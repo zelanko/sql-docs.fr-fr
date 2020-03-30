@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9702ca84fab0da2024db6f6f5e0f510822dcd29e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579811"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données
@@ -53,7 +53,7 @@ Les administrateurs d'alertes SharePoint peuvent consulter la liste des alertes 
     > [!NOTE]  
     >  Une fois que vous avez supprimé l’alerte, aucun message d’alerte n’est envoyé. Toutefois, si vous interrogez la base de données des alertes, vous constaterez que la définition d'alerte existe encore. Le service d'alertes effectue un nettoyage planifié qui supprimera définitivement la définition d'alerte lors du nettoyage suivant. L'intervalle de nettoyage par défaut est de 20 minutes. Cet intervalle, ainsi que d'autres paramètres de nettoyage, sont configurables. Pour plus d’informations, consultez [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  

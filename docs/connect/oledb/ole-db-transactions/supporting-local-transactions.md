@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993963"
 ---
 # <a name="supporting-local-transactions"></a>Prise en charge des transactions locales
@@ -39,7 +39,7 @@ ms.locfileid: "67993963"
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*isoLevel*[in]|Niveau d'isolation à utiliser avec cette transaction. Dans les transactions locales, OLE DB Driver pour SQL Server prend en charge les éléments suivants :<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Remarque : Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT est valide pour l'argument *isoLevel*, que le suivi des versions soit activé ou pas pour la base de données. Cependant, une erreur se produit si l'utilisateur essaie d'exécuter une instruction et que le suivi des versions n'est pas activé et/ou que la base de données n'est pas en lecture seule. De plus, l’erreur XACT_E_ISOLATIONLEVEL se produit si ISOLATIONLEVEL_SNAPSHOT est spécifié comme *isoLevel* lors de la connexion à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
+|*isoLevel*[in]|Niveau d'isolation à utiliser avec cette transaction. Dans les transactions locales, OLE DB Driver pour SQL Server prend en charge les éléments suivants :<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Remarque : Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures, ISOLATIONLEVEL_SNAPSHOT est valide pour l’argument *isoLevel*, que le suivi des versions soit activé ou non pour la base de données. Cependant, une erreur se produit si l'utilisateur essaie d'exécuter une instruction et que le suivi des versions n'est pas activé et/ou que la base de données n'est pas en lecture seule. De plus, l’erreur XACT_E_ISOLATIONLEVEL se produit si ISOLATIONLEVEL_SNAPSHOT est spécifié comme *isoLevel* lors de la connexion à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
 |*isoFlags*[in]|Le fournisseur OLE DB Driver pour SQL Server retourne une erreur pour toute valeur autre que zéro.|  
 |*pOtherOptions*[in]|Si la valeur est différente de NULL, le fournisseur OLE DB Driver pour SQL Server demande l'objet d'options de l'interface. Le fournisseur OLE DB Driver pour SQL Server retourne XACT_E_NOTIMEOUT si le membre *ulTimeout* de l'objet d'options est différent de zéro. Le fournisseur OLE DB Driver pour SQL Server ignore la valeur du membre *szDescription*.|  
 |*pulTransactionLevel*[out]|Si la valeur est différente de NULL, le fournisseur OLE DB Driver pour SQL Server retourne le niveau imbriqué de la transaction.|  

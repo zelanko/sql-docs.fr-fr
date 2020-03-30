@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080894"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
@@ -57,19 +57,19 @@ ms.locfileid: "77080894"
   
 -   [Informations supplémentaires](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Présentation des modifications de configuration  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> Présentation des modifications de configuration  
  Les modifications de configuration suivantes configurent le serveur afin d'utiliser des autorisations standard pour gérer le contenu et les opérations du serveur de rapports.  
   
 -   Ajoutez les URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aux sites approuvés. Par défaut, Internet Explorer est exécuté en **Mode protégé**sur les systèmes d’exploitation répertoriés, une fonctionnalité qui empêche les demandes du navigateur d’atteindre les processus globaux qui s’exécutent sur le même ordinateur. Vous pouvez désactiver le mode protégé pour les applications du serveur de rapports en les ajoutant comme Sites de confiance.  
   
 -   Créez les attributions de rôle qui vous accordent en tant qu'administrateur du serveur de rapports l'autorisation de gérer le contenu et les opérations sans devoir utiliser la fonctionnalité **Exécuter en tant qu'administrateur** sur Internet Explorer. En créant des attributions de rôle pour votre compte d'utilisateur Windows, vous accédez à un serveur de rapports avec les autorisations Gestionnaire de contenu et Administrateur système via des attributions de rôle explicites qui remplacent les attributions de rôle prédéfinies et intégrées créées par Reporting Services.  
   
-##  <a name="bkmk_configure_local_server"></a> Pour configurer un serveur de rapports local et l'administration du portail web  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> Pour configurer un serveur de rapports local et l'administration du portail web  
  Complétez les étapes de configuration de cette section si vous souhaitez accéder à un serveur de rapports local et vous voyez des erreurs semblables à la suivante :  
   
 -   L'utilisateur `'Domain\[user name]`» ne dispose pas des autorisations requises. Vérifiez que les autorisations suffisantes ont été accordées et qu'aucune restriction liée au contrôle de compte d'utilisateur (UAC) Windows ne pose problème.  
   
-###  <a name="bkmk_site_settings"></a> Paramètres du site de confiance dans le navigateur  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> Paramètres du site de confiance dans le navigateur  
   
 1.  Ouvrez une fenêtre du navigateur avec les autorisations Exécuter en tant qu'administrateur. Dans le menu **Démarrer**, cliquez avec le bouton de droite sur **Internet Explorer** et sélectionnez **Exécuter en tant qu’administrateur**.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "77080894"
   
 10. Décochez la case **Nécessite la certification du serveur (https:) pour tous les sites dans cette zone** si vous n’utilisez pas HTTPS pour le site par défaut.  
   
-11. Cliquez sur **Add**.  
+11. Cliquez sur **Ajouter**.  
   
 12. Sélectionnez **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Paramètres du dossier de portail Web  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Paramètres du dossier de portail Web  
   
 1.  Dans le portail web, sur la page d’accueil, cliquez sur **Gérer le dossier**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080894"
   
 6.  Sélectionnez **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Paramètres du site de portail Web  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Paramètres du site de portail Web  
   
 1.  Ouvrez votre navigateur avec des privilèges d'administrateur et accédez au portail web, `https://<server name>/reports`.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "77080894"
   
     ![icône Engrenage](../media/ssrsgearmenu.png).
     >[!TIP]  
-    >**Remarque :** Si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
+    >**Remarque :** si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
   
 3.  Dans la page Paramètres du Site, sélectionnez **Sécurité**, puis sélectionnez **Ajouter un groupe ou utilisateur**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "77080894"
   
 8. Rouvrez le portail web dans Internet Explorer, sans utiliser **Exécuter en tant qu’administrateur**.  
   
-##  <a name="bkmk_configure_ssms"></a> Pour configurer SQL Server Management Studio (SSMS) pour l'administration du serveur de rapports local  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> Pour configurer SQL Server Management Studio (SSMS) pour l'administration du serveur de rapports local  
  Par défaut, vous ne pouvez accéder à toutes les propriétés du serveur de rapports disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à moins de démarrer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] avec des privilèges d'administrateur.  
   
  **Pour configurer les propriétés et attributions de rôles [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , vous n'avez donc pas besoin de démarrer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] avec des autorisations élevées chaque fois :  
@@ -152,7 +152,7 @@ ms.locfileid: "77080894"
   
  Maintenant, lorsque vous ouvrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et vous ne sélectionnez pas explicitement **Exécuter en tant qu'administrateur** , vous avez accès aux propriétés du serveur de rapports.  
   
-##  <a name="bkmk_configure_ssdt"></a> Pour configurer SQL Server Data Tools (SSDT) pour la publication sur un serveur de rapports local  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> Pour configurer SQL Server Data Tools (SSDT) pour la publication sur un serveur de rapports local  
  Si vous avez installé [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sur l’un des systèmes d’exploitation répertoriés dans la première section de cette rubrique et que vous souhaitez que SSDT interagisse avec un serveur de rapports local en mode natif, vous rencontrerez des erreurs d’autorisation sauf si vous ouvrez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] avec des autorisations élevées ou si vous configurez des rôles Reporting Services. Par exemple, si vous n'avez pas les autorisations suffisantes, vous rencontrerez des avertissements semblables au suivant :  
   
 -   Lorsque vous tentez de déployer des éléments de rapport sur le serveur de rapports local, vous voyez un message d'erreur similaire au suivant dans la fenêtre **Liste d'erreurs** :  
@@ -171,7 +171,7 @@ Vous devez maintenant être en mesure de déployer les rapports et autres élém
   
 -   Consultez les sections [Paramètres du dossier du portail web](#bkmk_configure_folder_settings) et [Paramètres du site du portail web](#bkmk_configure_site_settings) plus haut dans cette rubrique.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Informations supplémentaires  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> Informations supplémentaires  
  Une étape de configuration supplémentaire et courante pour l'administration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à ouvrir le port 80 dans le Pare-feu Windows pour autoriser l'accès à l'ordinateur du serveur de rapports. Pour obtenir des instructions, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Voir aussi  

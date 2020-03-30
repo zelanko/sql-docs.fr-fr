@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896285"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge par SqlClient des fonctionnalités de haute disponibilité et de reprise d’activité
@@ -59,7 +59,7 @@ Utilisez les instructions suivantes pour la connexion à un serveur dans un grou
   
 - La connexion à une instance SQL Server configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
-- Le comportement d'une application qui utilise la propriété de connexion `MultiSubnetFailover` n'est pas affecté par le type d'authentification : Authentification SQL Server, Authentification Kerberos ou Authentification Windows.  
+- Le comportement d’une application qui utilise la propriété de connexion `MultiSubnetFailover` n’est pas affecté en fonction du type d’authentification : authentification SQL Server, authentification Kerberos ou authentification Windows.  
   
 - Augmentez la valeur de la propriété `Connect Timeout` pour permettre le basculement de serveur et réduire le nombre de tentatives de connexion d’une application.  
   

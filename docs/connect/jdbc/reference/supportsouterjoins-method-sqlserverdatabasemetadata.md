@@ -16,10 +16,10 @@ ms.assetid: 9dd19257-b120-4b74-8055-6570a343fc8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e79d93030bc8bafbc569e8bbcd289479c760750e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969031"
 ---
 # <a name="supportsouterjoins-method-sqlserverdatabasemetadata"></a>Méthode supportsOuterJoins (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsOuterJoins()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

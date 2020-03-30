@@ -20,10 +20,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 45f53291d70d08fa75ab158db3911c058fdba5c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253532"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -42,12 +42,12 @@ Cette rubrique explique comment définir des limites de taille pour les journaux
   
     [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 *Pour redimensionner le journal d’historique des travaux en fonction de sa taille brute :*
   

@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578237"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
@@ -29,7 +29,7 @@ ms.locfileid: "65578237"
   
 ## <a name="options"></a>Options  
  **Configuration**  
- Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal** et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
+ Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal**et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
   
  Pour consulter simultanément les propriétés de plusieurs configurations, sélectionnez **Toutes les configurations** ou **Configurations multiples**.  
   

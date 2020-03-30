@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080751"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Ajouter un filtre (Générateur de rapports et SSRS)
@@ -31,14 +31,14 @@ ms.locfileid: "77080751"
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** _\<région_de_données>_ . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** _\<région_de_données>_ s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur _Properties de\<_ **région_de_données>** . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue _Propriétés de\<_ **région_de_données>** s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  
   
 3.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-4.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
+4.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
   
 5.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "77080751"
   
 4.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-5.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
+5.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
   
 6.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "77080751"
   
 4.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-5.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
+5.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
   
 6.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080751"
   
 4.  Cliquez sur **Filtres**. La liste actuelle des équations de filtre s'affiche. Par défaut, elle est vide.  
   
-5.  Cliquez sur **Add**. Une nouvelle équation de filtre vierge apparaît.  
+5.  Cliquez sur **Ajouter**. Une nouvelle équation de filtre vierge apparaît.  
   
 6.  Dans **Expression**, tapez ou sélectionnez l'expression pour le champ à filtrer. Pour modifier l’expression, cliquez sur le bouton d’expression (*fx*).  
   

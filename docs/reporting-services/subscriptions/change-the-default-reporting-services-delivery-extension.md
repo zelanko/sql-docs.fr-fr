@@ -11,10 +11,10 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500401"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
@@ -83,9 +83,9 @@ ms.locfileid: "66500401"
   
      Lors de la lecture de la configuration, l'événement suivant est écrit dans le journal des événements Windows.  
   
-     **ID d’événement :** 109  
+     **ID de l’événement :** 109  
   
-     **Source :** Service Windows Serveur de rapports (nom de l'instance)  
+     **Source :** service Windows Report Server (nom de l’instance)  
   
      Le fichier RSReportServer.config a été modifié.  
   

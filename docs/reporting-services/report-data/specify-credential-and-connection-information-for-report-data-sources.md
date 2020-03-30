@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244564"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
@@ -147,7 +147,7 @@ ms.locfileid: "75244564"
 ## <a name="user-name-and-password-login"></a>Connexion à l'aide d'un nom d'utilisateur et d'un mot de passe  
  Lorsque vous sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**, un nom d'utilisateur et un mot de passe doivent être fournis pour permettre l'accès à la source de données. Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les informations d'identification peuvent correspondre à une connexion de base de données. Les informations d'identification sont passées à la source de données pour authentification.  
   
-##  <a name="DataSourceConfigurationConnections"></a> Configuration d’une source de données et connexions réseau  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configuration d’une source de données et connexions réseau  
  Le tableau suivant montre comment les connexions sont établies pour des combinaisons spécifiques de types d'informations d'identification et d'extensions de traitement de données. Si vous utilisez une extension de traitement de données personnalisée, consultez [Spécifier des connexions pour des extensions de traitement de données personnalisées](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md).  
   
 |**Type**|**Contexte de connexion réseau**|**Types de source de données**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  

@@ -11,10 +11,10 @@ ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 886c6b6622a2051751704aa9ea72aabcbb4afef3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579908"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>Méthode ConfigurationSetting - ListReservedURLs
@@ -56,12 +56,12 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

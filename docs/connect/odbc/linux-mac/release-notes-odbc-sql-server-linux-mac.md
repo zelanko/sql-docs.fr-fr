@@ -11,10 +11,10 @@ author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090503"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Linux et macOS
@@ -114,7 +114,7 @@ Lors de l’utilisation d’Always Encrypted avec des enclaves sécurisées et A
 
 **Nouvelles distributions prises en charge** : macOS High Sierra et Ubuntu 17.10 
 
-**Amélioration des performances** : Les performances sont plus que décuplées quand le pilote convertit vers/depuis UTF-8/16.
+**Optimisation des performances** : les performances sont plus que décuplées quand le pilote convertit vers/depuis UTF-8/16.
 
 **Fonctionnalités ajoutées** :
 
@@ -140,11 +140,11 @@ Prise en charge d’Azure SQL Managed Instance.
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ajoute la prise en charge d’Always Encrypted et d’Azure Active Directory quand il est utilisé conjointement avec Microsoft SQL Server 2016.
 
-**Nouvelles distributions prises en charge.**  : OS X 10.11 et macOS 10.12 sont pris en charge dans la première version du pilote ODBC sur macOS. Ubuntu 16.10 est maintenant également pris en charge ainsi que Red Hat 6, 7 et SUSE 12. Chaque plateforme dispose d’un package relatif à la plateforme (RPM ou DEB) pour faciliter l’installation et la configuration. Pour plus d’informations, consultez les instructions d’installation du pilote ODBC pour [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) et [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+**Nouvelles distributions prises en charge** : OS X 10.11 et macOS 10.12 sont pris en charge dans la première version du pilote ODBC sur macOS. Ubuntu 16.10 est maintenant également pris en charge ainsi que Red Hat 6, 7 et SUSE 12. Chaque plateforme dispose d’un package relatif à la plateforme (RPM ou DEB) pour faciliter l’installation et la configuration. Pour plus d’informations, consultez les instructions d’installation du pilote ODBC pour [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) et [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**Changements de prise en charge du Gestionnaire de pilotes unixODBC 2.3.1** : Le pilote ODBC ne dépend plus d’un empaquetage personnalisé pour le gestionnaire de pilotes unixODBC (sauf sur RedHat 6) et, à la place, s’appuie sur le gestionnaire de package de distribution pour résoudre la dépendance UnixODBC à partir des dépôts de la distribution.
+**Modifications apportées à la prise en charge d’unixODBC Driver Manager 2.3.1** : le pilote ODBC ne dépend plus d’un empaquetage personnalisé pour le gestionnaire de pilotes unixODBC (sauf sur RedHat 6) et, à la place, s’appuie sur le gestionnaire de package de distribution pour résoudre la dépendance UnixODBC à partir des dépôts de la distribution.
 
-**Prise en charge de l’API BCP** : Le pilote ODBC Linux et macOS prend désormais en charge l’utilisation des [fonctions de l’API BCP (**bcp_init**, etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+**Prise en charge de l’API BCP** : le pilote ODBC Linux et macOS prend désormais en charge l’utilisation des [fonctions de l’API BCP (**bcp_init**, etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
 ## <a name="130-for-ssnoversion-on-linux"></a>13.0, pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux
 
@@ -154,11 +154,11 @@ Avec Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 et SQL Server�
 
 Ubuntu est maintenant pris en charge, ainsi que Red Hat et SUSE. Chaque plateforme dispose d’un package relatif à la plateforme (RPM ou DEB) pour faciliter l’installation et la configuration.  Consultez [Installation du pilote](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) pour obtenir des instructions d’installation.
 
-**Prise en charge du Gestionnaire de pilotes unixODBC 2.3.1** : Outre un nouveau gestionnaire de pilotes, il existe un package pour l’installation de cette dépendance qui facilite l’installation et la configuration.  
+**Prise en charge d’unixODBC Driver Manager 2.3.1** : outre un nouveau gestionnaire de pilotes, il existe un package pour l’installation de cette dépendance qui facilite l’installation et la configuration.  
 
-**Résolution transparente d’adresses IP réseau** : « Résolution d’adresses IP réseau transparente » est une révision de la fonctionnalité « Basculement de plusieurs sous-réseaux » existante qui affecte la séquence de connexion du pilote si la première adresse IP résolue du nom d’hôte ne répond pas et que plusieurs adresses IP sont associées au nom d’hôte.
+**Résolution d’adresses IP réseau transparente** : « Résolution d’adresses IP réseau transparente » est une révision de la fonctionnalité « Basculement de plusieurs sous-réseaux » existante qui affecte la séquence de connexion du pilote si la première adresse IP résolue du nom d’hôte ne répond pas et que plusieurs adresses IP sont associées au nom d’hôte.
 
-**Prise en charge de TLS 1.2** : Microsoft ODBC Driver 13.0 for SQL Server sur Linux prend désormais en charge TLS 1.2 quand des communications sécurisées avec SQL Server sont utilisées.
+**Prise en charge de TLS 1.2** : Microsoft ODBC Driver 13.0 for SQL Server sur Linux prend désormais en charge TLS 1.2 quand des communications sécurisées avec SQL Server sont utilisées.
 
 ## <a name="11-for-ssnoversion-on-linux"></a>11, pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux
 
@@ -166,6 +166,6 @@ Le pilote ODBC sur SUSE Linux (Preview) prend en charge 64 bits SUSE Linux Enter
 
 Le pilote ODBC sur Linux prend en charge les [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux de la haute disponibilité et de la reprise d’activité](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Le pilote ODBC sur Linux prend en charge les connexions à Microsoft Azure SQL Database. Pour plus d’informations, consultez [Procédure : se connecter à Azure SQL Database à l'aide d'ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Le pilote ODBC sur Linux prend en charge les connexions à Microsoft Azure SQL Database. Pour plus d’informations, consultez [Procédure de connexion à Windows Azure SQL Database avec ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 L’option `-l` (délai d’expiration de la connexion) a été ajoutée à `bcp`. Pour plus d’informations, consultez [Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

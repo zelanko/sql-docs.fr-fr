@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79027934"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
@@ -26,7 +26,7 @@ Cet article décrit comment utiliser des fonctions du package [**sqlmlutils**](h
 > [!NOTE]
 > La commande `install.packages` R standard n’est pas recommandée pour l’ajout de packages R sur SQL Server. Au lieu de cela, utilisez **sqlmlutils** comme décrit dans cet article.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Installez [R](https://www.r-project.org) et [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server. Vous pouvez utiliser n’importe quel IDE R pour exécuter les scripts, mais cet article part du principe que vous utilisez RStudio.
 

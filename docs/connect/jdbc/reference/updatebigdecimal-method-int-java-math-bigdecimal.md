@@ -16,10 +16,10 @@ ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad5239c609e58750e7fd494d482ee11c62ab9cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985450"
 ---
 # <a name="updatebigdecimal-method-int-javamathbigdecimal"></a>Méthode updateBigDecimal (int, java.math.BigDecimal)
@@ -38,11 +38,11 @@ public void updateBigDecimal(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- **int** indiquant l’index de colonne.  
+ **int** indiquant l’index de la colonne.  
   
  *x*  
   
- Un objet BigDecimal.  
+ Objet BigDecimal.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

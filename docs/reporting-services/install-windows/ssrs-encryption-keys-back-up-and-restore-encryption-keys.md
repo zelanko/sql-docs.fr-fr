@@ -13,10 +13,10 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65502849"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Clés de chiffrement SSRS - Sauvegarder et restaurer les clés de chiffrement
@@ -46,18 +46,18 @@ ms.locfileid: "65502849"
 
  La sauvegarde de la clé symétrique est un processus qui consiste à écrire la clé dans le fichier que vous spécifiez, puis à brouiller ces données à l'aide du mot de passe que vous fournissez. En aucun cas la clé symétrique ne peut être conservée sans être chiffrée, vous devez donc fournir un mot de passe afin de chiffrer la clé au moment de son enregistrement sur un disque. Une fois le fichier créé, vous devez le stocker dans un endroit sécurisé et **vous souvenir du mot de passe** qui permet de déverrouiller le fichier. Pour sauvegarder la clé symétrique, utilisez les outils suivants :  
   
- **Mode natif :** le Gestionnaire de configuration de Reporting Services ou l'utilitaire **rskeymgmt**.  
+ **Mode natif :** le Gestionnaire de configuration de Reporting Services ou l'utilitaire **rskeymgmt** .  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Mode SharePoint :** pages de l'Administration centrale de SharePoint ou PowerShell.  
   
-##  <a name="bkmk_backup_sharepoint"></a> Sauvegarde de serveurs de rapports en mode SharePoint  
+##  <a name="backup-sharepoint-mode-report-servers"></a><a name="bkmk_backup_sharepoint"></a> Sauvegarde de serveurs de rapports en mode SharePoint  
  Pour les serveurs de rapports en mode SharePoint, vous pouvez utiliser des commandes PowerShell ou utiliser les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 
 ::: moniker-end
   
-##  <a name="bkmk_backup_configuration_manager"></a> Sauvegarder les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
+##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Sauvegarder les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
   
 1.  Lancez Report Server Configuration Manager, puis connectez-vous à l'instance de serveur de rapports à configurer.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65502849"
   
 5.  Sélectionnez **OK**.  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> Sauvegarder les clés de chiffrement - rskeymgmt (mode natif)  
+###  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a> Sauvegarder les clés de chiffrement - rskeymgmt (mode natif)  
   
 1.  Exécutez le fichier **rskeymgmt.exe** localement sur l'ordinateur qui héberge le serveur de rapports. Vous devez utiliser l’argument d’extraction **-e** pour copier la clé, fournir un nom de fichier et spécifier un mot de passe. L'exemple suivant illustre les arguments que vous devez spécifier :  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65502849"
   
  Pour restaurer une clé de chiffrement, vous devez posséder un exemplaire de la clé de chiffrement dans un fichier et connaître le mot de passe permettant de déverrouiller l'exemplaire stocké. Si vous détenez la clé et le mot de passe, procédez à la restauration en exécutant l'outil de configuration de Reporting Services ou l'utilitaire **rskeymgmt** . La clé symétrique doit être identique à l'exemplaire qui verrouille et déverrouille les données chiffrées stockées à ce moment-là dans la base de données du serveur de rapports. Si vous restaurez un exemplaire non valide, le serveur de rapports est incapable d'accéder à ces données. Vous serez amené à supprimer toutes les valeurs chiffrées si jamais la restauration d'une clé valide est impossible. Si, pour une raison quelconque, vous ne pouvez pas restaurer la clé de chiffrement (vous ne possédez pas de copie de sauvegarde par exemple), supprimez la clé et le contenu chiffré. Pour plus d’informations, consultez [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Pour plus d’informations sur la création de clés symétriques, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="bkmk_restore_configuration_manager"></a> Restaurer les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
+###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurer les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
   
 1.  Démarrez le Gestionnaire de configuration de Reporting Services et connectez-vous à l'instance de serveur de rapports à configurer.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65502849"
   
 5.  Sélectionnez **OK**. 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> Restaurer les clés de chiffrement - rskeymgmt (mode natif)  
+###  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> Restaurer les clés de chiffrement - rskeymgmt (mode natif)  
   
 1.  Exécutez le fichier **rskeymgmt.exe** localement sur l'ordinateur qui héberge le serveur de rapports. Utilisez l’argument **-a** pour restaurer les clés. Vous devez fournir un nom de fichier complet et spécifier un mot de passe. L'exemple suivant illustre les arguments que vous devez spécifier :  
   

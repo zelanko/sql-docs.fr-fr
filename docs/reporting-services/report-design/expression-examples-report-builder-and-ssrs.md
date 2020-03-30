@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080339"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
@@ -62,13 +62,13 @@ Pour obtenir des exemples d'expressions pour des utilisations spécifiques, cons
   
 Pour plus d’informations sur les expressions simples et complexes, l’endroit où vous pouvez utiliser des expressions et les types de références que vous pouvez inclure dans une expression, consultez les rubriques sous [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Pour plus d’informations sur le contexte dans lequel les expressions sont évaluées pour calculer des agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutoriel : Introduction aux expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Fonctions  
  Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions de la bibliothèque runtime [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et des fonctions des espaces de noms <xref:System.Convert> et <xref:System.Math>. Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser des classes à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y compris <xref:System.Text.RegularExpressions>.  
   
-##  <a name="VisualBasicFunctions"></a> Fonctions Visual Basic  
+##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Fonctions Visual Basic  
  Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour manipuler les données affichées dans des zones de texte ou utilisées pour des paramètres, des propriétés et d'autres zones du rapport. Cette section fournit des exemples décrivant certaines de ces fonctions. Pour plus d'informations, consultez [Membres de la bibliothèque runtime Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
  Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre de nombreuses options de formats personnalisés, par exemple pour des formats de date spécifiques. Pour plus d'informations, consultez [Mise en forme des types](https://go.microsoft.com/fwlink/?LinkId=112024) sur MSDN.  
@@ -87,7 +87,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     = Round(1.3*5)/5  
     ```  
   
-###  <a name="DateFunctions"></a> Fonctions de date  
+###  <a name="date-functions"></a><a name="DateFunctions"></a> Fonctions de date  
   
 -   La fonction **Today** fournit la date actuelle. Cette expression peut être utilisée dans une zone de texte pour afficher la date sur le rapport ou bien, dans un paramètre pour filtrer les données basées sur la date actuelle.  
   
@@ -192,7 +192,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
 |Il y a un an|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Il y a deux ans|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-###  <a name="StringFunctions"></a> Fonctions de chaîne  
+###  <a name="string-functions"></a><a name="StringFunctions"></a> Fonctions de chaîne  
   
 -   Vous pouvez combiner plusieurs champs en utilisant des opérateurs de concaténation et des constantes [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . L'expression suivante retourne deux champs, chacun sur une ligne séparée dans la même zone de texte :  
   
@@ -258,7 +258,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-###  <a name="ConversionFunctions"></a> Fonctions de conversion  
+###  <a name="conversion-functions"></a><a name="ConversionFunctions"></a> Fonctions de conversion  
  Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour convertir un champ en un type de données différent de celui qu'il avait au départ. Les fonctions de conversion peuvent être utilisées pour convertir le type de données par défaut d'un champ en type qui sera nécessaire pour certains calculs ou pour combiner du texte.  
   
 -   L’expression suivante convertit la constante 500 en type Decimal pour la comparer à un type de données money [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le champ Value d’une expression de filtre.  
@@ -273,7 +273,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-###  <a name="DecisionFunctions"></a> Fonctions de décision  
+###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> Fonctions de décision  
   
 -   La fonction **Iif** retourne une valeur sur les deux possibles, laquelle dépend du fait que l'expression est vraie ou fausse. L’expression ci-dessous utilise la fonction **Iif** pour retourner la valeur booléenne **True** si la valeur de `LineTotal` est supérieure à 100. Sinon, elle retourne **False**:  
   
@@ -328,10 +328,10 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
   
     ```  
   
-##  <a name="ReportFunctions"></a> Fonctions de rapport  
+##  <a name="report-functions"></a><a name="ReportFunctions"></a> Fonctions de rapport  
  Dans une expression, vous pouvez ajouter une référence à des fonctions supplémentaires de rapport qui manipulent les données dans un rapport. Cette section fournit des exemples pour deux de ces fonctions. Pour plus d’informations sur les fonctions et les exemples de rapport, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-###  <a name="Sum"></a> Sum  
+###  <a name="sum"></a><a name="Sum"></a> Sum  
   
 -   La fonction **Sum** peut additionner les valeurs dans un groupe ou une région de données. Cette fonction peut être utile dans l'en-tête ou le pied de page d'un groupe. L'expression suivante affiche la somme des données dans la région de données ou le groupe Order :  
   
@@ -345,7 +345,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-###  <a name="RowNumber"></a> RowNumber  
+###  <a name="rownumber"></a><a name="RowNumber"></a> RowNumber  
   
 -   La fonction **RowNumber** , quand elle est utilisée dans une zone de texte au sein d'une région de données, affiche le numéro de ligne de chaque instance de la zone de texte dans laquelle l'expression apparaît. Cette fonction peut être utile pour numéroter les lignes dans un tableau. Elle peut également servir à l'accomplissement de tâches plus complexes, telles que l'insertion de sauts de page en fonction du nombre de lignes. Pour plus d'informations, consultez [Sauts de page](#PageBreaks) , plus loin dans cette rubrique.  
   
@@ -355,10 +355,10 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =RowNumber(Nothing)  
     ```  
   
-##  <a name="AppearanceofReportData"></a> Apparence des données d'un rapport  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> Apparence des données d'un rapport  
  Vous pouvez recourir à des expressions pour intervenir sur la façon dont les données apparaissent sur un rapport. Par exemple, vous pouvez afficher les valeurs de deux champs dans une seule zone de texte, afficher des informations sur le rapport ou modifier la façon dont les sauts de page sont insérés dans le rapport.  
   
-###  <a name="PageHeadersandFooters"></a> En-têtes et pieds de page  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a> En-têtes et pieds de page  
  Lors de la conception d'un rapport, vous pouvez choisir d'afficher son nom et les numéros des pages dans le pied de page. Pour ce faire, vous pouvez utiliser les expressions suivantes :  
   
 -   L'expression suivante fournit le nom du rapport ainsi que les date et heure de son exécution. Elle peut être placée dans une zone de texte du pied de page du rapport ou dans le corps du rapport. Le format des date et heure est déterminé par la chaîne de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour la date courte :  
@@ -398,7 +398,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
 > [!NOTE]  
 >  Vous ne pouvez faire référence qu'à un seul élément de rapport par expression dans un en-tête ou un pied de page. Vous pouvez aussi faire référence au nom de la zone de texte, mais pas à l'expression de données elle-même, dans les expressions d'en-tête et de pied de page.  
   
-###  <a name="PageBreaks"></a> Sauts de page  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> Sauts de page  
  Dans certains rapports, vous pouvez souhaiter placer un saut de page à la fin d'un nombre spécifié de lignes à la place, ou en plus, de groupes ou d'éléments de rapport. Pour ce faire, créez un groupe qui contient les groupes ou enregistrements de détails qui vous intéressent, ajoutez un saut de page au groupe, puis ajoutez une expression de groupe pour regrouper par un nombre spécifié de lignes.  
   
 -   L'expression suivante, quand elle est placée dans l'expression de groupe, affecte un nombre à chaque ensemble de 25 lignes. Quand un saut de page est défini pour le groupe, cette expression insère un saut de page toutes les 25 lignes.  
@@ -415,10 +415,10 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
   
      Pour plus d’informations sur la définition de sauts de page pour un groupe, consultez [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
-##  <a name="Properties"></a> Propriétés  
+##  <a name="properties"></a><a name="Properties"></a> Propriétés  
  Les expressions ne sont pas uniquement utilisées pour afficher des données dans des zones de texte. Elles peuvent également servir à modifier la manière dont les propriétés sont appliquées aux éléments de rapport. Vous pouvez modifier les informations de style d'un élément de rapport ou bien modifier sa visibilité.  
   
-###  <a name="Formatting"></a> Mise en forme  
+###  <a name="formatting"></a><a name="Formatting"></a> Mise en forme  
   
 -   L’expression suivante, quand elle est utilisée dans la propriété Color d’une zone de texte, modifie la couleur du texte en fonction de la valeur du champ `Profit` :  
   
@@ -448,7 +448,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
 ### <a name="chart-colors"></a>Couleurs du graphique  
  Pour spécifier les couleurs d'un graphique à base de formes, vous pouvez utiliser du code personnalisé pour contrôler l'ordre dans lequel les couleurs sont mappées aux valeurs de point de données. Cela vous permet d'utiliser des couleurs cohérentes dans le cadre de plusieurs graphiques possédant les mêmes groupes de catégories. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
-###  <a name="Visibility"></a> Visibilité  
+###  <a name="visibility"></a><a name="Visibility"></a> Visibilité  
  Vous pouvez également afficher et masquer des éléments dans un rapport en utilisant les propriétés de visibilité de l'élément de rapport. Dans une région de données comme un tableau, vous pouvez initialement masquer les lignes de détails en fonction de la valeur d'une expression.  
   
 -   L'expression suivante, lorsqu'elle est utilisée pour la visibilité initiale des lignes de détails dans un groupe, affiche les lignes de détails de toutes les ventes supérieures à 90 pour cent dans le champ `PctQuota` :  
@@ -469,7 +469,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =IIF(Fields!Column_1.IsMissing, true, false)  
     ```  
   
-###  <a name="Hyperlinks"></a> URL  
+###  <a name="urls"></a><a name="Hyperlinks"></a> URL  
  Vous pouvez personnaliser des URL à l'aide de données de rapport, mais aussi contrôler de manière conditionnelle si les URL sont ajoutées en tant qu'action pour une zone de texte.  
   
 -   L'expression ci-dessous, lorsqu'elle est utilisée en tant qu'action pour une zone de texte, génère une URL personnalisée qui spécifie le champ de dataset `EmployeeID` comme un paramètre d'URL.  
@@ -486,10 +486,10 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
-##  <a name="ReportData"></a> Données des rapports  
+##  <a name="report-data"></a><a name="ReportData"></a> Données des rapports  
  Les expressions peuvent être utilisées pour manipuler les données utilisées dans les rapports. Vous pouvez faire référence à des paramètres et à d'autres informations de rapport. Vous pouvez même modifier la requête utilisée pour extraire les données du rapport.  
   
-###  <a name="Parameters"></a> Paramètres  
+###  <a name="parameters"></a><a name="Parameters"></a> Paramètres  
  Vous pouvez utiliser des expressions dans un paramètre pour faire varier la valeur par défaut du paramètre. Par exemple, vous pouvez utiliser un paramètre pour filtrer les données d'un utilisateur en particulier en fonction de l'ID utilisateur utilisé pour exécuter le rapport.  
   
 -   L'expression ci-dessous, lorsqu'elle est utilisée comme valeur par défaut pour un paramètre, collecte l'ID utilisateur de la personne exécutant le rapport :  
@@ -510,7 +510,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     =Fields(Parameters!ParameterField.Value).Value  
     ```  
   
-##  <a name="CustomCode"></a> Code personnalisé  
+##  <a name="custom-code"></a><a name="CustomCode"></a> Code personnalisé  
  L'usage de code personnalisé au sein d'un rapport est possible. Le code personnalisé est soit incorporé au rapport, soit stocké dans un assembly personnalisé utilisé au sein du rapport. Pour plus d’informations sur le code personnalisé, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Utilisation de variables de groupe pour une agrégation personnalisée  

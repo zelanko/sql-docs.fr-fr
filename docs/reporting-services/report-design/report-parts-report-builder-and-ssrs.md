@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081109"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77081109"
   
  La partie de rapport que vous ajoutez à votre rapport gère une relation à l'instance de la partie de rapport sur le site ou serveur au moyen d'un ID unique. Après avoir ajouté des parties de rapport d'un site ou serveur à un rapport, vous pouvez les modifier, indépendamment de la partie de rapport d'origine sur le site ou serveur. Vous pouvez accepter les mises à jour que d'autres personnes ont apportées à la partie de rapport sur le site ou le serveur, et vous pouvez enregistrer à nouveau la partie de rapport modifiée sur le site ou le serveur, soit en ajoutant une nouvelle partie de rapport, soit en remplaçant la partie de rapport d'origine, si vous avez des autorisations suffisantes.  
   
-##  <a name="ComponentWorkflow"></a> Cycle de vie d'une partie de rapport  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> Cycle de vie d'une partie de rapport  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Une personne A crée un rapport avec un graphique qui dépend d'un dataset incorporé.  
@@ -42,7 +42,7 @@ ms.locfileid: "77081109"
 6.  La personne B accepte le graphique mis à jour du serveur. Les modifications que la personne B avait apportées au graphique dans son rapport sont ainsi remplacées.  
   
   
-##  <a name="PublishingComponents"></a> Publication de parties de rapport  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Publication de parties de rapport  
  Lorsque vous publiez une partie de rapport, le Générateur de rapports lui affecte un ID unique, qui est distinct du nom de partie de rapport. Le Générateur de rapports gère cet ID, quelles que soient les autres modifications que vous avez apportées à la partie de rapport. L'ID lie l'élément de rapport d'origine dans votre rapport à la partie de rapport. Lorsque d'autres auteurs de rapports réutilisent la partie de rapport, l'ID lie également la partie de rapport dans leur rapport à celle sur le serveur de rapports.  
   
  Voici les éléments de rapport que vous pouvez publier comme parties de rapport :  
@@ -81,7 +81,7 @@ ms.locfileid: "77081109"
  Vous pouvez également modifier la description dans le volet Propriétés.  
   
   
-##  <a name="ReusingComponents"></a> Réutilisation de parties de rapport  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a> Réutilisation de parties de rapport  
  La façon la plus facile de créer un rapport est d'ajouter une partie de rapport existante, comme une table ou un graphique, à votre rapport à partir de la bibliothèque de parties de rapport. Après l'avoir ajoutée à votre rapport, vous pouvez la modifier comme vous le souhaitez ou accepter les mises à jour du serveur. La modification de l'élément de rapport dans votre rapport n'affectera pas l'instance de la partie de rapport publiée sur le site ou serveur et ne rompra pas non plus la relation entre l'instance dans le rapport et sur le site ou serveur. Si vous avez des autorisations suffisantes, vous pouvez enregistrer à nouveau la copie mise à jour sur le site ou serveur. Si quelqu'un d'autre modifie la copie sur le site ou serveur, vous pouvez décider de garder votre copie telle quelle ou la mettre à jour pour qu'elle soit identique à celle du site ou serveur.  
   
 ### <a name="searching-for-report-parts"></a>Recherche de parties de rapport  
@@ -103,7 +103,7 @@ ms.locfileid: "77081109"
  Lorsque vous ajoutez une autre partie de rapport qui utilise un dataset identique à un dataset déjà dans votre rapport, l'Assistant n'ajoute pas une autre version de ce dataset à votre rapport ; il redirige les références dans la partie de rapport vers le dataset existant. Pour plus d’informations, consultez [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
   
-##  <a name="UpdatingComponents"></a> Mise à jour de parties de rapport avec les modifications du serveur  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> Mise à jour de parties de rapport avec les modifications du serveur  
  Chaque fois que vous ouvrez un rapport, le Générateur de rapports vérifie si les instances de serveur des parties de rapport de ce rapport ont été mises à jour sur le serveur. Il recherche également des modifications dans les éléments dépendants des parties de rapport, tels que le dataset et les paramètres. Si des parties de rapport publiées ou leurs dépendances ont été mises à jour sur le serveur, une barre d'informations dans votre rapport affiche le nombre d'éléments mis à jour. Vous pouvez choisir d'afficher et d'accepter ou de rejeter les mises à jour ou de faire disparaître la barre d'informations. Si vous choisissez d'afficher les mises à jour, une miniature de la partie de rapport, de la personne qui l'a modifié en dernier et du moment de cette modification apparaît. Vous pouvez alors accepter certains ou l'ensemble des éléments mis à jour.  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "77081109"
  Pour rétablir la version sur le serveur, il vous suffit de supprimer la version que vous avez dans votre rapport et de la rajouter.  
   
   
-##  <a name="RepublishingComponents"></a> Mise à jour de parties de rapport déjà sur le serveur  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> Mise à jour de parties de rapport déjà sur le serveur  
  Vous pouvez choisir de mettre à jour une partie de rapport existante sur le serveur ou de la publier comme une nouvelle partie de rapport sans remplacer la partie existante. Lorsque vous mettez à jour la partie de rapport sur le serveur, les copies de la partie de rapport dans d'autres rapports ne sont pas modifiées automatiquement. Si d'autres auteurs de rapports ont ajouté cette partie de rapport à un rapport, ils sont informés de la modification la prochaine fois qu'ils ouvrent ce rapport. Ils peuvent choisir d'accepter ou non vos modifications.  
   
  Si vous choisissez de la publier comme une nouvelle partie de rapport, le Générateur de rapports lui donne un nouvel ID unique et elle n'est plus liée à la partie de rapport d'origine.  
@@ -128,10 +128,10 @@ ms.locfileid: "77081109"
  Si le dataset est incorporé dans la partie de rapport, chaque fois que vous publiez cette dernière, le dataset figure dans la boîte de dialogue **Publier les parties de rapports** . Les datasets partagés ne sont pas affichés dans la boîte de dialogue **Publier les parties de rapports** .  
   
   
-##  <a name="RptPartsRptDesigner"></a> Utilisation de parties de rapports dans le Concepteur de rapports  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> Utilisation de parties de rapports dans le Concepteur de rapports  
  Les parties de rapports fonctionnent un peu différemment dans le Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dans le Concepteur de rapports, la publication est unidirectionnelle : vous pouvez publier une partie de rapport à partir du Concepteur de rapports, mais vous ne pouvez pas réutiliser une partie de rapport existante à partir de ce même Concepteur. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
  [Publier et republier des parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
  [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

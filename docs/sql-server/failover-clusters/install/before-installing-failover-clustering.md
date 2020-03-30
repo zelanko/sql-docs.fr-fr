@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72517943"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
@@ -37,19 +37,19 @@ ms.locfileid: "72517943"
   
  
   
-##  <a name="BestPractices"></a> Bonnes pratiques  
+##  <a name="best-practices"></a><a name="BestPractices"></a> Bonnes pratiques  
   
--   Passez en revue les [Notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
+-   Passez en revue les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Notes de publication[ de ](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Installez les logiciels requis. Avant d'exécuter l'installation ou la mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installez les composants requis suivants pour réduire la durée d'installation. Vous pouvez installer les logiciels requis sur chaque nœud de cluster de basculement, puis redémarrer les nœuds une fois avant d'exécuter le programme d'installation.  
   
     -   Windows PowerShell n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Windows PowerShell est un composant requis pour l’installation des composants du [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell n’est pas présent sur votre ordinateur, vous pouvez l’activer en suivant les instructions de la page [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .  
   
-    -   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des systèmes d'exploitation Windows plus anciens. Pour plus d’informations, consultez les [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+    -   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des systèmes d'exploitation Windows plus anciens. Pour plus d’informations, consultez les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]notes de publication[ de ](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **Mise à jour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update :** Pour éviter le redémarrage de l'ordinateur suite à l'installation de .NET Framework 4 pendant l'installation, le programme d'installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiert l'installation de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sur l'ordinateur.  Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, cette mise à jour est incluse. Si vous installez sur un système d'exploitation Windows plus ancien, vous pouvez la télécharger à partir de la [Mise à niveau Microsoft pour le .NET Framework 4.0 sur Windows Vista et Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] :** pour éviter le redémarrage de l'ordinateur suite à l'installation de .NET Framework 4 pendant l'installation, le programme d'installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiert l'installation de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update sur l'ordinateur.  Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, cette mise à jour est incluse. Si vous installez sur un système d'exploitation Windows plus ancien, vous pouvez la télécharger à partir de la [Mise à niveau Microsoft pour le .NET Framework 4.0 sur Windows Vista et Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   .NET Framework 4 : Le programme d'installation installe le .NET Framework 4 sur un système d'exploitation en cluster. Pour réduire le temps d'installation, vous pouvez envisager d'installer le .NET Framework 4 avant d'exécuter le programme d'installation.  
+    -   Le programme d'installation de .NET Framework 4.0 installe le .NET Framework 4 sur un système d'exploitation en cluster. Pour réduire le temps d'installation, vous pouvez envisager d'installer le .NET Framework 4 avant d'exécuter le programme d'installation.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez installer ces fichiers en exécutant SqlSupport.msi qui se trouve sur le support d'installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72517943"
   
     -   Si vous utilisez le partage de fichiers SMB comme option de stockage, le compte d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit avoir les privilèges SeSecurityPrivilege sur le serveur de fichiers. Pour ce faire, dans la console de stratégie de sécurité locale du serveur de fichiers, ajoutez le compte utilisé pour l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux droits **Gérer le journal d'audit et de la sécurité** .  
   
-##  <a name="Hardware"></a> Vérifiez votre solution matérielle  
+##  <a name="verify-your-hardware-solution"></a><a name="Hardware"></a> Vérifiez votre solution matérielle  
   
 -   Si la solution de cluster inclut des nœuds de cluster dispersés géographiquement, il est important de vérifier d'autres éléments, tels que la prise en charge de disques partagés et le temps de réponse du réseau.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72517943"
   
 -   Pour installer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque les fichiers d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sources et le cluster se trouvent dans des domaines différents, copiez les fichiers d'installation sur le domaine actuellement disponible sur le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Security"></a> Passez en revue les considérations sur la sécurité  
+##  <a name="review-security-considerations"></a><a name="Security"></a> Passez en revue les considérations sur la sécurité  
   
 -   Pour utiliser le chiffrement, installez le certificat du serveur avec le nom DNS complet du cluster WSFC sur tous les nœuds du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, si vous disposez d'un cluster à deux nœuds appelés « Test1.NomDomaine.com » et « Test2.NomDomaine.com » et d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appelée « Virtsql », vous devez vous procurer un certificat pour « Virtsql.NomDomaine.com » et installer le certificat sur les nœuds test1 et test2. Vous pouvez ensuite activer la case à cocher **Forcer le chiffrement du protocole** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour configurer votre cluster de basculement à des fins de chiffrement.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72517943"
     *   instance de cluster de basculement SQL sur des clusters de domaine + de groupe de travail. 
 
   
-##  <a name="Network"></a> Passez en revue les considérations relatives aux réseau, port et pare-feu  
+##  <a name="review-network-port-and-firewall-considerations"></a><a name="Network"></a> Passez en revue les considérations relatives aux réseau, port et pare-feu  
   
 -   Vérifiez que vous avez désactivé NetBIOS pour toutes les cartes réseau privées avant d'entamer la procédure d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -183,7 +183,7 @@ ms.locfileid: "72517943"
   
     5.  À l'issue de l'installation, retournez dans Connexions réseau dans le Panneau de configuration et désactivez les cartes réseau qui ne sont pas actuellement utilisées.  
   
-##  <a name="OS_Support"></a> Vérifiez votre système d'exploitation  
+##  <a name="verify-your-operating-system"></a><a name="OS_Support"></a> Vérifiez votre système d'exploitation  
  Assurez-vous que votre système d'exploitation est installé correctement et qu'il prend en charge le clustering de basculement. Le tableau suivant comporte une liste des éditions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des systèmes d'exploitation qui les prennent en charge.  
   
 |Édition de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
@@ -199,7 +199,7 @@ ms.locfileid: "72517943"
   
  **Pris en charge pour le clustering de basculement de plusieurs sous-réseaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="MultiSubnet"></a> Remarques supplémentaires concernant les configurations de sous-réseaux multiples  
+##  <a name="additional-considerations-for-multi-subnet-configurations"></a><a name="MultiSubnet"></a> Remarques supplémentaires concernant les configurations de sous-réseaux multiples  
  Les sections ci-dessous décrivent les points à garder à l'esprit lors de l'installation d'un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Une configuration de sous-réseaux multiples implique le clustering de plusieurs sous-réseaux et, par conséquent, l'utilisation de plusieurs adresses IP et la modification des dépendances de ressource d'adresse IP.  
   
 ### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Considérations relatives au système d’exploitation et à l’édition  
@@ -225,7 +225,7 @@ ms.locfileid: "72517943"
 #### <a name="related-content"></a>Contenu associé  
  Pour plus d’informations sur le basculement multisite [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , consultez [Site de clustering de basculement Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) et [Concevoir un service ou une application en cluster dans un clustering de basculement multisite](https://go.microsoft.com/fwlink/?LinkId=177873).  
   
-##  <a name="WSFC"></a> Configurer le cluster de basculement Windows Server  
+##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> Configurer le cluster de basculement Windows Server  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Le logiciel WSFC (service de cluster) doit être configuré sur au moins l’un des nœuds de votre cluster de serveurs. Vous devez également exécuter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard conjointement à WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise prend en charge les clusters de basculement contenant jusqu'à 16 nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard prennent en charge les clusters de basculement à deux nœuds.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72517943"
   
 -   Configurez le service DNS (Domain Name Service) ou le service WINS (Windows Internet Name Service). Un serveur DNS ou un serveur WINS doit s'exécuter dans l'environnement où votre cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sera installé. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite un enregistrement DNS dynamique de la référence virtuelle de l'interface IP [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La configuration du serveur DNS doit permettre aux nœuds de cluster d'inscrire dynamiquement une table d'adresses IP en ligne sur le nom du réseau. Si l'enregistrement dynamique ne peut pas être effectué, le programme d'installation échoue et l'installation est restaurée. Pour plus d'informations, consultez [cet article de la base de connaissances](https://support.microsoft.com/kb/947048)  
   
-##  <a name="MSDTC"></a> Installer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
+##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a> Installer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
  Avant d'installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un cluster de basculement, déterminez si la ressource de cluster [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC) doit être créée. Si vous installez uniquement le [!INCLUDE[ssDE](../../../includes/ssde-md.md)], la ressource de cluster MSDTC n'est pas nécessaire. Si vous installez le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et SSIS, les composants de station de travail, ou si vous comptez utiliser les transactions distribuées, vous devez installer MSDTC. Notez que MSDTC n'est pas requis pour les instances d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]uniquement.  
   
  Sur [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], vous pouvez installer plusieurs instances de MSDTC sur un cluster de basculement unique. La première instance de MSDTC installée sera l'instance de cluster par défaut de MSDTC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tirera parti d'une instance de MSDTC installée automatiquement sur le groupe de ressources de cluster local [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant automatiquement l'instance de MSDTC. Toutefois, les applications peuvent être mappées individuellement à toute instance de MSDTC sur le cluster.  
@@ -256,7 +256,7 @@ ms.locfileid: "72517943"
 ### <a name="configure-msconame-distributed-transaction-coordinator"></a>Configurer le coordinateur de transactions distribuées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MSDTC)  
  Une fois que vous avez installé le système d'exploitation et configuré votre cluster, vous devez configurer MSDTC pour qu'il fonctionne dans un cluster à l'aide de l'Administrateur de cluster. L'échec de la mise en cluster de MSDTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MSDTC n'est pas configuré correctement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  

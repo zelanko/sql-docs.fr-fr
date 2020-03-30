@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970352"
 ---
 # <a name="sqlserverstatement-members"></a>Membres de SQLServerStatement
@@ -68,7 +68,7 @@ ms.locfileid: "67970352"
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|Définit le nom de curseur SQL selon la chaîne donnée, qui est exécutée par les méthodes d'exécution suivantes.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|Définit le mode de traitement d'échappement.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|Fournit un conseil au pilote JDBC concernant la direction de traitement des lignes du jeu de résultats.|  
-|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|Fournit un conseil au pilote JDBC concernant le nombre de lignes qui doivent être extraites depuis la base de données, lorsque davantage de lignes sont nécessaires. |  
+|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|Fournit un conseil au pilote JDBC concernant le nombre de lignes qui doivent être extraites depuis la base de données, lorsque davantage de lignes sont nécessaires.|  
 |[setMaxFieldSize](../../../connect/jdbc/reference/setmaxfieldsize-method-sqlserverstatement.md)|Définit le nombre maximal d’octets dans une colonne [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) qui stocke des valeurs de caractères ou binaires selon le nombre d’octets donné.|  
 |[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|Définit la limite du nombre maximal de lignes que tout objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) peut contenir sur le nombre donné.|  
 |[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|Demande qu'une instruction soit regroupée ou non.|  
@@ -83,7 +83,7 @@ ms.locfileid: "67970352"
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

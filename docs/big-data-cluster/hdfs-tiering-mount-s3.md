@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652307"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Guide pratique pour monter S3 pour la hiérarchisation HDFS dans un cluster Big Data
@@ -43,7 +43,7 @@ Ouvrez une invite de commandes sur une machine client pouvant accéder à votre 
    > [!TIP]
    > Pour plus d’informations sur la création de clés d’accès S3, consultez [clés d’accès S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
-## <a id="mount"></a> Monter le stockage HDFS distant
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Monter le stockage HDFS distant
 
 Une fois que vous avez préparé un fichier d’informations d’identification avec les clés d’accès, vous pouvez commencer le montage. Les étapes suivantes permettent de monter le stockage HDFS distant dans S3 vers le stockage HDFS local de votre cluster Big Data.
 
@@ -72,7 +72,7 @@ Une fois que vous avez préparé un fichier d’informations d’identification 
 
 Si le montage a été correctement effectué, vous devez pouvoir interroger les données HDFS et exécuter des tâches Spark sur ces dernières. Il apparaît dans le stockage HDFS de votre cluster Big Data à l’emplacement spécifié par `--mount-path`.
 
-## <a id="status"></a> Obtenir l’état des montages
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Obtenir l’état des montages
 
 Pour répertorier l’état de tous les montages de votre cluster Big Data, utilisez la commande suivante :
 
@@ -94,7 +94,7 @@ L’exemple suivant actualise le montage.
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Supprimer le montage
+## <a name="delete-the-mount"></a><a id="delete"></a> Supprimer le montage
 
 Pour supprimer le montage, utilisez la commande **azdata bdc hdfs mount delete** et spécifiez le chemin de montage dans HDFS :
 

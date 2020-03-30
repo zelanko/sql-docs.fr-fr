@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989464"
 ---
 # <a name="data-source-wizard-screen-4"></a>Assistant Source de données, écran 4
@@ -33,7 +33,7 @@ Si l'option est sélectionnée, les données transférées via les connexions é
 
 ### <a name="trust-server-certificate"></a>Faire confiance au certificat de serveur
 
-Cette option s’applique uniquement si l’option **Utiliser le chiffrement renforcé pour les données** est activée, auquel cas la validation du nom d’hôte de serveur du certificat du serveur et de l’émission par une autorité de certification de confiance échouera. 
+Cette option s’applique uniquement si l’option **Utiliser le chiffrement renforcé pour les données** est activée, Si cette option est sélectionnée, le certificat du serveur n’aura pas le nom d’hôte de serveur correct et ne sera pas émis par une autorité de certification approuvée. 
 
 ### <a name="perform-translation-for-character-data"></a>Traduire les données de type caractère
 

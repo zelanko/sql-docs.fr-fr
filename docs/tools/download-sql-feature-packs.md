@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 ms.openlocfilehash: 3a9c24e046c9fa6dfeba338a28b0aa4ff3a86782
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251344"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Télécharger les fonctionnalités et les outils étendus de SQL Server
@@ -49,7 +49,7 @@ Cet article fournit une brève explication des différents téléchargements et 
 | [Infrastructure d'application de la couche Données SQL Server](https://www.microsoft.com/download/details.aspx?id=56508) | L'Infrastructure d'application de la couche Données (DAC) SQL Server est un composant basé sur le .NET Framework qui fournit des services de cycle de vie des applications pour le développement et la gestion de bases de données. |
 | [Base de langages statistiques pour la recherche sémantique SQL Server](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | La base de données des statistiques linguistiques de sémantique est un composant obligatoire de la fonctionnalité de recherche sémantique statistique dans Microsoft SQL Server. |
 | [Objets de gestion partagée SQL Server](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | SQL Server Management Objects (SMO) est un modèle objet de Microsoft .NET Framework qui permet aux développeurs de logiciels de créer des applications côté client qui gèrent et administrent les objets et les services SQL Server. |
-| [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | Le package SQL Server System CLR Types contient les composants nécessaires à l’implémentation des types d’ID geometry, geography et hierarchy id dans SQL Server. **Remarque : Ce composant requiert également [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** . |
+| [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | Le package SQL Server System CLR Types contient les composants nécessaires à l’implémentation des types d’ID geometry, geography et hierarchy id dans SQL Server. **Remarque : ce composant requiert également [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** . |
 | [Extensions Windows PowerShell pour Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | Les extensions Microsoft Windows PowerShell pour SQL Server incluent un fournisseur et un ensemble d'applets de commande qui permettent aux administrateurs et aux développeurs de créer des scripts PowerShell pour gérer des instances de SQL Server. |
 |||
 

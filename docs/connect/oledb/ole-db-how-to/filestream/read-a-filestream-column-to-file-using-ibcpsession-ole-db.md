@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015600"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lire une colonne FILESTREAM dans un fichier à l'aide d'IBCPSession (OLE DB)
@@ -26,7 +26,7 @@ ms.locfileid: "68015600"
   
  Pour plus d'informations sur la fonctionnalité filestream, consultez [Prise en charge de FILESTREAM](../../../oledb/features/filestream-support.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
  Utilisez l'un des exemples suivants pour créer la table à partir de laquelle cet exemple lit :  

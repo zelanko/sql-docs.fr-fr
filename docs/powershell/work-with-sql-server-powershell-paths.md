@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68121353"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utiliser des chemins d'accès PowerShell SQL Server
@@ -35,7 +35,7 @@ Après avoir accédé à un nœud dans un chemin de fournisseur du [!INCLUDE[ssD
   
  Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est utilisé pour gérer les objets dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Il n'est pas utilisé pour travailler avec les données de bases de données. Si vous avez accédé à une table ou une vue, vous ne pouvez pas utiliser le fournisseur pour sélectionner, insérer, mettre à jour ou supprimer des données. Utilisez l’applet de commande **Invoke-Sqlcmd** pour interroger ou modifier des données dans des tables et des vues à partir de l’environnement Windows PowerShell. Pour plus d’informations, consultez [Invoke-Sqlcmd (applet de commande)](invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Affichage de la liste des méthodes et des propriétés  
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> Affichage de la liste des méthodes et des propriétés  
  **Affichage de la liste des méthodes et des propriétés**  
   
  Pour afficher les méthodes et propriétés disponibles pour des objets ou classes d’objets spécifiques, utilisez l’applet de commande **Get-Member** .  
@@ -65,7 +65,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> Utilisation des méthodes et des propriétés  
+##  <a name="using-methods-and-properties"></a><a name="UsePropMeth"></a> Utilisation des méthodes et des propriétés  
  **Utilisation des méthodes et des propriétés SMO**  
   
  Pour effectuer un travail sur les objets d'un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../includes/ssde-md.md)] , vous pouvez utiliser les méthodes et les propriétés SMO.  

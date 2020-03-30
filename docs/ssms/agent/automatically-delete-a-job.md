@@ -20,10 +20,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 08384619502a5fdd3452f90e30ba994d3780c578
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255738"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
@@ -49,12 +49,12 @@ Les réponses à un travail garantissent que les administrateurs de base de donn
   
     Utilisez cette réponse à un travail si vous êtes certain de ne plus avoir besoin d'exécuter ce travail à nouveau.  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-automatically-delete-a-job"></a>Pour supprimer automatiquement un travail  
   
@@ -72,7 +72,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
     -   Cliquez sur **Lorsque le travail est terminé** pour supprimer le travail quel que soit son état d'achèvement.  
   
-## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 **Pour supprimer automatiquement un travail**  
   
 Utilisez la propriété **DeleteLevel** de la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

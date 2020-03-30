@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 411d03198633354169e7faf8f5693685e078f2fa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75239154"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
@@ -46,10 +46,10 @@ Lors de la création de travaux de [!INCLUDE[msCoName](../../includes/msconame_m
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
 Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Pour définir un flux en cas de réussite ou d'échec de l'étape de travail  
   
@@ -77,7 +77,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 9. Si la liste **Exécuter en tant qu'utilisateur** est disponible, sélectionnez le compte proxy ayant les informations d'identification que le travail utilisera.  
   
-## <a name="TSQL"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Pour définir un flux en cas de réussite ou d'échec de l'étape de travail  
   
@@ -101,7 +101,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 Pour plus d’informations, consultez [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
-## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 **Pour définir un flux en cas de réussite ou d'échec de l'étape de travail**  
   
 Utilisez la classe **JobStep** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

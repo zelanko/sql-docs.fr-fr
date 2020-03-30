@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70911328"
 ---
 # <a name="pdf-device-information-settings"></a>Paramètres d'informations de périphérique PDF
@@ -28,7 +28,6 @@ ms.locfileid: "70911328"
 |**ColumnSpacing**|Espacement entre les colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
 |**DpiX**|Résolution du périphérique de sortie sur l'axe x.|  
 |**DpiY**|Résolution du périphérique de sortie sur l'axe y.|  
-|**EmbedFonts**|Indique s’il faut incorporer des polices dans le fichier PDF, dont la taille est supérieure, mais les polices de rapport sont restituées correctement pour tous les clients. La valeur **None** désactive l’incorporation des polices.|  
 |**EndPage**|Dernière page du rapport à restituer. La valeur par défaut correspond à la valeur définie pour **StartPage**.|  
 |**HumanReadablePDF**|Indique s’il faut restituer un fichier PDF décompressé, plus volumineux, mais plus facile à lire par l’utilisateur dans un éditeur de texte brut. La valeur par défaut est **false**.|  
 |**MarginBottom**|Valeur de marge inférieure, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  

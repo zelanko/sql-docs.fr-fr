@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: b1db107bc9d426036f5831ad8f49f5fc5f7edddc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306994"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option replay (outil d'administration Distributed Replay)
@@ -93,7 +93,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Le paramètre **-d** spécifie l’emplacement du fichier intermédiaire sur le contrôleur, `c:\WorkingDir`.  
   
--   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : L'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
+-   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : l'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
   
 -   Le paramètre **-w** spécifie que les ordinateurs `client1` à `client4` participent en tant que clients à la relecture distribuée.  
   

@@ -13,10 +13,10 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1a0c969bf5e1964446ac9ffd3d9abe12bb90b89
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893404"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Scripts et PowerShell avec Reporting Services
@@ -61,7 +61,7 @@ ms.locfileid: "68893404"
   
 -   Pour obtenir des exemples supplémentaires de script, d'application et d'extension, consultez les [exemples de produit SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Écrire des scripts pour les tâches d'administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [Écrire des scripts avec l'utilitaire rs.exe et le service Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  

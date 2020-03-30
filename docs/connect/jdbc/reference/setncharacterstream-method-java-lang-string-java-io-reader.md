@@ -11,10 +11,10 @@ ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973872"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>Méthode setNCharacterStream (java.lang.String, java.io.Reader)
@@ -33,7 +33,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
 #### <a name="parameters"></a>Paramètres  
  *parameterName*  
   
- **Chaîne** indiquant le nom du paramètre.  
+ Valeur **chaîne** qui indique le nom du paramètre.  
   
  *value*  
   

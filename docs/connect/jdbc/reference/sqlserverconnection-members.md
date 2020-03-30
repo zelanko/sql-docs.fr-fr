@@ -11,10 +11,10 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971720"
 ---
 # <a name="sqlserverconnection-members"></a>Membres de SQLServerConnection
@@ -60,7 +60,7 @@ ms.locfileid: "67971720"
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|Récupère la capacité actuelle de mise en attente des objets [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) créés à l’aide de cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|Récupère un objet [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) contenant des métadonnées sur la base de données pour laquelle cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) représente une connexion.|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|Retourne la valeur de la propriété de connexion **serverPreparedStatementDiscardThreshold**.|  
-|[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|Retourne le nombre actuel de handles d’instructions préparées regroupées.|  
+|[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|Retourne le nombre actuel de handles d’instruction préparée regroupés.|  
 |[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|Retourne la taille du cache d’instructions préparées pour cette connexion.|  
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|Récupère le niveau d’isolation actuel de la transaction de cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|Récupère l’objet Map associé à cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  

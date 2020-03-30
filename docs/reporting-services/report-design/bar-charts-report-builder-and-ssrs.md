@@ -9,10 +9,10 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 31749e321ac89d02a046a1bd6d67139bc476c110
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081476"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "77081476"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutoriel : Ajouter un graphique à barres à un rapport](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres dans un rapport](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

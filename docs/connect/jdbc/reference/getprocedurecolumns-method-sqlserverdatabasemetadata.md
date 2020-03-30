@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980752"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Méthode getProcedureColumns (SQLServerDatabaseMetaData)
@@ -94,7 +94,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Chaîne**|Nom d'une collection de schémas XML. Si le nom est introuvable, la chaîne est vide.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Chaîne**|Nom du catalogue qui contient le type défini par l'utilisateur (UDT).|  
 |SS_XML_SCHEMACOLLECTION_NAME|**Chaîne**|Nom du schéma qui contient le type défini par l'utilisateur (UDT).|  
-|SS_DATA_TYPE|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé par les procédures stockées étendues.<br /><br /> <br /><br /> **Remarque :** Pour plus d’informations sur les types de données retournés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez « Types de données (Transact-SQL) » dans la Documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|SS_DATA_TYPE|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé par les procédures stockées étendues.<br /><br /> <br /><br /> **Remarque** : Pour plus d’informations sur les types de données retournés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez la rubrique « Types de données (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getProcedureColumns, consultez la rubrique « sp_sproc_columns (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
