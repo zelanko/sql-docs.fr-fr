@@ -11,10 +11,10 @@ ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970854"
 ---
 # <a name="sqlserverpooledconnection-class"></a>Classe SQLServerPooledConnection
@@ -35,10 +35,10 @@ ms.locfileid: "67970854"
 public final class SQLServerPoolingDataSource  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La classe SQLServerPooledConnection fournit les méthodes permettant au gestionnaire de regroupement de connexions de gérer le regroupement de connexions. En général, les applications n'instancient pas ces connexions directement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerPooledConnection, membres](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
  [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

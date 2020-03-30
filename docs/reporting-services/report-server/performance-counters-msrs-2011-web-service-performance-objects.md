@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893455"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Compteurs de performances - Service web MSRS 2011, objets de performance
@@ -41,7 +41,7 @@ ms.locfileid: "68893455"
   
 -   [Utiliser des applets de commande PowerShell pour retourner des listes](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Compteurs de performance du service Web MSRS 2011  
+##  <a name="msrs-2011-web-service-performance-counters"></a><a name="bkmk_webservice"></a> Compteurs de performance du service Web MSRS 2011  
  L'objet de performance **MSRS 2011 Web Service** contrôle les performances du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement du serveur de rapports initialisé en général via des opérations de consultation du rapport interactives. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques. Ces compteurs sont réinitialisés à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
   
  Le tableau suivant répertorie les compteurs inclus dans l'objet de performance **MSRS 2011 Web Service** .  
@@ -71,7 +71,7 @@ ms.locfileid: "68893455"
 |**Total des rapports exécutés**|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
 |**Total de requêtes**|Nombre total des demandes envoyées au serveur de rapports après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
   
-##  <a name="bkmk_windowsservice"></a> Compteurs de performance du service Windows MSRS 2011  
+##  <a name="msrs-2011-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> Compteurs de performance du service Windows MSRS 2011  
  L'objet de performance **MSRS 2011 Windows Service** contrôle le service Windows du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées peuvent englober l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques.  
   
  Le tableau suivant répertorie les compteurs inclus dans l'objet de performance **MSRS 2011 Windows Service** .  
@@ -110,7 +110,7 @@ ms.locfileid: "68893455"
 |**Total de requêtes**|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est remis à zéro lorsque le domaine d'application se recycle.|  
 |**Total des mises à jour d’instantanés**|Nombre total de mises à jour d'instantanés d'exécution de rapport.|  
   
-##  <a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
  ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr » :  
   
 ```  

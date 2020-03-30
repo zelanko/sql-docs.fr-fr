@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571594"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
@@ -54,7 +54,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Pour ouvrir le Concepteur d’alertes de données, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport. Si vous ne voyez pas l’option **Nouvelle alerte de données** , cela signifie que le rapport n’est pas configuré pour utiliser les informations d’identification stockées. Vous pouvez mettre à jour le type d'informations d'identification en mettant à jour la source des données de rapport depuis la bibliothèque SharePoint.  
   
-##  <a name="AlertDesigner"></a> Interface utilisateur du Concepteur d'alertes de données  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> Interface utilisateur du Concepteur d'alertes de données  
  Le Concepteur d'alertes de données est divisé en zones. La zone où vous sélectionnez le flux des données de rapport, la zone où vous créez des conditions simples ou complexes en ajoutant des règles aux conditions, et ainsi de suite. L'image suivante affiche les zones du Concepteur d'alertes de données.  
   
  ![Zones dans l'interface utilisateur du Concepteur d’alertes](../reporting-services/media/rs-alertdesigner.gif "Zones dans l'interface utilisateur du Concepteur d’alertes")  
@@ -176,7 +176,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Pour plus d’informations sur la façon dont l’e-mail est généré, consultez [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="CreateAlert"></a> Créer une définition d'alerte de données  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> Créer une définition d'alerte de données  
  Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport en utilisant des valeurs de paramètre différentes pour vous assurer que les données qui vous intéressent s'affichent dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
   
  ![Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d'alertes à partir de la bibliothèque SharePoint")  
@@ -184,7 +184,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
  Pour plus d’informations, consultez [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="SaveAlert"></a> Enregistrer une définition d'alerte de données  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> Enregistrer une définition d'alerte de données  
  Le Concepteur d'alertes de données affiche l'URL du site où la définition d'alerte de données sera enregistrée. Les définitions d'alerte de données sont toujours enregistrées sur le même site en tant que rapports.  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
  Avant que la définition d'alerte soit enregistrée, elle est validée. Vous devez corriger toutes les erreurs avant de pouvoir enregistrer la définition d'alerte. Pour plus d’informations, consultez [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="EditAlert"></a> Modifier une définition d'alerte de données  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> Modifier une définition d'alerte de données  
  Une fois que vous avez enregistré votre définition d'alerte de données, vous pouvez la rouvrir pour la modifier dans le Concepteur d'alertes de données. Vous pouvez ajouter, modifier ou supprimer des règles et des clauses et modifier la planification et les paramètres des courriers électroniques. Si le flux de données du rapport utilisé par l'alerte a changé et ne contient plus les champs référencés par les règles de l'alerte, ou si les types de données ou d'autres métadonnées des champs ont été modifiés, la définition d'alerte n'est plus valide et vous devez la corriger avant de pouvoir l'enregistrer de nouveau. Si vous souhaitez utiliser un flux de données différent, vous devez créer une nouvelle définition d'alerte.  
   
  Pour modifier une définition d’alerte de données, cliquez avec le bouton droit dans le Gestionnaire des alertes de données et sélectionnez **Modifier**. L'image suivante montre le menu contextuel d'une alerte de données dans le Gestionnaire des alertes de données.  
@@ -203,7 +203,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
  Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
-##  <a name="HowTo"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures qui vous indiquent comment créer et modifier des alertes.  
   
 -   [Modifier une alerte de données dans le concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244289"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
@@ -67,7 +67,7 @@ Lorsque vous exécutez des tests unitaires sur un ordinateur de build, les tests
   
 Pour résoudre ces problèmes, vous devez spécifier une section de remplacement dans le fichier app.config qui remplace le fichier app.config par un fichier de configuration spécifique à l'environnement Team Foundation Build. Pour plus d'informations, consultez [Modifier le projet de test](#ModifyTestProject) plus loin dans cette rubrique.  
   
-## <a name="ConfigureX64"></a>Configurer les paramètres de test pour exécuter des tests unitaires SQL Server sur un agent de build x64  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>Configurer les paramètres de test pour exécuter des tests unitaires SQL Server sur un agent de build x64  
 Pour pouvoir exécuter des tests unitaires sur un agent de build x64, vous devez configurer les paramètres de test de façon à modifier la plateforme de processus hôte.  
   
 #### <a name="to-specify-the-host-process-platform"></a>Pour spécifier la plateforme de processus hôte  
@@ -84,7 +84,7 @@ Pour pouvoir exécuter des tests unitaires sur un agent de build x64, vous devez
   
 5.  Cliquez sur **Appliquer**.  
   
-## <a name="CreateATestList"></a>Affecter des tests à une catégorie de test (facultatif)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>Affecter des tests à une catégorie de test (facultatif)  
 En règle générale, lorsque vous créez une définition de build pour effectuer des tests unitaires, vous spécifiez une ou plusieurs catégories de test. Tous les tests des catégories spécifiées sont exécutés lors de l'exécution de la build.  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>Pour affecter des tests à une catégorie de test  
@@ -101,7 +101,7 @@ En règle générale, lorsque vous créez une définition de build pour effectue
   
     La nouvelle catégorie de test sera affectée à votre test et disponible pour les autres tests par le biais de leurs propriétés.  
   
-## <a name="ModifyTestProject"></a>Modifier le projet de test  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>Modifier le projet de test  
 Par défaut, Team Foundation Build crée un fichier de configuration à partir du fichier app.config du projet lorsqu'il génère le projet de tests unitaires. Le chemin d'accès au projet de base de données est stocké en tant que chemin d'accès relatif dans le fichier app.config. Les chemins d'accès relatifs qui fonctionnent dans Visual Studio ne fonctionneront pas, car Team Foundation Build place les fichiers créés à différents emplacements relatifs dans lesquels vous exécutez des tests unitaires. En outre, le fichier app.config contient les chaînes de connexion qui spécifient la base de données à tester. Vous avez également besoin d'un fichier app.config distinct pour Team Foundation Build si les tests unitaires doivent se connecter à une base de données différente de celle utilisée lorsque le projet de test a été créé. En apportant les modifications dans la procédure suivante, configurez le projet de test et le serveur de build de façon à ce que Team Foundation Build utilise une autre configuration.  
   
 > [!IMPORTANT]  
@@ -205,7 +205,7 @@ Par défaut, Team Foundation Build crée un fichier de configuration à partir d
   
     Ensuite, archivez votre solution dans le contrôle de version.  
   
-## <a name="CheckInTheTestList"></a>Archiver la solution  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>Archiver la solution  
 Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichiers incluent le fichier de métadonnées de test de votre solution, qui contient les associations de catégorie de test et les tests. Chaque fois que vous ajoutez, supprimez, réorganisez ou modifier le contenu des tests, votre fichier de métadonnées de test est automatiquement mis à jour pour refléter ces modifications.  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
     Les tests sont disponibles dans Team Foundation Build. Vous pouvez à présent créer une définition de build qui contient les tests à exécuter.  
   
-## <a name="CreateBuildDef"></a>Créer une définition de build  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>Créer une définition de build  
   
 #### <a name="to-create-a-build-definition"></a>Pour créer une définition de build  
   
@@ -268,7 +268,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
     Vous avez créé une définition de build. Ensuite, modifiez le projet de test.  
   
-## <a name="RunBuild"></a>Exécuter la nouvelle définition de build  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>Exécuter la nouvelle définition de build  
   
 #### <a name="to-run-the-new-build-type"></a>Pour exécuter le nouveau type de build  
   

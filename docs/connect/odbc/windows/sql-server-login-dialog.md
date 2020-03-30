@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
 ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989421"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Compte de connexion SQL Server, boîte de dialogue (ODBC)
@@ -100,7 +100,7 @@ Lorsque cette option est sélectionnée, les données transmises via la connexio
 
 ### <a name="trust-server-certificate"></a>Faire confiance au certificat de serveur
 
-Cette option s’applique uniquement si l’option **Utiliser le chiffrement renforcé pour les données** est activée. Si cette option est sélectionnée, le certificat du serveur n’aura pas le nom d’hôte de serveur correct et ne sera pas émis par une autorité de certification approuvée.
+Cette option s’applique uniquement si l’option **Utiliser le chiffrement renforcé pour les données** est activée, Si cette option est sélectionnée, le certificat du serveur n’aura pas le nom d’hôte de serveur correct et ne sera pas émis par une autorité de certification approuvée.
 
 ## <a name="see-also"></a>Voir aussi
 

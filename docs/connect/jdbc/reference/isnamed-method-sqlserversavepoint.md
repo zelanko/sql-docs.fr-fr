@@ -16,10 +16,10 @@ ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccf64f404926f2fa2c27d6fd3d3d0f417d93619c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977552"
 ---
 # <a name="isnamed-method-sqlserversavepoint"></a>Méthode isNamed (SQLServerSavepoint)
@@ -37,7 +37,7 @@ public boolean isNamed()
 ## <a name="return-value"></a>Valeur de retour  
  **true** si le point de sauvegarde est nommé. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerSavepoint, méthodes](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   
  [SQLServerSavepoint, membres](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
  [SQLServerSavepoint, classe](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  

@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256993"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorisations nécessaires pour SQL Server Data Tools
@@ -35,7 +35,7 @@ Avant d'exécuter une action sur une base de données dans Visual Studio, vous d
   
 -   [Autorisations nécessaires pour les projets SQL Server Common Language Runtime (SQL CLR)](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>Autorisations nécessaires pour créer ou déployer une base de données  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Autorisations nécessaires pour créer ou déployer une base de données  
 Vous devez disposer des autorisations suivantes pour créer ou déployer une base de données.  
   
 |||  
@@ -51,10 +51,10 @@ Vous devez disposer des autorisations suivantes pour créer ou déployer une bas
   
 Pour plus d'informations, consultez la documentation en ligne de SQL Server.  
   
-## <a name="DatabaseRefactoringPermissions"></a>Autorisations nécessaires pour refactoriser une base de données  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>Autorisations nécessaires pour refactoriser une base de données  
 La *refactorisation de base de données* se produit uniquement dans le projet de base de données. Vous devez disposer des autorisations nécessaires pour utiliser le projet de base de données. Aucune autorisation n'est nécessaire sur une base de données cible jusqu'à ce que vous y déployiez des modifications.  
   
-## <a name="DatabaseUnitTestingPermissions"></a>Autorisations nécessaires pour exécuter des tests unitaires sur une base de données SQL Server  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Autorisations nécessaires pour exécuter des tests unitaires sur une base de données SQL Server  
 Vous devez disposer des autorisations suivantes pour exécuter des tests unitaires sur une base de données.  
   
 |||  
@@ -66,10 +66,10 @@ Vous devez disposer des autorisations suivantes pour exécuter des tests unitair
 |Déployer les modifications de la base de données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
 |Générer des données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
-## <a name="DataGenerationPermissions"></a>Autorisations nécessaires pour générer des données  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Autorisations nécessaires pour générer des données  
 Vous devez disposer des autorisations **INSERT** et **SELECT** sur les objets de la base de données cible pour générer les données de test en utilisant le générateur de données. Si vous supprimez des données avant de générer des données, vous devez également disposer des autorisations **DELETE** sur les objets de la base de données cible. Pour réinitialiser la colonne **IDENTITY** dans une table, vous devez être propriétaire de la table ou être membre du rôle db_owner ou db_ddladmin.  
   
-## <a name="SchemaAndDataComparePermissions"></a>Autorisations nécessaires pour comparer les schémas et les données  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Autorisations nécessaires pour comparer les schémas et les données  
 Vous devez disposer des autorisations suivantes pour comparer des schémas ou des données.  
   
 |||  
@@ -82,10 +82,10 @@ Vous devez disposer des autorisations suivantes pour comparer des schémas ou de
   
 Pour plus d'informations, consultez la documentation en ligne de SQL Server.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Autorisations nécessaires pour exécuter l’éditeur Transact\-SQL  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Autorisations nécessaires pour exécuter l’éditeur Transact\-SQL  
 Les opérations réalisables dans l'éditeur Transact\-SQL sont déterminées par le contexte d'exécution dans la base de données cible.  
   
-## <a name="SQLCLRPermissions"></a>Autorisations nécessaires pour les projets SQL Server Common Language Runtime  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>Autorisations nécessaires pour les projets SQL Server Common Language Runtime  
 Le tableau suivant répertorie les autorisations nécessaires pour déployer ou déboguer des projets CLR :  
   
 |Actions|Autorisations requises|  

@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580102"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
@@ -86,7 +86,7 @@ ms.locfileid: "65580102"
   
 -   Les parties de rapports utilisent les mêmes stratégies d’autorisation que le type d’élément « Resource » existant. Dans un dossier, il n'y a aucune différenciation entre les éléments de ressource traditionnels et les parties de rapports, du point de vue de l'héritage de la sécurité. La partie de rapport héritera de la même stratégie d'autorisation que les images qui figurent dans le même dossier. Lorsque cette distinction est nécessaire, la sécurité au niveau des éléments peut être configurée pour les parties de rapports souhaitées. Sinon, vous pouvez placer les parties de rapports dans des dossiers séparés avec les autorisations appropriées configurées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   

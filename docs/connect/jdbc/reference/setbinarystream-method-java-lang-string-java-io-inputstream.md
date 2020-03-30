@@ -11,10 +11,10 @@ ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a286c4d6c8b44482c254e7fe30b84836283df0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975131"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>Méthode setBinaryStream (java.lang.String, java.io.InputStream)
@@ -42,10 +42,10 @@ public void setBinaryStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream de l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

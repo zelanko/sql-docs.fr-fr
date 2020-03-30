@@ -12,10 +12,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058833"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Installer Microsoft ODBC Driver for SQL Server (Linux)
@@ -24,7 +24,7 @@ Cet article explique comment installer Microsoft ODBC Driver for SQL Server sur 
 
 Cet article fournit des commandes pour installer le pilote ODBC à partir de l’interpréteur de commandes bash. Si vous souhaitez télécharger les packages directement, consultez [Télécharger ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md).
 
-## <a id="17"></a> Microsoft ODBC 17
+## <a name="microsoft-odbc-17"></a><a id="17"></a> Microsoft ODBC 17
 
 Les sections suivantes expliquent comment installer le pilote Microsoft ODBC 17 à partir de l’interpréteur de commandes bash pour différentes distributions de Linux.
 
@@ -37,7 +37,7 @@ Les sections suivantes expliquent comment installer le pilote Microsoft ODBC 17
 > [!IMPORTANT]
 > Si vous avez installé le package `msodbcsql` v17 qui n’a pas été disponible longtemps, vous devez le supprimer avant d’installer le package `msodbcsql17`. Cette opération évitera les conflits. Le package `msodbcsql17` peut être installé côte à côte avec le package `msodbcsql` v13.
 
-### <a id="alpine17"></a> Alpine Linux
+### <a name="alpine-linux"></a><a id="alpine17"></a> Alpine Linux
 
 ```bash
 #Download the desired package(s)
@@ -62,7 +62,7 @@ sudo apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk
 > [!NOTE]
 > Le pilote version 17.5 ou ultérieure est requise pour la prise en charge d’Alpine.
 
-### <a id="debian17"></a> Debian
+### <a name="debian"></a><a id="debian17"></a> Debian
 
 ```bash
 sudo su
@@ -97,7 +97,7 @@ sudo apt-get install libgssapi-krb5-2
 > [!NOTE]
 > Vous pouvez remplacer la variable d’environnement 'ACCEPT_EULA' par la variable debconf 'msodbcsql/ACCEPT_EULA' : `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
-### <a id="redhat17"></a> Red Hat Enterprise Server et Oracle Linux
+### <a name="red-hat-enterprise-server-and-oracle-linux"></a><a id="redhat17"></a> Red Hat Enterprise Server et Oracle Linux
 
 ```bash
 sudo su
@@ -126,7 +126,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a id="suse17"></a> SUSE Linux Enterprise Server
+### <a name="suse-linux-enterprise-server"></a><a id="suse17"></a> SUSE Linux Enterprise Server
 
 ```bash
 sudo su
@@ -157,7 +157,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ```
 
-### <a id="ubuntu17"></a> Ubuntu
+### <a name="ubuntu"></a><a id="ubuntu17"></a> Ubuntu
 
 ```bash
 sudo su
@@ -202,7 +202,7 @@ Les sections suivantes fournissent des instructions pour l’installation des ve
 - [Pilote Microsoft ODBC 13 for SQL Server](#13)
 - [Pilote Microsoft ODBC 11 for SQL Server](#11)
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 Les sections suivantes expliquent comment installer le pilote Microsoft ODBC 13.1 à partir de l’interpréteur de commandes bash pour différentes distributions de Linux.
 
@@ -344,7 +344,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-## <a id="13"></a> ODBC 13
+## <a name="odbc-13"></a><a id="13"></a> ODBC 13
 
 Les sections suivantes expliquent comment installer le pilote Microsoft ODBC 13 à partir de l’interpréteur de commandes bash pour différentes distributions de Linux.
 
@@ -468,7 +468,7 @@ Une fois l’installation du package terminée, vous pouvez vérifier que [!INCL
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
 
-## <a id="11"></a> ODBC 11
+## <a name="odbc-11"></a><a id="11"></a> ODBC 11
 
 Les sections suivantes expliquent comment installer le pilote Microsoft ODBC 11 sur Linux. Avant d’utiliser le pilote, installez le Gestionnaire de pilotes unixODBC. Pour plus d’informations, consultez [Installation du Gestionnaire de pilotes](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
@@ -519,7 +519,7 @@ Le pilote ODBC sur Linux est constitué des composants suivants :
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X ou libmsodbcsql-13.X.so.X.X|Fichier bibliothèque dynamique (`so`) d’objets partagés contenant l’ensemble des fonctionnalités du pilote. Ce fichier est installé dans `/opt/microsoft/msodbcsql17/lib64/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/lib64/` pour Driver 13.|  
 |`msodbcsqlr17.rll` ou `msodbcsqlr13.rll`|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  Vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h est installé dans `/opt/microsoft/msodbcsql17/include/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/include/` pour Driver 13. |
+|msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h est installé dans `/opt/microsoft/msodbcsql17/include/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/include/` pour Driver 13. |
 |LICENSE.txt|Fichier texte qui contient les termes du contrat de licence utilisateur final. Ce fichier est placé dans `/usr/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/share/doc/msodbcsql/` pour Driver 13.|
 |RELEASE_NOTES|Fichier texte qui contient les notes de publication. Ce fichier est placé dans `/usr/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/share/doc/msodbcsql/` pour Driver 13.|
 

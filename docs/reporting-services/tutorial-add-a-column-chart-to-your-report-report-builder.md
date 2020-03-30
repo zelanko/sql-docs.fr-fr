@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041317"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
@@ -35,7 +35,7 @@ Durée estimée pour effectuer ce didacticiel : 15 minutes.
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Créer un rapport de graphique à partir de l'Assistant Graphique  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Créer un rapport de graphique à partir de l'Assistant Graphique  
 Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset incorporé, choisir une source de données partagée et créer un histogramme.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
 9. Cliquez sur **Suivant**.  
   
-## <a name="ChartType"></a>2. Choisir le type de graphique  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Choisir le type de graphique  
 Vous pouvez choisir parmi plusieurs types de graphiques prédéfinis, puis modifier le graphique après avoir terminé l’Assistant.  
   
 ### <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
@@ -114,7 +114,7 @@ Vous pouvez choisir parmi plusieurs types de graphiques prédéfinis, puis modif
 
 Notez que le graphique n’étiquette pas chaque catégorie sur l’axe horizontal. Par défaut, seules sont incluses les étiquettes qui n'empiètent pas sur l'axe. 
   
-## <a name="Horizontal"></a>3. Mettre en forme une date sur l’axe horizontal  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3. Mettre en forme une date sur l’axe horizontal  
 Par défaut, l'axe horizontal affiche les valeurs dans un format général qui est mis à l'échelle automatiquement pour s'ajuster à la taille du graphique.  
   
 1.  Basculez en mode création de rapport.  
@@ -159,7 +159,7 @@ Sur le graphique, les étiquettes pivotent.
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5. Déplacer la légende  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Déplacer la légende  
 La légende est créée automatiquement à partir des données de catégories et de séries. Vous pouvez déplacer la légende sous la zone de graphique d’un histogramme.  
   
 1.  Basculez en mode création de rapport.  
@@ -176,7 +176,7 @@ La légende est créée automatiquement à partir des données de catégories et
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="ChartTitle"></a>6. Intituler le graphique  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Intituler le graphique  
     
 1.  Basculez en mode création de rapport.  
   
@@ -184,7 +184,7 @@ La légende est créée automatiquement à partir des données de catégories et
   
 3.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Vertical"></a>7. Mettre en forme et étiqueter l'axe vertical  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7. Mettre en forme et étiqueter l'axe vertical  
 Par défaut, l'axe vertical affiche les valeurs dans un format général qui est mis à l'échelle automatiquement pour s'ajuster à la taille du graphique.   
   
 1.  Basculez en mode création de rapport.  
@@ -235,7 +235,7 @@ Vous remarquerez que seuls certaines des étiquettes sur l’axe x sont affiché
     
     Le graphique affiche maintenant toutes ses étiquettes.
   
-## <a name="Average"></a>9. Ajouter une moyenne mobile avec une série calculée  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9. Ajouter une moyenne mobile avec une série calculée  
 
 Une moyenne mobile est une moyenne des données de votre série, calculée au fil du temps. La moyenne mobile peut identifier des tendances.
   
@@ -261,7 +261,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10. Ajouter un titre de rapport  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Ajouter un titre de rapport  
   
 1.  Basculez en mode création de rapport.  
   
@@ -283,7 +283,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 7.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Save"></a>11. Enregistrer le rapport  
+## <a name="11-save-the-report"></a><a name="Save"></a>11. Enregistrer le rapport  
   
 ### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   

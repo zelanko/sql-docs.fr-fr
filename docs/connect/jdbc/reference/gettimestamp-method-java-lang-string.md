@@ -16,10 +16,10 @@ ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 999cfba0f0bd98bfc7e13f436303160ef66962b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978728"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>Méthode getTimestamp (java.lang.String)
@@ -40,7 +40,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
  Valeur **chaîne** qui contient le nom du paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Objet Timestamp.  
+ Un objet Timestamp.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -48,7 +48,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 ## <a name="remarks"></a>Notes  
  Cette méthode getTimestamp est spécifiée par la méthode getTimestamp de l’interface java.sql.CallableStatement.  
   
- Cette méthode retourne des valeurs seulement à partir des colonnes **datetime** et **smalldatetime** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Cette méthode retourne des valeurs seulement à partir des colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**et**smalldatetime**de**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTimestamp, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

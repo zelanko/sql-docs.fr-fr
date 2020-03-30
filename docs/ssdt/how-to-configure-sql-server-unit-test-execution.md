@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241568"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procédure : configurer l'exécution de test unitaire SQL Server
@@ -32,7 +32,7 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
     > [!NOTE]  
     > Les tests ne s'exécutent pas dans le dossier de la solution, mais dans un dossier distinct sur le disque dur. Bien que vous puissiez configurer tous les aspects du déploiement de test, en général vous n'avez pas besoin de les configurer pour les tests unitaires. Pour plus d'informations sur le déploiement de test, consultez [Exécution de tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
-## <a name="SpecifyConnectionStrings"></a>Spécifier des chaînes de connexion  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Spécifier des chaînes de connexion  
   
 #### <a name="to-specify-database-connection-strings"></a>Pour spécifier les chaînes de connexion de base de données  
   
@@ -54,7 +54,7 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
   
 4.  Régénérez le projet de test pour appliquer les modifications de configuration.  
   
-## <a name="DeployingDBSchema"></a>Déployer un schéma de base de données  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>Déployer un schéma de base de données  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>Pour déployer dans une base de données le schéma d'un projet de base de données  
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285863"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
@@ -79,7 +79,7 @@ Pour ODBC Driver 17, les données SQLCHAR dans un des jeux de caractères/encod
 >
 > Pour plus d’informations, consultez [Différences fonctionnelles par rapport à glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
-|Nom|Description|
+|Name|Description|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latin US|
@@ -122,13 +122,13 @@ Il existe certaines différences de conversion d’encodage entre Windows et plu
 
 Dans ODBC Driver 13 et 13.1, quand des caractères multioctets UTF-8 ou des substituts UTF-16 sont répartis entre les mémoires tampons SQLPutData, les données sont altérées. Utilisez des mémoires tampons pour diffuser en continu les SQLPutData qui ne se terminent pas dans des encodages de caractères partiels. Cette restriction a été supprimée avec ODBC Driver 17.
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 À partir de la version 17.4, le pilote charge OpenSSL de manière dynamique, ce qui lui permet de s’exécuter sur des systèmes dotés de la version 1.0 ou 1.1 sans avoir besoin de fichiers de pilote distincts. Lorsqu’il y a plusieurs versions d’OpenSSL, le pilote tente de charger la dernière version. Le pilote prend actuellement en charge OpenSSL 1.0.x et 1.1.x
 
 > [!NOTE]  
 > Un conflit potentiel peut se produire si l’application qui utilise le pilote (ou l’un de ses composants) est liée à une version différente d’OpenSSL ou la charge dynamiquement. S’il y a plusieurs versions d’OpenSSL sur le système et que l’application l’utilise, il est fortement recommandé de s’assurer que la version chargée par l’application et le pilote ne sont pas incompatibles, car les erreurs peuvent corrompre la mémoire et, par conséquent, ne pas forcément se manifester de manière évidente ou cohérente.
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 Au moment de la rédaction de cet article, la taille de la pile par défaut dans MUSL est de 128 Ko, ce qui est suffisant pour les fonctionnalités de base du pilote ODBC. Toutefois, en fonction de ce que fait l’application, cette limite peut être facilement dépassée, en particulier lorsque le pilote est appelé à partir de plusieurs threads. Il est recommandé de compiler une application ODBC sur Alpine Linux avec `-Wl,-z,stack-size=<VALUE IN BYTES>` pour augmenter la taille de la pile. Pour référence, la taille de la pile par défaut sur la plupart des systèmes GLIBC est de 2 Mo.
 
 ## <a name="additional-notes"></a>Remarques supplémentaires  

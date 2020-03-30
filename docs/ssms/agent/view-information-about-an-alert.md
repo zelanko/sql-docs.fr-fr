@@ -19,10 +19,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 52c53a90befe99862cbac6b5b76810be0a79924a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257814"
 ---
 # <a name="view-information-about-an-alert"></a>Afficher les informations relatives à une alerte
@@ -34,14 +34,14 @@ ms.locfileid: "75257814"
 
 Cette rubrique explique comment afficher des informations relatives aux alertes [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Avant de commencer  
   
-### <a name="Security"></a>Sécurité  
+### <a name="security"></a><a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Autorisations  
+#### <a name="permissions"></a><a name="Permissions"></a>Autorisations  
 Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des informations sur une alerte. Les autres utilisateurs doivent disposer du rôle de base de données fixe **SQLAgentOperatorRole** dans la base de données **msdb** .  
   
-## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Pour afficher des informations relatives à une alerte  
   
@@ -53,7 +53,7 @@ Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des
   
 4.  Cliquez avec le bouton droit sur l'alerte comportant les informations que vous voulez afficher, puis sélectionnez **Propriétés**.  
   
-    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue **Propriétés de l’alerte**_nom\_alerte_, consultez :  
+    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de l’alerte\__ nom**alerte**, consultez :  
   
     -   [Propriétés de l’alerte - Nouvelle alerte &#40;page Général&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
@@ -65,7 +65,7 @@ Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Pour afficher des informations relatives à une alerte  
   

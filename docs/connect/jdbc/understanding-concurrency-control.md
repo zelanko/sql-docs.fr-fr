@@ -11,10 +11,10 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027645"
 ---
 # <a name="understanding-concurrency-control"></a>Présentation du contrôle d'accès concurrentiel
@@ -25,16 +25,16 @@ ms.locfileid: "69027645"
 > [!NOTE]  
 >  Pour plus d’informations sur l’accès simultané [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Gestion de l’accès concurrentiel aux données » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le pilote JDBC prend en charge les types d'accès simultanés suivants :  
   
 |Type d'accès simultané|Caractéristiques|Verrous de lignes|Description|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Lecture seule|Non |Les mises à jour effectuées à l'aide du curseur ne sont pas autorisées et aucun verrou n'est maintenu sur les lignes constituant le jeu de résultats.|  
-|CONCUR_UPDATABLE|Lecture/écriture optimistes|Non |La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison d'horodateurs.|  
+|CONCUR_READ_ONLY|Lecture seule|Non|Les mises à jour effectuées à l'aide du curseur ne sont pas autorisées et aucun verrou n'est maintenu sur les lignes constituant le jeu de résultats.|  
+|CONCUR_UPDATABLE|Lecture/écriture optimistes|Non|La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison d'horodateurs.|  
 |CONCUR_SS_SCROLL_LOCKS|Lecture/écriture pessimistes|Oui|La base de données suppose que la contention de ligne est probable. L'intégrité de ligne est garantie avec le verrouillage de ligne.|  
-|CONCUR_SS_OPTIMISTIC_CC|Lecture/écriture optimistes|Non |La base de données suppose que la contention de ligne est improbable, mais possible. L’intégrité de ligne est vérifiée avec une comparaison d’horodateurs.<br /><br /> Pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, le serveur remplace ceci par CONCUR_SS_OPTIMISTIC_CCVAL, si la table ne contient pas de colonne timestamp.<br /><br /> Pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], si la table sous-jacente a une colonne timestamp, OPTIMISTIC WITH ROW VERSIONING est utilisé même si OPTIMISTIC WITH VALUES est spécifié. Si OPTIMISTIC WITH ROW VERSIONING est spécifié et que la table ne possède pas d'horodateurs, OPTIMISTIC WITH VALUES est utilisé.|  
-|CONCUR_SS_OPTIMISTIC_CCVAL|Lecture/écriture optimistes|Non |La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison des données brutes.|  
+|CONCUR_SS_OPTIMISTIC_CC|Lecture/écriture optimistes|Non|La base de données suppose que la contention de ligne est improbable, mais possible. L’intégrité de ligne est vérifiée avec une comparaison d’horodateurs.<br /><br /> Pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, le serveur remplace ceci par CONCUR_SS_OPTIMISTIC_CCVAL, si la table ne contient pas de colonne timestamp.<br /><br /> Pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], si la table sous-jacente a une colonne timestamp, OPTIMISTIC WITH ROW VERSIONING est utilisé même si OPTIMISTIC WITH VALUES est spécifié. Si OPTIMISTIC WITH ROW VERSIONING est spécifié et que la table ne possède pas d'horodateurs, OPTIMISTIC WITH VALUES est utilisé.|  
+|CONCUR_SS_OPTIMISTIC_CCVAL|Lecture/écriture optimistes|Non|La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison des données brutes.|  
   
 ## <a name="result-sets-that-are-not-updateable"></a>Jeux de résultats qui ne peuvent pas être mis à jour  
  Un jeu de résultats pouvant être mis à jour est un jeu de résultats dans lequel des lignes peuvent être insérées, mises à jour et supprimées. Dans les cas suivants, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer de curseur pouvant être mis à jour. L'exception générée est « Le jeu de résultat ne peut pas être mis à jour ».  

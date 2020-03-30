@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078679"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Créer une matrice (Générateur de rapports et SSRS)
@@ -20,12 +20,12 @@ ms.locfileid: "77078679"
   
  Vous pouvez enrichir votre conception initiale en développant une matrice en vue d'améliorer l'affichage pour l'utilisateur. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Pour rapidement commencer à utiliser les matrices, consultez [Tutoriel : Création d’un rapport de matrice &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Pour une rapide prise en main des matrices, consultez [Didacticiel : création d’un rapport de matrice &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des listes hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties des rapports (Générateur de rapports et SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="AddingMatrix"></a> Ajout d'une matrice à votre rapport  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> Ajout d'une matrice à votre rapport  
  Ajoutez une matrice à l'aire de conception depuis l'onglet Insérer sur le ruban. Vous avez la possibilité d'ajouter une matrice à l'aide de l'Assistant Tableau ou matrice, qui inclut la création d'une connexion à la source de données et d'un dataset ainsi que la configuration de la matrice ou l'ajout d'une matrice basée sur le modèle de matrice.  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "77078679"
  La matrice avec laquelle vous démarrez est un modèle basé sur la région de données de tableau matriciel. Vous pouvez poursuivre le développement de la conception de votre matrice en ajoutant des groupes de lignes ou de colonnes imbriqués ou adjacents, voire en ajoutant des lignes de détails. Pour plus d’informations, consultez [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS& #41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="AddingParentGroupChild"></a> Ajout d'un groupe parent ou d'un groupe enfant dans une matrice  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> Ajout d'un groupe parent ou d'un groupe enfant dans une matrice  
  Pour ajouter un groupe selon un seul champ de dataset, faites glisser le champ à partir du volet des données de rapport vers la zone de groupes de lignes ou de groupes de colonnes appropriée, dans le volet de regroupement. Déposez le champ dans la hiérarchie de groupes pour définir sa relation aux groupes existants. Déposez-le au-dessus d'un groupe existant pour créer un groupe parent ou sous un groupe existant pour créer un groupe enfant.  
   
  L'insertion d'un champ dans le volet de **Regroupement** entraîne plusieurs conséquences :  
@@ -78,7 +78,7 @@ ms.locfileid: "77078679"
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
   
-##  <a name="AddingAdjacentGroup"></a> Ajout d'un groupe adjacent à une matrice  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> Ajout d'un groupe adjacent à une matrice  
  Pour ajouter un groupe adjacent selon un champ de dataset unique, utilisez le menu contextuel du volet de regroupement. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). L'illustration suivante présente un groupe basé sur la géographie et un groupe adjacent basé sur l'année.  
   
  ![Groupes de colonnes adjacents pour Geography et Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Groupes de colonnes adjacents pour Geography et Year")  

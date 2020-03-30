@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
 ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76037175"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Qu’est-ce que SQL Server Management Studio (SSMS) ?
@@ -68,7 +68,7 @@ Pour plus d’informations sur la façon d’utiliser [!INCLUDE[ssManStudioFull]
 
 Utiliser SQL Server Management Studio pour activer les fonctionnalités de Reporting Services, administrer le serveur et les bases de données, et gérer des rôles et des travaux.
 
-Vous gérez des planifications partagées à l'aide du dossier Planifications partagées et gérer des bases de données du serveur de rapports (ReportServer, ReportServerTempdb). Vous créez aussi un RSExecRole dans la base de données système MASTER quand vous déplacez une base de données du serveur de rapports vers un moteur de base de données SQL Server nouveau ou différent ([!INCLUDE[ssDE](../includes/ssde_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). Pour plus d’informations sur ces tâches, consultez les articles suivants :  
+Vous gérez des planifications partagées à l'aide du dossier Planifications partagées et gérer des bases de données du serveur de rapports (ReportServer, ReportServerTempdb). Vous créez aussi un RSExecRole dans la base de données système MASTER quand vous déplacez une base de données du serveur de rapports vers un moteur de base de données SQL Server nouveau ou différent ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Pour plus d’informations sur ces tâches, consultez les articles suivants :  
 
 - [Reporting Services dans SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Administrer une base de données du serveur de rapports](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)

@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574018"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint)
@@ -100,7 +100,7 @@ ms.locfileid: "65574018"
 |Exemple de rapport Company Sales dans le dossier **Documents/Doc** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |Exemple de rapport Company Sales dans le dossier **Report Center** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> Publication dans une bibliothèque SharePoint à partir d’un outil de création  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Publication dans une bibliothèque SharePoint à partir d’un outil de création  
  Lorsque vous utilisez un outil de création de rapports pour publier des rapports et des fichiers associés dans une bibliothèque, les fichiers sont validés avant d'être ajoutés. Si vous téléchargez les rapports et les fichiers associés via l’action **Télécharger** dans une bibliothèque SharePoint, aucune vérification de validation n’a lieu. Vous ne saurez pas si le fichier est valide tant que vous n'accéderez pas au rapport en le gérant, le modifiant ou l'exécutant.  
   
 > [!NOTE]  

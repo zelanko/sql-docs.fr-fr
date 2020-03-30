@@ -14,10 +14,10 @@ ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190817"
 ---
 # <a name="manage-report-data-sources"></a>Gérer des sources de données de rapports
@@ -37,7 +37,7 @@ ms.locfileid: "74190817"
   
  Remarquez que la modification des requêtes ne fait pas partie de la gestion de la connexion à la source de données. Pour modifier une requête pour un rapport ou un modèle, vous devez utiliser un outil de création et apporter vos modifications dans la définition du rapport ou du modèle.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriétés managées : Type de source de données, chaînes de connexion et informations d'identification  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriétés gérées : type de source de données, chaînes de connexion et informations d'identification  
  Les propriétés de la source de données que vous pouvez gérer sur un serveur de rapports sont les suivantes :  
   
 |Propriété|Description|Comment gérer|  
@@ -73,7 +73,7 @@ ms.locfileid: "74190817"
 > [!NOTE]  
 >  La gestion des connexions aux sources de données d'un rapport diffère de la gestion de la connexion d'un serveur de rapports à sa base de données. Pour plus d’informations sur la connexion d’un serveur de rapports à sa banque de données interne, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Stocker des informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

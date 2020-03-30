@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173610"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster Big Data SQL Server
@@ -30,7 +30,7 @@ Cet article décrit les étapes de déploiement de Kubernetes sur AKS avec Azure
 > [!TIP]
 > Vous pouvez également créer un script pour déployer AKS et un cluster Big Data en une seule étape. Pour plus d’informations, consultez la procédure à suivre dans un [script Python](quickstart-big-data-cluster-deploy.md) ou dans un [notebook](deploy-notebooks.md) Azure Data Studio.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Déployer les outils Big Data SQL Server 2019](deploy-big-data-tools.md) :
    - **Kubectl**
@@ -161,7 +161,7 @@ Choisissez la dernière version disponible pour votre cluster. Prenez note du nu
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> Dépannage
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> Dépannage
 
 Si vous rencontrez des problèmes lors de la création d’un service Azure Kubernetes avec les commandes précédentes, essayez les solutions suivantes :
 

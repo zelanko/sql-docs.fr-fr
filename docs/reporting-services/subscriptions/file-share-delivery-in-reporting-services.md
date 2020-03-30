@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72278232"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "72278232"
   
 -   [Options de fichier](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Rapports de caractéristiques remis aux dossiers partagés  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> Rapports de caractéristiques remis aux dossiers partagés  
   
 -   Contrairement aux rapports qui sont hébergés et gérés par un serveur de rapports, les rapports qui sont remis dans un dossier partagé sont des fichiers statiques.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72278232"
   
 -   Si vous voulez conserver les fonctionnalités interactives dans un rapport remis, utilisez la remise par courrier électronique à la place. Le message électronique contient un lien vers le rapport hébergé sur le serveur de rapports et les utilisateurs peuvent utiliser les fonctionnalités interactives. Pour plus d’informations, consultez [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Dossiers cibles  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> Dossiers cibles  
  Lorsque vous définissez un abonnement qui utilise la remise dans un partage de fichiers, vous devez spécifier un dossier existant comme dossier cible. Le serveur de rapports ne crée pas de dossiers sur le système de fichiers. Le dossier que vous spécifiez doit être accessible via une connexion réseau.  
   
  Vérifiez que les utilisateurs qui **afficheront les rapports** dans le dossier partagé disposent d’une autorisation de lecture.  
@@ -60,17 +60,17 @@ ms.locfileid: "72278232"
   
  Lorsque vous créez le dossier, tenez compte des limites de connexion requises. Le serveur de rapports nécessite deux connexions, mais vous devez inclure suffisamment de connexions pour la prise en charge des utilisateurs complémentaires qui veulent ouvrir des rapports sur le dossier partagé.  
   
-##  <a name="bkmk_file_formats"></a> Formats de fichier  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formats de fichier  
  Les rapports peuvent être restitués sous plusieurs formats de fichier, tels que HTML, DOCX ou Excel. Pour enregistrer le rapport dans un format de fichier spécifique, sélectionnez le format de rendu au moment de la création de l'abonnement. Par exemple, en choisissant **Excel** , vous enregistrez le rapport sous la forme d'un fichier [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Bien que vous puissiez choisir n'importe quel format de rendu pris en charge, certains formats sont mieux adaptés que d'autres.  
   
  Pour la remise par partage de fichiers, choisissez un format qui assure la remise du rapport dans un seul fichier, où toutes les images et le contenu associé sont inclus dans le rapport. Les formats appropriés sont les suivants : archive Web, PDF, TIFF et Excel. Évitez le format HTML 4.0. Si votre rapport comporte des images, le format HTML 4.0 ne permettra pas de les inclure dans le fichier.  
   
-##  <a name="bkmk_file_options"></a> Options de fichier  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Options de fichier  
  Lorsque vous créez un abonnement de partage de fichiers, vous pouvez configurer le mode de création du nom de fichier et spécifier si le fichier doit remplacer les versions précédentes du rapport. Un nom de fichier complet comprend trois parties : un nom, une extension et du texte ou un nombre ajouté au fichier pour créer un nom de fichier unique.  
   
- **Nom de fichier :** le nom de fichier par défaut est basé sur le nom du rapport source, mais vous pouvez indiquer un nom personnalisé dans l’abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  
+ **Nom de fichier :** le nom de fichier est basé sur le nom du rapport, mais vous pouvez indiquer un nom personnalisé dans l’abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  
   
- **Remplacer :** Vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
+ **Remplacer :** vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
   
  Pour créer des noms de fichiers uniques pour la remise de rapport, il existe une autre approche qui consiste à inclure un élément d'horodatage dans le nom de fichier. Pour ce faire, ajoutez la variable **\@timestamp** au nom de fichier (par exemple, *CompanySales@timestamp* ). Avec cette approche, le nom de fichier est unique par définition : il ne sera jamais remplacé.  
   

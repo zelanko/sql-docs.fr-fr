@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571490"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestionnaire des alertes de données pour les utilisateurs SharePoint
@@ -41,7 +41,7 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 > [!NOTE]  
 >  Avant de pouvoir utiliser les fonctionnalités d’alerte de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , un administrateur doit vous accorder des autorisations. Pour plus d’informations sur les autorisations nécessaires, consultez [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Consulter les informations relatives aux alertes de données  
+##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> Consulter les informations relatives aux alertes de données  
  Vous pouvez afficher la liste des alertes de données que vous avez créées dans le Concepteur d'alertes de données. Pour ouvrir le Gestionnaire des alertes de données, cliquez avec le bouton droit sur un rapport publié dans une bibliothèque SharePoint. L’image suivante présente l’option **Gérer les alertes de données** dans le menu contextuel du rapport.  
   
  ![Ouvrir le Gestionnaire d'alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d'alertes à partir du menu contextuel du rapport")  
@@ -57,24 +57,24 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 |TopPromotion|PromotionTracking|Lauren Johnson|0||5/23/2011|Alerte créée.|  
   
   
-##  <a name="DeleteAlerts"></a> Supprimer des alertes de données  
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a> Supprimer des alertes de données  
  Vous pouvez supprimer des définitions d'alerte dans le Gestionnaire des alertes de données. En tant que travailleur de l'information, vous pouvez supprimer les définitions d'alerte que vous avez créées. Vous ne pouvez pas supprimer des définitions d'alerte créées par d'autres. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  Lorsque vous supprimez une définition d'alerte, elle est supprimée définitivement. Si vous souhaitez uniquement suspendre les messages d'alerte, vous pouvez modifier la périodicité ou bien la date de démarrage ou d'arrêt dans la définition de l'alerte. Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
-##  <a name="EditAlerts"></a> Modifier des alertes de données  
+##  <a name="edit-data-alerts"></a><a name="EditAlerts"></a> Modifier des alertes de données  
  En tant que travailleur de l'information, vous ouvrez vos définitions d'alerte pour les modifier dans le Gestionnaire des alertes de données. Vous pouvez modifier les définitions d'alerte que vous avez créées, mais pas celles créées par d'autres. Quand vous cliquez avec le bouton droit sur la définition d’alerte et cliquez sur **Modifier** , le Concepteur d’alertes de données s’ouvre, affichant la définition d’alerte. Pour plus d’informations, consultez [Concepteur d’alertes de données](../reporting-services/data-alert-designer.md) et [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
-##  <a name="RunAlerts"></a> Exécuter des alertes de données  
+##  <a name="run-data-alerts"></a><a name="RunAlerts"></a> Exécuter des alertes de données  
  Le Gestionnaire des alertes de données contient des informations sur la dernière exécution par le service d'alerte de la définition d'alerte de données et le nombre de fois que des messages d'alerte de données ont été envoyés. Vous pouvez exécuter et envoyer le message d'alerte immédiatement, au lieu d'attendre l'heure spécifiée par la planification. Lorsque vous exécutez une alerte du Gestionnaire des alertes de données, la planification de l'alerte est supprimée et le traitement commence après un délai d'une à cinq minutes, en fonction du temps nécessaire pour exécuter le rapport et selon que le serveur de rapports est occupé ou non au moment où vous avez choisi d'exécuter l'alerte. Toutefois, si vous avez spécifié qu'un message soit envoyé uniquement si les résultats changent, aucun message ne sera créé ou envoyé si les résultats ne changent pas. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 > [!NOTE]  
 >  Après avoir cliqué sur l’option **Exécuter**  , un délai de quelques secondes est nécessaire avant la mise à jour de la valeur de la colonne **État** indiquant que l’alerte est en cours de traitement. Si vous cliquez plusieurs fois sur l’option **Exécuter**  , l’alerte est traitée plusieurs fois. Cette opération consomme inutilement des ressources sur le serveur de rapports et peut affecter les performances de celui-ci. Pour afficher des informations d'alerte à jour, cliquez sur le bouton d'actualisation du navigateur Web pour rechercher les mises à jour d'état ainsi que d'autres informations sur l'alerte.  
   
   
-##  <a name="HowTo"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tâches associées  
  Cette section inclut les procédures qui vous expliquent comment gérer vos alertes et modifier vos définitions d'alerte.  
   
 -   [Gérer mes alertes de données dans le gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  

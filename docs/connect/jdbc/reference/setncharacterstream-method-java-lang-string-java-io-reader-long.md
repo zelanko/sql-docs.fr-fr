@@ -11,10 +11,10 @@ ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73bd7fe7d3da0745f66e0a6d883d7024a318c95f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973888"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>Méthode setNCharacterStream (java.lang.String, java.io.Reader, long)
@@ -34,7 +34,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
 #### <a name="parameters"></a>Paramètres  
  *parameterName*  
   
- **Chaîne** indiquant le nom du paramètre.  
+ Valeur **chaîne** qui indique le nom du paramètre.  
   
  *value*  
   
@@ -42,7 +42,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *length*  
   
- **long**, qui indique le nombre de caractères dans le flux.  
+ **long** indiquant le nombre de caractères dans le flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

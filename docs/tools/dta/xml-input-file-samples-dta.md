@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 80f0fd24dbee090a7e4526d9776fe0720bfbeaf1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252956"
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemples de fichiers d'entrée XML (Assistant Paramétrage de base de données)
@@ -32,6 +32,6 @@ Cette section contient des exemples de fichiers d’entrée XML que vous pouvez 
 
 - [Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

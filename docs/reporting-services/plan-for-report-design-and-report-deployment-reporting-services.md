@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581247"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
@@ -22,7 +22,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
  Les fichiers RDL sont créés dans le Concepteur de rapports dans les projets [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] et dans le Générateur de rapports. Les fichiers RDLC sont créés à l'aide des contrôles ReportViewer qui sont inclus dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
-##  <a name="bkmk_rdl_schema_versions"></a> Versions de schéma RDL  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Versions de schéma RDL  
  Le tableau suivant répertorie chaque version disponible du schéma et l'abréviation utilisée dans le reste de cette rubrique :  
   
 |Abréviation|Version de schéma|  
@@ -43,22 +43,22 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
  Pour plus d’informations sur les contrôles ReportViewer, consultez [Contrôles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Prise en charge du serveur de rapports et du schéma RDL  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Prise en charge du serveur de rapports et du schéma RDL  
  Un fichier de définition de rapport peut être déployé sur un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] des manières suivantes :  
   
--   **Concepteur de rapports :** Déployez un rapport à partir du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Concepteur de rapports :** déployez un rapport du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Générateur de rapports :** Enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
+-   **Générateur de rapports :** enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
   
--   **Portail web :** Chargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Portail web :** téléchargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint :** Chargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
+-   **SharePoint :** téléchargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
 
 ::: moniker-end
   
--   **Programmatiquement :** Publiez programmatiquement un rapport à l'aide des interfaces API SOAP vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Par programmation :** publiez par programmation un rapport à l'aide des interfaces SOAP API vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Le tableau suivant indique version par version le schéma RDL pris en charge pour le serveur de rapports.  
   
@@ -82,7 +82,7 @@ Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documen
   
  Pour plus d’informations sur les mises à niveau de rapports et les versions de schéma prises en charge, consultez [Mettre à niveau des rapports](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Prise en charge de la création et le déploiement de rapports  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> Prise en charge de la création et le déploiement de rapports  
  Les environnements de création de rapports sont le Concepteur de rapports dans les projets [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] et le Générateur de rapports. Les environnements de création de rapports fournissent de nombreuses prises en charge pour la mise à niveau de rapport, la conception de rapport, l'aperçu de rapport en mode local, l'aperçu de rapport sur le serveur de rapports et le déploiement de rapport.  
   
  Le tableau suivant récapitule la prise en charge de la création et du déploiement de définitions de rapport pour les différentes versions de schéma :  
@@ -101,7 +101,7 @@ Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documen
   
 -   [SQL Server Data Tools pour Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
-##  <a name="bkmk_reportviewer"></a> Contrôles ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> Contrôles ReportViewer  
  Le contrôle ReportViewer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] peut d'afficher un rapport .rdlc en mode de prévisualisation local ou distant. Il peut afficher un fichier .rdl hébergé sur un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Le tableau suivant fournit la liste des versions RDL prises en charge par les contrôles de ReportViewer pour le traitement local (.rdlc). La prise en charge RDL côté serveur est résumée dans la section [Prise en charge du serveur de rapports et du schéma RDL](#bkmk_report_server_rdl_schema_support).  
   
 |Contrôle ReportViewer du produit|Version de RDL pour la prévisualisation locale|  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531984"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Effectuer un déploiement hors connexion d’un cluster Big Data SQL Server
@@ -55,7 +55,7 @@ Les étapes suivantes expliquent comment tirer (pull) les images conteneur du cl
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> Images conteneur de cluster Big Data
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> Images conteneur de cluster Big Data
 
 Les images conteneur de cluster Big Data suivantes sont nécessaires pour une installation hors connexion :
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ Les images conteneur de cluster Big Data suivantes sont nécessaires pour une in
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> Script automatisé
+## <a name="automated-script"></a><a id="automated"></a> Script automatisé
 
 Vous pouvez utiliser un script Python automatisé qui tire (pull) automatiquement toutes les images conteneur nécessaires, puis les pousse (push) vers un référentiel privé.
 
@@ -120,7 +120,7 @@ Vous pouvez utiliser un script Python automatisé qui tire (pull) automatiquemen
 
 Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que **Python**, `azdata` et **kubectl**. Suivez les étapes suivantes pour installer ces outils sur un serveur hors connexion.
 
-### <a id="python"></a> Installer Python hors connexion
+### <a name="install-python-offline"></a><a id="python"></a> Installer Python hors connexion
 
 1. Sur une machine disposant d’un accès à Internet, téléchargez l’un des fichiers compressés suivants contenant Python :
 
@@ -138,7 +138,7 @@ Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que *
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> Installer azdata hors connexion
+### <a name="install-azdata-offline"></a><a id="azdata"></a> Installer azdata hors connexion
 
 1. Sur une machine disposant d’un accès à Internet et de [Python](https://wiki.python.org/moin/BeginnersGuide/Download), exécutez la commande suivante pour télécharger tous les packages `azdata` dans le dossier actif.
 
@@ -154,7 +154,7 @@ Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que *
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> Installer kubectl hors connexion
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> Installer kubectl hors connexion
 
 Pour installer **kubectl** sur une machine hors connexion, utilisez les étapes suivantes.
 

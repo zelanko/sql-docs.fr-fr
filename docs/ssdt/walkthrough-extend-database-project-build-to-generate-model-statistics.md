@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242688"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : Étendre la génération du projet de base de données à la génération de statistiques de modèle
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle
 
 Vous pouvez créer un contributeur de génération pour effectuer des actions personnalisées lorsque vous générez un projet de base de données. Dans cette procédure pas à pas, vous allez créer un contributeur de génération nommé ModelStatistics qui génère des statistiques de base de données SQL lorsque vous créez un projet de base de données. Ce contributeur de génération acceptant des paramètres lorsque vous effectuez la génération, quelques étapes supplémentaires sont nécessaires.  
   
@@ -70,7 +70,7 @@ Lors de la génération, les contributeurs personnalisés sont chargés à parti
   
 Dans ce cas le premier paramètre de l’attribut doit être un identificateur unique qui sera utilisé pour identifier un contributeur dans des fichiers de projet. Il est recommandé d’associer l’espace de noms de la bibliothèque (ici, « ExampleContributors ») au nom de la classe (ici, « ModelStatistics ») pour générer l’identificateur. Vous pouvez voir comment cet espace de noms est utilisé pour spécifier que votre contributeur doit être exécuté ultérieurement dans la chronologie.  
   
-## <a name="CreateBuildContributor"></a>Créer un contributeur de génération  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>Créer un contributeur de génération  
 Pour créer un contributeur de génération, vous devez effectuer les tâches suivantes :  
   
 -   Créez un projet Bibliothèque de classes et ajoutez les références requises.  
@@ -452,7 +452,7 @@ Pour créer un contributeur de génération, vous devez effectuer les tâches su
   
     Ensuite, vous devez installer l'assembly afin qu'il soit chargé lorsque vous générez des projets SQL.  
   
-## <a name="InstallBuildContributor"></a>Installer un contributeur de génération  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>Installer un contributeur de génération  
 Pour installer un contributeur de génération, vous devez copier l'assembly et le fichier .pdb associé dans le dossier Extensions.  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>Pour installer l'assembly MyBuildContributor  
@@ -464,7 +464,7 @@ Pour installer un contributeur de génération, vous devez copier l'assembly et 
     > [!NOTE]  
     > Par défaut, le chemin d'accès du fichier .dll compilé est le suivant : Chemin de votre solution\Chemin de votre projet\bin\Debug ou Chemin de votre solution\Chemin de votre projet\bin\Release.  
   
-## <a name="TestBuildContributor"></a>Exécuter ou tester votre contributeur de génération  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>Exécuter ou tester votre contributeur de génération  
 Pour exécuter ou tester un contributeur de génération, vous devez effectuer les tâches suivantes :  
   
 -   Ajouter des propriétés au fichier .sqlproj que vous envisagez de générer.  
@@ -525,7 +525,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
 1.  Dans Visual Studio, cliquez avec le bouton droit sur le projet et sélectionnez « Regénérer ». Cela reconstruit le projet, puis les statistiques du modèle sont générées, et la sortie comprise dans la sortie de la génération et enregistrée dans ModelStatistics.xml. Notez que vous pouvez être amené à sélectionner « Afficher tous les fichiers » dans l’Explorateur de solutions pour visualiser le fichier XML.  
   
-2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>** , cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)** .  
+2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>** , cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)** .  
   
 3.  À l'invite de commandes, accédez au dossier qui contient votre projet SQL.  
   
@@ -593,5 +593,5 @@ Vous pouvez créer des outils supplémentaires pour effectuer le traitement du f
   
 ## <a name="see-also"></a>Voir aussi  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

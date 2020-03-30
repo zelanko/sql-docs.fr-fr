@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041239"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
@@ -34,7 +34,7 @@ Durée estimée pour effectuer le didacticiel : 10 minutes.
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Créer un graphique à secteurs à partir de l'Assistant Graphique  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Créer un graphique à secteurs à partir de l'Assistant Graphique  
 Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset incorporé, choisissez une source de données partagée et créez un graphique à secteurs.  
 
   
@@ -77,7 +77,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
 9. Cliquez sur **Suivant**.  
   
-## <a name="ChartType"></a>2. Choisir le type de graphique  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Choisir le type de graphique  
 Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
 
   
@@ -103,7 +103,7 @@ Le rapport affiche le graphique à secteurs avec huit secteurs, un pour chaque p
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. Afficher des pourcentages dans chaque secteur  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Afficher des pourcentages dans chaque secteur  
 Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secteur par rapport à l'ensemble.  
 
   
@@ -130,7 +130,7 @@ Le rapport affiche le pourcentage de chaque secteur par rapport à l'ensemble.
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. Combiner de petits secteurs en un secteur  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Combiner de petits secteurs en un secteur  
 Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combiner plusieurs petits secteurs en un secteur « Autre » plus grand qui représente l’ensemble des trois secteurs.  
 
 1.  Basculez en mode création de rapport.  
@@ -155,7 +155,7 @@ Dans la légende, vous pouvez désormais voir la catégorie « Autre ». Le nouv
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. Faire démarrer les valeurs de graphique à secteurs à partir du haut 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Faire démarrer les valeurs de graphique à secteurs à partir du haut 
 
 Par défaut dans les graphiques à secteurs, la première valeur du dataset démarre à 90 degrés à partir du haut du graphique à secteurs. Vous pouvez le constater dans le graphique à secteurs des sections précédentes.
 
@@ -173,7 +173,7 @@ Dans cette section, nous allons faire démarrer la première valeur à partir du
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. Ajouter un titre de rapport  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Ajouter un titre de rapport  
   
 Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a pas besoin d’avoir son propre titre. Le titre du rapport suffit.
   
@@ -197,7 +197,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Save"></a>7. Enregistrer le rapport  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Enregistrer le rapport  
   
 ### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   

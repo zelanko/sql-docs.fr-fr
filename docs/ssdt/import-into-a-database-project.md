@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246451"
 ---
 # <a name="import-into-a-database-project"></a>Importer dans un projet de base de données
@@ -37,7 +37,7 @@ Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveau
   
 [Importer des objets chiffrés](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>Source d’importation : base de données ou application de la couche Données (*.dacpac)  
+## <a name="import-source-database-or-data-tier-application-dacpac"></a><a name="bkmk_import_source_db"></a>Source d’importation : base de données ou application de la couche Données (*.dacpac)  
 La possibilité d'importer un schéma depuis une base de données ou un fichier .dacpac n'est disponible que si aucun objet de schéma n'est encore défini dans le projet. Cela n'inclut pas les fichiers RefactorLogs ni les scripts de prédéploiement et de post-déploiement.  
   
 Lors de l’importation, les définitions d’objet sont écrites via un script dans les fichiers de projet à l’aide des valeurs organisationnelles par défaut de SSDT pour les nouveaux objets : nouveaux fichiers pour les objets de niveau supérieur, enfants hiérarchiques définis dans le même fichier que le parent, contraintes de table/colonne définies en ligne lorsque cela est possible. Pour disposer d'un meilleur contrôle et d'une visibilité ciblée pour chaque objet, utilisez Comparaison de schémas au lieu d'Importer.  
@@ -48,7 +48,7 @@ Dossier **Ignoré lors de l’importation**
   
 ![Dossier des éléments ignorés lors de l'importation dans SSDT](../ssdt/media/ssdt-ignoredonimport.gif "Dossier des éléments ignorés lors de l'importation dans SSDT")  
   
-## <a name="bkmk_import_source_script"></a>Source d’importation : script (*.sql)  
+## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>Source d’importation : script (*.sql)  
 Tous les objets de la source d’importation qui n’existent *pas* encore dans le projet seront ajoutés, et tous les ceux qui existent *déjà* remplaceront la définition des objets dans le projet.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ Tous les objets de la source d’importation qui n’existent *pas* encore dans 
 Le processus d'importation à partir d'un script ne comprend pas les scripts de prédéploiement et de post-déploiement, les variables SQLCMD ni les fichiers RefactorLog. Ces éléments, ainsi que toutes les autres constructions non prises en charge qui sont détectées lors de l’importation, seront placés dans un fichier **ScriptsIgnoredOnImport.sql** au sein d’un dossier **Scripts** dans votre projet.  
   
  
-## <a name="bkmk_import_encrypted"></a>Importer des objets chiffrés  
+## <a name="import-encrypted-objects"></a><a name="bkmk_import_encrypted"></a>Importer des objets chiffrés  
 Lors de l'importation d'objets chiffrés dans un projet de base de données, le corps entier de la définition d'objet ne peut pas toujours être récupéré depuis le serveur. De ce fait, le comportement d'importation peut varier lorsque cette classe d'objets doit être gérée.  
   
 Lorsqu'il n'est pas possible de récupérer la définition du corps entier, l'en-tête/le pied de page de l'objet, ainsi qu'un corps factice, sont écrits dans un script. Attendez-vous à rencontrer ce comportement lorsque vous effectuez une importation ou utilisez une comparaison de schémas dans laquelle la source est une base de données active ou un fichier .dacpac extrait d'une base de données.  

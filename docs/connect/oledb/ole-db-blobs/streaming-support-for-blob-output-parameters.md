@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936516"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB
@@ -28,7 +28,7 @@ ms.locfileid: "67936516"
   
  Vos paramètres de sortie peuvent apparaître bloqués dans IMultipleResults::GetResult en recevant la valeur de retour DB_E_OBJECTOPEN. L’appelant doit rechercher les paramètres d’objet BLOB en attente, puis les lire entièrement ou les libérer.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
@@ -512,7 +512,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243517"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilisation de conditions de test dans les tests unitaires SQL Server
@@ -75,7 +75,7 @@ Tous les paramètres non spécifiés sont ignorés. Vous passez ces paramètres 
   
 Pour obtenir un exemple montrant comment utiliser les exceptions attendues et un test unitaire de SQL Server négatif, consultez [Procédure pas à pas : création et exécution d’un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
-## <a name="SpecifyDataChecksum"></a>Spécification d'un checksum de données  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>Spécification d'un checksum de données  
 Pour afficher le Concepteur de test unitaire SQL Server, double-cliquez sur le fichier de code source d'un test unitaire dans l'**Explorateur de solutions**.  
   
 Après avoir ajouté une condition de test Checksum de données à un test unitaire de base de données, vous devez configurer la somme de contrôle attendue à l'aide de la procédure suivante :  
@@ -107,7 +107,7 @@ Après avoir ajouté une condition de test Checksum de données à un test unita
   
     La somme de contrôle attendue apparaît dans la colonne **Valeur** de la condition de test.  
   
-## <a name="SpecifyExpectedSchema"></a>Spécification d'un schéma attendu  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>Spécification d'un schéma attendu  
 Après avoir ajouté une condition de test Schéma attendu à un test unitaire SQL Server, vous devez configurer le schéma attendu à l'aide de la procédure suivante :  
   
 #### <a name="to-specify-an-expected-schema"></a>Pour spécifier un schéma attendu  

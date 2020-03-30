@@ -16,10 +16,10 @@ ms.assetid: 45c83c4f-649a-4cd6-9d44-d38524758bb8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc000039be5ca8a9699100f9bbe4672af26b0530
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969583"
 ---
 # <a name="supportsconvert-method-"></a>Méthode supportsConvert ()
@@ -35,7 +35,7 @@ public boolean supportsConvert()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

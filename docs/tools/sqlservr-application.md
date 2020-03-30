@@ -23,10 +23,10 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75305787"
 ---
 # <a name="sqlservr-application"></a>Application sqlservr
@@ -63,7 +63,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-l** *master_log_path* Indique le chemin complet du fichier journal des transactions de la base de données **master**. Il n’existe aucun espace entre **-l** et *chemin_du_journal_master*.
 
-**-m** Spécifie le démarrage d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en mode mono-utilisateur. Dans ce mode, un seul utilisateur peut se connecter au démarrage de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le mécanisme CHECKPOINT (qui garantit le transfert régulier des transactions terminées du cache disque vers l'unité de bases de données) n'est pas lancé. Cette option est généralement utilisée en cas de problème au niveau de bases de données système requérant une réparation. Active l’option **sp_configure allow updates**. Par défaut, l'option **allow updates** est désactivée.
+**-m** Spécifie le démarrage d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en mode mono-utilisateur. Dans ce mode, un seul utilisateur peut se connecter au démarrage de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le mécanisme CHECKPOINT (qui garantit le transfert régulier des transactions terminées du cache disque vers l'unité de bases de données) n'est pas lancé. Cette option est généralement utilisée en cas de problème au niveau de bases de données système requérant une réparation. Active l’option **sp_configure allow updates** . Par défaut, l'option **allow updates** est désactivée.
 
 **-n** Permet de démarrer une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si le paramètre **-s** n’est pas spécifié, l’instance par défaut tente de démarrer. Vous devez accéder au répertoire BINN de l’instance, dans l’invite de commandes, avant de démarrer **sqlservr.exe**. Par exemple, si Instance1 doit utiliser \mssql$Instance1 pour ses fichiers binaires, l’utilisateur doit être dans le répertoire \mssql$Instance1\binn pour démarrer **sqlservr.exe -s instance1**. Si vous démarrez une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec l’option **-n** , il est également recommandé d’utiliser l’option **-e** , sinon les événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne sont pas consignés.
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190403"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurer la hiérarchisation HDFS sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -57,7 +57,7 @@ Nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et à Amazon
 - [Guide pratique pour monter ADLS Gen2 pour la hiérarchisation HDFS dans un cluster Big Data](hdfs-tiering-mount-adlsgen2.md)
 - [Guide pratique pour monter S3 pour la hiérarchisation HDFS dans un cluster Big Data](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Problèmes connus et limitations
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> Problèmes connus et limitations
 
 La liste suivante contient les problèmes connus et les limitations actuelles lors de l’utilisation de la hiérarchisation HDFS dans [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] :
 

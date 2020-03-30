@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d37291b7626e3a8f3fb47555d66af2e5e21feea2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306750"
 ---
 # <a name="sql-server-services"></a>Services SQL Server
@@ -26,9 +26,9 @@ ms.locfileid: "75306750"
 >  Si vous ouvrez le **Gestionnaire de configuration SQL Server** sur un nœud d’un cluster qui n’héberge pas les ressources, les services apparaissent comme arrêtés.  
   
 > [!NOTE]  
->  Si les nœuds des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas remplis avec les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles sur l’ordinateur, vous ne disposez peut-être pas des autorisations suffisantes pour accéder à Windows Management Instrumentation (WMI). Pour configurer les autorisations sur WMI, dans la documentation en ligne, recherchez la rubrique « Procédure : Configurer WMI pour afficher l'état du serveur dans les outils SQL Server. »  
+>  Si les nœuds des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas remplis avec les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles sur l’ordinateur, vous ne disposez peut-être pas des autorisations suffisantes pour accéder à Windows Management Instrumentation (WMI). Pour configurer les autorisations sur WMI, dans la documentation en ligne, recherchez la rubrique « Procédure : configurer WMI pour afficher l'état du serveur dans les outils SQL Server ».  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Aide sur le Gestionnaire de configuration SQL Server](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

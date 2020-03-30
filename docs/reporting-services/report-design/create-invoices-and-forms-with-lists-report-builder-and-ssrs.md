@@ -9,21 +9,21 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078590"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Créer des factures et des formulaires avec des listes (Générateur de rapports et SSRS)
   Une région de données de liste est répétée avec chaque groupe ou ligne du dataset du rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données. Vous pouvez définir des listes contenant n'importe quel nombre d'éléments de rapport. Une liste peut être imbriquée  
   
- Pour rapidement commencer à utiliser les listes, consultez [Tutoriel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Pour prendre en main les listes rapidement, consultez [Didacticiel : création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des listes hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties des rapports (Générateur de rapports et SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="AddingList"></a> Ajout d'une liste à votre rapport  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a> Ajout d'une liste à votre rapport  
  Ajoutez une liste à l'aire de conception depuis l'onglet Insérer sur le ruban. Par défaut, la liste comporte initialement une cellule unique dans une ligne associée au groupe de détails.  
   
  ![Nouvel élément de rapport Liste sur l'aire de conception](../../reporting-services/report-design/media/rs-listtemplatenew.gif "Nouvel élément de rapport Liste sur l'aire de conception")  
@@ -35,7 +35,7 @@ ms.locfileid: "77078590"
  La liste avec laquelle vous démarrez est un modèle basé sur la région de données de tableau matriciel. Après avoir ajouté une liste, vous pouvez continuer à améliorer la conception en changeant le contenu ou l’apparence de la liste en spécifiant des expressions de filtre, de tri ou de groupe, ou en modifiant la façon dont la liste s’affiche sur les pages du rapport. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). Bien que la liste démarre avec une colonne et une ligne uniques, vous pouvez continuer ensuite à développer votre conception de liste en ajoutant des groupes de lignes ou de colonnes imbriqués ou adjacents, ou en ajoutant des lignes de détails supplémentaires. Pour plus d’informations, consultez [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS& #41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="DisplayingLayout"></a> Affichage des données dans une disposition libre  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> Affichage des données dans une disposition libre  
  Pour organiser les données de rapport dans une disposition libre au lieu de les présenter sous forme de grille, vous pouvez ajouter une liste à l'aire de conception. Faites glisser les champs du volet des données de rapportvers la cellule. Par défaut, la cellule contient un rectangle qui joue le rôle de conteneur. Déplacez chaque champ dans le conteneur jusqu'à ce que vous obteniez la conception voulue. Utilisez les lignes d'alignement qui apparaissent lorsque vous faites glisser des zones de texte dans le conteneur rectangle pour vous aider à aligner les contours verticalement et horizontalement. Supprimez l'espace vide inutile en ajustant la taille de la cellule. Pour plus d’informations, consultez [Modifier la hauteur de ligne ou la largeur de colonne &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre une liste qui affiche des informations sur une commande et comporte les champs suivants : Date, Order, Qty, Product, LineTotal et une image.  
@@ -50,7 +50,7 @@ ms.locfileid: "77078590"
 >  Les traits en pointillés dans ces illustrations indiquent la disposition libre de chaque valeur de champ. En général, vous n'utilisez pas de traits en pointillés dans un rapport de production.  
   
   
-##  <a name="DisplayingGrouping"></a> Affichage des données avec un niveau de regroupement unique  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> Affichage des données avec un niveau de regroupement unique  
  Comme une liste fournit automatiquement un conteneur, vous pouvez utiliser une liste pour afficher des données regroupées avec plusieurs vues. Pour modifier la liste par défaut pour spécifier un groupe, modifiez le groupe de détails, indiquez un nouveau nom et spécifiez une expression de groupe.  
   
  Par exemple, vous pouvez incorporer un tableau et un graphique qui affiche différentes vues du même dataset. Vous pouvez ajouter un groupe à la liste afin que les éléments de rapport imbriqués soient utilisés à une seule reprise pour chaque valeur de groupe. L'illustration suivante représente une liste regroupée par catégorie de produit. Notez l'absence de ligne de détails. Deux tableaux sont imbriqués côte à côte dans la liste. Le premier tableau affiche les sous-catégories avec les ventes totales. Le deuxième tableau affiche la catégorie regroupée par zone géographique, avec un graphique représentant la distribution des sous-catégories.  

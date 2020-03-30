@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866022"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
@@ -78,7 +78,7 @@ ms.locfileid: "74866022"
 |**Service local**|**Service local** est un compte prédéfini qui s’apparente à un compte d’utilisateur Windows local authentifié. Les services qui s’exécutent au moyen du compte **Service local** accèdent aux ressources réseau dans le cadre d’une session nulle, sans informations d’identification. Ce compte ne convient pas aux scénarios de déploiement intranet où le serveur de rapports doit se connecter à une base de données de serveur de rapports distante ou à un contrôleur de domaine réseau afin d'authentifier un utilisateur avant d'ouvrir un rapport ou de traiter un abonnement.|  
 |**Système local**|**Système local** est un compte doté de privilèges élevés qui n’est pas obligatoire pour l’exécution d’un serveur de rapports. Évitez ce compte pour les installations de serveur de rapports. Choisissez un compte de domaine ou **Service réseau** à la place.|  
   
-## <a name="localaccounts"></a> Considérations relatives à l’utilisation des comptes locaux
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> Considérations relatives à l’utilisation des comptes locaux
 
  La principale considération liée à l'utilisation des comptes locaux concerne l'obligation, pour le serveur de rapports, de pouvoir accéder aux serveurs de base de données, serveurs de messagerie et contrôleurs de domaine distants. Si vous configurez le serveur de rapports pour qu'il s'exécute en tant que compte d'utilisateur Windows local, Service local ou Système Local, vous introduisez des considérations qui doivent être prises en compte lors de la définition d'autres paramètres de configuration et de la création et remise d'abonnement :  
   

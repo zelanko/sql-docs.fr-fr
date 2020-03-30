@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8b7da81bd6c0a54c96367fc24cc742fce6700974
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247618"
 ---
 # <a name="pick-schedule-for-job"></a>Choisir une planification pour le travail
@@ -50,6 +50,6 @@ Répertorie les numéros des travaux associés à la planification. Cliquez sur 
 **Propriétés**  
 Affiche la boîte de dialogue **Propriétés de la planification du travail** qui inclut des informations sur la planification.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des planifications et les attacher à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
   

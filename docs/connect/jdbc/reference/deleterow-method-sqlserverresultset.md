@@ -16,10 +16,10 @@ ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc02d31a1d13a3d32f581da6fb3367473cb88bbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955137"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>deleteRow, méthode (SQLServerResultSet)
@@ -37,14 +37,14 @@ public void deleteRow()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode deleteRow est spécifiée par la méthode deleteRow de l’interface java.sql.ResultSet.  
   
  Cette méthode ne peut pas être appelée lorsque le curseur se trouve sur la ligne d'insertion.  
   
  Si vous utilisez des curseurs de jeu de clés, cette méthode fait apparaître un vide dans le jeu de résultats. Vous pouvez tester la présence de ce vide à l’aide de la méthode [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Les numéros des lignes dans le jeu de résultats ne changent pas.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

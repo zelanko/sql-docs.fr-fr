@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a819f2ffbb327d967193de32cb0a55b48e2e3aaa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242312"
 ---
 # <a name="job-properties---new-job-alerts-page"></a>Propriétés du travail - Nouveau travail (page Alertes)
@@ -42,7 +42,7 @@ Permet de modifier la définition de l'alerte.
 **Remove**  
 Permet de supprimer l'alerte sélectionnée du travail et de supprimer l'alerte.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Alertes](../../ssms/agent/alerts.md)  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
   

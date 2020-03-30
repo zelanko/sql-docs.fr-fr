@@ -16,10 +16,10 @@ ms.assetid: e6fc1461-bbc6-45ae-85b1-a824aba51085
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbd52e2576bc9924c623a2a4627d998b74571edb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955774"
 ---
 # <a name="clearbatch-method-sqlserverstatement"></a>clearBatch, méthode (SQLServerStatement)
@@ -37,10 +37,10 @@ public void clearBatch()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode clearBatch est spécifiée par la méthode clearBatch de l’interface java.sql.Statement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

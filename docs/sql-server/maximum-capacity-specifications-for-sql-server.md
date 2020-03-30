@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126002"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510220"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications de capacité maximale pour SQL Server
 
@@ -36,7 +36,7 @@ Cet article présente la taille maximale et le nombre maximal des différents ob
 >[!NOTE]
 >En plus des informations contenues dans cet article, nous vous conseillons de consulter les liens suivants :
 >
->* [Télécharger SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [Télécharger SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [Paramètres de l’outil d’analyse de configuration système](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >
@@ -109,7 +109,7 @@ Taille maximale et nombre maximal des différents objets définis dans les bases
 
 Taille maximale et nombre maximal des différents objets testés dans l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 
-|Objet utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet utilitaire||Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|
 |----------------------------------------------|-|------------------------------------------------------------------|
 |Ordinateurs (ordinateurs physique ou ordinateurs virtuels) par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||100|
 |Instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par ordinateur||5|

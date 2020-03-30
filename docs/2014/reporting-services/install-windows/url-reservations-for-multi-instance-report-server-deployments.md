@@ -1,5 +1,5 @@
 ---
-title: Réservations d’URL pour les déploiements de serveur de rapports multi-instance (SSRS Configuration Manager) | Microsoft Docs
+title: Réservations d’URL pour les déploiements de serveurs de rapports multi-instances (SSRS Configuration Manager) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108618"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380690"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Réservations d’URL pour les déploiements de serveur de rapports multi-instance (Gestionnaire de configuration de SSRS)
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le Gestionnaire de rapports doivent avoir au moins une réservation d'URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  
@@ -42,13 +42,13 @@ ms.locfileid: "66108618"
 |Instance par défaut du serveur de rapports (MSSQLSERVER)|ReportServer_MyNamedInstance|Unicité|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|Chaque instance écoute sur un port différent.|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Chaque instance répond à différents noms de serveurs (nom de domaine complet et nom d'ordinateur).|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Chaque instance répond à différents noms de serveurs (nom de domaine complet et nom d'ordinateur).|  
   
 ## <a name="uniqueness-requirements"></a>Spécifications relatives à l'unicité  
  Les technologies sous-jacentes utilisées par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imposent des spécifications relatives aux noms uniques. HTTP.SYS requiert que toutes les URL dans sa base de données de référentiel soient uniques. Vous pouvez varier le port, le nom d'hôte ou le nom de répertoire virtuel pour créer une URL unique. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiert que les identités d’application soient uniques dans le même processus. Cette spécification affecte les noms de répertoires virtuels. Elle spécifie que vous ne pouvez pas dupliquer de nom de répertoire virtuel dans la même instance de serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer les URL du serveur de rapports &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

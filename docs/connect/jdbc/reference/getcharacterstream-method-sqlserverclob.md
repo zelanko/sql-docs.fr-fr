@@ -11,10 +11,10 @@ ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c521ac453cc0f82577c1d87a78e68d8ddf9cb78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953228"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>Méthode getCharacterStream (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67953228"
 |[getCharacterStream, méthode &#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|Retourne les données Clob en tant qu'objet java.io.Reader ou que flux de caractères.|  
 |[getCharacterStream, méthode &#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|Retourne les données Clob sous forme d’objet java.io.Reader ou de flux de caractères avec la position et la longueur spécifiées.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  

@@ -16,10 +16,10 @@ ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b31fe466494bdcbca279a5229a3ff083ce20dd51
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954221"
 ---
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
@@ -37,7 +37,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
 #### <a name="parameters"></a>Paramètres  
  *paramName*  
   
- **Chaîne** indiquant le nom du paramètre.  
+ Valeur **chaîne** qui indique le nom du paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Objet InputStream.  
@@ -45,7 +45,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getAsciiStream, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

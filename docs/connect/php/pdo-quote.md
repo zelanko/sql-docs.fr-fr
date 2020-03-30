@@ -11,10 +11,10 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916369"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -30,7 +30,7 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*string* : chaîne à placer entre guillemets.  
+$*string*: chaîne à placer entre guillemets.  
   
 $*parameter_type* : symbole (entier) facultatif indiquant le type de données.  La valeur par défaut est PDO::PARAM_STR.  
 
@@ -45,10 +45,10 @@ De nouvelles constantes PDO ont été introduites dans PHP 7.2 pour prendre en 
 ## <a name="return-value"></a>Valeur de retour  
 Chaîne entre guillemets qui peut être passée à une instruction SQL, ou false en cas d’échec.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -69,7 +69,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 
 Le script suivant montre quelques exemples de la façon dont les types de chaînes étendus affectent PDO::quote() avec PHP 7.2 +.
 
@@ -88,7 +88,7 @@ $db->quote('foo', PDO::PARAM_STR | PDO::PARAM_STR_CHAR); // 'foo'
 ?>
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

@@ -14,17 +14,17 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 07e01e8069cce53d1c37d01cea7513fcbcdd1cb9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74706667"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380750"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurer IIS pour la synchronisation Web
   Les procédures de cette rubrique constituent la deuxième étape de la configuration de la synchronisation Web pour la réplication de fusion. Cette étape est réalisée après l'activation d'une publication pour la synchronisation Web. Le processus de configuration est présenté dans [Configurer la synchronisation Web](configure-web-synchronization.md). Après avoir terminé les procédures de cette rubrique, poursuivez par la troisième étape, qui est la configuration d'un abonnement pour qu'il utilise la synchronisation Web. Cette troisième étape est décrite dans les rubriques suivantes :  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procédure : configurer un abonnement pour utiliser la synchronisation \(Web SQL Server Management Studio\) ](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Guide pratique pour configurer un abonnement qui utilise la synchronisation web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   Programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] de réplication. [Procédure : configurer un abonnement pour utiliser la synchronisation Web (programmation Transact-SQL de la réplication)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74706667"
   
 1.  Configurer SSL (Secure Sockets Layer). SSL est requis pour les communications entre IIS et tous les Abonnés.  
   
-2.  Installez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les composants de connectivité sur l’ordinateur qui exécute IIS à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide de l’Assistant Installation de. Si vous envisagez d'utiliser l'Assistant Configuration de la synchronisation Web mentionné dans l'étape 3, vous devez également installer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sur l'ordinateur exécutant IIS.  
+2.  Installez des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants de connectivité sur l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui fonctionne IIS en utilisant le Assistant d’Installation. Si vous envisagez d'utiliser l'Assistant Configuration de la synchronisation Web mentionné dans l'étape 3, vous devez également installer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sur l'ordinateur exécutant IIS.  
   
 3.  Configurez l'ordinateur exécutant IIS pour la synchronisation Web. Vous pouvez configurer l'ordinateur manuellement ou utiliser l'Assistant Configuration de la synchronisation Web. Nous vous recommandons d'utiliser l'Assistant.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "74706667"
   
     1.  Cliquez sur **Démarrer**, puis sur **Exécuter**.  
   
-    2.  Dans la zone **ouvrir** , tapez `inetmgr`, puis cliquez sur **OK**.  
+    2.  Dans la boîte `inetmgr` **ouverte,** tapez, puis cliquez **sur OK**.  
   
 3.  Exécutez l'Assistant Certificat d'IIS :  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74706667"
         > [!NOTE]  
         >  Par défaut, le certificat installé par SelfSSL est valide pour sept jours.  
   
-    -   Pour spécifier des valeurs pour un ou plusieurs paramètres : cliquez sur **Démarrer**, puis cliquez sur **Exécuter**. Dans la zone **ouvrir** , entrez `cmd`, puis cliquez sur **OK**. Recherchez le répertoire d'installation de SelfSSL, tapez `SelfSSL`, puis spécifiez les valeurs d'un ou plusieurs paramètres. Pour obtenir la liste des paramètres, tapez `SelfSSL -?`.  
+    -   Pour spécifier des valeurs pour un ou plusieurs paramètres : cliquez sur **Démarrer**, puis cliquez sur **Exécuter**. Dans la boîte `cmd` **ouverte,** entrez, puis cliquez **sur OK**. Recherchez le répertoire d'installation de SelfSSL, tapez `SelfSSL`, puis spécifiez les valeurs d'un ou plusieurs paramètres. Pour obtenir la liste des paramètres, tapez `SelfSSL -?`.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>Installation des composants de connectivité et de SQL Server Management Studio  
   
@@ -108,7 +108,7 @@ ms.locfileid: "74706667"
   
 1.  Connectez-vous en tant qu'administrateur à l'ordinateur exécutant IIS.  
   
-2.  Démarrez l'Assistant Installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à partir du disque d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’utilisation de cet Assistant, voir [installer SQL Server 2014 à partir de l’Assistant installation &#40;&#41;d' ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)installation.  
+2.  Démarrez l'Assistant Installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à partir du disque d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur l’utilisation de cet assistant, voir [Install SQL Server 2014 de l’installation Wizard &#40;Configuration&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Dans la page **Sélection de composant** , sélectionnez **Connectivité des outils clients**.  
   
@@ -129,9 +129,9 @@ ms.locfileid: "74706667"
     > [!NOTE]  
     >  Le site Web que vous spécifiez donne accès aux composants utilisés par la synchronisation Web. Il ne donne pas accès à d'autres données ou à d'autres pages Web, sauf si vous configurez le site dans ce sens.  
   
--   crée un répertoire virtuel et ses alias associés. L'alias est utilisé lors de l'accès aux composants de la synchronisation Web. Par exemple, si l'adresse du serveur IIS est https://*serveur.domaine.com* et si vous spécifiez l'alias « websync1 », l'adresse permettant d'accéder au composant replisapi.dll est https://*serveur.domaine.com*/websync1/replisapi.dll.  
+-   crée un répertoire virtuel et ses alias associés. L'alias est utilisé lors de l'accès aux composants de la synchronisation Web. Par exemple, si l’adresse du serveur IIS est `https://*server.domain.com*` et si vous spécifiez l’alias « websync1 », l’adresse permettant d’accéder au composant replisapi.dll est `https://*server.domain.com*/websync1/replisapi.dll`.  
   
--   Utilise l'authentification de base. Il est recommandé d'utiliser l'authentification de base car elle vous permet d'exécuter IIS et le serveur de publication/distribution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des ordinateurs distincts (c'est la configuration recommandée) sans recourir à la délégation Kerberos. L'utilisation de SSL avec l'authentification de base garantit que les connexions, les mots de passe et toutes les données sont chiffrés lors du transit. (SSL est obligatoire, quel que soit le type d’authentification utilisé.) Pour plus d’informations sur les meilleures pratiques pour la synchronisation Web, consultez la section « meilleures pratiques de sécurité pour la synchronisation Web » dans [configurer la synchronisation Web](configure-web-synchronization.md).  
+-   Utilise l'authentification de base. Il est recommandé d'utiliser l'authentification de base car elle vous permet d'exécuter IIS et le serveur de publication/distribution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des ordinateurs distincts (c'est la configuration recommandée) sans recourir à la délégation Kerberos. L'utilisation de SSL avec l'authentification de base garantit que les connexions, les mots de passe et toutes les données sont chiffrés lors du transit. (SSL est nécessaire, quel que soit le type d’authentification qui est utilisé.) Pour plus d’informations sur les meilleures pratiques de synchronisation Web, consultez la section « Les meilleures pratiques de sécurité pour la synchronisation Web » dans [Configurer la synchronisation Web](configure-web-synchronization.md).  
   
 #### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>Pour configurer l'ordinateur exécutant IIS à l'aide de l'Assistant Configuration de la synchronisation Web  
   
@@ -155,7 +155,7 @@ ms.locfileid: "74706667"
   
     1.  Dans la zone **Alias** , entrez un alias pour le répertoire virtuel.  
   
-    2.  Dans la zone **Chemin d'accès** , entrez un chemin d'accès au répertoire virtuel. Par exemple, si vous avez `websync1` entré dans la zone **alias** , `C:\Inetpub\wwwroot\websync1` entrez dans la zone **chemin d’accès** . Cliquez sur **Suivant**.  
+    2.  Dans la zone **Chemin d'accès** , entrez un chemin d'accès au répertoire virtuel. Par exemple, si `websync1` vous êtes entré `C:\Inetpub\wwwroot\websync1` dans la boîte **Alias,** entrez dans la boîte **Du chemin.** Cliquez sur **Suivant**.  
   
     3.  Dans les deux boîtes de dialogue, cliquez sur **Oui**. Ceci indique que vous souhaitez créer un nouveau dossier et copier la DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (Internet Server API). .  
   
@@ -179,11 +179,11 @@ ms.locfileid: "74706667"
   
 11. Si l'ordinateur exécutant IIS utilise une version 64 bits de Windows, replisapi.dll doit être copié dans le répertoire approprié :  
   
-    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la zone **ouvrir** , entrez `iisreset`, puis cliquez sur **OK**.  
+    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la boîte `iisreset` **ouverte,** entrez, puis cliquez **sur OK**.  
   
     2.  Après l'arrêt et le redémarrage d'IIS, copiez replisapi.dll à partir du dossier [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi vers le répertoire spécifié à l'étape 6b.  
   
-    3.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la zone **ouvrir** , entrez `cmd`, puis cliquez sur **OK**.  
+    3.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la boîte `cmd` **ouverte,** entrez, puis cliquez **sur OK**.  
   
     4.  Dans le répertoire spécifié à l'étape 6b, exécutez la commande suivante :  
   
@@ -203,7 +203,7 @@ ms.locfileid: "74706667"
   
 3.  Inscrivez replisapi.dll :  
   
-    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la zone **ouvrir** , entrez `cmd`, puis cliquez sur **OK**.  
+    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la boîte `cmd` **ouverte,** entrez, puis cliquez **sur OK**.  
   
     2.  Dans le répertoire créé à l'étape 1, exécutez la commande suivante :  
   
@@ -224,7 +224,7 @@ ms.locfileid: "74706667"
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>Définition des autorisations pour l'écouteur de réplication SQL Server  
  Lorsqu'un Abonné se connecte à l'ordinateur exécutant IIS, il est authentifié à l'aide du type d'authentification spécifié lors de la configuration de IIS. Après avoir authentifié l'Abonné, IIS vérifie que l'Abonné est autorisé à appeler la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous contrôlez les utilisateurs en mesure d'appeler la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en définissant des autorisations pour replisapi.dll. La configuration correcte des autorisations est cruciale pour empêcher les accès non autorisés à la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Pour configurer les autorisations minimales du compte sous lequel est exécuté l'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , suivez la procédure ci-dessous. Les étapes de la procédure s’appliquent à l’exécution d' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] IIS 6,0.  
+ Pour configurer les autorisations minimales du compte sous lequel est exécuté l'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , suivez la procédure ci-dessous. Les étapes de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] procédure s’appliquent à l’exécution de l’IIS 6.0.  
   
  En plus de suivre les étapes ci-dessous, vérifiez que les noms de connexion requis se trouvent dans la liste d'accès à la publication (PAL, Publication Access List). Pour plus d’informations sur la liste d’accès à la publication, consultez [Sécuriser le serveur de publication](security/secure-the-publisher.md).  
   
@@ -236,7 +236,7 @@ ms.locfileid: "74706667"
   
     2.  Dans **Gestion de l'ordinateur**, développez **Utilisateurs et groupes locaux**.  
   
-    3.  Cliquez avec le bouton droit sur **Utilisateurs**, puis cliquez sur **Nouvel utilisateur**.  
+    3.  Clic droit **Utilisateurs**, puis cliquez sur **Nouvel Utilisateur**.  
   
     4.  Entrez un nom d'utilisateur et un mot de passe fort.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "74706667"
   
     1.  Cliquez sur **Démarrer**, puis sur **Exécuter**.  
   
-    2.  Dans la zone **ouvrir** , tapez `inetmgr`, puis cliquez sur **OK**.  
+    2.  Dans la boîte `inetmgr` **ouverte,** tapez, puis cliquez **sur OK**.  
   
     3.  Dans **Gestionnaire des services Internet (IIS)**, développez le nœud **ordinateur local** .  
   
@@ -290,7 +290,7 @@ ms.locfileid: "74706667"
   
     2.  Cliquez avec le bouton droit sur le pool d'applications que vous avez créé, puis cliquez sur **Propriétés**.  
   
-    3.  Dans la boîte de dialogue Propriétés de la ** \<> de ApplicationPoolName** , sous l’onglet **identité** , cliquez sur **configurable**.  
+    3.  Dans la **Identity** **Configurable** ** \<boîte de dialogue ApplicationPoolName> Properties,** sur l’onglet Identité, cliquez configurable .  
   
     4.  Dans les champs **Nom d'utilisateur** et **Mot de passe** , entrez le compte et le mot de passe créés à l'étape 1.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "74706667"
   
 1.  Vérifiez que les paramètres du réseau local (LAN) sur l'Abonné sont corrects :  
   
-    1.  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, dans le menu **Outils** , cliquez sur **Options Internet**.  
+    1.  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, sur le menu **Tools,** cliquez sur **Internet Options**.  
   
     2.  Sur l'onglet **Connexions** , cliquez sur **Paramètres LAN**.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "74706667"
   
     5.  Cliquez sur **OK**.  
   
-2.  Sur l'Abonné, dans Internet Explorer, connectez-vous au serveur en mode de diagnostic en ajoutant `?diag` à l'adresse pour le fichier replisapi.dll. Par exemple : https://server.domain.com/directory/replisapi.dll?diag.  
+2.  Sur l'Abonné, dans Internet Explorer, connectez-vous au serveur en mode de diagnostic en ajoutant `?diag` à l'adresse pour le fichier replisapi.dll. Par exemple : `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  Si le certificat spécifié pour IIS n'est pas reconnu par le système d'exploitation Windows, la boîte de dialogue **Alerte de sécurité** s'affiche. Cette alerte peut se produire si le certificat est un certificat de test ou si le certificat a été émis par une Autorité de certification non reconnue par Windows.  
   

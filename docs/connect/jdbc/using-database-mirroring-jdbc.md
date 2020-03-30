@@ -11,10 +11,10 @@ ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026436"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Utilisation de la mise en miroir de bases de données (JDBC)
@@ -56,7 +56,7 @@ AND db.database_id = m.database_id
 
 Vous devez envisager de mettre en cache les informations du partenaire afin de mettre à jour la chaîne de connexion ou concevoir une stratégie de nouvelle tentative en cas d'échec de la première tentative de création d'une connexion.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l'exemple suivant, une tentative est réalisée en premier lieu pour établir une connexion au serveur de principe. En cas d'échec et de génération d'une exception, une tentative est réalisée pour établir une connexion au serveur miroir, qui peut avoir été promu serveur de principe. Remarquez l'utilisation de la propriété failoverPartner dans la chaîne de connexion.
 

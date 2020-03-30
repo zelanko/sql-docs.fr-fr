@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573875"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Résoudre les problèmes avec les rapports Reporting Services
@@ -34,7 +34,7 @@ Lorsque vous affichez un rapport publié dans le Gestionnaire de rapports, vous 
   
 Pour afficher la pile des appels, ouvrez une session sur le serveur de rapports avec des informations d’identification d’administrateur local, cliquez avec le bouton droit sur la page Gestionnaire de rapports, puis cliquez sur **Afficher la source**. La pile des appels fournit le contexte détaillé du message d'erreur.  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>Utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] pour vérifier les informations d’identification et les requêtes  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] pour vérifier les informations d’identification et les requêtes  
 Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] pour valider des requêtes complexes avant de les inclure dans votre rapport.   
   
 Pour plus d’informations, consultez [Éditeur de requête du moteur de base de données](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) et [Gérer les objets à l’aide de l’Explorateur d’objets](~/ssms/object/manage-objects-by-using-object-explorer.md).  

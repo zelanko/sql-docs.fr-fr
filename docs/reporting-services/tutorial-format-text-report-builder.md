@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63042961"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutoriel : Mettre en forme du texte (Générateur de rapports)
+# <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
 
 Dans ce didacticiel, vous allez vous entraîner à mettre en forme le texte de plusieurs façons dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Vous pouvez expérimenter avec différents formats. 
 
@@ -25,12 +25,12 @@ Après avoir configuré le rapport vierge avec la source de données et le datas
   
 Dans une étape, vous allez sciemment générer une erreur afin de voir pourquoi il s'agit d'une erreur. Vous corrigerez ensuite l'erreur pour obtenir l'effet souhaité.  
     
-Durée estimée pour effectuer ce tutoriel : 20 minutes.  
+Durée estimée pour effectuer le didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateReport"></a>Créer un rapport vierge avec une source de données et un dataset  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Créer un rapport vierge avec une source de données et un dataset  
   
 ### <a name="to-create-a-blank-report"></a>Pour créer un rapport vierge  
   
@@ -50,7 +50,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 
     Si le volet **Données du rapport** n’est pas visible, cochez **Données du rapport** sous l’onglet **Affichage**.
   
-2.  Dans la zone **Nom**, tapez : **TextDataSource**  
+2.  Dans la zone **Nom** , tapez **TextDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
@@ -67,7 +67,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 2.  Vérifiez que la source de données est **TextDataSource**.  
   
-3.  Dans la zone **Nom**, tapez : **TextDataset.**  
+3.  Dans la zone **Nom** , tapez **TextDataset**.  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   
@@ -119,7 +119,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>Ajouter un champ à l'aire de conception du rapport  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Ajouter un champ à l'aire de conception du rapport  
 Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre premier réflexe peut être de le faire glisser directement sur l'aire de conception. Cet exercice montre pourquoi cela ne fonctionne pas et ce que vous devez faire à la place.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Pour ajouter un champ au rapport (et obtenir le résultat incorrect)  
@@ -174,7 +174,7 @@ Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre
   
 7.  Sélectionnez la zone de liste et appuyez sur la touche Suppr.  
   
-## <a name="AddTable"></a>Ajouter un tableau à l'aire de conception du rapport  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Ajouter un tableau à l'aire de conception du rapport  
 Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le texte pivoté.   
   
 1.  Sous l’onglet **Insertion** > **Table** > **Assistant Tableau**.  
@@ -209,7 +209,7 @@ Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le tex
     
     ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>Ajouter un lien hypertexte au rapport  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Ajouter un lien hypertexte au rapport  
 Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de la section précédente.  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
@@ -234,7 +234,7 @@ Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de
   
 10. Cliquez sur un lien. Si l'ordinateur est connecté à Internet, un navigateur s'ouvre sur une rubrique d'aide du Générateur de rapports.  
   
-## <a name="RotateText"></a>Faire pivoter le texte dans le rapport  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Faire pivoter le texte dans le rapport  
 Dans cette section, vous allez faire pivoter une partie du texte du tableau des sections précédentes.  
  
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
@@ -260,7 +260,7 @@ Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas 
 
 ![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>Mettre en forme la devise  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>Mettre en forme la devise  
   
 1.  Cliquez sur **Conception** pour basculer en mode Conception.  
   
@@ -280,7 +280,7 @@ Le rapport affiche maintenant les données mises en forme et est plus facile à 
 
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>Afficher le texte avec la mise en forme HTML  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Afficher le texte avec la mise en forme HTML  
   
 1.  Cliquez sur **Conception** pour basculer en mode Conception.  
   
@@ -322,7 +322,7 @@ Le texte de la zone de texte est affiché sous forme de titre, paragraphe et lis
   
 ![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>Enregistrer le rapport  
+## <a name="save-the-report"></a><a name="Save"></a>Enregistrer le rapport  
 Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur.  
   
 Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
@@ -355,7 +355,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. [Tutoriel : Création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
+Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. Le [didacticiel : création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
 
 [Tutoriels du Générateur de rapports ](../reporting-services/report-builder-tutorials.md) 
 [Mise en forme des éléments de rapport](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
