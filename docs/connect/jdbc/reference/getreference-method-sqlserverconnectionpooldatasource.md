@@ -16,10 +16,10 @@ ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980493"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>Méthode getReference (SQLServerConnectionPoolDataSource)
@@ -35,7 +35,7 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Objet Reference.  
+ Objet de référence.  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode getReference est spécifiée par la méthode getReference de l’interface javax.naming.Referenceable. Elle remplace la méthode [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) de la classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  

@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027591"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
@@ -59,8 +59,8 @@ ms.locfileid: "69027591"
 |WARNING|Indique un problème potentiel.|  
 |INFO|Fournit des messages d'information.|  
 |FINE|Fournit des informations de suivi, y compris la création et la destruction d'objets de base. En outre, toutes les exceptions levées par les méthodes publiques.|  
-|FINER|Fournit des informations de suivi détaillées, y compris tous les points d'entrée et de sortie des méthodes publiques avec les types de données associés pour les paramètres et toutes les propriétés publiques pour les classes publiques. En outre, les paramètres d’entrée, les paramètres de sortie et les méthodes retournent des valeurs, à l’exception des types de valeurs de retour CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Les catégories suivantes de journalisation existaient dans la version 1.2 du pilote JDBC avec le niveau de journalisation FINE : [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA et [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). À compter de la version 2.0, elles sont mises à niveau vers le niveau FINER.|  
-|FINEST|Fournit des informations de suivi très détaillées. Il s'agit du niveau de journalisation le plus bas.<br /><br /> Les catégories suivantes de journalisation existaient dans la version 1.2 du pilote JDBC avec le niveau de journalisation FINEST : TDS.DATA et TDS.TOKEN. À compter de la version 2.0, elles conservent le niveau de journalisation FINEST.|  
+|FINER|Fournit des informations de suivi détaillées, y compris tous les points d'entrée et de sortie des méthodes publiques avec les types de données associés pour les paramètres et toutes les propriétés publiques pour les classes publiques. En outre, les paramètres d’entrée, les paramètres de sortie et les méthodes retournent des valeurs, à l’exception des types de valeurs de retour CLOB, BLOB, NCLOB, Reader, \<stream>.<br /><br /> Les catégories de journalisation suivantes existaient dans la version 1.2 du pilote JDBC avec le niveau de journalisation FINE : [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA et [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). À compter de la version 2.0, elles sont mises à niveau vers le niveau FINER.|  
+|FINEST|Fournit des informations de suivi très détaillées. Il s'agit du niveau de journalisation le plus bas.<br /><br /> Les catégories de journalisation suivantes existaient dans la version 1.2 du pilote JDBC avec le niveau de journalisation FINEST : TDS.DATA et TDS.TOKEN. À compter de la version 2.0, elles conservent le niveau de journalisation FINEST.|  
 |OFF|Désactive la journalisation.|  
 |ALL|Active la journalisation de tous les messages.|  
   

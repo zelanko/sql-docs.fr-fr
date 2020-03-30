@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843808"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
@@ -35,7 +35,7 @@ ms.locfileid: "73843808"
  > [!NOTE]
  > Ultérieurement, n’oubliez pas que la désactivation de Stretch Database pour une table ou une base de données ne supprime pas l’objet distant. Si vous souhaitez supprimer la table distante ou la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. Les objets distants continuent d’entraîner des coûts Azure tant qu’ils n’ont pas été supprimés manuellement.
  
-##  <a name="EnableWizardTable"></a> Utilisation de l’assistant pour activer Stretch Database sur une table  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-table"></a><a name="EnableWizardTable"></a> Utilisation de l’assistant pour activer Stretch Database sur une table  
  **Lancer l’Assistant**  
  1.  Dans l’Explorateur d’objets de SQL Server Management Studio, sélectionnez la table pour laquelle vous souhaitez activer Stretch.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73843808"
  **Résultats**  
  Passez en revue les résultats.  
   
-##  <a name="EnableTSQLTable"></a> Utilisation de Transact-SQL pour activer Stretch Database sur une table  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> Utilisation de Transact-SQL pour activer Stretch Database sur une table  
  Vous pouvez activer Stretch Database pour une table existante ou créer une table avec Stretch Database activée à l'aide de Transact-SQL.  
   
 ### <a name="options"></a>Options  

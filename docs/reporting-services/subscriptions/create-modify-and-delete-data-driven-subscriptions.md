@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140266"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Créer, modifier ou supprimer des abonnements pilotés par les données
@@ -35,14 +35,14 @@ ms.locfileid: "67140266"
   
 -   [Exécution de l'abonnement](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> Gestion et suppression d'un abonnement piloté par les données  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> Gestion et suppression d'un abonnement piloté par les données  
  Un abonnement piloté par les données en cours d'exécution ne peut pas être arrêté ou supprimé via le portail web. Par conséquent, il est préférable d'utiliser une planification partagée pour déclencher l'abonnement piloté par les données. Si vous voulez empêcher temporairement l'exécution d'un abonnement, vous pouvez suspendre la planification qui le déclenche. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
  Pour supprimer un abonnement piloté par les données, cochez la case en regard du rapport sur la page **Abonnements**, puis sélectionnez **Supprimer**.  
   
  Pour obtenir des instructions sur l’annulation d’un abonnement piloté par les données, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
-##  <a name="bkmk_create_and_modify"></a> Création et modification d'un abonnement piloté par les données  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> Création et modification d'un abonnement piloté par les données  
  Pour créer un abonnement piloté par les données, sélectionnez un rapport qui utilise des informations d'identification stockées ou aucune information d'identification. Lorsque vous créez l'abonnement piloté par les données, nous vous conseillons d'utiliser une convention d'affectation de noms pour le champ de description, afin de pouvoir différencier facilement les abonnements standard des abonnements pilotés par les données.  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Pour créer un abonnement piloté par les données (mode natif)  
@@ -88,14 +88,14 @@ ms.locfileid: "67140266"
   
 -   **Conditions requises liées à l'utilisateur**. L'auteur de l'abonnement doit être autorisé à « Gérer les rapports » et « Gérer tous les abonnements ». Pour plus d’informations sur les autorisations d’exécution de tâches au niveau élément, consultez [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md). L'auteur doit également posséder les informations d'identification requises pour accéder à la source de données externe qui contient les données des abonnés.  
   
-##  <a name="bkmk_define_query"></a> Définition d'une requête qui extrait les informations d'abonnement  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> Définition d'une requête qui extrait les informations d'abonnement  
  Un abonnement piloté par les données doit spécifier une requête ou une commande qui permet d'extraire les données des abonnés. La requête doit produire une ligne pour chaque abonné. Si vous utilisez l'extension de remise par messagerie électronique, la requête doit retourner un alias de messagerie pour chaque abonné. Le nombre de remises effectuées est basé sur le nombre de lignes retournées par la requête. Si le jeu de lignes contient 10 000 lignes, l'abonnement remet 10 000 rapports.  
   
  Si l'exécution de la requête est trop longue, vous pouvez augmenter la valeur du délai d'expiration pour permettre un temps de traitement supplémentaire.  
   
  Pour cette étape, la requête doit être validée avant que vous continuiez. La validation ne traite pas la requête mais retourne la liste de toutes les colonnes qui se trouvent dans l'ensemble de lignes, ce qui vous permet de référencer les colonnes lors de sélections ultérieures. Si la validation de la requête échoue, il vous est impossible de continuer. Une requête n'est pas validée si sa syntaxe est incorrecte ou si la connexion à la source de données n'est pas valide. Utilisez le bouton **Précédent** pour effectuer les corrections qui s'imposent sur la source de données.  
   
-##  <a name="bkmk_run_subscription"></a> Exécution de l'abonnement  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> Exécution de l'abonnement  
  Vous devez indiquer les conditions du traitement de l'abonnement. Vous pouvez spécifier une planification ou déclencher l'abonnement de façon à ce qu'il coïncide avec la mise à jour de l'instantané d'exécution de rapport. Le traitement des abonnements pilotés par les données est identique au traitement des abonnements standard.  
   
 ## <a name="see-also"></a>Voir aussi  

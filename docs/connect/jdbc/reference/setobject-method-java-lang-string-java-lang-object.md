@@ -16,10 +16,10 @@ ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d07f5026ccc4ee5a614f1f3fa5020502f9dcadd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973318"
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>Méthode setObject (java.lang.String, java.lang.Object)
@@ -52,9 +52,9 @@ public void setObject(java.lang.String sCol,
   
  Cette méthode convertit le paramètre spécifié en type CHAR si une valeur Null est donnée, avant de l'envoyer à la base de données. Si le paramètre est déclaré en tant que type SQL binary, varbinary ou image, une exception est levée lors de l'exécution de l'instruction.  
   
- Depuis la version 3.0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du pilote JDBC, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Paramétrage des propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Définir les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Pour plus d’informations, consultez [Configuration du mode d'envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Pour plus d’informations, consultez [Configurer le mode d’envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setObject, méthode (SQLServerCallableStatement)](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   

@@ -11,10 +11,10 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955515"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Méthode compareTo (DateTimeOffset)
@@ -41,10 +41,10 @@ public int compareTo(DateTimeOffset other)
 |nombre négatif|Cet objet **DateTimeOffset** représente un point dans le temps antérieur à *other*.|  
 |nombre positif|Cet objet **DateTimeOffset** représente un point dans le temps postérieur à *other*.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque deux objets **DateTimeOffset** ont la même heure GMT, ils ne sont pas triés en fonction du décalage.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DateTimeOffset, classe](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset, membres](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

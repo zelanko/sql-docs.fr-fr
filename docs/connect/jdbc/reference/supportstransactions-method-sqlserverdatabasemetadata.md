@@ -16,10 +16,10 @@ ms.assetid: 57d28ee5-c2f6-4740-b42d-cead1aade809
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aca62d4355c19497b5e9d2f86c105c7f083a1346
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968640"
 ---
 # <a name="supportstransactions-method-sqlserverdatabasemetadata"></a>Méthode supportsTransactions (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsTransactions()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

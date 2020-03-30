@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077777"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77077777"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> Champs de dataset et requêtes  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> Champs de dataset et requêtes  
  Les champs de dataset sont spécifiés par la commande de requête de dataset et par tout champ calculé que vous définissez. La collection de champs que vous voyez dans votre rapport dépend du type de dataset dont vous disposez :  
   
 -   **Dataset partagé.** La collection de champs correspond à la liste des champs pour la requête dans la définition du dataset partagé au moment où vous avez ajouté directement le dataset partagé à votre rapport, ou lorsque vous avez ajouté une partie de rapport incluant le dataset partagé. La collection de champs locale ne change pas lorsque la définition du dataset partagé est modifiée sur le serveur de rapports. Pour mettre à jour la collection de champs locale, vous devez actualiser la liste pour le dataset partagé local.  
@@ -59,7 +59,7 @@ ms.locfileid: "77077777"
 >  Certaines propriétés **Field** ne peuvent pas être utilisées pour toutes les sources de données. Les propriétés **Value** et **IsMissing** sont définies pour toutes les sources de données. D’autres propriétés prédéfinies (comme **Key**, **UniqueName**et **ParentUniqueName** pour les sources de données multidimensionnelles) sont prises en charge uniquement si la source de données les fournit. Certains fournisseurs de données prennent en charge les propriétés personnalisées. Pour plus d’informations, consultez les rubriques spécifiques relatives aux propriétés de champ étendues correspondant à votre type de source de données dans [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Pour obtenir un exemple relatif à une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Defaults"></a> Présentation des expressions par défaut pour les champs  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> Présentation des expressions par défaut pour les champs  
  Une zone de texte peut correspondre à un élément de rapport de zone de texte dans le corps du rapport ou il peut s'agir d'une zone de texte dans une cellule d'une région de données de tableau matriciel. Lorsque vous liez un champ à une zone de texte, l'emplacement de celle-ci détermine l'expression par défaut pour la référence du champ. Dans le corps du rapport, une expression de valeur de zone de texte doit spécifier un agrégat et un dataset. S'il n'existe qu'un seul dataset dans le rapport, cette expression par défaut est créée à votre place. Pour un champ qui représente une valeur numérique, la fonction d'agrégation par défaut est Sum. Pour un champ qui représente une valeur non numérique, l'agrégat par défaut est First.  
   
  Dans une région de données de tableau matriciel, l'expression de champ par défaut dépend des appartenances aux lignes et aux groupes de la zone de texte à laquelle vous ajoutez le champ. L'expression de champ pour le champ Sales, lorsqu'il est ajouté à une zone de texte dans la ligne de détails d'une table, est `[Sales]`. Si vous ajoutez ce même champ à une zone de texte dans un en-tête de groupe, l'expression par défaut est `(Sum[Sales])`, car l'en-tête de groupe affiche des valeurs résumées pour le groupe et non des valeurs de détails. Lors de l'exécution du rapport, le processeur de rapports évalue chaque expression et substitue le résultat dans le rapport.  
@@ -67,7 +67,7 @@ ms.locfileid: "77077777"
  Pour plus d’informations sur les expressions, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="DataTypes"></a> Types de données de champ  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> Types de données de champ  
  Lorsque vous créez un dataset, il se peut que les types de données des champs sur la source de données ne correspondent pas exactement aux types de données utilisés dans un rapport. Les types de données peuvent passer par une ou deux couches de mappage. L'extension pour le traitement des données ou le fournisseur de données peuvent mapper les types de données de la source de données en types de données CLR (Common Language Runtime). Les types de données retournés par les extensions pour le traitement des données sont mappés à un sous-ensemble de types de données CLR (Common Language Runtime) à partir du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Dans la source de données, les données sont stockées dans des types de données pris en charge par la source de données. Par exemple, les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent correspondre à l’un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pris en charge, tels que **nvarchar** ou **datetime**. Lorsque vous récupérez des données à partir de la source de données, celles-ci sont transmises par l'intermédiaire d'une extension pour le traitement des données ou d'un fournisseur de données associé au type de source de données. Selon l'extension pour le traitement des données utilisée, les données peuvent être converties à partir des types de données utilisés par la source de données en types de données pris en charge par l'extension pour le traitement des données. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des types de données pris en charge par le CLR (Common Language Runtime) installé avec [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le fournisseur de données mappe chaque colonne contenue dans le jeu de résultats du type de données natif en un type de données CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "77077777"
  Pour plus d’informations sur l’ajout de références dans un champ de dataset à partir d’une expression, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="MissingFields"></a> Détection de champs manquants lors de l'exécution  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> Détection de champs manquants lors de l'exécution  
  Lorsque le rapport est traité, le jeu de résultats pour un dataset peut ne pas contenir de valeurs pour toutes les colonnes spécifiées, car les colonnes n'existent plus dans la source de données. Vous pouvez utiliser la propriété de champ IsMissing pour détecter si des valeurs ont été retournées pour un champ au moment de l’exécution. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   

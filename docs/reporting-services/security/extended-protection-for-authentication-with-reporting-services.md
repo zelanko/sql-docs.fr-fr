@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570995"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
@@ -107,13 +107,13 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
   
  Si la validation des paramètres de configuration échoue, les types d'authentification **RSWindowsNTLM**, **RSWindowsKerberos** et **RSWindowsNegotiate** sont désactivés sur le serveur de rapports.  
   
-###  <a name="ConfigurationSettings"></a> Paramètres de configuration pour la protection étendue de Reporting Services  
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Paramètres de configuration pour la protection étendue de Reporting Services  
  Le tableau suivant donne des informations sur les paramètres de configuration qui figurent dans le fichier **rsreportserver.config** de protection étendue.  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Indique le niveau d'application de la protection étendue. Les valeurs autorisées sont :<br /><br /> **Off** : Par défaut. Indique l’absence de vérification de la liaison de canal ou de service.<br /><br /> **Allow** prend en charge la protection étendue, mais ne l’impose pas.  Spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue. La manière dont la protection s’applique dépend du paramètre **RsWindowsExtendedProtectionScenario**.<br /><br /> -L’authentification est autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> **Require** spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue.<br /><br /> -L’authentification **n’est pas** autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.|  
-|**RsWindowsExtendedProtectionScenario**|Spécifie quelles formes de protection étendue sont validées : Liaison de canal, liaison de service ou les deux. Les valeurs autorisées sont :<br /><br /> **Proxy** : Par défaut. Spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Any** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Direct** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : Le paramètre **RsWindowsExtendedProtectionScenario** est ignoré si **RsWindowsExtendedProtectionLevel** est défini sur **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Indique le niveau d'application de la protection étendue. Les valeurs autorisées sont :<br /><br /> **Off**: valeur par défaut. Indique l’absence de vérification de la liaison de canal ou de service.<br /><br /> **Allow** prend en charge la protection étendue, mais ne l’impose pas.  Spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue. La manière dont la protection s’applique dépend du paramètre **RsWindowsExtendedProtectionScenario**.<br /><br /> -L’authentification est autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> **Require** spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue.<br /><br /> -L’authentification **n’est pas** autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.|  
+|**RsWindowsExtendedProtectionScenario**|Indique les formes de protection étendue validées : liaison de canal, liaison de service ou les deux à la fois. Les valeurs autorisées sont :<br /><br /> **Proxy**: valeur par défaut. Spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Any** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Direct** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : le paramètre **RsWindowsExtendedProtectionScenario** est ignoré si **RsWindowsExtendedProtectionLevel** est défini sur **OFF**.|  
   
  Exemples d'entrées dans le fichier de configuration **rsreportserver.config** :  
   
@@ -166,7 +166,7 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 [Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Avis de sécurité Microsoft : Protection étendue de l’authentification](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft Security Advisory: Extended protection for authentication (en anglais)](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Méthode SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

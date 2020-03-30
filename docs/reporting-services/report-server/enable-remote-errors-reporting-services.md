@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593873"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73593873"
   
 -   [Modification de la table ConfigurationInfo (mode natif)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> Activer les erreurs distantes pour le mode SharePoint  
+##  <a name="enable-remote-errors-for-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Activer les erreurs distantes pour le mode SharePoint  
  Il existe deux procédures différentes pour activer les erreurs distantes pour le mode SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La procédure est différente pour les deux architectures différentes de serveur de rapports. La dernière architecture basée sur un service SharePoint qui a été introduite dans la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise un paramètre qui peut être configuré pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'architecture plus ancienne utilise un paramètre de niveau de site unique.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Activer les erreurs distantes pour une application de service Reporting Services  
@@ -60,7 +60,7 @@ ms.locfileid: "73593873"
   
 5.  Cliquez sur **OK**  
   
-##  <a name="bkmk_mgtStudio"></a> Activer les erreurs distantes au moyen de SQL Server Management Studio (mode natif)  
+##  <a name="enable-remote-errors-through-sql-server-management-studio-native-mode"></a><a name="bkmk_mgtStudio"></a> Activer les erreurs distantes au moyen de SQL Server Management Studio (mode natif)  
   
 1.  Démarrez Management Studio et connectez-vous à une instance du serveur de rapports. Pour plus d’informations, consultez [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73593873"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> Activer les erreurs distantes au moyen d'un script (mode natif)  
+##  <a name="enable-remote-errors-through-script-native-mode"></a><a name="bkmk_script"></a> Activer les erreurs distantes au moyen d'un script (mode natif)  
   
 1.  Créez un fichier texte et copiez-y le script suivant.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73593873"
   
 6.  Pour plus d’informations, consultez [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
-##  <a name="bkmk_ConfigurationInfo"></a> Modification de la table ConfigurationInfo (mode natif)  
+##  <a name="modifying-the-configurationinfo-table-native-mode"></a><a name="bkmk_ConfigurationInfo"></a> Modification de la table ConfigurationInfo (mode natif)  
   
 > [!NOTE]  
 >  Vous pouvez modifier la table **ConfigurationInfo** dans la base de données du serveur de rapports afin d'affecter la valeur **EnableRemoteErrors** à **True**, mais si le serveur de rapports est utilisé de manière active, vous devez utiliser SQL Server Management Studio ou un script pour modifier les paramètres. Si vous modifiez le paramètre dans la base de données, vous devez redémarrer le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant que les modifications entrent en vigueur.  

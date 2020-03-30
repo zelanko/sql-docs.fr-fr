@@ -15,13 +15,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226828"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : Utiliser le Concepteur de tables pour gérer les tables et les relations
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : utiliser le Concepteur de tables pour gérer les tables et les relations
 
 Le Concepteur de tables offre une expérience visuelle parallèle à l’Éditeur Transact\-SQL pour la création et la modification de la structure des tables, y compris des objets de programmation propres aux tables, pour les bases de données SQL Server.  Il s’exécute lorsque l’utilisateur crée une table pour une base de données connectée ou un projet, ou double-clique pour modifier une table dans l’Explorateur d’objets SQL Server ou l’Explorateur de solutions.  
   
@@ -57,5 +57,5 @@ Le concepteur comprend la Grille Colonnes, un volet de script et un volet contex
     Notez que l'expérience de création et modification d'entités de base de données pour un projet en mode hors connexion est identique à celle d'exécution des tâches avec une base de données connectée.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : créer des objets de base de données avec le Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Guide pratique : Créer des objets de base de données avec le Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

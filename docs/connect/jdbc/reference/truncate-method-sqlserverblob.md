@@ -16,10 +16,10 @@ ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968498"
 ---
 # <a name="truncate-method-sqlserverblob"></a>Méthode truncate (SQLServerBlob)
@@ -42,10 +42,10 @@ public void truncate(long len)
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode truncate est spécifiée par la méthode truncate de l’interface java.sql.Blob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerBlob, méthodes](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob, membres](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob, classe](../../../connect/jdbc/reference/sqlserverblob-class.md)  

@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257027"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procédure pas à pas : création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server
@@ -33,7 +33,7 @@ Lors de cette procédure pas à pas, vous allez créer une règle personnalisée
   
 5. Vérifier que la nouvelle règle d'analyse du code est en place.  
   
-**Composants requis**
+**Prérequis**
   
 Vous devez disposer des éléments suivants pour exécuter cette procédure pas à pas :  
   
@@ -544,7 +544,7 @@ Enfin, la nouvelle règle s’affiche dans le projet SQL Server. Pour afficher l
   
 3. Cliquez sur **Analyse du code**. Vous devez voir une nouvelle catégorie nommée RuleSamples.CategorySamples.  
   
-4. Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : éviter d’utiliser des instructions WAITFOR DELAY dans des procédures stockées, des fonctions et des déclencheurs.  
+4. Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : Évitez d'utiliser des instructions WaitFor Delay dans des procédures stockées, des fonctions et des déclencheurs.  
   
 ## <a name="see-also"></a>Voir aussi
 

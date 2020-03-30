@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5360e7aa9718fef0d17bf73b9064c2d1a61a4577
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75726946"
 ---
 # <a name="install-azdata-with-pip"></a>Installer `azdata` avec `pip`
@@ -24,7 +24,7 @@ Cet article explique comment installer l’outil `azdata` Windows ou Linux à l�
 
 Pour Windows et Linux (distribution Ubuntu), vous pouvez effectuer l’installation avec un [gestionnaire de package](./deploy-install-azdata-installer.md) pour bénéficier d’une expérience plus simple.
 
-## <a id="prerequisites"></a> Conditions préalables
+## <a name="prerequisites"></a><a id="prerequisites"></a> Conditions préalables
 
 `azdata` est un utilitaire en ligne de commande écrit en Python qui permet aux administrateurs de clusters de démarrer et de gérer les clusters Big Data via des API REST. Vous devez utiliser au minimum Python version 3.5. `pip` est requis pour télécharger et installer l’outil `azdata`. Les instructions ci-dessous fournissent des exemples pour Windows et Ubuntu. Pour installer Python sur d’autres plateformes, consultez la [documentation Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 En outre, installez et mettez à jour la dernière version du package Python `requests` :
@@ -36,7 +36,7 @@ pip3 install -U requests
 > [!IMPORTANT]
 > Si vous installez une version plus récente de clusters Big Data, sauvegardez vos données et supprimez les anciens clusters avant de mettre à niveau `azdata` et d’installer la nouvelle version. Pour plus d’informations, consultez [Mise à niveau vers une nouvelle version](deployment-upgrade.md).
 
-## <a id="windows"></a> Installation de `azdata` sur Windows
+## <a name="windows-azdata-installation"></a><a id="windows"></a> Installation de `azdata` sur Windows
 
 1. Sur un client Windows, téléchargez le package Python nécessaire à partir de [https://www.python.org/downloads/](https://www.python.org/downloads/). Pour Python 3.5.3 et versions ultérieures, pip3 est installé en même temps que Python. 
 
@@ -63,7 +63,7 @@ pip3 install -U requests
    pip3 install -r https://aka.ms/azdata
    ```
 
-## <a id="linux"></a> Installation de `azdata` sur Linux
+## <a name="linux-azdata-installation"></a><a id="linux"></a> Installation de `azdata` sur Linux
 
 Sur Linux, vous devez installer Python 3.5, puis mettre à niveau pip. L’exemple suivant montre les commandes qui fonctionnent pour Ubuntu. Pour les autres plateformes Linux, consultez la [documentation Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
@@ -105,7 +105,7 @@ Sur Linux, vous devez installer Python 3.5, puis mettre à niveau pip. L’exe
    > [!NOTE]
    > Le commutateur `--user` installe `azdata` dans le répertoire d’installation de l’utilisateur Python. Sur Linux, il s’agit généralement de `~/.local/bin`. Ajoutez ce répertoire à votre chemin ou accédez au répertoire d’installation de l’utilisateur et exécutez `./azdata` à partir de ce répertoire.
 
-## <a id="macOSX"></a> Installer `azdata` sur macOS ou OS X
+## <a name="install-azdata-on-macos-or-os-x"></a><a id="macOSX"></a> Installer `azdata` sur macOS ou OS X
 
 Pour installer `azdata` sur macOS ou OS X, effectuez les étapes suivantes. Pour chaque étape, exécutez l’exemple dans Terminal.
 

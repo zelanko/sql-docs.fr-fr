@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Configurer l’environnement de développement pour le développement Ruby | Microsoft Docs'
+title: 'Étape 1 : Configurer l’environnement de développement pour le développement Ruby | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992458"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Ruby
@@ -43,7 +43,7 @@ a. Double-cliquez sur le fichier. Vous serez invité à indiquer l’emplacement
 b. Cliquez sur le bouton « ... », puis sélectionnez « C:\DevKit ». Vous devrez probablement créer ce dossier pour la première fois en cliquant sur « Créer un nouveau dossier ».  
 c. Cliquez sur « OK » puis sur « Extraire » pour extraire les fichiers.  
   
-5. **Ouvrir cmd. exe**  
+5. **Ouvrez cmd.exe**  
   
 6. **Initialiser Ruby DevKit**  
 ```  
@@ -94,7 +94,7 @@ Notez que macOS X dispose déjà de Ruby préinstallé, car le système d’exp
   
 1.  **Ouvrir le terminal**  
   
-2. **Installer le gestionnaire de package Homebrew**  
+2. **Installez le gestionnaire de package Homebrew**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  

@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570596"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint
@@ -51,7 +51,7 @@ ms.locfileid: "65570596"
   
  L'autorisation « Parcourir les informations utilisateur » permet au serveur de rapports de retourner des informations sur l'auteur de l'élément et sur l'utilisateur qui l'a modifié en dernier. Sans cette autorisation, le serveur de rapports retourne les erreurs ci-après. Pour les opérations de navigation, l’erreur est : « Report Server a rencontré une erreur SharePoint. ---> System.UnauthorizedAccessException : accès refusé. » Pour les opérations de publication, l’erreur est : « Les autorisations accordées à l’utilisateur « \<domaine>\\<utilisateur\> » sont insuffisantes pour effectuer cette opération. »  
   
-##  <a name="permissionReports"></a> Autorisations pour afficher et gérer des rapports  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Autorisations pour afficher et gérer des rapports  
  Les autorisations de définition de rapport sont définies par l'intermédiaire des autorisations pour les listes sur la bibliothèque contenant le rapport ; vous pouvez toutefois définir des autorisations sur des rapports individuels si vous souhaitez en restreindre l'accès. Le tableau suivant présente une liste de tâches et les autorisations nécessaires pour chacune d'entre elles.  
   
 |Tâche|Autorisation|  
@@ -69,7 +69,7 @@ ms.locfileid: "65570596"
 |Supprimer les instantanés de l'historique de rapport et supprimer des versions spécifiques de définitions de rapport extraites et modifiées de temps à autre.|**Supprimer les versions** sur la bibliothèque contenant le rapport pour lequel vous supprimez l'historique de rapport.|  
 |Afficher les instantanés de l'historique de rapport et afficher des versions spécifiques de définitions de rapport extraites et modifiées de temps à autre.|**Afficher les versions** sur la bibliothèque qui contient le rapport.|  
   
-##  <a name="permissionReportBuilder"></a> Autorisations pour la création de rapports et l'utilisation du Générateur de rapports  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> Autorisations pour la création de rapports et l'utilisation du Générateur de rapports  
  Le Générateur de rapports est un outil de création de rapports permettant de créer des rapports ad hoc. Le Générateur de rapports utilise les modèles de rapport comme source de données pour prendre en charge l'exploration ad hoc des données. Vous pouvez charger un modèle dans le Générateur de rapports pour créer un rapport, puis l'exécuter, cliquer sur des données du modèle et éventuellement enregistrer le rapport dans une bibliothèque. Les utilisateurs bénéficiant des autorisations suffisantes peuvent ensuite ouvrir le même rapport et effectuer également une exploration ad hoc des données.  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "65570596"
   
  Les autorisations pour créer et utiliser les abonnements, l'historique de rapport et pour définir les options de traitement des rapports ou des données sur un rapport du Générateur de rapports sont identiques à celles servant à ces mêmes actions sur les fichiers de définition de rapport standard.  
   
-##  <a name="permissionSharedSchedules"></a> Autorisations pour créer et gérer des planifications partagées  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> Autorisations pour créer et gérer des planifications partagées  
  Les planifications partagées ne sont pas des documents stockés dans une bibliothèque. Pour cette raison, la création et la gestion de ces planifications exigent des autorisations sur le site. Vous ne pouvez pas restreindre l'accès à des planifications partagées spécifiques. Toutes les planifications partagées créées seront disponibles à tous les utilisateurs qui disposent d'une autorisation Ouvrir sur l'ensemble du site.  
   
  Le tableau suivant présente une liste des tâches et des autorisations permettant de créer, gérer et utiliser les planifications partagées :  
@@ -100,7 +100,7 @@ ms.locfileid: "65570596"
 |Créer, modifier ou supprimer une planification partagée.|**Gérer le site Web** sur le site.|  
 |Sélectionner une planification partagée pour le traitement des abonnements ou la récupération de données.|**Ouvrir** sur le site contenant la bibliothèque.|  
   
-##  <a name="permissionSubscriptions"></a> Autorisations pour créer et gérer des abonnements  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> Autorisations pour créer et gérer des abonnements  
  SharePoint applique une dépendance entre l'abonnement et les autorisations d'affichage. Vous ne pouvez pas vous abonner à un rapport que vous n'êtes pas autorisé à afficher. Si vous accordez des autorisations d'abonnement à un rapport, les autorisations d'affichage sont automatiquement accordées.  
   
  Le tableau suivant présente une liste des tâches et des autorisations permettant de créer, gérer et utiliser les abonnements :  
@@ -111,7 +111,7 @@ ms.locfileid: "65570596"
 |Sélectionner une planification partagée à utiliser avec l'abonnement.|**Ouvrir** sur le site contenant la bibliothèque.|  
 |Créer, modifier ou supprimer un abonnement quelconque d'un site.|**Gérer les alertes** sur le site.|  
   
-##  <a name="permissionDataSources"></a> Autorisations pour créer et gérer des sources de données partagées et des modèles de rapport  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> Autorisations pour créer et gérer des sources de données partagées et des modèles de rapport  
  Un fichier de source de données partagée (.rsds) contient des informations de connexion à la source de données utilisables par plusieurs rapports et modèles. Pour les rapports standard, l'utilisation d'un fichier .rsds pour spécifier les informations de connexion à la source de données est facultative. Pour les rapports pilotés par un modèle, l'utilisation d'un fichier .rsds est nécessaire. Un modèle de rapport utilise toujours un fichier .rsds pour se connecter à des sources de données externes.  
   
  Vous pouvez définir des propriétés sur les sources de données partagées qui déterminent si des utilisateurs individuels peuvent afficher ou gérer ces sources de données partagées. Les autorisations pour afficher ou gérer une source de données partagée sont différentes des autorisations pour afficher un rapport ; vous pouvez afficher un rapport utilisant un fichier .rsds sans disposer d'autorisation d'affichage sur le fichier .rsds lui-même.  

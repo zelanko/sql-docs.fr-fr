@@ -13,10 +13,10 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015123"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Regroupement de connexions (Microsoft Drivers for PHP for SQL Server)
@@ -35,7 +35,7 @@ Voici des points importants à noter sur le regroupement de connexions dans [!IN
 Pour plus d’informations sur le regroupement de connexions, consultez [Regroupement de connexions du Gestionnaire de pilotes](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="enablingdisabling-connection-pooling"></a>Activation/désactivation du regroupement de connexions
-### <a name="windows"></a> Windows
+### <a name="windows"></a>Windows
 Vous pouvez forcer le pilote à créer une connexion (au lieu de rechercher une connexion équivalente dans le pool de connexions) en affectant à l’attribut *ConnectionPooling* de la chaîne de connexion la valeur **false** (ou 0).  
   
 Si l’attribut *ConnectionPooling* est omis de la chaîne de connexion ou si sa valeur est **true** (ou 1), le pilote crée uniquement une connexion si aucune connexion équivalente n’existe dans le pool de connexions.  
@@ -74,7 +74,7 @@ La définition de `Pooling` sur `No` dans le fichier odbcinst.ini force le pilot
 Pooling=No
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 - Sur Linux ou macOS, toutes les connexions sont regroupées si le regroupement est activé dans le fichier odbcinst.ini. Cela signifie que l’option de connexion ConnectionPooling n’a aucun effet. Pour désactiver le regroupement, définissez Pooling=No dans le fichier odbcinst.ini et rechargez les pilotes.
   - unixODBC <= 2.3.4 (Linux et macOS) risque de ne pas renvoyer les informations de diagnostic appropriées, notamment les messages d’erreur, les avertissements et les messages informatifs
   - Pour cette raison, les pilotes SQLSRV et PDO_SQLSRV risquent de ne pas récupérer correctement les données de type Long (XML, binaires, par exemple) sous forme de chaînes. Pour contourner le problème, les données de type Long peuvent être extraites en tant que flux de données. Consultez l’exemple ci-dessous pour SQLSRV.
@@ -124,8 +124,8 @@ function getColumn($conn)
 ```
 
 
-## <a name="see-also"></a> Voir aussi  
-[Procédure : Se connecter à l’aide de l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+## <a name="see-also"></a>Voir aussi  
+[Guide pratique pour se connecter à l’aide de l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Procédure : Se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Guide pratique pour se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

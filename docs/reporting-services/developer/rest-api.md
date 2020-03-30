@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937669"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
@@ -32,10 +32,10 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 * **L’URI de demande**, qui se compose de : `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Bien que l’URI de demande soit inclus dans l’en-tête de message de la demande, nous l’appelons séparément ici, car la plupart des langages ou des frameworks vous obligent à le transmettre séparément du message de demande.
 
-    * Schéma d’URI : Indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
-    * Hôte d’URI : Spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison du service REST est hébergé, comme `myserver.contoso.com`.
-    * Chemin de la ressource : Spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
-    * Chaîne de requête (facultatif) : Fournit des paramètres simples supplémentaires, comme la version de l’API ou les critères de sélection des ressources.
+    * Schéma d’URI : indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
+    * Hôte de l’URI : spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison de service REST est hébergé, tel que `myserver.contoso.com`.
+    * Chemin de la ressource : spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
+    * Chaîne de requête (facultative) : fournit des paramètres simples supplémentaires, tels que la version de l’API ou les critères de sélection des ressources.
 
 * Champs d’en-tête du message de requête HTTP :
 

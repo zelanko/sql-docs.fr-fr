@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028892"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
@@ -63,7 +63,7 @@ Vous pouvez créer une source de données partagée pour vos rapports mobiles à
   
 En savoir plus sur [les sources de données partagées dans Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
-## <a name="shared-dataset">Créer un jeu de données partagé</a>  
+## <a name=""></a><a name="shared-dataset">Créer un jeu de données partagé</a>  
   
 Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existant, tel que le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], pour créer le jeu de données partagé.  Cette procédure pas à pas utilise [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installez le Générateur de rapports](../install-windows/install-report-builder.md)ou lancez-le à partir de votre portail web. Vous allez créer trois jeux de données : un pour la valeur de l’indicateur de performance clé, un pour la tendance de l’indicateur de performance clé et un autre avec davantage de champs pour le rapport mobile Reporting Services.     
   
@@ -93,7 +93,7 @@ Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md
    
 Vous pouvez maintenant utiliser le jeu de données comme base pour vos indicateurs de performance clés et vos rapports mobiles.  Vous pouvez créer plusieurs jeux de données sur la même source de données. Vous pouvez aussi créer plusieurs indicateurs de performance clés et rapports mobiles à partir de ces jeux de données partagés.   
   
-## <a name="create-KPI">Créer un indicateur de performance clé</a>  
+## <a name=""></a><a name="create-KPI">Créer un indicateur de performance clé</a>  
 Vous créez les indicateurs de performance clés directement sur le portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
 1. En haut à droite du portail web, cliquez sur **Nouveau** > **Nouveau KPI**.   
@@ -133,7 +133,7 @@ Vous créez les indicateurs de performance clés directement sur le portail web 
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Créer un rapport mobile Reporting Services</a>  
+## <a name=""></a><a name="create-mobile-report">Créer un rapport mobile Reporting Services</a>  
    
 Pour créer un rapport mobile Reporting Services, [installez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)ou lancez-le à partir du portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 

@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244399"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau
@@ -40,7 +40,7 @@ ms.locfileid: "75244399"
 |6|Configurer **Hostname** et **UrlRoot** pour utiliser l’adresse IP de serveur virtuel du cluster avec équilibrage de la charge réseau.|[Comment configurer Hostname et UrlRoot](#SpecifyingVirtualServerName) dans cette rubrique.|  
 |7|Vérifiez que les serveurs sont accessibles via le nom d'hôte que vous avez spécifié.|[Vérifier l’accès au serveur de rapports](#Verify) dans cette rubrique.|  
   
-## <a name="ViewState"></a> Comment configurer la validation de l’état d’affichage
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Comment configurer la validation de l’état d’affichage
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Pour exécuter un déploiement avec montée en puissance parallèle sur un cluster avec équilibrage de la charge réseau, vous devez configurer la validation de l'état d'affichage afin que les utilisateurs puissent consulter les rapports HTML interactifs.  Vous devez procéder ainsi pour le service Web Report Server.
@@ -92,7 +92,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Comment configurer Hostname et UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Comment configurer Hostname et UrlRoot
 
  Pour configurer un déploiement avec montée en puissance parallèle du serveur de rapports sur un cluster avec équilibrage de la charge réseau, vous devez définir un seul nom de serveur virtuel qui fournit un point d'accès unique au cluster de serveurs. Puis, inscrivez le nom du serveur virtuel auprès du serveur de noms de domaine de votre environnement.  
   
@@ -122,7 +122,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
   
 6. Répétez ces étapes dans chaque fichier RSReportServer.config de chaque serveur de rapports impliqué dans le déploiement par montée en puissance parallèle.  
   
-## <a name="Verify"></a> Vérifier l’accès au serveur de rapports
+## <a name="verify-report-server-access"></a><a name="Verify"></a> Vérifier l’accès au serveur de rapports
 
  Vérifiez que vous avez accès au déploiement avec montée en puissance parallèle par le biais du nom du serveur virtuel (par exemple, `https://MyVirtualServerName/reportserver` et `https://MyVirtualServerName/reports`).  
   

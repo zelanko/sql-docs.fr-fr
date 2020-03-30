@@ -17,10 +17,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75224590"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
@@ -53,7 +53,7 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
   
 ## <a name="criteria-pane"></a>Volet Critères  
   
-|À|Appuyez sur|Cliquez sur |  
+|À|Appuyez sur|Cliquez sur|  
 |------|---------|---------|  
 |Vous déplacer entre les cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la dernière ligne d'une colonne sélectionnée|Ctrl+Flèche bas||  
@@ -113,6 +113,6 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
   
 Pour plus d’informations, consultez [Volet Résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -17,10 +17,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.openlocfilehash: 74f521a83f63d1604e96deda8313fd11f07235c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256223"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Déplacer un serveur inscrit ou un groupe de serveurs inscrits
@@ -37,7 +37,7 @@ Cette rubrique explique comment organiser les serveurs dans des serveurs inscrit
   
 2. Dans la boîte de dialogue **Déplacer l’inscription du serveur** , développez la liste des groupes de serveurs, cliquez sur le nœud où doit apparaître le serveur ou le groupe de serveurs, puis cliquez sur **OK**.  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Inscrire des serveurs](../../tools/sql-server-management-studio/register-servers.md)
 

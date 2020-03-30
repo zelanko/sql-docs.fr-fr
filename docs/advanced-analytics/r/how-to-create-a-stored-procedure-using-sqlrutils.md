@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727467"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Créer une procédure stockée à l’aide de sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727467"
 
 Cet article décrit les étapes nécessaires pour convertir votre code R pour qu’il s’exécute en tant que procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
 
-## <a name="bkmk_rewrite"></a>Étape 1. Réécrire le script R
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>Étape 1. Réécrire le script R
 
 Pour obtenir les meilleurs résultats, vous devez réécrire votre code R pour l’encapsuler en tant que fonction unique.
 
@@ -145,7 +145,7 @@ L’ensemble du processus d’appel de la procédure stockée SQL préparée est
 2. Définissez un `$query` ou un `$value` pour chaque paramètre d’entrée.
 3. Utilisez `executeStoredProcedure` pour exécuter la procédure stockée à partir de l’environnement de développement R, en passant la liste des objets de paramètres d’entrée que vous avez définis.
 
-## <a name = "samples"></a>Exemple
+## <a name="example"></a><a name = "samples"></a>Exemple
 
 Cet exemple montre les versions avant et après d’un script R qui obtient des données d’une base de données SQL Server, effectue certaines transformations sur les données et les enregistre dans une autre base de données.
 

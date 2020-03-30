@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295634"
 ---
 # <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
@@ -31,7 +31,7 @@ Durée estimée pour effectuer ce didacticiel : 30 minutes.
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
 Dans cette section, vous allez créer un rapport de tableau, une source de données et un dataset. Lorsque vous créez le tableau, n'incluez que quelques champs. Après avoir terminé l'Assistant, vous ajouterez manuellement des colonnes. L’Assistant facilite la disposition du tableau.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
 17. Cliquez sur **Terminer**.  
   
-## <a name="UpdateNames"></a>2. Mettre à jour les noms par défaut de la source de données et du dataset  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. Mettre à jour les noms par défaut de la source de données et du dataset  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>Pour mettre à jour le nom par défaut de la source de données  
   
@@ -146,7 +146,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3. Afficher la première initiale et le nom de famille  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Afficher la première initiale et le nom de famille  
 Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** ( **&** ) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .   
   
 1.  Cliquez avec le bouton droit sur la colonne **StateProvince** , pointez sur **Insérer une colonne**et cliquez sur **Gauche**.  
@@ -191,7 +191,7 @@ Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur *
   
 12. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
-## <a name="DateFormat"></a>(facultatif) Mettre en forme les colonnes de date et de devise, et la ligne d’en-tête  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(facultatif) Mettre en forme les colonnes de date et de devise, et la ligne d’en-tête  
 Dans cette section, vous allez mettre en forme la colonne **Last Purchase** qui contient des dates et la colonne YTDPurchase qui contient des devises. Vous allez également mettre en forme la ligne d’en-tête.  
   
 ### <a name="to-format-the-date-column"></a>Pour formater la colonne de date  
@@ -227,7 +227,7 @@ Voici le rapport avec les dates, les devises et les en-têtes de colonnes mis en
 ![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4. Utiliser des couleurs pour afficher le sexe  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Utiliser des couleurs pour afficher le sexe  
 Dans cette section, vous allez ajouter des couleurs pour afficher le sexe d’une personne. Vous allez ajouter une colonne pour afficher la couleur, puis déterminer la couleur qui apparaît dans la colonne en fonction de la valeur du champ Sexe.  
   
 Pour conserver la couleur que vous avez appliquée dans cette cellule de table lorsque vous transformez le rapport en rapport à bandes, ajoutez un rectangle, puis ajoutez la couleur d’arrière-plan au rectangle.  
@@ -309,7 +309,7 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5. Rechercher un nom de CountryRegion  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Rechercher un nom de CountryRegion  
 Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fonction **Lookup** pour afficher le nom d’un pays/d’une région au lieu de l’identifiant de pays/région.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>Pour créer le dataset CountryRegion  
@@ -379,7 +379,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Count"></a>6. Compter les jours depuis le dernier achat  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. Compter les jours depuis le dernier achat  
 Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **Now** ou la variable globale intégrée `ExecutionTime` pour calculer le nombre de jours écoulés depuis les derniers achats d’un client.  
   
 ### <a name="to-add-the-days-ago-column"></a>Pour ajouter la colonne Days Ago  
@@ -419,7 +419,7 @@ Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **
 
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="Indicator"></a>7. Utiliser un indicateur pour afficher la comparaison des ventes  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Utiliser un indicateur pour afficher la comparaison des ventes  
 Dans cette section, vous allez ajouter une nouvelle colonne et utiliser un indicateur pour afficher si les achats de l’année en cours à ce jour (YTD) d’une personne sont au-dessus ou en-dessous de la moyenne des achats YTD. La fonction **Round** supprime les décimales des valeurs.  
   
 La configuration de l’indicateur et de ses états s’effectue en plusieurs étapes. Si vous le souhaitez, vous pouvez avancer dans la procédure « Pour configurer l’indicateur » et copier-coller les expressions complétées à partir de ce tutoriel dans la boîte de dialogue **Expression**.  
@@ -514,7 +514,7 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
 
     ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8. Créer un rapport à bandes  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Créer un rapport à bandes  
 Créez un paramètre pour que les lecteurs du rapport puissent spécifier la couleur à appliquer aux lignes alternées dans le rapport, pour en faire un rapport à bandes.  
   
 ### <a name="to-add-a-parameter"></a>Pour ajouter un paramètre  
@@ -611,7 +611,7 @@ Créez un paramètre pour que les lecteurs du rapport puissent spécifier la cou
     
     ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(facultatif) Ajouter un titre au rapport  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(facultatif) Ajouter un titre au rapport  
 Ajoutez un titre au rapport.  
   
 ### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
@@ -630,7 +630,7 @@ Ajoutez un titre au rapport.
   
 3.  Sélectionnez une couleur pour les bandes non blanches du rapport, puis cliquez sur **Afficher le rapport**.  
   
-## <a name="Save"></a>(facultatif) Enregistrer le rapport  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(facultatif) Enregistrer le rapport  
 Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur. Pour plus d’informations, consultez [Enregistrement des rapports &#40;Générateur de rapports&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 Dans ce didacticiel, vous allez enregistrer le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  

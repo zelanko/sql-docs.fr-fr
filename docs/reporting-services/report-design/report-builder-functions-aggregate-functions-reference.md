@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081321"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Fonctions du Générateur de rapports - Référence aux fonctions d’agrégation
@@ -47,7 +47,7 @@ ms.locfileid: "77081321"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> Fonctions d'agrégation intégrées  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> Fonctions d'agrégation intégrées  
  Les fonctions intégrées suivantes calculent des valeurs résumées pour un jeu de données numériques non Null dans l'étendue par défaut ou l'étendue nommée.  
   
 |**Fonction**|**Description**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="Restrictions"></a> Restrictions sur les champs prédéfinis, les collections et les fonctions d'agrégation  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Restrictions sur les champs prédéfinis, les collections et les fonctions d'agrégation  
  Le tableau suivant résume les restrictions dans les emplacements de rapport où vous pouvez ajouter des expressions qui contiennent des références aux collections intégrées globales.  
   
 |Emplacement dans le rapport|Champs|Paramètres|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="NestedRestrictions"></a> Restrictions concernant les agrégats imbriqués  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Restrictions concernant les agrégats imbriqués  
  Le tableau suivant résume les restrictions concernant les fonctions d'agrégation qui peuvent spécifier d'autres fonctions d'agrégation comme agrégats imbriqués.  
   
 |Context|RunningValue|RowNumber|Premier<br /><br /> Dernier|Previous|Sum et autres fonctions Presort|Agrégats ReportItem|Fonctions de recherche|Fonction d'agrégation|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="CalculatingRunningValues"></a> Calcul de valeurs d'exécution  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Calcul de valeurs d'exécution  
  Les fonctions intégrées suivantes calculent des valeurs d'exécution pour un jeu de données. **RowNumber** est semblable à **RunningValue** en ce sens qu'il retourne la valeur d'exécution d'un nombre qui s'incrémente pour chaque ligne de l'étendue contenante. Le paramètre d'étendue de ces fonctions doit spécifier une étendue contenante, laquelle contrôle le moment où le nombre redémarre.  
   
 |**Fonction**|**Description**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="RetrievingRowCounts"></a> Récupération de nombres de lignes  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Récupération de nombres de lignes  
  La fonction intégrée suivante calcule le nombre de lignes d'une étendue donnée. Utilisez-la pour compter toutes les lignes, y compris celles contenant des valeurs Null.  
   
 |**Fonction**|**Description**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="LookupFunctions"></a> Recherche de valeurs d'un autre dataset  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Recherche de valeurs d'un autre dataset  
  Les fonctions de recherche suivantes récupèrent des valeurs à partir d'un dataset spécifié.  
   
 |**Fonction**|**Description**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="RetrievingPostsortValues"></a> Récupération de valeurs dépendantes du tri  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Récupération de valeurs dépendantes du tri  
  Les fonctions intégrées suivantes retournent la première valeur, la dernière valeur ou la valeur précédente dans une étendue donnée. Ces fonctions dépendent de l'ordre de tri des valeurs de données. Utilisez ces fonctions pour, par exemple, rechercher les première et dernière valeurs d'une page afin de créer un en-tête de page de type dictionnaire. Utilisez **Previous** pour comparer une valeur d'une ligne avec la valeur de la ligne précédente dans une étendue spécifique pour, par exemple, rechercher des valeurs d'une année sur l'autre en pourcentage dans une table.  
   
 |**Fonction**|**Description**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="RetrievingServerAggregates"></a> Récupération d'agrégats de serveurs  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Récupération d'agrégats de serveurs  
  La fonction intégrée suivante récupère des agrégats personnalisés du fournisseur de données. Par exemple, un type de la source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'extraire des agrégats calculés sur le serveur de source de données pour une utilisation dans un en-tête de groupe.  
   
 |**Fonction**|**Description**|  
@@ -170,7 +170,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="TestingforScope"></a> Test de l'étendue  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Test de l'étendue  
  La fonction intégrée suivante teste le contexte actuel d'un élément de rapport pour voir s'il est membre d'une étendue spécifique.  
   
 |Fonction|Description|  
@@ -179,7 +179,7 @@ ms.locfileid: "77081321"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
-##  <a name="RetrievingRecursiveLevel"></a> Récupération du niveau récursif  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Récupération du niveau récursif  
  La fonction intégrée suivante récupère le niveau actuel lorsqu'une hiérarchie récursive est traitée. Utilisez le résultat de cette fonction avec la propriété **Padding** dans une zone de texte pour contrôler le niveau de retrait d'une hiérarchie visuelle pour un groupe récursif. Pour plus d’informations, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Fonction|Description|  

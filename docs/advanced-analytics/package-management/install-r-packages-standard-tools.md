@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485314"
 ---
 # <a name="install-packages-with-r-tools"></a>Installer des packages avec les outils R
@@ -75,7 +75,7 @@ Si le SQL Server a accès à Internet, vous pouvez utiliser les outils d’insta
 
 Si vous disposez de plusieurs instances côte à côte de SQL Server, exécutez l’installation séparément pour chaque instance dans laquelle vous souhaitez utiliser le package. Il n’est pas possible de partager des packages entre les instances.
 
-## <a name = "bkmk_offlineInstall"></a> Installation hors connexion (aucun accès à Internet)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a> Installation hors connexion (aucun accès à Internet)
 
 Souvent, les serveurs qui hébergent des bases de données de production n’ont pas de connexion Internet. Pour installer des packages R dans cet environnement, vous devez télécharger et préparer des packages et des dépendances à l’avance (sous forme de fichiers zippés), puis copier les fichiers dans un dossier sur le serveur. Une fois les fichiers en place, vous pouvez installer les packages hors connexion.
 

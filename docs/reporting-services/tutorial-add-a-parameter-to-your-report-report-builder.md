@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72252140"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,14 +23,14 @@ Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[
 Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport. 
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce tutoriel : 25 minutes.  
+Durée estimée pour effectuer le didacticiel : 25 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Créer un rapport de matrice et un dataset dans l’Assistant Tableau ou matrice  
+## <a name="1-create-a-matrix-report-and-dataset-in-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Créer un rapport de matrice et un dataset dans l’Assistant Tableau ou matrice  
 Créez un rapport de matrice, une source de données et un dataset.  
   
 > [!NOTE]  
@@ -82,13 +82,13 @@ Créez un rapport de matrice, une source de données et un dataset.
   
 11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ) pour voir les données.   
   
-    Le jeu de résultats se compose de 11 lignes de données indiquant le volume d'articles vendus pour chaque sous-catégorie dans quatre magasins, dans les colonnes suivantes : StoreID, Subcategory et Quantity. Le nom du magasin ne fait pas partie du jeu de résultats. Ultérieurement, dans ce didacticiel, vous rechercherez le nom du magasin qui correspond à l'identificateur de magasin d'un dataset distinct.  
+    Le jeu de résultats comprend 11 lignes de données qui montrent le volume d’articles vendus pour chaque sous-catégorie dans quatre magasins, dans les colonnes suivantes : StoreID, Subcategory et Quantity. Le nom du magasin ne fait pas partie du jeu de résultats. Ultérieurement, dans ce didacticiel, vous rechercherez le nom du magasin qui correspond à l'identificateur de magasin d'un dataset distinct.  
   
     Cette requête ne contient pas de paramètres de requête. Vous ajouterez ultérieurement des paramètres de requête dans ce didacticiel.   
   
 12. Cliquez sur **Suivant**.  
   
-## <a name="CompleteWizard"></a>2. Organiser les données et choisir la disposition dans l’Assistant  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organiser les données et choisir la disposition dans l’Assistant  
 L’Assistant fournit une conception initiale pour l’affichage des données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
   
 ### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -127,7 +127,7 @@ Le rapport s'exécute sur le serveur de rapports en présentant son titre et l'h
   
 Jusqu’à maintenant, les en-têtes de colonnes affichent l’identificateur du magasin mais pas le nom du magasin. Ultérieurement, vous ajouterez une expression pour rechercher le nom de magasin dans un dataset qui contient des paires nom d'identificateur/nom de magasin.  
   
-## <a name="Query"></a>3. Ajouter un paramètre de requête pour créer un paramètre de rapport  
+## <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. Ajouter un paramètre de requête pour créer un paramètre de rapport  
 Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur de rapports crée automatiquement un paramètre de rapport à valeur unique avec des propriétés par défaut pour le nom, le texte affiché à l'invite et le type de données.  
   
 ### <a name="to-add-a-query-parameter"></a>Pour ajouter un paramètre de requête  
@@ -162,7 +162,7 @@ Notez que vous disposez désormais d’un paramètre de rapport nommé *\@StoreI
   
 Vous ne voyez pas un volet Paramètres ? Dans le menu **Affichage** , sélectionnez **Paramètres**.  
   
-## <a name="ChangeDefaultProperties"></a>4. Modifier le type de données par défaut et d'autres propriétés pour un paramètre de rapport  
+## <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. Modifier le type de données par défaut et d'autres propriétés pour un paramètre de rapport  
 Après avoir créé un paramètre de rapport, vous pouvez ajuster les valeurs par défaut des propriétés.  
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Pour modifier le type de données par défaut d'un paramètre de rapport  
@@ -185,7 +185,7 @@ Par défaut, le paramètre que vous avez créé a pour type de données **Texte*
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
-## <a name="AddDataset"></a>4a. Ajouter un dataset pour fournir des valeurs disponibles et des noms d'affichage  
+## <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. Ajouter un dataset pour fournir des valeurs disponibles et des noms d'affichage  
 Pour que les lecteurs de votre rapport ne puissent taper que des valeurs valides pour un paramètre, vous pouvez créer une liste déroulante de valeurs à choisir. Les valeurs peuvent provenir d'un dataset ou d'une liste que vous spécifiez. Les valeurs disponibles doivent être fournies à partir d’un dataset avec une requête qui ne contient pas de référence au paramètre.  
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Pour créer un dataset de valeurs valides pour un paramètre  
@@ -215,7 +215,7 @@ Pour que les lecteurs de votre rapport ne puissent taper que des valeurs valides
   
     Le volet des données de rapport affiche les champs StoreID et StoreName sous le nœud du dataset **Stores** .  
   
-## <a name="AvailableValues"></a>4b. Spécifier les valeurs disponibles à afficher dans une liste 
+## <a name="4b-specify-available-values-to-show-in-a-list"></a><a name="AvailableValues"></a>4b. Spécifier les valeurs disponibles à afficher dans une liste 
 Après avoir créé un dataset pour fournir des valeurs disponibles, vous modifiez les propriétés de rapport pour spécifier quel dataset et quel champ utiliser pour remplir la liste déroulante à l’aide de valeurs valides dans la barre d’outils Visionneuse de rapports.  
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
@@ -246,7 +246,7 @@ Après avoir créé un dataset pour fournir des valeurs disponibles, vous modifi
   
 Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
-## <a name="DefaultValues"></a>4c. Spécifier une valeur par défaut 
+## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. Spécifier une valeur par défaut 
 Vous pouvez spécifier une valeur par défaut pour chaque paramètre afin que le rapport s'exécute automatiquement.  
   
 ### <a name="to-specify-a-default-value-from-a-dataset"></a>Pour spécifier une valeur par défaut à partir d'un dataset  
@@ -283,7 +283,7 @@ Pour *\@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North 
   
 Pour *\@StoreID*, la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
-## <a name="NameValue"></a>4d. Rechercher une paire nom/valeur  
+## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. Rechercher une paire nom/valeur  
 Un dataset peut contenir à la fois l'identificateur et le champ Nom correspondant. Lorsque vous avez seulement un identificateur, vous pouvez rechercher le nom correspondant dans un dataset que vous avez créé et qui inclut des paires nom/valeur.  
   
 ### <a name="to-look-up-a-value-from-a-dataset"></a>Pour rechercher une valeur dans un dataset  
@@ -308,13 +308,13 @@ Un dataset peut contenir à la fois l'identificateur et le champ Nom corresponda
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **Expr**.  
+    L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe : **Expr**.  
   
 8.  Affichez l'aperçu du rapport.  
   
 L’en-tête de colonne en haut de chaque colonne affiche le nom de magasin au lieu de l’identificateur de magasin.  
   
-## <a name="Expression"></a>5. Afficher la valeur de paramètre sélectionnée dans le rapport  
+## <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. Afficher la valeur de paramètre sélectionnée dans le rapport  
 Quand les lecteurs de votre rapport ont des questions sur un rapport, il est utile de connaître les valeurs de paramètres qu’ils ont choisies. Vous pouvez conserver les valeurs sélectionnées par l'utilisateur pour chaque paramètre du rapport. L'une des solutions possibles consiste à afficher les paramètres dans une zone de texte au sein du pied de page.  
   
 ### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>Pour afficher la valeur du paramètre sélectionné et son étiquette dans un pied de page  
@@ -335,7 +335,7 @@ Quand les lecteurs de votre rapport ont des questions sur un rapport, il est uti
   
 7.  Affichez l'aperçu du rapport.  
   
-## <a name="Filter"></a>6. Utiliser le paramètre de rapport dans un filtre  
+## <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. Utiliser le paramètre de rapport dans un filtre  
 Les filtres permettent de contrôler les données à utiliser dans un rapport une fois qu'il a été récupéré à partir d'une source de données externe. Pour permettre aux lecteurs du rapport de contrôler les données qu’ils souhaitent afficher, vous pouvez inclure le paramètre de rapport dans un filtre pour la matrice.  
   
 ### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>Pour spécifier un paramètre dans un filtre de matrice  
@@ -364,7 +364,7 @@ Les filtres permettent de contrôler les données à utiliser dans un rapport un
   
 La matrice affiche les données qui correspondent au magasin que vous avez sélectionné.  
   
-## <a name="Multivalued"></a>7. Modifier le paramètre de rapport pour accepter plusieurs valeurs  
+## <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. Modifier le paramètre de rapport pour accepter plusieurs valeurs  
 Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, vous devez modifier la requête et toutes les expressions qui contiennent une référence au paramètre, notamment les filtres. Un paramètre à valeurs multiples est un tableau de valeurs. Dans une requête de dataset, la syntaxe de requête doit tester l'inclusion d'une valeur dans un ensemble de valeurs. Dans une expression de rapport, la syntaxe d'expression doit accéder à un tableau de valeurs au lieu d'une valeur individuelle.  
   
 ### <a name="to-change-a-parameter-from-single-to-multivalued"></a>Pour changer un paramètre à valeur unique en paramètre à valeurs multiples  
@@ -424,7 +424,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
-## <a name="Boolean"></a>8. Ajouter un paramètre booléen pour la visibilité conditionnelle  
+## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. Ajouter un paramètre booléen pour la visibilité conditionnelle  
   
 ### <a name="to-add-a-boolean-parameter"></a>Pour ajouter un paramètre booléen  
   
@@ -468,7 +468,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
     La zone de texte située dans le pied de page apparaît, montrant tous les noms de magasins que vous avez sélectionnés.  
   
-## <a name="Title"></a>9. Ajouter un titre de rapport  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Ajouter un titre de rapport  
   
 ### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
 
@@ -478,7 +478,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 2.  Tapez Ventes de produits paramétrables, puis cliquez en dehors de la zone de texte.  
   
-## <a name="Save"></a>10. Enregistrer le rapport  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Enregistrer le rapport  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  
   

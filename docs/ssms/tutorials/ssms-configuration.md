@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247289"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Composants et configuration de SQL Server Management Studio
@@ -44,10 +44,10 @@ Cette section décrit les différents composants de fenêtre disponibles dans l�
 
     ![Menu Affichage](media/ssms-configuration/viewmenu.png)
 
-* **Explorateur d’objets** (F8) : L'Explorateur d'objets est une arborescence qui présente tous les objets de base de données sur un serveur. Cette vue inclut les bases de données du moteur de base de données SQL Server, SQL Server Analysis Services, SQL Server Reporting Services et SQL Server Integration Services. L’Explorateur d’objets contient des informations pour tous les serveurs qui y sont connectés. 
+* **Explorateur d’objets** (F8) : l’Explorateur d’objets est une arborescence qui présente tous les objets de base de données sur un serveur. Cette vue inclut les bases de données du moteur de base de données SQL Server, SQL Server Analysis Services, SQL Server Reporting Services et SQL Server Integration Services. L’Explorateur d’objets contient des informations pour tous les serveurs qui y sont connectés. 
 
     ![Explorateur d’objets](media/ssms-configuration/objectexplorer.png)
-* **Fenêtre de requête** (Ctrl+N) : Après avoir sélectionné **Nouvelle requête**, entrez vos requêtes Transact-SQL (T-SQL) dans cette fenêtre. Les résultats de vos requêtes s’affichent également ici.
+* **Fenêtre de requête** (Ctrl + N) : Après avoir sélectionné **Nouvelle requête**, entrez vos requêtes Transact-SQL (T-SQL) dans cette fenêtre. Les résultats de vos requêtes s’affichent également ici.
 
     ![Fenêtre Nouvelle requête](media/ssms-configuration/newquery.png)
 
@@ -55,7 +55,7 @@ Cette section décrit les différents composants de fenêtre disponibles dans l�
 
     ![Propriétés](media/ssms-configuration/properties.png)
 
-* **Explorateur de modèles** (Ctrl+Alt+T) : L’Explorateur de modèles a divers modèles T-SQL prédéfinis. Vous pouvez utiliser ces modèles pour effectuer diverses fonctions, comme créer ou sauvegarder une base de données. 
+* **Explorateur de modèles** (Ctrl + Alt + T) : L’Explorateur de modèles a divers modèles T-SQL prédéfinis. Vous pouvez utiliser ces modèles pour effectuer diverses fonctions, comme créer ou sauvegarder une base de données. 
 
     ![Explorateur de modèles](media/ssms-configuration/templates.png)
 

@@ -16,10 +16,10 @@ ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17f2762975f72ccd1e6482ea7120701eacf0c4c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67984078"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate, méthode (int, java.util.Calendar) (SQLServerResultSet)
@@ -42,7 +42,7 @@ public java.sql.Date getDate(int columnIndex,
   
  *cal*  
   
- Objet Calendar.  
+ Objet de calendrier.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Objet Date.  

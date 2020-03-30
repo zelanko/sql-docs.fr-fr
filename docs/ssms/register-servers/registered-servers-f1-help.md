@@ -15,10 +15,10 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256226"
 ---
 # <a name="registered-servers-f1-help"></a>Serveurs inscrits – Aide (F1)
@@ -63,7 +63,7 @@ ms.locfileid: "75256226"
  **Mémoriser le mot de passe**  
  Permet d'enregistrer le mot de passe que vous avez entré. Cette option n'est disponible que si vous avez cliqué sur **Authentification de base** ou **Authentification par formulaire**.  
   
-> **REMARQUE :** Si vous avez stocké le mot de passe et ne voulez plus le conserver en mémoire, désactivez la case à cocher, puis cliquez sur **Enregistrer**.  
+> **REMARQUE :** Si vous avez stocké le mot de passe et ne voulez plus le conserver en mémoire, décochez la case, puis cliquez sur **Enregistrer**.  
   
  **Nom du serveur inscrit**  
  Le nom qui doit apparaître dans Serveurs inscrits. Il n'est pas nécessaire que ce nom corresponde à celui de la zone **Nom du serveur** .  

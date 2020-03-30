@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593389"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
@@ -66,10 +66,10 @@ ms.locfileid: "73593389"
  [Résultats de la requête](#QueryResults)  
  Affiche des exemples de données pour le jeu de résultats de la requête générée automatiquement.  
   
-###  <a name="DatabaseView"></a> Volet Vue de base de données  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Volet Vue de base de données  
  Le volet Vue de base de données affiche les métadonnées des objets de base de données que vous êtes autorisé à afficher, selon la connexion à la source de données et les informations d'identification. La vue hiérarchique affiche les objets de base de données organisés par le schéma de base de données. Développez le nœud de chaque schéma pour afficher les tables, les vues, les procédures stockées et les fonctions table. Développez une table ou une vue pour afficher les colonnes.  
   
-###  <a name="SelectedFields"></a> Volet Champs sélectionnés  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Volet Champs sélectionnés  
  Le volet Champs sélectionnés affiche les champs du dataset de rapport, ainsi que les groupes et agrégats à inclure dans la requête.  
   
  Les options suivantes s'affichent :  
@@ -114,14 +114,14 @@ ms.locfileid: "73593389"
 |Var Distinct|Retourne des variances statistiques uniques. Implémente une combinaison de l'agrégat VAR et du mot clé DISTINCT.|  
 |VarP Distinct|Retourne des variances statistiques uniques. Implémente une combinaison de l'agrégat VARP et du mot clé DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Volet Paramètres de fonction  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Volet Paramètres de fonction  
  Le volet Paramètres de fonction affiche les paramètres pour une procédure stockée ou une fonction table. Les colonnes suivantes s’affichent :  
   
 -   **Nom du paramètre** : affiche le nom du paramètre défini par la procédure stockée ou la fonction table.  
   
 -   **Valeur** : valeur à utiliser pour le paramètre quand la requête s’exécute pour récupérer les données à afficher dans le volet Résultats de la requête au moment de la conception. Cette valeur n'est pas utilisée lorsque le rapport s'exécute au moment de l'exécution.  
   
-###  <a name="Relationships"></a> Volet Relations  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Volet Relations  
  Le volet Relations affiche les relations de jointure. Les relations peuvent être détectées automatiquement en fonction des relations de clé étrangère récupérées à partir des métadonnées de la base de données, mais vous pouvez également les créer manuellement.  
   
  Les options suivantes s'affichent :  
@@ -159,7 +159,7 @@ ms.locfileid: "73593389"
   
 -   **Champs de jointure** : répertorie les paires de champs joints ; si une relation a plusieurs conditions de jointure, les paires de champs joints sont séparées par des virgules (,).  
   
-###  <a name="AppliedFilters"></a> Volet Filtres appliqués  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Volet Filtres appliqués  
  Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause SQL WHERE. Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
   
  Les colonnes suivantes s’affichent :  
@@ -172,7 +172,7 @@ ms.locfileid: "73593389"
   
 -   **Paramètre** Affiche l'option pour ajouter un paramètre de requête à la requête. Utilisez les propriétés de dataset pour afficher la relation entre le paramètre de requête et le paramètre de rapport.  
   
-###  <a name="QueryResults"></a> Volet Résultats de la requête  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Volet Résultats de la requête  
  Le volet Résultats de la requête affiche les résultats pour la requête générée automatiquement qui est spécifiée par des sélections dans d'autres volets. Les colonnes dans le jeu de résultats sont les champs que vous spécifiez dans le volet Champs sélectionnés et les données de ligne sont limitées par les filtres que vous spécifiez dans le volet Filtres appliqués. Si la requête inclut des agrégats, le jeu de résultats inclut les nouvelles colonnes d'agrégat. Par exemple, si la colonne **Couleur** est agrégée à l'aide de l'agrégat de comptage, les résultats de la requête incluent une nouvelle colonne. Par défaut, cette colonne est nommée **Count_Color**.  
   
  Ces données représentent les valeurs de la source de données au moment de l'exécution de la requête. Les données ne sont pas enregistrées dans la définition du rapport. Les données réelles dans le rapport sont récupérées lors du traitement du rapport.  

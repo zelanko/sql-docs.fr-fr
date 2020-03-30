@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67038016"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Comparaison des serveurs de rapports Reporting Services natifs et SharePoint
@@ -27,7 +27,7 @@ Découvrez la pièce centrale d’une installation [!INCLUDE[ssNoVersion](../../
 
 Un serveur de rapports Reporting Services s’exécute dans l’un des deux modes de déploiement : le mode natif ou le mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#feature-comparison-of-sharepoint-and-native-mode) pour obtenir une comparaison des fonctionnalités.  
   
- **Installation :** Pour plus d’informations sur l’installation de Reporting Services, consultez [Installer SQL Server Reporting Services](../install-windows/install-reporting-services.md).
+ **Installation :** pour plus d’informations sur l’installation de Reporting Services, consultez [Installer SQL Server Reporting Services](../install-windows/install-reporting-services.md).
 
 ## <a name="overview-of-report-server-modes"></a>Présentation des modes du serveur de rapports
 
@@ -54,16 +54,16 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 |**Gestionnaire de configuration**|Oui|**\*\* Important \*\*** Le gestionnaire de configuration ne peut pas être utilisé pour gérer un serveur de rapports en mode SharePoint. À la place, utilisez l'Administration centrale de SharePoint.|  
 |**Portail Web**|Oui|Vous ne pouvez pas gérer le mode SharePoint dans le portail web. Utilisez les pages d'application SharePoint. Pour plus d’informations, consultez [Services Reporting Services SharePoint et applications de service](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Rapports liés**|Oui|Non.|  
-|**Mes rapports**|Oui|Non |  
-|**Mes abonnements** et méthodes de traitement par lot.|Oui|Non |  
-|**Alertes de données**|Non |Oui|  
-|**Power View**|Non |Oui<br /><br /> Requiert Silverlight dans le navigateur client. Pour plus d’informations sur la configuration de navigateur requise, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|**Mes rapports**|Oui|Non|  
+|**Mes abonnements** et méthodes de traitement par lot.|Oui|Non|  
+|**Alertes de données**|Non|Oui|  
+|**Power View**|Non|Oui<br /><br /> Requiert Silverlight dans le navigateur client. Pour plus d’informations sur la configuration de navigateur requise, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
 |**Rapports .RDL**|Oui|Oui<br /><br /> Les rapports .RDL peuvent s’exécuter sur des serveurs de rapports Reporting Services en mode natif ou en mode SharePoint.|  
-|**Rapports .RDLX**|Non |Oui<br /><br /> Les rapports .RDLX Power View peuvent s’exécuter uniquement sur des serveurs de rapports Reporting Services en mode SharePoint.|  
-|**Informations d'identification du jeton utilisateur SharePoint pour l'extension de liste SharePoint**|Non |Oui|  
-|**Zones AAM (mappages des accès de substitution) pour les déploiements exposés à Internet**|Non |Oui|  
-|**Sauvegarde et récupération SharePoint**|Non |Oui|  
-|**Prise en charge des journaux ULS**|Non |Oui|  
+|**Rapports .RDLX**|Non|Oui<br /><br /> Les rapports .RDLX Power View peuvent s’exécuter uniquement sur des serveurs de rapports Reporting Services en mode SharePoint.|  
+|**Informations d'identification du jeton utilisateur SharePoint pour l'extension de liste SharePoint**|Non|Oui|  
+|**Zones AAM (mappages des accès de substitution) pour les déploiements exposés à Internet**|Non|Oui|  
+|**Sauvegarde et récupération SharePoint**|Non|Oui|  
+|**Prise en charge des journaux ULS**|Non|Oui|  
   
 ## <a name="native-mode"></a>en mode natif
 

@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245361"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>Contrôler les en-têtes de ligne et de colonne (Générateur de rapports et SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "75245361"
   
  Pour les régions de données de tableau matriciel avec des zones de groupe de lignes ou de colonnes, contrôlez les lignes et colonnes associées en définissant des propriétés sur la région de données de tableau matriciel. Dans tous les autres cas, contrôlez les lignes et colonnes en définissant des propriétés dans le volet Propriétés pour le membre de tableau matriciel sélectionné. Pour obtenir des instructions détaillées, consultez [Afficher des en-têtes de ligne et de colonne sur plusieurs pages &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) et [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Top"></a> Exemples  
+##  <a name="examples"></a><a name="Top"></a> Exemples  
  Les exemples les plus courants de régions de données de tableau matriciel sont relatifs à une matrice, une table sans groupes, une table avec un groupe de lignes et un en-tête de groupe de lignes, et une table avec un groupe de lignes mais sans en-tête de groupe de lignes. Pour contrôler la façon de répéter ou de figer les en-têtes, vous devez déterminer si les lignes ou colonnes que vous souhaitez contrôler sont associées à un en-tête de groupe dans la zone de groupes de lignes ou de groupes de colonnes.  
   
  Les sections suivantes fournissent des exemples pour les mises en page courantes d'une région de données de tableau matriciel :  
@@ -58,7 +58,7 @@ ms.locfileid: "75245361"
   
 -   [Table avec groupes de lignes mais sans zone de groupe de lignes](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> Matrice  
+###  <a name="matrix"></a><a name="Matrix"></a> Matrice  
  Par défaut, une matrice simple possède un groupe de lignes et un groupe de colonnes. La figure ci-dessous illustre une matrice avec un groupe de lignes basé sur la catégorie et un groupe de colonnes basé sur la géographie :  
   
  ![Matrice, ligne Category et groupe de colonnes Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrice, ligne Category et groupe de colonnes Geography")  
@@ -73,7 +73,7 @@ ms.locfileid: "75245361"
   
  [Retour au début](#Top)  
   
-###  <a name="TableNoGroups"></a> Table sans groupes de lignes  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> Table sans groupes de lignes  
  Par défaut, une table simple sans groupes inclut le groupe de détails. La figure ci-dessous illustre une table qui affiche la catégorie, le numéro de commande et les données de ventes :  
   
  ![Conception, table avec une ligne statique, une ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Conception, table avec une ligne statique, une ligne dynamique")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245361"
   
  [Retour au début](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> Table avec groupes de lignes et zone de groupe de lignes  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> Table avec groupes de lignes et zone de groupe de lignes  
  Si vous ajoutez un groupe de lignes à une table simple, une zone de groupe de lignes est ajoutée à la table sur l'aire de conception. La figure ci-dessous illustre une table avec un groupe de lignes basé sur la catégorie :  
   
  ![Conception, table avec un groupe de lignes et détails](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Conception, table avec un groupe de lignes et détails")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245361"
   
  ![Groupes de lignes, mode avancé avec membres statiques](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Groupes de lignes, mode avancé avec membres statiques")  
   
- Pour les membres de tableau matriciel sont répertoriés : **Statique**, (**Statique**) Catégorie et (**Détails**). Un membre de tableau matriciel qui inclut des parenthèses () indique qu'il n'existe pas d'en-tête de groupe correspondant. Pour répéter ou figer des en-têtes de colonnes, sélectionnez le membre de tableau matriciel statique supérieur et définissez les propriétés dans le volet Propriétés.  
+ Pour les membres de tableau matriciel sont répertoriés **Statique**, (**Statique**) Catégorie et (**Détails**). Un membre de tableau matriciel qui inclut des parenthèses () indique qu'il n'existe pas d'en-tête de groupe correspondant. Pour répéter ou figer des en-têtes de colonnes, sélectionnez le membre de tableau matriciel statique supérieur et définissez les propriétés dans le volet Propriétés.  
   
  [Retour au début](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> Table avec groupes de lignes et sans zone de groupe de lignes  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> Table avec groupes de lignes et sans zone de groupe de lignes  
  Il existe plusieurs cas où une table peut avoir des groupes de lignes mais aucune zone de groupe de lignes. Cette situation se produit par exemple dans les deux cas suivants :  
   
 -   Démarrez avec une table avec des groupes de lignes et une zone de groupe de lignes, puis supprimez les colonnes de la zone de groupe de lignes. Supprimez uniquement les colonnes et non les groupes. Par exemple, vous pouvez choisir une grille simple pour le format de la table.  
@@ -138,7 +138,7 @@ ms.locfileid: "75245361"
   
  ![Groupes de lignes, avancé, aucun en-tête de groupe.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Groupes de lignes, avancé, aucun en-tête de groupe.")  
   
- Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**) (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonne, sélectionnez le membre de tableau matriciel (**Statique**) supérieur et définissez les propriétés dans le volet Propriétés.  
+ Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**), (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonne, sélectionnez le membre de tableau matriciel (**Statique**) supérieur et définissez les propriétés dans le volet Propriétés.  
   
  [Retour au début](#Top)  
   
@@ -159,7 +159,7 @@ ms.locfileid: "75245361"
   
  Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581126"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -33,7 +33,7 @@ ms.locfileid: "65581126"
   
 -   [Pour modifier un fichier de configuration Reporting Services](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lecture et utilisation des valeurs de configuration  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lecture et utilisation des valeurs de configuration  
  Un serveur de rapports lit les fichiers de configuration lorsque le service démarre et chaque fois que le fichier de configuration est enregistré. Les valeurs nouvelles et modifiées prennent effet dans un nouveau domaine d'application après l'expiration du domaine d'application actuel. Chaque fois que possible, les requêtes en cours de traitement dans le domaine d'application actuel sont autorisées à se terminer. Toutefois, quelques paramètres requièrent une opération immédiate de recyclage du domaine d'application. Dans ce cas, toutes les requêtes en cours de traitement sont redémarrées dans un nouveau domaine d'application.  
   
  Si le serveur de rapports détecte une valeur non valide, il enregistre une erreur dans le journal des applications Windows et, selon la nature de l'erreur, ne démarre pas ou démarre en utilisant une valeur par défaut.  
@@ -44,13 +44,13 @@ ms.locfileid: "65581126"
   
  Toutes les modifications des fichiers de configuration, qu'elles soient réussies ou non, sont enregistrées dans le fichier journal des traces du serveur de rapports. Seules les erreurs sont enregistrées dans le journal d'événements d'applications.  
   
-##  <a name="bkmk_default_values"></a> À propos des valeurs par défaut  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> À propos des valeurs par défaut  
  La plupart des paramètres de configuration ont des valeurs par défaut qui sont spécifiées de manière interne sur le serveur de rapports. Le serveur de rapports utilise ces valeurs si une valeur définie par l'utilisateur n'est pas valide ou si elle n'est pas spécifiée. Si une valeur par défaut doit être utilisée en raison d'un paramètre de configuration non valide, une erreur est écrite dans le fichier journal des traces.  
   
-##  <a name="bkmk_delete_config_settings"></a> Suppression de paramètres de configuration  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Suppression de paramètres de configuration  
  Pour les paramètres de configuration qui ont des valeurs par défaut, la suppression du paramètre du fichier de configuration n'a aucun effet. La plupart des paramètres de configuration sont en fait définis et configurés en interne. Si vous supprimez un élément du fichier de configuration, la copie interne reste disponible et utilise la valeur par défaut définie pour cet élément.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Pour modifier un fichier de configuration Reporting Services  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Pour modifier un fichier de configuration Reporting Services  
   
 1.  Recherchez le fichier de configuration à modifier :  
   

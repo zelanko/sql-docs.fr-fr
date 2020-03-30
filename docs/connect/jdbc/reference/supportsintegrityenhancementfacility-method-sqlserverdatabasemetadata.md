@@ -16,10 +16,10 @@ ms.assetid: edee084b-9a8c-4167-9e13-66fc3ed1ecaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8beed08df4d58389aff44356e567455078cb5c4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969323"
 ---
 # <a name="supportsintegrityenhancementfacility-method-sqlserverdatabasemetadata"></a>Méthode supportsIntegrityEnhancementFacility (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean supportsIntegrityEnhancementFacility()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- **true** si prise en charge. Dans le cas contraire, la valeur est **false**.  
+ **true** en cas de prise en charge. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

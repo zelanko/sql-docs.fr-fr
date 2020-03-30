@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294648"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
@@ -27,7 +27,7 @@ Durée estimée pour effectuer le didacticiel : 20 minutes.
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
-## <a name="CreateMatrix"></a>1. Créer un rapport de matrice et un dataset à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. Créer un rapport de matrice et un dataset à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
 Dans cette section, vous choisissez une source de données partagée, vous créez un dataset incorporé et vous affichez les données dans une matrice.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
 
 11. Cliquez sur **Suivant**.  
   
-## <a name="Groups"></a>2. Organiser les données et choisir la mise en page à partir de l’Assistant Nouveau tableau ou nouvelle matrice  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. Organiser les données et choisir la mise en page à partir de l’Assistant Nouveau tableau ou nouvelle matrice  
 Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la matrice.  
   
 1.  Dans la page **Organiser les champs** , faites glisser Territory de **Champs disponibles** vers **Groupes de lignes**.  
@@ -145,7 +145,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3. Mettre en forme les données  
+## <a name="3-format-data"></a><a name="FormatData"></a>3. Mettre en forme les données  
 Par défaut, les données de synthèse du champ Sales affichent un nombre général et le champ SalesDate affiche des informations de date et d'heure. Dans cette section, vous mettez en forme le champ Sales de façon à afficher le nombre sous forme de devise et le champ SalesDate afin qu’il n’affiche que la date. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
   
 ### <a name="to-format-fields"></a>Pour mettre en forme les champs  
@@ -170,7 +170,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 Les valeurs de date affichent uniquement les dates et les valeurs de ventes sont affichées sous forme de valeurs monétaires.  
   
-## <a name="AdjacentGroup"></a>4. Ajouter un groupe de colonnes adjacent  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. Ajouter un groupe de colonnes adjacent  
 Vous pouvez imbriquer des groupes de lignes et de colonnes dans des relations parent-enfant ou définir des groupes adjacents dans des relations de frère.  
   
 Dans cette section, vous ajoutez un groupe de colonnes adjacent au groupe de colonnes Subcategory, vous copiez les cellules pour remplir le nouveau groupe de colonnes, puis vous utilisez une expression pour créer la valeur de l’en-tête de groupe de colonnes.  
@@ -216,7 +216,7 @@ Le rapport inclut des colonnes nommées Monday et Tuesday. Le dataset contient u
 > [!NOTE]  
 > Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne a l’en-tête de colonne **Sales**et les totaux des ventes par secteur.  
   
-## <a name="Width"></a>5. Modifier la largeur des colonnes  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5. Modifier la largeur des colonnes  
 Un rapport qui inclut une matrice s'étend généralement horizontalement et verticalement lorsqu'il s'exécute. Le contrôle de l'expansion horizontale est particulièrement important si vous projetez d'exporter le rapport vers des formats tels que Microsoft Word ou Adobe PDF qui sont utilisés pour imprimer les rapports. Si le rapport s'étend horizontalement sur plusieurs pages, le rapport imprimé est difficile à comprendre. Pour réduire l'expansion horizontale, vous pouvez redimensionner les colonnes afin qu'elles ne soient pas plus larges que nécessaire pour afficher les données sans renvoi à la ligne. Vous pouvez également renommer les colonnes afin que leur titre soit ajusté à la largeur nécessaire pour afficher les données.  
   
 ### <a name="to-rename-and-resize-the-columns"></a>Pour renommer et redimensionner les colonnes  
@@ -245,7 +245,7 @@ Un rapport qui inclut une matrice s'étend généralement horizontalement et ver
   
 Les colonnes qui contiennent des quantités sont maintenant plus étroites et sont nommées QTY.  
   
-## <a name="MergeCells"></a>6. Fusionner des cellules de matrice  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. Fusionner des cellules de matrice  
 La zone d'angle se trouve dans le coin supérieur gauche de la matrice. Selon le nombre de groupes de lignes et de colonnes dans la matrice, le nombre de cellules de la zone d'angle varie. La matrice générée dans ce didacticiel comporte quatre cellules dans sa zone d'angle. Les cellules sont disposées en deux lignes et deux colonnes, ce qui reflète la profondeur des hiérarchies de groupes de lignes et de colonnes. Les quatre cellules ne sont pas utilisées dans ce rapport et vous allez les fusionner en une seule.  
   
 ### <a name="to-merge-matrix-cells"></a>Pour fusionner des cellules de matrice  
@@ -268,7 +268,7 @@ La zone d'angle se trouve dans le coin supérieur gauche de la matrice. Selon le
   
 La cellule dans le coin supérieur de la matrice n’est plus visible. 
   
-## <a name="HeaderTitle"></a>7. Ajouter un en-tête de rapport et un titre de rapport  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. Ajouter un en-tête de rapport et un titre de rapport  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez supprimer la zone de texte au haut du rapport et ajouter un titre à l'en-tête.  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>Pour ajouter un en-tête de rapport et un titre de rapport  
@@ -293,7 +293,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 Le rapport inclut un titre de rapport dans l'en-tête de rapport.  
   
-## <a name="Save"></a>8. Enregistrer le rapport  
+## <a name="8-save-the-report"></a><a name="Save"></a>8. Enregistrer le rapport  
 Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur.  
   
 Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
@@ -324,7 +324,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
 Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
   
 Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  

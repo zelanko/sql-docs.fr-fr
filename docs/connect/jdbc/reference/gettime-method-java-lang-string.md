@@ -16,10 +16,10 @@ ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978977"
 ---
 # <a name="gettime-method-javalangstring"></a>Méthode getTime (java.lang.String)
@@ -40,7 +40,7 @@ public java.sql.Time getTime(java.lang.String sCol)
  Valeur **chaîne** qui contient le nom du paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Objet Temps.  
+ Un objet Time.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -48,7 +48,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique [Comprendre les conversions de types de données](../../../connect/jdbc/understanding-data-type-conversions.md) pour savoir quels sont les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] récupérables avec cette méthode.  
+ Pour savoir quels sont les types de données [ récupérables avec cette méthode, consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique ](../../../connect/jdbc/understanding-data-type-conversions.md)Comprendre les conversions de types de données[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

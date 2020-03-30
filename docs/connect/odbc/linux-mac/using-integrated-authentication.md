@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008704"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
@@ -26,7 +26,7 @@ ms.locfileid: "68008704"
   
 ## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Utilisation de l’authentification intégrée pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’une application ODBC  
 
-Vous pouvez activer l’authentification intégrée Kerberos en spécifiant **Trusted_Connection=yes** dans la chaîne de connexion **SQLDriverConnect** ou **SQLConnect**. Par exemple :   
+Vous pouvez activer l’authentification intégrée Kerberos en spécifiant **Trusted_Connection=yes** dans la chaîne de connexion **SQLDriverConnect** ou **SQLConnect**. Par exemple :  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -119,7 +119,7 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-Si votre ordinateur Linux ou macOS est configuré pour utiliser le protocole DHCP (Dynamic Host Configuration Protocol) avec un serveur DHCP Windows fournissant les serveurs DNS à utiliser, vous pouvez faire appel à **dns_lookup_kdc=true**. À présent, vous pouvez utiliser Kerberos pour vous connecter à votre domaine en exécutant la commande `kinit alias@YYYY.CORP.CONTOSO.COM`. Les paramètres passés à `kinit` sont sensibles à la casse, et vous devez ajouter `alias@YYYY.CORP.CONTOSO.COM` à l’ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configuré pour être dans le domaine pour la connexion. À présent, vous pouvez utiliser des connexions approuvées (**Trusted_Connection=YES** dans une chaîne de connexion, **bcp -T** ou **sqlcmd -E**).  
+Si votre ordinateur Linux ou macOS est configuré pour utiliser le protocole DHCP (Dynamic Host Configuration Protocol) avec un serveur DHCP Windows fournissant les serveurs DNS à utiliser, vous pouvez faire appel à **dns_lookup_kdc=true**. À présent, vous pouvez utiliser Kerberos pour vous connecter à votre domaine en exécutant la commande `kinit alias@YYYY.CORP.CONTOSO.COM`. Les paramètres passés à `kinit` sont sensibles à la casse, et vous devez ajouter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’ordinateur `alias@YYYY.CORP.CONTOSO.COM` configuré pour être dans le domaine pour la connexion. À présent, vous pouvez utiliser des connexions approuvées (**Trusted_Connection=YES** dans une chaîne de connexion, **bcp -T** ou **sqlcmd -E**).  
   
 L’heure sur l’ordinateur Linux ou macOS et l’heure sur le centre de distribution de clés Kerberos (KDC) doivent être proches. Vérifiez que l’heure système est correctement définie, par exemple en utilisant le protocole NTP (Network Time Protocol).  
 
@@ -127,7 +127,7 @@ Si l’authentification Kerberos échoue, le pilote ODBC sur Linux ou macOS n’
 
 Pour plus d’informations sur l’authentification des ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients Linux avec Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) et [Bonnes pratiques pour intégrer OS X à Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/16/2019
 ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253307"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports, Gestionnaire de configuration SSRS  
@@ -27,7 +27,7 @@ Les bases de données sont créées ensemble et liées par le nom. Avec une inst
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-Le **mode SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut une troisième base de données utilisée pour les métadonnées d’alerte des données. Les trois bases de données sont créées pour chaque application de service SSRS. Les noms de base de données par défaut incluent un identificateur global unique (GUID) qui représente l’application de service. 
+Le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]mode SharePoint**SQL Server** inclut une troisième base de données utilisée pour les métadonnées d’alerte des données. Les trois bases de données sont créées pour chaque application de service SSRS. Les noms de base de données par défaut incluent un identificateur global unique (GUID) qui représente l’application de service. 
 
 Voici des exemples de noms des trois bases de données en mode SharePoint :
 

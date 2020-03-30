@@ -13,10 +13,10 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826896"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Serveur de rapports Reporting Services (mode natif)
@@ -36,7 +36,7 @@ ms.locfileid: "66826896"
   
 -   [Référencement d'une ressource image à partir d'un rapport](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Récapitulatif du mode natif  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> Récapitulatif du mode natif  
  Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif comprend plusieurs fonctionnalités côté serveur à gérer et à entretenir. Les fonctionnalités du serveur incluent les suivantes :  
   
 -   Le service web Report Server qui s'exécute au sein du service Report Server.  
@@ -53,7 +53,7 @@ ms.locfileid: "66826896"
   
 -   Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un contrôleur de domaine, vous devez être administrateur de domaine.  
   
-##  <a name="bkmk_managecontent"></a> Gestion du contenu  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Gestion du contenu  
  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des rapports, des modèles, des dossiers, des ressources et des sources de données partagées. Tous ces éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu.  
   
 > [!NOTE]  
@@ -75,11 +75,11 @@ ms.locfileid: "66826896"
   
 -   Équilibrage des demandes de traitement de rapports adressées au serveur en planifiant le traitement des rapports, et en indiquant ceux qui peuvent être exécutés à la demande et ceux qui sont chargés à partir du cache.  
   
- L'autorisation d'effectuer des tâches de gestion est accordée via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ L'autorisation d'effectuer des tâches de gestion est accordée via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le portail web permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports.  
   
-##  <a name="bkmk_manageresources"></a> Sécurisation et gestion d'une ressource  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a> Sécurisation et gestion d'une ressource  
  Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier.  
   
  Pour ajouter une ressource à un serveur de rapports, vous devez télécharger ou publier un fichier :  
@@ -95,7 +95,7 @@ ms.locfileid: "66826896"
   
  Les ressources coexistent avec les rapports, les sources de données partagées, les planifications partagées et les dossiers en tant qu'éléments nommés dans l'arborescence des dossiers du serveur de rapports. Vous pouvez rechercher, afficher, sécuriser et définir des propriétés sur les ressources à l'instar de n'importe quel autre élément stocké sur un serveur de rapports. Pour afficher ou gérer une ressource, vous devez disposer des tâches Afficher les ressources ou Gérer les ressources dans le rôle qui vous est attribué.  
   
-##  <a name="bkmk_referenceimage"></a> Référencement d'une ressource image à partir d'un rapport  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a> Référencement d'une ressource image à partir d'un rapport  
  Les ressources peuvent contenir une image que vous référencez dans un rapport. Si les spécifications d'un rapport incluent l'utilisation d'images externes, prenez en considération les avantages suivants liés au stockage de l'image en tant que ressource :  
   
 -   Stockage centralisé dans la base de données du serveur de rapports. Si vous déplacez la base de données du serveur de rapports et son contenu vers un autre ordinateur, l'image externe reste avec le rapport. Vous n'avez pas à effectuer le suivi des fichiers image stockés sur les disques de différents ordinateurs.  

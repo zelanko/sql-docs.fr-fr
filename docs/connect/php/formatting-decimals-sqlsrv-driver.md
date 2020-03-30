@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265145"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Mise en forme des chaînes décimales et valeurs monétaires (pilote SQLSRV)
@@ -66,7 +66,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example---format-the-output-parameter"></a>Exemple : mettre en forme le paramètre de sortie
-Si un champ décimal ou numérique est renvoyé comme [paramètre de sortie](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), la valeur renvoyée sera considérée comme une chaîne varchar normale. Toutefois, si SQLSRV_SQLTYPE_DECIMAL ou SQLSRV_SQLTYPE_NUMERIC est spécifié, vous pouvez définir `FormatDecimals` sur true pour vous assurer qu’il n’existe pas de zéro non significatif pour la valeur de chaîne numérique. Pour plus d’informations, consultez le [Guide pratique : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+Si un champ décimal ou numérique est renvoyé comme [paramètre de sortie](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), la valeur renvoyée sera considérée comme une chaîne varchar normale. Toutefois, si SQLSRV_SQLTYPE_DECIMAL ou SQLSRV_SQLTYPE_NUMERIC est spécifié, vous pouvez définir `FormatDecimals` sur true pour vous assurer qu’il n’existe pas de zéro non significatif pour la valeur de chaîne numérique. Pour plus d’informations, veuillez lire [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 L’exemple suivant montre comment mettre en forme le paramètre de sortie d’une procédure stockée qui renvoie une valeur décimale (8,4).
 

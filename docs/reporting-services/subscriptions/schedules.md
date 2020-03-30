@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578095"
 ---
 # <a name="schedules"></a>Planifications
@@ -34,7 +34,7 @@ ms.locfileid: "65578095"
  La maintenance des planifications partagées est plus facile à assurer ; par ailleurs, ces dernières vous apportent une plus grande souplesse de gestion des opérations planifiées. Par exemple, vous pouvez suspendre et reprendre des planifications partagées. En outre, si vous trouvez que trop d'opérations planifiées s'exécutent en même temps, vous pouvez créer plusieurs planifications partagées qui s'exécutent à des heures différentes, puis vous pouvez ajuster les informations de planification de sorte que la charge de traitement soit répartie de manière égale sur le serveur de rapports.  
   
   
-##  <a name="bkmk_whatyoucando"></a> Opérations réalisables avec les planifications  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> Opérations réalisables avec les planifications  
  Vous pouvez utiliser le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] en mode natif et les pages d’administration de site SharePoint en mode SharePoint pour créer et gérer vos planifications. Vous pouvez :  
   
 -   Planifier la remise de rapports dans un abonnement standard ou piloté par des données.  
@@ -56,7 +56,7 @@ ms.locfileid: "65578095"
 > [!NOTE]  
 >  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-##  <a name="bkmk_compare"></a> Comparaison entre les planifications partagées et les planifications spécifiques aux rapports  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> Comparaison entre les planifications partagées et les planifications spécifiques aux rapports  
  Les deux types de planification produisent le même résultat.  
   
 -   Les**planifications partagées** sont des éléments portables à usage général qui contiennent des informations de planification prêtes à l’emploi. Comme les planifications partagées sont des éléments de niveau système, la création d'une planification partagée exige des autorisations de niveau système. C'est pourquoi c'est un administrateur de serveur de rapports ou un gestionnaire de contenu qui crée généralement les planifications partagées disponibles sur votre serveur de rapports. Les planifications partagées sont stockées et gérées sur le serveur de rapports à l’aide du portail web ou des paramètres de site SharePoint.  
@@ -71,14 +71,14 @@ ms.locfileid: "65578095"
   
 -   Les**planifications spécifiques aux rapports** sont définies dans le contexte d’un rapport, d’un abonnement ou d’une opération d’exécution de rapport pour déterminer le délai d’expiration d’un cache ou des mises à jour d’instantanés. Ces planifications sont créées en ligne lorsque vous définissez un abonnement ou précisez des propriétés d'exécution de rapport. Vous pouvez créer une planification spécifique aux rapports si une planification partagée ne fournit pas le modèle de fréquence ou de périodicité dont vous avez besoin. Pour empêcher l'exécution d'un rapport, vous devez modifier manuellement la planification spécifique à ce rapport. Les planifications spécifiques aux rapports peuvent être créées par des utilisateurs.  
   
-##  <a name="bkmk_configuredatasources"></a> Configurer les sources de données  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> Configurer les sources de données  
  Avant de pouvoir planifier le traitement de données ou d'abonnements d'un rapport, vous devez configurer la source de données de rapport afin d'utiliser les informations d'identification stockées ou le compte de traitement de rapport sans assistance. Si vous utilisez des informations d'identification stockées, vous ne pouvez stocker qu'un seul jeu d'informations d'identification ; par ailleurs, ces dernières seront employées par tous les utilisateurs qui exécutent le rapport. Les informations d'identification peuvent correspondre à un compte d'utilisateur Windows ou un compte d'utilisateur de base de données.  
   
  Le compte de traitement de rapport sans assistance est un compte spécial configuré sur le serveur de rapports. Il est utilisé par le serveur de rapports pour se connecter aux ordinateurs distants lorsqu'une opération planifiée nécessite la récupération d'un fichier ou traitement externe. Si vous configurez ce compte, vous pouvez l'utiliser pour vous connecter aux sources de données externes qui fournissent des données à un rapport.  
   
  Pour spécifier les informations d'identification stockées ou le compte de traitement de rapport sans assistance, modifiez les propriétés de la source de données du rapport. Si le rapport utilise une source de données partagée, modifiez plutôt cette dernière.  
   
-##  <a name="bkmk_credentials"></a> Stocker les informations d'identification et les comptes de traitement  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> Stocker les informations d'identification et les comptes de traitement  
  La façon dont vous travaillez avec une planification dépend des tâches faisant partie de votre attribution de rôle. Si vous utilisez des rôles prédéfinis, les utilisateurs qui sont des gestionnaires de contenu et des administrateurs système peuvent créer et gérer n'importe quelle planification. Si vous utilisez des attributions de rôle par défaut, l'attribution de rôle doit inclure les tâches prenant en charge les opérations planifiées.  
   
 |Action à réaliser|Incluez cette tâche|Rôles prédéfinis du mode natif|Groupes du mode SharePoint|  
@@ -90,7 +90,7 @@ ms.locfileid: "65578095"
   
  Pour plus d’informations sur la sécurité dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]en mode natif, consultez [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md), [Octroi d’autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) et [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md). Pour le mode SharePoint, consultez [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
-##  <a name="bkmk_how_scheduling_works"></a> Fonctionnement du traitement des planifications et des livraisons  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> Fonctionnement du traitement des planifications et des livraisons  
  Le processeur de planification et de livraison présente les fonctionnalités suivantes :  
   
 -   Maintient une file d'attente d'événements et de notifications dans la base de données du serveur de rapports. Dans un déploiement avec montée en puissance parallèle, la file d'attente est partagée par tous les serveurs de rapports de la structure.  
@@ -115,19 +115,19 @@ ms.locfileid: "65578095"
   
  Reporting Services gère une file d'attente d'événements pour toutes les opérations planifiées. Il interroge régulièrement la file d'attente pour vérifier si elle contient de nouveaux événements. Par défaut, la file d'attente fait l'objet d'une analyse toutes les 10 secondes. Si vous souhaitez changer cette fréquence, modifiez les paramètres de configuration **PollingInterval**, **IsNotificationService**et **IsEventService** dans le fichier RSReportServer.config. Le mode SharePoint utilise également le fichier RSreporserver.config pour ces paramètres et les valeurs s'appliquent à toutes les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-##  <a name="bkmk_serverdependencies"></a> Dépendances de serveur  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> Dépendances de serveur  
  Il est impératif que le service Report Server et l'Agent SQL Server s'exécutent pour que le processeur de planification et de livraison fonctionne. La fonctionnalité de traitement des planifications et des livraisons doit être activée par le biais de la propriété **ScheduleEventsAndReportDeliveryEnabled** de la facette **Configuration de la surface d’exposition pour Reporting Services** de la gestion basée sur une stratégie. Enfin, les opérations planifiées ne peuvent se déclencher que si l'Agent SQL Server et le service Report Server sont en cours d'exécution.  
   
 > [!NOTE]  
 >  Vous pouvez utiliser la facette **Configuration de la surface d'exposition pour Reporting Services** pour interrompre temporairement ou définitivement des opérations planifiées. Bien que vous puissiez créer et déployer des extensions de remise personnalisées, le processeur de planification et de livraison n'est en lui-même pas extensible. Vous ne pouvez pas modifier la manière dont il gère les événements et les notifications. Pour plus d'informations sur la désactivation des fonctionnalités, consultez la section **Événements planifiés et remise** de [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
-###  <a name="bkmk_stoppingagent"></a> Conséquences de l'interruption de l'Agent SQL Server  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> Conséquences de l'interruption de l'Agent SQL Server  
  Le traitement des rapports planifiés utilise l'Agent SQL Server par défaut. Si vous arrêtez ce service, aucune nouvelle demande de traitement ne sera ajoutée à la file d’attente à moins d’y être intégrée, par programmation, à l’aide de la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Lorsque vous redémarrez le service, les travaux à l'origine des demandes de traitement des rapports reprennent leur cours. Le serveur de rapports ne tente pas de recréer les travaux de traitement des rapports survenus précédemment tandis que l'Agent SQL Server était en mode hors connexion. Si vous arrêtez l'Agent SQL Server l'espace d'une semaine, toutes les opérations planifiées de cette semaine sont perdues.  
   
 > [!NOTE]  
 >  La fonction assurée par SQL Server Agent pour Reporting Services peut être remplacée par un code personnalisé qui utilise la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> pour ajouter des événements planifiés dans la file d’attente.  
   
-###  <a name="bkmk_stoppingservice"></a> Conséquences de l'arrêt du service Report Server  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> Conséquences de l'arrêt du service Report Server  
  Si vous arrêtez le service Report Server, l'Agent SQL Server continue malgré tout d'ajouter des demandes de traitement de rapport à la file d'attente. Les informations d'état de SQL Server Agent indiquent que les travaux ont été correctement effectués. Toutefois, aucun traitement de rapport n'a, en réalité, été réalisé puisque le service Report Server ne fonctionne pas. Les demandes continueront de s'accumuler dans la file d'attente jusqu'à ce que le service Report Server redémarre. Une fois ce service relancé, toutes les demandes de traitement de rapport présentes dans la file d'attente sont traitées dans l'ordre.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -16,10 +16,10 @@ ms.assetid: f81f7ba0-7d75-4b42-861c-be00c0032335
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0641ea362d679cb865207dadefbf6dc127515dac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998135"
 ---
 # <a name="updatetimestamp-method-sqlserverresultset"></a>updateTimestamp, méthode (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67998135"
 |[updateTimestamp (int, java.sql.Timestamp)](../../../connect/jdbc/reference/updatetimestamp-method-int-java-sql-timestamp.md)|Met à jour la colonne désignée avec une valeur d'horodateur en fonction de l'index de colonne.|  
 |[updateTimestamp (java.lang.String, java.sql.Timestamp)](../../../connect/jdbc/reference/updatetimestamp-method-java-lang-string-java-sql-timestamp.md)|Met à jour la colonne désignée avec une valeur d'horodateur en fonction du nom de colonne.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

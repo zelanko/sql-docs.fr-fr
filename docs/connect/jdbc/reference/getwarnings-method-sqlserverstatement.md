@@ -16,10 +16,10 @@ ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bdb05e7d538de461596e1e7bc4b2db715825fae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978066"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>getWarnings, méthode (SQLServerStatement)
@@ -35,7 +35,7 @@ public final java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Un objet SQLWarning.  
+ Objet SQLWarning.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

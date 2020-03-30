@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241581"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procédure : Comparer et synchroniser les données de deux bases de données
@@ -41,7 +41,7 @@ Pour plus d'informations, consultez [Comparer et synchroniser des données d'une
 > [!NOTE]  
 > Vous pouvez également comparer le *schéma* de deux bases de données ou de deux versions de la même base de données. Pour plus d'informations, consultez [Procédure : utiliser la comparaison de schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
-## <a name="CompareDatabaseData"></a>Comparaison des données d'une base de données  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Comparaison des données d'une base de données  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>Pour comparer des données à l'aide de l'Assistant Nouvelle comparaison de données  
   
@@ -87,7 +87,7 @@ Pour plus d'informations, consultez [Comparer et synchroniser des données d'une
   
     Les données des bases de données source et cibles spécifiées sont comparées. Les résultats s'affichent dans une session de comparaisons de données. Pour plus d'informations sur l'affichage des résultats ou la synchronisation des données, consultez [Afficher les différences entre les données](#ViewDifferences) et [Synchronisation des données d'une base de données](#Synchronize).  
   
-## <a name="ViewDifferences"></a>Afficher les différences entre les données  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>Afficher les différences entre les données  
 Après avoir comparé les données dans les deux bases de données, Comparaison de données répertorie chaque *objet de base de données* que vous avez comparé et son état. Vous pouvez également afficher les résultats des enregistrements dans chaque objet, regroupés par état. Pour plus d'informations sur les désignations d’état, consultez [Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 Après avoir affiché les différences, vous pouvez mettre à jour la cible pour qu'elle corresponde à la source pour une partie ou l'ensemble des objets ou des enregistrements qui sont différents, manquants ou nouveaux. Pour plus d'informations, consultez [Synchronisation des données d'une base de données](#Synchronize).  
@@ -102,7 +102,7 @@ Après avoir affiché les différences, vous pouvez mettre à jour la cible pour
   
     -   Pour afficher les résultats des enregistrements dans un objet particulier, cliquez sur l'objet dans le volet de résultats principal, puis cliquez sur un onglet dans le volet de vue des enregistrements. Chaque onglet affiche tous les enregistrements de cet objet qui ont un état particulier : différent, uniquement dans la source, uniquement dans la cible et en double. Les données s'affichent par enregistrement et colonne.  
   
-## <a name="Synchronize"></a>Synchronisation des données d'une base de données  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>Synchronisation des données d'une base de données  
 Après avoir comparé les données dans deux bases de données, vous pouvez les synchroniser en mettant à jour l'ensemble ou une partie de la cible pour qu'elle corresponde à la source. Vous pouvez comparer les données dans deux types d'objets de base de données : les tables et les vues.  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>Pour mettre à jour les données cibles à l'aide de la commande d'écriture de mises à jour  

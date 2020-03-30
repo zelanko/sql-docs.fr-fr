@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68044790"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Dépannage de clusters de basculement
@@ -33,7 +33,7 @@ ms.locfileid: "68044790"
 -   Utilisation de procédures stockées étendues et d'objets COM  
   
 ## <a name="basic-troubleshooting-steps"></a>Étapes de dépannage de base  
- La première étape de diagnostic consiste à exécuter une vérification de validation de cluster à jour. Pour plus d’informations sur la validation, consultez [Guide pas à pas des clusters de basculement : Validation matérielle d’un cluster de basculement](https://technet.microsoft.com/library/cc732035.aspx).  Vous pouvez le faire sans interruption de service, car cela n’affecte aucune des ressources de cluster en ligne. La validation peut être exécutée à tout moment une fois que la fonctionnalité Clustering de basculement a été installée, notamment avant le déploiement du cluster, lors de la création du cluster et lors de l’exécution du cluster. En fait, des tests supplémentaires sont exécutés une fois le cluster utilisé, pour vérifier que les bonnes pratiques sont respectées pour les charges de travail à haute disponibilité. Sur ces dizaines de tests, seuls quelques-uns affecteront les charges de travail de cluster en cours d’exécution, et tous concernent la catégorie stockage. Il suffit donc de passer cette catégorie entière pour éviter facilement les tests avec interruption.  
+ La première étape de diagnostic consiste à exécuter une vérification de validation de cluster à jour. Pour plus d’informations sur la validation, consultez [Guide pas à pas du cluster de basculement : validation matérielle d’un cluster de basculement](https://technet.microsoft.com/library/cc732035.aspx).  Vous pouvez le faire sans interruption de service, car cela n’affecte aucune des ressources de cluster en ligne. La validation peut être exécutée à tout moment une fois que la fonctionnalité Clustering de basculement a été installée, notamment avant le déploiement du cluster, lors de la création du cluster et lors de l’exécution du cluster. En fait, des tests supplémentaires sont exécutés une fois le cluster utilisé, pour vérifier que les bonnes pratiques sont respectées pour les charges de travail à haute disponibilité. Sur ces dizaines de tests, seuls quelques-uns affecteront les charges de travail de cluster en cours d’exécution, et tous concernent la catégorie stockage. Il suffit donc de passer cette catégorie entière pour éviter facilement les tests avec interruption.  
 Le clustering de basculement est proposé avec une sécurité intégrée pour empêcher les temps d’arrêt accidentels lors de l’exécution des tests de stockage pendant la validation. Si le cluster comprend des groupes en ligne lorsque la validation est lancée, et que les tests de stockage restent sélectionnés, l’utilisateur est invité à confirmer s'il souhaite exécuter tous les tests (et provoquer des temps d'arrêt) ou ignorer les tests de disques appartenant à des groupes en ligne pour éviter les temps d’arrêt. Si la catégorie de stockage entière est exclue des tests, cette invite ne s’affiche pas. Cela permet d’activer la validation du cluster sans temps d’arrêt.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Comment revalider votre cluster  
@@ -77,54 +77,54 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
      Ce type de récupération à partir d'une défaillance du système d'exploitation peut prendre du temps. Si l'échec du système d'exploitation peut être facilement récupéré, évitez toutefois d'utiliser cette technique.  
   
-     Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) et [Guide pratique : Récupérer d’une défaillance de cluster de basculement dans le scénario 2](recover-from-failover-cluster-instance-failure.md).  
+     Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) et [Procédure : récupérer d’une défaillance de cluster de basculement dans le scénario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Résolution des problèmes courants  
  La liste ci-dessous décrit les problèmes d'utilisation les plus courants et explique comment les résoudre.  
   
-### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problème : Utilisation incorrecte de la syntaxe d’invite de commandes pour installer SQL Server  
- **Problème 1 :** Il est difficile de diagnostiquer les problèmes d’installation quand vous utilisez le commutateur  **/qn** à partir de l’invite de commandes, car le commutateur  **/qn** supprime l’ensemble des boîtes de dialogue et messages d’erreur d’installation. Si le commutateur **/qn** est spécifié, tous les messages d’installation, y compris les messages d’erreur, sont écrits dans les fichiers journaux de l’installation. Pour plus d’informations sur les fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problème : utilisation incorrecte de la syntaxe d'invite de commandes pour installer SQL Server  
+ **Erreur 1** : Il est difficile de diagnostiquer les erreurs du programme d’installation lorsque vous utilisez le commutateur **/qn** à partir de l’invite de commandes, dans la mesure où le commutateur **/qn** supprime toutes les boîtes de dialogue et les messages d’erreur du programme d’installation. Si le commutateur **/qn** est spécifié, tous les messages d’installation, y compris les messages d’erreur, sont écrits dans les fichiers journaux de l’installation. Pour plus d’informations sur les fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
- **Résolution 1 :** Utilisez le commutateur  **/qb** au lieu du commutateur  **/qn**. Si vous utilisez le commutateur **/qb** , l’interface utilisateur de base s’affichera à chaque étape, ainsi que les messages d’erreur.  
+ **Solution 1**: Utilisez le commutateur **/qb** à la place du commutateur **/qn** . Si vous utilisez le commutateur **/qb** , l’interface utilisateur de base s’affichera à chaque étape, ainsi que les messages d’erreur.  
   
-### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problème : SQL Server ne peut pas se connecter au réseau après avoir fait l’objet d’une migration vers un autre nœud  
+### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problème : SQL Server ne peut pas se connecter au réseau après avoir fait l'objet d'une migration vers un autre nœud  
  **Erreur 1 :** les comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas en mesure de contacter un contrôleur de domaine.  
   
- **Résolution 1 :** Dans vos journaux d’événements, recherchez des signes indiquant l’existence de problèmes réseau, tels que des défaillances d’adaptateur ou des problèmes affectant le service DNS. Vérifiez que vous pouvez exécuter une commande ping sur le contrôleur de domaine.  
+ **Solution 1**: dans les journaux d'événements, recherchez des signes indiquant l'existence de problèmes réseau, tels que des défaillances d'adaptateur ou des problèmes affectant le service DNS. Vérifiez que vous pouvez exécuter une commande ping sur le contrôleur de domaine.  
   
  **Erreur 2 :** les mots de passe du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas identiques sur tous les nœuds du cluster ou le nœud ne redémarre pas un service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a fait l’objet d’une migration depuis un nœud défaillant.  
   
- **Résolution 2 :** Changez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous n'effectuez pas cette opération et que vous modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un nœud, vous devez également modifier les mots de passe sur tous les autres nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue cette opération automatiquement.  
+ **Solution 2 :** modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous n'effectuez pas cette opération et que vous modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un nœud, vous devez également modifier les mots de passe sur tous les autres nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue cette opération automatiquement.  
   
-### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>Problème : SQL Server ne peut pas accéder aux disques de cluster  
- **Problème 1 :** Les microprogrammes ou les pilotes ne sont pas mis à jour sur tous les nœuds.  
+### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>Problème : SQL Server ne peut pas accéder aux disques organisés en clusters  
+ **Erreur 1 :** les microprogrammes ou les pilotes ne sont pas mis à jour sur tous les nœuds.  
   
- **Résolution 1 :** Vérifiez que tous les nœuds utilisent les versions de microprogrammes adéquates et les mêmes versions de pilotes.  
+ **Solution 1 :** vérifiez que tous les nœuds utilisent les versions adéquates des microprogrammes et les mêmes versions des pilotes.  
   
- **Problème 2 :** Un nœud ne peut pas récupérer des disques de cluster qui ont fait l’objet d'une migration à partir d’un nœud défaillant sur un disque de cluster partagé ayant une lettre de lecteur différente.  
+ **Erreur 2 :** un nœud ne peut pas récupérer des disques de clusters qui ont fait l'objet d'une migration depuis un nœud ayant échoué sur un disque de clusters partagés utilisant une lettre de lecteur différente.  
   
- **Résolution 2 :** Les lettres de lecteur de disque pour les disques de cluster doivent être identiques sur les deux serveurs. Si ce n'est pas le cas, examinez l'installation d'origine du système d'exploitation et MSCS ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service).  
+ **Solution 2 :** les lettres de lecteur de disque pour les disques de clusters doivent être identiques sur les deux serveurs. Si ce n'est pas le cas, examinez l'installation d'origine du système d'exploitation et MSCS ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service).  
   
-### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>Problème : La défaillance d’un service SQL Server provoque un basculement  
- **Résolution :** Pour empêcher que la défaillance de services spécifiques provoque le basculement du groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], configurez ces services à l’aide de l’Administrateur de cluster dans Windows, comme suit :  
+### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>Problème : la défaillance d'un service SQL Server provoque un basculement  
+ **Solution :** pour empêcher que la défaillance de services spécifiques provoque le basculement du groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , configurez ces services à l’aide de l’Administrateur de cluster dans Windows, comme suit :  
   
 -   Désactivez la case à cocher **Affecter le groupe** sur l'onglet **Avancé** de la boîte de dialogue **Propriétés de texte intégral** . Cependant, si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoque un basculement, le service de recherche en texte intégral redémarre.  
   
-### <a name="problem-sql-server-does-not-start-automatically"></a>Problème : SQL Server ne démarre pas automatiquement  
- **Résolution :** Utilisez l’Administrateur de cluster dans MSCS pour démarrer un cluster de basculement. Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être paramétré de manière à démarrer manuellement ; l’Administrateur de cluster doit être configuré dans MSCS de façon à démarrer le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Gestion des services](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
+### <a name="problem-sql-server-does-not-start-automatically"></a>Problème : SQL Server ne démarre pas automatiquement.  
+ **Solution :** utilisez l'Administrateur de cluster dans MSCS. Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être paramétré de manière à démarrer manuellement ; l’Administrateur de cluster doit être configuré dans MSCS de façon à démarrer le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Gestion des services](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
   
-### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problème : Le nom de réseau est hors ligne et vous ne pouvez pas vous connecter à SQL Server avec TCP/IP  
- **Problème 1 :** Le service DNS échoue à cause d’une ressource de cluster définie de façon à exiger ce service.  
+### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problème : le nom de réseau est hors ligne et vous ne pouvez pas vous connecter à SQL Server avec TCP/IP  
+ **Erreur 1 :** le service DNS a échoué à cause d'une ressource cluster définie de façon à requérir ce service.  
   
- **Résolution 1 :** Corrigez les problèmes liés au service DNS.  
+ **Solution 1 :** remédiez aux problèmes DNS.  
   
- **Problème 2 :** Un nom en double existe sur le réseau.  
+ **Erreur 2 :** un nom en double existe sur le réseau.  
   
- **Résolution 2 :** Utilisez NBTSTAT pour rechercher le nom en double, puis corrigez le problème.  
+ **Solution 2 :** utilisez NBTSTAT pour rechercher le nom en double, puis résolvez le problème.  
   
  **Erreur 3 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne se connecte pas à l’aide de canaux nommés.  
   
- **Résolution 3 :** Pour vous connecter à l’aide de canaux nommés, créez un alias avec le Gestionnaire de configuration SQL Server pour vous connecter à l’ordinateur approprié. Par exemple, si vous disposez d’un cluster à deux nœuds (**Node A** et **Node B**) et d’une instance de cluster de basculement (**Virtsql**) avec une instance par défaut, vous pouvez vous connecter au serveur dont la ressource de nom réseau est hors connexion, en procédant comme suit :  
+ **Solution 3 :** pour vous connecter à l'aide de canaux nommés, créez un alias avec le Gestionnaire de configuration de SQL Server pour vous connecter à l'ordinateur approprié. Par exemple, si vous disposez d’un cluster à deux nœuds (**Node A** et **Node B**) et d’une instance de cluster de basculement (**Virtsql**) avec une instance par défaut, vous pouvez vous connecter au serveur dont la ressource de nom réseau est hors connexion, en procédant comme suit :  
   
 1.  Déterminez le nœud sur lequel s'exécute le groupe contenant l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , à l'aide de l'Administrateur de cluster. Dans cet exemple, il s'agit de **Node A**.  
   
@@ -138,15 +138,15 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
 6.  Connectez-vous à cette instance à l'aide de l'alias SQLTEST1 comme nom de serveur.  
   
-### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problème : L’installation de SQL Server échoue sur un cluster avec l’erreur 11001  
- **Problème :** Une clé de Registre orpheline dans [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
+### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problème : le programme d'installation de SQL Server échoue sur un cluster avec l'erreur 11001  
+ **Erreur** : Une clé de Registre orpheline dans [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
   
- **Résolution :** Vérifiez que la ruche du Registre MSSQL.X n’est pas en cours d’utilisation, puis supprimez la clé de cluster.  
+ **Solution :** assurez-vous que la ruche du Registre MSSQL.X n'est pas en cours d'utilisation, puis supprimez la clé de cluster.  
   
-### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problème : Erreur d’installation de cluster : « Le programme d’installation ne dispose pas des privilèges suffisants pour accéder à ce répertoire : \<lecteur\Microsoft SQL Server. Impossible de poursuivre l'installation. Ouvrez une session en tant qu'administrateur ou contactez votre administrateur système. »  
- **Problème :** Cette erreur est due à un lecteur partagé SCSI mal partitionné.  
+### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problème : erreur d’installation de cluster : « Le programme d’installation ne dispose pas des privilèges suffisants pour accéder au répertoire : \<lecteur\Microsoft SQL Server. Impossible de poursuivre l'installation. Ouvrez une session en tant qu'administrateur ou contactez votre administrateur système. »  
+ **Erreur :** cette erreur est due à un lecteur partagé SCSI mal partitionné.  
   
- **Résolution :** Recréez une partition unique sur le disque partagé en effectuant les étapes suivantes :  
+ **Solution** : Recréez une partition unique sur le disque partagé, comme suit :  
   
 1.  Supprimez la ressource disque du cluster.  
   
@@ -160,10 +160,10 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
 6.  Exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problème : Les applications ne parviennent pas à inscrire les ressources SQL Server dans une transaction distribuée  
- **Problème :** Comme [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) n’est pas complètement configuré dans Windows, les applications peuvent échouer dans leur tentative d’inscription des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une transaction distribuée. Ce problème peut affecter les serveurs liés, les requêtes distribuées et les procédures stockées distantes qui utilisent des transactions distribuées. Pour plus d’informations sur la façon de configurer MS DTC, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
+### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problème : les applications ne parviennent pas à inscrire les ressources SQL Server dans une transaction distribuée  
+ **Erreur** : comme [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) n’est pas complètement configuré dans Windows, les applications peuvent échouer dans leur tentative d’inscription des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une transaction distribuée. Ce problème peut affecter les serveurs liés, les requêtes distribuées et les procédures stockées distantes qui utilisent des transactions distribuées. Pour plus d’informations sur la façon de configurer MS DTC, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
- **Résolution :** Pour éviter ce type de problème, vous devez activer intégralement les services MS DTC sur les serveurs où [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé et où MS DTC est configuré.  
+ **Solution :** pour éviter ce type de problème, vous devez activer intégralement les services MS DTC sur les serveurs où [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé et MS DTC est configuré.  
   
  Pour activer correctement MS DTC, procédez comme suit :  
   
@@ -184,7 +184,7 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
  Si les procédures stockées étendues utilisent des composants COM, l'administrateur doit enregistrer les composants COM sur chaque nœud du cluster. Les informations pour le chargement et l'exécution des composants COM doivent figurer dans le Registre du nœud actif, afin que les composants soient créés. Dans le cas contraire, les informations sont conservées dans le Registre de l'ordinateur sur lequel les composants COM ont été enregistrés en premier lieu.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Fonctionnement des procédures stockées étendues](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Caractéristiques d'exécution des procédures stockées étendues](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  

@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
 ms.openlocfilehash: a34b37a2e970c0f7a1a873947d9f8432c0b9733c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74317857"
 ---
 # <a name="discontinued-functionality-in-sql-server-2016-reporting-services-ssrs"></a>Fonctionnalités supprimées dans SQL Server 2016 Reporting Services (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "74317857"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Cet article décrit les fonctionnalités de SQL Server Reporting Services qui ne sont plus disponibles dans SQL Server 2016. Il n’inclut pas les annonces relatives à la fin du support des versions spécifiques du système d’exploitation ou de Microsoft Internet Information Services (IIS). Pour plus d’informations sur cette configuration système requise, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+Cet article décrit les fonctionnalités de SQL Server Reporting Services qui ne sont plus disponibles dans SQL Server 2016. Il n’inclut pas les annonces relatives au support abandonné des versions spécifiques du système d’exploitation ou de Microsoft Internet Information Services (IIS). Pour plus d’informations sur cette configuration système requise, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 Une *fonctionnalité interrompue* désigne une fonctionnalité qui n’est plus prise en charge. Elle peut également avoir été physiquement retirée du produit. Les fonctionnalités suivantes ne sont plus disponibles.
 
