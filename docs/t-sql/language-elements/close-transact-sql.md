@@ -20,10 +20,10 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 63234f9f337bd6427c4c5ed33c146e2ed3a714c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950324"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67950324"
 
   Ferme un curseur ouvert en libérant le jeu de résultats actuel et tous les verrous de curseur dans les lignes sur lesquelles le curseur est positionné. `CLOSE` garde les structures de données disponibles pour une réouverture éventuelle, mais les extractions et les mises à jour positionnées ne sont pas autorisées jusqu’à la réouverture du curseur. `CLOSE` doit être émise sur un curseur ouvert. Elle n’est pas autorisée sur un curseur qui a seulement été déclaré ou qui est déjà fermé.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

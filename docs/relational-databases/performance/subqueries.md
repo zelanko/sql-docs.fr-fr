@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113286"
 ---
 # <a name="subqueries-sql-server"></a>Sous-requêtes (SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> Principes de base des sous-requêtes
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> Principes de base des sous-requêtes
 Une sous-requête est également appelée « requête interne » ou « sélection interne » et l'instruction qui la contient est aussi appelée « requête externe » ou « sélection externe ».   
 
 Il est souvent possible d'exprimer sous la forme d'une jointure une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui contient une sous-requête. D'autres questions peuvent uniquement être posées par le biais de sous-requêtes. Dans [!INCLUDE[tsql](../../includes/tsql-md.md)], les performances ne varient généralement pas, que vous utilisiez une instruction comportant une sous-requête ou que vous ayez recours à une syntaxe sémantiquement équivalente qui n'en contient pas. Toutefois, lorsque vous devez vérifier l'existence, une jointure offre de meilleures performances. En effet, la requête imbriquée doit être traitée pour chaque résultat de la requête externe de façon à éliminer les doublons. Dans de tels cas, une jointure donnera de meilleurs résultats. L’exemple suivant présente une sous-requête `SELECT` et une jointure `SELECT` qui retournent le même jeu de résultats :
@@ -92,7 +92,7 @@ Il existe trois sous-requêtes de base :
 -   les sous-requêtes introduites par un opérateur de comparaison non modifié et qui doivent retourner une valeur unique ;
 -   les sous-requêtes introduites par `EXISTS` qui constituent des tests d’existence.
 
-## <a name="rules"></a> Règles des sous-requêtes
+## <a name="subquery-rules"></a><a name="rules"></a> Règles des sous-requêtes
 Une sous-requête est soumise aux restrictions suivantes : 
 -   La liste de sélection d’une sous-requête introduite par un opérateur de comparaison ne peut contenir qu’une seule expression ou qu’un seul nom de colonne (sauf quand `EXISTS` et `IN` opèrent respectivement sur `SELECT *` ou sur une liste).   
 -   Si la clause `WHERE` d’une requête externe comprend un nom de colonne, ce dernier doit pouvoir être joint à la colonne spécifiée dans la liste de sélection de la sous-requête.   
@@ -104,7 +104,7 @@ Une sous-requête est soumise aux restrictions suivantes :
 -   Une vue créée à l'aide d'une sous-requête ne peut pas être mise à jour.   
 -   Par convention, la liste de sélection d’une sous-requête introduite par `EXISTS` est dotée d’un astérisque (\*) au lieu d’un nom de colonne unique. Les règles à appliquer à une sous-requête introduite par `EXISTS` sont identiques à celles d’une liste de sélection standard. En effet, une sous-requête introduite par `EXISTS` crée un test d’existence et retourne les valeurs TRUE ou FALSE au lieu des données.   
 
-## <a name="qualifying"></a> Qualification de noms de colonnes dans des sous-requêtes
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> Qualification de noms de colonnes dans des sous-requêtes
 Dans l’exemple suivant, la colonne *BusinessEntityID* indiquée dans la clause `WHERE` de la requête externe est implicitement qualifiée par le nom de table figurant dans la clause `FROM` de la requête externe, (*Sales.Store*). La référence à la colonne *CustomerID* dans la liste de sélection de la sous-requête est qualifiée par la clause `FROM` de la sous-requête, c’est-à-dire par la table *Sales.Customer*.
 
 ```sql
@@ -140,7 +140,7 @@ Ce n'est pas une erreur d'exprimer explicitement le nom de table, et il est touj
 > [!IMPORTANT]
 > Si une colonne est référencée dans une sous-requête qui n’existe pas dans la table référencée par la clause `FROM` de la sous-requête, mais qu’elle existe dans une table référencée par la clause `FROM` de la requête externe, la requête s’exécute sans erreur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualifie implicitement la colonne dans la sous-requête avec le nom de table indiqué dans la requête externe.   
 
-## <a name="nesting"></a> Niveaux d’imbrication multiples
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> Niveaux d’imbrication multiples
 Une sous-requête peut imbriquer une ou plusieurs autres sous-requêtes. Le nombre de sous-requêtes imbriquées dans une instruction est illimité.   
 
 La requête ci-après recherche les noms des employés qui sont également vendeurs.   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> Sous-requêtes corrélées
+## <a name="correlated-subqueries"></a><a name="correlated"></a> Sous-requêtes corrélées
 De nombreuses requêtes peuvent être évaluées en exécutant une fois la sous-requête et en entrant la ou les valeurs obtenues dans la clause `WHERE` de la requête externe. Dans les requêtes qui contiennent une sous-requête en corrélation (aussi appelée sous-requête répétitive), la sous-requête dépend de la requête externe pour ses valeurs. Cela signifie que la sous-requête s'exécute de manière répétitive, une fois pour chaque ligne que la requête externe pourrait sélectionner.
 Cette requête récupère une instance du prénom et du nom de chaque employé pour lequel la prime est égale à 5 000 dans la table *SalesPerson* et dont le numéro d’identification se trouve dans les tables *Employee* et *SalesPerson*.
 
@@ -259,7 +259,7 @@ Puisque la valeur est false, la ligne de `Syed Abbas` n’est pas incluse dans l
 
 Les sous-requêtes corrélées peuvent aussi inclure des fonctions table dans la clause `FROM` en référençant des colonnes d’une table dans la requête externe sous la forme d’argument de cette fonction table. Dans ce cas, pour chaque ligne de la requête externe, la fonction table est évaluée en fonction de la sous-requête.    
   
-## <a name="types"></a> Types de sous-requête
+## <a name="subquery-types"></a><a name="types"></a> Types de sous-requête
 Les sous-requêtes peuvent être spécifiées dans de nombreux endroits : 
 -   Avec des alias. Pour plus d’informations, consultez [Sous-requêtes et alias](#aliases).
 -   Avec `IN` ou `NOT IN`. Pour plus d’informations, consultez [Sous-requêtes introduites par IN](#in) et [Sous-requêtes introduites par NOT IN](#notin).
@@ -269,7 +269,7 @@ Les sous-requêtes peuvent être spécifiées dans de nombreux endroits :
 -   Avec `EXISTS` ou `NOT EXISTS`. Pour plus d’informations, consultez [Sous-requêtes introduites par EXISTS](#exists) et [Sous-requêtes introduites par NOT EXISTS](#notexists).
 -   À la place d'une expression. Pour plus d’informations, consultez [Utilisation d’une sous-requête à la place d’une expression](#expression).
 
-### <a name="aliases"></a> Sous-requêtes et alias
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> Sous-requêtes et alias
 De nombreuses instructions où la sous-requête et la requête externe portent sur la même table peuvent également être formulées sous forme de jointures réflexives (jointure d'une table à elle-même). Par exemple, vous pouvez rechercher les adresses d'employés dans un état donné à l'aide d'une sous-requête :   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 Grâce aux noms d’alias explicites, il apparaît clairement qu’une référence à la table *Person.Address* dans la sous-requête est différente de la référence spécifiée dans la requête externe.   
 
-### <a name="in"></a> Sous-requêtes introduites par IN
+### <a name="subqueries-with-in"></a><a name="in"></a> Sous-requêtes introduites par IN
 Le résultat d’une sous-requête introduite par `IN` (ou par `NOT IN`) est une liste de valeurs zéro ou plus. Dès que la sous-requête retourne des résultats, la requête externe les utilise.    
 La requête suivante recherche le nom de toutes les roues fabriquées par Adventure Works Cycles.     
 
@@ -468,7 +468,7 @@ GO
 
 Une jointure peut toujours s'exprimer sous la forme d'une sous-requête. Une sous-requête peut souvent s'exprimer sous la forme d'une jointure, mais pas toujours. Les jointures étant symétriques, vous pouvez joindre une table A à une table B ou inversement et obtenir le même résultat. Ce n'est pas le cas lorsqu'on utilise une sous-requête.    
 
-### <a name="notin"></a> Sous-requêtes introduites par NOT IN
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> Sous-requêtes introduites par NOT IN
 Les sous-requêtes introduites par le mot clé NOT IN retournent également une liste de valeurs zéro ou plus.   
 La requête suivante trouve les noms des produits qui ne font pas partie de la sous-catégorie « produits finis ».   
 
@@ -488,7 +488,7 @@ GO
 
 Cette instruction ne peut pas être convertie en jointure. La jointure analogue « non égal à » revêt une autre signification : elle trouve les noms des produits qui se trouvent dans une sous-catégorie différente de « produits finis ».      
 
-### <a name="upsert"></a> Sous-requêtes dans les instructions UPDATE, DELETE et INSERT
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> Sous-requêtes dans les instructions UPDATE, DELETE et INSERT
 Les sous-requêtes peuvent être imbriquées dans les instructions de manipulation de données (DML, Data Manipulation Language) `UPDATE`, `DELETE`, `INSERT` et `SELECT`.    
 
 L’exemple suivant double la valeur de la colonne *ListPrice* dans la table *Production.Product*. La sous-requête contenue dans la clause `WHERE` fait référence à la table *Purchasing.ProductVendor* pour limiter les lignes mises à jour dans la table *Product* à celles fournies par *BusinessEntity* 1540 uniquement.
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> Sous-requêtes et opérateurs de comparaison
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> Sous-requêtes et opérateurs de comparaison
 Les sous-requêtes peuvent être introduites par l'un de ces opérateurs de comparaison (=, < >, >, > =, <, ! >, ! < ou < =).   
 
 Une sous-requête introduite par un opérateur de comparaison non modifié (autrement dit, un opérateur de comparaison non suivi de `ANY` ou de `ALL`) ne doit retourner qu’une seule valeur et non une liste de valeurs, à l’instar des sous-requêtes introduites par `IN`. Si une sous-requête de ce type retourne plusieurs valeurs, SQL Server affiche un message d’erreur.    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> Opérateurs de comparaison modifiés par ANY, SOME ou ALL
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> Opérateurs de comparaison modifiés par ANY, SOME ou ALL
 Les opérateurs de comparaison qui introduisent une sous-requête peuvent être modifiés par les mots clés ALL ou ANY. SOME est un équivalent de `ANY` dans la norme ISO.     
 
 Les sous-requêtes introduites par un opérateur de comparaison modifié retournent une liste contenant aucune ou plusieurs valeurs et peuvent contenir une clause `GROUP BY` ou `HAVING`. Ces sous-requêtes peuvent être reformulées avec `EXISTS`.     
@@ -667,7 +667,7 @@ Pour la même raison, quand vous utilisez `NOT IN` dans cette requête, les rés
 
 Vous pouvez obtenir les mêmes résultats avec l’opérateur `<>ALL`, qui est l’équivalent de `NOT IN`.   
 
-### <a name="exists"></a> Sous-requêtes introduites par EXISTS
+### <a name="subqueries-with-exists"></a><a name="exists"></a> Sous-requêtes introduites par EXISTS
 Une sous-requête introduite par le mot clé `EXISTS` constitue un test d’existence. La clause `WHERE` de la requête externe teste l’existence des lignes retournées par la sous-requête. En réalité, la sous-requête ne génère pas de données, elle retourne la valeur TRUE ou FALSE.   
 
 Une sous-requête introduite par EXISTS présente la syntaxe suivante :   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> Sous-requêtes introduites par NOT EXISTS
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> Sous-requêtes introduites par NOT EXISTS
 `NOT EXISTS` fonctionne comme `EXISTS`, sauf que la clause `WHERE` dans laquelle ce paramètre est utilisé est remplie si la sous-requête ne retourne aucune ligne.    
 
 Par exemple, pour rechercher les noms de produits qui n'appartiennent pas à la sous-catégorie des roues (Wheels) :   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> Utilisation d’une sous-requête à la place d’une expression
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> Utilisation d’une sous-requête à la place d’une expression
 Dans [!INCLUDE[tsql](../../includes/tsql-md.md)], une sous-requête peut remplacer une expression partout où celle-ci est autorisée dans des instructions `SELECT`, `UPDATE`, `INSERT` et `DELETE`, à l’exception d’une liste `ORDER BY`.    
 
 L'exemple suivant illustre l'application de cette amélioration. Cette requête fournit le prix de tous les produits VTT, leur prix moyen, ainsi que la différence entre le prix de chaque VTT et le prix moyen.    

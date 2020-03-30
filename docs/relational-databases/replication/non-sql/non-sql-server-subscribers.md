@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940406"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
@@ -87,7 +87,7 @@ Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, co
   
 -   Si un article est ajouté ou supprimé d'une publication, les abonnements aux abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être réinitialisés.  
   
--   Les seules contraintes prises en charge pour tous les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont : NULL et NOT NULL. Les contraintes de clés primaires sont répliquées en tant qu'index uniques.  
+-   Les seules contraintes prises en charge pour tous les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont : NULL et NOT NULL. Les contraintes de clés primaires sont répliquées en tant qu'index uniques.  
   
 -   La valeur NULL est traitée différemment par différentes bases de données, ce qui affecte la façon dont une valeur vide, une chaîne vide ou une valeur NULL est représentée. Cela affecte à son tour le comportement des valeurs insérées dans des colonnes où des contraintes uniques sont définies. Par exemple, Oracle autorise plusieurs valeurs NULL dans une colonne considérée comme unique, alors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise qu'une seule valeur NULL dans une colonne unique.  
   

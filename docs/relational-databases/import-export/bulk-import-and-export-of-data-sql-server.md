@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680810"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importation et exportation en bloc de données (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "71680810"
 - L'*exportation en bloc* consiste à copier des données d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données.
 - Le terme*importation en bloc* fait référence au chargement de données d’un fichier de données vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez exporter des données d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel vers un fichier de données, puis importer en bloc ces données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-## <a name="MethodsForBuliIE"></a> Méthodes pour l’importation et l’exportation de données en bloc
+## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> Méthodes pour l’importation et l’exportation de données en bloc
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'exportation en bloc de données à partir d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'importation en bloc de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les méthodes de base disponibles sont les suivantes.
 
@@ -58,7 +58,7 @@ ms.locfileid: "71680810"
 > [!NOTE]
 > Seul l’utilitaire bcp est pris en charge par Azure SQL Data Warehouse pour l’importation et l’exportation des fichiers délimités.
 
-## <a name="FFs"></a> Fichiers de format
+## <a name="format-files"></a><a name="FFs"></a> Fichiers de format
 
 L’ [utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)et [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) gèrent tous l’utilisation d’un *fichier de format* spécialisé qui stocke les informations de format de chaque champ dans un fichier de données. Un fichier de format peut également contenir des informations sur la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante. Le fichier de format peut être utilisé pour fournir toutes les informations de format nécessaires pour exporter en bloc des données à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et pour importer en bloc des données vers une instance du même type.
 

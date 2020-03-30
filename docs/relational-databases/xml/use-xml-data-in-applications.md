@@ -26,17 +26,17 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68039150"
 ---
 # <a name="use-xml-data-in-applications"></a>Utiliser des données XML dans les applications
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cette rubrique décrit les options dont vous disposez pour utiliser le type de données **xml** dans votre application. Cette rubrique inclut des informations sur les thèmes suivants :  
   
--   Gestion de XML à partir d’une colonne de type **xml[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’ADO et de** Native Client  
+-   Gestion de XML à partir d’une colonne de type **xml** à l’aide d’ADO et de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 -   Gestion de XML à partir d'une colonne de type **xml** à l'aide d'ADO.NET  
   

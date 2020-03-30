@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084020"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Cette rubrique contient des informations sur la façon de surveiller la taille d’un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de réduire le journal des transactions, d’ajouter ou d’agrandir un fichier journal de transactions, d’optimiser le taux de croissance du journal des transactions de **tempdb**, et de contrôler la croissance d’un fichier journal de transactions.  
 
-##  <a name="MonitorSpaceUse"></a>Surveiller l’utilisation de l’espace pour le journal  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Surveiller l’utilisation de l’espace pour le journal  
 Surveillez l’utilisation de l’espace pour le journal à l’aide de [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Cette vue de gestion dynamique retourne des informations sur la quantité d’espace journal utilisée et indique à quel moment le journal des transactions a besoin d’être tronqué. 
 
 Pour plus d’informations sur la taille actuelle d’un fichier journal, sa taille maximale et l’option de croissance automatique du fichier, vous pouvez également utiliser les colonnes **size**, **max_size** et **growth** de ce fichier journal dans [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
@@ -33,7 +33,7 @@ Pour plus d’informations sur la taille actuelle d’un fichier journal, sa tai
 > [!IMPORTANT]
 > Évitez de surcharger le disque du journal. Assurez-vous que le stockage des journaux peut supporter les exigences [d’IOPS](https://wikipedia.org/wiki/IOPS) et de faible latence inhérentes à votre charge transactionnelle. 
   
-##  <a name="ShrinkSize"></a> Réduire la taille du fichier journal  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> Réduire la taille du fichier journal  
  Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Cela est utile quand vous savez qu’un fichier journal de transactions contient de l’espace inutilisé. Vous pouvez réduire un fichier journal uniquement quand la base de données est en ligne, et qu’au moins un [fichier journal virtuel](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) est libre. Dans certains cas, la réduction du journal peut n'être possible qu'après la troncation de journal suivante.  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ La réduction d’un fichier journal supprime un ou plusieurs [fichiers journaux
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (consultez les colonnes **size**, **max_size** et **growth** du ou des fichiers journaux.)  
   
-##  <a name="AddOrEnlarge"></a> Ajouter ou agrandir un fichier journal  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> Ajouter ou agrandir un fichier journal  
 Vous pouvez gagner de l’espace en agrandissant le fichier journal existant (si l’espace disque le permet) ou en ajoutant un fichier journal à la base de données, généralement sur un autre disque. Un seul fichier journal de transactions est suffisant, sauf si l’espace pour le journal est insuffisant, et que l’espace disque est également insuffisant sur le volume qui contient le fichier journal.   
   
 -   Pour ajouter un fichier journal à la base de données, utilisez la clause `ADD LOG FILE` de l’instruction `ALTER DATABASE`. L'ajout d'un fichier journal permet au journal de croître.  
@@ -68,12 +68,12 @@ Vous pouvez gagner de l’espace en agrandissant le fichier journal existant (si
 
 Pour plus d’informations, consultez les [Recommandations](#Recommendations) dans cette rubrique.
     
-##  <a name="tempdbOptimize"></a> Optimiser la taille du journal des transactions tempdb  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> Optimiser la taille du journal des transactions tempdb  
  Le redémarrage d’une instance de serveur permet de redimensionner le journal des transactions de la base de données **tempdb** conformément à sa taille d’origine avant la croissance automatique. Ceci peut réduire les performances du journal des transactions **tempdb** . 
  
  Vous pouvez éviter cette surcharge en augmentant la taille du journal des transactions **tempdb** après avoir démarré ou redémarré l'instance de serveur. Pour plus d'informations, consultez [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-##  <a name="ControlGrowth"></a> Contrôler la croissance d’un fichier journal de transactions  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> Contrôler la croissance d’un fichier journal de transactions  
  Utilisez l’instruction [ALTER DATABASE - Options de fichiers et de groupes de fichiers &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) pour gérer la croissance d’un fichier journal de transactions. Notez les points suivants :  
   
 -   Pour changer la taille actuelle du fichier selon les unités Ko, Mo, Go et To, utilisez l’option `SIZE`.  
@@ -82,7 +82,7 @@ Pour plus d’informations, consultez les [Recommandations](#Recommendations) da
 
 Pour plus d’informations, consultez les [Recommandations](#Recommendations) dans cette rubrique.
 
-## <a name="Recommendations"></a> Recommandations
+## <a name="recommendations"></a><a name="Recommendations"></a> Recommandations
 Voici une série de recommandations générales à suivre pendant l’utilisation de fichiers journaux de transactions :
 
 -   L’incrément de croissance automatique du journal des transactions, tel que défini par l’option `FILEGROWTH`, doit être suffisamment grand pour anticiper les besoins des transactions de la charge de travail. L'incrément de croissance d'un fichier journal doit être suffisamment important pour éviter une expansion fréquente. Une bonne approche pour dimensionner correctement un journal des transactions consiste à contrôler la quantité de journal occupée pendant :

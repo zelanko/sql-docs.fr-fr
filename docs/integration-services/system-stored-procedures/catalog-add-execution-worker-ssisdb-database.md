@@ -12,10 +12,10 @@ author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: c5c53af690df29c17012e19267debfe2273b4193
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281387"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (base de données SSISDB)
@@ -25,7 +25,7 @@ ms.locfileid: "71281387"
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale Out.
+Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale-out.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,5 +67,5 @@ ID d’agent de Worker d’un Scale Out Worker. *workeragent_id* est de type **u
 - L’exécution n’a pas lieu dans Scale-out.
 
 ## <a name="see-also"></a>Voir aussi
-[Exécuter des packages dans Scale Out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
+[Exécuter des packages dans Scale-out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

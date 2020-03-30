@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254054"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "75254054"
   Pour une explication plus approfondie, consultez [modes de récupération](recovery-models-sql-server.md).
   
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 
 -   [Sauvegardez le journal des transactions](back-up-a-transaction-log-sql-server.md) **avant** de quitter le [mode de récupération complète ou mode de récupération utilisant les journaux de transactions](recovery-models-sql-server.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "75254054"
   
 **Remarque** Si vous adoptez le mode de récupération complète pendant une opération en bloc, la journalisation des opérations en bloc passe de la journalisation minimale à la journalisation complète, et inversement.  
   
-###  <a name="Security"></a> Autorisations requises  
+###  <a name="required-permissions"></a><a name="Security"></a> Autorisations requises  
    Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Pour afficher ou modifier le mode de récupération  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75254054"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Pour afficher le mode de récupération  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
   
 -   **Après un changement de mode de récupération complète ou de mode de récupération utilisant les journaux de transactions**  
   
@@ -128,7 +128,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Assurez-vous que des sauvegardes des bases de données régulières sont planifiées. La sauvegarde de votre base de données est essentielle pour protéger vos données et tronquer la partie inactive du journal des transactions.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -138,7 +138,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Plans de maintenance de base de données](../maintenance-plans/maintenance-plans.md) (dans la documentation en ligne de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
