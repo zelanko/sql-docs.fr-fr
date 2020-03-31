@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950339"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  L’incidence de l’utilisation de *checkpoint_duration* sur les performances dépend du nombre de pages incorrectes, de l’activité sur le système et de la durée réelle spécifiée. Par exemple, si le point de contrôle s’effectue normalement en 120 secondes, le fait de spécifier une valeur *checkpoint_duration* de 45 secondes oblige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à allouer plus de ressources au point de contrôle que ne le ferait la valeur par défaut. À l’inverse, une valeur de 180 secondes spécifiée pour *checkpoint_duration* fait en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue moins de ressources que ce qui serait attribué par défaut. En règle générale, une valeur faible pour *checkpoint_duration* augmente les ressources attribuées au point de contrôle tandis qu’une valeur plus élevée les réduit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue toujours un point de contrôle lorsque cela est possible et l'instruction CHECKPOINT renvoie immédiatement les informations lorsqu'un point de contrôle se termine. Ainsi, dans certains cas, un point de contrôle peut se terminer avant ou après que la durée spécifiée soit écoulée.  
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
  Les autorisations de CHECKPOINT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin** et aux membres des rôles de base de données fixes **db_owner** et **db_backupoperator** ; elles ne sont pas transférables.  
