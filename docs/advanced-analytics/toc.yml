@@ -15,26 +15,26 @@
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Installer
   items:
-    - name: "Changements d’isolation dans SQL\_Server\_2019"
-      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Installer ML Services sur Windows
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: Installer ML Services sur Linux
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+    - name: Installer ML Services sur Docker
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    - name: "Changements d’isolation dans SQL\_Server\_2019"
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Installer R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: Installer un serveur autonome
-      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-    - name: Installer des modèles pré-entraînés
-      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: Installation hors connexion (sans Internet)
       items:
-        - name: Installer sans accès à Internet
+        - name: Installation sans accès à Internet
           href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
         - name: Téléchargements CAB
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: Installation via l’invite de commandes
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+    - name: Installer des modèles préentraînés
+      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: Mettre à niveau Python et R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Notebooks Azure Data Studio
@@ -45,6 +45,8 @@
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Installer sur une machine virtuelle Azure
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+    - name: Installer un serveur autonome
+      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: Démarrages rapides
   items:
     - name: Python
@@ -157,7 +159,7 @@
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
             - name: 7. Créer des modèles
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 8. Affecter un score à de nouvelles données
+            - name: 8. Calculer le score de nouvelles données
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
             - name: 9. Transformer les données
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
@@ -201,15 +203,15 @@
           href: ../advanced-analytics/connect/loopback-connection.md
         - name: Se connecter à OLAP à partir de R
           items:
-            - name: Utilisation de données de cubes OLAP dans R
+            - name: Utiliser des données de cubes OLAP dans R
               href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
-            - name: Guide pratique pour créer des requêtes MDX à l’aide d’olapR
+            - name: Guide pratique pour créer des requêtes MDX avec olapR
               href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
     - name: Exploration et modélisation des données
       items:
         - name: R
           items:
-            - name: Charger des objets R à l’aide d’ODBC
+            - name: Charger des objets R avec ODBC
               href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
             - name: Modélisation prédictive avec R
               href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
@@ -223,13 +225,13 @@
           href: ../advanced-analytics/r/r-libraries-and-data-types.md
     - name: Déployer
       items:
-        - name: Effectuer des opérations avec des procédures stockées
+        - name: Opérationnaliser avec des procédures stockées
           href: ../advanced-analytics/r/operationalizing-your-r-code.md
         - name: Créer des workflows SSIS et SSRS avec R
           href: ../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md
         - name: Convertir le code R pour SQL Server
           href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md
-        - name: Créer une procédure stockée à l’aide de sqlrutils
+        - name: Créer une procédure stockée avec sqlrutils
           href: ../advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils.md
     - name: Prévisions
       items:
@@ -273,9 +275,9 @@
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: Administration
       items:
-        - name: Moniteur
+        - name: Superviser
           items:
-            - name: Surveiller en utilisant des rapports SSMS
+            - name: Superviser avec des rapports SSMS
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: Superviser en utilisant des vues DMV
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
