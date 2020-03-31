@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256993"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78256993"
 
   Les applications qui utilisent le suivi des modifications doivent être en mesure d'obtenir les modifications suivies, d'appliquer ces modifications à une autre banque de données et de mettre à jour la base de données source. Cette rubrique explique comment effectuer ces tâches et le rôle joué par le suivi des modifications lorsqu'un basculement se produit et qu'une base de données doit être restaurée à partir d'une sauvegarde.  
   
-##  <a name="Obtain"></a> Obtenir les modifications à l'aide des fonctions de suivi des modifications  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Obtenir les modifications à l'aide des fonctions de suivi des modifications  
  Explique comment utiliser les fonctions de suivi des modifications pour obtenir des modifications et les informations sur les modifications apportées à une base de données.  
   
 ### <a name="about-the-change-tracking-functions"></a>À propos des fonctions de suivi des modifications  
@@ -295,7 +295,7 @@ L’activation de l’isolement d’instantané et du suivi des modifications su
 > [!NOTE]  
 >  Le choix de l'approche la mieux adaptée à l'application lorsque vous utilisez le suivi des modifications (ou tout mécanisme de suivi personnalisé) requiert une analyse approfondie. Il est par conséquent beaucoup plus simple d'utiliser le niveau d'isolement d'instantané.  
   
-##  <a name="Handles"></a> Comment le suivi des modifications gère les modifications apportées à une base de données  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> Comment le suivi des modifications gère les modifications apportées à une base de données  
  Certaines applications qui utilisent le suivi des modifications effectuent une synchronisation bidirectionnelle avec une autre banque de données. Autrement dit, les modifications apportées à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont mises à jour dans l'autre banque de données et les modifications apportées à l'autre banque sont mises à jour dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Lorsqu'une application met à jour la base de données locale avec les modifications d'une autre banque de données, elle doit effectuer les opérations suivantes :  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Il est possible que la ligne mise à jour dans le cadre de la transaction d'instantané ait été mise à jour dans une autre transaction après le démarrage de la transaction d'instantané. Dans ce cas, un conflit de mise à jour du niveau d'isolement d'instantané se produit et provoque la fin de la transaction. Si cela se produit, réessayez d'effectuer la mise à jour. Cette tentative génère alors la détection d'un conflit de suivi des modifications et aucune ligne n'est modifiée.  
   
-##  <a name="DataRestore"></a> Suivi des modifications et restauration de données  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> Suivi des modifications et restauration de données  
  Les applications qui nécessitent une synchronisation doivent considérer le cas où une base de données pour laquelle le suivi des modifications est activé rétablit une version antérieure des données. Ce cas peut se produire après la restauration d'une base de données à partir d'une sauvegarde, lors d'un basculement vers un miroir de base de données asynchrone ou lors d'un échec pendant l'utilisation de la copie des journaux de transaction. Le scénario suivant illustre ce problème :  
   
 1.  La table T1 fait l'objet d'un suivi des modifications et sa version valide minimale est 50.  

@@ -10,10 +10,10 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265166"
 ---
 # <a name="idle-connection-resiliency"></a>Résilience des connexions inactives
@@ -30,7 +30,7 @@ La résilience de connexion s’implémente en ajoutant deux mots clés de conne
 
 Si le produit de **ConnectRetryCount** et de **ConnectRetryInterval** est supérieur à **LoginTimeout**, le client cesse d’essayer de se connecter une fois **LoginTimeout** atteint. Sinon, il continuera à tenter de se reconnecter jusqu’à ce que **ConnectRetryCount** soit atteint.
 
-#### <a name="remarks"></a>Notes 
+#### <a name="remarks"></a>Notes
 
 La résilience de connexion s’applique lorsque la connexion est inactive. Les défaillances qui se produisent lors de l’exécution d’une transaction, par exemple, ne déclencheront pas de tentatives de reconnexion. Elles échoueront normalement. Les situations suivantes, appelées états de session non récupérables, ne déclenchent pas de tentatives de reconnexion :
 
@@ -43,7 +43,7 @@ La résilience de connexion s’applique lorsque la connexion est inactive. Les 
 * Handles XML préparés
 * Indicateurs de trace
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Le code suivant se connecte à une base de données et exécute une requête. La connexion est interrompue en arrêtant la session et une nouvelle requête est tentée à l’aide de la connexion interrompue. Cet exemple utilise l’exemple de base de données [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
 
@@ -130,5 +130,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Résilience de connexion du pilote ODBC Windows](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

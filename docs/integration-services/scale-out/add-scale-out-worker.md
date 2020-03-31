@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: c1b9941b60dc8a5f1fc87627094513ce6f20711b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897008"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Ajouter un Scale Out Worker avec Scale Out Manager
@@ -23,9 +23,9 @@ ms.locfileid: "67897008"
 
 
 
-Integration Services Scale Out Manager simplifie l’ajout d’un Scale Out Worker à votre environnement Scale Out existant. 
+Integration Services Scale Out Manager simplifie l’ajout d’un Scale Out Worker à votre environnement Scale-out existant. 
 
-Suivez les étapes ci-dessous pour ajouter un Scale Out Worker à votre topologie Scale Out :
+Suivez les étapes ci-dessous pour ajouter un Scale Out Worker à votre topologie Scale-out :
 
 ## <a name="1-install-scale-out-worker"></a>1. Installer Scale Out Worker
 Dans l’Assistant Installation de SQL Server, sélectionnez Integration Services et Scale Out Worker dans la page **Sélection de fonctionnalités**. 
@@ -41,9 +41,9 @@ Ouvrez le port spécifié pendant l’installation de Scale Out Master (8391, pa
 ## <a name="3-add-a-scale-out-worker-with-scale-out-manager"></a>3. Ajouter un Scale Out Worker avec Scale Out Manager
 Exécutez SQL Server Management Studio en tant qu’administrateur et connectez-vous à l’instance SQL Server de Scale Out Master.
 
-Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **SSISDB** et sélectionnez **Gérer Scale Out**. 
+Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **SSISDB** et sélectionnez **Gérer Scale-out**. 
 
-![Gérer Scale Out](media/manage-scale-out.PNG)
+![Gérer Scale-out](media/manage-scale-out.PNG)
 
 Dans la boîte de dialogue **Scale Out Manager**, basculez vers **Gestionnaire de workers**. Sélectionnez **+** et suivez les instructions de la boîte de dialogue **Connect Worker** (Connecter le nœud Worker). 
 

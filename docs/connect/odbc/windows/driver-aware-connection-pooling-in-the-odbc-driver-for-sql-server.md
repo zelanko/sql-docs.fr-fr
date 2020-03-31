@@ -11,10 +11,10 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68009971"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Regroupement de connexions prenant en charge le pilote dans le pilote ODBC pour SQL Server
@@ -48,8 +48,8 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
     |`AnsiNPW`|Oui|Oui|
     |`App`|Oui|Oui|
     |`ApplicationIntent`|Oui|Oui|  
-    |`Authentication`|Oui|Non |
-    |`ColumnEncryption`|Oui|Non |
+    |`Authentication`|Oui|Non|
+    |`ColumnEncryption`|Oui|Non|
     |`Database`|Oui|Oui|
     |`Encrypt`|Oui|Oui|  
     |`Failover_Partner`|Oui|Oui|
@@ -72,11 +72,11 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
     |`SQL_ATTR_CURRENT_CATALOG`|Oui|Oui|
     |`SQL_ATTR_PACKET_SIZE`|Oui|Oui|
     |`SQL_COPT_SS_ANSI_NPW`|Oui|Oui|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|Oui|Non |
-    |`SQL_COPT_SS_AUTHENTICATION`|Oui|Non |
+    |`SQL_COPT_SS_ACCESS_TOKEN`|Oui|Non|
+    |`SQL_COPT_SS_AUTHENTICATION`|Oui|Non|
     |`SQL_COPT_SS_ATTACHDBFILENAME`|Oui|Oui|
     |`SQL_COPT_SS_BCP`|Oui|Oui|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Oui|Non |
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Oui|Non|
     |`SQL_COPT_SS_CONCAT_NULL`|Oui|Oui|
     |`SQL_COPT_SS_ENCRYPT`|Oui|Oui|
     |`SQL_COPT_SS_FAILOVER_PARTNER`|Oui|Oui|
@@ -87,7 +87,7 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
     |`SQL_COPT_SS_SERVER_SPN`|Oui|Oui|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Oui|Oui|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Oui|Oui|
-    |`SQL_COPT_SS_TNIR`|Oui|Non |
+    |`SQL_COPT_SS_TNIR`|Oui|Non|
  
 -   Le pilote peut réinitialiser et ajuster les mots clés et attributs de connexion suivants sans appel réseau supplémentaire. Le pilote réinitialise ces paramètres pour s’assurer que la connexion ne contient pas d’informations incorrectes.  
   
@@ -126,7 +126,7 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
     |`SQL_COPT_SS_USER_DATA`|  Oui|Oui|
     |`SQL_COPT_SS_WARN_ON_CP_ERROR`|Oui|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft ODBC Driver for SQL Server sur Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

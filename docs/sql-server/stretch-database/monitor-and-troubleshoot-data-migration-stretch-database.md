@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843780"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Surveillance et résolution des problèmes de migration de données (Stretch Database)
@@ -33,10 +33,10 @@ ms.locfileid: "73843780"
   
  ![Moniteur Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Moniteur Stretch Database")  
   
-##  <a name="Migration"></a> Vérification de l’état de la migration des données dans une vue de gestion dynamique  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> Vérification de l’état de la migration des données dans une vue de gestion dynamique  
  Ouvrez la vue de gestion dynamique **sys.dm_db_rda_migration_status** pour afficher le nombre de lots et de lignes de données migrés. Pour plus d’informations, consultez [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
-##  <a name="Firewall"></a> Résolution des problèmes liés à la migration des données  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> Résolution des problèmes liés à la migration des données  
  **Les lignes de ma table Stretch ne sont pas migrées vers Azure. Quel est le problème ?**  
  Plusieurs problèmes peuvent affecter la migration. Vérifiez les points suivants :  
   

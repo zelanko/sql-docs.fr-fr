@@ -257,10 +257,10 @@
   href: menu-help/sql-server-management-studio-menu-help.md
 - name: SQL Server Agent +
   href: agent/sql-server-agent.md
-- name: "Didacticiel\_: SQL Server Management Studio"
+- name: "Tutoriel\_: SQL Server Management Studio"
   href: tutorials/tutorial-sql-server-management-studio.md
   items:
-    - name: 'Leçon 1 : Navigation de base dans SQL Server Management Studio'
+    - name: "Leçon\_1\_: Navigation de base dans SQL\_Server Management Studio"
       href: tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md
       items:
         - name: Démarrer SQL Server Management Studio
@@ -279,9 +279,9 @@
           href: tutorials/lesson-1-7-set-the-startup-options.md
         - name: Restaurer la configuration par défaut de SQL Server Management Studio
           href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
-        - name: 'Résumé : Navigation de base'
+        - name: "Résumé\_: Navigation de base"
           href: tutorials/lesson-1-9-summary-basic-navigation.md
-    - name: 'Leçon 2 : Écriture d''instructions Transact-SQL'
+    - name: "Leçon\_2\_: Écriture d'instructions\_Transact-SQL"
       href: tutorials/lesson-2-writing-transact-sql.md
       items:
         - name: Connexion à l'aide de l'Éditeur de requête
@@ -305,5 +305,5 @@
           href: tutorials/lesson-3-2-create-custom-templates.md
         - name: Enregistrer des scripts sous forme de projets ou de solutions
           href: tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md
-        - name: 'Résumé : Solutions et projets de script'
+        - name: "Résumé\_: Solutions et projets de script"
           href: tutorials/lesson-3-4-summary-solutions-and-script-projects.md

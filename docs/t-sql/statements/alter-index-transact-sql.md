@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924964"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ Sur les ordinateurs multiprocesseurs, à la manière d’autres requêtes, `ALTE
 > [!IMPORTANT]
 > Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers dans lequel il se trouve est hors connexion ou en lecture seule. Si le mot clé ALL est spécifié et que des index se trouvent dans un groupe de fichiers hors connexion ou en lecture seule, l'instruction échoue.  
   
-## <a name="rebuilding-indexes"></a> Reconstruction des index  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> Reconstruction des index  
 La reconstruction d'un index entraîne sa suppression puis sa recréation. Ceci permet d'éviter toute fragmentation, de libérer de l'espace disque en compactant les pages d'après le paramètre du facteur de remplissage spécifié ou déjà existant et en retriant les lignes de l'index en pages contiguës. Quand ALL est précisé, tous les index sur la table sont supprimés puis reconstruits en une seule transaction. Il n’est pas nécessaire de supprimer les contraintes de clé étrangère au préalable. Lorsque de la reconstruction d'index contenant au moins 128 étendues, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations de pages ainsi que les verrous qui y sont associés jusqu'à ce que la transaction soit validée.  
  
 Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
-## <a name="reorganizing-indexes"></a> Réorganisation des index
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> Réorganisation des index
 La réorganisation d'un index utilise des ressources système minimes. En effet, elle défragmente le niveau feuille des index cluster et non cluster sur les tables et les vues en retriant les pages de niveau feuille de façon physique afin de resuivre l'ordre logique, c'est-à-dire de gauche à droite, des nœuds. Cette opération compacte également les pages d'index. Le compactage s'appuie sur la valeur du facteur de remplissage existante. 
   
 Si `ALL` est spécifié, les index relationnels, aussi bien cluster que non cluster, et les index XML de la table sont réorganisés. Certaines restrictions s’appliquent quand ALL est spécifié ; consultez la définition de ALL dans la section Arguments de cet article.  
@@ -659,7 +659,7 @@ Pour plus d’informations, consultez [Réorganiser et reconstruire des index](.
 > [!IMPORTANT]
 > Pour une table Azure SQL Data Warehouse avec un index cluster columnstore en cluster ordonné, `ALTER INDEX REORGANIZE` trie à nouveau les données. Pour trier à nouveau l’utilisation de données `ALTER INDEX REBUILD`.
   
-## <a name="disabling-indexes"></a> Désactivation des index  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Désactivation des index  
 Désactiver un index permet d'éviter l'accès à l'index, et dans le cas d'index cluster, aux données de la table sous-jacente par les utilisateurs. La définition de l'index est conservée dans le catalogue système. Désactiver un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. Désactiver un index cluster permet d'éviter l'accès aux données mais celles-ci ne sont plus mises à jour dans l'arborescence binaire (appelé également arbre B) jusqu'à ce que l'index soit supprimé ou reconstruit. Pour afficher l’état d’un index, qu’il soit activé ou désactivé, lancez une requête sur la colonne **is_disabled** dans la vue de catalogue **sys.indexes**.  
   
 Si une table est dans une publication de réplication transactionnelle, vous ne pouvez pas désactiver les index qui sont associés à des colonnes clés primaire. Ces index sont requis par la réplication. Pour désactiver un index, vous devez d'abord supprimer la table de la réplication. Pour plus d’informations, consultez [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
@@ -682,7 +682,7 @@ Si ALL est indiqué lors de la définition des options de verrouillage de ligne 
 |ALLOW_PAGE_LOCKS = ON|S'applique au segment de mémoire et à tout index non cluster qui lui est associé.|  
 |ALLOW_PAGE_LOCKS = OFF|Verrou entier pour les index non cluster. En d'autres termes, tous les verrous de page ne sont pas autorisés sur les index non cluster. En ce qui concerne le segment de mémoire, seul les verrous partagé (P), de mise à jour (M) et exclusifs (E) ne sont pas autorisés. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut toujours acquérir un verrou de page intentionnel (IS, IU ou IX) à des fins internes.|  
   
-## <a name="online-index-operations"></a> Opérations d’index en ligne  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> Opérations d’index en ligne  
 Si vous reconstruisez un index et que l'option ONLINE est activée (ON), les objets, les tables et les index associés sous-jacents sont disponibles pour permettre les requêtes et la modification de données. Vous pouvez également reconstruire en ligne une partie d'un index résidant sur une partition unique. Les verrous de tables exclusifs ne sont maintenus que pour une durée courte lors du processus de modification.  
   
 La réorganisation d'un index s'effectue toujours en ligne. Elle ne conserve pas les verrous à long terme et ne bloque pas ainsi les requêtes ou les mises à jour en cours d'exécution.  
@@ -695,7 +695,7 @@ Vous pouvez lancer des opérations d'index en ligne simultanées sur une même t
   
 Toutes les autres opérations en ligne sur les index exécutées en même temps échouent. Par exemple, vous ne pouvez pas reconstruire de façon concurrente plusieurs index portant sur une même table ou créer d'index lors de la reconstruction d'un index existant portant sur la même table.  
 
-### <a name="resumable-indexes"></a> Opérations d’index pouvant être reprises
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Opérations d’index pouvant être reprises
 
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
 

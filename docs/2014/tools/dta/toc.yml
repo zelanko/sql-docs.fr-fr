@@ -80,17 +80,17 @@
       href: xml-input-file-sample-with-inline-workload-dta.md
     - name: Exemple de fichier d'entrée XML avec une configuration spécifiée par l'utilisateur (Assistant Paramétrage de base de données)
       href: xml-input-file-sample-with-user-specified-configuration-dta.md
-- name: 'Didacticiel : Assistant Paramétrage du moteur de base de données'
+- name: "Tutoriel\_: Database Engine Tuning Advisor"
   href: tutorial-database-engine-tuning-advisor.md
   items:
-    - name: 'Leçon 1 : navigation de base dans l''Assistant Paramétrage du moteur de base de données'
+    - name: "Leçon\_1\_: Navigation de base dans l’Assistant Paramétrage du moteur de base de données"
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
       items:
         - name: Lancement de l'Assistant Paramétrage du moteur de base de données
           href: lesson-1-1-launching-database-engine-tuning-advisor.md
         - name: Définition des options du menu Outils et de la disposition
           href: lesson-1-2-setting-tool-options-and-layout.md
-    - name: 'Leçon 2 : utilisation de l''Assistant Paramétrage du moteur de base de données'
+    - name: "Leçon\_2\_: Utilisation de l’Assistant Paramétrage du moteur de base de données"
       href: lesson-2-using-database-engine-tuning-advisor.md
       items:
         - name: Paramétrage d'une charge de travail
@@ -99,7 +99,7 @@
           href: lesson-1-2-viewing-tuning-recommendations.md
         - name: Affichage des rapports de paramétrage
           href: lesson-1-3-viewing-tuning-reports.md
-    - name: 'Leçon 3 : Utilisation de l''utilitaire de ligne de commande dta'
+    - name: "Leçon\_3\_: Utilisation de l’utilitaire de ligne de commande\_dta"
       href: lesson-3-using-the-dta-command-prompt-utility.md
       items:
         - name: Démarrage de l'utilitaire de ligne de commande dta et paramétrage d'une charge de travail

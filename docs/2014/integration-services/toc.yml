@@ -224,114 +224,114 @@
       href: extending-packages-scripting/extending-packages-with-scripting.md
 - name: Didacticiels sur Integration Services
   href: integration-services-tutorials.md
-- name: 'Didacticiel SSIS : Création d''un package ETL simple'
+- name: "Tutoriel SSIS\_: Création d’un package\_ETL simple"
   href: ssis-how-to-create-an-etl-package.md
   items:
-    - name: 'Leçon 1 : Création du package de base et du package du projet'
+    - name: "Leçon\_1\_: Création du package de base et du package du projet"
       href: lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
-        - name: 'Étape 1 : Création d''un nouveau projet Integration Services'
+        - name: "Étape\_1\_: Création d’un nouveau projet Integration Services"
           href: lesson-1-1-creating-a-new-integration-services-project.md
-        - name: 'Étape 2 : ajout et configuration d''un gestionnaire de connexions de fichiers plats'
+        - name: "Étape 2\_: Ajout et configuration d’un Gestionnaire de connexions de fichiers plats"
           href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
-        - name: 'Étape 3 : ajout et configuration d''un gestionnaire de connexions OLE DB'
+        - name: 'Étape 3 : Ajout et configuration d’un Gestionnaire de connexions OLE DB'
           href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
-        - name: 'Étape 4 : ajout d''une tâche de flux de données au package'
+        - name: 'Étape 4 : Ajout d’une tâche de flux de données au package'
           href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
-        - name: 'Étape 5 : Ajout et configuration de la source de fichier plat'
+        - name: "Étape 5\_: Ajout et configuration de la source de fichier plat"
           href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
         - name: 'Étape 6 : Ajout et configuration des transformations de recherche'
           href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
-        - name: 'Étape 7 : ajout et configuration de la destination OLE DB'
+        - name: 'Étape 7 : Ajout et configuration de la destination OLE DB'
           href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
-        - name: 'Étape 8 : comment rendre le package de la leçon 1 plus facile à assimiler'
+        - name: "Étape\_8\_: Comment rendre le package de la leçon\_1 plus facile à assimiler"
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
-        - name: 'Étape 9 : Test de la leçon 1 du Package du didacticiel'
+        - name: "Étape\_9\_: Test du package du tutoriel de la leçon\_1"
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: 'Leçon 2 : Ajout d''un bouclage'
+    - name: "Leçon\_2\_: Ajout d’un bouclage"
       href: lesson-2-adding-looping-with-ssis.md
       items:
-        - name: 'Étape 1 : Copie du package de la leçon 1'
+        - name: "Étape\_1\_: Copie du package de la leçon\_1"
           href: lesson-2-1-copying-the-lesson-1-package.md
-        - name: 'Étape 2 : ajout et configuration du conteneur de boucles Foreach'
+        - name: "Étape 2\_: Ajout et configuration du conteneur de boucles Foreach"
           href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
-        - name: 'Étape 3 : Modification du gestionnaire de connexions de fichiers plats'
+        - name: 'Étape 3 : Modification du Gestionnaire de connexions de fichiers plats'
           href: lesson-2-3-modifying-the-flat-file-connection-manager.md
-        - name: 'Étape 4 : test de la leçon 2 du Package du didacticiel'
+        - name: "Étape 4 : Test du package du tutoriel de la leçon\_2"
           href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
-    - name: 'Leçon 3 : Ajout du mode d''écriture dans un journal'
+    - name: "Leçon\_3\_: Ajout du mode d’écriture dans un journal"
       href: lesson-3-add-logging-with-ssis.md
       items:
-        - name: 'Étape 1 : Copie du package de la leçon 2'
+        - name: "Étape\_1\_: Copie du package de la leçon\_2"
           href: lesson-3-1-copying-the-lesson-2-package.md
-        - name: 'Étape 2 : Ajout et configuration de la journalisation'
+        - name: "Étape 2\_: Activation et configuration du mode d’écriture dans un journal"
           href: lesson-3-2-adding-and-configuring-logging.md
-        - name: 'Étape 3 : Test de la leçon 3 du package du didacticiel'
+        - name: "Étape 3 : Test du package du tutoriel de la leçon\_3"
           href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: 'Leçon 4 : Ajout de redirection de flux d''erreurs'
+    - name: "Leçon\_4\_: Ajout de redirection de flux d’erreurs"
       href: lesson-4-add-error-flow-redirection-with-ssis.md
       items:
-        - name: 'Étape 1 : Copie du package de la leçon 3'
+        - name: "Étape\_1\_: Copie du package de la leçon\_3"
           href: lesson-4-1-copying-the-lesson-3-package.md
-        - name: 'Étape 2 : Création d''un fichier corrompu'
+        - name: "Étape 2\_: Création d’un fichier corrompu"
           href: lesson-4-2-creating-a-corrupted-file.md
-        - name: 'Étape 3 : Ajout de redirection de flux d''erreurs'
+        - name: 'Étape 3 : Ajout de redirection de flux d’erreurs'
           href: lesson-4-3-adding-error-flow-redirection.md
-        - name: 'Étape 4 : Ajout d''une destination de fichier plat'
+        - name: 'Étape 4 : Ajout d’une destination de fichier plat'
           href: lesson-4-4-adding-a-flat-file-destination.md
-        - name: 'Étape 5 : Test de la leçon 4 du Package du didacticiel'
+        - name: "Étape 5\_: Test du package du tutoriel de la leçon\_4"
           href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
-    - name: 'Leçon 5 : Ajouter des configurations de package pour le modèle de déploiement de package'
+    - name: "Leçon\_5\_: Ajout de configurations de package pour le modèle de déploiement de package"
       href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
-        - name: 'Étape 1 : Copie du package de la leçon 4'
+        - name: "Étape\_1\_: Copie du package de la leçon\_4"
           href: lesson-5-1-copying-the-lesson-4-package.md
-        - name: 'Étape 2 : activation et configuration des configurations de package'
+        - name: "Étape 2\_: Activation et configuration des configurations de package"
           href: lesson-5-2-enabling-and-configuring-package-configurations.md
-        - name: 'Étape 3 : modification de la valeur de configuration de la propriété Directory'
+        - name: 'Étape 3 : Modification de la valeur de configuration de la propriété Directory'
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
-        - name: 'Étape 4 : Test de la leçon 5 du Package du didacticiel'
+        - name: "Étape 4 : Test du package du tutoriel de la leçon\_5"
           href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
     - name: "Leçon\_6\_: Utilisation des paramètres dans le modèle de déploiement de projet"
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
-        - name: 'Étape 1 : copie du package de la leçon 5'
+        - name: "Étape\_1\_: Copie du package de la leçon\_5"
           href: lesson-6-1-copying-the-lesson-5-package.md
-        - name: 'Étape 2 : Conversion du projet en modèle de déploiement de projet'
+        - name: "Étape 2\_: Conversion du projet en modèle de déploiement de projet"
           href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
-        - name: 'Étape 3 : Test du package de la leçon 6'
+        - name: "Étape 3 : Test du package de la leçon\_6"
           href: lesson-6-3-testing-the-lesson-6-package.md
-        - name: 'Étape 4 : Déploiement du package de la Leçon 6'
+        - name: "Étape 4 : Déploiement du package de la leçon\_6"
           href: lesson-6-4-deploying-the-lesson-6-package.md
-- name: "Didacticiel\_SSIS\_: déploiement de packages"
+- name: "Tutoriel SSIS\_: Déploiement des packages"
   href: deploy-packages-with-ssis.md
   items:
-    - name: 'Leçon 1 : préparation à la création de l''application de déploiement'
+    - name: "Leçon\_1\_: Préparation à la création de l’application de déploiement"
       href: lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
-        - name: "Étape\_1\_: création des variables d'environnement et des dossiers de travail"
+        - name: "Étape\_1\_: Création des variables d’environnement et des dossiers de travail"
           href: lesson-1-1-creating-working-folders-and-environment-variables.md
-        - name: 'Étape 2 : création du projet de déploiement'
+        - name: "Étape 2\_: Création du projet de déploiement"
           href: lesson-1-2-creating-the-deployment-project.md
-        - name: 'Étape 3 : ajout de packages et autres fichiers'
+        - name: 'Étape 3 : Ajout de packages et autres fichiers'
           href: lesson-1-3-adding-packages-and-other-files.md
         - name: 'Étape 4 : Ajout de configurations au package'
           href: lesson-1-4-adding-package-configurations.md
-        - name: 'Étape 5 : Test des packages mis à jour'
+        - name: "Étape 5\_: Test des packages mis à jour"
           href: lesson-1-5-testing-the-updated-packages.md
-    - name: 'Leçon 2 : Création de l''application de déploiement'
+    - name: "Leçon\_2\_: Création de l’application de déploiement"
       href: lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
-        - name: 'Étape 1 : génération de l''utilitaire de déploiement'
+        - name: "Étape\_1\_: Génération de l’utilitaire de déploiement"
           href: lesson-2-1-building-the-deployment-utility.md
-        - name: 'Étape 2 : Vérification de l''application de déploiement'
+        - name: "Étape 2\_: Vérification de l’application de déploiement"
           href: lesson-2-2-verifying-the-deployment-bundle.md
-    - name: "Leçon\_3\_: installation de packages"
+    - name: "Leçon\_3\_: Installation des packages"
       href: lesson-3-install-ssis-package.md
       items:
-        - name: 'Étape 1 : Copie de l''application de déploiement'
+        - name: "Étape\_1\_: Copier le bundle de déploiement"
           href: lesson-3-1-copying-the-deployment-bundle.md
-        - name: "Étape\_2\_: exécution de l'Assistant Installation de package"
+        - name: "Étape 2\_: Exécution de l’Assistant Installation de package"
           href: lesson-3-2-running-the-package-installation-wizard.md
         - name: 'Étape 3 : Test des packages déployés'
           href: lesson-3-3-testing-the-deployed-packages.md

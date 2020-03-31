@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297315"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
@@ -26,7 +26,7 @@ ms.locfileid: "71297315"
 
   Après avoir écrit le code d’un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l’assembly, le déployer, l’intégrer dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] afin qu’il puisse être utilisé dans des packages, puis le tester et le déboguer.  
   
-##  <a name="top"></a> Étapes du processus de génération, déploiement et débogage d’un objet personnalisé pour Integration Services  
+##  <a name="steps-in-building-deploying-and-debugging-a-custom-object-for-integration-services"></a><a name="top"></a> Étapes du processus de génération, déploiement et débogage d’un objet personnalisé pour Integration Services  
  Vous avez déjà écrit les fonctionnalités personnalisées de votre objet. À présent, vous devez les tester et les rendre disponibles aux utilisateurs. Les étapes sont très similaires pour tous les types d'objets personnalisés que vous pouvez créer pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Voici les étapes à suivre pour générer, déployer et tester votre objet personnalisé.  
@@ -47,7 +47,7 @@ ms.locfileid: "71297315"
   
  Vous pouvez désormais utiliser le concepteur SSIS dans SQL Server Data Tools (SSDT) pour créer, gérer et exécuter des packages qui ciblent différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’impact de cette amélioration sur vos extensions personnalisées, consultez [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
   
-##  <a name="signing"></a> Signature de l’assembly  
+##  <a name="signing-the-assembly"></a><a name="signing"></a> Signature de l’assembly  
  Lorsqu'un assembly est destiné à être partagé, il doit être installé dans le Global Assembly Cache. Une fois que l'assembly est ajouté au Global Assembly Cache, il peut être utilisé par des applications telles que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Une exigence du Global Assembly Cache stipule que l'assembly doit être signé avec un nom fort, lequel garantit qu'un assembly est globalement unique. Un assembly avec nom fort possède un nom qualifié complet qui comprend son nom, sa culture, sa clé publique et son numéro de version. Le runtime utilise ces informations pour rechercher l'assembly et le distinguer des autres assemblys portant le même nom.  
   
  Pour signer un assembly avec un nom fort, vous devez d'abord avoir ou créer une paire de clés publique/privée. Cette paire de clés de chiffrement publique et privée est utilisée au moment de la génération pour créer un assembly avec nom fort.  
@@ -62,7 +62,7 @@ ms.locfileid: "71297315"
   
  Vous pouvez signer facilement votre assembly avec un nom fort dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] au moment de la génération. Dans la boîte de dialogue **Propriétés du projet**, sélectionnez l’onglet **Signature**. Sélectionnez l’option **Signer l’assembly** et indiquez le chemin du fichier de clé (.snk).  
   
-##  <a name="building"></a> Génération de l’assembly  
+##  <a name="building-the-assembly"></a><a name="building"></a> Génération de l’assembly  
  Après avoir signé le projet, vous devez générer ou regénérer le projet ou la solution en utilisant les commandes disponibles dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Votre solution peut contenir un projet séparé d' interface utilisateur personnalisée, lequel doit également être signé avec un nom fort et peut être généré en même temps.  
   
  La méthode la plus pratique pour effectuer les deux étapes suivantes, à savoir le déploiement de l’assembly et son installation dans le Global Assembly Cache, consiste à écrire le script de ces étapes sous la forme d’un événement post-build dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Les événements de génération sont disponibles sur la page **Compiler** des propriétés d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et sur la page **Événements de génération** d’un projet C#. Le chemin complet est requis pour les utilitaires d’invite de commandes tels que **gacutil.exe**. Les guillemets sont requis à la fois autour des chemins d'accès qui contiennent des espaces et autour des macros telles que $(TargetPath) qui s'étendent aux chemins d'accès qui contiennent des espaces.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297315"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProviders "  
 ```  
   
-##  <a name="deploying"></a> Déploiement de l’assembly  
+##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Déploiement de l’assembly  
  Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] localise les objets personnalisés disponibles dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Lorsque les paramètres d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\130\DTS**. Toutefois, si vous créez un programme d’installation pour votre objet personnalisé, vous devez examiner la valeur de la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** pour vérifier l’emplacement de ce dossier.  
   
 > [!NOTE]  
@@ -99,7 +99,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 > [!NOTE]  
 >  Les assemblys sont copiés vers ces dossiers pour prendre en charge l'énumération des tâches, gestionnaires de connexions, etc. disponibles. Par conséquent, vous ne devez pas déployer des assemblys qui contiennent uniquement l'interface utilisateur personnalisée des objets personnalisés vers ces dossiers.  
   
-##  <a name="installing"></a> Installation de l’assembly dans le Global Assembly Cache  
+##  <a name="installing-the-assembly-in-the-global-assembly-cache"></a><a name="installing"></a> Installation de l’assembly dans le Global Assembly Cache  
  Pour installer l’assembly de tâche dans le Global Assembly Cache (GAC), utilisez l’outil en ligne de commande **gacutil.exe** ou faites glisser les assemblys vers le répertoire `%system%\assembly`. Par commodité, vous pouvez également inclure l’appel de **gacutil.exe** dans un événement post-build.  
   
  La commande suivante installe un composant nommé *MyTask.dll* dans le GAC en utilisant **gacutil.exe**.  
@@ -110,7 +110,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  Pour plus d'informations sur le Global Assembly Cache, consultez Global Assembly Cache Tool (Gactutil.exe) dans [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Tools.  
   
-##  <a name="troubleshooting"></a> Résolution des problèmes liés au déploiement  
+##  <a name="troubleshooting-the-deployment"></a><a name="troubleshooting"></a> Résolution des problèmes liés au déploiement  
  Si votre objet personnalisé apparaît dans la **boîte à outils** ou la liste des objets disponibles, mais que vous n’êtes pas en mesure de l’ajouter à un package, essayez la procédure suivante :  
   
 1.  Recherchez plusieurs versions de votre composant dans le Global Assembly Cache. S'il existe plusieurs versions du composant dans le Global Assembly Cache, il est possible que le concepteur ne soit pas en mesure de charger votre composant. Supprimez toutes les instances de l'assembly dans le Global Assembly Cache et ajoutez de nouveau l'assembly.  
@@ -121,7 +121,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 4.  Attachez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] à **devenv.exe** et définissez un point d’arrêt pour parcourir pas à pas votre code d’initialisation afin de vérifier qu’aucune exception ne se produit.  
   
-##  <a name="testing"></a> Test et débogage du code  
+##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Test et débogage du code  
  L’approche la plus simple pour déboguer les méthodes d’exécution d’un objet personnalisé consiste à démarrer **dtexec.exe** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] après avoir généré votre objet personnalisé et à exécuter un package qui utilise le composant.  
   
  Si vous souhaitez déboguer les méthodes de conception du composant, comme la méthode **Validate**, ouvrez un package qui utilise le composant dans une deuxième instance de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et effectuez un attachement à son processus **devenv.exe**.  

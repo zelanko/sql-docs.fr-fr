@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095294"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
@@ -28,7 +28,7 @@ ms.locfileid: "68095294"
   La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
   
   
-##  <a name="Upgrade_Server"></a> Mise à niveau d’une instance de serveur  
+##  <a name="upgrade-a-server-instance"></a><a name="Upgrade_Server"></a> Mise à niveau d’une instance de serveur  
  Pour une mise à niveau sur place, une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installée côte à côte avec l'ancienne version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et les données sont migrées. Si l'ancienne version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégrait la recherche en texte intégral, une nouvelle version de cette fonctionnalité est installée automatiquement. Une installation côte à côte signifie que chacun des composants suivants existe au niveau de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Analyseurs lexicaux, générateurs de formes dérivées et filtres  
@@ -43,7 +43,7 @@ ms.locfileid: "68095294"
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], chaque index de recherche en texte intégral réside dans un catalogue de texte intégral qui appartient à un groupe de fichiers, a un chemin d'accès physique et est traité en tant que fichier de base de données. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, un catalogue de texte intégral est un objet logique ou virtuel qui contient un groupe d'index de recherche en texte intégral. Par conséquent, un nouveau catalogue de texte intégral n'est pas traité en tant que fichier de base de données avec un chemin d'accès physique. Toutefois, un nouveau groupe de fichiers est créé sur le même disque pendant la mise à niveau de tout catalogue de texte intégral qui contient des fichiers de données. Cela maintient le comportement d'E/S de l'ancien disque après la mise à niveau. Tout index de recherche en texte intégral de ce catalogue est placé dans le nouveau groupe de fichiers si le chemin d'accès racine existe. Si l'ancien chemin de catalogue de texte intégral est non valide, la mise à niveau conserve l'index de recherche en texte intégral dans le même groupe de fichiers comme table de base ou, pour une table partitionnée, dans le groupe de fichiers principal.  
   
   
-##  <a name="FT_Upgrade_Options"></a> Options de mise à niveau de texte intégral  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a> Options de mise à niveau de texte intégral  
  Lors de la mise à niveau d'une instance de serveur vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interface utilisateur vous permet de choisir l'une des options de mise à niveau de texte intégral suivantes.  
   
 **Importer**  
@@ -62,7 +62,7 @@ ms.locfileid: "68095294"
  **Réinitialiser**  
  Les catalogues de texte intégral sont réinitialisés. Lors de la mise à niveau à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les catalogues de texte intégral sont supprimés, mais les métadonnées pour les catalogues de texte intégral et les index de recherche en texte intégral sont conservées. Après leur mise à niveau, tous les index de recherche en texte intégral ont le suivi des modifications désactivé et aucune analyse n'est démarrée automatiquement. Le catalogue reste vide tant que vous n'avez pas procédé manuellement à une alimentation complète, au terme de la mise à niveau.  
   
-##  <a name="Choosing_Upgade_Option"></a> Considérations relatives au choix d’une option de mise à niveau de texte intégral  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a> Considérations relatives au choix d’une option de mise à niveau de texte intégral  
  Au moment de choisir l'option de mise à niveau pour votre mise à niveau, tenez compte des éléments suivants :  
   
 -   Avez-vous besoin de cohérence dans les résultats de la requête ?  
@@ -114,7 +114,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
  Pour les catalogues de texte intégral importés à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le catalogue de texte intégral est encore un fichier de base de données dans son propre groupe de fichiers. Le processus de sauvegarde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour les catalogues de texte intégral s'applique encore mais le service MSFTESQL n'existe pas dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur le processus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration d’un catalogue de texte intégral](https://go.microsoft.com/fwlink/?LinkId=209154) dans la documentation en ligne de SQL Server 2005.  
   
-##  <a name="Upgrade_Db"></a> Migration d’index de recherche en texte intégral lors de la mise à niveau d’une base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> Migration d’index de recherche en texte intégral lors de la mise à niveau d’une base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Les fichiers de base de données et les catalogues de texte intégral d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mis à niveau vers une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existante en utilisant un attachement, une restauration ou l'Assistant Copie de base de données. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Les index de recherche en texte intégral sont, le cas échéant, importés, réinitialisés ou reconstruits. La propriété de serveur **upgrade_option** détermine l’option de mise à niveau de texte intégral que l’instance de serveur utilise pendant ces mises à niveau de base de données.  
   
  Après avoir attaché, restauré ou copié une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est ensuite automatiquement mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l'option de mise à niveau est Importer, si le catalogue de texte intégral n'est pas disponible, les index de recherche en texte intégral associés sont reconstruits.  
@@ -125,7 +125,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Utilisez l’**Option de mise à niveau du catalogue de texte intégral** de la boîte de dialogue **Propriétés du serveur**. Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
-##  <a name="Considerations_for_Restore"></a> Considérations relatives à la restauration d’un catalogue de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Considérations relatives à la restauration d’un catalogue de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Une méthode de mise à niveau de données de texte intégral d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est de restaurer une sauvegarde de la base de données complète vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  En important un catalogue [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vous pouvez sauvegarder et restaurer la base de données et le fichier catalogue. Le comportement est identique à celui de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -168,7 +168,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> Attachement d’une base de données SQL Server 2005 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a> Attachement d’une base de données SQL Server 2005 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, un catalogue de texte intégral est un concept logique qui renvoie à un groupe d'index de recherche en texte intégral. Le catalogue de texte intégral est un objet virtuel qui n'appartient à aucun groupe de fichiers. Cependant, lorsque vous attachez une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui contient des fichiers catalogue de texte intégral à une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , les fichiers catalogue sont attachés à partir de leur emplacement précédent avec les autres fichiers de base de données, les mêmes que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  L'état de chaque catalogue de texte intégral attaché sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est le même que lors du détachement de la base de données de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Si le remplissage de l'index de recherche en texte intégral est interrompu par l'opération de détachement, le remplissage reprend sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], et l'index de recherche en texte intégral devient disponible pour la recherche en texte intégral.  

@@ -13,10 +13,10 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012602"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurer l'option de configuration de serveur locks
@@ -43,9 +43,9 @@ ms.locfileid: "68012602"
   
 -   **Suivi :**  [Après avoir configuré l’option locks](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -57,12 +57,12 @@ ms.locfileid: "68012602"
   
 -   L'option **locks** influence également le moment où a lieu l'escalade de verrous. Quand l’option **locks** a la valeur 0, l’escalade de verrous se produit quand la mémoire utilisée par les structures de verrous actuelles atteint 40 pour cent du pool de mémoire du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Lorsque l'option **locks** a une valeur différente de 0, l'escalade de verrous intervient quand le nombre de verrous atteint 40 pour cent de la valeur spécifiée pour **Verrous**.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-configure-the-locks-option"></a>Pour définir l'option locks  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68012602"
   
      Utilisez l'option **locks** pour définir le nombre maximal de verrous disponibles et limiter ainsi la quantité de mémoire qu'utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les verrous.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-configure-the-locks-option"></a>Pour définir l'option locks  
   
@@ -99,7 +99,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option locks  
+##  <a name="follow-up-after-you-configure-the-locks-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l’option locks  
  Le serveur doit être redémarré pour que le paramètre puisse être effet.  
   
 ## <a name="see-also"></a>Voir aussi  

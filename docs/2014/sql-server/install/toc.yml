@@ -31,13 +31,13 @@
       href: how-to-install-upgrade-advisor.md
     - name: "Procédure\_: lancer le Conseiller de mise à niveau"
       href: how-to-launch-upgrade-advisor.md
-    - name: "Procédure\_: exécuter l'Assistant Analyse du Conseiller de mise à niveau"
+    - name: "Procédure\_: exécuter l’Assistant Analyse du Conseiller de mise à niveau"
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
     - name: "Procédure\_: afficher un rapport du Conseiller de mise à niveau"
       href: how-to-view-an-upgrade-advisor-report.md
     - name: "Procédure\_: filtrer des rapports"
       href: how-to-filter-reports.md
-    - name: "Procédure\_: exporter des rapports"
+    - name: "Procédure\_: Export Reports"
       href: how-to-export-reports.md
 - name: Référence de l'interface utilisateur
   href: upgrade-advisor-user-interface-reference.md
@@ -424,7 +424,7 @@
   items:
     - name: Installation de mises à jour à partir de l'invite de commandes
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: "Procédure\_: valider l'installation réussie d'une mise à jour de SQL\_Server"
+    - name: "Procédure\_: valider l’installation réussie d’une mise à jour de SQL\_Server"
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Vue d'ensemble de l'installation de maintenance de SQL Server
       href: overview-of-sql-server-servicing-installation.md

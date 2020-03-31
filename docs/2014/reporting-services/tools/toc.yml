@@ -1,6 +1,6 @@
 - name: Outils
   href: reporting-services-tools.md
-- name: 'Didacticiel : comment localiser et démarrer les outils Reporting Services'
+- name: "Tutoriel\_: Comment localiser et démarrer les outils Reporting Services"
   href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Reporting Services dans les outils de données SQL Server
   href: reporting-services-in-sql-server-data-tools-ssdt.md
@@ -183,13 +183,13 @@
           href: ../new-linked-report-page-report-manager.md
         - name: Page Nouveau modèle
           href: ../new-model-page-report-manager.md
-        - name: "Nouvelle attribution de rôle\_: Modifier l’attribution de rôle, page"
+        - name: "Nouvelle attribution de rôle\_: page Modifier l’attribution de rôle"
           href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
-        - name: "Nouvelle planification\_: Modifier la planification, page"
+        - name: "Nouvelle planification\_: page Modifier la planification"
           href: ../new-schedule-edit-schedule-page-report-manager.md
         - name: Page Nouvel abonnement ou Modifier l’abonnement
           href: ../new-subscription-or-edit-subscription-page-report-manager.md
-        - name: "Page Nouvelle attribution de rôle système\_: Modifier les attributions de rôles système"
+        - name: "Nouvelles attributions de rôle système\_: Modifier les attributions de rôles système"
           href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
         - name: Page de propriétés des paramètres
           href: ../parameters-properties-page-report-manager.md
