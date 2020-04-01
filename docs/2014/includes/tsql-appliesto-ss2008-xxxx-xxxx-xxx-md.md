@@ -1,1 +1,1 @@
-**Cette rubrique s’applique à :** ![Oui](media/yes.png "Oui")SQL Server \(à partir\) de 2008 ![non](media/no.png "non") ![Azure SQL Database aucun](media/no.png "non")Azure SQL Data Warehouse ![aucune](media/no.png "non")Data Warehouse parallèle
+**CE SUJET S’APPLIQUE À:** ![oui](media/yes-icon.png "Oui")SQL Server \(à partir de 2008\) pas de base ![de](media/no-icon.png "non")données Azure SQL ![pas](media/no-icon.png "non")Azure SQL Data Warehouse ![pas d’entrepôt](media/no-icon.png "non")de données parallèles
