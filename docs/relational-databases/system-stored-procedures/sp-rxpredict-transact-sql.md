@@ -1,6 +1,6 @@
 ---
 title: sp_rxPredict Microsoft Docs
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 752d9655096bc929ea9175577c7705dc58955652
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80471840"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517451"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Bien que le modèle doit être créé à l’aide de R ou Python, une fois qu’
 
 ## <a name="syntax"></a>Syntaxe
 
-```syntaxsql
+```
 sp_rxPredict  ( @model, @input )
 ```
 
@@ -64,7 +64,7 @@ L’utilisateur `EXECUTE` a besoin d’autorisation sur la base de données.
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (R ou Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md?view=sql-server-2017), ou [SQL Server 2017 Server (Standalone) (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
+Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016).
 
 #### <a name="r-revoscaler-models"></a>R: Modèles RevoScaleR
 
@@ -132,7 +132,7 @@ FROM model_table
 WHERE model_name = 'rxLogit trained';
 
 EXEC sp_rxPredict @model = @model,
-  @inputData = N'SELECT * FROM data';
+@inputData = N'SELECT * FROM data';
 ```
 
 En plus d’être une requête SQL valide, les données d’entrée dans * \@inputData* doivent inclure des colonnes compatibles avec les colonnes du modèle stocké.
