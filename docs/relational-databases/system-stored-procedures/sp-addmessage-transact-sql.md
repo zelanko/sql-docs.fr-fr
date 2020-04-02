@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage (Transact-SQL) | Microsoft Docs
+title: sp_addmessage (Transact-SQL) Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061838"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531033"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Stocke un nouveau message d’erreur défini par l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]utilisateur dans une instance du. Les messages stockés à l’aide de **sp_addmessage** peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
+  Stocke un nouveau message d’erreur [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]défini par l’utilisateur dans un cas de . Les messages stockés à l’aide **de sp_addmessage** peuvent être consultés en utilisant la vue du catalogue **sys.messages.**  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,20 +42,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@msgnum = ] msg_id`ID du message. *msg_id* est de **type int** avec NULL comme valeur par défaut. *msg_id* pour les messages d’erreur définis par l’utilisateur peut être un entier compris entre 50 001 et 2 147 483 647. La combinaison des *msg_id* et de la *langue* doit être unique ; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
+`[ @msgnum = ] msg_id`Est l’id du message. *msg_id* est **int** avec un défaut de NULL. *msg_id* pour les messages d’erreur définis par l’utilisateur peut être un integer entre 50 001 et 2 147 483 647. La combinaison de *msg_id* et de *la langue* doit être unique; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
   
-`[ \@severity = ]severity`Niveau de gravité de l’erreur. la *gravité* est de type **smallint** avec NULL comme valeur par défaut. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ @severity = ]severity`Est-ce le niveau de gravité de l’erreur. *la sévérité* est **smallint** avec un défaut de NULL. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
-`[ \@msgtext = ] 'msg'`Texte du message d’erreur. *MSG* est de type **nvarchar (255),** avec NULL comme valeur par défaut.  
+`[ @msgtext = ] 'msg'`Est-ce le texte du message d’erreur. *msg* est **nvarchar(255)** avec un défaut de NULL.  
   
-`[ \@lang = ] 'language'`Langue de ce message. *Language* est de **type sysname** , avec NULL comme valeur par défaut. Étant donné que plusieurs langues peuvent être installées sur le même serveur, *Language* spécifie la langue dans laquelle chaque message est écrit. Lorsque la *langue* est omise, la langue est la langue par défaut de la session.  
+`[ @lang = ] 'language'`Est-ce la langue de ce message. *la langue* est **sysname** avec un défaut de NULL. Étant donné que plusieurs langues peuvent être installées sur le même serveur, la *langue* spécifie la langue dans laquelle chaque message est écrit. Lorsque *la langue* est omise, la langue est la langue par défaut pour la session.  
   
-`[ \@with_log = ] { 'TRUE' | 'FALSE' }`Indique si le message doit être écrit dans le journal des applications Windows lorsqu’il se produit. WITH_LOG est de type **varchar (5),** avec false comme valeur par défaut. ** \@** Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres du rôle de serveur **sysadmin** peuvent utiliser cette option.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`Est de savoir si le message doit être écrit sur le journal de l’application Windows quand il se produit. with_log est **varchar(5)** avec un défaut de FALSE. ** \@** Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres du rôle du serveur **sysadmin** peuvent utiliser cette option.  
   
 > [!NOTE]  
->  Si un message est écrit dans le journal des applications Windows, il est également écrit dans [!INCLUDE[ssDE](../../includes/ssde-md.md)] le fichier journal des erreurs.  
+>  Si un message est écrit au journal d’application [!INCLUDE[ssDE](../../includes/ssde-md.md)] Windows, il est également écrit au fichier de journal d’erreur.  
   
-`[ \@replace = ] 'replace'`S’il est spécifié comme chaîne de *remplacement*, un message d’erreur existant est remplacé par un nouveau texte de message et un niveau de gravité. *Replace* est de type **varchar (7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais des États-Unis, le niveau de gravité est remplacé pour tous les messages dans toutes les autres langues qui ont le même *msg_id*.  
+`[ @replace = ] 'replace'`Si spécifié comme la chaîne *remplace,* un message d’erreur existant est écrasé par un nouveau texte de message et le niveau de gravité. *remplacer* est **varchar(7)** par un défaut de NULL. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais américain, le niveau de gravité est remplacé pour tous les messages dans toutes les autres langues qui ont la même *msg_id*.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -75,12 +75,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  La syntaxe pouvant différer d'une langue à l'autre, il se peut que les numéros de paramètres apparaissent dans un ordre différent par rapport au message d'origine.  
   
 ## <a name="permissions"></a>Autorisations  
-Nécessite l’appartenance aux rôles serveur fixes **sysadmin** ou **ServerAdmin** .  
+Nécessite l’adhésion aux rôles de serveur fixe **sysadmin** ou **serveradmin.**  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-defining-a-custom-message"></a>R. Définition d'un message personnalisé  
- L’exemple suivant ajoute un message personnalisé à **sys. messages**.  
+ L’exemple suivant ajoute un message personnalisé à **sys.messages**.  
   
 ```  
 USE master;  
@@ -158,8 +158,8 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>Voir aussi  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_altermessage &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tables de base système | Microsoft Docs
+title: Tables de base du système Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68029562"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531189"
 ---
 # <a name="system-base-tables"></a>Tables de base système
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Les tables de base système sont des tables sous-jacentes qui stockent les métadonnées pour une base de données spécifique. La base de données **Master** est spéciale dans ce cas, car elle contient des tables supplémentaires qui sont introuvables dans les autres bases de données. Ces tables contiennent des métadonnées persistantes dont l'étendue couvre le serveur.  
+  Les tables de base système sont des tables sous-jacentes qui stockent les métadonnées pour une base de données spécifique. La base de données **principale** est spéciale à cet égard parce qu’elle contient des tableaux supplémentaires qui ne se trouvent dans aucune des autres bases de données. Ces tables contiennent des métadonnées persistantes dont l'étendue couvre le serveur.  
   
 > [!IMPORTANT]  
 >  Les tables de base système sont uniquement utilisées dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et ne sont pas destinées à un usage général. Elles peuvent faire l'objet de modifications et la compatibilité n'est pas garantie.  
   
 ## <a name="system-base-table-metadata"></a>Métadonnées des tables de base système  
- Un bénéficiaire qui dispose de l’autorisation CONTROL, ALTER ou VIEW DEFINITION sur une base de données peut voir les métadonnées de la table de base système dans l’affichage catalogue **sys. Objects** . Le bénéficiaire peut également résoudre les noms et les ID d’objet des tables de base système en utilisant des fonctions intégrées telles que [object_name](../../t-sql/functions/object-name-transact-sql.md) et [object_id](../../t-sql/functions/object-id-transact-sql.md).  
+ Un bénéficiaire qui a l’autorisation CONTROL, ALTER ou VIEW DEFINITION sur une base de données peut voir les métadonnées de table de base du système dans la vue du catalogue **sys.objects.** Le bénéficiaire peut également résoudre les noms et les numéros d’objet des tables de base du système en utilisant des fonctions intégrées telles que [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) et [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
   
  Pour créer une liaison avec une table de base système, un utilisateur doit se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la connexion administrateur dédiée. Une tentative d'exécution d'une requête SELECT à partir d'une table de base système sans connexion via la DAC provoque une erreur.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "68029562"
 |**sys.sysnsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de l'étendue de l'espace de noms. Cette table est utilisée pour le stockage des entités de collection XML.|  
 |**sys.syscolpars**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne de table, chaque vue ou chaque fonction table. Contient également des lignes pour chaque paramètre d'une procédure ou d'une fonction.|  
 |**sys.systypedsubobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque sous-entité typée. Seuls les paramètres de la fonction de partition appartiennent à cette catégorie.|  
-|**sys.sysidxstats**|Existe dans toutes les bases de données. Contient une ligne pour chaque index ou statistique pour les tables et les vues indexées<br /><br /> Remarque : chaque index (à l’exception du segment de mémoire) est associé à une statistique qui porte le même nom que l’index.|  
+|**sys.sysidxstats**|Existe dans toutes les bases de données. Contient une ligne pour chaque index ou statistique pour les tables et les vues indexées<br /><br /> Remarque : Chaque index (sauf le tas) est associé à une statistique qui a le même nom que l’indice.|  
 |**sys.sysiscols**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne d'index et de statistiques persistante.|  
 |**sys.sysscalartypes**|Existe dans toutes les bases de données. Contient une ligne pour chaque type défini par l'utilisateur ou chaque type système.|  
-|**sys.sysdbreg**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque base de données inscrite.|  
-|**sys.sysxsrvs**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque serveur local, lié ou distant.|  
-|**sys.sysrmtlgns**|Cette table de base système existe uniquement dans la base de données **Master** . Contient une ligne pour chaque mappage d'ouverture de session distante. Cela est utilisé pour mapper les connexions entrantes issues d'un serveur correspondant et accédant à une connexion locale.|  
-|**sys.syslnklgns**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque mappage de connexion liée. Les mappages de connexions liées sont utilisés par des appels de procédure distante et par des requêtes distribuées qui émanent d'un serveur local vers un serveur lié correspondant.|  
-|**sys.sysxlgns**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque principal de serveur.|  
-|**sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est égale à zéro, la ligne représente un fichier qui appartient à cette base de données. Dans la base de données **Master** , la colonne **dbid** peut être différente de zéro. Lorsque c'est le cas, la ligne représente un fichier maître.|  
-|**sys.sysusermsg**|Existe uniquement dans la base de données **Master** . Chaque ligne représente un message d'erreur défini par l'utilisateur.|  
-|**sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : les autorisations au niveau du serveur sont stockées dans la base de données **Master** .|  
+|**sys.sysdbreg**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque base de données inscrite.|  
+|**sys.sysxsrvs**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque serveur local, lié ou distant.|  
+|**sys.sysrmtlgns**|Ce tableau de base du système n’existe que dans la base de données **principale.** Contient une ligne pour chaque mappage d'ouverture de session distante. Cela est utilisé pour mapper les connexions entrantes issues d'un serveur correspondant et accédant à une connexion locale.|  
+|**sys.syslnklgns**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque mappage de connexion liée. Les mappages de connexions liées sont utilisés par des appels de procédure distante et par des requêtes distribuées qui émanent d'un serveur local vers un serveur lié correspondant.|  
+|**sys.sysxlgns**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque principal de serveur.|  
+|**sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est nulle, la ligne représente un fichier qui appartient à cette base de données. Dans la base de données **principale,** la colonne **dbid** peut être nonzero. Lorsque c'est le cas, la ligne représente un fichier maître.|  
+|**sys.sysusermsg**|Existe uniquement dans la base de données **principale.** Chaque ligne représente un message d'erreur défini par l'utilisateur.|  
+|**sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : Les autorisations au niveau du serveur sont stockées dans la base de données **principale.**|  
 |**sys.sysowners**|Existe dans toutes les bases de données. Chaque ligne représente un principal de base de données.|  
 |**sys.sysobjkeycrypts**|Existe dans toutes les bases de données. Contient une ligne pour chaque clé symétrique, chaque chiffrement ou chaque propriété de chiffrement associé à un objet.|  
 |**sys.syscerts**|Existe dans toutes les bases de données. Contient une ligne pour chaque certificat dans une base de données.|  
@@ -70,14 +70,14 @@ ms.locfileid: "68029562"
 |**sys.sysallocunits**|Existe dans toutes les bases de données. Contient une ligne pour chaque unité d'allocation de stockage.|  
 |**sys.sysrowsets**|Existe dans toutes les bases de données. Contient une ligne pour chaque ensemble de lignes de partition pour un index ou un segment.|  
 |**sys.sysrowsetrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'index à un ensemble de lignes.|  
-|**sys.syslogshippers**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque témoin de mise en miroir de bases de données.|  
+|**sys.syslogshippers**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque témoin de mise en miroir de bases de données.|  
 |**sys.sysremsvcbinds**|Existe dans toutes les bases de données. Contient une ligne pour chaque liaison de service distant.|  
 |**sys.sysconvgroup**|Existe dans toutes les bases de données. Contient une ligne pour chaque instance de service dans Service Broker.|  
 |**sys.sysxmitqueue**|Existe dans toutes les bases de données. Contient une ligne pour chaque file d'attente de transmission de Service Broker.|  
 |**sys.sysdesend**|Existe dans toutes les bases de données. Contient une ligne pour chaque point de terminaison d'envoi d'une conversation Service Broker.|  
 |**sys.sysdercv**|Existe dans toutes les bases de données. Contient une ligne pour chaque point de terminaison récepteur d'une conversation Service Broker.|  
-|**sys.sysendpts**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque point de terminaison créé dans le serveur.|  
-|**sys.syswebmethods**|Existe uniquement dans la base de données **Master** . Contient une ligne pour chaque méthode SOAP définie sur un point de terminaison HTTP SOAP créé sur le serveur.|  
+|**sys.sysendpts**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque point de terminaison créé dans le serveur.|  
+|**sys.syswebmethods**|Existe uniquement dans la base de données **principale.** Contient une ligne pour chaque méthode SOAP définie sur un point de terminaison HTTP SOAP créé sur le serveur.|  
 |**sys.sysqnames**|Existe dans toutes les bases de données. Contient une ligne pour chaque espace de noms ou chaque nom qualifié à un jeton d'ID de 4 octets.|  
 |**sys.sysxmlcomponent**|Existe dans toutes les bases de données. Chaque ligne représente un composant de schéma XML.|  
 |**sys.sysxmlfacet**|Existe dans toutes les bases de données. Contient une ligne pour chaque facette (restriction) XML d'une définition de type XML.|  
@@ -87,4 +87,16 @@ ms.locfileid: "68029562"
 |**sys.sysobjvalues**|Existe dans toutes les bases de données. Contient une ligne pour chaque propriété de valeur générale d'une entité.|  
 |**sys.sysguidrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'ID classifiée GUID.|  
   
-  
+## <a name="updating-system-base-tables"></a>Mise à jour des tables de base du système    
+Vous pouvez afficher les données dans les tables système à travers les vues du catalogue système. Pour mettre à jour les métadonnées dans un tableau de base du système, utilisez l’interface TSQL appropriée (par exemple, les relevés DDL). Vous ne pouvez pas mettre à jour manuellement les tables système. SQL Server signale les messages suivants lorsque vous effectuez des mises à jour directes sur les tables système.
+
+### <a name="a-system-table-is-manually-updated"></a>Une table système est mise à jour manuellement
+Msg 17659 : Avertissement <id> : L’ID de <id> table du système a été mis à jour directement dans l’ID de base de données et la cohérence des caches n’a peut-être pas été maintenue. SQL Server doit être redémarré.
+
+### <a name="starting-a-database-with-a-system-table-that-was-manually-updated"></a>Démarrage d’une base de données avec une table système qui a été mise à jour manuellement
+Msg 3859: Avertissement: Le catalogue du système a été mis à jour directement dans la base de données ID 17, plus récemment à date_time.
+
+### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Exécution de la commande DBCC_CHECKDB après qu’une table système a été mise à jour manuellement
+Msg 3859: Avertissement: Le catalogue du système a été mis à jour directement dans la base de données ID 17, plus récemment à date_time.
+
+Si vous effectuez des mises à jour manuelles à une table système et rencontrez un problème, il se peut que vous restuisiez à partir d’une sauvegarde ou copiez les données de la base de données affectée à une nouvelle base de données. En savoir plus sur [les messages d’erreur d’action de l’utilisateur](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action).
