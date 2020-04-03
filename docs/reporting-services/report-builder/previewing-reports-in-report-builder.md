@@ -1,5 +1,6 @@
 ---
 title: Aperçu des rapports dans le Générateur de rapports | Microsoft Docs
+description: Quand vous créez un rapport paginé Reporting Services, vous pouvez afficher un aperçu du rapport pour vérifier qu’il affiche les éléments souhaités.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5af8a22b4cba1fd7d2ad43629b379e351b207b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580713"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342753"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Aperçu des rapports dans le Générateur de rapports
   Quand vous créez un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est utile d’afficher fréquemment un aperçu du rapport pour vérifier qu’il s’affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  

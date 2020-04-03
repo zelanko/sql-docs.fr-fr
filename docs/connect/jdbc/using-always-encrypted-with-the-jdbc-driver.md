@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’Always Encrypted avec le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004604"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271325"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation d’Always Encrypted avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,8 @@ Tous ces fournisseurs de magasin de clés sont décrits plus en détail dans les
 
 ### <a name="using-azure-key-vault-provider"></a>Utilisation du fournisseur Azure Key Vault
 Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si votre application est hébergée dans Azure. Microsoft JDBC Driver pour SQL Server comprend un fournisseur intégré, SQLServerColumnEncryptionAzureKeyVaultProvider, pour les applications qui ont des clés stockées dans Azure Key Vault. Le nom de ce fournisseur est AZURE_KEY_VAULT. Pour utiliser le fournisseur de magasin Azure Key Vault, un développeur d’applications doit créer le coffre et les clés dans Azure Key Vault, puis créer une inscription d’application dans Azure Active Directory. L’application inscrite doit disposer des autorisations Obtenir, Déchiffrer, Chiffrer, Ne pas inclure la clé, Inclure la clé et Vérifier dans les stratégies d’accès définies pour le coffre de clés créé en vue d’une utilisation avec Always Encrypted. Pour plus d’informations sur la configuration du coffre de clés et la création d’une clé principale de colonne, consultez la rubrique [Azure Key Vault – Étape par étape](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) et [Création de clés principales de colonne dans Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+
+Lorsque vous utilisez le fournisseur Azure Key Vault, le pilote JDBC vérifie le chemin de la clé principale de colonne par rapport à la liste des points de terminaison approuvés. À partir de la version 8.2.2 du pilote, cette liste est configurable. Créez le fichier « mssql-jdbc.properties » dans le répertoire de travail de l’application et définissez la propriété `AKVTrustedEndpoints` sur une liste délimitée par des points-virgules. Si la valeur commence par un point-virgule, elle étend la liste par défaut ; sinon, elle la remplace.
 
 Pour les exemples de cette page, si vous avez créé une clé principale de colonne et une clé de chiffrement de colonne Azure Key Vault à l’aide de SQL Server Management Studio, le script T-SQL permettant de les recréer peut ressembler à cet exemple, avec ses propres valeurs **KEY_PATH** et **ENCRYPTED_VALUE** :
 

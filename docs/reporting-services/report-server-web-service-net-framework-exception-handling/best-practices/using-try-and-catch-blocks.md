@@ -1,5 +1,6 @@
 ---
 title: Utilisation des blocs Try et Catch | Microsoft Docs
+description: Découvrez comment fournir une couche de protection supplémentaire contre les requêtes non valides en appliquant une gestion adaptée des exceptions via l’utilisation de blocs try/catch.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 055c1a98dd1c77f19712be66dc2b4dcaa6060b60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 51f6c4d3cbc7751df8e7685835057c4c5e58daa9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992179"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216355"
 ---
 # <a name="using-try-and-catch-blocks"></a>Utilisation des blocs Try et Catch
   Après avoir limité les demandes non valides au serveur de rapports en ajoutant des instructions conditionnelles à votre code, vous devez fournir une gestion adéquate des exceptions à l'aide des blocs try/catch. Cette technique fournit une autre couche de protection contre les demandes qui ne sont pas valides. Si une demande faite au serveur de rapports est incluse dans un bloc try et que cette demande entraîne la levée d'une exception par le serveur de rapports, l'exception est interceptée dans le bloc catch, empêchant ainsi votre application de se terminer de façon inattendue. Une fois l'exception interceptée, vous pouvez l'utiliser soit pour instruire l'utilisateur de modifier son action, soit pour l'informer, de façon amicale, qu'une erreur s'est produite. Vous pouvez utiliser ensuite un bloc finally pour nettoyer les ressources. D'une manière idéale, vous devez élaborer un plan général de gestion des exceptions afin d'éviter une duplication inutile des blocs try/catch.  

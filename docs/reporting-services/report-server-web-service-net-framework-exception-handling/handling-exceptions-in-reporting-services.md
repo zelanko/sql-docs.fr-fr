@@ -1,5 +1,6 @@
 ---
 title: Gestion des exceptions dans Reporting Services | Microsoft Docs
+description: Découvrez comment gérer les exceptions qui sont levées dans Reporting Services afin de déterminer la prochaine action à entreprendre dans vos applications.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fbf4c9d89d35f4fbb437a41c691f7f8c6578b9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e29de3a0c6b622de2abb411f36a815d7071f16d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63028566"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216328"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Gestion des exceptions dans Reporting Services
   Lorsqu'une demande de client de l'API SOAP Reporting Services ne peut pas être exécutée, le serveur de rapports retourne une erreur au lieu des résultats attendus de l'appel. Quand un appel ne peut pas être passé, une erreur pour le service web Report Server est retournée sous la forme d’élément XML **Fault** SOAP. L’élément descriptif principal de l’erreur est l’élément **detail**, qui inclut toutes les informations sur l’erreur fournies par le serveur de rapports, ainsi que d’éventuelles informations supplémentaires sur l’erreur du service web. L’information essentielle de l’élément **detail** est le code d’erreur du serveur de rapports. En fonction du message et du code d'erreur, vous pouvez déterminer l'action appropriée suivante à prendre dans vos applications. Pour plus d'informations sur les erreurs SOAP, consultez le site Web du W3C (World Wide Consortium) à l'adresse http://www.w3.org/TR/SOAP.  

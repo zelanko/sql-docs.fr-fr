@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287253"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448354"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -750,7 +750,7 @@ Les instructions suivantes s'appliquent aux opérations d'indexation en ligne :
 
 Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
-### <a name="resumable-indexes"></a> Opérations d’index pouvant être reprises
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Opérations d’index pouvant être reprises
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Les instructions suivantes s’appliquent aux opérations d’index pouvant être reprises :
@@ -820,7 +820,7 @@ Les restrictions suivantes s'appliquent aux index partitionnés :
 Pour évaluer la façon dont la modification de l’état de compression affecte une table, un index ou une partition, utilisez la procédure stockée [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 
 ## <a name="permissions"></a>Autorisations
-Nécessite l’autorisation `ALTER` sur la table ou la vue. L'utilisateur doit être membre du rôle serveur fixe `sysadmin` ou des rôles de base de données fixes `db_ddladmin` et `db_owner`.
+Nécessite l’autorisation `ALTER` sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe `sysadmin` ou des rôles de base de données fixes `db_ddladmin` ou `db_owner`.
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vous ne pouvez pas créer :

@@ -1,5 +1,6 @@
 ---
 title: Définir les options par défaut du Générateur de rapports | Microsoft Docs
+description: Cet article fournit certaines valeurs par défaut que vous pouvez définir dans le Générateur de rapports. Ces valeurs par défaut facilitent et accélèrent la création de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577916"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290776"
 ---
 # <a name="set-default-options-for-report-builder"></a>Définir les options par défaut du Générateur de rapports
   Dans le Générateur de rapports, vous pouvez définir un certain nombre de paramètres par défaut utiles pour faciliter et accélérer la création des rapports.  Par exemple, si vous pouvez définir ou modifier le serveur de rapports par défaut, le Générateur de rapports enregistre vos rapports sur le même serveur de rapports automatiquement, sauf indication contraire.  

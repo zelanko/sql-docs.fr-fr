@@ -1,5 +1,6 @@
 ---
 title: Commencer par la conception ou par les données lors de création de rapports mobiles Reporting Services | Microsoft Docs
+description: 'L’éditeur de rapports mobiles prend en charge deux méthodes de création de rapports : celle commençant par les données et celle commençant par la conception. Importez d’abord toutes les données, ou créez une conception, puis importez les données.'
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf9afd8c4aa916d87929a8e7d73347cc33456252
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e6628c233e90d59cb940521995234ee8a2b30e8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63066635"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447882"
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
   

@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Syntaxe de création de base de données pour SQL Server, Azure SQL Database, Azure Synapse Analytics et Système de plateforme d’analyse
 ms.custom: ''
-ms.date: 02/07/2020
+ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 1e20a18a405bc0bf2bf8fe94926d5bf4a6cb30ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074477"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448412"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -75,7 +75,7 @@ Dans SQL Server, cette instruction crée une nouvelle base de données et les fi
 
 Créer une base de données.
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
 [ CONTAINMENT = { NONE | PARTIAL } ]
 [ ON
@@ -134,7 +134,7 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 
 Attacher une base de données
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
     ON <filespec> [ ,...n ]
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }
@@ -151,7 +151,7 @@ CREATE DATABASE database_name
 
 Créer un instantané de base de données
 
-```sql
+```syntaxsql
 CREATE DATABASE database_snapshot_name
     ON
     (
@@ -432,7 +432,7 @@ Vous pouvez utiliser une instruction `CREATE DATABASE` pour créer une base de d
 
 Vous pouvez spécifier un maximum de 32 767 bases de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Chaque base de données appartient à un propriétaire qui peut réaliser des activités spéciales dans la base de données. Le propriétaire est l'utilisateur qui crée la base de données. Le propriétaire de base de données peut être changé à l’aide de [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md).
+Chaque base de données appartient à un propriétaire qui peut réaliser des activités spéciales dans la base de données. Le propriétaire est l'utilisateur qui crée la base de données. Le propriétaire de base de données peut être changé avec [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).
 
 Certaines fonctionnalités de base de données dépendent de fonctionnalités ou de capacités présentes dans le système de fichiers. Voici quelques exemples des fonctionnalités qui dépendent de jeux de fonctionnalités du système de fichiers :
 
@@ -837,7 +837,7 @@ GO
 - [Attacher et détacher une base de données](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [Instantanés de base de données](../../relational-databases/databases/database-snapshots-sql-server.md)
@@ -864,7 +864,7 @@ Dans le pool élastique/la base de données unique [!INCLUDE[ssSDSfull](../../in
 
 ### <a name="create-a-database"></a>Création d'une base de données
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
@@ -900,7 +900,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### <a name="copy-a-database"></a>Copier une base de données
 
-```
+```stntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
@@ -1230,7 +1230,7 @@ Dans Azure SQL Database Managed Instance, cette instruction permet de créer une
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
 ```
@@ -1300,7 +1300,7 @@ Dans Azure Synapse, cette instruction peut être utilisée avec un serveur Azure
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
     [ MAXSIZE = {
@@ -1411,7 +1411,7 @@ Dans le système de plateforme d’analyse, cette instruction permet de créer u
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE DATABASE database_name
 WITH (
     [ AUTOGROW = ON | OFF , ]

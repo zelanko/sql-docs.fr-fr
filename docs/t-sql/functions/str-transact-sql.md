@@ -21,17 +21,17 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea01281d77206ceccfe8598efc31d073ceea9391
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906882"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448263"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie des données de type caractère converties à partir de données numériques.  
+  Renvoie des données de type caractère converties à partir de données numériques. Les données caractères sont justifiées à droite, avec une longueur et une précision décimale spécifiées. 
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Notes  
- Si elles sont spécifiées, les valeurs des paramètres *length* et *decimal* dans STR doivent être positives. Le nombre est arrondi par défaut à un entier ou si le paramètre décimal est 0. La longueur spécifiée doit être supérieure ou égale à la partie du nombre située avant la virgule décimale plus le signe du nombre (le cas échéant). Un argument *float_expression* court est justifié à droite selon la longueur spécifiée, et un argument *float_expression* long est tronqué au nombre spécifié de décimales. Par exemple, STR(12 **,** 10) donne 12 comme résultat. Il est justifié à droite dans le jeu de résultats. Toutefois, STR(1223 **,** 2) tronque le jeu de résultats à **. Il est possible d'imbriquer des fonctions de chaîne.  
+ Si elles sont spécifiées, les valeurs des paramètres *length* et *decimal* dans STR doivent être positives. Le nombre est arrondi par défaut à un entier ou si le paramètre décimal est 0. La longueur spécifiée doit être supérieure ou égale à la partie du nombre située avant la virgule décimale plus le signe du nombre (le cas échéant). Un argument *float_expression* court est justifié à droite selon la longueur spécifiée, et un argument *float_expression* long est tronqué au nombre spécifié de décimales. Par exemple, STR(12, 10) donne 12 comme résultat. Il est justifié à droite dans le jeu de résultats. Toutefois, STR(1223, 2) tronque le jeu de résultats à \*\*. Il est possible d'imbriquer des fonctions de chaîne.  
   
 > [!NOTE]  
 >  Pour convertir en données Unicode, utilisez STR dans une fonction de conversion CONVERT ou [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  

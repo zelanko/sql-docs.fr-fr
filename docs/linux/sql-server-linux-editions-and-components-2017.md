@@ -1,5 +1,6 @@
 ---
 title: Éditions et fonctionnalités prises en charge de SQL Server 2017 ~ Linux
+description: Cet article décrit les fonctionnalités prises en charge par les différentes éditions de SQL Server 2017 sur Linux. Il vous aide à choisir parmi les éditions et les composants disponibles.
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288443"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402671"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017 sur Linux
 
@@ -77,7 +78,7 @@ Pour connaître les fonctionnalités prises en charge par les éditions Develope
 
 L’édition Developer continue à prendre en charge seulement un client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Limites d’échelle  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Limites d’échelle  
   
 |Fonctionnalité|Entreprise|standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +91,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
   
 <sup>1</sup> L’édition Enterprise avec serveur + licences d’accès client (CAL) (non disponibles pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, voir [Limites de capacité de calcul par édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> Haute disponibilité SGBDR  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Haute disponibilité SGBDR  
   
 |Fonctionnalité|Entreprise|standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +119,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 <sup>3</sup> L’édition Standard prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
 |Fonctionnalité|Entreprise|standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +144,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 <sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Le nombre de degrés de parallélisme maximal pour la création d’un index est limité à 2 pour l’édition Standard et à 1 pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables basées sur des disques et des tables à mémoire optimisée.
 
-##  <a name="RDBMSS"></a> Sécurité SGBDR  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Sécurité SGBDR  
   
 |Fonctionnalité|Entreprise|standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +158,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 |Bases de données autonomes|Oui|Oui|Oui|Oui| 
 |Chiffrement des sauvegardes|Oui|Oui|Non|Non|  
 
-##  <a name="RDBMSM"></a> Simplicité de gestion SGBDR  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Simplicité de gestion SGBDR  
   
 |Fonctionnalité|Entreprise|standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +177,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 |Vérifications de cohérence parallèles|Oui|Non|Non|Non| 
 |Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|Non|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Fonctionnalité|Entreprise|standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +198,11 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 <sup>1</sup> Le scale-out avec plusieurs nœuds de calcul nécessite un nœud principal.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consultez [Fonctionnalités d’Integration Services prises en charge par les éditions de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Services d’emplacement et spatiaux  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Services d’emplacement et spatiaux  
   
 |Nom de la fonctionnalité|Entreprise|standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,7 +210,7 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
 |Types de données planaires et géodésiques|Oui|Oui|Oui|Oui| 
 |Bibliothèques spatiales avancées|Oui|Oui|Oui|Oui|   
 |Importation/exportation de formats de données spatiales standard|Oui|Oui|Oui|Oui|   
-## <a name="Unsupported"></a> Fonctionnalités et services non pris en charge
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Fonctionnalités et services non pris en charge
 
 Les fonctionnalités et services suivants ne sont pas disponibles dans SQL Server 2017 sur Linux. Le support de ces fonctionnalités sera de plus en plus activé dans le temps.
 
@@ -228,6 +229,7 @@ Les fonctionnalités et services suivants ne sont pas disponibles dans SQL Serve
 | &nbsp; | Alertes |
 | &nbsp; | l'Agent de lecture du journal ; |
 | &nbsp; | Sauvegarde managée |
+| &nbsp; | Administration de plusieurs serveurs à l’aide de MSX/TSX |
 | **Haute disponibilité** | Mise en miroir de bases de données  |
 | **Sécurité** | Gestion de clés extensible |
 | &nbsp; | Authentification AD pour les serveurs liés | 

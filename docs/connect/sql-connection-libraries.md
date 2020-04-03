@@ -8,24 +8,24 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286403"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434116"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données SQL Microsoft
 
 Cet article fournit des liens de téléchargement de modules de connexion ou de *pilotes* permettant aux programmes clients d’interagir avec [Microsoft SQL Server](../relational-databases/database-features.md) et son équivalent dans le cloud, [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Les pilotes sont disponibles pour un large éventail de langages de programmation, sur les systèmes d’exploitation suivants :
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **Incompatibilité POO-relationnel :**
 
-*Relationnel* : les programmes clients écrits dans un langage de programmation orientée objet (POO) utilisent souvent des pilotes SQL qui retournent les données interrogées dans un format plus relationnel qu’orienté objet. C# avec ADO.NET en est un exemple. L’incompatibilité de format POO-relationnel rend parfois le code POO plus difficile à écrire et à comprendre.
+*Relationnel* : les programmes clients écrits dans un langage de programmation orientée objet utilisent souvent des pilotes SQL qui retournent les données interrogées dans un format plus relationnel qu’orienté objet. C# avec ADO.NET en est un exemple. L’incompatibilité de format POO-relationnel rend parfois le code POO plus difficile à écrire et à comprendre.
 
 *ORM* : d’autres pilotes ou frameworks renvoient les données interrogées au format POO, ce qui évite l’incompatibilité. Ces pilotes attendent que des classes soient définies pour correspondre aux colonnes de données de certaines tables SQL. Ils effectuent ensuite le *mappage objet-relationnel* (ORM) pour retourner les données interrogées en tant qu’instance d’une classe. Microsoft Entity Framework (EF) pour C#, et Hibernate pour Java, en sont deux exemples.
 
@@ -34,17 +34,6 @@ Le présent article consacre des sections distinctes à ces deux types de pilote
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Pilotes pour l’accès relationnel
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Langage | Téléchargement du pilote SQL |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ Le tableau suivant présente des exemples de frameworks de mapping objet-relatio
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Pages web Créer une application
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** vous permet d’accéder à un ensemble de pages *Build-an-app*, qui donnent des informations sur les nombreuses combinaisons possibles de langage de programmation, système d’exploitation et pilote de connexion SQL :
 
 - Premiers pas, pour chaque combinaison de langue, système d’exploitation et pilote.
-    - Instructions d’installation des derniers pilotes de connexion SQL.
+  - Instructions d’installation des derniers pilotes de connexion SQL.
 - Exemples de code pour chacun des éléments suivants :
-    - Exemples de code objet-relationnel.
-    - Exemples de code ORM.
-    - Démonstrations d’index columnstore pour des performances beaucoup plus rapides.
+  - Exemples de code objet-relationnel.
+  - Exemples de code ORM.
+  - Démonstrations d’index columnstore pour des performances beaucoup plus rapides.
 
 **Pages Build-an-app – Première page :**  
 ![Pages Build-an-app, capture d’écran de la première page](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ Le tableau suivant présente des exemples de frameworks de mapping objet-relatio
 &nbsp;
 
 ## <a name="related-links"></a>Liens connexes
+
 - [Exemples de code de connexion à Azure SQL Database dans le cloud, avec Java et d’autres langages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!--

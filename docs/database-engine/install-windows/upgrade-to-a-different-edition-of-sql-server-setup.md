@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258796"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434126"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2016 (Installation)
 
@@ -29,9 +29,9 @@ L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pren
 - [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de cluster de basculement :** une mise à niveau de l’édition sur un des nœuds de l’instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est suffisante. Le nœud peut être actif ou passif, et le moteur ne met pas les ressources hors connexion pendant la mise à niveau de l’édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de cluster de basculement :** exécuter une mise à niveau de l’édition sur l’un des nœuds de l’instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suffit. Le nœud peut être actif ou passif, et le moteur ne met pas les ressources hors connexion pendant la mise à niveau de l’édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
   
 ## <a name="procedure"></a>Procédure  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>Pour effectuer une mise à niveau vers une autre édition de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>Pour effectuer une mise à niveau vers une autre édition de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au niveau du dossier racine, double-cliquez sur setup.exe ou lancez le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir des Outils de configuration. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
@@ -78,7 +78,15 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 -   Les tailles et le mode de récupération des bases de données système tempdb et model restent inchangés après la mise à niveau. Reconfigurez ces paramètres en fonction des besoins. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Les bases de données modèles demeurent sur l'ordinateur après la mise à niveau.  
-  
+
+> [!NOTE]  
+> Si la procédure échoue sur la règle Engine_SqlEngineHealthCheck, vous pouvez utiliser l’option d’installation en ligne de commande pour ignorer cette règle spécifique et ainsi permettre au processus de mise à niveau de se terminer correctement. Pour ignorer la vérification de cette règle, ouvrez une invite de commandes, puis entrez le chemin du programme d’installation de SQL Server (Setup.exe). Ensuite, tapez la commande suivante : 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilité descendante_supprimé](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

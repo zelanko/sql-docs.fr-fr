@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558629"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487607"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur SUSE Linux Enterprise Server
 
@@ -31,14 +31,14 @@ Dans ce guide de démarrage rapide, vous installez SQL Server 2017 ou SQL Serve
 Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur SUSE Linux Enterprise Server (SLES) v12. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 > [!IMPORTANT]
-> SQL Server 2019 est pris en charge sur SUSE Enterprise Linux Server v12 SP2, SP3 ou SP4.
+> SQL Server 2019 est pris en charge sur SUSE Enterprise Linux Server v12 SP2, SP3, SP4 ou SP5.
 
 ::: moniker-end
 
 > [!TIP]
 > Ce tutoriel nécessite l'intervention de l'utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors ligne](sql-server-linux-setup.md#offline), voir [Conseils d’installation pour SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -50,7 +50,7 @@ Vous devez disposer d’une machine SLES version 12 SP2 avec **au moins 2 Go**
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Vous devez disposer d’une machine SLES v12 SP2, SP3 ou SP4 avec **au moins 2 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. Les autres systèmes de fichiers, tels que **BTRFS**, ne sont pas pris en charge.
+Vous devez disposer d’une machine SLES v12 SP2, SP3,SP4 ou SP5 avec **au moins 2 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. Les autres systèmes de fichiers, tels que **BTRFS**, ne sont pas pris en charge.
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ Pour les autres configurations système requises, voir [Configuration système r
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Installer SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installer SQL Server
 
 Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un terminal afin d’installer le package **mssql-server** :
 
@@ -125,7 +125,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Installer SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Installer SQL Server
 
 Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un terminal afin d’installer le package **mssql-server** :
 
@@ -173,7 +173,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
 ::: moniker-end
 
 
-## <a id="tools"></a>Installer les outils en ligne de commande SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installer les outils en ligne de commande SQL Server
 
 Pour créer une base de données, vous devez vous connecter à un outil capable d’exécuter des instructions Transact-SQL sur SQL Server. Les étapes suivantes installent les outils en ligne de commande SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
 

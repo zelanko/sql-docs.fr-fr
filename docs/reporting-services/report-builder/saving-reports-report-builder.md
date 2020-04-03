@@ -1,5 +1,6 @@
 ---
 title: Enregistrement des rapports (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, vous pouvez enregistrer la définition d’un rapport, ce qui comprend sa mise en page, mais pas ses données. Les données sont actualisées chaque fois que vous exécutez le rapport.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682d55f6c805066f5b596e79a074f253db9faa9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c96b1a65c6a576391f072f2bdabb4b70cb0fd63
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66499635"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290793"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous avez la possibilité d’enregistrer un rapport paginé sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d’une autorisation d’accès en écriture, ou sur votre ordinateur. 
@@ -30,7 +31,7 @@ Lorsque vous enregistrez un rapport, vous enregistrez en fait la définition de 
   
  Pour en savoir plus sur l’affichage et la gestion des rapports directement sur le serveur de rapports, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md) et [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
-##  <a name="SavingReportDefinitions"></a> Enregistrement de rapports sur un serveur de rapports  
+##  <a name="saving-reports-to-a-report-server"></a><a name="SavingReportDefinitions"></a> Enregistrement de rapports sur un serveur de rapports  
   L'enregistrement d'un rapport sur un serveur de rapports est également appelé « publication » d'un rapport. Bien que vous puissiez enregistrer des rapports sur votre ordinateur, l’enregistrement des rapports sur un serveur de rapports offre de nombreux avantages :  
   
 -   Les rapports sont mis à la disposition des autres utilisateurs qui sont autorisés à accéder au dossier dans lequel vous avez enregistré le rapport.  
@@ -45,16 +46,16 @@ Lorsque vous enregistrez un rapport, vous enregistrez en fait la définition de 
   
 -   Les exécutions de rapport peuvent être journalisées et fournir des informations d'audit et de performance.  
   
-##  <a name="ExportingAndSavingReports"></a> Exportation et enregistrement des rapports  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> Exportation et enregistrement des rapports  
  Si vous avez un petit nombre de rapports à archiver, optez pour la solution consistant à exporter un rapport puis à l'enregistrer dans un fichier. Une fois que vous avez exporté un rapport vers une application (au format PDF ou Excel par exemple), vous pouvez l'enregistrer en tant que fichier et le placer dans un répertoire partagé protégé sur le réseau. Vous pouvez également télécharger le fichier enregistré au format PDF ou Excel en tant qu'élément de ressource si vous souhaitez conserver toutes les copies d'un rapport, quel que soit leur format, dans la base de données du serveur de rapports. Pour plus d’informations sur l’exportation d’un rapport, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) et [Télécharger un fichier ou un rapport](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
-##  <a name="UsingFileShareDelivery"></a> Utilisation de la remise par partage de fichiers  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> Utilisation de la remise par partage de fichiers  
  Si vous avez un grand nombre de rapports à archiver, créez un abonnement qui remet le rapport directement au système de fichiers. Pour cette approche, vous devez créer un abonnement pour chaque rapport, choisir un dossier partagé où stocker les rapports et définir une planification qui détermine le moment auquel le fichier est créé. Une fois l'abonnement défini, le serveur de rapports peut exécuter le rapport sans surveillance et ajouter des fichiers de rapports à l'archive à l'aide de la planification que vous fournissez. Vous pouvez également créer des planifications à usage unique si vous souhaitez archiver des rapports occasionnellement. Pour plus d’informations sur les abonnements et la remise dans un partage de fichiers, consultez [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
-##  <a name="UsingReportHistory"></a> Utilisation de l'historique de rapport  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> Utilisation de l'historique de rapport  
  Vous pouvez également utiliser la fonctionnalité d'historique de rapport pour créer des copies historiques. Vous pouvez ensuite sauvegarder la base de données du serveur de rapports, puis stocker la sauvegarde à un emplacement sûr en vue d'une utilisation future. L'ensemble de l'historique de rapport (avec les rapports, les éléments de sources de données partagées, les dossiers, les abonnements et les planifications partagées) est stocké dans la base de données du serveur de rapports. Vous pouvez créer une sauvegarde pour conserver une copie permanente de l'historique et des métadonnées d'un rapport, notamment les informations d'abonnement indiquant ses différents destinataires. Pour plus d’informations, consultez [Créer, modifier et supprimer des instantanés dans l’historique de rapport](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md).  
  
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Rubriques de procédures  
   
 -   [Enregistrer des rapports sur un serveur de rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md)  
   

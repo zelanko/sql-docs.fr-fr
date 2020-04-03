@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9b0e4e37eef574fd50d28e02c4f92ee1805c953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117618"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526744"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,6 +58,9 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, le numéro 
 La fonction SUSER_NAME renvoie un nom de connexion seulement pour une connexion comportant une entrée dans la table système **syslogins**.  
   
 SUSER_NAME peut être utilisé dans une liste de sélection, dans une clause WHERE et partout où une expression est autorisée. Utilisez des parenthèses après SUSER_NAME, même si aucun paramètre n’est spécifié.  
+
+> [!NOTE]
+> Bien que la fonction SUSER_NAME soit prise en charge sur Azure SQL Database, l’utilisation d’*Execute As* avec SUSER_NAME n’est pas prise en charge sur Azure SQL Database. 
   
 ## <a name="examples"></a>Exemples  
 Dans l'exemple suivant, la procédure retourne le nom d'identification de la connexion utilisateur `1`.  

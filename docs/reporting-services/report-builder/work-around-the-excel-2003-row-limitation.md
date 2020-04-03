@@ -1,5 +1,6 @@
 ---
 title: Contourner la limitation de lignes d’Excel 2003 | Microsoft Docs
+description: Lorsque vous exportez des rapports paginés vers Excel, vous pouvez contourner la limitation du nombre de lignes dans Excel 2003 en forçant un saut de page après un certain nombre de lignes.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 940f5fd22d35ac0a90106c7a325e435e1d479bc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577782"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290725"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   Cette rubrique explique comment contourner la limitation de ligne d’Excel 2003 quand vous exportez des rapports paginés vers Excel. Elle s'applique à un rapport qui ne contient qu'une seule table.  

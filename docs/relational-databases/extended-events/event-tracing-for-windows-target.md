@@ -1,5 +1,6 @@
 ---
 title: suivi d'événements pour cible Windows
+description: Découvrez comment utiliser le suivi d’événements pour Windows (ETW) comme cible. Utilisez le suivi ETW avec les événements étendus ou en tant que consommateur d’événements étendus.
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234664"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433966"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
 

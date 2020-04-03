@@ -1,5 +1,6 @@
 ---
 title: Rapports Reporting Services | Microsoft Docs
+description: Découvrez les rapports Reporting Services plus en détail, notamment les avantages qu’ils présentent, ainsi que comment créer des rapports paginés et comment les afficher.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082427"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510060"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Rapports Reporting Services (SSRS)
   Les rapports paginés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont des définitions de rapport XML qui incluent des données de rapport et des éléments de disposition du rapport. Sur un système de fichiers client, les définitions de rapport portent l'extension de fichier .rdl. Une fois publié, un rapport paginé correspond à un élément de rapport stocké sur le serveur de rapports ou le site SharePoint. Les rapports paginés constituent une partie de la plateforme de création de rapports sur le serveur fourni par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez également [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -45,7 +46,7 @@ ms.locfileid: "77082427"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> Étapes du traitement des rapports  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Étapes du traitement des rapports  
  Lorsque vous créez un rapport, vous définissez un fichier de définition de rapport (.rdl) au format XML. Ce fichier contient toutes les informations nécessaires pour combiner les données et la mise en page du rapport par le processeur de rapports. Lorsque vous affichez un rapport, le rapport passe par les étapes suivantes :  
   
 -   **Compilation.** Évalue les expressions dans la définition de rapport et stocke le format intermédiaire compilé en interne sur le serveur de rapports.  
@@ -155,7 +156,7 @@ ms.locfileid: "77082427"
   
  Pour plus d’informations sur les performances, consultez [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
   
-##  <a name="bkmk_SecureReportsSummary"></a> Sécuriser les rapports  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Sécuriser les rapports  
  Pour sécuriser un rapport :  
   
 En tant qu'administrateur du serveur de rapports, identifiez le système d'autorisation et d'authentification utilisé pour votre installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'authentification Windows, la sécurité intégrée, et l'attribution de rôle pour contrôler l'accès aux rapports publiés. Pour plus d’informations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) et [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  

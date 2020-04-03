@@ -1,5 +1,6 @@
 ---
 title: Ouvrir un rapport mobile avec des paramètres spécifiques de chaîne de requête | Microsoft Docs
+description: Si un rapport mobile Reporting Services a des paramètres et une source de données, vous pouvez utiliser des paramètres de requête dans l’URL du rapport pour l’ouvrir avec des valeurs spécifiées.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62500015"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448394"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Ouvrir un rapport mobile avec des paramètres spécifiques de chaîne de requête | Reporting Services
 Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] avec des paramètres et une source de données [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)], vous pouvez inclure des paramètres de chaîne de requête dans l’URL du rapport afin qu’il s’ouvre automatiquement avec les valeurs que vous avez spécifiées. 
@@ -27,7 +28,7 @@ Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
     
 2.  La syntaxe de l’URL dépend de votre source de données. 
 
-     **Pour une source de données SQL Server Analysis Services**: générez une URL avec un paramètre de chaîne de requête dans ce format :
+     **Pour une source de données SQL Server Analysis Services** : Générez une URL avec un paramètre de chaîne de requête dans ce format :
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 
@@ -35,7 +36,7 @@ Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **Pour une source de données SQL Server** : le paramètre de chaîne de requête est presque identique, sauf qu’il comporte le symbole \@ devant le nom du champ :
+     **Pour une source de données SQL Server** : le paramètre de chaîne de requête est presque identique, sauf qu’il comporte le symbole \@ devant le nom de champ :
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 

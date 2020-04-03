@@ -1,5 +1,6 @@
 ---
 title: Définition de l’espace de noms des éléments pour la méthode GetProperties | Microsoft Docs
+Description: Découvrez comment récupérer des propriétés selon le chemin ou l’ID d’un élément, en utilisant la méthode GetProperties et l’en-tête SOAP ItemNamespaceHeader.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d415d1f8b8dc25143fc704c19b3d1d0c755aa02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026158"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216248"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Définition de l'espace de noms d'élément pour la méthode GetProperties
   Vous pouvez utiliser l'en-tête SOAP <xref:ReportService2010.ItemNamespaceHeader> dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour récupérer des propriétés d'élément selon deux identificateurs d'élément différents : le chemin d'accès complet de l'élément ou l'ID de l'élément.  

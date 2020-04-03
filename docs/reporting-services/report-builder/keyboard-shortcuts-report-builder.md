@@ -1,5 +1,6 @@
 ---
 title: Raccourcis clavier (Générateur de rapports) | Microsoft Docs
+description: Quand vous créez et modifiez des rapports paginés Reporting Services dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation de l’environnement Windows.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 624f48c3c3a118aecd20a389973cb7f79a6f448d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037863"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342768"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Quand vous créez et modifiez des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l’environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  

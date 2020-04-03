@@ -1,6 +1,6 @@
 ---
-title: Mises à niveau de version et d’édition prises en charge
-titleSuffix: SQL Server 2017
+title: Mises à niveau de version et d’édition prises en charge (SQL Server 2017)
+description: Décrit les mises à niveau de version et d’édition prises en charge pour SQL Server 2017.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3f5721cbbd6d56d4fc5f2510775b050c210c981
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258835"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434166"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Mises à niveau de version et d’édition prises en charge pour SQL Server 2017
+# <a name="supported-version--edition-upgrades-sql-server-2017"></a>Mises à niveau de version et d’édition prises en charge (SQL Server 2017)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -51,7 +51,7 @@ ms.locfileid: "75258835"
  
 -   Les clusters de basculement ne sont pas pris en charge en mode WOW.  
     
-## <a name="upgrades-from-earlier-versions-to-includesssqlv14-mdincludessssqlv14-mdmd"></a>Mises à niveau des versions antérieures vers [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv14-md"></a>Mises à niveau des versions antérieures vers [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] prend en charge la mise à niveau à partir des versions suivantes de SQL Server :
  
@@ -112,7 +112,7 @@ ms.locfileid: "75258835"
  \* La prise en charge Microsoft de la mise à niveau à partir de la version Release Candidate (RC) s’adresse particulièrement aux clients qui ont participé au programme TAP (Technology Adoption Program). 
 
    
-###  <a name="SupportFor2005"></a> Prise en charge de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] par [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+###  <a name="sssqlv14-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> Prise en charge de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] par [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  Cette section aborde la prise en charge de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], vous pouvez effectuer les opérations suivantes :  
   
 -   Attacher une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (fichiers mdf/ldf) à l'instance [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] du moteur de base de données.  
@@ -145,7 +145,7 @@ Les scénarios non spécifiés dans la liste ci-dessus ne sont pas pris en charg
   
 - Prise en charge des composants personnalisés Integration Services tiers de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , par exemple, pour l'exécution et la mise à niveau.  
   
-## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Mise à niveau d’édition  
+## <a name="sssqlv14-md-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Mise à niveau d’édition  
 Le tableau suivant répertorie les scénarios de mise à niveau d'édition prise en charge dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 Pour obtenir des instructions détaillées sur la façon d’effectuer une mise à niveau d’édition, consultez [Mettre à niveau vers une autre édition de SQL Server &#40;Installation&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
@@ -153,7 +153,7 @@ Pour obtenir des instructions détaillées sur la façon d’effectuer une mise 
 |Mise à niveau à partir de|Mise à niveau vers|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licence serveur+CAL et licence principale)**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> La mise à niveau depuis une version d’évaluation (une édition gratuite) vers toutes les éditions payantes est prise en charge pour les installations autonomes, mais pas pour les installations en cluster.|  
+|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> La mise à niveau depuis une version d’évaluation (une édition gratuite) vers toutes les éditions payantes est prise en charge pour les installations autonomes, mais pas pour les installations en cluster. Cette limitation ne s’applique pas aux instances autonomes installées sur un cluster de basculement Windows qui est membre d’un groupe de disponibilité.|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licence serveur+CAL ou licence principale)|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  

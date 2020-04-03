@@ -1,5 +1,6 @@
 ---
 title: Exportation vers Microsoft Excel (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, l’extension de rendu Excel affiche un rapport paginé au format Office Open XML à ouvrir dans Microsoft Excel.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079578"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342893"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
   L’extension de rendu Excel de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restitue un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au format [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Avec l'extension de rendu Excel, la largeur des colonnes dans Excel correspond plus précisément à la largeur des colonnes dans les rapports.  
@@ -29,7 +30,7 @@ ms.locfileid: "77079578"
 >   
 >  Pour réduire le risque d'exécution accidentelle de scripts malveillants, ouvrez les rapports rendus uniquement à partir de sources approuvées. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
   
-##  <a name="ExcelLimitations"></a> Limitations d'Excel  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Limitations d'Excel  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] impose des limitations aux rapports exportés en raison des fonctionnalités d'Excel et de ses formats de fichiers. Les plus significatives sont les suivantes :  
   
 -   La largeur de colonne maximum est limitée à 255 caractères ou de 1 726,5 points. Le convertisseur ne vérifie pas que la largeur de colonne est inférieure à cette limite.  
@@ -178,7 +179,7 @@ ms.locfileid: "77079578"
   
  Dans la mesure où le rapport définit la hauteur de ligne de manière explicite, la hauteur de ligne par défaut affecte uniquement les lignes dimensionnées automatiquement lors de l'exportation vers Excel.  
   
-##  <a name="ReportItemsExcel"></a> Éléments de rapport dans Excel  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Éléments de rapport dans Excel  
  Les rectangles, les sous-rapports, le corps du rapport et les régions de données sont rendus sous la forme d'une plage de cellules Excel. Les zones de texte, les images, ainsi que les graphiques, les barres de données, les graphiques sparkline, les cartes, les jauges et les indicateurs doivent être rendus dans une cellule Excel, qui peut être fusionnée en fonction de la mise en page du reste du rapport.  
   
  Les images, les graphiques, les graphiques sparkline, les barres de données, les cartes, les jauges, les indicateurs et les lignes sont positionnés dans une cellule Excel, mais se trouvent au-dessus du quadrillage de la cellule. Les lignes sont rendues sous forme de bordures de cellules.  
@@ -192,7 +193,7 @@ ms.locfileid: "77079578"
   
  Si aucune correspondance n'est trouvée, Excel utilise la taille de la page par défaut pour l'imprimante. Si la largeur de la page est inférieure à la hauteur du papier, l'orientation est définie sur Portrait, dans le cas contraire, l'orientation Paysage est utilisée.  
   
-##  <a name="WorksheetTabNames"></a> Noms des onglets de feuille de calcul  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> Noms des onglets de feuille de calcul  
  Lorsque vous exportez un rapport vers Excel, les pages de rapport créées par les sauts de page sont exportées dans différentes feuilles de calcul. Si vous avez fourni un nom de page initial pour le rapport, chaque feuille de calcul du classeur Excel porte ce nom par défaut. Le nom s'affiche sous l'onglet de feuille de calcul. Toutefois, puisque chaque feuille de calcul d'un classeur doit porter un nom unique, un nombre entier démarrant à 1 et incrémenté de 1 est ajouté au nom de page initial pour chaque feuille de calcul supplémentaire. Par exemple, si le nom de page initial est **État des ventes par exercice**, la deuxième feuille de calcul sera nommée **État des ventes par exercice1**, la troisième **État des ventes par exercice2**, etc.  
   
  Si toutes les pages de rapport créées par les sauts de page fournissent de nouveaux noms de page, chaque feuille de calcul portera le nom de la page associée. Toutefois, ces noms de page peuvent ne pas être uniques. Si les noms de page ne sont pas uniques, les feuilles de calcul sont nommées de la même manière que les pages initiales. Par exemple, si le nom de page de deux groupes est **Ventes NO**, un onglet de feuille de calcul aura le nom **Ventes NO**, et l'autre **Ventes NO1**.  
@@ -201,7 +202,7 @@ ms.locfileid: "77079578"
   
  Reporting Services fournit des propriétés à définir dans les rapports, les régions de données, les groupes et les rectangles afin de vous aider à créer des rapports qui peuvent être exportés vers Excel comme vous le souhaitez. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="DocumentProperties"></a> Propriétés du document  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Propriétés du document  
  Le convertisseur Excel écrit les métadonnées suivantes dans le fichier Excel.  
   
 |Propriétés des éléments de rapport|Description|  
@@ -211,7 +212,7 @@ ms.locfileid: "77079578"
 |Description|Report.Description|  
 |LastSaved|Date et heure d'exécution du rapport sous la forme d'une valeur de date/d'heure ISO.|  
   
-##  <a name="PageHeadersFooters"></a> En-têtes et pieds de page  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> En-têtes et pieds de page  
  En fonction du paramètre des informations relatives au périphérique SimplePageHeaders, l'en-tête de page peut être rendu de deux façons : l'en-tête de page peut être rendu au haut du quadrillage de chaque feuille de calcul ou dans la section d'en-tête de la feuille de calcul Excel. Par défaut, l'en-tête est rendu sur le quadrillage de la feuille de calcul Excel.  
   
  Le pied de page est toujours rendu dans la section du pied de page de la feuille de calcul d'Excel, indépendamment de la valeur du paramètre SimplePageHeaders.  
@@ -227,7 +228,7 @@ ms.locfileid: "77079578"
   
  En raison des limitations Excel, les zones de texte sont le seul type d'élément de rapport qui peut être rendu dans la section en-tête/pied de page Excel.  
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactivité  
  Certains éléments interactifs sont pris en charge dans Excel. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -262,7 +263,7 @@ ms.locfileid: "77079578"
 ### <a name="bookmarks"></a>Signets  
  Les liens de signet qui s'affichent dans les zones de texte sont rendus sous forme de liens hypertexte Excel dans la cellule dans laquelle le texte est rendu. Les liens de signet pour les images et les graphiques sont rendus sous forme de liens hypertexte Excel dans l'image en cas de rendu. Lors d'un clic, le signet va à la cellule Excel dans laquelle l'élément de rapport contenant un signet est rendu.  
   
-##  <a name="ConditionalFormat"></a> Modification des rapports au moment de l'exécution  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> Modification des rapports au moment de l'exécution  
  Si un rapport doit être restitué dans plusieurs formats et qu'il n'est pas possible de créer une mise en page de rapport qui restitue le rapport comme vous le souhaitez dans tous les formats requis, envisagez peut-être d'utiliser la valeur de la fonction globale intégrée RenderFormat pour modifier l'apparence du rapport de manière conditionnelle au moment de l'exécution. De cette façon, vous pouvez masquer ou afficher des éléments de rapport en fonction du convertisseur utilisé afin d'obtenir un résultat optimal dans chaque format. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Voir aussi  

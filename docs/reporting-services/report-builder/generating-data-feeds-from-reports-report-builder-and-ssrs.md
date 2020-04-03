@@ -1,5 +1,6 @@
 ---
 title: Génération de flux de données à partir de rapports (Générateur de rapports ) | Microsoft Docs
+description: L’extension de rendu Reporting Services Atom génère un document de service comprenant les flux de données d’un rapport paginé, ainsi que les flux des régions de données du rapport.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35f1f5f80d47aa5a59b77de9c4ebcab168394498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079169"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342804"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "77079169"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> Rapports en tant que flux de données  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> Rapports en tant que flux de données  
  Vous pouvez exporter un rapport de production en tant que flux de données ou créer un rapport dont l'objectif principal est de fournir des données, sous forme de flux de données, aux applications. L'utilisation de rapports en tant que flux de données vous offre une méthode supplémentaire pour fournir des données aux applications lorsque ces données ne sont pas facilement accessibles via des fournisseurs de données clients, ou lorsque vous préférez masquer la complexité de la source de données et faciliter l'utilisation des données. Un autre avantage de l’utilisation des données de rapport en tant que flux de données est que vous pouvez utiliser des fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] telles que la sécurité, la planification et les instantanés de rapport pour gérer les rapports à l’origine des flux de données.  
   
  Pour tirer au mieux profit de l'extension de rendu Atom, vous devez comprendre comment le rapport est restitué dans des flux de données. Si vous utilisez des rapports existants, il est utile de pouvoir prévoir quels flux de données seront générés par les rapports ; si vous écrivez un rapport spécifiquement en vue d'une utilisation en tant que flux de données, la capacité d'inclure les données et d'ajuster la mise en page du rapport pour optimiser l'utilité des flux de données constitue également un avantage précieux.  
@@ -39,7 +40,7 @@ ms.locfileid: "77079169"
  Pour plus d’informations, consultez [Générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
   
-##  <a name="AtomServiceDocument"></a> Document de service Atom (fichier .atomsvc)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Document de service Atom (fichier .atomsvc)  
  Un document de service Atom spécifie une connexion à un ou plusieurs flux de données. Au minimum, la connexion est une URL simple vers le service de données qui génère le flux.  
   
  Lorsque vous restituez les données de rapport à l'aide de l'extension de rendu Atom, le document de service Atom répertorie les flux de données disponibles pour un rapport. Le document répertorie au moins un flux de données pour chaque région de données du rapport. Les tables et jauges génèrent chacune un seul flux de données, mais les matrices, listes et graphiques peuvent en générer plusieurs en fonction des données qu'ils affichent.  
@@ -59,7 +60,7 @@ ms.locfileid: "77079169"
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
   
-##  <a name="DataFeeds"></a> Flux de données  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> Flux de données  
  Un flux est un fichier XML ayant un format tabulaire cohérent qui ne varie pas dans le temps et des données variables qui peuvent être différentes chaque fois que le rapport est exécuté. Les flux de données générés par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ont le même format que ceux générés par ADO.NET Data Services.  
   
  Un flux de données contient deux sections : l'en-tête et les données. La spécification Atom définit les éléments de chaque section. L'en-tête inclut des informations telles que le schéma d'encodage de caractères à utiliser avec les flux de données.  
@@ -122,7 +123,7 @@ ms.locfileid: "77079169"
  Un flux de données est enregistré avec l'extension de nom de fichier .atom. Vous pouvez utiliser un éditeur de texte ou XML tel que le Bloc-notes ou Éditeur XML pour afficher la structure de fichiers et leur contenu.  
   
   
-##  <a name="FlatteningReportData"></a> Données de rapport aplaties  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> Données de rapport aplaties  
  L'extension de rendu Atom fournit les données de rapport sous forme d'ensembles de lignes aplatis au format XML. Les règles pour aplatir des tables de données sont identiques à celles de l'extension de rendu CSV, avec quelques exceptions :  
   
 -   Les éléments dans l'étendue sont aplatis au niveau de détail. Contrairement au rendu CSV, les zones de texte du niveau supérieur s'affichent dans chaque entrée écrite dans le flux de données.  
@@ -144,7 +145,7 @@ ms.locfileid: "77079169"
  Pour plus d’informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="AtomRendering"></a> Règles de rendu Atom  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Règles de rendu Atom  
  L'extension de rendu Atom ignore les informations suivantes lors du rendu d'un flux de données :  
   
 -   mise en forme et mise en page ;  
@@ -181,7 +182,7 @@ ms.locfileid: "77079169"
 |Mappage|Génère un flux de données pour chaque région de données cartographiques. Si plusieurs couches utilisent la même région de données, le flux de données les inclut toutes. Le flux de données inclut un enregistrement avec les étiquettes et les valeurs pour chaque membre cartographique de la couche.|  
   
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut pour ce convertisseur, notamment le schéma d'encodage à utiliser. Pour plus d'informations, consultez [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes

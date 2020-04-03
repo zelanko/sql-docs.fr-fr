@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558309"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434106"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installer des packages Python avec sqlmlutils
 
@@ -75,9 +75,21 @@ Dans l’exemple suivant, vous allez ajouter le package [text-tools](https://pyp
 
 Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a accès à Internet, vous pouvez utiliser **sqlmlutils** pour rechercher le package **text-tools** et toutes les dépendances sur Internet, puis installer le package sur une instance SQL Server distante.
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. Sur l’ordinateur client, ouvrez **Python** ou un environnement Python.
+
+1. Utilisez les commandes suivantes pour installer le package **text-tools**. Remplacez vos propres informations de connexion de base de données SQL Server (si vous utilisez l’authentification Windows, vous n’avez pas besoin des paramètres `uid` et `pwd`).
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. Sur l’ordinateur client, ouvrez **Python** ou un environnement Python.
 
 1. Utilisez les commandes suivantes pour installer le package **text-tools**. Remplacez les valeurs existantes par vos propres informations de connexion à la base de données SQL Server.
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,12 +117,22 @@ Utilisez **sqlmlutils** pour installer chaque package (fichier WHL) que vous tro
 
 Dans cet exemple, **text-tools** n’a pas de dépendances. Il n’y a donc qu’un seul fichier du dossier `text-tools` que vous pouvez installer. En revanche, un package tel que **scikit-plot** a 11 dépendances. Par conséquent, vous trouverez 12 fichiers dans le dossier (le package **scikit-plot** et les 11 packages dépendants) et vous devez tous les installer.
 
-Exécutez le script Python suivant. Remplacez le chemin d’accès au fichier, le nom du package et vos propres informations de connexion de base de données SQL Server (si vous n’utilisez pas l’authentification Windows, ajoutez les paramètres `uid` et `pwd`). Répétez l’instruction `sqlmlutils.SQLPackageManager` pour chaque fichier de package dans le dossier.
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+Exécutez le script Python suivant. Remplacez le chemin du fichier, le nom du package et vos propres informations de connexion de base de données SQL Server (si vous utilisez l’authentification Windows, vous n’avez pas besoin des paramètres `uid` et `pwd`). Répétez l’instruction `sqlmlutils.SQLPackageManager` pour chaque fichier de package dans le dossier.
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+Exécutez le script Python suivant. Remplacez le chemin du fichier, le nom du package et vos propres informations de connexion de base de données SQL Server. Répétez l’instruction `sqlmlutils.SQLPackageManager` pour chaque fichier de package dans le dossier.
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>Utiliser le package dans SQL Server

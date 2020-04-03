@@ -1,5 +1,6 @@
 ---
 title: 'Accéder aux données externes : Types génériques ODBC - PolyBase'
+description: PolyBase dans SQL Server vous permet de vous connecter à des sources de données compatibles par le biais du connecteur ODBC. Installez le pilote ODBC et créez des tables externes.
 ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddee333a437ca7250252fb3938ee248bb28269f3
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.openlocfilehash: de3d0489acfca3363824b45ce87ba7ac4b63bf7a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507579"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215834"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 

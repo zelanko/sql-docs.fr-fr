@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288293"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380810"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ Définit le niveau de journalisation pour le clustering de basculement SQL Serve
   
 -   2 - Erreurs et avertissements  
   
+Dans les scénarios de basculement de ressources, la DLL de ressource SQL Server peut obtenir un fichier dump avant le basculement. Cela s’applique à la fois aux technologies d’instance de cluster de basculement et de groupe de disponibilité. Lorsque la DLL de ressource SQL Server détermine qu’une ressource SQL Server a échoué, elle utilise l’utilitaire Sqldumper.exe pour obtenir un fichier dump du processus SQL Server. Pour vous assurer que l’utilitaire Sqldumper.exe génère correctement le fichier dump lors du basculement de ressources, vous devez définir les trois propriétés suivantes comme prérequis : SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
+
 SQLDUMPEREDUMPFLAGS  
-Détermine le type de fichiers dump généré par l'utilitaire SQL Server SQLDumper. Le paramètre par défaut est 0. Pour plus d’informations, consultez [l’article de la base de connaissances consacré à l’utilitaire SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Détermine le type de fichiers dump généré par l'utilitaire SQL Server SQLDumper. Le paramètre par défaut est 0. Des valeurs décimales et non hexadécimales sont utilisées pour ce paramètre. Pour un minidump, utilisez 288 ; pour un minidump avec mémoire indirecte, utilisez 296 ; pour un dump filtré, utilisez 33024. Pour plus d’informations, consultez [l’article de la base de connaissances consacré à l’utilitaire SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 Emplacement de stockage des fichiers dump par l'utilitaire SQLDumper. Pour plus d’informations, consultez [l’article de la base de connaissances consacré à l’utilitaire SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  
@@ -304,7 +306,7 @@ La DLL de ressource du [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssNo
 |[Définition des options de base de données en mémoire](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> Définition de l’affinité de processus  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> Définition de l’affinité de processus  
 Les exemples de cette section montrent comment définir l'affinité de processus sur les unités centrales et les nœuds NUMA. Dans les exemples suivants, on part de l'hypothèse que le serveur contient 256 unités centrales qui sont réparties dans quatre groupes de 16 nœuds NUMA chacun. Les threads ne sont attribués à aucun nœud NUMA ou UC.  
   
 -   Groupe 0 : nœuds NUMA 0 à 3, UC 0 à 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> Définition des propriétés de cluster de basculement  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Définition des propriétés de cluster de basculement  
   
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. Modification du contexte de cluster d'un réplica de disponibilité  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. Modification du contexte de cluster d'un réplica de disponibilité  
 L'exemple qui suit remplace le contexte de cluster HADR de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour spécifier le cluster WSFC de destination, `clus01`, l'exemple spécifie le nom d'objet cluster complet, `clus01.xyz.com`.  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>Définition des options d'extension du pool de mémoires tampons  
   
-####  <a name="BufferPoolExtension"></a> A. Définition de l'option d'extension du pool de mémoires tampons  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Définition de l'option d'extension du pool de mémoires tampons  
   
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> Définition des options de base de données en mémoire
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Définition des options de base de données en mémoire
 
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 

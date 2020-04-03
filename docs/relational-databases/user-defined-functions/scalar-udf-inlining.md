@@ -1,8 +1,8 @@
 ---
-title: Incorporation des fonctions UDF scalaires dans les bases de données Microsoft SQL | Microsoft Docs
-description: Fonctionnalité d’incorporation (inlining) des fonctions UDF scalaires pour améliorer les performances des requêtes qui appellent des fonctions UDF scalaires dans SQL Server (à partir de SQL Server 2019) et Azure SQL Database.
+title: Incorporation des fonctions scalaires définies par l’utilisateur dans Microsoft SQL Server | Microsoft Docs
+description: Fonctionnalité d’incorporation des fonctions scalaires définies par l’utilisateur pour améliorer les performances des requêtes qui appellent des fonctions scalaires définies par l’utilisateur dans SQL Server (à partir de SQL Server 2019).
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287403"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486549"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Cet article présente l’incorporation (inlining) des fonctions UDF scalaires. Il s’agit d’une fonctionnalité qui est prise en charge dans la suite de fonctionnalités de [traitement intelligent des requêtes](../../relational-databases/performance/intelligent-query-processing.md). Cette fonctionnalité améliore les performances des requêtes qui appellent des fonctions UDF scalaires dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Cet article présente l’incorporation (inlining) des fonctions UDF scalaires. Il s’agit d’une fonctionnalité qui est prise en charge dans la suite de fonctionnalités de [traitement intelligent des requêtes](../../relational-databases/performance/intelligent-query-processing.md). Cette fonctionnalité améliore les performances des requêtes qui appellent des fonctions scalaires définies par l’utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Fonctions UDF (définies par l’utilisateur) scalaires T-SQL
 Les fonctions définies par l’utilisateur (UDF) qui sont implémentées dans [!INCLUDE[tsql](../../includes/tsql-md.md)] et qui retournent une valeur de données unique sont appelées fonctions UDF (définies par l’utilisateur) scalaires T-SQL. Les fonctions UDF T-SQL offrent une façon élégante de réutiliser le code et d’assurer la modularité entre les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Certains calculs (tels que des règles métier complexes) sont plus faciles à exprimer sous forme de fonctions UDF impératives. Les fonctions UDF favorisent la création d’une logique complexe sans devoir savoir écrire des requêtes SQL complexes.

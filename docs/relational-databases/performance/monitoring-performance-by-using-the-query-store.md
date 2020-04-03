@@ -1,7 +1,7 @@
 ---
 title: Analyse des performances à l’aide du Magasin des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288463"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448175"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 La fonctionnalité de magasin de requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous fournit des informations sur le choix de plan de requête et sur les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par des changements de plan de requête. Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de révision. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment les changements de plan de requête ont eu lieu sur le serveur. Vous pouvez configurer le magasin de requêtes à l’aide de l’option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -32,7 +32,7 @@ Pour plus d’informations sur l’utilisation du Magasin des requêtes dans Azu
 > [!IMPORTANT]
 > Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](https://support.microsoft.com/help/4340759) dès que possible.
 
-## <a name="Enabling"></a> Activation du magasin de requêtes
+## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Activation du magasin de requêtes
 
  Le magasin de requêtes n'est pas actif par défaut pour les nouvelles bases de données.
 
@@ -63,7 +63,7 @@ Pour obtenir d’autres options de syntaxe relatives au magasin des requêtes, c
 > [!IMPORTANT]
 > Pour plus d’informations sur l’activation du Magasin des requêtes et la manière de le garder ajusté à votre charge de travail, reportez-vous à [Bonnes pratiques concernant le magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
-## <a name="About"></a> Informations sur le Magasin des requêtes
+## <a name="information-in-the-query-store"></a><a name="About"></a> Informations sur le Magasin des requêtes
 
 Les plans d’exécution d’une requête spécifique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évoluent généralement au fil du temps pour un certain nombre de raisons, telles que les modifications des statistiques, les modifications de schémas, la création/suppression d’index, etc. Le cache de procédures (où sont stockés les plans de requête mis en cache) stocke uniquement le dernier plan d'exécution. Les plans sont également supprimés du cache du plan en raison de la sollicitation de la mémoire. Par conséquent, les régressions des performances de requête provoquées par des modifications du plan d'exécution peuvent être significatives et longues à résoudre.
 
@@ -109,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
-## <a name="Regressed"></a> Utiliser la fonctionnalité Requêtes régressées
+## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> Utiliser la fonctionnalité Requêtes régressées
 
 Après avoir activé le magasin des requêtes, actualisez la partie de la base de données du volet de l’Explorateur d’objets pour ajouter la section **Magasin des requêtes** .
 
@@ -123,7 +123,7 @@ Sélectionnez un plan pour afficher le plan de requête sous forme graphique. De
 
 Pour forcer un plan, sélectionnez une requête et un plan, puis cliquez sur **Forcer le plan.** Vous pouvez uniquement forcer des plans qui ont été enregistrés par la fonctionnalité de plan de requête et sont toujours conservés dans le cache du plan de requête.
 
-## <a name="Waiting"></a> Recherche de requêtes en attente
+## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Recherche de requêtes en attente
 
 À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], des statistiques d’attente par requête sur la durée sont disponibles dans le magasin des requêtes.
 
@@ -151,7 +151,7 @@ Voici quelques exemples vous permettant d’obtenir plus d’insights sur votre 
 |Attentes élevées de PAGEIOLATCH_SH par base de données|Attentes élevées d’E/S de mémoire tampon dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes comportant un grand nombre de lectures physiques dans le Magasin des requêtes. Si elles correspondent aux requêtes avec des attentes élevées d’E/S, introduisez un index sur l’entité sous-jacente pour faire des recherches au lieu d’analyses et ainsi réduire la surcharge d’E/S des requêtes.|
 |Attentes élevées de SOS_SCHEDULER_YIELD par base de données|Attentes élevées du processeur dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes les plus consommatrices de processeur dans le Magasin des requêtes. Parmi elles, identifiez celles pour lesquelles la tendance de processeur élevé correspond aux attentes élevées de processeur pour les requêtes concernées. Concentrez-vous sur l’optimisation de ces requêtes : il peut y avoir une régression de plan ou peut-être un index manquant.|
 
-## <a name="Options"></a> Options de configuration
+## <a name="configuration-options"></a><a name="Options"></a> Options de configuration
 
 Les options suivantes sont disponibles pour configurer les paramètres du magasin des requêtes.
 
@@ -177,7 +177,7 @@ Interrogez la vue **sys.database_query_store_options** pour déterminer les opti
 
 Pour plus d'informations sur la définition des options à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [Gestion des options](#OptionMgmt).
 
-## <a name="Related"></a> Vues, fonctions et procédures associées
+## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Vues, fonctions et procédures associées
 
 Affichez et gérez le magasin des requêtes par le biais de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou à l’aide des vues et procédures suivantes.
 
@@ -211,9 +211,9 @@ Les procédures stockées configurent le magasin de requêtes.
 |[sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
 |sp_query_store_consistency_check &#40;Transct-SQL&#41;||
 
-## <a name="Scenarios"></a> Principaux scénarios d’utilisation
+## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Principaux scénarios d’utilisation
 
-### <a name="OptionMgmt"></a> Gestion des options
+### <a name="option-management"></a><a name="OptionMgmt"></a> Gestion des options
 
 Cette section fournit des instructions sur la gestion de la fonctionnalité de magasin de requête proprement dite.
 
@@ -303,35 +303,44 @@ Vous pouvez également effacer uniquement les données de requête ad hoc, car e
 
 **Supprimer les requêtes ad hoc**
 
-Ceci supprime les requêtes qui ont été exécutées une seule fois et qui datent de plus de 24 heures.
+Vous purgez ainsi les requêtes ad hoc et internes du magasin des requêtes toutes les 3 minutes, de sorte que celui-ci ne manque pas d’espace ni ne supprime les requêtes que nous devons vraiment suivre
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 Vous pouvez définir votre propre procédure avec une logique différente pour effacer les données dont vous n’avez plus besoin.
@@ -341,7 +350,7 @@ L’exemple ci-dessus utilise la procédure stockée étendue **sp_query_store_r
 - **sp_query_store_reset_exec_stats** pour effacer les statistiques d’exécution pour un plan donné.
 - **sp_query_store_remove_plan** pour supprimer un plan unique.
 
-### <a name="Peformance"></a> Audit et résolution des problèmes de performances
+### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Audit et résolution des problèmes de performances
 
 Le magasin de requêtes conserve un historique des métriques de compilation et de runtime pour des exécutions de requêtes, ce qui vous permet de poser des questions sur votre charge de travail.
 
@@ -580,7 +589,7 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);
 ```
 
-### <a name="Stability"></a> Maintien de la stabilité des performances des requêtes
+### <a name="maintaining-query-performance-stability"></a><a name="Stability"></a> Maintien de la stabilité des performances des requêtes
 
 Pour les requêtes exécutées plusieurs fois, vous pouvez remarquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise différents plans, ce qui entraîne une utilisation des ressources et une durée différentes. Le magasin de requêtes permet de détecter le moment où les performances des requêtes ont régressé et de déterminer le plan optimal dans un délai donné. Vous pouvez ensuite forcer l'application de ce plan optimal pour l'exécution de requêtes ultérieures.
 
@@ -596,7 +605,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 Quand vous utilisez **sp_query_store_force_plan** , vous pouvez uniquement forcer des plans qui ont été enregistrés par le magasin de requêtes en tant que plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter cette requête lorsque le magasin de requêtes était actif.
 
-#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Considérer l’application forcée du support de l’avance rapide et des curseurs statiques
+#### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Considérer l’application forcée du support de l’avance rapide et des curseurs statiques
 
 À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et d’Azure SQL Database (tous les modèles de déploiement), le Magasin des requêtes prend en charge la possibilité de forcer des plans d’exécution de requêtes pour l’avance rapide et les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] et d’API statiques. Le forçage est pris en charge via `sp_query_store_force_plan` ou via les rapports du magasin des requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 

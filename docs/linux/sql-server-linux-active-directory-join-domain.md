@@ -1,7 +1,7 @@
 ---
 title: Joindre SQL Server sur Linux à Active Directory
 titleSuffix: SQL Server
-description: ''
+description: Cet article fournit des conseils pour joindre une machine hôte Linux SQL Server à un domaine AD. Vous pouvez utiliser un package SSSD intégré ou bien des fournisseurs AD tiers.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761873"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216190"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Joindre SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -22,7 +22,7 @@ ms.locfileid: "76761873"
 
 Cet article fournit des instructions générales sur la façon de joindre une machine hôte Linux SQL Server à un domaine Active Directory (AD). Il existe deux méthodes : utiliser un package SSSD intégré ou utiliser des fournisseurs Active Directory tiers. Par exemple, les produits de jonction de domaine tiers sont les suivants : [Service d’identité PowerBroker (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) et [Centrify](https://www.centrify.com/). Ce guide comprend les étapes permettant de vérifier la configuration de votre Active Directory. Toutefois, il n’est pas prévu de fournir des instructions sur la façon de joindre une machine à un domaine lors de l’utilisation d’utilitaires tiers.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant de configurer l’authentification Active Directory, vous devez configurer un contrôleur de domaine Active Directory, Windows, sur votre réseau. Joignez alors votre hôte SQL Server sur Linux à un domaine Active Directory.
 
@@ -129,7 +129,7 @@ Après la vérification de la configuration de base et de la connectivité avec 
 - [Option n°1 : Utiliser un package SSSD](#option1)
 - [Option n°2 : Utiliser des utilitaires de fournisseur OpenLDAP tiers](#option2)
 
-### <a id="option1"></a> Option n°1 : Utiliser le package SSSD pour joindre le domaine Active Directory
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> Option n°1 : Utiliser le package SSSD pour joindre le domaine Active Directory
 
 Cette méthode joint l’hôte SQL Server à un domaine AD à l’aide de packages **realmd** et **sssd**.
 
@@ -203,7 +203,7 @@ Procédez comme suit pour joindre un hôte SQL Server à un domaine Active Direc
 
 Pour plus d’informations, consultez la documentation Red Hat sur la [Découverte et la jonction de domaines d’identité](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Option n°2 : Utiliser des utilitaires de fournisseur OpenLDAP tiers
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> Option n°2 : Utiliser des utilitaires de fournisseur OpenLDAP tiers
 
 Vous pouvez utiliser des utilitaires tiers tels que [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) ou [Centrify](https://www.centrify.com/). Cet article ne couvre pas les étapes de chaque utilitaire individuellement. Vous devez d’abord utiliser l’un de ces utilitaires pour joindre l’hôte Linux pour SQL Server au domaine avant de continuer.  
 

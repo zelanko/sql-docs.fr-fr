@@ -1,5 +1,6 @@
 ---
 title: Exportation au format XML (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, l’extension de rendu XML affiche un rapport paginé au format XML. Importez du code XML dans une base de données, utilisez-le en tant que message ou envoyez-le à des applications.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079306"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342838"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L’extension de rendu XML retourne un rapport paginé au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -21,7 +22,7 @@ ms.locfileid: "77079306"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Éléments de rapport  
+##  <a name="report-items"></a><a name="ReportItems"></a> Éléments de rapport  
  Le tableau suivant décrit la façon dont les éléments de rapport sont rendus.  
   
 |Élément|Comportement de rendu|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079306"
 -   **Images, lines, and custom report items** sont ignorés.  
   
   
-##  <a name="DataTypes"></a> Types de données  
+##  <a name="data-types"></a><a name="DataTypes"></a> Types de données  
  L'élément zone de texte ou attribut se voit affecter un type de données XSD sur la base des valeurs affichées par la zone de texte.  
   
 |Si toutes les valeurs de zone de texte sont|Le type de données affecté est|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079306"
 |Autres|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> Règles de rendu spécifiques à XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Règles de rendu spécifiques à XML  
  Les sections suivantes décrivent comment les extensions de rendu XML interprètent les éléments dans le rapport.  
   
 ### <a name="report-body"></a>Corps du rapport  
@@ -150,15 +151,15 @@ ms.locfileid: "77079306"
  Si la valeur de la propriété DataElementOutput est égale à Output, l’en-tête d’un élément répétitif est rendu sous la forme d’un enfant de l’élément de détail.  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> Formats personnalisés et XSLT  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formats personnalisés et XSLT  
  Les fichiers XML générés par l'extension de rendu XML peuvent être convertis dans n'importe quel format à l'aide de XSL Transformations (XSLT). Cette fonctionnalité permet de générer des données dans des formats qui ne sont pas déjà pris en charge par des extensions de rendu existantes. Pensez à utiliser l'extension de rendu XML et XSLT avant de tenter de créer votre propre extension de rendu.  
   
   
-##  <a name="DuplicateName"></a> Noms en double  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Noms en double  
  S'il existe des noms d'élément de données en double dans la même étendue, le convertisseur affiche un message d'erreur.  
   
   
-##  <a name="XSLTTransformations"></a> Transformations XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> Transformations XSLT  
  Le convertisseur XML peut appliquer une transformation XSLT côté serveur aux données XML d'origine. Lorsqu'une transformation XSLT est appliquée, le convertisseur génère en sortie le contenu transformé au lieu des données XML d'origine. La transformation a lieu sur le serveur, et non sur le client.  
   
  La transformation XSLT à appliquer à la sortie est définie dans le fichier de définition de rapport avec la propriété DataTransform du rapport ou avec le paramètre XSLT *DeviceInfo* . Si l'une de ces valeurs est définie, la transformation se produit chaque fois que le convertisseur XML est utilisé. Lors de l’utilisation d’abonnements, la transformation XSLT doit être définie dans la propriété RDL DataTransform.  
@@ -166,7 +167,7 @@ ms.locfileid: "77079306"
  Si un fichier XSLT est spécifié, à la fois par la propriété de définition DataTransform et par le paramètre d’informations de périphérique, la transformation XSLT spécifiée dans DataTransform a lieu en premier, suivie de celle définie par les paramètres d’informations de périphérique.  
   
   
-###  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur en modifiant les paramètres d'informations de périphérique, y compris ceux ci-dessous :  
   
 -   une transformation (XSLT) à appliquer à la sortie XML ;  

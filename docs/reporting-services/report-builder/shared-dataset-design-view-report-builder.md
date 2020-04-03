@@ -1,5 +1,6 @@
 ---
 title: Mode création de dataset partagé (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, utilisez la fenêtre de conception pour créer des jeux de données à partager. Publiez vos jeux de données partagés sur un serveur de rapports afin de les utiliser dans plusieurs rapports.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190027"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290786"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Les datasets partagés sont publiés sur un serveur de rapports et peuvent être utilisés par plusieurs rapports. Vous pouvez créer des datasets à partager avec d’autres utilisateurs. Dans la fenêtre Dataset partagé, vous pouvez sélectionner une source de données partagée, spécifier des propriétés pour le dataset partagé et créer une requête dans le concepteur de requêtes.  
@@ -22,7 +23,7 @@ ms.locfileid: "74190027"
   
  Pour plus d’informations sur l’utilisation des données dans un rapport, consultez [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a> Ruban  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> Ruban  
  Le ruban vous permet de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées selon les groupes logiques suivants : Connexion, Jeu de données et Concepteur de requêtes.  
   
 ### <a name="connection"></a>Connexion  
@@ -58,7 +59,7 @@ ms.locfileid: "74190027"
  Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
   
-##  <a name="DesignSurface"></a> Aire du concepteur de requêtes  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> Aire du concepteur de requêtes  
  Un concepteur de requêtes vous permet de générer une requête dans la syntaxe requise par la source de données externe.  
   
  Certains types de sources de données fournissent un concepteur de requêtes graphique que vous pouvez utiliser pour explorer les métadonnées d'une source de données externe. Vous pouvez faire glisser de manière interactive des noms du volet de métadonnées vers l'aire de conception de requêtes, ou sélectionner de manière interactive les noms à utiliser.  
@@ -68,7 +69,7 @@ ms.locfileid: "74190027"
  Chaque type de source de données a des besoins spécifiques pour la requête basée sur la source de données externe. Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Results"></a> Affichage des résultats de requête  
+##  <a name="viewing-query-results"></a><a name="Results"></a> Affichage des résultats de requête  
  En mode création de dataset partagé, vous générez une requête qui doit récupérer des données à partir de la connexion de données, lorsque le rapport est traité.  
   
  Exécutez la requête pour consulter des exemples de données à partir de la connexion de données afin de vérifier que la requête retourne le type de données attendu. Les colonnes du jeu de résultats proviennent des métadonnées des schémas de données de la connexion de données. Les noms de colonnes deviennent la collection de champs de dataset. Les valeurs des données que vous voyez dans le jeu de résultats de la requête sont des données au moment de la conception. Une fois que vous avez enregistré le dataset partagé en tant que définition de dataset partagé sur le serveur de rapports, seul le texte de la requête est enregistré. Les données du jeu de résultats de la requête ne sont pas enregistrées.  
@@ -85,7 +86,7 @@ ms.locfileid: "74190027"
  Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Save"></a> Enregistrement du dataset partagé  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Enregistrement du dataset partagé  
  Pour enregistrer la requête que vous avez générée, sur le bouton **Générateur de rapports** , cliquez sur **Enregistrer** ou **Enregistrer sous**. Naviguez jusqu'au dossier approprié sur le serveur de rapports, puis enregistrez la définition de dataset partagé. Le dataset partagé n'est pas accessible aux autres utilisateurs tant que vous ne l'avez pas enregistré sur le serveur de rapports.  
   
   

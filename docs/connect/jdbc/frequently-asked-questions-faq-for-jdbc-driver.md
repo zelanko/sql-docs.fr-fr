@@ -1,7 +1,7 @@
 ---
-title: Questions fréquentes (FAQ) sur le pilote JDBC | Microsoft Docs
+title: Questions fréquentes (FAQ) sur le pilote JDBC
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903608"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271375"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -31,17 +31,17 @@ Le pilote JDBC est open source. Vous trouverez le code source sur [GitHub](https
 **Quelles sont les versions de SQL Server et de Java prises en charge par le pilote ?**  
 Pour obtenir des détails, consultez la page [Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Quelle est la différence entre les packages de pilotes JDBC disponibles dans le Centre de téléchargement Microsoft et le pilote JDBC disponible sur GitHub ?**  
-Les fichiers de pilotes JDBC disponibles sur le référentiel GitHub pour Microsoft JDBC Driver sont au cœur du pilote JDBC et sous la licence open source indiquée dans le référentiel. Les packages de pilotes du Centre de téléchargement Microsoft incluent des bibliothèques supplémentaires pour l’authentification Windows intégrée et les transactions XA avec le pilote JDBC, sous la licence incluse avec le package téléchargeable.
+**Quelle est la différence entre les packages de pilotes JDBC disponibles dans la [page des téléchargements Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) et le pilote JDBC disponible sur GitHub ?**  
+Les fichiers de pilotes JDBC disponibles sur le référentiel GitHub pour Microsoft JDBC Driver sont au cœur du pilote JDBC et sous la licence open source indiquée dans le référentiel. Les packages de pilotes de la [page des téléchargements Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) incluent des bibliothèques supplémentaires pour l’authentification Windows intégrée et les transactions XA avec le pilote JDBC, sous la licence incluse avec le package téléchargeable.
 
 **Que faut-il savoir avant la mise à niveau du pilote ?**  
 Microsoft JDBC Driver 8.2 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les trois bibliothèques de classes JAR suivantes :
 
 | JAR                        | Spécification JDBC            | Version JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (partiellement) et 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (partiellement) et 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3 (partiellement) et 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3 (partiellement) et 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4 prend en charge les spécifications JDBC 4.2 et 4.3 (partiellement). Le package d’installation comprend les trois bibliothèques de classes JAR suivantes :
@@ -119,7 +119,7 @@ Le pilote prend en charge le chiffrement SSL à compter de la version 1.2. Pour 
 **Quels sont les types d’authentification pris en charge par le pilote Microsoft JDBC Driver pour SQL Server ?**  
 Le tableau ci-dessous répertorie les options d’authentification disponibles. Une authentification Kerberos en Java pur est disponible à compter de la version 4.0 du pilote.
 
-| Plateforme    | Authentication                        |
+| Plateforme    | Authentification                        |
 | ----------- | ------------------------------------- |
 | Non-Windows | Kerberos en Java pur                    |
 | Non-Windows | SQL Server                            |

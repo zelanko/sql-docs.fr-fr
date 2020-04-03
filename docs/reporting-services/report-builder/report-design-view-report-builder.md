@@ -1,5 +1,6 @@
 ---
 title: Mode Création de rapport (Générateur de rapports) | Microsoft Docs
+description: Cet article décrit les contrôles de la fenêtre du Générateur de rapports qui permettent d’ajouter, de sélectionner et d’organiser vos ressources de rapport, ainsi que de modifier les propriétés des éléments de rapport.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190042"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290865"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports est conçu pour vous aider à organiser facilement vos ressources de rapport et à générer rapidement les rapports paginés dont vous avez besoin. L’aire de conception se trouve au centre de la fenêtre, avec le ruban et les volets autour d’elle. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Cet article décrit les volets que vous utilisez pour ajouter, sélectionner et organiser vos ressources de rapport, ainsi que pour modifier les propriétés des éléments de rapport.  
@@ -47,13 +48,13 @@ ms.locfileid: "74190042"
   
 8.  Barre d’état du rapport actif  
   
-##  <a name="Ribbon"></a> Volet Paramètres  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> Volet Paramètres  
  Avec les paramètres de rapport, vous pouvez contrôler les données du rapport, interconnecter des rapports associés et varier la présentation des rapports. Le volet Paramètres fournit une disposition souple pour les paramètres du rapport.  
   
  En savoir plus sur le [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="RptDesignSurface"></a> Aire de conception de rapport  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> Aire de conception de rapport  
  L'aire de conception de rapport du Générateur de rapports est la principale zone de travail pour concevoir vos rapports. Pour placer des éléments de rapport, tels que des régions de données, des sous-rapports, des zones de texte, des images, des rectangles et des lignes dans votre rapport, vous devez les ajouter en les faisant glisser du ruban ou de la bibliothèque de parties de rapports vers l’aire de conception. À partir de là, vous pouvez ajouter des groupes, des expressions, des paramètres, des filtres, des actions, une visibilité et une mise en forme à vos éléments de rapport.  
   
  Vous pouvez également modifier les éléments suivants :  
@@ -75,7 +76,7 @@ ms.locfileid: "74190042"
 >  Pour afficher la règle, sous l’onglet **Affichage**, cochez la case **Règle**.  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  À partir du volet Données du rapport, vous définissez les données de rapport et les ressources de rapport dont vous avez besoin pour un rapport avant de concevoir la disposition de votre rapport. Vous pouvez, par exemple, y ajouter des sources de données, des datasets, des champs calculés, des paramètres de rapport et des images.  
   
  Après avoir ajouté des éléments dans le volet Données du rapport, faites glisser des champs vers des éléments de rapport dans l'aire de conception afin de déterminer où apparaissent les données dans le rapport.  
@@ -105,7 +106,7 @@ ms.locfileid: "74190042"
 -   [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> Bibliothèque de parties de rapports  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> Bibliothèque de parties de rapports  
  La façon la plus simple de créer un rapport est de rechercher une partie de rapport existante, par exemple un tableau ou un graphique, sur le serveur de rapports ou un serveur de rapports intégré à un site SharePoint.  
   
  Cliquez sur **Parties de rapports** sous l’onglet Insertion pour ouvrir la bibliothèque de parties de rapports. Vous pouvez y rechercher des parties de rapports à ajouter à votre rapport. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d’une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment où elle a été apportée, de leur emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
@@ -116,7 +117,7 @@ ms.locfileid: "74190042"
  Vous pouvez afficher les résultats de la recherche sous la forme de miniatures ou d'une liste et les trier par nom, par dates de création et de modification, et par créateur. Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a> Le volet Propriétés (Générateur de rapports)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> Le volet Propriétés (Générateur de rapports)  
  Chaque élément d’un rapport, notamment les régions de données, les images, les zones de texte et le corps du rapport lui-même, est associé à des propriétés. Par exemple, la propriété BorderColor d'une zone de texte affiche la valeur de couleur de la bordure de la zone de texte et la propriété PageSize du rapport affiche la taille de page du rapport.  
   
  Ces propriétés sont affichées dans le volet Propriétés. Les propriétés du volet varient en fonction de l'élément de rapport que vous sélectionnez.  
@@ -142,7 +143,7 @@ ms.locfileid: "74190042"
  Le volet Propriétés comporte trois boutons en haut du volet : Catégorie, Classer par ordre alphabétique et Pages de propriétés. Cliquez sur les boutons Catégorie et Alphabétiser pour basculer entre les affichages du volet Propriétés. Cliquez sur le bouton **Pages de propriétés** pour ouvrir la boîte de dialogue des propriétés pour un élément de rapport sélectionné.  
   
   
-##  <a name="GroupPane"></a> Volet de regroupement (Générateur de rapports)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> Volet de regroupement (Générateur de rapports)  
  Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet Regroupement comporte deux volets : Groupes de lignes et Groupes de colonnes. Lorsqu’une région de données est sélectionnée, le volet Regroupement affiche tous les groupes de cette région de données sous forme de liste hiérarchique : les groupes enfants apparaissent en retrait sous leur groupe parent.  
   
  ![Générateur de rapports - Groupes de lignes](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Générateur de rapports - Groupes de lignes")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190042"
  Pour plus d’informations, consultez [Volet de regroupement &#40;Générateur de rapports&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md) et [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a> Affichage de l'aperçu de votre rapport en mode exécution  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> Affichage de l'aperçu de votre rapport en mode exécution  
  En mode création de rapport, vous n'utilisez pas des données réelles, mais une représentation des données indiquées par le nom ou l'expression du champ. Lorsque vous voulez afficher les données réelles dans le contexte du rapport que vous avez conçu, vous pouvez exécuter le rapport afin d'afficher un aperçu des données de la base de données sous-jacente dans la mise en page du rapport. Vous pouvez passer du mode Création au mode Exécution de votre rapport pour ajuster sa conception et voir les résultats immédiatement. Pour afficher un aperçu de votre rapport, cliquez sur **Exécuter** dans le groupe **Vues** dans le ruban.  
   
  Quand vous cliquez sur **Exécuter**, le Générateur de rapports se connecte aux sources de données du rapport, met en cache les données sur votre ordinateur, combine les données et la disposition, puis effectue le rendu du rapport dans la Visionneuse HTML. Vous pouvez exécuter le rapport aussi souvent que vous le souhaitez au fil de sa conception. Lorsque vous êtes satisfait du rapport, vous pouvez l'enregistrer sur le serveur de rapports, où les autres utilisateurs dotés des autorisations appropriées peuvent le visualiser.  
@@ -168,7 +169,7 @@ ms.locfileid: "74190042"
  Lorsque vous affichez un aperçu du rapport en mode exécution, le rapport ressemble à un rapport généré en HTML. L'aperçu n'est pas en HTML, mais la présentation et la pagination du rapport sont similaires à un affichage HTML. Vous pouvez changer la vue pour afficher le rapport tel qu'il sera imprimé en activant le mode d'aperçu avant impression. Cliquez sur le bouton **Aperçu avant impression** sous l’onglet **Exécuter** . Le rapport s'affiche comme sur une véritable page. Ce que vous voyez ressemble au résultat que produisent les extensions de rendu Image et PDF. L’aperçu avant impression n’est pas une image ni un fichier PDF, mais la disposition et la pagination du rapport sont similaires à la sortie de ces formats.  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

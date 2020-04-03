@@ -1,5 +1,6 @@
 ---
 title: Résoudre les problèmes de connectivité de PolyBase Kerberos | Microsoft Docs
+description: Pour résoudre les problèmes d’authentification de PolyBase avec un cluster Hadoop sécurisé par Kerberos, vous pouvez utiliser les diagnostics interactifs intégrés à PolyBase.
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909152"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215851"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 
@@ -30,7 +31,7 @@ Cet article sert de guide tout le long du processus de débogage de tels problè
 > Cet outil vous aidera à déterminer les problèmes non SQL Server, afin de vous aider à vous concentrer sur la résolution des problèmes d’installation de Kerberos HDFS, à savoir l’identification des problèmes liés à des erreurs de configuration de nom d’utilisateur/mot de passe et les erreurs de configuration de l’installation de cluster Kerberos.      
 > Cet outil est complètement indépendant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est disponible en tant que Jupyter Notebook et nécessite Azure Data Studio.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ou version ultérieure avec PolyBase installé
 1. Un cluster Hadoop (Cloudera ou Hortonworks) sécurisé avec Kerberos (Active Directory ou MIT)
@@ -197,7 +198,7 @@ Si vous atteignez ce stade, cela confirme que : (i) les trois acteurs sont en m
 ## <a name="common-errors"></a>Erreurs courantes
 Si l’outil a été exécuté et que les propriétés de fichier du chemin cible n’ont *pas* été imprimées (point de contrôle 4), une exception doit avoir été levée à mi-chemin. Examinez-la et étudiez le contexte de l’endroit dans le flux des quatre étapes où elle s’est produite. Envisagez les problèmes courants suivants qui se sont peut-être produits, dans l’ordre :
 
-| Exception et messages | Cause : | 
+| Exception et messages | Cause | 
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>L’authentification SIMPLE n’est pas activée. Available:[TOKEN, KERBEROS] | La propriété hadoop.security.authentication du fichier core-site.xml n’a pas la valeur « KERBEROS ».|
 |javax.security.auth.login.LoginException<br>Client introuvable dans la base de données Kerberos (6) - CLIENT_NOT_FOUND |    Le principal du service d’administration fourni n’existe pas dans le domaine spécifié dans core-site.xml.|

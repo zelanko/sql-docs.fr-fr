@@ -1,5 +1,6 @@
 ---
 title: Afficher un aperçu des rapports
+description: Découvrez comment afficher un aperçu des rapports dans SQL Server Reporting Services avant de les publier dans un environnement de production.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,19 +10,19 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68267488"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510130"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Afficher un aperçu des rapports dans SQL Server Reporting Services (SSRS)
 
   Quand vous concevez un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez le visualiser avant de le publier sur un environnement de production. Pour ce faire, vous disposez de plusieurs méthodes : en passant en mode aperçu dans le Concepteur de rapports, en utilisant la fenêtre d'aperçu du Concepteur de rapports et en publiant le rapport sur un serveur de rapports dans un environnement de test.  
   
 > [!NOTE]  
-> Lorsque vous prévisualisez un rapport, les données de ce rapport sont mises en cache dans un fichier sur l'ordinateur local. Ainsi, lorsque vous prévisualisez une nouvelle fois ce rapport (au moyen des mêmes requête, paramètres et informations d'identification), le Concepteur de rapports récupère l'exemplaire mis en cache au lieu d'exécuter à nouveau la requête. Le fichier de données est enregistré sous *\<nom_rapport>*.rdl.data dans le même répertoire que le fichier de définition de rapport. Le fichier n'est pas supprimé lorsque vous fermez le Générateur de rapports.  
+> Lorsque vous prévisualisez un rapport, les données de ce rapport sont mises en cache dans un fichier sur l'ordinateur local. Ainsi, lorsque vous prévisualisez une nouvelle fois ce rapport (au moyen des mêmes requête, paramètres et informations d'identification), le Concepteur de rapports récupère l'exemplaire mis en cache au lieu d'exécuter à nouveau la requête. Le fichier de données est enregistré sous *\<nom_rapport>* .rdl.data dans le même répertoire que le fichier de définition de rapport. Le fichier n'est pas supprimé lorsque vous fermez le Générateur de rapports.  
   
 ## <a name="preview-mode"></a>Mode Aperçu
 

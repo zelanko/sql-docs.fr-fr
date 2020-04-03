@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : rapport cartographique (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Rapport cartographique (Générateur de rapports) | Microsoft Docs'
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041572"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
+# <a name="tutorial-map-report-report-builder"></a>Tutoriel : Rapport cartographique (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Les cartes sont basées sur des données spatiales qui comportent en général des points, des lignes et des polygones. Par exemple, un polygone peut représenter le contour d'un comté, une ligne peut représenter une route, et un point peut représenter l'emplacement d'une ville. Chaque type de données spatiales est affiché sur une couche séparée sous la forme d'un jeu d'éléments cartographiques.  
@@ -27,16 +27,16 @@ Pour faire varier l'apparence des éléments cartographiques, vous devez spécif
 Dans ce didacticiel, vous créez un rapport cartographique qui affiche les emplacements des magasins dans les comtés de l’État de New York.  
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce tutoriel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Pour plus d’informations sur les autres spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Map"></a>1. Créer une carte avec une couche de polygones à partir de l'Assistant Carte  
+## <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1. Créer une carte avec une couche de polygones à partir de l'Assistant Carte  
 Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibliothèque de cartes. La carte a une couche qui affiche les comtés de l'État de New York. La forme de chaque comté est un polygone basé sur les données spatiales incorporées dans la carte de la bibliothèque de cartes.  
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Pour ajouter une carte dans un nouveau rapport à l'aide de l'Assistant Carte  
@@ -108,7 +108,7 @@ Le rapport rendu affiche le titre de la carte, la carte et l'échelle des distan
   
 La légende de la carte et l'échelle de couleurs n'apparaissent pas encore, car il n'y a pas de données analytiques associées à chaque comté. Vous ajouterez ultérieurement des données analytiques dans ce didacticiel.  
   
-## <a name="PointLayer"></a>2. Ajouter une couche de points pour afficher des emplacements de magasins  
+## <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2. Ajouter une couche de points pour afficher des emplacements de magasins  
 Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche de points qui affiche les emplacements des magasins.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
   
 1.  Sous l’onglet **Exécuter** > **Conception** pour rebasculer en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click the **New layer wizard** button ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche**![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -169,13 +169,13 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
 9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ).  
   
     Le jeu de résultats contient sept colonnes représentant un ensemble de magasins dans l’état de New York qui vendent des biens de consommation. Voici une liste, avec des explications pour les éléments qui ne sont peut-être pas évidents : 
-    *   **StoreKey**: identificateur de magasin.  
+    *   **StoreKey** : identificateur de magasin.  
     *   **StoreName**.
-    *   **SellingArea**: zone disponible pour l’affichage des produits, comprise entre 455 pieds carrés et 1125 pieds carrés.
+    *   **SellingArea** : espace disponible pour la présentation des produits, compris entre 455 et 1 125 pieds carrés.
     *   **City**.
     *   **County**.
-    *   **Sales**: total des ventes. 
-    *   **SpatialLocation**: emplacement en longitude et latitude. 
+    *   **Service commercial** : total des ventes. 
+    *   **SpatialLocation** : emplacement en longitude et latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -227,14 +227,14 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
 
 
   
-## <a name="LineLayer"></a>3. Ajouter une couche de lignes pour afficher un itinéraire  
+## <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3. Ajouter une couche de lignes pour afficher un itinéraire  
 Utilisez l'Assistant Couche pour ajouter une couche qui affiche un itinéraire entre deux magasins. Dans ce didacticiel, l'itinéraire est créé à partir de trois emplacements de magasin. Dans une application d'entreprise, l'itinéraire choisi peut être le meilleur itinéraire entre des magasins.  
   
 ### <a name="to-add-a-line-layer-to-map"></a>Pour ajouter une couche de lignes à une carte  
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click the **New layer wizard** button ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche**![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Dans la page **Choisir une source de données spatiales** , sélectionnez **Requête spatiale SQL Server** et cliquez sur **Suivant**.  
   
@@ -284,12 +284,12 @@ Utilisez l'Assistant Couche pour ajouter une couche qui affiche un itinéraire e
 
       Il s’agit du pourcentage de zoom. À 125 %, vous devez normalement voir l’État en entier.
   
-## <a name="TileLayer"></a>4. Ajouter un arrière-plan de mosaïques Bing  
+## <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4. Ajouter un arrière-plan de mosaïques Bing  
 Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosaïques Bing Maps.  
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click **Add Layer** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **Ajouter une couche**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
@@ -306,7 +306,7 @@ Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosa
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Transparent"></a>5. Rendre une couche transparente  
+## <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5. Rendre une couche transparente  
 Dans cette section, pour permettre aux éléments d’une couche de laisser transparaître une autre couche, vous ajustez l’ordre et la transparence des couches pour obtenir l’effet souhaité. Vous commencez avec la première couche que vous avez créée, PolygonLayer1. 
   
 1.  Double-cliquez sur la carte pour afficher le volet **Couches** .  
@@ -321,12 +321,12 @@ Dans cette section, pour permettre aux éléments d’une couche de laisser tran
 
     ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
   
-## <a name="Vary"></a>6. Faire varier la couleur du comté selon les ventes  
+## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. Faire varier la couleur du comté selon les ventes  
 Chaque comté de la couche de polygones a une couleur différente car le processeur de rapports attribue automatiquement une valeur de couleur de la palette de couleurs selon le thème que vous avez choisi dans la dernière page de l'Assistant Carte.  
   
 Dans cette section, vous spécifiez une règle de couleur pour associer des couleurs spécifiques à une plage de ventes des magasins pour chaque comté. Les couleurs rouge-jaune-vert indiquent des chiffres d'affaires relatifs élevés-moyens-bas. Mettez en forme l'échelle de couleurs pour afficher la devise. Affichez les plages de chiffres d'affaires annuels dans une nouvelle légende. Pour les comtés qui ne contiennent pas de magasins, utilisez la valeur Aucune couleur pour indiquer qu'il n'existe pas de données associées.  
   
-### <a name="Relationship"></a>6a. Créer une relation entre des données spatiales et des données analytiques  
+### <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. Créer une relation entre des données spatiales et des données analytiques  
 Pour faire varier les formes de comté par couleur en fonction des données analytiques, vous devez d’abord associer des données analytiques aux données spatiales. Dans ce didacticiel, vous utiliserez une correspondance basée sur le nom du comté. 
   
 1.  Basculez en mode Conception.  
@@ -355,7 +355,7 @@ En spécifiant un champ de correspondance de la source de données spatiales et 
   
 Chaque comté qui contient un magasin a une couleur basée sur la palette de couleurs du style que vous avez choisi dans l'Assistant. Les autres comtés sont en gris.  
   
-### <a name="ColorRules"></a>6b. Spécifier des règles de couleur pour les polygones  
+### <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6b. Spécifier des règles de couleur pour les polygones  
 Pour créer une règle qui fait varier la couleur de chaque comté en fonction des ventes des magasins, vous devez spécifier les valeurs de plage, le nombre de divisions dans la plage que vous souhaitez afficher, ainsi que les couleurs à utiliser.  
   
 #### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Pour spécifier des règles de couleur pour tous les polygones ayant des données associées  
@@ -398,7 +398,7 @@ Pour créer une règle qui fait varier la couleur de chaque comté en fonction d
   
     L’échelle de couleurs affiche quatre couleurs : rouge, orange, jaune, et vert. Chaque couleur représente une plage de ventes calculée automatiquement selon les ventes par comté.  
   
-### <a name="ColorScale"></a>6c. Mettre en forme les données de l'échelle de couleurs en tant que devises  
+### <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6c. Mettre en forme les données de l'échelle de couleurs en tant que devises  
 Par défaut, les données ont un format général. Dans cette section, vous appliquez des formats personnalisés.  
   
 1. Basculez en mode Conception.  
@@ -409,7 +409,7 @@ Par défaut, les données ont un format général. Dans cette section, vous appl
   
     L'échelle de couleurs affiche les chiffres d'affaires annuels au format monétaire pour chaque plage.  
   
-### <a name="NewLegend"></a>6d. Ajouter un titre de légende   
+### <a name="6d-add-a-legend-title"></a><a name="NewLegend"></a>6d. Ajouter un titre de légende   
   
 1.  Avec l’échelle de couleurs toujours sélectionnée, dans le volet Propriétés, vous voyez des propriétés pour **MapColorScale**. 
   
@@ -423,7 +423,7 @@ Par défaut, les données ont un format général. Dans cette section, vous appl
   
 Les comtés qui ont des magasins et des ventes associés s'affichent en fonction des règles de couleur. Les comtés qui n'ont pas de ventes n'ont aucune couleur.  
   
-### <a name="NoData"></a>6f. Modifier la couleur des comtés sans données  
+### <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. Modifier la couleur des comtés sans données  
 Vous pouvez définir les options d'affichage par défaut pour tous les éléments cartographiques d'une couche. Les règles de couleur ont priorité sur ces options d'affichage.  
   
 #### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Pour définir les propriétés d'affichage de tous les éléments d'une couche  
@@ -448,12 +448,12 @@ Vous pouvez définir les options d'affichage par défaut pour tous les élément
   
 Les comtés sans données associées s’affichent en gris-bleu. Seuls les comtés qui ont des données analytiques associées ont des couleurs allant du **Rouge** au **Vert** en fonction des règles de couleur que vous avez spécifiées.  
   
-## <a name="CustomPoint"></a>7. Ajouter un point personnalisé  
+## <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7. Ajouter un point personnalisé  
 Pour représenter un nouveau magasin qui n’a pas encore été mis en place, dans cette section, vous spécifiez un point avec le type de marqueur **Étoile** .  
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click **Add Layer**  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), then click **Point Layer**.  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **Ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), puis cliquez sur **Couche de points**.  
   
     Une nouvelle couche de points est ajoutée à la carte. Par défaut, le type de données spatiales de la couche de points est **Incorporé**.  
   
@@ -491,7 +491,7 @@ L'étiquette s'affiche au-dessus de l'emplacement du magasin.
 
 ![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
-## <a name="CenterView"></a>8. Centrer et redimensionner la carte   
+## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8. Centrer et redimensionner la carte   
 Dans cette section, vous changez le centre de la carte et vous utilisez une autre façon de modifier le niveau de zoom.  
  
 1.  Basculez en mode Conception.  
@@ -512,7 +512,7 @@ Dans cette section, vous changez le centre de la carte et vous utilisez une autr
   
 En mode Conception, la carte apparaît sur la surface d'affichage et la vue est basée sur les exemples de données. Dans le rapport rendu, la vue cartographique est centrée dans la vue que vous avez spécifiée.  
   
-## <a name="Title"></a>9. Ajouter un titre de rapport  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Ajouter un titre de rapport  
   
 1.  Basculez en mode Conception.
   
@@ -522,7 +522,7 @@ En mode Conception, la carte apparaît sur la surface d'affichage et la vue est 
   
 Ce titre s'affiche alors dans la partie supérieure du rapport. En l'absence d'en-tête de page défini, les éléments situés au-dessus du corps du rapport font office d'en-tête de rapport.  
   
-## <a name="Save"></a>10. Enregistrer le rapport  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Enregistrer le rapport  
   
 1.  En mode Création ou Aperçu, dans le menu **Fichier** > **Enregistrer sous**.
  

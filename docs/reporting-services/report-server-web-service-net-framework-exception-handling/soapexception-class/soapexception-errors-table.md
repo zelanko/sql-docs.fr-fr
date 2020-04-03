@@ -1,5 +1,6 @@
 ---
 title: Table d’erreurs SoapException | Microsoft Docs
+description: Découvrez les erreurs qui peuvent se produire avec les méthodes par le biais d’un SoapException dans le service Web Report Server.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d8025cc433a8ef6b773b51d86452a6a2f6b07534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991547"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215634"
 ---
 # <a name="soapexception-errors-table"></a>Table d'erreurs SoapException
   Le serveur de rapports génère des erreurs et des messages d'erreur dans l'exception SOAP en fonction des erreurs qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Le tableau suivant indique les erreurs qui sont accessibles à partir de méthodes par le biais d’un **SoapException** dans le service web Report Server. Il est organisé en fonction de la méthode ou des méthodes qui lèvent l'exception.  

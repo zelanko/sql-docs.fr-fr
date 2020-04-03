@@ -1,5 +1,6 @@
 ---
 title: Mappage des types avec PolyBase | Microsoft Docs
+description: Reportez-vous à ces tables pour le mappage entre des sources de données externes PolyBase et SQL Server. Définissez des tables externes avec la commande Transact-SQL CREATE EXTERNAL TABLE.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710468"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215742"
 ---
 # <a name="type-mapping-with-polybase"></a>Mappage des types avec PolyBase
 

@@ -1,5 +1,6 @@
 ---
 title: Publication de rapports sur un serveur de rapports | Microsoft Docs
+description: Découvrez comment utiliser les fonctionnalités de déploiement de SQL Server Data Tools (SSDT) pour publier des rapports sur un serveur de rapports.
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c4891d308c81a82ecb3f371cca8812111467bc37
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72359405"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510090"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
   Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier les rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server qui peut inclure plusieurs rapports et sources de données. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*à la place du terme *publier*. Les deux termes sont interchangeables.  
@@ -39,7 +40,7 @@ L'autorisation est déterminée via la sécurité basée sur les rôles définie
 ## <a name="project-configurations"></a>Configurations de projet  
  Plusieurs serveurs de rapports et versions différentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés dans votre environnement de création de rapports. Vous pouvez créer plusieurs configurations, puis en utiliser une différente selon le scénario de déploiement. Les configurations de projet incluent des propriétés pour la génération de rapports, telles que le dossier dans lequel les rapports créés doivent être stockés temporairement, et le mode de gestion des problèmes de génération. Les configurations ont également des propriétés que vous utilisez pour spécifier l'emplacement et la version du serveur de rapports, les dossiers sur le serveur de rapports.  
   
- Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournit trois configurations de projet : **DebugLocal**, **Debug**et **Release**. La configuration par défaut est DebugLocal. Vous utilisez en général la configuration DebugLocal pour afficher un aperçu des rapports dans une fenêtre d’aperçu locale, la configuration Debug pour publier des rapports sur un serveur de test et la configuration Release pour publier des rapports sur un serveur de production. La liste déroulante des configurations de solution dans la barre d'outils Standard affiche la configuration active. Pour utiliser une configuration différente, sélectionnez-la dans la liste.  
+ Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournit trois configurations de projet : **DebugLocal**, **Debug** et **Release**. La configuration par défaut est DebugLocal. Vous utilisez en général la configuration DebugLocal pour afficher un aperçu des rapports dans une fenêtre d’aperçu locale, la configuration Debug pour publier des rapports sur un serveur de test et la configuration Release pour publier des rapports sur un serveur de production. La liste déroulante des configurations de solution dans la barre d'outils Standard affiche la configuration active. Pour utiliser une configuration différente, sélectionnez-la dans la liste.  
   
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   

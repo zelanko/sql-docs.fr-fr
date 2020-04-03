@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822425"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510010"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Basculer vers une base de données secondaire de copie des journaux de transaction (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "74822425"
   
 2.  Appliquez à la suite toutes les sauvegardes non appliquées du journal des transactions à chaque base de données secondaire. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-3.  Si la base de données primaire est accessible, sauvegardez le journal des transactions actif et appliquez la sauvegarde du journal aux bases de données secondaires.  
+3.  Si la base de données primaire est accessible, sauvegardez le journal des transactions actif et appliquez la sauvegarde du journal aux bases de données secondaires. Vous devrez peut-être définir la base de données sur le [mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md) pour obtenir un accès exclusif avant d’exécuter la commande restore, puis repasser au mode multi-utilisateur une fois la restauration terminée.  
   
      Si l'instance du serveur principal d'origine n'est pas endommagée, sauvegardez la fin du journal des transactions de la base de données primaire à l'aide de l'option WITH NORECOVERY. Cette opération laisse la base de données en état de restauration et donc inaccessible aux utilisateurs. Par la suite, vous pouvez la restaurer par progression en appliquant les sauvegardes du journal des transactions à partir de la base de données primaire de remplacement.  
   
-     Pour plus d’informations, consultez [Sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+     Pour plus d’informations, consultez [Sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).   
   
 4.  Une fois que les serveurs secondaires sont synchronisés, vous pouvez basculer vers celui de votre choix en récupérant sa base de données secondaire et en redirigeant des clients vers cette instance de serveur. La récupération place la base de données dans un état cohérent et permet sa mise en ligne.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822425"
   
      Si aucune autre base de données secondaire n’est disponible, consultez [Configurer la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   

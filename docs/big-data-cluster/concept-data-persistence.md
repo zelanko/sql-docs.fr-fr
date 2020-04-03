@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173572"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215741"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistance des données avec un cluster Big Data SQL Server sur Kubernetes
 
@@ -33,6 +33,8 @@ Voici quelques aspects importants à prendre en compte lorsque vous planifiez la
 - Si le provisionneur de stockage pour la classe de stockage que vous fournissez dans la configuration ne prend pas en charge le provisionnement dynamique, vous devez créer au préalable les volumes persistants. Par exemple, le provisionneur `local-storage` n’active pas le provisionnement dynamique. Consultez cet [exemple de script](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) pour des indications sur la façon de procéder dans un cluster Kubernetes déployé avec `kubeadm`.
 
 - Lorsque vous déployez un cluster Big Data, vous pouvez configurer la même classe de stockage à utiliser par tous les composants du cluster. Mais, en guide de bonne pratique, pour un déploiement en production, différents composants requièrent différentes configurations de stockage pour prendre en charge les différentes charges de travail en termes de taille ou de débit. Vous pouvez remplacer la configuration de stockage par défaut spécifiée dans le contrôleur pour chaque instance principale SQL Server, jeu de données et pool de données. Cet article fournit des exemples sur la procédure à suivre.
+
+- Lors du calcul des exigences de dimensionnement du pool de stockage, vous devez prendre en compte le facteur de réplication avec lequel HDFS est configuré.  Le facteur de réplication peut être configuré au moment du déploiement dans le fichier de configuration du déploiement de cluster. La valeur par défaut des profils dev-test (c’est-à-dire, `aks-dev-test` ou `kubeadm-dev-test`) est de 2. Pour les profils que nous recommandons d’utiliser avec les déploiements de production (c’est-à-dire `kubeadm-prod`), la valeur par défaut est de 3. Selon nos bonnes pratiques, il est recommandé de configurer le déploiement de production de votre cluster Big Data avec un facteur de réplication d’au moins 3 pour HDFS. La valeur du facteur de réplication aura un impact sur le nombre d’instances présentes dans le pool de stockage. Le nombre d’instances de pool de stockage à déployer doit être au moins égal à la valeur du facteur de réplication. De plus, vous devez dimensionner le stockage en conséquence, car les données seront répliquées dans HDFS autant de fois que l’indique la valeur du facteur de réplication. Pour plus d’informations sur la réplication des données dans HDFS, [cliquez ici](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
 - Dans la version SQL Server 2019 CU1, vous ne pouvez pas modifier le paramétrage de la configuration du stockage après le déploiement. Cette contrainte vous empêche non seulement de modifier la taille de la revendication de volume persistant pour chaque instance, mais aussi d’effectuer des opérations de mise à l’échelle après le déploiement. Par conséquent, il est très important de planifier la disposition du stockage avant de déployer un cluster Big Data.
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 Ce processus crée deux fichiers, `bdc.json` et `control.json`, que vous pouvez personnaliser soit en les modifiant manuellement, soit à l’aide de la commande `azdata bdc config`. Vous pouvez utiliser une combinaison de bibliothèques jsonpath et jsonpatch pour fournir des moyens de modifier vos fichiers de configuration.
 
 
-### <a id="config-samples"></a> Configurer le nom de la classe de stockage et/ou la taille des revendications
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> Configurer le nom de la classe de stockage et/ou la taille des revendications
 
 Par défaut, la taille des revendications de volumes persistants provisionnés pour chaque pod provisionné dans le cluster est de 10 gigaoctets (Go). Vous pouvez mettre à jour cette valeur pour prendre en charge les charges de travail que vous exécutez dans un fichier de configuration personnalisé avant le déploiement du cluster.
 

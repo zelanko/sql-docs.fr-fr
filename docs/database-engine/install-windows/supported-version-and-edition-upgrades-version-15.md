@@ -1,5 +1,6 @@
 ---
-title: Mises à niveau de version et d’édition prises en charge - SQL Server 2019 | Microsoft Docs
+title: Mises à niveau de version et d’édition prises en charge (SQL Server 2019)
+description: Décrit les mises à niveau de version et d’édition prises en charge pour SQL Server 2019.
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f38c4563c01d756a7b81c0bdc34ecc429d5dbf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73531541"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434136"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>Mises à niveau de version et d’édition prises en charge pour SQL Server 2019
+# <a name="supported-version--edition-upgrades-sql-server-2019"></a>Mises à niveau de version et d’édition prises en charge (SQL Server 2019)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -45,7 +46,7 @@ ms.locfileid: "73531541"
   
 - Vous ne pouvez pas ajouter de nouvelles fonctionnalités pendant la mise à niveau de votre instance existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après avoir mis à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], vous pouvez ajouter des fonctionnalités via le programme d'installation de [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Pour plus d’informations, consultez [Ajouter des fonctionnalités à une instance de SQL Server &#40;Installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
-## <a name="upgrades-from-earlier-versions-to-includesssqlv15-mdincludessssqlv15-mdmd"></a>Mises à niveau des versions antérieures vers [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Mises à niveau des versions antérieures vers [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] prend en charge la mise à niveau à partir des versions suivantes de SQL Server :
 
@@ -108,7 +109,7 @@ Les conseils et les outils suivants peuvent vous aider à planifier et à implé
 
 - Chargement en masse : Les tables peuvent être copiées en bloc à partir de SQL Server 2008 ou SQL Server 2008 R2 vers SQL Server 2019.
 
-## <a name="includesssqlv15-mdincludessssqlv15-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Mise à niveau d’édition 
+## <a name="sssqlv15-md-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Mise à niveau d’édition 
 
 Le tableau suivant répertorie les scénarios de mise à niveau d'édition prise en charge dans [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)].  
 
@@ -117,7 +118,7 @@ Pour obtenir des instructions détaillées sur la façon d’effectuer une mise 
 |Mise à niveau à partir de|Mise à niveau vers|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (licence serveur+CAL et licence principale)**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> La mise à niveau depuis une version d’évaluation (une édition gratuite) vers toutes les éditions payantes est prise en charge pour les installations autonomes, mais pas pour les installations en cluster.|  
+|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> La mise à niveau depuis une version d’évaluation (une édition gratuite) vers toutes les éditions payantes est prise en charge pour les installations autonomes, mais pas pour les installations en cluster. Cette limitation ne s’applique pas aux instances autonomes installées sur un cluster de basculement Windows qui est membre d’un groupe de disponibilité. |  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (licence serveur+CAL ou licence principale)|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  

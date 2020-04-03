@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af8c94c6705578371fcb6b4d260da6313b73e4ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d412a817a3e796e2ed85002ab11575b32e06ca91
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68013844"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216268"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Placer un groupe de disponibilité hors connexion (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,20 +26,20 @@ ms.locfileid: "68013844"
   
   
 > [!CAUTION]  
->  Utilisez l'option OFFLINE uniquement pour une migration entre clusters des ressources du groupe de disponibilité.  
+>  Utilisez l’option OFFLINE pour la migration entre clusters des ressources d’un groupe de disponibilité ou pour le basculement d’un groupe de disponibilité accessible en lecture.
   
-##  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   L'instance de serveur sur laquelle vous sélectionnez la commande OFFLINE doit exécuter [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] ou version ultérieure (édition Entreprise ou ultérieure).    
 -   Le groupe de disponibilité doit être en ligne.  
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
  Avant de mettre le groupe de disponibilité hors connexion, supprimez le ou les écouteurs du groupe de disponibilité. Pour plus d’informations, consultez [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour placer le groupe de disponibilité hors connexion**  
   
 1.  Connectez-vous à une instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Ce réplica peut être le réplica principal ou un réplica secondaire.  
@@ -57,23 +57,23 @@ ms.locfileid: "68013844"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après que le groupe de disponibilité a été mis hors connexion  
+##  <a name="follow-up-after-the-availability-group-goes-offline"></a><a name="FollowUp"></a> Suivi : Après que le groupe de disponibilité a été mis hors connexion  
   
--   **Enregistrement d l'opération OFFLINE :**  l'identité du nœud WSFC sur lequel l'opération OFFLINE a été initialisée est stockée dans le journal du cluster WSFC et dans le journal des erreurs SQL.  
+-   **Enregistrement de l’opération OFFLINE :**  l’identité du nœud WSFC sur lequel l’opération OFFLINE a été initialisée est stockée dans le journal du cluster WSFC et dans le journal des erreurs SQL.  
   
--   **Si vous n’avez pas supprimé l’écouteur du groupe de disponibilité avant la mise hors connexion du groupe :**  si vous migrez le groupe de disponibilité vers un autre cluster WSFC, supprimez le numéro de réseau virtuel et l’adresse IP virtuelle de l’écouteur. Vous pouvez les supprimer à l’aide de la console de gestion du cluster de basculement, de l’applet de commande PowerShell [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) ou de [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Notez que cluster.exe est déconseillé sur Windows 8.  
+-   **Si vous n’avez pas supprimé l’écouteur de groupe de disponibilité avant de mettre le groupe hors connexion :**  Si vous migrez le groupe de disponibilité vers un autre cluster WSFC, supprimez le VNN et le VIP de l’écouteur. Vous pouvez les supprimer à l’aide de la console de gestion du cluster de basculement, de l’applet de commande PowerShell [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) ou de [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Notez que cluster.exe est déconseillé sur Windows 8.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
 -   [Changer le contexte de cluster HADR de l’instance de serveur &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Articles techniques SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

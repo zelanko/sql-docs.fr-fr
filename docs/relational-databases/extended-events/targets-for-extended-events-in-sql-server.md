@@ -1,5 +1,6 @@
 ---
 title: Cibles des Événements étendus SQL Server
+description: Cet article décrit les cibles package0 pour les événements étendus dans SQL Server. Découvrez les capacités des cibles en termes de collecte et de génération de rapports sur les données ainsi que les paramètres des cibles.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501983"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487517"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 
@@ -34,10 +35,10 @@ Cet article explique quand et comment utiliser les cibles package0 cible pour le
 La [section ring_buffer section](#h2_target_ring_buffer) inclut un exemple d’utilisation de [XQuery dans Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) pour copier une chaîne XML dans un ensemble de lignes relationnel.
 
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 
-- Familiarisez-vous avec les concepts de base des événements étendus, comme décrit dans [Démarrage rapide : événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Familiarisez-vous avec les concepts de base des événements étendus, décrits dans [Démarrage rapide : Événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Avez installé une version récente de l’utilitaire fréquemment mis à jour SQL Server Management Studio (SSMS.exe). Pour plus d’informations, consultez :

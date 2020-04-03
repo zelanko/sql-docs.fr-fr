@@ -1,5 +1,6 @@
 ---
 title: Outils associés aux événements étendus
+description: Ces outils créent et gèrent des sessions d’événements étendus SQL Server. En plus des sessions que vous créez, il existe une session d’intégrité système par défaut sur le serveur.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 811542608a33777a5e44183f65e44d8321a65c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8359dfc1874f55542e02ca7f05e3ca6cfead1c07
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234629"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433686"
 ---
 # <a name="extended-events-tools"></a>Outils associés aux événements étendus
 
@@ -41,7 +42,7 @@ ms.locfileid: "75234629"
 ## <a name="ddl-statements"></a>Instructions DDL  
  Utilisez les instructions DDL suivantes pour créer, modifier et supprimer une session d'événements étendus.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)|Crée un objet de session Événements étendus qui identifie la source des événements, les cibles de la session d'événements et les paramètres de la session d'événements.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|Démarre ou arrête une session d'événements, ou modifie la configuration d'une session d'événements.|  
@@ -50,7 +51,7 @@ ms.locfileid: "75234629"
 ## <a name="catalog-views"></a>Affichages catalogue  
  Utilisez les affichages catalogue ci-dessous pour obtenir les métadonnées créées lorsque vous créez une session d'événements.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|Répertorie toutes les définitions de la session d'événements.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|Retourne une ligne pour chaque action d'un événement d'une session d'événements.|  
@@ -64,7 +65,7 @@ ms.locfileid: "75234629"
 > [!NOTE]  
 >  Ces vues ne contiennent pas de données de session tant qu'une session n'a pas démarré.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|Retourne des informations sur les pools de répartiteurs de la session.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|Retourne une ligne pour chaque objet exposé par un package d'événement.|  
@@ -80,7 +81,7 @@ ms.locfileid: "75234629"
 ## <a name="system-tables"></a>Tables système  
  Utilisez les tables système suivantes pour obtenir les informations à propos des équivalents Événements étendus pour les classes d'événements Trace SQL et les colonnes.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Contient une ligne pour chaque événement Événements étendus mappé à une classe d'événements Trace SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL.|  

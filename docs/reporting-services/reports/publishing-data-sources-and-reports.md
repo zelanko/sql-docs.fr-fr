@@ -1,5 +1,6 @@
 ---
 title: Publication des sources de données et des rapports | Microsoft Docs
+description: Découvrez comment publier des sources de données et des rapports de sorte que les personnes qui disposent d’autorisations sur le serveur de rapports ou sur le site SharePoint puissent exécuter votre rapport.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 93e0c70d19d4f64278603c062e4f59aedd97070b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190463"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510070"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publication des sources de données et des rapports
   Avant de publier votre rapport, vous devez en afficher un aperçu pour voir à quoi il ressemblera une fois exécuté. Vous pouvez continuer à peaufiner sa conception jusqu'à ce que vous soyez satisfait du résultat obtenu.  
@@ -36,7 +37,7 @@ ms.locfileid: "74190463"
  [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Décrit comment publier un rapport sur un site SharePoint.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   

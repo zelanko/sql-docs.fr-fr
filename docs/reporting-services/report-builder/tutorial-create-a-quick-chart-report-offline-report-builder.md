@@ -1,5 +1,6 @@
 ---
 title: 'Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
+description: Dans ce tutoriel, vous allez créer un graphique à secteurs pour un rapport paginé Reporting Services dans le Générateur de rapports. Ensuite, vous allez ajouter des pourcentages et modifier le graphique à secteurs.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037958"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290746"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
@@ -27,10 +28,10 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
  ![Graphique rapide à secteurs - Générateur de rapports](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Graphique rapide à secteurs - Générateur de rapports")  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
-##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
   
 -   [Créer le graphique à secteurs avec des données XML](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
  [Créer le graphique à secteurs avec une requête Transact-SQL qui contient des données](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> Création du graphique à secteurs avec des données XML  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> Création du graphique à secteurs avec des données XML  
   
 1.  [Démarrez le Générateur de rapport](../../reporting-services/report-builder/start-report-builder.md) à partir du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , du serveur de rapports en mode intégré SharePoint, ou de votre ordinateur.  
   
@@ -137,7 +138,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
 18. Pour continuer à modifier votre graphique à secteurs, accédez à [Après l'exécution de l'Assistant](#AfterWizard) dans cet article.  
   
-##  <a name="CreatePieQueryData"></a> Création du graphique à secteurs avec une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Création du graphique à secteurs avec une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 1.  [Démarrez le Générateur de rapport](../../reporting-services/report-builder/start-report-builder.md) à partir du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , du serveur de rapports en mode intégré SharePoint, ou de votre ordinateur.  
   
@@ -187,7 +188,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
 15. Pour afficher votre graphique à secteurs, cliquez sur **Exécuter** sous l'onglet **Accueil** du ruban.  
  
-##  <a name="AfterWizard"></a> Après l'exécution de l'Assistant  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Après l'exécution de l'Assistant  
  Maintenant que vous avez créé votre rapport de graphique à secteurs, vous pouvez le manipuler. Sous l'onglet **Exécuter** du ruban, cliquez sur **Conception**de manière à pouvoir continuer de le modifier.  
   
 ## <a name="make-the-chart-bigger"></a>Augmenter la taille du graphique  
@@ -219,7 +220,7 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
   
  Pour plus d’informations sur la personnalisation des étiquettes et légendes de graphique, voir [Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) et [Modifier le texte d’un élément de légende (Générateur de rapports et SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
-##  <a name="WhatsNext"></a> Étape suivante  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> Étape suivante  
  Maintenant que vous avez créé votre premier rapport dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous devez avoir l’autorisation d’accéder à vos sources de données, telles que les bases de données, avec une *chaîne de connexion*, qui vous permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
   
  Pour utiliser les autres didacticiels, vous avez besoin du nom d’une instance de SQL Server et d’informations d’identification suffisantes pour accéder en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  

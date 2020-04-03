@@ -1,5 +1,6 @@
 ---
 title: Créer un rapport mobile Reporting Services | Microsoft Docs
+description: Avec l’éditeur de rapports mobiles SQL Server, vous pouvez créer des rapports mobiles SQL Server Reporting Services pour n’importe quelle taille d’écran, grâce à des éléments de rapport mobile flexibles.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316463"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448214"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Créer un rapport mobile Reporting Services
 L’Éditeur de rapports mobiles SQL Server vous permet de créer rapidement des rapports mobiles SQL Server Reporting Services bien adaptés à la taille de votre écran, sur une aire de conception dotée de lignes et de colonnes de grille réglables ainsi que d’éléments de rapport mobile flexibles.  
@@ -42,7 +43,7 @@ Quand vous créez un rapport mobile pour la première fois, vous pouvez installe
   
 6. Sélectionnez **Excel local** ou **Serveur de rapports**.  
   
-   >**Conseils**: si vous ajoutez des données à partir d’Excel, veillez à :  
+   >**Conseils** : si vous ajoutez des données provenant d’Excel, veillez à :  
     >* [Préparer les données Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) à utiliser dans votre rapport mobile.  
     >* Fermer le fichier avant d’ajouter les données.  
 7. Sélectionnez les feuilles de calcul souhaitées, puis sélectionnez **Importer**.   

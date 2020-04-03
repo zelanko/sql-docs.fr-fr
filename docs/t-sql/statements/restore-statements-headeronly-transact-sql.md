@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983029"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486580"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instructions RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|Description du jeu de sauvegardes.|  
 |**BackupType**|**smallint**|Type de sauvegarde :<br /><br /> **1** = Base de données<br /><br /> **2** = Journal des transactions<br /><br /> **4** = Fichier<br /><br /> **5** = Base de données différentielle<br /><br /> **6** = Fichier différentiel<br /><br /> **7** = Partiel<br /><br /> **8** = Partiel différentiel|  
 |**ExpirationDate**|**datetime**|Date d'expiration du jeu de sauvegardes.|  
-|**Compressed**|**BYTE(1)**|Indique si le jeu de sauvegarde a fait l'objet d'une compression logicielle :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
+|**Compressed**|**BIT(1)**|Indique si le jeu de sauvegarde a fait l'objet d'une compression logicielle :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
 |**Position**|**smallint**|Position du jeu de sauvegardes dans le volume (utilisée avec l'option FILE =).|  
 |**DeviceType**|**tinyint**|Numéro correspondant à l'unité utilisée pour la sauvegarde.<br /><br /> Disque :<br /><br /> **2** = Logique<br /><br /> **102** = Physique<br /><br /> Bande :<br /><br /> **5** = Logique<br /><br /> **105** = Physique<br /><br /> Unité virtuelle :<br /><br /> **7** = Logique<br /><br /> **107** = Physique<br /><br /> Les noms d’unité logiques et les numéros d’unités se trouvent dans **sys.backup_devices** ; pour plus d’informations, consultez [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nom de l'utilisateur qui a effectué l'opération de sauvegarde.|  

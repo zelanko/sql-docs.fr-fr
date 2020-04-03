@@ -1,5 +1,6 @@
 ---
 title: Exportation vers un fichier CSV (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, l’extension de rendu CSV affiche les rapports paginés dans un format de texte brut accessible en lecture et compatible avec de nombreuses applications.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078366"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342889"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L’extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports paginés sous la forme d’une représentation aplatie des données d’un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078366"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Rendu CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Rendu CSV  
  Si un rapport CSV est rendu avec les paramètres par défaut, il présente les caractéristiques suivantes :  
   
 -   La chaîne séparateur de champs par défaut est la virgule (,).  
@@ -95,7 +96,7 @@ ms.locfileid: "77078366"
  Pour plus d’informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="RenderingModes"></a> Modes du convertisseur  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modes du convertisseur  
  L'extension de rendu CSV peut fonctionner dans deux modes : l'un est optimisé pour Excel, l'autre pour les applications tierces qui requièrent une conformité stricte à la spécification CSV décrite dans le document RFC 4180. Selon le mode que vous utilisez, les régions de données d'homologue sont gérées différemment.  
   
 ### <a name="default-mode"></a>Mode par défaut  
@@ -119,7 +120,7 @@ ms.locfileid: "77078366"
 #### <a name="formatting"></a>Mise en forme  
  Les valeurs sont dépourvues de mise en forme.  
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactivité  
  L'interactivité n'est pas prise en charge par les formats CSV générés par ce convertisseur. Les éléments interactifs suivants ne sont pas rendus :  
   
 -   Liens hypertexte  
@@ -137,7 +138,7 @@ ms.locfileid: "77078366"
 -   Signets  
   
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, les caractères à utiliser comme séparateurs et ceux à utiliser comme chaîne par défaut d'identificateur de texte, ce en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Gérer le basculement du groupe de disponibilité - SQL Server sur Linux
-description: ''
+description: 'Cet article décrit trois types de basculement : le basculement automatique, le basculement manuel programmé et le basculement manuel forcé. Avec les types automatique et manuel programmé, vos données sont conservées.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280880"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216848"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité Always On sur Linux
 
@@ -24,7 +24,7 @@ Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle s
 
 Pour obtenir des informations en arrière-plan sur le basculement, consultez [Basculement et modes de basculement](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Basculement manuel
+## <a name="manual-failover"></a><a name="failover"></a>Basculement manuel
 
 Utilisez les outils de gestion de cluster pour basculer un groupe de disponibilité managé par un gestionnaire de cluster externe. Par exemple, si une solution utilise Pacemaker pour gérer un cluster Linux, utilisez `pcs` pour effectuer des basculements manuels sur RHEL ou Ubuntu. Sur SLES, utilisez `crm`. 
 
@@ -43,7 +43,7 @@ Basculement manuel en deux étapes.
 
    Ensuite, [supprimez la contrainte d’emplacement](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Étape 1. Basculer manuellement en déplaçant la ressource du groupe de disponibilité
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Étape 1. Basculer manuellement en déplaçant la ressource du groupe de disponibilité
 
 Pour basculer manuellement une ressource du groupe de disponibilité nommée *ag_cluster* vers le nœud de cluster nommé *nodeName2*, exécutez la commande appropriée pour votre distribution :
 
@@ -62,7 +62,7 @@ Pour basculer manuellement une ressource du groupe de disponibilité nommée *ag
 >[!IMPORTANT]
 >Quand vous faites basculer manuellement une ressource, vous devez supprimer une contrainte d’emplacement qui est automatiquement ajoutée.
 
-#### <a name="removeLocConstraint"> </a> Étape 2. Supprimer la contrainte d’emplacement
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Étape 2. Supprimer la contrainte d’emplacement
 
 À l’occasion d’un déplacement manuel, la commande `pcs``move` ou la commande `crm``migrate` ajoute une contrainte d’emplacement pour que la ressource prenne place sur le nouveau nœud cible. Pour afficher la nouvelle contrainte, exécutez la commande suivante après avoir déplacé manuellement la ressource :
 
@@ -107,7 +107,7 @@ Pour plus d'informations :
 - [Pacemaker - Déplacer des ressources manuellement](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [Guide d’administration SLES - Ressources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Forcer le basculement 
+## <a name="force-failover"></a><a name="forceFailover"></a> Forcer le basculement 
 
 Un basculement forcé est strictement destiné à la récupération d’urgence. Dans ce cas, vous ne pouvez pas effectuer le basculement avec les outils de gestion du cluster, car le centre de données principal est en panne. Si vous forcez le basculement vers un réplica secondaire qui n'est pas synchronisé, une perte de données est possible. Ne forcez le basculement uniquement si vous devez restaurer immédiatement le service sur le groupe de disponibilité et que vous êtes prêt à courir le risque de perdre des données.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028725"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216619"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Gérer SQL Server sur Linux avec PowerShell Core
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Explorer les cmdlets actuellement disponibles dans PS Core
-Même si le module SqlServer propose actuellement 109 applets de commande sur Windows PowerShell, seules 62 d’entre elles sont disponibles sur PSCore. Vous trouverez ci-dessous une liste complète des 59 cmdlets actuellement disponibles.  Pour une documentation détaillée de tous les cmdlets du module SqlServer, voir la [référence cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/) SqlServer.
+Même si le module SqlServer propose actuellement 109 applets de commande sur Windows PowerShell, seules 62 d’entre elles sont disponibles sur PSCore. Vous trouverez ci-dessous une liste complète des 62 applets de commande actuellement disponibles.  Pour une documentation détaillée de tous les cmdlets du module SqlServer, voir la [référence cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/) SqlServer.
 
 La commande suivante vous montrera tous les cmdlets disponibles sur la version PowerShell que vous utilisez.
 

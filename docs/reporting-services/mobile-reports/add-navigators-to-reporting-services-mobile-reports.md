@@ -1,5 +1,6 @@
 ---
 title: Ajouter des navigateurs aux rapports mobiles Reporting Services | Microsoft Docs
+description: Dans l’éditeur de rapports mobiles, ajoutez des navigateurs pour filtrer les données par heure ou par sélection. Les navigateurs sont semblables aux segments de Power BI et aux tableaux croisés dynamiques Excel.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27060715a2d616dd99e294175163ad74b54a17b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63317037"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448202"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], vous ajoutez des *navigateurs* pour filtrer les données dans les visualisations en fonction d’une période ou d’une sélection. 

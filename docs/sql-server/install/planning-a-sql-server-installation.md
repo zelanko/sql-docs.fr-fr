@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68019828"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428180"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planification d’une installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68019828"
   
  Indépendamment de la méthode d'installation, vous êtes invité à confirmer l'acceptation des termes de la licence de logiciel en tant que personne physique ou pour le compte d'une entité, sauf si votre utilisation du logiciel est régie par un accord distinct, tel qu'un accord de concession de licence en volume de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou un accord tiers avec un éditeur de logiciels ou un fabricant OEM.  
   
- Les termes du contrat de licence sont affichés afin que vous puissiez les consulter et les accepter dans l'interface utilisateur du programme d'installation. Les installations sans assistance (avec les paramètres `/Q` ou `/QS`) doivent inclure le paramètre `/IAcceptSQLServerLicenseTerms`. Téléchargez et lisez les termes du contrat de licence séparément dans [Termes du contrat de licence Microsoft SQL Server et autres informations](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Pour les termes du contrat de licence en volume, consultez [Termes de licence et documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Pour les versions antérieures de SQL Server, consultez [Termes du contrat de licence logiciel Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
+ Les termes du contrat de licence sont affichés afin que vous puissiez les consulter et les accepter dans l'interface utilisateur du programme d'installation. Les installations sans assistance (avec les paramètres `/Q` ou `/QS`) doivent inclure le paramètre `/IAcceptSQLServerLicenseTerms`. Téléchargez et lisez les termes du contrat de licence séparément dans [Termes du contrat de licence Microsoft SQL Server et autres informations](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Pour les conditions d’utilisation des licences en volume, consultez [Conditions de licence et documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Pour les versions antérieures de SQL Server, consultez [Termes du contrat de licence logiciel Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Selon la façon dont vous avez reçu le logiciel (par exemple, via le programme de licence en volume [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), votre utilisation du logiciel peut être soumise à des termes et conditions supplémentaires.  
@@ -40,8 +40,7 @@ ms.locfileid: "68019828"
  [Nouveautés liées à l’installation de SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  Cet article décrit les détails des fonctionnalités nouvelles ou améliorées de l’installation de cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- Cet article répertorie les configurations matérielle et logicielle minimales requises pour installer et exécuter une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Exigences matérielles et logicielles pour l’installation de [SQL Server 2016 et 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) ou [SQL Server sur Linux](../../linux/sql-server-linux-setup.md). Cet article liste les exigences matérielles et logicielles minimales nécessaires à l’installation et à l’exécution d’une instance SQL Server. .  
   
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  Cet article traite des recommandations de sécurité qu’il est conseillé de suivre avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après avoir installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

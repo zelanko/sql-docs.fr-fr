@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75256098"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448308"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |IsTornPageDetectionEnabled|Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] détecte les opérations d'E/S interrompues à la suite d'une coupure de courant ou de toute autre panne du système.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**| 
 |IsVerifiedClone|La base de données est une copie de schéma et de statistiques uniquement d’une base de données utilisateur créée avec l’option WITH VERIFY_CLONEDB de DBCC CLONEDATABASE. Pour plus d’informations, consultez cet [article du Support Microsoft](https://support.microsoft.com/help/3177838).|**S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**| 
 |IsXTPSupported|Indique si la base de données prend en charge l’option OLTP en mémoire, à savoir la création et l’utilisation de tables à mémoire optimisée et de modules compilés en mode natif.<br /><br /> Spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> La propriété IsXTPSupported est indépendante de l’existence de tout groupe de fichiers MEMORY_OPTIMIZED_DATA, qui est nécessaire pour la création d’objets OLTP en mémoire.|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide, erreur ou non applicable<br /><br /> Type de données de base : **int**|  
-|LastGoodCheckDbTime|Date et heure de la dernière exécution réussie de DBCC CHECKDB sur la base de données spécifiée. <sup>1</sup> Si DBCC CHECKDB n’a pas été exécuté sur une base de données, 1900-01-01 00:00:00.000 est retourné.|**S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Valeur DateHeure<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **datetime**| 
+|LastGoodCheckDbTime|Date et heure de la dernière exécution réussie de DBCC CHECKDB sur la base de données spécifiée. <sup>1</sup> Si DBCC CHECKDB n’a pas été exécuté sur une base de données, 1900-01-01 00:00:00.000 est retourné.|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] depuis SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] depuis CU9.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] ou une version ultérieure.</br>Azure SQL Database.<br/><br/>Valeur DateHeure<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **datetime**| 
 |LCID|Identificateur de paramètres régionaux (LCID) Windows de classement.|Valeur LCID (au format décimal).<br /><br /> Type de données de base : **int**|  
 |MaxSizeInBytes|Taille maximale de la base de données, en octets.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL : la base de données n’est pas démarrée<br /><br /> Type de données de base : **bigint**|  
 |Récupération|Mode de récupération de base de données|FULL : Mode de restauration complète<br /><br /> BULK_LOGGED : mode de récupération utilisant les journaux de transactions<br /><br /> SIMPLE : Mode de récupération simple<br /><br /> Type de données de base : **nvarchar(128)**|  

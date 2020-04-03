@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112281"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216258"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de mémoires tampons hybride
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Quand vous formatez votre appareil PMEM sur Windows, utilisez la plus grande taille d’unité d’allocation disponible pour NTFS (2 Mo dans Windows Server 2019) et vérifiez que l’appareil a été formaté pour DAX (Direct Access).
 
-Utilisez le grand modèle d’allocation de mémoire de page, qui peut être activé avec l’[indicateur de trace 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). L’indicateur de trace 834 est un indicateur de trace de démarrage.
-
-L’utilisation du grand modèle d’allocation de mémoire de page demande l’utilisation de [Pages verrouillées en mémoire](./enable-the-lock-pages-in-memory-option-windows.md) sur Windows.
+Activez [Verrouiller les pages en mémoire](./enable-the-lock-pages-in-memory-option-windows.md) sur Windows.
 
 Les tailles de fichiers doivent être un multiple de 2 Mo (modulo 2 Mo doit être égal à zéro).
 

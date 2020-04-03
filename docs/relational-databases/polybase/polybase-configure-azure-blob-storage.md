@@ -1,5 +1,6 @@
 ---
 title: 'Accéder aux données externes : Stockage Blob Azure - PolyBase'
+description: L’article utilise PolyBase sur une instance SQL Server avec le stockage Blob Azure. PolyBase est adapté aux requêtes ad hoc de tables externes et à l’importation/exportation de données.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258691"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215861"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer PolyBase pour accéder à des données externes dans Stockage Blob Azure
 
@@ -22,7 +23,7 @@ ms.locfileid: "75258691"
 
 L’article explique comment utiliser PolyBase sur une instance SQL Server pour interroger des données externes dans Stockage Blob Azure.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](polybase-installation.md). Cet article décrit les prérequis pour l’installation.
 

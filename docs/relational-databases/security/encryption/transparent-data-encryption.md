@@ -1,7 +1,7 @@
 ---
 title: Chiffrement TDE (Transparent Data Encryption) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: a45cddab6506fcd7b3affb262b956bcf97f30b72
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288263"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271455"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,17 +64,14 @@ ms.locfileid: "79288263"
   
  ![Affiche la hiérarchie décrite dans la rubrique.](../../../relational-databases/security/encryption/media/tde-architecture.png "Affiche la hiérarchie décrite dans la rubrique.")  
   
-## <a name="using-transparent-data-encryption"></a>Utilisation du chiffrement transparent des données  
- Pour utiliser le chiffrement transparent des données, procédez comme suit :  
+## <a name="enable-tde"></a>Activer TDE  
+ Pour activer Transparent Data Encryption, procédez comme suit : 
   
 **S'applique à**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Créez une clé principale.  
-  
--   Créez ou obtenez un certificat protégé par la clé principale.  
-  
--   Créez une clé de chiffrement de base de données et protégez-la à l'aide du certificat.  
-  
+-   Créez une clé principale.    
+-   Créez ou obtenez un certificat protégé par la clé principale.    
+-   Créez une clé de chiffrement de base de données et protégez-la à l'aide du certificat.    
 -   Configurez la base de données pour qu'elle utilise le chiffrement.  
   
  L'exemple ci-dessous illustre le chiffrement et le déchiffrement de la base de données `AdventureWorks2012` à l'aide d'un certificat installé sur le serveur nommé `MyServerCert`.  
@@ -146,7 +143,7 @@ GO
 > [!TIP]  
 > Pour surveiller les changements de l’état de TDE d’une base de données, utilisez SQL Server Audit ou l’audit SQL Database. Pour SQL Server, le chiffrement TDE est suivi sous le groupe d’actions d’audit DATABASE_CHANGE_GROUP qui se trouve dans [Actions et groupes d’actions SQL Server Audit ](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
   
-### <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrictions  
  Les opérations suivantes ne sont pas autorisées au cours du chiffrement initial de la base de données, de la modification d'une clé ou du déchiffrement de la base de données :  
   
 -   Suppression d'un fichier d'un groupe de fichiers dans la base de données  
@@ -196,8 +193,26 @@ GO
  Lors de la création de fichiers de base de données, l'initialisation instantanée des fichiers n'est pas disponible lorsque le chiffrement transparent des données est activé.  
   
  Afin de chiffrer la clé de chiffrement de base de données avec une clé asymétrique, la clé asymétrique doit résider sur un fournisseur de gestion de clés extensible.  
+
+## <a name="tde-scan"></a>Analyse TDE
+
+Afin d’activer Transparent Data Encryption (TDE) sur une base de données, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit effectuer une analyse de chiffrement qui lit chaque page du ou des fichiers de données dans le pool de mémoires tampons, puis écrit les pages chiffrées sur un disque. Pour fournir aux utilisateurs un contrôle accru sur l’analyse du chiffrement, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduit la syntaxe d’analyse (suspension et reprise) TDE afin que vous puissiez suspendre l’analyse alors que la charge de travail sur le système est lourde ou pendant les heures vitales pour l’entreprise, puis reprendre l’analyse ultérieurement.
+
+Pour suspendre l’analyse du chiffrement TDE, utilisez la syntaxe suivante :
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+De même, pour reprendre l’analyse du chiffrement TDE, utilisez la syntaxe suivante :
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+Pour afficher l’état actuel de l’analyse du chiffrement, `encryption_scan_state` a été ajouté à la vue de gestion dynamique `sys.dm_database_encryption_keys`. Il existe également une nouvelle colonne appelée `encryption_scan_modify_date` qui contient la date et l’heure du dernier changement d’état de l’analyse du chiffrement. Notez également que si l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redémarre pendant que l’analyse du chiffrement est dans un état suspendu, un message est consigné dans le journal des erreurs au démarrage, indiquant qu’une analyse existante a été suspendue.
   
-### <a name="transparent-data-encryption-and-transaction-logs"></a>Chiffrement transparent des données et journaux de transactions  
+## <a name="tde-and-transaction-logs"></a>TDE et journaux des transactions  
  L'activation du chiffrement transparent des données sur une base de données a pour effet de « réinitialiser » la partie restante du journal des transactions virtuel pour imposer le journal des transactions virtuel suivant. Cela garantit qu'aucun texte en clair n'est conservé dans les journaux des transactions après que la base de données a été définie pour le chiffrement. Vous pouvez rechercher l'état du chiffrement des fichiers journaux en consultant la colonne `encryption_state` dans la vue `sys.dm_database_encryption_keys`, comme dans l'exemple suivant :  
   
 ```  
@@ -217,39 +232,44 @@ GO
   
  Lorsque la clé de chiffrement d'une base de données a été modifiée deux fois, une sauvegarde de fichier journal doit être effectuée pour rendre possible une nouvelle modification de la clé de chiffrement.  
   
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Chiffrement transparent des données et base de données système tempdb  
+## <a name="tde-and-tempdb"></a>TDE et tempdb 
  La base de données système tempdb est chiffrée si toute autre base de données sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est chiffrée à l'aide du chiffrement transparent des données. Cela peut avoir un impact sur les performances des bases de données non chiffrées situées sur la même instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la base de données système tempdb, consultez [Base de données tempdb](../../../relational-databases/databases/tempdb-database.md).  
   
-### <a name="transparent-data-encryption-and-replication"></a>Chiffrement transparent des données et réplication  
+## <a name="tde-and-replication"></a>TDE et réplication  
  La réplication ne réplique pas automatiquement sous forme chiffrée les données d'une base sur laquelle le chiffrement transparent des données est activé. Vous devez activer séparément le chiffrement transparent des données si vous souhaitez protéger les bases de données de distribution et d'abonné. La réplication d'instantané, ainsi que la distribution initiale de données pour la réplication transactionnelle et la réplication de fusion, peut stocker des données dans des fichiers intermédiaires non chiffrés, par exemple, des fichiers bcp.  Au cours de la réplication transactionnelle ou de la réplication de fusion, le chiffrement peut être activé pour protéger le canal de communication. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-### <a name="transparent-data-encryption-and-filestream-data"></a>Chiffrement transparent des données et données FILESTREAM  
+
+## <a name="tde-and-always-on"></a>TDE et Always On
+ Vous pouvez [ajouter une base de données chiffrée à un groupe de disponibilité Always On](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md). 
+ 
+ Pour chiffrer les bases de données qui font partie d’un groupe de disponibilité, créez la clé principale et les certificats, ou la clé asymétrique (EKM) sur tous les réplicas secondaires avant de créer la [clé de chiffrement de base de données](../../../t-sql/statements/create-database-encryption-key-transact-sql.md) sur le réplica principal. 
+ 
+ Si un certificat est utilisé pour protéger la clé de chiffrement de base de données (DEK), [sauvegardez le certificat](../../../t-sql/statements/backup-certificate-transact-sql.md) créé sur le réplica principal, puis [créez le certificat à partir d’un fichier](../../../t-sql/statements/create-certificate-transact-sql.md) sur tous les réplicas secondaires avant de créer la clé de chiffrement de base de données sur le réplica principal. 
+
+## <a name="tde-and-filestream-data"></a>TDE et données FILESTREAM  
  Les données FILESTREAM ne sont pas chiffrées même si le chiffrement transparent des données est activé.  
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-tde-scan"></a>Analyse Transparent Data Encryption (TDE)
+## <a name="remove-tde"></a>Supprimer TDE
 
-Afin d’activer Transparent Data Encryption (TDE) sur une base de données, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit effectuer une analyse de chiffrement qui lit chaque page du ou des fichiers de données dans le pool de mémoires tampons, puis écrit les pages chiffrées sur un disque. Pour fournir aux utilisateurs un contrôle accru sur l’analyse du chiffrement, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduit la syntaxe d’analyse (suspension et reprise) TDE afin que vous puissiez suspendre l’analyse alors que la charge de travail sur le système est lourde ou pendant les heures vitales pour l’entreprise, puis reprendre l’analyse ultérieurement.
-
-Pour suspendre l’analyse du chiffrement TDE, utilisez la syntaxe suivante :
+Supprimez le chiffrement de la base de données à l’aide de l’instruction ALTER DATABASE.
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-De même, pour reprendre l’analyse du chiffrement TDE, utilisez la syntaxe suivante :
+Pour voir l’état de la base de données, utilisez la vue de gestion dynamique [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+Attendez la fin du déchiffrement avant de supprimer la clé de chiffrement de base de données en utilisant [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
-Pour afficher l’état actuel de l’analyse du chiffrement, `encryption_scan_state` a été ajouté à la vue de gestion dynamique `sys.dm_database_encryption_keys`. Il existe également une nouvelle colonne appelée `encryption_scan_modify_date` qui contient la date et l’heure du dernier changement d’état de l’analyse du chiffrement. Notez également que si l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redémarre pendant que l’analyse du chiffrement est dans un état suspendu, un message est consigné dans le journal des erreurs au démarrage, indiquant qu’une analyse existante a été suspendue.
+> [!IMPORTANT]  
+> Sauvegardez la clé principale et le certificat utilisés pour TDE à un emplacement sûr. La clé principale et le certificat sont requis pour restaurer les sauvegardes qui ont été effectuées lors du chiffrement de la base de données avec TDE. Après avoir supprimé la clé de chiffrement de base de données, effectuez une sauvegarde du journal suivie d’une nouvelle sauvegarde complète de la base de données déchiffrée.  
+
+## <a name="tde-and-buffer-pool-extension"></a>TDE et extension du pool de mémoires tampons  
+
+Les fichiers associés à l'extension du pool de mémoires tampons ne sont pas chiffrés lorsque la base de données est chiffrée à l'aide du chiffrement transparent des données. Vous devez utiliser les outils de chiffrement au niveau du système de fichiers tels que BitLocker ou EFS pour les fichiers associés à l’extension du pool de mémoires tampons.  
   
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Chiffrement transparent des données et Extension du Pool de mémoires tampons  
- Les fichiers associés à l'extension du pool de mémoires tampons ne sont pas chiffrés lorsque la base de données est chiffrée à l'aide du chiffrement transparent des données. Vous devez utiliser les outils de chiffrement au niveau du système de fichiers tels que BitLocker ou EFS pour les fichiers associés à l’extension du pool de mémoires tampons.  
-  
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Chiffrement transparent des données et OLTP en mémoire  
+## <a name="tde-and-in-memory-oltp"></a>TDE et OLTP en mémoire  
  Le chiffrement transparent des données (TDE) peut être activé sur une base de données contenant des objets de l'OLTP en mémoire. Dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , les enregistrements de journal et les données de l’OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé. Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , les enregistrements de journal de l’OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé, mais les fichiers dans le groupe de fichiers MEMORY_OPTIMIZED_DATA ne sont pas chiffrés.  
   
 ## <a name="related-tasks"></a>Tâches associées  

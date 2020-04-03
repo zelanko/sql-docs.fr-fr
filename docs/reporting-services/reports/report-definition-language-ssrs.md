@@ -1,5 +1,6 @@
 ---
 title: RDL (Report Definition Language) | Microsoft Docs
+description: Découvrez plus en détail le langage RDL. Vous verrez que le langage RDL est une représentation XML d’une définition de rapport SQL Server Reporting Services.
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 04c220383ef14fe6bd05b690e5c27ae73b4289a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078017"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510080"
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
   Report Definition Language (RDL) est une représentation XML d’une définition de rapport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Une définition de rapport contient les informations d'extraction de données et de mise en page d'un rapport. La spécification RDL est composée d’éléments XML qui sont conformes à une grammaire XML créée pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez ajouter vos propres fonctions personnalisées pour contrôler les valeurs, les styles et la mise en forme des éléments de rapport en accédant à des assemblys de code dans les fichiers de définition de rapport.  
@@ -35,17 +36,17 @@ ms.locfileid: "77078017"
   
 -   Schéma extensible et ouvert qui prend en charge des éléments personnalisés et des espaces de noms supplémentaires.  
   
-##  <a name="bkmk_RDL_Specifications"></a> Spécifications RDL  
+##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a> Spécifications RDL  
  Pour télécharger les spécifications des versions de schéma spécifiques, consultez [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865)[Spécification RDL (Report Definition Language)].  
   
-##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Définition de schéma XML RDL  
+##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a> Définition de schéma XML RDL  
  Un fichier RDL (Report Definition Language) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est validé à l’aide d’un fichier XSD (XML Schema Definition). Le schéma définit les règles indiquant où des éléments RDL peuvent se trouver dans un fichier .rdl. Un élément inclut son type de données et sa cardinalité, c’est-à-dire le nombre d’occurrences autorisées. Un élément peut être simple ou complexe. Un élément simple n'a pas d'éléments enfants ni d'attributs. Un élément complexe a des enfants et éventuellement des attributs.  
   
  Par exemple, le schéma inclut l’élément RDL **ReportParameters**, qui est le type complexe **ReportParametersType**. Par convention, le type complexe d’un élément correspond au nom de l’élément suivi du mot **Type**. Un élément **ReportParameters** peut être contenu par l’élément **Report** (type complexe) et peut contenir des éléments **ReportParameter** . **ReportParameterType** est un type simple qui peut uniquement avoir l’une des valeurs suivantes : **Boolean**, **DateTime**, **Integer**, **Float** ou **String**. Pour plus d’informations sur les types de données de schéma XML, consultez la recommandation du W3C [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Le XSD RDL est disponible dans le fichier ReportDefinition.xsd, situé dans le dossier Extras sur le CD-ROM du produit. Il est également disponible sur le serveur de rapports via l’URL suivante : `https://servername/reportserver/reportdefinition.xsd`.  
   
-##  <a name="bkmk_Creating_RDL"></a> Création de RDL  
+##  <a name="creating-rdl"></a><a name="bkmk_Creating_RDL"></a> Création de RDL  
  Compte tenu du caractère ouvert et extensible du langage RDL, il est possible de créer divers outils et applications qui génèrent le langage RDL selon son schéma XML.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs outils pour créer les fichiers RDL. Pour plus d’informations, consultez [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
@@ -54,7 +55,7 @@ ms.locfileid: "77078017"
   
  L'extension de fichier standard pour les fichiers de définition de rapport est .rdl. Vous pouvez également développer des fichiers de définition de rapport client, lesquels portent l'extension .rdlc. Le type MIME pour les deux extensions est text/xml. Pour plus d’informations sur les rapports, consultez [Rapports Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   
-##  <a name="bkmk_RDL_Types"></a> Types RDL  
+##  <a name="rdl-types"></a><a name="bkmk_RDL_Types"></a> Types RDL  
  La table suivante répertorie les types utilisés dans des éléments et des attributs RDL.  
   
 |Type|Description|  
@@ -73,7 +74,7 @@ ms.locfileid: "77078017"
 |**UnsignedInt**|Propriété dotée d'une valeur entière non signée (uint32).|  
 |**Variant**|Une propriété dotée d'un type XML simple.|  
   
-##  <a name="bkmk_RDL_Data_Types"></a> Types de données RDL  
+##  <a name="rdl-data-types"></a><a name="bkmk_RDL_Data_Types"></a> Types de données RDL  
  L'énumération DataType définit le type de données d'un attribut, d'une expression ou d'un paramètre dans RDL. Le tableau suivant illustre les types de données CLR (common langage runtime (CLR)) correspondent aux types de données RDL.  
   
 |**Type CLR**|**Type de données correspondant**|  

@@ -1,5 +1,6 @@
 ---
 title: Utilisation des méthodes de service web sécurisées | Microsoft Docs
+description: Exigez une connexion sécurisée pour les méthodes de service Web Report Server avec le paramètre SecureConnectionLevel dans le fichier de configuration RSReportServer.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84c0b693df2906d4ab3245df20c3b9a979cf07f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ddbc92de40fa15840e9c12cd482b1488bd54f7b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128801"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509600"
 ---
 # <a name="using-secure-web-service-methods"></a>Utilisation des méthodes de service Web sécurisées
   Certaines méthodes de service Web Report Server peuvent requérir une connexion sécurisée lorsque vous les appelez. Ces méthodes qui exigent une connexion sécurisée sont déterminées par le paramètre **SecureConnectionLevel** dans le fichier RSReportServer.config. La valeur du paramètre est une valeur entière avec une plage valide supérieure ou égale à 0. Le tableau suivant décrit ces valeurs.  

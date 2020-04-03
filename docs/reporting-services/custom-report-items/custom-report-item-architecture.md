@@ -1,5 +1,6 @@
 ---
 title: Architecture des éléments de rapports personnalisés| Microsoft Docs
+description: Découvrez comment l’extension d’architecture des éléments de rapports personnalisés permet aux développeurs d’ajouter des fonctionnalités qui ne sont pas prises en charge en mode natif dans le langage RDL.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e81e7cc32e32f0cfc56da2a3ec3bb0983dde6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039afae1b8be540869930055e77320c27857e23d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194291"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216958"
 ---
 # <a name="custom-report-item-architecture"></a>Architecture des éléments de rapports personnalisés
   Un élément de rapport personnalisé est une extension du langage RDL (Report Definition Language) qui permet aux développeurs d’ajouter des fonctionnalités qui ne sont pas prises en charge en mode natif dans le langage RDL ou d’étendre les fonctionnalités de contrôles existants. Un élément de rapport personnalisé comprend deux composants principaux : le composant d'exécution et le composant de conception. Ces composants sont implémentés en tant qu'assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et peuvent être écrits dans n'importe quel langage conforme CLS.  

@@ -1,5 +1,6 @@
 ---
 title: Utiliser des données simulées dans les rapports mobiles Reporting Services | Microsoft Docs
+description: Lorsque vous placez un élément de la galerie sur l’aire de conception, l’éditeur de rapports mobiles génère des données simulées pour cet élément. Concevez vos prototypes avec les données simulées.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474856"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448368"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Utiliser des données simulées dans les rapports mobiles Reporting Services
 Lorsque vous placez un élément de la galerie sur l’aire de conception, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] génère immédiatement des données simulées pour cet élément. Lors de la création de rapports mobiles, ces données ont différentes utilités.   
@@ -38,7 +39,7 @@ Comme mentionné précédemment, vous pouvez exporter des données simulées ver
   
 Une fois tous les contrôles liés aux données réelles, les tables simulées qui ne sont plus utilisées sont automatiquement supprimées du rapport mobile. Vous ne pouvez pas supprimer des tables simulées qui sont toujours référencées par des éléments sur l’aire de conception.  
   
->**Remarque**: Les données simulées n’augmentent pas l’encombrement global du rapport mobile parce qu’elles ne sont pas sérialisées avec le rapport mobile, mais générées à la volée pendant l’exécution.  
+>**Remarque** : les données simulées n’augmentent pas l’encombrement global du rapport mobile parce qu’elles ne sont pas sérialisées avec lui, mais générées à la volée à l’exécution.  
   
 ### <a name="see-also"></a>Voir aussi  
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

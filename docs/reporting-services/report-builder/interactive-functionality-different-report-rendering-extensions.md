@@ -1,5 +1,6 @@
 ---
 title: Fonctionnalité interactive - Différentes extensions de rendu de rapports | Microsoft Docs
+description: Reporting Services vous permet d’interagir avec un rapport paginé au moment de l’exécution. Cet article décrit le fonctionnement des fonctionnalités interactives dans certains formats.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8df9a5b08f4aa8883bb9351fa59df147e80bac95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580701"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342775"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Fonctionnalité interactive - Différentes extensions de rendu de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] propose des fonctionnalités permettant d’interagir avec un rapport paginé au moment de l’exécution. Certains formats de rendu de rapport ne prennent pas en charge toutes les fonctionnalités interactives. Le tableau suivant permet de comprendre le fonctionnement de chaque fonctionnalité interactive dans des formats spécifiques.  
@@ -60,7 +61,7 @@ ms.locfileid: "65580701"
   
 |Option d'exportation|Informations de support|  
 |-------------------|-------------------------|  
-|Aperçu/Visionneuse de rapports, HTML|Pour les rapports tabulaires, les utilisateurs cliquent sur des flèches de tri sur une colonne pour changer le mode de tri des données.|  
+|Aperçu/Visionneuse de rapports, HTML|Pour les rapports tabulaires, les utilisateurs cliquent sur les flèches de tri d’une colonne pour changer le mode de tri des données.|  
 |PDF|Non disponible dans le format PDF.|  
 |Excel|Non disponible dans Excel.|  
 |Word|Non disponible dans Word.|  

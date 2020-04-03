@@ -1,5 +1,6 @@
 ---
 title: Exportation vers un fichier image (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, l’extension de rendu de type image effectue le rendu d’un rapport paginé dans un fichier bitmap ou un métafichier. La valeur par défaut est un fichier TIFF affichable dans plusieurs pages.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081382"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342846"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportation vers un fichier image (Générateur de rapports et SSRS)
   L’extension de rendu de type image effectue le rendu d’un rapport paginé dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer. Cette rubrique fournit des informations spécifiques au rendu de l'image et décrit les exceptions aux règles de rendu.  
@@ -23,7 +24,7 @@ ms.locfileid: "77081382"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> Formats d'image pris en charge  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> Formats d'image pris en charge  
  Le tableau suivant indique l'extension de fichier et MimeType pour chaque format du convertisseur d'image.  
   
 |**Type**|**Extension**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081382"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> Rendu de plusieurs pages  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> Rendu de plusieurs pages  
  TIFF est le seul format qui prend en charge les documents de plusieurs pages dans un unique fichier. D'autres formats, tels que JPG ou PNG, produisent une page à la fois et requièrent un appel séparé à l'extension de rendu pour chaque page.  
   
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactivité  
  L'interactivité n'est pas prise en charge par les formats Image générés par ce convertisseur. Les éléments interactifs suivants ne sont pas rendus :  
   
 -   Liens hypertexte  
@@ -59,7 +60,7 @@ ms.locfileid: "77081382"
 -   Signets  
   
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut pour ce convertisseur en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [Image Device Information Settings](../../reporting-services/image-device-information-settings.md).  
   
   

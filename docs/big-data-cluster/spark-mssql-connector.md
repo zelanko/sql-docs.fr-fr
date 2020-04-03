@@ -9,33 +9,62 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831185"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487677"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL
 
 Un modèle d’utilisation clé du Big Data est le traitement de données volumineuses dans Spark, suivi de l’écriture des données dans SQL Server pour l’accès aux applications métier. Ces modèles d’utilisation tirent parti d’un connecteur qui utilise des optimisations SQL clés et fournit un mécanisme d’écriture efficace.
 
-Cet article fournit un exemple d’utilisation du connecteur Spark MSSQL pour lire et écrire des données aux emplacements suivants au sein d’un cluster Big Data :
-
+Cet article présente l’interface du connecteur Spark MSSQL et explique comment l’instancier en vue d’une utilisation en mode non AD et en mode AD. Ensuite, il fournit un exemple d’utilisation du connecteur Spark MSSQL pour lire et écrire des données aux emplacements suivants au sein d’un cluster Big Data :
 1. Instance maître SQL Server
 1. Pool de données SQL Server
 
    ![Diagramme du connecteur Spark de MSSQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-L’exemple effectue les tâches suivantes :
-
-- Lire un fichier à partir de HDFS et effectuer un traitement de base.
-- Écrire le dataframe dans une instance maître SQL Server en tant que table SQL, puis lire la table dans un dataframe.
-- Écrire le dataframe dans un pool de données SQL Server en tant que table SQL externe, puis lire la table externe dans un dataframe.
-
 ## <a name="mssql-spark-connector-interface"></a>Interface du connecteur Spark MSSQL
 
-SQL Server 2019 fournit le **connecteur Spark MSSQL** pour les clusters Big Data qui utilisent des API d’écriture en bloc SQL Server pour les écritures de Spark à SQL. Le connecteur Spark MSSQL est basé sur des API de source de données Spark et fournit une interface familière au connecteur JDBC Spark. Pour obtenir les paramètres d’interface, consultez la [documentation sur Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Le connecteur Spark MSSQL est référencé par le nom **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 fournit le **connecteur Spark MSSQL** pour les clusters Big Data qui utilisent des API d’écriture en bloc SQL Server pour les écritures de Spark à SQL. Le connecteur Spark MSSQL est basé sur des API de source de données Spark et fournit une interface familière au connecteur JDBC Spark. Pour obtenir les paramètres d’interface, consultez la [documentation sur Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Le connecteur Spark MSSQL est référencé par le nom **com.microsoft.sqlserver.jdbc.spark**. Le connecteur Spark MSSQL prend en charge deux modes de sécurité pour la connexion avec SQL Server : le mode non AD et le mode AD.
+### <a name="non-ad-mode"></a>Mode non AD
+En mode de sécurité non AD, chaque utilisateur dispose d’un nom d’utilisateur et d’un mot de passe qui doivent être fournis en tant que paramètres pendant l’instanciation du connecteur afin d’effectuer des opérations de lecture et/ou d’écriture.
+Voici un exemple d’instanciation de connecteur pour le mode non AD :
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark" 
+
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;"
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("user", ?) \ 
+   .option("password",?) 
+writer.save() 
+```
+### <a name="ad-mode"></a>Mode AD :
+En mode de sécurité AD, une fois que l’utilisateur a généré un fichier keytab, il doit fournir `principal` et `keytab` en tant que paramètres lors de l’instanciation du connecteur.
+
+Dans ce mode, le pilote charge le fichier keytab dans les conteneurs d’exécuteur respectifs. Ensuite, les exécuteurs utilisent le nom principal et le keytab pour générer un jeton qui est utilisé afin de créer un connecteur JDBC pour la lecture et l’écriture de données.
+
+Voici un exemple d’instanciation de connecteur pour le mode AD :
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark"
+
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;integratedSecurity=true;authenticationScheme=JavaKerberos;" 
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("principal", ?) \ 
+   .option("keytab", ?)   
+
+writer.save() 
+```
 
 Le tableau suivant décrit les nouveaux paramètres d’interface et ceux qui ont été modifiés :
 
@@ -45,13 +74,19 @@ Le tableau suivant décrit les nouveaux paramètres d’interface et ceux qui on
 
 Le connecteur utilise les API d’écriture en bloc SQL Server. Tous les paramètres d’écriture en bloc peuvent être passés en tant que paramètres facultatifs par l’utilisateur et sont passés en l’état par le connecteur à l’API sous-jacente. Pour plus d’informations sur les opérations d’écriture en bloc, consultez [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="mssql-spark-connector-sample"></a>Exemple pour le connecteur Spark MSSQL
+L’exemple effectue les tâches suivantes :
+
+- Lire un fichier à partir de HDFS et effectuer un traitement de base.
+- Écrire le dataframe dans une instance maître SQL Server en tant que table SQL, puis lire la table dans un dataframe.
+- Écrire le dataframe dans un pool de données SQL Server en tant que table SQL externe, puis lire la table externe dans un dataframe.
+### <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data SQL Server](deploy-get-started.md)
 
 - [Azure Data Studio](https://aka.ms/getazuredatastudio)
 
-## <a name="create-the-target-database"></a>Créer la base de données cible
+### <a name="create-the-target-database"></a>Créer la base de données cible
 
 1. Ouvrez Azure Data Studio et [connectez-vous à l’instance maître SQL Server de votre cluster Big Data](connect-to-big-data-cluster.md).
 
@@ -62,7 +97,7 @@ Le connecteur utilise les API d’écriture en bloc SQL Server. Tous les paramè
    GO
    ```
 
-## <a name="load-sample-data-into-hdfs"></a>Charger des exemples de données dans HDFS
+### <a name="load-sample-data-into-hdfs"></a>Charger des exemples de données dans HDFS
 
 1. Téléchargez [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) sur votre ordinateur local.
 
@@ -74,9 +109,9 @@ Le connecteur utilise les API d’écriture en bloc SQL Server. Tous les paramè
 
    ![Fichier CSV AdultCensusIncome](./media/spark-mssql-connector/spark_data.png)
 
-## <a name="run-the-sample-notebook"></a>Exécuter l’exemple de notebook
+### <a name="run-the-sample-notebook"></a>Exécuter l’exemple de notebook
 
-Pour illustrer l’utilisation du connecteur Spark MSSQL avec ces données, vous pouvez télécharger un exemple de notebook, l’ouvrir dans Azure Data Studio et exécuter chaque bloc de code. Pour plus d’informations sur l’utilisation des notebooks, consultez [Guide pratique pour utiliser des notebooks dans SQL Server](notebooks-guidance.md).
+Pour illustrer l’utilisation du connecteur Spark MSSQL avec ces données en mode non AD, vous pouvez télécharger un exemple de notebook, l’ouvrir dans Azure Data Studio et exécuter chaque bloc de code. Pour plus d’informations sur l’utilisation des notebooks, consultez [Guide pratique pour utiliser des notebooks dans SQL Server](notebooks-guidance.md).
 
 1. À partir d’une ligne de commande PowerShell ou bash, exécutez la commande suivante pour télécharger l’exemple de notebook **mssql_spark_connector_non_ad_pyspark.ipynb** :
 
@@ -91,3 +126,5 @@ Pour illustrer l’utilisation du connecteur Spark MSSQL avec ces données, vous
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les clusters Big Data, consultez [Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md)
+
+Vous avez des commentaires ou des recommandations concernant les fonctionnalités des clusters Big Data SQL Server ? [Faites-nous part de vos commentaires sur les clusters Big Data SQL Server](https://aka.ms/sql-server-bdc-feedback).

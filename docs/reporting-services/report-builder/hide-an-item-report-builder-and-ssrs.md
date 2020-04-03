@@ -1,5 +1,6 @@
 ---
 title: Masquer un élément (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, vous pouvez définir la visibilité d’un élément de rapport. Vous pouvez spécifier un paramètre de rapport ou une autre expression pour masquer de manière conditionnelle un élément.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dab0377e1f558c48be751b523c7129feefb18e66
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079049"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342787"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Masquer un élément (Générateur de rapports et SSRS)
   Définissez la visibilité d'un élément de rapport lorsque vous souhaitez masquer de façon conditionnelle un élément en fonction d'un paramètre de rapport ou d'une autre expression que vous spécifiez.  

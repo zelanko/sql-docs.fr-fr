@@ -1,5 +1,6 @@
 ---
 title: SoapException, classe Reporting Services | Microsoft Docs
+description: Découvrez comment résoudre les erreurs relatives à la classe SoapException de Reporting Services.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: daab30930fb1ae5df3c36dcfb417bd977d6663c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1e5dca57a7ccc4d3ca08f4b1c22e460747cc6d46
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991690"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215722"
 ---
 # <a name="reporting-services-soapexception-class"></a>Classe SoapException Reporting Services
   Vous devez traiter les erreurs [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] spécifiques que vous anticipez. Par exemple, dans une application dans laquelle vous demandez à l'utilisateur de créer un dossier, il est possible que l'utilisateur tente de créer un dossier qui existe déjà. En tant que développeur, vous n'avez pas le contrôle de ce que l'utilisateur entre dans les champs relatifs au nom de dossier et au chemin d'accès de votre application. Toutefois, vous êtes maître de l'expérience vécue par l'utilisateur lorsqu'il tente accidentellement de créer un élément qui existe déjà.  

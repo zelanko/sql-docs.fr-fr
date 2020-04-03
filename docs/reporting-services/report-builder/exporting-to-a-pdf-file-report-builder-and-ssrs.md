@@ -1,5 +1,6 @@
 ---
 title: Exportation vers un fichier PDF (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, l’extension de rendu PDF présente les rapports paginés sous forme de fichiers qui peuvent être ouverts dans des visionneuses tierces telles qu’Adobe Acrobat.
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078269"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342853"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
   L’extension de rendu PDF présente les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] sous forme de fichiers qui peuvent être ouverts dans des visionneuses telles qu’Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et versions ultérieures, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 11.0 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.  
@@ -25,7 +26,7 @@ ms.locfileid: "77078269"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Incorporation de police  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> Incorporation de police  
  Lorsque cela est possible, l'extension de rendu PDF incorpore le sous-ensemble de chaque police nécessaire pour afficher le rapport dans le fichier PDF. Les polices utilisées dans le rapport doivent être installées sur le serveur de rapports. Lorsque le serveur de rapports génère un rapport au format PDF, il utilise les informations stockées dans la police référencée par le rapport pour créer les mappages de caractères dans le fichier PDF. Si la police demandée n'est pas installée sur le serveur de rapports, le fichier PDF qui est créé peut ne pas contenir les mappages requis et donc ne pas s'afficher correctement lorsqu'il est ouvert.  
   
  Les polices sont incorporées dans le fichier PDF lorsque les conditions suivantes s'appliquent :  
@@ -54,7 +55,7 @@ ms.locfileid: "77078269"
   
  Les polices incorporées dans le fichier PDF sont incluses dans la propriété Fonts qui est enregistrée avec le fichier, en tant que métadonnées.  
   
-##  <a name="Metadata"></a> Métadonnées  
+##  <a name="metadata"></a><a name="Metadata"></a> Métadonnées  
  En plus de la mise en page du rapport, l'extension de rendu PDF écrit les métadonnées suivantes dans le dictionnaire des informations du document PDF.  
   
 |Propriété PDF|Créée à partir de|  
@@ -67,7 +68,7 @@ ms.locfileid: "77078269"
 |**CreationDate**|Heure de l'exécution du rapport au format **datetime** PDF|  
   
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactivité  
  Certains éléments interactifs sont pris en charge en PDF. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -88,7 +89,7 @@ ms.locfileid: "77078269"
  Les liens hypertexte dans les rapports sont rendus sous forme de liens interactifs dans le fichier PDF. Lors d'un clic, Acrobat ouvrira le navigateur client par défaut et naviguera jusqu'à l'URL du lien hypertexte.  
   
   
-##  <a name="Compression"></a> Compression  
+##  <a name="compression"></a><a name="Compression"></a> Compression  
  La compression d'image est basée sur le type de fichier d'origine de l'image. L'extension de rendu PDF compresse les fichiers PDF par défaut.  
   
  Pour conserver la compression des images incluses dans le fichier PDF lorsque cela est possible, les images JPEG sont stockées au format JPEG et tous les autres types d'images sont stockés au format BMP.  
@@ -97,7 +98,7 @@ ms.locfileid: "77078269"
 >  Les fichiers PDF ne prennent pas en charge l’incorporation d’images PNG.  
   
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut pour ce convertisseur en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   

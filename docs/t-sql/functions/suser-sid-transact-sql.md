@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 43106b52fdfcf166af3601c7ba82ddd03bd3d8b9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73981748"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486566"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,11 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
+## <a name="sssdsfull-remarks"></a>Notes concernant [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ SUSER_SID retourne toujours le SID de connexion pour le contexte de sécurité actuel. Utilisez [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) pour obtenir le SID d’une autre connexion.
+  
+ L’instruction SUSER_SID ne prend pas en charge l’exécution avec un contexte de sécurité représenté par la clause EXECUTE AS.  
+
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-suser_sid"></a>R. Utilisation de SUSER_SID  

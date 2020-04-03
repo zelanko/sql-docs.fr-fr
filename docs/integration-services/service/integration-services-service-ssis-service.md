@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296947"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216908"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296947"
   
  Si le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est arrêté, vous pouvez continuer à exécuter des packages par le biais de l’Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , de l’utilitaire d’exécution de package et de l’utilitaire d’invite de commandes **dtexec** (dtexec.exe). Vous ne pouvez cependant pas surveiller les packages en cours d'exécution.  
   
- Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s'exécute dans le contexte du compte SERVICE RESEAU.  
+ Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s'exécute dans le contexte du compte SERVICE RESEAU. Il est recommandé d’exécuter le service SQL Server Integration Services sous un compte disposant d’autorisations limitées, comme le compte SERVICE RÉSEAU. L’exécution du service SQL Server Integration Services sous un compte disposant de privilèges élevés représente un risque potentiel de sécurité. 
   
  Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] écrit dans le journal d'événements de Windows. Vous pouvez afficher les événements du service dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également consulter les événements du service à l'aide de l'Observateur d'événements Windows.  
   

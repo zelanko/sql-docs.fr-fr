@@ -1,5 +1,6 @@
 ---
 title: Ajouter des jauges aux rapports mobiles | Reporting Services| Microsoft Docs
+description: Vous pouvez ajouter des jauges à un rapport mobile Reporting Services. Les jauges affichent une valeur dans un jeu de données, par elle-même ou par rapport à un objectif.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280566"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448282"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Ajouter des jauges aux rapports mobiles | Reporting Services
 Les jauges sont les éléments visuels les plus simples et les plus utilisés dans les rapports mobiles. Elles affichent une seule valeur dans un dataset (la valeur seule ou la valeur comparée à un objectif).
@@ -42,7 +43,7 @@ Vous pouvez filtrer les valeurs de jauge en les connectant aux navigateurs du ra
 
 4. [facultatif] Pour modifier l’agrégation, sélectionnez **Options** et choisissez une autre agrégation.
    
-   >**Remarque**: si vous modifiez l’agrégation pour la valeur principale, il est probable que vous devrez aussi modifier celle de la valeur de comparaison même si dans certains cas, vous pouvez combiner les méthodes d’agrégation.  
+   >**Remarque** : si vous modifiez l’agrégation de la valeur principale, vous changerez probablement aussi celle de la valeur de comparaison, sauf si vous voulez mélanger les méthodes d’agrégation.  
 
 ## <a name="filter-a-gauge"></a>Filtrer une jauge
   
@@ -58,7 +59,7 @@ Si le rapport mobile comporte des navigateurs, vous pouvez lier une jauge à un 
   
 Outre les propriétés des données qui permettent de connecter les éléments de jauge à des champs de données, vous pouvez aussi personnaliser un certain nombre de propriétés fonctionnelles et visuelles. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>Définir le sens des valeurs : préférence aux valeurs hautes ou basses
+### <a name="set-value-direction-high-or-low-is-better"></a>Définir le sens des valeurs : Les valeurs hautes/basses sont préférables
 * Après avoir sélectionné une jauge, sous l’onglet **Disposition** du volet **Propriétés visuelles** , définissez le **Sens des valeurs** en choisissant **Les valeurs hautes sont préférables** ou **Les valeurs basses sont préférables**. 
 
 **Les valeurs hautes sont préférables** affiche les valeurs positives en vert, indiquant un changement favorable, et affiche les valeurs faibles en rouge, indiquant un changement défavorable. 

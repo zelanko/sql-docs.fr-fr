@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f0f244c15f4183f3214ae28efc2bf3300c571f0e
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335761"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80290755"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -104,7 +104,7 @@ Lorsque les agrégats MIN/MAX sont utilisés dans la liste SELECT de la définit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- L’affichage matérialisé sera désactivé lorsque UPDATE ou DELETE se produit dans les tables de base référencées.  Cette restriction ne s’applique pas aux instructions INSERT.  Pour réactiver l’affichage matérialisé, exécutez ALTER MATERIALIZED INDEX avec REBUILD.
+- L’affichage matérialisé sera désactivé lorsque UPDATE ou DELETE se produit dans les tables de base référencées.  Cette restriction ne s’applique pas aux instructions INSERT.  Pour réactiver l’affichage matérialisé, exécutez ALTER MATERIALIZED VIEW avec REBUILD.
   
 ## <a name="remarks"></a>Notes
 
@@ -125,9 +125,9 @@ ALTER TABLE SWITCH n’est pas pris en charge sur les tables référencées dans
 |Scénario|Nouvelles colonnes à ajouter à l’affichage matérialisé|Commentaire|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() est manquant dans la liste SELECT d’une définition de vue matérialisée| COUNT_BIG (*) |Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
-|SUM(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de vue matérialisée ET « a » est une expression nullable |COUNT_BIG (a) |Les utilisateurs ont besoin d’ajouter l’expression « a » manuellement dans la définition de l’affichage matérialisé.|
-|AVG(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de vue matérialisée ET « a » est une expression nullable.|SUM(a), COUNT_BIG(a)|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
-|STDEV(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition de vue matérialisée ET « a » est une expression nullable.|SUM(a), COUNT_BIG(a), SUM(square(a))|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise. |
+|SUM(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition d’affichage matérialisé ET « a » est une expression nullable |COUNT_BIG (a) |Les utilisateurs doivent ajouter l’expression « a » manuellement dans la définition de l’affichage matérialisé.|
+|AVG(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition d’affichage matérialisé où « a » est une expression.|SUM(a), COUNT_BIG(a)|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise.|
+|STDEV(a) est spécifié par les utilisateurs dans la liste SELECT d’une définition d’affichage matérialisé où « a » est une expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Ajouté automatiquement par la création de l’affichage matérialisé.  Aucune action de l'utilisateur n'est requise. |
 | | | |
 
 Après la création, des affichages matérialisés sont visibles dans SQL Server Management Studio sous le dossier des affichages de l’instance Azure SQL Data Warehouse.

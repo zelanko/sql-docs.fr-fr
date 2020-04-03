@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198270"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434096"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Dernières mises à jour pour Microsoft SQL Server
 
-Recherchez et gérez les mises à jour à un même emplacement pour vos produits SQL Server. Pour obtenir des informations sur les mises à jour et les télécharger, suivez le [blog de la version SQL Server](https://aka.ms/sqlreleases).
+Recherchez et gérez les mises à jour à un même emplacement pour vos produits SQL Server. Pour vous renseigner sur les mises à jour et télécharger les mises à jour nécessaires, consultez le [blog de votre version de SQL Server](https://aka.ms/sqlreleases).
 
-Cette page suit les dernières mises à jour de toutes les versions de SQL Server prises en charge. Pour plus d’informations sur les produits pris en charge, consultez la [page de cycle de vie du produit Microsoft](https://support.microsoft.com/lifecycle/).
+Cette page suit les dernières mises à jour de toutes les versions de SQL Server prises en charge. 
+
+Pour plus d’informations sur les mises à jour précédentes, consultez le [blog des builds SQL Server](https://sqlserverbuilds.blogspot.com/). 
+
+Pour plus d’informations sur les produits pris en charge, consultez la [page de cycle de vie du produit Microsoft](https://support.microsoft.com/lifecycle/). 
 
 ## <a name="latest-updates"></a>Dernières mises à jour
 
@@ -66,3 +70,5 @@ Chacun des liens suivants fournit des informations sur tous les produits et tech
   - [SQL Server DevCenter](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [TechCenter SQL Server](https://technet.microsoft.com/sqlserver/default.aspx)
   - [Centre d’information sur le produit SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+  - [Blog des builds SQL Server](https://sqlserverbuilds.blogspot.com/)
+  - [Blogs des versions de SQL Server](https://aka.ms/sqlreleases)

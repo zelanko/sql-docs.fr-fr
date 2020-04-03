@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241218"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386188"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  Une régression de l’analyse ScriptDom a été introduite dans la version 18.3.1, où ’RENAME’ n’est pas traité correctement comme un jeton de niveau supérieur, ce qui entraîne l’échec de l’analyse.
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>Problèmes connus 
+
+| Fonctionnalité | Détails |
+| :------ | :------ |
+| Déploiement |  Une régression introduite dans la version 18.4.1 provoque l’erreur « La référence d’objet n’a pas pour valeur une instance d’un objet. » lors du déploiement d’un dacpac ou de l’importation d’un bacpac avec un utilisateur disposant d’une connexion externe. Contournez ce problème en utilisant sqlpackage 18.4. Ce sera corrigé dans la prochaine version de sqlpackage. | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>sqlpackage 18.4
 

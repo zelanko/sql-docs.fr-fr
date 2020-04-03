@@ -1,5 +1,6 @@
 ---
 title: 'Accéder aux données externes : Hadoop - PolyBase'
+description: L’article utilise PolyBase sur une instance SQL Server avec Hadoop. PolyBase est adapté aux requêtes ad hoc de tables externes et à l’importation/exportation de données.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286903"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215864"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
@@ -66,7 +67,7 @@ Configurez d’abord SQL Server PolyBase pour utiliser votre fournisseur Hadoop 
   
    ![arrêter et démarrer les services PolyBase dans services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "arrêter et démarrer les services PolyBase dans services.msc")  
   
-## <a id="pushdown"></a>Activer le calcul pushdown  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a>Activer le calcul pushdown  
 
 Pour améliorer les performances des requêtes, activez le calcul pushdown sur votre cluster Hadoop :  
   

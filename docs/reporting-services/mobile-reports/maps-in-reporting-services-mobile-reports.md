@@ -1,5 +1,6 @@
 ---
 title: Cartes dans les rapports mobiles Reporting Services | Microsoft Docs
+description: L’éditeur de rapports mobiles SQL Server offre trois types de visualisation de carte, ainsi que des cartes intégrées pour les continents et pour un certain nombre de pays.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62683693"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448439"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Les cartes sont un excellent moyen de visualiser des données géographiques. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] offre trois types de visualisation de carte, et des cartes intégrées pour les continents ainsi qu’un certain nombre de pays. Vous pouvez également [télécharger et utiliser des cartes personnalisées](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -58,7 +59,7 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
   
 2. Sélectionnez **Ajouter des données**, puis **Excel local** ou **Serveur SSRS**.  
   
-   > **Conseil**: Vérifiez que les [données sont dans un format compatible pour les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > **Conseil** : vérifiez que les [données sont dans un format compatible avec les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Sélectionnez les feuilles de calcul souhaitées et sélectionnez **importer**.  
    Vos données s’affichent dans le [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  

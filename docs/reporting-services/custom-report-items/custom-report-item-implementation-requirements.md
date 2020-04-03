@@ -1,5 +1,6 @@
 ---
 title: Conditions d’implémentation des éléments de rapports personnalisés | Microsoft Docs
+description: Découvrez les exigences de développement et de déploiement qui sont nécessaires à l’implémentation des éléments de rapport personnalisés.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e25938d690d6e1046d1d0e75ae5a4952b05d4615
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 245164c763cf25ba22389f180acda9535147c721
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594513"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216970"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Conditions d'implémentation des éléments de rapports personnalisés
   Cette rubrique examine les conditions préalables au développement et au déploiement d'éléments de rapports personnalisés.  

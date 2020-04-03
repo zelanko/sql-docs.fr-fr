@@ -1,5 +1,6 @@
 ---
 title: Sécurité (Générateur de rapports) | Microsoft Docs
+description: Les fonctionnalités de sécurité du Générateur de rapports concernent les emplacements de publication, les rapports publiés, les sources de données externes et les modèles basés sur ces données, et incluent des fonctionnalités interactives.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190097"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290834"
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
   Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
@@ -34,7 +35,7 @@ ms.locfileid: "74190097"
   
  Passez en revue les informations de cette rubrique afin de mieux comprendre comment utiliser les fonctionnalités de sécurité pour gérer et sécuriser les rapports et les éléments liés aux rapports.  
   
-##  <a name="ReportServers"></a> Fonctionnement de la sécurité des serveurs de rapports  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Fonctionnement de la sécurité des serveurs de rapports  
  La publication de rapports et l'affichage de rapports sont des opérations qui requièrent des privilèges. Un administrateur de serveur de rapports accorde des autorisations pour s'assurer que seuls les utilisateurs autorisés peuvent publier et afficher des rapports sur l'un des types de serveurs de rapports suivants :  
   
 -   Serveur de rapports configuré en mode natif  
@@ -54,7 +55,7 @@ ms.locfileid: "74190097"
      Si vous ne pouvez pas vous connecter ou accéder à un site ou sous-site SharePoint, contactez l'administrateur du site SharePoint.  
   
   
-##  <a name="Reports"></a> Fonctionnement de la sécurité des rapports publiés et des éléments liés aux rapports  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Fonctionnement de la sécurité des rapports publiés et des éléments liés aux rapports  
  La sécurité des rapports et des éléments liés aux rapports est gérée par l'administrateur du serveur de rapports. Les éléments liés aux rapports comprennent les sources de données incorporées et partagées, ainsi que les informations d'identification, les datasets partagés, les paramètres, les parties de rapports et les modèles.  
   
  Sur un serveur de rapports ou un site SharePoint, les rapports ainsi que les éléments et opérations liés aux rapports sont sécurisables de manière indépendante. L'autorisation d'accès aux éléments et opérations est accordée via des stratégies de sécurité qui mappent un compte d'utilisateur ou de groupe à un niveau d'autorisation pour un élément. Pour réduire la complexité et la charge de traitement de la maintenance d'un grand nombre de stratégies, les autorisations d'un conteneur, tel qu'un dossier, sont héritées par les éléments présents dans le conteneur. Par exemple, si un utilisateur dispose de l'autorisation spécifique Afficher les rapports pour un dossier, il en dispose également pour les éléments présents dans le dossier.  
@@ -81,7 +82,7 @@ ms.locfileid: "74190097"
  Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="Data"></a> Fonctionnement de la sécurité des données de rapport et des sources de données externes  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Fonctionnement de la sécurité des données de rapport et des sources de données externes  
  Pour accéder aux données de chaque source de données externe dans un rapport, vous devez créer une source de données incorporée ou ajouter une référence à une source de données partagée ou un dataset partagé dans votre rapport.  
   
  Pour chaque source de données externe, vous devez fournir des informations d'identification suffisantes pour accéder à la source et aux données sous-jacentes. Le propriétaire de la source de données spécifie le type d'informations d'identification qui permettent cet accès.  
@@ -96,13 +97,13 @@ ms.locfileid: "74190097"
  Pour plus d’informations sur les sources de données, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Models"></a> Fonctionnement des modèles et des filtres de sécurité  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Fonctionnement des modèles et des filtres de sécurité  
  Lorsque des données sont récupérées à partir d'un modèle de rapport basé sur des données externes, vous pouvez appliquer des filtres de sécurité dans le modèle. Il s'agit d'un bon moyen pour sécuriser les données afin que chaque utilisateur qui exécute un rapport puisse consulter uniquement les données auxquelles il a l'autorisation d'accéder.  
   
  Les paramètres de rapport ne sont pas utilisés pour la sécurité au niveau des lignes ; ils n'empêchent pas des utilisateurs ou des groupes d'utilisateurs de visualiser des lignes de données spécifiques. Pour appliquer la sécurité aux données affichées dans un rapport, vous devez utiliser des filtres de sécurité ou la sécurité des éléments de modèle.  
   
   
-##  <a name="Interactive"></a> Fonctionnement de la sécurité en matière de création de rapports pour les fonctionnalités interactives  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Fonctionnement de la sécurité en matière de création de rapports pour les fonctionnalités interactives  
  Les rapports comportent fréquemment des paramètres pour permettre à l'utilisateur de personnaliser de manière interactive l'affichage d'un rapport. Utilisez les conseils suivants pour concevoir des rapports basés sur les meilleures pratiques :  
   
 -   N'utilisez pas de paramètres basés sur des paramètres de requête et qui sont de type **Texte** , à moins que vous ne fournissiez des valeurs valides. Une liste de valeurs disponibles aide l'utilisateur à choisir uniquement des valeurs valides. Sans une liste de valeurs disponibles, vous ne pouvez pas restreindre les valeurs qu'un utilisateur peut entrer.  

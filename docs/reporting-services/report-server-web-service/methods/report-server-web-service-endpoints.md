@@ -1,5 +1,6 @@
 ---
 title: Points de terminaison du service web Report Server | Microsoft Docs
+description: Le service Web Report Server fournit trois points de terminaison pour la gestion d’un serveur de rapports, ainsi que pour l’exécution de rapports et la navigation dans ces derniers.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284633"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509750"
 ---
 # <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server
   Le service Web Report Server fournit plusieurs points de terminaison pour la gestion d’un serveur de rapports aussi bien que l'exécution de rapports et la navigation dans ces derniers.  
@@ -63,7 +64,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
   
 |Point de terminaison proxy|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint.<br /><br /> Remarque : Ce point de terminaison est déconseillé dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint.<br /><br /> Remarque : Ce point de terminaison est déprécié dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.|  
 |<xref:ReportExecution2005>|Fournit les API pour l'exécution de rapports et la navigation dans ces derniers.|  
 |<xref:ReportServiceAuthentication>|Fournit les API pour l'authentification des utilisateurs avec un serveur de rapports lorsque l'application Web SharePoint est configurée pour l'authentification par formulaires.|  

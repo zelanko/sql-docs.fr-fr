@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9fa8bd2c029ea65bb03e21543212dd11b65f2242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67913941"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80345458"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,13 +44,14 @@ SET ANSI_DEFAULTS { ON | OFF }
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>Notes  
-ANSI_DEFAULTS est un paramètre côté serveur que le client ne modifie pas. Le client gère ses propres paramètres. Par défaut, ces paramètres sont l'inverse du paramètre serveur. Les utilisateurs ne doivent pas modifier le paramètre serveur. Pour modifier le comportement du client, les utilisateurs doivent recourir à SQL_COPT_SS_PRESERVE_CURSORS. Pour plus d’informations, consultez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ANSI_DEFAULTS est un paramètre côté serveur qui peut activer le comportement de toutes les connexions clientes. Le client demande généralement le paramètre lors de l’initialisation de la connexion ou de la session. Les utilisateurs ne doivent pas modifier le paramètre serveur.   
+Pour modifier le comportement du client, les utilisateurs doivent recourir aux méthodes spécifiques au client comme `SQL_COPT_SS_PRESERVE_CURSORS`. Pour plus d’informations, consultez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).
   
 Lorsque cette option est activée (ON), elle active les paramètres ISO suivants :  
   
@@ -63,9 +64,9 @@ Lorsque cette option est activée (ON), elle active les paramètres ISO suivants
   
 Ensemble, ces options SET ISO définissent l'environnement de traitement des requêtes pour la durée de la session de travail de l'utilisateur, de l'exécution d'un déclencheur ou d'une procédure stockée. Toutefois, ces options SET ne contiennent pas toutes les options requises pour se conformer à la norme ISO.  
   
-Lorsque vous travaillez avec des index sur des colonnes calculées et des vues indexées, quatre options par défaut (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS et QUOTED_IDENTIFIER) doivent être activées (valeur ON). Ces options par défaut font partie des sept options SET qui doivent avoir les valeurs requises lors de la création et de la modification des index sur des colonnes calculées et vues indexées. Les autres options SET sont ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) et NUMERIC_ROUNDABORT (OFF). Pour plus d’informations sur les valeurs requises des options SET dans des vues indexées et des index de colonnes calculées, consultez [Remarques sur l’utilisation de l’instruction SET dans la rubrique](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
+Quand vous utilisez des index sur des colonnes calculées et des vues indexées, quatre options par défaut (`ANSI_NULLS`, `ANSI_PADDING`, `ANSI_WARNINGS` et `QUOTED_IDENTIFIER`) doivent être activées (valeur ON). Ces options par défaut font partie des sept options SET qui doivent avoir les valeurs requises lors de la création et de la modification des index sur des colonnes calculées et vues indexées. Les autres options SET sont `ARITHABORT` (ON), `CONCAT_NULL_YIELDS_NULL` (ON) et `NUMERIC_ROUNDABORT` (OFF). Pour plus d’informations sur les valeurs requises des options SET dans des vues indexées et des index de colonnes calculées, consultez [Remarques sur l’utilisation de l’instruction SET dans la rubrique](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
   
-Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_DEFAULTS lors de la connexion. Le pilote et le fournisseur désactivent ensuite CURSOR_CLOSE_ON_COMMIT et IMPLICIT_TRANSACTIONS. La désactivation de CURSOR_CLOSE_ON_COMMIT et IMPLICIT_TRANSACTIONS peut être configurée dans des sources de données ou des attributs de connexion ODBC, ou encore dans les propriétés de connexion OLE DB définies dans l’application avant la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans le cas d’applications DB-Library, ANSI_DEFAULTS prend par défaut la valeur OFF.  
+Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_DEFAULTS lors de la connexion. Le pilote et le fournisseur désactivent ensuite CURSOR_CLOSE_ON_COMMIT et IMPLICIT_TRANSACTIONS. Les paramètres OFF pour `CURSOR_CLOSE_ON_COMMIT` et `IMPLICIT_TRANSACTIONS` peuvent être configurés dans les sources de données ou les attributs de connexion ODBC ainsi que dans les propriétés de connexion OLE DB définies dans l’application avant la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut de `ANSI_DEFAULTS` est OFF pour les connexions à partir d’applications DB-Library.  
   
 Quand SET ANSI_DEFAULTS est émis, la valeur de QUOTED_IDENTIFIER est définie au moment de l’analyse, et les options suivantes sont définies au moment de l’exécution :  
   

@@ -1,5 +1,6 @@
 ---
 title: Rendu au format HTML (Générateur de rapports) | Microsoft Docs
+description: Dans le Générateur de rapports, l’extension de rendu HTML effectue le rendu d’un rapport paginé au format HTML. Il peut produire des fragments ou des pages HTML complètes à incorporer dans d’autres pages.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082485"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290873"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
   L’extension de rendu HTML effectue le rendu d’un rapport paginé au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.  
@@ -27,11 +28,11 @@ ms.locfileid: "77082485"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Rendu au format MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Rendu au format MHTML  
  L'extension de rendu HTML peut également rendre des rapports au format MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML étend HTML pour intégrer des objets encodés, comme les images, dans le document HTML. Avec l'extension de rendu MHTML, vous pouvez incorporer dans un fichier unique des ressources telles que des images, des documents ou d'autres fichiers binaires en tant que structures MIME dans le rapport HTML. L'incorporation de rapports MHTML dans des messages électroniques se révèle également utile, car toutes les ressources sont incluses dans le rapport. Bien que ce soit en fait l'extension de rendu HTML qui assure le rendu MHTML, cette fonctionnalité peut également être appelée extension de rendu MHTML.  
   
   
-##  <a name="BrowserSupport"></a> Prise en charge des navigateurs  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> Prise en charge des navigateurs  
  Cette extension de rendu prend en charge les versions de navigateur suivantes :  
   
 -   Internet Explorer 5.5 et versions ultérieures  
@@ -43,7 +44,7 @@ ms.locfileid: "77082485"
  En raison des spécificités des navigateurs, le rapport rendu peut varier légèrement d'un navigateur à l'autre. Par exemple, la zone de texte contient une propriété nommée WritingMode. Cette propriété n'est pas prise en charge dans Firefox.  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> Règles de rendu spécifiques à HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> Règles de rendu spécifiques à HTML  
  Les règles spécifiques à HTML suivantes s'appliquent lors du rendu :  
   
 -   Le convertisseur génère une structure de table HTML destinée à contenir tous les éléments de chaque collection **ReportItems** , s’il en existe plusieurs.  
@@ -61,7 +62,7 @@ ms.locfileid: "77082485"
 -   Toutes les coordonnées et tailles d'élément de rapport sont converties en millimètres. Toutes les autres tailles, notamment les propriétés de style, conservent leurs unités d'origine. Les différences de taille et position inférieures à 0,2 mm sont traitées comme 0 mm.  
   
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactivité  
  Certains éléments interactifs sont pris en charge au format HTML. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -84,10 +85,10 @@ ms.locfileid: "77082485"
   
  Des fonctionnalités supplémentaires de recherche sont fournies par le contrôle Web Forms ReportViewer.  
   
-##  <a name="FontsOnClient"></a> Polices sur l'ordinateur client
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> Polices sur l'ordinateur client
  Lorsqu'une police personnalisée est utilisée dans le rapport, l'ordinateur utilisé pour consulter le rapport (l'ordinateur client) doit avoir la police personnalisée installée pour que le rapport s'affiche correctement. Si la police n’est pas installée sur l’ordinateur client, le rapport affiche une police système par défaut au lieu de la police personnalisée.
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, consultez [Paramètres d’informations de périphérique HTML](../../reporting-services/html-device-information-settings.md).  
   
   

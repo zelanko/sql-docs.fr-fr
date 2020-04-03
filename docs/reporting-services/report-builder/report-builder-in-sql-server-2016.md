@@ -1,5 +1,6 @@
 ---
 title: Générateur de rapports dans SQL Server| Microsoft Docs
+description: Le Générateur de rapports est un outil qui permet de créer des rapports paginés. Pour créer un rapport, vous devez spécifier les données à récupérer, où les obtenir et comment les afficher.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688516"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290895"
 ---
 # <a name="report-builder-in-sql-server"></a>Générateur de rapports dans SQL Server
 
@@ -30,7 +31,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
   
  Ce rapport paginé comprend une matrice avec des groupes de lignes et de colonnes, des graphiques sparkline, des indicateurs et un graphique à secteurs de synthèse dans la cellule d’angle, ainsi qu’une carte avec deux ensembles de données géographiques représentées par couleur et par taille de cercle.  
   
-##  <a name="JumpStartReptCreation"></a> Accélérer la création de rapports  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> Accélérer la création de rapports  
   
 -   **Commencez avec un jeu de données partagé**. Les jeux de données partagés sont des requêtes basées sur une source de données partagée, qui sont enregistrées sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint.  
   
@@ -40,7 +41,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
   
 -   **Commencez votre rapport avec des parties de rapport**. Les parties de rapports sont des éléments de rapport qui ont été publiés séparément sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint. Elles peuvent être réutilisées dans d’autres rapports. Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que parties de rapports.  
   
-##  <a name="DesignRept"></a> Concevoir votre rapport  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> Concevoir votre rapport  
   
 -   **Créez des rapports paginés à l’aide de mises en page de rapports de tableau, de matrice, de graphique et au format libre.** Créez des rapports de tableau pour des données en colonnes, des rapports de matrice (tels que des rapports d'analyse croisée ou de tableau croisé dynamique) pour des données synthétisées, des rapports de graphique pour des données graphiques et enfin, des rapports au format libre pour tout autre type de données. Les rapports peuvent incorporer d'autres rapports et graphiques, avec des listes, des graphiques et des contrôles pour les applications web dynamiques.  
   
@@ -55,7 +56,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
   
 -   **Incorporez des images ou faites référence à ces dernières** et à d'autres ressources, y compris du contenu externe.  
   
-##  <a name="ManageRpt"></a> Gérer votre rapport  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> Gérer votre rapport  
   
 -   **Enregistrez la définition du rapport** sur votre ordinateur ou sur le serveur de rapports, d'où vous pourrez le gérer et le partager avec d'autres utilisateurs.  
   

@@ -1,5 +1,6 @@
 ---
 title: Gérer les sessions d'événements dans l'Explorateur d'objets
+description: Vous pouvez effectuer des actions dans l’Explorateur d’objets qui affectent les événements étendus, comme la création, le démarrage ou l’arrêt, l’exportation, l’importation, la modification ou la suppression des sessions d’événements étendus.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234529"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434086"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
 
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  Après avoir modifié la session d'événements, cliquez sur **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Générer le script d'une définition de session d'événements à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Générer le script d'une définition de session d'événements à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  L'Assistant Nouvelle session et la boîte de dialogue Nouvelle session comprennent une option qui génère un script [!INCLUDE[tsql](../../includes/tsql-md.md)] définissant la session événements étendus.  
   
  Vous pouvez accéder à [!INCLUDE[tsql](../../includes/tsql-md.md)] pour une session d'événements étendus existante en cliquant sur le nom de la session, en sélectionnant **Générer un script de la session en tant que**, puis sélectionnant **Créer vers**.  

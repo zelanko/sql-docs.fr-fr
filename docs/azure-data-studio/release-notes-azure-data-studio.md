@@ -1,25 +1,40 @@
 ---
 title: Notes de publication
-titleSuffix: Azure Data Studio
 description: Notes de publication d’Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408863"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215478"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="march-2020"></a>Mars 2020
+
+18 mars 2020 &nbsp; / &nbsp; version : 1.16.0 
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Ajout de la prise en charge des graphiques dans les notebooks SQL | Quand une requête SQL est en cours d’exécution dans une cellule de code, les utilisateurs peuvent désormais créer et enregistrer des graphiques. |
+| Ajout de l’expérience de création de books Jupyter | Les utilisateurs peuvent désormais créer leurs propres books Jupyter à l’aide d’un notebook. |
+| Ajout de la prise en charge d’AAD pour l’extension Postgres | |
+| Correction de nombreux bogues d’accessibilité | [Liste des bogues d’accessibilité](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| Mise à jour de VS Code vers 1.42 | Cette version comprend les mises à jour de VS Code à partir des 3 versions précédentes. Lisez les [notes de publication](https://code.visualstudio.com/updates/v1_42) correspondantes pour en savoir plus. |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed) |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>Février (correctif)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408863"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Problème connu
+
 - Les utilisateurs sur macOS Catalina devront cliquer avec le bouton droit sur Azure Data Studio, puis cliquer sur Ouvrir.
 
 ## <a name="december-2019-hotfix"></a>Décembre 2019 (correctif logiciel)
@@ -144,6 +160,7 @@ ms.locfileid: "78408863"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problèmes connus
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare cas de sérialisation incorrecte du notebook
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408863"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problèmes connus
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Rare cas de sérialisation incorrecte du notebook
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408863"
 | Bogues et problèmes résolus | Dans les versions précédentes d’Azure Data Studio, si une base de données utilisateur était sélectionnée lors de la connexion à partir de la boîte de dialogue de connexion, l’entrée de l’Explorateur d’objets obtenue était entièrement limitée à cette base de données unique. À compter de cette version, ce comportement est modifié de sorte que les propriétés au niveau du serveur s’affichent également dans l’Explorateur d’objets. <br/> Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1) |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>Juin 2019
 
-6 juin 2019 &nbsp; / &nbsp; version : 1.8.0 
+6 juin 2019 &nbsp; / &nbsp; version : 1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408863"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problèmes connus
+
 - Extensions de l’outil d’administration de base de données pour Windows
     - Impossible de lancer les propriétés à partir du nœud de serveur déconnecté
     - Impossible de lancer les propriétés des serveurs Azure
@@ -300,7 +318,7 @@ ms.locfileid: "78408863"
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458) : L’extraction de dacpac fait planter SqlToolsService si une version non valide est utilisée <br/>
 **Solution de contournement :** Redémarrez Azure Data Studio et assurez-vous que la version correcte est utilisée.
 - Les icônes du nouveau notebook et du notebook ouvert sont perdues <br/>
-**Solution de contournement :** Le type de connexion hérité est déconseillé. Nous vous recommandons de vous connecter au point de terminaison SQL Server et vous aurez toutes les actions (nouveau notebook, travail Spark) comme prévu. 
+**Solution de contournement :** Le type de connexion hérité est déconseillé. Nous vous recommandons de vous connecter au point de terminaison SQL Server pour avoir toutes les actions (Nouveau notebook, Nouveau travail Spark) comme prévu. 
 
 ## <a name="february-2019"></a>Février 2019
 
@@ -361,8 +379,8 @@ ms.locfileid: "78408863"
 | Présentation de l’extension Coller le plan. | &nbsp; |
 | Présentation de l’extension de requêtes à couleurs, notamment le thème de l’éditeur SSMS. | &nbsp; |
 | Correctifs dans les extensions SQL Server Agent, Profiler et Import. | &nbsp; |
-| Correction du problème KeepAlive pour le socket .Net Core provoquant l’abandon des connexions inactives sur macOS. | &nbsp; |
-| Mettez à niveau le service Outils SQL vers .Net Core 2.2 Preview 3 (pour la prise en charge d’AAD). | &nbsp; |
+| Correction du problème KeepAlive pour le socket .NET Core provoquant l’abandon des connexions inactives sur macOS. | &nbsp; |
+| Mettez à niveau le service Outils SQL vers .NET Core 2.2 Preview 3 (pour la prise en charge d’AAD). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Correctifs de bogues, novembre 2018

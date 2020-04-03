@@ -1,5 +1,6 @@
 ---
 title: Exporter des rapports (Générateur de rapports) | Microsoft Docs
+description: Vous pouvez exporter un rapport Reporting Services dans un autre format de fichier, tel que PowerPoint ou PDF, à l’aide du Générateur de rapports, du Concepteur de rapports ou du serveur de rapports.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078489"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342929"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exporter des rapports (Générateur de rapports et SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078489"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> Pour exporter un rapport du Générateur de rapports
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> Pour exporter un rapport du Générateur de rapports
 
 1.  Créez le rapport ou affichez son aperçu.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078489"
   
      La boîte de dialogue **Enregistrer sous** s’affiche. Par défaut, le nom du fichier correspond à celui du rapport que vous avez exporté. Vous pouvez éventuellement modifier le nom du fichier.  
   
-##  <a name="bkmk_export_from_rm"></a> Pour exporter un rapport à partir du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> Pour exporter un rapport à partir du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  À partir de la page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Accueil **du portail web** , naviguez jusqu’au rapport que vous souhaitez exporter.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078489"
   
      À l'aide de l'application associée au format que vous avez choisi, le rapport est affiché ou enregistré. Si vous cliquez sur **Enregistrer**, vous devrez indiquer un emplacement pour enregistrer votre rapport.  
   
-##  <a name="bkmk_export_from_sharepoint"></a> Pour exporter un rapport à partir d’une bibliothèque SharePoint  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> Pour exporter un rapport à partir d’une bibliothèque SharePoint  
   
 1.  Affichez l'aperçu du rapport.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078489"
   
      **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi car vous ne disposez pas d'un programme associé à ce type de fichier, vous serez invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
   
-##  <a name="RendererTypes"></a> Types d'extensions de rendu  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> Types d'extensions de rendu  
  Il existe trois types d'extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Extensions de convertisseurs de données** Les extensions de rendu de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données ne prennent pas en charge les sauts de page.  
@@ -106,8 +107,8 @@ ms.locfileid: "77078489"
   
      Les extensions de rendu de saut de page manuel suivantes sont prises en charge : TIFF et PDF.  
   
-##  <a name="ExportFormats"></a> Formats d’exportation disponibles pendant l’affichage de rapports  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des extensions de rendu qui affichent les rapports dans divers formats. Il est conseillé d’optimiser la conception des rapports en fonction du format de fichier choisi.  Le tableau suivant répertorie les formats d’exportation disponibles dans l’interface utilisateur.  D’autres formats vous sont proposés avec des abonnements à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou si vous effectuez l’exportation à partir de l’URL d’accès.  Consultez la section [Autres modes d'exportation des rapports](#OtherWaysExportingReports)dans cette rubrique.  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> Formats d’exportation disponibles pendant l’affichage de rapports  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des extensions de rendu qui affichent les rapports dans divers formats. Il est conseillé d’optimiser la conception des rapports en fonction du format de fichier choisi.  Le tableau suivant liste les formats d’exportation disponibles dans l’interface utilisateur.  D’autres formats vous sont proposés avec des abonnements à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou si vous effectuez l’exportation à partir de l’URL d’accès.  Consultez la section [Autres modes d'exportation des rapports](#OtherWaysExportingReports)dans cette rubrique.  
   
 |Format|Type d'extension de rendu|Description|  
 |------------|------------------------------|-----------------|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078489"
 |WORDOPENXML|Saut de page conditionnelle|Affiché avec la mention « Word » dans le menu d’exportation lors de l’affichage des rapports. L’extension de rendu Word génère un rapport au format Word (.docx) compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Pour plus d’informations, consultez [Exportation vers Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Données|L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.<br/><br/> Pour plus d’informations, consultez [Exportation vers XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> Génération de flux à partir d'un rapport  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> Génération de flux à partir d'un rapport  
  Pour générer des flux à partir d’un rapport, exécutez ce dernier dans le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis cliquez sur l’icône **Générer un flux** dans la barre d’outils du portail web. Vous êtes invité à enregistrer ou à ouvrir le fichier. Si vous avez choisi **Ouvrir**, le document de service Atom s'ouvre dans l'application associée à l'extension de fichier .atomsvc. Si vous avez choisi **Enregistrer**, le document est enregistré en tant que fichier .atomsvc. Par défaut, le nom du fichier correspond au nom du rapport. Vous pouvez remplacer ce nom par un autre plus explicite.  
   
  Vous enregistrez le document de service Atom sur votre ordinateur. Ultérieurement, vous pouvez le télécharger vers un serveur de rapports ou tout autre serveur afin de le rendre accessible aux autres utilisateurs. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) et [Générer des flux de données à partir d’un rapport](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Dépannage des rapports exportés  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> Dépannage des rapports exportés  
  Vos rapports peuvent parfois avoir une apparence différente ou ne pas fonctionner comme vous le voulez après les avoir exportés dans un format différent. Cela se produit parce que certaines règles et limitations peuvent s'appliquer au convertisseur. Vous pouvez prendre en compte de nombreuses limitations lors de la création du rapport. Vous devrez peut-être utiliser une mise en page légèrement différente dans votre rapport, aligner soigneusement les éléments du rapport, restreindre les pieds de page du rapport à une seule ligne de texte, etc.  
   
  Si votre rapport contient du texte Unicode avec des chiffres arabes, ou s'il contient des dates en chiffres arabes, les dates et les nombres ne sont pas affichés correctement lorsque vous imprimez le rapport ou que vous l'exportez dans l'un des formats suivants.  
@@ -163,7 +164,7 @@ ms.locfileid: "77078489"
   
  Par ailleurs, vous pouvez utiliser la fonction globale intégrée RenderFormat pour appliquer de manière conditionnelle des mises en page de rapport différentes selon le type de convertisseur. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
-##  <a name="OtherWaysExportingReports"></a> Autres modes d'exportation des rapports  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> Autres modes d'exportation des rapports  
  L’exportation d’un rapport est une tâche à la demande que vous effectuez quand le rapport est ouvert dans le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le Générateur de rapports. Pour automatiser une opération d'exportation (par exemple l'exportation d'un rapport vers un dossier partagé en tant que type de fichier spécifique, selon une planification récurrente), créez un abonnement chargé de remettre le rapport dans un dossier partagé. Pour plus d'informations, consultez [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
  Les rapports prévisualisés dans les outils de création de rapports ou ouverts dans une application de navigation telle que le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont toujours rendus en premier au format HTML. Vous ne pouvez pas spécifier une autre extension de rendu par défaut pour l'affichage. Toutefois, vous pouvez créer un abonnement qui produit un rapport dans le format de rendu de votre choix afin de le remettre ultérieurement dans une boîte de réception de courrier électronique ou un dossier partagé. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) et [Créer, modifier ou supprimer des abonnements pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
