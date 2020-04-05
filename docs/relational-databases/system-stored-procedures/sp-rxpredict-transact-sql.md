@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517451"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662840"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Génère une valeur prévue pour une entrée donnée composée d’un modèle d�
 
 Fournit la notation sur les modèles d’apprentissage automatique R et Python en temps quasi réel. `sp_rxPredict`est une procédure stockée fournie comme `rxPredict` un emballage pour la fonction R dans [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), et la fonction [python rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) et [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il est écrit en C et est optimisé spécifiquement pour les opérations de notation.
 
-Bien que le modèle doit être créé à l’aide de R ou Python, une fois qu’il est sérialisé et stocké dans un format binaire sur une instance de moteur de base de données cible, il peut être consommé à partir de cette instance de moteur de base de données, même lorsque l’intégration R ou Python n’est pas installé. Pour plus d’informations, voir [notation en temps réel avec sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+Bien que le modèle doit être créé à l’aide de R ou Python, une fois qu’il est sérialisé et stocké dans un format binaire sur une instance de moteur de base de données cible, il peut être consommé à partir de cette instance de moteur de base de données, même lorsque l’intégration R ou Python n’est pas installé. Pour plus d’informations, voir [notation en temps réel avec sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,7 +64,7 @@ L’utilisateur `EXECUTE` a besoin d’autorisation sur la base de données.
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016).
+Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R ou Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
 
 #### <a name="r-revoscaler-models"></a>R: Modèles RevoScaleR
 
@@ -86,7 +86,7 @@ Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge
 #### <a name="r-transformations-supplied-by-microsoftml"></a>R: Transformations fournies par MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [Catégorique](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
@@ -112,7 +112,7 @@ Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge
 #### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Transformations fournies par microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [Catégorique](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
