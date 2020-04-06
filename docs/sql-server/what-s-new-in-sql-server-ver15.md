@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218054"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665363"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -231,7 +231,7 @@ Pour commencer à travailler avec [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
 |Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Modélisation basée sur une partition | Vous pouvez traiter les scripts externes par partition des données en utilisant les nouveaux paramètres ajoutés à `sp_execute_external_script`. Cette fonctionnalité prend en charge l’entraînement de nombreux petits modèles (un modèle par partition de données) au lieu d’un grand modèle. Consultez [Créer des modèles basés sur une partition](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Modélisation basée sur une partition | Vous pouvez traiter les scripts externes par partition des données en utilisant les nouveaux paramètres ajoutés à `sp_execute_external_script`. Cette fonctionnalité prend en charge l’entraînement de nombreux petits modèles (un modèle par partition de données) au lieu d’un grand modèle. Consultez [Créer des modèles basés sur une partition](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Cluster de basculement Windows Server| Vous pouvez configurer la haute disponibilité pour Machine Learning Services sur un cluster de basculement Windows Server.|
 | &nbsp; | &nbsp; |
 

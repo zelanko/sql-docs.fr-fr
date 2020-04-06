@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136532"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625504"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ Vous pouvez installer SQL Server sur Windows Server 2008 R2 Server Core SP1, ave
   
 **Solution de contournement :** pour installer la base de données des statistiques linguistiques de sémantique comme une condition préalable à l'indexation sémantique, procédez comme suit :  
   
-1.  Localisez et exécutez le package Windows Installer nommé SemanticLanguageDatabase.msi sur le support d'installation de SQL Server pour extraire la base de données. Pour SQL Server 2012 Express, téléchargez la base de données des statistiques linguistiques de sémantique à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582), puis exécutez le package Windows Installer.  
+1.  Localisez et exécutez le package Windows Installer nommé SemanticLanguageDatabase.msi sur le support d'installation de SQL Server pour extraire la base de données. Pour SQL Server 2012 Express, téléchargez la base de données des statistiques linguistiques de sémantique à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681), puis exécutez le package Windows Installer.  
   
 2.  Déplacez la base de données vers un dossier de données approprié. Si vous laissez la base de données dans l'emplacement par défaut, vous devez modifier les droits avant de pouvoir l'attacher.  
   

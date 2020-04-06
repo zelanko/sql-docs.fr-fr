@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173610"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531104"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster Big Data SQL Server
 
@@ -28,7 +28,7 @@ AKS simplifie la création, la configuration et la gestion d’un cluster de mac
 Cet article décrit les étapes de déploiement de Kubernetes sur AKS avec Azure CLI. Si vous n’avez pas d’abonnement Azure, créez un compte gratuit avant de commencer.
 
 > [!TIP]
-> Vous pouvez également créer un script pour déployer AKS et un cluster Big Data en une seule étape. Pour plus d’informations, consultez la procédure à suivre dans un [script Python](quickstart-big-data-cluster-deploy.md) ou dans un [notebook](deploy-notebooks.md) Azure Data Studio.
+> Vous pouvez également créer un script pour déployer AKS et un cluster Big Data en une seule étape. Pour plus d’informations, consultez la procédure à suivre dans un [script Python](quickstart-big-data-cluster-deploy.md) ou dans un [notebook](notebooks-deploy.md) Azure Data Studio.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 

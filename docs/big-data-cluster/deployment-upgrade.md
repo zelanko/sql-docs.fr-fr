@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256863"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607838"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,10 +66,10 @@ Cette section explique comment mettre à niveau une version de SQL Server BDC pr
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Par exemple, le script suivant utilise la balise d’image `2019-CU1-ubuntu-16.04` :
+   Par exemple, le script suivant utilise la balise d’image `2019-CU4-ubuntu-16.04` :
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ Un délai d’expiration peut se produire si certains composants ne sont pas mis
 Pour augmenter les délais d’expiration d’une mise à niveau, utilisez les paramètres **--controller-timeout** et **--component-timeout** afin de spécifier des valeurs plus élevées quand vous effectuez la mise à niveau. Cette option est disponible à compter de SQL Server 2019 CU2 uniquement. Par exemple :
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** spécifie le nombre de minutes à attendre avant la fin de la mise à niveau du contrôleur ou de la base de données du contrôleur.
 **--component-timeout** spécifie le délai d’exécution de chaque phase suivante de la mise à niveau.
