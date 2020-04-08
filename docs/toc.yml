@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: Écriture de scripts avec SSMS
               items:
+                - name: Générer des scripts
+                  items:
+                    - name: Générer des scripts
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: Assistant Générer et publier des scripts
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: Objets pris en charge par l'Assistant Génération de scripts
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: Éditeurs de texte et de requête
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: Fenêtre Résultats spatiaux
                           href: ssms/scripting/spatial-results-window.md
-                        - name: Générer des scripts
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: Assistant Générer et publier des scripts
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: Objets pris en charge par l'Assistant Génération de scripts
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Procédures
           items:
             - name: Installer SSMS dans une langue autre que l’anglais
