@@ -1,5 +1,6 @@
 ---
-title: Résoudre les problèmes liés aux rapports Reporting Services | Microsoft Docs
+title: Résoudre les problèmes avec les rapports Reporting Services
+description: Dans cet article, vous allez voir comment résoudre les problèmes liés à la conception, à la prévisualisation ou à l’exportation de rapports, et à leur publication ou leur affichage sur un serveur de rapports en mode natif ou SharePoint.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573875"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662801"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Résoudre les problèmes avec les rapports Reporting Services
 Cette rubrique vous fournit des conseils pour résoudre les problèmes associés à la conception de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , l’affichage de l’aperçu d’un rapport, la publication d’un rapport sur un serveur de rapports en mode natif ou en mode SharePoint, l’affichage d’un rapport sur le serveur de rapports ou l’exportation d’un rapport dans un format de fichier différent.  

@@ -1,5 +1,6 @@
 ---
-title: Résoudre les problèmes de rendu des rapports Reporting Services | Microsoft Docs
+title: Résoudre les problèmes de rendu des rapports Reporting Services
+description: Dans cet article, vous allez diagnostiquer et résoudre les problèmes d’affichage qui se produisent quand le rapport compilé et les données de mise en page sont envoyés à un convertisseur de rapport dans SQL Server Reporting Services.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574682"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662782"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Résoudre les problèmes de rendu des rapports Reporting Services
 Une fois les données et les informations de mise en page du rapport combinées, le rapport compilé est envoyé à un convertisseur de rapport. Par exemple, lorsque vous affichez l'aperçu d'un rapport localement, vous utilisez le convertisseur HTML pour afficher le rapport compilé. Utilisez cette rubrique pour vous aider à résoudre les problèmes spécifiques au rendu de rapport.   
@@ -58,9 +59,9 @@ Lorsque la source de données est configurée pour un type de connexion de liste
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**Pour corriger ce problème :** modifiez la source de données de manière à utiliser les informations d’identification stockées à la place des informations d’identification Windows.  
+**Pour contourner ce problème :** Modifiez la source de données de manière à utiliser les informations d’identification stockées à la place des informations d’identification Windows.  
   
-**Ce problème s’applique à :** navigateurs configurés pour demander les informations d’identification.  
+**Ce problème s’applique à :** Navigateurs configurés pour demander des informations d’identification.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

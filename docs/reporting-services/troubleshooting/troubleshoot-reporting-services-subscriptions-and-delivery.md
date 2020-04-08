@@ -1,5 +1,6 @@
 ---
-title: Résoudre les problèmes d’abonnements et de remise de Reporting Services | Microsoft Docs
+title: Résolution des problèmes d’abonnements et de remise de Reporting Services
+description: Dans cet article, vous allez diagnostiquer et résoudre les problèmes qui se produisent quand vous utilisez des abonnements, des planifications et la remise de rapports dans SQL Server Reporting Services.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572119"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662753"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Résolution des problèmes d’abonnements et de remise de Reporting Services
   
@@ -24,7 +25,7 @@ Utilisez cette rubrique pour résoudre les problèmes liés aux abonnements, aux
 La page Abonnement dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] inclut un état d’un abonnement, mais s’il existe un problème avec l’abonnement, les informations détaillées se trouvent dans les journaux [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**Journaux des traces :** Les journaux des traces sont des fichiers texte écrits dans : `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**Journaux des traces** : les journaux des traces sont des fichiers texte écrits dans : `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 Voici un exemple d’entrée de journal :
 
@@ -52,7 +53,7 @@ où \<error message> est remplacé par des informations complémentaires sur les
   
 Pour plus d’informations sur l’utilisation d’un service SMTP local pour une remise de rapports par messagerie électronique, consultez Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS).  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Échec de l'envoi du message électronique : Le serveur a rejeté l'adresse de l'expéditeur. La réponse du serveur était : 454 5.7.3 Le client n'est pas autorisé à soumettre du courrier à ce serveur  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Échec de l’envoi de l’e-mail : Le serveur a rejeté l’adresse de l’expéditeur. La réponse du serveur était : 454 5.7.3 Le client n’est pas autorisé à envoyer du courrier à ce serveur  
 Cette erreur se produit lorsque les paramètres de stratégie de sécurité du serveur SMTP autorisent uniquement des utilisateurs authentifiés à soumettre des messages pour une remise ultérieure. Si le serveur SMTP n'accepte pas les soumissions par messagerie à partir d'utilisateurs anonymes, demandez à l'administrateur système de vous donner l'autorisation d'utiliser le serveur.  
 > Cette erreur peut également se produire lorsque vous spécifiez un nom de serveur Exchange comme SMTPServer. Pour utiliser un serveur Exchange pour la remise du courrier électronique, vous devez indiquer le nom de la passerelle SMTP configurée pour votre serveur Exchange. Pour plus d'informations sur le serveur Exchange, contactez l'administrateur du système.  
   

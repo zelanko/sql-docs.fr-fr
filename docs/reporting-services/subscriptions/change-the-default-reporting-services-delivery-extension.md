@@ -1,5 +1,6 @@
 ---
 title: Modifier l’extension de remise par défaut de Reporting Services | Microsoft Docs
+description: Découvrez comment configurer les paramètres de Reporting Services pour réorganiser les extensions de remise indiquées dans la liste « Remis par » et pour définir l’extension de remise par défaut.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500401"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742305"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
   Vous pouvez modifier les paramètres de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour modifier l’extension de remise par défaut qui s’affiche dans la liste **Remis par** d’une page de définition d’abonnement. Par exemple, vous pouvez modifier la configuration afin que, lorsque les utilisateurs créent un nouvel abonnement, la remise par partage de fichiers soit activée par défaut, plutôt que la remise par messagerie électronique. Vous pouvez également modifier l'ordre selon lequel les extensions de remise sont répertoriées dans l'interface utilisateur.  
@@ -83,9 +84,9 @@ ms.locfileid: "66500401"
   
      Lors de la lecture de la configuration, l'événement suivant est écrit dans le journal des événements Windows.  
   
-     **ID de l’événement :** 109  
+     **ID d’événement :** 109  
   
-     **Source :** service Windows Report Server (nom de l’instance)  
+     **Source :** Service Windows Serveur de rapports (nom de l'instance)  
   
      Le fichier RSReportServer.config a été modifié.  
   

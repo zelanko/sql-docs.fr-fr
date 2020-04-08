@@ -1,1 +1,1 @@
-**S’APPLIQUE À :** ![oui](media/yes.png)SQL Server 2016 et versions ultérieures (Windows uniquement) ![non](media/no.png)Azure SQL Database ![non](media/no.png)Azure Synapse Analytics (SQL DW) ![non](media/no.png)Parallel Data Warehouse
+**S’APPLIQUE À :** ![Oui](media/yes-icon.png)SQL Server 2016 et ultérieur (Windows uniquement) ![Non](media/no-icon.png)Azure SQL Database ![Non](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![Non](media/no-icon.png)Parallel Data Warehouse

@@ -1,5 +1,6 @@
 ---
 title: Analyser les abonnements Reportions Services | Microsoft Docs
+description: Découvrez comment effectuer le suivi des abonnements Reporting Services à l’aide de l’interface utilisateur, de PowerShell ou des fichiers journaux. Les options de supervision dépendent du mode de serveur de rapports que vous exécutez.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285049"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742034"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  
@@ -76,7 +77,7 @@ ms.locfileid: "67285049"
   
  Voici un exemple de message d'erreur de fichier journal de trace lié aux abonnements :  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Error sending email**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Le fichier journal ne contient aucune information indiquant si le rapport a été ouvert ou si la remise a réussi. Une remise réussie signifie qu'aucune erreur n'a été générée par le processeur de planification et de livraison et que le serveur de rapports s'est connecté au serveur de messagerie. Si le message électronique a entraîné l'envoi d'un message d'erreur de non-remise dans la boîte aux lettres de l'utilisateur, cette information ne figurera pas dans le fichier journal. Pour plus d’informations sur les fichiers journaux, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285049"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Process|Domaine|Category|Level|Correlation|Message|  
-|5/21/2019 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(empty)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2019 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(empty)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: Boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  
  Pour obtenir des exemples de scripts PowerShell permettant de vérifier l'état des abonnements en mode natif ou SharePoint, voir [Gérer les propriétaires d’abonnements et exécuter un abonnement - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  

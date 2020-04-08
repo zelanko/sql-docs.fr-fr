@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259377"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80752881"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notes de publication pour les contrôles Visionneuse de rapports pour WebForms et WinForms de SSRS
 
 Voici les notes de publication pour les contrôles de la Visionneuse de rapports de WebForms et WinForms, en rapport avec [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 Pour les notes de publication de SSRS, consultez [Notes de publication de SQL Server Reporting Services (SSRS) 2017 et versions ultérieures](../release-notes-reporting-services.md).
+
+## <a name="15014040"></a>150.1404.0
+| Description de la modification | Détails |
+| :----------------- | :------ |
+| Correctifs de bogues | Résolution d’un problème lié à l’ordre des onglets de la barre d’outils dans WebForms. |
+|           | Amélioration de l’accessibilité du rendu HTML pour les tables. |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014000"></a>150.1400.0
 | Description de la modification | Détails |

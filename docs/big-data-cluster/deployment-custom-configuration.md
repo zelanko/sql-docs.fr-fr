@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285853"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550195"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement de services et ressources de cluster
 
@@ -466,6 +466,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> La bonne pratique consiste à accorder au maître Kubernetes l’un des rôles BDC ci-dessus. Si vous envisagez d’attribuer de toutes façons ces rôles au nœud maître Kubernetes, vous devez [supprimer sa teinte ``master:NoSchedule``.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Sachez que cela peut surcharger le nœud maître et l’empêcher d’effectuer ses tâches de gestion Kubernetes sur des clusters de plus grande taille. Il est normal de voir des pods planifiés sur le maître dans tout déploiement : ils tolèrent déjà la teinte ``master:NoSchedule`` et sont principalement utilisés pour aider à gérer le cluster. 
 
 ## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> Autres personnalisations utilisant les fichiers de correctif JSON
 

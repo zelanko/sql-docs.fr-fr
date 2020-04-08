@@ -1,5 +1,6 @@
 ---
-title: Résoudre les problèmes de traitement des rapports Reporting Services | Microsoft Docs
+title: Résoudre les problèmes de traitement des rapports Reporting Services
+description: Dans cet article, vous allez résoudre les problèmes qui se produisent quand le processeur de rapports combine des données et des informations de mise en page et évalue des expressions de propriétés d’éléments de rapport.
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573869"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664442"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Résoudre les problèmes de traitement des rapports Reporting Services
 Une fois les données de rapport récupérées, le processeur de rapports combine les données et les informations de mise en page. Chaque propriété d'élément de rapport qui possède une expression est évaluée dans le contexte des données et de la mise en page combinées. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.   
@@ -23,7 +24,7 @@ Au moment de l'exécution, le processeur de rapports combine les données et les
   
 Le processeur de rapports vérifie que la définition de rapport (fichier .rdl) est conforme au schéma spécifié dans la déclaration d'espace de noms au début du fichier .rdl. Pour plus d’informations sur les schémas RDL, voir [Rechercher la version du schéma de définition de rapport (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-Par ailleurs, les expressions de rapport qui sont évaluées au moment de l'exécution doivent respecter un ensemble de règles qui garantissent que les données de rapport et la mise en page peuvent être combinés correctement. Lorsque le processeur de rapports détecte un problème, le message suivant peut s'afficher : « La définition du rapport `<report name>` n'est pas valide ».  
+Par ailleurs, les expressions de rapport qui sont évaluées au moment de l'exécution doivent respecter un ensemble de règles qui garantissent que les données de rapport et la mise en page peuvent être combinés correctement. Quand le processeur de rapports détecte un problème, le message suivant peut s’afficher : La définition du rapport `<report name>` n’est pas valide.  
   
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>Les expressions d'élément de rapport peuvent uniquement faire référence aux champs dans l'étendue actuelle du dataset ou, à l'intérieur d'un agrégat, dans l'étendue du dataset spécifiée.  
   

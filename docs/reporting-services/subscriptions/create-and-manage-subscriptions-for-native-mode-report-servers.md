@@ -1,5 +1,6 @@
 ---
 title: Créer et gérer des abonnements pour les serveurs de rapports en mode natif | Microsoft Docs
+description: Découvrez comment créer et gérer un abonnement standard en tant qu’utilisateur individuel qui souhaite recevoir un rapport par e-mail ou dans un dossier partagé.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971316"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742297"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -52,9 +53,9 @@ ms.locfileid: "76971316"
   
 2.  Naviguez vers le rapport souhaité. Cliquez avec le bouton de droite sur le rapport, puis sélectionnez **S’abonner**.  
   
-3.  **Description** : entrez une description de l’abonnement du rapport, 512 caractères maximum.  
+3.  **Description** : Entrez une description de l’abonnement du rapport, 512 caractères maximum.  
   
-4.  **Propriétaire**: la valeur par défaut du champ Propriétaire est l’utilisateur actuel et ne peut pas être modifiée lors de la création de l’abonnement. Toutefois, une fois l’abonnement enregistré, vous pouvez modifier les propriétés d’abonnement, notamment le propriétaire et la description.  
+4.  **Propriétaire** : La valeur par défaut du champ Propriétaire est l’utilisateur actuel et ne peut pas être modifiée lors de la création de l’abonnement. Toutefois, une fois l’abonnement enregistré, vous pouvez modifier les propriétés d’abonnement, notamment le propriétaire et la description.  
 
 5. Sous **Type d’abonnement**, sélectionnez la case d’option **Abonnement Standard**.
 
@@ -67,15 +68,15 @@ ms.locfileid: "76971316"
 7. Sous **Destination**, sélectionnez **Partage de fichiers Windows**.  
   
 8. Sous **options de Remise (partage de fichiers Windows)** , spécifiez :  
-   - **Nom de fichier**: spécifiez un nom de fichier pour le rapport.
-   - **Ajouter une extension de fichier lorsque le fichier est créé**: cette option ajoute une extension de trois caractères au nom de fichier. L'extension de fichier est déterminée par le format de sortie sélectionné pour le rapport.  
-   - **Chemin d’accès** : tapez un chemin d’accès UNC (Universal Naming Convention) menant à un dossier existant qui doit contenir les rapports (par exemple, \\<servername\>\<myreports>). Insérez deux barres obliques inverses au début du chemin d'accès. Ne spécifiez pas de barre oblique de fin.  
+   - **Nom de fichier** : Spécifiez un nom de fichier pour le rapport.
+   - **Ajouter une extension de fichier lorsque le fichier est créé** : Cette option ajoute une extension de trois caractères au nom de fichier. L'extension de fichier est déterminée par le format de sortie sélectionné pour le rapport.  
+   - **Chemin d’accès** : Tapez un chemin d’accès UNC (Universal Naming Convention) menant à un dossier existant qui doit contenir les rapports (par exemple, \\<servername\>\<myreports>). Insérez deux barres obliques inverses au début du chemin d'accès. Ne spécifiez pas de barre oblique de fin.  
   
      ![abonnement au partage de fichiers](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "abonnement au partage de fichiers")  
   
-   - **Format du rendu**: sélectionnez un format de sortie du rapport pour la remise de fichier. Choisissez un format qui correspond à l'application bureautique qui sera utilisée pour ouvrir le rapport. Évitez les formats qui n'effectuent pas le rendu d'un rapport en un seul flux ou qui introduisent une interactivité non prise en charge dans un fichier statique (par exemple le format HTML 4.0).  
+   - **Format du rendu** : Sélectionnez un format de sortie du rapport pour la remise de fichier. Choisissez un format qui correspond à l'application bureautique qui sera utilisée pour ouvrir le rapport. Évitez les formats qui n'effectuent pas le rendu d'un rapport en un seul flux ou qui introduisent une interactivité non prise en charge dans un fichier statique (par exemple le format HTML 4.0).  
   
-   - **Informations d’identification**: permet d’utiliser le compte Partage de fichiers ou des informations d'identification Windows spécifiques. L’option **Utiliser le compte Partage de fichiers** est désactivée si votre administrateur de rapports n’a pas configuré de compte de partage de fichiers. Pour plus d’informations, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Dans les zones de texte **Nom d’utilisateur** et **Mot de passe**, indiquez les informations d’identification nécessaires pour accéder au partage de fichiers en respectant le format *\<domaine>* \\ *\<nom_utilisateur>* pour le nom d’utilisateur.  
+   - **Informations d’identification** : Choisissez d’utiliser le compte Partage de fichiers ou des informations d'identification Windows spécifiques. L’option **Utiliser le compte Partage de fichiers** est désactivée si votre administrateur de rapports n’a pas configuré de compte de partage de fichiers. Pour plus d’informations, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Dans les zones de texte **Nom d’utilisateur** et **Mot de passe**, indiquez les informations d’identification nécessaires pour accéder au partage de fichiers en respectant le format *\<domaine>* \\ *\<nom_utilisateur>* pour le nom d’utilisateur.  
   
    - **Options de remplacement**  
      - **Remplacer un fichier existant par une version plus récente**.  
@@ -92,9 +93,9 @@ Le rapport est remis sous forme de fichier statique. Si le rapport comprend des 
   
 2. Naviguez vers le rapport souhaité. Cliquez avec le bouton de droite sur le rapport, puis sélectionnez **S’abonner**.  
   
-3. **Description** : entrez une description de l’abonnement du rapport, 512 caractères maximum.  
+3. **Description** : Entrez une description de l’abonnement du rapport, 512 caractères maximum.  
   
-4.  **Propriétaire**: la valeur par défaut du champ Propriétaire est l’utilisateur actuel et ne peut pas être modifiée lors de la création de l’abonnement. Toutefois, une fois l’abonnement enregistré, vous pouvez modifier les propriétés d’abonnement, notamment le propriétaire et la description.  
+4.  **Propriétaire** : La valeur par défaut du champ Propriétaire est l’utilisateur actuel et ne peut pas être modifiée lors de la création de l’abonnement. Toutefois, une fois l’abonnement enregistré, vous pouvez modifier les propriétés d’abonnement, notamment le propriétaire et la description.  
 
 5. Sous **Type d’abonnement**, sélectionnez la case d’option **Abonnement Standard**.
 
@@ -107,18 +108,18 @@ Le rapport est remis sous forme de fichier statique. Si le rapport comprend des 
 7. Sous **Destination**, sélectionnez **E-mail**.  Si l’option **E-mail** n’est pas disponible, votre serveur de rapports n’est pas configuré pour les abonnements par e-mail. Consultez [Configurer l’e-mail d’une application de service Reporting Services](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).
   
 8. Sous **options de Remise (E-Mail)** , spécifiez :
-   - **À**: le nom de destinataire figurant dans le champ À : est renseigné automatiquement d’après votre compte d’utilisateur de domaine. Vérifiez que le format est [nom d’utilisateur]@[domain.com]. Les paramètres de configuration du serveur de rapports déterminent si le champ **À** est renseigné automatiquement à l'aide de votre compte d'utilisateur. Pour plus d’informations sur la modification des paramètres de configuration pour les adresses électroniques, consultez [Configurer un e-mail pour une application des services de Reporting Services](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
+   - **À** : Le nom de destinataire figurant dans le champ À : est renseigné automatiquement d’après votre compte d’utilisateur de domaine. Vérifiez que le format est [nom d’utilisateur]@[domain.com]. Les paramètres de configuration du serveur de rapports déterminent si le champ **À** est renseigné automatiquement à l'aide de votre compte d'utilisateur. Pour plus d’informations sur la modification des paramètres de configuration pour les adresses électroniques, consultez [Configurer un e-mail pour une application des services de Reporting Services](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
 
      >[!NOTE]  
      > En fonction de vos autorisations, vous pouvez taper l'adresse de messagerie à laquelle le rapport doit être remis. Si vous spécifiez plusieurs adresses, séparez-les par des points-virgules (;). Vous pouvez aussi taper des adresses e-mail supplémentaires dans les zones de texte **Cc**, **Cci**et **Répondre à** . Pour cela, vous devez disposer de l'autorisation de gestion de tous les abonnements.  
   
-   - **Objet** : a pour valeur par défaut « @ReportName a été exécuté à @ExecutionTime ». Vous pouvez modifier l’objet, mais notez que @ReportName et @ExecutionTime sont les seules variables globales prises en charge dans le champ **Objet**.  
+   - **Objet** : A pour valeur par défaut « @ReportName a été exécuté à @ExecutionTime ». Vous pouvez modifier l’objet, mais notez que @ReportName et @ExecutionTime sont les seules variables globales prises en charge dans le champ **Objet**.  
   
      ![abonnement e-mail](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "abonnement e-mail")  
 
-   - **Inclure un rapport**: permet d’incorporer ou de joindre un exemplaire du rapport. Le format du rapport est déterminé par le format de rendu sélectionné. Ne choisissez pas cette option si vous pensez que la taille du rapport peut dépasser la limite définie pour votre système de messagerie.  
+   - **Inclure un rapport** : Sélectionnez cette option pour incorporer ou joindre un exemplaire du rapport. Le format du rapport est déterminé par le format de rendu sélectionné. Ne choisissez pas cette option si vous pensez que la taille du rapport peut dépasser la limite définie pour votre système de messagerie.  
   
-   - **Inclure un lien**: sélectionnez cette option pour insérer une URL pointant vers le rapport dans le corps de texte du message électronique.  
+   - **Inclure un lien** : Sélectionnez cette option pour insérer une URL pointant vers le rapport dans le corps de texte de l’e-mail.  
   
      >[!NOTE]  
      >Si vous désactivez ces deux options, seul le texte de notification de la ligne Objet est envoyé.  

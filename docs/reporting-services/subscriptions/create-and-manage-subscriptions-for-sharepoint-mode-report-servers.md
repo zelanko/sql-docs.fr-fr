@@ -1,5 +1,6 @@
 ---
 title: Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint | Microsoft Docs
+description: Découvrez comment créer un abonnement Reporting Services pour remettre des rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578349"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742258"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -28,11 +29,11 @@ ms.locfileid: "65578349"
   
  Lorsque vous créez un abonnement, il existe trois méthodes pour spécifier sa remise :  
   
--   **Bibliothèque de documents**: vous pouvez créer un abonnement qui remet un document basé sur le rapport d'origine dans une bibliothèque située sur le même site SharePoint que le rapport d'origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
+-   **Bibliothèque de documents**  : vous pouvez créer un abonnement qui remet un document basé sur le rapport d’origine dans une bibliothèque située sur le même site SharePoint que le rapport d’origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
   
--   **Dossier de fichiers :** vous pouvez remettre un document basé sur le rapport d'origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
+-   **Dossier de fichiers :** vous pouvez remettre un document basé sur le rapport d’origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
   
--   **Courrier électronique :** si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
+-   **E-mail :** si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
   
  **Dans cette rubrique :**  
   

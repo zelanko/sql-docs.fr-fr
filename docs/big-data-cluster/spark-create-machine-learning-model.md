@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255910"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531127"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Créer, exporter et scorer les modèles de machine learning Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ Pour cet exemple, les données de recensement (**AdultCensusIncome.csv**) sont u
 
    Ce notebook contient des cellules avec les commandes nécessaires pour cette section de l’exemple.
 
-1. Ouvrez le notebook dans Azure Data Studio et exécutez chaque bloc de code. Pour plus d’informations sur l’utilisation des notebooks, consultez [Guide pratique pour utiliser des notebooks dans SQL Server](notebooks-guidance.md).
+1. Ouvrez le notebook dans Azure Data Studio et exécutez chaque bloc de code. Pour plus d’informations sur l’utilisation des notebooks, consultez [Guide pratique pour utiliser des notebooks avec SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 Les données sont d’abord lues dans Spark et divisées en jeux de données d’entraînement et de test. Ensuite, le code entraîne un modèle de pipeline avec les données d’entraînement. Enfin, il exporte le modèle vers un bundle MLeap.
 
@@ -61,7 +61,7 @@ Les données sont d’abord lues dans Spark et divisées en jeux de données d�
 
 ## <a name="model-scoring-with-sql-server"></a>Scoring du modèle avec SQL Server
 
-Maintenant que le modèle de pipeline Spark ML se trouve dans un format de [bundle MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) de sérialisation courant, vous pouvez scorer le modèle en Java sans la présence de Spark. 
+Maintenant que le modèle de pipeline Spark ML se trouve dans un format de [bundle MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) de sérialisation courant, vous pouvez scorer le modèle en Java sans la présence de Spark.
 
 Cet exemple utilise l’[extension de langage Java](../language-extensions/language-extensions-overview.md) dans SQL Server. Pour pouvoir scorer le modèle dans SQL Server, vous devez d’abord créer une application Java qui peut charger le modèle dans Java et le scorer. Vous pouvez trouver l’exemple de code pour cette application Java dans le [dossier mssql-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

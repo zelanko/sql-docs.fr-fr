@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866036"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531167"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
 
@@ -91,6 +91,13 @@ Il existe trois types d'informations d'identification utilisables dans une conne
   
 Si l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configurée pour l'authentification Windows et se trouve dans le même domaine ou un domaine approuvé avec le serveur de rapports, vous pouvez configurer la connexion pour utiliser le compte de service ou un compte d'utilisateur de domaine que vous gérez comme propriété de connexion à travers l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si le serveur de base de données figure dans un domaine différent ou si vous utilisez la sécurité de groupe de travail, vous devez configurer la connexion pour utiliser une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans ce cas, veillez bien à chiffrer la connexion.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Quand vous utilisez Azure SQL Managed Instance pour héberger des bases de données du serveur de rapports, l’authentification SQL Server est le seul type d’informations d’identification pris en charge. De plus, notez que Managed Instance ne peut pas héberger l’instance du serveur de rapports.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>Utilisation de comptes de service et de la sécurité intégrée
 
 Vous pouvez utiliser la sécurité intégrée de Windows pour vous connecter via le compte de service Report Server. Le compte bénéficie des droits de connexion à la base de données du serveur de rapports. Il s'agit du type d'informations d'identification par défaut que choisit le programme d'installation si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut.  
@@ -105,14 +112,7 @@ Vous pouvez spécifier un compte d'utilisateur Windows pour la connexion à la b
 
 #### <a name="using-a-sql-server-login"></a>Utilisation d'une connexion SQL Server
 
-Vous pouvez spécifier une seule connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la connexion à la base de données du serveur de rapports. Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et si la base de données du serveur de rapports se trouve sur un ordinateur distant, utilisez IPSec pour sécuriser la transmission des données entre les serveurs. Si vous utilisez une connexion de base de données, vous devez mettre à jour la connexion à la base de données du serveur de rapports chaque fois que vous changez le mot de passe ou le compte.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Lors de l’utilisation d’une instance managée Azure SQL pour héberger des bases de données Reporting Services 2019, la prise en charge est limitée à l’utilisation des informations d’identification de connexion SQL Server pour la connexion.
-
-::: moniker-end
+Vous pouvez spécifier une seule connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la connexion à la base de données du serveur de rapports. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que la base de données du serveur de rapports se trouve sur un ordinateur distant, utilisez IPSec pour sécuriser la transmission des données entre les serveurs. Si vous utilisez une connexion de base de données, vous devez mettre à jour la connexion à la base de données du serveur de rapports chaque fois que vous changez le mot de passe ou le compte.
 
 ### <a name="database-permissions"></a>Autorisations de base de données
 

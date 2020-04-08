@@ -1,5 +1,5 @@
 ---
-title: Superviser et dépanner
+title: Résoudre les problèmes liés à Kubernetes
 titleSuffix: SQL Server big data clusters
 description: Cet article fournit des commandes pratiques pour la supervision et la résolution des problèmes d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153632"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664183"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Superviser et dépanner [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Résoudre les problèmes liés à [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit plusieurs commandes Kubernetes utiles que vous pouvez utiliser pour superviser et dépanner un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il montre comment visualiser les informations détaillées d’un pod ou d’autres artefacts Kubernetes situés dans le cluster Big Data. Cet article traite également de tâches courantes, comme la copie de fichiers vers ou depuis un conteneur exécutant un des services du cluster Big Data SQL Server.
 
 > [!TIP]
-> Pour la supervision des composants des clusters Big Data, vous pouvez utiliser les commandes [**azdata bdc status**](deployment-guidance.md#status) ou les [notebooks de résolution des problèmes intégrés](manage-notebooks.md) fournis avec Azure Data Studio.
+> Pour la supervision des composants des clusters Big Data, vous pouvez utiliser les commandes [**azdata bdc status**](deployment-guidance.md#status) ou les [notebooks de résolution des problèmes intégrés](notebooks-manage-bdc.md) fournis avec Azure Data Studio.
 
 > [!TIP]
 > Exécutez les commandes **kubectl** suivantes sur une machine cliente Windows (cmd ou PS) ou Linux (bash). Elles nécessitent une authentification antérieure dans le cluster et un contexte de cluster pour s’exécuter. Par exemple, pour un cluster AKS créé précédemment, vous pouvez exécuter `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` pour télécharger le fichier de configuration de cluster Kubernetes et définir le contexte de cluster.

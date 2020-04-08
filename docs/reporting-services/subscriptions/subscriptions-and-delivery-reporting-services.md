@@ -1,5 +1,6 @@
 ---
 title: Abonnements et remise (Reporting Services) | Microsoft Docs
+description: Dans cet article, vous allez découvrir les abonnements Reporting Services, qui remettent un rapport à un moment donné ou en réponse à un événement.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91de7513eb5d7a6528537ca68b15765c36162f8d
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578032"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742227"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
   Un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous définissez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique.  

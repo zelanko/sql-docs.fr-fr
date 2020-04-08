@@ -1,6 +1,6 @@
 ---
 title: Gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell | Microsoft Docs
-description: Vous pouvez transférer programmatiquement la propriété d’un abonnement Reporting Services d’un utilisateur à un autre.
+description: Découvrez comment transférer par programmation la propriété d’un abonnement Reporting Services d’un utilisateur à un autre.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259327"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742185"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell
 
@@ -57,23 +57,23 @@ Cette section récapitule les niveaux d'autorisation requis pour utiliser chacun
   
 **Mode natif :**
   
-- Dresser la liste des abonnements : [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement OU ReadAnySubscription.  
+- Liste des abonnements : [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement OU ReadAnySubscription.  
   
-- Modifier les abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
+- Modifier des abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
   
-- Dresser la liste des enfants : ReadProperties sur Item  
+- Dresser la liste des enfants : ReadProperties on Item  
   
-- Déclencher un événement : GenerateEvents (Système)  
+- Déclencher un événement : GenerateEvents (Système)  
   
  **Mode SharePoint :**
   
-- Dresser la liste des abonnements : ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement et il s’agit d’un abonnement planifié.  
+- Liste des abonnements : ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sur le rapport ET l'utilisateur est le propriétaire de l'abonnement et il s'agit d'un abonnement planifié).  
   
-- Modifier des abonnements : ManageWeb  
+- Modifier des abonnements : ManageWeb  
   
-- Dresser la liste des enfants : ViewListItems  
+- Dresser la liste des enfants : ViewListItems  
   
-- Déclencher l'événement : ManageWeb  
+- Déclencher un événement : ManageWeb  
   
  Pour plus d'informations, consultez [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   

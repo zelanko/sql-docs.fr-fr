@@ -1,5 +1,6 @@
 ---
-title: Cause et résolution des erreurs Reporting Services | Microsoft Docs
+title: Cause et résolution des erreurs Reporting Services
+description: Consultez la liste des articles relatifs aux messages d’erreur relatifs à Reporting Services. Chaque article décrit le message d’erreur, les causes possibles et comment corriger le problème.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a07487083c645679001435ae14fd6befd618b4d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575581"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664262"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Cause et résolution des erreurs Reporting Services
   Cette rubrique contient des informations relatives à la cause et à la résolution de plusieurs erreurs concernant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les rubriques de message d'erreur dans cette section fournissent une explication du message d'erreur, des causes possibles et des actions que vous pouvez entreprendre pour corriger le problème.  

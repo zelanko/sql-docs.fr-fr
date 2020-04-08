@@ -1,7 +1,7 @@
 ---
 title: Se connecter au serveur (Moteur de base de données)
 ms.custom: seo-lt-2019
-ms.date: 03/27/2020
+ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402546"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531204"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
 
@@ -56,20 +56,17 @@ La version actuelle de SSMS propose cinq modes d’authentification lorsque vous
 > **Authentification SQL Server**  
 > Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur. Si possible, utilisez l’authentification Windows ou l’authentification par mot de passe Active Directory.  
 > 
-> **Active Directory - Authentification universelle avec prise en charge de MFA**  
+> **Azure Active Directory - Authentification universelle avec prise en charge de MFA**  
 > Active Directory - Authentification universelle avec prise en charge de MFA est un processus interactif qui prend en charge Azure Multi-Factor Authentication (MFA). Azure MFA contribue à sécuriser l’accès aux données et aux applications tout en répondant à la demande des utilisateurs souhaitant un processus d’authentification simple. Il fournit une authentification renforcée avec un éventail d’options de vérification simples (appel téléphonique, SMS, cartes à puce avec code confidentiel ou notification d’application mobile), ce qui permet aux utilisateurs de choisir la méthode qu’ils préfèrent. Quand le compte d’utilisateur est configuré pour MFA, le processus d’authentification interactif demande une plus grande intervention de l’utilisateur par le biais de boîtes de dialogue contextuelles, d’utilisation de carte à puce, et ainsi de suite. Quand le compte d’utilisateur est configuré pour MFA, l’utilisateur doit sélectionner Authentification universelle Azure pour se connecter. Si le compte d’utilisateur ne nécessite pas MFA, l’utilisateur peut toujours utiliser les deux autres options d’authentification Azure Active Directory. Pour plus d’informations, voir [Prise en charge de SSMS pour Azure AD MFA avec la base de données SQL et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Si nécessaire, vous pouvez changer le domaine qui authentifie la connexion, en cliquant sur **Options**, en sélectionnant l’onglet **Propriétés de connexion** et en renseignant la zone **Nom du domaine AD ou ID de locataire**.  
 > 
-> **Active Directory - Authentification par mot de passe**  
+> **Azure Active Directory - Mot de passe**  
 > L’authentification Azure Active Directory est un mécanisme de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] à l’aide d’identités dans Azure Active Directory (Azure AD).  Utilisez cette méthode pour vous connecter à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si vous êtes connecté à Windows avec les informations d’identification d’un domaine qui n’est pas fédéré avec Azure, ou si vous utilisez l’authentification Azure AD avec Azure AD basée sur le domaine client ou initial. Pour plus d’informations, consultez [Connexion à SQL Database avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
 > 
 > **Active Directory - Authentification intégrée**  
-> L’authentification Azure Active Directory est un mécanisme de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] à l’aide d’identités dans Azure AD (Azure Active Directory). Utilisez cette méthode pour vous connecter à SQL Database, Managed Instance ou Azure Synapse Analytics si vous êtes connecté à Windows à l’aide de vos informations d’identification Azure Active Directory à partir d’un domaine fédéré ou d’un domaine managé configuré pour une authentification unique fluide à des fins d’authentification directe et d’authentification par hachage du mot de passe. Pour plus d’informations, consultez [Authentification unique fluide Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) et [Connexion à SQL Database avec l’authentification Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
->
-  > [!NOTE]
-  > [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap) pour l’authentification Windows intégrée n’est pas pris en charge pour une authentification unique fluide à des fins d’authentification directe et d’authentification par hachage du mot de passe.  
+> L’authentification Azure Active Directory est un mécanisme de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] à l’aide d’identités dans Azure Active Directory (Azure AD). Utilisez cette méthode pour vous connecter à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si vous êtes connecté à Windows avec vos informations d’identification Azure Active Directory à partir d’un domaine fédéré. Pour plus d’informations, consultez [Connexion à SQL Database avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
 **Nom d'utilisateur**  
-Nom d’utilisateur Windows avec lequel vous connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec **l’Authentification par mot de passe Active Directory**. Il est en lecture seule lorsque vous sélectionnez l’authentification **Authentification Windows** ou **Active Directory - Authentification intégrée**.  
+Nom d’utilisateur Windows avec lequel vous connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec l’Authentification **Azure Active Directory - Mot de passe**. Elle est en lecture seule quand vous sélectionnez l’authentification **Authentification Windows** ou **Azure Active Directory - Authentification intégrée**.  
   
 **Connexion**  
 Entrez le nom d'accès avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec l’Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Authentification par mot de passe Active Directory.  

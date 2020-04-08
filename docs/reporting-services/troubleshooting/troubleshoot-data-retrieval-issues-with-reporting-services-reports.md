@@ -1,5 +1,6 @@
 ---
-title: Résoudre les problèmes de récupération des données avec des rapports Reporting Services | Microsoft Docs
+title: Dépanner des problèmes de récupération des données avec des rapports Reporting Services
+description: Dans cet article, vous allez diagnostiquer et résoudre les problèmes qui se produisent quand vous récupérez des données de rapport en prévisualisant un rapport localement ou en exécutant un rapport sur le serveur de rapports.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574429"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664447"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Dépanner des problèmes de récupération des données avec des rapports Reporting Services
 La première étape de traitement d'un rapport consiste à récupérer les données du rapport pour chaque dataset en exécutant la requête de dataset. Lorsque vous affichez l'aperçu d'un rapport localement, vos connexions à la source de données et vos informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur votre ordinateur. Lorsque vous exécutez un rapport sur le serveur de rapports, les connexions à la source de données et les informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur le serveur de rapports. Utilisez cette rubrique pour vous aider à résoudre des problèmes de récupération des données de rapport.   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>Je ne parviens pas à créer une connexion à une source de données  
-Lorsque vous créez une source de données, exécutez une requête de dataset ou affichez l'aperçu d'un rapport, vous pouvez obtenir le message suivant : « Impossible de créer une connexion à la source de données `<data source name>`».   
+Quand vous créez une source de données, exécutez une requête de dataset ou affichez l’aperçu d’un rapport, le message suivant peut s’afficher : Impossible de créer une connexion à la source de données `<data source name>`.   
     
 ### <a name="data-source-is-not-available"></a>La source de données n'est pas disponible.  
 La source de données est hors connexion ou non disponible pour une raison quelconque.   
@@ -57,7 +58,7 @@ Lorsque vous définissez une requête dans la boîte de dialogue Propriétés du
 Pour remplir la collection de champs de dataset, procédez comme suit :  
 * Assurez-vous que vous bénéficiez des autorisations nécessaires pour récupérer les informations des champs de la base de données. Pour certaines sources de données, vous disposez peut-être d'autorisations vous permettant d'accéder à la source de données, mais pas à la table ou à la colonne. Vous pouvez avoir l'autorisation d'accéder à une vue, mais vous n'êtes peut-être pas autorisé à exécuter les procédures stockées qui créent la vue. Pour valider votre accès à des tables ou à des colonnes spécifiques dans une base de données, vérifiez les résultats de votre requête dans une application séparée telle que SQL Server Management Studio, en tirant parti des mêmes autorisations que celles qui sont utilisées pour le rapport. Si vous ne pouvez pas voir les résultats désirés pour votre requête, faites appel à l'administrateur système pour modifier vos autorisations d'accès aux données.   
 * Exécutez la requête dans le volet de requêtes de la boîte de dialogue **Propriétés du dataset** . Pour en savoir plus, voir [Ajouter des données à un rapport (Générateur de rapports et SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
-* Ajoutez des champs manuellement. Pour en savoir plus, [Procédure : ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
+* Ajoutez des champs manuellement. Pour plus d’informations, consultez [Guide pratique pour ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## <a name="see-also"></a>Voir aussi  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

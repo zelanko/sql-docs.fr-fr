@@ -1,5 +1,6 @@
 ---
 title: Remise par partage de fichiers dans Reporting Services | Microsoft Docs
+description: Dans cet article, vous allez découvrir comment configurer l’extension de remise par partage de fichiers afin de pouvoir remettre un rapport dans un dossier.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a411b818d0b844f3f43ae29db7a3e1ee732be798
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72278232"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742047"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise de partage de fichiers qui vous permet de remettre un rapport dans un dossier. Cette extension est disponible par défaut et elle ne nécessite aucune configuration supplémentaire. Pour que la remise de fichier réussisse, vous devez définir des autorisations d'accès en écriture sur le dossier partagé. Le compte qui exige des autorisations d’écriture peut être soit des informations d’identification configurées dans l’abonnement, soit un **compte de partage de fichiers** configuré pour le serveur de rapports. Pour plus d’informations sur le compte de partage de fichiers, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). En outre, les utilisateurs qui demandent l'accès aux rapports doivent avoir des autorisations de lecture sur le dossier partagé.  
@@ -68,9 +69,9 @@ ms.locfileid: "72278232"
 ##  <a name="file-options"></a><a name="bkmk_file_options"></a> Options de fichier  
  Lorsque vous créez un abonnement de partage de fichiers, vous pouvez configurer le mode de création du nom de fichier et spécifier si le fichier doit remplacer les versions précédentes du rapport. Un nom de fichier complet comprend trois parties : un nom, une extension et du texte ou un nombre ajouté au fichier pour créer un nom de fichier unique.  
   
- **Nom de fichier :** le nom de fichier est basé sur le nom du rapport, mais vous pouvez indiquer un nom personnalisé dans l’abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  
+ **Nom de fichier :** le nom de fichier par défaut est basé sur le nom du rapport source, mais vous pouvez indiquer un nom personnalisé dans l’abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  
   
- **Remplacer :** vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
+ **Remplacer :** Vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
   
  Pour créer des noms de fichiers uniques pour la remise de rapport, il existe une autre approche qui consiste à inclure un élément d'horodatage dans le nom de fichier. Pour ce faire, ajoutez la variable **\@timestamp** au nom de fichier (par exemple, *CompanySales@timestamp* ). Avec cette approche, le nom de fichier est unique par définition : il ne sera jamais remplacé.  
   
