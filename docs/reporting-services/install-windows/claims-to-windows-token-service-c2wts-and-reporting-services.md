@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265001"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002657"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
 
@@ -49,7 +49,7 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
 
     **Comme bonne pratique, C2WTS doit s’exécuter sous sa propre identité de domaine.**
 
-    * Créez un compte Active Directory et inscrivez-le comme compte géré dans SharePoint Server. Pour en savoir plus sur les comptes gérés, consultez [Managed Accounts in Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * Créez un compte Active Directory et inscrivez-le comme compte géré dans SharePoint Server.
    
     * Configurez le service C2WTS pour utiliser le compte géré via l’Administration centrale de SharePoint > Sécurité > Configurer les comptes de service > Service Windows - Service d’émission de jetons Revendications vers Windows
 
