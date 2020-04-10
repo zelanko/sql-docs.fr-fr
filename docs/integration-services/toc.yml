@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: Planifier des packages dans Azure avec SSMS
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Processus et outils pour migrer vers Azure
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Installer Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Installation de plusieurs versions Integration Services côte à côte
@@ -446,7 +448,7 @@
         - name: Data Streaming Destination
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 'Procédure pas à pas : publier un package SSIS en tant que vue SQL'
+            - name: "Procédure pas à pas\_: Publication d’un package SSIS sous la forme d’une vue SQL"
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: destination DataReader
           href: ../integration-services/data-flow/datareader-destination.md
@@ -477,7 +479,7 @@
         - name: Source OData
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: 'Didacticiel : Utiliser la source OData'
+            - name: "Tutoriel\_: Utiliser la source OData"
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: Fournir une requête de source OData au moment de l’exécution
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -933,7 +935,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Bien démarrer avec SSIS Scale Out sur un seul ordinateur
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Procédure pas à pas : Configurer Integration Services Scale Out'
+    - name: "Procédure pas à pas\_: Configurer Scale-out Integration Services"
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Exécuter des packages dans Scale-out
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1730,7 +1732,7 @@
     - name: Créer un package
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: "Leçon 1\_: Créer un projet et un package de base"
+        - name: "Leçon\_1\_: Créer un projet et un package de base"
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: 'Leçon 1-1 : Création d’un projet Integration Services'
@@ -1751,7 +1753,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: 'Leçon 1-9 : Test du package du didacticiel de la leçon 1'
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: "Leçon 2\_: Ajouter un bouclage"
+        - name: "Leçon\_2\_: Ajouter un bouclage"
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: 'Leçon 2-1 : Copie du package de la leçon 1'
@@ -1762,7 +1764,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: 'Leçon 2-4 : Test du package du didacticiel de la leçon 2'
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: "Leçon 3\_: Ajouter la journalisation"
+        - name: "Leçon\_3\_: Ajouter une journalisation"
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: 'Leçon 3-1 : Copie du package de la leçon 2'
@@ -1771,7 +1773,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: 'Leçon 3-3 : Test du package du didacticiel de la leçon 3'
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: "Leçon 4\_: Ajouter une redirection de flux d’erreurs"
+        - name: "Leçon\_4\_: Ajouter une redirection de flux d’erreurs"
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: 'Leçon 4-1 : Copie du package de la leçon 3'
@@ -1784,7 +1786,7 @@
               href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
             - name: 'Leçon 4-5 : Test du package du didacticiel de la leçon 4'
               href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: "Leçon 5\_: Ajouter des configurations de package pour le modèle de déploiement de package"
+        - name: "Leçon\_5\_: Ajouter des configurations de package pour le modèle de déploiement de package"
           href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
           items:
             - name: 'Leçon 5-1 : Copie du package de la leçon 4'
@@ -1809,7 +1811,7 @@
     - name: Déployer des packages
       href: ../integration-services/deploy-packages-with-ssis.md
       items:
-        - name: 'Leçon 1 : préparation à la création de l''application de déploiement'
+        - name: "Leçon\_1\_: Préparation à la création de l’application de déploiement"
           href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
           items:
             - name: 'Leçon 1-1 : Création des variables d’environnement et des dossiers de travail'
@@ -1822,14 +1824,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: 'Leçon 1-5 : Test des packages mis à jour'
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: "Leçon 2\_: Créer le bundle de déploiement"
+        - name: "Leçon\_2\_: Créer le bundle de déploiement"
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: 'Leçon 2-1 : Génération de l’utilitaire de déploiement'
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: 'Leçon 2-2 : Vérification du bundle de déploiement'
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: "Leçon 3\_: Installer des packages"
+        - name: "Leçon\_3\_: Installer des packages"
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: 'Leçon 3-1 : Copie du bundle de déploiement'
