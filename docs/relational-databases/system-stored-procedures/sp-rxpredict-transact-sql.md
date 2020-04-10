@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662840"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012435"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Génère une valeur prévue pour une entrée donnée composée d’un modèle d’apprentissage automatique stocké dans un format binaire dans une base de données SQL Server.
 
@@ -40,7 +40,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>Arguments
 
-**Modèle**
+**model**
 
 Un modèle préentraîné dans un format pris en charge. 
 
@@ -64,7 +64,7 @@ L’utilisateur `EXECUTE` a besoin d’autorisation sur la base de données.
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R ou Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
+Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
 
 #### <a name="r-revoscaler-models"></a>R: Modèles RevoScaleR
 
