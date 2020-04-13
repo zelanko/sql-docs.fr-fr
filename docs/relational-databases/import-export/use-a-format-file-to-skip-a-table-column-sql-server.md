@@ -1,5 +1,6 @@
 ---
 title: Utiliser un fichier de format pour ignorer une colonne de table (SQL Server) | Microsoft Docs
+description: Cet article explique comment utiliser un fichier de format pour ignorer l’importation d’une colonne de table lorsque les données de la colonne ignorée n’existent pas dans le fichier de données source.
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909254"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980411"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,9 +64,9 @@ Le fichier de format modifié doit mapper chaque champ existant à une colonne c
 
 Pour importer des données en bloc depuis `myTestSkipCol2.dat` dans la table `myTestSkipCol`, le fichier de format doit mapper le premier champ de données vers `Col1`, ignorer `Col2` et mapper le second champ vers `Col3`.  
  
-## <a name="option-1---use-a-non-xml-format-file"></a>Option n{1}o{2}1 - Utiliser un fichier de format non-XML  
+## <a name="option-1---use-a-non-xml-format-file"></a>Option no1 - Utiliser un fichier de format non-XML  
   
-### <a name="step-1---create-a-default-non-xml-format-file"></a>Étape n{1}o{2}1 - Créer un fichier de format non-XML par défaut  
+### <a name="step-1---create-a-default-non-xml-format-file"></a>Étape no1 - Créer un fichier de format non-XML par défaut  
 Créez un fichier de format non-XML par défaut pour l’exemple de table `myTestSkipCol` au moyen de la commande suivante **bcp** à l’invite :  
   
 ```cmd
@@ -84,12 +85,12 @@ La commande précédente crée un fichier de format non XML, `myTestSkipCol_Defa
 > [!NOTE]  
 >  Pour plus d’informations sur les champs de fichier de format, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-### <a name="step-2---modify-a-non-xml-format-file"></a>Étape n{1}o{2}2 - Modifier un fichier de format non-XML  
+### <a name="step-2---modify-a-non-xml-format-file"></a>Étape no2 - Modifier un fichier de format non-XML  
 Pour modifier un fichier de format non XML par défaut, il existe deux alternatives. Quoi qu’il en soit, elles indiquent toutes deux que le champ de données n’existe pas dans le fichier de données et qu’aucune donnée ne peut être insérée dans la colonne correspondante de la table.
 
 Pour ignorer une colonne de table, modifiez le fichier de format non XML par défaut et modifiez-le à l'aide de l'une des méthodes alternatives suivantes :  
 
-#### <a name="option-1---remove-the-row"></a>Option n{1}o{2}1 - Supprimer la ligne
+#### <a name="option-1---remove-the-row"></a>Option no1 - Supprimer la ligne
 La méthode recommandée pour ignorer une colonne passe par les trois étapes suivantes :
 
 1.   Commencez par supprimer les lignes du fichier de format qui correspondent à un champ manquant dans le fichier de données source.
@@ -105,7 +106,7 @@ L'exemple suivant est basé sur le fichier de format par défaut pour la table `
 2       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
 ```  
   
-#### <a name="option-2---modify-the-row-definition"></a>Option n{1}o{2}2 - Modifier la définition de ligne
+#### <a name="option-2---modify-the-row-definition"></a>Option no2 - Modifier la définition de ligne
 
 Pour ignorer une colonne de table, vous pouvez aussi modifier la définition de la ligne du fichier-format qui correspond à la colonne de table. Dans cette ligne de fichier-format, les valeurs « longueur de préfixe », « longueur des données du fichier hôte » et « ordre des colonnes du serveur » doivent être égales à 0. De plus, les champs « terminateur » et « classement des colonnes » doivent avoir la valeur "" (c’est-à-dire une valeur vide ou NULL). La valeur « nom de la colonne du serveur » nécessite une chaîne non vide même si le nom de la colonne à proprement dit n’est pas nécessaire. Les champs de format restants nécessitent leurs valeurs par défaut.  
   
@@ -136,9 +137,9 @@ SELECT * FROM myTestSkipCol;
 GO  
 ```  
   
-## <a name="option-2---use-an-xml-format-file"></a>Option n{1}o{2}2 - Utiliser un fichier de format XML  
+## <a name="option-2---use-an-xml-format-file"></a>Option no2 - Utiliser un fichier de format XML  
   
-### <a name="step-1---create-a-default-xml-format-file"></a>Étape n{1}o{2}1 - Créer un fichier de format XML par défaut   
+### <a name="step-1---create-a-default-xml-format-file"></a>Étape no1 - Créer un fichier de format XML par défaut   
 
 Créez un fichier de format XML par défaut pour l’exemple de table `myTestSkipCol` au moyen de la commande suivante **bcp** à l’invite :  
   
@@ -170,7 +171,7 @@ La commande précédente crée un fichier de format XML, `myTestSkipCol_Default.
 > [!NOTE]  
 >  Pour plus d’informations sur la structure des fichiers de format XML, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
 
-### <a name="step-2---modify-an-xml-format-file"></a>Étape n{1}o{2}2 - Modifier un fichier de format XML
+### <a name="step-2---modify-an-xml-format-file"></a>Étape no2 - Modifier un fichier de format XML
 
 Voici le fichier de format XML modifié, `myTestSkipCol2.xml`, qui ignore `Col2`. Les entrées `FIELD` et `ROW` pour `Col2` ont été supprimées, et les entrées ont été renumérotées. Le délimiteur `\t` après le premier champ a également été remplacé par `,`.
 

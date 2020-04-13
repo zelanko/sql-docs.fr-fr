@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121558"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809836"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68121558"
 
   Implémente la gestion des erreurs pour [!INCLUDE[tsql](../../includes/tsql-md.md)], similaire à la gestion des exceptions dans les langages [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peut être contenu dans un bloc TRY. Si une erreur survient dans le bloc TRY, le contrôle est passé à un autre groupe d'instructions contenues dans un bloc CATCH.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,9 +70,14 @@ END CATCH
   
  Une construction TRY...CATCH ne peut pas s’étendre sur plusieurs lots. Une construction TRY...CATCH ne peut pas s’étendre sur plusieurs blocs d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple, une construction TRY...CATCH ne peut pas s’étendre sur deux blocs BEGIN...END d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et ne peut pas s’étendre sur une construction IF...ELSE.  
   
- Si le code inclus dans un bloc TRY ne contient aucune erreur, lorsque l'exécution de la dernière instruction du bloc TRY est terminée, le contrôle est passé à l'instruction qui se trouve immédiatement après l'instruction END CATCH associée. S'il existe une erreur dans le code inclus dans le bloc TRY, le contrôle est passé à la première instruction du bloc CATCH associé. Si l'instruction END CATCH se trouve dans la dernière instruction d'une procédure stockée ou d'un déclencheur, le contrôle revient à l'instruction qui a appelé la procédure stockée ou activé le déclencheur.  
-  
- Lorsque le code du bloc CATCH est terminé, le contrôle est passé à l'instruction qui se trouve immédiatement après l'instruction END CATCH. Les erreurs interceptées par un bloc CATCH ne sont pas renvoyées à l'application appelante. Si une partie des informations sur les erreurs doivent être renvoyées à l'application, le code dans le bloc CATCH doit pour ce faire utiliser des mécanismes tels que les jeux de résultats SELECT ou les instructions RAISERROR et PRINT.  
+ Si le code inclus dans un bloc TRY ne contient aucune erreur, lorsque l'exécution de la dernière instruction du bloc TRY est terminée, le contrôle est passé à l'instruction qui se trouve immédiatement après l'instruction END CATCH associée.
+ 
+ S'il existe une erreur dans le code inclus dans le bloc TRY, le contrôle est passé à la première instruction du bloc CATCH associé. Lorsque le code du bloc CATCH est terminé, le contrôle est passé à l'instruction qui se trouve immédiatement après l'instruction END CATCH. 
+ 
+ > [!NOTE] 
+ > Si l'instruction END CATCH se trouve dans la dernière instruction d'une procédure stockée ou d'un déclencheur, le contrôle revient à l'instruction qui a appelé la procédure stockée ou activé le déclencheur. 
+ 
+ Les erreurs interceptées par un bloc CATCH ne sont pas renvoyées à l'application appelante. Si une partie des informations sur les erreurs doivent être renvoyées à l'application, le code dans le bloc CATCH doit pour ce faire utiliser des mécanismes tels que les jeux de résultats SELECT ou les instructions RAISERROR et PRINT.  
   
  Les constructions TRY...CATCH peuvent être imbriquées. Un bloc TRY ou CATCH peut contenir des constructions imbriquées TRY...CATCH. Par exemple, un bloc CATCH peut contenir une construction TRY...CATCH imbriquée pour gérer les erreurs rencontrées par le code CATCH.  
   

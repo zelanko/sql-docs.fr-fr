@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479677"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531077"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+|Élément|Valeur|
+|:---|:---|
 |Nom du produit|SQL Server|  
 |ID de l’événement|8992|  
 |Source de l’événement|MSSQLSERVER|  
@@ -43,9 +43,9 @@ Cette erreur peut se produire lorsqu'une ou plusieurs tables système ont été 
 Cette erreur peut se produire lors de l'exécution de DBCC CHECKDB sur une base de données mise à niveau de SQL Server 2000 vers SQL Server 2005 ou version ultérieure. Dans SQL Server 2000, DBCC CHECKDB n'incluait pas la fonctionnalité DBCC CHECKCATALOG ; par conséquent, l'erreur ne peut pas être interceptée avant la mise à niveau à moins que DBCC CHECKCATALOG n'ait été spécifiquement exécuté sur la base de données dans SQL Server 2000.  
   
 Vous pouvez voir s'afficher les erreurs suivantes conjointement avec l'erreur 8992 :  
-|||
-|-|-| 
+
 |ID de message|Texte du message|
+|:---|:---|
 |3851|Une ligne non valide (%ls) a été détectée dans la table système sys.%ls%ls.|
 |3852|La ligne (%ls) de sys.%ls%ls ne correspond à aucune ligne (%ls) dans sys.%ls%ls.|
 |3853|L'attribut (%ls) de la ligne (%ls) dans sys.%ls%ls ne correspond à aucune ligne (%ls) dans sys.%ls%ls.|

@@ -17,17 +17,17 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5874c8714706e760f40c1862d18b94b3c28952b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907258"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664422"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Génère une valeur prédite ou des scores calculés à partir d’un modèle stocké. Pour plus d’informations, consultez [Notation native à l’aide de la fonction T-SQL PREDICT](../../advanced-analytics/sql-native-scoring.md).
+Génère une valeur prédite ou des scores calculés à partir d’un modèle stocké. Pour plus d’informations, consultez [Notation native à l’aide de la fonction T-SQL PREDICT](../../machine-learning/sql-native-scoring.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,7 +98,7 @@ Vous n’avez pas besoin d’installer R, Python ou un autre langage d’apprent
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Le modèle que vous utilisez doit avoir été créé à l’aide d’un des algorithmes pris en charge fournis dans le package RevoScaleR. Pour obtenir la liste des modèles pris en charge, consultez [Calcul des scores en temps réel](../../advanced-analytics/real-time-scoring.md).
+Le modèle que vous utilisez doit avoir été créé à l’aide d’un des algorithmes pris en charge fournis dans le package RevoScaleR. Pour obtenir la liste des modèles pris en charge, consultez [Calcul des scores en temps réel](../../machine-learning/real-time-scoring.md).
 
 ### <a name="permissions"></a>Autorisations
 
@@ -182,4 +182,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Notation native à l’aide de la fonction T-SQL PREDICT](../../advanced-analytics/sql-native-scoring.md)
+- [Notation native à l’aide de la fonction T-SQL PREDICT](../../machine-learning/sql-native-scoring.md)
