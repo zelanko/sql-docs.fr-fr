@@ -1,21 +1,20 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2020
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77520892"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664215"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "77520892"
 Inscrit les extensions de langage externe dans la base de données à partir du flux d’octets ou du chemin de fichier spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données d’inscrire de nouvelles extensions de langage externe sur toute plateforme de système d’exploitation prise en charge par SQL Server. Pour plus d’informations, consultez [Extensions de langage](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Actuellement, **Java** est le seul langage externe pris en charge. **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python**, consultez [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/).
+> Actuellement, **Java** est le seul langage externe pris en charge. **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python**, consultez [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -106,10 +105,6 @@ Cet argument permet de donner un ensemble de variables d’environnement au runt
 **platform**
 
 Ce paramètre est nécessaire pour les scénarios de systèmes d’exploitation hybrides. Dans une architecture hybride, le langage doit être inscrit une fois par plateforme. La plateforme et le nom du langage constituent la clé unique par langage externe. Si aucune plateforme n’est spécifiée, le système d’exploitation actuel est pris en considération.
-
-## <a name="remarks"></a>Notes
-
-Actuellement, **PARAMETERS** et **ENVIRONMENT_VARIABLES** ne sont pas pris en charge.
 
 ## <a name="permissions"></a>Autorisations
 

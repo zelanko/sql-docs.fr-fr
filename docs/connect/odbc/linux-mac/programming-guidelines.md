@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912375"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219225"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
@@ -39,7 +39,7 @@ Les sections suivantes de la documentation de [!INCLUDE[ssNoVersion](../../../in
 -   [Traitement des résultats (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Exécution de procédures stockées](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Prise en charge des colonnes éparses (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [Chiffrement SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Utilisation du chiffrement sans validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Paramètres table](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [API de commandes et données UTF-8 et UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Utilisation des fonctions de catalogue](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -79,7 +79,7 @@ Pour ODBC Driver 17, les données SQLCHAR dans un des jeux de caractères/encod
 >
 > Pour plus d’informations, consultez [Différences fonctionnelles par rapport à glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html)
 
-|Name|Description|
+|Nom|Description|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latin US|

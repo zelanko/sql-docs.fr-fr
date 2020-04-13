@@ -1,23 +1,23 @@
 ---
 title: Bibliothèques de connexions pour les bases de données SQL Microsoft | Microsoft Docs
 description: Fournit des liens de téléchargement de modules qui permettent de se connecter à Microsoft SQL Server et Azure SQL Database à partir d’un large éventail de langages de programmation côté client.
-author: RothJa
+author: David-Engel
 ms.prod: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.custom: ''
 ms.topic: article
-ms.date: 03/05/2020
-ms.author: JRoth
-ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/06/2020
+ms.author: v-daenge
+ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79434116"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219378"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données SQL Microsoft
 
-Cet article fournit des liens de téléchargement de modules de connexion ou de *pilotes* permettant aux programmes clients d’interagir avec [Microsoft SQL Server](../relational-databases/database-features.md) et son équivalent dans le cloud, [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Les pilotes sont disponibles pour un large éventail de langages de programmation, sur les systèmes d’exploitation suivants :
+Cet article fournit des liens de téléchargement de modules de connexion ou de *pilotes* permettant aux programmes clients d’interagir avec [Microsoft SQL Server](../relational-databases/database-features.md) et son équivalent dans le cloud, [Azure SQL Database](/azure/sql-database/). Les pilotes sont disponibles pour un large éventail de langages de programmation, sur les systèmes d’exploitation suivants :
 
 - Linux
 - macOS
@@ -44,7 +44,7 @@ Le présent article consacre des sections distinctes à ces deux types de pilote
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, instructions d’installation](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Télécharger ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Pilote Ruby, instructions d’installation](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby, page d’installation](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -60,7 +60,7 @@ Le tableau suivant présente des exemples de frameworks de mapping objet-relatio
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

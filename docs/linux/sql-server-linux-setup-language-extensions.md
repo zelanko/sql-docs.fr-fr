@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971224"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664342"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installer les extensions de langage SQL Server sur Linux
 
@@ -30,7 +30,7 @@ L’emplacement des packages pour les extensions Java se trouve dans les référ
 
 Les extensions de langage sont également prises en charge sur les conteneurs Linux. Nous ne fournissons pas de conteneurs prédéfinis avec les extensions de langage, mais vous pouvez en créer un à partir des conteneurs SQL Server à l’aide [d’un exemple de modèle disponible sur GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Les extensions de langage et [Machine Learning Services](../advanced-analytics/index.yml) sont installés par défaut sur Clusters Big Data SQL Server. Si vous utilisez Clusters Big Data, vous n’avez pas besoin de suivre les étapes décrites dans cet article. Pour plus d’informations, consultez [Utiliser Machine Learning Services (Python et R) sur Clusters Big Data](../big-data-cluster/machine-learning-services.md).
+Les extensions de langage et [Machine Learning Services](../machine-learning/index.yml) sont installés par défaut sur Clusters Big Data SQL Server. Si vous utilisez Clusters Big Data, vous n’avez pas besoin de suivre les étapes décrites dans cet article. Pour plus d’informations, consultez [Utiliser Machine Learning Services (Python et R) sur Clusters Big Data](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-version"></a>Désinstaller la préversion
 

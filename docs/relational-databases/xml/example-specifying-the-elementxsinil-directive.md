@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006718"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662967"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Exemple : spécification de la directive ELEMENTXSINIL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Lorsque vous spécifiez la directive ELEMENT pour extraire un document XML centré sur l'élément et que la colonne possède une valeur NULL, l'élément correspondant n'est pas généré par le mode EXPLICIT. Vous pouvez éventuellement spécifier la directive ELEMENTXSINIL pour demander l'élément généré dans le cas des valeurs NULL dont l'attribut **xsi:nil** a pour valeur TRUE.  
   
  La requête suivante construit un document XML qui comprend une adresse d'employé. Pour les colonnes `AddressLine2` et `City` , les noms de colonnes spécifient la directive `ELEMENTXSINIL` . Celle-ci génère l'élément pour les valeurs NULL des colonnes `AddressLine2` et `City` de l'ensemble de lignes.  

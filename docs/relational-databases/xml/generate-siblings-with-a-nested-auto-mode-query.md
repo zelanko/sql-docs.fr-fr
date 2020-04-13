@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e278a3ab3f81e1a858830868b310c678f603e0ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e39eb810ec59b6947ff088234cf874cf4cef13b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986584"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665289"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   L'exemple suivant indique comment générer des frères à l'aide d'une requête imbriquée en mode AUTO. La seule autre façon de générer ce type de document XML consiste à utiliser le mode EXPLICIT. Toutefois, cette méthode peut s'avérer lourde.  
   
 ## <a name="example"></a>Exemple  

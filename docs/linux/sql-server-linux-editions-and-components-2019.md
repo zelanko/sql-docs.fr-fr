@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402657"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002783"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 
@@ -152,7 +152,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 |Masquage dynamique des données|Oui|Oui|Oui|Oui|   
 |Audit de base|Oui|Oui|Oui|Oui| 
 |Audit de granularité fine|Oui|Oui|Oui|Oui| 
-|Chiffrement transparent de base de données|Oui|Non|Non|Non|   
+|Chiffrement transparent de base de données|Oui|Oui|Non|Non|   
 |Rôles définis par l’utilisateur|Oui|Oui|Oui|Oui| 
 |Bases de données autonomes|Oui|Oui|Oui|Oui| 
 |Chiffrement des sauvegardes|Oui|Oui|Non|Non|  
@@ -227,7 +227,6 @@ Les fonctionnalités et services suivants ne sont pas disponibles pour SQL Serve
 | **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecture de la file d’attente, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | Sauvegarde managée |
-| &nbsp; | Administration de plusieurs serveurs à l’aide de MSX/TSX |
 | **Haute disponibilité** | Mise en miroir de bases de données  |
 | **Sécurité** | Gestion de clés extensible |
 | &nbsp; | Authentification AD pour les serveurs liés | 

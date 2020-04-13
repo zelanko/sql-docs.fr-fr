@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257660"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530946"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
   
 Utilisez une instruction [SELECT](../../t-sql/queries/select-transact-sql.md) pour appeler la fonction [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md). Lors de l’appel de fonction, utilisez la fonction OBJECT_ID pour convertir le nom de la table (*nom_table*) en ID de table, spécifiez le nom d’un index unique pour la table et indiquez la propriété d’index **IsFulltextKey** , comme suit :  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -119,7 +119,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  L'exemple suivant permet de déterminer si l'index `PK_Document_DocumentID` est utilisé pour garantir l'unicité de la colonne clé de texte intégral, comme suit :  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -133,7 +133,7 @@ Chaque table activée pour la recherche en texte intégral comporte une colonne 
  
 Pour obtenir cet identificateur, vous pouvez utiliser une instruction SELECT afin d'appeler la fonction OBJECTPROPERTYEX. Utilisez la fonction OBJECT_ID pour convertir le nom de la table (*nom_table*) en ID de table et spécifiez la propriété **TableFulltextKeyColumn** , comme suit :  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  L'exemple ci-après retourne l'identificateur de la colonne clé de texte intégral ou une valeur Null. La valeur Null signifie que vous utilisez un nom d'index non valide, que le nom d'index ne correspond pas à la table, que la table n'existe pas, etc.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  L'exemple ci-après explique comment utiliser l'identificateur de la colonne clé unique pour obtenir le nom de la colonne.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  
