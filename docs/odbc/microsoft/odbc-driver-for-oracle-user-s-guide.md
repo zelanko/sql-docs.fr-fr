@@ -1,5 +1,5 @@
 ---
-title: Guide ODBC Driver for Oracle User&#39;s | Microsoft Docs
+title: ODBC Driver pour Oracle User&#39;s Guide (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293150"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Guide ODBC Driver for Oracle User&#39;s
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver pour Oracle User&#39;s Guide
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le Guide de l’utilisateur du pilote ODBC pour Oracle est destiné à compléter l’aide du programme d’installation accessible via l’administrateur de la [source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ Le pilote ODBC pour le guide de l’utilisateur Oracle est destiné à compléter l’aide à la configuration qui peut être consultée par l’intermédiaire [de l’administrateur de source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Schéma des versions du pilote](../../odbc/microsoft/driver-version-scheme.md)  
   

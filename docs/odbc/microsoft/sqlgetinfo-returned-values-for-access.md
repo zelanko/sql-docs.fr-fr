@@ -1,5 +1,5 @@
 ---
-title: Les valeurs retournées pour l’accès à SQLGetInfo | Microsoft Docs
+title: SQLGetInfo a retourné les valeurs d’accès (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298559"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Valeurs retournées par SQLGetInfo pour Access
-Le tableau suivant répertorie les #defines en langage C pour l’argument *fInfoType* et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être récupérées en transmettant le #defines de langage C indiqué à **SQLGetInfo** dans l’argument *fInfoType* . Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *Guide de référence du programmeur ODBC*.  
+Le tableau suivant énumère le #defines en langue C pour l’argument *fInfoType* et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être récupérées en passant le #defines en langue C ci-contre **à SQLGetInfo** dans l’argument *fInfoType.* Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, voir la *référence du programmeur ODBC*.  
   
 > [!NOTE]  
->  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale (&#124;) représente une opération or au niveau du bit.  
+>  Là où **SQLGetInfo** retourne un bitmask 32 bits, une barre verticale (&#124;) représente un peu ou.  
   
-|TypeInfo|Valeur retournée|  
+|InfoType InfoType|Valeur retournée|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Tous les jeux|  
+|SQL_AGGREGATE_FUNCTIONS|Tous les ensembles|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|Database|  
+|SQL_CATALOG_TERM|"Base de données"|  
 |SQL_CATALOG_USAGE|Valeurs multiples|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Le nom de source de fichier ODBC. ini ou «» si le mot clé DRIVER est utilisé dans ODBC. ini|  
+|SQL_DATA_SOURCE_NAME|Le DSN de Odbc.ini, ou "" si le mot clé DRIVER est utilisé dans Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nom de fichier|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|ACCÉDER|  
+|SQL_DBMS_NAME|"ACCÈS"|  
 |SQL_DBMS_VER|Valeurs multiples|  
 |SQL_DDL_INDEX|Valeurs multiples|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Géré par le gestionnaire de pilotes.|  
-|SQL_DRIVER_HENV|Géré par le gestionnaire de pilotes.|  
-|SQL_DRIVER_HLIB|Géré par le gestionnaire de pilotes.|  
-|SQL_DRIVER_HSTMT|Géré par le gestionnaire de pilotes.|  
-|SQL_DRIVER_NAME|« OdbcJt32. dll »|  
+|SQL_DRIVER_HDBC|Géré par le Driver Manager.|  
+|SQL_DRIVER_HENV|Géré par le Driver Manager.|  
+|SQL_DRIVER_HLIB|Géré par le Driver Manager.|  
+|SQL_DRIVER_HSTMT|Géré par le Driver Manager.|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|« 4,00.*nnnn*» (*nnnn* spécifie la date de génération)|  
+|SQL_DRIVER_VER|"4.00.*nnnn"*(*nnnn* précise la date de construction)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_GETDATA_EXTENSIONS|Valeurs multiples|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (guillemets de retour)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`(citation de retour)|  
 |SQL_KEYWORDS|Valeurs multiples|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -141,13 +141,13 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Valeurs multiples|  
-|CONFORMITÉ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|À partir du gestionnaire de pilotes|  
+|SQL_ODBC_VER|De Driver Manager|  
 |SQL_OJ_CAPABILITIES|Valeurs multiples|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|DEMANDE|  
+|SQL_PROCEDURE_TERM|"Requête"|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
@@ -155,16 +155,16 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|ACCÉDER|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,. !-+=\\ \'[] &#124;»|  
+|SQL_SERVER_NAME|"ACCÈS"|  
+|SQL_SPECIAL_CHARACTERS|"".":?/><,.!\`@#$%^&\*\_-+=\\\' \'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|Tableau|  
+|SQL_TABLE_TERM|"TABLE"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Valeurs multiples|  
 |SQL_TXN_CAPABLE|SQL_TC_ALL|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|Valeurs multiples|  
-|SQL_USER_NAME|« ADMIN »|
+|SQL_USER_NAME|"ADMIN"|

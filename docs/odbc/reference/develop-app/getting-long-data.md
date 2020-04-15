@@ -1,5 +1,5 @@
 ---
-title: Obtention de données de type long | Microsoft Docs
+title: Obtenir des données longues (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216361"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298989"
 ---
 # <a name="getting-long-data"></a>Obtention de données de type Long
-Les SGBD définissent des *données longues* sous forme de données binaires ou de caractères sur une certaine taille, par exemple 255 caractères. Ces données peuvent être suffisamment petites pour être stockées dans une seule mémoire tampon, telle qu’une description de partie de plusieurs milliers de caractères. Toutefois, il peut être trop long pour être stocké en mémoire, tel que des documents texte longs ou des bitmaps. Comme ces données ne peuvent pas être stockées dans une seule mémoire tampon, elles sont extraites du pilote en parties avec **SQLGetData** après que les autres données de la ligne ont été extraites.  
+Les DBMS définissent les *données longues* comme n’importe quel personnage ou données binaires sur une certaine taille, telles que 255 caractères. Ces données peuvent être assez petites pour être stockées dans un seul tampon, comme une description en partie de plusieurs milliers de caractères. Cependant, il pourrait être trop long à stocker dans la mémoire, tels que les documents texte longs ou bitmaps. Étant donné que ces données ne peuvent pas être stockées dans un seul tampon, elles sont récupérées auprès du conducteur dans des pièces avec **SQLGetData** après que les autres données de la rangée ont été récupérées.  
   
 > [!NOTE]  
->  Une application peut en fait récupérer n’importe quel type de données avec **SQLGetData**, pas seulement les données longues, bien que seules les données de caractères et binaires puissent être extraites dans des parties. Toutefois, si les données sont suffisamment petites pour tenir dans une seule mémoire tampon, il n’y a généralement aucune raison d’utiliser **SQLGetData**. Il est beaucoup plus facile de lier une mémoire tampon à la colonne et de laisser le pilote renvoyer les données dans la mémoire tampon.  
+>  Une application peut effectivement récupérer n’importe quel type de données avec **SQLGetData**, pas seulement de longues données, bien que seuls les données de caractère et binaires peuvent être récupérées en pièces. Toutefois, si les données sont assez petites pour tenir dans un seul tampon, il n’y a généralement aucune raison d’utiliser **SQLGetData**. Il est beaucoup plus facile de lier un tampon à la colonne et de laisser le pilote retourner les données dans le tampon.  
   
- Pour extraire des données de type long d’une colonne, une application appelle d’abord **SQLFetchScroll** ou **SQLFetch** pour passer à une ligne et extraire les données pour les colonnes dépendantes. L’application appelle ensuite **SQLGetData**. **SQLGetData** a les mêmes arguments que **SQLBindCol**: un descripteur d’instruction ; Numéro de colonne ; le type de données C, l’adresse et la longueur en octets d’une variable d’application ; et l’adresse d’une mémoire tampon de longueur/d’indicateur. Les deux fonctions ont les mêmes arguments, car elles effectuent essentiellement la même tâche : elles décrivent toutes deux une variable d’application pour le pilote et spécifient que les données d’une colonne particulière doivent être retournées dans cette variable. Les principales différences résident dans le fait que **SQLGetData** est appelé après l’extraction d’une ligne (et parfois appelée *liaison tardive* pour cette raison) et que la liaison spécifiée par **SQLGetData** dure uniquement pour la durée de l’appel.  
+ Pour récupérer de longues données d’une colonne, une application appelle d’abord **SQLFetchScroll** ou **SQLFetch** pour passer à une rangée et récupérer les données pour les colonnes liées. L’application appelle ensuite **SQLGetData**. **SQLGetData** a les mêmes arguments que **SQLBindCol**: une poignée de déclaration; un numéro de colonne; le type de données C, l’adresse et la durée des fourre-tout d’une variable d’application; et l’adresse d’un tampon longueur/indicateur. Les deux fonctions ont les mêmes arguments parce qu’elles exécutent essentiellement la même tâche : elles décrivent à la fois une variable d’application pour le conducteur et spécifient que les données d’une colonne particulière doivent être retournées dans cette variable. Les principales différences sont que **SQLGetData** est appelé après une rangée est récupérée (et est parfois appelé *liaison tardive* pour cette raison) et que la liaison spécifiée par **SQLGetData** ne dure que pour la durée de l’appel.  
   
- En ce qui concerne une seule colonne, **SQLGetData** se comporte comme **SQLFetch**: il récupère les données de la colonne, les convertit en type de la variable d’application et les retourne dans cette variable. Elle retourne également la longueur en octets des données dans la mémoire tampon de longueur/d’indicateur. Pour plus d’informations sur la façon dont **SQLFetch** retourne des données, consultez [extraction d’une ligne de données](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
+ En ce qui concerne une seule colonne, **SQLGetData** se comporte comme **SQLFetch**: Il récupère les données pour la colonne, les convertit au type de variable d’application, et les retourne dans cette variable. Il retourne également la longueur d’entrée des données dans le tampon longueur/indicateur. Pour plus d’informations sur la façon dont **SQLFetch** retourne les données, voir [Fetching a Row of Data](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- **SQLGetData** diffère de **SQLFetch** dans un respect important. Si elle est appelée plusieurs fois à la suite pour la même colonne, chaque appel retourne une partie successive des données. Chaque appel, à l’exception du dernier appel, retourne SQL_SUCCESS_WITH_INFO et SQLSTATE 01004 (String Data, Right TRUNCATE); le dernier appel retourne SQL_SUCCESS. Voici comment **SQLGetData** est utilisé pour extraire des données longues en parties. Lorsqu’il n’y a plus de données à retourner, **SQLGetData** retourne SQL_NO_DATA. L’application est chargée de placer les données longues ensemble, ce qui peut signifier la concaténation des parties des données. Chaque partie se termine par un caractère null ; l’application doit supprimer le caractère de fin null en cas de concaténation des parties. La récupération de données en parties peut être effectuée pour les signets de longueur variable ainsi que pour d’autres données de type long. La valeur retournée dans la mémoire tampon de longueur/d’indicateur diminue dans chaque appel par le nombre d’octets retournés dans l’appel précédent, bien qu’il soit courant que le pilote ne parvient pas à découvrir la quantité de données disponibles et retourne une longueur d’octet de SQL_NO_TOTAL. Par exemple :  
+ **SQLGetData** diffère de **SQLFetch** à un égard important. S’il est appelé plus d’une fois de suite pour la même colonne, chaque appel renvoie une partie successive des données. Chaque appel, à l’exception du dernier appel, renvoie SQL_SUCCESS_WITH_INFO et SQLSTATE 01004 (données de chaîne, droite tronquées); le dernier appel SQL_SUCCESS. C’est ainsi que **SQLGetData** est utilisé pour récupérer de longues données dans les pièces. Lorsqu’il n’y a plus de données à retourner, **SQLGetData** retourne SQL_NO_DATA. L’application est responsable de mettre les données longues ensemble, ce qui pourrait signifier concatenating les parties des données. Chaque partie est annulée; l’application doit supprimer le caractère de résiliation nulle si elle concatenant les pièces. La récupération des données dans les pièces peut être effectuée pour les signets à longueur variable ainsi que pour d’autres données longues. La valeur retournée dans la durée/indicateur tampon diminue dans chaque appel par le nombre d’octets retournés dans l’appel précédent, bien qu’il soit courant pour le conducteur d’être incapable de découvrir la quantité de données disponibles et de retourner une longueur d’octet de SQL_NO_TOTAL. Par exemple :  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  
@@ -72,16 +72,16 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Il existe plusieurs restrictions sur l’utilisation de **SQLGetData**. En général, les colonnes accessibles avec **SQLGetData**:  
+ Il existe plusieurs restrictions sur l’utilisation **de SQLGetData**. En général, les colonnes accessibles avec **SQLGetData**:  
   
--   Doit être accessible par ordre d’incrémentation du numéro de colonne (en raison de la façon dont les colonnes d’un jeu de résultats sont lues à partir de la source de données). Par exemple, il est erroné d’appeler **SQLGetData** pour la colonne 5, puis de l’appeler pour la colonne 4.  
+-   Il faut accéder de l’ordre de l’augmentation du nombre de colonnes (en raison de la façon dont les colonnes d’un ensemble de résultats sont lues à partir de la source de données). Par exemple, c’est une erreur d’appeler **SQLGetData** pour la colonne 5, puis l’appeler pour la colonne 4.  
   
--   Ne peut pas être lié.  
+-   On ne peut pas lier.  
   
--   Le numéro de colonne doit être supérieur à celui de la dernière colonne dépendante. Par exemple, si la dernière colonne dépendante est la colonne 3, c’est une erreur d’appeler **SQLGetData** pour la colonne 2. Pour cette raison, les applications doivent veiller à placer des colonnes de données longues à la fin de la liste de sélection.  
+-   Doit avoir un nombre de colonnes plus élevé que la dernière colonne liée. Par exemple, si la dernière colonne liée est la colonne 3, c’est une erreur d’appeler **SQLGetData** pour la colonne 2. Pour cette raison, les applications doivent s’assurer de placer de longues colonnes de données à la fin de la liste de sélection.  
   
--   Ne peut pas être utilisé si **SQLFetch** ou **SQLFetchScroll** a été appelé pour extraire plus d’une ligne. Pour plus d’informations, consultez [utilisation de curseurs de bloc](../../../odbc/reference/develop-app/using-block-cursors.md).  
+-   On ne peut pas utiliser si **SQLFetch** ou **SQLFetchScroll** ont été appelés pour récupérer plus d’une rangée. Pour plus d’informations, voir [Utilisation des curseurs de bloc](../../../odbc/reference/develop-app/using-block-cursors.md).  
   
- Certains pilotes n’appliquent pas ces restrictions. Les applications interopérables doivent soit supposer qu’elles existent, soit déterminer les restrictions qui ne sont pas appliquées en appelant **SQLGetInfo** avec l’option SQL_GETDATA_EXTENSIONS.  
+ Certains conducteurs n’appliquent pas ces restrictions. Les demandes interopérables devraient soit présumer qu’elles existent, soit déterminer quelles restrictions ne sont pas appliquées en appelant **SQLGetInfo** avec l’option SQL_GETDATA_EXTENSIONS.  
   
- Si l’application n’a pas besoin de toutes les données d’une colonne de données binaires ou de caractères, elle peut réduire le trafic réseau dans les pilotes SGBD en définissant l’attribut d’instruction SQL_ATTR_MAX_LENGTH avant d’exécuter l’instruction. Cela limite le nombre d’octets de données qui seront renvoyés pour toute colonne de type caractère ou binaire. Par exemple, supposons qu’une colonne contienne des documents texte longs. Une application qui parcourt la table contenant cette colonne peut être obligée d’afficher uniquement la première page de chaque document. Bien que cet attribut d’instruction puisse être simulé dans le pilote, il n’y a aucune raison de le faire. En particulier, si une application souhaite tronquer des données de type caractère ou binaire, elle doit lier une petite mémoire tampon à la colonne avec **SQLBindCol** et laisser le pilote tronquer les données.
+ Si l’application n’a pas besoin de toutes les données d’une colonne de caractère ou de données binaires, elle peut réduire le trafic réseau dans les pilotes basés sur DBMS en définissant l’attribut de l’SQL_ATTR_MAX_LENGTH déclaration avant d’exécuter la déclaration. Cela limite le nombre d’octets de données qui seront retournés pour n’importe quel personnage ou colonne binaire. Supposons, par exemple, qu’une colonne contient de longs documents texte. Une application qui parcourt la table contenant cette colonne peut avoir à afficher seulement la première page de chaque document. Bien que cet attribut d’instruction puisse être simulé dans le conducteur, il n’y a aucune raison de le faire. En particulier, si une application veut tronquer des données de caractère ou binaires, elle doit lier un petit tampon à la colonne avec **SQLBindCol** et laisser le conducteur tronquer les données.

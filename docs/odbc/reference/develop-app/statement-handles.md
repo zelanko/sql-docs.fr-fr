@@ -1,5 +1,5 @@
 ---
-title: Handles d’instruction | Microsoft Docs
+title: Poignées de déclarations Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1be90fe10d10a0b087d1c9724fed249805eb4dba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299675"
 ---
 # <a name="statement-handles"></a>Handles d’instruction
-Une *instruction* est plus facilement considérée comme une instruction SQL, telle que **Select \* from employee**. Toutefois, une instruction est plus qu’une simple instruction SQL. elle se compose de toutes les informations associées à cette instruction SQL, telles que les jeux de résultats créés par l’instruction et les paramètres utilisés dans l’exécution de l’instruction. Une instruction n’a même pas besoin d’une instruction SQL définie par l’application. Par exemple, lorsqu’une fonction de catalogue telle que **SQLTables** est exécutée sur une instruction, elle exécute une instruction SQL prédéfinie qui retourne une liste de noms de tables.  
+Une *déclaration* est plus facilement considérée comme une déclaration SQL, comme **SELECT \* FROM Employee**. Cependant, une déclaration est plus qu’une simple déclaration SQL - il se compose de toutes les informations associées à cette déclaration SQL, tels que tous les ensembles de résultats créés par l’énoncé et les paramètres utilisés dans l’exécution de la déclaration. Une déclaration n’a même pas besoin d’avoir une déclaration SQL définie par la demande. Par exemple, lorsqu’une fonction de catalogue telle que **SQLTables** est exécutée sur une déclaration, il exécute une déclaration SQL prédéfinie qui renvoie une liste de noms de table.  
   
- Chaque instruction est identifiée par un descripteur d’instruction. Une instruction est associée à une seule connexion, et il peut y avoir plusieurs instructions sur cette connexion. Certains pilotes limitent le nombre d’instructions actives qu’ils prennent en charge ; l’option SQL_MAX_CONCURRENT_ACTIVITIES dans **SQLGetInfo** spécifie le nombre d’instructions actives prises en charge par un pilote sur une seule connexion. Une instruction est définie comme *active* si elle a des résultats en attente, où les résultats sont soit un jeu de résultats, soit le nombre de lignes affectées par une instruction **Insert**, **Update**ou **Delete** , ou les données sont envoyées avec plusieurs appels à **SQLPutData**.  
+ Chaque relevé est identifié par une poignée de déclaration. Une déclaration est associée à une seule connexion, et il peut y avoir plusieurs déclarations sur cette connexion. Certains conducteurs limitent le nombre d’énoncés actifs qu’ils appuient; l’option SQL_MAX_CONCURRENT_ACTIVITIES dans **SQLGetInfo** précise le nombre de déclarations actives qu’un conducteur prend en charge sur une seule connexion. Une déclaration est définie pour être *active* si elle a des résultats en attente, lorsque les résultats sont soit un ensemble de résultats ou le nombre de lignes affectées par un **INSERT**, **UPDATE**, ou **DÉLÉ,** ou des données sont envoyées avec plusieurs appels à **SQLPutData**.  
   
- Dans un morceau de code qui implémente ODBC (le gestionnaire de pilotes ou un pilote), le descripteur d’instruction identifie une structure qui contient des informations d’instruction, telles que :  
+ Dans un code qui implémente ODBC (le gestionnaire de conducteur ou un pilote), la poignée de déclaration identifie une structure qui contient des informations de déclaration, telles que :  
   
--   État de l’instruction  
+-   L’état de la déclaration  
   
--   Diagnostics au niveau de l’instruction en cours  
+-   Les diagnostics actuels au niveau de l’énoncé  
   
--   Adresses des variables d’application liées aux paramètres de l’instruction et aux colonnes de l’ensemble de résultats  
+-   Les adresses des variables d’application liées aux paramètres de l’instruction et aux colonnes de jeu de résultats  
   
--   Paramètres actuels de chaque attribut d’instruction  
+-   Les paramètres actuels de chaque attribut d’instruction  
   
- Les descripteurs d’instruction sont utilisés dans la plupart des fonctions ODBC. En particulier, elles sont utilisées dans les fonctions pour lier des paramètres et des colonnes de jeu de résultats (**SQLBindParameter** et **SQLBindCol**), préparer et exécuter des instructions (**SQLPrepare**, **SQLExecute**et **SQLExecDirect**), récupérer des métadonnées (**SQLColAttribute** et **SQLDescribeCol**), extraire des résultats (**SQLFetch**) et récupérer les Diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**). Ils sont également utilisés dans les fonctions de catalogue (**SQLColumns**, **SQLTables**, etc.) et un certain nombre d’autres fonctions.  
+ Les poignées de relevé sont utilisées dans la plupart des fonctions ODBC. Notamment, ils sont utilisés dans les fonctions pour lier les paramètres et les colonnes de jeu de résultat (**SQLBindParameter** et **SQLBindCol**), préparer et exécuter des déclarations (**SQLPrepare**, **SQLExecute**, et **SQLExecDirect**), récupérer les métadonnées (**SQLColAttribute** et **SQLDescribeCol**), aller chercher des résultats (**SQLFetch**), et récupérer des diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**). Ils sont également utilisés dans les fonctions de catalogue **(SQLColumns**, **SQLTables**, et ainsi de suite) et un certain nombre d’autres fonctions.  
   
- Les descripteurs d’instruction sont alloués avec **SQLAllocHandle** et libérés avec **SQLFreeHandle**.
+ Les poignées de déclaration sont attribuées avec **SQLAllocHandle** et libérées avec **SQLFreeHandle**.

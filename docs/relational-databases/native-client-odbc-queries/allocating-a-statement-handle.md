@@ -1,5 +1,5 @@
 ---
-title: Allocation d’un descripteur d’instruction | Microsoft Docs
+title: Allouer une poignée de déclarations (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,32 +18,32 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 85678c5b03a77910c73bd5b8bac8d0e40d52c252
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779992"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291601"
 ---
 # <a name="allocating-a-statement-handle"></a>Allocation d'un descripteur d'instruction
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Pour qu'une application puisse exécuter une instruction, elle doit allouer un descripteur d'instruction. Pour ce faire, il appelle **SQLAllocHandle** avec le paramètre *comme handletype* défini sur SQL_HANDLE_STMT et *InputHandle* pointant vers un handle de connexion.  
+  Pour qu'une application puisse exécuter une instruction, elle doit allouer un descripteur d'instruction. Pour ce faire, il appelle **SQLAllocHandle** avec le paramètre *HandleType* réglé pour SQL_HANDLE_STMT et *InputHandle* pointant vers une poignée de connexion.  
   
- Les attributs d'instruction sont caractéristiques du descripteur d'instruction. Les exemples d'attributs d'instruction peuvent inclure l'utilisation de signets et le type de curseur à utiliser avec le jeu de résultats de l'instruction. Les attributs d’instruction sont définis avec [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)et leurs paramètres actuels sont récupérés à l’aide de [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md). Il n'y a aucune obligation pour une application de définir des attributs d'instruction ; tous les attributs d'instruction ont des valeurs par défaut, et certaines sont spécifiques aux pilotes.  
+ Les attributs d'instruction sont caractéristiques du descripteur d'instruction. Les exemples d'attributs d'instruction peuvent inclure l'utilisation de signets et le type de curseur à utiliser avec le jeu de résultats de l'instruction. Les attributs de déclaration sont définis avec [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md), et leurs paramètres actuels sont récupérés en utilisant [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md). Il n'y a aucune obligation pour une application de définir des attributs d'instruction ; tous les attributs d'instruction ont des valeurs par défaut, et certaines sont spécifiques aux pilotes.  
   
- Soyez prudent lorsque vous utilisez plusieurs options de connexion et d'instruction ODBC. L’appel de [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec *fOption* a la valeur SQL_ATTR_LOGIN_TIMEOUT contrôle la durée pendant laquelle une application attend une tentative de connexion de délai d’attente lors de l’attente de l’établissement d’une connexion (0 spécifie une attente infinie). Sur les sites dont les temps de réponse sont longs, il est possible de définir cette valeur à un niveau élevé pour s'assurer que les connexions disposent d'un délai suffisant pour s'effectuer. Toutefois, l'intervalle doit toujours être suffisamment faible pour qu'une réponse soit fournie à l'utilisateur dans un délai raisonnable, si le pilote ne peut pas se connecter.  
+ Soyez prudent lorsque vous utilisez plusieurs options de connexion et d'instruction ODBC. Appeler [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec *fOption* réglé pour SQL_ATTR_LOGIN_TIMEOUT contrôle le temps qu’une application attend une tentative de connexion pour temps d’arrêt en attendant d’établir une connexion (0 spécifie une attente infinie). Sur les sites dont les temps de réponse sont longs, il est possible de définir cette valeur à un niveau élevé pour s'assurer que les connexions disposent d'un délai suffisant pour s'effectuer. Toutefois, l'intervalle doit toujours être suffisamment faible pour qu'une réponse soit fournie à l'utilisateur dans un délai raisonnable, si le pilote ne peut pas se connecter.  
   
- L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_QUERY_TIMEOUT définit un intervalle de délai d’attente de requête pour aider à protéger le serveur et l’utilisateur des requêtes de longue durée.  
+ Appeler **SQLSetStmtAttr** avec *fOption* réglé pour SQL_ATTR_QUERY_TIMEOUT définit un intervalle de temps d’arrêt de requête pour aider à protéger le serveur et l’utilisateur contre les requêtes de longue durée.  
   
- L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_LENGTH limite la quantité de données de **texte** et d' **image** qu’une instruction individuelle peut récupérer. L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_ROWS limite également un ensemble de lignes aux *n* premières lignes si toutes les applications le requièrent. Notez que la définition de SQL_ATTR_MAX_ROWS oblige le pilote à émettre une instruction SET ROWCOUNT à destination du serveur. Cela affecte toutes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les instructions, y compris les déclencheurs et les mises à jour.  
+ Appeler **SQLSetStmtAttr** avec *fOption* réglé pour SQL_ATTR_MAX_LENGTH limite la quantité de **données de texte** et **d’image** qu’une déclaration individuelle peut récupérer. Appeler **SQLSetStmtAttr** avec *fOption* réglé pour SQL_ATTR_MAX_ROWS limite également un jeu de ligne aux premières rangées *n* si c’est tout ce que l’application exige. Notez que la définition de SQL_ATTR_MAX_ROWS oblige le pilote à émettre une instruction SET ROWCOUNT à destination du serveur. Cela affecte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les déclarations, y compris les déclencheurs et les mises à jour.  
   
  Soyez prudent lorsque vous définissez ces options. Il est préférable que tous les descripteurs d'instruction d'un handle de connexion aient les mêmes paramètres pour SQL_ATTR_MAX_LENGTH et SQL_ATTR_MAX_ROWS. Si le pilote passe d'un descripteur d'instruction à un autre avec des valeurs différentes pour ces options, il doit générer les instructions SET TEXTSIZE et SET ROWCOUNT appropriées pour modifier les paramètres. Le pilote ne peut pas placer ces instructions dans le même lot que l'instruction SQL utilisateur, car cette dernière peut contenir une instruction qui doit être la première dans un lot. Le pilote doit envoyer les instructions SET TEXTSIZE et SET ROWCOUNT dans un lot séparé, ce qui génère automatiquement un aller-retour supplémentaire au serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Exécution des requêtes &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

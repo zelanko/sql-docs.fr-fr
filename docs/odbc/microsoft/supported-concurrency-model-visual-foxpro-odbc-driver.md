@@ -1,5 +1,5 @@
 ---
-title: Modèle d’accès concurrentiel pris en charge (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: Modèle de concurrence pris en charge (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - concurrency models [ODBC]
 - FoxPro ODBC driver [ODBC], concurrency
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597d1022fa6946e0ae768cb9600a3f4534c67a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 253a6dd86f6dc974d53dd151636bb8b8132e4d02
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307715"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>Modèle d’accès concurrentiel pris en charge (pilote ODBC Visual FoxPro)
-Le pilote ODBC Visual FoxPro prend en charge l' *accès concurrentiel en lecture seule*. Votre application peut appeler [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) avec l’option SQL_CONCURRENCY SQL_CONCUR_READ_ONLY.  
+Le Visual FoxPro ODBC Driver prend en charge *la concurrence de lecture seulement*. Votre application peut appeler [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) avec une option SQL_CONCURRENCY de SQL_CONCUR_READ_ONLY.  
   
- Pour plus d’informations, consultez [Guide de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Pour plus d’informations, consultez la [référence du programmeur de l’ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
-## <a name="read-only-concurrency"></a>accès concurrentiel en lecture seule  
- Impossible de mettre à jour le curseur.  
+## <a name="read-only-concurrency"></a>la concurrence de lecture-seulement  
+ Le curseur ne peut pas être mis à jour.  
   
 ## <a name="row-versioning"></a>contrôle de version de ligne  
- Prise en charge des horodateurs, dans laquelle les versions de ligne sont comparées au moment de la mise à jour.
+ Essentiellement support timetamp, dans lequel les versions de ligne sont comparées au temps de mise à jour.

@@ -1,5 +1,5 @@
 ---
-title: Enregistrement d’en-tête | Microsoft Docs
+title: Enregistrement d’en-têtes (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - header records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: d0fff1ed-5616-422a-a394-7ea1d2486f89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f5fe5cf6aae0d5953cc82b845396dd4164c7fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 372185966cc1644147feb2683177ae3a5b69e788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139023"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300179"
 ---
 # <a name="header-record"></a>Enregistrement d’en-tête
-Les champs de l’enregistrement d’en-tête contiennent des informations générales sur l’exécution d’une fonction, y compris le code de retour, le nombre de lignes, le nombre d’enregistrements d’État et le type d’instruction exécuté. L’enregistrement d’en-tête est toujours créé, sauf si la fonction retourne SQL_INVALID_HANDLE. Pour obtenir la liste complète des champs de l’enregistrement d’en-tête, consultez la description de la fonction [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .
+Les champs de l’enregistrement d’en-tête contiennent des informations générales sur l’exécution d’une fonction, y compris le code de retour, le nombre de rangées, le nombre d’enregistrements d’état et le type de déclaration exécutée. L’enregistrement d’en-tête est toujours créé à moins que la fonction ne revienne SQL_INVALID_HANDLE. Pour une liste complète des champs dans l’enregistrement d’en-tête, consultez la description de la fonction [SQLGetDiagField.](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)

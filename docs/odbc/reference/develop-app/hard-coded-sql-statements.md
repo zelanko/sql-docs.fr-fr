@@ -1,5 +1,5 @@
 ---
-title: Instructions SQL codées en dur | Microsoft Docs
+title: Déclarations SQL à code dur (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139150"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300199"
 ---
 # <a name="hard-coded-sql-statements"></a>Instructions SQL codées en dur
-Les applications qui effectuent une tâche fixe contiennent généralement des instructions SQL codées en dur. Par exemple, un système de saisie des commandes peut utiliser l’appel suivant pour répertorier les commandes client ouvertes :  
+Les applications qui exécutent une tâche fixe contiennent habituellement des relevés SQL codés en dur. Par exemple, un système de saisie de commandes peut utiliser l’appel suivant pour énumérer les ordres de vente ouverts :  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Il existe plusieurs avantages pour les instructions SQL codées en dur : elles peuvent être testées lorsque l’application est écrite ; elles sont plus simples à implémenter que les instructions construites au moment de l’exécution. et ils simplifient l’application.  
+ Il y a plusieurs avantages aux énoncés SQL codés dur : ils peuvent être testés lorsque l’application est écrite; ils sont plus simples à mettre en œuvre que les énoncés construits au moment de l’exécution; et ils simplifient l’application.  
   
- L’utilisation de paramètres d’instruction et de préparation permet d’utiliser des instructions SQL codées en dur de manière plus efficace. Par exemple, supposons que la table des pièces contient les colonnes PartId, description et Price. Une façon d’insérer une nouvelle ligne dans cette table consiste à construire et à exécuter une instruction **Insert** :  
+ L’utilisation des paramètres d’énoncé et la préparation des relevés offrent de meilleures façons d’utiliser des relevés SQL codés en dur. Supposons, par exemple, que le tableau des pièces contient les colonnes PartID, Description et Prix. Une façon d’insérer une nouvelle ligne dans cette table serait de construire et d’exécuter une déclaration **INSERT:**  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Une méthode encore plus efficace consiste à utiliser une instruction paramétrable codée en dur. Cela présente deux avantages par rapport à une instruction avec des valeurs de données codées en dur. Tout d’abord, il est plus facile de construire une instruction paramétrable, car les valeurs de données peuvent être envoyées dans leurs types natifs, tels que des entiers et des nombres à virgule flottante, plutôt que de les convertir en chaînes. Deuxièmement, une telle instruction peut être utilisée plusieurs fois simplement en modifiant les valeurs des paramètres et en la réexécutant. Il n’est pas nécessaire de le régénérer.  
+ Une meilleure façon est d’utiliser une déclaration codée et paramétrée. Cela présente deux avantages par rapport à une déclaration avec des valeurs de données codées en dur. Tout d’abord, il est plus facile de construire une déclaration paramétrée parce que les valeurs de données peuvent être envoyées dans leurs types indigènes, tels que les intégriers et les numéros de points flottants, plutôt que de les convertir en chaînes. Deuxièmement, une telle déclaration peut être utilisée plus d’une fois simplement en modifiant les valeurs de paramètres et en la réexaminant; il n’est pas nécessaire de le reconstruire.  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- En supposant que cette instruction soit exécutée plusieurs fois, elle peut être préparée pour une efficacité encore accrue :  
+ En supposant que cette déclaration doit être exécutée plus d’une fois, elle peut être préparée pour une efficacité encore plus grande :  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Le moyen le plus efficace d’utiliser l’instruction consiste peut-être à construire une procédure contenant l’instruction, comme indiqué dans l’exemple de code suivant. Étant donné que la procédure est construite au moment du développement et stockée sur la source de données, elle n’a pas besoin d’être préparée au moment de l’exécution. L’inconvénient de cette méthode est que la syntaxe de création de procédures est spécifique au SGBD et que les procédures doivent être construites séparément pour chaque SGBD sur lequel l’application doit s’exécuter.  
+ Peut-être la façon la plus efficace d’utiliser l’instruction est de construire une procédure contenant l’instruction, comme le montre l’exemple de code suivant. Étant donné que la procédure est construite au moment du développement et stockée sur la source de données, elle n’a pas besoin d’être préparée au moment de l’exécution. Un inconvénient de cette méthode est que la syntaxe pour créer des procédures est DBMS spécifique et les procédures doivent être construites séparément pour chaque DBMS sur lequel l’application doit s’exécuter.  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +129,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- Pour plus d’informations sur les paramètres, les instructions préparées et les procédures, consultez [exécution d’une instruction](../../../odbc/reference/develop-app/executing-a-statement.md).
+ Pour plus d’informations sur les paramètres, les déclarations préparées et les procédures, voir [Exécution d’une déclaration](../../../odbc/reference/develop-app/executing-a-statement.md).

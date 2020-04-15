@@ -1,5 +1,5 @@
 ---
-title: Implémentation de SQLGetDiagRec et SQLGetDiagField | Microsoft Docs
+title: Mise en œuvre de SQLGetDiagRec et SQLGetDiagField (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300139"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implémentation de SQLGetDiagRec et de SQLGetDiagField
-**SQLGetDiagRec** et **SQLGetDiagField** sont implémentés par le gestionnaire de pilotes et chaque pilote. Le gestionnaire de pilotes et chaque pilote maintiennent les enregistrements de diagnostic pour chaque identificateur d’environnement, de connexion, d’instruction et de descripteur, et ne libèrent ces enregistrements que lorsqu’une autre fonction est appelée avec ce handle ou lorsque le descripteur est libéré.  
+**SQLGetDiagRec** et **SQLGetDiagField** sont mis en œuvre par le gestionnaire de conducteur et chaque conducteur. Le gestionnaire de conducteur et chaque conducteur tiennent des dossiers diagnostiques pour chaque environnement, connexion, instruction et poignée descripteur, et ne les libèrent que lorsqu’une autre fonction est appelée avec cette poignée ou que la poignée est libérée.  
   
- Bien que le gestionnaire de pilotes et chaque pilote doivent déterminer le premier enregistrement d’État en fonction des classements dans l' [ordre des enregistrements d’État](../../../odbc/reference/develop-app/sequence-of-status-records.md), le gestionnaire de pilotes détermine la dernière séquence d’enregistrements.  
+ Bien que le gestionnaire de pilote et chaque pilote doivent déterminer le premier enregistrement d’état en fonction du classement dans [Séquence des enregistrements d’état](../../../odbc/reference/develop-app/sequence-of-status-records.md), le gestionnaire de pilote détermine la séquence finale des enregistrements.  
   
- **SQLGetDiagRec** et **SQLGetDiagField** ne publient pas d’enregistrements de diagnostic sur eux-mêmes.  
+ **SQLGetDiagRec** et **SQLGetDiagField** ne publient pas de dossiers diagnostiques sur eux-mêmes.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Règles de gestion des diagnostics](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
   

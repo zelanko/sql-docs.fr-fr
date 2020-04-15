@@ -1,5 +1,5 @@
 ---
-title: Compatibilité des applications et des pilotes | Microsoft Docs
+title: Application et Compatibilité du conducteur Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - compatibility [ODBC], application and driver compatibility
 - application compatibility issues [ODBC]
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d803c2ad63d19ddd21d620233148dad7f7ca420
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304360"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilité des applications et des pilotes
-Les applications et le pilote ODBC sont répartis en plusieurs catégories, en plus de leur version. Certaines de ces applications sont incompatibles avec certains pilotes ; dans d’autres cas, le type de l’application ou du pilote peut avoir un impact sur les problèmes de compatibilité descendante entre eux.  
+Les applications ODBC et le pilote se divisent en plusieurs catégories en plus de leur version. Certaines de ces demandes sont incompatibles avec certains conducteurs; dans d’autres cas, le type de l’application ou du conducteur peut avoir une incidence sur les problèmes de compatibilité vers l’arrière entre eux.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Types d’applications](../../../odbc/reference/develop-app/types-of-applications.md)  
   

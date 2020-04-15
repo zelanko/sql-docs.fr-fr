@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (pilote Excel) | Microsoft Docs
+title: SQLSetConnectOption (Excel Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLSetConnectOption
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70bca38a81b59b7113f0873849609837bf8f48ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b9ddd764823b4ed89d9aae7055cf966f9f840a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071730"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301510"
 ---
 # <a name="sqlsetconnectoption-excel-driver"></a>SQLSetConnectOption (pilote Excel)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote Excel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet fournit des informations spécifiques à Excel Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Commentaire|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être défini sur SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le pilote n’empêche pas les mises à jour si SQL_ACCESS_MODE est défini sur SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Le pilote Microsoft Excel ne prend en charge que les SQL_AUTOCOMMIT ayant la valeur ON (État par défaut), car ils ne prennent pas en charge les transactions.|  
-|SQL_CURRENT_QUALIFIER| Pris en charge.|  
+|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être réglé à SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le conducteur n’empêche pas les mises à jour si SQL_ACCESS_MODE est configuré pour SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Le pilote Microsoft Excel ne prend en charge que SQL_AUTOCOMMIT étant réglé sur ON (l’état par défaut), parce qu’ils ne prennent pas en charge les transactions.|  
+|SQL_CURRENT_QUALIFIER|Pris en charge.|  
 |SQL_LOGIN_TIMEOUT|Non pris en charge.|  
-|SQL_OPT_TRACE| Pris en charge.|  
-|SQL_OPT_TRACEFILE| Pris en charge.|  
+|SQL_OPT_TRACE|Pris en charge.|  
+|SQL_OPT_TRACEFILE|Pris en charge.|  
 |SQL_PACKET_SIZE|Non pris en charge.|  
 |SQL_QUIET_MODE|Non pris en charge.|  
 |SQL_TRANSLATE_DLL|Non pris en charge.|  

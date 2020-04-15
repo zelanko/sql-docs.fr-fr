@@ -1,5 +1,5 @@
 ---
-title: Construction d’instructions SQL interopérables | Microsoft Docs
+title: Construire des déclarations interopérables SQL (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002244"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282513"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construction d’instructions SQL interopérables
-Comme mentionné dans les sections précédentes, les applications interopérables doivent utiliser la syntaxe ODBC SQL. Toutefois, au-delà de cette grammaire, un certain nombre de problèmes supplémentaires sont rencontrés par les applications interopérables. Par exemple, que fait une application si elle souhaite utiliser une fonctionnalité, telle que les jointures externes, qui n’est pas prise en charge par toutes les sources de données ?  
+Comme mentionné dans les sections précédentes, les applications interopérables devraient utiliser la grammaire SQL ODBC. Au-delà de l’utilisation de cette grammaire, cependant, un certain nombre de problèmes supplémentaires sont rencontrés par des applications interopérables. Par exemple, que fait une application si elle veut utiliser une fonctionnalité, comme les jointures extérieures, qui n’est pas prise en charge par toutes les sources de données?  
   
- À ce stade, l’auteur de l’application doit prendre des décisions concernant les fonctionnalités de langage requises et celles qui sont facultatives. Dans la plupart des cas, si un pilote particulier ne prend pas en charge une fonctionnalité requise par l’application, l’application refuse simplement de s’exécuter avec ce pilote. Toutefois, si la fonctionnalité est facultative, l’application peut contourner la fonctionnalité. Par exemple, il peut désactiver les parties de l’interface qui permettent à l’utilisateur d’utiliser la fonctionnalité.  
+ À ce stade, l’auteur de l’application doit prendre certaines décisions quant aux caractéristiques linguistiques requises et qui sont facultatives. Dans la plupart des cas, si un conducteur particulier ne prend pas en charge une fonctionnalité requise par la demande, l’application refuse simplement de s’exécuter avec ce conducteur. Toutefois, si la fonctionnalité est facultative, l’application peut fonctionner autour de la fonctionnalité. Par exemple, il peut désactiver les parties de l’interface qui permettent à l’utilisateur d’utiliser la fonctionnalité.  
   
- Pour déterminer les fonctionnalités prises en charge, les applications commencent en appelant **SQLGetInfo** avec l’option SQL_SQL_CONFORMANCE. Le niveau de conformité de SQL donne à l’application une vue d’ensemble des capacités de SQL prises en charge. Pour affiner cette vue, l’application appelle **SQLGetInfo** avec l’une des nombreuses autres options. Pour obtenir la liste complète de ces options, consultez la description de la fonction [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) . Enfin, **SQLGetTypeInfo** retourne des informations sur les types de données pris en charge par la source de données. Les sections suivantes répertorient un certain nombre de facteurs pouvant être surveillés par les applications lors de la construction d’instructions SQL interopérables.  
+ Pour déterminer quelles fonctionnalités sont prises en charge, les applications commencent par appeler **SQLGetInfo** avec l’option SQL_SQL_CONFORMANCE. Le niveau de conformité SQL donne à l’application une vue d’ensemble de laquelle SQL est pris en charge. Pour affiner cette vue, l’application appelle **SQLGetInfo** avec l’une ou l’autre d’un certain nombre d’autres options. Pour une liste complète de ces options, consultez la description de la fonction [SQLGetInfo.](../../../odbc/reference/syntax/sqlgetinfo-function.md) Enfin, **SQLGetTypeInfo** renvoie des informations sur les types de données pris en charge par la source de données. Les sections suivantes énumèrent un certain nombre de facteurs possibles que les applications devraient surveiller lors de la construction d’énoncés SQL interopérables.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Utilisation des catalogues et des schémas](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   
@@ -43,4 +43,4 @@ Comme mentionné dans les sections précédentes, les applications interopérabl
   
 -   [Marqueurs de paramètre dans les appels de procédure](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
--   [Instructions DDL](../../../odbc/reference/develop-app/ddl-statements.md)
+-   [Déclarations DDL](../../../odbc/reference/develop-app/ddl-statements.md)

@@ -1,5 +1,5 @@
 ---
-title: Types de curseurs avec défilement | Microsoft Docs
+title: Types de curseurs défilants (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304230"
 ---
 # <a name="scrollable-cursor-types"></a>Types de curseurs avec défilement
-Les quatre types de curseurs à défilement sont statiques, dynamiques, de jeu de clés et mixtes. Les curseurs statiques détectent peu ou pas de modifications, mais sont relativement peu coûteux à implémenter. Les curseurs dynamiques détectent toutes les modifications mais sont coûteux à implémenter. Les curseurs de jeu de clés et les curseurs mixtes se situent entre, en détectant la plupart des modifications, mais à moindre coût que les curseurs dynamiques.  
+Les quatre types de curseurs défilementables sont statiques, dynamiques, pilotés par les clés et mélangés. Les curseurs statiques détectent peu ou pas de changements, mais sont relativement bon marché à mettre en œuvre. Les curseurs dynamiques détectent tous les changements mais sont coûteux à mettre en œuvre. Les curseurs mixtes et à clé se trouvent entre les deux, détectant la plupart des changements, mais à moindre coût que les curseurs dynamiques.  
   
- Les termes suivants sont utilisés pour définir les caractéristiques de chaque type de curseur défilant :  
+ Les termes suivants sont utilisés pour définir les caractéristiques de chaque type de curseur défilementable :  
   
--   **Propres mises à jour, suppressions et insertions.** Mises à jour, suppressions et insertions effectuées par le biais du curseur, soit à l’aide d’un appel à **SQLBulkOperations** ou à **SQLSetPos** , soit à l’aide d’une instruction UPDATE ou DELETE positionnée.  
+-   **Propres mises à jour, suppressions et inserts.** Mises à jour, suppressions et inserts effectués par le curseur, soit avec un appel à **SQLBulkOperations** ou **SQLSetPos** ou avec une mise à jour ou supprimer l’instruction.  
   
--   **Autres mises à jour, suppressions et insertions.** Mises à jour, suppressions et insertions non effectuées par le curseur, y compris celles apportées par d’autres opérations dans la même transaction, celles effectuées par d’autres transactions et celles effectuées par d’autres applications.  
+-   **Autres mises à jour, suppressions et inserts.** Mises à jour, suppressions et encarts non effectués par le curseur, y compris ceux effectués par d’autres opérations dans la même transaction, ceux effectués par le biais d’autres transactions, et ceux effectués par d’autres applications.  
   
--   **Member.** Ensemble de lignes dans le jeu de résultats.  
+-   **Adhésion.** L’ensemble de lignes dans l’ensemble de résultat.  
   
--   **Ordre.** Ordre dans lequel les lignes sont retournées par le curseur.  
+-   **commande.** L’ordre dans lequel les rangées sont retournées par le curseur.  
   
--   **Valeurs.** Valeurs de chaque ligne du jeu de résultats.  
+-   **Valeurs.** Les valeurs dans chaque rangée dans l’ensemble de résultat.  
   
- Pour plus d’informations sur la mise à jour, la suppression et l’insertion de données, consultez [vue d’ensemble](../../../odbc/reference/develop-app/updating-data-overview.md)de la mise à jour des données.  
+ Pour plus d’informations sur la façon de mettre à jour, supprimer et insérer des données, voir [Mise à jour de l’aperçu des données](../../../odbc/reference/develop-app/updating-data-overview.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Curseurs statiques dans ODBC](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Exécution d’instructions (ODBC) | Microsoft Docs
+title: Déclarations d’exécution (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], executing
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efd0b9ba46975512491dadccb5a44940af52ec28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3489c26073da15fb41af6d1560cb48fe38897386
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73791026"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297933"
 ---
 # <a name="executing-statements-odbc"></a>Exécution d'instructions (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client offre plusieurs moyens d’exécuter des instructions SQL dans une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données :  
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conducteur de Native Client ODBC offre une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] variété de façons d’exécuter les relevés SQL dans une base de données :  
   
 -   Exécution directe  
   
 -   Exécution préparée  
   
- L’exécution directe implique la génération d’une chaîne [!INCLUDE[tsql](../../../includes/tsql-md.md)] de caractères contenant une instruction et son envoi en vue d’une exécution à l’aide de la fonction **SQLExecDirect** . L'exécution préparée implique la génération d'une chaîne de caractères contenant une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] et son exécution en deux étapes. La première étape utilise la fonction [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) pour analyser et compiler le plan d’exécution de l’instruction dans le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La deuxième étape utilise la fonction **SQLExecute** pour exécuter le plan d’exécution précédemment préparé. Cela permet de réduire la charge d'analyse et de compilation pour chaque exécution. L'exécution préparée est couramment utilisée par les applications pour exécuter de manière répétée la même instruction SQL paramétrable.  
+ L’exécution directe consiste à [!INCLUDE[tsql](../../../includes/tsql-md.md)] construire une chaîne de caractères contenant une déclaration et à la soumettre à l’exécution à l’aide de la fonction **SQLExecDirect.** L'exécution préparée implique la génération d'une chaîne de caractères contenant une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] et son exécution en deux étapes. La première étape utilise la fonction [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) fonction pour analyser et compiler le plan d’exécution pour la déclaration dans le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La deuxième étape utilise la fonction **SQLExecute** pour exécuter le plan d’exécution déjà préparé. Cela permet de réduire la charge d'analyse et de compilation pour chaque exécution. L'exécution préparée est couramment utilisée par les applications pour exécuter de manière répétée la même instruction SQL paramétrable.  
   
  Les exécutions directe et préparée peuvent exécuter une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] unique ou un lot d'instructions SQL, ou elles peuvent appeler une procédure stockée.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "73791026"
 -   [Conséquences des options ISO](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Exécution des requêtes &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Niveau d’isolation des transactions de curseur | Microsoft Docs
+title: Niveau d’isolement des transactions cursives (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - ODBC cursors, isolation levels
 - row versioning [SQL Server], ODBC
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92d9eb8bb09065290c99f3cb9894208a7613b984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 49ad51f271e80017420db978f9cac2d867712d8c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784100"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302864"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Niveau d'isolation des transactions de curseur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le comportement de verrouillage complet des curseurs est basé sur une interaction entre les attributs de concurrence et le niveau d'isolation de la transaction défini par le client. Les clients ODBC définissent le niveau d’isolation des transactions à l’aide des attributs [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION ou SQL_COPT_SS_TXN_ISOLATION. Vous pouvez déterminer le comportement de verrouillage d'un environnement de curseur particulier en associant les comportements de verrouillage des options de concurrence et de niveaux d'isolation des transactions.  
+  Le comportement de verrouillage complet des curseurs est basé sur une interaction entre les attributs de concurrence et le niveau d'isolation de la transaction défini par le client. Les clients d’ODBC établissent le niveau d’isolement des transactions à l’aide des attributs [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION ou SQL_COPT_SS_TXN_ISOLATION. Vous pouvez déterminer le comportement de verrouillage d'un environnement de curseur particulier en associant les comportements de verrouillage des options de concurrence et de niveaux d'isolation des transactions.  
   
- Les niveaux d’isolation des transactions de curseurs suivants [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont pris en charge par le pilote ODBC Native Client :  
+ Les niveaux d’isolement des transactions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de curseur suivants sont pris en charge par le conducteur de Native Client ODBC :  
   
 -   Lecture validée (SQL_TXN_READ_COMMITTED)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73784100"
   
 -   Instantané (SQL_TXN_SS_SNAPSHOT)  
   
- Notez que l’API ODBC spécifie des niveaux d’isolation des transactions supplémentaires, mais ceux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -ci [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas pris en charge par ou par le pilote ODBC Native Client.  
+ Notez que l’API ODBC spécifie des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] niveaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supplémentaires d’isolement des transactions, mais ceux-ci ne sont pas pris en charge par ou le conducteur de l’ODBC du client autochtone.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés de curseur](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

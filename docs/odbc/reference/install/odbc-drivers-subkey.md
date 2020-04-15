@@ -1,5 +1,5 @@
 ---
-title: Sous-clé des pilotes ODBC | Microsoft Docs
+title: ODBC Drivers Subkey - France Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304030"
 ---
 # <a name="odbc-drivers-subkey"></a>Sous-clé des pilotes ODBC
-Les valeurs de la sous-clé pilotes ODBC répertorient les pilotes installés. Le format de ces valeurs est indiqué dans le tableau suivant.  
+Les valeurs sous la sous-liste ODBC Drivers sont les pilotes installés. Le format de ces valeurs est affiché dans le tableau suivant.  
   
-|Name|Type de données|Données|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|*Description du pilote*|REG_SZ|**Ordinateur**|  
+|*description du conducteur*|REG_SZ|**Installé**|  
   
- Le nom *de la description du pilote* est défini par le développeur du pilote. Il s’agit généralement du nom du SGBD associé au pilote.  
+ Le nom *de description du conducteur* est défini par le développeur du conducteur. C’est généralement le nom du DBMS associé au conducteur.  
   
- Par exemple, supposons que des pilotes ont été installés pour les fichiers texte mis en forme et les SQL Server. Les valeurs sous la sous-clé pilotes ODBC peuvent être :  
+ Supposons, par exemple, que les conducteurs aient été installés pour des fichiers texte formatés et SQL Server. Les valeurs sous le sous-clé ODBC Drivers pourraient être les :  
   
 ```  
 Text : REG_SZ : Installed  

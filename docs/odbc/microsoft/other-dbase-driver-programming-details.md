@@ -1,5 +1,5 @@
 ---
-title: Autres détails de programmation du pilote dBASE | Microsoft Docs
+title: Autres détails de la programmation des pilotes DBASE (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d47915f9a8b38e450fb8ca9bc9797b748400d82c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135750"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291019"
 ---
 # <a name="other-dbase-driver-programming-details"></a>Autres détails de programmation du pilote dBASE
 > [!NOTE]  
->  Cette section fournit des informations spécifiques au pilote dBASE sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques à dBASE Driver sur les fonctions ODBC et d’autres détails de programmation. Pour plus d’informations générales sur une fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Cette section contient les rubriques suivantes :  
   
@@ -47,4 +47,4 @@ ms.locfileid: "68135750"
   
 -   [SQLTransact (pilote dBASE)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [Index dBASE (pilote dBASE)](../../odbc/microsoft/dbase-indexes.md)
+-   [dBASE Indexes (pilote dBASE)](../../odbc/microsoft/dbase-indexes.md)

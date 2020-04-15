@@ -1,5 +1,5 @@
 ---
-title: Emplacement du cache | Microsoft Docs
+title: Emplacement de cache (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a925b66b0d09a9beb32e4441d62bc4fa9296313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 13510332ae8bfab07a13d7831f9f74a048551214
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288617"
 ---
 # <a name="location-of-cache"></a>Emplacement du cache
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
   
- La bibliothèque de curseurs met en cache les données en mémoire et dans les fichiers temporaires Windows®. Cela limite la taille du jeu de résultats que la bibliothèque de curseurs peut gérer uniquement par l’espace disque disponible. Un fichier temporaire est utilisé lorsque les données à mettre en cache franchissent les limites du segment si elles sont insérées à la fin du cache de la bibliothèque de curseurs. Au lieu de cela, les données à mettre en cache sont ajoutées à la place du dernier bloc de données enregistré dans le cache. Le dernier bloc de données enregistré est enregistré dans un fichier temporaire. Si la bibliothèque de curseurs se termine anormalement, par exemple en cas de panne de courant, elle peut conserver les fichiers temporaires Windows sur le disque. Celles-ci sont nommées ~ CTT*nnnn*. tmp et sont créées dans le répertoire actif.  
+ La bibliothèque de curseurs cache des données dans la mémoire et dans Windows® des fichiers temporaires. Cela limite la taille de l’ensemble de résultat que la bibliothèque de curseurs ne peut gérer que par l’espace disque disponible. Un fichier temporaire est utilisé lorsque les données à mettre en cache traverseraient la limite du segment si elles sont insérées à l’extrémité du cache de la bibliothèque du curseur. Au lieu de cela, les données à mettre en cache sont ajoutées à la place du dernier bloc de données enregistrés dans le cache. Le dernier bloc de données enregistré est enregistré dans un fichier temporaire. Si la bibliothèque de curseurs se termine anormalement, par exemple lorsque la puissance tombe en panne, elle peut laisser des fichiers temporaires Windows sur le disque. Ceux-ci sont nommés 'CTT*nnnn*.tmp et sont créés dans le répertoire actuel.  
   
 > [!NOTE]  
->  Si la bibliothèque de curseurs dans Microsoft® Windows NT®/Windows2000 tente de mettre en cache des données dans un fichier temporaire sur le répertoire actif pendant que l’application s’exécute à partir d’un partage en lecture seule ou d’un disque compact (tel qu’un exemple bibliothèque MFC (Microsoft Foundation Class)), SQLSTATE HY000 (erreur générale-impossible de créer un tampon de fichier) est retourné.
+>  Si la bibliothèque de curseurs de Microsoft® WindowsNT®/Windows2000 tente de mettre en cache des données dans un fichier temporaire sur le répertoire actuel pendant que l’application est en cours d’exécution à partir d’une part de lecture seulement ou d’un disque compact (comme un échantillon microsoft Foundation Class Library), SQLSTATE HY000 (General Error-Unable pour créer un mémoire) sera retourné.

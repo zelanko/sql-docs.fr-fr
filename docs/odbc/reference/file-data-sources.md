@@ -1,5 +1,5 @@
 ---
-title: Sources de données de fichier | Microsoft Docs
+title: Sources de données de fichiers (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068644"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306650"
 ---
 # <a name="file-data-sources"></a>Sources de données de fichier
-Les *sources de données de fichier* sont stockées dans un fichier et permettent aux informations de connexion d’être utilisées à plusieurs reprises par un seul utilisateur ou partagées entre plusieurs utilisateurs. Quand une source de données de fichier est utilisée, le gestionnaire de pilotes établit la connexion à la source de données à l’aide des informations contenues dans un fichier. DSN. Ce fichier peut être manipulé comme n’importe quel autre fichier. Une source de données de fichier n’a pas de nom de source de données, comme la source de données d’une machine, et n’est pas inscrite auprès d’un utilisateur ou d’un ordinateur.  
+*Les sources de données* de fichiers sont stockées dans un fichier et permettent d’utiliser à plusieurs reprises les informations de connexion par un seul utilisateur ou partagées entre plusieurs utilisateurs. Lorsqu’une source de données de fichiers est utilisée, le gestionnaire de pilote effectue la connexion à la source de données en utilisant les informations contenues dans un fichier .dsn. Ce fichier peut être manipulé comme n’importe quel autre fichier. Une source de données de fichiers n’a pas de nom de source de données, tout comme une source de données de machine, et n’est enregistrée à aucun utilisateur ou machine.  
   
- Une source de données de fichier rationalise le processus de connexion, car le fichier. DSN contient la chaîne de connexion qui devrait normalement être générée pour un appel à la fonction **SQLDriverConnect** . Un autre avantage du fichier. DSN est qu’il peut être copié sur n’importe quel ordinateur, de sorte que des sources de données identiques peuvent être utilisées par de nombreux ordinateurs à condition que le pilote approprié soit installé. Une source de données de fichier peut également être partagée par les applications. Une source de données de fichier partageable peut être placée sur un réseau et utilisée simultanément par plusieurs applications.  
+ Une source de données de fichiers rationalise le processus de connexion, car le fichier .dsn contient la chaîne de connexion qui devrait autrement être construite pour un appel à la fonction **SQLDriverConnect.** Un autre avantage du fichier .dsn est qu’il peut être copié à n’importe quelle machine, de sorte que des sources de données identiques peuvent être utilisées par de nombreuses machines tant qu’ils ont le conducteur approprié installé. Une source de données de fichiers peut également être partagée par des applications. Une source de données de fichiers partageable peut être placée sur un réseau et utilisée simultanément par plusieurs applications.  
   
- Un fichier. DSN peut également être non partagé. Un fichier. DSN non partageable réside sur un seul ordinateur et pointe vers une source de données de machine. Les sources de données de fichiers non partagées existent principalement pour permettre une conversion facile des sources de données de l’ordinateur en sources de données de fichier afin qu’une application puisse être conçue pour fonctionner uniquement avec des sources de données de fichier. Quand le gestionnaire de pilotes reçoit les informations contenues dans une source de données de fichier non partageable, il se connecte en fonction des besoins à la source de données de l’ordinateur vers laquelle pointe le fichier. DSN.  
+ Un fichier .dsn peut également être inshareable. Un fichier .dsn inshareable se trouve sur une seule machine et indique une source de données de machine. Des sources de données de fichiers non partageables existent principalement pour permettre la conversion facile des sources de données de machines pour déposer des sources de données afin qu’une application puisse être conçue uniquement pour fonctionner uniquement avec les sources de données de fichiers. Lorsque le gestionnaire de pilote reçoit les informations dans une source de données de fichiers non partageable, il se connecte au besoin à la source de données de la machine à laquelle le fichier .dsn indique.  
   
- Pour plus d’informations sur les sources de données de fichier, consultez [connexion à l’aide de sources de données de fichier](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)ou description de la fonction [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) .
+ Pour plus d’informations sur les sources de données de fichiers, voir [Connecting Using File Data Sources](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), ou la description de la fonction [SQLDriverConnect.](../../odbc/reference/syntax/sqldriverconnect-function.md)

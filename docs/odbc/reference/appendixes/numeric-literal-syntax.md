@@ -1,5 +1,5 @@
 ---
-title: Syntaxe des littéraux numériques | Microsoft Docs
+title: Syntaxe littérale numérique (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990715"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299859"
 ---
 # <a name="numeric-literal-syntax"></a>Syntaxe des littéraux numériques
-La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :  
+La syntaxe suivante est utilisée pour les littérals numériques dans ODBC:  
   
- *Numeric-Literal* :: = *signed-numeric-Literal &#124; non signé-Numeric-Literal*  
+ *numérique-littérale* ::- *signé-numérique-littérale &#124; non signé-numérique-littérale*  
   
- Signed *-Numeric-Literal* :: = [*Sign*] non *signé-Numeric-Literal*  
+ *signé-numérique-littérale* ::' [*signe*] *non signé-numérique-littérale*  
   
- *unsigned-Numeric-littéral* :: = *exact-numeric-Literal &#124; littéral approximatif-Numeric*  
+ *non signé-numérique-littérale* ::' *exact-numérique-littérale &#124; approximative-numérique-littérale*  
   
- *exact-Numeric-littéral* :: = *unsigned-Integer* [*point*[*unsigned-Integer*]] *&#124;point unsigned-Integer*  
+ *exact-numérique-littérale* ::' *non signé-integer* [*période**[non signé-integer*]] *&#124;période non signée-integer*  
   
- *Sign* :: = signe *plus &#124; signe moins (-)*  
+ *signe* :: *plus-signe &#124; moins-signe*  
   
- *approximatif-Numeric-Literal* :: = *mantisse E Exponent*  
+ *approximative-numérique-littérale* ::mantissa *E exposant*  
   
- *mantisse* :: = *expression-littérale exacte*  
+ *mantissa* ::' *exact-numeric-littérale*  
   
- *Exponent* :: = *signed-integer*  
+ *exposant* ::- *signé-integer*  
   
- Signed *-Integer* :: = [*Sign*] non *signé-Integer*  
+ *signé-integer* ::' [*signe*] *non signé-integer*  
   
- *unsigned-entier* :: = *digit...*  
+ *non signé-integer* ::' *chiffre ...*  
   
- signe *plus* :: =*+*  
+ *plus-signe* ::MD*+*  
   
- signe *moins* :: =-  
+ *moins-signe* ::- -  
   
- *chiffre* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *chiffre* :: 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *période* :: =.
+ *période* ::MD .

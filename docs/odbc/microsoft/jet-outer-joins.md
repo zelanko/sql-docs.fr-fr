@@ -1,5 +1,5 @@
 ---
-title: 'Jet : jointures externes | Microsoft Docs'
+title: 'Jet: Joints extérieurs Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL grammar [ODBC], outer join clause
 - outer join clauses [ODBC]
 ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8ab2c4f7e66338c792fb62f9192cf312c5d19e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 173f785dae601ad733aa73eb536e5f410d9a10d0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085480"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299933"
 ---
 # <a name="jet-outer-joins"></a>Jet : Jointures externes
-Une instruction SELECT peut contenir une liste de clauses de jointure externe. Les JOINTUREs externes imbriquées sont prises en charge. Pour plus d’informations sur les JOINTUREs externes, consultez le *Guide du programmeur Microsoft Jet moteur de base de données*.
+Une déclaration SELECT peut contenir une liste de clauses OUTER JOIN. Les JOINS OUTER Nested sont soutenus. Pour plus d’informations sur OUTER JOINS, consultez le *Guide du programmeur de moteurs microsoft Jet Database*Engine .

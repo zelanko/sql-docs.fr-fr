@@ -1,5 +1,5 @@
 ---
-title: Exécution des procédures | Microsoft Docs
+title: Procédures d’exécution (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a796c615d7dfdec11a9acb90ab4b5129cf69717
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069952"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305710"
 ---
 # <a name="executing-procedures"></a>Exécution de procédures
-ODBC définit une séquence d’échappement standard pour l’exécution des procédures. Pour obtenir la syntaxe de cette séquence et un exemple de code qui l’utilise, consultez [appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md).  
+ODBC définit une séquence d’évacuation standard pour l’exécution des procédures. Pour la syntaxe de cette séquence et un exemple de code qui l’utilise, voir [Procedure Calls](../../../odbc/reference/develop-app/procedure-calls.md).  
   
- Pour exécuter une procédure, une application effectue les actions suivantes :  
+ Pour exécuter une procédure, une application effectue les actions suivantes :  
   
-1.  Définit les valeurs de tous les paramètres. Pour plus d’informations, consultez [paramètres des instructions](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
+1.  Définit les valeurs de tous les paramètres. Pour plus d’informations, voir [Paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md), plus tard dans cette section.  
   
-2.  Appelle **SQLExecDirect** et lui transmet une chaîne contenant l’instruction SQL qui exécute la procédure. Cette instruction peut utiliser la séquence d’échappement définie par ODBC ou la syntaxe spécifique au SGBD. les instructions qui utilisent la syntaxe propre au SGBD ne sont pas interopérables.  
+2.  Appelle **SQLExecDirect** et lui passe une chaîne contenant la déclaration SQL qui exécute la procédure. Cette déclaration peut utiliser la séquence d’évacuation définie par la syntaxe spécifique à l’ODBC ou au DBMS; les déclarations qui utilisent la syntaxe spécifique à DBMS ne sont pas interopérables.  
   
-3.  Lorsque **SQLExecDirect** est appelé, le pilote :  
+3.  Lorsque **SQLExecDirect** est appelé, le conducteur:  
   
-    -   Récupère les valeurs de paramètres actuelles et les convertit si nécessaire. Pour plus d’informations, consultez [paramètres des instructions](../../../odbc/reference/develop-app/statement-parameters.md), plus loin dans cette section.  
+    -   Récupère les valeurs de paramètres actuelles et les convertit au besoin. Pour plus d’informations, voir [Paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md), plus tard dans cette section.  
   
-    -   Appelle la procédure dans la source de données et l’envoie aux valeurs de paramètre converties. La façon dont le pilote appelle la procédure est spécifique au pilote. Par exemple, il peut modifier l’instruction SQL pour utiliser la grammaire SQL de la source de données et envoyer cette instruction pour exécution, ou elle peut appeler la procédure directement à l’aide d’un mécanisme d’appel de procédure distante (RPC) défini dans le protocole de flux de données du SGBD.  
+    -   Appelle la procédure dans la source de données et lui envoie les valeurs de paramètres converties. La façon dont le conducteur appelle la procédure est spécifique au conducteur. Par exemple, il peut modifier l’énoncé SQL pour utiliser la grammaire SQL de la source de données et soumettre cette déclaration pour exécution, ou il peut appeler la procédure directement à l’aide d’un mécanisme d’appel de procédure à distance (RPC) qui est défini dans le protocole de flux de données du DBMS.  
   
-    -   Retourne les valeurs de tous les paramètres d’entrée/sortie ou de sortie ou la valeur de retour de la procédure, en supposant que la procédure aboutisse. Ces valeurs peuvent ne pas être disponibles tant que tous les autres résultats (nombres de lignes et jeux de résultats) générés par la procédure n’ont pas été traités. Si la procédure échoue, le pilote retourne les erreurs éventuelles.
+    -   Retourne les valeurs de tout paramètres d’entrée/sortie ou de sortie ou de la valeur de retour de la procédure, en supposant que la procédure réussisse. Ces valeurs pourraient ne pas être disponibles avant que tous les autres résultats (nombres de lignes et ensembles de résultats) générés par la procédure aient été traités. En cas d’échec de la procédure, le conducteur renvoie toute erreur.

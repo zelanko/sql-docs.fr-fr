@@ -1,5 +1,5 @@
 ---
-title: Exécution d’instructions ODBC | Microsoft Docs
+title: Exécution des déclarations ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f34053646c9a279a95740132fcb7a046c559795c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305700"
 ---
 # <a name="executing-statements-odbc"></a>Exécution d’instructions (ODBC)
-Les applications ODBC effectuent presque tous les accès aux bases de données en exécutant des instructions SQL. La séquence générale des événements consiste à allouer un descripteur d’instruction, à définir des attributs d’instruction, à exécuter l’instruction, à récupérer des résultats et à libérer le descripteur d’instruction.  
+Les applications ODBC effectuent presque tous les accès à la base de données en exécutant les relevés SQL. La séquence générale des événements consiste à allouer une poignée de relevé, à définir les attributs de l’instruction, à exécuter l’instruction, à récupérer les résultats et à libérer la poignée de déclaration.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Allocation d'un descripteur d'instruction](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)  
   

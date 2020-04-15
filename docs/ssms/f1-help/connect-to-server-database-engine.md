@@ -1,7 +1,5 @@
 ---
 title: Se connecter au serveur (Moteur de base de données)
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,24 +15,30 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.custom: seo-lt-2019
+ms.date: 04/07/2020
+ms.openlocfilehash: 49bc9ee786c814da1322e9f44c1b80bf7bc63b23
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531204"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809694"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à une instance nommée, utilisez le nom d’ordinateur suivi d’une barre oblique inverse, puis du nom de l’instance. Par exemple : `mycomputer\myinstance`. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
+Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à une instance nommée, utilisez le nom d’ordinateur suivi d’une barre oblique inverse, puis du nom de l’instance. Par exemple : `mycomputer\myinstance`. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.
   
-De nombreux facteurs affectent votre capacité à vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir de l’aide, consultez les ressources suivantes :  
+De nombreux facteurs affectent votre capacité à vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir de l’aide, consultez les ressources suivantes :
+
 - [Leçon 1 du tutoriel : Connexion au moteur de base de données](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+
 - [Résoudre les problèmes de connexion au moteur de base de données SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+
 - [Résolution des erreurs de connectivité à SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Options
+
 **Type de serveur**  
 Lors de l'inscription d'un serveur dans l'Explorateur d'objets, sélectionnez le type de serveur auquel se connecter : [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le reste de la boîte de dialogue affiche uniquement les options s'appliquant au type de serveur sélectionné. Lors de l’inscription d’un serveur de la liste Serveurs inscrits, la zone **Type de serveur** est en lecture seule et indique le type de serveur affiché dans le composant Serveurs inscrits. Pour inscrire un autre type de serveur, sélectionnez [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssEW](../../includes/ssew-md.md)]ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans la barre d'outils Serveurs inscrits avant d'entamer l'inscription d'un nouveau serveur.  
   
@@ -43,13 +47,13 @@ Sélectionnez l'instance de serveur à laquelle se connecter. La dernière insta
   
 > [!NOTE]  
 > Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], utilisez le protocole des canaux nommés en spécifiant le nom du canal, par exemple `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+
 > [!NOTE]  
 > Les connexions sont généralement conservées dans l’historique « Utilisés le plus récemment » (MRU). Pour supprimer des entrées de la liste des fichiers récents, cliquez simplement sur la zone de liste déroulante **Nom du serveur**, sélectionnez le nom du serveur à supprimer, puis appuyez sur la touche **SUPPR**.  
-   
+
 **Authentification**  
 La version actuelle de SSMS propose cinq modes d’authentification lorsque vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Si votre boîte de dialogue d’authentification ne correspond pas à la liste suivante, téléchargez la version la plus récente de SSMS à partir de [Télécharger SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-  
 > **Authentification Windows**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
 > 
@@ -71,12 +75,14 @@ Nom d’utilisateur Windows avec lequel vous connecter. Cette option est disponi
 **Connexion**  
 Entrez le nom d'accès avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec l’Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Authentification par mot de passe Active Directory.  
   
+> [!NOTE]  
+> Les connexions sont généralement conservées dans l’historique « Utilisés le plus récemment » (MRU). Pour supprimer des entrées de la liste des fichiers récents, cliquez simplement sur la zone de liste déroulante **Nom du serveur**, sélectionnez le nom du serveur à supprimer, puis appuyez sur la touche **SUPPR**. Introduit avec SSMS 18.5.
+
 **Mot de passe**  
 Entrez le mot de passe utilisé avec la connexion. Cette option est modifiable uniquement si vous avez choisi la connexion avec l’Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Authentification par mot de passe Active Directory.  
-  
+
 **Connexion**  
-Cliquez sur le bouton pour vous connecter au serveur.  
-  
+Cliquez sur le bouton pour vous connecter au serveur.
+
 **Options**  
-Cliquez pour afficher les onglets **Propriétés de connexion** et **Paramètres de connexion supplémentaires**.  
-  
+Cliquez pour afficher les onglets **Propriétés de connexion** et **Paramètres de connexion supplémentaires**.
