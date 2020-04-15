@@ -1,5 +1,5 @@
 ---
-title: Définition du niveau d’isolation de la transaction | Microsoft Docs
+title: Définir le niveau d’isolement des transactions (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e59db823f8b84edfb5c92f2d142c8238449e3323
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107579"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299809"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Définition du niveau d’isolation des transactions
-Pour définir le niveau d’isolation de la transaction, une application utilise l’attribut de connexion SQL_ATTR_TXN_ISOLATION. Si la source de données ne prend pas en charge le niveau d’isolation demandé, le pilote ou la source de données peut définir un niveau supérieur. Pour déterminer les niveaux d’isolation des transactions pris en charge par une source de données et le niveau d’isolation par défaut, une application appelle **SQLGetInfo** avec les options SQL_TXN_ISOLATION_OPTION et SQL_DEFAULT_TXN_ISOLATION, respectivement.  
+Pour définir le niveau d’isolement des transactions, une application utilise l’attribut de connexion SQL_ATTR_TXN_ISOLATION. Si la source de données ne prend pas en charge le niveau d’isolement demandé, le conducteur ou la source de données peut établir un niveau plus élevé. Pour déterminer quels niveaux d’isolement des transactions une source de données prend en charge et quel est le niveau d’isolement par défaut, une application appelle **SQLGetInfo** avec les options SQL_TXN_ISOLATION_OPTION et SQL_DEFAULT_TXN_ISOLATION, respectivement.  
   
- Les niveaux d’isolation des transactions les plus élevés offrent la meilleure protection de l’intégrité des données de la base de données. Les transactions sérialisables sont garanties comme non affectées par d’autres transactions et, par conséquent, garantissent l’intégrité de la base de données.  
+ Des niveaux plus élevés d’isolement des transactions offrent le plus de protection pour l’intégrité des données de base de données. Les transactions sérialisables sont garanties d’être non affectées par d’autres transactions et donc garanties de maintenir l’intégrité de la base de données.  
   
- Toutefois, un niveau d’isolation des transactions plus élevé peut entraîner une baisse des performances, car cela augmente le risque que l’application ait besoin d’attendre la libération de verrous sur les données. Une application peut spécifier un niveau d’isolation inférieur pour améliorer les performances dans les cas suivants :  
+ Cependant, un niveau plus élevé d’isolement des transactions peut entraîner un ralentissement des performances, car il augmente les chances que l’application devra attendre que les verrous sur les données soient publiés. Une demande peut spécifier un niveau d’isolement inférieur pour augmenter le rendement dans les cas suivants :  
   
--   Lorsqu’il peut être garanti qu’aucune autre transaction ne peut interférer avec les transactions d’une application. Cette situation se produit uniquement dans des circonstances limitées, par exemple lorsqu’une personne d’une petite entreprise conserve des fichiers dBASE qui contiennent des données de personnel sur un ordinateur et ne partage pas ces fichiers.  
+-   Lorsqu’il est possible de garantir qu’il n’existe aucune autre transaction qui pourrait interférer avec les transactions d’une application. Cette situation ne se produit que dans des circonstances limitées, par exemple lorsqu’une personne d’une petite entreprise tient des fichiers dBASE qui contiennent des données du personnel sur un ordinateur et ne partage pas ces fichiers.  
   
--   Lorsque la vitesse est plus importante que la précision et que des erreurs sont susceptibles d’être mineures. Supposons, par exemple, qu’une entreprise effectue de nombreuses petites ventes et que les ventes volumineuses soient rares. Une transaction qui estime la valeur totale de tous les ventes ouvertes peut utiliser en toute sécurité le niveau d’isolation lecture non validée. Bien que la transaction inclue les commandes qui sont ouvertes ou fermées et qui sont ensuite restaurées, elles s’annulent généralement mutuellement et la transaction est beaucoup plus rapide, car elle n’est pas bloquée à chaque fois qu’elle rencontre une telle commande.  
+-   Lorsque la vitesse est plus critique que la précision et que toute erreur est susceptible d’être faible. Supposons, par exemple, qu’une entreprise réalise de nombreuses petites ventes et que les grandes ventes sont rares. Une transaction qui estime la valeur totale de toutes les ventes ouvertes peut utiliser en toute sécurité le niveau d’isolement Read Uncommitted. Bien que la transaction inclue des commandes qui sont ouvertes ou fermées et qui sont par la suite annulées, celles-ci s’annuleraient généralement les unes les autres et la transaction serait beaucoup plus rapide parce qu’elle n’est pas bloquée chaque fois qu’elle fait l’objet d’une telle commande.  
   
- Pour plus d’informations, consultez [accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+ Pour plus d’informations, voir [Concordurrency Optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).

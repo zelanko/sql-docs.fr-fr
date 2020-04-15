@@ -1,5 +1,5 @@
 ---
-title: Niveaux de conformité SQL (pilote ODBC pour Oracle) | Microsoft Docs
+title: Niveaux de conformité SQL (ODBC Driver pour Oracle) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - SQL conformance levels [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063354"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300679"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Niveaux de conformité de SQL (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle prend en charge la grammaire SQL minimale et la grammaire SQL de base, et prend également en charge les extensions ODBC suivantes pour SQL :  
+ Le pilote ODBC pour Oracle prend en charge la grammaire SqL Minimum et la grammaire Core SQL et prend également en charge les extensions ODBC suivantes à SQL :  
   
--   Données de date, d’heure et d’horodatage  
+-   Dates, heures et données de timetamp  
   
--   Jointures externes gauches et droites  
+-   Jointures extérieures gauche et droite  
   
--   Fonctions numériques :  
+-   Fonctions numériques :  
   
     |||||  
     |-|-|-|-|  
@@ -39,35 +39,35 @@ ms.locfileid: "68063354"
     |Ceiling|Log10|second|truncate|  
     |Cos|Mod|sign||  
     |Exp|Pi|sin||  
-    |Floor|Puissance|sqrt||  
+    |Floor|Power|sqrt||  
   
 -   Fonctions de date :  
   
     |||||  
     |-|-|-|-|  
-    |CURDATE|DayOfWeek|MonthName|second|  
-    |Curtime|Jour de l'année|minute|week|  
-    |Dayname|Heure|now|year|  
-    |DayOfMonth|Month|quarter||  
+    |Curdate (Curdate)|Dayofweek|nom de mois|second|  
+    |Curtime Curtime|Jour de l'année|minute|week|  
+    |Nom de jour|Heure|now|year|  
+    |Jourofmonth|Month|quarter||  
   
 -   Fonctions de chaînes :  
   
     |||||  
     |-|-|-|-|  
-    |ASCII|Gauche|Oui|UCase|  
-    |Char|Longueur|RTrim||  
-    |Concat|LTRIM|Soundex||  
-    |LCase|Replace|substring||  
+    |ASCII|Gauche|droite|ucase|  
+    |Char|Longueur|rtrim rtrim||  
+    |Concat|Ltrim Ltrim|Soundex||  
+    |Lcase|Replace|substring||  
   
--   Fonction de conversion de type :  
+-   Fonction de conversion de type :  
   
     ||  
     |-|  
     |Convertir|  
   
--   Fonctions système :  
+-   Fonctions du système :  
   
     ||  
     |-|  
-    |Ifnull|  
+    |Ifnull (En)|  
     |Utilisateur|

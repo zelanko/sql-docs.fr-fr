@@ -1,5 +1,5 @@
 ---
-title: Activation de Visual Studio Analyzer | Microsoft Docs
+title: Permettre l’analyseur de studio visuel (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,33 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d80d54dc4aeebcc5c32d07a2beebb9ded41bf355
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046778"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300449"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Activation de Visual Studio Analyzer
 > [!IMPORTANT]  
->  La prise en charge de Visual Studio Analyzer a été supprimée depuis Windows 8 (Visual Studio Analyzer n’était inclus que dans les versions antérieures de Visual Studio). Pour un autre mécanisme de résolution des problèmes, utilisez le suivi des enchères.  
+>  La prise en charge de Visual Studio Analyzer a été supprimée à partir de Windows 8 (Visual Studio Analyzer n’a été inclus que dans les anciennes versions de Visual Studio.). Pour un autre mécanisme de dépannage, utilisez le traçage BID.  
   
- Microsoft Visual Studio Analyzer est un outil d’analyse de l’application conçu pour fournir une vue d’ensemble des performances d’une application sur l’ensemble des niveaux et systèmes. Il se concentre sur l’interaction entre les composants. Visual Studio Analyzer pouvez démarrer et arrêter à partir de l’onglet de suivi de l’administrateur ODBC.  
+ Microsoft Visual Studio Analyzer est un outil d’analyse d’applications conçu pour fournir un aperçu de haut niveau des performances d’une application sur tous les niveaux et tous les systèmes. Il met l’accent sur l’interaction entre les composants. Visual Studio Analyzer peut être lancé et arrêté à partir de l’onglet De traçage de l’administrateur de l’ODBC.  
   
- Pour afficher les événements générés par ODBC, procédez comme suit :  
+ Pour voir l’un ou l’autre des événements générés par ODBC, suivez ces étapes :  
   
-1.  Accédez à l’administrateur de la source de données ODBC.  
+1.  Accédez à l’administrateur de source de données ODBC.  
   
-2.  Cliquez sur l’onglet **suivi** .  
+2.  Cliquez sur l’onglet **Tracing.**  
   
-3.  Cliquez sur **démarrer Visual Studio Analyzer le suivi**.  
+3.  Cliquez **sur Démarrer Visual Studio Analyzer Tracing**.  
   
 4.  Cliquez sur **OK**.  
   
- Visual Studio Analyzer la génération d’événements se poursuit jusqu’à ce que l’option **arrêter le suivi des Visual Studio Analyzer** soit sélectionnée.  
+ Visual Studio Analyzer event-generation continue jusqu’à ce que **Stop Visual Studio Analyzer Tracing** soit sélectionné.  
   
- Cette section contient la rubrique suivante.  
+ Cette section contient le sujet suivant.  
   
 -   [Événements générés par le gestionnaire de pilotes ODBC](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)

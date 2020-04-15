@@ -1,5 +1,5 @@
 ---
-title: Signets de longueur fixe | Microsoft Docs
+title: Signets à longueur fixe Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - compatibility [ODBC], bookmarks
 - fixed-length bookmarks [ODBC]
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f90c5888a68506c056b2a56fce516080148528e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913584"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306980"
 ---
 # <a name="fixed-length-bookmarks"></a>Signets de longueur fixe
-Si un pilote ODBC *3. x* doit fonctionner avec une application ODBC *2. x* qui utilise des signets de longueur fixe, le pilote doit prendre en charge les éléments suivants :  
+Si un conducteur ODBC *3.x* doit travailler avec une application ODBC *2.x* qui utilise des signets de longueur fixe, le conducteur doit prendre en charge ce qui suit :  
   
--   SQL_UB_ON comme valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillé dans ODBC *3. x*.)  
+-   SQL_UB_ON comme valeur pour l’option SQL_USE_BOOKMARKS déclaration. (SQL_UB_ON est dépréciée dans ODBC *3.x*.)  
   
--   Option d’instruction SQL_GET_BOOKMARK.
+-   L’option SQL_GET_BOOKMARK déclaration.

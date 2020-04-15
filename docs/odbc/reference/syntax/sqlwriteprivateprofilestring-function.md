@@ -1,5 +1,5 @@
 ---
-title: SQLWritePrivateProfileString fonction) | Microsoft Docs
+title: FONCTION SQLWritePrivateProfileString (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWritePrivateProfileString [ODBC]
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0de5ad074fb2b760420686feddff58b26887112
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039381"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286882"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString, fonction
 **Conformité**  
- Version introduite : ODBC 2,0  
+ Version introduite: ODBC 2.0  
   
  **Résumé**  
- **SQLWritePrivateProfileString** écrit un nom de valeur et des données dans la sous-clé ODBC. ini des informations système.  
+ **SQLWritePrivateProfileString** écrit un nom de valeur et des données au sous-clé Odbc.ini des informations du système.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,36 +46,36 @@ BOOL SQLWritePrivateProfileString(
   
 ## <a name="arguments"></a>Arguments  
  *lpszSection*  
- Entrée Pointe vers une chaîne se terminant par un caractère null qui contient le nom de la section dans laquelle la chaîne sera copiée. Si la section n’existe pas, elle est créée. Le nom de la section est indépendant de la casse ; la chaîne peut être n’importe quelle combinaison de lettres majuscules et minuscules.  
+ [Entrée] Indique une corde non terminée contenant le nom de la section à laquelle la chaîne sera copiée. Si l’article n’existe pas, il est créé. Le nom de l’article est indépendant des cas; la ficelle peut être n’importe quelle combinaison de majuscules et de lettres minuscules.  
   
- *lpszEntry*  
- Entrée Pointe vers une chaîne se terminant par un caractère null qui contient le nom de la clé à associer à une chaîne. Si la clé n’existe pas dans la section spécifiée, elle est créée. Si cet argument a la valeur NULL, la section entière, y compris toutes les entrées de la section, est supprimée.  
+ *lpszEntry (en)*  
+ [Entrée] Indique une corde non terminée contenant le nom de la clé à associer à une chaîne. Si la clé n’existe pas dans la section spécifiée, elle est créée. Si cet argument est NULL, toute la section, y compris toutes les entrées dans la section, est supprimée.  
   
- *lpszString*  
- Entrée Pointe vers une chaîne se terminant par un caractère null à écrire dans le fichier. Si cet argument a la valeur NULL, la clé vers laquelle pointe l’argument *lpszEntry* est supprimée.  
+ *lpszString (lpszString)*  
+ [Entrée] Indique une corde non résiliée à écrire au dossier. Si cet argument est NULL, la clé pointée par *l’argument lpszEntry* est supprimée.  
   
  *lpszFilename*  
- Sortie Pointe vers une chaîne se terminant par un caractère null qui nomme le fichier d’initialisation.  
+ [Sortie] Indique une chaîne non terminée qui nomme le fichier d’initialisation.  
   
 ## <a name="returns"></a>Retours  
- La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
+ La fonction retourne VRAI si elle est réussie, FALSE si elle échoue.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLWritePrivateProfileString** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Lorsque **SQLWritePrivateProfileString** retourne FALSE, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les * \*valeurs pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et explique chacune dans le cadre de cette fonction.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode (en)*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erreur générale du programme d’installation|Une erreur s’est produite pour laquelle aucune erreur d’installation spécifique n’a été rencontrée.|  
-|ODBC_ERROR_REQUEST_FAILED|Échec de la requête|Les informations système demandées n’ont pas pu être écrites.|  
-|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu exécuter la fonction en raison d’un manque de mémoire.|  
+|ODBC_ERROR_GENERAL_ERR|Erreur d’installateur général|Une erreur s’est produite pour laquelle il n’y a pas eu d’erreur spécifique d’installateur.|  
+|ODBC_ERROR_REQUEST_FAILED|Échec de la demande|Les renseignements sur le système demandé n’ont pas pu être rédigés.|  
+|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|L’installateur ne pouvait pas effectuer la fonction en raison d’un manque de mémoire.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLWritePrivateProfileString** est fourni comme un moyen simple de porter des pilotes et des dll de configuration de pilote de Microsoft® Windows® à Microsoft windows NT®/Windows 2000. Les appels à **WritePrivateProfileString** qui écrivent une chaîne de profil dans le fichier ODBC. ini doivent être remplacés par des appels à **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** appelle des fonctions dans l’API de® Win32 pour ajouter le nom de valeur et les données spécifiés à la sous-clé ODBC. ini des informations système.  
+ **SQLWritePrivateProfileString** est fourni comme un moyen simple pour les pilotes de port et d’installation du conducteur DLLs de Microsoft® Windows® à Microsoft Windows NT®/Windows 2000. Les appels à **WritePrivateProfileString** qui écrivent une chaîne de profil au fichier Odbc.ini doivent être remplacés par des appels à **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** appelle des fonctions dans l’API de 32 ® pour ajouter le nom et les données de valeur spécifiés au sous-clé Odbc.ini des informations du système.  
   
- Un mode de configuration indique que l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système. Si le DSN est un DSN utilisateur (la variable d’État est USERDSN_ONLY), la fonction écrit dans l’entrée ODBC. ini dans HKEY_CURRENT_USER. Si le DSN est un DSN système (SYSTEMDSN_ONLY), la fonction écrit dans l’entrée ODBC. ini de HKEY_LOCAL_MACHINE. Si la variable d’État est BOTHDSN, HKEY_CURRENT_USER est tentée et, en cas d’échec, HKEY_LOCAL_MACHINE est utilisé.  
+ Un mode de configuration indique où l’entrée Odbc.ini énumérant les valeurs DSN est dans les informations du système. Si le DSN est un DSN utilisateur (la variable d’état est USERDSN_ONLY), la fonction écrit à l’entrée Odbc.ini dans HKEY_CURRENT_USER. Si le DSN est un système DSN (SYSTEMDSN_ONLY), la fonction écrit à l’entrée Odbc.ini dans HKEY_LOCAL_MACHINE. Si la variable d’état est BOTHDSN, HKEY_CURRENT_USER est essayée, et si elle échoue, HKEY_LOCAL_MACHINE est utilisé.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Obtention d’une valeur à partir des informations système|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|
+|Obtenir une valeur de l’information du système|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|

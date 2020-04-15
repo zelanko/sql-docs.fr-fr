@@ -11,27 +11,27 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6b0a6b512798e4da90555f7a7e195bfbcfbe97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4d4b2bef0bf37b4400ac2cfcb672e43ba4f5abcb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75231770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297130"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>Propriétés de la session - Fournisseur OLE DB de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client interprète OLE DB propriétés de session comme suit.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native De DB OLE de client interprète les propriétés de session OLE DB comme suit.  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge tous les niveaux d’isolation des transactions de validation automatique, à l’exception du niveau chaos DBPROPVAL_TI_CHAOS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB prend en charge tous les niveaux d’isolement des transactions automatiques, à l’exception du niveau de chaos DBPROPVAL_TI_CHAOS.|  
 |||
 
- Dans le jeu de propriétés spécifiques au fournisseur DBPROPSET_SQLSERVERSESSION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native Client définit la propriété de session supplémentaire suivante.  
+ Dans l’ensemble de propriétés spécifique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au fournisseur DBPROPSET_SQLSERVERSESSION, le fournisseur de DB OLE de client autochtone définit la propriété de session supplémentaire suivante.  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
@@ -41,6 +41,6 @@ ms.locfileid: "75231770"
 |||
 
 ## <a name="see-also"></a>Voir aussi  
- [Objets de source de données &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets source de données &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

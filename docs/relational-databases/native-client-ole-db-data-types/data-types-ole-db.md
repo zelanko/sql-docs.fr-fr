@@ -13,20 +13,20 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304437"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Pour exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions et traiter les résultats à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fournisseur OLE DB Native Client, vous devez savoir comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mappe les types de données aux types de données OLE DB lors de la liaison de paramètres ou de colonnes dans un ensemble de lignes, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lorsqu’il utilise l’interface **ITableDefinition** pour créer une table dans.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] Afin d’exécuter des instructions et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de traiter les résultats à l’aide du fournisseur native Client OLE DB, vous devez savoir comment le fournisseur native OLE DB cartographie les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données aux types de données OLE DB lors de la liaison des paramètres ou des colonnes dans un ensemble de lignes, et quand il utilise **l’interface ITableDefinition** pour créer un tableau en .  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

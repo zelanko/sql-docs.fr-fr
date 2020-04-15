@@ -1,5 +1,5 @@
 ---
-title: Modèle de curseur pris en charge (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: Modèle cursor pris en charge (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301125"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modèle de curseur pris en charge (pilote ODBC Visual FoxPro)
-Le pilote ODBC Visual FoxPro prend en charge les curseurs de *bloc* (*rowset*) et *statiques* . Les curseurs statiques sont pris en charge pour tous les pilotes conformes à la compatibilité ODBC de niveau 1. Le pilote ne prend pas en charge les curseurs dynamiques, pilotés par jeu de clés ou mixtes (keyset et Dynamic).  
+Le visual FoxPro ODBC Driver prend en charge à la fois *le bloc* (*rowset*) et les curseurs *statiques.* Les curseurs statiques sont pris en charge pour tout pilote conforme à la conformité au niveau 1 ODBC. Le conducteur ne prend pas en charge les curseurs dynamiques, à clé ou mixtes (clés et dynamiques).  
   
  Votre application peut appeler [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) avec une option SQL_CURSOR_TYPE de SQL_CURSOR_FORWARD_ONLY (curseur de bloc) ou SQL_CURSOR_STATIC (curseur statique).  
   
 > [!NOTE]  
->  Si vous appelez **SQLSetStmtOption** avec une option SQL_CURSOR_TYPE autre que SQL_CURSOR_FORWARD_ONLY ou SQL_CURSOR_STATIC, la fonction retourne SQL_SUCCESS_WITH_INFO avec un SQLSTATE de 01s02 ne (valeur d’option modifiée). Le pilote définit tous les modes de curseur non pris en charge pour SQL_CURSOR_STATIC.  
+>  Si vous appelez **SQLSetStmtOption** avec une option SQL_CURSOR_TYPE autre que SQL_CURSOR_FORWARD_ONLY ou SQL_CURSOR_STATIC, la fonction renvoie SQL_SUCCESS_WITH_INFO avec un SQLSTATE de 01S02 (valeur d’option modifiée). Le conducteur définit tous les modes de curseur non pris en soutien pour SQL_CURSOR_STATIC.  
   
- Pour plus d’informations sur les types de curseurs et sur **SQLSetStmtOption**, consultez [Guide de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Pour plus d’informations sur les types de curseurs et sur **SQLSetStmtOption**, voir la [référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>curseur de bloc  
- Un jeu de résultats en lecture seule de défilement avant est retourné au client, qui est responsable de la maintenance du stockage pour les données.  
+ Un ensemble de résultats avant-scrolling et lu seulement est retourné au client, qui est responsable du stockage pour les données.  
   
 ## <a name="static-cursor"></a>curseur statique  
- Instantané d’un jeu de données défini par la requête. Les curseurs statiques ne reflètent pas les modifications en temps réel des données sous-jacentes par d’autres utilisateurs. La mémoire tampon du curseur est conservée par la bibliothèque de curseurs ODBC, ce qui permet de faire défiler vers l’avant et vers l’arrière.  
+ Un instantané d’un ensemble de données défini par la requête. Les curseurs statiques ne reflètent pas les modifications en temps réel des données sous-jacentes par d’autres utilisateurs. Le tampon de mémoire du curseur est maintenu par la bibliothèque de curseurs ODBC, qui permet de défiler vers l’avant et vers l’arrière.  
   
 ## <a name="rowset"></a>ensemble de lignes  
- Blocs de données stockés dans un curseur, représentant les lignes extraites d’une source de données.
+ Blocs de données stockées dans un curseur, représentant les rangées récupérées à partir d’une source de données.

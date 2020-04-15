@@ -1,5 +1,5 @@
 ---
-title: Comportement de validation et de restauration | Microsoft Docs
+title: Comportement d’engagement et de recul (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - interoperability [ODBC], transaction support
 - transactions [ODBC], DBMS support
 ms.assetid: 2ac8f012-e46d-41ca-81bb-e4a3246e3241
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 643d7d4174df66abfcee274c1f987e8f405d19b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c67c29b295160a2908152b22c7a349ce4c0f9f50
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083343"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299129"
 ---
 # <a name="commit-and-rollback-behavior"></a>Comportement de validation et d’annulation
-Un comportement courant parmi les SGBD de serveur est de fermer les curseurs et d’ignorer les instructions préparées lorsqu’une instruction est validée ou restaurée. Les bases de données de bureau sont plus susceptibles de conserver les curseurs ouverts et de conserver les instructions préparées. Pour plus d’informations, consultez les options SQL_CURSOR_COMMIT_BEHAVIOR et SQL_CURSOR_ROLLBACK_BEHAVIOR dans la description de la fonction [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) et l' [effet des transactions sur les curseurs et les instructions préparées](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md).
+Un comportement courant parmi les DBMS serveur est de fermer les curseurs et de jeter les instructions préparées lorsqu’une déclaration est commise ou annulée. Les bases de données de bureau sont plus susceptibles de garder les curseurs ouverts et de conserver les instructions préparées. Pour de plus amples renseignements, consultez les options de SQL_CURSOR_COMMIT_BEHAVIOR et de SQL_CURSOR_ROLLBACK_BEHAVIOR dans la description de la fonction [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) et [l’effet des transactions sur les curseurs et les déclarations préparées.](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)

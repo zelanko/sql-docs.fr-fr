@@ -1,5 +1,5 @@
 ---
-title: Fonction SQLConnect | Microsoft Docs
+title: Fonction SQLConnect (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConnect function [ODBC]
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68121463"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301215"
 ---
 # <a name="sqlconnect-function"></a>Fonction SQLConnect
 **Conformité**  
- Version introduite : ODBC 1,0 conformité aux normes : ISO 92  
+ Version introduite: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Résumé**  
- **SQLConnect** établit des connexions à un pilote et à une source de données. Le handle de connexion fait référence au stockage de toutes les informations sur la connexion à la source de données, y compris l’État, l’état de la transaction et les informations sur l’erreur.  
+ **SQLConnect** établit des connexions à un conducteur et à une source de données. La connexion gère le stockage des références de toutes les informations sur la connexion à la source de données, y compris l’état, l’état de transaction et les informations d’erreur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,149 +48,149 @@ SQLRETURN SQLConnect(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ConnectionHandle*  
+ *ConnexionHandle*  
  [Entrée] Handle de connexion.  
   
- *Nom du serveur*  
- Entrée Nom de la source de données. Les données peuvent se trouver sur le même ordinateur que le programme, ou sur un autre ordinateur sur un réseau. Pour plus d’informations sur la façon dont une application choisit une source de données, consultez [choix d’une source de données ou](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)d’un pilote.  
+ *Servername*  
+ [Entrée] Nom de source de données. Les données peuvent être localisées sur le même ordinateur que le programme, ou sur un autre ordinateur quelque part sur un réseau. Pour plus d’informations sur la façon dont une application choisit une source de données, voir [Choisir une source de données ou un pilote](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
  *NameLength1*  
- Entrée Longueur de **ServerName* en caractères.  
+ [Entrée] Longueur de*ServerName* en caractères.  
   
- *Nom d’utilisateur*  
- Entrée Identificateur de l’utilisateur.  
+ *nom d'utilisateur*  
+ [Entrée] Identifiant utilisateur.  
   
- *NameLength2*  
- Entrée Longueur de **nom d’utilisateur* en caractères.  
+ *NomLength2*  
+ [Entrée] Longueur de*l’UserName* en caractères.  
   
  *Authentification*  
- Entrée Chaîne d’authentification (généralement le mot de passe).  
+ [Entrée] Chaîne d’authentification (généralement le mot de passe).  
   
- *NameLength3*  
- Entrée Longueur de **authentification* en caractères.  
+ *NomLength3*  
+ [Entrée] Longueur de*l’authentification* en caractères.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLConnect** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_DBC et un *handle* de *ConnectionHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLConnect** et explique chacune d’elles dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLConnect** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DBC et une *poignée* de *ConnectionHandle*. Le tableau suivant énumère les valeurs SQLSTATE généralement retournées par **SQLConnect** et explique chacune dans le cadre de cette fonction; la notation " (DM)" précède les descriptions des SQLSTATEs retournées par le gestionnaire de conducteur. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01S02 ne|Valeur d’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée de l’argument *ValuePtr* dans **SQLSetConnectAttr** et substituait une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|08001|Le client ne peut pas établir la connexion|Le pilote n’a pas pu établir une connexion avec la source de données.|  
-|08002|Nom de connexion en cours d’utilisation|(DM) le *ConnectionHandle* spécifié a déjà été utilisé pour établir une connexion avec une source de données, et la connexion était toujours ouverte ou l’utilisateur parvient à accéder à une connexion.|  
-|08004|Le serveur a rejeté la connexion|La source de données a rejeté l’établissement de la connexion pour des raisons définies par l’implémentation.|  
-|08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote essayait de se connecter a échoué avant la fin du traitement de la fonction.|  
-|28000|Spécification d’autorisation non valide|La valeur spécifiée pour l’argument *nom d’utilisateur* ou la valeur spécifiée pour l' *authentification* de l’argument n’a pas respecté les restrictions définies par la source de données.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|(DM) le gestionnaire de pilotes n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
-|HY008|Opération annulée|Le traitement asynchrone a été activé pour *ConnectionHandle*. La fonction **SQLConnect** a été appelée, et avant la fin de l’exécution, la [fonction SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) a été appelée sur le *ConnectionHandle*, puis la fonction **SQLConnect** a été appelée à nouveau sur le *ConnectionHandle*.<br /><br /> Ou bien, la fonction **SQLConnect** a été appelée et avant la fin de l’exécution, **SQLCancelHandle** a été appelé sur le *ConnectionHandle* à partir d’un thread différent dans une application multithread.|  
-|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *ConnectionHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.|  
-|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) la valeur spécifiée pour l’argument *NameLength1*, *NameLength2*ou *NameLength3* est inférieure à 0, mais n’est pas égale à SQL_NTS.<br /><br /> (DM) la valeur spécifiée pour l’argument *NameLength1* a dépassé la longueur maximale pour un nom de source de données.|  
-|HYT00|Délai expiré|Le délai d’expiration de la requête a expiré avant la fin de la connexion à la source de données. Le délai d’attente est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
-|HY114|Le pilote ne prend pas en charge l’exécution de fonctions asynchrones au niveau de la connexion|(DM) l’application a activé l’opération asynchrone sur le handle de connexion avant d’établir la connexion. Toutefois, le pilote ne prend pas en charge les opérations asynchrones sur le handle de connexion.|  
-|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote spécifié par le nom de la source de données ne prend pas en charge la fonction.|  
-|IM002|Source de données introuvable et aucun pilote par défaut spécifié|(DM) le nom de source de données spécifié dans l’argument *ServerName* est introuvable dans les informations système, et il n’y avait pas de spécification de pilote par défaut.|  
-|IM003|Impossible de connecter le pilote spécifié à|(DM) le pilote listé dans la spécification de la source de données dans informations système est introuvable ou n’a pas pu être connecté pour une autre raison.|  
-|IM004|Échec du SQLAllocHandle du pilote sur SQL_HANDLE_ENV|(DM) au cours de **SQLConnect**, le gestionnaire de pilotes a appelé la fonction **SQLAllocHandle** du pilote avec un *comme HandleType* de SQL_HANDLE_ENV et le pilote a renvoyé une erreur.|  
-|IM005|Échec du SQLAllocHandle du pilote sur SQL_HANDLE_DBC|(DM) au cours de **SQLConnect**, le gestionnaire de pilotes a appelé la fonction **SQLAllocHandle** du pilote avec un *comme HandleType* de SQL_HANDLE_DBC et le pilote a renvoyé une erreur.|  
-|IM006|Échec de SQLSetConnectAttr du pilote|Au cours de **SQLConnect**, le gestionnaire de pilotes a appelé la fonction **SQLSetConnectAttr** du pilote et le pilote a renvoyé une erreur. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|IM009|Impossible de se connecter à la DLL de traduction|Le pilote n’a pas pu se connecter à la DLL de traduction spécifiée pour la source de données.|  
-|IM010|Le nom de la source de données est trop long|Le nom du * \*serveur* (DM) est plus long que SQL_MAX_DSN_LENGTH caractères.|  
-|IM014|Le nom de source de donnée spécifié contient une incompatibilité d’architecture entre le pilote et l’application|(DM) l’application 32 bits utilise un DSN se connectant à un pilote 64 bits ; ou vice versa.|  
-|IM015|Échec de SQLConnect sur SQL_HANDLE_DBC_INFO_HANDLE du pilote|Si un pilote retourne SQL_ERROR, le gestionnaire de pilotes renverra SQL_ERROR à l’application et la connexion échouera.<br /><br /> Pour plus d’informations sur la SQL_HANDLE_DBC_INFO_TOKEN, consultez [développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
-|IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
-|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur ce handle.|Si l’appel de fonction précédent sur le descripteur retourne SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur le handle pour effectuer un traitement postérieur et terminer l’opération.|  
-|S1118|Le pilote ne prend pas en charge la notification asynchrone|Si le pilote ne prend pas en charge les notifications asynchrones, vous ne pouvez pas définir SQL_ATTR_ASYNC_DBC_EVENT ou SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
+|01000|Avertissement général|Message d’information spécifique au conducteur. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
+|01S02|Valeur de l’option modifiée|Le conducteur n’a pas supporté la valeur spécifiée de *l’argument ValuePtr* dans **SQLSetConnectAttr** et a remplacé une valeur similaire. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
+|08001|Client incapable d’établir la connexion|Le conducteur n’a pas été en mesure d’établir une connexion avec la source de données.|  
+|08002|Nom de connexion en cours d’utilisation|(DM) Le *ConnectionHandle* spécifié avait déjà été utilisé pour établir une connexion avec une source de données, et la connexion était toujours ouverte ou l’utilisateur naviguait pour une connexion.|  
+|08004|Server a rejeté la connexion|La source de données a rejeté l’établissement de la connexion pour des raisons définies par la mise en œuvre.|  
+|08S01|Défaillance du lien de communication|Le lien de communication entre le conducteur et la source de données à laquelle le conducteur tentait de se connecter a échoué avant que la fonction ne termine le traitement.|  
+|28000|Spécifications d’autorisation invalides|La valeur spécifiée pour l’argument *UserName* ou la valeur spécifiée pour l’argument *Authentification* violé les restrictions définies par la source de données.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle il n’y avait pas de SQLSTATE spécifique et pour laquelle aucun SQLSTATE spécifique à la mise en œuvre n’a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le * \** tampon MessageText décrit l’erreur et sa cause.|  
+|HY001 (hy001)|Erreur d’allocation de mémoire|(DM) Le gestionnaire de conducteur n’a pas été en mesure d’allouer la mémoire requise pour soutenir l’exécution ou l’achèvement de la fonction.|  
+|HY008 HY008|Opération annulée|Le traitement asynchrone a été activé pour le *ConnectionHandle*. La fonction **SQLConnect** a été appelée, et avant qu’elle ait terminé l’exécution, [SQLCancelHandle Function](../../../odbc/reference/syntax/sqlcancelhandle-function.md) a été appelé sur le *ConnectionHandle*, puis la fonction **SQLConnect** a été appelée à nouveau sur le *ConnectionHandle*.<br /><br /> Ou, la fonction **SQLConnect** a été appelée, et avant qu’il ne termine l’exécution, **SQLCancelHandle** a été appelé sur le *ConnectionHandle* à partir d’un thread différent dans une application multitâli.|  
+|HY010|Erreur de séquence de fonction|(DM) Une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *ConnectionHandle* et était toujours en exécution lorsque cette fonction a été appelée.|  
+|HY013|Erreur de gestion de la mémoire|L’appel de fonction n’a pas pu être traité parce que les objets de mémoire sous-jacents n’ont pas pu être consultés, peut-être en raison de conditions de mémoire basse.|  
+|HY090 HY090|Longueur invalide de ficelle ou de tampon|(DM) La valeur spécifiée pour l’argument *NameLength1*, *NameLength2*, ou *NameLength3* était inférieure à 0 mais pas égale à SQL_NTS.<br /><br /> (DM) La valeur spécifiée pour l’argument *NameLength1* a dépassé la durée maximale d’un nom de source de données.|  
+|HYT00|Délai expiré|La période de délai de requête a expiré avant que la connexion à la source de données ne soit terminée. La période de délai d’attente est fixée par **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
+|HY114|Le conducteur ne prend pas en charge l’exécution de la fonction asynchrone de niveau de connexion|(DM) L’application a activé l’opération asynchrone sur la poignée de connexion avant de faire la connexion. Toutefois, le conducteur ne prend pas en charge les opérations asynchrones sur la poignée de connexion.|  
+|HYT01 (HYT01)|Délai de connexion expiré|La période de délai de connexion a expiré avant que la source de données ne réponde à la demande. La période de délai de connexion est définie par **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le conducteur ne prend pas en charge cette fonction|(DM) Le conducteur spécifié par le nom de source de données ne prend pas en charge la fonction.|  
+|IM002|Source de données non trouvée et aucun conducteur par défaut spécifié|(DM) Le nom de source de données spécifié dans l’argument *ServerName* n’a pas été trouvé dans les informations du système, ni il n’y avait de spécification de conducteur par défaut.|  
+|IM003|Le conducteur spécifié ne pouvait pas être connecté à|(DM) Le conducteur figurant dans les spécifications de source de données dans les informations du système n’a pas été trouvé ou n’a pas pu être connecté à pour une autre raison.|  
+|IM004|Le conducteur SQLAllocHandle sur SQL_HANDLE_ENV a échoué|(DM) Pendant **SQLConnect**, le gestionnaire de conducteur a appelé la fonction **SQLAllocHandle** du conducteur avec un *HandleType* de SQL_HANDLE_ENV et le conducteur a retourné une erreur.|  
+|IM005|Le conducteur SQLAllocHandle sur SQL_HANDLE_DBC a échoué|(DM) Pendant **SQLConnect**, le gestionnaire de conducteur a appelé la fonction **SQLAllocHandle** du conducteur avec un *HandleType* de SQL_HANDLE_DBC et le conducteur a retourné une erreur.|  
+|IM006|Le conducteur SQLSetConnectAttr a échoué|Pendant **SQLConnect**, le gestionnaire de conducteur a appelé la fonction **SQLSetConnectAttr** du conducteur et le conducteur a retourné une erreur. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
+|IM009|Impossible de se connecter à la traduction DLL|Le conducteur n’a pas été en mesure de se connecter à la traduction DLL qui a été spécifiée pour la source de données.|  
+|IM010|Nom source de données trop long|(DM) * \*ServerName* était plus long que SQL_MAX_DSN_LENGTH caractères.|  
+|IM014|Le DSN spécifié contient un décalage architectural entre le conducteur et l’application|(DM) L’application 32 bits utilise une connexion DSN à un conducteur 64 bits; ou vice versa.|  
+|IM015|SQLConnect du conducteur sur SQL_HANDLE_DBC_INFO_HANDLE échoué|Si un conducteur retourne SQL_ERROR, le gestionnaire de conducteur retournera SQL_ERROR à l’application et la connexion échouera.<br /><br /> Pour plus d’informations sur SQL_HANDLE_DBC_INFO_TOKEN, voir [Developing Connection-Pool Awareness in an ODBC Driver](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
+|IM017|Le sondage est désactivé en mode notification asynchrone|Chaque fois que le modèle de notification est utilisé, le sondage est désactivé.|  
+|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur cette poignée.|Si la fonction précédente fait appel aux retours de poignée SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur la poignée pour effectuer le post-traitement et terminer l’opération.|  
+|S1118|Le conducteur ne prend pas en charge la notification asynchrone|Lorsque le conducteur ne prend pas en charge la notification asynchrone, vous ne pouvez pas définir SQL_ATTR_ASYNC_DBC_EVENT ou SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
   
 ## <a name="comments"></a>Commentaires  
- Pour plus d’informations sur la raison pour laquelle une application utilise **SQLConnect**, consultez [connexion avec SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md).  
+ Pour plus d’informations sur les raisons pour lesquelles une application utilise **SQLConnect**, voir [Connecting avec SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md).  
   
- Le gestionnaire de pilotes ne se connecte pas à un pilote tant que l’application n’a pas appelé une fonction (**SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**) pour se connecter au pilote. Jusqu’à ce stade, le gestionnaire de pilotes fonctionne avec ses propres Handles et gère les informations de connexion. Lorsque l’application appelle une fonction de connexion, le gestionnaire de pilotes vérifie si un pilote est actuellement connecté pour le *ConnectionHandle*spécifié :  
+ Le gestionnaire de conducteur ne se connecte pas à un conducteur jusqu’à ce que l’application appelle une fonction (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**) pour se connecter au conducteur. Jusque-là, le Driver Manager travaille avec ses propres poignées et gère les informations de connexion. Lorsque l’application appelle une fonction de connexion, le Gestionnaire de conducteur vérifie si un pilote est actuellement connecté à la *Connexion*spécifiée :  
   
--   Si un pilote n’est pas connecté à, le gestionnaire de pilotes se connecte au pilote et appelle **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV, **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC, **SQLSetConnectAttr** (si l’application a spécifié des attributs de connexion) et la fonction de connexion dans le pilote. Le gestionnaire de pilotes retourne SQLSTATE IM006 (échec de **SQLSetConnectOption** du pilote) et SQL_SUCCESS_WITH_INFO pour la fonction de connexion si le pilote a retourné une erreur pour **SQLSetConnectAttr**. Pour plus d’informations, consultez [connexion à une source de données ou à un pilote](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md).  
+-   Si un conducteur n’est pas connecté, le gestionnaire de conducteur se connecte au conducteur et appelle **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_ENV, **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_DBC, **SQLSetConnectAttr** (si l’application spécifié attributs de connexion), et la fonction de connexion dans le conducteur. Le gestionnaire de conducteur retourne SQLSTATE IM006 (Driver’s **SQLSetConnectOption** a échoué) et SQL_SUCCESS_WITH_INFO pour la fonction de connexion si le conducteur a retourné une erreur pour **SQLSetConnectAttr**. Pour plus d’informations, voir [Connecting to a Data Source or Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md).  
   
--   Si le pilote spécifié est déjà connecté à sur le *ConnectionHandle*, le gestionnaire de pilotes appelle uniquement la fonction de connexion dans le pilote. Dans ce cas, le pilote doit s’assurer que tous les attributs de connexion du *ConnectionHandle* conservent leurs paramètres actuels.  
+-   Si le pilote spécifié est déjà connecté à sur le *ConnectionHandle*, le Gestionnaire de conducteur n’appelle que la fonction de connexion dans le conducteur. Dans ce cas, le conducteur doit s’assurer que tous les attributs de connexion pour le *ConnectionHandle* maintiennent leurs paramètres actuels.  
   
--   Si un autre pilote est connecté, le gestionnaire de pilotes appelle **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DBC, puis, si aucun autre pilote n’est connecté dans cet environnement, il appelle **sqlfreehandle** avec un *comme HandleType* de SQL_HANDLE_ENV dans le pilote connecté, puis il déconnecte ce pilote. Il effectue ensuite les mêmes opérations que lorsqu’un pilote n’est pas connecté à.  
+-   Si un autre conducteur est connecté à, le gestionnaire de conducteur appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, et puis, si aucun autre conducteur n’est connecté à cet environnement, il appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV dans le conducteur connecté, puis déconnecte ce conducteur. Il effectue ensuite les mêmes opérations que lorsqu’un conducteur n’est pas connecté.  
   
- Le pilote alloue ensuite des handles et s’initialise lui-même.  
+ Le conducteur alloue ensuite les poignées et les initialisations.  
   
- Lorsque l’application appelle **SQLDisconnect**, le gestionnaire de pilotes appelle **SQLDisconnect** dans le pilote. Toutefois, il ne déconnecte pas le pilote. Cela permet de conserver le pilote en mémoire pour les applications qui se connectent et se déconnectent à plusieurs reprises d’une source de données. Lorsque l’application appelle **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DBC, le gestionnaire de pilotes appelle **sqlfreehandle** avec un *comme HandleType* de SQL_HANDLE_DBC, puis **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_ENV dans le pilote, puis déconnecte le pilote.  
+ Lorsque l’application appelle **SQLDisconnect**, le gestionnaire de conducteur appelle **SQLDisconnect** dans le conducteur. Cependant, il ne déconnecte pas le conducteur. Cela maintient le pilote en mémoire pour les applications qui se connectent à plusieurs reprises à une source de données et se déconnectent. Lorsque l’application appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, le gestionnaire de conducteur appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC puis **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV dans le conducteur, puis débranche le conducteur.  
   
- Une application ODBC peut établir plusieurs connexions.  
+ Une application ODBC peut établir plus d’une connexion.  
   
-## <a name="driver-manager-guidelines"></a>Instructions du gestionnaire de pilotes  
- Le contenu de **ServerName* affecte la façon dont le gestionnaire de pilotes et un pilote fonctionnent ensemble pour établir une connexion à une source de données.  
+## <a name="driver-manager-guidelines"></a>Lignes directrices sur le gestionnaire de conducteur  
+ Le contenu de*l’entreprise ServerName influe* sur la façon dont le Gestionnaire de conducteur et un conducteur travaillent ensemble pour établir une connexion à une source de données.  
   
--   Si \* *ServerName* contient un nom de source de données valide, le gestionnaire de pilotes localise la spécification de source de données correspondante dans les informations système et se connecte au pilote associé. Le gestionnaire de pilotes passe chaque argument **SQLConnect** au pilote.  
+-   Si \* *ServerName* contient un nom de source de données valide, le gestionnaire de pilote localise les spécifications de source de données correspondantes dans les informations du système et se connecte au pilote associé. Le gestionnaire de conducteur transmet chaque argument **SQLConnect** au conducteur.  
   
--   Si le nom de la source de données est introuvable ou si *ServerName* est un pointeur null, le gestionnaire de pilotes localise la spécification de la source de données par défaut et se connecte au pilote associé. Le gestionnaire de pilotes passe au pilote les arguments *username* et *Authentication* inchangés et « Default » pour l’argument *ServerName* .  
+-   Si le nom de source de données ne peut pas être trouvé ou *que ServerName* est un pointeur nul, le gestionnaire de pilote localise les spécifications de source de données par défaut et se connecte au pilote associé. Le Driver Manager transmet au conducteur les arguments *UserName* et *Authentication* non modifiés, et "DEFAULT" pour l’argument *ServerName.*  
   
--   Si l’argument *ServerName* est défini sur « Default », le gestionnaire de pilotes localise la spécification de la source de données par défaut et se connecte au pilote associé. Le gestionnaire de pilotes passe chaque argument **SQLConnect** au pilote.  
+-   Si l’argument *serverName* est « DEFAULT », le gestionnaire de pilote localise les spécifications de source de données par défaut et se connecte au pilote associé. Le gestionnaire de conducteur transmet chaque argument **SQLConnect** au conducteur.  
   
--   Si le nom de la source de données est introuvable ou si *ServerName* est un pointeur null et que la spécification de la source de données par défaut n’existe pas, le gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE IM002 (le nom de la source de données est introuvable et aucun pilote par défaut n’a été spécifié).  
+-   Si le nom de la source de données ne peut pas être trouvé ou *que ServerName* est un pointeur nul, et que la spécification de source de données par défaut n’existe pas, le gestionnaire de conducteur retourne SQL_ERROR avec SQLSTATE IM002 (nom source de données non trouvé et aucun pilote par défaut spécifié).  
   
- Une fois connecté à par le gestionnaire de pilotes, un pilote peut localiser sa spécification de source de données correspondante dans les informations système et utiliser des informations spécifiques au pilote à partir de la spécification pour terminer son ensemble d’informations de connexion requises.  
+ Une fois qu’il est connecté par le Gestionnaire de conducteur, un conducteur peut localiser ses spécifications de source de données correspondantes dans les informations du système et utiliser des informations spécifiques au conducteur à partir des spécifications pour compléter son ensemble d’informations de connexion requises.  
   
- Si une bibliothèque de traduction par défaut est spécifiée dans les informations système de la source de données, le pilote s’y connecte. Une autre bibliothèque de traduction peut être connectée à en appelant **SQLSetConnectAttr** avec l’attribut SQL_ATTR_TRANSLATE_LIB. Vous pouvez spécifier une option de traduction en appelant **SQLSetConnectAttr** avec l’attribut SQL_ATTR_TRANSLATE_OPTION.  
+ Si une bibliothèque de traduction par défaut est spécifiée dans les informations système pour la source de données, le pilote s’y connecte. Une bibliothèque de traduction différente peut être connectée en appelant **SQLSetConnectAttr** avec l’attribut SQL_ATTR_TRANSLATE_LIB. Une option de traduction peut être spécifiée en appelant **SQLSetConnectAttr** avec l’attribut SQL_ATTR_TRANSLATE_OPTION.  
   
- Si un pilote prend en charge **SQLConnect**, la section du mot clé Driver des informations système pour le pilote doit contenir le mot clé **ConnectFunctions** avec le premier caractère défini sur « Y ».  
+ Si un conducteur prend en charge **SQLConnect**, la section mot-clé du conducteur des informations du système pour le conducteur doit contenir le mot clé **ConnectFunctions** avec le premier personnage réglé sur "Y".  
   
 ### <a name="connection-pooling"></a>Regroupement de connexions  
- Le regroupement de connexions permet à une application de réutiliser une connexion qui a déjà été créée. Lorsque le regroupement de connexions est activé et que **SQLConnect** est appelé, le gestionnaire de pilotes essaie d’établir la connexion à l’aide d’une connexion qui fait partie d’un pool de connexions dans un environnement désigné pour le regroupement de connexions. Cet environnement est un environnement partagé qui est utilisé par toutes les applications qui utilisent les connexions dans le pool.  
+ La mise en commun des connexions permet à une application de réutiliser une connexion qui a déjà été créée. Lorsque la mise en commun des connexions est activée et **que SQLConnect** est appelée, le gestionnaire de conducteur tente de faire la connexion à l’aide d’une connexion qui fait partie d’un pool de connexions dans un environnement qui a été désigné pour la mise en commun des connexions. Cet environnement est un environnement partagé qui est utilisé par toutes les applications qui utilisent les connexions dans la piscine.  
   
- Le regroupement de connexions est activé avant l’allocation de l’environnement en appelant **SQLSetEnvAttr** pour définir SQL_ATTR_CONNECTION_POOLING sur SQL_CP_ONE_PER_DRIVER (qui spécifie un maximum d’un pool par pilote) ou SQL_CP_ONE_PER_HENV (qui spécifie un maximum d’un pool par environnement). Dans ce cas, **SQLSetEnvAttr** est appelé avec *EnvironmentHandle* défini sur null, ce qui fait de l’attribut un attribut de niveau processus. Si SQL_ATTR_CONNECTION_POOLING est défini sur SQL_CP_OFF, le regroupement de connexions est désactivé.  
+ La mise en commun des connexions est activée avant que l’environnement ne soit alloué en appelant **SQLSetEnvAttr** pour régler SQL_ATTR_CONNECTION_POOLING à SQL_CP_ONE_PER_DRIVER (ce qui spécifie un maximum d’une piscine par conducteur) ou SQL_CP_ONE_PER_HENV (ce qui spécifie un maximum d’une piscine par environnement). **SQLSetEnvAttr** dans ce cas est appelé avec *EnvironmentHandle* réglé à null, ce qui rend l’attribut un attribut de niveau de processus. Si SQL_ATTR_CONNECTION_POOLING est réglée pour SQL_CP_OFF, la mise en commun des connexions est désactivée.  
   
- Une fois que le regroupement de connexions a été activé, **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV est appelé pour allouer un environnement. L’environnement alloué par cet appel est un environnement partagé, car le regroupement de connexions a été activé. Toutefois, l’environnement qui sera utilisé n’est pas déterminé tant que **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC n’est pas appelé.  
+ Une fois la mise en commun des connexions activée, **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_ENV est appelé à allouer un environnement. L’environnement alloué par cet appel est un environnement partagé car la mise en commun des connexions a été activée. Cependant, l’environnement qui sera utilisé n’est pas déterminé jusqu’à ce que **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_DBC est appelé.  
   
- **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC est appelé pour allouer une connexion. Le gestionnaire de pilotes tente de trouver un environnement partagé existant qui correspond aux attributs d’environnement définis par l’application. Si aucun environnement de ce type n’existe, il est créé en tant qu' *environnement partagé*implicite. Si un environnement partagé correspondant est trouvé, le handle d’environnement est retourné à l’application et son décompte de références est incrémenté.  
+ **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_DBC est appelé à allouer une connexion. Le Driver Manager tente de trouver un environnement partagé existant qui correspond aux attributs de l’environnement définis par l’application. Si un tel environnement n’existe pas, on est créé comme un *environnement implicite partagé.* Si un environnement partagé assorti est trouvé, la poignée de l’environnement est retournée à l’application et son nombre de références est incrémenté.  
   
- Toutefois, la connexion qui sera utilisée n’est pas déterminée tant que **SQLConnect** n’est pas appelé. À ce stade, le gestionnaire de pilotes tente de trouver une connexion existante dans le pool de connexions qui correspond aux critères demandés par l’application. Ces critères incluent les options de connexion demandées dans l’appel à **SQLConnect** (les valeurs des mots clés *ServerName*, *username*et *Authentication* ) et tous les attributs de connexion définis depuis **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC a été appelé. Le gestionnaire de pilotes vérifie ces critères par rapport aux mots clés et attributs de connexion correspondants dans les connexions dans le pool. Si une correspondance est trouvée, la connexion dans le pool est utilisée. Si aucune correspondance n’est trouvée, une nouvelle connexion est créée.  
+ Toutefois, la connexion qui sera utilisée n’est pas déterminée jusqu’à ce que **SQLConnect** soit appelé. À ce moment-là, le gestionnaire de conducteur tente de trouver une connexion existante dans le pool de connexion qui correspond aux critères demandés par la demande. Ces critères comprennent les options de connexion demandées dans l’appel à **SQLConnect** (les valeurs du *ServerName*, *UserName*, et *Authentication* mots clés) et tous les attributs de connexion définis depuis **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_DBC a été appelé. Le Gestionnaire de pilote vérifie ces critères par rapport aux mots clés de connexion correspondants et attribue dans les connexions dans le pool. Si une correspondance est trouvée, la connexion dans la piscine est utilisée. Si aucune correspondance n’est trouvée, une nouvelle connexion est créée.  
   
- Si l’attribut d’environnement SQL_ATTR_CP_MATCH est défini sur SQL_CP_STRICT_MATCH, la correspondance doit être exacte pour qu’une connexion dans le pool soit utilisée. Si l’attribut d’environnement SQL_ATTR_CP_MATCH est défini sur SQL_CP_RELAXED_MATCH, les options de connexion dans l’appel à **SQLConnect** doivent correspondre, mais tous les attributs de connexion doivent correspondre.  
+ Si l’attribut SQL_ATTR_CP_MATCH environnement est réglé pour SQL_CP_STRICT_MATCH, le match doit être exact pour une connexion dans la piscine à utiliser. Si l’attribut SQL_ATTR_CP_MATCH environnement est réglé pour SQL_CP_RELAXED_MATCH, les options de connexion dans l’appel à **SQLConnect** doivent correspondre, mais pas tous les attributs de connexion doivent correspondre.  
   
- Les règles suivantes sont appliquées lorsqu’un attribut de connexion, tel que défini par l’application avant **SQLConnect** est appelé, ne correspond pas à l’attribut de connexion de la connexion dans le pool :  
+ Les règles suivantes sont appliquées lorsqu’un attribut de connexion, tel qu’défini par l’application avant **l’appel de SQLConnect,** ne correspond pas à l’attribut de connexion de la connexion dans le pool :  
   
--   Si l’attribut de connexion doit être défini avant que la connexion soit établie :  
+-   Si l’attribut de connexion doit être défini avant que la connexion ne soit effectuée :  
   
-     Si SQL_ATTR_CP_MATCH est SQL_CP_STRICT_MATCH, SQL_ATTR_PACKET_SIZE dans la connexion regroupée doit être identique à l’attribut défini par l’application. Si SQL_CP_RELAXED_MATCH, les valeurs de SQL_ATTR_PACKET_SIZE peuvent être différentes.  
+     Si SQL_ATTR_CP_MATCH est SQL_CP_STRICT_MATCH, SQL_ATTR_PACKET_SIZE dans la connexion commune doit être identique à l’attribut défini par l’application. Si SQL_CP_RELAXED_MATCH, les valeurs de SQL_ATTR_PACKET_SIZE peuvent être différentes.  
   
-     La valeur de SQL_ATTR_LOGIN_VALUE n’affecte pas la correspondance.  
+     La valeur de SQL_ATTR_LOGIN_VALUE n’affecte pas le match.  
   
--   Si l’attribut de connexion peut être défini avant ou après l’établissement de la connexion :  
+-   Si l’attribut de connexion peut être défini avant ou après la connexion :  
   
-     Si l’attribut de connexion n’a pas été défini par l’application mais a été défini sur la connexion dans le pool, et qu’il existe une valeur par défaut, l’attribut de connexion dans la connexion regroupée est rétabli à la valeur par défaut et une correspondance est déclarée. Si aucune valeur par défaut n’est définie, la connexion regroupée n’est pas considérée comme une correspondance.  
+     Si l’attribut de connexion n’a pas été défini par l’application mais a été défini sur la connexion dans le pool, et il y a un défaut, l’attribut de connexion dans la connexion mise en commun est remis à la valeur par défaut et une correspondance est déclarée. S’il n’y a pas de défaut, la connexion mise en commun n’est pas considérée comme une correspondance.  
   
-     Si l’attribut de connexion a été défini par l’application mais n’a pas été défini sur la connexion dans le pool, l’attribut de connexion sur le pool est remplacé par celui défini par l’application et une correspondance est déclarée.  
+     Si l’attribut de connexion a été défini par l’application mais n’a pas été défini sur la connexion dans le pool, l’attribut de connexion sur le pool est modifié à cet ensemble par l’application et une correspondance est déclarée.  
   
-     Si l’attribut de connexion a été défini par l’application et a également été défini sur la connexion dans le pool, mais que les valeurs sont différentes, la valeur de l’attribut de connexion de l’application est utilisée et une correspondance est déclarée.  
+     Si l’attribut de connexion a été défini par l’application, et a également été défini sur la connexion dans le pool, mais les valeurs sont différentes, la valeur de l’attribut de connexion de l’application est utilisée et une correspondance est déclarée.  
   
--   Si les valeurs des attributs de connexion spécifiques au pilote ne sont pas identiques et que SQL_ATTR_CP_MATCH est défini sur SQL_CP_STRICT_MATCH, la connexion dans le pool n’est pas utilisée.  
+-   Si les valeurs des attributs de connexion spécifiques au conducteur ne sont pas identiques et SQL_ATTR_CP_MATCH est réglée pour SQL_CP_STRICT_MATCH, la connexion dans le pool n’est pas utilisée.  
   
- Lorsque l’application appelle **SQLDisconnect** pour se déconnecter, la connexion est retournée au pool de connexions et peut être réutilisée.  
+ Lorsque l’application appelle **SQLDisconnect** à se déconnecter, la connexion est retournée au pool de connexion et est disponible pour la réutilisation.  
   
-### <a name="optimizing-connection-pooling-performance"></a>Optimisation des performances du regroupement de connexions  
- Lorsque des transactions distribuées sont impliquées, il est possible d’optimiser les performances du regroupement de connexions à l’aide de **SQL_DTC_TRANSITION_COST**, qui est un masque de SQLUINTEGER. Les transitions référencées sont les transitions de l’attribut de connexion SQL_ATTR_ENLIST_IN_DTC passage de la valeur 0 à la valeur différente de zéro, et vice versa. Il s’agit d’une connexion qui n’est pas inscrite dans une transaction distribuée à inscrite dans une transaction distribuée, et vice versa. Selon la façon dont le pilote a implémenté l’inscription (définition de l’attribut de connexion SQL_ATTR_ENLIST_IN_DTC), ces transitions peuvent être onéreuses et doivent donc être évitées pour des performances optimales.  
+### <a name="optimizing-connection-pooling-performance"></a>Optimiser les performances de mise en commun des connexions  
+ Lorsque des transactions distribuées sont en cause, il est possible d’optimiser les performances de mise en commun des **connexions**en utilisant SQL_DTC_TRANSITION_COST , qui est un bitmask SQLUINTEGER. Les transitions mentionnées sont les transitions de l’attribut de connexion SQL_ATTR_ENLIST_IN_DTC passant de la valeur 0 à non zéro, et vice versa. Il s’agit d’une connexion qui passe de non-enrôlé dans une transaction distribuée à enrôlée dans une transaction distribuée, et vice versa. Selon la façon dont le conducteur a mis en place l’enrôlement (réglage de l’attribut de connexion SQL_ATTR_ENLIST_IN_DTC), ces transitions peuvent être coûteuses et doivent donc être évitées pour les meilleures performances.  
   
- La valeur retournée par le pilote contient une combinaison des bits suivants :  
+ La valeur retournée par le conducteur contient n’importe quelle combinaison des bits suivants :  
   
--   **SQL_DTC_ENLIST_EXPENSIVE**, quand elle est définie, implique que la transition zéro vers une autre valeur est beaucoup plus coûteuse qu’une transition de la valeur différente de zéro à une autre valeur différente de zéro (en inscrit une connexion précédemment inscrite dans sa prochaine transaction).  
+-   **SQL_DTC_ENLIST_EXPENSIVE**, lorsqu’elle est définie, implique que la transition zéro à non zéro est beaucoup plus coûteuse qu’une transition de nonzero à une autre valeur non zéro (enrôlant une connexion précédemment enrôlée dans sa prochaine transaction).  
   
--   **SQL_DTC_UNENLIST_EXPENSIVE**, quand elle est définie, implique que la transition différente de zéro à zéro est beaucoup plus coûteuse que l’utilisation d’une connexion dont l’attribut SQL_ATTR_ENLIST_IN_DTC est déjà défini à zéro.  
+-   **SQL_DTC_UNENLIST_EXPENSIVE,** lorsqu’il est réglé, implique que la transition non zéro est beaucoup plus coûteuse que l’utilisation d’une connexion dont l’attribut SQL_ATTR_ENLIST_IN_DTC est déjà réglé à zéro.  
   
- Il existe un compromis entre performances et utilisation de la connexion. Si un pilote indique qu’une ou plusieurs de ces transitions sont coûteuses, le dispositif de regroupement de connexions du gestionnaire de pilotes y répond en conservant plus de connexions dans le pool. Certaines des connexions dans le pool sont préférables pour une utilisation non transactionnelle, et d’autres sont préférables pour une utilisation transactionnelle. Toutefois, si le pilote indique que ces transitions ne sont pas coûteuses, il est possible d’utiliser moins de connexions, par exemple en alternant entre une utilisation transactionnelle et non transactionnelle.  
+ Il y a un compromis d’utilisation de performance par rapport à l’utilisation de connexion. Si un conducteur indique qu’une ou plusieurs de ces transitions sont coûteuses, le pooler de connexion du gestionnaire de conducteur y répond en conservant plus de connexions dans la piscine. Certaines des connexions dans le pool sont préférées pour une utilisation non comportementale, et certaines sont préférées pour une utilisation transactionnelle. Toutefois, si le conducteur indique que ces transitions ne sont pas coûteuses, moins de connexions peuvent être utilisées, peut-être en alternance entre l’utilisation nontransactionale et transactionnelle.  
   
- Les pilotes qui ne prennent pas en charge les SQL_ATTR_ENLIST_IN_DTC n’ont pas besoin de prendre en charge SQL_DTC_TRANSITION_COST. Pour les pilotes qui prennent en charge SQL_ATTR_ENLIST_IN_DTC mais pas SQL_DTC_TRANSITION_COST, il est supposé que les transitions ne sont pas coûteuses, comme si le pilote retournait 0 (aucun bit défini) pour cette valeur.  
+ Les conducteurs qui ne prennent pas en charge SQL_ATTR_ENLIST_IN_DTC n’ont pas besoin de soutenir SQL_DTC_TRANSITION_COST. Pour les conducteurs qui prennent en charge SQL_ATTR_ENLIST_IN_DTC mais pas SQL_DTC_TRANSITION_COST, on suppose que les transitions ne sont pas coûteuses, comme si le conducteur avait retourné 0 (pas de bits) pour cette valeur.  
   
- Bien que SQL_DTC_TRANSITION_COST ait été introduite dans ODBC 3,5, ODBC 2. *x* peut également le prendre en charge, car le gestionnaire de pilotes interrogera ces informations quelle que soit la version du pilote.  
+ Bien que SQL_DTC_TRANSITION_COST ait été introduit dans ODBC 3.5, un ODBC 2. *x* le conducteur peut également le prendre en charge parce que le gestionnaire de pilote va interroger ces informations indépendamment de la version du conducteur.  
   
 ### <a name="code-example"></a>Exemple de code  
- Dans l’exemple suivant, une application alloue des handles d’environnement et de connexion. Il se connecte ensuite à la source de données SalesOrders avec l’ID d’utilisateur JohnS et le mot de passe Sesame et traite les données. Lorsqu’il a terminé le traitement des données, il se déconnecte de la source de données et libère les handles.  
+ Dans l’exemple suivant, une application alloue des poignées d’environnement et de connexion. Il se connecte ensuite à la source de données SalesOrders avec l’utilisateur ID JohnS et le mot de passe Sésame et traite les données. Lorsqu’il a terminé le traitement des données, il se déconnecte de la source de données et libère les poignées.  
   
 ```cpp  
 // SQLConnect_ref.cpp  
@@ -249,13 +249,13 @@ int main() {
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Allocation d’un descripteur|[SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Découverte et énumération des valeurs requises pour se connecter à une source de données|[Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Déconnexion d’une source de données|[SQLDisconnect, fonction](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[SQLDriverConnect, fonction](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Renvoi du paramètre d’un attribut de connexion|[Fonction SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Définition d’un attribut de connexion|[Fonction SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Répartition d’une poignée|[SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Découvrir et énumérer les valeurs requises pour se connecter à une source de données|[Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Déconnecter d’une source de données|[SQLDisconnect, fonction](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[Fonction SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Retour du paramètre d’un attribut de connexion|[Fonction SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Définir un attribut de connexion|[Fonction SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Référence API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

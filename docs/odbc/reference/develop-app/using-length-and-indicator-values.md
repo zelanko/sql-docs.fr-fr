@@ -1,5 +1,5 @@
 ---
-title: Utilisation des valeurs de longueur et d’indicateur | Microsoft Docs
+title: Utilisation des valeurs de longueur et d’indicateurs Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0c878c9038b26aa996ed206c6b8adfe8d6c21e5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67902467"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306760"
 ---
 # <a name="using-length-and-indicator-values"></a>Utilisation des valeurs de longueur et d’indicateur
-La mémoire tampon de longueur/d’indicateur est utilisée pour transmettre la longueur d’octet des données dans la mémoire tampon de données ou un indicateur spécial, tel que SQL_NULL_DATA, qui indique que les données sont NULL. Selon la fonction dans laquelle elle est utilisée, une mémoire tampon de longueur/d’indicateur est définie pour être un SQLINTEGER destinée ou un SQLSMALLINT. Par conséquent, un seul argument est nécessaire pour le décrire. Si la mémoire tampon de données est une mémoire tampon d’entrée non différée, cet argument contient la longueur en octets des données elles-mêmes ou une valeur d’indicateur. Il est souvent nommé *StrLen_Or_Ind* ou un nom similaire. Par exemple, le code suivant appelle **SQLPutData** pour passer une mémoire tampon remplie de données ; la longueur d’octet (*ValueLen*) est passée directement, car la mémoire tampon de données (*ValuePtr*) est une mémoire tampon d’entrée.  
+Le tampon longueur/indicateur est utilisé pour passer la longueur des données dans le tampon de données ou un indicateur spécial tel que SQL_NULL_DATA, ce qui indique que les données sont NULL. Selon la fonction dans laquelle il est utilisé, un tampon de longueur/indicateur est défini comme étant un SQLINTEGER ou un SQLSMALLINT. Par conséquent, un seul argument est nécessaire pour le décrire. Si le tampon de données est un tampon d’entrée non dédiécé, cet argument contient la longueur d’entrée des données elle-même ou une valeur indicateur. Il est souvent nommé *StrLen_or_Ind* ou un nom similaire. Par exemple, le code suivant appelle **SQLPutData** à passer un tampon rempli de données; la longueur des fourre-tout (*ValueLen*) est passée directement parce que le tampon de données (*ValuePtr*) est un tampon d’entrée.  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -38,7 +38,7 @@ FillBuffer(ValuePtr, sizeof(ValuePtr), &ValueLen);
 SQLPutData(hstmt, ValuePtr, ValueLen);  
 ```  
   
- Si la mémoire tampon de données est une mémoire tampon d’entrée différée, une mémoire tampon de sortie non différée ou une mémoire tampon de sortie, l’argument contient l’adresse de la mémoire tampon de longueur/d’indicateur. Il est souvent nommé *StrLen_or_IndPtr* ou un nom similaire. Par exemple, le code suivant appelle **SQLGetData** pour récupérer une mémoire tampon remplie de données ; la longueur d’octet est retournée à l’application dans le tampon de longueur/d’indicateur (*ValueLenOrInd*), dont l’adresse est passée à **SQLGetData** , car la mémoire tampon de données correspondante (*ValuePtr*) est une mémoire tampon de sortie non différée.  
+ Si le tampon de données est un tampon d’entrée différé, un tampon de sortie non différé ou un tampon de sortie, l’argument contient l’adresse du tampon longueur/indicateur. Il est souvent nommé *StrLen_or_IndPtr* ou un nom similaire. Par exemple, le code suivant appelle **SQLGetData** pour récupérer un tampon rempli de données; la longueur des fourre-tout est retournée à l’application dans le tampon longueur/indicateur (*ValueLenOrInd*), dont l’adresse est transmise à **SQLGetData** parce que le tampon de données correspondant (*ValuePtr*) est un tampon de sortie non différé.  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -46,28 +46,28 @@ SQLINTEGER   ValueLenOrInd;
 SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);  
 ```  
   
- À moins qu’il ne soit spécifiquement interdit, un argument de mémoire tampon de longueur/indicateur peut avoir la valeur 0 (en entrée non différée) ou un pointeur null (en cas de sortie ou d’entrée différée). Pour les mémoires tampons d’entrée, le pilote ignore la longueur d’octet des données. Cela retourne une erreur lors du passage de données de longueur variable, mais est courant lors du passage de données non null, de longueur fixe, car aucune valeur de longueur ou d’indicateur n’est nécessaire. Pour les mémoires tampons de sortie, le pilote ne retourne pas la longueur en octets des données ou une valeur d’indicateur. Il s’agit d’une erreur si les données retournées par le pilote ont la valeur NULL, mais est courante lors de la récupération de données de longueur fixe non Nullable, car aucune valeur de longueur ou d’indicateur n’est nécessaire.  
+ À moins qu’il ne soit expressément interdit, un argument de mémoire tampon de longueur ou d’indicateur peut être 0 (si l’entrée non différée) ou un pointeur nul (si la sortie ou l’entrée différée). Pour les tampons d’entrée, cela amène le conducteur à ignorer la longueur des données. Cela renvoie une erreur lors de la transmission de données à durée variable, mais il est courant lors de l’adoption de données non nulles à durée déterminée, car ni une longueur ni une valeur d’indicateur ne sont nécessaires. Pour les tampons de sortie, cela amène le conducteur à ne pas retourner la longueur d’entrée des données ou une valeur indicateur. Il s’agit d’une erreur si les données retournées par le conducteur sont NULL, mais est fréquente lors de la récupération de données fixes et non annulables, car ni une longueur ni une valeur d’indicateur n’est nécessaire.  
   
- Comme lorsque l’adresse d’un tampon de données différé est passée au pilote, l’adresse d’une mémoire tampon de longueur/d’indicateur différée doit rester valide jusqu’à ce que la mémoire tampon soit détachée.  
+ Comme lorsque l’adresse d’un tampon de données différée est transmise au conducteur, l’adresse d’un tampon de longueur différée/indicateur doit rester valide jusqu’à ce que le tampon ne soit pas lié.  
   
- Les longueurs suivantes sont valides en tant que valeurs de longueur/indicateur :  
+ Les longueurs suivantes sont valides en tant que valeurs de longueur/indicateur :  
   
 -   *n*, où *n* > 0.  
   
 -   0.  
   
--   SQL_NTS. Une chaîne envoyée au pilote dans le tampon de données correspondant est terminée par un caractère null ; C’est un moyen pratique pour les programmeurs C de passer des chaînes sans avoir à calculer leur longueur d’octet. Cette valeur est légale uniquement lorsque l’application envoie des données au pilote. Lorsque le pilote retourne des données à l’application, il retourne toujours la longueur d’octet réelle des données.  
+-   SQL_NTS. Une chaîne envoyée au conducteur dans le tampon de données correspondant est annulée; c’est un moyen pratique pour les programmeurs C de passer les ficelles sans avoir à calculer leur longueur d’au revoir. Cette valeur n’est légale que lorsque l’application envoie des données au conducteur. Lorsque le conducteur retourne les données à l’application, il renvoie toujours la durée réelle des données.  
   
- Les valeurs suivantes sont valides en tant que valeurs de longueur/indicateur. SQL_NULL_DATA est stocké dans le champ de descripteur de SQL_DESC_INDICATOR_PTR ; toutes les autres valeurs sont stockées dans le champ descripteur SQL_DESC_OCTET_LENGTH_PTR.  
+ Les valeurs suivantes sont valables sous forme de valeurs de longueur/indicateur. SQL_NULL_DATA est stockée dans le champ descripteur SQL_DESC_INDICATOR_PTR; toutes les autres valeurs sont stockées dans le champ descripteur SQL_DESC_OCTET_LENGTH_PTR.  
   
--   SQL_NULL_DATA. Les données sont une valeur de données NULL, et la valeur dans le tampon de données correspondant est ignorée. Cette valeur est légale uniquement pour les données SQL envoyées ou récupérées à partir du pilote.  
+-   SQL_NULL_DATA. Les données sont une valeur de données NULL, et la valeur du tampon de données correspondant est ignorée. Cette valeur n’est légale que pour les données SQL envoyées ou récupérées au conducteur.  
   
--   SQL_DATA_AT_EXEC. La mémoire tampon de données ne contient aucune donnée. Au lieu de cela, les données sont envoyées avec **SQLPutData** lors de l’exécution de l’instruction ou lors de l’appel de **SQLBulkOperations** ou **SQLSetPos** . Cette valeur est légale uniquement pour les données SQL envoyées au pilote. Pour plus d’informations, consultez [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)et [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+-   SQL_DATA_AT_EXEC. Le tampon de données ne contient aucune donnée. Au lieu de cela, les données seront envoyées avec **SQLPutData** lorsque la déclaration est exécutée ou lorsque **SQLBulkOperations** ou **SQLSetPos** est appelé. Cette valeur n’est légale que pour les données SQL envoyées au conducteur. Pour plus d’informations, voir [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), et [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
--   Résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*). Cette valeur est similaire à SQL_DATA_AT_EXEC. Pour plus d’informations, consultez [envoi de données de type long](../../../odbc/reference/develop-app/sending-long-data.md).  
+-   Résultat de la SQL_LEN_DATA_AT_EXEC(*longueur)* macro. Cette valeur est similaire à SQL_DATA_AT_EXEC. Pour plus d’informations, voir [Envoyer des données longues](../../../odbc/reference/develop-app/sending-long-data.md).  
   
--   SQL_NO_TOTAL. Le pilote ne peut pas déterminer le nombre d’octets de données longues encore disponibles pour le retour dans une mémoire tampon de sortie. Cette valeur est légale uniquement pour les données SQL récupérées à partir du pilote.  
+-   SQL_NO_TOTAL. Le conducteur ne peut pas déterminer le nombre d’octets de données longues encore disponibles pour revenir dans un tampon de sortie. Cette valeur n’est légale que pour les données SQL récupérées auprès du conducteur.  
   
--   SQL_DEFAULT_PARAM. Une procédure consiste à utiliser la valeur par défaut d’un paramètre d’entrée dans une procédure au lieu de la valeur dans la mémoire tampon de données correspondante.  
+-   SQL_DEFAULT_PARAM. Une procédure consiste à utiliser la valeur par défaut d’un paramètre d’entrée dans une procédure au lieu de la valeur du tampon de données correspondant.  
   
--   SQL_COLUMN_IGNORE. **SQLBulkOperations** ou **SQLSetPos** est d’ignorer la valeur dans la mémoire tampon de données. Lors de la mise à jour d’une ligne de données par un appel à **SQLBulkOperations** ou **SQLSetPos,** la valeur de la colonne n’est pas modifiée. Lors de l’insertion d’une nouvelle ligne de données par un appel à **SQLBulkOperations**, la valeur de la colonne est définie sur sa valeur par défaut ou, si la colonne n’a pas de valeur par défaut, la valeur null.
+-   SQL_COLUMN_IGNORE. **SQLBulkOperations** ou **SQLSetPos** doit ignorer la valeur du tampon de données. Lors de la mise à jour d’une série de données par un appel à **SQLBulkOperations** ou **SQLSetPos,** la valeur de la colonne n’est pas modifiée. Lors de l’insertion d’une nouvelle ligne de données par un appel à **SQLBulkOperations**, la valeur de la colonne est réglée à sa valeur par défaut ou, si la colonne n’a pas de défaut, à NULL.

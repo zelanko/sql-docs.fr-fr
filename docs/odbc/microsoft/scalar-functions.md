@@ -1,5 +1,5 @@
 ---
-title: Fonctions scalaires | Microsoft Docs
+title: Fonctions Scalar Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - scalar functions [ODBC], desktop database drivers
 - SQL grammar [ODBC], scalar functions
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9d319b08069fd0ae32af20bf39dbdb7cdfb819c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306010"
 ---
 # <a name="scalar-functions"></a>Fonctions scalaires
-Les pilotes de base de données de bureau Microsoft ODBC prennent en charge les fonctions scalaires suivantes :  
+Les pilotes microsoft ODBC Desktop Database prennent en charge les fonctions scalaires suivantes :  
   
 ||||  
 |-|-|-|  
@@ -35,4 +35,4 @@ Les pilotes de base de données de bureau Microsoft ODBC prennent en charge les 
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- Pour plus d’informations sur les arguments et les valeurs de retour des fonctions scalaires, consultez l’annexe F de la *documentation de référence du programmeur ODBC.*
+ Pour plus d’informations sur les arguments et les valeurs de retour des fonctions scalaires, voir l’annexe F de la *Référence du programmeur ODBC.*

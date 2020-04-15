@@ -1,5 +1,5 @@
 ---
-title: Commandes avec des paramètres table
+title: Commandes avec paramètres de valeur de table
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a41e0e4993bc9a742f4b116ec2434fd3d8c09b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0dee877b0e1489a0298e37227d2535d52a8854b6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306682"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Exécution de commandes contenant des paramètres table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "75242751"
 ## <a name="table-valued-parameter-specification"></a>Spécification des paramètres table  
  Le consommateur peut spécifier le type du paramètre table. Ces informations incluent le nom du type du paramètre table. Elles incluent aussi le nom du schéma et indiquent si le type de table défini par l'utilisateur pour le paramètre table ne figure pas dans le schéma par défaut actuel de la connexion. En fonction de la prise en charge du serveur, le consommateur peut également spécifier des informations de métadonnées facultatives, telles que la classification des colonnes, et mentionner que toutes les lignes de colonnes particulières ont des valeurs par défaut.  
   
- Pour spécifier un paramètre table, le consommateur appelle ISSCommandWithParameter :: SetParameterInfo, et appelle éventuellement ISSCommandWithParameters :: SetParameterProperties. Pour un paramètre table, le champ *pwszDataSourceType* de la structure DBPARAMBINDINFO a la valeur DBTYPE_TABLE. Le champ *ulParamSize* est défini avec la valeur ~0 pour indiquer que la longueur est inconnue. Les propriétés particulières des paramètres table, telles que le nom de schéma, le nom de type, l’ordre des colonnes et les colonnes par défaut, peuvent être définies via ISSCommandWithParameters :: SetParameterProperties.  
+ Pour spécifier un paramètre table, le consommateur appelle ISSCommandWithParameter::SetParameterInfo, et éventuellement ISSCommandWithParameters::SetParameterProperties. Pour un paramètre table, le champ *pwszDataSourceType* de la structure DBPARAMBINDINFO a la valeur DBTYPE_TABLE. Le champ *ulParamSize* est défini avec la valeur ~0 pour indiquer que la longueur est inconnue. Les propriétés particulières des paramètres table, telles que le nom de schéma, le nom de type, l'ordre des colonnes et les colonnes par défaut, peuvent être définies via ISSCommandWithParameters::SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Liaison de paramètre table  
  Un paramètre table peut être n'importe quel objet d'ensemble de lignes. Le fournisseur effectue la lecture à partir de cet objet tout en envoyant les paramètres table au serveur pendant l'exécution.  
   
- Pour lier le paramètre table, le consommateur appelle IAccessor :: CreateAccessor. Le champ *wType* de la structure DBBINDING du paramètre table est défini avec la valeur DBTYPE_TABLE. Le membre *pObject* de la structure DBBINDING n’est pas Null et le membre *iid* de *pObject* est défini avec la valeur IID_IRowset ou autre interface d’objets d’ensemble de lignes de paramètres table. Les champs restants de la structure DBBINDING doivent être définis de la même façon qu'ils le sont pour les BLOB transmis en continu.  
+ Pour lier le paramètre table, le consommateur appelle IAccessor::CreateAccessor. Le champ *wType* de la structure DBBINDING du paramètre table est défini avec la valeur DBTYPE_TABLE. Le membre *pObject* de la structure DBBINDING n’est pas Null et le membre *iid* de *pObject* est défini avec la valeur IID_IRowset ou autre interface d’objets d’ensemble de lignes de paramètres table. Les champs restants de la structure DBBINDING doivent être définis de la même façon qu'ils le sont pour les BLOB transmis en continu.  
   
  Dans les liaisons du paramètre table et de l'objet d'ensemble de lignes associé à un paramètre table, les restrictions suivantes s'appliquent :  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75242751"
 -   Les données sont envoyées au serveur pour les colonnes avec DBPROP_COL_AUTOINCREMENT ou SSPROP_COL_COMPUTED, à moins que SSPROP_PARAM_TABLE_DEFAULT ne soit également défini.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Paramètres table &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Paramètres évalués par la table &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Utiliser les paramètres table &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

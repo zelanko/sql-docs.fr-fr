@@ -1,5 +1,5 @@
 ---
-title: Fichier Schema. ini (pilote de fichier texte) | Microsoft Docs
+title: Fichier Schema.ini (Text File Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,82 +11,82 @@ helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 365351724f27205e7d460c757f1268d042cefc76
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305510"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
-Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema. ini et toujours conservé dans le même répertoire que la source de données texte. Le fichier d’informations de schéma fournit à l’IISAM des informations sur le format général du fichier, le nom de colonne et les informations sur le type de données, ainsi que plusieurs autres caractéristiques de données. Un fichier Schema. ini est toujours requis pour l’accès aux données de longueur fixe. Vous devez utiliser un fichier Schema. ini lorsque votre table de texte contient des données de type DateTime, Currency ou Decimal, ou à chaque fois que vous souhaitez plus de contrôle sur la gestion des données dans la table.  
+Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’information schématique. Le fichier d’information schématique est toujours nommé Schema.ini et toujours conservé dans le même répertoire que la source de données de texte. Le fichier d’information sur les schémas fournit à l’IISAM des informations sur le format général du fichier, le nom de colonne et les informations de type de données, ainsi que plusieurs autres caractéristiques de données. Un fichier Schema.ini est toujours nécessaire pour accéder aux données à durée fixe. Vous devez utiliser un fichier Schema.ini lorsque votre table texte contient des données DateTime, Monnaie ou Décimale, ou à tout moment où vous voulez plus de contrôle sur le traitement des données dans le tableau.  
   
 > [!NOTE]  
->  L’ISAM de texte obtiendra les valeurs initiales du Registre, et non de Schema. ini. Le même format de fichier par défaut s’applique à toutes les nouvelles tables de données de texte. Tous les fichiers qui ont été créés par l’instruction CREATE TABLE héritent des mêmes valeurs de format par défaut, qui sont définies en sélectionnant des valeurs de format de \<fichier dans la boîte de dialogue définir le format de **texte** avec les> par défaut choisies dans la liste **tables** . Si les valeurs du Registre diffèrent des valeurs de Schema. ini, les valeurs du Registre seront remplacées par les valeurs de Schema. ini.  
+>  Le texte ISAM obtiendra les valeurs initiales du registre, et non de Schema.ini. Le même format de fichier par défaut s’applique à toutes les nouvelles tables de données textuelles. Tous les fichiers créés par la déclaration CREATE TABLE héritent de ces mêmes valeurs de format \<par défaut, qui sont définies en sélectionnant les valeurs de format de fichier dans la boîte de dialogue Define Text **Format** avec> par défaut choisies dans la liste des **tables.** Si les valeurs du registre diffèrent des valeurs de Schema.ini, les valeurs du registre seront remplacées par les valeurs de Schema.ini.  
   
-## <a name="understanding-schemaini-files"></a>Fonctionnement des fichiers Schema. ini  
- Les fichiers Schema. ini fournissent des informations de schéma sur les enregistrements d’un fichier texte. Chaque entrée Schema. ini spécifie l’une des cinq caractéristiques de la table :  
+## <a name="understanding-schemaini-files"></a>Comprendre schema.ini Fichiers  
+ Les fichiers Schema.ini fournissent des informations sur les dossiers dans un fichier texte. Chaque entrée Schema.ini précise l’une des cinq caractéristiques de la table :  
   
--   Nom du fichier texte  
+-   Le nom du fichier texte  
   
--   Le format de fichier  
+-   Le format du fichier  
   
--   Noms de champs, largeurs et types  
+-   Les noms de champ, les largeurs et les types  
   
--   Jeu de caractères  
+-   L’ensemble de caractères  
   
--   Conversions de types de données spéciaux  
+-   Conversions spéciales de type de données  
   
- Les sections suivantes décrivent ces caractéristiques.  
+ Les sections suivantes traitent de ces caractéristiques.  
   
-## <a name="specifying-the-file-name"></a>Spécification du nom de fichier  
- La première entrée dans Schema. ini est toujours le nom du fichier de source de texte placé entre crochets. L’exemple suivant illustre l’entrée du fichier Sample. txt :  
+## <a name="specifying-the-file-name"></a>Spécifier le nom du fichier  
+ La première entrée dans Schema.ini est toujours le nom du fichier source de texte enfermé dans les parenthèses carrées. L’exemple suivant illustre l’entrée pour le fichier Sample.txt:  
   
 ```  
 [Sample.txt]  
 ```  
   
-## <a name="specifying-the-file-format"></a>Spécification du format de fichier  
- L’option **format** dans Schema. ini spécifie le format du fichier texte. L’IISAM de texte peut lire le format automatiquement à partir de la plupart des fichiers délimités par des caractères. Vous pouvez utiliser n’importe quel caractère unique comme délimiteur dans le fichier, à l’exception du guillemet double ("). Le paramètre **format** dans Schema. ini remplace le paramètre dans le Registre Windows, file by file. Le tableau suivant répertorie les valeurs valides pour l’option **format** .  
+## <a name="specifying-the-file-format"></a>Spécifier le format de fichier  
+ **L’option Format** dans Schema.ini précise le format du fichier texte. Le Texte IISAM peut lire le format automatiquement à partir de la plupart des fichiers délimités par les personnages. Vous pouvez utiliser n’importe quel personnage unique comme délimitant dans le fichier, sauf la double marque de citation ("). Le paramètre **Format** dans Schema.ini remplace le paramètre dans le Registre Windows, fichier par fichier. Le tableau suivant répertorie les valeurs valides pour l’option **Format.**  
   
-|Spécificateur de format|Format de table|Schema. ini (instruction de format)|  
+|Spécificateur de format|Format de table|Déclaration de format Schema.ini|  
 |----------------------|------------------|---------------------------------|  
-|**Délimité par des tabulations**|Les champs du fichier sont délimités par des tabulations.|Format = TabDelimited|  
-|**Délimité CSV**|Les champs du fichier sont délimités par des virgules (valeurs séparées par des virgules).|Format = CSVDelimited|  
-|**Délimité personnalisé**|Les champs du fichier sont délimités par n’importe quel caractère que vous choisissez d’entrer dans la boîte de dialogue. Tous les guillemets (") sont autorisés, y compris les guillemets doubles (").|Format = délimité (*caractère personnalisé*)<br /><br /> -ou-<br /><br /> Sans délimiteur spécifié :<br /><br /> Format = délimité ()|  
-|**Longueur fixe**|Les champs du fichier ont une longueur fixe.|Format = multiple|  
+|**Onglet Délimité**|Les champs dans le fichier sont délimités par des onglets.|Format-TabDelimited|  
+|**CSV délimité**|Les champs du fichier sont délimités par des virgules (valeurs séparées par virgule).|Format-CSVDelimited|  
+|**Délimité personnalisé**|Les champs dans le fichier sont délimités par n’importe quel personnage que vous choisissez d’entrer dans la boîte de dialogue. Tous sauf les doubles guillemets (") sont autorisés, y compris vide.|Format-Delimited *(caractère personnalisé*)<br /><br /> -ou-<br /><br /> Sans délimiter spécifié :<br /><br /> Format-Delimited( )|  
+|**Longueur fixe**|Les champs dans le fichier sont d’une longueur fixe.|Format-FixedLength|  
   
-## <a name="specifying-the-fields"></a>Spécification des champs  
- Vous pouvez spécifier des noms de champ dans un fichier texte délimité par des caractères de deux manières :  
+## <a name="specifying-the-fields"></a>Spécifier les champs  
+ Vous pouvez spécifier les noms de champ dans un fichier texte délimité par les personnages de deux façons :  
   
--   Incluez les noms de champs dans la première ligne de la table et affectez à **ColNameHeader** la **valeur true.**  
+-   Inclure les noms de terrain dans la première rangée de la table et mettre **ColNameHeader** à **Vrai.**  
   
--   Spécifiez chaque colonne par nombre et spécifiez le nom de colonne et le type de données.  
+-   Spécifiez chaque colonne par numéro et désignez le nom de colonne et le type de données.  
   
- Vous devez spécifier chaque colonne par nombre et désigner le nom de colonne, le type de données et la largeur des fichiers de longueur fixe.  
+ Vous devez spécifier chaque colonne par numéro et désigner le nom de colonne, le type de données et la largeur des fichiers à durée fixe.  
   
 > [!NOTE]  
->  Le paramètre **ColNameHeader** dans Schema. ini remplace le paramètre **FirstRowHasNames** dans le Registre Windows, file by file.  
+>  Le paramètre **ColNameHeader** dans Schema.ini remplace le paramètre **FirstRowHasNames** dans le Registre Windows, fichier par fichier.  
   
- Les types de données des champs peuvent également être déterminés. Utilisez l’option **MaxScanRows** pour indiquer le nombre de lignes qui doivent être analysées lors de la détermination des types de colonne. Si vous affectez à **MaxScanRows** la valeur 0, la totalité du fichier est analysée. Le paramètre **MaxScanRows** dans Schema. ini remplace le paramètre dans le Registre Windows, file by file.  
+ Les types de données des champs peuvent également être déterminés. Utilisez l’option **MaxScanRows** pour indiquer combien de lignes doivent être numérisées lors de la détermination des types de colonnes. Si vous **définissez MaxScanRows** à 0, l’ensemble du fichier est numérisé. Le paramètre **MaxScanRows** dans Schema.ini remplace le paramètre du Registre Windows, fichier par fichier.  
   
- L’entrée suivante indique que Microsoft Jet doit utiliser les données de la première ligne du tableau pour déterminer les noms des champs et doit examiner l’ensemble du fichier pour déterminer les types de données utilisés :  
+ L’entrée suivante indique que Microsoft Jet devrait utiliser les données dans la première rangée de la table pour déterminer les noms de terrain et devrait examiner l’ensemble du fichier pour déterminer les types de données utilisés:  
   
 ```  
 ColNameHeader=True  
 MaxScanRows=0  
 ```  
   
- L’entrée suivante désigne les champs d’une table à l’aide de l’option column Number (**col**_n_), qui est facultative pour les fichiers délimités par des caractères et requis pour les fichiers de longueur fixe. L’exemple montre les entrées de Schema. ini pour deux champs, un champ de texte CustomerNumber de 10 caractères et un champ de texte CustomerName de 30 caractères :  
+ L’entrée suivante désigne les champs dans un tableau en utilisant l’option numéro de colonne (**Col**_n_), qui est facultative pour les fichiers délimités par les caractères et requise pour les fichiers à durée fixe. L’exemple montre les entrées Schema.ini pour deux domaines, un champ de texte CustomerNumber de 10 caractères et un champ de texte CustomerName de 30 caractères :  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La syntaxe de **col**_n_ est la suivante :  
+ La syntaxe de **Col**_n_ est:  
   
 ```  
   
@@ -94,37 +94,37 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le tableau suivant décrit chaque partie de l’entrée **col**_n_ .  
+ Le tableau suivant décrit chaque partie de l’entrée **du Col**_n._  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*NomColonne*|Nom de texte de la colonne. Si le nom de colonne contient des espaces incorporés, vous devez le placer entre guillemets doubles.|  
-|*entrer*|Les types de données sont les suivants :<br /><br /> **Types de données Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Court<br /><br /> Long<br /><br /> Devise<br /><br /> Unique<br /><br /> Double<br /><br /> DateTime<br /><br /> Texte<br /><br /> Champs<br /><br /> **Types de données ODBC** Char (identique au texte)<br /><br /> Float (identique à double)<br /><br /> Entier (identique à Short)<br /><br /> LongChar (identique à MEMO)<br /><br /> Date *format date*|  
-|**Largeur**|Valeur `Width`de chaîne littérale. Indique que le nombre suivant désigne la largeur de la colonne (facultatif pour les fichiers délimités par des caractères ; obligatoire pour les fichiers de longueur fixe).|  
-|*#*|Valeur entière qui désigne la largeur de la colonne (obligatoire si la **largeur** est spécifiée).|  
+|*ColumnName*|Le nom de texte de la colonne. Si le nom de la colonne contient des espaces intégrés, vous devez l’enfermer dans des guillemets doubles.|  
+|*type*|Les types de données sont les suivants :<br /><br /> **Types de données Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Court<br /><br /> Long<br /><br /> Devise<br /><br /> Unique<br /><br /> Double<br /><br /> DateTime<br /><br /> Texte<br /><br /> Mémo<br /><br /> **Types de données ODBC** Char (même que le texte)<br /><br /> Flotteur (même que Double)<br /><br /> Integer (même que Short)<br /><br /> LongChar (même que Memo)<br /><br /> *Format de date de date*|  
+|**Width**|La valeur `Width`de la chaîne littérale . Indique que le numéro suivant désigne la largeur de la colonne (facultatif pour les fichiers délimités par les caractères; requis pour les fichiers à durée fixe).|  
+|*#*|La valeur de l’intégrant qui désigne la largeur de la colonne (nécessaire si **la largeur** est spécifiée).|  
   
-## <a name="selecting-a-character-set"></a>Sélection d’un jeu de caractères  
- Vous pouvez sélectionner deux jeux de caractères : ANSI et OEM. Le paramètre **CharacterSet** dans Schema. ini remplace le paramètre dans le Registre Windows, file by file. L’exemple suivant illustre l’entrée Schema. ini qui définit le jeu de caractères sur ANSI :  
+## <a name="selecting-a-character-set"></a>Sélection d’un ensemble de caractères  
+ Vous pouvez sélectionner parmi deux ensembles de personnages : ANSI et OEM. Le paramètre **CharacterSet** dans Schema.ini remplace le paramètre dans le Registre Windows, fichier par fichier. L’exemple suivant montre l’entrée Schema.ini qui définit le personnage mis à ANSI:  
   
 ```  
 CharacterSet=ANSI  
 ```  
   
-## <a name="specifying-data-type-formats-and-conversions"></a>Spécification de formats et de conversions de types de données  
- Le fichier Schema. ini contient plusieurs options que vous pouvez utiliser pour spécifier la façon dont les données sont converties ou affichées. Le tableau suivant répertorie chacune de ces options.  
+## <a name="specifying-data-type-formats-and-conversions"></a>Spécifier les formats et les conversions de type de données  
+ Le fichier Schema.ini contient plusieurs options que vous pouvez utiliser pour spécifier la façon dont les données sont converties ou affichées. Le tableau suivant répertorie chacune de ces options.  
   
 |Option|Description|  
 |------------|-----------------|  
-|**DateTimeFormat**|Peut être défini sur une chaîne de format qui indique les dates et les heures. Vous devez spécifier cette entrée si tous les champs de date/heure de l’importation/exportation sont gérés avec le même format. Tous les formats Microsoft Jet sauf A.M. et P.M sont pris en charge. S’il n’y a pas de chaîne de format, les options d’image et d’heure de la date abrégée du panneau de configuration Windows sont utilisées.|  
-|**DecimalSymbol**|Peut être défini sur n’importe quel caractère unique utilisé pour séparer l’entier de la partie fractionnaire d’un nombre.|  
-|**NumberDigits**|Indique le nombre de chiffres décimaux dans la partie fractionnaire d’un nombre.|  
-|**NumberLeadingZeros**|Spécifie si une valeur décimale inférieure à 1 et supérieure à-1 doivent contenir des zéros non significatifs. Cette valeur peut être false (sans zéro non significatif) ou true.|  
-|**CurrencySymbol**|Indique le symbole monétaire qui peut être utilisé pour les valeurs monétaires dans le fichier texte. Les exemples incluent le signe dollar ($) et le DM (DM).|  
-|**CurrencyPosFormat**|Peut être défini sur l’une des valeurs suivantes :<br /><br /> -Préfixe de symbole monétaire sans séparation ($1)<br />-Suffixe de symbole monétaire sans séparation ($1)<br />-Préfixe de symbole monétaire avec une séparation de caractères ($1)<br />-Suffixe de symbole monétaire avec une séparation de caractères ($1)|  
-|**CurrencyDigits**|Spécifie le nombre de chiffres utilisés pour la partie fractionnaire d’un montant en devise.|  
-|**CurrencyNegFormat**|Peut être l’une des valeurs suivantes :<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> Cet exemple montre le signe dollar, mais vous devez le remplacer par la valeur **CurrencySymbol** appropriée dans le programme réel.|  
-|**CurrencyThousandSymbol**|Indique le symbole à un seul caractère qui peut être utilisé pour séparer les valeurs monétaires dans le fichier texte par des milliers.|  
-|**CurrencyDecimalSymbol**|Peut être défini sur n’importe quel caractère unique utilisé pour séparer l’ensemble de la partie fractionnaire d’un montant monétaire.|  
+|**DateTimeFormat**|Peut être réglé sur une chaîne de format qui indique les dates et les heures. Vous devez spécifier cette entrée si tous les champs de date/heure de l’importation/exportation sont traités avec le même format. Tous les formats Microsoft Jet sauf A.M. et P.M sont pris en charge. S’il n’y a pas de chaîne de format, l’image de date courte et les options d’heure du panneau de contrôle Windows sont utilisées.|  
+|**DécimamalSymbol**|Peut être réglé à n’importe quel personnage unique qui est utilisé pour séparer l’intégrant de la partie fractionnaire d’un nombre.|  
+|**NombreDigits**|Indique le nombre de chiffres décimaux dans la partie fractionnaire d’un nombre.|  
+|**NombreLeadingZeros**|Précise si une valeur décimale inférieure à 1 et supérieure à -1 devrait contenir des zéros de premier plan; cette valeur peut être soit fausse (pas de zéros de premier plan) ou Vrai.|  
+|**CurrencySymbol**|Indique le symbole de change qui peut être utilisé pour les valeurs de change dans le fichier texte. Par exemple, le signe en dollars ($) et le Dm.|  
+|**MonnaiePosFormat**|Peut être réglé à l’une des valeurs suivantes :<br /><br /> - Préfixe de symbole de devise sans séparation ($1)<br />- Suffixe de symbole de devise sans séparation (1$)<br />- Préfixe de symbole de devise avec une séparation de caractère ($ 1)<br />- Suffixe de symbole de devise avec une séparation de caractère (1 $)|  
+|**CurrencyDigits**|Spécifie le nombre de chiffres utilisés pour la partie fractionnaire d’un montant de devise.|  
+|**MonnaieNegFormat**|Il peut s'agir de l'une des valeurs suivantes :<br /><br /> - (1 $)<br />- -$1<br />- $-1<br />- 1 $<br />- (1$)<br />- -1$<br />- 1-$<br />- 1$-<br />- -1 $<br />- -$ 1<br />- 1 $-<br />- $ 1-<br />- $ -1<br />- 1- $<br />- (1 $ )<br />- (1 $)<br /><br /> Cet exemple montre le signe du dollar, mais vous devez le remplacer par la valeur **appropriée de CurrencySymbol** dans le programme réel.|  
+|**MonnaieThousandSymbol**|Indique le symbole à caractère unique qui peut être utilisé pour séparer les valeurs de change dans le fichier texte par milliers.|  
+|**MonnaieDecimalSymbol**|Peut être réglé à n’importe quel personnage unique qui est utilisé pour séparer l’ensemble de la partie fractionnaire d’un montant de devise.|  
   
 > [!NOTE]  
->  Si vous omettez une entrée, la valeur par défaut dans le panneau de configuration Windows est utilisée.
+>  Si vous ometez une entrée, la valeur par défaut du panneau de contrôle Windows est utilisée.

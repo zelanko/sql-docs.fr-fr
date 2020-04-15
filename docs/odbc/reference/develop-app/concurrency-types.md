@@ -1,5 +1,5 @@
 ---
-title: Types d’accès concurrentiel | Microsoft Docs
+title: Types de concordance (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 642301d09c5aa189276db534e58aca0c5e00e3ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299099"
 ---
 # <a name="concurrency-types"></a>Types d’accès concurrentiels
-Pour résoudre le problème d’accès concurrentiel réduit dans les curseurs, ODBC expose quatre types différents d’accès concurrentiel de curseur :  
+Pour résoudre le problème de la concurrence réduite dans les curseurs, ODBC expose quatre types différents de concurrence curseurr:  
   
--   **Lecture seule** Le curseur peut lire les données, mais ne peut pas mettre à jour ou supprimer des données. Il s’agit du type de concurrence par défaut. Bien que le SGBD puisse verrouiller des lignes pour appliquer les niveaux d’isolation Repeatable Read et Serializable, il peut utiliser des verrous en lecture au lieu de verrous en écriture. Cela entraîne une plus grande concurrence, car les autres transactions peuvent au moins lire les données.  
+-   **Lire-seulement** Le curseur peut lire les données mais ne peut pas mettre à jour ou supprimer des données. Il s’agit du type de concordance par défaut. Bien que le DBMS puisse verrouiller des lignes pour appliquer les niveaux d’isolement répétables Read et Serializable, il peut utiliser des serrures de lecture au lieu d’écrire des serrures. Il en résulte une plus grande concurrence parce que d’autres transactions peuvent au moins lire les données.  
   
--   **Verrouillage** Le curseur utilise le niveau de verrouillage le plus bas nécessaire pour s’assurer qu’il peut mettre à jour ou supprimer des lignes dans le jeu de résultats. Cela entraîne généralement des niveaux de concurrence très faibles, en particulier dans les niveaux d’isolation des transactions Repeatable Read et Serializable.  
+-   **Verrouillage** Le curseur utilise le niveau le plus bas de verrouillage nécessaire pour s’assurer qu’il peut mettre à jour ou supprimer les lignes dans l’ensemble de résultat. Cela se traduit généralement par des niveaux de concurrence très faibles, en particulier aux niveaux d’isolement des transactions Répétables Read et Serializable.  
   
--   **Accès concurrentiel optimiste à l’aide des versions de ligne et de l’accès concurrentiel optimiste à l’aide de valeurs** Le curseur utilise l’accès concurrentiel optimiste : il met à jour ou supprime des lignes uniquement s’ils n’ont pas été modifiés depuis leur dernière lecture. Pour détecter les modifications, il compare les versions de ligne ou les valeurs. Il n’y a aucune garantie que le curseur sera en mesure de mettre à jour ou de supprimer une ligne, mais la concurrence est bien plus élevée que lors de l’utilisation du verrouillage. Pour plus d’informations, consultez la section suivante, [accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **Concurrence optimiste à l’aide de versions en ligne et de concordance optimiste à l’aide de valeurs** Le curseur utilise une concordance optimiste : il ne met à jour ou supprime les lignes que si elles n’ont pas changé depuis leur dernière lecture. Pour détecter les changements, il compare les versions ou les valeurs de la ligne. Il n’y a aucune garantie que le curseur sera en mesure de mettre à jour ou de supprimer une ligne, mais la concurrence est beaucoup plus élevée que lorsque le verrouillage est utilisé. Pour plus d’informations, voir la section suivante, [Concordurrency Optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
- Une application spécifie le type de concurrence qu’elle souhaite que le curseur utilise avec l’attribut d’instruction SQL_ATTR_CONCURRENCY. Pour déterminer les types pris en charge, il appelle **SQLGetInfo** avec l’option SQL_SCROLL_CONCURRENCY.
+ Une application précise quel type de concurrence elle veut que le curseur utilise avec l’attribut de l’SQL_ATTR_CONCURRENCY déclaration. Pour déterminer quels types sont pris en charge, il appelle **SQLGetInfo** avec l’option SQL_SCROLL_CONCURRENCY.

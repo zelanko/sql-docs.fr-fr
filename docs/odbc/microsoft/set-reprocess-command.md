@@ -1,5 +1,5 @@
 ---
-title: SET Reprocess, commande | Microsoft Docs
+title: Set REPROCESS Commande (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a7eb5fd19ca538c4f25077926567011ae133e54
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063623"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300829"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS, commande
-Spécifie le nombre de fois ou la durée de verrouillage d’un fichier ou d’un enregistrement après une tentative de verrouillage ayant échoué.  
+Précise combien de fois ou pour combien de temps pour verrouiller un fichier ou un enregistrement après une tentative de verrouillage infructueuse.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,27 +30,27 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
 ```  
   
 ## <a name="arguments"></a>Arguments  
- À *nAttempts*[secondes]  
- Spécifie le nombre de fois ou le nombre de secondes pendant lequel tenter de verrouiller un enregistrement ou un fichier après une tentative initiale ayant échoué. La valeur par défaut est 0 ; la valeur maximale est 32 000.  
+ À *nAttempts*[SECONDS]  
+ Spécifie le nombre de fois ou de nombre de secondes pour essayer de verrouiller un enregistrement ou un fichier après une première tentative infructueuse. La valeur par défaut est de 0; la valeur maximale est de 32 000.  
   
- SECONDES spécifie que Visual FoxPro tente de verrouiller un fichier ou un enregistrement pendant *nAttempts* secondes. Elle est disponible uniquement lorsque *nAttempts* est supérieur à zéro.  
+ SECONDS précise que Visual FoxPro tente de verrouiller un fichier ou un enregistrement pour les secondes *nAttempts.* Il n’est disponible que lorsque *nAttempts* est supérieur à zéro.  
   
- Par exemple, si *nAttempts* est 30, Visual FoxPro tente de verrouiller un enregistrement ou un fichier jusqu’à 30 fois. Si vous incluez également secondes (définir le retraitement sur 30 secondes), Visual FoxPro tente continuellement de verrouiller un enregistrement ou un fichier pendant 30 secondes.  
+ Par exemple, si *nAttempts* est de 30, Visual FoxPro tente de verrouiller un enregistrement ou de fichier jusqu’à 30 fois. Si vous incluez également SECONDS (SET REPROCESS TO 30 SECONDS), Visual FoxPro tente en permanence de verrouiller un enregistrement ou un fichier jusqu’à 30 secondes.  
   
- Si une routine en cas d’erreur est en vigueur et que des tentatives d’une commande de verrouillage de l’enregistrement ou du fichier échouent, la routine en cas d’erreur est exécutée. Toutefois, si une fonction tente le verrou, une routine en cas d’erreur n’est pas exécutée et la fonction retourne false (. F.).  
+ Si une routine ON ERROR est en vigueur et si les tentatives d’une commande pour verrouiller l’enregistrement ou le fichier sont infructueuses, la routine ON ERROR est exécutée. Toutefois, si une fonction tente le verrou, une routine ON ERROR n’est pas exécutée et la fonction renvoie faux (. F.).  
   
- Si une routine en cas d’erreur n’est pas en vigueur, une commande tente de verrouiller l’enregistrement ou le fichier, et le verrou ne peut pas être placé, une erreur est générée. Si une fonction tente de placer le verrou, l’alerte n’est pas affichée et la fonction retourne false (. F.).  
+ Si une routine ON ERROR n’est pas en vigueur, qu’une commande tente de verrouiller l’enregistrement ou le fichier, et que le verrou ne peut pas être placé, une erreur est générée. Si une fonction tente de placer la serrure, l’alerte n’est pas affichée et la fonction renvoie faux (. F.).  
   
- Si *nAttempts* a la valeur 0 (valeur par défaut) et que vous émettez une commande ou une fonction qui tente de verrouiller un enregistrement ou un fichier, Visual FoxPro tente de verrouiller l’enregistrement ou le fichier indéfiniment. Si l’enregistrement ou le fichier devient disponible pour le verrouillage pendant l’attente, le verrou est placé et le message système est effacé. Si une fonction a tenté de placer le verrou, la fonction retourne true (. T.).  
+ Si *nAttempts* est 0 (la valeur par défaut) et que vous émetssez une commande ou une fonction qui tente de verrouiller un enregistrement ou un fichier, Visual FoxPro tente de verrouiller l’enregistrement ou le fichier indéfiniment. Si l’enregistrement ou le fichier devient disponible pour le verrouillage pendant que vous attendez, le verrou est placé et le message du système est effacé. Si une fonction a tenté de placer la serrure, la fonction renvoie True (. T.).  
   
- Si une routine en cas d’erreur est en vigueur et qu’une commande tente de verrouiller l’enregistrement ou le fichier, la routine en cas d’erreur a priorité sur les tentatives supplémentaires de verrouillage de l’enregistrement ou du fichier. La routine en cas d’erreur est immédiatement exécutée. Visual FoxPro ne tente pas d’effectuer d’autres verrous d’enregistrement ou de fichier et n’affiche pas le message système.  
+ Si une routine ON ERROR est en vigueur et qu’une commande tente de verrouiller l’enregistrement ou le fichier, la routine ON ERROR prime sur d’autres tentatives de verrouillage de l’enregistrement ou du fichier. La routine ON ERROR est immédiatement exécutée. Visual FoxPro ne tente pas d’enregistrers supplémentaires ou de verrouillages de fichiers et n’affiche pas le message du système.  
   
- Si *nAttempts* a la valeur 1, Visual FoxPro tente de verrouiller l’enregistrement ou le fichier indéfiniment et une routine en cas d’erreur n’est pas exécutée.  
+ Si *nAttempts* est 1, Visual FoxPro tente de verrouiller l’enregistrement ou le fichier indéfiniment et une routine ON ERROR n’est pas exécutée.  
   
  Si un verrou a été placé par un autre utilisateur sur l’enregistrement ou le fichier que vous tentez de verrouiller, vous devez attendre que l’utilisateur libère le verrou.  
   
- SUR AUTOMATIQUE  
- Spécifie que Visual FoxPro tente de verrouiller l’enregistrement ou le fichier indéfiniment. (SET Reprocess TO-2 est une commande équivalente.)  
+ À AUTOMATIQUE  
+ Précise que Visual FoxPro tente de verrouiller l’enregistrement ou le fichier indéfiniment. (SET REPROCESS TO -2 est une commande équivalente.)  
   
 ## <a name="remarks"></a>Notes  
- La première tentative de verrouillage d’un enregistrement ou d’un fichier n’est pas toujours réussie. Souvent, un enregistrement ou un fichier est verrouillé par un autre utilisateur sur le réseau. SET Reprocess détermine si Visual FoxPro effectue des tentatives supplémentaires pour verrouiller l’enregistrement ou le fichier en cas d’échec de la tentative initiale. Vous pouvez spécifier le nombre de tentatives supplémentaires effectuées ou la durée des tentatives. Une routine en cas d’erreur affecte la gestion des échecs de tentatives de verrouillage.
+ La première tentative de verrouillage d’un enregistrement ou d’un fichier n’est pas toujours réussie. Fréquemment, un enregistrement ou un fichier est verrouillé par un autre utilisateur sur le réseau. SET REPROCESS détermine si Visual FoxPro fait d’autres tentatives pour verrouiller l’enregistrement ou le fichier lorsque la tentative initiale est infructueuse. Vous pouvez spécifier le nombre de tentatives supplémentaires ou pour combien de temps les tentatives sont faites. Une routine ON ERROR affecte la façon dont les tentatives de verrouillage infructueuses sont traitées.

@@ -1,5 +1,5 @@
 ---
-title: Sqlinstalltranslator, fonction) | Microsoft Docs
+title: Fonction SQLInstallTranslator (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallTranslator function [ODBC]
 ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b973332c2fe0fa541635d326a3a5adecf6ae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b094aa730fff6db80b9addb63a92bee0f5f85b2a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076113"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300319"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator, fonction
 **Conformité**  
- Version introduite : ODBC 2,5, déconseillé  
+ Version introduite: ODBC 2.5, Déprécé  
   
  **Résumé**  
- Dans ODBC 3,0, **sqlinstalltranslator,** a été remplacé par [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Les appels à **sqlinstalltranslator,** sont mappés à **SQLInstallTranslatorEx**. Pour plus d’informations, consultez **SQLInstallTranslatorEx**.  
+ Dans ODBC 3.0, **SQLInstallTranslator** a été remplacé par [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Les appels à **SQLInstallTranslator** seront cartographiés à **SQLInstallTranslatorEx**. Pour plus d’informations, voir **SQLInstallTranslatorEx**.  
   
- **Sqlinstalltranslator,** retourne la valeur false si une application l’appelle dans le gestionnaire de pilotes ODBC *3. x* avec l’argument *lpszInfFile* défini sur une valeur autre que NULL. Le fichier ODBC. inf utilisé dans ODBC *2. x* n’est plus pris en charge dans ODBC *3. x*, même pour la compatibilité descendante.
+ **SQLInstallTranslator** retournera FALSE si une demande l’appelle dans le gestionnaire de conducteur ODBC *3.x* avec *l’argument lpszInfFile* réglé à une valeur autre que NULL. Le fichier Odbc.inf utilisé dans ODBC *2.x* n’est plus pris en charge dans ODBC *3.x*, même pour la compatibilité vers l’arrière.

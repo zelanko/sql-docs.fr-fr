@@ -1,5 +1,5 @@
 ---
-title: ODBC et l’interface CLI standard | Microsoft Docs
+title: ODBC et le Standard CLI (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,68 +14,68 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944848"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305140"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC et l’interface CLI standard
-ODBC s’aligne sur les spécifications et normes suivantes qui traitent de l’interface de niveau appel (CLI). (Les fonctionnalités ODBC sont un sur-ensemble de chacune de ces normes.)  
+ODBC s’aligne sur les spécifications et les normes suivantes qui traitent de l’interface de niveau d’appel (CLI). (Les caractéristiques oDBC sont un superset de chacune de ces normes.)  
   
--   La spécification Open Group IAO « Gestion des données : interface de niveau appel SQL (CLI) »  
+-   Spécification CAE Open Group "Data Management: SQL Call-Level Interface (CLI)"  
   
--   Interface de niveau d’appel ISO/IEC 9075-3:1995 (E) (SQL/CLI)  
+-   ISO/IEC 9075-3:1995 (E) Interface de niveau d’appel (SQL/CLI)  
   
- À la suite de cet alignement, les conditions suivantes sont vraies :  
+ À la suite de cet alignement, ce qui suit est vrai :  
   
--   Une application écrite dans les spécifications Open Group et ISO CLI fonctionne avec un pilote ODBC *3. x* ou un pilote conforme aux normes lorsqu’elle est compilée avec les fichiers d’en-tête ODBC *3. x* et est liée aux bibliothèques ODBC *3. x* , et lorsqu’elle accède au pilote par le biais du gestionnaire de pilotes ODBC *3. x* .  
+-   Une application écrite aux spécifications Open Group et ISO CLI fonctionnera avec un pilote ODBC *3.x* ou un pilote conforme aux normes lorsqu’elle sera compilée avec les fichiers d’en-tête ODBC *3.x* et reliée aux bibliothèques ODBC *3.x,* et lorsqu’elle accède au pilote par l’intermédiaire du gestionnaire de conducteur ODBC *3.x.*  
   
--   Un pilote écrit dans les spécifications Open Group et ISO CLI fonctionne avec une application ODBC *3. x* ou une application conforme aux normes lorsqu’elle est compilée avec les fichiers d’en-tête ODBC *3. x* et est liée aux bibliothèques ODBC *3. x* , et lorsque l’application accède au pilote par le biais du gestionnaire de pilotes ODBC *3. x* . (Pour plus d’informations, consultez [applications et pilotes conformes aux normes](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Un pilote écrit selon les spécifications Open Group et ISO CLI travaillera avec une application ODBC *3.x* ou une application conforme aux normes lorsqu’il sera compilé avec les fichiers d’en-tête ODBC *3.x* et lié aux bibliothèques ODBC *3.x,* et lorsque l’application accède au pilote par l’intermédiaire du gestionnaire de conducteur ODBC *3.x.* (Pour plus d’informations, voir [Applications et pilotes conformes aux normes](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- Le niveau de conformité de l’interface principale englobe toutes les fonctionnalités de l’interface CLI ISO et toutes les fonctionnalités non facultatives de l’interface CLI Open Group. Les fonctionnalités facultatives de l’interface CLI Open Group s’affichent dans des niveaux de conformité d’interface plus élevés. Étant donné que tous les pilotes ODBC *3. x* sont requis pour prendre en charge les fonctionnalités dans le niveau de conformité de l’interface principale, les conditions suivantes sont vraies :  
+ Le niveau de conformité à l’interface Core englobe toutes les fonctionnalités de l’ISO CLI et toutes les fonctionnalités nonoptionnelles de l’Open Group CLI. Les caractéristiques facultatives de l’Open Group CLI apparaissent dans des niveaux de conformation d’interface plus élevés. Étant donné que tous les pilotes ODBC *3.x* sont tenus de prendre en charge les fonctionnalités du niveau de conformité à l’interface Core, ce qui suit est vrai :  
   
--   Un pilote ODBC *3. x* prend en charge toutes les fonctionnalités utilisées par une application conforme aux normes.  
+-   Un pilote ODBC *3.x* prendra en charge toutes les fonctionnalités utilisées par une application conforme aux normes.  
   
--   Une application ODBC *3. x* qui utilise uniquement les fonctionnalités de la CLI ISO et les fonctionnalités non facultatives de l’interface CLI Open Group fonctionne avec tous les pilotes conformes aux normes.  
+-   Une application ODBC *3.x* utilisant uniquement les fonctionnalités dans ISO CLI et les caractéristiques nonoptionnelles de l’Open Group CLI fonctionnera avec n’importe quel pilote conforme aux normes.  
   
- Outre les spécifications de l’interface au niveau de l’appel contenues dans les normes de l’interface de commande de groupe ISO/CEI et Open Group, ODBC implémente les fonctionnalités suivantes. (Certaines de ces fonctionnalités existaient dans les versions d’ODBC antérieures à ODBC *3. x*.)  
+ En plus des spécifications d’interface au niveau des appels contenues dans les normes ISO/IEC et Open Group CLI, ODBC implémente les fonctionnalités suivantes. (Certaines de ces fonctionnalités existaient dans les versions d’ODBC avant ODBC *3.x*.)  
   
--   Extractions multiligne par un appel de fonction unique  
+-   Multirow récupère par un seul appel de fonction  
   
--   Liaison à un tableau de paramètres  
+-   Liaison à un éventail de paramètres  
   
--   Prise en charge des signets incluant l’extraction par signet, les signets de longueur variable et les mises à jour en bloc et les suppressions par signet sur les lignes non contiguës  
+-   Support de signet comprenant aller chercher par signet, signets variables, et mise à jour et suppression en vrac par des opérations de signets sur des rangées discontiguous  
   
 -   Liaison selon les lignes  
   
--   Décalages de liaison  
+-   Compensations contraignantes  
   
--   Prise en charge des lots d’instructions SQL, qu’il s’agisse d’une procédure stockée ou d’une séquence d’instructions SQL exécutées à l’aide de **SQLExecute** ou **SQLExecDirect**  
+-   Prise en charge de lots de relevés SQL, soit dans le cadre d’une procédure stockée, soit sous forme de séquence de déclarations SQL exécutées par **SQLExecute** ou **SQLExecDirect**  
   
--   Nombre exact ou approximatif de lignes de curseur  
+-   Nombre exact ou approximatif de rangée de curseurs  
   
--   Opérations de mise à jour et de suppression positionnées et mises à jour et suppressions par lot par appel de fonction (**SQLSetPos**)  
+-   Mise à jour et suppression des opérations positionnées et mises à jour et suppressions par appel de fonction (**SQLSetPos**)  
   
--   Fonctions de catalogue qui extraient des informations du schéma d’informations sans avoir besoin de prendre en charge les vues de schémas d’informations  
+-   Catalogue des fonctions qui extraient des informations à partir du schéma d’information sans avoir besoin de points de vue sur les schémas d’information à l’appui  
   
--   Séquences d’échappement pour les jointures externes, les fonctions scalaires, les littéraux datetime, les littéraux d’intervalle et les procédures stockées  
+-   Séquences d’évasion pour les jointures extérieures, fonctions scalaires, littérals de date, les littérals d’intervalle, et les procédures stockées  
   
--   Bibliothèques de traduction de page de codes  
+-   Bibliothèques de traduction de pages de code  
   
--   Rapport du niveau de conformité ANSI d’un pilote et de la prise en charge de SQL  
+-   Signalement du niveau ansI-conformance d’un conducteur et du support SQL  
   
--   Remplissage automatique à la demande du descripteur de paramètre d’implémentation  
+-   Population automatique à la demande du descripteur de paramètres de mise en œuvre  
   
--   Tableaux d’état des diagnostics et des lignes et des paramètres améliorés  
+-   Amélioration des diagnostics et des tableaux d’état des lignes et des paramètres  
   
--   Types de mémoire tampon d’application de type DateTime, Interval, Numeric/Decimal et 64 bits  
+-   Date, intervalle, numérique/décimal, et 64 bits de type tampon d’application integer  
   
 -   Exécution asynchrone  
   
--   Prise en charge des procédures stockées, y compris les séquences d’échappement, les mécanismes de liaison de paramètre de sortie et les fonctions de catalogue  
+-   Support de procédure stocké, y compris les séquences d’évacuation, les mécanismes de liaison des paramètres de sortie et les fonctions de catalogue  
   
--   Améliorations de la connexion, notamment la prise en charge des attributs de connexion et de l’exploration des attributs
+-   Améliorations de connexion, y compris la prise en charge des attributs de connexion et la navigation d’attribut

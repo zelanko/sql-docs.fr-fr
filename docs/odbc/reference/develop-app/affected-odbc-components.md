@@ -1,5 +1,5 @@
 ---
-title: Composants ODBC affectés | Microsoft Docs
+title: Composants ODBC touchés (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], affected components
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08997f610b00f22d436a5c91d34beb2a8fc2cc1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d9155fa1c9df5846f069e93a3db1b969e9219ed
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944852"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306473"
 ---
 # <a name="affected-odbc-components"></a>Composants ODBC affectés
-Compatibilité descendante décrit la façon dont les applications, le gestionnaire de pilotes et les pilotes sont affectés par l’introduction d’une nouvelle version du gestionnaire de pilotes. Cela affecte les applications et le pilote lorsque l’un ou l’autre, ou les deux, sont conservés dans l’ancienne version. Il existe, par conséquent, trois types de compatibilité descendante à prendre en compte, comme indiqué dans le tableau suivant.  
+La compatibilité rétrograde décrit comment les applications, le Driver Manager et les pilotes sont affectés par l’introduction d’une nouvelle version du Driver Manager. Cela affecte les applications et le pilote lorsque l’un ou l’autre d’entre eux restent dans l’ancienne version. Il existe donc trois types de compatibilité vers l’arrière à considérer, comme le montre le tableau suivant.  
   
 |Type|Version de DM|Version de l’application|Version du pilote|  
 |----------|-------------------|----------------------------|-----------------------|  
-|Compatibilité descendante du gestionnaire de pilotes|*3.x*|*2.x*|*2.x*|  
-|Compatibilité descendante du pilote [1]|*3.x*|*2.x*|*3.x*|  
-|Compatibilité descendante de l’application|*3.x*|*3.x*|*2.x*|  
+|Compatibilité rétrograde du Driver Manager|*3.x*|*2.x*|*2.x*|  
+|Compatibilité rétrograde du conducteur[1]|*3.x*|*2.x*|*3.x*|  
+|Compatibilité rétrograde de l’application|*3.x*|*3.x*|*2.x*|  
   
- [1] la compatibilité descendante des pilotes est principalement décrite dans annexe G : instructions relatives aux pilotes pour la compatibilité descendante.  
+ [1] La compatibilité rétrograde des conducteurs est principalement discutée à l’Annexe G: Lignes directrices du conducteur pour la compatibilité vers l’arrière.  
   
 > [!NOTE]
->  Une application conforme aux normes, par exemple, une application qui a été écrite conformément aux normes Open Group ou ISO CLI, est garantie de fonctionner avec un pilote ODBC *3. x* par le biais du gestionnaire de pilotes ODBC *3. x* . Il est supposé que la fonctionnalité utilisée par l’application est disponible dans le pilote. Il est également supposé que l’application conforme aux normes a été compilée avec les fichiers d’en-tête ODBC *3. x* .
+>  Une application conforme aux normes - par exemple, une application qui a été écrite conformément aux normes Open Group ou ISO CLI - est garantie de travailler avec un pilote ODBC *3.x* par l’intermédiaire de l’ODBC *3.x* Driver Manager. On suppose que la fonctionnalité que l’application utilise est disponible dans le pilote. On suppose également que l’application conforme aux normes a été compilée avec les fichiers d’en-tête ODBC *3.x.*

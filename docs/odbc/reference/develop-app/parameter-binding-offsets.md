@@ -1,5 +1,5 @@
 ---
-title: Décalages de liaison de paramètre | Microsoft Docs
+title: Décalages de liaison de paramètres Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d0dbddc71b0d647246d10dad16ad72d533df16de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de67b230883f3cf8a582e73ce82e8c4bd7d21ad0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023344"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282488"
 ---
 # <a name="parameter-binding-offsets"></a>Décalages des liaisons de paramètres
-Une application peut spécifier qu’un décalage est ajouté aux adresses tampons de paramètre liées et aux adresses de mémoire tampon d’indicateur de longueur/indicateur correspondantes lorsque **SQLExecDirect** ou **SQLExecute** est appelé. Le résultat de ces ajouts détermine les adresses utilisées dans ces opérations.  
+Une application peut spécifier qu’un décalage est ajouté aux adresses tampons de paramètres consolidés et aux adresses tampons de longueur/indicateur correspondantes lorsque **SQLExecDirect** ou **SQLExecute** est appelé. Le résultat de ces ajouts détermine les adresses utilisées dans ces opérations.  
   
- Les décalages de liaison permettent à une application de modifier des liaisons sans appeler **SQLBindParameter** pour les paramètres précédemment liés. Un appel à **SQLBindParameter** pour relier un paramètre modifie l’adresse de la mémoire tampon et le pointeur de longueur/indicateur. La reliaison avec un décalage, en revanche, ajoute simplement un décalage à l’adresse tampon de paramètre liée existante et à l’adresse tampon de longueur/d’indicateur existante. Lorsque des décalages sont utilisés, les liaisons sont un « modèle » de la façon dont les mémoires tampons d’application sont présentées et l’application peut déplacer ce « modèle » dans différentes zones de mémoire en modifiant le décalage. Un nouveau décalage peut être spécifié à tout moment et est toujours ajouté aux valeurs liées à l’origine.  
+ Les compensations de liaison permettent à une application de modifier les fixations sans appeler **SQLBindParameter** pour les paramètres précédemment liés. Un appel à **SQLBindParameter** pour rebind un paramètre modifie l’adresse tampon et le pointeur longueur/indicateur. Le rebinding avec un décalage, d’autre part, ajoute simplement une compensation à l’adresse tampon de paramètre lié existant et l’adresse tampon de longueur/indicateur. Lorsque des compensations sont utilisées, les fixations sont un « modèle » de la façon dont les tampons d’application sont disposés et l’application peut déplacer ce « modèle » vers différents domaines de mémoire en changeant la compensation. Un nouveau décalage peut être spécifié à tout moment et est toujours ajouté aux valeurs initialement liées.  
   
- Pour spécifier un décalage de liaison, l’application définit l’attribut d’instruction SQL_ATTR_PARAM_BIND_OFFSET_PTR sur l’adresse d’une mémoire tampon SQLINTEGER destinée. Avant que l’application appelle une fonction qui utilise les liaisons, elle place un décalage en octets dans cette mémoire tampon, tant que l’adresse de la mémoire tampon du paramètre et l’adresse tampon de longueur/d’indicateur n’ont pas la valeur 0, et que le paramètre lié est dans l’instruction SQL. La somme de l’adresse et du décalage doit être une adresse valide. (Cela signifie que l’offset et l’adresse à laquelle le décalage est ajouté peuvent être non valides, à condition que leur somme soit une adresse valide.)  
+ Pour spécifier un décalage de liaison, la demande définit l’attribut SQL_ATTR_PARAM_BIND_OFFSET_PTR énoncé à l’adresse d’un tampon SQLINTEGER. Avant que l’application appelle une fonction qui utilise les liaisons, il place un décalage dans les octets dans ce tampon, tant que ni l’adresse tampon paramètre ni l’adresse tampon longueur /indicateur est 0, et le paramètre lié est dans l’énoncé SQL. La somme de l’adresse et la compensation doivent être une adresse valide. (Cela signifie que l’un ou l’autre ou à la fois le décalage et l’adresse à laquelle le décalage est ajouté peuvent être invalides, tant que leur somme est une adresse valide.)  
   
 > [!NOTE]  
->  ODBC 2 ne prend pas en charge les décalages de liaison. *x* pilotes.
+>  Les compensations contraignantes ne sont pas prises en charge par ODBC 2. *x* conducteurs.

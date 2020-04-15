@@ -1,5 +1,5 @@
 ---
-title: Autres détails de programmation du pilote Paradox | Microsoft Docs
+title: Autres détails de la programmation du conducteur paradoxal (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f2b19abbb3c1a05342707cf80c9266bc19ee689d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290949"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Autres détails de programmation du pilote Paradox
 > [!NOTE]  
->  Cette section fournit des informations spécifiques au pilote Paradox sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques à Paradox Driver sur les fonctions ODBC et d’autres détails de programmation. Pour plus d’informations générales sur une fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLColAttributes (pilote Paradox)](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)  
   

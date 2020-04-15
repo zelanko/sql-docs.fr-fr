@@ -1,5 +1,5 @@
 ---
-title: Configuration des sources de données | Microsoft Docs
+title: Configurer les sources de données (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0d52c154f4e9d38aad9d08668f41917793e5893
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068620"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300349"
 ---
 # <a name="configuring-data-sources"></a>Configuration de sources de données
-Les informations sur les sources de données sont stockées dans le registre système. Les utilisateurs modifient les informations de source de données par le biais d’un programme d’administration. Il peut s’agir de l’administrateur ODBC, du périphérique du panneau de configuration ODBC ou d’un programme d’administration écrit par un développeur d’applications ou de pilotes.  
+L’information sur les sources de données est stockée dans le registre du système. Les utilisateurs modifient les informations de source de données par le biais d’un programme d’administration. Il peut s’agir de l’administrateur ODBC, du dispositif ODBC Control Panel ou d’un programme d’administration écrit par une application ou un développeur de pilotes.  
   
- Vous pouvez utiliser des commandes PowerShell pour modifier des sources de données. Pour plus d’informations sur ces commandes PowerShell, consultez [Windows Data Access Components PowerShell Commands](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Vous pouvez utiliser les commandes PowerShell pour modifier les sources de données. Pour plus d’informations sur ces commandes PowerShell, voir [Windows Data Access Components PowerShell Commands](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
 > [!NOTE]  
->  Cette section est spécifique aux plates-formes Microsoft Windows®. La façon dont les sources de données sont configurées sur d’autres plateformes est spécifique à la plateforme.  
+>  Cette section est spécifique aux plates-formes Microsoft Windows®. La façon dont les sources de données sont configurées sur d’autres plates-formes est spécifique à la plate-forme.  
   
  Cette section couvre les rubriques suivantes :  
   

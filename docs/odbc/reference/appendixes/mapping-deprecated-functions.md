@@ -1,5 +1,5 @@
 ---
-title: Mappage des fonctions dépréciées | Microsoft Docs
+title: Cartographie des fonctions dépréciées (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,47 +15,47 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299879"
 ---
 # <a name="mapping-deprecated-functions"></a>Mappage des fonctions dépréciées
-Cette section décrit comment les fonctions déconseillées sont mappées par le gestionnaire de pilotes ODBC *3. x* pour garantir la compatibilité descendante des pilotes ODBC *3. x* utilisés avec les applications ODBC *2. x* . Le gestionnaire de pilotes effectue ce mappage, quelle que soit la version de l’application. Étant donné que chacune des fonctions ODBC *2. x* de la liste suivante est mappée à la fonction ODBC *3. x* correspondante quand elle est appelée dans un pilote ODBC *3. x* , le pilote ODBC *3. x* n’a pas à implémenter les fonctions ODBC *2. x* .  
+Cette section décrit comment les fonctions dépréciées sont cartographiées par l’ODBC *3.x* Driver Manager pour garantir la compatibilité rétrograde des pilotes ODBC *3.x* qui sont utilisés avec les applications ODBC *2.x.* Le Driver Manager effectue cette cartographie quelle que soit la version de l’application. Étant donné que chacune des fonctions ODBC *2.x* de la liste suivante est cartographiée pour la fonction ODBC *3.x* correspondante lorsqu’elle est appelée dans un pilote ODBC *3.x,* le pilote ODBC *3.x* n’a pas à implémenter les fonctions ODBC *2.x.*  
   
- Le mappage de la liste est déclenché lorsque le pilote est un pilote ODBC *3. x* et que le pilote ne prend pas en charge la fonction qui est mappée.  
+ La cartographie dans la liste est déclenchée lorsque le conducteur est un pilote ODBC *3.x* et que le conducteur ne prend pas en charge la fonction qui est cartographiée.  
   
- Le tableau suivant répertorie toutes les fonctionnalités dupliquées qui ont été introduites dans ODBC *3. x*.  
+ Le tableau suivant répertorie toutes les fonctionnalités dupliquées qui ont été introduites dans ODBC *3.x*.  
   
-|ODBC *2. x,* fonction|ODBC *3. x,* fonction|  
+|Fonction ODBC *2.x*|Fonction ODBC *3.x*|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAllocConnect (SQLAllocConnect)**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt,**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
-|**Sqlfreeconnect,**|**SQLFreeHandle**|  
-|**Sqlfreeenv,**|**SQLFreeHandle**|  
+|**Sqlerror**|**SQLGetDiagRec**|  
+|**SQLFreeConnect (en anglais)**|**SQLFreeHandle**|  
+|**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLFreeStmt** avec une *option* de SQL_DROP|**SQLFreeHandle**|  
-|**Sqlgetconnectoption,**|**SQLGetConnectAttr**|  
+|**SQLGetConnectOption (SQLGetConnectOption)**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions,**|**SQLSetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
-|**SQLSetParam,**[2]|**SQLBindParameter**|  
+|**SQLSetParam**[2]|**SQLBindParameter**|  
 |**SQLSetScrollOption**|**SQLSetStmtAttr**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
-|**SQLTransact**|**SQLEndTran**|  
+|**SQLTransacte**|**SQLEndTran**|  
   
- [1] même si cette fonction n’existait pas dans ODBC *2. x*, elle se trouve dans les normes de groupe et ISO ouvertes.  
+ [1] Même si cette fonction n’existait pas dans ODBC *2.x*, il est dans le groupe ouvert et les normes ISO.  
   
- [2] il s’agit d’une fonction ODBC 1,0.  
+ [2] Il s’agit d’une fonction ODBC 1.0.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLAllocConnect, mappage](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   

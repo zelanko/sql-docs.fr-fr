@@ -1,5 +1,5 @@
 ---
-title: Compatibilité des pilotes de base de données Bureau | Microsoft Docs
+title: Compatibilité des pilotes de base de données de bureau (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077284"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303520"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilité des pilotes pour les bases de données de poste de travail
-Unicode est une méthode d’encodage de caractères logiciels qui traite tous les caractères comme ayant une largeur fixe de deux octets. Cette méthode est utilisée comme alternative à l’encodage de caractères ANSI Windows, car elle représente les caractères d’un octet, est limitée à 256 caractères. Étant donné que le format Unicode peut représenter plus de 65 000 caractères, il prend en charge de nombreux langages dont les caractères ne sont pas représentés dans l’encodage ANSI.  
+Unicode est une méthode d’encodage de caractère logiciel qui traite tous les personnages comme ayant une largeur fixe de deux octets. Cette méthode est utilisée comme une alternative à l’encodage de caractères de Windows ANSI, qui, parce qu’il représente des caractères dans un byte, est limité à 256 caractères. Parce qu’Unicode peut représenter plus de 65 000 caractères, il accueille de nombreuses langues dont les personnages ne sont pas représentés dans l’encodage de l’ANSI.  
   
- Le gestionnaire de pilotes ODBC 3,5 (ou version ultérieure) est compatible Unicode. Cela affecte deux domaines majeurs : les appels de fonction et les types de données de chaîne. Le gestionnaire de pilotes mappe les arguments de chaîne de fonction et les données de chaîne selon les exigences de l’application et du pilote, qui peuvent être compatibles Unicode ou ANSI.  
+ L’ODBC 3.5 (ou plus tard) Driver Manager est compatible Unicode. Cela affecte deux domaines principaux : les appels de fonction et les types de données de chaîne. Le Driver Manager cartographie les arguments de chaîne de fonction et les données de chaîne comme l’exige l’application et le pilote, qui peuvent être soit compatibles Unicode ou SANS permis.  
   
- Le gestionnaire de pilotes ODBC 3,5 (ou version ultérieure) prend en charge l’utilisation d’un pilote Unicode avec une application Unicode et une application ANSI. Il prend également en charge l’utilisation d’un pilote ANSI avec une application ANSI. Le gestionnaire de pilotes fournit un mappage Unicode-à-ANSI limité pour une application Unicode utilisant un pilote ANSI. Cela permet l’accès aux bases de données Jet 3,5 et la prise en charge de tous les types de fichiers ISAM existants.  
+ L’ODBC 3.5 (ou plus tard) Driver Manager prend en charge l’utilisation d’un pilote Unicode avec une application Unicode et une application ANSI. Il soutient également l’utilisation d’un pilote ANSI avec une application ANSI. Le Driver Manager fournit une cartographie Unicode-à-ANSI limitée pour une application Unicode travaillant avec un pilote ANSI. Cela permet d’accéder aux bases de données Jet 3.5 et de prendre en charge tous les types de fichiers ISAM existants.  
   
- Quand une application ANSI utilise le pilote de base de données du Bureau ODBC 4,0 et accède à Microsoft Access 4,0 ou version ultérieure, le pilote expose le type de données en tant que SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR même si Jet 4,0 prend en charge la version étendue. Les versions antérieures de jet ne prennent pas en charge SQL_WCHAR, SQL_WVARCHAR et SQL_WLONGVARCHAR. Cette restriction s’applique également dans les cas où les anciens formats sont utilisés avec le Moteur de base de données Jet 4,0.  
+ Lorsqu’une application ANSI utilise le pilote de base de données de bureau ODBC 4.0 et accède à Microsoft Access 4.0 ou plus tard, le pilote expose le type de données comme SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR même si Jet 4.0 prend en charge la version large. Les anciennes versions de Jet ne prennent pas en charge SQL_WCHAR, SQL_WVARCHAR et SQL_WLONGVARCHAR. Cette restriction s’applique également dans les cas où les anciens formats sont utilisés avec le moteur de base de données Jet 4.0.  
   
- Pour plus d’informations sur les problèmes Unicode liés à ODBC, consultez [Unicode](../../odbc/reference/develop-app/unicode.md) dans considérations sur la programmation.
+ Pour plus d’informations sur les problèmes d’Unicode avec ODBC, voir [Unicode](../../odbc/reference/develop-app/unicode.md) dans Programming Considerations.

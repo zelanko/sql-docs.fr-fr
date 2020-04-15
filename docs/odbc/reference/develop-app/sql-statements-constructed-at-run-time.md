@@ -1,5 +1,5 @@
 ---
-title: Instructions SQL construites au moment de l’exécution | Microsoft Docs
+title: Déclarations SQL construites à l’heure de course (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 795335be2a2a3aab1be6dac26bf6d213161fe42e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107460"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301970"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Construction d’instructions SQL au moment de l’exécution
-Les applications qui effectuent une analyse ad hoc génèrent généralement des instructions SQL au moment de l’exécution. Par exemple, une feuille de calcul peut permettre à un utilisateur de sélectionner des colonnes à partir desquelles récupérer des données :  
+Les applications qui effectuent une analyse ad hoc construisent généralement des énoncés SQL au moment de l’exécution. Par exemple, une feuille de calcul peut permettre à un utilisateur de sélectionner des colonnes à partir desquelles récupérer des données :  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -68,8 +68,8 @@ int main() {
 }  
 ```  
   
- Une autre classe d’applications qui construit habituellement des instructions SQL au moment de l’exécution sont des environnements de développement d’applications. Toutefois, les instructions qu’elles construisent sont codées en dur dans l’application qu’elles génèrent, où elles peuvent généralement être optimisées et testées.  
+ Une autre catégorie d’applications qui construit généralement des relevés SQL au moment de l’exécution sont les environnements de développement d’applications. Cependant, les déclarations qu’ils construisent sont codées en dur dans l’application qu’ils construisent, où elles peuvent généralement être optimisées et testées.  
   
- Les applications qui construisent des instructions SQL au moment de l’exécution peuvent offrir une flexibilité exceptionnelle à l’utilisateur. Comme vous pouvez le voir dans l’exemple précédent, qui n’a même pas pris en charge ces opérations courantes comme les clauses **Where** , les clauses **order by** ou les jointures, la construction d’instructions SQL au moment de l’exécution est beaucoup plus complexe que les instructions de codage irréversible. En outre, le test de telles applications est problématique, car il peut construire un nombre arbitraire d’instructions SQL.  
+ Les applications qui construisent des relevés SQL à l’heure d’exécution peuvent offrir une flexibilité énorme à l’utilisateur. Comme on peut le voir dans l’exemple précédent, qui n’a même pas soutenu des opérations communes telles que les clauses **WHERE,** **ORDER BY** clauses, ou joint, la construction de déclarations SQL à l’heure d’exécution est beaucoup plus complexe que les déclarations de codage dur. De plus, le test de telles applications est problématique parce qu’elles peuvent construire un nombre arbitraire de relevés SQL.  
   
- L’un des inconvénients potentiels de la construction d’instructions SQL au moment de l’exécution est qu’il faut beaucoup plus de temps pour construire une instruction que d’utiliser une instruction codée en dur. Heureusement, cela est rarement un problème. Ces applications ont tendance à être gourmandes en interface utilisateur, et le temps que l’application consacre à construire des instructions SQL est généralement faible par rapport au temps passé par l’utilisateur à entrer des critères.
+ Un inconvénient potentiel de la construction des déclarations SQL au moment de l’exécution est qu’il faut beaucoup plus de temps pour construire une déclaration que d’utiliser une déclaration codée en dur. Heureusement, c’est rarement une préoccupation. Ces applications ont tendance à être intensives à interface utilisateur, et le temps que passe l’application à la construction des relevés SQL est généralement faible par rapport au temps que l’utilisateur passe à entrer des critères.

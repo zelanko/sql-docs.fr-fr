@@ -1,5 +1,5 @@
 ---
-title: Types de données de fichier texte | Microsoft Docs
+title: Types de données de fichiers texte (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,37 +14,37 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7864dc81eaa3dd37f3d0053b2329c8842e445c8d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939714"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302657"
 ---
 # <a name="text-file-data-types"></a>Types de données des fichiers texte
-Le tableau suivant montre comment les types de données texte sont mappés aux types de données SQL ODBC. Notez que tous les types de données ODBC SQL ne sont pas pris en charge par le pilote texte ODBC.  
+Le tableau suivant montre comment les types de données textuelles sont cartographiés selon les types de données ODBC SQL. Notez que tous les types de données SQL ODBC ne sont pas pris en charge par le pilote de texte ODBC.  
   
-|Type de données text|Type de données ODBC|  
+|Type de données textuelles|Type de données ODBC|  
 |--------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATETIME|SQL_TIMESTAMP|  
 |FLOAT|SQL_DOUBLE|  
 |INTEGER|SQL_INTEGER|  
-|LONGCHAR|SQL_LONGVARCHAR|  
+|LONGCHAR (EN)|SQL_LONGVARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retourne des types de données ODBC. Toutes les conversions de l’annexe D de la *Référence du programmeur ODBC* sont prises en charge pour les types de données SQL répertoriés dans le tableau précédent.  
+>  **SQLGetTypeInfo** renvoie les types de données ODBC. Toutes les conversions à l’Annexe D de la *référence du programmeur ODBC* sont prises en charge pour les types de données SQL énumérés dans le tableau précédent.  
   
- Le tableau suivant présente les limitations relatives aux types de données texte.  
+ Le tableau suivant montre des limites sur les types de données textuelles.  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|CHAR|La création d’une colonne CHAR de zéro ou d’une longueur non spécifiée retourne en fait une colonne 255 bits.<br /><br /> Dans les fichiers délimités, une colonne de type CHAR peut avoir ou non des délimiteurs de guillemet double au début et à la fin ; dans les fichiers de longueur fixe, les guillemets doubles ne sont pas utilisés comme délimiteurs.|  
-|DATETIME|MM-JJ-AA (par exemple, 01-17-92)<br /><br /> MMM-JJ-AA (par exemple, Jan-17-92)<br /><br /> JJ-MMM-AA (par exemple, 17-Jan-92)<br /><br /> AAAA-MM-JJ (par exemple, 1992-01-17)<br /><br /> AAAA-MMM-JJ (par exemple, 1992-Jan-17)<br /><br /> Les séparateurs de date mixte ne sont pas autorisés dans une table.<br /><br /> Le texte ISAM met en forme un champ DATETIME au format États-Unis ou européen, en fonction du paramètre international dans le panneau de configuration Windows.|  
-|FLOAT|La largeur maximale comprend le signe et la virgule décimale. Dans Schema. ini, la largeur est indiquée comme suit :<br /><br /> 14,083 est une largeur de virgule flottante de 6<br /><br /> -14,083 est une largeur à virgule flottante 7<br /><br /> + 14,083 est une largeur à virgule flottante 7<br /><br /> 14083. est une largeur à virgule flottante de 6<br /><br /> ODBC retourne toujours 8 pour les colonnes FLOAT.<br /><br /> Les colonnes FLOAT peuvent également être en notation scientifique, par exemple :<br /><br /> -3.04 e + 2 correspond à la largeur de flotte 8<br /><br /> 25E4 est de type float Width 4<br /><br /> **Remarque** Les notations Decimal et scientifique ne peuvent pas être mélangées dans une colonne.<br /><br /> Les valeurs NULL sont représentées par une chaîne remplie vide dans des fichiers de longueur fixe et sont omises dans les fichiers délimités.<br /><br /> Les données float peuvent être complétées par des espaces à gauche.|  
-|INTEGER|Les valeurs valides pour les colonnes de type entier sont comprises entre 32767 et-32766.<br /><br /> Dans Schema. ini, la largeur est indiquée comme suit :<br /><br /> 14083 est une largeur d’entier de 5<br /><br /> 0 est la largeur entière 1<br /><br /> ODBC retourne toujours 4 pour les colonnes d’entiers.<br /><br /> La largeur maximale comprend un signe. La largeur maximale d’une colonne d’entiers est de 11, bien que la largeur puisse être supérieure en raison des espaces autorisés dans les tables de format fixe.|  
-|LONGCHAR|La limite théorique de la largeur d’une colonne LONGCHAR dans une table de longueur fixe ou délimitée est 65500K. L’ISAM Text est plus susceptible de fournir une prise en charge fiable jusqu’à environ 32 Ko.|  
+|CHAR|La création d’une colonne CHAR de longueur zéro ou non spécifiée renvoie en fait une colonne 255 bits.<br /><br /> Dans les fichiers délimités, une colonne CHAR peut ou non avoir des délimitations de double guillemets au début et à la fin; dans les fichiers à durée fixe, les doubles guillemets ne sont pas utilisés comme délimitants.|  
+|DATETIME|MM-DD-YY (par exemple, 01-17-92)<br /><br /> MMM-DD-YY (par exemple, 17-92 janvier)<br /><br /> DD-MMM-YY (par exemple, 17-Jan-92)<br /><br /> YYYY-MM-DD (par exemple, 1992-01-17)<br /><br /> YYYY-MMM-DD (par exemple, 1992-janvier-17)<br /><br /> Les séparateurs de dates mixtes ne sont pas autorisés à l’intérieur d’une table.<br /><br /> Le text ISAM formate un champ DATETIME aux États-Unis ou en format européen, selon le paramètre international dans le panneau de contrôle Windows.|  
+|FLOAT|La largeur maximale comprend le signe et le point décimal. Dans Schema.ini, la largeur est indiquée comme suit :<br /><br /> 14.083 est FLOAT Width 6<br /><br /> -14.083 est FLOAT Width 7<br /><br /> 14.083 est FLOAT Width 7<br /><br /> 14083. est FLOAT Width 6<br /><br /> ODBC retourne toujours 8 pour les colonnes FLOAT.<br /><br /> Les colonnes FLOAT peuvent également être dans la notation scientifique, par exemple :<br /><br /> -3.04E-2 est Flotteur Largeur 8<br /><br /> 25E4 est Float Width 4<br /><br /> **Note** La notation décimale et scientifique ne peut pas être mélangée dans une colonne.<br /><br /> Les valeurs NULL sont représentées par une chaîne rembourrée vierge dans les fichiers à durée fixe et sont omises dans les fichiers délimités.<br /><br /> Les données de flotteur peuvent être rembourrées avec des blancs de tête.|  
+|INTEGER|Les valeurs valides pour les colonnes INTEGER sont de 32767 à -32766.<br /><br /> Dans Schema.ini, la largeur est indiquée comme suit :<br /><br /> 14083 est INTEGER Width 5<br /><br /> 0 est INTEGER Width 1<br /><br /> ODBC retourne toujours 4 pour les colonnes INTEGER.<br /><br /> La largeur maximale comprend un signe. La largeur maximale d’une colonne INTEGER est de 11, bien que la largeur puisse être plus grande en raison des blancs qui sont autorisés dans les tables à format fixe.|  
+|LONGCHAR (EN)|La limite théorique sur la largeur d’une colonne LONGCHAR dans une table de longueur fixe ou délimitée est de 65500K. Le texte ISAM est plus susceptible de fournir un soutien fiable jusqu’à environ 32K.|  
   
- Vous trouverez plus de restrictions sur les types de données dans limitations des types de [données](../../odbc/microsoft/data-type-limitations.md).
+ Plus de limitations sur les types de données peuvent être trouvées dans [les limites de type de données](../../odbc/microsoft/data-type-limitations.md).

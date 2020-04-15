@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (pilote dBASE) | Microsoft Docs
+title: SQLDriverConnect (pilote dBASE) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 238931112d55214c239dab732f951a197d359615
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39d3d062ef8371ce37f812216cbb642d103eff98
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302920"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (pilote dBASE)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote dBASE. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet fournit dBASE Des informations spécifiques au conducteur. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  **SQLDriverConnect** vous permet de vous connecter à un pilote sans créer de source de données (DSN).  
   
- Les mots clés suivants sont pris en charge dans la chaîne de connexion pour tous les pilotes : **DSN**, **DBQ**et **fil**.  
+ Les mots clés suivants sont pris en charge dans la chaîne de connexion pour tous les pilotes: **DSN**, **DBQ**, et **FIL**.  
   
- Lorsque le pilote Paradox est utilisé, les utilisateurs n’ont pas la possibilité d’ouvrir le même fichier après qu’un utilisateur a ouvert un fichier protégé par mot de passe.  
+ Lorsque le pilote Paradox est utilisé, après l’ouverture d’un fichier protégé par mot de passe par un utilisateur, d’autres utilisateurs ne sont pas autorisés à ouvrir le même fichier.  
   
- Le tableau suivant indique les mots clés minimaux requis pour se connecter à chaque pilote et fournit un exemple de paires mot clé/valeur utilisées avec **SQLDriverConnect**. Pour obtenir la liste complète des valeurs DRIVERID, consultez [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
+ Le tableau suivant affiche les mots clés minimums requis pour se connecter à chaque pilote, et fournit un exemple de mots clés / paires de valeur utilisés avec **SQLDriverConnect**. Pour une liste complète des valeurs DRIVERID, voir [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
   
 > [!NOTE]  
->  Si DBQ ou DefaultDir n’est pas spécifié pour le dBASEdriver, le pilote se connecte au répertoire actif.  
+>  Si DBQ ou DefaultDir n’est pas spécifié pour le dBASEdriver, le conducteur se connectera à l’annuaire actuel.  
   
-|Pilote|Mots clés requis|Exemples|  
+|Pilote|Mots-clés requis|Exemples|  
 |------------|-----------------------|--------------|  
-|dBASE|Pilote, DriverID|Driver = {pilote Microsoft dBASE (*. dbf)}; DBQ = c:\temp ; DriverID = 277|
+|Dbase|Pilote, DriverID|Driver microsoft dBASE Driver (.dbf)MD; DBQ-c: temp; DriverID 277|

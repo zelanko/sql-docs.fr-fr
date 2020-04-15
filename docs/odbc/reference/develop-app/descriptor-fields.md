@@ -1,5 +1,5 @@
 ---
-title: Champs de descripteur | Microsoft Docs
+title: Champs descripteur Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94e70de7d237c2eca9aee81979cb19d5295561b5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305920"
 ---
 # <a name="descriptor-fields"></a>Champs de descripteur
-Les descripteurs contiennent des champs d' *en-tête* et d' *enregistrement* qui décrivent complètement des colonnes ou des paramètres.  
+Les descripteurs contiennent des champs *d’en-tête* et *d’enregistrement* qui décrivent complètement des colonnes ou des paramètres.  
   
- Un descripteur contient une seule copie des champs d’en-tête suivants. La modification d’un champ d’en-tête affecte toutes les colonnes ou tous les paramètres.  
+ Un descripteur contient une seule copie des champs d’en-tête suivants. La modification d’un champ d’en-tête affecte toutes les colonnes ou paramètres.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Les descripteurs contiennent des champs d' *en-tête* et d' *enregistrement* qui
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Un descripteur contient zéro ou plusieurs enregistrements de descripteur. Chaque enregistrement décrit une colonne ou un paramètre, en fonction du type de descripteur. Lorsqu’une nouvelle colonne ou un nouveau paramètre est lié, un nouvel enregistrement est ajouté au descripteur. Lorsqu’une colonne ou un paramètre est indépendant, un enregistrement est supprimé du descripteur. Chaque enregistrement contient une copie unique des champs suivants :  
+ Un descripteur contient zéro ou plus d’enregistrements descripteur. Chaque enregistrement décrit une colonne ou un paramètre, selon le type de descripteur. Lorsqu’une nouvelle colonne ou un nouveau paramètre est lié, un nouvel enregistrement est ajouté au descripteur. Lorsqu’une colonne ou un paramètre n’est pas lié, un enregistrement est supprimé du descripteur. Chaque enregistrement contient une seule copie des champs suivants :  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ Les descripteurs contiennent des champs d' *en-tête* et d' *enregistrement* qui
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- De nombreux attributs d’instruction correspondent au champ d’en-tête d’un descripteur. La définition de ces attributs via un appel à **SQLSetStmtAttr** et la définition du champ d’en-tête du descripteur correspondant en appelant **SQLSetDescField** ont le même effet. Il en va de même pour **SQLGetStmtAttr** et **SQLGetDescField**, qui récupèrent les mêmes informations. L’appel des fonctions d’instruction à la place des fonctions de descripteur présente l’avantage qu’il n’est pas nécessaire de récupérer un handle de descripteur.  
+ De nombreux attributs de déclaration correspondent au champ d’en-tête d’un descripteur. Définir ces attributs par un appel à **SQLSetStmtAttr** et définir le champ d’en-tête descripteur correspondant en appelant **SQLSetDescField** ont le même effet. Il en va de même pour **SQLGetStmtAttr** et **SQLGetDescField**, qui récupèrent tous deux les mêmes informations. Appeler les fonctions de déclaration au lieu des fonctions descripteur a l’avantage qu’une poignée descripteur n’a pas à être récupérée.  
   
- Les champs d’en-tête suivants peuvent être définis en définissant des attributs d’instruction :  
+ Les champs d’en-tête suivants peuvent être définis en définissant les attributs de l’instruction :  
   
 |||  
 |-|-|  
@@ -64,7 +64,7 @@ Les descripteurs contiennent des champs d' *en-tête* et d' *enregistrement* qui
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Nombre d'enregistrements](../../../odbc/reference/develop-app/record-count.md)  
   

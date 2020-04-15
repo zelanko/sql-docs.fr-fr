@@ -1,5 +1,5 @@
 ---
-title: Erreurs ODBC | Microsoft Docs
+title: Erreurs de l’ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors (ODBC desktop database drivers)
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7aa5d75b01fc30783505b2e149f3487b50f75150
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06ef8558ce8e4266cdd77736bdceae210658b14b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298089"
 ---
 # <a name="odbc-errors"></a>Erreurs ODBC
-Lorsqu’une erreur se produit, les pilotes de base de données de bureau Microsoft ODBC retournent le numéro d’erreur natif, le SQLSTATE (un code d’erreur ODBC) et un message d’erreur.  
+Lorsqu’une erreur se produit, les pilotes microsoft ODBC Desktop Database retournent le numéro d’erreur natif, le SQLSTATE (un code d’erreur ODBC) et un message d’erreur.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Erreur native](../../odbc/microsoft/native-error.md)  
   
