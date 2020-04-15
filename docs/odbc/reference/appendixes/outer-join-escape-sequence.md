@@ -1,5 +1,5 @@
 ---
-title: Séquence d’échappement de jointure externe | Microsoft Docs
+title: Séquence d’évasion de jointure extérieure (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303610"
 ---
 # <a name="outer-join-escape-sequence"></a>Séquence d’échappement pour les jointures externes
-ODBC utilise des séquences d’échappement pour les jointures externes. La syntaxe de cette séquence d’échappement est la suivante :  
+ODBC utilise des séquences d’évasion pour les jointures extérieures. La syntaxe de cette séquence d’évasion est la suivante :  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans la notation BNF, la syntaxe est la suivante :  
+ Dans la notation BNF, la syntaxe est la suivante :  
   
- *ODBC-externe-jointure-Escape* :: =  
+ *ODBC-outer-join-escape* ::  
   
- *ODBC-ESC-initiateur* JO *Outer-joindre ODBC-ESC-terminateur*  
+ *ODBC-esc-initiateur* oj *outer-join ODBC-esc-terminator*  
   
- *OUTER-JOIN* :: = *table-Name* [*corrélation-Name*] {Left &#124; Right &#124; complet}  
+ *l’extérieur-join* ::md *nom de table* [ nom de*corrélation*] 'LEFT &#124; RIGHT &#124; FULL'  
   
- JOINTURE externe {*table-Name* [*Correlation-* Name] &#124; *jointure externe*} sur  
+ OUTER JOINMD*nom de table* [ nom de*corrélation*] *&#124;'extérieur-join*- ON  
   
- *recherche*  
+ *recherche-*  
   
- *Etat*  
+ *Condition*  
   
- *Correlation-Name* :: = *nom défini par l’utilisateur*  
+ *nom de corrélation* ::- *nom défini par l’utilisateur*  
   
- *ODBC-Echap-Initiator* :: = {  
+ *ODBC-esc-initiateur* ::  
   
- *ODBC-ESC-terminateur* :: =}  
+ *ODBC-esc-terminator* ::  
   
- Pour déterminer quelles parties de cette instruction sont prises en charge, une application appelle **SQLGetInfo** avec le type d’informations SQL_OJ_CAPABILITIES. Pour les jointures externes, la *condition de recherche* doit contenir uniquement la condition de jointure entre les *noms de table*spécifiés.
+ Pour déterminer quelles parties de cette déclaration sont prises en charge, une application appelle **SQLGetInfo** avec le type d’information SQL_OJ_CAPABILITIES. Pour les jointures extérieures, *l’état de recherche* ne doit contenir que l’état de jointure entre les *noms de table*spécifiés.

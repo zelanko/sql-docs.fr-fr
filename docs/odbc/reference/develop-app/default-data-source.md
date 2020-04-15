@@ -1,5 +1,5 @@
 ---
-title: Source de données par défaut | Microsoft Docs
+title: Source de données par défaut (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 978362b7dfe92d1333f83be684f6326cf25dd69b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076852"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305990"
 ---
 # <a name="default-data-source"></a>Source de données par défaut
-Le pilote peut sélectionner une source de données, appelée source de données par défaut, dans certains cas où l’application n’en spécifie pas explicitement une :  
+Le conducteur peut sélectionner une source de données, appelée source de données par défaut, dans certains cas où l’application ne spécifie pas explicitement :  
   
--   Dans un appel à **SQLConnect** où l’argument *ServerName* est une chaîne de longueur nulle, un pointeur null ou default.  
+-   Dans un appel à **SQLConnect** où l’argument *ServerName* est une chaîne de zéro longueur, un pointeur nul, ou DEFAULT.  
   
--   Dans un appel à **SQLDriverConnect** , où *InConnectionString* spécifie **DSN**= default ou spécifie avec le mot clé **DSN** une source de données qui n’est pas contenue dans les informations système.  
+-   Dans un appel à **SQLDriverConnect** où *InConnectionString* spécifie **DSN**-DEFAULT ou spécifie avec le mot clé **DSN** une source de données qui n’est pas contenue dans les informations du système.  
   
- C’est la façon dont la source de données par défaut est spécifiée par le pilote. Cela peut impliquer une action administrative et peut dépendre de l’utilisateur.
+ Il est défini par le conducteur comment la source de données par défaut est spécifiée. Cela peut impliquer une action administrative et peut dépendre de l’utilisateur.

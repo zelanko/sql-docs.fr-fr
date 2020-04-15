@@ -1,5 +1,5 @@
 ---
-title: Pilotes basés sur des fichiers | Microsoft Docs
+title: Pilotes basés sur les fichiers (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], file-based drivers
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 223bd838754f1d656ac71ae37926389097af3ea1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915382"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306662"
 ---
 # <a name="file-based-drivers"></a>Pilotes basés sur des fichiers
-Les pilotes basés sur des fichiers sont utilisés avec des sources de données telles que dBASE qui ne fournissent pas de moteur de base de données autonome pour le pilote à utiliser. Ces pilotes accèdent directement aux données physiques et doivent implémenter un moteur de base de données pour traiter les instructions SQL. En règle générale, les moteurs de base de données des pilotes basés sur des fichiers implémentent le sous-ensemble de SQL ODBC défini par le niveau de conformité SQL minimal. pour obtenir la liste des instructions SQL dans ce niveau de conformité, consultez l' [annexe C : grammaire SQL](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+Les pilotes basés sur les fichiers sont utilisés avec des sources de données telles que dBASE qui ne fournissent pas un moteur de base de données autonome pour le conducteur à utiliser. Ces conducteurs accèdent directement aux données physiques et doivent mettre en œuvre un moteur de base de données pour traiter les relevés SQL. Comme pratique courante, les moteurs de base de données des pilotes basés sur des fichiers mettent en œuvre le sous-ensemble de SQL ODBC défini par le niveau minimum de conformité SQL; pour une liste des déclarations SQL dans ce niveau de conformité, voir [Annexe C: SQL Grammar](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
- Lors de la comparaison des pilotes basés sur des fichiers et des SGBD, les pilotes basés sur des fichiers sont plus difficiles à écrire en raison du composant moteur de base de données, moins compliqué à configurer, car il n’y a pas d’éléments réseau et moins puissants, car peu de personnes ont le temps d’écrire la base de données moteurs aussi puissants que ceux générés par les sociétés de base de données.  
+ En comparant les pilotes basés sur les fichiers et les pilotes basés sur les fichiers, les pilotes basés sur des fichiers sont plus difficiles à écrire en raison du composant moteur de base de données, moins compliqué à configurer parce qu’il n’y a pas de pièces de réseau, et moins puissant parce que peu de gens ont le temps d’écrire des moteurs de base de données aussi puissants que ceux produits par les sociétés de base de données.  
   
- L’illustration suivante montre deux configurations différentes de pilotes basés sur des fichiers, l’un dans lequel les données résident localement et l’autre dans laquelle elles résident sur un serveur de fichiers réseau.  
+ L’illustration suivante montre deux configurations différentes de pilotes basés sur des fichiers, l’une dans laquelle les données résident localement et l’autre dans laquelle elles se trouvent sur un serveur de fichiers réseau.  
   
- ![Deux configurations de pilotes basés sur des&#45;de fichiers](../../odbc/reference/media/pr06.gif "pr06")
+ ![Deux configurations de fichiers&#45;pilotes basés](../../odbc/reference/media/pr06.gif "pr06")

@@ -1,5 +1,5 @@
 ---
-title: Utiliser des curseurs (ODBC) | Microsoft Docs
+title: Utiliser cursors (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45190660a75fed82f339ec845ee2b40faaf14c02
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294195"
 ---
 # <a name="use-cursors-odbc"></a>Utiliser des curseurs (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,6 +75,6 @@ ms.locfileid: "73781628"
      Vous pouvez contrôler le type de curseur utilisé en définissant SQL_ATTR_CURSOR_TYPE et SQL_ATTR_CONCURRENCY ou en définissant SQL_ATTR_CURSOR_SENSITIVITY et SQL_ATTR_CURSOR_SCROLLABLE. Vous ne devez pas combiner les deux méthodes de spécification de comportement du curseur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives à l’utilisation des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [Utilisation de cursors How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sous-clé ODBC Core | Microsoft Docs
+title: ODBC Core Subkey - France Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - registry entries for components [ODBC], core subkey
 - core subkey [ODBC]
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e6bfcf3c1efa87076e6d3e27a438cde6f794157
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304053"
 ---
 # <a name="odbc-core-subkey"></a>Sous-clé des composants principaux ODBC
-La valeur de la sous-clé ODBC principale indique le nombre d’utilisations des composants principaux (gestionnaire de pilotes, bibliothèque de curseurs, DLL du programme d’installation, etc.). Le format de cette valeur est indiqué dans le tableau suivant.  
+La valeur sous le sous-marin ODBC Core donne le compte d’utilisation pour les composants de base (Driver Manager, cursor library, installateur DLL, et ainsi de suite). Le format de cette valeur est affiché dans le tableau suivant.  
   
-|Name|Type de données|Données|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|UsageCount|REG_DWORD|*saut*|  
+|UtilisationCompte|REG_DWORD|*count*|  
   
- Par exemple, supposons que les composants ODBC Core ont été installés par les programmes d’installation pour trois applications différentes et deux pilotes différents. La valeur sous la sous-clé ODBC Core est la suivante :  
+ Supposons, par exemple, que les composants ODBC Core aient été installés par les programmes d’installation pour trois applications différentes et deux pilotes différents. La valeur en vertu de la sous-clé ODBC Core serait :  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

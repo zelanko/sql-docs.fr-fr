@@ -1,5 +1,5 @@
 ---
-title: Liaison de paramètres ODBC | Microsoft Docs
+title: Paramètres contraignants ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,37 +10,37 @@ ms.topic: conceptual
 helpviewer_keywords:
 - binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306380"
 ---
 # <a name="binding-parameters-odbc"></a>Liaison de paramètres dans ODBC
-Chaque paramètre dans une instruction SQL doit être associé, ou *lié,* à une variable dans l’application avant l’exécution de l’instruction. Lorsque l’application lie une variable à un paramètre, elle décrit cette variable-Address, le type de données C, et ainsi de suite, le pilote. Elle décrit également le paramètre, le type de données SQL, la précision, etc. Le pilote stocke ces informations dans la structure qu’il gère pour cette instruction et utilise ces informations pour récupérer la valeur de la variable lors de l’exécution de l’instruction.  
+Chaque paramètre dans une déclaration SQL doit être associé, ou *lié,* à une variable dans la demande avant l’exécution de la déclaration. Lorsque l’application lie une variable à un paramètre, elle décrit cette variable - adresse, type de données C, etc. - au conducteur. Il décrit également le paramètre lui-même - type de données SQL, précision, et ainsi de suite. Le conducteur stocke ces informations dans la structure qu’il conserve pour cette déclaration et utilise les informations pour récupérer la valeur de la variable lorsque l’instruction est exécutée.  
   
- Les paramètres peuvent être liés ou reliés à tout moment avant l’exécution d’une instruction. Si un paramètre est relié après l’exécution d’une instruction, la liaison ne s’applique pas tant que l’instruction n’est pas exécutée de nouveau. Pour lier un paramètre à une variable différente, une application relie simplement le paramètre à la nouvelle variable ; la liaison précédente est automatiquement libérée.  
+ Les paramètres peuvent être liés ou rebondir à tout moment avant qu’une déclaration ne soit exécutée. Si un paramètre est rebondi après l’exécution d’une déclaration, la liaison ne s’applique pas tant que la déclaration n’est pas exécutée à nouveau. Pour lier un paramètre à une variable différente, une application rébinde simplement le paramètre avec la nouvelle variable; la liaison précédente est automatiquement libérée.  
   
- Une variable reste liée à un paramètre jusqu’à ce qu’une variable différente soit liée au paramètre, jusqu’à ce que tous les paramètres soient indépendants en appelant **SQLFreeStmt** avec l’option SQL_RESET_PARAMS ou jusqu’à ce que l’instruction soit libérée. Pour cette raison, l’application doit s’assurer que les variables ne sont pas libérées tant qu’elles ne sont pas détachées. Pour plus d’informations, consultez [allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Une variable reste liée à un paramètre jusqu’à ce qu’une variable différente soit liée au paramètre, jusqu’à ce que tous les paramètres ne soient pas liés en appelant **SQLFreeStmt** avec l’option SQL_RESET_PARAMS, ou jusqu’à ce que la déclaration soit publiée. Pour cette raison, l’application doit être sûre que les variables ne sont pas libérées avant qu’elles ne soient non liées. Pour plus d’informations, voir [Allocating and Freeing Buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Étant donné que les liaisons de paramètres sont simplement des informations stockées dans la structure gérée par le pilote de l’instruction, elles peuvent être définies dans n’importe quel ordre. Elles sont également indépendantes de l’instruction SQL exécutée. Par exemple, supposons qu’une application lie trois paramètres, puis exécute l’instruction SQL suivante :  
+ Étant donné que les fixations de paramètres ne sont que des informations stockées dans la structure entretenue par le conducteur pour l’instruction, elles peuvent être définies dans n’importe quel ordre. Ils sont également indépendants de la déclaration SQL qui est exécutée. Supposons, par exemple, qu’une application lie trois paramètres et exécute ensuite la déclaration SQL suivante :  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Si l’application exécute ensuite immédiatement l’instruction SQL  
+ Si l’application exécute immédiatement la déclaration SQL  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- sur le même descripteur d’instruction, les liaisons de paramètre pour l’instruction **Insert** sont utilisées, car il s’agit des liaisons stockées dans la structure de l’instruction. Dans la plupart des cas, il s’agit d’une pratique de programmation médiocre qui devrait être évitée. Au lieu de cela, l’application doit appeler **SQLFreeStmt** avec l’option SQL_RESET_PARAMS pour dissocier tous les anciens paramètres, puis en lier de nouveaux.  
+ sur la même poignée de relevé, les fixations de paramètres pour l’instruction **INSERT** sont utilisées parce que ce sont les liaisons stockées dans la structure de l’instruction. Dans la plupart des cas, il s’agit d’une mauvaise pratique de programmation et doit être évitée. Au lieu de cela, l’application devrait appeler **SQLFreeStmt** avec la SQL_RESET_PARAMS option de délier tous les anciens paramètres, puis lier de nouveaux.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Liaison de marqueurs de paramètre](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   

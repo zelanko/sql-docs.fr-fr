@@ -1,5 +1,5 @@
 ---
-title: Prise en charge du type, date et heure ODBC
+title: Support type, Date et heure ODBC
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d2e4c8c8a664f7c8b4816cdb7c3eb8940d1573f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b34d6864bf6b6c36404770f0ab795634dd746dc8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76910032"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301754"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations date/heure (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "76910032"
   
  Le tableau ci-dessous correspond au mappage complet de type serveur. Remarquez que certaines cellules contiennent deux entrées ; dans ces cas, la première est la valeur ODBC 3.0 et la seconde la valeur ODBC 2.0.  
   
-|Type de données SQL Server|Type de données SQL|Valeur|  
+|Type de données SQL Server|Type de données SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (Sqlext. h)|  
-|Temps|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
+|Temps|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 ||||
@@ -62,12 +62,11 @@ ms.locfileid: "76910032"
   
 |Type de données SQL Server|Type de données ODBC|Format de chaîne pour les conversions clientes|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:hh:ss'<br /><br /> Ce type de données possède une précision d'une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-jj'|  
 |Temps|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh : mm : SS [. 9999999] '<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.99999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'aaaa-mm-jj hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 ||||
 
@@ -140,7 +139,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Si le **timezone_hour** est négatif, le **timezone_minute** doit être négatif ou égal à zéro. Si le **timezone_hour** est positif, le **timezone_minute** doit être positif ou zéro. Si la **timezone_hour** est égale à zéro, la **timezone_minute** peut avoir n’importe quelle valeur comprise dans la plage comprise entre-59 et + 59.  
+ Si le **timezone_hour** est négatif, le **timezone_minute** doit être négatif ou nul. Si le **timezone_hour** est positif, le **timezone_minute** doit être positif ou nul. Si le **timezone_hour** est nul, le **timezone_minute** peut avoir une valeur dans la gamme -59 à 59.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Améliorations de la date et de l’heure &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (pilote Excel) | Microsoft Docs
+title: SQLGetInfo (Excel Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298579"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (pilote Excel)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote Excel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet fournit des informations spécifiques à Excel Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** prend en charge le type d’informations SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
+ **SQLGetInfo** prend en charge le type d’information SQL_FILE_USAGE. La valeur retournée est un intégré 16 bits qui indique comment le conducteur traite directement les fichiers dans une source de données :  
   
--   SQL_FILE_NOT_SUPPORTED-le pilote n’est pas un pilote à un seul niveau.  
+-   SQL_FILE_NOT_SUPPORTED - Le conducteur n’est pas un pilote à un seul niveau.  
   
--   SQL_FILE_TABLE : un pilote à niveau unique traite les fichiers d’une source de données en tant que tables.  
+-   SQL_FILE_TABLE - Un pilote à un seul niveau traite les fichiers dans une source de données comme des tableaux.  
   
--   SQL_FILE_QUALIFIER : un pilote à niveau unique traite les fichiers d’une source de données en tant que qualificateur.  
+-   SQL_FILE_QUALIFIER - Un pilote à un seul niveau traite les fichiers d’une source de données comme un qualificatif.  
   
- Le pilote ODBC retourne SQL_FILE_TABLE pour le Exceldriver de la table, car chaque fichier est une table.  
+ Le pilote ODBC retourne SQL_FILE_TABLE pour leMicrosoft Exceldriver car chaque fichier est une table.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|SÉQUENTIEL|Version|Format des numéros de version|  
+|Isam|Version|Format des numéros de version|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
@@ -64,14 +64,14 @@ ms.locfileid: "68003279"
  31 (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_name_separator"></a>SQL_CATALOG_NAME_SEPARATOR  
- "\\" (Excel 3.0/4.0)  
+ "\\(Excel 3.0/4.0)  
   
  "." (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_term"></a>SQL_CATALOG_TERM  
- « Répertoire » (Excel 3.0/4.0)  
+ "Directory" (Excel 3.0/4.0)  
   
- « Classeur » (Excel 5.0/7.0/97)  
+ "Workbook" (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_usage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  

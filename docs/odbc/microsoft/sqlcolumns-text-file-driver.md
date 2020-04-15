@@ -1,5 +1,5 @@
 ---
-title: SQLColumns (pilote de fichier texte) | Microsoft Docs
+title: SQLColumns (Text File Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLColumns
 - SQLColumns function [ODBC], Text File Driver
 ms.assetid: c99e5f8d-4e43-48f8-9e0e-086707b411f5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 893ffa40f346a878b4cdde87a9a0a55fbb9e1c7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 78c2e20f12dedf399ab36dd908f83aa93bebffc4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132523"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307864"
 ---
 # <a name="sqlcolumns-text-file-driver"></a>SQLColumns (pilote de fichier texte)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote de fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet fournit des informations spécifiques au fichier texte. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Colonne|Commentaires|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Le chemin d’accès à un répertoire est retourné.|  
-|TABLE_OWNER|La valeur NULL est retournée dans cette colonne, car le nom du propriétaire n’est pas pris en charge.|  
+|TABLE_QUALIFIER|Le chemin vers un répertoire est retourné.|  
+|TABLE_OWNER|NULL est retourné dans cette colonne parce que le nom du propriétaire n’est pas pris en charge.|  
 |NULLABLE|SQL_NO_NULLS est retourné pour les colonnes qui participent à une clé primaire ou un index unique.|

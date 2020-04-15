@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a123717631084a61a33bbd8b106f95a51a831b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763024"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306709"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,9 +67,9 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_POPULATION : l'objet est dans une phase de remplissage. Bien que l'ensemble de lignes soit entièrement initialisé et que la plage complète d'interfaces soit disponible sur l'objet, d'autres lignes peuvent ne pas être encore remplies dans l'ensemble de lignes. Même si *pulProgress* et *pulProgressMax* peuvent être basés sur le nombre de lignes remplies, ils sont en général basés sur la durée ou l'effort requis pour remplir l'ensemble de lignes. Un appelant doit par conséquent utiliser ces informations comme une estimation approximative de la durée du processus, et non comme le nombre de lignes éventuel. Cette phase est uniquement retournée lors du remplissage d'un ensemble de lignes ; elle n'est jamais retournée lors de l'initialisation d'un objet source de données ou par l'exécution d'une commande qui met à jour, supprime ou insère des lignes.  
   
- DBASYNCHPHASE_COMPLETE : l'ensemble du traitement asynchrone ayant été réalisé par l'objet. **ISSAsynchStatus :: GetStatus** retourne un HRESULT qui indique le résultat de l’opération. En général, il s'agit du HRESULT qui aurait été retourné si l'opération avait été appelée de manière synchrone. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* sont égaux au nombre total de lignes affectées par la commande. Si *cParamSets* est supérieur à 1, il s'agit du nombre total de lignes affectées par tous les jeux de paramètres spécifiés dans l'exécution. Si *peAsynchPhase* est un pointeur null, aucun code d'état n'est retourné.  
+ DBASYNCHPHASE_COMPLETE : l'ensemble du traitement asynchrone ayant été réalisé par l'objet. **ISSAsynchStatus::GetStatus** retourne un HRESULT qui indique le résultat de l'opération. En général, il s'agit du HRESULT qui aurait été retourné si l'opération avait été appelée de manière synchrone. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* sont égaux au nombre total de lignes affectées par la commande. Si *cParamSets* est supérieur à 1, il s'agit du nombre total de lignes affectées par tous les jeux de paramètres spécifiés dans l'exécution. Si *peAsynchPhase* est un pointeur null, aucun code d'état n'est retourné.  
   
- DBASYNCHPHASE_CANCELED : le traitement asynchrone de l'objet a été abandonné. **ISSAsynchStatus :: GetStatus** retourne DB_E_CANCELED. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* est égal au nombre total de lignes, pour tous les paramètres définis, affectées par la commande avant l'annulation.  
+ DBASYNCHPHASE_CANCELED : le traitement asynchrone de l'objet a été abandonné. **ISSAsynchStatus::GetStatus** retourne DB_E_CANCELED. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* est égal au nombre total de lignes, pour tous les paramètres définis, affectées par la commande avant l'annulation.  
   
  *ppwszStatusText*[in/out]  
  Pointeur vers la mémoire contenant des informations supplémentaires sur l'opération. Un fournisseur peut utiliser cette valeur pour faire la différence entre des éléments d'une opération, par exemple les différentes ressources en cours d'accès. Cette chaîne est localisée selon la propriété DBPROP_INIT_LCID sur l'objet source de données.  
@@ -99,11 +99,11 @@ HRESULT GetStatus(
  Le paramètre *hChapter* est incorrect.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus :: GetStatus** a été appelé sur un objet source de données, et **IDBInitialize :: Initialize** n’a pas été appelé sur l’objet source de données.  
+ **ISSAsynchStatus::GetStatus** a été appelé sur un objet source de données, et **IDBInitialize::Initialize** n'a pas été appelé sur l'objet source de données.  
   
- **ISSAsynchStatus :: GetStatus** a été appelé sur un ensemble de lignes, **ITransaction :: Commit** ou **ITransaction :: Abort** a été appelé, et l’objet est à l’État Zombie.  
+ **ISSAsynchStatus::GetStatus** a été appelé sur un ensemble de lignes, **ITransaction::Commit** ou **ITransaction::Abort** a été appelé, et l'objet se trouve dans un état zombie.  
   
- **ISSAsynchStatus :: GetStatus** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d’initialisation. L'ensemble de lignes se trouve dans un état zombie.  
+ **ISSAsynchStatus::GetStatus** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
  E_FAIL  
  Une erreur spécifique au fournisseur s'est produite.  
@@ -124,7 +124,7 @@ HRESULT GetStatus(
  Le fait d'appeler **ISSAsynchStatus::GetStatus** sur un objet source de données initialisé ou un ensemble de lignes rempli, ou de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN, retourne S_OK avec la même valeur attribuée à *pulProgress* et à *pulProgressMax* . Si **ISSAsynchStatus::GetStatus** est appelé sur un objet créé à partir de l'exécution d'une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* indiquent le nombre total de lignes affectées par la commande.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution d’opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [Exécution des opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

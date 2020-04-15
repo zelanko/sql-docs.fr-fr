@@ -1,5 +1,5 @@
 ---
-title: Types de données de paramètre | Microsoft Docs
+title: Types de données paramètres (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: 5140c69184332b1760859421b7e802a5163a0f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f29bb70937df32e03480c13c7ef739eb273f15eb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303580"
 ---
 # <a name="parameter-data-types"></a>Types de données de paramètre
-Même si chaque paramètre spécifié avec **SQLBindParameter** est défini à l’aide d’un type de données SQL, les paramètres d’une instruction SQL n’ont pas de type de données intrinsèque. Par conséquent, les marqueurs de paramètres peuvent être inclus dans une instruction SQL uniquement si leurs types de données peuvent être déduits à partir d’un autre opérande dans l’instruction. Par exemple, dans une expression arithmétique telle que ? + COLONNE1, le type de données du paramètre peut être déduit à partir du type de données de la colonne nommée représentée par COLONNE1. Une application ne peut pas utiliser un marqueur de paramètre si le type de données ne peut pas être déterminé.  
+Même si chaque paramètre spécifié avec **SQLBindParameter** est défini à l’aide d’un type de données SQL, les paramètres d’une déclaration SQL n’ont pas de type de données intrinsèque. Par conséquent, les marqueurs de paramètres ne peuvent être inclus dans une déclaration SQL que si leurs types de données peuvent être déduits d’un autre opérande dans la déclaration. Par exemple, dans une expression arithmétique comme ? COLUMN1, le type de données du paramètre peut être déduit du type de données de la colonne nommée représentée par COLUMN1. Une application ne peut pas utiliser un marqueur de paramètres si le type de données ne peut pas être déterminé.  
   
- Le tableau suivant décrit la façon dont un type de données est déterminé pour plusieurs types de paramètres, conformément à SQL-92. Pour obtenir une spécification plus complète sur la déduction du type de paramètre lorsque d’autres clauses SQL sont utilisées, consultez la spécification SQL-92.  
+ Le tableau suivant décrit comment un type de données est déterminé pour plusieurs types de paramètres, conformément à SQL-92. Pour obtenir des spécifications plus complètes sur l’infération du type de paramètre lors de l’utilisation d’autres clauses SQL, consultez les spécifications SQL-92.  
   
-|Emplacement du paramètre|Type de données supposé|  
+|Emplacement du paramètre|Type de données supposés|  
 |---------------------------|-----------------------|  
-|Un opérande d’un opérateur binaire arithmétique ou de comparaison|Identique à l’autre opérande|  
-|Premier opérande dans une clause **between**|Identique au second opérande|  
-|Deuxième ou troisième opérande dans une clause **between**|Identique au premier opérande|  
-|Expression utilisée avec **dans**|Identique à la première valeur ou à la colonne de résultat de la sous-requête|  
-|Valeur utilisée avec **dans**|Identique à l’expression ou à la première valeur s’il existe un marqueur de paramètre dans l’expression|  
-|Valeur de modèle utilisée avec **Like**|VARCHAR|  
-|Une valeur de mise à jour utilisée avec **Update**|Identique à la colonne mettre à jour|
+|Un opéra d’un opérateur binaire d’arithmétique ou de comparaison|Comme l’autre opérande|  
+|Le premier opéra dans une clause **BETWEEN**|Comme le deuxième opéra|  
+|Le deuxième ou troisième opérande d’une clause **BETWEEN**|Comme le premier opéra|  
+|Une expression utilisée avec **IN**|Tout comme la première valeur ou la colonne de résultat de la sous-pays|  
+|Une valeur utilisée avec **IN**|Tout comme l’expression ou la première valeur s’il y a un marqueur de paramètre dans l’expression|  
+|Une valeur de modèle utilisée avec **LIKE**|VARCHAR|  
+|Une valeur de mise à jour utilisée avec **UPDATE**|Idem pour la colonne de mise à jour|

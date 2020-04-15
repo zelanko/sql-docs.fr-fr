@@ -1,5 +1,5 @@
 ---
-title: Connexion avec SQLConnect | Microsoft Docs
+title: Connexion avec SQLConnect ( Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294649"
 ---
 # <a name="connecting-with-sqlconnect"></a>Connexion avec SQLConnect
-**SQLConnect** est la fonction de connexion la plus simple. Il requiert un nom de source de données et accepte un ID d’utilisateur et un mot de passe facultatifs. Elle fonctionne bien pour les applications qui codent en dur un nom de source de données et ne nécessitent pas d’ID utilisateur ou de mot de passe. Il fonctionne également bien pour les applications qui souhaitent contrôler leur propre « apparence » ou qui n’ont pas d’interface utilisateur. De telles applications peuvent créer une liste de sources de données à l’aide de **SQLDataSources**, demander à l’utilisateur la source de données, l’ID d’utilisateur et le mot de passe, puis appeler **SQLConnect**.  
+**SQLConnect** est la fonction de connexion la plus simple. Il nécessite un nom de source de données et accepte un identifiant d’utilisateur et un mot de passe optionnels. Il fonctionne bien pour les applications qui codent dur un nom de source de données et ne nécessitent pas un identifiant utilisateur ou mot de passe. Il fonctionne également bien pour les applications qui veulent contrôler leur propre "look and feel" ou qui n’ont pas d’interface utilisateur. Ces applications peuvent constituer une liste de sources de données à l’aide de **SQLDataSources,** inciter l’utilisateur à trouver la source de données, l’identifiant d’utilisateur et le mot de passe, puis appeler **SQLConnect**.  
   
- L’exemple suivant se connecte à la base de données Northwind, à l’aide d’un nom de source de données appelé Northwind, et récupère tous les champs nom et prénom de tous les enregistrements de la table Employees.  
+ L’exemple suivant se connecte à la base de données Northwind, à l’aide d’un DSN appelé Northwind, et récupère tous les champs de prénom et de nom de famille de tous les enregistrements de la table des employés.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

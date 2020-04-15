@@ -1,5 +1,5 @@
 ---
-title: Conformité de l’interface de niveau 2 | Microsoft Docs
+title: Conformité à l’interface de niveau 2 (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50e74eaed2d651158834a241563d10b3b2e90d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306161"
 ---
 # <a name="level-2-interface-conformance"></a>Conformité de l’interface - niveau 2
-Le niveau de conformité de l’interface de niveau 2 comprend la fonctionnalité de niveau de conformité de l’interface de niveau 1, ainsi que les fonctionnalités suivantes :  
+Le niveau de conformité à l’interface de niveau 2 comprend la fonctionnalité de niveau 1 de niveau conforme au niveau de la conformité ainsi que les fonctionnalités suivantes :  
   
 |||  
 |-|-|  
-|201|Utilisez des noms en trois parties pour les vues et les tables de base de données. (Pour plus d’informations, consultez la fonctionnalité de prise en charge des noms en deux parties 101 dans conformité de l' [interface de niveau 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
-|202|Décrivez les paramètres dynamiques en appelant **SQLDescribeParam**.|  
-|203|Utilisez non seulement des paramètres d’entrée, mais également des paramètres de sortie et d’entrée/sortie, ainsi que des valeurs de résultat de procédures stockées.|  
-|204|Utilisez des signets, y compris la récupération de signets, en appelant **SQLDescribeCol** et **SQLColAttribute** sur la colonne numéro 0 ; récupération basée sur un signet, en appelant **SQLFetchScroll** avec l’argument *FetchOrientation* défini sur SQL_FETCH_BOOKMARK ; les opérations de mise à jour, de suppression et d’extraction par signet, en appelant **SQLBulkOperations** avec l’argument *operation* défini sur SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK ou SQL_FETCH_BY_BOOKMARK.|  
-|205|Récupérez des informations avancées sur le dictionnaire de données en appelant **SQLColumnPrivileges**, **SQLForeignKeys**et **SQLTablePrivileges**.|  
-|206|Utilisez les fonctions ODBC à la place des instructions SQL pour effectuer des opérations de base de données supplémentaires, en appelant **SQLBulkOperations** avec SQL_ADD ou **SQLSetPos** avec SQL_DELETE ou SQL_UPDATE. (La prise en charge des appels à **SQLSetPos** avec l’argument *LockType* défini sur SQL_LOCK_EXCLUSIVE ou SQL_LOCK_UNLOCK ne fait pas partie des niveaux de conformité, mais est une fonctionnalité facultative.)|  
-|207|Active l’exécution asynchrone des fonctions ODBC pour les instructions individuelles spécifiées.|  
-|208|Obtenez le SQL_ROWVER colonne d’identification de lignes des tables en appelant **SQLSpecialColumns**. (Pour plus d’informations, consultez la prise en charge de **SQLSpecialColumns** avec l’argument *IdentifierType* défini sur SQL_BEST_ROWID comme Feature 20 dans conformité de l' [interface principale](../../../odbc/reference/develop-app/core-interface-conformance.md).)|  
-|209|Définissez l’attribut d’instruction SQL_ATTR_CONCURRENCY sur au moins une valeur autre que SQL_CONCUR_READ_ONLY.|  
-|210|La possibilité de délai d’expiration de la demande de connexion et des requêtes SQL (SQL_ATTR_LOGIN_TIMEOUT et SQL_ATTR_QUERY_TIMEOUT).|  
-|211|La possibilité de modifier le niveau d’isolation par défaut ; possibilité d’exécuter des transactions avec le niveau d’isolation « Serializable ».|
+|201|Utilisez des noms en trois parties de tables et de vues de base de données. (Pour plus d’informations, voir la fonction de support de nommage en deux parties 101 dans [le niveau 1 Interface Conformance](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
+|202|Décrivez les paramètres dynamiques, en appelant **SQLDescribeParam**.|  
+|203|Utilisez non seulement les paramètres d’entrée, mais aussi les paramètres de sortie et d’entrée/sortie, et les valeurs de résultat des procédures stockées.|  
+|204|Utilisez des signets, y compris la récupération de signets, en appelant **SQLDescribeCol** et **SQLColAttribute** sur la colonne numéro 0; aller chercher sur la base d’un signet, en appelant **SQLFetchScroll** avec *l’argument FetchOrientation* mis à SQL_FETCH_BOOKMARK; et mettre à jour, supprimer et aller chercher par des opérations de signets, en appelant **SQLBulkOperations** avec *l’argument de l’opération* réglé pour SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK ou SQL_FETCH_BY_BOOKMARK.|  
+|205|Récupérez des informations avancées sur le dictionnaire de données, en appelant **SQLColumnPrivileges**, **SQLForeignKeys**, et **SQLTablePrivileges**.|  
+|206|Utilisez les fonctions ODBC au lieu des relevés SQL pour effectuer d’autres opérations de base de données, en appelant **SQLBulkOperations** avec SQL_ADD, ou **SQLSetPos** avec SQL_DELETE ou SQL_UPDATE. (Le soutien aux appels à **SQLSetPos** avec l’argument *LockType* réglé pour SQL_LOCK_EXCLUSIVE ou SQL_LOCK_UNLOCK ne fait pas partie des niveaux de conformité, mais est une caractéristique facultative.)|  
+|207|Activez l’exécution asynchrone des fonctions d’ODBC pour des déclarations individuelles spécifiées.|  
+|208|Obtenez la colonne SQL_ROWVER d’identification des rangées de tables, en appelant **SQLSpecialColumns**. (Pour plus d’informations, voir le soutien de **SQLSpecialColumns** avec *l’argument IdentifierType* mis à SQL_BEST_ROWID comme fonctionnalité 20 dans [Core Interface Conformance](../../../odbc/reference/develop-app/core-interface-conformance.md).)|  
+|209|Définissez l’attribut SQL_ATTR_CONCURRENCY d’énoncé à au moins une valeur autre que SQL_CONCUR_READ_ONLY.|  
+|210|La possibilité de temps libre demande de connexion et les requêtes SQL (SQL_ATTR_LOGIN_TIMEOUT et SQL_ATTR_QUERY_TIMEOUT).|  
+|211|La capacité de modifier le niveau d’isolement par défaut; la capacité d’exécuter des transactions avec le niveau d’isolement « sérialisable ».|

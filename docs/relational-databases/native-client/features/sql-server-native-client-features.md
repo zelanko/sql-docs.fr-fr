@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités de SQL Server Native Client | Microsoft Docs
+title: Caractéristiques des clients autochtones de SQL Server (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8821a8c0c0ef095d46682e0e1ad07e1cd74be16b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 592039c8001befac1bea31cd652e582fd102566f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761325"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303780"
 ---
 # <a name="sql-server-native-client-features"></a>Fonctionnalités de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73761325"
  Décrit un changement de comportement à compter de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Utilisation de la mise en miroir de bases de données](../../../relational-databases/native-client/features/using-database-mirroring.md)  
- Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l’utilisation de bases de données mises en miroir, qui est la possibilité de conserver une copie, ou miroir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , d’une base de données sur un serveur de secours.  
+ Discute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la façon dont Native Client prend en charge l’utilisation de bases [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de données en miroir, qui est la possibilité de conserver une copie, ou un miroir, d’une base de données sur un serveur de veille.  
   
  [Exécution d'opérations asynchrones](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations asynchrones, à savoir la capacité d'un retour immédiat sans blocage sur le thread appelant.  
@@ -44,7 +44,7 @@ ms.locfileid: "73761325"
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge le type de données XML, qui peut être utilisé comme type de colonne, type de variable, type de paramètre ou type de retour de fonction.  
   
  [Utilisation des types définis par l'utilisateur](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les types définis par l’utilisateur (UDT), qui étendent le système de type SQL en vous permettant de stocker des objets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des structures de données personnalisées dans une base de données.  
+ Discute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la façon dont Native Client prend en charge les types définis par les utilisateurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (UDT), qui étend le système de type SQL en vous permettant de stocker des objets et des structures de données personnalisées dans une base de données.  
   
  [Utilisation de types de valeur élevée](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les types de données de valeur élevée, à savoir les types de données LOB.  
@@ -59,19 +59,19 @@ ms.locfileid: "73761325"
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la notification des consommateurs en cas de modification de l'ensemble de lignes.  
   
  [Exécution d'opérations de copie en bloc](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
- Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations de copie en bloc qui permettent le transfert de grandes quantités de données vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir d’une table ou d’une vue.  
+ Discute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la façon dont Native Client prend en charge les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opérations de copie en vrac qui permettent le transfert de grandes quantités de données dans ou hors d’une table ou d’une vue.  
   
  [Utilisation du chiffrement sans validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  Explique comment utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour chiffrer les données envoyées au serveur sans validation du certificat.  
   
- [Paramètres table &#40;SQL Server Native Client&#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Paramètres de valeur de table &#40;SQL Server Native Client&#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les paramètres table.  
   
  [Types CLR volumineux définis par l'utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
  Explique la prise en charge des types UDT volumineux du CLR.  
   
  [Prise en charge de FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
- Décrit la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prise en charge native client pour la fonctionnalité FileStream améliorée.  
+ Discute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du soutien des clients autochtones à la fonction FILESTREAM améliorée.  
   
  [Prise en charge des noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Explique comment la prise en charge des noms de principaux du service a été étendue pour permettre l'authentification mutuelle à travers l'ensemble des protocoles.  
@@ -86,10 +86,10 @@ ms.locfileid: "73761325"
  Décrit les améliorations apportées à la découverte des métadonnées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Prise en charge de UTF-16 dans SQL Server Native Client 11.0](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d’un paramètre de sortie ou de résultat de colonne, et si le caractère **WCHAR** écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitution étendu d’une paire de substitution, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si le caractère **WCHAR** suivant est un point de code de substitution faible, Native Client n’ajoute pas le point de code de substitution  
+ Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez un tampon de longueur fixe lors de la liaison d’un résultat de colonne ou paramètre de sortie et si le caractère **wchar** écrit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le tampon avant le caractère de terminatation est un point de code de substitution élevé d’une paire de substitution, et si le prochain caractère **wchar** est un point de code de substitution faible, Native Client n’ajoutera pas le point de code de substitution élevé à la mémoire tampon.  
   
  [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de reprise d’activité haute disponibilité ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Accès aux informations de diagnostic dans le journal des événements étendus](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Présente les améliorations apportées à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et au suivi de données qui vous donne accès aux informations de diagnostic dans la mémoire tampon en anneau et le journal XEvents.  
@@ -98,9 +98,9 @@ ms.locfileid: "73761325"
  Décrit la prise en charge de la fonctionnalité LocalDB par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Rubriques de procédures relatives à ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Rubriques "Comment" relatives aux OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [Programme des clients autochtones DE SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [ODBC Comment faire sur les sujets](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [OLE DB Thèmes de la recherche](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
  [Installation de SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

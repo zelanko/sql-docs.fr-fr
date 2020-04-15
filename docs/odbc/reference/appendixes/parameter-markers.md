@@ -1,5 +1,5 @@
 ---
-title: Marqueurs de paramètres | Microsoft Docs
+title: Marqueurs de paramètres Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], minimum SQL syntax supported
 - parameter markers [ODBC]
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100580"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303570"
 ---
 # <a name="parameter-markers"></a>Marqueurs de paramètres
-Conformément à la spécification SQL-92, une application ne peut pas placer de marqueurs de paramètres aux emplacements suivants. Pour obtenir une liste plus complète, consultez la spécification SQL-92.  
+Conformément aux spécifications SQL-92, une application ne peut pas placer de marqueurs de paramètres aux endroits suivants. Pour une liste plus complète, consultez les spécifications SQL-92.  
   
--   Dans une liste de **sélection**  
+-   Dans une liste **SELECT**  
   
--   À la fois en tant qu' *expressions* dans un *prédicat de comparaison*  
+-   Comme les deux *expressions* dans une *comparaison-prédicate*  
   
--   Comme opérandes d’un opérateur binaire  
+-   En tant qu’opérands d’un opérateur binaire  
   
--   En tant que premier et deuxième opérandes d’une opération **between**  
+-   En tant que premier et deuxième opérands d’une opération **BETWEEN**  
   
--   Comme les premier et troisième opérandes d’une opération **between**  
+-   En tant que premier et troisième opérands d’une opération **BETWEEN**  
   
--   À la fois l’expression et la première valeur d’une opération **in**  
+-   Comme l’expression et la première valeur d’une opération **IN**  
   
--   Comme opérande d’une opération + or unaire  
+-   En tant qu’opéra d’une opération non ordonnée ou  
   
--   En tant qu’argument d’une *fonction Set-Function-Reference*  
+-   Comme argument d’un *set-fonction-référence*  
   
- Pour plus d’informations sur les marqueurs de paramètres, consultez la spécification SQL-92. Pour plus d’informations sur les paramètres, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md).
+ Pour de plus amples renseignements sur les marqueurs de paramètres, consultez les spécifications SQL-92. Pour plus d’informations sur les paramètres, voir [Paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md).

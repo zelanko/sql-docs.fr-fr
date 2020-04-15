@@ -1,5 +1,5 @@
 ---
-title: Appel de SQLGetDiagField | Microsoft Docs
+title: Appel à SQLGetDiagField (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQLGetDiagField function [ODBC], calling
 - compatibility [ODBC], SQLGetDiagField
 ms.assetid: 3c4fb606-b81c-4f11-9820-f0a54e3bc401
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ef69704ae6984f41080aea009f17ac09bafefd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a097cbdd74cfcd76d2b102bb71dfccb974906709
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68134976"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306260"
 ---
 # <a name="calling-sqlgetdiagfield"></a>Appel de SQLGetDiagField
-Quand une application ODBC *3. x* appelle **SQLGetDiagField** dans un pilote ODBC *2. x* , le pilote retourne SQL_SUCCESS et les informations appropriées dans * \*DiagInfoPtr* si l’argument *DiagIdentifier* est SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retournent SQL_ERROR.
+Lorsqu’une application ODBC *3.x* appelle **SQLGetDiagField** dans un conducteur ODBC *2.x,* le conducteur retournera SQL_SUCCESS et les informations appropriées dans * \*DiagInfoPtr* si l’argument *diagIdentificateur* est SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME, ou SQL_DIAG_SQLSTATE. Tous les autres domaines diagnostiques seront de retour SQL_ERROR.

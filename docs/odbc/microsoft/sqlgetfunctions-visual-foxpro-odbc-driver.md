@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: SQLGetFunctions (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003334"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298609"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Soutien: Complet  
   
- Conformité de l’API ODBC : niveau 1  
+ Conformité API ODBC: Niveau 1  
   
- Retourne la valeur TRUE pour toutes les fonctions prises en charge.  
+ Retourne TRUE pour toutes les fonctions prises en charge.  
   
- Le pilote ODBC Visual FoxPro prend en charge toutes les fonctions de base de l’API ODBC et de niveau 1. Le tableau suivant indique si le pilote prend en charge une fonction spécifique de niveau 2.  
+ Le Visual FoxPro ODBC Driver prend en charge toutes les fonctions ODBC API Core et Level 1. Le tableau suivant indique si le conducteur prend en charge une fonction spécifique de niveau 2.  
   
-|*Fonctionnalités*|Prise en charge|  
+|*Fonction*|Prise en charge|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|Non|  
 |SQL_API_SQLCOLUMNPRIVELEGES|Non|  
@@ -51,4 +51,4 @@ ms.locfileid: "68003334"
 |SQL_API_SQLSETSCROLLOPTIONS|Oui|  
 |SQL_API_SQLTABLEPRIVILEGES|Non|  
   
- Pour plus d’informations, consultez [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) dans le *Guide de référence du programmeur ODBC*.
+ Pour plus d’informations, voir [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) dans la *référence du programmeur ODBC*.

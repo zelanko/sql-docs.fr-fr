@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr | Microsoft Docs
+title: SQLSetEnvAttr - France Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLSetEnvAttr function
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e1d8e6ea962f5cd8fe094fca195a2fa59a5701d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6d0e93e73de0698e8bce1cb4073458cafe526c41
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301871"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "73785636"
  L'un des attributs contrôlé par **SQLSetEnvAttr** indique si le regroupement de connexions sera utilisé. Si le regroupement de connexions est utilisé avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, il faut affecter au paramètre *DriverCompletion* la valeur SQL_DRIVER_NOPROMPT lors de la connexion à [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) ou **SQLConnect**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLSetEnvAttr fonction)](https://go.microsoft.com/fwlink/?LinkId=59369)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Fonction SQLSetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=59369)   
+ [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

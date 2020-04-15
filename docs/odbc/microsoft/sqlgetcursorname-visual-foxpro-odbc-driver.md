@@ -1,5 +1,5 @@
 ---
-title: SQLGetCursorName (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: SQLGetCursorName (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetCursorName function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1eec75ec935e8b60fadb540c9bab05fbe2a05fdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d8e7c3d6f8ac1a13e4ea367ca59cffa838aee7a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003390"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304130"
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Soutien: Complet  
   
- Conformité de l’API ODBC : niveau principal  
+ Conformité API ODBC : Niveau de base  
   
- Retourne le nom du curseur associé au *HSTMT*donné. **SQLGetCursorName** est inclus dans l’API du pilote ODBC Visual FoxPro, car il fait partie des fonctionnalités de l’API de niveau principal. elle ne peut pas être utilisée avec d’autres fonctions API, car le pilote ne prend pas en charge les mises à jour positionnées.  
+ Retourne le nom du curseur associé à la *hstmt*donnée . **SQLGetCursorName** est inclus dans l’API visual FoxPro ODBC Driver parce qu’il fait partie de la fonctionnalité API de niveau de base; il ne peut pas être utilisé avec d’autres fonctions API parce que le conducteur ne prend pas en charge les mises à jour positionnées.  
   
- Pour plus d’informations, consultez [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) dans le *Guide de référence du programmeur ODBC*.
+ Pour plus d’informations, voir [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) dans la *référence du programmeur ODBC*.

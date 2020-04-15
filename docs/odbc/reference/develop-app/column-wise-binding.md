@@ -1,5 +1,5 @@
 ---
-title: Liaison selon les colonnes | Microsoft Docs
+title: Liaison Colonne-Sage Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083384"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299149"
 ---
 # <a name="column-wise-binding"></a>Liaison selon les colonnes
-Lors de l’utilisation d’une liaison selon les colonnes, une application lie un ou deux, ou dans certains cas, trois tableaux à chaque colonne pour laquelle les données doivent être retournées. Le premier tableau contient les valeurs de données, tandis que le second tableau contient des mémoires tampons de longueur/indicateur. Les indicateurs et les valeurs de longueur peuvent être stockés dans des mémoires tampons distinctes en affectant des valeurs différentes aux champs SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR descripteur ; Si c’est le cas, un troisième tableau est lié. Chaque tableau contient autant d’éléments qu’il y a de lignes dans l’ensemble de lignes.  
+Lorsque vous utilisez une liaison de colonne-sage, une application lie un ou deux, ou dans certains cas trois, des tableaux à chaque colonne pour laquelle les données doivent être retournées. Le premier tableau contient les valeurs de données, et le deuxième tableau contient des tampons de longueur/indicateur. Les indicateurs et les valeurs de longueur peuvent être stockés dans des tampons distincts en fixant les champs SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR descripteur à des valeurs différentes; si cela est fait, un troisième tableau est lié. Chaque tableau contient autant d’éléments qu’il y a de rangées dans le ramage.  
   
- L’application déclare qu’elle utilise une liaison selon les colonnes avec l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE, qui détermine le type de liaison pour les mémoires tampons d’ensemble de lignes plutôt que les tampons de jeu de paramètres. Le pilote retourne les données pour chaque ligne dans des éléments successifs de chaque tableau. L’illustration suivante montre le fonctionnement de la liaison selon les colonnes.  
+ L’application déclare qu’elle utilise une liaison de colonne avec l’attribut de l’SQL_ATTR_ROW_BIND_TYPE déclaration, qui détermine le type de liaison pour les tampons encastrés par opposition aux tampons définis par paramètres. Le conducteur retourne les données pour chaque rangée dans les éléments successifs de chaque tableau. L’illustration suivante montre comment fonctionne la reliure de colonnes.  
   
- ![Liaison de colonne&#45;de trois colonnes](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Colonne&#45;liaison sage de trois colonnes](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Par exemple, le code suivant lie les tableaux à 10 éléments aux colonnes OrderID, SalesPerson et Status :  
+ Par exemple, le code suivant lie les tableaux de 10 éléments aux colonnes OrderID, SalesPerson et Status :  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

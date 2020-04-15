@@ -1,5 +1,5 @@
 ---
-title: Mappage SQLTransact | Microsoft Docs
+title: Cartographie SQLTransact Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLTransact
 - SQLTransact function [ODBC], mapping
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6aaa056fca860a70f81ad7c3a4cd8539512bc25d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304880"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact, mappage
-**SQLTransact** est maintenant remplacé par **SQLEndTran**. La principale différence entre les deux fonctions est que **SQLEndTran** contient un argument *comme HandleType*, qui spécifie l’étendue du travail à effectuer. L’argument *comme HandleType* peut spécifier l’environnement ou le handle de connexion. L’appel suivant à **SQLTransact**:  
+**SQLTransact** est maintenant remplacé par **SQLEndTran**. La principale différence entre les deux fonctions est que **SQLEndTran** contient un argument *HandleType*, qui spécifie la portée du travail à faire. *L’argument De HandleType* peut spécifier l’environnement ou la poignée de connexion. L’appel suivant à **SQLTransact**:  
   
 ```  
 SQLTransact(henv, hdbc, fType)  
 ```  
   
- est mappé à  
+ est cartographié pour  
   
 ```  
 SQLEndTran(SQL_HANDLE_DBC, ConnectionHandle, CompletionType);  
 ```  
   
- Si *ConnectionHandle* n’est pas égal à SQL_NULL_HDBC. L’argument *ConnectionHandle* est défini sur la valeur de *hdbc*.  
+ si *ConnectionHandle* n’est pas égal à SQL_NULL_HDBC. *L’argument ConnectionHandle* est réglé à la valeur de *hdbc*.  
   
- **SQL_Transact** est mappé à  
+ **SQL_Transact** est cartographié pour  
   
 ```  
 SQLEndTran (SQL_HANDLE_ENV, EnvironmentHandle, CompletionType);  
 ```  
   
- Si *ConnectionHandle* est égal à SQL_NULL_HDBC. L’argument *EnvironmentHandle* est défini sur la valeur de *henv*.  
+ si *ConnectionHandle* est égal à SQL_NULL_HDBC. *L’argument de EnvironmentHandle* est fixé à la valeur du *henv*.  
   
- Dans les deux cas précédents, l’argument *CompletionType* est défini sur la même valeur que *ftype*.
+ Dans les deux cas précédents, l’argument *de CompletionType* est réglé à la même valeur que *fType*.

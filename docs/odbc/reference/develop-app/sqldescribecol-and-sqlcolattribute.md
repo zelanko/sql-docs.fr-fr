@@ -1,5 +1,5 @@
 ---
-title: SQLDescribeCol et SQLColAttribute | Microsoft Docs
+title: SQLDescribeCol et SQLColAttribute (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d602368475c6f1326cc615453116e898b1c1892f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299759"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol et SQLColAttribute
-**SQLDescribeCol** et **SQLColAttribute** sont utilisés pour récupérer les métadonnées du jeu de résultats. La différence entre ces deux fonctions est que **SQLDescribeCol** retourne toujours les cinq mêmes informations (le nom d’une colonne, le type de données, la précision, l’échelle et la possibilité de valeur null), tandis que **SQLColAttribute** retourne une seule information demandée par l’application. Toutefois, **SQLColAttribute** peut retourner une sélection beaucoup plus riche de métadonnées, notamment le respect de la casse, la taille d’affichage, la mise à jour et la recherche d’une colonne.  
+**SQLDescribeCol** et **SQLColAttribute** sont utilisés pour récupérer les métadonnées définies de résultats. La différence entre ces deux fonctions est que **SQLDescribeCol** renvoie toujours les mêmes cinq informations (nom d’une colonne, type de données, précision, échelle et nullabilité), tandis que **SQLColAttribute** renvoie toujours un seul élément d’information demandé par l’application. Cependant, **SQLColAttribute** peut retourner une sélection beaucoup plus riche de métadonnées, y compris la sensibilité aux cas d’une colonne, la taille de l’affichage, la redatabilité et la searchabilité.  
   
- De nombreuses applications, en particulier celles qui affichent uniquement des données, requièrent uniquement les métadonnées retournées par **SQLDescribeCol**. Pour ces applications, il est plus rapide d’utiliser **SQLDescribeCol** que **SQLColAttribute** , car les informations sont retournées en un seul appel. D’autres applications, en particulier celles qui mettent à jour des données, requièrent les métadonnées supplémentaires retournées par **SQLColAttribute** et utilisent donc les deux fonctions. En outre, **SQLColAttribute** prend en charge les métadonnées spécifiques au pilote. Pour plus d’informations, consultez [types de données spécifiques au pilote, types de descripteurs, types d’informations, types de diagnostics et attributs](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ De nombreuses applications, en particulier ceux qui n’affichent que des données, ne nécessitent que les métadonnées retournées par **SQLDescribeCol**. Pour ces applications, il est plus rapide d’utiliser **SQLDescribeCol** que **SQLColAttribute** parce que l’information est retournée en un seul appel. D’autres applications, en particulier ceux qui mettent à jour les données, nécessitent les métadonnées supplémentaires retournées par **SQLColAttribute** et donc utiliser les deux fonctions. De plus, **SQLColAttribute** prend en charge les métadonnées spécifiques au conducteur; pour plus d’informations, voir [Types de données spécifiques au conducteur, Types descripteurs, Types d’information, Types de diagnostic et Attributs](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Une application peut récupérer des métadonnées de jeu de résultats à tout moment après la préparation ou l’exécution d’une instruction et avant la fermeture du curseur sur le jeu de résultats. Très peu d’applications requièrent des métadonnées de jeu de résultats après la préparation de l’instruction et avant son exécution. Si possible, les applications doivent attendre la récupération des métadonnées jusqu’à ce que l’instruction soit exécutée, car certaines sources de données ne peuvent pas retourner de métadonnées pour les instructions préparées et l’émulation de cette fonctionnalité dans le pilote est souvent un processus lent. Par exemple, le pilote peut générer un jeu de résultats de ligne zéro en remplaçant la clause **Where** d’une instruction **Select** par la clause **Where 1 = 2** et en exécutant l’instruction résultante.  
+ Une application peut récupérer les métadonnées définies de résultat à tout moment après qu’une déclaration a été préparée ou exécutée et avant que le curseur sur l’ensemble de résultat soit fermé. Très peu d’applications nécessitent des métadonnées définies de résultat après la préparation de la déclaration et avant qu’elle ne soit exécutée. Si possible, les applications doivent attendre pour récupérer les métadonnées jusqu’à ce que la déclaration soit exécutée, parce que certaines sources de données ne peuvent pas retourner les métadonnées pour les instructions préparées et l’imitation de cette capacité dans le conducteur est souvent un processus lent. Par exemple, le conducteur peut générer un résultat à ligne zéro défini en remplaçant la clause **WHERE** d’une déclaration **SELECT** par la clause **WHERE 1 et 2** et en exécutant l’instruction résultante.  
   
- Les métadonnées sont souvent coûteuses à récupérer à partir de la source de données. C’est la raison pour laquelle les pilotes doivent mettre en cache les métadonnées qu’ils récupèrent à partir du serveur et les conserver tant que le curseur sur le jeu de résultats est ouvert. En outre, les applications doivent uniquement demander les métadonnées dont elles ont absolument besoin.
+ Les métadonnées sont souvent coûteuses à récupérer à partir de la source de données. Pour cette raison, les pilotes doivent mettre en cache toutes les métadonnées qu’ils récupèrent sur le serveur et le tenir aussi longtemps que le curseur sur l’ensemble de résultat est ouvert. En outre, les demandes ne devraient demander que les métadonnées dont elles ont absolument besoin.

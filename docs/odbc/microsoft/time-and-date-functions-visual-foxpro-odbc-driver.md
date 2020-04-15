@@ -1,5 +1,5 @@
 ---
-title: Fonctions d’heure et de date (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: Fonctions d’heure et de date (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,59 +15,59 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912404"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303060"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
-Le tableau suivant répertorie les fonctions ODBC de date et d’heure prises en charge par le pilote ODBC Visual FoxPro. Lorsque la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, l’équivalent Visual FoxPro est listé.  
+Le tableau suivant répertorie les fonctions d’heure et de date de l’ODBC prises en charge par le Visual FoxPro ODBC Driver; lorsque la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, l’équivalent Visual FoxPro est répertorié.  
   
-|Grammaire ODBC|Grammaire de Visual FoxPro|  
+|Grammaire ODBC|Grammaire visuelle FoxPro|  
 |------------------|---------------------------|  
-|CAILLÉ *()*|DATE *()*|  
-|CURTIME *()*|HEURE *()*|  
+|CURDATE *( )*|Date *( )*|  
+|CURTIME *( )*|TEMPS *( )*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|JOUR *()*|  
+|DAYOFMONTH *(date_exp)*|JOUR *( )*|  
 |HEURE *(time_exp)*||  
 |MINUTE *(time_exp)*||  
-|MOIS *(time_exp)*||  
+|MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|NOW *()*|DATETIME *()*|  
-|DEUXIÈME *(time_exp)*|S *(time_exp)*|  
+|MAINTENANT *( )*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
 |SEMAINE *(date_exp)*||  
 |ANNÉE *(date_exp)*||  
   
- Les fonctions d’heure et de date suivantes ne sont pas prises en charge :  
+ Les fonctions d’heure et de date suivantes ne sont pas prises en charge :  
   
- DAYOFYEAR *(date_exp)*  
+ JOUROFYEAR *(date_exp)*  
   
- TRIMESTRE *(date_exp)*  
+ QUARTER *(date_exp)*  
   
  TIMESTAMPADD *(intervalle, integer_exp, timestamp_exp)*  
   
  TIMESTAMPDIFF *(intervalle, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>Séquences d’échappement ODBC  
- Le pilote prend également en charge la séquence d’échappement ODBC pour les données de date et d’horodatage. La syntaxe de la clause Escape est la suivante :  
+ Le conducteur prend également en charge la séquence d’évacuation de l’ODBC pour les données sur les dates et les heures de travail. La syntaxe de clause d’évasion est la suivante :  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)-  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- Dans cette syntaxe, **d** indique que la *valeur* est une date au *format aaaa-mm-jj* et que **TS** indique que la *valeur* est un horodateur au format *aaaa-mm-jj hh : mm : SS*[.* f...*] format. La syntaxe raccourcie pour les données de date et d’horodatage est la suivante :  
+ Dans cette syntaxe, **d** indique que la *valeur* est une date dans le format *yyyy-mm-dd* et **ts** indique que la *valeur* est un temps humide dans le *yyyy-mm-dd hh:mm:ss*[.* f...*] Format. La syntaxe abrégé pour les données sur les dates et les heures est la suivante :  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Par exemple, chacune des instructions suivantes met à jour la table ALLTYPES à l’aide de la syntaxe abrégée date et timestamp dans une commande SQL UPDATE prise en charge :  
+ Par exemple, chacune des déclarations suivantes met à jour le tableau ALLTYPES en utilisant la syntaxe shorthand date et l’humidité du temps dans une commande SQL UPDATE supportée :  
   
 ```  
 UPDATE alltypes  
@@ -80,4 +80,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les séquences d’échappement, consultez [séquences d’échappement dans ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) dans le *Guide de référence du programmeur ODBC*.
+ Pour plus d’informations sur les séquences d’évasion, voir [Escape Sequences in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) dans la *référence du programmeur ODBC*.

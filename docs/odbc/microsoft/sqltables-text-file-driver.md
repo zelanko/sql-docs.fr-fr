@@ -1,5 +1,5 @@
 ---
-title: SQLTables (pilote de fichier texte) | Microsoft Docs
+title: SQLTables (Text File Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLTables
 - SQLTables function [ODBC], Text File Driver
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7fcdf9cc41a55d1e529001ae7183ef9fa833363b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 938ceba5da25d176628d5c1d9875383d977e3aec
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299329"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables (pilote de fichier texte)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote de fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet fournit des informations spécifiques au fichier texte. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Argument|Commentaires|  
 |--------------|--------------|  
-|*szTableOwner*|Le seul argument valide pour *szTableOwner* est null, car aucun des pilotes ne prend en charge les noms de propriétaire. Si *szTableOwner* a la valeur null, toutes les tables sont retournées. La valeur NULL est retournée dans la colonne TABLE_OWNER.|  
-|*szTableQualifier*|Dans la colonne TABLE_QUALIFIER, **SQLTables** retourne le chemin d’accès à un répertoire.|  
-|*SzTableType*|« TABLE » est le seul type de table pris en charge.<br /><br /> Lorsque le pilote de texte est utilisé, la liste des fichiers retournés par **SQLTables** est déterminée par les extensions de fichier dans la zone de **liste Extensions** de la boîte de dialogue **installation de texte ODBC** .|
+|*szTableOwner (en)*|Le seul argument valable pour *szTableOwner* est NULL parce qu’aucun des noms de propriétaire de soutien des conducteurs. Avec *szTableOwner* réglé à NULL, toutes les tables sont retournées. NULL est retourné dans la colonne TABLE_OWNER.|  
+|*szTableQualifier*|Dans la colonne TABLE_QUALIFIER, **SQLTables** retournera le chemin à un répertoire.|  
+|*SzTableType (en)*|"TABLE" est le seul type de table pris en charge.<br /><br /> Lorsque le pilote de texte est utilisé, la liste des fichiers retournés par **SQLTables** est déterminée par les extensions de fichiers dans la boîte **de liste d’extensions** dans la boîte de dialogue **ODBC Text Setup.**|

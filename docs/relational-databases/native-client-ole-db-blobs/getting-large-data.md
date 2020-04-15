@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73775509"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303620"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  En général, les consommateurs doivent isoler le code qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un Client natif OLE DB objet de stockage du fournisseur à partir d’un autre code qui gère les données non référencées par le biais d’un pointeur d’interface **ISequentialStream** .  
+  En général, les consommateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devraient isoler le code qui crée un objet de stockage fournisseur de fournisseur OLE DB de native Client à partir d’autres codes qui traitent les données non référencées par un pointeur d’interface **ISequentialStream.**  
   
  Cette rubrique aborde les fonctionnalités disponibles avec les fonctions suivantes :  
   
@@ -36,9 +36,9 @@ ms.locfileid: "73775509"
   
 -   ICommand::Execute  
   
- Si la propriété DBPROP_ACCESSORDER (dans le groupe de propriétés rowset) est définie sur l’une des valeurs DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur ne doit extraire qu’une seule ligne de données dans un appel à la méthode **GetNextRows** , car les données BLOB ne sont pas mises en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
+ Si la propriété DBPROP_ACCESSORDER (dans le groupe immobilier rowset) est réglée à l’une ou l’autre des valeurs DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur ne devrait aller chercher qu’une seule rangée de données dans un appel à la méthode **GetNextRows** parce que les données BLOB n’est pas tamponnée. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ne récupère pas les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volumineuses à partir de jusqu’à ce qu’il les ait demandées par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de DB OLE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client autochtone ne récupère pas de grandes données jusqu’à ce que le consommateur lui demande de le faire. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  
@@ -149,7 +149,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets BLOB et OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOBs et objets OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilisation de types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLBindCol, fonction | Microsoft Docs
+title: Fonction SQLBindCol (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75656596"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298739"
 ---
 # <a name="sqlbindcol-function"></a>Fonction SQLBindCol
 **Conformité**  
- Version introduite : ODBC 1,0 conformité aux normes : ISO 92  
+ Version introduite: ODBC 1.0 Standards Compliance: ISO 92  
   
  **Résumé**  
- **SQLBindCol** lie les tampons de données d’application aux colonnes du jeu de résultats.  
+ **SQLBindCol** lie les tampons de données d’application aux colonnes dans l’ensemble de résultats.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,47 +48,47 @@ SQLRETURN SQLBindCol(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *StatementHandle*  
- Entrée Descripteur d’instruction.  
+ *StatementHandle (en)*  
+ [Entrée] Poignée de déclaration.  
   
  *ColumnNumber*  
- Entrée Numéro de la colonne du jeu de résultats à lier. Les colonnes sont numérotées dans l’ordre des colonnes de plus en plus à partir de 0, où la colonne 0 est la colonne de signets. Si les signets ne sont pas utilisés (autrement dit, l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS est défini sur SQL_UB_OFF), les numéros de colonne commencent à 1.  
+ [Entrée] Nombre de la colonne de jeu de résultat à lier. Les colonnes sont numérotées dans l’ordre de colonne croissante à partir de 0, où la colonne 0 est la colonne de signet. Si les signets ne sont pas utilisés - c’est-à-dire, l’attribut de l’SQL_ATTR_USE_BOOKMARKS’énoncé est réglé pour SQL_UB_OFF - alors les nombres de colonnes commencent à 1.  
   
- *TargetType*  
- Entrée Identificateur du type de données C de la \*mémoire tampon *TargetValuePtr* . Lorsqu’il récupère des données de la source de données avec **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**ou **SQLSetPos**, le pilote convertit les données en ce type ; lorsqu’il envoie des données à la source de données avec **SQLBulkOperations** ou **SQLSetPos**, le pilote convertit les données de ce type. Pour obtenir la liste des types de données et des identificateurs de type C valides, consultez la section [types de données c](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe D : types de données.  
+ *Targettype*  
+ [Entrée] L’identifiant du type de \*données C du tampon *TargetValuePtr.* Lorsqu’il est en train de récupérer des données à partir de la source de données avec **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, ou **SQLSetPos**, le conducteur convertit les données à ce type; lorsqu’il envoie des données à la source de données avec **SQLBulkOperations** ou **SQLSetPos**, le conducteur convertit les données de ce type. Pour une liste de types de données C valides et d’identifiants de type, consultez la section [Types de données C](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe D : Data Types.  
   
- Si l’argument *TargetType* est un type de données Interval, la précision de l’intervalle par défaut (2) et la précision de l’intervalle par défaut (6), telles que définies dans les champs SQL_DESC_DATETIME_INTERVAL_PRECISION et SQL_DESC_PRECISION de l’ARD, respectivement, sont utilisées pour les données. Si l’argument *TargetType* est SQL_C_NUMERIC, la précision par défaut (définie par le pilote) et l’échelle par défaut (0), telles que définies dans les champs SQL_DESC_PRECISION et SQL_DESC_SCALE de ARD, sont utilisées pour les données. Si une précision ou une échelle par défaut n’est pas appropriée, l’application doit définir explicitement le champ de descripteur approprié à l’aide d’un appel à **SQLSetDescField** ou **SQLSetDescRec**.  
+ Si l’argument *de TargetType* est un type de données d’intervalle, l’intervalle par défaut menant la précision (2) et l’intervalle par défaut secondes de précision (6), tel qu’indiqué dans les champs SQL_DESC_DATETIME_INTERVAL_PRECISION et SQL_DESC_PRECISION de l’ARD, respectivement, sont utilisés pour les données. Si l’argument *de TargetType* est SQL_C_NUMERIC, la précision par défaut (définie par le conducteur) et l’échelle par défaut (0), telle qu’elle est définie dans les champs SQL_DESC_PRECISION et SQL_DESC_SCALE de l’ARD, sont utilisées pour les données. Si une précision ou une échelle par défaut n’est pas appropriée, l’application doit définir explicitement le champ descripteur approprié par un appel à **SQLSetDescField** ou **SQLSetDescRec**.  
   
- Vous pouvez également spécifier un type de données C étendu. Pour plus d’informations, consultez [types de données C dans ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+ Vous pouvez également spécifier un type de données C étendu. Pour plus d’informations, voir [C Data Types in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
- *TargetValuePtr*  
- [Entrée/sortie différée] Pointeur vers la mémoire tampon de données à lier à la colonne. **SQLFetch** et **SQLFetchScroll** retournent des données dans cette mémoire tampon. **SQLBulkOperations** retourne les données de cette mémoire tampon lorsque l' *opération* est SQL_FETCH_BY_BOOKMARK ; elle récupère les données de cette mémoire tampon lorsque l' *opération* est SQL_ADD ou SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** retourne des données dans cette mémoire tampon lorsque l' *opération* est SQL_REFRESH ; elle récupère les données de cette mémoire tampon lorsque l' *opération* est SQL_UPDATE.  
+ *TargetValuePtr (en)*  
+ [Entrée différée/sortie] Pointeur vers le tampon de données pour se lier à la colonne. **SQLFetch** et **SQLFetchScroll retournent** les données dans ce tampon. **SQLBulkOperations** renvoie des données dans ce tampon lorsque *l’opération* est SQL_FETCH_BY_BOOKMARK; il récupère des données de ce tampon lorsque *l’opération* est SQL_ADD ou SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** retourne des données dans ce tampon lorsque *l’opération* est SQL_REFRESH; il récupère les données de ce tampon lorsque *l’opération* est SQL_UPDATE.  
   
- Si *TargetValuePtr* est un pointeur null, le pilote dissocie la mémoire tampon de données pour la colonne. Une application peut dissocier toutes les colonnes en appelant **SQLFreeStmt** à l’aide de l’option SQL_UNBIND. Une application peut dissocier la mémoire tampon de données pour une colonne tout en gardant une limite de mémoire tampon de longueur/d’indicateur pour la colonne, si l’argument *TargetValuePtr* dans l’appel à **SQLBindCol** est un pointeur null, mais que l’argument *StrLen_or_IndPtr* est une valeur valide.  
+ Si *TargetValuePtr* est un pointeur nul, le pilote débinde le tampon de données pour la colonne. Une application peut délier toutes les colonnes en appelant **SQLFreeStmt** avec l’option SQL_UNBIND. Une application peut délier le tampon de données pour une colonne, mais ont toujours un tampon de longueur / indicateur lié à la colonne, si *l’argument TargetValuePtr* dans l’appel à **SQLBindCol** est un pointeur nul, mais *l’argument StrLen_or_IndPtr* est une valeur valide.  
   
  *BufferLength*  
- Entrée Longueur en octets \*de la mémoire tampon *TargetValuePtr* .  
+ [Entrée] Longueur du \*tampon *TargetValuePtr* dans les octets.  
   
- Le pilote utilise *BufferLength* pour éviter d’écrire au-delà de \*la fin de la mémoire tampon *TargetValuePtr* lorsqu’il retourne des données de longueur variable, telles que des données de type caractère ou binaire. Notez que le pilote compte le caractère de fin null lorsqu’il retourne des données de \*type caractère à *TargetValuePtr*. \**TargetValuePtr* doit donc contenir de l’espace pour le caractère de fin null ou le pilote va tronquer les données.  
+ Le pilote utilise *BufferLength* pour éviter \*d’écrire au-delà de la fin du tampon *TargetValuePtr* lorsqu’il renvoie des données à longueur variable, telles que des données de caractère ou binaires. Notez que le conducteur compte le caractère de \*non-résiliation lorsqu’il renvoie les données de caractère à *TargetValuePtr*. \**TargetValuePtr* doit donc contenir de l’espace pour le caractère de non-termination ou le pilote va tronquer les données.  
   
- Lorsque le pilote retourne des données de longueur fixe, telles qu’un entier ou une structure de date, le pilote ignore *BufferLength* et suppose que la mémoire tampon est suffisamment grande pour contenir les données. Par conséquent, il est important pour l’application d’allouer une mémoire tampon suffisamment importante pour les données de longueur fixe ou le pilote écrit au-delà de la fin de la mémoire tampon.  
+ Lorsque le conducteur retourne des données de longueur fixe, comme un intégrateur ou une structure de date, le conducteur ignore *BufferLength* et suppose que le tampon est assez grand pour contenir les données. Par conséquent, il est important que l’application alloue un tampon suffisamment grand pour les données à durée fixe ou que le pilote écrira au-delà de la fin du tampon.  
   
- **SQLBindCol** retourne SQLState HY090 (longueur de chaîne ou de mémoire tampon non valide) lorsque *BufferLength* est inférieur à 0 mais pas lorsque *BufferLength* est égal à 0. Toutefois, si *TargetType* spécifie un type de caractère, une application ne doit pas affecter la valeur 0 à *BufferLength* , car les pilotes compatibles ISO CLI retournent SQLSTATE HY090 (chaîne non valide ou longueur de la mémoire tampon) dans ce cas.  
+ **SQLBindCol** retourne SQLSTATE HY090 (longueur de chaîne ou tampon invalide) lorsque *BufferLength* est inférieur à 0, mais pas lorsque *BufferLength* est 0. Toutefois, si *TargetType* spécifie un type de personnage, une application ne doit pas définir *BufferLength* à 0, parce que les pilotes conformes à l’ISO CLI retournent SQLSTATE HY090 (longueur de chaîne ou tampon invalide) dans ce cas.  
   
  *StrLen_or_IndPtr*  
- [Entrée/sortie différée] Pointeur vers la mémoire tampon de longueur/d’indicateur à lier à la colonne. **SQLFetch** et **SQLFetchScroll** retournent une valeur dans cette mémoire tampon. **SQLBulkOperations** récupère une valeur de cette mémoire tampon lorsque l' *opération* est SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** retourne une valeur dans cette mémoire tampon lorsque l' *opération* est SQL_FETCH_BY_BOOKMARK. **SQLSetPos** retourne une valeur dans cette mémoire tampon lorsque l' *opération* est SQL_REFRESH ; elle récupère une valeur de cette mémoire tampon lorsque l' *opération* est SQL_UPDATE.  
+ [Entrée différée/sortie] Pointeur vers le tampon longueur/indicateur pour se lier à la colonne. **SQLFetch** et **SQLFetchScroll** retournent une valeur dans ce tampon. **SQLBulkOperations** récupère une valeur de ce tampon lorsque *l’opération* est SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** retourne une valeur dans ce tampon lorsque *l’opération* est SQL_FETCH_BY_BOOKMARK. **SQLSetPos** retourne une valeur dans ce tampon lorsque *l’opération* est SQL_REFRESH; il récupère une valeur de ce tampon lorsque *l’opération* est SQL_UPDATE.  
   
- **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**et **SQLSetPos** peuvent retourner les valeurs suivantes dans le tampon longueur/indicateur :  
+ **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, et **SQLSetPos** peuvent retourner les valeurs suivantes dans le tampon longueur/indicateur :  
   
--   La longueur des données disponibles pour le retour  
+-   La durée des données disponibles pour revenir  
   
 -   SQL_NO_TOTAL  
   
 -   SQL_NULL_DATA  
   
- L’application peut placer les valeurs suivantes dans la mémoire tampon de longueur/indicateur pour une utilisation avec **SQLBulkOperations** ou **SQLSetPos**:  
+ L’application peut mettre les valeurs suivantes dans le tampon longueur/indicateur pour une utilisation avec **SQLBulkOperations** ou **SQLSetPos**:  
   
--   La longueur des données envoyées  
+-   La durée des données envoyées  
   
 -   SQL_NTS  
   
@@ -96,194 +96,194 @@ SQLRETURN SQLBindCol(
   
 -   SQL_DATA_AT_EXEC  
   
--   Résultat de la macro SQL_LEN_DATA_AT_EXEC  
+-   Le résultat de la macro SQL_LEN_DATA_AT_EXEC  
   
 -   SQL_COLUMN_IGNORE  
   
- Si la mémoire tampon d’indicateur et la mémoire tampon de longueur sont des mémoires tampons distinctes, le tampon d’indicateur peut retourner uniquement SQL_NULL_DATA, tandis que la mémoire tampon de longueur peut retourner toutes les autres valeurs.  
+ Si le tampon d’indicateur et le tampon de longueur sont des tampons distincts, le tampon d’indicateur ne peut revenir qu’SQL_NULL_DATA, tandis que le tampon de longueur peut retourner toutes les autres valeurs.  
   
- Pour plus d’informations, consultez [fonction SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [fonction SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md), [fonction SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)et [utilisation de valeurs de longueur/indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+ Pour plus d’informations, voir [SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLFetch Function](../../../odbc/reference/syntax/sqlfetch-function.md), [SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md), et Using [Length/Indicator Values](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Si *StrLen_or_IndPtr* est un pointeur null, aucune valeur de longueur ou d’indicateur n’est utilisée. Il s’agit d’une erreur lors de la récupération de données et les données ont la valeur NULL.  
+ Si *StrLen_or_IndPtr* est un pointeur nul, aucune longueur ou valeur d’indicateur n’est utilisée. Il s’agit d’une erreur lors de l’obtenir des données et les données sont NULL.  
   
- Consultez [ODBC 64-informations sur ODBC](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécute sur un système d’exploitation 64 bits.  
+ Consultez [ODBC 64-Bit Information](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécute sur un système d’exploitation 64 bits.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLBindCol** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLBindCol** et explique chacune d’elles dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLBindCol** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et une *poignée* de *StatementHandle*. Le tableau suivant énumère les valeurs SQLSTATE généralement retournées par **SQLBindCol** et explique chacune dans le cadre de cette fonction; la notation " (DM)" précède les descriptions des SQLSTATEs retournées par le gestionnaire de conducteur. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|07006|Violation d’attribut de type de données restreint|(DM) l’argument *ColumnNumber* était 0 et l’argument *TargetType* n’était pas SQL_C_BOOKMARK ou SQL_C_VARBOOKMARK.|  
-|07009|Index de descripteur non valide|La valeur spécifiée pour l’argument *ColumnNumber* a dépassé le nombre maximal de colonnes dans le jeu de résultats.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
-|HY003|Type de tampon d’application non valide|L’argument *TargetType* n’était ni un type de données valide, ni SQL_C_DEFAULT.|  
-|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lorsque **SQLBindCol** était appelé.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
-|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) la valeur spécifiée pour l’argument *BufferLength* est inférieure à 0.<br /><br /> (DM) le pilote était un ODBC 2. *x* , l’argument *ColumnNumber* a été défini sur 0, et la valeur spécifiée pour l’argument *BufferLength* n’était pas égale à 4.|  
-|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Fonctionnalité facultative non implémentée|Le pilote ou la source de données ne prend pas en charge la conversion spécifiée par la combinaison de l’argument *TargetType* et du type de données SQL spécifique au pilote de la colonne correspondante.<br /><br /> L’argument *ColumnNumber* était 0 et le pilote ne prend pas en charge les signets.<br /><br /> Le pilote prend en charge uniquement ODBC 2. *x* et l’argument *TargetType* était l’un des éléments suivants :<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> et tous les types de données Interval C listés dans les [types de données c](../../../odbc/reference/appendixes/c-data-types.md) de l’annexe D : types de données.<br /><br /> Le pilote ne prend en charge que les versions ODBC antérieures à 3,50, et l’argument *TargetType* était SQL_C_GUID.|  
-|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *StatementHandle* ne prend pas en charge la fonction.|  
+|01000|Avertissement général|Message d’information spécifique au conducteur. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
+|07006|Violation restreinte d’attribut de type de données|(DM) *L’argument de La Colonnen comptait* 0, et l’argument *de TargetType* n’était pas SQL_C_BOOKMARK ou SQL_C_VARBOOKMARK.|  
+|07009|Indice descripteur invalide|La valeur spécifiée pour l’argument *ColumnNumber* a dépassé le nombre maximum de colonnes dans l’ensemble de résultats.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle il n’y avait pas de SQLSTATE spécifique et pour laquelle aucun SQLSTATE spécifique à la mise en œuvre n’a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le * \** tampon MessageText décrit l’erreur et sa cause.|  
+|HY001 (hy001)|Erreur d’allocation de mémoire|Le conducteur n’a pas été en mesure d’allouer la mémoire nécessaire pour soutenir l’exécution ou l’achèvement de la fonction.|  
+|HY003 (HY003)|Type tampon d’application invalide|L’argument *TargetType* n’était ni un type de données valide ni SQL_C_DEFAULT.|  
+|HY010|Erreur de séquence de fonction|(DM) Une fonction d’exécution asynchrone a été appelée pour la poignée de connexion qui est associée à la *StatementHandle*. Cette fonction asynchrone était encore en cours d’exécution lorsque **SQLBindCol** a été appelé.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *StatementHandle* et retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres en streaming.<br /><br /> (DM) Une fonction d’exécution asynchrone a été appelée pour le *StatementHandle* et était toujours en exécution lorsque cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant que les données ne soient envoyées pour tous les paramètres ou colonnes de données à l’exécution.|  
+|HY013|Erreur de gestion de la mémoire|L’appel de fonction n’a pas pu être traité parce que les objets de mémoire sous-jacents n’ont pas pu être consultés, peut-être en raison de conditions de mémoire basse.|  
+|HY090 HY090|Longueur invalide de ficelle ou de tampon|(DM) La valeur spécifiée pour l’argument *BufferLength* était inférieure à 0.<br /><br /> (DM) Le conducteur était un ODBC 2. *x* conducteur, *l’argument de ColumnNumber* a été réglé à 0, et la valeur spécifiée pour l’argument *BufferLength* n’était pas égale à 4.|  
+|HY117|La connexion est suspendue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seulement sont autorisées.|(DM) Pour plus d’informations sur l’état suspendu, voir [SQLEndTran Fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Fonctionnalité facultative non implémentée|Le conducteur ou la source de données ne prend pas en charge la conversion spécifiée par la combinaison de l’argument *TargetType* et du type de données SQL spécifique au conducteur de la colonne correspondante.<br /><br /> *L’argument ColumnNumber* était 0 et le conducteur ne prend pas en charge les signets.<br /><br /> Le conducteur ne prend en charge que L’ODBC 2. *x* et l’argument *TargetType* était l’un des suivants:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> et n’importe lequel des types de données D’intervalle répertoriés dans [les types de données C](../../../odbc/reference/appendixes/c-data-types.md) de l’Annexe D : Types de données.<br /><br /> Le conducteur ne prend en charge les versions ODBC avant 3.50, et l’argument *TargetType* a été SQL_C_GUID.|  
+|HYT01 (HYT01)|Délai de connexion expiré|La période de délai de connexion a expiré avant que la source de données ne réponde à la demande. La période de délai de connexion est définie par **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le conducteur ne prend pas en charge cette fonction|(DM) Le conducteur associé au *StatementHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLBindCol** est utilisé pour associer, ou *lier,* les colonnes du jeu de résultats aux tampons de données et aux mémoires tampons de longueur/d’indicateur dans l’application. Lorsque l’application appelle **SQLFetch**, **SQLFetchScroll**ou **SQLSetPos** pour extraire des données, le pilote retourne les données pour les colonnes dépendantes dans les mémoires tampons spécifiées ; Pour plus d’informations, consultez la [fonction SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Lorsque l’application appelle **SQLBulkOperations** pour mettre à jour ou insérer une ligne ou **SQLSetPos** pour mettre à jour une ligne, le pilote récupère les données pour les colonnes dépendantes à partir des mémoires tampons spécifiées ; Pour plus d’informations, consultez [fonction SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) ou [fonction SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md). Pour plus d’informations sur la liaison, consultez [récupération des résultats (de base)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ **SQLBindCol** est utilisé pour associer ou *lier les* colonnes dans l’ensemble de résultats aux tampons de données et aux tampons de longueur/indicateur dans l’application. Lorsque l’application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLSetPos** pour obtenir des données, le conducteur retourne les données pour les colonnes liées dans les tampons spécifiés; pour plus d’informations, voir [SQLFetch Function](../../../odbc/reference/syntax/sqlfetch-function.md). Lorsque l’application appelle **SQLBulkOperations** pour mettre à jour ou insérer une ligne ou **SQLSetPos** pour mettre à jour une ligne, le conducteur récupère les données pour les colonnes liées des tampons spécifiés; pour plus d’informations, voir [SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md) ou [SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md). Pour plus d’informations sur la liaison, voir [Résultats de récupération (De base)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
- Notez que les colonnes n’ont pas besoin d’être liées pour récupérer des données à partir de celles-ci. Une application peut également appeler **SQLGetData** pour récupérer des données à partir de colonnes. Bien qu’il soit possible de lier des colonnes dans une ligne et d’appeler **SQLGetData** pour d’autres, cela peut être soumis à certaines restrictions. Pour plus d’informations, consultez [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
+ Notez que les colonnes n’ont pas besoin d’être tenus de récupérer des données d’eux. Une application peut également appeler **SQLGetData** pour récupérer des données dans les colonnes. Bien qu’il soit possible de lier certaines colonnes d’affilée et d’appeler **SQLGetData** pour d’autres, cela est soumis à certaines restrictions. Pour plus d’informations, voir [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
-## <a name="binding-unbinding-and-rebinding-columns"></a>Liaison, dissociation et reliaison de colonnes  
- Une colonne peut être liée, détachée ou reliée à tout moment, même après que les données ont été extraites du jeu de résultats. La nouvelle liaison prend effet la prochaine fois qu’une fonction qui utilise des liaisons est appelée. Supposons, par exemple, qu’une application lie les colonnes d’un jeu de résultats et appelle **SQLFetch**. Le pilote retourne les données dans les mémoires tampons liées. Supposons à présent que l’application lie les colonnes à un autre ensemble de mémoires tampons. Le pilote ne place pas les données de la ligne juste-à-extraite dans les mémoires tampons nouvellement liées. Au lieu de cela, il attend que **SQLFetch** soit rappelé, puis place les données de la ligne suivante dans les mémoires tampons nouvellement liées.  
+## <a name="binding-unbinding-and-rebinding-columns"></a>Colonnes contraignantes, non contraignantes et rebinding  
+ Une colonne peut être liée, non liée ou rebondie à tout moment, même après que les données ont été récupérées à partir de l’ensemble de résultats. La nouvelle liaison prend effet la prochaine fois qu’une fonction qui utilise des fixations est appelée. Supposons, par exemple, qu’une application lie les colonnes dans un ensemble de résultats et appelle **SQLFetch**. Le conducteur retourne les données dans les tampons consolidés. Supposons maintenant que l’application lie les colonnes à un ensemble différent de tampons. Le conducteur ne met pas les données pour la rangée juste-fetched dans les tampons nouvellement liés. Au lieu de cela, il attend jusqu’à ce que **SQLFetch** est appelé à nouveau et place ensuite les données pour la rangée suivante dans les tampons nouvellement liés.  
   
 > [!NOTE]  
->  L’attribut d’instruction SQL_ATTR_USE_BOOKMARKS doit toujours être défini avant la liaison d’une colonne à la colonne 0. Ce n’est pas obligatoire, mais il est fortement recommandé.  
+>  L’attribut d’instruction SQL_ATTR_USE_BOOKMARKS doit toujours être défini avant de lier une colonne à la colonne 0. Ce n’est pas nécessaire, mais est fortement recommandé.  
   
 ## <a name="binding-columns"></a>Liaison de colonnes  
- Pour lier une colonne, une application appelle **SQLBindCol** et transmet le numéro de colonne, le type, l’adresse et la longueur d’une mémoire tampon de données, ainsi que l’adresse d’une mémoire tampon de longueur/d’indicateur. Pour plus d’informations sur l’utilisation de ces adresses, consultez « adresses de tampon » plus loin dans cette section. Pour plus d’informations sur les colonnes de liaison, consultez [utilisation de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
+ Pour lier une colonne, une application appelle **SQLBindCol** et passe le numéro de colonne, le type, l’adresse et la longueur d’un tampon de données, ainsi que l’adresse d’un tampon de longueur/indicateur. Pour plus d’informations sur la façon dont ces adresses sont utilisées, voir « Adresses tampons », plus tard dans cette section. Pour plus d’informations sur les colonnes de liaison, voir [Utiliser SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- L’utilisation de ces mémoires tampons est différée ; autrement dit, l’application les lie à **SQLBindCol** , mais le pilote y accède à partir d’autres fonctions, à savoir **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**ou **SQLSetPos**. Il incombe à l’application de s’assurer que les pointeurs spécifiés dans **SQLBindCol** restent valides tant que la liaison reste en vigueur. Si l’application autorise ces pointeurs à devenir non valides, par exemple, elle libère une mémoire tampon, puis appelle une fonction qui s’attend à ce qu’elle soit valide, les conséquences ne sont pas définies. Pour plus d’informations, consultez [mémoires tampons différées](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ L’utilisation de ces tampons est reportée; c’est-à-dire que l’application les lie dans **SQLBindCol,** mais le conducteur y accède à partir d’autres fonctions - à savoir **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, ou **SQLSetPos**. Il incombe à l’application de s’assurer que les pointeurs spécifiés dans **SQLBindCol** demeurent valides tant que la liaison demeure en vigueur. Si l’application permet à ces pointeurs de devenir invalides - par exemple, elle libère un tampon - et appelle ensuite une fonction qui s’attend à ce qu’ils soient valides, les conséquences ne sont pas définies. Pour plus d’informations, voir [Tampons différés](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
- La liaison reste en vigueur jusqu’à ce qu’elle soit remplacée par une nouvelle liaison, que la colonne soit détachée ou que l’instruction soit libérée.  
+ La liaison reste en vigueur jusqu’à ce qu’elle soit remplacée par une nouvelle liaison, que la colonne ne soit pas liée ou que la déclaration soit libérée.  
   
-## <a name="unbinding-columns"></a>Dissocier des colonnes  
- Pour annuler la liaison d’une seule colonne, une application appelle **SQLBindCol** avec *ColumnNumber* défini sur le numéro de cette colonne et *TargetValuePtr* défini sur un pointeur null. Si *ColumnNumber* fait référence à une colonne indépendante, **SQLBindCol** retourne toujours SQL_SUCCESS.  
+## <a name="unbinding-columns"></a>Colonnes non contraignantes  
+ Pour délier une seule colonne, une application appelle **SQLBindCol** avec *ColumnNumber* réglé sur le nombre de cette colonne et *TargetValuePtr* réglé à un pointeur nul. Si *ColumnNumber* fait référence à une colonne non liée, **SQLBindCol** retourne toujours SQL_SUCCESS.  
   
- Pour dissocier toutes les colonnes, une application appelle **SQLFreeStmt** avec *fOption* défini sur SQL_UNBIND. Pour ce faire, vous pouvez également définir le champ SQL_DESC_COUNT de ARD sur zéro.  
+ Pour délier toutes les colonnes, une application appelle **SQLFreeStmt** avec *fOption* réglé pour SQL_UNBIND. Cela peut également être accompli en plaçant le champ SQL_DESC_COUNT de l’ARD à zéro.  
   
-## <a name="rebinding-columns"></a>Reliaison de colonnes  
- Une application peut effectuer l’une des deux opérations suivantes pour modifier une liaison :  
+## <a name="rebinding-columns"></a>Colonnes rebinding  
+ Une application peut effectuer l’une ou l’autre des deux opérations pour modifier une liaison :  
   
--   Appelez **SQLBindCol** pour spécifier une nouvelle liaison pour une colonne qui est déjà liée. Le pilote remplace l’ancienne liaison par la nouvelle.  
+-   Appelez **SQLBindCol** pour spécifier une nouvelle liaison pour une colonne qui est déjà liée. Le conducteur surmene l’ancienne fixation avec la nouvelle.  
   
--   Spécifiez un décalage à ajouter à l’adresse tampon spécifiée par l’appel de liaison à **SQLBindCol**. Pour plus d’informations, consultez la section suivante, « offsets de liaison ».  
+-   Spécifier une compensation à ajouter à l’adresse tampon qui a été spécifiée par l’appel de liaison à **SQLBindCol**. Pour plus d’informations, voir la section suivante, "Binding Offsets."  
   
-## <a name="binding-offsets"></a>Décalages de liaison  
- Un décalage de liaison est une valeur qui est ajoutée aux adresses des tampons de données et de longueur/indicateur (comme spécifié dans les arguments *TargetValuePtr* et *StrLen_or_IndPtr* ) avant d’être déréférencés. Lorsque des décalages sont utilisés, les liaisons sont un « modèle » de la façon dont les tampons de l’application sont disposés, et l’application peut déplacer ce « modèle » dans différentes zones de mémoire en modifiant le décalage. Étant donné que le même décalage est ajouté à chaque adresse dans chaque liaison, les décalages relatifs entre les mémoires tampons pour les différentes colonnes doivent être identiques dans chaque ensemble de mémoires tampons. C’est toujours le cas lorsque la liaison selon les lignes est utilisée ; l’application doit disposer soigneusement ses tampons pour que cela soit vrai lorsque la liaison selon les colonnes est utilisée.  
+## <a name="binding-offsets"></a>Compensations contraignantes  
+ Une compensation contraignante est une valeur ajoutée aux adresses des données et des tampons de longueur/indicateur (comme indiqué dans *l’argument TargetValuePtr* et *StrLen_or_IndPtr)* avant qu’elles ne soient déreférées. Lorsque des compensations sont utilisées, les fixations sont un « modèle » de la façon dont les tampons de l’application sont disposés, et l’application peut déplacer ce « modèle » vers différents domaines de mémoire en changeant le décalage. Étant donné que le même décalage est ajouté à chaque adresse dans chaque liaison, les décalages relatifs entre les tampons pour différentes colonnes doivent être les mêmes dans chaque ensemble de tampons. Cela est toujours vrai lorsque la fixation de la ligne est utilisée; l’application doit soigneusement exposer ses tampons pour que cela soit vrai lorsque la liaison de colonne-sage est utilisée.  
   
- L’utilisation d’un décalage de liaison a fondamentalement le même effet que la reliaison d’une colonne en appelant **SQLBindCol**. La différence est qu’un nouvel appel à **SQLBindCol** spécifie de nouvelles adresses pour la mémoire tampon de données et la mémoire tampon de longueur/d’indicateur, tandis que l’utilisation d’un offset de liaison ne modifie pas les adresses, mais leur ajoute simplement un offset. L’application peut spécifier un nouveau décalage à chaque fois qu’elle le souhaite, et ce décalage est toujours ajouté aux adresses à liaison à l’origine. En particulier, si le décalage est défini sur 0 ou si l’attribut d’instruction est défini sur un pointeur null, le pilote utilise les adresses à liaison à l’origine.  
+ L’utilisation d’un décalage de liaison a essentiellement le même effet que la rébination d’une colonne en appelant **SQLBindCol**. La différence est qu’un nouvel appel à **SQLBindCol** spécifie de nouvelles adresses pour le tampon de données et la longueur / indicateur tampon, tandis que l’utilisation d’un décalage de liaison ne change pas les adresses, mais ajoute juste une compensation pour eux. L’application peut spécifier un nouveau décalage quand il le souhaite, et ce décalage est toujours ajouté aux adresses initialement liées. En particulier, si le décalage est réglé à 0 ou si l’attribut de déclaration est réglé à un pointeur nul, le pilote utilise les adresses initialement liées.  
   
- Pour spécifier un décalage de liaison, l’application définit l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR sur l’adresse d’une mémoire tampon SQLINTEGER destinée. Avant que l’application appelle une fonction qui utilise des liaisons, elle place un offset en octets dans cette mémoire tampon. Pour déterminer l’adresse de la mémoire tampon à utiliser, le pilote ajoute le décalage à l’adresse dans la liaison. La somme de l’adresse et du décalage doit être une adresse valide, mais il n’est pas nécessaire que l’adresse à laquelle le décalage est ajouté soit valide. Pour plus d’informations sur l’utilisation des décalages de liaison, consultez « adresses de tampon » plus loin dans cette section.  
+ Pour spécifier une compensation contraignante, la demande définit l’attribut SQL_ATTR_ROW_BIND_OFFSET_PTR énoncé à l’adresse d’un tampon SQLINTEGER. Avant que l’application appelle une fonction qui utilise des fixations, il met un décalage dans les octets dans ce tampon. Pour déterminer l’adresse du tampon à utiliser, le conducteur ajoute le décalage à l’adresse de la liaison. La somme de l’adresse et de la compensation doit être une adresse valide, mais l’adresse à laquelle le décalage est ajouté n’a pas à être valide. Pour plus d’informations sur la façon dont les compensations contraignantes sont utilisées, voir « Adresses tampons », plus tard dans cette section.  
   
-## <a name="binding-arrays"></a>Tableaux de liaison  
- Si la taille de l’ensemble de lignes (valeur de l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE) est supérieure à 1, l’application lie des tableaux de mémoires tampons au lieu de mémoires tampons uniques. Pour plus d’informations, consultez [bloquer les curseurs](../../../odbc/reference/develop-app/block-cursors.md).  
+## <a name="binding-arrays"></a>Arrays de liaison  
+ Si la taille de l’acart (la valeur de l’attribut de l’SQL_ATTR_ROW_ARRAY_SIZE) est supérieure à 1, l’application lie des pans de tampons au lieu de tampons uniques. Pour plus d’informations, voir [Block Cursors](../../../odbc/reference/develop-app/block-cursors.md).  
   
- L’application peut lier des tableaux de deux manières :  
+ L’application peut lier les tableaux de deux façons :  
   
--   Liez un tableau à chaque colonne. C’est ce que l’on appelle une liaison selon les *colonnes* , car chaque structure de données (tableau) contient des données pour une colonne unique.  
+-   Lier un tableau à chaque colonne. C’est ce qu’on appelle *la liaison de colonne-sage* parce que chaque structure de données (tableau) contient des données pour une seule colonne.  
   
--   Définissez une structure qui contiendra les données pour une ligne entière et liez un tableau de ces structures. C’est ce que l’on appelle une liaison selon les *lignes* , car chaque structure de données contient les données d’une seule ligne.  
+-   Définissez une structure pour conserver les données pour toute une rangée et lier un tableau de ces structures. C’est ce qu’on appelle *la liaison de ligne-sage* parce que chaque structure de données contient les données pour une seule rangée.  
   
- Chaque tableau de mémoires tampons doit avoir au moins autant d’éléments que la taille de l’ensemble de lignes.  
+ Chaque tableau de tampons doit avoir au moins autant d’éléments que la taille de l’acart.  
   
 > [!NOTE]  
->  Une application doit vérifier que l’alignement est valide. Pour plus d’informations sur les considérations d’alignement, consultez [alignment](../../../odbc/reference/develop-app/alignment.md).  
+>  Une application doit vérifier que l’alignement est valide. Pour plus d’informations sur les considérations d’alignement, voir [Alignement](../../../odbc/reference/develop-app/alignment.md).  
   
 ## <a name="column-wise-binding"></a>Liaison selon les colonnes  
- Dans une liaison selon les colonnes, l’application lie des données distinctes et des tableaux de longueur/indicateur à chaque colonne.  
+ Dans la liaison de colonne-sage, l’application lie des données séparées et des tableaux de longueur/indicateur à chaque colonne.  
   
- Pour utiliser la liaison selon les colonnes, l’application définit d’abord l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE sur SQL_BIND_BY_COLUMN. (Il s’agit de la valeur par défaut.) Pour chaque colonne à lier, l’application effectue les étapes suivantes :  
+ Pour utiliser la liaison de colonne-sage, l’application définit d’abord l’attribut SQL_ATTR_ROW_BIND_TYPE énoncé à SQL_BIND_BY_COLUMN. (C’est la valeur par défaut.) Pour que chaque colonne soit liée, l’application effectue les étapes suivantes :  
   
-1.  Alloue un tableau de mémoires tampons de données.  
+1.  Alloue un tableau tampon de données.  
   
-2.  Alloue un tableau de mémoires tampons de longueur/d’indicateur.  
+2.  Alloue une gamme de tampons de longueur/indicateur.  
   
     > [!NOTE]  
-    >  Si l’application écrit directement dans descripteurs lorsque la liaison selon les colonnes est utilisée, des tableaux distincts peuvent être utilisés pour les données de longueur et d’indicateur.  
+    >  Si l’application écrit directement aux descripteurs lorsque la liaison de la colonne est utilisée, des tableaux distincts peuvent être utilisés pour la longueur et les données d’indicateur.  
   
-3.  Appelle **SQLBindCol** avec les arguments suivants :  
+3.  Appelle **SQLBindCol** avec les arguments suivants:  
   
-    -   *TargetType* est le type d’un élément unique dans le tableau de mémoires tampons de données.  
+    -   *TargetType* est le type d’élément unique dans le tableau tampon de données.  
   
-    -   *TargetValuePtr* est l’adresse du tableau de tampons de données.  
+    -   *TargetValuePtr* est l’adresse du tableau tampon de données.  
   
-    -   *BufferLength* est la taille d’un élément unique dans le tableau de mémoires tampons de données. L’argument *BufferLength* est ignoré lorsque les données sont de longueur fixe.  
+    -   *BufferLength* est la taille d’un seul élément dans le tableau tampon de données. *L’argument de BufferLength* est ignoré lorsque les données sont des données à durée fixe.  
   
-    -   *StrLen_or_IndPtr* est l’adresse du tableau longueur/indicateur.  
+    -   *StrLen_or_IndPtr* est l’adresse du tableau de longueur/indicateur.  
   
- Pour plus d’informations sur l’utilisation de ces informations, consultez « adresses de tampon » plus loin dans cette section. Pour plus d’informations sur la liaison selon les colonnes, consultez [liaison selon les colonnes](../../../odbc/reference/develop-app/column-wise-binding.md).  
+ Pour plus d’informations sur la façon dont ces informations sont utilisées, voir « Adresses tampons », plus tard dans cette section. Pour plus d’informations sur la liaison de colonne-sage, voir [Column-Wise Binding](../../../odbc/reference/develop-app/column-wise-binding.md).  
   
 ## <a name="row-wise-binding"></a>Liaison selon les lignes  
- Dans une liaison selon les lignes, l’application définit une structure qui contient des tampons de données et de longueur/d’indicateur pour chaque colonne à lier.  
+ Dans la fixation en ligne, l’application définit une structure qui contient des données et des tampons de longueur/indicateur pour chaque colonne à lier.  
   
- Pour utiliser la liaison selon les lignes, l’application effectue les étapes suivantes :  
+ Pour utiliser la fixation en ligne, l’application effectue les étapes suivantes :  
   
-1.  Définit une structure pour contenir une seule ligne de données (y compris les mémoires tampons de longueur/d’indicateur) et alloue un tableau de ces structures.  
+1.  Définit une structure pour contenir une seule rangée de données (y compris les données et les tampons de longueur/indicateur) et alloue un éventail de ces structures.  
   
     > [!NOTE]  
-    >  Si l’application écrit directement dans descripteurs lorsque la liaison selon les lignes est utilisée, des champs séparés peuvent être utilisés pour les données de longueur et d’indicateur.  
+    >  Si l’application écrit directement aux descripteurs lorsque la liaison en ligne est utilisée, des champs distincts peuvent être utilisés pour la longueur et les données d’indicateurs.  
   
-2.  Affecte à l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE la taille de la structure qui contient une seule ligne de données ou la taille d’une instance d’une mémoire tampon dans laquelle les colonnes de résultats seront liées. La longueur doit inclure de l’espace pour toutes les colonnes liées, ainsi que tout remplissage de la structure ou de la mémoire tampon, pour s’assurer que lorsque l’adresse d’une colonne liée est incrémentée avec la longueur spécifiée, le résultat pointe vers le début de la même colonne dans la ligne suivante. Lorsque vous utilisez l’opérateur *sizeof* en C ANSI, ce comportement est garanti.  
+2.  Définit l’attribut SQL_ATTR_ROW_BIND_TYPE énoncé à la taille de la structure qui contient une seule rangée de données ou à la taille d’une instance d’un tampon dans lequel les colonnes de résultats seront liées. La longueur doit inclure de l’espace pour toutes les colonnes liées, et tout rembourrage de la structure ou du tampon, pour s’assurer que lorsque l’adresse d’une colonne liée est incrémentée avec la longueur spécifiée, le résultat indiquera le début de la même colonne dans la rangée suivante. Lors de *l’utilisation de la taille de l’opérateur* dans ANSI C, ce comportement est garanti.  
   
-3.  Appelle **SQLBindCol** avec les arguments suivants pour chaque colonne à lier :  
+3.  Appelle **SQLBindCol** avec les arguments suivants pour que chaque colonne soit liée :  
   
-    -   *TargetType* est le type du membre de la mémoire tampon de données à lier à la colonne.  
+    -   *TargetType* est le type de membre tampon de données à lié à la colonne.  
   
-    -   *TargetValuePtr* est l’adresse du membre de tampon de données dans le premier élément de tableau.  
+    -   *TargetValuePtr* est l’adresse du membre tampon de données dans le premier élément de tableau.  
   
-    -   *BufferLength* est la taille du membre de tampon de données.  
+    -   *BufferLength* est la taille du membre tampon de données.  
   
-    -   *StrLen_or_IndPtr* est l’adresse du membre de longueur/indicateur à lier.  
+    -   *StrLen_or_IndPtr* est l’adresse du membre de la longueur/indicateur à lier.  
   
- Pour plus d’informations sur l’utilisation de ces informations, consultez « adresses de tampon » plus loin dans cette section. Pour plus d’informations sur la liaison selon les colonnes, consultez [liaison selon les lignes](../../../odbc/reference/develop-app/row-wise-binding.md).  
+ Pour plus d’informations sur la façon dont ces informations sont utilisées, voir « Adresses tampons », plus tard dans cette section. Pour plus d’informations sur la liaison de colonne-sage, voir [Row-Wise Binding](../../../odbc/reference/develop-app/row-wise-binding.md).  
   
-## <a name="buffer-addresses"></a>Adresses de mémoire tampon  
- L' *adresse de la mémoire tampon* correspond à l’adresse réelle de la mémoire tampon de données ou de longueur/indicateur. Le pilote calcule l’adresse de la mémoire tampon juste avant d’écrire dans les tampons (par exemple pendant l’exécution de l’extraction). Elle est calculée à partir de la formule suivante, qui utilise les adresses spécifiées dans les arguments *TargetValuePtr* et *StrLen_or_IndPtr* , le décalage de liaison et le numéro de ligne :  
+## <a name="buffer-addresses"></a>Adresses tampon  
+ *L’adresse tampon* est l’adresse réelle des données ou de la longueur/indicateur tampon. Le conducteur calcule l’adresse tampon juste avant qu’elle n’écrive aux tampons (par exemple pendant le temps d’aller). Il est calculé à partir de la formule suivante, qui utilise les adresses spécifiées dans les arguments *TargetValuePtr* et *StrLen_or_IndPtr,* la compensation contraignante, et le numéro de ligne:  
   
- ** + *Décalage de liaison* d’adresse liée + ((*numéro de ligne* -1) x taille de l' *élément*)  
+ *Compensation* + *de liaison d’adresse* liée ((numéro de*rangée* - 1) x *taille d’élément*)  
   
- où les variables de la formule sont définies comme décrit dans le tableau suivant.  
+ où les variables de la formule sont définies comme décrites dans le tableau suivant.  
   
 |Variable|Description|  
 |--------------|-----------------|  
-|*Adresse liée*|Pour les mémoires tampons de données, adresse spécifiée avec l’argument *TargetValuePtr* dans **SQLBindCol**.<br /><br /> Pour les mémoires tampons de longueur/d’indicateur, adresse spécifiée avec l’argument *StrLen_or_IndPtr* dans **SQLBindCol**. Pour plus d’informations, consultez « commentaires supplémentaires » dans la section « descripteurs et SQLBindCol ».<br /><br /> Si l’adresse liée est 0, aucune valeur de données n’est retournée, même si l’adresse telle que calculée par la formule précédente est différente de zéro.|  
-|*Décalage de liaison*|Si la liaison selon les lignes est utilisée, il s’agit de la valeur stockée à l’adresse spécifiée avec l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Si la liaison selon les colonnes est utilisée ou si la valeur de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR est un pointeur null, l' *offset de liaison* est 0.|  
-|*Row Number*|Numéro de base 1 de la ligne dans l’ensemble de lignes. Pour les extractions sur une seule ligne, il s’agit de la valeur par défaut 1.|  
-|*Taille de l’élément*|Taille d’un élément dans le tableau lié.<br /><br /> Si la liaison selon les colonnes est utilisée, il s’agit de **sizeof (SQLINTEGER destinée)** pour les mémoires tampons de longueur/indicateur. Pour les mémoires tampons de données, il s’agit de la valeur de l’argument *BufferLength* dans **SQLBindCol** si le type de données est de longueur variable et de la taille du type de données si la longueur est fixe.<br /><br /> Si la liaison selon les lignes est utilisée, il s’agit de la valeur de l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE pour les tampons de données et de longueur/d’indicateur.|  
+|*Adresse liée*|Pour les tampons de données, l’adresse spécifiée avec l’argument *TargetValuePtr* dans **SQLBindCol**.<br /><br /> Pour les tampons de longueur/indicateur, l’adresse spécifiée avec *l’argument StrLen_or_IndPtr* dans **SQLBindCol**. Pour de plus amples renseignements, consultez la section « Commentaires additionnels » dans la section « Descriptors et SQLBindCol ».<br /><br /> Si l’adresse consolidée est de 0, aucune valeur de données n’est retournée, même si l’adresse calculée par la formule précédente n’est pas zéro.|  
+|*Compensation de liaison*|Si la fixation en ligne est utilisée, la valeur stockée à l’adresse spécifiée avec l’attribut SQL_ATTR_ROW_BIND_OFFSET_PTR déclaration.<br /><br /> Si la liaison de la colonne est utilisée ou si la valeur de l’attribut de l’SQL_ATTR_ROW_BIND_OFFSET_PTR’énoncé est un pointeur nul, *binding Offset* est de 0.|  
+|*Row Number*|Le numéro à 1 base de la rangée dans le rame. Pour les allers-meur à une seule ligne, qui sont la valeur par défaut, c’est 1.|  
+|*Taille de l’élément*|La taille d’un élément dans le tableau lié.<br /><br /> Si la liaison de colonne-sage est utilisée, **c’est la taille de (SQLINTEGER)** pour la longueur/ tampons d’indicateur. Pour les tampons de données, c’est la valeur de l’argument *BufferLength* dans **SQLBindCol** si le type de données est de longueur variable, et la taille du type de données si le type de données est la longueur fixe.<br /><br /> Si la fixation de la ligne est utilisée, c’est la valeur de l’attribut de l’SQL_ATTR_ROW_BIND_TYPE énoncé pour les données et les tampons de longueur/indicateur.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>Descripteurs et SQLBindCol  
  Les sections suivantes décrivent comment **SQLBindCol** interagit avec les descripteurs.  
   
 > [!CAUTION]  
->  L’appel de **SQLBindCol** pour une instruction peut affecter d’autres instructions. Cela se produit lorsque le ARD associé à l’instruction est explicitement alloué et est également associé à d’autres instructions. Étant donné que **SQLBindCol** modifie le descripteur, les modifications s’appliquent à toutes les instructions auxquelles ce descripteur est associé. Si ce n’est pas le comportement requis, l’application doit dissocier ce descripteur des autres instructions avant d’appeler **SQLBindCol**.  
+>  Appeler **SQLBindCol** pour une déclaration peut affecter d’autres déclarations. Cela se produit lorsque l’ARD associé à l’instruction est explicitement attribué et est également associé à d’autres énoncés. Étant donné que **SQLBindCol** modifie le descripteur, les modifications s’appliquent à toutes les déclarations auxquelles ce descripteur est associé. Si ce n’est pas le comportement requis, l’application doit dissocier ce descripteur des autres déclarations avant d’appeler **SQLBindCol**.  
   
-## <a name="argument-mappings"></a>Mappages d’arguments  
- D’un plan conceptuel, **SQLBindCol** effectue les étapes suivantes dans l’ordre :  
+## <a name="argument-mappings"></a>Cartographies d’argument  
+ Conceptuellement, **SQLBindCol** effectue les étapes suivantes dans l’ordre :  
   
-1.  Appelle **SQLGetStmtAttr** pour obtenir le handle ARD.  
+1.  Appelle **SQLGetStmtAttr** pour obtenir la poignée ARD.  
   
-2.  Appelle **SQLGetDescField** pour récupérer le champ SQL_DESC_COUNT de ce descripteur, et si la valeur de l’argument *ColumnNumber* dépasse la valeur de SQL_DESC_COUNT, appelle **SQLSetDescField** pour augmenter la valeur de SQL_DESC_COUNT à *ColumnNumber*.  
+2.  Appelle **SQLGetDescField** pour obtenir le champ SQL_DESC_COUNT de ce descripteur, et si la valeur de *l’argument De Lame de colonne* dépasse la valeur de SQL_DESC_COUNT, appelle **SQLSetDescField** pour augmenter la valeur de SQL_DESC_COUNT à *ColumnNumber*.  
   
-3.  Appelle **SQLSetDescField** plusieurs fois pour affecter des valeurs aux champs suivants du ARD :  
+3.  Appelle **SQLSetDescField** plusieurs fois pour attribuer des valeurs aux champs suivants de l’ARD :  
   
-    -   Définit SQL_DESC_TYPE et SQL_DESC_CONCISE_TYPE sur la valeur de *TargetType*, sauf que si *TargetType* est l’un des identificateurs concis d’un sous-type DateTime ou interval, il définit SQL_DESC_TYPE sur SQL_DATETIME ou SQL_INTERVAL, respectivement ; définit SQL_DESC_CONCISE_TYPE sur l’identificateur concis ; et définit SQL_DESC_DATETIME_INTERVAL_CODE sur le sous-code datetime ou Interval correspondant.  
+    -   Définit SQL_DESC_TYPE et SQL_DESC_CONCISE_TYPE à la valeur de *TargetType*, sauf que si *TargetType* est l’un des identificateurs concis d’un sous-type de date ou d’intervalle, il définit SQL_DESC_TYPE à SQL_DATETIME ou SQL_INTERVAL, respectivement; définit SQL_DESC_CONCISE_TYPE à l’identifiant concis; et définit SQL_DESC_DATETIME_INTERVAL_CODE au sous-code de date ou d’intervalle correspondant.  
   
-    -   Définit un ou plusieurs SQL_DESC_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE et SQL_DESC_DATETIME_INTERVAL_PRECISION, en fonction du *TargetType*.  
+    -   Définit une ou plusieurs SQL_DESC_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE et SQL_DESC_DATETIME_INTERVAL_PRECISION, le cas échéant pour *TargetType*.  
   
-    -   Définit le champ SQL_DESC_OCTET_LENGTH sur la valeur de *BufferLength*.  
+    -   Définit le champ SQL_DESC_OCTET_LENGTH à la valeur de *BufferLength*.  
   
-    -   Définit le champ SQL_DESC_DATA_PTR sur la valeur de *TargetValue*.  
+    -   Définit le champ SQL_DESC_DATA_PTR à la valeur de *TargetValue*.  
   
-    -   Affecte la valeur de *StrLen_Or_Ind*au champ SQL_DESC_INDICATOR_PTR. (Voir le paragraphe suivant).  
+    -   Définit le champ SQL_DESC_INDICATOR_PTR à la valeur de *StrLen_or_Ind*. (Voir le paragraphe suivant.)  
   
-    -   Affecte la valeur de *StrLen_Or_Ind*au champ SQL_DESC_OCTET_LENGTH_PTR. (Voir le paragraphe suivant).  
+    -   Définit le champ SQL_DESC_OCTET_LENGTH_PTR à la valeur de *StrLen_or_Ind*. (Voir le paragraphe suivant.)  
   
- La variable à laquelle l’argument *StrLen_Or_Ind* fait référence est utilisée à la fois pour les informations relatives aux indicateurs et à la longueur. Si une instruction FETCH rencontre une valeur null pour la colonne, elle stocke SQL_NULL_DATA dans cette variable ; dans le cas contraire, elle stocke la longueur des données dans cette variable. Le passage d’un pointeur null en tant que *StrLen_Or_Ind* empêche l’opération d’extraction de retourner la longueur des données, mais fait échouer l’extraction si elle rencontre une valeur null et n’a aucun moyen de retourner SQL_NULL_DATA.  
+ La variable à laquelle *l’argument StrLen_or_Ind* fait référence est utilisée à la fois pour l’information sur les indicateurs et la longueur. Si un aller chercher rencontre une valeur nulle pour la colonne, il stocke SQL_NULL_DATA dans cette variable; autrement, il stocke la longueur des données dans cette variable. Passer un pointeur nul que *StrLen_or_Ind* empêche l’opération aller chercher de retourner la longueur des données, mais rend l’aller chercher échouer si elle rencontre une valeur nulle et n’a aucun moyen de retourner SQL_NULL_DATA.  
   
- Si l’appel à **SQLBindCol** échoue, le contenu des champs de descripteur qu’il aurait définis dans le ARD n’est pas défini et la valeur du champ SQL_DESC_COUNT du ARD est inchangée.  
+ Si l’appel à **SQLBindCol** échoue, le contenu des champs descripteur qu’il aurait mis dans l’ARD n’est pas défini et la valeur du champ SQL_DESC_COUNT de l’ARD est inchangée.  
   
-## <a name="implicit-resetting-of-count-field"></a>Réinitialisation implicite du champ de nombre  
- **SQLBindCol** définit SQL_DESC_COUNT à la valeur de l’argument *ColumnNumber* uniquement lorsque cela augmente la valeur de SQL_DESC_COUNT. Si la valeur de l’argument *TargetValuePtr* est un pointeur null et que la valeur de l’argument *ColumnNumber* est égale à SQL_DESC_COUNT (autrement dit, lors de la dissociation de la colonne liée la plus élevée), SQL_DESC_COUNT est défini sur le numéro de la colonne dépendante la plus élevée.  
+## <a name="implicit-resetting-of-count-field"></a>Réinitialisation implicite du champ COUNT  
+ **SQLBindCol** ne fixe SQL_DESC_COUNT à la valeur de *l’argument de La Colonnen* que lorsque cela augmenterait la valeur de SQL_DESC_COUNT. Si la valeur de l’argument *TargetValuePtr* est un pointeur nul et que la valeur de *l’argument de La fiche de colonne* est égale à SQL_DESC_COUNT (c’est-à-dire, lorsqu’il ne relie pas la colonne la plus élevée), alors SQL_DESC_COUNT est réglée au nombre de la colonne la plus haute liée restante.  
   
-## <a name="cautions-regarding-sql_default"></a>Précautions relatives à SQL_DEFAULT  
- Pour que les données des colonnes soient correctement récupérées, l’application doit déterminer correctement la longueur et le point de départ des données dans la mémoire tampon de l’application. Lorsque l’application spécifie un *TargetType*explicite, les conceptions erronées de l’application sont facilement détectées. Toutefois, lorsque l’application spécifie un *TargetType* de SQL_DEFAULT, **SQLBindCol** peut être appliqué à une colonne d’un type de données différent de celui prévu par l’application, soit à partir de modifications apportées aux métadonnées, soit en appliquant le code à une autre colonne. Dans ce cas, l’application peut ne pas toujours déterminer le début ou la longueur des données de la colonne extraite. Cela peut entraîner des erreurs de données ou des violations de mémoire qui ne sont pas signalées.  
+## <a name="cautions-regarding-sql_default"></a>Mises en garde concernant les SQL_DEFAULT  
+ Pour récupérer les données de la colonne avec succès, l’application doit déterminer correctement la longueur et le point de départ des données dans le tampon d’application. Lorsque l’application spécifie un *TargetType*explicite, les idées fausses d’application sont facilement détectées. Toutefois, lorsque l’application spécifie un *TargetType* de SQL_DEFAULT, **SQLBindCol** peut être appliqué à une colonne d’un type de données différent de celui prévu par l’application, soit des modifications apportées aux métadonnées, soit en appliquant le code à une autre colonne. Dans ce cas, l’application peut ne pas toujours déterminer le début ou la longueur des données de colonne récupérées. Cela peut entraîner des erreurs de données non déclarées ou des violations de la mémoire.  
   
 ## <a name="code-example"></a>Exemple de code  
- Dans l’exemple suivant, une application exécute une instruction **Select** sur la table Customers pour retourner un jeu de résultats des ID de client, des noms et des numéros de téléphone, triés par nom. Il appelle ensuite **SQLBindCol** pour lier les colonnes de données aux mémoires tampons locales. Enfin, l’application extrait chaque ligne de données avec **SQLFetch** et imprime le nom, l’ID et le numéro de téléphone de chaque client.  
+ Dans l’exemple suivant, une application exécute une déclaration **SELECT** sur la table des clients pour retourner un ensemble de résultats des numéros d’ID, noms et numéros de téléphone du client, triés par leur nom. Il appelle ensuite **SQLBindCol** pour lier les colonnes de données aux tampons locaux. Enfin, l’application récupère chaque série de données avec **SQLFetch** et imprime le nom, l’identification et le numéro de téléphone de chaque client.  
   
- Pour obtenir plus d’exemples de code, consultez [fonction SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), fonction [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md), [fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)et [fonction SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ Pour plus d’exemples de code, voir [SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLColumns Function](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLFetchScroll Function](../../../odbc/reference/syntax/sqlfetchscroll-function.md), et [SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
 ```cpp  
 // SQLBindCol_ref.cpp  
@@ -375,19 +375,19 @@ int main() {
 }  
 ```  
   
- Consultez également [exemple de programme ODBC](../../../odbc/reference/sample-odbc-program.md).  
+ Voir aussi, [Échantillon ODBC Program](../../../odbc/reference/sample-odbc-program.md).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Retour d’informations sur une colonne dans un jeu de résultats|[Fonction SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|Extraction d’un bloc de données ou défilement dans un jeu de résultats|[Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Extraction de plusieurs lignes de données|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Libération de mémoires tampons de colonne sur l’instruction|[Fonction SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|Extraction d’une partie ou de la totalité d’une colonne de données|[Fonction SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|Retour du nombre de colonnes du jeu de résultats|[Fonction SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|Informations de retour sur une colonne dans un ensemble de résultats|[Fonction SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|Aller chercher un bloc de données ou faire défiler un ensemble de résultats|[Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Aller chercher plusieurs rangées de données|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Libérer des tampons de colonne sur la déclaration|[Fonction SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|Aller chercher une partie ou la totalité d’une colonne de données|[Fonction SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|Retour du nombre de colonnes de jeu de résultats|[Fonction SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Référence API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

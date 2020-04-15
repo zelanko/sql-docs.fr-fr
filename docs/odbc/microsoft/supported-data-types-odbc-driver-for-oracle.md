@@ -1,5 +1,5 @@
 ---
-title: Types de données pris en charge (pilote ODBC pour Oracle) | Microsoft Docs
+title: Types de données pris en charge (ODBC Driver pour Oracle) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915671"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301114"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Types de données pris en charge (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle prend en charge tous les types de données Oracle 7,3. Toutefois, il ne prend pas en charge les nouveaux types de données Oracle8 répertoriés ici.  
+ Le pilote ODBC pour Oracle prend en charge tous les types de données Oracle 7.3 ; cependant, il ne prend en charge aucun des nouveaux types de données Oracle8 énumérés ici.  
   
 |Type de données|Oracle 7,3|Oracle8|  
 |---------------|----------------|-------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "67915671"
 |NVARCHAR2|n/a|Non pris en charge|  
 |RAW|Prise en charge|Prise en charge|  
 |VARCHAR2|Prise en charge|Prise en charge|  
-|MLSLABEL|Non pris en charge.|Non pris en charge.|  
+|MLSLABEL (EN)|Non pris en charge.|Non pris en charge.|  
   
 > [!NOTE]  
->  Pour plus d’informations sur la taille autorisée de la colonne VARCHAR, consultez [varchar Column Size](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) dans ce guide.
+>  Pour plus d’informations sur la taille admissible de la colonne VARCHAR, voir [la taille de la colonne VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) dans ce guide.

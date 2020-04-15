@@ -1,5 +1,5 @@
 ---
-title: Propriétés du curseur | Microsoft Docs
+title: Propriétés Cursor (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baa8d826718572051b1d3002bd660605cb6c44a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef1b52cfc45099bbfe09683b871f5ef822b36370
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784238"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298353"
 ---
 # <a name="cursor-properties"></a>Propriétés de curseur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Les caractéristiques générales d'un curseur sont déterminées en définissant le type de curseur ODBC ou les comportements de curseur SQL-92/ISO. Les rubriques suivantes décrivent les attributs d'instruction et de connexion supplémentaires qui affectent le comportement d'un curseur.  
   
--   [Taille de l'ensemble de lignes d'un curseur](../../../relational-databases/native-client-odbc-cursors/properties/cursor-rowset-size.md)  
+-   [Taille de l’ensemble de lignes d’un curseur](../../../relational-databases/native-client-odbc-cursors/properties/cursor-rowset-size.md)  
   
 -   [Accès concurrentiel au curseur &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
   
--   [Niveau d'isolation des transactions de curseur](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
+-   [Niveau d’isolation des transactions de curseur](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Utilisation de cursors &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

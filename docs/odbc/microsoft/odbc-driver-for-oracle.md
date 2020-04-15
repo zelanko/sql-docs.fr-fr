@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298129"
 ---
 # <a name="odbc-driver-for-oracle"></a>Pilote ODBC pour Oracle
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le [pilote ODBC fourni par Oracle](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html).  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
  Le pilote Microsoft® ODBC pour Oracle vous permet de connecter votre application conforme à l’ODBC à une base de données Oracle. Le pilote ODBC pour Oracle est conforme aux spécifications de connectivité open Database (ODBC) décrites dans la *référence du programmeur ODBC*. Il permet l’accès aux forfaits PL/SQL, à l’intégration XA/DTC et à l’accès Oracle à partir des services d’information Internet (IIS).  
   

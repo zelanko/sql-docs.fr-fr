@@ -1,5 +1,5 @@
 ---
-title: Descripteurs alloués explicitement | Microsoft Docs
+title: Descripteurs explicitement attribués (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - explicitly allocated descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5808265a9ab70b9947cea64fef790497c7229da8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9950bc23a1e75606316039e6c2d66f3dba59940
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069929"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305690"
 ---
 # <a name="explicitly-allocated-descriptors"></a>Descripteurs alloués explicitement
-Une application peut allouer explicitement un descripteur d’application sur une connexion à tout moment qu’elle est connectée à la base de données. En spécifiant ce handle de descripteur comme attribut d’un descripteur d’instruction à l’aide de **SQLSetStmtAttr**, l’application indique au pilote d’utiliser ce descripteur à la place des descripteurs d’application alloués implicitement correspondants. L’application ne peut pas spécifier d’autres descripteurs d’implémentation.  
+Une application peut affecter explicitement un descripteur d’application sur une connexion à tout moment où elle est connectée à la base de données. En spécifiant cette poignée descripteur comme attribut d’une poignée de déclaration à l’aide de **SQLSetStmtAttr**, l’application ordonne au conducteur d’utiliser ce descripteur à la place des descripteurs d’application implicitement attribués correspondants. L’application ne peut pas spécifier d’autres descripteurs de mise en œuvre.  
   
- Une application peut associer un descripteur explicitement alloué à plusieurs instructions. Uniquement lorsqu’une application est réellement connectée à la base de données, un descripteur peut être un descripteur explicitement alloué. L’application peut libérer explicitement ce descripteur, ou implicitement en libérant sa connexion.
+ Une demande peut associer un descripteur explicitement attribué à plus d’une déclaration. Ce n’est que lorsqu’une application est effectivement connectée à la base de données qu’un descripteur peut être un descripteur explicitement attribué. L’application peut libérer un tel descripteur explicitement, ou implicitement en libérant sa connexion.
