@@ -1,6 +1,6 @@
 ---
 title: IF...ELSE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Référence du langage Transact-SQL pour les instructions IF-ELSE afin de fournir le flux de contrôle dans les instructions Transact-SQL.
 ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,19 +21,19 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd1a2617af761a900dc6fa7085f8343d0b4fa505
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71823611"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517647"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Impose les conditions d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui suit le mot clé IF et sa condition est exécutée si la condition est remplie, c'est-à-dire lorsque l'expression booléenne retourne la valeur TRUE. Le mot clé facultatif ELSE introduit une autre instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui est exécutée lorsque la condition IF n'est pas remplie : l'expression booléenne retourne alors la valeur FALSE.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

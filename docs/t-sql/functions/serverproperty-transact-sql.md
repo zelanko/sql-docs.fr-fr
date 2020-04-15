@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761664"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517526"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -67,6 +67,7 @@ Expression contenant les informations de propriétés à retourner pour le serve
 |InstanceDefaultLogPath|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Nom du chemin par défaut jusqu’aux fichiers journaux d’instance.|  
 |InstanceName|Nom de l'instance à laquelle l'utilisateur est connecté.<br /><br /> Retourne la valeur NULL si le nom de l'instance est celui de l'instance par défaut, et en cas d'entrée incorrecte ou d'erreur.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Retourne 1 si la fonctionnalité Analyse avancée a été installée pendant l’installation ; 0 si la fonctionnalité Analyse avancée n’a pas été installée.|  
+|IsBigDataCluster| Introduite dans [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] à compter de la mise à jour cumulative 4 (CU4).<br /><br />Retourne 1 si l’instance est un cluster Big Data SQL Server ; 0 dans le cas contraire.|  
 |IsClustered|L'instance de serveur est configurée dans un cluster de basculement.<br /><br /> 1 = Ordonné en clusters<br /><br /> 0 = Non cluster<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
 |IsFullTextInstalled|Les composants d'indexation sémantique et de texte intégral sont installés sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Les composants d'indexation sémantique et de texte intégral sont installés.<br /><br /> 0 = Les composants d'indexation sémantique et de texte intégral ne sont pas installés.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
 |IsHadrEnabled|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activé sur cette instance de serveur.<br /><br /> 0 = La fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est désactivée.<br /><br /> 1 = La fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activée.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**<br /><br /> Pour les réplicas de disponibilité à créer et exécuter sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le service [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] doit être activé sur l'instance de serveur. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Remarque :** La propriété IsHadrEnabled se rapporte uniquement aux [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. D'autres fonctionnalités haute disponibilité ou de récupération d'urgence, telles que la mise en miroir de bases de données ou la copie des journaux de transaction, ne sont pas affectées par cette propriété du serveur.|  

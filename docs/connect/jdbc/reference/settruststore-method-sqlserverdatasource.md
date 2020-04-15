@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3d229e9e9c4758f43a090c1481d751560d072da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 30af86d585602c730dfe49e1a5f6b557b065f6cc
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901915"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219155"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Méthode setTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  Pour plus d'informations, consultez la documentation d'interface SunX509 TrustManager sur le site Web de Sun Microsystems.  
   
- Si la propriété trustStore est définie avec une chaîne ou une valeur vide « », le pilote utilise cette valeur pour rechercher le fichier trustStore pour valider le certificat SSL du serveur.  
+ Si la propriété trustStore est définie avec une chaîne ou une chaîne vide (""), le pilote utilise cette valeur pour rechercher le fichier trustStore afin de valider le certificat TLS/SSL du serveur.  
   
  La propriété trustStorePassword peut être spécifiée avec la propriété trustStore et sa valeur est utilisée pour ouvrir le fichier trustStore. Pour plus d’informations, consultez [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   

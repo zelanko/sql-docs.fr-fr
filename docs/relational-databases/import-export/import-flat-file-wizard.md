@@ -1,5 +1,6 @@
 ---
 title: Importer un fichier plat dans SQL | Microsoft Docs
+description: L’Assistant Importation de fichier plat offre un moyen simple de copier les données d’un fichier .csv ou .txt dans une nouvelle table de base de données. Cet article vous montre comment et quand utiliser l’Assistant.
 ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f04842324642c3d24f8b378a3c096e94aa96227c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74190791"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980551"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

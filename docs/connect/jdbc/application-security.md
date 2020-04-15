@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922671"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219438"
 ---
 # <a name="application-security"></a>Sécurité des applications
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,9 +59,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  Le code « file:/install_dir/lib/- » fait référence au répertoire d'installation du pilote JDBC.  
   
 ## <a name="protecting-server-communication"></a>Protection de la communication avec le serveur  
- Lorsque vous utilisez le pilote JDBC pour communiquer avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez sécuriser le canal de communication à l’aide du protocole Internet IPsec (Internet Protocol Security), du protocole SSL (Secure Sockets Layer) ou des deux à la fois.  
+ Quand vous utilisez le pilote JDBC pour communiquer avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez sécuriser le canal de communication à l’aide du protocole IPsec (Internet Protocol Security) ou TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), ou des deux à la fois.  
   
- La prise en charge du protocole SSL peut être utilisée pour fournir un niveau supplémentaire de protection conjointement avec la sécurité IPSEC. Pour plus d’informations sur l’utilisation du protocole SSL, consultez [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md).  
+ La prise en charge du protocole TLS peut être utilisée pour fournir un niveau supplémentaire de protection conjointement avec IPSEC. Pour plus d’informations sur l’utilisation du protocole TLS, consultez [Utilisation du chiffrement](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications du pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

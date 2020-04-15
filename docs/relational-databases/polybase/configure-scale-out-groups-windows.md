@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216078"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443385"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurer des groupes de scale-out PolyBase sur Windows
 
@@ -87,7 +87,10 @@ Une fois l’installation terminée, les deux machines peuvent fonctionner en ta
 3. Exécutez services.msc sur le nœud de calcul (PQTH4A-CMP02).
   
 4. Arrêtez le moteur PolyBase et redémarrez le service de déplacement des données PolyBase.
-  
+
+> [!NOTE] 
+> Quand le service du moteur Polybase est redémarré ou arrêté dans le nœud principal, le service DMS (Data Movement Service) s’arrête dès que le canal de communication est fermé entre DMS et le service du moteur Polybase (DW). Si le moteur DW est redémarré plus de 2 fois, le service DMS entre dans une période silencieuse de 90 minutes et doit attendre 90 minutes avant la prochaine tentative de démarrage automatique. Dans une telle situation, vous devez démarrer ce service manuellement sur tous les nœuds.
+
 ## <a name="optional-remove-a-compute-node"></a>Facultatif : supprimez un nœud de calcul  
   
 1. Connectez-vous au nœud de calcul SQL Server (PQTH4A-CMP02).

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d323481aaf3e12da9786a3b02f21f47c3c98f7cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924538"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219391"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -62,8 +62,8 @@ Pour vous connecter à une instance nommée sur un port statique, utilisez <b>Se
 Vous pouvez vérifier que votre pilote fonctionne en utilisant `isql` pour tester la connexion, ou en exécutant cette commande :
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
-## <a name="using-secure-sockets-layer-ssl"></a>Utilisation du protocole SSL (Secure Sockets Layer)  
-Vous pouvez utiliser le protocole SSL (Secure Sockets Layer) pour chiffrer les connexions à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le protocole SSL protège les noms d’utilisateur et mots de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le réseau. Il vérifie également l’identité du serveur à des fins de protection contre les attaques de l’intercepteur (« man in the middle »).  
+## <a name="using-tlsssl"></a>Utilisation de TLS/SSL  
+Vous pouvez utiliser le protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), pour chiffrer les connexions à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le protocole TLS protège les noms d’utilisateur et mots de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le réseau. Il vérifie également l’identité du serveur à des fins de protection contre les attaques de l’intercepteur (« man-in-the-middle »).  
 
 L’activation du chiffrement renforce la sécurité au détriment des performances.
 
@@ -74,7 +74,7 @@ Quels que soient les paramètres pour **Encrypt** et **TrustServerCertificate**,
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|  
-|**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun de l’objet ou autre nom de l’objet dans un certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
+|**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun de l’objet ou autre nom de l’objet dans un certificat TLS/SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
 
 Par défaut, les connexions chiffrées vérifient toujours le certificat du serveur. Toutefois, si vous vous connectez à un serveur qui possède un certificat auto-signé, ajoutez également l’option `TrustServerCertificate` pour contourner la vérification du certificat par rapport à la liste des autorités de certification approuvées :  
 
@@ -82,7 +82,7 @@ Par défaut, les connexions chiffrées vérifient toujours le certificat du serv
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
-Le protocole SSL utilise la bibliothèque OpenSSL. Le tableau suivant présente les versions minimales prises en charge d’OpenSSL et les emplacements du magasin d’approbations de certificat par défaut pour chaque plateforme :
+Le protocole TLS utilise la bibliothèque OpenSSL. Le tableau suivant présente les versions minimales prises en charge d’OpenSSL et les emplacements du magasin d’approbations de certificat par défaut pour chaque plateforme :
 
 |Plateforme|Version OpenSSL minimale|Emplacement du magasin d’approbations de certificat par défaut|  
 |------------|---------------------------|--------------------------------------------|

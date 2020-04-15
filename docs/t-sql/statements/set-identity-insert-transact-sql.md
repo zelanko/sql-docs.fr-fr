@@ -1,6 +1,6 @@
 ---
 title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Référence Transact-SQL pour l’instruction SET IDENTITY_INSERT. Quand la valeur est ON, permet d’insérer des valeurs explicites dans la colonne d’identité d’une table.
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,19 +23,19 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec5ad11e85df28992e40be22315395de744e2276
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928963"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517538"
 ---
 # <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Autorise l'insertion de valeurs explicites dans la colonne d'identité d'une table.  
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

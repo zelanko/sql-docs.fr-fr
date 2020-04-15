@@ -1,7 +1,7 @@
 ---
 title: Analyse des performances à l’aide du Magasin des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448175"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012415"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 
@@ -34,9 +34,9 @@ Pour plus d’informations sur l’utilisation du Magasin des requêtes dans Azu
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Activation du magasin de requêtes
 
- Le magasin de requêtes n'est pas actif par défaut pour les nouvelles bases de données.
+ Le magasin des requêtes n’est pas activé par défaut pour les nouvelles bases de données SQL Server et Azure Synapse Analytics (SQL DW), mais il est activé par défaut pour les nouvelles bases de données Azure SQL Database.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Utiliser la page Magasin des requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Utiliser la page Magasin des requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur une base de données, puis sur **Propriétés**.
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur l’utilisation du Magasin des requêtes dans Azu
 
 3. Dans la zone **Mode d’opération (demandé)** , sélectionnez **Lecture Écriture**.
 
-## <a name="use-transact-sql-statements"></a>Utilisation d’instructions Transact-SQL
+### <a name="use-transact-sql-statements"></a>Utilisation d’instructions Transact-SQL
 
 Utilisez l’instruction **ALTER DATABASE** pour activer le Magasin des requêtes pour une base de données déterminée. Par exemple :
 

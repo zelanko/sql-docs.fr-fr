@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfaf987fe9eb674ece6724b903c6a629f213fc3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c7035ebdab328abd33c4648754ebaba6b80efb54
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923131"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219192"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Prise en charge de la haute disponibilité et de la récupération d'urgence par le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,7 +69,7 @@ Remarques :
   
 -   La connexion à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
--   Le comportement d’une application qui utilise la propriété de connexion **multiSubnetFailover** peut ne pas être affecté en fonction du type d’authentification : authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], authentification Kerberos ou authentification Windows.  
+-   Le comportement d'une application qui utilise la propriété de connexion **multiSubnetFailover** n'est pas affecté par le type d'authentification : l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’authentification Kerberos ou l’authentification Windows.  
   
 -   Augmentez la valeur de **loginTimeout** pour tenir compte du temps de basculement et réduire les nouvelles tentatives de connexion de l’application.  
   
@@ -111,8 +111,8 @@ Remarques :
   
  Les méthodes **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** et **setTransparentNetworkIPResolution** sont également ajoutées à [SQLServerDataSource Class](../../connect/jdbc/reference/sqlserverdatasource-class.md), à [SQLServerConnectionPoolDataSource Class](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) et à [SQLServerXADataSource Class](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
-## <a name="ssl-certificate-validation"></a>Validation du certificat SSL  
- Un groupe de disponibilité se compose de plusieurs serveurs physiques. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] prend désormais en charge **Autre nom du sujet** dans les certificats SSL de manière à permettre l’association de plusieurs hôtes à un même certificat. Pour plus d’informations sur le protocole SSL, consultez [Comprendre la prise en charge de SSL](../../connect/jdbc/understanding-ssl-support.md).  
+## <a name="tlsssl-certificate-validation"></a>Validation du certificat TLS/SSL  
+ Un groupe de disponibilité se compose de plusieurs serveurs physiques. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] prend désormais en charge **Autre nom du sujet** dans les certificats TLS/SSL de manière à permettre l’association de plusieurs hôtes à un même certificat. Pour plus d’informations sur le protocole TLS, consultez [Comprendre la prise en charge du chiffrement](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

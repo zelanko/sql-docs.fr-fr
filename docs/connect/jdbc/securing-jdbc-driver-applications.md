@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb59afd2044fc1614bdf0303702d72a5435728ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928440"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219428"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Sécurisation des applications du pilote JDBC
 
@@ -32,7 +32,7 @@ Les rubriques de cette section décrivent certains problèmes de sécurité cour
 | [Sécurisation de chaînes de connexion](../../connect/jdbc/securing-connection-strings.md) | Décrit des techniques permettant d'aider à protéger les informations utilisées pour se connecter à une source de données.                                                                                    |
 | [Validation des entrées utilisateur](../../connect/jdbc/validating-user-input.md)             | Décrit des techniques permettant de valider l'entrée utilisateur.                                                                                                                          |
 | [Sécurité des applications](../../connect/jdbc/application-security.md)               | Décrit comment utiliser des autorisations de stratégie Java afin d'aider à sécuriser une application de pilote JDBC.                                                                                |
-| [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)               | Décrit comment établir un canal de communication sécurisé avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du protocole SSL (Secure Sockets Layer). |
+| [Utilisation du chiffrement](../../connect/jdbc/using-ssl-encryption.md)               | Décrit comment établir un canal de communication sécurisé avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer). |
 | [Mode FIPS](../../connect/jdbc/fips-mode.md)                                     | Explique comment utiliser le pilote JDBC en mode compatible FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807411"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607857"
 ---
 # <a name="flexible-file-task"></a>Tâche de fichier flexible
 
@@ -44,18 +44,19 @@ Pour l’opération **Copy**, les propriétés suivantes sont disponibles.
 - **SourceConnectionType :** spécifie le type de gestionnaire de connexions source.
 - **SourceConnection :** spécifie le gestionnaire de connexions source.
 - **SourceFolderPath :** spécifie le chemin du dossier source.
-- **SourceFileName :** spécifie le nom du fichier source. Si ce champ est vide, le dossier source sera copié.
+- **SourceFileName :** spécifie le nom du fichier source. Si ce champ est vide, le dossier source sera copié. Les caractères génériques suivants sont autorisés dans le nom du fichier source : `*` (représente zéro ou plusieurs caractères), `?` (représente zéro ou un caractère) et `^` (caractère d’échappement).
 - **SearchRecursively :** spécifie s’il faut copier les sous-dossiers de manière récursive.
 - **DestinationConnectionType :** spécifie le type de gestionnaire de connexions de destination.
 - **DestinationConnection :** spécifie le gestionnaire de connexions de destination.
 - **DestinationFolderPath :** spécifie le chemin du dossier de destination.
-- **DestinationFileName :** spécifie le nom du fichier de destination.
+- **DestinationFileName :** spécifie le nom du fichier de destination. Si ce champ est vide, les noms des fichiers sources sont utilisés.
 
 Pour l’opération **Delete**, les propriétés suivantes sont disponibles.
 - **ConnectionType :** Spécifie le type de gestionnaire de connexions.
 - **Connection :** Spécifie le gestionnaire de connexions.
 - **FolderPath :** Spécifie le chemin du dossier.
-- **FileName :** Spécifie le nom du fichier. Si ce champ est vide, le dossier sera supprimé. Pour le Stockage Blob Azure, la suppression de dossier n’est pas prise en charge.
+- **FileName :** Spécifie le nom du fichier. Si ce champ est vide, le dossier sera supprimé. Pour le Stockage Blob Azure, la suppression de dossier n’est pas prise en charge. Les caractères génériques suivants sont autorisés dans le nom du fichier : `*` (représente zéro ou plusieurs caractères), `?` (représente zéro ou un caractère) et `^` (caractère d’échappement).
+- **DeleteRecursively :** spécifie s’il faut supprimer les fichiers de manière récursive.
 
 ***Remarques sur la configuration des autorisations du principal de service***
 

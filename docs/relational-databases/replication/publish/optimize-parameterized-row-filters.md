@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710868"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219348"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Optimiser les filtres de lignes paramétrables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "71710868"
     > [!NOTE]  
     >  Quand vous activez `keep_partition_changes`, vous devez d’abord désactiver `use_partition_groups` et spécifier la valeur `1` pour `@force_reinit_subscription`.  
   
-4.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez la valeur `partition_options` pour `@property` et la valeur appropriée pour * @value`. Pour connaître la définition de ces options de filtrage, consultez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) .  
+4.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez la valeur `partition_options` pour `@property` et la valeur appropriée pour `@value`. Pour connaître la définition de ces options de filtrage, consultez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) .  
   
 5.  (Facultatif) Lancez l'Agent d'instantané afin de régénérer l'instantané si nécessaire. Pour plus d’informations sur les modifications qui requièrent un nouvel instantané, consultez [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   

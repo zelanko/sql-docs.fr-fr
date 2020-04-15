@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52f5093d4f9ba61bda2b3fb44cf6a64e76b6fe4e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 297d37f6e0451e207d92dbc8a342b087c4d28895
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920787"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219368"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>Méthode setPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +42,11 @@ public void setPacketSize(int packetSize)
 ## <a name="remarks"></a>Notes  
  La plage acceptable de valeurs de cette propriété est [-1 | 0 | 512..32767]. Si cette propriété est définie sur une valeur située en dehors des limites acceptables, une exception se produit.  
   
- L'application peut souhaiter définir la propriété packetSize pendant la connexion à l'aide du chiffrement SSL (Secure Sockets Layer). Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] négocie la taille de paquet avec le serveur. Si la propriété encrypt a la valeur « **true** » et que la taille négociée du paquet est supérieure à la taille de l’enregistrement SSL du fournisseur de sécurité par défaut de la machine virtuelle Java (JVM), le pilote génère une erreur et met fin à la connexion.  
+ L’application peut souhaiter définir la propriété packetSize pendant la connexion à l’aide du chiffrement TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer). Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] négocie la taille de paquet avec le serveur. Si la propriété encrypt a la valeur « **true** » et que la taille négociée du paquet est supérieure à la taille de l’enregistrement TLS du fournisseur de sécurité par défaut de la machine virtuelle Java (JVM), le pilote génère une erreur et met fin à la connexion.  
   
- De plus, l'application peut souhaiter définir la propriété packetSize sans demander de chiffrement SSL. Dans ce cas, si le serveur requiert que le client prenne en charge le chiffrement SSL, le pilote vérifie la taille d'enregistrement SSL du fournisseur de sécurité par défaut de la machine virtuelle Java. Si la propriété packetSize est supérieure à la taille d'enregistrement SSL du fournisseur de sécurité par défaut de la machine virtuelle Java, le pilote génère une erreur et met fin à la connexion.  
+ De plus, l’application peut souhaiter définir la propriété packetSize sans demander de chiffrement TLS. Dans ce cas, si le serveur exige que le client prenne en charge le chiffrement TLS, le pilote vérifie la taille d’enregistrement TLS du fournisseur de sécurité par défaut de la machine virtuelle Java. Si la propriété packetSize est supérieure à la taille d’enregistrement TLS du fournisseur de sécurité par défaut de la machine virtuelle Java, le pilote génère une erreur et met fin à la connexion.  
   
- Pour plus d’informations sur l’utilisation du protocole SSL, consultez [Utilisation du chiffrement SSL](../../../connect/jdbc/using-ssl-encryption.md).  
+ Pour plus d’informations sur l’utilisation du protocole TLS, consultez [Utilisation du chiffrement](../../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

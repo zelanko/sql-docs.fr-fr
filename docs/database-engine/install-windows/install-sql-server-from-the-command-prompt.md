@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f1e6d89848da95ab71cc6153faa55b50fc7452b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288613"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925477"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
 
@@ -261,7 +261,7 @@ Les paramètres répertoriés pour un composant [!INCLUDE[ssDEnoversion](../../i
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatoire](#Accounts)|N’est plus applicable à compter de SQL Server 2017.  Spécifie le mot de passe du compte de démarrage pour le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Facultatif**|N’est plus applicable à compter de SQL Server 2017.  Spécifie le mode de [démarrage](#Accounts) pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Valeurs prises en charge :<br /><br /> **Automatique**<br /><br /> **Désactivé**<br /><br /> **Manuel**|  
 |Python/Machine Learning Services (dans la base de données)|MPYCACHEDIRECTORY|Réservé pour un usage futur. Utilisez %TEMP% pour stocker les fichiers .CAB Python pour une installation sur un ordinateur ne disposant pas de connexion Internet. |  
-|R/Machine Learning Services (dans la base de données)|/MRCACHEDIRECTORY|Utilisez ce paramètre afin de spécifier le répertoire du cache pour la prise en charge de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (autonome) ou de la fonctionnalité R dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants R à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
+|R/Machine Learning Services (dans la base de données)|/MRCACHEDIRECTORY|Utilisez ce paramètre afin de spécifier le répertoire du cache pour la prise en charge de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (autonome) ou de la fonctionnalité R dans SQL Server Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants R à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-component-install-without-internet-access).|  
 |Java/Extensions de langage Java| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Facultatif** | À partir de SQL Server 2019, spécifie l’installation de Java avec extensions de langage. Si/SQL_INST_JAVA est fourni sans le paramètre /SQLJAVADIR, il est supposé que vous souhaitez installer le JRE Zulu Open fourni par le support d’installation. <br /><br /> Le fait de fournir un chemin d’accès pour /SQLJAVADIR indique que vous souhaitez utiliser un JRE ou un JDK déjà installé. |
   
 ###### <a name="sample-syntax"></a>Exemple de syntaxe :  
@@ -843,10 +843,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase |Installe les composants PolyBase.|
 ||PolyBaseCore | À compter de SQL Server 2019, associez à **PolyBase** pour installer la technologie Polybase qui permet d’effectuer des requêtes véritablement intégrées sur Oracle, Teradata, SQL Server, et d’autres données relationnelles et non relationnelles, en utilisant des instructions T-SQL standard. |
 || PolyBaseJava | À compter de SQL Server 2019, associez à **PolyBase** pour installer le connecteur PolyBase Java qui permet des requêtes véritablement intégrées sur des données HDFS en utilisant des instructions T-SQL standard.
-||AdvancedAnalytics |Installe [SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) ou [SQL Server 2016 R Services (dans la base de données)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install).|  
-||SQL_INST_MR |S’applique à [Machine Learning Services pour SQL Server 2017 et ultérieur](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Appairez avec **AdvancedAnalytics** pour installer R Open et des packages R propriétaires.|  
-||SQL_INST_MPY|S’applique à [Machine Learning Services pour SQL Server 2017 et ultérieur](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Appairez avec **AdvancedAnalytics** pour installer Anaconda et des packages Python propriétaires.|  
-||SQL_INST_JAVA |S’applique à [Machine Learning Services pour SQL Server 2017 et ultérieur](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install). Associez à **AdvancedAnalytics** pour installer des extensions qui permettent l’intégration à Java en utilisant des instructions T-SQL standard.|  
+||AdvancedAnalytics |Installe [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install) ou [SQL Server 2016 R Services (dans la base de données)](https://docs.microsoft.com/sql/machine-learning/install/sql-r-services-windows-install).|  
+||SQL_INST_MR |S’applique à [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install). Appairez avec **AdvancedAnalytics** pour installer R Open et des packages R propriétaires.|  
+||SQL_INST_MPY|S’applique à [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install). Appairez avec **AdvancedAnalytics** pour installer Anaconda et des packages Python propriétaires.|  
+||SQL_INST_JAVA |S’applique à [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install). Associez à **AdvancedAnalytics** pour installer des extensions qui permettent l’intégration à Java en utilisant des instructions T-SQL standard.|  
 |AS||Installe tous les composants [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |RS||Installe tous les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Suppression à compter de SQL Server 2017. |  
 |RS_SHP||Installe des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour SharePoint. Suppression à compter de SQL Server 2017.|  
@@ -856,8 +856,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Master|Inclut Scale Out Master pour Integration Services Scale Out.| 
 ||IS_Worker|Inclut Scale Out Worker pour Integration Services Scale Out.| 
 |MDS||Installe [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
-|SQL_SHARED_MPY||Installe des packages Python pour [SQL Server 2017 Machine Learning Server (autonome)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) |  
-|SQL_SHARED_MR||Installe des packages R pour [SQL Server 2016 R Server (autonome)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) ou SQL Server 2017 Machine Learning Server (autonome) |  
+|SQL_SHARED_MPY||Installe des packages Python pour [SQL Server 2017 Machine Learning Server (autonome)](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) |  
+|SQL_SHARED_MR||Installe des packages R pour [SQL Server 2016 R Server (autonome)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install?view=sql-server-2016) ou [SQL Server Machine Learning Server (autonome)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) |  
 |Tools*||Installe les outils clients et les composants de la documentation en ligne de SQL Server.|  
 ||BC|Installe les composants de compatibilité descendante.|  
 ||Conn|Installe les composants de connectivité.|

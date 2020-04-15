@@ -25,12 +25,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49a731b57b56c5c4499d6d46f7fe8a70875ec1d
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008889"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550177"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "68008889"
 
 Force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à suivre les règles ISO se rapportant aux guillemets qui délimitent les identificateurs et les chaînes littérales. Les identificateurs entre guillemets doubles peuvent être des mots clés réservés [!INCLUDE[tsql](../../includes/tsql-md.md)] ou ils peuvent contenir des caractères généralement interdits dans les conventions de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] concernant les identificateurs.
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,18 +55,18 @@ SET QUOTED_IDENTIFIER ON
 ```
 
 ## <a name="remarks"></a>Notes
+Quand `SET QUOTED_IDENTIFIER` a la valeur ON (par défaut), les identificateurs peuvent être encadrés par des guillemets (" ") et les littéraux par des apostrophes (' '). Toutes les chaînes délimitées par des guillemets doubles sont considérées comme des identificateurs d'objet. Par conséquent, les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] applicables aux identificateurs. Ils peuvent être des mots clés réservés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les guillemets doubles ne peuvent pas servir à délimiter des expressions littérales ; seuls des guillemets simples peuvent encadrer des chaînes littérales. Si un guillemet simple (') fait partie d’une chaîne littérale, il peut être représenté par deux guillemets simples accolés ("). `SET QUOTED_IDENTIFIER` doit avoir la valeur ON si des mots clés réservés sont utilisés pour des noms d’objets dans la base de données.
 
-Si SET QUOTED_IDENTIFIER a la valeur ON, les identificateurs peuvent être délimités par des guillemets doubles et les valeurs littérales doivent être délimitées par des guillemets simples. Lorsque SET QUOTED_IDENTIFIER a la valeur OFF, les identificateurs ne peuvent pas apparaître entre guillemets et doivent respecter les conventions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Les chaînes littérales peuvent être délimitées par des guillemets simples ou doubles.
+Quand `SET QUOTED_IDENTIFIER` a la valeur OFF, les identificateurs ne peuvent pas figurer entre des guillemets et doivent respecter toutes les règles de [!INCLUDE[tsql](../../includes/tsql-md.md)] applicables aux identificateurs. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Les chaînes littérales peuvent être délimitées par des guillemets simples ou doubles. Si une chaîne littérale est délimitée par des guillemets doubles, des apostrophes (guillemets simples) peuvent y être imbriquées.
 
-Si SET QUOTED_IDENTIFIER a la valeur par défaut ON, toutes les chaînes délimitées par des guillemets doubles sont interprétées comme des identificateurs d'objets. Par conséquent, les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] applicables aux identificateurs. Ils peuvent être des mots clés réservés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les guillemets doubles ne peuvent pas servir à délimiter des expressions littérales ; seuls des guillemets simples peuvent encadrer des chaînes littérales. Si un guillemet simple ( **'** ) fait partie d’une chaîne littérale, il peut être représenté par deux guillemets simples accolés ( **"** ). SET QUOTED_IDENTIFIER doit avoir la valeur ON si des mots clés réservés sont utilisés pour des noms d'objets dans la base de données.
+> [!NOTE]
+> QUOTED_IDENTIFIER n’affecte pas les identificateurs délimités entre crochets ([]).
 
-Si SET QUOTED_IDENTIFIER a la valeur OFF, les chaînes littérales figurant dans les expressions peuvent être délimitées par des guillemets simples ou doubles. Si une chaîne littérale est délimitée par des guillemets doubles, des apostrophes (guillemets simples) peuvent y être imbriquées.
+`SET QUOTED_IDENTIFIER` doit avoir la valeur ON lors de la création ou de la modification d’index dans des colonnes calculées ou des vues indexées. Si `SET QUOTED_IDENTIFIER` a la valeur OFF, les instructions CREATE, UPDATE, INSERT et DELETE échouent dans des tables avec des index sur des colonnes calculées ou dans des tables avec des vues indexées. Pour plus d’informations sur les paramètres d’option SET requis dans des vues indexées et des index sur des colonnes calculées, consultez [Remarques sur l’utilisation des instructions SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
 
-SET QUOTED_IDENTIFIER doit avoir la valeur ON lors de la création ou de la modification d'index dans des colonnes calculées ou des vues indexées. Si SET QUOTED_IDENTIFIER a la valeur OFF, les instructions CREATE, UPDATE, INSERT et DELETE dans des tables comportant des index sur des colonnes calculées ou des vues indexées échouent. Pour plus d’informations sur les paramètres d’option SET obligatoires avec les vues indexées et les index sur des colonnes calculées, consultez la section « Remarques sur l’utilisation des instructions SET » de l’article [Instructions SET](../../t-sql/statements/set-statements-transact-sql.md).
+`SET QUOTED_IDENTIFIER` doit avoir la valeur ON quand vous créez un index filtré.
 
-SET QUOTED_IDENTIFIER doit avoir la valeur ON lorsque vous créez un index filtré.
-
-SET QUOTED_IDENTIFIER doit avoir la valeur ON lorsque vous appelez les méthodes de type de données XML.
+`SET QUOTED_IDENTIFIER` doit avoir la valeur ON quand vous appelez les méthodes ayant le type de données XML.
 
 Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribuent automatiquement la valeur ON à QUOTED_IDENTIFIER lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, ainsi que dans les propriétés de connexion OLE DB. Dans le cas d'une connexion depuis une application DB-Library, SET QUOTED_IDENTIFIER a la valeur OFF par défaut.
 
@@ -76,32 +76,30 @@ Lors de la création d'une procédure stockée, les options de SET QUOTED_IDENTI
 
 La valeur de SET QUOTED_IDENTIFIER ne change pas lorsqu'elle est exécutée dans une procédure stockée.
 
-Lorsque SET ANSI_DEFAULTS a la valeur ON, l'option SET QUOTED_IDENTIFIER est activée.
+Quand `SET ANSI_DEFAULTS` a la valeur ON, QUOTED_IDENTIFIER a également la valeur ON.
 
-SET QUOTED_IDENTIFIER correspond aussi à l'option QUOTED_IDENTIFIER de ALTER DATABASE. Pour plus d’informations sur les paramètres de base de données, consultez l’article [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+`SET QUOTED_IDENTIFIER` correspond aussi au paramètre QUOTED_IDENTIFIER de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-SET QUOTED_IDENTIFIER prend effet au moment de l’analyse. Il affecte uniquement l’analyse, et non l’exécution des requêtes.
+`SET QUOTED_IDENTIFIER` prend effet au moment de l’analyse [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il affecte uniquement l’analyse, et n’affecte ni l’optimisation ni l’exécution des requêtes.
 
-Pour un lot ad hoc de plus haut niveau, l’analyse commence en utilisant le paramètre actuel de la session défini pour QUOTED_IDENTIFIER. Lors de l’analyse du lot, toute occurrence de SET QUOTED_IDENTIFIER change le comportement de l’analyse à partir de ce point, et enregistre ce paramètre pour la session. Par conséquent, une fois le lot analysé et exécuté, le paramètre QUOTED_IDENTIFER de la session est défini en fonction de la dernière occurrence de SET QUOTED_IDENTIFIER dans le lot.
+Pour un lot ad hoc de plus haut niveau, l’analyse commence en utilisant le paramètre actuel de la session défini pour QUOTED_IDENTIFIER. Lors de l’analyse du lot, toute occurrence de `SET QUOTED_IDENTIFIER` change le comportement de l’analyse à partir de ce point, et enregistre ce paramètre pour la session. Par conséquent, une fois le lot analysé et exécuté, le paramètre QUOTED_IDENTIFER de la session est défini en fonction de la dernière occurrence de `SET QUOTED_IDENTIFIER` dans le lot.
 
-Le code SQL statique d’une procédure stockée est analysée à l’aide de l’option QUOTED_IDENTIFIER en vigueur pour le lot qui a créé ou modifié la procédure stockée. SET QUOTED_IDENTIFIER n’a aucun effet quand il apparaît dans le corps d’une procédure stockée sous forme de code SQL statique.
+Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] statique d’une procédure stockée est analysée à l’aide du paramètre QUOTED_IDENTIFIER en vigueur pour le lot qui a créé ou modifié la procédure stockée. `SET QUOTED_IDENTIFIER` n’a aucun effet quand il apparaît dans le corps d’une procédure stockée sous forme de code [!INCLUDE[tsql](../../includes/tsql-md.md)] statique.
 
-Pour un lot imbriqué à l’aide de sp_executesql ou exec(), l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la session. Si le lot imbriqué se trouve à l’intérieur d’une procédure stockée, l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la procédure stockée. Lors de l’analyse du lot imbriqué, toute occurrence de SET QUOTED_IDENTIFIER modifie le comportement de l’analyse à partir de ce point, mais le paramètre QUOTED_IDENTIFIER de la session n’est pas mis à jour.
+Pour un lot imbriqué à l’aide de `sp_executesql` ou `exec()`, l’analyse commence en utilisant le paramètre QUOTED_IDENTIFIER de la session. Si le lot imbriqué se trouve à l’intérieur d’une procédure stockée, l’analyse commence en utilisant le paramètre QUOTED_IDENTIFIER de la procédure stockée. Lors de l’analyse du lot imbriqué, toute occurrence de `SET QUOTED_IDENTIFIER` change le comportement de l’analyse à partir de ce point, mais le paramètre QUOTED_IDENTIFIER de la session n’est pas mis à jour.
 
-L’utilisation de crochets, **[** et **]** , pour délimiter des identificateurs n’est pas affectée par le paramètre QUOTED_IDENTIFIER.
-
-Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante.
+Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante :
 
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
-IF ( (256 & @@OPTIONS) = 256 ) SET @QUOTED_IDENTIFIER = 'ON';
-SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
+IF ( (256 & @@OPTIONS) = 256 ) 
+SET @QUOTED_IDENTIFIER = 'ON';
 
+SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```
 
 ## <a name="permissions"></a>Autorisations
-
-Nécessite l'appartenance au rôle public.
+Nécessite l’appartenance au rôle `PUBLIC`.
 
 ## <a name="examples"></a>Exemples
 
@@ -112,15 +110,15 @@ L'exemple suivant montre que l'option `SET QUOTED_IDENTIFIER` doit être `ON`, e
 ```sql
 SET QUOTED_IDENTIFIER OFF
 GO
--- An attempt to create a table with a reserved keyword as a name
--- should fail.
+
+-- Create statement fails.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
 SET QUOTED_IDENTIFIER ON;
 GO
 
--- Will succeed.
+-- Create statement succeeds.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
@@ -143,6 +141,7 @@ GO
 ```sql
 SET QUOTED_IDENTIFIER OFF;
 GO
+
 USE AdventureWorks2012;
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_NAME = 'Test')
@@ -197,17 +196,17 @@ GO
  ```
 
 ## <a name="see-also"></a>Voir aussi
-
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)
-- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Data types](../../t-sql/data-types/data-types-transact-sql.md)
-- [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
-- [SELECT](../../t-sql/queries/select-transact-sql.md)
-- [Instructions SET](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)    
+[CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)    
+[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)    
+[CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)    
+[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
+[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)    
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
+[Types de données](../../t-sql/data-types/data-types-transact-sql.md)    
+[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)    
+[SELECT](../../t-sql/queries/select-transact-sql.md)    
+[Instructions SET](../../t-sql/statements/set-statements-transact-sql.md)    
+[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)    
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
+[Identificateurs de base de données](../../relational-databases/databases/database-identifiers.md)

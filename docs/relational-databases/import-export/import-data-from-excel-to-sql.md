@@ -1,5 +1,6 @@
 ---
 title: Importer des données d’Excel vers SQL | Microsoft Docs
+description: Cet article décrit les méthodes permettant d’importer des données à partir d’Excel vers SQL Server ou Azure SQL Database. Certaines ne nécessitent qu’une seule étape, tandis que d’autres ont besoin d’un fichier texte intermédiaire.
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245271"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980574"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importer des données d’Excel vers SQL Server ou Azure SQL Database
 
@@ -252,7 +253,7 @@ Comme décrit précédemment dans la section [Prérequis](#prereq), vous devez e
 Pour plus d’informations sur l’Assistant Copie, consultez les rubriques suivantes :
 
 - [Assistant Data Factory Copy](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Didacticiel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
+- [Tutoriel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -269,7 +270,7 @@ Pour plus d’informations sur l’utilisation de ces sources et récepteurs Dat
 Pour apprendre à copier des données avec Azure Data Factory, consultez les rubriques suivantes :
 
 - [Déplacer des données à l’aide de l’activité de copie](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Didacticiel : Créer un pipeline avec l’activité de copie à l’aide du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Tutoriel : Créer un pipeline avec activité de copie à l’aide du Portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Erreurs courantes
 

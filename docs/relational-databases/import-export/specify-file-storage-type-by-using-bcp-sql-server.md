@@ -1,5 +1,6 @@
 ---
 title: Spécifier le type de stockage de fichier avec bcp
+description: Utilisez bcp pour exporter des données vers un fichier correspondant au type de table de base de données, dans une représentation caractère ou en tant que type de données prenant en charge la conversion implicite.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db8b4d96fd8ac097f912f535087ca658ca48bcca
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056380"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980533"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l’aide de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

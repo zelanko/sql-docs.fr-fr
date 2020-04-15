@@ -3,7 +3,7 @@ title: Fonctionnalités dépréciées du moteur de base de données | Microsoft 
 titleSuffix: SQL Server 2019
 description: Découvrez les fonctionnalités du moteur de base de données dépréciées qui sont toujours disponibles dans SQL Server 2017 (14.x), mais qui ne doivent pas être utilisées dans les nouvelles applications.
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402602"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550173"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Cette rubrique décrit les fonctionnalités du moteur de base de données SQL Server qui sont dépréciées, tout en étant encore disponibles dans SQL Server 2017 (14.x). Les fonctionnalités dépréciées ne doivent pas être utilisées dans les nouvelles applications.  
-
+  Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
+  
 Quand une fonctionnalité est marquée comme étant dépréciée, cela signifie que :
 
-- La fonctionnalité est en mode de maintenance uniquement. Elle ne fait l’objet d’aucunes nouvelles modifications, y compris pour l’interopérabilité avec de nouvelles fonctionnalités.
+- La fonctionnalité est en mode de maintenance uniquement. Aucune nouvelle modification ne lui sera apportée, notamment celles liées à l’interopérabilité avec de nouvelles fonctionnalités.
+- Nous nous efforçons de ne pas retirer une fonctionnalité dépréciée des futures versions pour faciliter les mises à niveau. Cependant, dans de rares cas, nous pouvons décider de retirer définitivement une fonctionnalité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si elle limite de futures innovations.
+- Pour un nouveau travail de développement, nous vous recommandons de ne pas utiliser des fonctionnalités dépréciées.      
 
-- Nous nous efforçons de ne pas retirer une fonctionnalité dépréciée des futures versions pour faciliter les mises à niveau. Cependant, dans de rares cas, nous pouvons décider de retirer définitivement une fonctionnalité de SQL Server si celle-ci limite des innovations futures.
+Vous pouvez surveiller l'utilisation de fonctionnalités déconseillées à l'aide du compteur de performance Objet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fonctionnalités déconseillées et des événements de suivi. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-- Pour un nouveau travail de développement, nous vous recommandons de ne pas utiliser des fonctionnalités dépréciées.
-
-Vous pouvez superviser l’utilisation des fonctionnalités dépréciées à l’aide du compteur de performances de l’objet SQL Server Deprecated Features et des événements de trace. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).
-
-Vous pouvez également obtenir les valeurs de ces compteurs en exécutant l’instruction suivante :
+La valeur de ces compteurs est également disponible en exécutant l’instruction suivante :  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ Mise à niveau à partir de la version 100 (SQL Server 2008 et SQL Server 2008 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité | ID de la fonctionnalité |
 |--------------------|-------------|--------------|------------|
 | Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Les déchiffrements de RC4 et RC4_128 ne sont pas dépréciés. | Utilisez un autre algorithme de chiffrement, par exemple AES. | Algorithme de chiffrement déconseillé | 253 |
-
-### <a name="hash-algorithms"></a>Algorithmes de hachage
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité | ID de la fonctionnalité |
-|--------------------|-------------|--------------|------------|
 | L’utilisation de MD2, MD4, MD5, SHA et SHA-1 est dépréciée. | Utilisez SHA2_256 ou SHA2_512 à la place. Des algorithmes plus anciens continuent de fonctionner, mais ils déclenchent un événement de dépréciation. |Algorithme de hachage déconseillé | None |
 
 ### <a name="remote-servers"></a>Serveurs distants
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité | ID de la fonctionnalité |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ». | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ». | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | Remplacez les serveurs distants à l'aide de serveurs liés. | None | None |
 | SET REMOTE_PROC_TRANSACTIONS|Remplacez les serveurs distants à l'aide de serveurs liés. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>Options définies
+### <a name="transact-sql"></a>Transact-SQL
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité | ID de la fonctionnalité |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** pour les instructions **INSERT**, **UPDATE**et **DELETE** | Mot clé TOP | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>Indicateurs de table
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité | ID de la fonctionnalité |
-|--------------------|-------------|--------------|------------|
 | Indicateur de table HOLDLOCK sans parenthèses. | Utilisez HOLDLOCK avec la parenthèse. | Indicateur de table HOLDLOCK sans parenthèses | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Fonctionnalités dépréciées dans une future version de SQL Server
@@ -131,12 +119,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Hindi <br /><br /> Macédonien | Ces classements existent dans SQL Server 2005 (9.x) et les versions ultérieures, mais ils ne sont pas visibles via fn_helpcollations. Utilisez à la place Macedonian_FYROM_90 et Indic_General_90.|Hindi <br /><br /> Macédonien |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>Configuration
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF et option de base de données ANSI_NULLS OFF<br /><br />SET ANSI_PADDING OFF et option de base de données ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF et option de base de données CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS | Aucun. <br /><br /> ANSI_NULLS, ANSI_PADDING et CONCAT_NULLS_YIELDS_NULL ont toujours la valeur ON. SET OFFSETS n’est pas disponible. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>Types de données
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
@@ -152,6 +134,9 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|Instruction CREATE DATABASE avec l'option FOR ATTACH. Pour recréer plusieurs fichiers journaux, lorsqu'un ou plusieurs d'entre eux possèdent un nouvel emplacement, utilisez FOR ATTACH_REBUILD_LOG. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | MODIFY NAME dans ALTER DATABASE | sp_renamedb |
 
 ### <a name="database-objects"></a>Objets de base de données
 
@@ -161,7 +146,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | Mot clé CHECK dans CREATE TABLE et ALTER TABLE | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | Utilisez ALTER USER. | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities et sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | MODIFY NAME dans ALTER DATABASE | sp_renamedb |
 | sp_getbindtoken | Utilisez MARS ou les transactions distribuées. | sp_getbindtoken |
 
 ### <a name="database-options"></a>Options de la base de données
@@ -201,12 +185,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Utilisez l'intégration CLR à la place. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Utiliser CREATE_LOGIN<br /><br /> Utiliser l'argument DROP LOGIN IsIntegratedSecurityOnly de SERVERPROPERTY | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig |
 
-### <a name="function"></a>Fonction
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>Haute disponibilité
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
@@ -235,12 +213,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 |--------------------|-------------|--------------|
 | Spécification du fournisseur SQLOLEDB pour les serveurs liés. | SQL Server Native Client (SQLNCLI) | SQLOLEDDB pour les serveurs liés |
 
-### <a name="locking"></a>Verrouillage
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>Métadonnées
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
@@ -258,13 +230,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL for C|Bien que le moteur de base de données prenne toujours en charge les connexions des applications existantes qui utilisent les API DB-Library et Embedded SQL, il n'inclut pas les fichiers ou la documentation nécessaires aux tâches de programmation dans les applications qui utilisent ces API. Une version future du moteur de base de données SQL Server n’intègre plus la prise en charge des connexions à partir des applications DB-Library ou Embedded SQL. N'utilisez pas DB-Library ni Embedded SQL pour développer de nouvelles applications. Supprimez toutes les dépendances à DB-Library ou à Embedded SQL lorsque vous modifiez les applications existantes. À la place de ces API, utilisez l’espace de noms SQLClient ou une API comme ODBC. SQL Server 2019 (15.x) n’inclut pas la DLL DB-Library nécessaire à l’exécution de ces applications. Pour exécuter des applications DB-Library ou Embedded SQL, vous avez besoin de la DLL DB-Library fournie dans SQL Server version 6.5, SQL Server 7.0 ou SQL Server 2000 (8.x). | None |
-
-### <a name="removable-databases"></a>Bases de données supprimables
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>Sécurité
 
@@ -288,12 +253,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Fonction intrinsèque PERMISSIONS | Interrogez à la place sys.fn_my_permissions. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | Algorithmes de chiffrement RC4 et DESX|Utilisez un autre algorithme, par exemple AES. | Algorithme DESX |
-
-### <a name="set-options"></a>Options définies
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>Options de configuration de serveur
 
@@ -319,11 +278,14 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 |--------------------|-------------|--------------|
 | Intégration de l’Explorateur de solutions dans SQL Server Management Studio | | None |
 
-### <a name="system-stored-procedures"></a>Procédures stockées système
+### <a name="system-stored-procedures-and-functions"></a>Fonctions et procédures stockées système
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | Aucun. La prise en charge des partitions augmentées est disponible dans SQL Server 2019 (15.x). | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>Tables système
 
@@ -338,12 +300,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[Événements étendus](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>Fonctions système
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>Vues système
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
@@ -357,14 +313,6 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Utilisation du format de stockage vardecimal. | Le format de stockage vardecimal est déconseillé. La compression des données SQL Server 2019 (15.x) compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal. | Format de stockage vardecimal |
 | Utilisation de la procédure sp_db_vardecimal_storage_format.|Le format de stockage vardecimal est déconseillé. La compression des données SQL Server 2019 (15.x) compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal. | sp_db_vardecimal_storage_format |
 | Utilisation de la procédure sp_estimated_rowsize_reduction_for_vardecimal.|Utilisez à la place la compression de données et la procédure sp_estimate_data_compression_savings. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>Indicateurs de table
-
-| Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
-|--------------------|-------------|--------------|
-| Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE. | Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM. | NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE |
-| Spécification des indicateurs de table sans utilisation du mot clé WITH.|Utilisez WITH.|Indicateur de table sans WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>Pointeurs de texte
 
@@ -386,13 +334,18 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | GROUP BY ALL|Utilisez la solution personnalisée cas par cas avec UNION ou une table dérivée. | GROUP BY ALL |
 | ROWGUIDCOL comme nom de colonne dans les instructions DML.|Utilisez $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL comme nom de colonne dans les instructions DML.|Utilisez $identity.|IDENTITYCOL |
-| Utilisation de #, ## comme table temporaire et noms de procédure stockée temporaires.|Utilisez au moins un caractère supplémentaire.|'#' et '##' comme nom des tables temporaires et procédures stockées|185|  
-| Utilisez \@, \@\@ ou \@\@ comme identificateurs Transact-SQL.|N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs.|\@ et noms commençant par \@\@ comme identificateurs Transact-SQL |
+| Utilisation de #, ## comme table temporaire et noms de procédure stockée temporaires. | Utilisez au moins un caractère supplémentaire.|'#' et '##' comme nom des tables temporaires et procédures stockées
+| Utilisez \@, \@\@ ou \@\@ comme identificateurs Transact-SQL. | N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. | \@ et noms commençant par \@\@ comme identificateurs Transact-SQL |
 | Utilisation du mot clé DEFAULT comme valeur par défaut.|N'utilisez pas le mot DEFAULT comme valeur par défaut. | Mot clé DEFAULT comme valeur par défaut. |
 | Utilisation d'un espace comme séparateur entre les indicateurs de table.|Utilisez une virgule pour séparer les indicateurs de table. | Indicateurs de table multiples sans virgule |
-| La liste de sélection d’une vue indexée d’agrégation doit contenir COUNT_BIG (\*) dans le mode de compatibilité 90. | Utilisez COUNT_BIG (\*). | Liste de sélection de vue d’index sans COUNT_BIG(\*)|2|  
+| La liste de sélection d’une vue indexée d’agrégation doit contenir COUNT_BIG (\*) dans le mode de compatibilité 90. | Utilisez COUNT_BIG (\*). | Liste de sélection de vue d’index sans COUNT_BIG(\*) |
 | Application indirecte des indicateurs de table à un appel d'une fonction table à plusieurs instructions via une vue.|Aucun.|Indicateurs TVF indirects |
-| Syntaxe ALTER DATABASE :<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| Syntaxe ALTER DATABASE :<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF et option de base de données ANSI_NULLS OFF<br /><br />SET ANSI_PADDING OFF et option de base de données ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF et option de base de données CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS | Aucun. <br /><br /> ANSI_NULLS, ANSI_PADDING et CONCAT_NULLS_YIELDS_NULL ont toujours la valeur ON. SET OFFSETS n’est pas disponible. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE. | Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM. | NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE |
+| Spécification des indicateurs de table sans utilisation du mot clé WITH. | Utilisez WITH. | Indicateur de table sans WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>Outils
 
@@ -415,7 +368,8 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 
 > [!NOTE]
 > Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)** . Si les développeurs ont alloué **varbinary(50)** , l’application peut nécessiter des modifications si la taille de retour des cookies augmente dans une future version. Bien qu'il ne s'agisse pas d'un problème de suppression de fonctionnalités, ce phénomène est mentionné dans cette rubrique car les réglages de l'application sont similaires. Pour plus d’informations, consultez [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Discontinued Database Engine Functionality in SQL Server 2016 (Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016)](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>Voir aussi
-
- [Discontinued Database Engine Functionality in SQL Server 2016 (Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016)](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

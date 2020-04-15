@@ -1,5 +1,6 @@
 ---
 title: Utiliser le format natif pour importer et exporter des données
+description: Dans le cadre de l’importation ou de l’exportation de données dans SQL Server, le format natif conserve les types de données natifs d’une base de données pour le transfert de données haut débit entre tables SQL Server.
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe836c8b933438cca8ac153db14dd060aad83b80
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055918"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980303"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

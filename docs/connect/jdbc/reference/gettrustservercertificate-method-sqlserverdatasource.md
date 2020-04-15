@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b84a323e3dd8bac95309f0462b48e322ba422c9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f43719fc585a4d1a2fda23fa1111a3918365572b
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911338"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219302"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>Méthode getTrustServerCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +38,9 @@ public boolean getTrustServerCertificate()
  **true** si trustServerCertificate est activé. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
- Si la propriété trustServerCertificate est définie sur **true**, le certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est automatiquement approuvé quand la couche de communication est chiffrée avec SSL. En d’autres termes, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ne validera pas le certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur par défaut est **false**.  
+ Si la propriété trustServerCertificate a la valeur **true**, le certificat TLS (Transport Layer Security) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], anciennement SSL (Secure Sockets Layer), est automatiquement approuvé quand la couche de communication est chiffrée avec TLS. En d’autres termes, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ne valide pas le certificat TLS/SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur par défaut est **false**.  
   
- Si la propriété trustServerCertificate est définie sur **false**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] validera le certificat SSL du serveur.  
+ Si la propriété trustServerCertificate a la valeur **false**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] valide le certificat TLS/SSL du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

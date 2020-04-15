@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873165"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "75548274"
 
   Supprime une ou plusieurs lignes d’une table ou d’une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -192,7 +192,7 @@ DELETE
  TOP ne peut pas être utilisé dans une instruction DELETE avec des vues partitionnées.  
   
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
- Par défaut, une instruction DELETE acquiert toujours un verrou exclusif (X) sur la table qu'il modifie et maintient ce verrou jusqu'à la fin de la transaction. Un verrou exclusif (X) empêche toute autre transaction de modifier les données ; les opérations de lecture ne peuvent avoir lieu qu'avec l'indicateur NOLOCK ou le niveau d'isolation « lecture non validée ». Vous pouvez spécifier des indicateurs de table pour remplacer ce comportement par défaut pour la durée de l'instruction DELETE en spécifiant une autre méthode de verrouillage ; toutefois, nous vous recommandons de ne recourir aux indicateurs qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Par défaut, une instruction DELETE acquiert toujours un verrou intentionnel exclusif (IX) sur l’objet table qu’elle modifie et maintient ce verrou jusqu’à la fin de la transaction. Un verrou intentionnel exclusif (IX) empêche toute autre transaction de modifier les données ; les opérations de lecture ne peuvent avoir lieu qu’avec l’indicateur NOLOCK ou le niveau d’isolation « lecture non validée ». Vous pouvez spécifier des indicateurs de table pour remplacer ce comportement par défaut pour la durée de l'instruction DELETE en spécifiant une autre méthode de verrouillage ; toutefois, nous vous recommandons de ne recourir aux indicateurs qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Lors de la suppression de lignes d’un segment de mémoire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut utiliser le verrouillage de ligne ou de page pour l’opération. Par conséquent, les pages rendues vides par l'opération de suppression demeurent allouées au segment de mémoire. Lorsque des pages vides ne sont pas désallouées, l'espace associé ne peut pas être réutilisé par d'autres objets dans la base de données.  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   Spécifiez l'indicateur TABLOCK dans l'instruction DELETE. Grâce à l'indicateur TABLOCK, l'opération de suppression utilise un verrou exclusif sur la table au lieu d'un verrou de ligne ou de page. Les pages sont ainsi désallouées. Pour plus d’informations sur l’indicateur TABLOCK, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Utilisez TRUNCATE TABLE si toutes les lignes doivent être supprimées de la table.  
+-   Utilisez `TRUNCATE TABLE` si toutes les lignes doivent être supprimées de la table.  
   
 -   Créez un index cluster sur le segment de mémoire avant de supprimer les lignes. Vous pouvez supprimer l'index cluster après avoir supprimé les lignes. Cette méthode prend plus de temps que les méthodes précédentes et utilise davantage de ressources temporaires.  
   
@@ -208,14 +208,14 @@ DELETE
 >  Les pages vides peuvent être supprimées d’un segment de mémoire à tout moment à l’aide de l’instruction `ALTER TABLE <table_name> REBUILD`.  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
- L'instruction DELETE est toujours entièrement journalisée.  
+L'instruction DELETE est toujours entièrement journalisée.  
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Les autorisations DELETE sont requises sur la table cible. Des autorisations SELECT sont également requises si l'instruction comporte une clause WHERE.  
+ Les autorisations `DELETE` sont obligatoires sur la table cible. Des autorisations `SELECT` sont également requises si l’instruction comporte une clause WHERE.  
   
- Les autorisations DELETE sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
+ Les autorisations DELETE sont attribuées par défaut aux membres du rôle serveur fixe `sysadmin`, aux membres des rôles de base de données fixes `db_owner` et `db_datawriter` ainsi qu’au propriétaire de la table. Les membres des rôles `sysadmin`, `db_owner` et `db_securityadmin` ainsi que le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
   
 ## <a name="examples"></a>Exemples  
   

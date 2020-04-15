@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13bab7b3a5b97195a1fd57e30cd2f5bf514b315
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287873"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809710"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ Comme toutes les bases de données complètement ou partiellement hors connexion
 > [!IMPORTANT]  
 > Une base de données créée dans une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être attachée à des versions antérieures. Ainsi, la base de données ne peut pas être utilisée physiquement avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, cela concerne l’état des métadonnées et n’affecte pas le [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
-Lorsque vous attachez une base de données à une autre instance de serveur et si vous souhaitez offrir une expérience cohérente aux utilisateurs et aux applications, il est possible que vous deviez recréer une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, sur cette autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+Lorsque vous attachez une base de données à une autre instance de serveur et si vous souhaitez offrir une expérience cohérente aux utilisateurs et aux applications, il est possible que vous deviez recréer une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, sur cette autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
 **Pour détacher une base de données**  

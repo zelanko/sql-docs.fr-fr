@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873883"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625565"
 ---
 # <a name="edge-constraints"></a>Contraintes d’arête
 
@@ -50,7 +50,7 @@ Considérez que vous avez les nœuds `Product` et `Customer` dans votre graphe e
 La création d’une contrainte d’arête ne crée pas automatiquement un index correspondant sur les colonnes `$from_id` et `$to_id` dans la table d’arêtes. La création manuelle d’un index sur une paire `$from_id`, `$to_id` est recommandée si vous avez des requêtes de recherche de points ou une charge de travail OLTP.
 
 ### <a name="on-delete-referential-actions-on-edge-constraints"></a>Actions référentielles ON DELETE sur des contraintes d’arête
-Les actions en cascade sur une contrainte d’arête permettent aux utilisateurs de définir le actions que le moteur de base de données effectue lorsqu’un utilisateur supprime le(s) nœud(s) au(x)quel(s) l’arête donnée est reliée. Les actions référentielles suivantes peuvent être définies :  
+Les actions en cascade sur une contrainte d’arête permettent aux utilisateurs de définir les actions que le moteur de base de données effectue quand un utilisateur supprime le ou les nœuds auxquels l’arête donnée est reliée. Les actions référentielles suivantes peuvent être définies :  
 *NO ACTION*   
 Le moteur de base de données génère une erreur quand vous essayez de supprimer un nœud relié à des arêtes.  
 

@@ -1,6 +1,6 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Référence Transact-SQL pour la fonction DATEDIFF. Retourne la différence numérique entre une date de début et de fin en fonction de datepart.
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d74f65d119de40a2a02902076eebe6ae42bf4ce5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731129"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517509"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -44,9 +44,9 @@ ms.locfileid: "68731129"
 
 Cette fonction retourne le nombre (valeur entière signée) de limites datepart spécifiées, traversées entre les valeurs *startdate* et *enddate* spécifiées.
   
-Consultez [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) pour obtenir une fonction qui gère des différences plus importantes entre les valeurs *startdate* et *enddate*. Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [, consultez ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)].
+Consultez [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) pour obtenir une fonction qui gère des différences plus importantes entre les valeurs *startdate* et *enddate*. Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

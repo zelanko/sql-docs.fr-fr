@@ -1,5 +1,6 @@
 ---
 title: Prérequis pour une journalisation minimale dans l’importation en bloc | Microsoft Docs
+description: Dans un mode de récupération simple ou un mode de récupération utilisant les journaux de transactions, la journalisation minimale des opérations d’importation en bloc réduit la possibilité qu’une importation remplisse l’espace de journal.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69872eeb356ff4dbd530bf0c752cdf02706d8344
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70910836"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980118"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

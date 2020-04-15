@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924665"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219149"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -113,8 +113,8 @@ Les pilotes JDBC 6.0, 6.2, 6.4 et 7.0 sont redistribuables. Lisez la clause « 
 **Puis-je utiliser le pilote pour accéder à Microsoft SQL Server à partir d’un ordinateur Linux ?**  
 Oui. Le pilote vous permet d’accéder à SQL Server à partir de Linux, d’Unix et d’autres plateformes non-Windows. Pour plus d’informations, voir [Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) .
 
-**Le pilote prend-il en charge le chiffrement SSL (Secure Sockets Layer) ?**  
-Le pilote prend en charge le chiffrement SSL à compter de la version 1.2. Pour plus d’informations, consultez [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md).
+**Le pilote prend-il en charge le chiffrement TLS ?**  
+À partir de la version 1.2, le pilote prend en charge le chiffrement TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer). Pour plus d’informations, consultez [Utilisation du chiffrement](../../connect/jdbc/using-ssl-encryption.md).
 
 **Quels sont les types d’authentification pris en charge par le pilote Microsoft JDBC Driver pour SQL Server ?**  
 Le tableau ci-dessous répertorie les options d’authentification disponibles. Une authentification Kerberos en Java pur est disponible à compter de la version 4.0 du pilote.

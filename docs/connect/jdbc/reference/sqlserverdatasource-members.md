@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fd4c6c324c8f25ab9b3630aaf565671261115c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26d778c5d75686a3de61064037fd0ade492f998b
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927627"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219279"
 ---
 # <a name="sqlserverdatasource-members"></a>Membres de SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "80927627"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|Initialise une nouvelle instance de la classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "80927627"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|Retourne la valeur de la propriété de connexion **applicationIntent**.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|Renvoie le nom de l'application.|  
@@ -47,7 +47,7 @@ ms.locfileid: "80927627"
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|Retourne une valeur **booléenne** indiquant si la propriété encrypt est activée.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|Retourne une description de la source de données.|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|Retourne le nom du serveur de basculement utilisé dans la configuration de la mise en miroir de bases de données.|  
-|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|Retourne le nom d'hôte utilisé dans la validation du certificat SSL (Secure Sockets Layer) SQL Server.|  
+|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|Retourne le nom d’hôte utilisé dans la validation du certificat TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), SQL Server.|  
 |[getInstanceName](../../../connect/jdbc/reference/getinstancename-method-sqlserverdatasource.md)|Retourne le nom de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md)|Retourne une valeur **booléenne** indiquant si la propriété lastUpdateCount est activée.|  
 |[getLockTimeout](../../../connect/jdbc/reference/getlocktimeout-method-sqlserverdatasource.md)|Retourne une valeur **int** indiquant le nombre de millisecondes qu’attend la base de données avant de signaler l’expiration du délai d’un verrou.|  
@@ -83,7 +83,7 @@ ms.locfileid: "80927627"
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Spécifie la nouvelle valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall**.|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|Définit une valeur **booléenne** indiquant si la propriété encrypt est activée.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|Définit le nom du serveur de basculement utilisé dans la configuration de la mise en miroir de bases de données.|  
-|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Définit le nom d'hôte à utiliser pour valider le certificat SSL (Secure Sockets Layer) SQL Server.|  
+|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Définit le nom d’hôte à utiliser dans la validation du certificat TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), SQL Server.|  
 |[setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)|Définit le nom de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|Définit une valeur **booléenne** indiquant si la propriété integratedSecurity est activée.|  
 |[setLastUpdateCount](../../../connect/jdbc/reference/setlastupdatecount-method-sqlserverdatasource.md)|Définit une valeur **booléenne** indiquant si la propriété lastUpdateCount est activée.|  

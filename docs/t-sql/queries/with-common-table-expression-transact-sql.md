@@ -1,6 +1,6 @@
 ---
 title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Référence Transact-SQL sur l’utilisation d’expressions de table communes (CTE) dans les requêtes.
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82ec259664eaa0573f841b9fea21fd705b23ee5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287303"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517602"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Identificateur valide pour l’expression de table commune. *expression_name* do
  *CTE_query_definition*  
  Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT de *CTE_query_definition* doit remplir les mêmes conditions que celles requises pour la création d’une vue, mis à part qu’une expression de table commune ne peut pas en définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si plusieurs arguments *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un de ces opérateurs : UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Si plusieurs *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -100,7 +100,7 @@ Les principes suivants s'appliquent à des expressions de table communes non ré
   
 -   La définition de l'expression de table commune récursive doit contenir au moins deux définitions de requête d'expression de table commune, un membre d'ancrage et un membre récursif. Plusieurs membres d'ancrage et membres récursifs peuvent être définis ; toutefois, toutes les définitions de requêtes de membres d'ancrage doivent être placées avant la première définition de membre récursif. Toutes les définitions de requête d'expression de table commune sont des membres d'ancrage à moins qu'ils ne fassent référence à l'expression de table commune elle-même.  
   
--   Les membres d'ancrage doivent être associés par l'un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
+-   Les membres d’ancrage doivent être associés par l’un des opérateurs de jeu ci-après : UNION ALL, UNION, INTERSECT ou EXCEPT. UNION ALL est le seul opérateur défini autorisé entre le dernier membre d'ancrage et le premier membre récursif, ainsi que lors de la combinaison de plusieurs membres récursifs.  
   
 -   Le nombre de colonnes des membres d'ancrage et récursifs doivent être identiques.  
   

@@ -1,5 +1,6 @@
 ---
 title: Préparer l’importation de données en bloc (SQL Server) | Microsoft Docs
+description: Vous pouvez exécuter la commande bcp, l’instruction BULK INSERT ou la fonction OPENROWSET(BULK) pour importer des données en bloc uniquement à partir d’un fichier de données.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e80c94b8198b3564e76d67e5a632a4791d9c64e1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063162"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980631"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Préparer l'importation de données en bloc (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68063162"
   
 -   Procurez-vous les autorisations nécessaires à votre compte d'utilisateur.  
   
-     Le compte d’utilisateur dans lequel vous utilisez **bcp** , l’instruction BULK INSERT ou l’instruction INSERT... SELECT * FROM OPENROWSET(BULK...) doit bénéficier des autorisations nécessaires sur la table (affectées par le propriétaire de la table). Pour plus d’informations sur les autorisations requises par chaque méthode, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)et [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     Le compte d’utilisateur dans lequel vous utilisez **bcp**, l’instruction BULK INSERT ou l’instruction INSERT... SELECT * FROM OPENROWSET(BULK...) doit bénéficier des autorisations nécessaires sur la table (affectées par le propriétaire de la table). Pour plus d’informations sur les autorisations requises par chaque méthode, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)et [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Utilisez le mode de récupération utilisant les journaux de transactions.  
   

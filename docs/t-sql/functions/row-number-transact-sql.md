@@ -1,6 +1,6 @@
 ---
 title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Référence Transact-SQL pour la fonction ROW_NUMBER. Cette fonction numérote la sortie d’un jeu de résultats.
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77ea306991662b48a164c52a506d921318844f5d
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095380"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517479"
 ---
 # <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ Numérote la sortie d’un jeu de résultats. Plus particulièrement, retourne l
 > [!NOTE]
 > `ROW_NUMBER` est une valeur temporaire calculée lorsque la requête est exécutée. Pour conserver les nombres dans un tableau, consultez [IDENTITY (propriété)](../../t-sql/statements/create-table-transact-sql-identity-property.md) et [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>Syntaxe  

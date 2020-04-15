@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165217"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809858"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec versions gérées par le système
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Les colonnes **PERIOD** sont toujours considérées comme n’acceptant pas les valeurs Null, même si la possibilité de valeur Null n’est pas spécifiée. Si les colonnes **PERIOD** sont explicitement définies comme acceptant les valeurs Null, l’instruction **CREATE TABLE** échoue.
 - La table de l’historique doit toujours être alignée par schéma sur la table actuelle ou temporelle, en termes de nombre de colonnes, de noms de colonnes, de classement et de types de données.
 - Une table de l’historique anonyme est créée automatiquement sur le même schéma que la table en cours ou temporelle.
-- Le nom de la table de l’historique anonyme a le format suivant : *MSSQL_TemporalHistoryFor_<ID_objet_table_temporelle_actuelle>_ [suffixe]* . Le suffixe est facultatif. Il est ajouté uniquement si la première partie du nom de la table n’est pas unique.
+- Le nom de la table de l’historique anonyme a le format suivant : *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Le suffixe est facultatif. Il est ajouté uniquement si la première partie du nom de la table n’est pas unique.
 - La table de l’historique est créée en tant que table rowstore. Un compression de page est appliquée si possible. Autrement, la table de l’historique est décompressée. Par exemple, certaines configurations de table, telles des colonnes fragmentées, n’autorisent pas la compression.
 - Un index cluster par défaut est créé pour la table de l’historique avec un nom généré automatiquement au format *IX_<nom_table_historique>* . L’index cluster contient les colonnes **PERIOD** (début, fin).
 - Pour créer la table actuelle comme table optimisée en mémoire, consultez [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - L’ajout de colonnes n’acceptant pas les valeurs Null et comportant des valeurs par défaut à une table existante contenant des données est une opération sur la taille des données pour toutes les éditions autres que SQL Server Entreprise Edition (version sur laquelle il s’agit d’une opération de métadonnées). Sur SQL Server Édition Standard, l’ajout d’une colonne non Null à une table de l’historique volumineuse contenant des données peut être une opération coûteuse.
 - Les contraintes applicables aux colonnes de fin et de début de la période doivent être choisies avec soin :
-
   - Par défaut, la colonne de début spécifie le point dans le temps à partir duquel vous considérez que les lignes existantes sont valides. Il ne peut pas s’agir d’un point DateHeure dans le futur.
-  - L’heure de fin doit être spécifiée comme valeur maximale pour un point datetime2 donné.
+  - L’heure de fin doit être spécifiée comme valeur maximale pour une précision datetime2 donnée, par exemple `9999-12-31 23:59:59` ou `9999-12-31 23:59:59.9999999`.
 - L’ajout d’une période entraîne une vérification de cohérence des données sur la table actuelle pour s’assurer que les valeurs par défaut pour les colonnes de période sont valides.
 - Quand une table de l’historique existant est spécifiée lors de l’activation de **SYSTEM_VERSIONING**, une vérification de cohérence des données temporelles est effectuée sur les tables actuelles et de l’historique. Elle peut être ignorée si vous spécifiez **DATA_CONSISTENCY_CHECK = OFF** comme paramètre supplémentaire.
 
@@ -198,7 +197,7 @@ ALTER TABLE ProjectTaskCurrent
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Tables temporelles](../../relational-databases/tables/temporal-tables.md)
- [Prise en main des tables temporelles versionnées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
+ [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
 - [Gérer la rétention des données d’historique dans les tables temporelles avec contrôle de version par le système](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
 - [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)

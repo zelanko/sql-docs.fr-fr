@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 49276dd1d3e4f868a2f1fce7a521bba9d31545c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510210"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80464379"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -3034,7 +3034,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Exécutez cette commande pour vérifier si une requête a été exécutée avec un accès ou un échec du cache de résultats.  En cas de présence d’un cache, result_cache_hit retourne 1.
+Exécutez cette commande pour vérifier si une requête a été exécutée avec un résultat mis en cache.  La colonne result_set_cache retourne 1 pour la correspondance dans le cache, 0 pour l’absence dans le cache et des valeurs négatives reflétant les raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
 
 ```sql
 SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests

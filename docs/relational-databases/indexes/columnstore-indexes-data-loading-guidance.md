@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286673"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550223"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
 
@@ -47,7 +47,7 @@ Le chargement en masse dispose des fonctions d’optimisation des performances i
 
 -   **Journalisation réduite :** Les données directement chargées dans des groupes de lignes compressés entraînent une réduction significative de la taille du journal. Par exemple, si les données ont été compressées 10 fois, le journal des transactions correspondant sera approximativement 10 fois plus petit sans nécessiter TABLOCK ou le mode de récupération simple/mode de récupération utilisant les journaux de transactions. Toutes les données qui sont placées dans un rowgroup delta sont entièrement journalisées. Cela inclut toutes les tailles de lot inférieures à 102 400 lignes.  La bonne pratique consiste à utiliser BatchSize > = 102400. Étant donné qu’aucun TABLOCK n’est nécessaire, vous pouvez charger les données en parallèle. 
 
--   **Journalisation minimale :** Vous pouvez réduire davantage la journalisation si vous respectez les prérequis pour une [journalisation minimale](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Toutefois, contrairement au chargement de données dans un rowstore, TABLOCK provoque un verrou X sur la table au lieu d’un verrou BU (mise à jour en bloc) et, par conséquent, le chargement de données en parallèle ne peut pas être effectué. Pour plus d’informations sur le verrouillage, consultez [Verrouillage et gestion des versions de ligne[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+-   **Journalisation minimale :** Vous pouvez réduire davantage la journalisation si vous respectez les prérequis pour une [journalisation minimale](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Toutefois, contrairement au chargement de données dans un rowstore, TABLOCK provoque un verrou X sur la table au lieu d’un verrou BU (mise à jour en bloc) et, par conséquent, le chargement de données en parallèle ne peut pas être effectué. Pour plus d’informations sur le verrouillage, consultez [Verrouillage et contrôle de version de ligne](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
 -   **Optimisation du verrouillage :** Le verrou X sur un groupe de lignes est automatiquement acquis lors du chargement des données dans un groupe de lignes compressé. Toutefois, lors d’un chargement en masse dans un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continue de verrouiller les verrous PAGE/EXTENT car le verrou de rowgroup X ne fait pas partie de la hiérarchie de verrouillage.  
   

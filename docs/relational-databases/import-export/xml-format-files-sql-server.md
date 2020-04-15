@@ -1,5 +1,6 @@
 ---
 title: Fichiers de format XML (SQL Server) | Microsoft Docs
+description: SQL Server 2019 fournit un schéma XML qui définit la syntaxe des fichiers de format XML à utiliser pour l’importation en bloc de données dans une table SQL Server.
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091432"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980371"
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit un schéma XML qui définit la syntaxe des *fichiers de format XML* à utiliser pour l'importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les fichiers de format XML doivent respecter ce schéma, qui est défini en langage XSDL (XML Schema Definition Language). Les fichiers de format XML ne sont pris en charge que si les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés conjointement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Vous pouvez utiliser un fichier de format XML avec une commande **bcp** , une instruction BULK INSERT ou une instruction INSERT... Instruction SELECT \* FROM OPENROWSET(BULK...). La commande **bcp** vous permet de générer automatiquement un fichier de format XML pour une table. Pour plus d’informations, voir [bcp Utility](../../tools/bcp-utility.md).  
+ Vous pouvez utiliser un fichier de format XML avec une commande **bcp**, une instruction BULK INSERT ou une instruction INSERT... Instruction SELECT \* FROM OPENROWSET(BULK...). La commande **bcp** vous permet de générer automatiquement un fichier de format XML pour une table. Pour plus d’informations, voir [bcp Utility](../../tools/bcp-utility.md).  
   
 > [!NOTE]  
 >  Deux types de fichiers de format sont pris en charge pour l’exportation et l’importation en bloc : les *fichiers de format non XML* et les *fichiers de format XML*. Les fichiers de format XML offrent une solution souple et puissante aux fichiers de format non XML. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
@@ -204,7 +205,7 @@ ms.locfileid: "68091432"
 |ID **="** _fieldID_ **"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> est mappé à \<COLUMN SOURCE **="** _fieldID_ **"** />|Obligatoire|  
 |xsi:type **="** _fieldType_ **"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de l'instance de l'élément. La valeur de *fieldType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.|Obligatoire (selon le type de données)|  
 |LENGTH **="** _n_ **"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
-|PREFIX_LENGTH **="** _p_ **"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
+|PREFIX_LENGTH **="** _p_ **"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |MAX_LENGTH **="** _m_ **"**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Facultatif|  
 |COLLATION **="** _collationName_ **"**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Facultatif|  
 |TERMINATOR **= "** _terminator_ **"**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
@@ -277,7 +278,7 @@ ms.locfileid: "68091432"
 |Chaîne de caractères|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**et **SQLNVARCHAR**|Aucun.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes du client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
+>  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
   
  Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -350,7 +351,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. Classement de champs de données caractères dans le même ordre que les colonnes d'une table  
  L'exemple suivant illustre un fichier de format XML décrivant un fichier de données qui contient trois champs de données caractères. Le fichier de format mappe le fichier de données sur une table contenant trois colonnes. Les champs de données correspondent un-à-un aux colonnes de la table.  
   
- **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Fichier de données (enregistrement) :** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -388,7 +389,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> B. Classement de champs de données et de colonnes d'une table dans un ordre différent  
  L'exemple suivant illustre un fichier de format XML décrivant un fichier de données qui contient trois champs de données caractères. Le fichier de format mappe le fichier de données sur une table contenant trois colonnes classées dans un ordre différent de celui des champs du fichier de données.  
   
- **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Table (ligne) :** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Fichier de données** (enregistrement) : Age\<tab>Lastname\<tab>Firstname\<return>  
   
@@ -423,7 +424,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> C. Omission d'un champ de données  
  L'exemple suivant illustre un fichier de format XML décrivant un fichier de données qui contient quatre champs de données caractères. Le fichier de format mappe le fichier de données sur une table contenant trois colonnes. Le deuxième champ de données ne correspond à aucune colonne de la table.  
   
- **Table (ligne) :** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **Table (ligne) :** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **Fichier de données (enregistrement) :** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   

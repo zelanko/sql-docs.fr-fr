@@ -3,16 +3,16 @@ title: Notes de publication pour SQL Server 2019 sur Linux
 description: Cet article contient les notes de publication et fonctionnalités prises en charge pour SQL Server 2019 s’exécutant sur Linux. Les notes de publication sont incluses dans la mise en production la plus récente et dans plusieurs mises en production précédentes.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bb848dd8146653e3d4886128ca39fc5dfe13c743
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e75becc77691ccd91c8c5db01bd08112aaad9476
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216636"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517673"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notes de publication pour SQL Server 2019 sur Linux
 
@@ -45,6 +45,7 @@ Le tableau suivant liste l’historique de publication des versions de SQL Serve
 
 | Libérer                   | Version       | Date de publication |
 |---------------------------|---------------|--------------|
+| [CU4](#cu4)               | 15.0.4033.1   | 31-03-2020   |
 | [CU3](#cu3)               | 15.0.4023.6   | 2020-03-12   |
 | [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
 | [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
@@ -63,6 +64,25 @@ Si vous mettez à jour des packages SQL Server existants, exécutez la commande 
 - [Installer SQL Server 2019 Machine Learning Services pour prendre en charge R et Python sur Linux](sql-server-linux-setup-machine-learning.md)
 - [Installer le package PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Activer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (avril 2020)
+
+Il s’agit de la version de la mise à jour cumulative 4 (CU4) de SQL Server 2019 (15.x). La version du moteur de base de données SQL Server pour cette version est 15.0.4033.1. Pour plus d’informations sur les correctifs et améliorations, consultez <https://support.microsoft.com/help/4548597>.
+
+### <a name="package-details"></a>Détails du package
+
+Pour les installations du package manuelles ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations figurant dans la table suivante :
+
+> [!NOTE]
+> À compter de CU1, les liens d’installation de package hors connexion pour Red Hat pointent vers les packages RHEL 8. Si vous recherchez les packages RHEL 7, reportez-vous au chemin de téléchargement <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
+>
+> **Ubuntu 18.04** est maintenant pris en charge sur SQL Server 2019 à compter de CU3. Les liens d’installation de package hors connexion pour Ubuntu pointent vers les packages Ubuntu 18.04. Si vous recherchez les packages Ubuntu 16.04, reportez-vous au chemin de téléchargement <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
+
+| Package | Version du package | Téléchargements |
+|-----|-----|-----|
+| Package Red Hat RPM | 15.0.4033.1-2 | [Package RPM du moteur](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM d’extensibilité](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM d’extensibilité Java](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM PolyBase](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4033.1-2.x86_64.rpm)|
+| Package SLES RPM | 15.0.4033.1-2 | [Package RPM du moteur mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM d’extensibilité](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM d’extensibilité Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4033.1-2.x86_64.rpm)</br>[Package RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4033.1-2.x86_64.rpm)|
+| Package Ubuntu 18.04 Debian | 15.0.4033.1-2 | [Package Debian du moteur](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4033.1-2_amd64.deb)</br>[Package Debian haute disponibilité](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4033.1-2_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4033.1-2_amd64.deb)</br>[Package Debian d’extensibilité](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4033.1-2_amd64.deb)</br>[Package Debian d’extensibilité Java](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4033.1-2_amd64.deb)</br>[Package RPM PolyBase](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4033.1-2_amd64.deb)|
 
 ## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (mars 2020)
 

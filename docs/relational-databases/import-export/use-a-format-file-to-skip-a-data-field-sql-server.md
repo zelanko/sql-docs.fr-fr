@@ -1,5 +1,6 @@
 ---
 title: Utiliser un fichier de format pour ignorer un champ de données
+description: Vous pouvez utiliser un fichier de format avec un fichier de données contenant plus de champs que de colonnes de table. Il mappe les colonnes de table aux champs de données correspondants et ignore les champs supplémentaires.
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f936706a855e810eefc8749a6c9296e855a9d57
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056318"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980651"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utiliser un fichier de format pour ignorer un champ de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ Le nombre de champs contenus dans un fichier de données peut être supérieur a
 |[Exemples de conditions de test](#etc)<br />&emsp;&#9679;&emsp;[Exemple de table](#sample_table)<br />&emsp;&#9679;&emsp;[Exemple de fichier de données](#sample_data_file)<br />[Création des fichiers de format](#create_format_file)<br />&emsp;&#9679;&emsp;[Création d’un fichier de format non-XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Modification d’un fichier de format non-XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Création d’un fichier de format XML](#xml_format_file)<br />&emsp;&#9679;&emsp;[Modification d’un fichier de format XML](#modify_xml_format_file)<br />[Importation de données avec un fichier de format pour ignorer un champ de données](#import_data)<br />&#9679;&emsp;&emsp;[Utilisation d’un fichier de format bcp et non-XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Utilisation de bcp et d’un fichier de format XML](#bcp_xml)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et d’un fichier de format non-XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et d’un fichier de format XML](#bulk_xml)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et d’un fichier de format non-XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et d’un fichier de format XML](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 > [!NOTE]
->  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer en bloc un fichier de données dans la table à l’aide d’une commande [bcp utility](../../tools/bcp-utility.md) , d’une instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou d’une instruction INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) . Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
+>  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer en bloc un fichier de données dans la table à l’aide d’une commande [bcp utility](../../tools/bcp-utility.md), d’une instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ou d’une instruction INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
 ## <a name="example-test-conditions"></a>Exemples de conditions de test<a name="etc"></a>  
 Les fichiers de format modifiés pris en exemple dans cette rubrique sont fondés sur la table et le fichier de données définis ci-dessous.
