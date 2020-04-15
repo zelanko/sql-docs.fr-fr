@@ -1,5 +1,5 @@
 ---
-title: Colonnes de texte et d’image liées et non liées | Microsoft Docs
+title: Bound vs Unbound Text and Image Columns (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d23b999c40aaa6a7cd8200185f18f14ac759403f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0cfa05f7019342d63ab6f3092c3b6df5ae6e8daa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778871"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297732"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>Colonnes de texte et d'image liées et non liées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Lors de l’utilisation de curseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côté serveur, le pilote ODBC Native Client est optimisé pour ne pas transmettre les données des colonnes de **texte**, **ntext**ou **image** non liées au moment où **SQLFetch** est exécutée. Les données **Text**, **ntext**ou **image** ne sont pas réellement récupérées à partir du serveur tant que l’application n’émet pas [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) pour la colonne.  
+  Lors de l’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de curseurs serveur, le pilote Native Client ODBC est optimisé pour ne pas transmettre les données pour le **texte**non lié, **ntext**, ou colonnes **d’image** au moment **SQLFetch** est effectué. Le **texte**, **ntext**, ou les données **d’image** n’est pas réellement récupéré à partir du serveur jusqu’à ce que l’application émet [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) pour la colonne.  
   
- De nombreuses applications peuvent être écrites de sorte qu’aucune donnée **Text**, **ntext**ou **image** ne soit affichée alors qu’un utilisateur fait simplement défiler la liste vers le haut et vers le haut dans un curseur. Lorsqu’un utilisateur sélectionne une ligne pour obtenir plus de détails, l’application peut ensuite appeler **SQLGetData** pour extraire les données **Text**, **ntext**ou **image** . Cela empêchera la transmission des données **Text**, **ntext**ou **image** pour les lignes que l’utilisateur ne sélectionne pas et peut donc empêcher la transmission de très grandes quantités de données.  
+ De nombreuses applications peuvent être écrites de sorte qu’aucun **texte,** **ntext**, ou des données **d’image** est affiché alors qu’un utilisateur est tout simplement défiler de haut en bas dans un curseur. Lorsqu’un utilisateur sélectionne une ligne pour obtenir plus de détails, l’application peut alors appeler **SQLGetData** pour récupérer le **texte,** **le ntext**, ou les données **d’image.** Cela empêchera la transmission du **texte,** **du ntext**, ou des données **d’image** pour l’une des lignes que l’utilisateur ne sélectionne pas, et peut donc empêcher la transmission de très grandes quantités de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des colonnes texte et image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
+ [Gestion des colonnes de texte et d’image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
  [Comportements des curseurs](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
   
   

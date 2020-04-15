@@ -1,5 +1,5 @@
 ---
-title: COMME une séquence d’échappement | Microsoft Docs
+title: Séquence d’évasion LIKE Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304920"
 ---
 # <a name="like-escape-sequence"></a>Séquence d’échappement pour l’opérateur LIKE
-ODBC utilise des séquences d’échappement pour la clause LIKE. La syntaxe de cette séquence d’échappement est la suivante :  
+ODBC utilise des séquences d’évasion pour la clause LIKE. La syntaxe de cette séquence d’évasion est la suivante :  
   
 ```  
 {'escape-character'}  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans la notation BNF, la syntaxe est la suivante :  
+ Dans la notation BNF, la syntaxe est la suivante :  
   
- *ODBC-like-Escape* :: =  
+ *ODBC-comme-évasion* ::  
   
- *ODBC-ESC-initiateur* Echap'*Escape-caractère*' *ODBC-ESC-terminateur*  
+ *ODBC-esc-initiator* escape '*escape-character*' *ODBC-esc-terminator*  
   
- *caractère d’échappement* :: = *caractère*  
+ *escape-character* ::- *caractère*  
   
- *ODBC-Echap-Initiator* :: = {  
+ *ODBC-esc-initiateur* ::  
   
- *ODBC-ESC-terminateur* :: =}  
+ *ODBC-esc-terminator* ::  
   
- Pour déterminer si le pilote prend en charge la séquence d’échappement LIKE, une application peut appeler **SQLGetInfo** avec le type d’informations SQL_LIKE_ESCAPE_CLAUSE.
+ Pour déterminer si le conducteur prend en charge la séquence d’évacuation LIKE, une application peut appeler **SQLGetInfo** avec le type d’information SQL_LIKE_ESCAPE_CLAUSE.

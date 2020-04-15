@@ -14,20 +14,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297636"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage consommateur.  
+  Avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur Native Client OLE DB, vous pouvez définir les données BLOB en passant un pointeur vers un objet de stockage grand public.  
   
  Le consommateur crée un objet de stockage qui contient les données et passe au fournisseur un pointeur vers cet objet de stockage. Le fournisseur lit ensuite les données de l'objet de stockage du consommateur et les écrit dans la colonne BLOB.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73758320"
 ## <a name="how-to-set-large-data"></a>Définir des données volumineuses  
  Pour transmettre un pointeur à son propre objet de stockage, le consommateur crée un accesseur qui lie la valeur de la colonne BLOB, puis appelle les méthodes **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Pour définir des données BLOB :  
   
-1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément *dwFlag* de la structure DBOBJECT sur STGM_READ, puis définissez l’élément *iid* sur IID_ISequentialStream (l’interface à exposer).  
+1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Réglez *l’élément dwFlag* de la structure DBOBJECT pour STGM_READ et définissez *l’élément iid* à IID_ISequentialStream (l’interface à exposer).  
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets BLOB et OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOBs et objets OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilisation de types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

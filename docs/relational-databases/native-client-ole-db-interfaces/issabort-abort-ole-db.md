@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d66d37da3ba2de7f12cefb8f806c44d5dd967003
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8ce2c92dad8c0ff97cdbcf4e77a58e8dd6ceb18c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303980"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73763176"
   
 L'interface **ISSAbort** , exposée dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, fournit la méthode **ISSAbort::Abort** utilisée pour annuler l'ensemble de lignes actuel, plus les commandes regroupées par lot avec la commande ayant généré initialement l'ensemble de lignes et dont l'exécution n'est pas encore achevée.  
   
- **Méthode ISSAbort** est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interface propre au fournisseur native client disponible en utilisant **QueryInterface** sur l’objet **IMultipleResults** retourné par **ICommand :: Execute** ou **IOpenRowset :: OpenRowset**.  
+ **ISSAbort** est une interface propre au fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client disponible en utilisant **QueryInterface** sur l'objet **IMultipleResults** retourné par **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +61,7 @@ HRESULT Abort(void);
  Le lot n'a pas été annulé.  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s’est produite ; Pour plus d’informations, utilisez l’interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Une erreur spécifique au fournisseur s’est produite; pour plus d’informations, utilisez l’interface [ISQLServerErrorInfo.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, l'objet est dans un état zombie parce que la méthode **ISSAbort::Abort** a déjà été appelée.  
@@ -70,6 +70,6 @@ HRESULT Abort(void);
  Erreur de mémoire insuffisante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode ISSAbort &#40;OLE DB&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
+ [ISSAbort &#40;&#41;OLE DB](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
   
   

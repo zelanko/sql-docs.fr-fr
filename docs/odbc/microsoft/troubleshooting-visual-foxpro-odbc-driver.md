@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: Dépannage (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,50 +17,50 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4eeb6210b9bce124e16a1b4e666dee03c1d992be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70b035069c0be88d05a3aa5e17b96af991c27405
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912387"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303030"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Résolution des problèmes (pilote ODBC Visual FoxPro)
-Les sections suivantes expliquent comment améliorer les performances et résoudre les problèmes que vous pouvez rencontrer lors de l’utilisation du pilote ODBC Visual FoxPro.  
+Les sections suivantes discutent de la façon d’améliorer les performances et de résoudre les problèmes que vous pourriez rencontrer lors de l’utilisation du pilote Visual FoxPro ODBC.  
   
-## <a name="accessing-parameterized-views"></a>Accès aux vues paramétrées  
- Vous ne pouvez pas accéder aux vues paramétrées dans une base de données Visual FoxPro à l’aide du pilote. Une vue paramétrable crée une clause WHERE dans l’instruction SQL **Select** de la vue qui limite les enregistrements téléchargés aux enregistrements qui remplissent les conditions de la clause WHERE créée à l’aide de la valeur fournie pour le paramètre. Étant donné que le pilote ne prend pas en charge le passage de paramètres à la vue, les tentatives d’accès à une vue paramétrée à l’aide du pilote échouent.  
+## <a name="accessing-parameterized-views"></a>Accès aux vues paramétrisées  
+ Vous ne pouvez pas accéder aux vues paramétrisées dans une base de données Visual FoxPro à l’aide du pilote. Une vue paramétrée crée une clause WHERE dans l’énoncé SQL **SELECT** de la vue qui limite les enregistrements téléchargés aux enregistrements qui répondent aux conditions de la clause WHERE construite en utilisant la valeur fournie pour le paramètre. Étant donné que le conducteur ne prend pas en charge le passage des paramètres de la vue, les tentatives d’accès à une vue paramétrée en utilisant le conducteur échoueront.  
   
- La valeur du paramètre peut être fournie au moment de l’exécution ou passée par programme à la vue.  
+ La valeur du paramètre peut être fournie au moment de l’exécution ou transmise de façon programmatique à la vue.  
   
-## <a name="accessing-remote-views"></a>Accès aux vues distantes  
- Vous ne pouvez pas accéder à des vues distantes dans une base de données Visual FoxPro à l’aide du pilote. Les vues distantes sont des vues qui accèdent à des données non-FoxPro ou à une combinaison de données FoxPro et non FoxPro. Pour accéder aux vues à distance, utilisez Visual FoxPro.  
+## <a name="accessing-remote-views"></a>Accès aux vues à distance  
+ Vous ne pouvez pas accéder à des vues distantes dans une base de données Visual FoxPro à l’aide du pilote. Les vues à distance sont des vues qui accèdent soit aux données non FoxPro, soit à une combinaison de données FoxPro et non FoxPro. Pour accéder à des vues à distance, utilisez Visual FoxPro.  
   
-## <a name="deleting-records"></a>Suppression d’enregistrements  
- Vous pouvez marquer les enregistrements à supprimer à l’aide du pilote, mais vous ne pouvez pas supprimer définitivement les enregistrements de la base de données. Pour supprimer définitivement des enregistrements d’une table, utilisez Visual FoxPro.  
+## <a name="deleting-records"></a>Suppression des dossiers  
+ Vous pouvez marquer les enregistrements de suppression à l’aide du pilote, mais vous ne pouvez pas supprimer définitivement les enregistrements de la base de données. Pour supprimer définitivement les enregistrements d’une table, utilisez Visual FoxPro.  
   
-## <a name="increasing-performance-using-background-fetching"></a>Amélioration des performances à l’aide de la récupération en arrière-plan  
- Vous pouvez améliorer les performances des extractions volumineuses à l’aide de la fonctionnalité de récupération en arrière-plan du pilote. La récupération en arrière-plan utilise un thread distinct pour extraire les données demandées à partir d’une source de données spécifique.  
+## <a name="increasing-performance-using-background-fetching"></a>Accroître les performances en utilisant l’utilisation de l’arrière-plan  
+ Vous pouvez améliorer les performances sur les gros lots en utilisant la fonction d’aller chercher de fond du conducteur. L’aller chercher de fond utilise un thread séparé pour récupérer les données demandées auprès d’une source de données spécifique.  
   
- Vous pouvez utiliser la récupération en arrière-plan pour une source de données de l’une des manières suivantes :  
+ Vous pouvez utiliser l’utilisation d’un bagage d’arrière-plan pour une source de données de l’une des façons suivantes :  
   
--   Cochez la case **récupérer des données en arrière-plan** dans la [boîte de dialogue installation de ODBC pour Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md).  
+-   Vérifiez les données Fetch dans la case à cocher **d’arrière-plan** sur la [boîte de dialogue ODBC Visual FoxPro Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md).  
   
 -   Utilisez le mot clé d’attribut BackgroundFetch dans votre chaîne de connexion.  
   
- Pour plus d’informations sur les mots clés d’attribut de chaîne de connexion, consultez [utilisation de chaînes de connexion](../../odbc/microsoft/using-connection-strings.md).  
+ Pour plus d’informations sur les mots clés d’attribut de chaîne de connexion, voir [Using Connection Strings](../../odbc/microsoft/using-connection-strings.md).  
   
-## <a name="updating-multitiered-views"></a>Mise à jour des vues multicouches  
- Une vue à plusieurs niveaux est une vue basée sur une ou plusieurs vues plutôt que sur une table de base. Lorsque vous mettez à jour des données dans une vue multicouche, les mises à jour ne sont pas répercutées sur un niveau, jusqu’à la vue sur laquelle la vue de niveau supérieur est basée. les tables de base ne sont pas mises à jour.  
+## <a name="updating-multitiered-views"></a>Mise à jour des vues multitiers  
+ Une vue à plusieurs étages est une vue basée sur une ou plusieurs vues plutôt que sur une table de base. Lorsque vous mettez à jour les données dans une vue multitier, les mises à jour ne diminuent qu’à un niveau, à la vue sur laquelle la vue de haut niveau est basée ; les tables de base ne sont pas mises à jour.  
   
-## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>Utilisation du langage de définition de données (DDL) dans les procédures stockées  
- Vous ne pouvez pas utiliser DDL, tel que CREATE TABLE ou ALTER TABLE, dans les procédures stockées Visual FoxPro.  
+## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>Utilisation du langage de définition des données (DDL) dans les procédures stockées  
+ Vous ne pouvez pas utiliser DDL, comme CREATE TABLE ou ALTER TABLE, dans visual FoxPro procédures stockées.  
   
- Pour plus d’informations sur le langage que vous pouvez utiliser dans les procédures stockées, consultez [prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md).  
+ Pour plus d’informations sur la langue que vous pouvez utiliser dans les procédures stockées, consultez [Support for Rules, Triggers, Default Values, and Stored Procedures](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md).  
   
 ## <a name="using-positioned-updates"></a>Utilisation des mises à jour positionnées  
- Le pilote ne prend pas en charge les mises à jour positionnées. Utilisez la clause SQL WHERE pour identifier les lignes que vous souhaitez mettre à jour.  
+ Le conducteur ne prend pas en charge les mises à jour positionnées. Utilisez la clause SQL WHERE pour identifier les lignes que vous souhaitez mettre à jour.  
   
-## <a name="using-the-set-ansi-command"></a>Utilisation de la commande SET ANSI  
- Si vous êtes un développeur Visual FoxPro, vous devez savoir que le paramètre par défaut pour SET ANSI est activé pour le pilote, contrairement à un paramètre par défaut désactivé pour Visual FoxPro. La valeur par défaut de SET ANSI permet aux sources de données Visual FoxPro de se comporter de manière cohérente avec d’autres sources de données ODBC qui effectuent généralement des comparaisons exactes. Vous pouvez modifier le paramètre par défaut. Pour plus d’informations, consultez [SET ANSI](../../odbc/microsoft/set-ansi-command.md).
+## <a name="using-the-set-ansi-command"></a>Utilisation du commandement SET ANSI  
+ Si vous êtes un développeur Visual FoxPro, vous devez être conscient que le paramètre par défaut pour SET ANSI est ON pour le pilote, contrairement à un paramètre par défaut de OFF pour Visual FoxPro. Le paramètre PAR défaut ON pour SET ANSI permet aux sources de données Visual FoxPro de se comporter de manière cohérente avec d’autres sources de données ODBC qui effectuent généralement des comparaisons exactes. Vous pouvez modifier le paramètre par défaut. Pour plus d’informations, voir [SET ANSI](../../odbc/microsoft/set-ansi-command.md).

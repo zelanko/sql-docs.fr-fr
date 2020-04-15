@@ -1,5 +1,5 @@
 ---
-title: Métadonnées du jeu de résultats | Microsoft Docs
+title: Métadonnées de l’ensemble des résultats (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d8da8c15c861fff4767aa598e1b989d8f699c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b78cdeb4c8b3522f4677c0277401cd9395a36a5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020591"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300079"
 ---
 # <a name="result-set-metadata"></a>Métadonnées des jeux de résultats
-Les *métadonnées* sont des données qui décrivent d’autres données. Par exemple, les métadonnées du jeu de résultats décrivent le jeu de résultats, comme le nombre de colonnes dans le jeu de résultats, les types de données de ces colonnes, leurs noms, la précision, la possibilité de valeur null, etc.  
+*Les métadonnées* sont des données qui décrivent d’autres données. Par exemple, les métadonnées définies de résultat décrivent l’ensemble de résultats, tels que le nombre de colonnes dans l’ensemble de résultats, les types de données de ces colonnes, leurs noms, la précision, l’annulation, et ainsi de suite.  
   
- Les applications interopérables doivent toujours vérifier les métadonnées des colonnes du jeu de résultats. Les métadonnées d’une colonne dans un jeu de résultats peuvent différer des métadonnées de la colonne, telles qu’elles sont retournées par une fonction de catalogue. Par exemple, supposons qu’une colonne pouvant être mise à jour est incluse dans un jeu de résultats créé en joignant deux tables. Alors que **SQLColumnPrivileges** peut indiquer qu’un utilisateur peut mettre à jour la colonne, les métadonnées du jeu de résultats ne peuvent pas si la colonne se trouve sur le côté « plusieurs » de la jointure. de nombreuses sources de données peuvent mettre à jour des colonnes du côté « un » d’une jointure, mais pas du côté « plusieurs ». Même les types de données ne peuvent pas être considérés comme identiques, car la source de données peut promouvoir le type de données lors de la création du jeu de résultats.  
+ Les applications interopérables doivent toujours vérifier les métadonnées des colonnes définies de résultats. Les métadonnées d’une colonne dans un ensemble de résultats peuvent différer des métadonnées de la colonne telles qu’elles sont retournées par une fonction de catalogue. Supposons, par exemple, qu’une colonne updatable soit incluse dans un ensemble de résultats créé en rejoignant deux tables. Bien que **SQLColumnPrivileges** puisse indiquer qu’un utilisateur peut mettre à jour la colonne, les métadonnées définies de résultat pourraient ne pas si la colonne est du côté « nombreux » de la jointure ; de nombreuses sources de données peuvent mettre à jour les colonnes du côté « un » d’une jointure, mais pas du côté du « grand nombre ». Même les types de données ne peuvent pas être supposés être les mêmes, parce que la source de données peut promouvoir le type de données tout en créant l’ensemble de résultats.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Comment les métadonnées sont-elles utilisées ?](../../../odbc/reference/develop-app/how-is-metadata-used.md)  
   

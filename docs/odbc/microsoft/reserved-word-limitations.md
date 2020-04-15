@@ -1,5 +1,5 @@
 ---
-title: Limitations des mots réservés | Microsoft Docs
+title: Limitations de mots réservés (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf536e06556e6b2e7b27f220d09a51f91b44d23c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988027"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304007"
 ---
-# <a name="reserved-keyword-limitations"></a>Limitations des mots clés réservés
+# <a name="reserved-keyword-limitations"></a>Limitations de mots clés réservés
 
-Évitez d’utiliser des mots clés réservés ODBC comme identificateurs dans vos tables SQL ou objets connexes. Si un cas impair se produit lorsque vous devez utiliser un mot clé réservé comme identificateur, vous devez entourer l’identificateur d’une paire de *battements* ('). Un autre nom *pour la* sauvegarde est un *guillemet*.
+Évitez d’utiliser des mots clés réservés ODBC comme identifiants dans vos tables SQL ou objets connexes. Si un cas impair se présente lorsque vous devez utiliser un mot clé réservé comme identifiant, vous devez entourer l’identifiant d’une paire de *backticks* ('). Un autre nom pour *backtick* est *citation de retour*.
 
-La limitation du mot clé réservé s’applique également à toute forme abrégée des mots clés réservés.
+La limitation des mots clés réservés s’applique également à toute forme d’abréviation des mots clés réservés.
 
-Une liste des mots clés réservés ODBC est disponible à l’adresse suivante :
+Une liste des mots-clés réservés à l’ODBC est disponible à l’heure :
 
-- [Mots clés réservés ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [Mots-clés réservés À l’ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
 
-- Dans le *Guide de référence du programmeur ODBC*, consultez l' [annexe C : grammaire SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+- Dans le *Guide de référence du programmeur de l’ODBC*, voir Annexe [C: SQL Grammar](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
 

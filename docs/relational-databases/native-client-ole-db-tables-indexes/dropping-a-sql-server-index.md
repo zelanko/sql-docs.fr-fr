@@ -1,5 +1,5 @@
 ---
-title: Suppression d’un index de SQL Server | Microsoft Docs
+title: Suppression d'un index SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2481c516714acd58ba243c614534b1079be6b0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3143dc794e3c75ec1473529ec018c476edd3e687
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761579"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303010"
 ---
 # <a name="dropping-a-sql-server-index"></a>Suppression d'un index SQL Server
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose la fonction **IIndexDefinition ::D ropindex** . Cela permet aux consommateurs de supprimer un index d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB expose la fonction **IIndexDefinition::DropIndex.** Cela permet aux consommateurs de supprimer un index d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] certaines contraintes de clé primaire et uniques en tant qu’index. Le propriétaire de la table, le propriétaire de la base de données et certains membres munis de rôles d’administration peuvent modifier une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en supprimant une contrainte. Par défaut, seul le propriétaire de la table peut supprimer un index existant. Le succès ou l’échec de la fonction **DropIndex** ne dépend pas uniquement des droits d’accès de l’utilisateur de l’application, mais également du type d’index indiqué.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de DB OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de client autochtone expose quelques contraintes PRIMARY KEY et UNIQUE comme index. Le propriétaire de la table, le propriétaire de la base de données et certains membres munis de rôles d’administration peuvent modifier une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en supprimant une contrainte. Par défaut, seul le propriétaire de la table peut supprimer un index existant. Le succès ou l’échec de la fonction **DropIndex** ne dépend pas uniquement des droits d’accès de l’utilisateur de l’application, mais également du type d’index indiqué.  
   
  Les consommateurs spécifient le nom de table en tant que chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pTableID*. Le membre *eKind* de *pTableID* doit être DBKIND_NAME.  
   
- Les consommateurs spécifient le nom d’index comme une chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pIndexID*. Le membre *eKind* de *pIndexID* doit être DBKIND_NAME. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client ne prend pas en charge la fonctionnalité de OLE DB de suppression de tous les index d’une table lorsque *pIndexID* a la valeur null. Si *pIndexID* a la valeur Null, E_INVALIDARG est retourné.  
+ Les consommateurs spécifient le nom d’index comme une chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pIndexID*. Le membre *eKind* de *pIndexID* doit être DBKIND_NAME. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB ne prend pas en charge la fonction OLE DB de laisser tomber tous les index sur une table lorsque *pIndexID* est nul. Si *pIndexID* a la valeur Null, E_INVALIDARG est retourné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+ [Tableaux et indices](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
+ [ALTER TABLE &#40;&#41;Transact-SQL](../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
   
