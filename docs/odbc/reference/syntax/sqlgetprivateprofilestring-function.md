@@ -1,5 +1,5 @@
 ---
-title: SQLGetPrivateProfileString fonction) | Microsoft Docs
+title: FONCTION SQLGetPrivateProfileString (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetPrivateProfileString function [ODBC]
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c12fc8d08535960cbb239c14e017b2ad5faa6c0e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061473"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303291"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString, fonction
 **Conformité**  
- Version introduite : ODBC 2,0  
+ Version introduite: ODBC 2.0  
   
  **Résumé**  
- **SQLGetPrivateProfileString** obtient une liste de noms de valeurs ou de données correspondant à une valeur des informations système.  
+ **SQLGetPrivateProfileString** obtient une liste de noms de valeurs ou de données correspondant à une valeur de l’information du système.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,41 +48,41 @@ int SQLGetPrivateProfileString(
   
 ## <a name="arguments"></a>Arguments  
  *lpszSection*  
- Entrée Pointe vers une chaîne se terminant par un caractère null qui spécifie la section contenant le nom de la clé. Si cet argument a la valeur NULL, la fonction copie tous les noms de sections du fichier dans la mémoire tampon fournie.  
+ [Entrée] Indique une chaîne non terminée qui spécifie la section contenant le nom clé. Si cet argument est NULL, la fonction copie tous les noms de section dans le fichier au tampon fourni.  
   
- *lpszEntry*  
- Entrée Pointe vers la chaîne terminée par le caractère null qui contient le nom de la clé dont la chaîne associée doit être récupérée. Si cet argument a la valeur NULL, tous les noms de clés de la section spécifiée par l’argument *lpszSection* sont copiés dans la mémoire tampon spécifiée par l’argument *RetBuffer* .  
+ *lpszEntry (en)*  
+ [Entrée] Points à la chaîne non terminée contenant le nom clé dont la chaîne associée doit être récupérée. Si cet argument est NULL, tous les noms clés de la section spécifiée par *l’argument de lpszSection* sont copiés sur le tampon spécifié par l’argument de *RetBuffer.*  
   
  *lpszDefault*  
- Entrée Pointe vers une chaîne se terminant par un caractère null qui spécifie la valeur par défaut de la clé donnée si la clé est introuvable dans le fichier d’initialisation. Cet argument ne peut pas être NULL.  
+ [Entrée] Indique une chaîne non résiliée qui précise la valeur par défaut de la clé donnée si la clé ne peut pas être trouvée dans le fichier de initialisation. Cet argument ne peut pas avoir la valeur null.  
   
- *RetBuffer*  
- Sortie Pointe vers la mémoire tampon qui reçoit la chaîne récupérée.  
+ *RetBuffer (RetBuffer)*  
+ [Sortie] Points vers le tampon qui reçoit la chaîne récupérée.  
   
  *cbRetBuffer*  
- Entrée Spécifie la taille, en caractères, de la mémoire tampon vers laquelle pointe l’argument *RetBuffer* .  
+ [Entrée] Spécifie la taille, dans les caractères, de la mémoire tampon pointée par l’argument de *RetBuffer.*  
   
  *lpszFilename*  
- Entrée Pointe vers une chaîne se terminant par un caractère null qui nomme le fichier d’initialisation. Si cet argument ne contient pas de chemin d’accès complet au fichier, la recherche s’effectue dans le répertoire par défaut.  
+ [Entrée] Indique une chaîne non terminée qui nomme le fichier d’initialisation. Si cet argument ne contient pas un chemin complet vers le fichier, l’annuaire par défaut est recherché.  
   
 ## <a name="returns"></a>Retours  
- **SQLGetPrivateProfileString** retourne une valeur entière qui indique le nombre de caractères lus.  
+ **SQLGetPrivateProfileString** retourne une valeur integer qui indique le nombre de caractères lus.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsqu’un appel à **SQLGetPrivateProfileString** échoue, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Lorsqu’un appel à **SQLGetPrivateProfileString** échoue, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les * \*valeurs pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et explique chacune dans le cadre de cette fonction.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode (en)*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erreur générale du programme d’installation|Une erreur s’est produite pour laquelle aucune erreur d’installation spécifique n’a été rencontrée.|  
-|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu exécuter la fonction en raison d’un manque de mémoire.|  
+|ODBC_ERROR_GENERAL_ERR|Erreur d’installateur général|Une erreur s’est produite pour laquelle il n’y a pas eu d’erreur spécifique d’installateur.|  
+|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|L’installateur ne pouvait pas effectuer la fonction en raison d’un manque de mémoire.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLGetPrivateProfileString** est fourni comme un moyen simple de porter des pilotes et des dll de configuration de pilote de Microsoft® Windows® à Microsoft windows NT®/Windows 2000. Les appels à **GetPrivateProfileString** qui récupèrent une chaîne de profil à partir du fichier ODBC. ini doivent être remplacés par des appels à **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** appelle des fonctions dans l’API de® Win32 pour récupérer les noms demandés de valeurs ou de données correspondant à une valeur de la sous-clé ODBC. ini des informations système.  
+ **SQLGetPrivateProfileString** est fourni comme un moyen simple pour les pilotes de port et d’installation du conducteur DLLs de Microsoft® Windows® à Microsoft Windows NT®/Windows 2000. Les appels vers **GetPrivateProfileString** qui récupèrent une chaîne de profil du fichier Odbc.ini doivent être remplacés par des appels à **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** appelle des fonctions dans l’API de ® WinLGetPrivate Pour récupérer les noms demandés de valeurs ou de données correspondant à une valeur de la sous-clé Odbc.ini des informations du système.  
   
- Le mode de configuration (tel que défini par **SQLSetConfigMode**) indique où l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système. Si le DSN est un DSN utilisateur (le mode de configuration est USERDSN_ONLY), la fonction lit à partir de l’entrée ODBC. ini dans HKEY_CURRENT_USER. Si le DSN est un DSN système (SYSTEMDSN_ONLY), la fonction lit à partir de l’entrée ODBC. ini dans HKEY_LOCAL_MACHINE. Si le mode de configuration est BOTHDSN, HKEY_CURRENT_USER est essayé et, en cas d’échec, HKEY_LOCAL_MACHINE est utilisé.  
+ Le mode de configuration (tel qu’il est défini par **SQLSetConfigMode**) indique où les valeurs DSN de liste odbc.ini sont dans l’information du système. Si le DSN est un DSN utilisateur (le mode de configuration est USERDSN_ONLY), la fonction se lit à partir de l’entrée Odbc.ini dans HKEY_CURRENT_USER. Si le DSN est un DSN système (SYSTEMDSN_ONLY), la fonction se lit à partir de l’entrée Odbc.ini dans HKEY_LOCAL_MACHINE. Si le mode de configuration est BOTHDSN, HKEY_CURRENT_USER est essayé, et s’il échoue, HKEY_LOCAL_MACHINE est utilisé.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Écriture d’une valeur dans les informations système|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
+|Rédaction d’une valeur pour l’information du système|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

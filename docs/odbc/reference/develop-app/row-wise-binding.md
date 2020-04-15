@@ -1,5 +1,5 @@
 ---
-title: Liaison selon les lignes | Microsoft Docs
+title: Liaison Row-Wise (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061623"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304270"
 ---
 # <a name="row-wise-binding"></a>Liaison selon les lignes
-Lors de l’utilisation d’une liaison selon les lignes, une application définit une structure contenant un ou deux, ou, dans certains cas, trois éléments pour chaque colonne pour laquelle les données doivent être retournées. Le premier élément contient la valeur de données et le deuxième élément contient la mémoire tampon de longueur/d’indicateur. Les indicateurs et les valeurs de longueur peuvent être stockés dans des mémoires tampons distinctes en affectant des valeurs différentes aux champs SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR descripteur ; Si c’est le cas, la structure contient un troisième élément. L’application alloue ensuite un tableau de ces structures, qui contient autant d’éléments qu’il y a de lignes dans l’ensemble de lignes.  
+Lors de l’utilisation de la liaison en ligne, une application définit une structure contenant une ou deux, ou dans certains cas trois, des éléments pour chaque colonne pour laquelle les données doivent être retournées. Le premier élément détient la valeur des données, et le deuxième élément détient le tampon longueur/indicateur. Les indicateurs et les valeurs de longueur peuvent être stockés dans des tampons distincts en fixant les champs SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR descripteur à des valeurs différentes; si cela est fait, la structure contient un troisième élément. L’application alloue ensuite un tableau de ces structures, qui contient autant d’éléments qu’il y a de lignes dans le ramset.  
   
- L’application déclare la taille de la structure au pilote à l’aide de l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE et lie l’adresse de chaque membre dans le premier élément du tableau. Ainsi, le pilote peut calculer l’adresse des données pour une ligne et une colonne particulières en tant que  
+ L’application déclare la taille de la structure au conducteur avec l’attribut SQL_ATTR_ROW_BIND_TYPE déclaration et lie l’adresse de chaque membre dans le premier élément du tableau. Ainsi, le conducteur peut calculer l’adresse des données pour une ligne et une colonne  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- où les lignes sont numérotées de 1 à la taille de l’ensemble de lignes. (L’un est soustrait du numéro de ligne, car l’indexation de tableau dans C est de base zéro.) L’illustration suivante montre le fonctionnement de la liaison selon les lignes. En règle générale, seules les colonnes qui seront liées sont incluses dans la structure. La structure peut contenir des champs qui ne sont pas liés à des colonnes de jeu de résultats. Les colonnes peuvent être placées dans la structure dans n’importe quel ordre, mais elles sont affichées dans l’ordre séquentiel pour plus de clarté.  
+ où les rangées sont numérotées de 1 à la taille de l’aviron. (On est soustrait du nombre de rangées parce que l’indexation de tableau dans C est basée à zéro.) L’illustration suivante montre comment fonctionne la reliure en ligne. En général, seules les colonnes qui seront liées sont incluses dans la structure. La structure peut contenir des champs qui ne sont pas liés aux colonnes définies de résultat. Les colonnes peuvent être placées dans la structure dans n’importe quel ordre, mais sont montrées dans l’ordre séquentiel pour la clarté.  
   
- ![Affiche la liaison de ligne&#45;Wise](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Affiche la ligne&#45;liaison sage](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Par exemple, le code suivant crée une structure avec des éléments dans lesquels des données doivent être retournées pour les colonnes OrderID, SalesPerson et Status, ainsi que la longueur/des indicateurs pour les colonnes SalesPerson et Status. Elle alloue 10 de ces structures et les lie aux colonnes OrderID, SalesPerson et Status.  
+ Par exemple, le code suivant crée une structure avec des éléments dans lesquels retourner les données pour les colonnes OrderID, SalesPerson et Status, ainsi que la longueur/indicateurs pour les colonnes SalesPerson et Status. Il alloue 10 de ces structures et les lie aux colonnes OrderID, SalesPerson et Status.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  
