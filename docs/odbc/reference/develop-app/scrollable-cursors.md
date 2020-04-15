@@ -1,5 +1,5 @@
 ---
-title: Curseurs de défilement | Microsoft Docs
+title: Cursors défilementables (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061615"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304210"
 ---
 # <a name="scrollable-cursors"></a>Curseurs avec défilement
-Dans les applications modernes basées sur l’écran, l’utilisateur fait défiler les données vers l’avant et vers l’arrière. Pour de telles applications, le retour à une ligne extraite précédemment pose problème. L’une des possibilités consiste à fermer et à rouvrir le curseur, puis à extraire les lignes jusqu’à ce que le curseur atteigne la ligne requise. Une autre possibilité consiste à lire le jeu de résultats, à le mettre en cache localement et à implémenter le défilement dans l’application. Les deux possibilités fonctionnent bien uniquement avec les petits jeux de résultats, et cette dernière possibilité est difficile à implémenter. Une meilleure solution consiste à utiliser un *curseur de défilement,* qui peut se déplacer vers l’avant et vers l’arrière dans le jeu de résultats.  
+Dans les applications modernes basées sur l’écran, l’utilisateur fait défiler vers l’arrière et vers l’avant à travers les données. Pour de telles applications, le retour à une rangée précédemment récupérée est un problème. Une possibilité est de fermer et de rouvrir le curseur, puis d’aller chercher des rangées jusqu’à ce que le curseur atteigne la rangée requise. Une autre possibilité est de lire l’ensemble de résultats, le mettre en cache localement, et implémenter le défilement dans l’application. Les deux possibilités ne fonctionnent bien qu’avec de petits ensembles de résultats, et cette dernière possibilité est difficile à mettre en œuvre. Une meilleure solution est d’utiliser un *curseur défilementable,* qui peut se déplacer vers l’arrière et vers l’avant dans l’ensemble de résultats.  
   
- Un *curseur à défilement* est couramment utilisé dans les applications modernes basées sur les écrans, dans lesquelles l’utilisateur fait défiler les données vers l’avant et l’arrière. Toutefois, les applications doivent utiliser des curseurs de défilement uniquement lorsque les curseurs avant uniquement n’effectuent pas le travail, car les curseurs de défilement sont généralement plus chers que les curseurs avant uniquement.  
+ Un *curseur défilementable* est couramment utilisé dans les applications modernes basées sur l’écran dans lesquelles l’utilisateur fait défiler les données. Toutefois, les applications ne doivent utiliser des curseurs défilementibles que lorsque les curseurs avant-seulement ne feront pas le travail, car les curseurs défilementables sont généralement plus chers que les curseurs avant-seulement.  
   
- La possibilité de revenir en arrière déclenche une question non applicable aux curseurs avant uniquement : un curseur de défilement doit-il détecter les modifications apportées aux lignes précédemment extraites ? C’est-à-dire qu’il doit détecter les lignes mises à jour, supprimées et récemment insérées ?  
+ La capacité de reculer soulève une question qui ne s’applique pas aux curseurs avant-seulement : un curseur défilementable devrait-il détecter les modifications apportées aux lignes précédemment récupérées? Autrement dit, devrait-il détecter les lignes mises à jour, supprimées et nouvellement insérées?  
   
- Cette question est due au fait que la définition d’un jeu de résultats-l’ensemble de lignes qui correspond à certains critères-n’indique pas quand les lignes sont vérifiées pour déterminer si elles correspondent à ces critères, et qu’elle indique si les lignes doivent contenir les mêmes données chaque fois qu’elles sont extraites. La première omission permet aux curseurs de défilement de détecter si des lignes ont été insérées ou supprimées, tandis que ces derniers permettent de détecter les données mises à jour.  
+ Cette question se pose parce que la définition d’un ensemble de résultats - l’ensemble de lignes qui correspond à certains critères - ne précise pas quand les lignes sont vérifiées pour voir si elles correspondent à ces critères, ni indique si les lignes doivent contenir les mêmes données chaque fois qu’elles sont récupérées. La première omission permet aux curseurs défilementables de détecter si les lignes ont été insérées ou supprimées, tandis que celle-ci leur permet de détecter les données mises à jour.  
   
- La possibilité de détecter des modifications est parfois utile, parfois pas. Par exemple, une application de gestion des comptes a besoin d’un curseur qui ignore toutes les modifications ; l’équilibrage des livres est impossible si le curseur affiche les dernières modifications. D’un autre côté, un système de réservation de compagnies aériennes a besoin d’un curseur qui indique les dernières modifications apportées aux données ; sans ce type de curseur, il doit continuellement interroger la base de données pour afficher la disponibilité de vol la plus récente.  
+ La capacité de détecter les changements est parfois utile, parfois pas. Par exemple, une demande comptable a besoin d’un curseur qui ne tient pas compte de tous les changements; l’équilibrage des livres est impossible si le curseur affiche les derniers changements. D’autre part, un système de réservation de compagnie aérienne a besoin d’un curseur qui montre les dernières modifications apportées aux données; sans un tel curseur, il doit continuellement requery la base de données pour afficher la disponibilité de vol la plus à jour.  
   
- Pour couvrir les besoins des différentes applications, ODBC définit quatre types différents de curseurs à défilement. Ces curseurs varient à la fois en termes de dépenses et en fonction de leur capacité à détecter les modifications apportées au jeu de résultats. Notez que si un curseur de défilement peut détecter des modifications apportées aux lignes, il peut les détecter uniquement lorsqu’il tente de récupérer ces lignes. Il n’existe aucun moyen pour la source de données d’informer le curseur des modifications apportées aux lignes actuellement récupérées. Notez également que la visibilité des modifications est également contrôlée par le niveau d’isolation de la transaction. Pour plus d’informations, consultez [isolation des transactions](../../../odbc/reference/develop-app/transaction-isolation.md).  
+ Pour couvrir les besoins de différentes applications, ODBC définit quatre types différents de curseurs défilementables. Ces curseurs varient à la fois dans les dépenses et dans leur capacité à détecter les changements à l’ensemble de résultats. Notez que si un curseur défilementable peut détecter les changements aux lignes, il ne peut les détecter que lorsqu’il tente de réfélévoir ces lignes; il n’y a aucun moyen pour la source de données d’aviser le curseur des modifications apportées aux lignes actuellement récupérées. Notez également que la visibilité des changements est également contrôlée par le niveau d’isolement des transactions; pour plus d’informations, voir [Transaction Isolation](../../../odbc/reference/develop-app/transaction-isolation.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Types de curseurs avec défilement](../../../odbc/reference/develop-app/scrollable-cursor-types.md)  
   

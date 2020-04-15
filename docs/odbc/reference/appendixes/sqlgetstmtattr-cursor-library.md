@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr (bibliothèque de curseurs) | Microsoft Docs
+title: SQLGetStmtAttr (Cursor Library) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073847"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306000"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (bibliothèque de curseurs)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
   
- Cette rubrique traite de l’utilisation de la fonction **SQLGetStmtAttr** dans la bibliothèque de curseurs. Pour obtenir des informations générales sur **SQLGetStmtAttr**, consultez [fonction SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ Ce sujet traite de l’utilisation de la fonction **SQLGetStmtAttr** dans la bibliothèque de curseurs. Pour plus d’informations générales sur **SQLGetStmtAttr**, voir [SQLGetStmtAttr Function](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
- La bibliothèque de curseurs prend en charge les attributs d’instruction suivants avec **SQLGetStmtAttr**:  
+ La bibliothèque de curseurs prend en charge les attributs de déclaration suivantes avec **SQLGetStmtAttr**:  
   
 |||  
 |-|-|  

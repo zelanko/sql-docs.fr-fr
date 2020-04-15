@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - IRowsetFind comparability [ODBC]
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af874d2a12b6cc33174649b34b1359b1d1df5db9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 41c5eda04ec647decc0dbc55b89ae617869add0e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095236"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304380"
 ---
 # <a name="comparability-for-irowsetfind"></a>Comparabilité pour IRowsetFind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,6 +42,6 @@ ms.locfileid: "74095236"
  Si une autre comparaison est tentée, DB_E_BADCOMPAREOP est retourné. Ce comportement est conforme à la spécification OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations de la date et de l’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

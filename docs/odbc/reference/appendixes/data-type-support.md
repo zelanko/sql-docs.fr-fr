@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des types de données | Microsoft Docs
+title: Support de type de données (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - data types [ODBC], ODBC drivers
 - ODBC drivers [ODBC], data types
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3abfe85ee32fb9ff4a8499c9949c0685563fec70
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044954"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284426"
 ---
 # <a name="data-type-support"></a>Prise en charge du type de données
-Les pilotes ODBC doivent prendre en charge au moins l’un des SQL_CHAR et SQL_VARCHAR. La prise en charge d’autres types de données est déterminée par le niveau de conformité de SQL-92 de la source de données ou du pilote. Une application doit appeler **SQLGetTypeInfo** pour déterminer les types de données pris en charge par le pilote.  
+Les conducteurs de l’ODBC doivent soutenir au moins un des SQL_CHAR et SQL_VARCHAR. Le support pour d’autres types de données est déterminé par le niveau de conformité SQL-92 du conducteur ou de la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer les types de données pris en charge par le conducteur.  
   
- Pour plus d’informations sur les types de données, consultez l' [annexe D : types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).
+ Pour plus d’informations sur les types de données, voir [Annexe D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md).

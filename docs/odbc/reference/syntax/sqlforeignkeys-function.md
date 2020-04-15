@@ -1,5 +1,5 @@
 ---
-title: SQLForeignKeys fonction) | Microsoft Docs
+title: Fonction SQLForeignKeys (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLForeignKeys function [ODBC]
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58f69b9f3088c063faa39da677f2865abdfc6476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f2769fb378a5ee989fb6a0351537edb3de03469
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003009"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285859"
 ---
 # <a name="sqlforeignkeys-function"></a>Fonction SQLForeignKeys
 **Conformité**  
- Version introduite : ODBC 1,0 conforme aux normes : ODBC  
+ Version introduite : ODBC 1.0 Standards Compliance: ODBC  
   
  **Résumé**  
- **SQLForeignKeys** peut retourner :  
+ **SQLForeignKeys** peut revenir:  
   
--   Liste de clés étrangères dans la table spécifiée (colonnes de la table spécifiée qui font référence à des clés primaires dans d’autres tables).  
+-   Une liste de clés étrangères dans le tableau spécifié (colonnes dans le tableau spécifié qui se réfèrent aux touches primaires dans d’autres tables).  
   
--   Liste de clés étrangères dans d’autres tables qui font référence à la clé primaire dans la table spécifiée.  
+-   Une liste de clés étrangères dans d’autres tableaux qui se réfèrent à la clé principale dans le tableau spécifié.  
   
- Le pilote retourne chaque liste sous la forme d’un jeu de résultats sur l’instruction spécifiée.  
+ Le conducteur renvoie chaque liste à la suite définie sur l’instruction spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,163 +60,163 @@ SQLRETURN SQLForeignKeys(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *StatementHandle*  
- Entrée Descripteur d’instruction.  
+ *StatementHandle (en)*  
+ [Entrée] Poignée de déclaration.  
   
  *PKCatalogName*  
- Entrée Nom du catalogue de la table de clé primaire. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, une chaîne vide ("") dénote les tables qui n’ont pas de catalogues. *PKCatalogName* ne peut pas contenir un modèle de recherche de chaînes.  
+ [Entrée] Nom principal du catalogue de table. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, comme lorsque le pilote récupère des données de différents DBMS, une chaîne vide ("") dénote les tables qui n’ont pas de catalogues. *PKCatalogName* ne peut pas contenir un modèle de recherche de cordes.  
   
- Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *PKCatalogName* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *PKCatalogName* est un argument ordinaire ; Il est traité littéralement et sa casse est importante. Pour plus d’informations, consultez [arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+ Si l’attribut de SQL_ATTR_METADATA_ID déclaration est réglé pour SQL_TRUE, *PKCatalogName* est traité comme un identifiant et son cas n’est pas significatif. S’il est SQL_FALSE, *PKCatalogName* est un argument ordinaire; il est traité littéralement, et son cas est significatif. Pour plus d’informations, voir [Arguments in Catalog Functions](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- Entrée Longueur de **PKCatalogName*, en caractères.  
+ [Entrée] Longueur de*PKCatalogName*, en caractères.  
   
  *PKSchemaName*  
- Entrée Nom de schéma de la table de clé primaire. Si un pilote prend en charge des schémas pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, une chaîne vide ("") dénote les tables qui n’ont pas de schémas. *PKSchemaName* ne peut pas contenir un modèle de recherche de chaînes.  
+ [Entrée] Nom principal de schéma de table de clef. Si un conducteur prend en charge des schémas pour certaines tables, mais pas pour d’autres, comme lorsque le conducteur récupère des données de différents DBMS, une chaîne vide («)) dénote les tables qui n’ont pas de schémas. *PKSchemaName* ne peut pas contenir un modèle de recherche de cordes.  
   
- Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *PKSchemaName* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *PKSchemaName* est un argument ordinaire ; Il est traité littéralement et sa casse est importante.  
+ Si l’attribut de l’SQL_ATTR_METADATA_ID déclaration est réglé pour SQL_TRUE, *PKSchemaName* est traité comme un identifiant et son cas n’est pas significatif. S’il est SQL_FALSE, *PKSchemaName* est un argument ordinaire; il est traité littéralement, et son cas est significatif.  
   
- *NameLength2*  
- Entrée Longueur de **PKSchemaName*, en caractères.  
+ *NomLength2*  
+ [Entrée] Longueur de*PKSchemaName*, en caractères.  
   
- *PKTableName*  
- Entrée Nom de la table de clé primaire. *PKTableName* ne peut pas contenir un modèle de recherche de chaînes.  
+ *PKTableName (en)*  
+ [Entrée] Nom de table principal. *PKTableName* ne peut pas contenir un modèle de recherche de cordes.  
   
- Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *PKTableName* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *PKTableName* est un argument ordinaire ; Il est traité littéralement et sa casse est importante.  
+ Si l’attribut de l’SQL_ATTR_METADATA_ID est réglé pour SQL_TRUE, *PKTableName* est traité comme un identifiant et son cas n’est pas significatif. S’il s’agit d’SQL_FALSE, *PKTableName* est un argument ordinaire; il est traité littéralement, et son cas est significatif.  
   
- *NameLength3*  
- Entrée Longueur de **PKTableName*, en caractères.  
+ *NomLength3*  
+ [Entrée] Longueur de*PKTableName*, en caractères.  
   
  *FKCatalogName*  
- Entrée Nom du catalogue de la table de clés étrangères. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, une chaîne vide ("") dénote les tables qui n’ont pas de catalogues. *FKCatalogName* ne peut pas contenir un modèle de recherche de chaînes.  
+ [Entrée] Nom étranger du catalogue de table clé. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, comme lorsque le pilote récupère des données de différents DBMS, une chaîne vide ("") dénote les tables qui n’ont pas de catalogues. *FKCatalogName* ne peut pas contenir un modèle de recherche de cordes.  
   
- Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *FKCatalogName* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *FKCatalogName* est un argument ordinaire ; Il est traité littéralement et sa casse est importante.  
+ Si l’attribut de SQL_ATTR_METADATA_ID déclaration est réglé pour SQL_TRUE, *FKCatalogName* est traité comme un identifiant et son cas n’est pas significatif. Si c’est SQL_FALSE, *FKCatalogName* est un argument ordinaire; il est traité littéralement, et son cas est significatif.  
   
- *NameLength4*  
- Entrée Longueur de **FKCatalogName*, en caractères.  
+ *NomLength4*  
+ [Entrée] Longueur de*FKCatalogName*, en caractères.  
   
  *FKSchemaName*  
- Entrée Nom de schéma de la table de clé étrangère. Si un pilote prend en charge des schémas pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, une chaîne vide ("") dénote les tables qui n’ont pas de schémas. *FKSchemaName* ne peut pas contenir un modèle de recherche de chaînes.  
+ [Entrée] Nom de schéma de table clé étranger. Si un conducteur prend en charge des schémas pour certaines tables, mais pas pour d’autres, comme lorsque le conducteur récupère des données de différents DBMS, une chaîne vide («)) dénote les tables qui n’ont pas de schémas. *FKSchemaName* ne peut pas contenir un modèle de recherche de cordes.  
   
- Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *FKSchemaName* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *FKSchemaName* est un argument ordinaire ; Il est traité littéralement et sa casse est importante.  
+ Si l’attribut de SQL_ATTR_METADATA_ID déclaration est réglé pour SQL_TRUE, *FKSchemaName* est traité comme un identifiant et son cas n’est pas significatif. S’il est SQL_FALSE, *FKSchemaName* est un argument ordinaire; il est traité littéralement, et son cas est significatif.  
   
- *NameLength5*  
- Entrée Longueur de **FKSchemaName*, en caractères.  
+ *NomLength5*  
+ [Entrée] Longueur de*FKSchemaName*, en caractères.  
   
- *FKTableName*  
- Entrée Nom de la table de clé étrangère. *FKTableName* ne peut pas contenir un modèle de recherche de chaînes.  
+ *FKTableName (en)*  
+ [Entrée] Nom de table clé étranger. *FKTableName* ne peut pas contenir un modèle de recherche de cordes.  
   
- Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *FKTableName* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *FKTableName* est un argument ordinaire ; Il est traité littéralement et sa casse est importante.  
+ Si l’attribut de l’SQL_ATTR_METADATA_ID déclaration est réglé pour SQL_TRUE, *FKTableName* est traité comme un identifiant et son cas n’est pas significatif. S’il s’agit d’SQL_FALSE, *FKTableName* est un argument ordinaire; il est traité littéralement, et son cas est significatif.  
   
- *NameLength6*  
- Entrée Longueur de **FKTableName*, en caractères.  
+ *NomLength6*  
+ [Entrée] Longueur de*FKTableName*, en caractères.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLForeignKeys** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLForeignKeys** et explique chacune d’elles dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLForeignKeys** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et une *poignée* de *StatementHandle*. Le tableau suivant énumère les valeurs SQLSTATE généralement retournées par **SQLForeignKeys** et explique chacune dans le cadre de cette fonction; la notation " (DM)" précède les descriptions des SQLSTATEs retournées par le gestionnaire de conducteur. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
-|24 000|État de curseur non valide|Un curseur a été ouvert sur *StatementHandle*, et **SQLFetch** ou **SQLFetchScroll** ont été appelés. Cette erreur est retournée par le gestionnaire de pilotes si **SQLFetch** ou **SQLFetchScroll** n’a pas retourné SQL_NO_DATA, et est retourné par le pilote si **sqlfetch** ou **SQLFetchScroll** a retourné SQL_NO_DATA.<br /><br /> Un curseur a été ouvert sur le *StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’a pas été appelé.|  
-|40001|Échec de la sérialisation|La transaction a été restaurée en raison d’un blocage de ressource avec une autre transaction.|  
-|40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
-|HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*, puis la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
-|HY009|Utilisation non valide d’un pointeur null|(DM) les arguments *PKTableName* et *FKTableName* ont tous deux des pointeurs null.<br /><br /> L’attribut d’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE, l’argument *FKCatalogName* ou *PKCatalogName* était un pointeur null, et l' *infotype* SQL_CATALOG_NAME retourne que les noms de catalogue sont pris en charge.<br /><br /> (DM) l’attribut d’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE, et l’argument *FKSchemaName*, *PKSchemaName*, *FKTableName*ou *PKTableName* était un pointeur null.|  
-|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction SQLForeignKeys.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
-|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) la valeur de l’un des arguments de longueur de nom était inférieure à 0, mais n’est pas égale à SQL_NTS.|  
-|||La valeur de l’un des arguments de longueur de nom dépasse la valeur de longueur maximale pour le nom correspondant. (Voir « commentaires ».)|  
-|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Fonctionnalité facultative non implémentée|Un nom de catalogue a été spécifié, et le pilote ou la source de données ne prend pas en charge les catalogues.<br /><br /> Un nom de schéma a été spécifié, et le pilote ou la source de données ne prend pas en charge les schémas.|  
-|||La combinaison des paramètres actuels des attributs d’instruction SQL_ATTR_CONCURRENCY et SQL_ATTR_CURSOR_TYPE n’a pas été prise en charge par le pilote ou la source de données.<br /><br /> L’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a été défini sur SQL_UB_VARIABLE et l’attribut d’instruction SQL_ATTR_CURSOR_TYPE a été défini sur un type de curseur pour lequel le pilote ne prend pas en charge les signets.|  
-|HYT00|Délai expiré|Le délai d’expiration de la requête a expiré avant que la source de données n’ait retourné le jeu de résultats. Le délai d’attente est défini à l’aide de **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *StatementHandle* ne prend pas en charge la fonction.|  
-|IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
-|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur ce handle.|Si l’appel de fonction précédent sur le descripteur retourne SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur le handle pour effectuer un traitement postérieur et terminer l’opération.|  
+|01000|Avertissement général|Message d’information spécifique au conducteur. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Défaillance du lien de communication|Le lien de communication entre le conducteur et la source de données à laquelle le conducteur était connecté a échoué avant que la fonction ne termine le traitement.|  
+|24 000|État de curseur non valide|Un curseur était ouvert sur le *StatementHandle*, et **SQLFetch** ou **SQLFetchScroll** avaient été appelés. Cette erreur est retournée par le gestionnaire du conducteur si **SQLFetch** ou **SQLFetchScroll** n’est pas retourné SQL_NO_DATA, et est retourné par le conducteur si **SQLFetch** ou **SQLFetchScroll** est retourné SQL_NO_DATA.<br /><br /> Un curseur était ouvert sur le *StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’avait pas été appelé.|  
+|40001|Échec de la sérialisation|La transaction a été annulée en raison d’une impasse dans les ressources avec une autre transaction.|  
+|40003|Achèvement de l’énoncé inconnu|La connexion associée a échoué lors de l’exécution de cette fonction, et l’état de la transaction ne peut pas être déterminé.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle il n’y avait pas de SQLSTATE spécifique et pour laquelle aucun SQLSTATE spécifique à la mise en œuvre n’a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le * \** tampon MessageText décrit l’erreur et sa cause.|  
+|HY001 (hy001)|Erreur d’allocation de mémoire|Le conducteur n’a pas été en mesure d’allouer la mémoire nécessaire pour soutenir l’exécution ou l’achèvement de la fonction.|  
+|HY008 HY008|Opération annulée|Le traitement asynchrone a été activé pour le *StatementHandle*. La fonction a été appelée, et avant qu’il ait terminé l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*, puis la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée, et avant qu’il ait terminé l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multitâli.|  
+|HY009|Utilisation invalide du pointeur nul|(DM) Les arguments *PKTableName* et *FKTableName* étaient tous deux des pointeurs nuls.<br /><br /> L’attribut de déclaration SQL_ATTR_METADATA_ID a été réglé pour SQL_TRUE, l’argument *FKCatalogName* ou *PKCatalogName* était un pointeur nul, et le SQL_CATALOG_NAME *InfoType* retourne que les noms de catalogue sont pris en charge.<br /><br /> (DM) L’attribut de déclaration SQL_ATTR_METADATA_ID a été fixé à SQL_TRUE, et le *FKSchemaName*, *PKSchemaName*, *FKTableName*, ou *PKTableName* argument était un pointeur nul.|  
+|HY010|Erreur de séquence de fonction|(DM) Une fonction d’exécution asynchrone a été appelée pour la poignée de connexion qui est associée à la *StatementHandle*. Cette fonction asynchrone était encore en cours d’exécution lorsque la fonction SQLForeignKeys a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *StatementHandle* et retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres en streaming.<br /><br /> (DM) Une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en exécution lorsque cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant que les données ne soient envoyées pour tous les paramètres ou colonnes de données à l’exécution.|  
+|HY013|Erreur de gestion de la mémoire|L’appel de fonction n’a pas pu être traité parce que les objets de mémoire sous-jacents n’ont pas pu être consultés, peut-être en raison de conditions de mémoire basse.|  
+|HY090 HY090|Longueur invalide de ficelle ou de tampon|(DM) La valeur de l’un des arguments de longueur de nom était inférieure à 0, mais pas égale à SQL_NTS.|  
+|||La valeur de l’un des arguments de longueur du nom a dépassé la valeur maximale de longueur pour le nom correspondant. (Voir "Commentaires.")|  
+|HY117|La connexion est suspendue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seulement sont autorisées.|(DM) Pour plus d’informations sur l’état suspendu, voir [SQLEndTran Fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Fonctionnalité facultative non implémentée|Un nom de catalogue a été spécifié, et le pilote ou la source de données ne prend pas en charge les catalogues.<br /><br /> Un nom de schéma a été spécifié, et le conducteur ou la source de données ne prend pas en charge les schémas.|  
+|||La combinaison des paramètres actuels des attributs SQL_ATTR_CONCURRENCY et SQL_ATTR_CURSOR_TYPE de l’énoncé n’a pas été prise en charge par le conducteur ou la source de données.<br /><br /> L’attribut de SQL_ATTR_USE_BOOKMARKS déclaration a été réglé pour SQL_UB_VARIABLE, et l’attribut de déclaration SQL_ATTR_CURSOR_TYPE a été réglé à un type de curseur pour lequel le conducteur ne prend pas en charge les signets.|  
+|HYT00|Délai expiré|La période de délai de requête a expiré avant que la source de données ne rende l’ensemble de résultats. La période de délai d’attente est fixée par **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01 (HYT01)|Délai de connexion expiré|La période de délai de connexion a expiré avant que la source de données ne réponde à la demande. La période de délai de connexion est définie par **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le conducteur ne prend pas en charge cette fonction|(DM) Le conducteur associé au *StatementHandle* ne prend pas en charge la fonction.|  
+|IM017|Le sondage est désactivé en mode notification asynchrone|Chaque fois que le modèle de notification est utilisé, le sondage est désactivé.|  
+|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur cette poignée.|Si la fonction précédente fait appel aux retours de poignée SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur la poignée pour effectuer le post-traitement et terminer l’opération.|  
   
 ## <a name="comments"></a>Commentaires  
- Pour plus d’informations sur la façon dont les informations retournées par cette fonction peuvent être utilisées, consultez [utilisations des données de catalogue](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ Pour plus d’informations sur la façon dont les informations retournées par cette fonction peuvent être utilisées, voir [Uses of Catalog Data](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
- Si \* *PKTableName* contient un nom de table, **SQLForeignKeys** retourne un jeu de résultats qui contient la clé primaire de la table spécifiée et toutes les clés étrangères qui y font référence. La liste de clés étrangères dans d’autres tables n’inclut pas les clés étrangères qui pointent vers des contraintes uniques dans la table spécifiée.  
+ Si \* *PKTableName* contient un nom de table, **SQLForeignKeys** retourne un ensemble de résultats qui contient la clé principale de la table spécifiée et toutes les clés étrangères qui s’y réfèrent. La liste des clés étrangères dans d’autres tableaux n’inclut pas les clés étrangères qui indiquent des contraintes uniques dans le tableau spécifié.  
   
- Si \* *FKTableName* contient un nom de table, **SQLForeignKeys** retourne un jeu de résultats qui contient toutes les clés étrangères de la table spécifiée qui pointent vers les clés primaires d’autres tables, et les clés primaires dans les autres tables auxquelles ils font référence. La liste de clés étrangères dans la table spécifiée ne contient pas de clés étrangères qui font référence à des contraintes uniques dans d’autres tables.  
+ Si \* *FKTableName* contient un nom de table, **SQLForeignKeys** retourne un ensemble de résultats qui contient toutes les clés étrangères dans le tableau spécifié qui pointent vers les touches primaires dans d’autres tables, et les clés principales dans les autres tables auxquelles ils se réfèrent. La liste des clés étrangères dans le tableau spécifié ne contient pas de clés étrangères qui se réfèrent à des contraintes uniques dans d’autres tableaux.  
   
- Si \* *PKTableName* et \* *FKTableName* contiennent des noms de tables **, SQLForeignKeys** retourne les clés étrangères dans la table spécifiée \*dans *FKTableName* qui font référence à la clé primaire de la table spécifiée dans **PKTableName*. Ce doit être une clé au plus.  
+ \*Si *PKTableName* \*et *FKTableName* contiennent des noms de table, **SQLForeignKeys** retourne les clés étrangères dans le tableau spécifiées dans \* *FKTableName* qui se réfèrent à la clé principale du tableau spécifié dans*PKTableName*. Cela devrait être une clé tout au plus.  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’utilisation générale, les arguments et les données renvoyées des fonctions de catalogue ODBC, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).  
+>  Pour plus d’informations sur l’utilisation générale, les arguments et les données retournées des fonctions de catalogue ODBC, voir [Catalog Functions](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- **SQLForeignKeys** retourne les résultats sous la forme d’un jeu de résultats standard. Si les clés étrangères associées à une clé primaire sont demandées, le jeu de résultats est trié par FKTABLE_CAT, FKTABLE_SCHEM, FKTABLE_NAME et KEY_SEQ. Si les clés primaires associées à une clé étrangère sont demandées, le jeu de résultats est trié par PKTABLE_CAT, PKTABLE_SCHEM, PKTABLE_NAME et KEY_SEQ. Le tableau suivant répertorie les colonnes du jeu de résultats.  
+ **SQLForeignKeys** retourne les résultats comme un résultat standard. Si les clés étrangères associées à une clé principale sont demandées, l’ensemble de résultats est commandé par FKTABLE_CAT, FKTABLE_SCHEM, FKTABLE_NAME et KEY_SEQ. Si les clés principales associées à une clé étrangère sont demandées, l’ensemble de résultat est commandé par PKTABLE_CAT, PKTABLE_SCHEM, PKTABLE_NAME et KEY_SEQ. Le tableau suivant répertorie les colonnes dans l’ensemble de résultats.  
   
- Les longueurs des colonnes VARCHAR ne sont pas indiquées dans le tableau. les longueurs réelles dépendent de la source de données. Pour déterminer les longueurs réelles des colonnes PKTABLE_CAT ou FKTABLE_CAT, PKTABLE_SCHEM ou FKTABLE_SCHEM, PKTABLE_NAME ou FKTABLE_NAME et PKCOLUMN_NAME ou FKCOLUMN_NAME, une application peut appeler **SQLGetInfo** avec les options SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN et SQL_MAX_COLUMN_NAME_LEN.  
+ Les longueurs des colonnes VARCHAR ne sont pas indiquées dans le tableau; les longueurs réelles dépendent de la source de données. Pour déterminer la longueur réelle des colonnes PKTABLE_CAT ou FKTABLE_CAT, PKTABLE_SCHEM ou FKTABLE_SCHEM, PKTABLE_NAME ou FKTABLE_NAME, et PKCOLUMN_NAME ou FKCOLUMN_NAME colonnes, une application peut appeler **SQLGetInfo** avec les options de SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN et SQL_MAX_COLUMN_NAME_LEN.  
   
- Les colonnes suivantes ont été renommées pour ODBC 3 *. x.* Les modifications apportées aux noms de colonne n’affectent pas la compatibilité descendante, car les applications sont liées par numéro de colonne.  
+ Les colonnes suivantes ont été rebaptisées pour ODBC 3 *.x.* Les modifications du nom de colonne n’affectent pas la compatibilité vers l’arrière parce que les applications se lient par numéro de colonne.  
   
-|Colonne ODBC 2,0|Colonne ODBC 3 *. x*|  
+|Colonne ODBC 2.0|Colonne ODBC 3 *.x*|  
 |---------------------|-----------------------|  
 |PKTABLE_QUALIFIER|PKTABLE_CAT|  
 |PKTABLE_OWNER|PKTABLE_SCHEM|  
 |FKTABLE_QUALIFIER|FK_TABLE_CAT|  
 |FKTABLE_OWNER|FKTABLE_SCHEM|  
   
- Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires qui dépassent la colonne 14 (remarques) peuvent être définies par le pilote. Une application doit accéder aux colonnes spécifiques aux pilotes en comptant à partir de la fin de l’ensemble de résultats au lieu de spécifier une position ordinale explicite. Pour plus d’informations, consultez [données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ Le tableau suivant répertorie les colonnes dans l’ensemble de résultats. Des colonnes supplémentaires au-delà de la colonne 14 (REMARQUE) peuvent être définies par le conducteur. Une application doit avoir accès à des colonnes spécifiques au conducteur en comptant à partir de la fin de l’ensemble de résultat au lieu de spécifier une position ordinaire explicite. Pour plus d’informations, voir [Données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
 |Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
-|PKTABLE_CAT (ODBC 1,0)|1|Varchar|Nom du catalogue de la table de clé primaire ; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, il renvoie une chaîne vide ("") pour les tables qui n’ont pas de catalogues.|  
-|PKTABLE_SCHEM (ODBC 1,0)|2|Varchar|Nom de schéma de la table de clé primaire ; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des schémas pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, il renvoie une chaîne vide ("") pour les tables qui n’ont pas de schémas.|  
-|PKTABLE_NAME (ODBC 1,0)|3|Varchar non NULL|Nom de la table de clé primaire.|  
-|PKCOLUMN_NAME (ODBC 1,0)|4|Varchar non NULL|Nom de la colonne de clé primaire. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
-|FKTABLE_CAT (ODBC 1,0)|5|Varchar|Nom du catalogue de la table de clés étrangères ; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, il renvoie une chaîne vide ("") pour les tables qui n’ont pas de catalogues.|  
-|FKTABLE_SCHEM (ODBC 1,0)|6|Varchar|Nom de schéma de la table de clés étrangères ; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des schémas pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, il renvoie une chaîne vide ("") pour les tables qui n’ont pas de schémas.|  
-|FKTABLE_NAME (ODBC 1,0)|7|Varchar non NULL|Nom de la table de clé étrangère.|  
-|FKCOLUMN_NAME (ODBC 1,0)|8|Varchar non NULL|Nom de la colonne de clé étrangère. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
-|KEY_SEQ (ODBC 1,0)|9|Smallint non NULL|Numéro de séquence de la colonne dans la clé (à partir de 1).|  
-|UPDATE_RULE (ODBC 1,0)|10|Smallint|Action à appliquer à la clé étrangère lorsque l’opération SQL est **mise à jour**. Peut avoir l’une des valeurs suivantes. (La table référencée est la table qui contient la clé primaire ; la table de référence est la table qui contient la clé étrangère.)<br /><br /> SQL_CASCADE : lorsque la clé primaire de la table référencée est mise à jour, la clé étrangère de la table de référence est également mise à jour.<br /><br /> SQL_NO_ACTION : si une mise à jour de la clé primaire de la table référencée provoquerait une « référence non résolue » dans la table de référence (autrement dit, les lignes de la table de référence n’auraient pas d’équivalents dans la table référencée), la mise à jour est rejetée. Si une mise à jour de la clé étrangère de la table de référence introduirait une valeur qui n’existe pas en tant que valeur de la clé primaire de la table référencée, la mise à jour est rejetée. (Cette action est identique à l’action SQL_RESTRICT dans ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL : quand une ou plusieurs lignes de la table référencée sont mises à jour de telle sorte qu’un ou plusieurs composants de la clé primaire sont modifiés, les composants de la clé étrangère de la table de référence qui correspondent aux composants modifiés de la clé primaire sont définis la valeur NULL dans toutes les lignes correspondantes de la table de référence.<br /><br /> SQL_SET_DEFAULT : quand une ou plusieurs lignes de la table référencée sont mises à jour de telle sorte qu’un ou plusieurs composants de la clé primaire sont modifiés, les composants de la clé étrangère de la table de référence qui correspondent aux composants modifiés de la clé primaire sont Définissez les valeurs par défaut applicables dans toutes les lignes correspondantes de la table de référence.<br /><br /> NULL s’il n’est pas applicable à la source de données.|  
-|DELETE_RULE (ODBC 1,0)|11|Smallint|Action à appliquer à la clé étrangère lorsque l’opération SQL est **supprimée**. Peut avoir l’une des valeurs suivantes. (La table référencée est la table qui contient la clé primaire ; la table de référence est la table qui contient la clé étrangère.)<br /><br /> SQL_CASCADE : lorsqu’une ligne de la table référencée est supprimée, toutes les lignes correspondantes dans les tables de référence sont également supprimées.<br /><br /> SQL_NO_ACTION : si la suppression d’une ligne dans la table référencée provoquerait une « référence non résolue » dans la table de référence (autrement dit, les lignes de la table de référence n’auraient pas d’équivalents dans la table référencée), la mise à jour est rejetée. (Cette action est identique à l’action SQL_RESTRICT dans ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL : quand une ou plusieurs lignes de la table référencée sont supprimées, chaque composant de la clé étrangère de la table de référence a la valeur NULL dans toutes les lignes correspondantes de la table de référence.<br /><br /> SQL_SET_DEFAULT : quand une ou plusieurs lignes de la table référencée sont supprimées, chaque composant de la clé étrangère de la table de référencement est défini sur la valeur par défaut applicable dans toutes les lignes correspondantes de la table de référence.<br /><br /> NULL s’il n’est pas applicable à la source de données.|  
-|FK_NAME (ODBC 2,0)|12|Varchar|Nom de la clé étrangère. NULL s’il n’est pas applicable à la source de données.|  
-|PK_NAME (ODBC 2,0)|13|Varchar|Nom de la clé primaire. NULL s’il n’est pas applicable à la source de données.|  
-|REPORTABILITÉ (ODBC 3,0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE SQL_NOT_DEFERRABLE.|  
+|PKTABLE_CAT (ODBC 1.0)|1|Varchar|Nom principal du catalogue de table clé; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, comme lorsque le pilote récupère des données de différents DBMS, il retourne une chaîne vide ("") pour les tables qui n’ont pas de catalogues.|  
+|PKTABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom principal de schéma de table clé ; NULL s’il n’est pas applicable à la source de données. Si un conducteur prend en charge des schémas pour certaines tables, mais pas pour d’autres, comme lorsque le conducteur récupère des données de différents DBMS, il retourne une chaîne vide ("") pour les tables qui n’ont pas de schémas.|  
+|PKTABLE_NAME (ODBC 1.0)|3|Varchar pas NULL|Nom de table principal.|  
+|PKCOLUMN_NAME (ODBC 1.0)|4|Varchar pas NULL|Nom de colonne principale. Le conducteur retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
+|FKTABLE_CAT (ODBC 1.0)|5|Varchar|Nom étranger du catalogue de table clé; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, comme lorsque le pilote récupère des données de différents DBMS, il retourne une chaîne vide ("") pour les tables qui n’ont pas de catalogues.|  
+|FKTABLE_SCHEM (ODBC 1.0)|6|Varchar|Nom étranger de schéma de table clé ; NULL s’il n’est pas applicable à la source de données. Si un conducteur prend en charge des schémas pour certaines tables, mais pas pour d’autres, comme lorsque le conducteur récupère des données de différents DBMS, il retourne une chaîne vide ("") pour les tables qui n’ont pas de schémas.|  
+|FKTABLE_NAME (ODBC 1.0)|7|Varchar pas NULL|Nom de table clé étranger.|  
+|FKCOLUMN_NAME (ODBC 1.0)|8|Varchar pas NULL|Nom de colonne de clé étranger. Le conducteur retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
+|KEY_SEQ (ODBC 1.0)|9|Smallint non NULL|Numéro de séquence de colonne dans la clé (à partir de 1).|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|Action à appliquer à la clé étrangère lorsque l’opération SQL est **UPDATE**. Peut avoir l’une des valeurs suivantes. (Le tableau référencé est le tableau qui a la clé principale; la table de référencement est la table qui a la clé étrangère.)<br /><br /> SQL_CASCADE : Lorsque la clé principale du tableau référencé est mise à jour, la clé étrangère du tableau de référencement est également mise à jour.<br /><br /> SQL_NO_ACTION : Si une mise à jour de la clé principale du tableau référencé provoquerait une « référence » dans le tableau de référencement (c’est-à-dire que les lignes dans le tableau de référence n’auraient pas de contreparties dans le tableau référencé), la mise à jour est rejetée. Si une mise à jour de la clé étrangère du tableau de référence introduit une valeur qui n’existe pas comme valeur de la clé principale du tableau référencé, la mise à jour est rejetée. (Cette action est la même que l’action SQL_RESTRICT dans ODBC 2 *.x*.)<br /><br /> SQL_SET_NULL : Lorsqu’une ou plusieurs lignes du tableau référencé sont mises à jour de manière à ce qu’un ou plusieurs composants de la clé principale soient modifiés, les composants de la clé étrangère dans le tableau de référencement qui correspondent aux composants modifiés de la clé principale sont réglés à NULL dans toutes les rangées correspondantes de la table de référencement.<br /><br /> SQL_SET_DEFAULT : Lorsqu’une ou plusieurs lignes du tableau référencé sont mises à jour de manière à ce qu’un ou plusieurs composants de la clé principale soient modifiés, les composants de la clé étrangère dans le tableau de référencement qui correspondent aux composants modifiés de la clé principale sont réglés aux valeurs par défaut applicables dans toutes les lignes correspondantes de la table de référencement.<br /><br /> NULL s’il n’est pas applicable à la source de données.|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|Action à appliquer à la clé étrangère lorsque l’opération SQL est **DELETE**. Peut avoir l’une des valeurs suivantes. (Le tableau référencé est le tableau qui a la clé principale; la table de référencement est la table qui a la clé étrangère.)<br /><br /> SQL_CASCADE : Lorsqu’une rangée dans le tableau référencé est supprimée, toutes les lignes correspondantes dans les tableaux de référencement sont également supprimées.<br /><br /> SQL_NO_ACTION : Si une suppression d’une ligne dans le tableau référencé provoquerait une « référence » dans le tableau de référencement (c’est-à-dire que les lignes dans le tableau de référence n’auraient pas de contreparties dans le tableau référencé), la mise à jour est rejetée. (Cette action est la même que l’action SQL_RESTRICT dans ODBC 2 *.x*.)<br /><br /> SQL_SET_NULL : Lorsqu’une ou plusieurs lignes dans le tableau référencé sont supprimées, chaque composant de la clé étrangère de la table de référencement est réglé à NULL dans toutes les rangées correspondantes de la table de référencement.<br /><br /> SQL_SET_DEFAULT : Lorsqu’une ou plusieurs lignes dans le tableau référencé sont supprimées, chaque composant de la clé étrangère de la table de référencement est réglé à la valeur par défaut applicable dans toutes les lignes correspondantes de la table de référencement.<br /><br /> NULL s’il n’est pas applicable à la source de données.|  
+|FK_NAME (ODBC 2.0)|12|Varchar|Nom clé étranger. NULL s’il n’est pas applicable à la source de données.|  
+|PK_NAME (ODBC 2.0)|13|Varchar|Nom clé principal. NULL s’il n’est pas applicable à la source de données.|  
+|REPORTRABILITÉ (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  
   
 ## <a name="code-example"></a>Exemple de code  
- Comme illustré dans le tableau suivant, cet exemple utilise trois tables, nommées ORDERs, LINEs et CUSTOMers.  
+ Comme illustré dans le tableau suivant, cet exemple utilise trois tableaux, nommés ORDERS, LINES et CUSTOMERS.  
   
-|ORDERS|COURBES|ACHETEURS|  
+|ORDERS|Lignes|Clients|  
 |------------|-----------|---------------|  
-|ORDERID|ORDERID|CUSTID|  
-|CUSTID|COURBES|NOM|  
-|OPENDATE|PARTID|-|  
-|Equipe|SPÉCIFIÉE|TÉLÉPHONE|  
+|ORDRE|ORDRE|CUSTID|  
+|CUSTID|Lignes|NAME|  
+|OPENDATE (EN)|PartiD (PARTID)|Adresse|  
+|Vendeur|Quantité|TÉLÉPHONE|  
 |STATUT|||  
   
- Dans la table ORDERs, CUSTID identifie le client auquel la vente a été effectuée. Il s’agit d’une clé étrangère qui fait référence à CUSTID dans la table CUSTOMers.  
+ Dans le tableau ORDERS, CUSTID identifie le client à qui la vente a été faite. Il s’agit d’une clé étrangère qui se réfère à CUSTID dans le tableau customers.  
   
- Dans la table LINEs, ORDERID identifie la commande client à laquelle la ligne est associée. Il s’agit d’une clé étrangère qui fait référence à ORDERID dans la table ORDERs.  
+ Dans le tableau LINES, ORDERID identifie l’ordre de vente auquel l’élément de ligne est associé. Il s’agit d’une clé étrangère qui se réfère à ORDERID dans le tableau ORDERS.  
   
- Cet exemple appelle **SQLPrimaryKeys** pour récupérer la clé primaire de la table Orders. Le jeu de résultats aura une ligne ; les colonnes significatives sont indiquées dans le tableau suivant.  
+ Cet exemple appelle **SQLPrimaryKeys** pour obtenir la clé principale de la table ORDERS. L’ensemble de résultats aura une rangée; les colonnes significatives sont indiquées dans le tableau suivant.  
   
 |TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
-|ORDERS|ORDERID|1|  
+|ORDERS|ORDRE|1|  
   
- L’exemple appelle ensuite **SQLForeignKeys** pour récupérer les clés étrangères dans d’autres tables qui font référence à la clé primaire de la table Orders. Le jeu de résultats aura une ligne ; les colonnes significatives sont indiquées dans le tableau suivant.  
-  
-|PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
-|-------------------|--------------------|-------------------|--------------------|--------------|  
-|ORDERS|CUSTID|COURBES|CUSTID|1|  
-  
- Enfin, l’exemple appelle **SQLForeignKeys** pour récupérer les clés étrangères dans la table Orders qui font référence aux clés primaires d’autres tables. Le jeu de résultats aura une ligne ; les colonnes significatives sont indiquées dans le tableau suivant.  
+ Ensuite, l’exemple appelle **SQLForeignKeys** pour obtenir les clés étrangères dans d’autres tables qui font référence à la clé principale de la table ORDERS. L’ensemble de résultats aura une rangée; les colonnes significatives sont indiquées dans le tableau suivant.  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|ACHETEURS|CUSTID|ORDERS|CUSTID|1|  
+|ORDERS|CUSTID|Lignes|CUSTID|1|  
+  
+ Enfin, l’exemple appelle **SQLForeignKeys** pour obtenir les clés étrangères dans le tableau ORDERS qui se réfèrent aux clés principales d’autres tables. L’ensemble de résultats aura une rangée; les colonnes significatives sont indiquées dans le tableau suivant.  
+  
+|PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
+|-------------------|--------------------|-------------------|--------------------|--------------|  
+|Clients|CUSTID|ORDERS|CUSTID|1|  
   
 ```cpp  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  
@@ -322,13 +322,13 @@ SQLFreeStmt(hstmt, SQL_DROP);
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Liaison d’une mémoire tampon à une colonne dans un jeu de résultats|[Fonction SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Annulation du traitement des instructions|[SQLCancel, fonction](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Extraction d’une seule ligne ou d’un bloc de données dans une direction vers l’avant uniquement|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Extraction d’un bloc de données ou défilement dans un jeu de résultats|[Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Lier un tampon à une colonne dans un ensemble de résultats|[Fonction SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Annulation du traitement des relevés|[SQLCancel, fonction](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Aller chercher une seule rangée ou un bloc de données dans une direction avant-seulement|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Aller chercher un bloc de données ou faire défiler un ensemble de résultats|[Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Retour des colonnes d’une clé primaire|[Fonction SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
-|Retour de statistiques de table et d’index|[Fonction SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
+|Retour des statistiques et des indices de table|[Fonction SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Référence API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

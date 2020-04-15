@@ -12,24 +12,24 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d54dbe8e3df6e930ebd026e638d0a21f2f88f32e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8779b68d6ab1070514f8ef6685ef378437d09539
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73772559"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302524"
 ---
 # <a name="transactions"></a>Transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client implémente la prise en charge des transactions locales. Le consommateur peut utiliser des transactions distribuées ou coordonnées à l'aide de Microsoft Distributed Transaction Coordinator (MS DTC). Pour les consommateurs qui requièrent un contrôle des transactions qui s' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étend sur plusieurs sessions, le fournisseur de OLE DB Native Client peut joindre des transactions initiées et gérées par MS DTC.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB met en œuvre le support transactionnel local. Le consommateur peut utiliser des transactions distribuées ou coordonnées à l'aide de Microsoft Distributed Transaction Coordinator (MS DTC). Pour les consommateurs qui ont besoin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un contrôle des transactions qui s’étend sur plusieurs séances, le fournisseur de DB OLE de client autochtone peut se joindre aux transactions initiées et maintenues par MS DTC.  
   
- Par défaut, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client utilise un mode de transaction AutoCommit, où chaque action discrète sur une session de consommateur comprend une transaction complète sur une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mode de validation automatique du fournisseur OLE DB Native Client est local, et les transactions de validation automatique ne s’étendent jamais sur plus d’une seule session.  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de DB OLE Native Client utilise un mode de transaction autocommit, où chaque action discrète sur une session de consommateur comprend une transaction complète contre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mode autocommit fournisseur de fournisseur d’OLE de client autochtone est local, et les transactions autocommit ne s’étendent jamais plus d’une seule session.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose l’interface **ITransactionLocal** , ce qui permet au consommateur d’utiliser des transactions de démarrage explicite et implicite sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unique à une instance de. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client ne prend pas en charge les transactions locales imbriquées.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB expose **l’interface ITransactionLocal,** permettant au consommateur d’utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]explicitement et implicitement des transactions sur une seule connexion à une instance de . Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de DB OLE de client autochtone n’appuie pas les transactions locales imbriquées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73772559"
   
 -   [Prise en charge des transactions distribuées](../../relational-databases/native-client-ole-db-transactions/supporting-distributed-transactions.md)  
   
--   [Niveaux d’isolement &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-transactions/isolation-levels-ole-db.md)  
+-   [Niveaux d'isolation &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-transactions/isolation-levels-ole-db.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

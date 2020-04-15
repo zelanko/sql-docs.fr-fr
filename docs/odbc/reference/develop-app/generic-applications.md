@@ -1,5 +1,5 @@
 ---
-title: Applications génériques | Microsoft Docs
+title: Applications génériques (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - interoperability [ODBC], levels
 - generic applications [ODBC]
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 607676d5370f02ee1d39196bff9261bc897521ee
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139297"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305550"
 ---
 # <a name="generic-applications"></a>Applications génériques
-Les applications génériques effectuent parfois une tâche codée en dur, telle qu’une feuille de calcul qui récupère les données d’une base de données. Ils peuvent également effectuer diverses tâches définies par l’utilisateur, telles qu’une application de requête générique permettant à l’utilisateur d’entrer et d’exécuter une instruction SQL. Les applications génériques sont en commun : elles doivent fonctionner avec différents SGBD et que le développeur ne sache pas à l’avance ce que seront les SGBD.  
+Les applications génériques effectuent parfois une tâche codée en dur, comme une feuille de calcul récupérant des données à partir d’une base de données. Ils peuvent également effectuer une variété de tâches définies par l’utilisateur, comme une application de requête générique permettant à l’utilisateur d’entrer et d’exécuter une déclaration SQL. Ce que les applications génériques ont en commun, c’est qu’ils doivent travailler avec une variété de différents DBMS et que le développeur ne sait pas à l’avance ce que ces DBMS seront.  
   
- Par conséquent, les applications génériques doivent être très interopérables. Le développeur doit faire de nombreux choix, commercialiser l’interopérabilité pour les fonctionnalités et écrire du code qui s’attend à ce que les pilotes prennent en charge un large éventail de fonctionnalités. Alors que les applications génériques peuvent être paramétrées pour fonctionner avec des SGBD répandus, elles contiennent rarement du code spécifique au pilote ou au SGBD.
+ Par conséquent, les applications génériques doivent être hautement interopérables. Le développeur doit faire de nombreux choix, en échangeant l’interopérabilité pour les fonctionnalités, et doit écrire du code qui s’attend à ce que les pilotes prennent en charge un large éventail de fonctionnalités. Bien que les applications génériques puissent être réglées pour fonctionner avec des DBMS populaires, elles contiennent rarement du code spécifique au conducteur ou DBMS.
