@@ -1,22 +1,22 @@
 ---
-title: API de framework d’extensibilité pour Microsoft SQL Server
+title: API de framework d’extensibilité
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: Vous pouvez utiliser le framework d’extensibilité pour écrire des extensions de langage de programmation pour SQL Server. L’API de framework d’extensibilité pour Microsoft SQL Server est une API qui peut être utilisée par une extension de langage pour interagir avec des données et les échanger avec SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517710"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012425"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>API de framework d’extensibilité pour Microsoft SQL Server
+# <a name="extensibility-framework-api-for-sql-server"></a>API de framework d’extensibilité pour SQL Server
 
 Vous pouvez utiliser le framework d’extensibilité pour écrire des extensions de langage de programmation pour SQL Server. L’API de framework d’extensibilité pour Microsoft SQL Server est une API qui peut être utilisée par une extension de langage pour interagir avec des données et les échanger avec SQL Server.
 
@@ -302,7 +302,7 @@ Quand `@parallel = 1` dans [sp_execute_external_script](../../relational-databas
 *RowsNumber*  
 \[Entrée\] Nombre de lignes dans *Data*.
 
-*Data*  
+*Données*  
 \[Entrée\] Tableau à deux dimensions qui contient le jeu de résultats de `@input_data_1` dans [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 Le nombre total de colonnes est *InputSchemaColumnsNumber* qui a été reçu dans l’appel [InitSession](#initsession). Chaque colonne contient *RowsNumber* éléments qui doivent être interprétés en fonction du type de colonne de [InitColumn](#initcolumn).
@@ -405,7 +405,7 @@ Quand `@parallel = 1` dans [sp_execute_external_script](../../relational-databas
 *RowsNumber*  
 \[Sortie\] Pointeur vers une mémoire tampon qui contient le nombre de lignes dans *Data*.
 
-*Data*  
+*Données*  
 \[Sortie\] Pointeur vers un tableau à deux dimensions alloué par l’extension qui contient le jeu de résultats de `@script` dans [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 Le nombre total de colonnes doit être  *OutputSchemaColumnsNumber* qui a été récupéré dans l’appel [Execute](#execute). Chaque colonne doit contenir *RowsNumber* éléments qui doivent être interprétés en fonction du type de colonne de [GetResultColumn](#getresultcolumn).
@@ -483,7 +483,7 @@ SQLRETURN CleanupSession(
 
 Quand `@parallel = 1` dans [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), cette valeur est comprise entre 0 et le degré de parallélisme de la requête.
 
-## <a name="cleanup"></a>Cleanup
+## <a name="cleanup"></a>Nettoyage
 
 Nettoyer les informations globales et partagées (par exemple JVM).
 

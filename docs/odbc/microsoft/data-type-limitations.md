@@ -1,5 +1,5 @@
 ---
-title: Limitations des types de données | Microsoft Docs
+title: Limitations de type de données (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - data types [ODBC], desktop database drivers
 - desktop database drivers [ODBC], data types
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4beaf91a4ead743e3e8a2e32578796baba3c17be
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280669"
 ---
 # <a name="data-type-limitations"></a>Limitations des types de données
-Les pilotes de base de données Microsoft ODBC Desktop imposent les limitations suivantes sur les types de données :  
+Les pilotes microsoft ODBC Desktop Database imposent les limites suivantes sur les types de données :  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|Tous les types de données|Les échecs de conversion de type peuvent entraîner la définition de la colonne affectée avec la valeur NULL.|  
-|BINARY|La création d’une colonne binaire de longueur nulle retourne en fait une colonne binaire de 255 octets.|  
+|Tous les types de données|Les défaillances de conversion de type peuvent entraîner l’ensemble de la colonne affectée à NULL.|  
+|BINARY|La création d’une colonne BINAIRE de longueur zéro renvoie en fait une colonne BINAIRE de 255 byte.|  
 |DATE|Le type de données DATE ne peut pas être converti en un autre type de données (ou lui-même) par la fonction CONVERT.|  
-|DÉCIMAL (numérique exact)|Non pris en charge.|  
-|Types de données à virgule flottante|Le nombre de décimales dans un nombre à virgule flottante peut être limité par le format de nombre défini dans la section international du panneau de configuration Windows.|  
-|NUMERIC|Prend en charge la précision maximale et une échelle de 28.|  
+|DECIMAL (Exact Numeric)|Non pris en charge.|  
+|Types de données à point flottant|Le nombre de décimales dans un numéro de point flottant peut être limité par le format de nombre défini dans la section internationale du panneau de contrôle Windows.|  
+|NUMERIC|Prend en charge une précision maximale et une échelle de 28.|  
 |timestamp|Le type de données TIMESTAMP ne peut pas être converti en lui-même par la fonction CONVERT.|  
-|TINYINT|Les valeurs TINYINT sont toujours non signées.|  
-|Chaînes de longueur nulle|Lorsqu’un dBASE, Microsoft Excel, Paradox ou TextDriver est utilisé, l’insertion d’une chaîne de longueur nulle dans une colonne insère en fait une valeur NULL à la place.|
+|TINYINT|Les valeurs TINYINT ne sont toujours pas signées.|  
+|Cordes zéro longueur|Lorsqu’un dBASE, Microsoft Excel, Paradox ou Textdriver est utilisé, l’insertion d’une chaîne de longueur zéro dans une colonne insère en fait un NULL à la place.|

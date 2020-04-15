@@ -1,5 +1,5 @@
 ---
-title: Fonctions de l’API de niveau 2 (pilote ODBC pour Oracle) | Microsoft Docs
+title: Fonctions API de niveau 2 (ODBC Driver pour Oracle) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,35 +15,35 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7600734fef44071b1f5e35c136a6b9facdb8b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b1e181c5863d6b906eaf9a3ba499728c595f0449
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284179"
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau 2 (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Les fonctions à ce niveau assurent la conformité de l’interface de niveau 1, ainsi que des fonctionnalités supplémentaires telles que la prise en charge des signets, des paramètres dynamiques et l’exécution asynchrone des fonctions ODBC.  
+ Les fonctions à ce niveau fournissent la conformation d’interface de niveau 1 ainsi que des fonctionnalités supplémentaires telles que le support pour les signets, les paramètres dynamiques, et l’exécution asynchrone des fonctions d’ODBC.  
   
 |Fonction API|Notes|  
 |------------------|-----------|  
-|**SQLBindParameter**|Associe une mémoire tampon à un marqueur de paramètre dans une instruction SQL.|  
-|**SQLBrowseConnect**|Retourne des niveaux successifs d’attributs et de valeurs d’attribut.|  
-|**SQLDataSources**|Répertorie les noms de sources de données. Implémenté par le gestionnaire de pilotes.|  
-|**SQLDescribeParam**|Retourne la description d’un marqueur de paramètre associé à une instruction SQL préparée.<br /><br /> Retourne une estimation optimale de ce que le paramètre est, en fonction de l’analyse de l’instruction. Si le type de paramètre ne peut pas être déterminé, SQL_VARCHAR retourne avec une longueur de 2000.|  
-|**SQLDrivers**|Implémenté par le gestionnaire de pilotes.|  
-|**SQLExtendedFetch**|Semblable à **SQLFetch** , mais retourne plusieurs lignes à l’aide d’un tableau pour chaque colonne. Le jeu de résultats est un défilement vers l’avant et peut être rendu à défilement vers l’arrière si le curseur est défini comme statique, et non en avant uniquement. Pour les curseurs avant uniquement avec une liaison de colonne par défaut, les données de colonne des jeux de données plus grands que l’attribut de connexion BUFFERSIZE sont extraites directement dans les tampons de données. Ne prend pas en charge les signets de longueur variable et ne prend pas en charge l’extraction d’un ensemble de lignes à un décalage (autre que 0) à partir d’un signet.|  
-|**SQLForeignKeys**|Retourne une liste de clés étrangères dans une table unique, ou une liste de clés étrangères dans d’autres tables qui font référence à une table unique.|  
-|**SQLMoreResults**|Détermine si davantage de résultats sont en attente sur un descripteur d’instruction, hstmt, contenant des instructions SELECT, UPDATE, INSERT ou DELETE et, le cas échéant, initialise le traitement de ces résultats.<br /><br /> Oracle prend en charge plusieurs jeux de résultats uniquement à partir de procédures stockées, lors de l’utilisation de séquences d’échappement {ResultSet...}.|  
-|**SQLNativeSql**|Pour plus d’informations sur l’utilisation, consultez [renvoi de paramètres de tableau à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLNumParams**|Retourne le nombre de paramètres dans une instruction SQL. Le nombre de paramètres doit être égal au nombre de points d’interrogation dans l’instruction SQL passée à **SQLPrepare**.|  
-|**SQLPrimaryKeys**|Retourne les noms de colonnes qui composent la clé primaire d’une table.|  
-|**SQLProcedureColumns**|Retourne une liste de paramètres d’entrée et de sortie, la valeur de retour, les colonnes du jeu de résultats d’une procédure unique et deux colonnes supplémentaires, OVERLOAD et ORDINAL_POSITION. OVERLOAD est la colonne de surcharge de la table ALL_ARGUMENTS de la vue de dictionnaire de données Oracle. ORDINAL_POSITION est la colonne de séquence de la table ALL_ARGUMENTS de la vue de dictionnaire de données Oracle. Pour les procédures empaquetées, la colonne de nom de la procédure est au format *PackageName. NomProcédure* . Ne retourne pas les colonnes de procédure d’un synonyme créé qui fait référence à une procédure ou une fonction.|  
-|**SQLProcedures**|Retourne une liste de procédures dans la source de données. Pour les procédures empaquetées, la colonne de nom de la procédure est au format *PackageName. NomProcédure* .<br /><br /> Oracle n’offrant aucun moyen de distinguer les procédures packagées des fonctions empaquetées, le pilote retourne SQL_PT_UNKNOWN pour la colonne PROCEDURE_TYPE.|  
-|**SQLSetPos**|Définit la position du curseur dans un ensemble de lignes. Vous pouvez utiliser **SQLSetPos** avec **SQLGetData** pour récupérer des lignes de colonnes indépendantes après avoir positionner le curseur sur une ligne spécifique de l’ensemble de lignes. Les lignes ajoutées au jeu de résultats à l’aide de *fOption* SQL_ADD sont ajoutées après la dernière ligne du jeu de résultats.|  
-|**SQLSetScrollOptions**|Définit des options qui contrôlent le comportement des curseurs associés à un descripteur d’instruction, hstmt. Pour plus d’informations, consultez [types de curseurs et combinaisons d’accès concurrentiel](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+|**SQLBindParameter**|Associe un tampon à un marqueur de paramètres dans une déclaration SQL.|  
+|**SQLBrowseConnect**|Retourne les niveaux successifs d’attributs et de valeurs d’attribut.|  
+|**SQLDataSources**|Répertorie les noms de source de données. Mise en œuvre par le Driver Manager.|  
+|**SQLDescribeParam**|Retourne la description d’un marqueur de paramètres associé à une déclaration SQL préparée.<br /><br /> Retourne une meilleure estimation de ce que le paramètre est, basé sur l’analyse de l’instruction. Si le type de paramètre ne peut pas être déterminé, SQL_VARCHAR revient avec la longueur 2000.|  
+|**SQLDrivers**|Mise en œuvre par le Driver Manager.|  
+|**SQLExtendedFetch**|Semblable à **SQLFetch,** mais retourne plusieurs lignes à l’aide d’un tableau pour chaque colonne. L’ensemble de résultat est défilement vers l’avant et peut être rendu défilement vers l’arrière si le curseur est défini comme statique, et non vers l’avant seulement. Pour les curseurs avant-seulement avec la liaison de colonne par défaut, les données de colonne des ensembles de données plus grandes que l’attribut de connexion BUFFERSIZE sont récupérées directement dans des tampons de données. Ne prend pas en charge les signets à longueur variable et ne prend pas en charge la récupération d’un acart à un décalage (autre que 0) à partir d’un signet.|  
+|**SQLForeignKeys**|Retourne une liste de clés étrangères dans une seule table, ou une liste de clés étrangères dans d’autres tableaux qui se réfèrent à une seule table.|  
+|**SQLMoreResults**|Détermine si d’autres résultats sont en attente sur une poignée de déclaration, hstmt, contenant DES instructions SELECT, UPDATE, INSERT ou DELETE et, dans l’affirmative, initialise le traitement de ces résultats.<br /><br /> Oracle prend en charge plusieurs ensembles de résultats uniquement à partir de procédures stockées, lors de l’utilisation de séquences d’évasion .|  
+|**SQLNativeSql**|Pour plus d’informations sur l’utilisation, voir [Paramètres de tableau de retour à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
+|**SQLNumParams**|Retourne le nombre de paramètres dans un communiqué de SQL. Le nombre de paramètres devrait égaler le nombre de points d’interrogation dans la déclaration SQL transmise à **SQLPrepare**.|  
+|**SQLPrimaryKeys**|Retourne les noms de colonne qui composent la clé principale pour une table.|  
+|**SQLProcedureColumns**|Retourne une liste des paramètres d’entrée et de sortie, la valeur de retour, les colonnes dans l’ensemble de résultat d’une seule procédure, et deux colonnes supplémentaires, OVERLOAD et ORDINAL_POSITION. OVERLOAD est la colonne OVERLOAD du tableau ALL_ARGUMENTS de l’Oracle Data Dictionary View. ORDINAL_POSITION est la colonne SÉQUENCE de la table ALL_ARGUMENTS de l’Oracle Data Dictionary View. Pour les procédures emballées, la colonne PROCEDURE NAME est en format *packagename.procedurename.* Ne renvoie pas les colonnes de procédure d’un synonyme créé qui se réfère à une procédure ou une fonction.|  
+|**SQLProcedures**|Renvoie une liste de procédures dans la source de données. Pour les procédures emballées, la colonne PROCEDURE NAME est en format *packagename.procedurename.*<br /><br /> Parce qu’Oracle ne fournit pas un moyen de distinguer les procédures emballées des fonctions emballées, le pilote retourne SQL_PT_UNKNOWN pour la colonne PROCEDURE_TYPE.|  
+|**SQLSetPos**|Définit la position du curseur dans un aviron. Vous pouvez utiliser **SQLSetPos** avec **SQLGetData** pour récupérer les rangées des colonnes non liées après avoir placé le curseur à une rangée spécifique dans le rame. Des lignes ajoutées à l’ensemble de résultats à l’aide de *fOption* SQL_ADD sont ajoutées après la dernière ligne dans l’ensemble de résultats.|  
+|**SQLSetScrollOptions**|Définit les options qui contrôlent le comportement des curseurs associés à une poignée de déclaration, hstmt. Pour plus de détails, voir [Cursor Type and Concurrency Combinations](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|

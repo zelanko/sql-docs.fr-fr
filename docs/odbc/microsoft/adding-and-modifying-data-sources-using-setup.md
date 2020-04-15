@@ -1,5 +1,5 @@
 ---
-title: Ajout et modification de sources de données à l’aide du programme d’installation | Microsoft Docs
+title: Ajout et modification des sources de données à l’aide de la configuration ( Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,66 +15,66 @@ helpviewer_keywords:
 - data sources [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], adding data sources
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 621d10c3c602b2f406461a24e53b2302e45835eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281409"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Ajout et modification de sources de données via la configuration
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Une source de données identifie un chemin d’accès aux données qui peut inclure une bibliothèque réseau, un serveur, une base de données et d’autres attributs. dans ce cas, la source de données est le chemin d’accès à une base de données Oracle. Pour vous connecter à une source de données, le gestionnaire de pilotes recherche des informations de connexion spécifiques dans le Registre Windows.  
+ Une source de données identifie un chemin vers les données qui peuvent inclure une bibliothèque réseau, un serveur, une base de données et d’autres attributs - dans ce cas, la source de données est le chemin vers une base de données Oracle. Pour se connecter à une source de données, le Gestionnaire de pilote vérifie le registre Windows pour des informations de connexion spécifiques.  
   
- L’entrée de Registre créée par l’administrateur de la source de données ODBC est utilisée par le gestionnaire de pilotes ODBC et les pilotes ODBC. Cette entrée contient des informations sur chaque source de données et son pilote associé. Avant de pouvoir vous connecter à une source de données, ses informations de connexion doivent être ajoutées au registre.  
+ L’entrée de registre créée par l’administrateur de source de données ODBC est utilisée par le gestionnaire de conducteur ODBC et les chauffeurs ODBC. Cette entrée contient des informations sur chaque source de données et son pilote associé. Avant de pouvoir vous connecter à une source de données, ses informations de connexion doivent être ajoutées au registre.  
   
- Pour ajouter et configurer des sources de données, utilisez l’administrateur de la [source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md). L’administrateur ODBC met à jour vos informations de connexion à la source de données. À mesure que vous ajoutez des sources de données, l’administrateur ODBC met à jour les informations de Registre pour vous.  
+ Pour ajouter et configurer des sources de données, utilisez [l’administrateur de source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md). L’administrateur ODBC met à jour vos informations de connexion source de données. Lorsque vous ajoutez des sources de données, l’administrateur de l’ODBC met à jour les informations du registre pour vous.  
   
 ### <a name="to-add-a-data-source-for-windows"></a>Pour ajouter une source de données pour Windows  
   
-1.  Ouvrez l’administrateur de la source de données ODBC.  
+1.  Ouvrez l’administrateur de source de données ODBC.  
   
-2.  Dans la boîte de dialogue administrateur de sources de données ODBC, cliquez sur Ajouter. La boîte de dialogue créer une nouvelle source de données s’affiche.  
+2.  Dans la boîte de dialogue de l’administrateur de source de données ODBC, cliquez sur Ajouter. La boîte de dialogue Creat New Data Source apparaît.  
   
-3.  Sélectionnez Microsoft ODBC pour Oracle, puis cliquez sur Terminer. La boîte de dialogue installation de Microsoft ODBC pour Oracle s’affiche.  
+3.  Sélectionnez Microsoft ODBC pour Oracle, puis cliquez sur Finition. La boîte de dialogue Microsoft ODBC pour Oracle Setup apparaît.  
   
-4.  Dans la zone nom de la source de données, tapez le nom de la source de données à laquelle vous souhaitez accéder. Il peut s’agir de n’importe quel nom de votre choix.  
+4.  Dans la boîte de noms de source de données, tapez le nom de la source de données à laquelle vous souhaitez accéder. Il peut être n’importe quel nom que vous choisissez.  
   
-5.  Dans la zone Description, tapez la description du pilote. Ce champ facultatif décrit le pilote de base de données auquel la source de données se connecte. Il peut s’agir de n’importe quel nom de votre choix.  
+5.  Dans la boîte de description, tapez la description pour le conducteur. Ce champ optionnel décrit le pilote de base de données à qui la source de données se connecte. Il peut être n’importe quel nom que vous choisissez.  
   
-6.  Dans la zone nom d’utilisateur, tapez votre nom d’utilisateur de base de données (votre ID d’utilisateur de base de données).  
+6.  Dans la boîte nom de l’utilisateur, tapez votre nom d’utilisateur de base de données (votre identifiant d’utilisateur de base de données).  
   
-7.  Dans la zone serveur, tapez l’alias de base de données ou la chaîne de connexion pour le moteur Oracle Server auquel vous souhaitez accéder.  
+7.  Dans la boîte Server, tapez le pseudonyme de base de données ou connectez la chaîne pour le moteur Oracle Server que vous souhaitez accéder.  
   
 8.  Cliquez sur OK pour ajouter cette source de données.  
   
 > [!NOTE]  
->  La boîte de dialogue sources de données s’affiche et l’administrateur ODBC met à jour les informations du Registre. Le nom d’utilisateur et la chaîne de connexion que vous avez tapés deviennent les valeurs de connexion par défaut pour cette source de données lorsque vous vous y connectez.  
+>  La boîte de dialogue des sources de données apparaît, et l’administrateur de l’ODBC met à jour les informations du registre. Le nom d’utilisateur et la chaîne de connexion que vous avez tapé deviennent les valeurs de connexion par défaut pour cette source de données lorsque vous vous y connectez.  
   
-1.  Cliquez sur options apporter plus de spécifications sur l’installation du pilote ODBC pour Oracle :  
+1.  Cliquez sur Options faire plus de spécifications sur le pilote ODBC pour la configuration Oracle:  
   
-    -   **Traduction** -cliquez sur Sélectionner pour choisir un convertisseur de données chargé. La valeur par \<défaut est aucun> de traduction.  
+    -   **Traduction** - Cliquez sur Sélectionnez pour choisir un traducteur de données chargé. La valeur \<par défaut n’est pas>.  
   
-    -   **Performances** -la case à cocher inclure les notes dans les fonctions de catalogue spécifie si le pilote retourne des colonnes de remarques pour le jeu de résultats [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.  
+    -   **Performances** - Les REMARQUEs incluent dans la case à cocher des fonctions de catalogue précise si le conducteur retourne des colonnes de remarques pour l’ensemble de résultats [SQLColumns.](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) Le pilote ODBC pour Oracle offre un accès plus rapide lorsque cette valeur n’est pas définie.  
   
-         La case à cocher inclure les SYNONYMEs dans les colonnes SQL spécifie si le pilote retourne des informations sur les colonnes. **Taille de la mémoire tampon** spécifie la taille, en octets, allouée à la réception des données extraites. Le pilote optimise l’extraction afin qu’une extraction à partir du serveur Oracle retourne suffisamment de lignes pour remplir une mémoire tampon de la taille spécifiée. Des valeurs plus élevées tendent à augmenter les performances lors de l’extraction d’un grand nombre de données.  
+         La liste de cocher de la colonnes de SQL indique si le conducteur renvoie les informations de la colonne. **La taille tampon** spécifie la taille, dans les octets, allouée pour recevoir des données récupérées. Le pilote optimise l’aller chercher de sorte que l’on se rende sur le serveur Oracle retourne suffisamment de lignes pour remplir un tampon de la taille spécifiée. Les valeurs plus grandes ont tendance à augmenter les performances lorsqu’elles obtiennent beaucoup de données.  
   
-    -   **Personnalisation** : la case à cocher appliquer le standard ODBC DayOfWeek spécifie si le jeu de résultats est conforme au format de jour de la semaine spécifié par ODBC (dimanche = 1 ; Samedi = 7). Si cette case à cocher est désactivée, la valeur Oracle spécifique aux paramètres régionaux est retournée.  
+    -   **Personnalisation** - La case à cocher Standard Enforce ODBC DayOfWeek précise si l’ensemble de résultats sera conforme au format de jour de semaine spécifié par l’ODBC (dimanche et 1; Samedi 7). Si cette case à cocher est effacée, la valeur Oracle locale est retournée.  
   
-         SQLDescribeCol **retourne toujours une valeur pour** la case à cocher précision spécifie si le pilote doit retourner une valeur différente de zéro pour l’argument *cbColDef* de **SQLDescribeCol**. Cet attribut de chaîne de connexion s’applique uniquement aux colonnes où aucune échelle n’est définie par Oracle, telles que les colonnes numériques calculées et les colonnes définies comme nombre sans précision ou échelle. Un appel de **SQLDescribeCol** retourne 130 pour la précision quand Oracle ne fournit pas ces informations. Si cette case à cocher est désactivée, le pilote retourne 0 pour ces types de colonnes à la place.  
+         Le SQLDescribeCol **retourne toujours une valeur pour** la case à cocher de précision précise précise si oui ou non le conducteur doit retourner une valeur non-zéro pour *l’argument cbColDef* de **SQLDescribeCol**. Cet attribut de chaîne de connexion ne s’applique qu’aux colonnes où il n’y a pas d’échelle définie par Oracle, telles que les colonnes numériques calculées et les colonnes définies comme NUMBER sans précision ni échelle. Un appel **SQLDescribeCol** renvoie 130 pour la précision quand Oracle ne fournit pas cette information. Si cette case à cocher est effacée, le conducteur retournera 0 pour ces types de colonnes à la place.  
   
-2.  Cliquez sur Ajouter pour ajouter une autre source de données ou sur Fermer pour quitter.  
+2.  Cliquez sur Ajouter pour ajouter une autre source de données, ou cliquez sur Près de la sortie.  
   
-### <a name="to-modify-a-data-source-for-windows"></a>Pour modifier une source de données pour Windows  
+### <a name="to-modify-a-data-source-for-windows"></a>Modifier une source de données pour Windows  
   
-1.  Ouvrez l’administrateur de la source de données ODBC. Cliquez sur l’onglet DSN approprié.  
+1.  Ouvrez l’administrateur de source de données ODBC. Cliquez sur l’onglet DSN approprié.  
   
-2.  Sélectionnez la source de données Oracle que vous souhaitez modifier, puis cliquez sur Configurer. La boîte de dialogue installation de Microsoft ODBC pour Oracle s’affiche.  
+2.  Sélectionnez la source de données Oracle que vous souhaitez modifier, puis cliquez sur Configurer. La boîte de dialogue Microsoft ODBC pour Oracle Setup apparaît.  
   
-3.  Modifiez les champs de source de données applicables, puis cliquez sur OK.  
+3.  Modifier les champs de source de données applicables, puis cliquez sur OK.  
   
- Lorsque vous avez fini de modifier les informations de cette boîte de dialogue, l’administrateur ODBC met à jour les informations du Registre.
+ Lorsque vous avez fini de modifier les informations contenues dans cette boîte de dialogue, l’administrateur de l’ODBC met à jour les informations du registre.

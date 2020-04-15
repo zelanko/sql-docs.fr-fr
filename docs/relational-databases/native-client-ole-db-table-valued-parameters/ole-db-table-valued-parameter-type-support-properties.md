@@ -1,5 +1,5 @@
 ---
-title: Type de paramètre table OLE DB (propriétés)
+title: OLE DB Type de paramètre de valeur de la table (propriétés)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283136"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Prise en charge du type de paramètre table OLE DB (Propriétés)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "75242770"
   Cette rubrique fournit des informations sur les propriétés et les jeux de propriétés OLE DB associés aux objets d'ensemble de lignes de paramètre table.  
   
 ## <a name="properties"></a>Propriétés  
- Voici la liste les propriétés exposées par la méthode IRowsetInfo::GetProperties sur des objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, toute tentative de définition des propriétés via IOpenRowset :: OpenRowset ou ITableDefinitionWithConstraints :: CreateTableWithConstraints des méthodes sur leurs valeurs non définies par défaut génère une erreur et aucun objet n’est créé.  
+ Voici la liste les propriétés exposées par la méthode IRowsetInfo::GetProperties sur des objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, toute tentative de définition des propriétés via les méthodes IOpenRowset::OpenRowset ou ITableDefinitionWithConstraints::CreateTableWithConstraints sur leurs valeurs non définies par défaut génère une erreur et aucun objet n’est créé.  
   
  Les propriétés non implémentées dans l'objet d'ensemble de lignes de paramètre table n'apparaissent pas dans cette liste. Pour obtenir une liste complète des propriétés, consultez la documentation OLE DB dans Windows Data Access Components.  
   
-|ID de propriété|Valeur|  
+|ID de propriété|Value|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -78,7 +78,7 @@ ms.locfileid: "75242770"
  Les jeux de propriétés suivants prennent en charge les paramètres table.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Cette propriété est utilisée par le consommateur dans le processus de création d’un objet d’ensemble de lignes de paramètre table à l’aide de ITableDefinitionWithConstraints :: CreateTableWithConstraints pour chaque colonne via la structure DBCOLUMNDESC, si nécessaire.  
+ Cette propriété est utilisée par le consommateur au cours du processus de création d'un objet d'ensemble de lignes de paramètre table en utilisant ITableDefinitionWithConstraints::CreateTableWithConstraints pour chaque colonne via la structure DBCOLUMNDESC (si nécessaire).  
   
 |ID de propriété|Valeur de propriété|  
 |-----------------|--------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "75242770"
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Ces propriétés sont lues par le consommateur tout en détectant les informations de type de paramètre table dans les appels à ISSCommandWithParameters :: GetParameterProperties et définies par le consommateur lors de la définition de propriétés spécifiques sur le paramètre table. Via ISSCommandWithParameters :: SetParameterProperties.  
+ Ces propriétés sont lues par le consommateur lors de la détection des informations sur le type de paramètre table lors des appels à ISSCommandWithParameters::GetParameterProperties et sont définies par le consommateur au moment de définir les propriétés spécifiques relatives au paramètre table via ISSCommandWithParameters::SetParameterProperties.  
   
  Le tableau qui suit offre des descriptions détaillées de ces propriétés.  
   
@@ -95,12 +95,12 @@ ms.locfileid: "75242770"
 |SSPROP_PARAM_TYPE_TYPENAME|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_BSTR<br /><br /> Description : les consommateurs utilisent cette propriété pour se procurer ou définir le type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur.<br /><br /> Vous pouvez, si vous le souhaitez, la spécifier afin de préciser un nom de type de table pour un paramètre table (en cas d'utilisation d'une commande de syntaxe d'appel ODBC). Cette propriété est obligatoire pour les requêtes paramétrables SQL ad hoc.|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_BSTR<br /><br /> Description : les consommateurs utilisent cette propriété pour se procurer ou définir le nom de schéma du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur.|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|Lecture/écriture : lecture seule<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_BSTR<br /><br /> Description : les consommateurs utilisent cette propriété pour se procurer ou définir le nom de catalogue du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur. La définition de cette propriété est une erreur ; les types de tables définis par l'utilisateur doivent figurer dans la même base de données que les paramètres table qui les utilisent.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : les consommateurs utilisent cette propriété pour spécifier quelles colonnes dans l'ensemble de lignes seront traitées en tant que valeurs par défaut. Aucune valeur ne sera envoyée pour ces colonnes. Au moment d'extraire des données de l'objet d'ensemble de lignes du consommateur, le fournisseur n'exige aucune liaison pour ces colonnes.<br /><br /> Chaque élément du tableau doit désigner l'ordinal d'une colonne dans l'objet d'ensemble de lignes. Les ordinaux non valides génèrent des erreurs lors de l'exécution des commandes.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : cette propriété est utilisée par le consommateur pour indiquer au serveur l'ordre de tri des données des colonnes. Le fournisseur n'effectue aucune validation et part du principe que le consommateur agit conformément à la spécification fournie. Le serveur utilise cette propriété pour procéder à des optimisations.<br /><br /> Les informations d'ordre des colonnes pour chaque colonne sont représentées par une paire d'éléments dans le tableau. Le premier élément dans la paire correspond au numéro de la colonne. Le deuxième élément dans la paire sera 1 pour l'ordre croissant ou 2 pour l'ordre décroissant.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Description : les consommateurs utilisent cette propriété pour spécifier quelles colonnes dans l'ensemble de lignes seront traitées en tant que valeurs par défaut. Aucune valeur ne sera envoyée pour ces colonnes. Au moment d'extraire des données de l'objet d'ensemble de lignes du consommateur, le fournisseur n'exige aucune liaison pour ces colonnes.<br /><br /> Chaque élément du tableau doit désigner l'ordinal d'une colonne dans l'objet d'ensemble de lignes. Les ordinaux non valides génèrent des erreurs lors de l'exécution des commandes.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Description : cette propriété est utilisée par le consommateur pour indiquer au serveur l'ordre de tri des données des colonnes. Le fournisseur n'effectue aucune validation et part du principe que le consommateur agit conformément à la spécification fournie. Le serveur utilise cette propriété pour procéder à des optimisations.<br /><br /> Les informations d'ordre des colonnes pour chaque colonne sont représentées par une paire d'éléments dans le tableau. Le premier élément dans la paire correspond au numéro de la colonne. Le deuxième élément dans la paire sera 1 pour l'ordre croissant ou 2 pour l'ordre décroissant.|  
 |||
 
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge du type de paramètre table OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Soutien de type de paramètre OLE DB évalué à la table](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Utiliser les paramètres table &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

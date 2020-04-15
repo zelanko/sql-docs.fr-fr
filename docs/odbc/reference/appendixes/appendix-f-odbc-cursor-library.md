@@ -1,5 +1,5 @@
 ---
-title: 'Annexe F : bibliothèque de curseurs ODBC | Microsoft Docs'
+title: 'Annexe F : Bibliothèque ODBC Cursor (fr) Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - cursor library [ODBC], about cursor library
 - cursor library [ODBC]
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bfffd95dd88b0a25be682a3df581e55825ed9ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090835"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292429"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Annexe F : Bibliothèque de curseurs ODBC
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
   
- La bibliothèque de curseurs ODBC (odbccr32. dll) prend en charge les curseurs de blocage de bloc pour tout pilote conforme au niveau de conformité de l’API de niveau 1 et peut être redistribué par les développeurs avec leurs applications ou pilotes. La bibliothèque de curseurs prend également en charge les instructions Update et DELETE positionnées pour les jeux de résultats générés par les instructions **Select** . Bien qu’il prenne en charge uniquement les curseurs statiques et les curseurs avant uniquement, la bibliothèque de curseurs répond aux besoins de nombreuses applications. En outre, elle peut fournir de bonnes performances, en particulier pour les jeux de résultats de petite taille et de taille moyenne, et pour les applications qui n’ont pas une bonne prise en charge de curseur.  
+ La bibliothèque de curseurs ODBC (Odbccr32.dll) prend en charge les curseurs défilements de bloc pour tout pilote qui respecte le niveau de conformité API de niveau 1 et peut être redistribué par les développeurs avec leurs applications ou pilotes. La bibliothèque de curseurs prend également en charge la mise à jour positionnée et supprime les instructions pour les ensembles de résultats générés par les relevés **SELECT.** Bien qu’elle ne supporte que des curseurs statiques et avant-seulement, la bibliothèque de curseurs répond aux besoins de nombreuses applications. En outre, il peut fournir de bonnes performances, en particulier pour les ensembles de résultats de petite et moyenne taille, et pour les applications qui n’ont pas un bon support curseur.  
   
- La bibliothèque de curseurs est une bibliothèque de liens dynamiques (DLL) qui se trouve entre le gestionnaire de pilotes et le pilote. Quand une application appelle une fonction, le gestionnaire de pilotes appelle la fonction dans la bibliothèque de curseurs, qui exécute la fonction ou l’appelle dans le pilote spécifié. Pour une connexion donnée, une application spécifie si la bibliothèque de curseurs est toujours utilisée, utilisée si le pilote ne prend pas en charge les curseurs de défilement ou n’est jamais utilisée.  
+ La bibliothèque de curseurs est une bibliothèque dynamique qui se trouve entre le Driver Manager et le conducteur. Lorsqu’une application appelle une fonction, le gestionnaire de pilote appelle la fonction dans la bibliothèque du curseur, qui exécute la fonction ou l’appelle dans le pilote spécifié. Pour une connexion donnée, une application précise si la bibliothèque de curseurs est toujours utilisée, utilisée si le conducteur ne prend pas en charge les curseurs défilementables, ou n’a jamais été utilisé.  
   
- La bibliothèque de curseurs apparaît en tant que pilote pour le gestionnaire de pilotes. Si la bibliothèque de curseurs réside entre le gestionnaire de pilotes et un pilote ODBC *2. x* , la bibliothèque de curseurs apparaît en tant que pilote ODBC *2. x* . Si la bibliothèque de curseurs réside entre le gestionnaire de pilotes et un pilote ODBC *3. x* , la bibliothèque de curseurs apparaît en tant que pilote ODBC *3. x* . Le comportement présenté par la bibliothèque de curseurs dépend de la version du pilote utilisé, à l’exception des décalages de liaison, qui sont pris en charge pour les pilotes ODBC *2. x* et ODBC *3. x* .  
+ La bibliothèque de curseurs apparaît comme un conducteur au gestionnaire de conducteur. Si la bibliothèque de curseurs se trouve entre le gestionnaire de conducteur et un conducteur ODBC *2.x,* la bibliothèque de curseur apparaît comme un conducteur ODBC *2.x.* Si la bibliothèque de curseurs se trouve entre le gestionnaire de conducteur et un conducteur ODBC *3.x,* la bibliothèque de curseur apparaît comme un conducteur ODBC *3.x.* Le comportement exposé par la bibliothèque de curseurs dépend de la version du conducteur avec laquelle elle travaille, à l’exception des décalages contraignants, qui est pris en charge pour les conducteurs ODBC *2.x* et ODBC *3.x.*  
   
- Pour implémenter des curseurs de bloc dans **SQLFetch** et **SQLFetchScroll**, la bibliothèque de curseurs appelle **SQLFetch** à plusieurs reprises dans le pilote. Pour implémenter le défilement, il met en cache les données qu’il a récupérées en mémoire et dans les fichiers sur disque. Quand une application demande un nouvel ensemble de lignes, la bibliothèque de curseurs la récupère, le cas échéant, à partir du pilote ou du cache.  
+ Pour mettre en œuvre des curseurs de blocs dans **SQLFetch** et **SQLFetchScroll**, la bibliothèque de curseurs appelle à plusieurs reprises **SQLFetch** dans le conducteur. Pour implémenter le défilement, il cache les données qu’il a récupérées dans la mémoire et dans les fichiers disque. Lorsqu’une demande demande un nouveau ramset, la bibliothèque de curseurs la récupère au besoin auprès du conducteur ou du cache.  
   
- Pour implémenter des instructions Update et DELETE positionnées, la bibliothèque de curseurs construit une instruction **Update** ou **Delete** avec une clause **Where** qui spécifie la valeur mise en cache de chaque colonne liée dans la ligne. Lorsqu’il exécute une instruction Update positionnée, la bibliothèque de curseurs met à jour son cache à partir des valeurs des mémoires tampons de l’ensemble de lignes.  
+ Pour implémenter les instructions de mise à jour et de suppression positionnées, la bibliothèque de curseurs construit une déclaration **UPDATE** ou **DELETE** avec une clause **WHERE** qui spécifie la valeur mise en cache de chaque colonne liée dans la rangée. Lorsqu’elle exécute une instruction de mise à jour positionnée, la bibliothèque de curseurs met à jour son cache à partir des valeurs des tampons encastrés.  
   
- Pour plus d’informations sur la bibliothèque de curseurs ODBC, reportez-vous aux sections suivantes de cette annexe :  
+ Pour plus d’informations sur la bibliothèque de curseurs de l’ODBC, consultez les sections suivantes de cette annexe :  
   
 -   [Utilisation de la bibliothèque de curseurs ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   

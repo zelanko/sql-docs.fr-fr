@@ -1,5 +1,5 @@
 ---
-title: Considérations sur la programmation | Microsoft Docs
+title: Considérations de programmation (en anglais) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282179"
 ---
 # <a name="programming-considerations"></a>Éléments de programmation à prendre en considération
-Cette section présente brièvement un certain nombre de sujets relatifs à l’écriture d’applications et de pilotes ODBC.  
+Cette section traite brièvement d’un certain nombre de sujets liés à la rédaction d’applications et de chauffeurs de l’ODBC.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Multithreading](../../../odbc/reference/develop-app/multithreading.md)  
   

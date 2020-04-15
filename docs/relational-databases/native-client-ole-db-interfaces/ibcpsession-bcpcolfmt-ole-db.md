@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73765693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307414"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ HRESULT BCPColFmt(
   
  Vous n'êtes pas obligé de copier toutes les données dans un fichier utilisateur vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour ignorer une colonne, spécifiez le format des données pour la colonne en attribuant la valeur 0 au paramètre idxServerCol. Pour ignorer un champ, vous avez encore besoin de toutes les informations pour que la méthode fonctionne correctement.  
   
- **Remarque** La fonction [IBCPSession :: BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) peut être utilisée pour rendre persistante la spécification de format fournie par le biais de **BCPColFmt**.  
+ **Remarque** La fonction [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) peut être utilisée pour assurer la persistance de la spécification de format fournie par le biais de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Arguments  
  *idxUserDataCol*[in]  
@@ -97,7 +97,7 @@ HRESULT BCPColFmt(
   
  La valeur **cbUserData** représente le nombre d'octets de données. Si des données caractères sont représentées par des caractères Unicode étendus, une valeur de paramètre **cbUserData** positive représente le nombre de caractères multiplié par la taille, en octets, de chaque caractère.  
   
- *pbUserDataTerm*[size_is] [in]  
+ *pbUserDataTerm*[size_is][in]  
  Séquence de marque de fin à utiliser pour le champ. Ce paramètre est utile surtout pour les types de données de caractères puisque tous les autres types sont de longueur fixe ou, dans le cas des données binaires, nécessitent un indicateur de longueur pour enregistrer avec précision le nombre d'octets présents.  
   
  Pour éviter de terminer des données extraites ou pour indiquer que les données dans un fichier utilisateur ne sont pas terminées, attribuez la valeur NULL à ce paramètre.  
@@ -106,7 +106,7 @@ HRESULT BCPColFmt(
   
  L'interface de programmation d'applications (API) de la copie en bloc procède à la conversion des caractères Unicode vers MBCS en fonction des besoins. Prenez soin de définir comme il se doit la chaîne d'octets de terminaison et la longueur de cette même chaîne.  
   
- *cbUserDataTerm avec*[in]  
+ *cbUserDataTerm*[in]  
  Longueur, en octets, de la séquence de marque de fin à utiliser pour la colonne. Si aucune marque de fin n'est présente ou désirée dans les données, attribuez 0 à cette valeur.  
   
  *idxServerCol*[in]  
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  S_OK  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s’est produite. pour plus d’informations, utilisez l’interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Une erreur spécifique au fournisseur s’est produite, pour des informations détaillées, utilisez [l’interface ISQLServerErrorInfo.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n’a pas été appelée avant d’appeler cette méthode.  

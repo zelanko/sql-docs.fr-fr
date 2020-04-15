@@ -1,5 +1,5 @@
 ---
-title: Types de données C par défaut | Microsoft Docs
+title: Types de données par défaut C (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307050"
 ---
 # <a name="default-c-data-types"></a>Types de données C par défaut
-Si une application spécifie SQL_C_DEFAULT dans **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**, le pilote part du principe que le type de données C de la sortie ou de la mémoire tampon d’entrée correspond au type de données SQL de la colonne ou du paramètre auquel la mémoire tampon est liée.  
+Si une application spécifie SQL_C_DEFAULT dans **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**, le conducteur suppose que le type de données C du tampon de sortie ou d’entrée correspond au type de données SQL de la colonne ou du paramètre auquel le tampon est lié.  
   
 > [!IMPORTANT]  
->  Les applications interopérables ne doivent pas utiliser SQL_C_DEFAULT. Au lieu de cela, ils doivent toujours spécifier le type C de la mémoire tampon qu’ils utilisent. Cela est dû au fait que les pilotes ne peuvent pas toujours déterminer correctement le type C par défaut, pour les raisons suivantes :  
+>  Les applications interopérables ne doivent pas utiliser SQL_C_DEFAULT. Au lieu de cela, ils doivent toujours spécifier le type C du tampon qu’ils utilisent. C’est parce que les conducteurs ne peuvent pas toujours déterminer correctement le type C par défaut, pour les raisons suivantes:  
   
--   Si le SGBD promeut un type de données SQL d’une colonne ou d’un paramètre, le pilote ne peut pas déterminer le type de données SQL d’origine d’une colonne ou d’un paramètre. Par conséquent, il ne peut pas déterminer le type de données C par défaut correspondant.  
+-   Si le DBMS fait la promotion d’un type de données SQL d’une colonne ou d’un paramètre, le conducteur ne peut pas déterminer le type de données SQL d’origine d’une colonne ou d’un paramètre. Par conséquent, il ne peut pas déterminer le type de données par défaut C correspondant.  
   
--   Si le pilote ne peut pas déterminer si une colonne ou un paramètre particulier est signé, comme c’est souvent le cas quand il est géré par le SGBD, le pilote ne peut pas déterminer si le type de données C par défaut correspondant doit être signé ou non signé.  
+-   Si le conducteur ne peut pas déterminer si une colonne ou un paramètre particulier est signé, comme c’est souvent le cas lorsque cela est traité par le DBMS, le conducteur ne peut pas déterminer si le type de données par défaut C correspondant doit être signé ou non signé.  
   
-     Étant donné que SQL_C_DEFAULT est fourni uniquement comme une pratique de programmation, l’application ne perd aucune fonctionnalité lorsqu’elle spécifie le type de données C réel.  
+     Étant donné que SQL_C_DEFAULT n’est fourni que comme commodité de programmation, l’application ne perd aucune fonctionnalité lorsqu’elle spécifie le type de données C réel.  
   
- Une table qui indique le type de données C par défaut pour chaque type de données SQL est incluse dans la [conversion des données des types de données SQL en c](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md), plus loin dans cette annexe.
+ Un tableau montrant le type de données C par défaut pour chaque type de données SQL est inclus dans [la conversion des données de SQL à C Data Types](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md), plus tard dans cette annexe.

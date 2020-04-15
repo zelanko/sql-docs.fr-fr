@@ -1,5 +1,5 @@
 ---
-title: 'Étape 5 : valider la transaction | Microsoft Docs'
+title: 'Étape 5 : Engagez la transaction Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - transaction commit [ODBC]
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bde493edbc6d677b27ef72a24736b504959a7b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e348ce697e512f30db46d14535cf19bd6d530f61
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114128"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283349"
 ---
-# <a name="step-5-commit-the-transaction"></a>Étape 5 : Valider la transaction
-L’étape suivante consiste à valider la transaction, comme indiqué dans l’illustration suivante.  
+# <a name="step-5-commit-the-transaction"></a>Étape 5 : Valider la transaction
+L’étape suivante consiste à valider la transaction, comme le montre l’illustration suivante.  
   
  ![Présente la validation d'une transaction](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  
   
- La cinquième étape consiste à appeler **SQLEndTran** pour valider ou restaurer la transaction. L’application effectue cette étape uniquement si elle définit le mode de validation de transaction sur Manuel-Commit ; Si le mode de validation de transaction est auto-commit, qui est la valeur par défaut, la transaction est automatiquement validée lors de l’exécution de l’instruction. Pour plus d’informations, consultez [transactions](../../../odbc/reference/develop-app/transactions-odbc.md).  
+ La cinquième étape consiste à appeler **SQLEndTran** pour engager ou annuler la transaction. L’application n’effectue cette étape que si elle régle le mode d’engagement de transaction à l’engagement manuel; si le mode de validation de transaction est auto-commit, qui est le défaut, la transaction est automatiquement validée lorsque la déclaration est exécutée. Pour plus d’informations, consultez [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md).  
   
- Pour exécuter une instruction dans une nouvelle transaction, l’application retourne à l’étape 3. Pour se déconnecter de la source de données, l’application passe à l’étape 6.
+ Pour exécuter une déclaration dans une nouvelle transaction, l’application revient à l’étape 3. Pour se déconnecter de la source de données, l’application se poursuit à l’étape 6.

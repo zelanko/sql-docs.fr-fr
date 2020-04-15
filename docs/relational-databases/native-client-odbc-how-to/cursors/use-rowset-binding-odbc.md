@@ -1,5 +1,5 @@
 ---
-title: Utiliser la liaison d’ensemble de lignes (ODBC) | Microsoft Docs
+title: Utiliser Rowset Binding (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 542834d73cdea5a985ea6926d011f1db4711f3e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 05277e548dab36b22c023fe674e404d8b9014c7c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781515"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284509"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utiliser une liaison d'ensembles de lignes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,8 +73,8 @@ ms.locfileid: "73781515"
 5.  Chaque appel à [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) extrait des lignes R et transfère les données dans les colonnes dépendantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives à l’utilisation des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
- [Comment les curseurs sont implémentés](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Utiliser des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [Utilisation de cursors How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [Comment les curseurs sont mis en œuvre](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ [Utilisez cursors &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

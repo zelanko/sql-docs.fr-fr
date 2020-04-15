@@ -1,5 +1,5 @@
 ---
-title: Procédures ODBC | Microsoft Docs
+title: Procédures ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - procedures [ODBC], defined
 - procedures [ODBC]
 ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18955db5c11f4f338091598ac717a71e7c78969e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d16c5353d2a8bd58563753d92cccade2968d09cc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023275"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282219"
 ---
 # <a name="procedures-odbc"></a>Procédures dans ODBC
-Une *procédure* est un objet exécutable stocké dans la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées.  
+Une *procédure* est un objet exécutable stocké sur la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Quand utiliser des procédures](../../../odbc/reference/develop-app/when-to-use-procedures.md)  
   

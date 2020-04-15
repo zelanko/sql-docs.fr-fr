@@ -1,5 +1,5 @@
 ---
-title: Exemple de code de la bibliothèque de curseurs | Microsoft Docs
+title: Exemple du Code de la bibliothèque cursur (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284679"
 ---
 # <a name="cursor-library-code-example"></a>Exemple de code de la bibliothèque de curseurs
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
   
- L’exemple suivant utilise la bibliothèque de curseurs pour récupérer l’ID de chaque commande, la date d’ouverture et l’état de la table ORDERs. Il affiche ensuite 20 lignes de données. Si l’utilisateur met à jour ces données, le code met à jour les mémoires tampons de l’ensemble de lignes et exécute une instruction Update positionnée. Enfin, il invite l’utilisateur à indiquer la direction de défilement et répète le processus.  
+ L’exemple suivant utilise la bibliothèque du curseur pour récupérer l’ID, la date d’ouverture et l’état de chaque commande à partir de la table ORDERS. Il affiche ensuite 20 rangées de données. Si l’utilisateur met à jour ces données, le code met à jour les tampons encastrés et exécute une mise à jour positionnée. Enfin, il invite l’utilisateur pour la direction à faire défiler et répète le processus.  
   
 ```  
 #define ROWS 20  
