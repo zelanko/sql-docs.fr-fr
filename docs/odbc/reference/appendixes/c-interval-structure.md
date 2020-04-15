@@ -1,5 +1,5 @@
 ---
-title: Structure d’intervalle C | Microsoft Docs
+title: Structure d’intervalle C Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292151"
 ---
 # <a name="c-interval-structure"></a>Structure d’intervalle C
-Chacun des types de données d’intervalle C listés dans la section [types de données c](../../../odbc/reference/appendixes/c-data-types.md) utilise la même structure pour contenir les données d’intervalle. Quand **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** est appelé, le pilote retourne des données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur spécifiée par l’application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT et remplit le champ *Interval_type* de la structure avec la valeur d' *énumération* correspondant au type c. Notez que les pilotes ne lisent pas le champ *interval_type* pour déterminer le type de l’intervalle. ils récupèrent la valeur du champ descripteur SQL_DESC_CONCISE_TYPE. Lorsque la structure est utilisée pour les données de paramètre, le pilote utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE de l’APD pour interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur du champ *interval_type* sur une autre valeur.  
+Chacun des types de données d’intervalle C répertoriés dans la section [C Data Types](../../../odbc/reference/appendixes/c-data-types.md) utilise la même structure pour contenir les données d’intervalle. Lorsque **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** est appelé, le conducteur retourne des données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur qui a été spécifiée par l’application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT, et remplit le champ *interval_type* de la structure avec la valeur enum correspondant à la *Cum.* Notez que les conducteurs ne lisent pas le champ *interval_type* pour déterminer le type d’intervalle; ils récupèrent la valeur du champ descripteur SQL_DESC_CONCISE_TYPE. Lorsque la structure est utilisée pour les données de paramètres, le conducteur utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE de l’APD pour interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur du *champ interval_type* à une valeur différente.  
   
- Cette structure est définie comme suit :  
+ Cette structure est définie comme suit :  
   
 ```  
 typedef struct tagSQL_INTERVAL_STRUCT  
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- Le champ *interval_type* de la SQL_INTERVAL_STRUCT indique à l’application la structure qui est conservée dans l’Union, ainsi que les membres de la structure qui sont pertinents. La valeur du champ *interval_sign* est SQL_FALSE si le champ de début de l’intervalle n’est pas signé ; s’il est SQL_TRUE, le champ de début est négatif. La valeur du champ de début est toujours non signée, quelle que soit la valeur de *interval_sign*. Le champ *interval_sign* agit comme un bit de signe.
+ Le *interval_type* domaine de la SQL_INTERVAL_STRUCT indique à la demande quelle structure est tenue dans le syndicat et aussi quels membres de la structure sont pertinents. Le champ *interval_sign* a la valeur SQL_FALSE si le champ de tête d’intervalle n’est pas signé; s’il est SQL_TRUE, le champ de tête est négatif. La valeur dans le domaine de tête lui-même n’est toujours pas signée, quelle que soit la valeur de *interval_sign*. Le champ *interval_sign* agit comme un morceau de signe.

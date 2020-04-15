@@ -1,5 +1,5 @@
 ---
-title: Journalisation des requêtes longues (ODBC) | Microsoft Docs
+title: Log Long-Running Queries (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d1e931a24462711a742b8008eb04538e0e518d55
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305362"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilage des données de performances du pilote ODBC - Enregistrer les requêtes longues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,40 +26,40 @@ ms.locfileid: "73780925"
   Cet exemple présente les options [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques aux pilotes ODBC pour la consignation des requêtes de longue durée. Lorsqu'il est exécuté, cet exemple crée Odbcqry.log, qui contient une liste de requêtes dont la durée d'exécution dépasse un intervalle défini par l'application. Cet exemple n'est pas pris en charge sur la plateforme IA64. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez poursuivre vos informations d’identification, vous devez les chiffrer avec [l’API Win32 crypto](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Pour enregistrer des requêtes longues à l'aide de l'Administrateur ODBC  
   
-1.  Dans **le panneau de configuration**, double-cliquez sur **Outils d’administration** , puis sur **sources de données (ODBC)**. (Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.)  
+1.  Dans **Control Panel**, double clic Outils **administratifs,** puis double clic Sources de données **(ODBC)**. (Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.)  
   
-2.  Cliquez sur l’onglet **DSN utilisateur**, **système DSN**ou **fichier DSN** .  
+2.  Cliquez sur **l’utilisateur DSN**, **système DSN**, ou **fichier DSN** onglet.  
   
 3.  Cliquez sur la source de données pour laquelle vous souhaitez enregistrer des requêtes longues.  
   
 4.  Cliquez sur **Configurer**.  
   
-5.  Dans l’Assistant Microsoft SQL Server configurer un DSN, accédez à la page avec **enregistrer les requêtes longues dans le fichier journal**.  
+5.  Dans le Microsoft SQL Server Configure DSN Wizard, naviguez vers la page avec **enregistrer des requêtes de longue durée au fichier journal**.  
   
-6.  Sélectionnez **enregistrer les requêtes longues dans le fichier journal**. Dans la zone, tapez le nom du fichier dans lequel les requêtes longues sont à enregistrer. Si vous le souhaitez, cliquez sur **Parcourir** pour rechercher le journal des requêtes dans le système de fichiers.  
+6.  Sélectionnez **Enregistrer des requêtes de longue durée au fichier journal.** Dans la zone, tapez le nom du fichier dans lequel les requêtes longues sont à enregistrer. Optionnellement, cliquez **sur Parcourir** pour parcourir le système de fichiers pour le journal de requête.  
   
-7.  Définissez un intervalle de délai de requête, en millisecondes, dans la zone **durée de requête longue (millisecondes)** .  
+7.  Réglez un intervalle de temps d’exécution des requêtes, en millisecondes, dans la boîte **long de temps de requête (millisecondes).**  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Pour enregistrer des données de requêtes longues par programme  
   
-1.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY_LOG et le chemin d’accès complet et le nom du fichier journal des requêtes de longue durée. Par exemple :  
+1.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY_LOG et le nom complet du chemin et du fichier du fichier de journal de requête de longue durée. Par exemple :  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY_INTERVAL et définissez à l’intervalle de délai d’attente, en millisecondes.  
+2.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY_INTERVAL et définissez à l’intervalle de temps d’exécution, en millisecondes.  
   
-3.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY et SQL_PERF_START pour démarrer l’enregistrement des requêtes de longue durée.  
+3.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY et SQL_PERF_START pour commencer à enregistrer des requêtes de longue durée.  
   
-4.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY et SQL_PERF_STOP pour arrêter l’enregistrement des requêtes longues.  
+4.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY et SQL_PERF_STOP pour arrêter d’enregistrer des requêtes de longue durée.  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger la base de données de l’échantillon AdventureWorks à partir de la page d’accueil [Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Cette source de données doit être basée sur le conducteur ODBC qui est fourni par le système d’exploitation (le nom du conducteur est "SQL Server"). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -219,6 +219,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Profilage de la performance des conducteurs D’ODBC How-to Topics &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

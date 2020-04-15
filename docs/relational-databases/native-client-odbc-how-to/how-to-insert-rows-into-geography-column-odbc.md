@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : insérer des lignes dans la colonne Geography (ODBC) | Microsoft Docs'
+title: 'Comment : Insérez des lignes dans la colonne de géographie (ODBC) Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781286"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293849"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procédure : insérer des lignes dans la colonne de géographie (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "73781286"
   
  Il ne fonctionne pas avec les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Pour plus d’informations sur le stockage spatial, consultez [données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Pour plus d’informations sur le stockage spatial, voir [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Exemple  
- La première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée une table utilisée par cet exemple.  
+ La première [!INCLUDE[tsql](../../includes/tsql-md.md)]liste de code () crée une table utilisée par cet échantillon.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et user32.lib. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73781286"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime la table utilisée par cet exemple.  
+ La troisième [!INCLUDE[tsql](../../includes/tsql-md.md)]liste de code supprime la table utilisée par cet échantillon.  
   
 ```sql
 use tempdb  

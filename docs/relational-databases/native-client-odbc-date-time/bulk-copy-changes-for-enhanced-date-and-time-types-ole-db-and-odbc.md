@@ -1,5 +1,5 @@
 ---
-title: Copie en bloc, types améliorés, OLE DB
+title: Copie en vrac, types améliorés, DB OLE
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301830"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifications de la copie en bloc pour les types date/heure améliorés (OLE DB et ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,9 +64,9 @@ ms.locfileid: "75225255"
 ```  
   
 ## <a name="character-data-files"></a>Fichiers de données de type caractère  
- Dans les fichiers de données de type caractère, les valeurs de date et d’heure sont représentées comme décrit dans la section « formats de données : chaînes et littéraux » de [type de données pour les améliorations de date et d’heure ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) pour ODBC, ou [pour la prise en charge de type de données pour OLE DB améliorations de la date et](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) de l’heure pour les OLE DB.  
+ Dans les fichiers de données de caractère, les valeurs de date et d’heure sont représentées telles que décrites dans la section « Formats de données : chaînes et littérales » de [data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) for ODBC, ou de Data Type Support for [OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) for OLE DB.  
   
- Dans les natifs de données natives, les valeurs de date et d’heure pour les quatre nouveaux types sont représentées comme leurs représentations TDS avec une échelle de 7 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (car il s’agit de la valeur maximale prise en charge par et les fichiers de données BCP ne stockent pas l’échelle de ces colonnes). Aucune modification n’est apportée au stockage des types **datetime** et **smalldatetime** existants, ni à leurs représentations de flux de données tabulaires (TDS).  
+ Dans les flux de données natifs, les valeurs de date et d’heure des quatre nouveaux types sont représentées comme leurs représentations TDS avec une échelle de 7 (parce que c’est le maximum pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les fichiers de données bcp ne stockent pas l’échelle de ces colonnes). Aucune modification n’est apportée au stockage des types **datetime** et **smalldatetime** existants, ni à leurs représentations de flux de données tabulaires (TDS).  
   
  Les tailles de stockage pour les différents types de stockage sont les suivantes pour OLE DB :  
   
@@ -93,9 +93,9 @@ ms.locfileid: "75225255"
 ||||
 
 ## <a name="bcp-types-in-sqlnclih"></a>Types BCP dans sqlncli.h  
- Les types suivants sont définis dans sqlncli.h pour être utilisés avec les extensions d'API BCP d'ODBC. Ces types sont passés avec le paramètre *eUserDataType* de IBCPSession :: BCPColFmt dans OLE DB.  
+ Les types suivants sont définis dans sqlncli.h pour être utilisés avec les extensions d'API BCP d'ODBC. Ces types sont passés avec le paramètre *eUserDataType* de IBCPSession::BCPColFmt dans OLE DB.  
   
-|type de stockage de fichier|Type de données du fichier hôte|Tapez sqlncli. h pour l’utiliser avec IBCPSession :: BCPColFmt|Valeur|  
+|type de stockage de fichier|Type de données du fichier hôte|Tapez dans sqlncli.h pour une utilisation avec IBCPSession::BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -108,9 +108,9 @@ ms.locfileid: "75225255"
 ## <a name="bcp-data-type-conversions"></a>Conversions des types de données BCP  
  Les tableaux ci-dessous fournissent des informations de conversion.  
   
- **Remarque OLE DB** Les conversions suivantes sont effectuées par IBCPSession. IRowsetFastLoad utilise OLE DB conversions telles que définies dans les [conversions effectuées du client au serveur](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Notez que les valeurs datetime sont arrondies au 1/300e de seconde et que les secondes des valeurs smalldatetime sont mises à zéro après l'exécution des conversions clientes décrites ci-dessous. L'arrondi des valeurs datetime est propagé aux heures et aux minutes, mais pas à la date.  
+ **Remarque pour OLE DB** : Les conversions suivantes sont effectuées par IBCPSession. IRowsetFastLoad utilise des conversions OLE DB telles que définies dans [Conversions effectuées de client à serveur](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Notez que les valeurs datetime sont arrondies au 1/300e de seconde et que les secondes des valeurs smalldatetime sont mises à zéro après l'exécution des conversions clientes décrites ci-dessous. L'arrondi des valeurs datetime est propagé aux heures et aux minutes, mais pas à la date.  
   
-|À--><br /><br /> De|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|À --><br /><br /> À partir|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Temps|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
@@ -131,7 +131,7 @@ ms.locfileid: "75225255"
 |-|Aucune conversion n'est prise en charge.<br /><br /> Un enregistrement de diagnostic ODBC est généré avec SQLSTATE 07006 et le message « Violation de l'attribut de type de données restreint ».|  
 |1|Si les données fournies ne sont pas valides, un enregistrement de diagnostic ODBC est généré avec SQLSTATE 22007 et le message « Format datetime non valide ». Pour les valeurs datetimeoffset, la partie heure doit se situer dans la plage après la conversion au format UTC, même si aucune conversion au format UTC n'est demandée. Ceci tient au fait que TDS et le serveur normalisent toujours l'heure dans les valeurs datetimeoffset pour UTC. Par conséquent, le client doit vérifier que les composants heure se situent dans la plage prise en charge après la conversion au format UTC.|  
 |2|Le composant heure est ignoré.|  
-|3|Pour ODBC, si la troncation avec perte de données se produit, un enregistrement de diagnostic est généré avec SQLSTATE 22001 et le message « données de chaîne, tronqué à droite » le nombre de chiffres de fraction de seconde (l’échelle) est déterminé à partir de la taille de la colonne de destination en fonction de tableau suivant. Pour les tailles de colonne supérieures à la plage du tableau, une échelle de 7 est nécessaire. Cette conversion accepte jusqu'à neuf chiffres de fractions de seconde, valeur maximale autorisée par ODBC.<br /><br /> **Tapez :** DBTIME2<br /><br /> **Échelle impliquée 0** 8<br /><br /> **Échelle impliquée 1.. 7** 10, 16<br /><br /> <br /><br /> **Tapez :** DBTIMESTAMP<br /><br /> **Échelle impliquée 0 :** 19<br /><br /> **Échelle impliquée 1.. 7 :** 21.. 27<br /><br /> <br /><br /> **Tapez :** DBTIMESTAMPOFFSET<br /><br /> **Échelle impliquée 0 :** 26<br /><br /> **Échelle impliquée 1.. 7 :** 28.. 34<br /><br /> Pour OLE DB, s'il se produit une troncation avec perte de données, une erreur est publiée. Pour datetime2, le nombre de chiffres des fractions de seconde (l'échelle) est déterminé à partir de la taille de la colonne de destination, conformément au tableau suivant. pour les tailles de colonne supérieures à la plage du tableau, une échelle de 9 est nécessaire. Cette conversion accepte jusqu'à neuf chiffres de fractions de seconde, valeur maximale autorisée par OLE DB.<br /><br /> **Tapez :** DBTIME2<br /><br /> **Échelle impliquée 0** 8<br /><br /> **Échelle impliquée 1.. 9** 1.. 9<br /><br /> <br /><br /> **Tapez :** DBTIMESTAMP<br /><br /> **Échelle impliquée 0 :** 19<br /><br /> **Échelle impliquée 1.. 9 :** 21.. 29<br /><br /> <br /><br /> **Tapez :** DBTIMESTAMPOFFSET<br /><br /> **Échelle impliquée 0 :** 26<br /><br /> **Échelle impliquée 1.. 9 :** 28.. 36|  
+|3|Pour ODBC, Si la troncation avec la perte de données se produit, un enregistrement diagnostique est généré avec SQLSTATE 22001 et message «Données de chaîne, droite tronquée» Le nombre de chiffres fractionnels secondes (l’échelle) est déterminé à partir de la taille de la colonne de destination selon le tableau suivant. Pour les tailles de colonne supérieures à la plage du tableau, une échelle de 7 est nécessaire. Cette conversion accepte jusqu'à neuf chiffres de fractions de seconde, valeur maximale autorisée par ODBC.<br /><br /> **Type:** DBTIME2<br /><br /> **Échelle impliquée 0**8<br /><br /> **Échelle implicite 1..7** 10,16<br /><br /> <br /><br /> **Type:** DBTIMESTAMP DBTIMESTAMP<br /><br /> **Échelle impliquée 0 :** 19<br /><br /> **Échelle implicite 1..7:** 21..27<br /><br /> <br /><br /> **Type :** DBTIMESTAMPOFFSET<br /><br /> **Échelle impliquée 0 :** 26<br /><br /> **Échelle implicite 1..7:** 28..34<br /><br /> Pour OLE DB, s'il se produit une troncation avec perte de données, une erreur est publiée. Pour datetime2, le nombre de chiffres des fractions de seconde (l'échelle) est déterminé à partir de la taille de la colonne de destination, conformément au tableau suivant. pour les tailles de colonne supérieures à la plage du tableau, une échelle de 9 est nécessaire. Cette conversion accepte jusqu'à neuf chiffres de fractions de seconde, valeur maximale autorisée par OLE DB.<br /><br /> **Type:** DBTIME2<br /><br /> **Échelle impliquée 0**8<br /><br /> **Échelle impliquée 1..9** 1..9<br /><br /> <br /><br /> **Type:** DBTIMESTAMP DBTIMESTAMP<br /><br /> **Échelle impliquée 0 :** 19<br /><br /> **Échelle impliquée 1..9 :** 21..29<br /><br /> <br /><br /> **Type :** DBTIMESTAMPOFFSET<br /><br /> **Échelle impliquée 0 :** 26<br /><br /> **Échelle impliquée 1..9 :** 28..36|  
 |4|Le composant date est ignoré.|  
 |5|Le composant fuseau horaire est défini au format UTC (par exemple, 00:00).|  
 |6|L'heure est définie avec la valeur zéro.|  
@@ -145,5 +145,5 @@ ms.locfileid: "75225255"
 |||
 
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [Améliorations de la date et de l’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Améliorations de la date et de l’heure &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

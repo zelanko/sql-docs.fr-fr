@@ -1,5 +1,5 @@
 ---
-title: Commande UPDATE-SQL | Microsoft Docs
+title: MISE À JOUR - Commandement SQL Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 818811c18ed52cef5bdb1c4d97f947bb86e67422
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912332"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307640"
 ---
 # <a name="update---sql-command"></a>UPDATE, commande SQL
-Met à jour des enregistrements dans une table avec de nouvelles valeurs.  
+Mise à jour des enregistrements dans un tableau avec de nouvelles valeurs.  
   
- Le pilote ODBC Visual FoxPro prend en charge la syntaxe du langage Visual FoxPro natif pour cette commande. Pour obtenir des informations spécifiques au pilote, consultez la **section Remarques**sur le pilote.  
+ Le Visual FoxPro ODBC Driver prend en charge la syntaxe en langue visuelle FoxPro native pour cette commande. Pour obtenir des renseignements spécifiques au conducteur, consultez **les remarques du conducteur**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,27 +35,27 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>Arguments  
- MISE à jour [ *DatabaseName1 !*] *TableName1*  
- Spécifie la table dans laquelle les enregistrements sont mis à jour avec de nouvelles valeurs.  
+ MISE À JOUR [ *DatabaseName1!*] *TableName1*  
+ Spécifie le tableau dans lequel les enregistrements sont mis à jour avec de nouvelles valeurs.  
   
- *DatabaseName1!* Spécifie le nom d’une base de données autre que la base de données spécifiée avec la source de données contenant la table. Vous devez inclure le nom de la base de données contenant la table si celle-ci n’est pas la base de données actuelle. Insérez le délimiteur du point d’exclamation ( !) après le nom de la base de données et avant le nom de la table.  
+ *DatabaseName1!* spécifie le nom d’une base de données autre que la base de données spécifiée avec la source de données contenant la table. Vous devez inclure le nom de la base de données contenant la table si la base de données n’est pas la base de données actuelle. Inclure le point d’exclamation (!) delimiter après le nom de la base de données et avant le nom de table.  
   
- Set *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
- Spécifie les colonnes mises à jour et leurs nouvelles valeurs. Si vous omettez la clause WHERE, chaque ligne de la colonne est mise à jour avec la même valeur.  
+ SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ Spécifie les colonnes mises à jour et leurs nouvelles valeurs. Si vous ometez la clause WHERE, chaque ligne de la colonne est mise à jour avec la même valeur.  
   
- WHERE *FilterCondition1*[et &#124; ou *FilterCondition2*...]  
- Spécifie les enregistrements mis à jour avec les nouvelles valeurs.  
+ Où *FilterCondition1*[ET &#124; OU *FilterCondition2*...]  
+ Spécifie les enregistrements qui sont mis à jour avec de nouvelles valeurs.  
   
- *FilterCondition* spécifie les critères que les enregistrements doivent remplir pour être mis à jour avec de nouvelles valeurs. Vous pouvez inclure autant de conditions de filtre que vous le souhaitez, en les connectant à l’aide de l’opérateur AND ou OR. Vous pouvez également utiliser l’opérateur NOT pour inverser la valeur d’une expression logique, ou vous pouvez utiliser **Empty**() pour rechercher un champ vide.  
+ *FilterCondition* spécifie les critères que les enregistrements doivent respecter pour être mis à jour avec de nouvelles valeurs. Vous pouvez inclure autant de conditions de filtre que vous le souhaitez, les reliant à l’ET ou à l’opérateur OU. Vous pouvez également utiliser l’opérateur PAS pour inverser la valeur d’une expression logique, ou vous pouvez utiliser **EMPTY**( ) pour vérifier un champ vide.  
   
 ## <a name="remarks"></a>Notes  
- UPDATE-SQL ne peut mettre à jour que les enregistrements d’une seule table.  
+ MISE À JOUR - SQL ne peut mettre à jour les enregistrements que dans un seul tableau.  
   
- Contrairement à Replace, UPDATE-SQL utilise le verrouillage des enregistrements lors de la mise à jour de plusieurs enregistrements dans des tables ouvertes pour un accès partagé. Cela réduit la contention des enregistrements dans les situations multi-utilisateur, mais peut réduire les performances. Pour des performances maximales, ouvrez la table pour une utilisation exclusive ou utilisez **troupeau**() pour verrouiller la table.  
+ Contrairement à REPLACE, UPDATE - SQL utilise le verrouillage des enregistrements lors de la mise à jour de plusieurs enregistrements dans des tables ouvertes pour un accès partagé. Cela réduit la contention des records dans les situations multi-autres, mais peut réduire les performances. Pour un maximum de performances, ouvrez la table pour une utilisation exclusive ou utilisez **FLOCK**( ) pour verrouiller la table.  
   
-## <a name="driver-remarks"></a>Remarques sur le pilote  
- Lorsque votre application envoie la mise à jour de l’instruction SQL ODBC à la source de données, le pilote ODBC Visual FoxPro convertit la commande en commande Visual FoxProUPDATE sans traduction.  
+## <a name="driver-remarks"></a>Remarques du conducteur  
+ Lorsque votre application envoie la mise À JOUR de relevé SQL ODBC à la source de données, le visual FoxPro ODBC Driver convertit la commande en commande Visual FoxProUPDATE sans traduction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [DELETE-commande SQL](../../odbc/microsoft/delete-sql-command.md)   
+ [DELETE - Commandement SQL](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT, commande SQL](../../odbc/microsoft/insert-sql-command.md)

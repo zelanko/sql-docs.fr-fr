@@ -1,5 +1,5 @@
 ---
-title: Autres détails de programmation du pilote Excel | Microsoft Docs
+title: Autres détails de la programmation des pilotes Excel (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290999"
 ---
 # <a name="other-excel-driver-programming-details"></a>Autres détails de programmation du pilote Excel
 > [!NOTE]  
->  Cette section fournit des informations spécifiques au pilote Excel sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques à Excel Driver sur les fonctions ODBC et d’autres détails de programmation. Pour plus d’informations générales sur une fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLBindParameter (pilote Excel)](../../odbc/microsoft/sqlbindparameter-excel-driver.md)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68043772"
   
 -   [SQLColumns (pilote Excel)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [SQLConfigDataSource (pilote Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (Pilote Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (pilote Excel)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

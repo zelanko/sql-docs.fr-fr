@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789522"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303915"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,13 +63,13 @@ HRESULT Abort(
  Le paramètre *hChapter* n'est pas DB_NULL_HCHAPTER ou *eOperation* n'est pas DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus :: Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize :: Initialize** n’a pas été appelé, ou n’est pas terminé.  
+ **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** n'a pas été appelé ou ne s'est pas terminé.  
   
- **ISSAsynchStatus :: Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize :: Initialize** a été appelé, mais il a été annulé par la suite avant l’initialisation ou a dépassé le délai d’attente. L’objet source de données n’est toujours pas initialisé.  
+ **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** a été appelé, mais par la suite annulé avant l’initialisation, ou a chronométré. L’objet source de données est encore uninitialisé.  
   
- **ISSAsynchStatus :: Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction :: Commit** ou **ITransaction :: Abort** a été appelé précédemment, et l’ensemble de lignes n’a pas survécu à la validation ou à l’abandon et est à l’État Zombie.  
+ **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction::Commit** ou **ITransaction::Abort** a été appelé précédemment, et l'ensemble de lignes n'a pas survécu à la validation ou à l'abandon et se trouve dans un état passif.  
   
- **ISSAsynchStatus :: Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d’initialisation. L'ensemble de lignes se trouve dans un état zombie.  
+ **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
 ## <a name="remarks"></a>Notes  
  L'abandon de l'initialisation d'un ensemble de lignes ou d'un objet source de données peut laisser l'ensemble de lignes ou l'objet source de données dans un état zombie, de telle sorte que toutes les méthodes autres que **IUnknown** retournent E_UNEXPECTED. Lorsque cela se produit, la seule action possible pour le consommateur est de libérer l'ensemble de lignes ou l'objet source de données.  

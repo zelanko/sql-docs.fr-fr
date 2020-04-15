@@ -1,5 +1,5 @@
 ---
-title: Libération des descripteurs | Microsoft Docs
+title: Libérer les descripteurs (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - freeing descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af30ceb29e032764b89aa2069086aa898a7d35db
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305600"
 ---
 # <a name="freeing-descriptors"></a>Libération des descripteurs
-Les descripteurs alloués explicitement peuvent être libérés explicitement, en appelant **SQLFreeHandle** avec *comme HandleType* de SQL_HANDLE_DESC, ou implicitement, lorsque le handle de connexion est libéré. Lorsqu’un descripteur alloué explicitement est libéré, tous les descripteurs d’instruction auxquels le descripteur libéré a été appliqué reprennent automatiquement les descripteurs alloués implicitement.  
+Les descripteurs explicitement attribués peuvent être libérés explicitement, soit en appelant **SQLFreeHandle** avec *HandleType* de SQL_HANDLE_DESC, ou implicitement, lorsque la poignée de connexion est libérée. Lorsqu’un descripteur explicitement attribué est libéré, toutes les poignées de déclaration auxquelles le descripteur libéré appliqué retournent automatiquement aux descripteurs qui leur sont implicitement attribués.  
   
- Les descripteurs alloués implicitement peuvent être libérés uniquement en appelant **SQLDisconnect**, ce qui supprime toutes les instructions ou descripteurs ouverts sur la connexion, ou en appelant **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_STMT pour libérer un handle d’instruction et tous les descripteurs alloués implicitement associés à l’instruction. Un descripteur alloué implicitement ne peut pas être libéré en appelant **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DESC.  
+ Les descripteurs implicitement attribués ne peuvent être libérés qu’en appelant **SQLDisconnect**, qui laisse tomber toutes les déclarations ou les descripteurs ouverts sur la connexion, ou en appelant **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_STMT pour libérer une poignée de déclaration et tous les descripteurs implicitement attribués associés à la déclaration. Un descripteur implicitement attribué ne peut pas être libéré en appelant **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DESC.  
   
- Même lorsqu’elle est libérée, un descripteur alloué implicitement reste valide et **SQLGetDescField** peut être appelé sur ses champs.
+ Même lorsqu’il est libéré, un descripteur implicitement attribué reste valide, et **SQLGetDescField** peut être appelé sur ses champs.

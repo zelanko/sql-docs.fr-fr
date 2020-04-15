@@ -14,24 +14,24 @@ helpviewer_keywords:
 - OLE DB extensions for XML
 - SQL Server Native Client OLE DB provider, command execution
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4c641495f2232bd0710e810716459d29a7f357a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 88353fa31be9265af5de0e8350aeac5481722351
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290195"
 ---
 # <a name="executing-a-command"></a>Exécution d'une commande
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Après l’établissement de la connexion à une source de données, le consommateur appelle la méthode **méthode IDBCreateSession :: CreateSession** pour créer une session. La session agit en guise de commande, d'ensemble de lignes ou de fabrique de transactions.  
+  Une fois la connexion à une source de données établie, le consommateur appelle la méthode **IDBCreateSession::CreateSession** pour créer une session. La session agit en guise de commande, d'ensemble de lignes ou de fabrique de transactions.  
   
  Pour utiliser directement des tables individuelles ou des index, le consommateur demande l’interface **IOpenRowset**. La méthode **IOpenRowset::OpenRowset** ouvre et retourne un ensemble de lignes qui inclut toutes les lignes d’une même table de base ou d’un même index.  
   
- Pour exécuter une commande (par exemple SELECT \* FROM Authors), le consommateur demande l’interface **IDBCreateCommand**. Le consommateur peut exécuter la méthode **IDBCreateCommand :: CreateCommand** pour créer un objet de commande et demander l’interface **ICommandText** . La méthode **ICommandText :: SetCommandText** est utilisée pour spécifier la commande à exécuter.  
+ Pour exécuter une commande (par exemple SELECT \* FROM Authors), le consommateur demande l’interface **IDBCreateCommand**. Le consommateur peut exécuter la méthode **IDBCreateCommand::CreateCommand** pour créer un objet de commande et demander l'interface **ICommandText**. La méthode **ICommandText::SetCommandText** est utilisée pour spécifier la commande à exécuter.  
   
  La commande **Execute** est utilisée pour exécuter la commande. La commande peut être un nom de procédure ou une instruction SQL. Toutes les commandes ne génèrent pas un objet de jeu de résultats (ensemble de lignes). Les commandes, telles que SELECT * FROM Authors, produisent un jeu de résultats.  
   

@@ -1,5 +1,5 @@
 ---
-title: Allocation d’un handle de connexion ODBC | Microsoft Docs
+title: Allouer une poignée de connexion ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bd3a44fe4f0466dfcf11a72fa0377564c1cf02f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077212"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288519"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Allocation d’un handle de connexion dans ODBC
-Pour que l’application puisse se connecter à une source de données ou à un pilote, elle doit allouer un handle de connexion, comme suit :  
+Avant que l’application puisse se connecter à une source de données ou à un pilote, elle doit allouer une poignée de connexion, comme suit :  
   
-1.  L’application déclare une variable de type SQLHDBC. Il appelle ensuite **SQLAllocHandle** et transmet l’adresse de cette variable, le handle de l’environnement dans lequel la connexion doit être allouée et l’option SQL_HANDLE_DBC. Par exemple :  
+1.  L’application déclare une variable de type SQLHDBC. Il appelle ensuite **SQLAllocHandle** et passe l’adresse de cette variable, la poignée de l’environnement dans lequel allouer la connexion, et l’option SQL_HANDLE_DBC. Par exemple :  
   
     ```  
     SQLHDBC hdbc1;  
@@ -36,10 +36,10 @@ Pour que l’application puisse se connecter à une source de données ou à un 
     SQLAllocHandle(SQL_HANDLE_DBC, henv1, &hdbc1);  
     ```  
   
-2.  Le gestionnaire de pilotes alloue une structure dans laquelle stocker des informations sur l’instruction et retourne le handle de connexion dans la variable.  
+2.  Le gestionnaire de conducteur alloue une structure dans laquelle stocker des informations sur l’instruction et renvoie la poignée de connexion dans la variable.  
   
- Le gestionnaire de pilotes n’appelle pas **SQLAllocHandle** dans le pilote pour l’instant, car il ne sait pas quel pilote appeler. Elle retarde l’appel de **SQLAllocHandle** dans le pilote jusqu’à ce que l’application appelle une fonction pour se connecter à une source de données. Pour plus d’informations, consultez [rôle du gestionnaire de pilotes dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md), plus loin dans cette section.  
+ Le gestionnaire de conducteur n’appelle pas **SQLAllocHandle** dans le conducteur pour le moment parce qu’il ne sait pas quel conducteur appeler. Il retarde l’appel **SQLAllocHandle** dans le conducteur jusqu’à ce que l’application appelle une fonction pour se connecter à une source de données. Pour plus [d’informations,](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)consultez le rôle du gestionnaire de conducteur dans le processus de connexion , plus tard dans cette section.  
   
- Il est important de noter que l’allocation d’un handle de connexion n’est pas la même que le chargement d’un pilote. Le pilote n’est pas chargé tant qu’une fonction de connexion n’a pas été appelée. Ainsi, après avoir alloué un handle de connexion et avant de vous connecter au pilote ou à la source de données, les seules fonctions que l’application peut appeler avec le handle de connexion sont **SQLSetConnectAttr**, **SQLGetConnectAttr**ou **SQLGetInfo** avec l’option SQL_ODBC_VER. L’appel d’autres fonctions avec le descripteur de connexion, tel que **SQLEndTran**, retourne SQLState 08003 (connexion non ouverte). Pour plus d’informations, consultez [annexe B : tables de transition d’État ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Il est important de noter que l’attribution d’une poignée de connexion n’est pas la même chose que le chargement d’un conducteur. Le conducteur n’est pas chargé jusqu’à ce qu’une fonction de connexion soit appelée. Ainsi, après avoir alloué une poignée de connexion et avant de se connecter au conducteur ou à la source de données, les seules fonctions que l’application peut appeler avec la poignée de connexion sont **SQLSetConnectAttr**, **SQLGetConnectAttr**, ou **SQLGetInfo** avec l’option SQL_ODBC_VER. Appelant d’autres fonctions avec la poignée de connexion, telles que **SQLEndTran**, retourne SQLSTATE 08003 (Connexion non ouverte). Pour plus de détails, voir [Annexe B: ODBC State Transition Tables](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Pour plus d’informations sur les handles de connexion, consultez [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md).
+ Pour plus d’informations sur les poignées de connexion, voir [Connection Handles](../../../odbc/reference/develop-app/connection-handles.md).

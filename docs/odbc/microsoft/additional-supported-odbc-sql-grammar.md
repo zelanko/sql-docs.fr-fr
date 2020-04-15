@@ -1,5 +1,5 @@
 ---
-title: Grammaire SQL ODBC supplémentaire prise en charge | Microsoft Docs
+title: Grammaire SQL D’ODBC soutenue d’autre Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901397"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307130"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammaire SQL ODBC supplémentaire prise en charge
-Les pilotes ODBC prennent entièrement en charge la grammaire ODBC 2,5 minimale et les clauses suivantes dans la syntaxe ODBC 2,5 de base et étendue. Des informations supplémentaires peuvent être affichées en sautant à l' [instruction ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), aux [noms de corrélation](../../odbc/microsoft/correlation-names.md)et aux rubriques d’appel de [procédure](../../odbc/microsoft/procedure-invocation.md) .  
+Les conducteurs de l’ODBC prennent entièrement en charge la grammaire Minimum ODBC 2.5 et les clauses suivantes dans la grammaire Core and Extended ODBC 2.5. Des informations supplémentaires peuvent être affichées en sautant à [l’énoncé ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), les noms de [corrélation](../../odbc/microsoft/correlation-names.md), et les sujets [d’invocation de procédure.](../../odbc/microsoft/procedure-invocation.md)  
   
--   Littéral numérique approximatif (Core)  
+-   Alphabète numérique (Core)  
   
--   [ALTER TABLE, instruction](../../odbc/microsoft/alter-table-statement.md) (Core)  
+-   [ÉNONCÉ ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (Core)  
   
--   Littéraux binaires (étendus)  
+-   Littéral binaires (étendu)  
   
 -   [Noms de corrélation](../../odbc/microsoft/correlation-names.md) (Core)  
   
--   [Appel de procédure](../../odbc/microsoft/procedure-invocation.md) (étendu)  
+-   [Procédure Invocation](../../odbc/microsoft/procedure-invocation.md) (Étendue)  
   
--   [Between, prédicat](../../odbc/microsoft/between-predicate.md) (Core)  
+-   [BETWEEN Predicate](../../odbc/microsoft/between-predicate.md) (Core)  
   
 -   [CREATE INDEX, instruction](../../odbc/microsoft/create-index-statement.md)  
   
 -   [Arithmétique des dates](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet : littéraux de date, d’heure et d’horodatage](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet : Littéraux de date, d’heure et d’horodatage](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX, instruction](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -51,15 +51,15 @@ Les pilotes ODBC prennent entièrement en charge la grammaire ODBC 2,5 minimale 
   
 -   [ORDER BY avec GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   Prédicat EXISTs (Core)  
+-   EXISTS prédicate (Core)  
   
--   IN (*valueList*) (Core)  
+-   IN (*liste de valeurs*) (Core)  
   
--   [Jet : jointures externes](../../odbc/microsoft/jet-outer-joins.md) (étendues)  
+-   [Jet: Outer Joins](../../odbc/microsoft/jet-outer-joins.md) (Extended)  
   
--   Instruction SELECT (étendue) (y compris les clauses GROUP BY, HAVING et UNION)  
+-   DÉCLARATION SELECT (extended) (y compris les clauses GROUPE BY, HAVING et UNION)  
   
--   Sous-requêtes (sous-SÉLECTIONs) (Core)  
+-   Subqueries (SUBSELECTs) (Core)  
   
 -   [Fonctions scalaires](../../odbc/microsoft/scalar-functions.md)  
   

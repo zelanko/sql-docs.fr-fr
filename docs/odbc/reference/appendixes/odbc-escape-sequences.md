@@ -1,5 +1,5 @@
 ---
-title: Séquences d’échappement ODBC | Microsoft Docs
+title: Séquences d’évasion ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b32d12cc6be2814198160ce95cb8153227c19aa9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990633"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287569"
 ---
 # <a name="odbc-escape-sequences"></a>Séquences d’échappement ODBC
-Les séquences d’échappement suivantes sont utilisées dans ODBC. La grammaire de cette section utilise certains éléments définis dans les [éléments utilisés dans les instructions SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
+Les séquences d’évacuation suivantes sont utilisées dans ODBC. La grammaire de cette section utilise certains éléments définis dans [les éléments utilisés dans les déclarations SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Date, heure et horodatage, séquences d’échappement](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)  
   

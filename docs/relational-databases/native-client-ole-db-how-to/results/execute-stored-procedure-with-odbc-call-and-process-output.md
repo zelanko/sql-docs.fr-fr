@@ -1,5 +1,5 @@
 ---
-title: Procédure stockée, appel ODBC, sortie
+title: Procédure stockée, ODBC CALL, Sortie
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244492"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302220"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "75244492"
   
 2.  Créez un jeu de liaisons (un pour chaque marqueur de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-3.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor :: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un ensemble de liaisons.  
+3.  Créez un accesseur pour les paramètres définis à l'aide de la méthode **IAccessor::CreateAccessor**. **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 4.  Remplissez la structure DBPARAMS.  
   
 5.  Appelez la commande **Execute** (dans ce cas, un appel à une procédure stockée).  
   
-6.  Traitez l’ensemble de lignes et libérez-le à l’aide de la méthode **IRowset :: Release** .  
+6.  Traitez l'ensemble de lignes et libérez-le à l'aide de la méthode **IRowset::Release**.  
   
 7.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   

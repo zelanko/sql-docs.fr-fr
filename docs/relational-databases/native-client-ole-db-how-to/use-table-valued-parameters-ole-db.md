@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 266109ccef7b6e88777b5a7e2d888d998ac8770d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789690"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307470"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utiliser des paramètres table (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73789690"
   
 -   Affichage de la gestion des erreurs pour les erreurs de SQLNCLI11.  
   
- Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Pour de plus amples renseignements sur les paramètres évalués à la table, voir [Paramètres de valeur de la table &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Exemple  
  La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée la base de données utilisée par l'exemple.  

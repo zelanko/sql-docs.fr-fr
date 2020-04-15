@@ -1,5 +1,5 @@
 ---
-title: Types de données Paradox | Microsoft Docs
+title: Types de données paradoxaux (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,49 +15,49 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043692"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290929"
 ---
 # <a name="paradox-data-types"></a>Types de données Paradox
-Le pilote ODBC Paradox mappe les types de données Paradox aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et indique les types de données SQL ODBC auxquels ils sont mappés.  
+Le pilote ODBC Paradox cartographie les types de données Paradox aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et affiche les types de données SQL ODBC qu’ils sont cartographiés.  
   
-|Type de données Paradox|Type de données ODBC|  
+|Type de données paradoxale|Type de données ODBC|  
 |-----------------------|--------------------|  
-|COMPORTANT|SQL_VARCHAR|  
-|AUTOINCREMENT [1]|SQL_INTEGER|  
-|BCD [1]|SQL_DOUBLE|  
-|OCTETS [1]|SQL_BINARY|  
+|Alphanumérique|SQL_VARCHAR|  
+|AUTOINCRÉTION[1]|SQL_INTEGER|  
+|BCD[1]|SQL_DOUBLE|  
+|OCTETS[1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
-|IMAGE [2]|SQL_LONGVARBINARY|  
-|LOGIQUE [1]|SQL_BIT|  
-|LONG [1]|SQL_INTEGER|  
-|MÉMO [2]|SQL_LONGVARCHAR|  
-|MONEY [1]|SQL_DOUBLE|  
+|IMAGE[2]|SQL_LONGVARBINARY|  
+|LOGIQUE[1]|SQL_BIT|  
+|LONG[1]|SQL_INTEGER|  
+|MÉMO[2]|SQL_LONGVARCHAR|  
+|ARGENT[1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|Résumé|SQL_SMALLINT|  
-|HEURE [1]|SQL_TIMESTAMP|  
-|HORODATEUR [1]|SQL_TIMESTAMP|  
+|SHORT|SQL_SMALLINT|  
+|TEMPS[1]|SQL_TIMESTAMP|  
+|TIMESTAMP[1]|SQL_TIMESTAMP|  
   
- [1] valide uniquement pour les versions Paradox 5. *x*.  
+ [1] Valable uniquement pour les versions Paradox 5. *x*.  
   
- [2] valide uniquement pour Paradox versions 4. *x* et 5. *x*.  
+ [2] Valable uniquement pour les versions Paradox 4. *x* et 5. *x*.  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retourne des types de données ODBC SQL. Toutes les conversions de l’annexe D de la *Référence du programmeur ODBC* sont prises en charge pour les types de données SQL ODBC répertoriés précédemment dans cette rubrique.  
+>  **SQLGetTypeInfo** renvoie les types de données ODBC SQL. Toutes les conversions de l’Annexe D de la *référence du programmeur ODBC* sont prises en charge pour les types de données SQL ODBC énumérés plus tôt dans ce sujet.  
   
- Le tableau suivant présente les limitations relatives aux types de données Paradox.  
+ Le tableau suivant montre des limites sur les types de données Paradox.  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|COMPORTANT|La création d’une colonne alphanumérique de zéro ou d’une longueur non spécifiée renvoie en fait une colonne de 255 octets.|  
-|BYTES|Si vous insérez la valeur NULL dans une colonne binaire avec le pilote Paradox5, elle est remplacée par la valeur 0.|  
-|LONG|Valeur négative maximale prise en charge par le pilote Paradox pour le type de données long dans Paradox 5. *x* n’est pas-2 ^ 31 (-2147483648), car long est mappé au type de données ODBC SQL_INTEGER. La valeur négative maximale prise en charge pour long est en fait-2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis Récupérée à partir de la colonne, la valeur récupérée peut différer de la valeur insérée de 1 seconde en raison de l’arrondi.|  
+|Alphanumérique|La création d’une colonne ALPHANUMERIC de longueur zéro ou non spécifiée renvoie en fait une colonne de 255 byte.|  
+|BYTES|Si vous insérez NULL dans une colonne binaire avec le pilote Paradox5, il est changé en 0.|  
+|LONG|La valeur négative maximale supportée par le pilote Paradox pour le type de données Long dans Paradox 5. *x* n’est pas -2-31 (-2147483648), comme il devrait être depuis cartes longues au type de données ODBC SQL_INTEGER. La valeur négative maximale supportée pour Long est en fait de -2 à 31 euros (-2147483647).|  
+|timestamp|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis récupérée par la suite dans la colonne, la valeur récupérée peut différer de la valeur insérée jusqu’à 1 seconde en raison de l’arrondissement.|  
   
- Vous trouverez plus de restrictions sur les types de données dans limitations des types de [données](../../odbc/microsoft/data-type-limitations.md).
+ Plus de limitations sur les types de données peuvent être trouvées dans [les limites de type de données](../../odbc/microsoft/data-type-limitations.md).

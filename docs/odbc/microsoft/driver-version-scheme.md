@@ -1,5 +1,5 @@
 ---
-title: Schéma de version du pilote | Microsoft Docs
+title: Système de version du conducteur (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 864a8bd892315b060fc6fcf42dbe69dfea61ae59
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303450"
 ---
 # <a name="driver-version-scheme"></a>Schéma des versions du pilote
 > [!IMPORTANT]  
@@ -25,25 +25,25 @@ ms.locfileid: "68071856"
   
  Le tableau suivant répertorie toutes les versions publiées du pilote Microsoft ODBC pour Oracle.  
   
-|Version du pilote|Numéro de build|Historique de disponibilité|  
+|Version du pilote|Numéro de build|Historique des disponibilités|  
 |--------------------|------------------|--------------------------|  
-|1.0|2.00.6235|Visual C++ 4,2 et Visual Basic 5,0, édition entreprise|  
-|2.0|2.73.7269|Visual Studio 97 et MDAC 1.5 a|  
-|2,0 mis à jour|2.73.7283.01|IIS 4,0|  
-|2,0 mis à jour|2.73.7283.03|MDAC 1.5 b et 1.5 c|  
-|2,0 mis à jour|2.73.7356|SDK ODBC 3,5|  
-|2.5|2.573.2927|Visual Studio 6,0 et MDAC 2,0|  
-|2,5 mis à jour|2.573.3513|SQL Server 7,0<br /><br /> SQL Server 6,5 SP5|  
+|1.0|2.00.6235|Visual C 4.2 et Visual Basic 5.0, Enterprise Edition|  
+|2|2.73.7269|Visual Studio 97 et MDAC 1.5a|  
+|2.0 mise à jour|2.73.7283.01|IIS 4.0|  
+|2.0 mise à jour|2.73.7283.03|MDAC 1.5b et 1.5c|  
+|2.0 mise à jour|2.73.7356|ODBC 3.5 SDK|  
+|2.5|2.573.2927|Visual Studio 6.0 et MDAC 2.0|  
+|2.5 mise à jour|2.573.3513|Serveur SQL 7.0<br /><br /> Serveur SQL 6.5 SP5|  
   
- Build 2.00.6235 (version 1) était la première version du pilote Microsoft ODBC pour Oracle. Après la publication de la première version, une convention d’affectation de noms a été adoptée.  
+ Build 2.00.6235 (version 1) a été la première version du pilote Microsoft ODBC pour Oracle. Après la sortie de la première version, une nouvelle convention de nommage a été adoptée.  
   
- Par exemple, 2.73.7283.03 peut être divisé en composants distincts suivants :  
+ Par exemple, 2.73.7283.03 peut être divisé en éléments distincts suivants :  
   
--   2 = le numéro de version.  
+-   2 - Le numéro de version.  
   
--   73 = la version du serveur Oracle pour lequel le pilote a été conçu.  
+-   73 - La version d’Oracle Server pour laquelle le pilote a été conçu.  
   
--   7283,03 = Numéro de build du pilote.  
+-   7283.03 - Le numéro de construction du conducteur.  
   
 > [!NOTE]  
->  Avec la version 2.573.2973, la Convention d’affectation de noms a entraîné une certaine confusion : 2,573 est une version antérieure à 2,73, mais chaque section du numéro de build doit être considérée comme individuelle. Le nombre 573 est supérieur à 73, donc il s’agit d’une version plus récente. En outre, « 2,5 » indique le numéro de version du pilote.
+>  Avec la version 2.573.2973, la convention de nommage a conduit à une certaine confusion que 2.573 est une version antérieure de 2.73, mais chaque section du numéro de construction devrait être considérée individuellement. Le numéro 573 est supérieur à 73, il s’agit donc d’une version plus récente. En outre, "2.5" indique le numéro de version du conducteur.

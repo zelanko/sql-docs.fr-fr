@@ -1,5 +1,5 @@
 ---
-title: Considérations sur la programmation des pilotes Microsoft Access | Microsoft Docs
+title: Considérations de programmation des conducteurs d’accès Microsoft (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308050"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Considérations sur la programmation du pilote Microsoft Access
-Cette section contient les rubriques suivantes :  
+Cette section contient les rubriques suivantes :  
   
 -   [Définition d’options par programmation pour le pilote Access](../../odbc/microsoft/setting-options-programmatically-for-the-access-driver.md)  
   

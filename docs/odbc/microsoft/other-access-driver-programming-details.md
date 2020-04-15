@@ -1,5 +1,5 @@
 ---
-title: Autres détails de programmation du pilote Access | Microsoft Docs
+title: Autres détails de programmation des conducteurs d’accès (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 806e981ea897f3482c88808212dce1d0f5a02829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291089"
 ---
 # <a name="other-access-driver-programming-details"></a>Autres détails de programmation du pilote Access
 > [!NOTE]  
->  Cette section fournit des informations spécifiques au pilote d’accès sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des renseignements spécifiques à Access Driver sur les fonctions ODBC et d’autres détails de programmation. Pour plus d’informations générales sur une fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [SQLColAttributes (pilote Access)](../../odbc/microsoft/sqlcolattributes-access-driver.md)  
   

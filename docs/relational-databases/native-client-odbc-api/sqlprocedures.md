@@ -1,5 +1,5 @@
 ---
-title: SQLProcedures | Microsoft Docs
+title: SQLProcedures ( france) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLProcedures function
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5fe3b032491371eb53a5f1663e8e6778ce60871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 14ff76504c9a36657be60ba4855cf252474071d7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302368"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Toutes les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent une valeur. Les rapports **SQLProcedures** SQL_PT_FUNCTION pour la colonne de l’ensemble de résultats PROCEDURE_TYPE.  
+  Toutes les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent une valeur. **SQLProcedures signale** SQL_PT_FUNCTION pour la colonne de l’ensemble de résultats PROCEDURE_TYPE.  
   
- **SQLProcedures** retourne SQL_SUCCESS si des valeurs existent pour les paramètres *nomcatalogue, SchemaName* ou *procname* . **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  
+ **SQLProcedures** renvoie SQL_SUCCESS des valeurs existent ou non pour les paramètres *CatalogName, SchemaName* ou *ProcName.* **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  
   
- Les **SQLProcedures** peuvent être exécutés sur un curseur côté serveur statique. Une tentative d’exécution de **SQLProcedures** sur un curseur pouvant être mis à jour (dynamique ou de jeu de clés) retourne SQL_SUCCESS_WITH_INFO, ce qui indique que le type de curseur a été modifié.  
+ **SQLProcedures** peut être exécuté sur un curseur serveur statique. Une tentative d’exécuter **SQLProcedures** sur un curseur updatable (dynamique ou keyset) reviendra SQL_SUCCESS_WITH_INFO, ce qui indique que le type de curseur a été modifié.  
   
- **SQLProcedures** retourne des informations sur les procédures dont les noms correspondent à *procname* et peuvent être exécutés par l’utilisateur actuel, ou pour lesquels l’utilisateur actuel a reçu l’autorisation View definition.  
+ **SQLProcedures renvoie** des informations sur toutes les procédures dont les noms correspondent *à ProcName* et peuvent être exécutés par l’utilisateur actuel, ou pour lesquels l’utilisateur actuel a obtenu l’autorisation VIEW DEFINITION.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLProcedures (fonction)](https://go.microsoft.com/fwlink/?LinkId=59364)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Fonction SQLProcedures](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

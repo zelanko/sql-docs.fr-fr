@@ -1,5 +1,5 @@
 ---
-title: Littéraux de date, d’heure et d’horodatage | Microsoft Docs
+title: Date, Heure et Literals Timestamp Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,40 +10,40 @@ ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288295"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Littéraux de date, d’heure et d’horodatage
-La séquence d’échappement pour les littéraux de date, d’heure et d’horodatage est  
+La séquence d’évasion pour les littérals de date, d’heure et d’humidité temporelle est  
   
- **{**  _-type_ **'** _valeur_ **'}**  
+ **-**  _type_ **'** _valeur_ **''**  
   
- où *Literal-type* est l’une des valeurs énumérées dans le tableau suivant.  
+ où *le type littéral* est l’une des valeurs énumérées dans le tableau suivant.  
   
 |*type littéral*|Signification|Format de *valeur*|  
 |---------------------|-------------|-----------------------|  
-|**e**|Date|*aaaa*-** mm-*JJ*|  
-|**t**|Simultanément|*hh*:*mm*:*SS*[1]|  
-|**TS**|Timestamp|*aaaa*-** mm-*JJ* *hh*:*mm*:*SS*[.* f...*] 1,0|  
+|**D**|Date|*yyyy*-*mm*-*dd*|  
+|**T**|Temps|*hh*:*mm*:*ss*[1]|  
+|**Ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.* f...*] [1]|  
   
- [1] le nombre de chiffres à droite de la virgule décimale dans un littéral d’intervalle de temps ou d’horodatage contenant un composant de secondes dépend de la précision en secondes, telle qu’elle est contenue dans le champ du descripteur de SQL_DESC_PRECISION. (Pour plus d’informations, consultez [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+ [1] Le nombre de chiffres à droite du point décimal dans un intervalle de temps ou d’intervalle de temps littéral contenant un composant de secondes dépend de la précision secondes, comme contenu dans le champ descripteur SQL_DESC_PRECISION. (Pour plus d’informations, voir [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- Pour plus d’informations sur les séquences d’échappement de date, d’heure et d’horodatage, consultez [séquences d’échappement de date, d’heure et d’horodatage](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) dans annexe C : grammaire SQL.  
+ Pour plus d’informations sur les séquences d’évasion date, heure et timetamp, voir [Date, Time et Timestamp Escape Sequences](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) dans l’annexe C: SQL Grammar.  
   
- Par exemple, les deux instructions SQL suivantes mettent à jour la date d’ouverture de la commande client 1023 dans la table Orders. La première instruction utilise la syntaxe de la séquence d’échappement. La deuxième instruction utilise la syntaxe Native RDB Oracle pour la colonne de DATE et n’est pas interopérable.  
+ Par exemple, les deux énoncés SQL suivants mettent à jour la date d’ouverture de l’ordre de vente 1023 dans le tableau des commandes. La première déclaration utilise la syntaxe de séquence d’évacuation. La deuxième déclaration utilise la syntaxe native Oracle Rdb pour la colonne DATE et n’est pas interopérable.  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- La séquence d’échappement pour un littéral de date, d’heure ou d’horodatage peut également être placée dans une variable de caractère liée à un paramètre de date, d’heure ou d’horodatage. Par exemple, le code suivant utilise un paramètre de date lié à une variable de caractères pour mettre à jour la date d’ouverture de la commande client 1023 dans la table Orders :  
+ La séquence d’évacuation d’une date, d’une heure ou d’un littératie temporelle peut également être placée dans une variable de caractère liée à un paramètre de date, d’heure ou d’heure. Par exemple, le code suivant utilise un paramètre de date lié à une variable de caractère pour mettre à jour la date d’ouverture de l’ordre de vente 1023 dans le tableau des commandes :  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- Toutefois, il est généralement plus efficace de lier le paramètre directement à une structure de date :  
+ Cependant, il est généralement plus efficace de lier le paramètre directement à une structure de date :  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- Pour déterminer si un pilote prend en charge les séquences d’échappement ODBC pour les littéraux de date, d’heure ou d’horodatage, une application appelle **SQLGetTypeInfo**. Si la source de données prend en charge un type de données date, Time ou TIMESTAMP, elle doit également prendre en charge la séquence d’échappement correspondante.  
+ Pour déterminer si un conducteur prend en charge les séquences d’évacuation de l’ODBC pour les littérals de date, d’heure ou d’humidité temporelle, une application appelle **SQLGetTypeInfo**. Si la source de données prend en charge un type de données de date, d’heure ou de timetamp, elle doit également prendre en charge la séquence d’évacuation correspondante.  
   
- Les sources de données peuvent également prendre en charge les littéraux datetime définis dans la spécification SQL-92 ANSI, qui sont différents des séquences d’échappement ODBC pour les littéraux de date, d’heure ou d’horodatage. Pour déterminer si une source de données prend en charge les littéraux ANSI, une application appelle **SQLGetInfo** avec l’option SQL_ANSI_SQL_DATETIME_LITERALS.  
+ Les sources de données peuvent également prendre en charge les littérations de date définies dans les spécifications ANSI SQL-92, qui sont différentes des séquences d’évasion de l’ODBC pour les littérations de date, d’heure ou d’humidité temporelle. Pour déterminer si une source de données prend en charge les littérals de l’ANSI, une application appelle **SQLGetInfo** avec l’option SQL_ANSI_SQL_DATETIME_LITERALS.  
   
- Pour déterminer si un pilote prend en charge les séquences d’échappement ODBC pour les littéraux d’intervalle, une application appelle **SQLGetTypeInfo**. Si la source de données prend en charge un type de données DateTime Interval, elle doit également prendre en charge la séquence d’échappement correspondante.  
+ Pour déterminer si un conducteur prend en charge les séquences d’évacuation ODBC pour les littérals d’intervalle, une application appelle **SQLGetTypeInfo**. Si la source de données prend en charge un type de données d’intervalle de date, elle doit également prendre en charge la séquence d’évacuation correspondante.  
   
- Les sources de données peuvent également prendre en charge les littéraux datetime définis dans la spécification SQL-92 ANSI, qui sont différents des séquences d’échappement ODBC pour les littéraux d’intervalle DateTime. Pour déterminer si une source de données prend en charge les littéraux ANSI, une application appelle **SQLGetInfo** avec l’option SQL_ANSI_SQL_DATETIME_LITERALS.
+ Les sources de données peuvent également prendre en charge les littérations de date définies dans les spécifications ANSI SQL-92, qui sont différentes des séquences d’évacuation ODBC pour les littérations d’intervalle de date. Pour déterminer si une source de données prend en charge les littérals de l’ANSI, une application appelle **SQLGetInfo** avec l’option SQL_ANSI_SQL_DATETIME_LITERALS.

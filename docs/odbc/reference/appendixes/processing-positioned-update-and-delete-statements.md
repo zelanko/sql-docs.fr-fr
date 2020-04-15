@@ -1,5 +1,5 @@
 ---
-title: Traitement des instructions Update et DELETE positionnées | Microsoft Docs
+title: Traitement Des mises à jour positionnées et supprimer les déclarations ( Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b3f20da018bcd4e28e8ffca097fb5a4373d7f42
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028428"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308020"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Traitement des instructions de mise à jour et de suppression positionnées
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
   
- La bibliothèque de curseurs prend en charge les instructions Update et DELETE positionnées en remplaçant la clause **Where Current of** dans ces instructions par une clause **Where** qui énumère les valeurs stockées dans son cache pour chaque colonne liée. La bibliothèque de curseurs transmet les instructions **Update** et **Delete** nouvellement construites au pilote en vue de leur exécution. Pour les instructions Update positionnées, la bibliothèque de curseurs met à jour son cache à partir des valeurs dans les mémoires tampons d’ensemble de lignes et définit la valeur correspondante dans le tableau d’état de ligne sur SQL_ROW_UPDATED. Pour les instructions DELETE positionnées, elle définit la valeur correspondante dans le tableau d’état de ligne sur SQL_ROW_DELETED.  
+ La bibliothèque de curseurs prend en charge les mises à jour positionnées et suppriment les déclarations en remplaçant la clause **WHERE CURRENT OF** dans de telles déclarations par une clause **WHERE** qui énumère les valeurs stockées dans son cache pour chaque colonne consolidée. La bibliothèque de curseurs transmet les instructions **UPDATE** et **DELETE** nouvellement construites au conducteur pour exécution. Pour les instructions de mise à jour positionnées, la bibliothèque de curseurs met à jour son cache à partir des valeurs des tampons encastrés et définit la valeur correspondante du tableau d’état de la ligne à SQL_ROW_UPDATED. Pour les instructions de suppression positionnées, il définit la valeur correspondante dans le tableau d’état de la ligne à SQL_ROW_DELETED.  
   
 > [!CAUTION]  
->  La clause **Where** construite par la bibliothèque de curseurs pour identifier la ligne actuelle peut ne pas pouvoir identifier de lignes, identifier une autre ligne ou identifier plusieurs lignes. Pour plus d’informations, consultez [construction d’instructions de recherche](../../../odbc/reference/appendixes/constructing-searched-statements.md), plus loin dans cette annexe.  
+>  La clause **WHERE** construite par la bibliothèque du curseur pour identifier la rangée actuelle peut ne pas identifier les lignes, identifier une rangée différente ou identifier plus d’une rangée. Pour plus d’informations, voir [Construction des déclarations recherchées](../../../odbc/reference/appendixes/constructing-searched-statements.md), plus tard dans cette annexe.  
   
- Les instructions Update et DELETE positionnées sont soumises aux restrictions suivantes :  
+ Les relevés de mise à jour et de suppression positionnés sont soumis aux restrictions suivantes :  
   
--   Les instructions Update et DELETE positionnées ne peuvent être utilisées que dans les cas suivants : lorsqu’une instruction **Select** a généré le jeu de résultats ; Lorsque l’instruction **Select** ne contenait pas de jointure, de clause **Union** ou de clause **Group by** ; et lorsque des colonnes qui utilisaient un alias ou une expression dans la liste de sélection n’étaient pas liées à **SQLBindCol**.  
+-   Les instructions de mise à jour et de suppression positionnées ne peuvent être utilisées que dans les cas suivants : lorsqu’une instruction **SELECT** a généré l’ensemble de résultats ; lorsque la déclaration **SELECT** ne contenait pas de jointure, de clause **UNION** ou **d’une** clause GROUPE BY; et quand toutes les colonnes qui utilisaient un alias ou une expression dans la liste de sélection n’étaient pas liées à **SQLBindCol**.  
   
--   Si une application prépare une instruction UPDATE ou DELETE positionnée, elle doit le faire après avoir appelé **SQLFetch** ou **SQLFetchScroll**. Bien que la bibliothèque de curseurs soumette l’instruction au pilote pour la préparation, elle ferme l’instruction et l’exécute directement lorsque l’application appelle **SQLExecute**.  
+-   Si une application prépare une mise à jour ou une déclaration de suppression positionnée, elle doit le faire après avoir appelé **SQLFetch** ou **SQLFetchScroll**. Bien que la bibliothèque de curseurs soumette la déclaration au conducteur pour la préparation, elle ferme l’instruction et l’exécute directement lorsque la demande appelle **SQLExecute**.  
   
--   Si le pilote ne prend en charge qu’une seule instruction active, la bibliothèque de curseurs extrait le reste du jeu de résultats et récupère ensuite l’ensemble de lignes actuel à partir de son cache avant d’exécuter une instruction UPDATE ou DELETE positionnée. Si l’application appelle ensuite une fonction qui retourne des métadonnées dans un jeu de résultats (par exemple, **SQLNumResultCols** ou **SQLDescribeCol**), la bibliothèque de curseurs retourne une erreur.  
+-   Si le conducteur ne prend en charge qu’une seule déclaration active, la bibliothèque de curseurs récupère le reste de l’ensemble de résultats, puis refoigne le jeu de ligne actuel de son cache avant d’exécuter une mise à jour ou une déclaration de suppression positionnée. Si l’application appelle alors une fonction qui renvoie les métadonnées dans un ensemble de résultats (par exemple, **SQLNumResultCols** ou **SQLDescribeCol),** la bibliothèque de curseurs renvoie une erreur.  
   
--   Si une instruction UPDATE ou DELETE positionnée est exécutée sur une colonne d’une table qui comprend une colonne timestamp qui est automatiquement mise à jour chaque fois qu’une mise à jour est effectuée, toutes les instructions Update ou DELETE positionnées suivantes échouent si la colonne timestamp est indépendantes. Cela est dû au fait que l’instruction UPDATE ou DELETE recherchée créée par la bibliothèque de curseurs n’identifie pas correctement la ligne à mettre à jour. La valeur de l’instruction recherchée pour la colonne timestamp ne correspondra pas à la valeur mise à jour automatiquement de la colonne timestamp.
+-   Si une mise à jour ou une déclaration de suppression positionnée est effectuée sur une colonne d’une table qui comprend une colonne timetamp qui est automatiquement mise à jour chaque fois qu’une mise à jour est effectuée, toutes les mises à jour ou supprimer les instructions ultérieures échoueront si la colonne timetamp est liée. Cela se produit parce que la mise à jour recherchée ou supprimer l’instruction que la bibliothèque de curseur crée n’identifiera pas avec précision la ligne à mettre à jour. La valeur de l’instruction recherchée pour la colonne de timestamp ne correspondra pas à la valeur automatiquement mise à jour de la colonne de timestamp.

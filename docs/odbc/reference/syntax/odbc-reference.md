@@ -1,5 +1,5 @@
 ---
-title: Référence ODBC | Microsoft Docs
+title: Référence ODBC (fr) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - API reference [ODBC]
 - ODBC [ODBC], API reference
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290529"
 ---
 # <a name="odbc-reference"></a>Informations de référence sur ODBC
-Les rubriques suivantes contiennent la syntaxe et les informations sémantiques pour toutes les fonctions ODBC.  
+Les sujets suivants contiennent des informations syntaxiques et sémantiques pour toutes les fonctions de l’ODBC.  
   
 -   [Récapitulatif des fonctions](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ Les rubriques suivantes contiennent la syntaxe et les informations sémantiques 
   
 -   [Informations de référence sur l’API de la DLL de configuration](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Référence de l’API DLL du programme d’installation](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [Installateur DLL API Référence](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [Référence des fonctions de la DLL de traduction](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Traduction DLL Fonction Référence](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Informations de référence sur l’interface SPI ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

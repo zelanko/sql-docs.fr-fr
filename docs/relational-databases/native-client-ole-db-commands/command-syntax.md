@@ -1,5 +1,5 @@
 ---
-title: Syntaxe de commande | Microsoft Docs
+title: Syntaxe de la commande | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], command syntax
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88ba95d4664d4ec3247fbd37c4eb33c37410cd6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2d06b72d21dec6e335ef438f0be7838cee4a1231
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790665"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304492"
 ---
 # <a name="command-syntax"></a>Syntaxe de la commande
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client reconnaît la syntaxe de commande spécifiée par la macro DBGUID_SQL. Pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, le spécificateur indique qu’un amalgame de ODBC SQL, ISO et [!INCLUDE[tsql](../../includes/tsql-md.md)] est une syntaxe valide. Par exemple, l'instruction SQL suivante utilise une séquence d'échappement ODBC SQL pour spécifier la fonction de chaîne LCASE :  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB reconnaît la syntaxe de commande spécifiée par la macro DBGUID_SQL. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de DB OLE de client autochtone, le spécificateur [!INCLUDE[tsql](../../includes/tsql-md.md)] indique qu’un amalgame de ODBC SQL, ISO, et est une syntaxe valide. Par exemple, l'instruction SQL suivante utilise une séquence d'échappement ODBC SQL pour spécifier la fonction de chaîne LCASE :  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -38,10 +38,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client traite les deux formes de l’instruction avec succès lorsqu’il est spécifié sous forme de texte pour une commande.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de DB OLE du client autochtone traite avec succès l’une ou l’autre forme de la déclaration lorsqu’il est spécifié comme texte pour une commande.  
   
 ## <a name="stored-procedures"></a>Procédures stockées  
- Lors de l’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une procédure stockée à l’aide d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commande du fournisseur OLE DB Native Client, utilisez la séquence d’échappement ODBC Call dans le texte de la commande. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client utilise ensuite le mécanisme d’appel de procédure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante de pour optimiser le traitement des commandes. Par exemple, l'instruction ODBC SQL suivante correspond à un texte de commande préféré par rapport à la forme [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+ Lors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une procédure stockée à l’aide d’une commande de fournisseur de DB OLE Native Client, utilisez la séquence d’évacuation ODBC CALL dans le texte de commande. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de DB OLE native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise ensuite le mécanisme d’appel de procédure à distance pour optimiser le traitement des commandes. Par exemple, l'instruction ODBC SQL suivante correspond à un texte de commande préféré par rapport à la forme [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 -   ODBC SQL  
   

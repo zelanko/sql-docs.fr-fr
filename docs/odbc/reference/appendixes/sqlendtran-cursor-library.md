@@ -1,5 +1,5 @@
 ---
-title: SQLEndTran (bibliothèque de curseurs) | Microsoft Docs
+title: SQLEndTran (Cursor Library) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f713f9a0c96aaf3798cf160e648404470e3a4363
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2277a67cd5410ea3c2a5d5b03b16d4533ed6ee1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304769"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (bibliothèque de curseurs)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
   
- Cette rubrique traite de l’utilisation de la fonction **SQLEndTran** dans la bibliothèque de curseurs. Pour obtenir des informations générales sur **SQLEndTran**, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ Ce sujet traite de l’utilisation de la fonction **SQLEndTran** dans la bibliothèque de curseurs. Pour plus d’informations sur **SQLEndTran**, voir [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
- La bibliothèque de curseurs ne prend pas en charge les transactions et transmet directement les appels à **SQLEndTran** au pilote. Toutefois, la bibliothèque de curseurs prend en charge les comportements de validation et de restauration de curseur tels qu’ils sont retournés par la source de données avec les types d’informations SQL_CURSOR_ROLLBACK_BEHAVIOR et SQL_CURSOR_COMMIT_BEHAVIOR :  
+ La bibliothèque de curseurs ne prend pas en charge les transactions et transmet les appels au **SQLEndTran** directement au conducteur. Cependant, la bibliothèque de curseur prend en charge les comportements de validation et de restauration du curseur tels que retournés par la source de données avec les types d’information SQL_CURSOR_ROLLBACK_BEHAVIOR et SQL_CURSOR_COMMIT_BEHAVIOR :  
   
--   Pour les sources de données qui conservent des curseurs sur des transactions, les modifications qui sont restaurées dans la source de données ne sont pas restaurées dans le cache de la bibliothèque de curseurs. Pour que le cache corresponde aux données de la source de données, l’application doit fermer et rouvrir le curseur.  
+-   Pour les sources de données qui préservent les curseurs dans toutes les transactions, les modifications qui sont annulées dans la source de données ne sont pas retournées dans le cache de la bibliothèque de curseurs. Pour faire correspondre le cache des données dans la source de données, l’application doit fermer et rouvrir le curseur.  
   
--   Pour les sources de données qui ferment des curseurs au niveau des limites de transaction, la bibliothèque de curseurs ferme les curseurs et supprime les caches pour toutes les instructions sur la connexion.  
+-   Pour les sources de données qui ferment les curseurs aux limites des transactions, la bibliothèque de curseurs ferme les curseurs et supprime les caches pour toutes les instructions sur la connexion.  
   
--   Pour les sources de données qui suppriment des instructions préparées au niveau des limites des transactions, l’application doit repréparer toutes les instructions préparées sur la connexion avant de les réexécuter.
+-   Pour les sources de données qui suppriment les relevés préparés aux limites des transactions, l’application doit reporéser toutes les déclarations préparées sur la connexion avant de les réexaminer.

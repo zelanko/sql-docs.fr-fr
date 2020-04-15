@@ -1,5 +1,5 @@
 ---
-title: Liaison de colonnes | Microsoft Docs
+title: Colonnes de liaison Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a634a553672b83931091056dd489f7559c4269b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fca4cfb1455c91ca57f7b1769266e2040d6a3511
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106213"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301820"
 ---
 # <a name="binding-columns"></a>Liaison de colonnes
-Les données extraites de la source de données sont retournées à l’application dans les variables que l’application a allouées à cet effet. Avant de pouvoir effectuer cette opération, l’application doit associer, ou *lier*, ces variables aux colonnes du jeu de résultats. Conceptuellement, ce processus est identique à la liaison de variables d’application à des paramètres d’instruction. Lorsque l’application lie une variable à une colonne de jeu de résultats, elle décrit cette adresse variable, le type de données, et ainsi de suite, le pilote. Le pilote stocke ces informations dans la structure qu’il gère pour cette instruction et utilise ces informations pour retourner la valeur de la colonne lors de l’extraction de la ligne.  
+Les données récupérées à partir de la source de données sont retournées à l’application dans les variables que l’application a allouées à cette fin. Avant que cela puisse être fait, l’application doit associer, ou *lier,* ces variables aux colonnes de l’ensemble de résultat; conceptuellement, ce processus est le même que les variables d’application contraignantes aux paramètres d’énoncé. Lorsque l’application lie une variable à une colonne d’ensemble de résultats, elle décrit cette variable - adresse, type de données, etc. - au pilote. Le conducteur stocke ces informations dans la structure qu’il maintient pour cette déclaration et utilise les informations pour retourner la valeur de la colonne lorsque la rangée est récupérée.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Liaison des colonnes d’un ensemble de résultats](../../../odbc/reference/develop-app/binding-result-set-columns.md)  
   

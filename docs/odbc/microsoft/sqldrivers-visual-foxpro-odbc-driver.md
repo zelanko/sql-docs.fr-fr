@@ -1,5 +1,5 @@
 ---
-title: SQLDrivers (pilote ODBC Visual FoxPro) | Microsoft Docs
+title: SQLDrivers (Visual FoxPro ODBC Driver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDrivers function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 809ea368225809fa88e6902dd6f437ee81cb39d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b75d1cc79a5fe2b3113a6d65345956d5ea801f5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053870"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307080"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Soutien: Complet  
   
- Conformité de l’API ODBC : niveau 2  
+ Conformité API ODBC: Niveau 2  
   
- Répertorie les descriptions des pilotes et les mots clés des attributs du pilote.  
+ Répertorie les descriptions des pilotes et les mots clés d’attribut du conducteur.  
   
- Pour plus d’informations, consultez [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) dans le *Guide de référence du programmeur ODBC*.
+ Pour plus d’informations, voir [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) dans la *référence du programmeur ODBC*.

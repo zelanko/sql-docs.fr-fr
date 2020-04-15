@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (pilote Paradox) | Microsoft Docs
+title: SQLSetConnectOption (Pilote Paradox) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLSetConnectOption
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cf6d01650b86fca4c782521fe3c368f729e6b42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06a90a83e2cbf24e6e85a67d961684c230bca924
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67897769"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301490"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (pilote Paradox)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote Paradox. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Ce sujet fournit des informations spécifiques à Paradox Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Commentaire|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être défini sur SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le pilote n’empêche pas les mises à jour si SQL_ACCESS_MODE est défini sur SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Le pilote Paradox prend uniquement en charge les SQL_AUTOCOMMIT ayant la valeur ON (État par défaut), car ils ne prennent pas en charge les transactions.|  
-|SQL_CURRENT_QUALIFIER| Pris en charge.|  
+|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être réglé à SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le conducteur n’empêche pas les mises à jour si SQL_ACCESS_MODE est configuré pour SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Le pilote Paradox ne prend en charge SQL_AUTOCOMMIT être réglé sur ON (l’état par défaut), parce qu’ils ne prennent pas en charge les transactions.|  
+|SQL_CURRENT_QUALIFIER|Pris en charge.|  
 |SQL_LOGIN_TIMEOUT|Non pris en charge.|  
-|SQL_OPT_TRACE| Pris en charge.|  
-|SQL_OPT_TRACEFILE| Pris en charge.|  
+|SQL_OPT_TRACE|Pris en charge.|  
+|SQL_OPT_TRACEFILE|Pris en charge.|  
 |SQL_PACKET_SIZE|Non pris en charge.|  
 |SQL_QUIET_MODE|Non pris en charge.|  
 |SQL_TRANSLATE_DLL|Non pris en charge.|  
