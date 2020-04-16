@@ -1,5 +1,5 @@
 ---
-title: DefinedSize, exemple de propriété (VC + +) | Microsoft Docs
+title: Exemple de propriété definedSize (VCMD) Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "76939583"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize, exemple de propriété (VC++)
-Cet exemple illustre la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la table **Employees** de la base de données *Northwind* . Ensuite, la modification des valeurs du [champ](../../../ado/reference/ado-api/field-object.md) FirstName d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur la table **Employees** s’affiche. Notez que, par défaut, le champ FirstName est complété par des espaces après avoir redéfini la propriété **DefinedSize** .  
+Cet exemple démontre la propriété [definedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinira la taille de la colonne FirstName de la table **employés** de la base de données *Northwind.* Ensuite, le changement dans les valeurs du [champ](../../../ado/reference/ado-api/field-object.md) FirstName d’un [Dossier basé](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table **des employés** est affiché. Notez que par défaut, le champ FirstName devient rembourré d’espaces après avoir redéfini la propriété **DefinedSize.**  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +163,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize, propriété (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
