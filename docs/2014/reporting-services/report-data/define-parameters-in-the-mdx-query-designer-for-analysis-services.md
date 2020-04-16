@@ -1,5 +1,5 @@
 ---
-title: Définir des paramètres dans le concepteur de requêtes MDX pour Analysis Services (Générateur de rapports et SSRS) | Microsoft Docs
+title: Définir paramètres dans le MDX Query Designer for Analysis Services (Report Builder et SSRS) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd352eccbe0cba2d29c7c446eef00bea5415084d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176907"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388534"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services (Générateur de rapports et SSRS)
   Pour paramétrer une requête MDX pour une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vous devez ajouter un paramètre de requête à la requête. Dans le Concepteur de requêtes MDX, vous pouvez ajouter un paramètre de requête à la fois en mode Création et en mode Requête en spécifiant un filtre. Après avoir défini la requête avec un paramètre de requête, Reporting Services crée automatiquement un paramètre de rapport et un dataset pour fournir la liste des valeurs valides. Cela permet à un utilisateur de spécifier une valeur transmise directement à la requête.
@@ -59,7 +59,7 @@ ms.locfileid: "78176907"
 
 2.  Dans la barre d'outils, cliquez sur **Création** pour passer au mode Requête.
 
-3.  Dans la barre d’outils du Concepteur de requêtes MDX, cliquez sur **Paramètres de la requête** (![Icône de la boîte de dialogue Paramètres de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")). La boîte de dialogue Paramètres de la requête s'ouvre.
+3.  Dans la barre d’outils du Concepteur de requêtes MDX, cliquez sur **Paramètres de la requête** (![Icône de la boîte de dialogue Paramètres de la requête](../../analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")). La boîte de dialogue Paramètres de la requête s'ouvre.
 
 4.  Dans la colonne **Paramètre**, cliquez sur **\<Entrez le paramètre**, puis tapez le nom d’un paramètre.
 
@@ -82,6 +82,6 @@ ms.locfileid: "78176907"
      Pour afficher le dataset qui fournit des valeurs disponibles pour le paramètre de rapport, cliquez avec le bouton droit sur tout espace vide dans le volet des données de rapport, puis cliquez sur **Afficher les datasets masqués**. Le volet des données de rapport affiche tous les datasets dans le rapport.
 
 ## <a name="see-also"></a>Voir aussi
- [Type de connexion Analysis Services pour mdx &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services interface utilisateur du concepteur de requêtes MDX](analysis-services-mdx-query-designer-user-interface.md)
+ [Analyse Services Type de connexion pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)
 
 

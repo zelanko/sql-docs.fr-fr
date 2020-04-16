@@ -1,6 +1,6 @@
 ---
 title: Bonnes pratiques pour Data Migration Assistant
-description: Découvrez les meilleures pratiques pour la migration de bases de données SQL Server avec Assistant Migration de données
+description: Apprenez les meilleures pratiques pour la migration des bases de données SQL Server avec Data Migration Assistant
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e0f81a49af551836881ca71b49ff6a15d22a9897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f2bfbb79a8a4803bb56e3dce85f575e8cf257b4a
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76162620"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388153"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de l’assistant Migration de données
-Cet article fournit des informations sur les meilleures pratiques pour l’installation, l’évaluation et la migration.
+Cet article fournit quelques informations sur les meilleures pratiques pour l’installation, l’évaluation et la migration.
 
 ## <a name="installation"></a>Installation
-N’installez pas et n’exécutez pas le Assistant Migration de données directement sur l’ordinateur hôte SQL Server.
+N’installez pas et n’exécutez pas l’assistant de migration de données directement sur la machine d’hôte SQL Server.
 
 ## <a name="assessment"></a>Évaluation
-- Exécuter des évaluations sur les bases de données de production pendant les heures creuses.
-- Pour réduire la durée de l’évaluation, vous pouvez effectuer des analyses de **compatibilité** et de **nouvelles recommandations** sur les fonctionnalités séparément.
+- Exécuter des évaluations sur les bases de données de production pendant les périodes de pointe.
+- Effectuer les **questions de compatibilité** et **les nouvelles évaluations des recommandations** de fonctionnalités séparément pour réduire la durée de l’évaluation.
 
 ## <a name="migration"></a>Migration
-- Migrez un serveur en dehors des heures de pointe.
+- Migrez un serveur pendant les heures de pointe.
 
-- Lors de la migration d’une base de données, fournissez un emplacement de partage unique accessible par le serveur source et le serveur cible, et évitez une opération de copie si possible. Une opération de copie peut introduire un délai en fonction de la taille du fichier de sauvegarde. L’opération de copie augmente également les risques d’échec d’une migration en raison d’une étape supplémentaire. Lorsqu’un emplacement unique est fourni, Assistant Migration de données ignore l’opération de copie.
+- Lorsque vous migrez une base de données, fournissez une localisation d’action unique accessible par le serveur source et le serveur cible, et évitez une opération de copie si possible. Une opération de copie peut introduire un retard en fonction de la taille du fichier de sauvegarde. L’opération de copie augmente également les chances qu’une migration échoue en raison d’une étape supplémentaire. Lorsqu’un seul emplacement est fourni, Data Migration Assistant contourne l’opération de copie.
  
-    En outre, assurez-vous que pour fournir les autorisations appropriées au dossier partagé afin d’éviter les échecs de migration. Les autorisations appropriées sont spécifiées dans l’outil. Si une instance de SQL Server s’exécute sous informations d’identification de service réseau, attribuez les autorisations appropriées sur le dossier partagé au compte d’ordinateur pour l’instance de SQL Server.
+    En outre, assurez-vous que de fournir les autorisations correctes au dossier partagé pour éviter les défaillances de migration. Les autorisations correctes sont spécifiées dans l’outil. Si une instance SQL Server s’exécute sous les informations d’identification du service réseau, donnez les autorisations correctes sur le dossier partagé au compte de la machine pour l’instance SQL Server.
 
-- Activez le chiffrement de la connexion lors de la connexion aux serveurs source et cible. L’utilisation du chiffrement SSL augmente la sécurité des données transmises sur les réseaux entre Assistant Migration de données et l’instance de SQL Server, ce qui est particulièrement utile lors de la migration de connexions SQL. Si le chiffrement SSL n’est pas utilisé et que le réseau est compromis par une personne malveillante, les connexions SQL en cours de migration peuvent être interceptées et/ou modifiées à la volée par l’attaquant.
+- Activez la connexion de chiffrement lors de la connexion aux serveurs source et cible. L’utilisation du chiffrement TLS augmente la sécurité des données transmises sur les réseaux entre Data Migration Assistant et l’instance SQL Server, ce qui est bénéfique en particulier lors de la migration des connexions SQL. Si le chiffrement TLS n’est pas utilisé et que le réseau est compromis par un attaquant, les connexions SQL migrées pourraient être interceptées et/ou modifiées à la volée par l’attaquant.
 
-    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire requise pour chiffrer et déchiffrer les paquets. Pour plus d’informations, consultez [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances parce que les frais généraux supplémentaires sont nécessaires pour chiffrer et déchiffrer les paquets. Pour plus d’informations, veuillez consulter [le site de cryptage des connexions vers SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
     
-- Vérifiez les contraintes non fiables sur la base de données source et la base de données cible avant de migrer les données. Après la migration, analysez de nouveau la base de données cible pour voir si des contraintes n’ont pas été approuvées dans le cadre du déplacement des données. Corrigez les contraintes non fiables en fonction des besoins. Si vous laissez les contraintes non approuvées, vous risquez d’obtenir des plans d’exécution médiocres, et cela peut affecter les performances.
+- Vérifiez les contraintes non fiables tant sur la base de données source que sur la base de données cible avant de migrer les données. Après la migration, analysez à nouveau la base de données cible pour voir si des contraintes ne sont pas fiables dans le cadre du mouvement des données. Fixez les contraintes non fiables au besoin. Laisser les contraintes non fiables peut entraîner de mauvais plans d’exécution, et cela peut affecter les performances.

@@ -1,5 +1,5 @@
 ---
-title: Native Client, mots-clés de connexion SQL
+title: Utilisation de mots clés de chaînes de connexion
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6dd4f0cecc7b2772e82386d552e8b391d6dfd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 86e615d22284c5e22f3c6281caa683becfc35bb0
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303910"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388584"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "81303910"
 |**Sauvegarde de la base de données**|Nom de la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut utilisée pour la connexion. Si **la base de données** n’est pas spécifiée, la base de données par défaut définie pour la connexion est utilisée. La base de données par défaut de la source de données ODBC remplace la base de données par défaut définie pour la connexion. La base de données doit être une base de données existante à moins **qu’AttacheDBFileName** ne soit également spécifiée. Si **AttachDBFileName** est également spécifié, le fichier principal qu’il indique est joint et donné le nom de base de données spécifié par **Database**.|  
 |**Pilote**|Nom du conducteur tel que retourné par [SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md). La valeur de mot clé pour le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est « {SQL Server Native Client 11.0} ». Le mot clé **Serveur** est requis si **le pilote** est spécifié et **driverCompletion** est réglé pour SQL_DRIVER_NOPROMPT.<br /><br /> Pour plus d’informations sur les noms des conducteurs, voir [à l’aide de l’en-tête et des fichiers de bibliothèque de serveurs SQL.](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)|  
 |**Dsn**|Nom d'une source de données utilisateur ou système ODBC existante. Ce mot clé remplace toutes les valeurs qui pourraient être spécifiées dans le **serveur,** le **réseau**et les mots clés **d’adresse.**|  
-|**Encrypt (Chiffrer)**|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
+|**Crypter**|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
 |**Secours**|Ce mot clé est déconseillé et sa valeur est ignorée par le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |**Failover_Partner**|Nom du partenaire de basculement à utiliser s'il est impossible d'établir une connexion au serveur principal.|  
 |**FailoverPartnerSPN**|Nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide. Une chaîne vide fait en sorte que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise le nom principal de service par défaut généré par le pilote.|  
@@ -151,8 +151,8 @@ ms.locfileid: "81303910"
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configure la traduction de caractères OEM/ANSI. Les valeurs reconnues sont « yes » et « no ».|  
 |**Sauvegarde de la base de données**|DBPROP_INIT_CATALOG|Nom de la base de données.|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|Spécifie le mode de gestion de type de données à utiliser. Les valeurs reconnues sont « 0 » pour les types de données de fournisseur et « 80 » pour les types de données SQL Server 2000.|  
-|**Encrypt (Chiffrer)**|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
-|**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|Nom du serveur de basculement utilisé pour la mise en miroir de bases de données.|  
+|**Crypter**|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
+|**FailoverPartner (en)**|SSPROP_INIT_FAILOVERPARTNER|Nom du serveur de basculement utilisé pour la mise en miroir de bases de données.|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|Nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide. Une chaîne vide fait en sorte que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise le nom principal de service par défaut généré par le fournisseur.|  
 |**Language**|SSPROP_INIT_CURRENTLANGUAGE|Langue de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion si le serveur est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  

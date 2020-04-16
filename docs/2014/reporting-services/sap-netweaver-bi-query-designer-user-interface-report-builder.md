@@ -1,5 +1,5 @@
 ---
-title: Interface utilisateur du concepteur de requêtes SAP NetWeaver BI (Générateur de rapports) | Microsoft Docs
+title: SAP NetWeaver BI Query Designer User Interface (Report Builder) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aebffe75cf3644717315cd80c82cc753e3256f57
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: d3dc9e21a9bea5c188b32ccc01b7d1fa6d15fa98
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78174947"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388646"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI (Générateur de rapports)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données SAP NetWeaver® Business Intelligence. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres à partir d'InfoCube, de MultiProvider ou d'une requête Web définie sur la source de données, afin de générer une requête MDX visant à récupérer des données lors du traitement du rapport.
 
 > [!IMPORTANT]
@@ -54,21 +53,21 @@ ms.locfileid: "78174947"
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Non disponible pour ce type de source de données.|
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers.|
 |![Actualiser les champs du dataset](media/rsqdicon-refreshfields.gif "Actualiser les champs du dataset")|Actualise les métadonnées à partir de la source de données.|
-|![Ajouter un membre calculé](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|
-|![Afficher les cellules vides](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|
-|![Exécuter automatiquement la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée, par exemple lorsqu'une colonne est supprimée du volet Données. Les résultats s'affichent dans le volet Données.|
-|![Supprimer](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "DELETE")|Supprime de la requête la colonne sélectionnée dans le volet Données.|
-|![Icône de la boîte de dialogue Paramètres de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")|Affiche la boîte de dialogue **Variables** . Ce bouton est activé uniquement lorsque le cube sélectionné est un cube de requête (car seuls les cubes de requête prennent en charge les variables). Lorsque vous affectez une valeur par défaut à une variable, un paramètre de rapport correspondant est créé.|
-|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|
-|![Annuler la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Annuler la requête")|Annule la requête.|
-|![Passer en mode création](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création")|Bascule entre le mode Création et le mode Requête.|
+|![Ajouter un membre calculé](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|
+|![Basculer pour afficher les cellules vides](../analysis-services/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|
+|![Exécuter automatiquement la requête](../analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée, par exemple lorsqu'une colonne est supprimée du volet Données. Les résultats s'affichent dans le volet Données.|
+|![Supprimer](../analysis-services/media/rsqdicon-delete.gif "DELETE")|Supprime de la requête la colonne sélectionnée dans le volet Données.|
+|![Icône de la boîte de dialogue Paramètres de la requête](../analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")|Affiche la boîte de dialogue **Variables** . Ce bouton est activé uniquement lorsque le cube sélectionné est un cube de requête (car seuls les cubes de requête prennent en charge les variables). Lorsque vous affectez une valeur par défaut à une variable, un paramètre de rapport correspondant est créé.|
+|![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|
+|![Annuler la requête](../analysis-services/media/rsqdicon-cancel.gif "Annuler la requête")|Annule la requête.|
+|![Passer en mode Conception](../analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création")|Bascule entre le mode Création et le mode Requête.|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>Concepteur de requêtes graphique en mode Requête
  Pour basculer vers le mode Requête du concepteur de requêtes graphique, cliquez sur le bouton bascule **Mode Création** dans la barre d'outils.
 
  L'illustration suivante présente les composants du Concepteur de requêtes en mode Requête.
 
- ![Concepteur de requêtes SAP BW MDX en mode Affichage des requêtes](media/rsqd-dssapbw-mdx-querymode.gif "Concepteur de requêtes SAP BW MDX en mode Affichage des requêtes")
+ ![Concepteur de requêtes SAP BW MDX en mode Requête](media/rsqd-dssapbw-mdx-querymode.gif "Concepteur de requêtes SAP BW MDX en mode Requête")
 
  Le tableau ci-dessous décrit la fonction de chaque volet.
 
@@ -91,13 +90,13 @@ ms.locfileid: "78174947"
 
 -   **Modifier en tant que texte**
 
--   **Ajouter un membre calculé** (![Ajouter un membre calculé](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))
+-   **Ajouter un membre calculé** (![Ajouter un membre calculé](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))
 
--   **Afficher les cellules vides** (afficher![/Masquer les cellules vides](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Afficher les cellules vides"))
+-   **Afficher les cellules vides** (![Basculer pour afficher les cellules vides](../analysis-services/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides"))
 
--   **Exécution** automatique (![exécution automatique de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))
+-   **Exécuter automatiquement** (![Exécuter automatiquement la requête](../analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))
 
--   **Supprimer** (![supprimer](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "DELETE"))
+-   **Supprimer** (![Supprimer](../analysis-services/media/rsqdicon-delete.gif "DELETE"))
 
 ## <a name="see-also"></a>Voir aussi
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../../2014/reporting-services/query-designers-report-builder.md)

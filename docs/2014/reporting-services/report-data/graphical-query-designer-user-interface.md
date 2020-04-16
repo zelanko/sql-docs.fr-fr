@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbf2bdf2249209da0c46c7ba4e1dc95df6789c5e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173348"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388547"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes graphique
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md). Pour plus d’informations sur l’utilisation de types de sources de données spécifiques, consultez [Ajouter des données à un rapport &#40;générateur de rapports et SSRS&#41;](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md). Pour plus d’informations sur le travail avec des types spécifiques de source de données, voir [Ajouter des données à un rapport &#40;Report Builder et SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
 ## <a name="graphical-query-designer"></a>Concepteur de requêtes graphique
- Ce concepteur de requêtes graphique prend en charge trois types de commandes de requête : **Text**, **StoredProcedure** ou **TableDirect**. Avant de créer une requête pour votre dataset, vous devez sélectionner une option de type de commande dans la page Requête de la boîte de dialogue [Propriétés du dataset](../dataset-properties-dialog-box-query.md) .
+ Ce concepteur de requêtes graphique prend en charge trois types de commandes de requête : **Text**, **StoredProcedure**ou **TableDirect**. Avant de créer une requête pour votre dataset, vous devez sélectionner une option de type de commande dans la page Requête de la boîte de dialogue [Propriétés du dataset](../dataset-properties-dialog-box-query.md) .
 
  Les options suivantes sont disponibles pour le type de requête :
 
@@ -76,7 +76,7 @@ ms.locfileid: "78173348"
 |![Bouton bascule Afficher/Masquer le volet Grille](../media/rsqdicon-showhidegrid.gif "Bouton bascule Afficher/Masquer le volet Grille")|Affiche ou masque le volet Grille.|
 |![Bouton bascule Afficher/Masquer le volet SQL](../media/rsqdicon-showhidesql.gif "Bouton bascule Afficher/Masquer le volet SQL")|Affiche ou masque le volet SQL.|
 |![Bouton bascule Afficher/Masquer le volet Résultats](../media/rsqdicon-showhideresult.gif "Bouton bascule Afficher/Masquer le volet Résultats")|Affiche ou masque le volet Résultat.|
-|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête.|
+|![Exécuter la requête](../../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête.|
 |![Bouton Vérifier SQL dans le volet SQL](../media/rsqdicon-verifysql.gif "Bouton Vérifier SQL dans le volet SQL")|Vérifie que la syntaxe du texte de la requête est correcte.|
 |![Définir Tri croissant sur le champ sélectionné](../media/rsqdicon-sortascending.gif "Définir Tri croissant sur le champ sélectionné")|Définit l’ordre de tri **Tri croissant** pour la colonne sélectionnée dans le volet Schéma.|
 |![Définir Tri décroissant sur le champ sélectionné](../media/rsqdicon-sortdescending.gif "Définir Tri décroissant sur le champ sélectionné")|Définit l’ordre de tri **Tri décroissant** pour la colonne sélectionnée dans le volet Schéma.|
@@ -84,7 +84,7 @@ ms.locfileid: "78173348"
 |![Utiliser Regrouper par pour le champ sélectionné](../media/rsqdicon-usegroupby.gif "Utiliser Regrouper par pour le champ sélectionné")|Affiche ou masque la colonne **Regrouper par** dans le volet Grille. Quand le bouton bascule **Regrouper par** est activé, une colonne supplémentaire intitulée **Regrouper par** s’affiche dans le volet Grille et chaque valeur pour les colonnes sélectionnées dans la requête prend par défaut la valeur **Regrouper par**, ce qui a pour effet d’inclure la colonne sélectionnée dans une clause GROUP BY dans le texte SQL. Utilisez le bouton Regrouper par pour ajouter automatiquement une clause GROUP BY qui inclut toutes les colonnes dans la clause SELECT. Si votre clause SELECT inclut des appels de fonction d'agrégation (par exemple, SUM(ColumnName)), vous devez inclure chaque colonne de non agrégation dans la clause GROUP BY si vous souhaitez qu'elle s'affiche dans le jeu de résultats.<br /><br /> Pour qu'elle s'affiche dans le volet Résultat, chaque colonne de la requête doit avoir une fonction d'agrégation définie pour être utilisée dans le calcul de la valeur à afficher dans le volet Résultat, ou alors la colonne de la requête doit être spécifiée dans la clause GROUP BY de la requête SQL.|
 |![Ajouter une table au volet Diagramme](../media/rsqdicon-addtable.gif "Ajouter une table au volet Diagramme")|Ajoute une nouvelle table à partir de la source de données dans le volet Diagramme.<br /><br /> **Remarque** Quand vous ajoutez une nouvelle table, le concepteur de requêtes tente de faire correspondre des relations de clé étrangère depuis la source de données. Après avoir ajouté la table, confirmez que les relations de clé étrangère représentées par des liaisons entre les tables sont correctes.|
 
-#### <a name="example"></a> Exemple
+#### <a name="example"></a>Exemple
  La requête suivante retourne la liste des noms depuis la table [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Person **de la base de données** :
 
 ```
@@ -118,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique.|
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers .sql et .rdl sont pris en charge. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
 |![Icône du bouton du concepteur de requêtes générique](../media/icongenericquerydesigner.gif "Icône du bouton du concepteur de requêtes générique")|Bascule entre le Concepteur de requêtes générique et le concepteur de requêtes graphique, tout en conservant le texte de la requête ou la vue de la procédure stockée.|
-|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Sélectionne toutes les colonnes de la table sélectionnée.|
+|![Exécuter la requête](../../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Sélectionne toutes les colonnes de la table sélectionnée.|
 
 ### <a name="command-type-storedprocedure"></a>Type de commande StoredProcedure
  Avec le type **StoredProcedure** , le concepteur de requêtes graphique affiche une liste déroulante des procédures stockées disponibles dans la source de données, ainsi qu’un volet Résultats. Le tableau ci-dessous décrit la fonction de chaque volet.
@@ -135,15 +135,15 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique.|
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers .sql et .rdl sont pris en charge. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
-|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la procédure stockée sélectionnée.|
+|![Exécuter la requête](../../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la procédure stockée sélectionnée.|
 |Liste déroulante Procédure stockée|Cliquez sur la flèche vers le bas pour afficher une liste des procédures stockées disponibles dans la source de données. Cliquez sur une procédure stockée de la liste pour la sélectionner.|
 
-#### <a name="example"></a> Exemple
+#### <a name="example"></a>Exemple
  La procédure stockée suivante appelle une liste de ligne hiérarchique de responsables à partir de la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] . Cette procédure stockée accepte *BusinessEntityID* en tant que paramètre. Vous pouvez spécifier un entier plus petit.
 
  `uspGetEmployeeManagers '1';`
 
-## <a name="see-also"></a> Voir aussi
- [Outils de conception de requête dans Concepteur de rapports SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [Ajouter des données à un rapport &#40;générateur de rapports et SSRS](report-datasets-ssrs.md)&#41;SQL Server [type de connexion &#40;SSRS](sql-server-connection-type-ssrs.md)&#41;[OLE DB type de connexion &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) [Ajouter des données à un rapport &#40;](report-datasets-ssrs.md) de générateur de rapports [Visual Database Tools](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)&#41;de &#40;SSRS&#41;de [configuration](../report-server/rsreportdesigner-configuration-file.md) de [SSRS](oracle-connection-type-ssrs.md) &#40;
+## <a name="see-also"></a>Voir aussi
+ [Les outils de conception de requête dans les outils de données de serveur SQL de report SQL &#40;SSRS&#41;](query-design-tools-ssrs.md) [ajouter des données à un report &#40;Report Builder et SSRS&#41;](report-datasets-ssrs.md) [SQL Server Connection Type &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) [OLE DB Connection Type &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) ajouter des données à un rapport &#40;Report Builder et [SSRS&#41;](report-datasets-ssrs.md) oracle Connection Type &#40;[SSRS&#41;](oracle-connection-type-ssrs.md) [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md) Design Questions and Views [How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
 
 

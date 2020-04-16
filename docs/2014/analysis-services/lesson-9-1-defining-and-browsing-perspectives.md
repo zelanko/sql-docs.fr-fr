@@ -1,5 +1,5 @@
 ---
-title: Définition et exploration des perspectives | Microsoft Docs
+title: Définir et parcourir les perspectives (en anglais seulement) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "69493775"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Définition et exploration de perspectives
@@ -41,7 +41,7 @@ ms.locfileid: "69493775"
   
      ![Nouvelle perspective dans la colonne Nom de perspective](../../2014/tutorials/media/l9-perspectives-2.gif "Nouvelle perspective dans la colonne Nom de perspective")  
   
-3.  Remplacez le nom de la `Internet Sales`perspective par.  
+3.  Changer le nom `Internet Sales`de la perspective à .  
   
 4.  Sur la ligne suivante, affectez à DefaultMeasure la valeur **Internet Sales-Sales Amount**.  
   
@@ -52,37 +52,37 @@ ms.locfileid: "69493775"
   
 5.  Désactivez la case à cocher pour les objets suivants :  
   
-    -   `Reseller Sales`Groupe de mesures  
+    -   `Reseller Sales`groupe de mesure  
   
-    -   Groupe de mesures **Sales quotas**  
+    -   Groupe de mesures**Sales Quotas**  
   
-    -   Groupe de mesures **Sales quotas 1**  
+    -   Groupe de mesures**Sales Quotas 1**  
   
-    -   Dimension de cube **Reseller**  
+    -   Dimension de cube**Reseller**  
   
-    -   Dimension du cube de **géographie du revendeur**  
+    -   Dimension de cube**Reseller Geography**  
   
-    -   Dimension de cube de **secteur de vente**  
+    -   Dimension de cube**Sales Territory**  
   
-    -   Dimension de cube **Employee**  
+    -   Dimension de cube**Employee**  
   
-    -   Dimension de cube de **promotion**  
+    -   Dimension de cube**Promotion**  
   
-    -   **Revenus du revendeur** INDICATEUR  
+    -   Indicateur de performance clé**Reseller Revenue**  
   
-    -   Jeu nommé **grands revendeurs**  
+    -   Jeu nommé**Large Resellers**  
   
-    -   Membre calculé **Total Sales Amount**  
+    -   Membre calculé**Total Sales Amount**  
   
-    -   Membre calculé du **coût total du produit**  
+    -   Membre calculé**Total Product Cost**  
   
-    -   Membre calculé **Reseller GPM**  
+    -   Membre calculé**Reseller GPM**  
   
-    -   Membre calculé **total GPM**  
+    -   Membre calculé**Total GPM**  
   
-    -   Membre calculé **Reseller Sales Ratio to All Products**  
+    -   Membre calculé**Reseller Sales Ratio to All Products**  
   
-    -   Membre calculé **Total Sales Ratio to All Products**  
+    -   Membre calculé**Total Sales Ratio to All Products**  
   
      Ces objets ne concernent pas les ventes par Internet.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493775"
   
 1.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
-2.  Remplacez le nom de la nouvelle perspective par `Reseller Sales`.  
+2.  Changer le nom de `Reseller Sales`la nouvelle perspective à .  
   
 3.  Définissez **Reseller Sales-Sales Amount** comme mesure par défaut.  
   
@@ -101,29 +101,29 @@ ms.locfileid: "69493775"
   
 4.  Désactivez la case à cocher pour les objets suivants :  
   
-    -   `Internet Sales`Groupe de mesures  
+    -   `Internet Sales`groupe de mesure  
   
-    -   Groupe de mesures **Internet Sales Reason**  
+    -   Groupe de mesures**Internet Sales Reason**  
   
-    -   Dimension de cube **Customer**  
+    -   Dimension de cube**Customer**  
   
-    -   Dimension de cube **Internet Sales Order Details**  
+    -   Dimension de cube**Internet Sales Order Details**  
   
-    -   Dimension de cube **Sales Reason**  
+    -   Dimension de cube**Sales Reason**  
   
-    -   Action d’extraction de l’action d’extraction **Internet Sales Details**  
+    -   Action d’extraction**Internet Sales Details Drillthrough Action**  
   
-    -   Membre calculé **Total Sales Amount**  
+    -   Membre calculé**Total Sales Amount**  
   
-    -   Membre calculé du **coût total du produit**  
+    -   Membre calculé**Total Product Cost**  
   
-    -   Membre calculé **Internet GPM**  
+    -   Membre calculé**Internet GPM**  
   
-    -   Membre calculé **total GPM**  
+    -   Membre calculé**Total GPM**  
   
-    -   Membre calculé **Internet Sales Ratio to All Products**  
+    -   Membre calculé**Internet Sales Ratio to All Products**  
   
-    -   Membre calculé **Total Sales Ratio to All Products**  
+    -   Membre calculé**Total Sales Ratio to All Products**  
   
      Ces objets ne concernent pas les ventes de revendeurs.  
   
@@ -131,34 +131,34 @@ ms.locfileid: "69493775"
   
 1.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
-2.  Remplacez le nom de la nouvelle perspective par `Sales Summary`.  
+2.  Changer le nom de `Sales Summary`la nouvelle perspective à .  
   
     > [!NOTE]  
     >  Vous ne pouvez pas spécifier une mesure calculée comme mesure par défaut.  
   
 3.  Désactivez la case à cocher pour les objets suivants :  
   
-    -   `Internet Sales`Groupe de mesures  
+    -   `Internet Sales`groupe de mesure  
   
-    -   `Reseller Sales`Groupe de mesures  
+    -   `Reseller Sales`groupe de mesure  
   
-    -   Groupe de mesures **Internet Sales Reason**  
+    -   Groupe de mesures**Internet Sales Reason**  
   
-    -   Groupe de mesures **Sales quotas**  
+    -   Groupe de mesures**Sales Quotas**  
   
-    -   Groupe de mesures **Sales Quotas1**  
+    -   Groupe de mesures**Sales Quotas1**  
   
-    -   Dimension de cube **Internet Sales Order Details**  
+    -   Dimension de cube**Internet Sales Order Details**  
   
-    -   Dimension de cube **Sales Reason**  
+    -   Dimension de cube**Sales Reason**  
   
-    -   Action d’extraction de l’action d’extraction **Internet Sales Details**  
+    -   Action d’extraction**Internet Sales Details Drillthrough Action**  
   
 4.  Activez la case à cocher pour les objets suivants :  
   
-    -   Mesure **Internet Sales Count**  
+    -   Mesure**Internet Sales Count**  
   
-    -   Mesure **Reseller Sales Count**  
+    -   Mesure**Reseller Sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Exploration du cube à travers chaque perspective  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493775"
   
      ![Assistant Connexion de données dans Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistant Connexion de données dans Excel")  
   
-6.  Sélectionnez `Internet Sales` dans la liste **perspective** , puis examinez les mesures et les dimensions dans le volet métadonnées.  
+6.  Sélectionnez `Internet Sales` dans la liste **Perspective,** puis examinez les mesures et les dimensions du volet métadonnées.  
   
      Observez que seuls les objets spécifiés pour la perspective Internet Sales apparaissent.  
   
 7.  Dans le volet de métadonnées, développez **Mesures**.  
   
-     Notez que seul le `Internet Sales` groupe de mesures apparaît, ainsi que les membres calculés **Internet GPM** et **Internet Sales Ratio to All Products** .  
+     Notez que `Internet Sales` seul le groupe de mesure apparaît, ainsi que le **GPM Internet** et **le ratio de ventes Internet à tous les produits** calculés membres.  
   
 8.  Dans le modèle, sélectionnez à nouveau Excel. Sélectionnez `Sales Summary`.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493775"
  [Définition et exploration de traductions](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Différente](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspectives dans les modèles multidimensionnels](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

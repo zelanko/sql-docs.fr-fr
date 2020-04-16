@@ -1,5 +1,5 @@
 ---
-title: Native Client, mise à jour app SQL de MDAC
+title: Mise à jour de l’ACDM
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f913cd28ddd787939a89838bfef08ba78772c9ca
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: e1651eecd3238f737adfe82cfef0d574b5312b6c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302465"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388276"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "81302465"
   
     -   Reconfigurer  
   
-    -   Éteindre  
+    -   Shutdown  
   
     -   Tuer  
   
@@ -98,7 +98,7 @@ ms.locfileid: "81302465"
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
-    |**varbinaire(max)**|**Image**|  
+    |**varbinary(max)**|**image**|  
     |**Udt**|**varbinary**|  
     |**xml**|**ntext**|  
   

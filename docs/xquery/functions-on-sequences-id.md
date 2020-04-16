@@ -1,5 +1,6 @@
 ---
-title: ID, fonction (XQuery) | Microsoft Docs
+title: Id Fonction (XQuery) Microsoft Docs
+description: Apprenez à utiliser la fonction XQuery id pour retourner une séquence d’éléments dans l’instance XML, dans l’ordre de document, avec les valeurs xs:IDREF fournies.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68004660"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388513"
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences : id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la séquence de nœuds d’élément avec des valeurs XS : ID qui correspondent aux valeurs d’une ou plusieurs des valeurs XS : IDREF fournies dans *$arg*.  
+  Retourne la séquence des nœuds d’élément avec xs:ID valeurs qui correspondent aux valeurs d’un ou plusieurs des xs:IDREF valeurs fournies dans *$arg*.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,20 +45,20 @@ fn:id($arg as xs:IDREF*) as element()*
  Si la valeur xs:IDREF ne correspond à aucun élément, la fonction renvoie la séquence vide.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
+ Ce sujet fournit des exemples XQuery contre les instances XML qui sont stockées dans diverses colonnes de type **xml** dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>R. Récupération des éléments en fonction de la valeur de l'attribut IDREF  
- L’exemple suivant utilise FN : ID pour récupérer les <`employee`> éléments, en fonction de l’attribut IDREF Manager. Dans cet exemple, l'attribut manager est de type IDREF et l'attribut eid est de type ID.  
+ L’exemple suivant utilise fn:id pour `employee` récupérer les éléments <>, basé sur l’attribut du gestionnaire de l’IDREF. Dans cet exemple, l'attribut manager est de type IDREF et l'attribut eid est de type ID.  
   
- Pour une valeur d’attribut Manager spécifique, la fonction **ID ()** recherche le `employee` <> élément dont la valeur de l’attribut type d’ID correspond à la valeur IDREF d’entrée. En d’autres termes, pour un employé spécifique, la fonction **ID ()** retourne le responsable de l’employé.  
+ Pour une valeur d’attribut spécifique de gestionnaire, la `employee` fonction **id()** trouve le <> élément dont la valeur d’attribut de type ID correspond à la valeur IDREF d’entrée. En d’autres termes, pour un employé en particulier, la fonction **id()** renvoie le gestionnaire d’employés.  
   
  Voici ce qui se passe dans l'exemple :  
   
 -   Une collection de schémas XML est créée.  
   
--   Une variable **XML** typée est créée à l’aide de la collection de schémas XML.  
+-   Une variable **xml** dactylographiée est créée à l’aide de la collection de schémas XML.  
   
--   La requête récupère l’élément qui a une valeur d’attribut ID référencée par l’attribut **Manager** IDREF de l’élément `employee` <>.  
+-   La requête récupère l’élément qui a une valeur d’attribut ID référencée par **l’attribut IDREF gestionnaire** de l’élément `employee` <>.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -98,9 +99,9 @@ Go
  La requête renvoie la valeur « Dave », ce qui indique que Dave est le supérieur hiérarchique de Joe.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Récupération des éléments en fonction de la valeur de l'attribut IDREFS OrderList  
- Dans l’exemple suivant, l’attribut OrderList de l’élément `Customer` <> est un attribut de type IDREFS. Il répertorie les ID de commande se rapportant à un client particulier. Pour chaque ID de commande, il existe un `Order` <> élément enfant sous le `Customer` <> fournissant la valeur de la commande.  
+ Dans l’exemple suivant, l’attribut OrderList `Customer` du <> élément est un attribut de type IDREFS. Il répertorie les ID de commande se rapportant à un client particulier. Pour chaque pièce d’identité de `Order` commande, il y a un `Customer` <> enfant élément sous le <> fournissant la valeur de commande.  
   
- L'expression de la requête, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, récupère la première valeur de la liste IDREFS pour le premier client. Cette valeur est ensuite transmise à la fonction **ID ()** . La fonction recherche ensuite le <`Order`> élément dont la valeur d’attribut OrderID correspond à l’entrée de la fonction **ID ()** .  
+ L'expression de la requête, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, récupère la première valeur de la liste IDREFS pour le premier client. Cette valeur est ensuite transmise à la fonction **id()** . La fonction trouve alors le `Order` <> élément dont la valeur d’attribut OrderID correspond à l’entrée à la fonction **id()** .  
   
 ```  
 drop xml schema collection SC  
@@ -176,9 +177,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ne prend pas en charge la version à deux arguments de **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]n’appuie pas la version à deux arguments **d’id()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]requiert que le type d’argument **ID ()** soit un sous-type de XS : IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]exige que le type **d’id d’argument()** soit un sous-type de xs : IDREFMD.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions sur les séquences](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

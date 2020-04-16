@@ -1,5 +1,6 @@
 ---
-title: 'Recevoir des références URL à des données BLOB avec SQL : encode (SQLXML)'
+title: Obtenez des références URL aux données BLOB avec sql:encode (SQLXML)
+description: Découvrez comment demander une référence URL aux données BLOB en spécifiant l’annotation sql:encode dans SQLXML 4.0.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,33 +21,33 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1cd65cce635c89cb7ece1b88851d5f4a9b7cb09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 487ed2bbee997db22739bdeecd7e024b817ace80
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257418"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388119"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Demande de références URL à des données BLOB à l'aide de sql:encode (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dans un schéma XSD annoté, lorsqu'un attribut (ou élément) est mappé à une colonne BLOB dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les données sont retournées au format encodé en base 64 dans XML.  
   
- Si vous souhaitez qu’une référence aux données (un URI) soit retournée et puisse être utilisée ultérieurement pour récupérer les données BLOB dans un format binaire, spécifiez l’annotation **SQL : encode** . Vous pouvez spécifier **SQL : encode** sur un attribut ou un élément de type simple.  
+ Si vous souhaitez qu’une référence aux données (un URI) soit retournée qui peut être utilisée plus tard pour récupérer les données BLOB dans un format binaire, spécifiez **l’annotation sql:encode.** Vous pouvez spécifier **sql:encode** sur un attribut ou un élément de type simple.  
   
- Spécifiez l’annotation **SQL : encode** pour indiquer qu’une URL vers le champ doit être retournée à la place de la valeur du champ. **SQL : encode** dépend de la clé primaire pour générer une sélection Singleton dans l’URL. La clé primaire peut être spécifiée à l’aide de l’annotation **SQL : key-fields** .  
+ Spécifier **l’annotation sql:encoder** pour indiquer qu’une URL sur le champ doit être retournée au lieu de la valeur du champ. **sql:encode** dépend de la clé principale pour générer une sélection de singleton dans l’URL. La clé principale peut être spécifiée à l’aide de **l’annotation sql:key-fields.**  
   
- L’annotation **SQL : encode** peut recevoir la valeur « URL » ou « default ». Une valeur « default » retourne des données au format encodé en base 64.  
+ Le **sql:** l’annotation de code peut être attribué la valeur "url" ou "par défaut". Une valeur « default » retourne des données au format encodé en base 64.  
   
- L’annotation **SQL : encode** ne peut pas être utilisée avec **SQL : use-cdata** ou sur les types d’attributs ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS. Elle ne peut pas non plus être utilisée avec l’attribut **fixed** XSD.  
+ L’annotation **sql:encode** ne peut pas être utilisée avec **sql:use-cdata** ou sur l’ID, IDREF, IDREFS, NMTOKEN, ou NMTOKENS types d’attributs. Il ne peut pas non plus être utilisé avec l’attribut **fixe** XSD.  
   
 > [!NOTE]  
 >  Les colonnes de type BLOB ne peuvent pas être utilisées en tant que partie d'une clé ou d'une clé étrangère.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, voir [Exigences pour l’exécution des exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>R. Spécification de sql:encode pour obtenir une référence URL à des données BLOB  
- Dans cet exemple, le schéma de mappage spécifie **SQL : encode** sur l’attribut **LargePhoto** pour récupérer la référence URI à une photo de produit spécifique (au lieu de récupérer les données binaires dans un format encodé en base 64).  
+ Dans cet exemple, le schéma de cartographie spécifie **sql:encode** sur l’attribut **LargePhoto** pour récupérer la référence URI à une photo de produit spécifique (au lieu de récupérer les données binaires dans le format base 64-encoded).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -84,7 +85,7 @@ ms.locfileid: "75257418"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, voir [Utiliser ADO pour exécuter SQLXML 4.0 Requêtes](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le résultat obtenu :  
   
