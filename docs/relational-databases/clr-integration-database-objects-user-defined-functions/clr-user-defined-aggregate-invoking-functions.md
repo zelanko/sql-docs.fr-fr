@@ -1,5 +1,6 @@
 ---
-title: Appel de fonctions d’agrégation CLR définies par l’utilisateur | Microsoft Docs
+title: Invoquer les fonctions d’agrégats définies par l’utilisateur CLR (fr) Microsoft Docs
+description: Dans l’intégration SQL Server CLR, utilisez Transact-SQL SELECT pour invoquer les agrégats définis par l’utilisateur CLR, sous réserve des règles qui s’appliquent aux fonctions agrégées du système.
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028374"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488408"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agrégats CLR définis par l’utilisateur -Appel de fonctions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

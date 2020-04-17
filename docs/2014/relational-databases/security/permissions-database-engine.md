@@ -18,27 +18,27 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128764"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487156"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
   Chaque élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des autorisations associées qui peuvent être accordées à un principal. Cette rubrique fournit les informations suivantes :  
   
--   [Conventions de dénomination des autorisations](#_conventions)  
+-   [Conventions de noms d'autorisations](#_conventions)  
   
 -   [Autorisations relatives à des éléments sécurisables spécifiques](#_securables)  
   
--   [Autorisations de SQL Server](#_permissions)  
+-   [Autorisations SQL Server](#_permissions)  
   
 -   [Algorithme de vérification des autorisations](#_algorithm)  
   
 -   [Exemples](#_examples)  
   
-##  <a name="_conventions"></a> Conventions des noms des autorisations  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Autorisations nommant des conventions  
  La section ci-après décrit les conventions générales qui sont suivies pour affecter des noms aux autorisations.  
   
 -   CONTROL  
@@ -49,11 +49,11 @@ ms.locfileid: "63128764"
   
      Confère la capacité de modifier les propriétés, excepté l'appartenance, d'un élément sécurisable particulier. Lorsque ALTER est accordé sur une portée, ALTER octroie également la capacité de modifier, de créer ou de supprimer tous les éléments sécurisables contenus dans cette portée. Par exemple, l'autorisation ALTER sur un schéma inclut la capacité de créer, de modifier et de supprimer les objets du schéma.  
   
--   ALTER ANY \<*Élément sécurisable du serveur*>, où *Élément sécurisable du serveur* désigne n’importe quel élément sécurisable du serveur.  
+-   ALTER \<N’importe quel *serveur titrable*>, où *Server Securable* peut être n’importe quel serveur titrable.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable du serveur*. Par exemple, ALTER ANY LOGIN confère la capacité de créer, de modifier ou de supprimer n'importe quelle connexion dans l'instance.  
   
--   ALTER ANY \<*Élément sécurisable de base de données*>, où *Élément sécurisable de base de données* désigne n’importe quel élément sécurisable au niveau de la base de données.  
+-   ALTER \<N’importe quelle *base de données> récurable,* où la base de données *titrable* peut être n’importe quelle titrable au niveau de la base de données.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable de base de données*. Par exemple, ALTER ANY SCHEMA confère la capacité de créer, de modifier ou de supprimer n'importe quel schéma dans la base de données.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "63128764"
   
      Permet au bénéficiaire d'obtenir la propriété de l'élément sécurisable sur lequel cette autorisation est accordée.  
   
--   IMPERSONATE \<*Connexion*>  
+-   IMPERSONATE \< *Login*>  
   
      Permet au bénéficiaire d'emprunter l'identité impliquée dans la connexion.  
   
--   IMPERSONATE \<*Utilisateur*>  
+-   Utilisateur \<DE *l’USER DE l’IMITATE*>  
   
      Permet au bénéficiaire d'emprunter l'identité de l'utilisateur.  
   
--   CREATE \<*Élément sécurisable du serveur*>  
+-   SERVEUR \<CREATE *Titrable*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
   
--   CREATE \<*Élément sécurisable de base de données*>  
+-   Base \<de données CREATE *Titrable*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
   
--   CREATE \<*Élément sécurisable contenu dans le schéma*>  
+-   CREATE \< *Schéma-contenu Securable*>  
   
      Confère la capacité de créer l'élément sécurisable contenu dans le schéma. Toutefois, l'autorisation ALTER sur le schéma est requise pour créer l'élément sécurisable dans un schéma particulier.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "63128764"
      L'autorisation REFERENCES est obligatoire sur un objet pour pouvoir créer une FONCTION ou une VUE avec la clause `WITH SCHEMABINDING` qui référence cet objet.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
- Pour obtenir un graphique de la taille [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’une affiche de toutes les [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)autorisations au format PDF, consultez.  
+ Pour un tableau de [!INCLUDE[ssDE](../../includes/ssde-md.md)] taille d’affiche [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)de toutes les autorisations en format pdf, voir .  
   
-##  <a name="_securables"></a> Autorisations applicables à des éléments sécurisables spécifiques  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Autorisations applicables à des titrables spécifiques  
  Le tableau ci-dessous répertorie les principales classes d'autorisations et les types d'éléments sécurisables auxquels elles peuvent s'appliquer.  
   
 |Autorisation|S’applique à|  
@@ -116,7 +116,7 @@ ms.locfileid: "63128764"
 > [!CAUTION]  
 >  Les autorisations par défaut accordées aux objets système au moment de l'installation sont évaluées avec soin par rapport aux menaces potentielles et ne doivent pas être modifiées dans le cadre du renforcement de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les modifications apportées aux autorisations sur les objets système peuvent limiter ou rompre le fonctionnement et pourraient potentiellement laisser votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non pris en charge.  
   
-##  <a name="_permissions"></a>Autorisations SQL Server et SQL Database  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>Autorisations SQL Server et SQL Database  
  Le tableau ci-dessous fournit la liste complète des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les autorisations[!INCLUDE[ssSDS](../../includes/sssds-md.md)] sont disponibles seulement pour les éléments sécurisables de base pris en charge. Les autorisations de niveau serveur ne peuvent pas être accordées dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; toutefois, dans certains cas, les autorisations de base de données sont disponibles à la place.  
   
 |Élément sécurisable de base|Autorisations granulaires sur les éléments sécurisables de base|Code du type d'autorisation|Élément sécurisable qui contient un élément sécurisable de base|Autorisation sur l'élément sécurisable conteneur, qui implique une autorisation granulaire sur l'élément sécurisable de base|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128764"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Note: Ne [!INCLUDE[ssSDS](../../includes/sssds-md.md)]s’applique qu’à .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128764"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|CONTROL SERVER|  
+|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Note: Ne [!INCLUDE[ssSDS](../../includes/sssds-md.md)]s’applique qu’à .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "63128764"
 |DATABASE|Suppression|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Exécutez|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à. Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Note: Ne [!INCLUDE[ssSDS](../../includes/sssds-md.md)]s’applique qu’à . Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -342,13 +342,13 @@ ms.locfileid: "63128764"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Résumé de l’algorithme de vérification des autorisations  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Résumé de l’algorithme de vérification des autorisations  
  La vérification des autorisations peut être complexe. L'algorithme de vérification des autorisations englobe les membres de groupes qui se chevauchent et le chaînage des propriétés, l'autorisation explicite et implicite, et peut être affecté par les autorisations sur les classes sécurisables qui contiennent l'entité sécurisable. Le processus général de l'algorithme consiste à collecter toutes les autorisations pertinentes. Si aucun blocage DENY n'est rencontré, l'algorithme recherche une instruction GRANT fournissant un accès suffisant. L'algorithme contient trois éléments essentiels : le **contexte de sécurité**, l' **espace d'autorisation**et l' **autorisation requise**.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas accorder, refuser ou révoquer des autorisations à sa, dbo, le propriétaire de l'entité (entity owner), information_schema, sys ou à vous-même.  
   
--   **Contexte de sécurité**  
+-   **contexte de sécurité**  
   
      Il s'agit du groupe de principaux qui apporte les autorisations à la vérification d'accès. Ces autorisations sont liées à la connexion ou à l'utilisateur actif, à moins que le contexte de sécurité n'ait été modifié au profit d'une autre connexion ou d'un autre utilisateur par le biais de l'instruction EXECUTE AS. Le contexte de sécurité se compose des principaux suivants :  
   
@@ -362,11 +362,11 @@ ms.locfileid: "63128764"
   
     -   si la signature de module est utilisée, toute connexion ou compte d'utilisateur du certificat utilisé pour signer le module actuellement exécuté par l'utilisateur, ainsi que les appartenances aux rôles associées de ce principal.  
   
--   **Espace d’autorisation**  
+-   **espace d'autorisation**  
   
      Correspond à l'entité sécurisable et aux classes sécurisables qui contiennent l'élément sécurisable. Par exemple, une table (entité sécurisable) est contenue par la classe sécurisable de schéma et par la classe sécurisable de base de données. L'accès peut être affecté par des autorisations de niveau table, schéma, base de données et serveur. Pour plus d’informations, consultez [Hiérarchie des autorisations &#40;moteur de base de données&#41;](permissions-hierarchy-database-engine.md).  
   
--   **Autorisation obligatoire**  
+-   **Autorisation requise**  
   
      Correspond au type d'autorisation requise. Il peut s'agir, par exemple, d'une autorisation INSERT, UPDATE, DELETE, SELECT, EXECUTE, ALTER, CONTROL, etc.  
   
@@ -396,7 +396,7 @@ ms.locfileid: "63128764"
   
 7.  Succès de la vérification des autorisations si l' **autorisation requise** n'a pas été refusée et si l' **autorisation requise** contient une autorisation GRANT ou GRANT WITH GRANT directement ou implicitement accordée à l'une des identités dans le **contexte de sécurité** pour un objet contenu dans l' **espace d'autorisation**.  
   
-##  <a name="_examples"></a> Exemples  
+##  <a name="examples"></a><a name="_examples"></a> Exemples  
  Les exemples de cette section montrent comment récupérer des informations relatives aux autorisations.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. Retour de la liste complète des autorisations accordables  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](permissions-hierarchy-database-engine.md)   
+ [Permissions Hiérarchie &#40;moteur de base de données&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

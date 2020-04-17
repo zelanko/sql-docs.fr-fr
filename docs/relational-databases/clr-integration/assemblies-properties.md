@@ -1,5 +1,6 @@
 ---
-title: Propriétés de l’assembly (page général) | Microsoft Docs
+title: Propriétés de l’Assemblée (Page Générale) Microsoft Docs
+description: Vous pouvez afficher ou modifier les propriétés d’un assemblage hébergé sur SQL Server. Il s’agit notamment du nom et du propriétaire de l’assemblage, de l’ensemble d’autorisation et d’autres propriétés.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027972"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488018"
 ---
 # <a name="assemblies---properties"></a>Assemblys - Propriétés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68027972"
  **Propriétaire de l'assembly**  
  Tapez le nom du propriétaire ou le nom du schéma, ou effectuez votre sélection dans la liste.  
   
- **Jeu d'autorisations**  
+ **Ensemble d’autorisation**  
  Définissez le niveau de sécurité pour l'assembly. Trois niveaux de sécurité sont fournis : **Sûr**, **Accès externe**et accès **Illimité** .  
   
  **Chemin d'accès de l'assembly**  

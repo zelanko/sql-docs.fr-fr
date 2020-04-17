@@ -1,5 +1,6 @@
 ---
-title: Intégration et transactions du CLR | Microsoft Docs
+title: Intégration et transactions CLR (fr) Microsoft Docs
+description: L’espace de nom System.Transactions fournit un cadre de transaction entièrement intégré à l’intégration ADO.NET et SQL Server CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616d03d7a76e0db922157e88cf450eb99b4aa25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913519"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487476"
 ---
 # <a name="clr-integration-and-transactions"></a>Intégration et transactions du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'espace de noms **System.Transactions** fournit une infrastructure de transaction qui s'intègre entièrement à ADO.NET et au CLR (Common Language Runtime) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System. transactions** et ADO.NET fonctionnent ensemble pour étendre et simplifier l’utilisation des transactions locales et distribuées dans les applications managées.  
+  L'espace de noms **System.Transactions** fournit une infrastructure de transaction qui s'intègre entièrement à ADO.NET et au CLR (Common Language Runtime) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System.Transactions** et ADO.NET travaillent ensemble pour étendre et simplifier l’utilisation des transactions locales et distribuées dans les applications gérées.  
   
 > [!NOTE]  
 >  Une procédure CLR définie par l'utilisateur ne peut ni établir de connexion au serveur sur lequel elle s'exécute (connexion de bouclage) ni s'inscrire dans la même transaction. Si cette opération est tentée, la tentative de connexion est bloquée et le contrôle n'est pas redonné à la procédure définie par l'utilisateur. Il en résulte une erreur de délai d'attente (Msg 1206) sur la procédure définie par l'utilisateur.  
@@ -40,7 +41,7 @@ ms.locfileid: "67913519"
  Décrit comment accéder à une transaction en cours d'exécution in-process sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Utilisation de System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- Décrit comment utiliser l’interface de programmation d’applications (API) **System. transactions** dans votre application managée.  
+ Décrit comment utiliser l’interface de programmation d’applications **System.Transactions** (API) dans votre application gérée.  
   
  [Durées de vie des transactions](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Décrit la différence en termes de durée de vie entre les transactions démarrées dans les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] et celles démarrées dans les applications CLR.  

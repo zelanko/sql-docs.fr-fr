@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664278"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488198"
 ---
 # <a name="sysdm_external_script_requests"></a>Sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
   
 > [!NOTE] 
 >  
-> Cette vue de gestion dynamique (DMV) n’est disponible que si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution externe du script. Pour plus d’informations, voir [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017 et plus tard](../../machine-learning/what-is-sql-server-machine-learning.md).  
+> Cette vue de gestion dynamique (DMV) n’est disponible que si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution externe du script. Pour plus d’informations, voir [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017 et plus tard](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID processus tel qu’il a été reçu par[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |langage|**nvarchar**|Mot clé qui représente un langage de script pris en charge. |  
-|degree_of_parallelism|**Int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
+|degree_of_parallelism|**int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
 |external_user_name|**nvarchar**|Le compte de travail Windows sous lequel le script a été exécuté.|  
   
 ## <a name="permissions"></a>Autorisations  

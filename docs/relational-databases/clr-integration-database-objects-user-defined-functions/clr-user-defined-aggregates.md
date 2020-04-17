@@ -1,5 +1,6 @@
 ---
-title: Agrégats CLR définis par l’utilisateur | Microsoft Docs
+title: Agrégats définis par l’utilisateur CLR (en anglais seulement) Microsoft Docs
+description: L’intégration SQL Server CLR vous permet de créer des fonctions agrégées personnalisées dans le code géré, qui effectuent un calcul sur un ensemble de valeurs et retournent une valeur.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e654e1e14aa09e5414a100e6d06c64eba93dab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009797"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488282"
 ---
 # <a name="clr-user-defined-aggregates"></a>Agrégats CLR définis par l'utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

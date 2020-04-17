@@ -1,6 +1,6 @@
 ---
-title: Installer et configurer l’exemple de base de données WideWorldImporters
-description: Suivez ces instructions pour télécharger, installer et configurer l’exemple de base de données WideWorldImporters avec SQL Server Management Studio.
+title: Installer et configurer la base de données d’échantillons de WideWorldImporters
+description: Suivez ces instructions pour télécharger, installer et configurer la base de données d’échantillons WideWorldImporters avec SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,85 +10,85 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 14570059925fa5f8d8d24502c18593a118d84e37
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 355eaa254fcc7bb6cd4aa9a39c2cbcb269d88396
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112446"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487068"
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Instructions d’installation et de configuration de la base de données OLTP des importateurs larges World.
+Instructions d’installation et de configuration de base de données OLTP de Wide World Importers.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez l’édition Évaluation SQL Server/Developer/Enterprise.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats, utilisez la version du 2016 juin ou une version ultérieure.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou plus) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour la version complète de l’échantillon, utilisez SQL Server Evaluation/Developer/Enterprise Edition.
+- [STUDIO de gestion des serveurs SQL](../ssms/download-sql-server-management-studio-ssms.md). Pour les meilleurs résultats, utilisez la version de juin 2016 ou plus tard.
 
 ## <a name="download"></a>Téléchargement
 
-La dernière version de l’exemple :
+La dernière version de l’échantillon:
 
-[larges-World-importateurs-version](https://go.microsoft.com/fwlink/?LinkID=800630)
+[large-importateurs-libération](https://go.microsoft.com/fwlink/?LinkID=800630)
 
-Téléchargez l’exemple de sauvegarde de base de données WideWorldImporters/BacPac qui correspond à votre édition de SQL Server ou Azure SQL Database.
+Téléchargez l’exemple de sauvegarde/bacpac de base de données WideWorldImporters qui correspond à votre édition de SQL Server ou Azure SQL Database.
 
-Le code source permettant de recréer l’exemple de base de données est disponible à partir de l’emplacement suivant. Notez que la recréation de l’exemple entraînera de légères différences dans les données, car il existe un facteur aléatoire dans la génération de données :
+Le code source pour recréer la base de données de l’échantillon est disponible à partir de l’emplacement suivant. Notez que la reconstitution de l’échantillon entraînera de légères différences dans les données, puisqu’il y a un facteur aléatoire dans la génération de données :
 
-[importateurs larges-World](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[importateurs du monde entier](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## <a name="install"></a>Installer
 
 
 ### <a name="sql-server"></a>SQL Server
 
-Pour restaurer une sauvegarde sur une instance de SQL Server, vous pouvez utiliser Management Studio.
+Pour restaurer une sauvegarde dans une instance SQL Server, vous pouvez utiliser Management Studio.
 
-1. Ouvrez SQL Server Management Studio et connectez-vous à l’instance de SQL Server cible.
-2. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **restaurer la base de données**.
-3. Sélectionnez **périphérique** , puis cliquez sur le bouton **...**
-4. Dans la boîte de dialogue **Sélectionner les unités de sauvegarde**, cliquez sur **Ajouter**, accédez à la sauvegarde de la base de données dans le système de fichiers du serveur, puis sélectionnez la sauvegarde. Cliquez sur **OK**.
-5. Si nécessaire, modifiez l’emplacement cible pour les fichiers de données et les fichiers journaux dans le volet **fichiers** . Notez qu’il est recommandé de placer les fichiers de données et les fichiers journaux sur des lecteurs différents.
-6. Cliquez sur **OK**. La restauration de la base de données est lancée. Une fois l’opération terminée, la base de données WideWorldImporters est installée sur votre instance SQL Server.
+1. Ouvrez SQL Server Management Studio et connectez-vous à l’instance sqL Server cible.
+2. Cliquez à droite sur le nœud **databases** et sélectionnez **Restore Database**.
+3. Sélectionnez **l’appareil** et cliquez sur le bouton **...**
+4. Dans le dialogue **Sélectionnez les périphériques de sauvegarde**, cliquez sur **Ajouter,** naviguer vers la sauvegarde de base de données dans le système de fichiers du serveur, et sélectionnez la sauvegarde. Cliquez sur **OK**.
+5. Si nécessaire, modifiez l’emplacement cible des données et des fichiers journaux, dans la vitre **des fichiers.** Notez qu’il est préférable de placer des données et des fichiers de journal sur différents lecteurs.
+6. Cliquez sur **OK**. Cela permettra d’initier la restauration de la base de données. Une fois qu’elle sera terminée, vous aurez installé la base de données WideWorldImporters sur votre instance SQL Server.
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
-Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Management Studio.
+Pour importer un bacpac dans une nouvelle base de données SQL, vous pouvez utiliser Management Studio.
 
-1. facultatif Si vous n’avez pas encore de SQL Server dans Azure, accédez au [portail Azure](https://portal.azure.com/) et créez un SQL Database. Dans le processus de création d’une base de données, vous allez créer un serveur. Notez le serveur.
-   - Consultez [ce didacticiel](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) pour créer une base de données en quelques minutes
-2. Ouvrez SQL Server Management Studio et connectez-vous à votre serveur dans Azure.
-3. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **Importer une application de la couche données**.
-4. Dans **Importer les paramètres** , sélectionnez **Importer à partir du disque local** et sélectionnez le BacPac de l’exemple de base de données à partir de votre système de fichiers.
-5. Sous **paramètres de la base de données** , modifiez le nom de la base de données en *wideworldimporters* et sélectionnez l’édition cible et l’objectif de service à utiliser.
-6. Cliquez sur **suivant** et sur **Terminer** pour lancer le déploiement. Quelques minutes sont à effectuer sur P1. Si vous souhaitez un niveau tarifaire inférieur, il est recommandé d’importer dans une nouvelle base de données P1, puis de modifier le niveau tarifaire au niveau souhaité.
+1. (facultatif) Si vous n’avez pas encore de serveur SQL à Azure, naviguez vers le [portail Azure](https://portal.azure.com/) et créez une nouvelle base de données SQL. Dans le processus de création d’une base de données, vous allez créer un serveur. Prenez note du serveur.
+   - Voir [ce tutoriel](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) pour créer une base de données en quelques minutes
+2. Ouvrez SQL Server Management Studio et connectez-vous à votre serveur azure.
+3. Cliquez à droite sur le nœud **databases** et sélectionnez **l’application Import Data-Tier**.
+4. Dans les **Paramètres d’importation** **sélectionnez Import à partir d’un disque local** et sélectionnez le bacpac de la base de données de l’échantillon à partir de votre système de fichiers.
+5. Sous **bases de données Paramètres** modifier le nom de base de données en *WideWorldImporters* et sélectionner l’édition cible et l’objectif de service à utiliser.
+6. Cliquez **sur Next** and **Finish** pour lancer le déploiement. Il faudra quelques minutes pour terminer sur un P1. Si un niveau de tarification plus bas est souhaité, il est recommandé d’importer dans une nouvelle base de données P1, puis de modifier le niveau de prix au niveau souhaité.
 
 ## <a name="configuration"></a>Configuration
 
 ### <a name="full-text-indexing"></a>Indexation de texte intégral
 
-L’exemple de base de données peut utiliser l’indexation de texte intégral. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server, vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans Azure SQL DB). Par conséquent, une étape consécutive à l’installation est requise.
+La base de données de l’échantillon peut utiliser l’indexation intégrale. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server - vous devez la sélectionner lors de la configuration SQL Server (elle est activée par défaut dans Azure SQL DB). Par conséquent, une étape post-installation est nécessaire.
 
 1. Dans SQL Server Management Studio, connectez-vous à la base de données WideWorldImporters et ouvrez une nouvelle fenêtre de requête.
-2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données :`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexage intégral dans la base de données :`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
 S’applique à : SQL Server
 
-L’activation de l’audit dans SQL Server requiert la configuration du serveur. Pour activer l’audit de SQL Server pour l’exemple WideWorldImporters, exécutez l’instruction suivante dans la base de données :
+L’activation de l’audit dans SQL Server nécessite la configuration du serveur. Pour activer l’audit SQL Server pour l’échantillon WideWorldImporters, exécutez la déclaration suivante dans la base de données :
 
     EXECUTE [Application].[Configuration_ApplyAuditing]
 
-Dans Azure SQL Database, l’audit est configuré par le biais du [portail Azure](https://portal.azure.com/).
+Dans la base de données Azure SQL, Audit est configuré via le [portail Azure](https://portal.azure.com/).
 
 ### <a name="row-level-security"></a>Sécurité au niveau des lignes
 
-S’applique à : Azure SQL Database
+S’applique à: Azure SQL Database
 
-La sécurité au niveau des lignes n’est pas activée par défaut dans le téléchargement BacPac de WideWorldImporters. Pour activer la sécurité au niveau des lignes dans la base de données, exécutez la procédure stockée suivante :
+Row-Level Security n’est pas activé par défaut dans le téléchargement bacpac de WideWorldImporters. Pour activer la sécurité au niveau des lignes dans la base de données, exécutez la procédure stockée suivante :
 
     EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

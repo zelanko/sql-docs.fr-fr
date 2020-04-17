@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888658"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487393"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   Les procédures de cette rubrique constituent un guide d'installation sur un serveur d'un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode de déploiement SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint 2013.  
@@ -70,7 +70,7 @@ ms.locfileid: "68888658"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> Configuration requise de SQL Server  
  Les fonctionnalités de Business Intelligence ne sont pas toutes disponibles dans toutes les éditions de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour plus de détails, voir [Les fonctionnalités prises enhttps://go.microsoft.com/fwlink/?linkid=232473) charge par les Editions de SQL Server 2012 (](https://go.microsoft.com/fwlink/?linkid=232473) et [Les éditions et composants de SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
- Les notes de sortie actuelles peuvent être trouvées à [SQL Server 2012 SP1 Release Notes](ttp://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+ Les notes de sortie actuelles peuvent être trouvées à [SQL Server 2012 SP1 Release Notes](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
   
  [Microsoft SQL Server 2012https://go.microsoft.com/fwlink/?LinkId=236893)Notes de sortie (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   

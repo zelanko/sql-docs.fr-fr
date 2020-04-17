@@ -1,5 +1,6 @@
 ---
-title: Accès à la transaction en cours | Microsoft Docs
+title: Accès à la transaction actuelle (fr) Microsoft Docs
+description: Dans l’intégration SQL Server CLR, la propriété actuelle de la catégorie System.Transactions.Transaction vous permet d’accéder à la transaction en cours.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab30ca777997a8d7dff819c3c797cae740922ca4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913528"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487474"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

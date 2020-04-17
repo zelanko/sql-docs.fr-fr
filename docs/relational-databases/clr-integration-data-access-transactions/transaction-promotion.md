@@ -1,5 +1,6 @@
 ---
-title: Promotion de la transaction | Microsoft Docs
+title: Promotion des transactions (fr) Microsoft Docs
+description: Dans l’intégration SQL Server CLR, une transaction locale légère peut être promue à une transaction entièrement distribuable par le biais de la promotion transaction.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d75bbf1c4d468a0d6c3872a220566d667b059a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e77409f6bf6c71363e030f29f86f41205dd4a0f0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67937500"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487475"
 ---
 # <a name="transaction-promotion"></a>Promotion des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +30,9 @@ ms.locfileid: "67937500"
  La propriété **ConnectionString** d'un objet **SqlConnection** prend en charge le mot clé **Enlist** , qui indique si **System.Data.SqlClient** détecte les contextes transactionnels et inscrit automatiquement la connexion dans une transaction distribuée. Si le mot clé est défini avec la valeur true (valeur par défaut), la connexion est automatiquement inscrite dans le contexte de transaction actif du thread d'ouverture. S'il est défini avec la valeur false, la connexion SqlClient n'interagit pas avec une transaction distribuée. Si **Enlist** n'est pas spécifié dans la chaîne de connexion, la connexion est inscrite automatiquement dans une transaction distribuée si celle-ci est détectée au moment où la connexion est ouverte.  
   
 ## <a name="distributed-transactions"></a>Transactions distribuées  
- Les transactions distribuées consomment en général d'importantes ressources système. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) gère ces transactions et intègre tous les gestionnaires de ressources qui y sont accédés. La promotion des transactions, en revanche, est une forme spéciale de transaction **System.Transactions** qui délègue efficacement le travail à une simple transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System. transactions**, **System. Data. SqlClient**et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordonnent le travail impliqué dans la gestion de la transaction, en la promouvant en une transaction distribuée complète en fonction des besoins.  
+ Les transactions distribuées consomment en général d'importantes ressources système. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) gère ces transactions et intègre tous les gestionnaires de ressources qui y sont accédés. La promotion des transactions, en revanche, est une forme spéciale de transaction **System.Transactions** qui délègue efficacement le travail à une simple transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System.Transactions**, **System.Data.SqlClient**et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordonnent le travail nécessité par la gestion de la transaction, en la promouvant autant que nécessaire en une transaction distribuée complète.  
   
- L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction **TransactionScope** active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations sur **TransactionScope**, consultez [utilisation de System. transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
+ L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction **TransactionScope** active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations sur **TransactionScope**, voir [Using System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration et transactions du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

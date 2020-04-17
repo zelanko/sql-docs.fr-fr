@@ -1,5 +1,6 @@
 ---
-title: SqlPipe, objet | Microsoft Docs
+title: Objet SqlPipe Microsoft Docs
+description: Pour les objets de base de données CLR en cours d’exécution dans SQL Server, vous pouvez envoyer des résultats au tuyau connecté en utilisant les méthodes d’envoi de l’objet SqlPipe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913557"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487513"
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ ms.locfileid: "67913557"
 ## <a name="returning-custom-result-sets"></a>Retour de jeux de résultats personnalisés  
  Les procédures stockées managées peuvent envoyer des jeux de résultats qui ne proviennent pas d'un **SqlDataReader**. La méthode **SendResultsStart** , ainsi que **SendResultsRow** et **SendResultsEnd**, permettent aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
- **SendResultsStart** prend un **SqlDataRecord** comme entrée. Elle  marque le début d'un jeu de résultats et utilise les métadonnées d'enregistrement pour construire les métadonnées qui décrivent le jeu de résultats. Elle n'envoie pas la valeur de l'enregistrement avec **SendResultsStart**. Toutes les lignes suivantes, envoyées à l'aide de **SendResultsRow**, doivent correspondre à cette définition des métadonnées.  
+ **SendResultsStart** accepte un **SqlDataRecord** en tant qu'entrée. Elle  marque le début d'un jeu de résultats et utilise les métadonnées d'enregistrement pour construire les métadonnées qui décrivent le jeu de résultats. Elle n'envoie pas la valeur de l'enregistrement avec **SendResultsStart**. Toutes les lignes suivantes, envoyées à l'aide de **SendResultsRow**, doivent correspondre à cette définition des métadonnées.  
   
 > [!NOTE]  
->  Après l'appel de la méthode **SendResultsStart** , seules **SendResultsRow** et **SendResultsEnd** peuvent être appelées. L'appel de toute autre méthode dans la même instance de **SqlPipe** entraîne **InvalidOperationException**. **SendResultsEnd** définit le paramètre **SqlPipe** à l’état initial dans lequel d’autres méthodes peuvent être appelées.  
+>  Après l'appel de la méthode **SendResultsStart** , seules **SendResultsRow** et **SendResultsEnd** peuvent être appelées. L'appel de toute autre méthode dans la même instance de **SqlPipe** entraîne **InvalidOperationException**. **SendResultsEnd** rétablit **SqlPipe** à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
   
 ### <a name="example"></a>Exemple  
  La procédure stockée **uspGetProductLine** retourne les nom, numéro de produit, couleur et tarif de tous les produits dans une ligne de produit spécifiée. Cette procédure stockée accepte des correspondances exactes pour *prodLine*.  
@@ -140,7 +141,7 @@ EXEC uspGetProductLineVB 'T';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SqlDataRecord, objet](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
+ [Objet SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [Procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   

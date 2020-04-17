@@ -1,5 +1,6 @@
 ---
-title: Sécurité de l’intégration du CLR | Microsoft Docs
+title: Sécurité d’intégration CLR (fr) Microsoft Docs
+description: L’intégration de SQL Server avec la sécurité .NET Framework CLR gère l’accès entre les objets. Les contrôles de sécurité effectués sur les objets dépendent des appels en cause.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118509"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487113"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
 
@@ -36,8 +37,7 @@ ms.locfileid: "68118509"
   
 -   Le code défini par l'utilisateur ne doit pas être en mesure d'accéder de façon non autorisée aux ressources système du fait de son exécution dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intègre maintenant le modèle de sécurité basé sur utilisateur de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le modèle de sécurité basé sur l'accès du code du CLR. Quelques-uns des avantages offerts par cette approche combinée de la sécurité sont discutés dans cette section.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intègre maintenant le modèle de sécurité basé sur utilisateur de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le modèle de sécurité basé sur l'accès du code du CLR. Quelques-uns des avantages offerts par cette approche combinée de la sécurité sont discutés dans cette section.  
   
  Le tableau suivant décrit les rubriques de cette section.  
   

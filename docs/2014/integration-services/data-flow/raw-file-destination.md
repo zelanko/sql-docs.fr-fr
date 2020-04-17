@@ -18,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770854"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487010"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
   La destination de fichier brut écrit des données brutes dans un fichier. Le format des données étant natif pour la destination, les données ne requièrent aucune traduction et peu d'analyse. Cela signifie que la destination de fichier brut peut écrire des données plus rapidement que d'autres destinations telles que les destinations de fichier plat et OLE DB.  
@@ -113,7 +113,7 @@ ms.locfileid: "62770854"
   
 1.  Définissez la propriété sur **CreateOnce** ou **CreateAlways**, et effectuez une itération de la boucle. Le fichier est créé. Cette opération permet de s'assurer de la correspondance entre les métadonnées des données ajoutées et le fichier.  
   
-2.  Réinitialisez la propriété WriteOption à **Append** et affectez à `False`la propriété ValidateExternalMetadata la valeur.  
+2.  Réinitialisez la propriété WriteOption à **l’annexe** et `False`définissez la propriété ValidateExternalMetadata à .  
   
  Si vous utilisez l’option **TruncateAppend** au lieu de l’option **Append** , celle-ci tronque les lignes ajoutées dans les itérations précédentes, puis ajoute de nouvelles lignes. L’utilisation de l’option **TruncateAppend** nécessite également que les données correspondent au format du fichier.  
   
@@ -130,10 +130,10 @@ ms.locfileid: "62770854"
  Pour plus d’informations sur la définition des propriétés du composant, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), sur sqlservercentral.com.  
+ Entrée de blog, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), sur sqlservercentral.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source de fichier brut](raw-file-source.md)   
- [Flux de données](data-flow.md)  
+ [Source de fichiers bruts](raw-file-source.md)   
+ [Data Flow](data-flow.md)  
   
   

@@ -54,7 +54,7 @@
               href: agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
             - name: Paramètres d’invite de commandes
               href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
-    - name: Moniteur
+    - name: Superviser
       href: monitoring-replication.md
       items:
         - name: Moniteur de réplication
@@ -362,7 +362,7 @@
         - name: Réplication sur SQL Database +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: Réplication avec SQL Database MI +
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: Republier des données
           href: republish-data.md
         - name: Réplication sur Internet

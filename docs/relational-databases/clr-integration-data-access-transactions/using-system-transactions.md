@@ -1,5 +1,6 @@
 ---
-title: Utilisation de System. transactions | Microsoft Docs
+title: Utilisation de System.Transactions (fr) Microsoft Docs
+description: L’espace de nom System.Transactions fournit un cadre de transaction entièrement intégré à l’intégration ADO.NET et SQL Server CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081355"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488493"
 ---
 # <a name="using-systemtransactions"></a>Utilisation de System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68081355"
   
  Si une exception se produit dans **TransactionScope**, la transaction est marquée comme non cohérente et est abandonnée. Elle est annulée quand **TransactionScope** est supprimé. Si aucune exception ne se produit, les transactions sont validées.  
   
- **TransactionScope** doit être utilisé uniquement en cas d’accès à des sources de données locales et distantes ou à des gestionnaires de ressources externes. La raison en est que **TransactionScope** provoque toujours une promotion de la transaction, même si elle n'est utilisé que dans une connexion de contexte.  
+ **TransactionScope** doit être utilisé uniquement en cas d'accès des sources de données locales et distantes ou des gestionnaires de ressources externes. La raison en est que **TransactionScope** provoque toujours une promotion de la transaction, même si elle n'est utilisé que dans une connexion de contexte.  
   
 > [!NOTE]  
 >  La classe **TransactionScope** crée par défaut une transaction avec un **System.Transactions.Transaction.IsolationLevel** ayant la valeur **Serializable** . Selon votre application, vous pouvez envisager de baisser le niveau d'isolation pour éviter une contention élevée au sein de votre application.  

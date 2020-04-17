@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012435"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488534"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>Arguments
 
-**model**
+**Modèle**
 
 Un modèle préentraîné dans un format pris en charge. 
 
@@ -64,7 +64,7 @@ L’utilisateur `EXECUTE` a besoin d’autorisation sur la base de données.
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
+Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server Machine Learning Services (R ou Python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services), [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), [SQL Server Machine Learning Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone), ou [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016).
 
 #### <a name="r-revoscaler-models"></a>R: Modèles RevoScaleR
 
@@ -86,7 +86,7 @@ Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge
 #### <a name="r-transformations-supplied-by-microsoftml"></a>R: Transformations fournies par MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [Catégorique](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
@@ -112,7 +112,7 @@ Pour créer et former le modèle, utilisez l’un des algorithmes pris en charge
 #### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Transformations fournies par microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [Catégorique](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   

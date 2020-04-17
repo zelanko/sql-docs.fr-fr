@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19eaefc6fcd6615b74614893a37aa1722095e63d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9597b55eabb247dc4a95ed83fe04abac5067a269
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664312"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488175"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "80664312"
 Renvoie une ligne pour chaque type de demande de script externe. Les demandes de script externe sont regroupées par le langage de script externe pris en charge. Une ligne est générée pour chaque fonction enregistrée de script externe. Les fonctions de script externe ne sont pas enregistrées, sauf si elle sont envoyées par un processus parent, comme `rxExec`.
   
 > [!NOTE]  
-> Cette vue de gestion dynamique (DMV) n’est disponible que si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution externe du script. Pour plus d’informations, voir [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017 et plus tard](../../machine-learning/what-is-sql-server-machine-learning.md).  
+> Cette vue de gestion dynamique (DMV) n’est disponible que si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution externe du script. Pour plus d’informations, voir [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017 et plus tard](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |langage|**nvarchar**|Nom du langage enregistré de script externe. Chaque script externe doit spécifier le langage dans la demande de requête utilisé pour le démarrage du lanceur associé. |  
 |counter_name|**nvarchar**|Nom de la fonction enregistrée de script externe. N'accepte pas la valeur NULL.|  
-|counter_value|**Entier**|Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée.|  
+|counter_value|**entier**|Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée.|  
 
   
 ## <a name="permissions"></a>Autorisations  

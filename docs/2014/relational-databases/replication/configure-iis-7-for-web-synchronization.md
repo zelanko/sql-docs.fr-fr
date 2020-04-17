@@ -13,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721537"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486988"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
   Les procédures décrites dans cette rubrique vous guident dans le processus de configuration manuelle des services IIS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services) version 7 et ultérieures pour une utilisation avec la synchronisation web en vue de la réplication de fusion. 
@@ -28,11 +28,11 @@ ms.locfileid: "62721537"
  L’ensemble du processus de configuration est présenté dans [Configurer la synchronisation web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] risquent de provoquer des erreurs, telles que : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
+>  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent provoquer des erreurs, par exemple : « Le format d’un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
   
  Pour utiliser la synchronisation Web, vous devez configurer IIS 7 en effectuant les étapes ci-dessous. Chaque étape est détaillée dans cette rubrique.  
   
-1.  Installez et configurez l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écouteur de réplication sur l’ordinateur qui exécute IIS.  
+1.  Installez et configurez l’écouteur de réplication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur qui exécute IIS.  
   
 2.  Configurer SSL (Secure Sockets Layer). SSL est requis pour les communications entre IIS et tous les abonnés.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62721537"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>Installation de l'écouteur de réplication SQL Server  
 
-La synchronisation web est prise en charge sur IIS à compter de la version 5.0. L’Assistant Configuration de la synchronisation Web d’IIS versions 5 et 6 n’est pas disponible avec IIS version 7.0 et ultérieures. **À partir de SQL Server 2012, pour utiliser le composant de synchronisation Web sur le serveur IIS, vous devez installer SQL Server avec la réplication. Il peut s’agir de l’édition gratuite de SQL Server Express.**
+La synchronisation web est prise en charge sur IIS à compter de la version 5.0. L’Assistant Configuration de la synchronisation Web d’IIS versions 5 et 6 n’est pas disponible avec IIS version 7.0 et ultérieures. **À partir de SQL Server 2012, pour utiliser le composant de synchronisation web sur le serveur IIS, vous devez installer SQL Server avec la réplication. Il peut s’agir de l’édition gratuite de SQL Server Express.**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>Pour installer et configurer l'écouteur de réplication SQL Server  
   
@@ -54,7 +54,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 4.  Inscrivez replisapi.dll :  
   
-    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la zone **ouvrir** , entrez `cmd`, puis cliquez sur **OK**.  
+    1.  Cliquez sur **Démarrer**, puis sur **Exécuter**. Dans la boîte `cmd` **ouverte,** entrez, puis cliquez **sur OK**.  
   
     2.  Dans le répertoire créé à l'étape 1, exécutez la commande suivante :  
   
@@ -66,7 +66,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     1.  Dans le **Gestionnaire des services Internet (IIS)**, dans le volet **Connexions** , cliquez avec le bouton droit sur **Site Web par défaut**, puis sélectionnez **Ajouter un répertoire virtuel**.  
   
-    2.  Pour **alias**, entrez `SQLReplication`.  
+    2.  Pour **Alias** `SQLReplication`, entrez .  
   
     3.  Pour **Chemin d’accès physique**, entrez **\<lecteur>:\Inetpub\SQLReplication\\**, puis cliquez sur **OK**.  
   
@@ -78,7 +78,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     3.  Dans le volet **Actions** , cliquez sur **Ajouter un mappage de modules**.  
   
-    4.  Pour **** le chemin d’accès `replisapi.dll`de la demande, entrez.  
+    4.  Pour le chemin `replisapi.dll` **de demande,** entrez .  
   
     5.  Dans la liste déroulante **Module** , sélectionnez **IsapiModule**.  
   
@@ -155,7 +155,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 ###### <a name="to-test-the-certificate"></a>Pour tester le certificat  
   
-1.  Dans le **Gestionnaire de Internet Information Services (IIS)**, cliquez sur **site Web par défaut.**  
+1.  Dans **Internet Information Services (IIS) Manager**, cliquez sur Le site Web par **défaut.**  
   
 2.  Dans le volet **Actions**, cliquez sur **Parcourir \*:443(https)**.  
   
@@ -188,11 +188,11 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 1.  Créez un compte local sur l'ordinateur exécutant IIS :  
   
-    1.  Ouvrez le **Gestionnaire de serveur**. Dans le menu Démarrer, cliquez avec le bouton droit sur **Poste de travail**, puis cliquez sur **Gérer**.  
+    1.  **Open Server Manager**. Dans le menu Démarrer, cliquez avec le bouton droit sur **Poste de travail**, puis cliquez sur **Gérer**.  
   
     2.  Dans **Gestionnaire de serveur**, développez **Configuration**, puis développez **Utilisateurs et groupes locaux**.  
   
-    3.  Cliquez avec le bouton droit sur **Utilisateurs**, puis cliquez sur **Nouvel utilisateur**.  
+    3.  Clic droit **Utilisateurs**, puis cliquez sur **Nouvel Utilisateur**.  
   
     4.  Entrez un nom d'utilisateur et un mot de passe fort. Désactivez **L'utilisateur doit changer le mot de passe à la prochaine ouverture de session**.  
   
@@ -272,7 +272,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 1.  Vérifiez que les paramètres du réseau local (LAN) sur l'Abonné sont corrects :  
   
-    1.  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, dans le menu **Outils** , cliquez sur **Options Internet**.  
+    1.  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, sur le menu **Tools,** cliquez sur **Internet Options**.  
   
     2.  Sur l'onglet **Connexions** , cliquez sur **Paramètres LAN**.  
   
@@ -280,7 +280,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     4.  Si un serveur proxy est utilisé, cliquez sur **Utiliser un serveur proxy pour votre réseau local** et **Ne pas utiliser de serveur proxy pour les adresses locales**, puis cliquez sur **OK**.  
   
-2.  Sur l'Abonné, dans Internet Explorer, connectez-vous au serveur en mode de diagnostic en ajoutant `?diag` à l'adresse pour le fichier replisapi.dll. Par exemple : **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  Sur l'Abonné, dans Internet Explorer, connectez-vous au serveur en mode de diagnostic en ajoutant `?diag` à l'adresse pour le fichier replisapi.dll. Par exemple : `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  Dans l'exemple ci-dessus, **server.domain.com** doit être remplacé par le nom exact de **Délivré à** répertorié sous la section **Certificats de serveur** dans Gestionnaire des services IIS.  

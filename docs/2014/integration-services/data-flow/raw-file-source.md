@@ -16,12 +16,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900909"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486975"
 ---
 # <a name="raw-file-source"></a>source de fichier brut
   La source de fichier brut lit des données brutes dans un fichier. La représentation des données étant native pour la source, celles-ci ne nécessitent aucune traduction et pratiquement aucune analyse. Par conséquent, la source de fichier brut peut lire les données plus rapidement que les autres sources telles que la source du fichier plat et la source OLE DB.  
@@ -51,10 +51,10 @@ ms.locfileid: "62900909"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), sur sqlservercentral.com  
+-   Entrée de blog, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), sur sqlservercentral.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Destination de fichier brut](raw-file-destination.md)   
- [Flux de données](data-flow.md)  
+ [Destination de fichiers bruts](raw-file-destination.md)   
+ [Data Flow](data-flow.md)  
   
   

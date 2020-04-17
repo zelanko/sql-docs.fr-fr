@@ -1,5 +1,6 @@
 ---
-title: Fonctions CLR définies par l’utilisateur | Microsoft Docs
+title: Fonctions définies par l’utilisateur CLR (fr) Microsoft Docs
+description: L’intégration CLR de SQL Server vous permet de créer des fonctions de programmation de valeur scalaire, de valeur de table et d’agrégation définies par l’utilisateur dans n’importe quel langage de programmation cadre .NET.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6195badbf3fc0d789e1b083ab187eebbce2414fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009726"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488268"
 ---
 # <a name="clr-user-defined-functions"></a>Fonctions CLR définies par l'utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,6 +41,6 @@ ms.locfileid: "68009726"
  Décrit comment implémenter et utiliser les agrégats définis par l'utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)  
+ [Fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   
