@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: Nouveautés
+    - name: What's New
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -1385,6 +1385,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: Page Magasin des requêtes
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: Notification d'événement
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: Implémenter
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: Configurer la sécurité du dialogue
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: Obtenir des informations
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 'Flux de fichier, FileTable et objet BLOB'
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1540,14 +1549,7 @@
         - name: Propriétés de la séquence
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: Implémenter
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: Configurer la sécurité du dialogue
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: Obtenir des informations
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: Données spatiales
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4372,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: "Vue d'ensemble du moniteur SQL\_Server"
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: Buffer Pool Extension
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: Options de configuration de serveur
