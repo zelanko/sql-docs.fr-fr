@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082070"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488253"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -33,7 +33,7 @@ Vous pouvez configurer le service Scale Out Worker avec le fichier `\<drive\>:\P
 |DisplayName|Nom complet du Scale Out Worker. **Pas en cours d’utilisation dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nom de l'ordinateur|
 |Description|Description du Scale Out Worker. **Pas en cours d’utilisation dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vide|
 |MasterEndpoint|Point de terminaison pour la connexion à Scale Out Master.|Point de terminaison défini pendant l’installation du Scale Out Worker.|
-|MasterHttpsCertThumbprint|Empreinte numérique du certificat client SSL utilisé pour authentifier Scale Out Master.|Empreinte numérique du certificat client spécifié pendant l’installation de Scale Out Worker.|
+|MasterHttpsCertThumbprint|Empreinte numérique du certificat client TLS/SSL utilisé pour authentifier Scale Out Master|Empreinte numérique du certificat client spécifié pendant l’installation de Scale Out Worker.|
 |WorkerHttpsCertThumbprint|Empreinte numérique du certificat Scale Out Master utilisé pour authentifier le Scale Out Worker.|Empreinte numérique d’un certificat créé et installé automatiquement pendant l’installation du Scale Out Worker.|
 |StoreLocation|Emplacement du magasin de certificats de Worker.|LocalMachine|
 |StoreName|Nom du magasin où se trouve ce certificat de Worker.|My|

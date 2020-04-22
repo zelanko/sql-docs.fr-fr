@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288743"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487998"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out
 
@@ -66,9 +66,9 @@ Pour installer la fonctionnalité Scale Out Master, utilisez l’Assistant Insta
 
     ![Configuration de Master](media/master-config.PNG "Configuration de Master")
 
-4.  Spécifiez le certificat SSL utilisé pour protéger les communications entre Scale Out Master et Scale Out Worker en effectuant l’une des opérations suivantes.
-    * Laissez le processus d’installation créer un certificat SSL auto-signé par défaut en cliquant sur **Créer un certificat SSL**.  Le certificat par défaut est installé sous Autorités de certification racines de confiance, Ordinateur local. Vous pouvez spécifier les noms communs dans ce certificat. Le nom d’hôte du point de terminaison principal doit être inclus dans les noms communs. Par défaut, le nom de machine et l’adresse IP du nœud Master sont inclus.
-    * Sélectionnez un certificat SSL existant sur l’ordinateur local en cliquant sur **Utiliser un certificat SSL existant**, puis sur **Parcourir** pour sélectionner un certificat. L’empreinte numérique du certificat s’affiche dans la zone de texte. Cliquez sur **Parcourir** pour afficher les certificats stockés dans Autorités de certification racines de confiance, Ordinateur local. Le certificat que vous sélectionnez doit être stocké ici.       
+4.  Spécifiez le certificat TLS/SSL utilisé pour protéger les communications entre Scale Out Master et Scale Out Worker en effectuant l’une des opérations suivantes.
+    * Laissez le processus d’installation créer un certificat TLS/SSL auto-signé par défaut en cliquant sur **Créer un certificat SSL**.  Le certificat par défaut est installé sous Autorités de certification racines de confiance, Ordinateur local. Vous pouvez spécifier les noms communs dans ce certificat. Le nom d’hôte du point de terminaison principal doit être inclus dans les noms communs. Par défaut, le nom de machine et l’adresse IP du nœud Master sont inclus.
+    * Sélectionnez un certificat TLS/SSL existant sur l’ordinateur local en cliquant sur **Utiliser un certificat TLS/SSL existant**, puis sur **Parcourir** pour sélectionner un certificat. L’empreinte numérique du certificat s’affiche dans la zone de texte. Cliquez sur **Parcourir** pour afficher les certificats stockés dans Autorités de certification racines de confiance, Ordinateur local. Le certificat que vous sélectionnez doit être stocké ici.       
 
     ![Configuration de Master 2](media/master-config-2.PNG "Configuration de Master 2")
   
@@ -118,14 +118,14 @@ Pour installer la fonctionnalité Scale Out Worker, utilisez l’Assistant Insta
     > [!NOTE]
     > Vous pouvez également ignorer la configuration de Worker à ce stade et associer Scale Out Worker à Scale Out Master en utilisant [Scale Out Manager](integration-services-ssis-scale-out-manager.md) après l’installation.
 
-4. Pour un environnement à **plusieurs ordinateurs**, spécifiez le certificat SSL client utilisé pour valider Scale Out Master. Pour un environnement à **un seul ordinateur**, il est inutile de spécifier un certificat SSL client. 
+4. Pour un environnement à **plusieurs ordinateurs**, spécifiez le certificat TLS/SSL client utilisé pour valider Scale Out Master. Pour un environnement à **un seul ordinateur**, il est inutile de spécifier un certificat TLS/SSL client. 
   
-    Cliquez sur **Parcourir** pour rechercher le fichier de certificat (*.cer). Pour utiliser le certificat SSL par défaut, sélectionnez le fichier `SSISScaleOutMaster.cer` situé sous `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` sur l’ordinateur où Scale Out Master est installé.   
+    Cliquez sur **Parcourir** pour rechercher le fichier de certificat (*.cer). Pour utiliser le certificat TLS/SSL par défaut, sélectionnez le fichier `SSISScaleOutMaster.cer` situé sous `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` sur l’ordinateur où Scale Out Master est installé.   
 
     ![Configuration de Worker 2](media/worker-config-2.PNG "Configuration de Worker 2")
 
     > [!NOTE]
-    > Quand le certificat SSL utilisé par Scale Out Master est auto-signé, un certificat SSL client correspondant doit être installé sur l’ordinateur avec Scale Out Worker. Si vous fournissez le chemin de fichier du certificat client SSL dans la page **Configuration d’Integration Services Scale Out Worker**, le certificat est installé automatiquement. Sinon, vous devez installer le certificat manuellement plus tard. 
+    > Quand le certificat TLS/SSL utilisé par Scale Out Master est auto-signé, un certificat TLS/SSL client correspondant doit être installé sur l’ordinateur avec Scale Out Worker. Si vous fournissez le chemin de fichier du certificat client TLS/SSL dans la page **Configuration d’Integration Services Scale Out Worker**, le certificat est installé automatiquement. Sinon, vous devez installer le certificat manuellement plus tard. 
      
 5. Terminez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 

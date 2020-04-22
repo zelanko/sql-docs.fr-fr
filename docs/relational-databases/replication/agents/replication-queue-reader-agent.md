@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3dacfe725541c93f3d5fe1276513423d77aeba9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085940"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529393"
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,16 +79,16 @@ qrdrsvc [-?]
  Spécifie le mode de sécurité du serveur de distribution. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Niveau du chiffrement SSL (Secure Sockets Layer) utilisé par l'Agent de lecture de la file d'attente lors de l'établissement de connexions.  
+ Niveau du chiffrement TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), utilisé par l'Agent de lecture de la file d’attente lors de l'établissement de connexions.  
   
 |Valeur EncryptionLevel|Description|  
 |---------------------------|-----------------|  
-|**0**|Spécifie que le chiffrement SSL n'est pas utilisé.|  
-|**1**|Spécifie que le chiffrement SSL est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur de confiance.|  
-|**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
+|**0**|Spécifie que le chiffrement TLS n'est pas utilisé.|  
+|**1**|Spécifie que le chiffrement TLS/SSL est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur TLS/SSL est signé par un émetteur de confiance.|  
+|**2**|Spécifie que le chiffrement TLS est utilisé et que le certificat est vérifié.|  
 
  > [!NOTE]  
- >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
+ >  Un certificat TLS/SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
   
  Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

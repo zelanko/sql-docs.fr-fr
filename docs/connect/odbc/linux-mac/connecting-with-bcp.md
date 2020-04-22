@@ -1,5 +1,6 @@
 ---
-title: Se connecter à bcp | Microsoft Docs
+title: Connexion avec bcp
+description: Découvrez comment utiliser l’utilitaire bcp avec Microsoft ODBC Driver for SQL Server sur Linux et macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924544"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632803"
 ---
 # <a name="connecting-with-bcp"></a>Connexion avec bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,7 +62,7 @@ Utilise un type de données caractères.
 Spécifie la base de données à laquelle se connecter.  
   
 - -d  
-Fait en sorte que la valeur passée à l’option -S de `bcp` soit interprétée comme un nom de source de données (DSN). Pour plus d’informations, consultez « Prise en charge du nom de source de données dans sqlcmd et bcp » dans [Connexion avec sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Fait en sorte que la valeur passée à l’option -S de `bcp` soit interprétée comme un nom de source de données (DSN). Pour plus d’informations, consultez « Prise en charge du nom de source de données dans sqlcmd et bcp » dans [Connexion avec sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file* Spécifie le chemin complet d’un fichier d’erreur utilisé pour stocker les lignes que l’utilitaire `bcp` n’a pas pu transférer du fichier à la base de données.  
   
@@ -84,7 +85,7 @@ Spécifie un délai de connexion. L’option -l spécifie le nombre de secondes 
 Spécifie le numéro de la dernière ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données.  
   
 - -m *max_errors*  
-Spécifie le nombre maximal d’erreurs de syntaxe tolérées avant l’annulation de l’opération `bcp`.  
+Spécifie le nombre maximal d'erreurs de syntaxe tolérées avant l'annulation de l'opération `bcp`.  
   
 - -n  
 Utilise les types de données (de la base de données) natifs pour effectuer l’opération de copie en bloc.  
@@ -147,4 +148,4 @@ Utilisé avec les options format et -f formal_file, génère un fichier au forma
   
 ## <a name="see-also"></a>Voir aussi
 
-[Connexion avec **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Connexion avec **sqlcmd**](connecting-with-sqlcmd.md)  

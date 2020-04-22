@@ -1,5 +1,6 @@
 ---
-title: Pilote Ruby pour SQL Server | Microsoft Docs
+title: Pilote Ruby
+description: Découvrez comment vous connecter à une base de données SQL avec Ruby sur Windows, Linux ou macOS.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,23 +11,23 @@ ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75999805ee94981142db9e0437b69a8f3dbd30d2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c9c221f053ea486d3534ab4a37a9cfe85f176518
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926746"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634603"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Pilote Ruby pour SQL Server
 
 ![Télécharger-FlècheBas-Entourée](../../ssms/media/download-icon.png)[Télécharger le pilote Ruby pour SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Vous pouvez vous connecter à une base de données SQL avec Ruby sur Windows, Linux ou Mac.   
+Vous pouvez vous connecter à une base de données SQL avec Ruby sur Windows, Linux ou macOS.
   
 ## <a name="getting-started"></a>Mise en route  
-* [Étape 1 : Configurer l’environnement de développement pour le développement Ruby](step-1-configure-development-environment-for-ruby-development.md)  
+* [Étape 1 : Configurer un environnement de développement Ruby](step-1-configure-development-environment-for-ruby-development.md)  
 * [Étape 2 : Créer une base de données SQL pour le développement Ruby](step-2-create-a-sql-database-for-ruby-development.md)  
-* [Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
+* [Étape 3 : Preuve de concept sur la connexion à SQL avec Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>Documentation  
 [Documentation sur ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  

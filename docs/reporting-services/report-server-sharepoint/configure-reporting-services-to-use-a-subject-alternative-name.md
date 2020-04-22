@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580016"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487022"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurer Reporting Services pour utiliser un autre nom d’objet
 
@@ -20,11 +20,11 @@ Cette rubrique explique comment configurer SQL Server Reporting Services (SSRS) 
 
 Les instructions s'appliquent à l'URL Reporting Services, ainsi qu'à une URL de service web.
 
-Pour utiliser un nom SAN, le certificat SSL doit être inscrit sur le serveur, être signé et posséder la clé privée. Vous ne pouvez pas utiliser un certificat auto-signé.  
+Pour utiliser un nom SAN, le certificat TLS/SSLdoit être inscrit sur le serveur, être signé et posséder la clé privée. Vous ne pouvez pas utiliser un certificat auto-signé.  
   
- Vous pouvez configurer les URL dans Reporting Services de sorte qu’elles utilisent un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service SSL d’être à l’écoute de plusieurs URL. Il permet également au service SSL de partager le port SSL avec d’autres applications. Le nom SAN ressemble à `www.s2.com`.  
+ Vous pouvez configurer les URL dans Reporting Services de sorte qu’elles utilisent un certificat TLS/SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service TLS d’être à l’écoute de plusieurs URL. Il permet également au service TLS de partager le port TLS avec d’autres applications. Le nom SAN ressemble à `www.s2.com`.  
   
- Pour plus d’informations sur l’activation de SSL pour Reporting Services, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Pour plus d’informations sur l’activation de TLS pour Reporting Services, consultez [Configurer des connexions TLS sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurer SSRS pour utiliser un autre nom de l’objet pour l’URL d’un service web
   
@@ -32,11 +32,11 @@ Pour utiliser un nom SAN, le certificat SSL doit être inscrit sur le serveur, �
   
      Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Dans la page **URL du service web** , sélectionnez un port SSL et un certificat SSL.  
+2.  Dans la page **URL du service web** , sélectionnez un port TLS/SSL et un certificat TLS/SSL.  
   
      ![Gestionnaire de configuration de Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gestionnaire de configuration de Reporting Services")  
   
-     Le gestionnaire de configuration inscrit le certificat SSL pour le port.  
+     Le gestionnaire de configuration inscrit le certificat TLS/SSL pour le port.  
   
 3.  Ouvrez le fichier rsreportserver.config.  
   

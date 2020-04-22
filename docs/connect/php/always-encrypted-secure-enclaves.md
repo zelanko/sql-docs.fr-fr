@@ -1,5 +1,6 @@
 ---
-title: Always Encrypted avec les enclaves sécurisées avec des pilotes PHP pour SQL Server | Microsoft Docs
+title: Always Encrypted avec des enclaves sécurisées avec les pilotes PHP
+description: Découvrez comment utiliser Always Encrypted avec les enclaves sécurisées avec les pilotes Microsoft pour PHP pour SQL Server.
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941086"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632089"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Utilisation d’Always Encrypted avec des enclaves sécurisées avec les pilotes PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941086"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Activation d’Always Encrypted avec les enclaves sécurisées
 
-Le support de Always Encrypted avec des enclaves sécurisées est disponible dans les pilotes PHP pour SQL Server à partir de 5.8.0. Always Encrypted avec des enclaves sécurisées requiert SQL Server 2019 ou version ultérieure et la version 17.4+ du pilote ODBC. Pour plus d’informations sur les exigences générales requises pour Always Encrypted avec les pilotes PHP pour SQL Server, consultez [ici](../../connect/php/using-always-encrypted-php-drivers.md).
+Le support de Always Encrypted avec des enclaves sécurisées est disponible dans les pilotes PHP pour SQL Server à partir de 5.8.0. Always Encrypted avec des enclaves sécurisées requiert SQL Server 2019 ou version ultérieure et la version 17.4+ du pilote ODBC. Pour plus d’informations sur les exigences générales requises pour Always Encrypted avec les pilotes PHP pour SQL Server, consultez [ici](using-always-encrypted-php-drivers.md).
 
 Always Encrypted avec des enclaves sécurisées garantit la sécurité des données chiffrées en attestant l’enclave, c’est-à-dire en vérifiant l’enclave par rapport à un service d’attestation externe. Pour utiliser des enclaves sécurisées, le mot clé `ColumnEncryption` doit identifier le type et le protocole d’attestation ainsi que les données d’attestation associées, séparées par une virgule. La version 17.4 du pilote ODBC prend en charge uniquement la sécurité basée sur la virtualisation (VBS) et le protocole de service Guardian hôte (SGH) pour le type et le protocole d’enclave. Les données d’attestation associées sont l’URL du serveur d’attestation. Ainsi, les éléments suivants sont ajoutés à la chaîne de connexion :
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>Voir aussi  
-[Guide de programmation pour le pilote SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Référence API du pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Utilisation d’Always Encrypted avec les pilotes PHP pour SQL Server | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)
+[Guide de programmation pour le pilote SQL PHP](programming-guide-for-php-sql-driver.md)  
+[Informations de référence sur l’API du pilote SQLSRV](sqlsrv-driver-api-reference.md)  
+[Référence API du pilote PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
+[Utilisation d’Always Encrypted avec les pilotes PHP pour SQL Server](using-always-encrypted-php-drivers.md)
   

@@ -1,5 +1,6 @@
 ---
 title: Modèles de contenu non déterministes | Microsoft Docs
+description: Découvrez un exemple d’utilisation d’un schéma XML avec un modèle de contenu non déterministe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e2deef952a4c938a65cf1c8a5c8181c2fd6bc04
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 23118823d946266d841c444f2f7e1f7f1bec230b
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665073"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388475"
 ---
 # <a name="non-deterministic-content-models"></a>modèles de contenu non déterministes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80665073"
   
  À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1, toutefois, les modèles de contenu non déterministes sont acceptés si les contraintes d’occurrence sont 0,1, ou non liées.  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>Exemple: modèle de contenu non déterministe rejeté  
+## <a name="example-non-deterministic-content-model-rejected"></a>Exemple : modèle de contenu non déterministe rejeté  
  L'exemple suivant tente de créer un schéma XML dont le modèle de contenu est non déterministe. Le code échoue car il n'est pas certain si l'élément `<root>` doit avoir une séquence de deux éléments `<a>` ou si l'élément `<root>` doit avoir deux séquences, chacune possédant un élément `<a>` .  
   
 ```  
@@ -60,7 +61,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>Exemple: modèle de contenu non déterministe accepté  
+## <a name="example-non-deterministic-content-model-accepted"></a>Exemple : modèle de contenu non déterministe accepté  
  Le schéma suivant serait rejeté dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1.  
   
 ```  

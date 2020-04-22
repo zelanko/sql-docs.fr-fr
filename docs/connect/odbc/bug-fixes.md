@@ -1,5 +1,6 @@
 ---
-title: Liste des bogues corrigés | Microsoft Docs
+title: Liste des bogues corrigés
+description: Cette page contient la liste des bogues résolus dans chaque version, à partir du pilote Microsoft ODBC 17 pour SQL Server.
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896777"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629719"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
-Cette page contient la liste des bogues résolus dans chaque version, à partir du pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Cette page contient la liste des bogues résolus dans chaque version, à partir du pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>Correctifs de bogues dans la version 17.5.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -30,10 +31,10 @@ Cette page contient la liste des bogues résolus dans chaque version, à partir 
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Correctifs de bogues dans le pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17.5 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Correction du calcul du hachage des métadonnées CMK AKV sur Linux/Mac
+- Correction du calcul du hachage des métadonnées CMK AKV sur Linux/macOS
 - Correction de l’erreur lors du chargement d’OpenSSL 1.0.0
 - Résolution des problèmes de conversion lors de l’utilisation des pages de codes ISO-8859-1 et ISO-8859-2
-- Correction du nom de la bibliothèque interne sur Mac pour inclure le numéro de version
+- Correction du nom de la bibliothèque interne sur macOS pour inclure le numéro de version
 - Correction du paramètre de l’indicateur null lorsque des liaisons de longueur et d’indicateur distincts sont utilisées
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>Correctifs de bogues dans le pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17.4.2 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]

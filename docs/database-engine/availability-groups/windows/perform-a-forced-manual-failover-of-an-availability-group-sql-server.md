@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 901059ea6aa203dfcf21878c35eb1bc0214408b9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822538"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301590"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel forcé d’un groupe de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74822538"
  Après un basculement forcé, la cible de basculement vers laquelle le groupe de disponibilité a basculé devient le nouveau réplica principal. Les bases de données secondaires dans les réplicas secondaires restants sont suspendues et vous devez les reprendre manuellement. Lorsque l'ancien réplica principal devient disponible, il adopte le rôle secondaire, et les anciennes bases de données primaires deviennent les bases de données secondaires et passent à l'état SUSPENDED. Avant de reprendre une base de données secondaire donnée, vous pouvez récupérer les données perdues de celle-ci. Toutefois, notez que la troncation du journal des transactions est retardée sur une base de données primaire donnée, lorsque l'une de ses bases de données secondaires est interrompue.  
   
 > [!IMPORTANT]  
->  La synchronisation de données avec la base de données primaire n'est pas effectuée tant que la base de données secondaire n'est pas reprise. Pour plus d'informations sur la reprise d'une base de données secondaire, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp) plus loin dans cet article.  
+>  La synchronisation de données avec la base de données primaire n'est pas effectuée tant que la base de données secondaire n'est pas reprise. Pour plus d’informations sur la reprise d’une base de données secondaire, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cet article.  
   
  Effectuer un basculement forcé est nécessaire dans les cas d'urgence suivants :  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74822538"
     >  Lorsque le cluster WSFC possède un quorum sain, si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica effectue un basculement manuel planifié.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les conditions préalables requises et les recommandations pour forcer le basculement et un exemple de scénario qui utilise un basculement forcé pour récupérer après d’une défaillance catastrophique, consultez [Exemple de scénario : utilisation d'un basculement forcé pour effectuer une récupération suite à une défaillance catastrophique](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)plus loin dans cette rubrique.  
+>  Pour plus d’informations sur les prérequis et les recommandations pour forcer un basculement et pour obtenir un exemple de scénario qui utilise un basculement forcé pour effectuer une récupération suite à une défaillance catastrophique, consultez [Exemple de scénario : Utilisation d’un basculement forcé pour effectuer une récupération suite à une défaillance catastrophique](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy), plus loin dans cette rubrique.  
   
   
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
@@ -55,7 +55,7 @@ ms.locfileid: "74822538"
   
 -   Une perte de données est possible pendant le basculement forcé d'un groupe de disponibilité. En outre, si le réplica principal s'exécute lorsque vous démarrez un basculement forcé, les clients risquent de toujours être connectés aux bases de données primaires précédentes. Par conséquent, nous vous recommandons vivement de forcer le basculement uniquement si le réplica principal n'est plus exécuté et si vous êtes prêt à prendre le risque de perdre des données afin de restaurer l'accès aux bases de données dans le groupe de disponibilité.  
   
--   Lorsqu'une base de données secondaire se trouve dans l'état REVERTING ou INITIALIZING, forcer le basculement entraîne l'impossibilité pour la base de données de démarrer en tant que base de données primaire. Si la base de données se trouve dans un état INTIAILIZING, appliquez les enregistrements de journal manquants d'une sauvegarde de base de données ou restaurez entièrement la base de données. Si la base de données se trouvait dans un état REVERTING, vous devez restaurer entièrement la base de données à partir de sauvegardes.  
+-   Lorsqu'une base de données secondaire se trouve dans l'état REVERTING ou INITIALIZING, forcer le basculement entraîne l'impossibilité pour la base de données de démarrer en tant que base de données primaire. Si la base de données se trouve dans un état INITIALIZING, appliquez les enregistrements de journal manquants d'une sauvegarde de base de données ou restaurez entièrement la base de données. Si la base de données se trouvait dans un état REVERTING, vous devez restaurer entièrement la base de données à partir de sauvegardes.  
   
 -   Une commande de basculement est retournée dès que la cible de basculement a accepté la commande. Toutefois, la récupération de la base de données est asynchrone après que le basculement du groupe de disponibilité est terminé.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74822538"
   
 -   Ne forcez pas le basculement lorsque le réplica principal est toujours en cours d'exécution.  
   
--   Si possible, forcez le basculement uniquement vers une cible de basculement dont les bases de données secondaires se trouvent dans l'état NOT SYNCHRONIZED, SYNCHRONIZED ou SYNCHRONIZING. Pour plus d'informations sur les conséquences d'un basculement forcé lorsqu'une base de données secondaire se trouve dans l'état INTIAILIZGING ou REVERTING, consultez [Limitations et restrictions](#Restrictions), plus haut dans cette rubrique.  
+-   Si possible, forcez le basculement uniquement vers une cible de basculement dont les bases de données secondaires se trouvent dans l'état NOT SYNCHRONIZED, SYNCHRONIZED ou SYNCHRONIZING. Pour plus d'informations sur les conséquences d'un basculement forcé lorsqu'une base de données secondaire se trouve dans l'état INITIALIZING ou REVERTING, consultez [Limitations et restrictions](#Restrictions), plus haut dans cette rubrique.  
   
 -   En général, la latence d'une base de données secondaire donnée, par rapport à la base de données primaire, doit être similaire sur les différents réplicas secondaires de validation asynchrone. Toutefois, lors d'un basculement forcé, une perte de données peut constituer un souci majeur. Par conséquent, prenez le temps de déterminer la latence relative des copies des bases de données sur les différents réplicas secondaires. Pour déterminer quelle copie d'une base de données secondaire donnée présente la latence la plus faible, comparez leurs numéros séquentiels LSN de fin de journal. Plus ce numéro LSN de fin de journal est élevé, plus la latence est faible.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "74822538"
   
 4.  Cette commande lance l'Assistant Basculer le groupe de disponibilité. Pour plus d’informations, consultez [Utiliser l’Assistant Basculer le groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-5.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d'informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
+5.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d’informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour forcer le basculement (avec possible perte de données)**  
@@ -144,7 +144,7 @@ ms.locfileid: "74822538"
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
-3.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d'informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
+3.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d’informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour forcer le basculement (avec possible perte de données)**  
@@ -180,17 +180,17 @@ ms.locfileid: "74822538"
     > [!NOTE]  
     >  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-3.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d'informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
+3.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d’informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
 -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="follow-up-essential-tasks-after-a-forced-failover"></a><a name="FollowUp"></a> Suivi : Tâches essentielles après un basculement forcé  
+##  <a name="follow-up-essential-tasks-after-a-forced-failover"></a><a name="FollowUp"></a> Suivi : Tâches essentielles après un basculement forcé  
   
 1.  Après un basculement forcé, le réplica secondaire vers lequel vous avez effectué le basculement devient le nouveau réplica principal. Toutefois, pour que ce réplica de disponibilité soit accessible aux clients, vous devrez peut-être reconfigurer le quorum WSFC ou ajuster la configuration du mode de disponibilité du groupe de disponibilité, comme suit :  
   
-    -   **Si vous effectuez le basculement en dehors du [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] :**  Ajustez les votes de quorum des nœuds WSFC pour refléter votre nouvelle configuration de groupe de disponibilité. Si le nœud WSFC qui héberge le réplica secondaire cible n'a pas de vote de quorum WSFC, vous devrez peut-être forcer le quorum WSFC.  
+    -   **Si vous avez effectué le basculement en dehors du [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] :**  Ajustez les votes de quorum des nœuds WSFC afin de refléter la nouvelle configuration de votre groupe de disponibilité. Si le nœud WSFC qui héberge le réplica secondaire cible n'a pas de vote de quorum WSFC, vous devrez peut-être forcer le quorum WSFC.  
   
         > [!NOTE]  
         >  Un [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] existe uniquement si deux réplicas de disponibilité (réplica principal précédent inclus) sont configurés pour le mode de validation synchrone avec basculement automatique.  
@@ -203,7 +203,7 @@ ms.locfileid: "74822538"
   
         -   [Forcer un cluster WSFC à démarrer sans quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   **Si vous avez effectué le basculement en dehors du [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] :** Nous vous recommandons d’ajuster le mode de disponibilité et de basculement sur le nouveau réplica principal et sur les réplicas secondaires restants afin de refléter la configuration de votre choix concernant la validation synchrone et le basculement automatique.  
+    -   **Si vous avez effectué le basculement en dehors du [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] :** Nous vous recommandons d’ajuster le mode de disponibilité et de basculement sur le nouveau réplica principal et sur les réplicas secondaires restants afin de refléter la configuration de votre choix concernant la validation synchrone et le basculement automatique.  
   
         > [!NOTE]  
         >  Un [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] existe uniquement si le réplica principal actuel est configuré pour le mode de validation synchrone.  
@@ -244,8 +244,8 @@ ms.locfileid: "74822538"
   
     -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> Exemple de scénario : Utilisation d’un basculement forcé pour récupérer d’une défaillance catastrophique  
- Si le réplica principal échoue et qu'aucun réplica secondaire synchronisé n'est disponible, forcer le groupe de disponibilité à basculer peut constituer une réponse appropriée. La pertinence d'un basculement forcé varie : (1) selon que vous vous attendez ou non à ce que le réplica principal reste hors connexion pendant une durée plus longue que celle tolérée par votre contrat de qualité de service (SLA), et (2) selon que vous êtes prêt à prendre le risque de perdre éventuellement des données afin de mettre les bases de données primaires à disposition le plus rapidement possible. Si vous décidez qu'un groupe de disponibilité nécessite un basculement forcé, ce dernier ne constitue qu'une étape dans un processus plus complexe.  
+##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy">Exemple de scénario :</a> Utilisation d’un basculement forcé pour effectuer une récupération suite à une défaillance catastrophique  
+ Si le réplica principal échoue et qu'aucun réplica secondaire synchronisé n'est disponible, forcer le groupe de disponibilité à basculer peut constituer une réponse appropriée. La pertinence d’un basculement forcé varie : (1) selon que vous vous attendez ou non à ce que le réplica principal reste hors connexion pendant une durée plus longue que celle tolérée par votre contrat de niveau de service (SLA), et (2) selon que vous êtes prêt à prendre le risque de perdre éventuellement des données afin de mettre les bases de données primaires à disposition le plus rapidement possible. Si vous décidez qu'un groupe de disponibilité nécessite un basculement forcé, ce dernier ne constitue qu'une étape dans un processus plus complexe.  
   
  Pour illustrer les étapes requises pour utiliser un basculement forcé afin d'opérer une récupération suite à une défaillance catastrophique, cette rubrique présente un possible scénario de récupération d'urgence. Ce scénario d'exemple implique un groupe de disponibilité dont la topologie d'origine consiste en un centre de données principal qui héberge trois réplicas de disponibilité avec validation synchrone, y compris le réplica principal, et un centre de données distant qui héberge deux réplicas secondaires avec validation asynchrone. La figure suivante illustre la topologie d'origine de ce groupe de disponibilité d'exemple. Le groupe de disponibilité est hébergé par un cluster WSFC à plusieurs sous-réseaux avec trois nœuds dans le centre de données principal (**nœud 01**, **nœud 02**et **nœud 03**) et deux nœuds dans un centre de données distant (**nœud 04** et **nœud 05**).  
   
@@ -288,8 +288,8 @@ ms.locfileid: "74822538"
   
 ||Étape|Liens|  
 |-|----------|-----------|  
-|**1.**|Les nœuds du centre de données principal reviennent en ligne et rétablissent la communication avec le cluster WSFC. Leurs réplicas de disponibilité reviennent en ligne en tant que réplicas secondaires avec des bases de données interrompues et l'administrateur de base de données doit rétablir manuellement chacune d'entre elles dans un bref délai.|[Reprendre une base de données de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Conseil : si vous êtes inquiet de la possible perte de données sur les bases de données primaires suite au basculement, vous devez essayer de créer une capture instantanée de base de données sur les bases de données interrompues sur l’une des bases de données secondaires avec validation synchrone. Gardez à l'esprit que la troncation du journal des transactions est retardée sur une base de données primaire, lorsque l'une de ses bases de données secondaires est interrompue. De même, l'état de synchronisation du réplica secondaire avec validation synchrone ne peut pas effectuer la transition vers l'état HEALTHY tant qu'une base de données locale reste interrompue.|  
-|**2.**|Une fois que les bases de données ont repris, l'administrateur de base de données change le nouveau réplica principal pour qu'il passe en mode de validation synchrone de manière temporaire. Cela implique deux étapes :<br /><br /> 1) Modifiez un réplica de disponibilité hors connexion en mode de validation asynchrone.<br /><br /> 2) Modifiez le nouveau réplica principal en mode de validation synchrone. Remarque : cette étape permet aux bases de données secondaires avec validation synchrone ayant repris de passer à l’état SYNCHRONIZED.|[Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
+|**1.**|Les nœuds du centre de données principal reviennent en ligne et rétablissent la communication avec le cluster WSFC. Leurs réplicas de disponibilité reviennent en ligne en tant que réplicas secondaires avec des bases de données interrompues et l'administrateur de base de données doit rétablir manuellement chacune d'entre elles dans un bref délai.|[Reprendre une base de données de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Conseil : Si vous êtes inquiet de la possible perte de données sur les bases de données primaires suite au basculement, vous devez essayer de créer une capture instantanée de base de données sur les bases de données interrompues sur l’une des bases de données secondaires avec validation synchrone. Gardez à l'esprit que la troncation du journal des transactions est retardée sur une base de données primaire, lorsque l'une de ses bases de données secondaires est interrompue. De même, l'état de synchronisation du réplica secondaire avec validation synchrone ne peut pas effectuer la transition vers l'état HEALTHY tant qu'une base de données locale reste interrompue.|  
+|**2.**|Une fois que les bases de données ont repris, l'administrateur de base de données change le nouveau réplica principal pour qu'il passe en mode de validation synchrone de manière temporaire. Cela implique deux étapes :<br /><br /> 1) Modifiez un réplica de disponibilité hors connexion en mode de validation asynchrone.<br /><br /> 2) Modifiez le nouveau réplica principal en mode de validation synchrone. Remarque : Cette étape permet aux bases de données secondaires avec validation synchrone ayant repris de passer à l’état SYNCHRONIZED.|[Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|Une fois que le réplica secondaire avec validation synchrone sur le **nœud 03** (le réplica principal d’origine) passe à l’état de synchronisation HEALTHY, l’administrateur de base de données effectue un basculement planifié manuel vers ce réplica, pour qu’il redevienne le réplica principal. Le réplica sur le **nœud 04** redevient un réplica secondaire.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|L'administrateur de base de données se connecte au nouveau réplica principal et :<br /><br /> 1) Modifie l’ancien réplica principal (dans le centre distant) pour qu’il repasse en mode de validation asynchrone.<br /><br /> 2) Modifie le réplica secondaire avec validation asynchrone dans le centre de données principal pour qu’il repasse en mode de validation synchrone|[Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
@@ -318,7 +318,7 @@ ms.locfileid: "74822538"
   
 -   **Blogs :**  
   
-     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117082"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487688"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Scoring natif à l’aide de la fonction T-SQL PREDICT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Le scoring natif utilise la [fonction T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) et les fonctionnalités des extensions C++ natives dans SQL Server 2017 pour générer des valeurs de prédiction ou des *scores* pour les nouvelles entrées de données en quasi temps réel. Cette méthodologie offre la vitesse de traitement la plus rapide possible pour les charges de travail de prévision et de prédiction, mais elle s’accompagne d’exigences en matière de plateforme et de bibliothèque : seules les fonctions de RevoScaleR et de revoscalepy ont des implémentations en C++.
 
-Le scoring natif nécessite un modèle déjà entraîné. Dans SQL Server 2017 sur Windows ou sur Linux, ou dans Azure SQL Database, vous pouvez appeler la fonction PREDICT dans Transact-SQL pour appeler le scoring natif sur les nouvelles données que vous fournissez en tant que paramètre d’entrée. La fonction PREDICT retourne des scores pour les entrées de données que vous fournissez.
+Le scoring natif nécessite un modèle déjà entraîné. Dans SQL Server 2017 sur Windows ou sur Linux, vous pouvez appeler la fonction PREDICT dans Transact-SQL pour appeler le scoring natif sur les nouvelles données que vous fournissez en tant que paramètre d’entrée. La fonction PREDICT retourne des scores pour les entrées de données que vous fournissez.
 
 ## <a name="how-native-scoring-works"></a>Fonctionnement du scoring natif
 
@@ -36,7 +36,7 @@ La fonction retourne des prédictions pour les données d’entrée ainsi que to
 
 ## <a name="prerequisites"></a>Prérequis
 
-PREDICT est disponible et activé par défaut dans toutes les éditions du moteur de base de données SQL Server 2017, y compris dans SQL Server Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) et Azure SQL Database. Vous n’avez pas besoin d’installer R ou Python ni d’activer des fonctionnalités supplémentaires.
+PREDICT est disponible et activé par défaut dans toutes les éditions du moteur de base de données SQL Server 2017 et versions ultérieures, y compris dans SQL Server Machine Learning Services sur Windows, SQL Server 2017 et versions ultérieures sur Windows et Linux. Vous n’avez pas besoin d’installer R ou Python ni d’activer des fonctionnalités supplémentaires.
 
 + Le modèle doit être entraîné à l’avance à l’aide de l’un des algorithmes **rx** pris en charge listés ci-dessous.
 

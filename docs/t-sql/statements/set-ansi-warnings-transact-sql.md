@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,29 +23,29 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 141e7ddb6fb0f8d539af559532debe65c01b569f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948026"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634459"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Spécifie le comportement conforme à la norme ISO pour plusieurs conditions d'erreur :  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_WARNINGS ON
@@ -73,8 +73,8 @@ ANSI_WARNINGS doit être activé (valeur ON) lors de la création ou de la manip
 > [!IMPORTANT]
 > La valeur de ANSI_WARNINGS doit être définie à ON lors de l'exécution de requêtes distribuées.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_WARNINGS lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, définis dans l'application avant la connexion. La valeur par défaut pour SET ANSI_WARNINGS est OFF lorsqu'il s'agit de connexions à partir d'applications de bibliothèques de bases de données.  
-  
+Les clients, tels que le pilote ODBC client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le fournisseur OLE DB client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le pilote Microsoft JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définissent automatiquement ANSI_WARNINGS sur ON avec un indicateur de connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, définis dans l'application avant la connexion. La valeur par défaut pour SET ANSI_WARNINGS est OFF lorsqu'il s'agit de connexions à partir d'applications de bibliothèques de bases de données. Pour plus d’informations, consultez [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) dans les spécifications du protocole TDS (Tabular Data Stream). 
+
 Quand ANSI_DEFAULTS est ON, ANSI_WARNINGS est activé.  
   
 La valeur d’ANSI_WARNINGS est définie au moment de l’exécution, pas au moment de l’analyse.  

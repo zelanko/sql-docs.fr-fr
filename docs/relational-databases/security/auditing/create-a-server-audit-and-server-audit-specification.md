@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fe4348947203e54a889c9e7fa18067a0562feca
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952471"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635751"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,14 +164,19 @@ ms.locfileid: "75952471"
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> Même si vous pouvez utiliser un chemin d’accès UNC comme cible de fichier d’audit, faites attention. En cas de latence du réseau sur ce partage de partage, vous pouvez constater une dégradation des performances dans SQL Server, car les threads attendent qu’une écriture d’audit se termine avant de continuer. Vous pouvez observer différents messages d’erreur dans le journal des erreurs SQL Server, par exemple 17894 :
+>
+>   2020-02-07 12:21:35.100 Le répartiteur serveur (0x7954) du pool de répartiteurs 'XE Engine main dispatcher pool' Worker 0x00000058E7300000 semble être improductif sur le nœud 0.
+
+
 #### <a name="to-create-a-server-audit-specification"></a>Pour créer une spécification d'audit de serveur  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

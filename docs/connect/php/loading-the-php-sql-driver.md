@@ -1,5 +1,6 @@
 ---
-title: Chargement de Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+title: Chargement des pilotes Microsoft pour PHP
+description: Cette rubrique fournit des instructions pour le chargement des pilotes Microsoft SQL Server pour PHP dans l’espace de processus PHP.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce26b4800250cab25a6db6f5b3ed7ebf0b1d9bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73899b2ea917c3981b0c696b78de453eacbf894d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922871"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632771"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Chargement des pilotes Microsoft SQL Server pour PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique fournit des instructions pour le chargement de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] dans l’espace de processus PHP.  
   
-Vous pouvez télécharger les pilotes prédéfinis pour votre plateforme sur la page de projet GitHub [Pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases). Chaque package d’installation contient les fichiers de pilote SQLSRV et PDO_SQLSRV dans les variantes avec et sans thread. Sur Windows, ils sont également disponibles en version 32 bits et 64 bits. Pour obtenir la liste des fichiers de pilote contenus dans chaque package, consultez [Configuration système requise pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md). Le fichier de pilote doit correspondre à la version de PHP, à l’architecture et au type (avec/sans thread) de votre environnement PHP.
+Vous pouvez télécharger les pilotes prédéfinis pour votre plateforme sur la page de projet GitHub [Pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases). Chaque package d’installation contient les fichiers de pilote SQLSRV et PDO_SQLSRV dans les variantes avec et sans thread. Sur Windows, ils sont également disponibles en version 32 bits et 64 bits. Pour obtenir la liste des fichiers de pilote contenus dans chaque package, consultez [Configuration système requise pour les pilotes Microsoft pour PHP pour SQL Server](system-requirements-for-the-php-sql-driver.md). Le fichier de pilote doit correspondre à la version de PHP, à l’architecture et au type (avec/sans thread) de votre environnement PHP.
 
-Sur Linux et macOS, les pilotes peuvent également être installés avec PECL, suivant le [tutoriel d’installation](../../connect/php/installation-tutorial-linux-mac.md).
+Sur Linux et macOS, les pilotes peuvent également être installés avec PECL, suivant le [tutoriel d’installation](installation-tutorial-linux-mac.md).
 
 Vous pouvez également générer les pilotes à partir de la source lors de l’étape de build de PHP ou avec `phpize`. Dans ce cas, vous aurez la possibilité de les créer de manière statique dans PHP, et non en tant qu’extensions partagées, en ajoutant `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (sur Linux et macOS) ou `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (sur Windows) à la commande `./configure` pendant l’étape de build de PHP. Pour plus d’informations sur le système de build de PHP et `phpize`, consultez la [Documentation de PHP](http://php.net/manual/install.php).
   
@@ -63,7 +64,7 @@ Pour charger le pilote SQLSRV au démarrage de PHP, commencez par déplacer un f
     ```
     Sur Linux, si vous avez installé PHP à l’aide du gestionnaire de package de votre système, l’extension PDO est probablement installée comme extension chargée dynamiquement sous le nom pdo.so. Elle doit être chargée avant l’extension PDO_SQLSRV, sinon le chargement échouera. Les extensions sont généralement chargées à l’aide de fichiers .ini individuels, qui sont lus après php.ini. Par conséquent, si pdo.so est chargé par le biais de son propre fichier .ini, un fichier distinct permettant de charger le pilote PDO_SQLSRV après PDO est nécessaire. 
 
-    Pour savoir dans quel répertoire se trouvent les fichiers .ini de chaque extension, exécutez `php --ini` et notez le répertoire indiqué sous `Scan for additional .ini files in:`. Recherchez le fichier qui charge pdo.so : il est probablement préfixé par un nombre, par exemple 10-pdo.ini. Le préfixe numérique indique l’ordre de chargement des fichiers .ini, tandis que les fichiers dépourvus de préfixe numérique sont chargés par ordre alphabétique. Créez un fichier pour charger le fichier de pilote PDO_SQLSRV nommé 30-pdo_sqlsrv.ini (ou n’importe quel autre nombre supérieur au préfixe de pdo.ini) ou pdo_sqlsrv.ini (si pdo.ini n’est pas précédé d’un nombre), puis ajoutez la ligne suivante, avec le nom de fichier correspondant :  
+    Pour savoir dans quel répertoire se trouvent les fichiers .ini de chaque extension, exécutez `php --ini` et notez le répertoire indiqué sous `Scan for additional .ini files in:`. Recherchez le fichier qui charge pdo.so. Il est probablement préfixé par un nombre, par exemple 10-pdo.ini. Le préfixe numérique indique l’ordre de chargement des fichiers .ini, tandis que les fichiers dépourvus de préfixe numérique sont chargés par ordre alphabétique. Créez un fichier pour charger le fichier de pilote PDO_SQLSRV nommé 30-pdo_sqlsrv.ini (ou n’importe quel autre nombre supérieur au préfixe de pdo.ini) ou pdo_sqlsrv.ini (si pdo.ini n’est pas précédé d’un nombre), puis ajoutez la ligne suivante, avec le nom de fichier correspondant :  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
@@ -83,13 +84,13 @@ Pour charger le pilote SQLSRV au démarrage de PHP, commencez par déplacer un f
 Pour plus d’informations sur les directives **php.ini**, consultez [Description des principales directives php.ini](https://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](getting-started-with-the-php-sql-driver.md)
 
-[Configuration système requise pour Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Configuration système requise pour Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
 
-[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](programming-guide-for-php-sql-driver.md)
 
-[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+[Informations de référence sur l’API du pilote SQLSRV](sqlsrv-driver-api-reference.md)
 
-[Référence API du pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Référence API du pilote PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
   

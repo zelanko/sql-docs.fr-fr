@@ -1,5 +1,6 @@
 ---
-title: 'Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pymssql | Microsoft Docs'
+title: 'Étape 3 : Connexion à SQL avec pymssql'
+description: L’étape 3 est une preuve de concept, qui montre comment vous pouvez vous connecter à SQL Server à l’aide de Python et pymssql. Les exemples de base illustrent la sélection et l’insertion de données.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913095"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528563"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -50,7 +51,7 @@ La fonction [cursor.execute](https://pypi.org/project/pymssql/) peut être utili
   
 ## <a name="step-3--insert-a-row"></a>Étape 3 :  Insérer une ligne  
   
-Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSERT](../../../t-sql/statements/insert-transact-sql.md) en toute sécurité, passer des paramètres pour protéger votre application de la valeur [Injection SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Dans cet exemple, vous allez apprendre à exécuter une instruction [INSERT](../../../t-sql/statements/insert-transact-sql.md) en toute sécurité et à passer des paramètres. Le passage de paramètres en tant que valeurs protège votre application contre les [injections SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
   
 ```python
@@ -66,7 +67,7 @@ Dans cet exemple, vous allez découvrir comment exécuter une instruction [INSER
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Étape 4 :  Restaurer une transaction  
+## <a name="step-4-roll-back-a-transaction"></a>Étape 4 : Restaurer une transaction  
   
 Cet exemple de code illustre l'utilisation de transactions dans lesquelles vous :  
   

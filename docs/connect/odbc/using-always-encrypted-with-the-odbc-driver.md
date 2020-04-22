@@ -1,5 +1,6 @@
 ---
-title: Utilisation d’Always Encrypted avec ODBC Driver for SQL Server | Microsoft Docs
+title: Utilisation d’Always Encrypted avec ODBC Driver
+description: Découvrez comment développer des applications ODBC à l’aide d’Always Encrypted et de Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285843"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635421"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "79285843"
 
 ### <a name="introduction"></a>Introduction
 
-Cet article fournit des informations sur la façon de développer des applications ODBC à l’aide d’[Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec les enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md) et d’[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Cet article fournit des informations sur la façon de développer des applications ODBC à l’aide d’[Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec les enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md) et d’[ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. À cette fin, un pilote compatible avec Always Encrypted, comme ODBC Driver for SQL Server, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Always Encrypted *avec les enclaves sécurisées* étend cette fonctionnalité pour activer des fonctionnalités plus complexes sur les données sensibles tout en préservant la confidentialité des données.
 
@@ -60,7 +61,7 @@ Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du c
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Activation d’Always Encrypted avec les enclaves sécurisées
 
 > [!NOTE]
-> Sur Linux et Mac, la version 1.0.1 ou une version ultérieure d’OpenSSL est nécessaire pour pouvoir utiliser Always Encrypted avec des enclaves sécurisées.
+> Sur Linux et macOS, la version 1.0.1 ou une version ultérieure d’OpenSSL est nécessaire pour pouvoir utiliser Always Encrypted avec des enclaves sécurisées.
 
 À partir de la version 17.4, le pilote prend en charge Always Encrypted avec enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 (ou version ultérieure), définissez le nom de source de données `ColumnEncryption`, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17.4, seul le type d’enclave [Sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) avec le protocole d’attestation [Service Guardian hôte](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indiqué par `VBS-HGS`, est pris en charge ; pour l’utiliser, spécifiez l’URL du serveur d’attestation, par exemple :
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 Aucune autre modification d’application ODBC n’est requise pour utiliser Azure Key Vault pour le stockage des clés CMK.
 
 > [!NOTE]
-> Le pilote contient la liste des points de terminaison AKV auxquels il fait confiance. À partir de la version 17.5.2 du pilote, cette liste est configurable : définissez la propriété `AKVTrustedEndpoints` dans la clé de Registre (Windows) ODBCINST.INI ou ODBC.INI ou dans la section du fichier `odbcinst.ini` ou `odbc.ini` (Linux/Mac) du pilote ou du DNS sous forme de liste délimitée par des points-virgules. En la définissant dans le DSN, elle devient prioritaire par rapport à un paramètre du pilote. Si la valeur commence par un point-virgule, elle étend la liste par défaut ; sinon, elle la remplace. La liste par défaut (à partir de 17.5) est `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+> Le pilote contient la liste des points de terminaison AKV auxquels il fait confiance. À partir de la version 17.5.2 du pilote, cette liste est configurable : définissez la propriété `AKVTrustedEndpoints` dans la clé de Registre (Windows) ODBCINST.INI ou ODBC.INI ou dans la section du fichier `odbcinst.ini` ou `odbc.ini` (Linux/macOS) du pilote ou du DNS sous forme de liste délimitée par des points-virgules. En la définissant dans le DSN, elle devient prioritaire par rapport à un paramètre du pilote. Si la valeur commence par un point-virgule, elle étend la liste par défaut ; sinon, elle la remplace. La liste par défaut (à partir de 17.5) est `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
 
-ODBC Driver for SQL Server sur Windows inclut un fournisseur de magasin de clés CMK intégré pour le Magasin de certificats Windows, nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux.) Avec ce fournisseur, la clé CMK est stockée localement sur l’ordinateur client, et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et à sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
+ODBC Driver for SQL Server sur Windows inclut un fournisseur de magasin de clés CMK intégré pour le Magasin de certificats Windows, nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux.) Avec ce fournisseur, la clé CMK est stockée localement sur l’ordinateur client, et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et à sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-custom-keystore-providers"></a>Utilisation de fournisseurs de magasins de clés personnalisés
 
-ODBC Driver for SQL Server prend également en charge les fournisseurs de magasins de clés tiers personnalisés à l’aide de l’interface CEKeystoreProvider. Cela permet à une application de charger, d’interroger et de configurer des fournisseurs de magasin de clés afin que le pilote puisse les utiliser pour accéder aux colonnes chiffrées. Les applications peuvent également interagir directement avec un fournisseur de magasin de clés afin de chiffrer des clés CEK pour le stockage dans SQL Server, et effectuer des tâches au-delà de l’accès aux colonnes chiffrées avec ODBC. Pour plus d’informations, consultez [Fournisseurs de magasins de clés personnalisés](../../connect/odbc/custom-keystore-providers.md).
+ODBC Driver for SQL Server prend également en charge les fournisseurs de magasins de clés tiers personnalisés à l’aide de l’interface CEKeystoreProvider. Cela permet à une application de charger, d’interroger et de configurer des fournisseurs de magasin de clés afin que le pilote puisse les utiliser pour accéder aux colonnes chiffrées. Les applications peuvent également interagir directement avec un fournisseur de magasin de clés afin de chiffrer des clés CEK pour le stockage dans SQL Server, et effectuer des tâches au-delà de l’accès aux colonnes chiffrées avec ODBC. Pour plus d’informations, consultez [Fournisseurs de magasins de clés personnalisés](custom-keystore-providers.md).
 
 Deux attributs de connexion sont utilisés pour interagir avec les fournisseurs de magasins de clés personnalisés. Il s'agit de :
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 Des informations détaillées supplémentaires sur les erreurs peuvent être obtenues par le biais de [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
 
 > [!NOTE]
-> Le fournisseur peut utiliser le handle de connexion pour associer les données écrites à une connexion spécifique, s’il le souhaite. Cela est utile pour implémenter la configuration par connexion. Il peut également ignorer le contexte de connexion et traiter les données de manière identique quelle que soit la connexion utilisée pour envoyer les données. Pour plus d’informations; consultez [Association de contexte](../../connect/odbc/custom-keystore-providers.md#context-association).
+> Le fournisseur peut utiliser le handle de connexion pour associer les données écrites à une connexion spécifique, s’il le souhaite. Cela est utile pour implémenter la configuration par connexion. Il peut également ignorer le contexte de connexion et traiter les données de manière identique quelle que soit la connexion utilisée pour envoyer les données. Pour plus d’informations; consultez [Association de contexte](custom-keystore-providers.md#context-association).
 
 #### <a name="reading-data-from-a-provider"></a>Lecture de données à partir d’un fournisseur
 
@@ -565,7 +566,7 @@ L’appelant doit s’assurer qu’une mémoire tampon de longueur suffisante su
 
 Cette interface n’impose aucune exigence supplémentaire sur le format des données transférées entre une application et un fournisseur de magasin de clés. Chaque fournisseur peut définir son propre format de data/protocole, en fonction de ses besoins.
 
-Pour obtenir un exemple d’implémentation de votre propre fournisseur de magasin de clés, consultez [Fournisseurs de magasins de clés personnalisés](../../connect/odbc/custom-keystore-providers.md)
+Pour obtenir un exemple d’implémentation de votre propre fournisseur de magasin de clés, consultez [Fournisseurs de magasins de clés personnalisés](custom-keystore-providers.md)
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitations du pilote ODBC lors de l’utilisation d’Always Encrypted
 

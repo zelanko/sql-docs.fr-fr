@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70958337"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487448"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
 
@@ -49,10 +49,10 @@ Prenez les points suivants en compte lorsque vous travaillez avec des tables tem
 - Les déclencheurs**INSTEAD OF** ne sont pas autorisés sur la table actuelle ou sur la table d’historique pour éviter l’invalidation de la logique DML. Les déclencheurs**AFTER** sont autorisés uniquement dans la table actuelle. Ils sont bloqués dans la table d’historique afin d’éviter l’invalidation de la logique DML.
 - L’utilisation de technologies de réplication est limitée :
 
-  - **Always On (Toujours active)** : entièrement prise en charge
-  - **Capture de données modifiées et Suivi des modifications de données** : uniquement prises en charge dans la table actuelle
-  - **Capture instantanée et réplication transactionnelle**: uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »). L’utilisation de plusieurs abonnés n’est pas prise en charge car ce scénario peut entraîner une incohérence des données temporelles, chacune d’elles dépendant de l’horloge système locale.
-  - **Réplication de fusion** : non prise en charge pour les tables temporelles
+  - **Always On (Toujours active) :** entièrement prise en charge
+  - **Capture de données modifiées et suivi des modifications :** uniquement prise en charge sur la table actuelle
+  - **Capture instantanée et réplication transactionnelle** : uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »). Lorsque l’agent de distribution démarre, il ouvre une transaction qui est maintenue ouverte jusqu’à ce que l’agent de distribution s’arrête. En raison de ce comportement, SysStartTime et SysEndTime sont remplis sur l’heure de la première transaction démarrée par l’agent de distribution. Par conséquent, il peut être préférable d’exécuter l’agent de distribution en suivant une planification plutôt que de l’exécuter en continu. L’utilisation de plusieurs abonnés n’est pas prise en charge, car cela peut entraîner des données temporelles incohérentes en raison de la dépendance sur l’horloge système locale.
+  - **Réplication de fusion :** non prise en charge pour les tables temporelles
 
 - Les requêtes régulières affectent uniquement les données dans la table actuelle. Pour interroger des données dans la table d’historique, vous devez utiliser des requêtes temporelles. Ces points sont abordés dans ce document dans la section Interrogation des données temporelles.
 - Une stratégie d’indexation optimale inclut stockage de colonnes d’index en cluster et / ou un index rowstore d’arbre B (B-tree) dans la table actuelle et un index columnstore en cluster dans la table d’historique pour des performances et une taille de stockage optimales. Si vous créez / utilisez votre propre table d’historique, nous vous recommandons vivement de créer ce type d’index comportant des colonnes de période en commençant à la fin de la colonne de période pour accélérer le traitement des requêtes temporelles et des requêtes qui font partie de la vérification de cohérence des données. La table d’historique par défaut a un index rowstore en cluster créé selon les colonnes de période (début, fin). Nous recommandons au minimum un index rowstore non-cluster.

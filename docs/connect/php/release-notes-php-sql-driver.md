@@ -1,10 +1,11 @@
 ---
-title: Notes de publication des pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
+title: Notes de publication des pilotes Microsoft pour PHP
+description: Cette page décrit ce qui a été modifié dans chaque version des pilotes Microsoft pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 03/05/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-dapugl, kenvh
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe4a5b0b9d336ad02cb7fdf8431f9e3754bd8d35
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923803"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633860"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notes de publication de Microsoft Drivers for PHP for SQL Server
 
@@ -38,6 +39,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="581"></a>5.8.1
+
+Cette version s’applique uniquement à Linux et macOS.
+
+[Balise de version GitHub (packages Linux et macOS disponibles ici)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
+
+### <a name="version-information"></a>Informations sur la version
+
+- Numéro de version : 5.8.1
+- Publication : 15 avril 2020
+
+## <a name="whats-new-in-581"></a>Nouveautés de la version 5.8.1
+
+| Nouvel élément | Détails |
+| :------- | :------ |
+| Correctif de bogue | Correction des problèmes de paramètres régionaux par défaut dans Alpine Linux. |
+| Correctif de bogue | Suppression de la structure de données inutile pour la prise en charge de la fonctionnalité de curseurs côté client dans Alpine Linux. |
+| Correctif de bogue | Correction des problèmes de journalisation lorsque les deux pilotes sont activés dans Alpine Linux. |
+| &nbsp; | &nbsp; |
 
 ## <a name="58"></a>5.8
 
@@ -131,7 +152,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - Prise en charge de Microsoft ODBC Driver 17.2 sur toutes les plateformes
 - Prise en charge de macOS High Sierra (requiert le pilote ODBC 17 ou une version ultérieure)
-- Prise en charge d’Azure Key Vault pour Always Encrypted pour les fonctionnalités CRUD de base, car la fonctionnalité Always Encrypted est disponible pour toutes les plateformes Windows, Linux ou macOS prises en charge [Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Prise en charge d’Azure Key Vault pour Always Encrypted pour les fonctionnalités CRUD de base, car la fonctionnalité Always Encrypted est disponible pour toutes les plateformes Windows, Linux ou macOS prises en charge [Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server](using-always-encrypted-php-drivers.md)
 - Prise en charge d’Ubuntu 18.04 LTS (requiert le pilote ODBC 17.2)
 - Prise en charge de la résilience des connexions dans Linux ou macOS (nécessite le pilote ODBC 17.2)
 
@@ -152,7 +173,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - La version 17 est désormais la version par défaut sur toutes les plateformes
 - Prise en charge d’Ubuntu 17.10, Debian 9 et SuSE Enterprise Linux 12
 - Prise en charge d’Ubuntu 15.10 abandonnée
-- Prise en charge d’Always Encrypted avec des fonctionnalités CRUD sur Windows. Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec les pilotes PHP pour SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Prise en charge d’Always Encrypted avec des fonctionnalités CRUD sur Windows. Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec les pilotes PHP pour SQL Server](using-always-encrypted-php-drivers.md)
   - Prise en charge du Magasin de certificats Windows
   - Always Encrypted est pris en charge uniquement avec le pilote Microsoft ODBC 17 et versions ultérieures
 - Prise en charge des paramètres régionaux non UTF8 sur Linux et macOS
@@ -176,11 +197,11 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Prise en charge de macOS Sierra et de macOS El Capitan
 - Prise en charge d’Ubuntu 15.10 et de Debian 8
 - Prise en charge d’Ubuntu 15.04 abandonnée
-- Prise en charge des groupes de disponibilité Always On via une résolution d’adresse IP réseau transparente. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).
+- Prise en charge des groupes de disponibilité Always On via une résolution d’adresse IP réseau transparente. Pour plus d’informations, consultez [Connection Options](connection-options.md).
 - Ajout de la prise en charge du type de données sql_variant avec des limitations.
-- Prise en charge de la résilience des connexions inactives dans Windows. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).
-- Prise en charge du regroupement de connexions pour Linux et macOS. Pour plus d’informations, consultez [Regroupement de connexions](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
-- Prise en charge de l’authentification Azure Active Directory avec ActiveDirectoryPassword et SqlPassword. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).
+- Prise en charge de la résilience des connexions inactives dans Windows. Pour plus d’informations, consultez [Connection Options](connection-options.md).
+- Prise en charge du regroupement de connexions pour Linux et macOS. Pour plus d’informations, consultez [Regroupement de connexions](connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
+- Prise en charge de l’authentification Azure Active Directory avec ActiveDirectoryPassword et SqlPassword. Pour plus d’informations, consultez [Connection Options](connection-options.md).
 
 ## <a name="40"></a>4.0
 
@@ -231,17 +252,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="whats-new-in-30"></a>Nouveautés de la version 3.0  
 
 - Prise en charge de PHP 5.4.  PHP 5.2 n’est pas pris en charge dans la version 3 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-- Ajout de l’option de connexion AttachDBFileName. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).  
-- Prise en charge de la Base de données locale, qui a été ajoutée dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Pour plus d’informations, consultez [Prise en charge de LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
-- Ajout de l’option de connexion AttachDBFileName. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md).  
-- Prise en charge des fonctionnalités de récupération d’urgence/haute disponibilité. Pour plus d’informations, consultez [Prise en charge de la haute disponibilité et de la récupération d'urgence](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
-- Prise en charge des curseurs côté client (mise en cache d’un jeu de résultats en mémoire). Pour plus d’informations, consultez [Types de curseur &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) et [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
-- Ajout de l’attribut PDO::ATTR_EMULATE_PREPARES. Pour plus d’informations, consultez [PDO::prepare](../../connect/php/pdo-prepare.md).  
+- Ajout de l’option de connexion AttachDBFileName. Pour plus d’informations, consultez [Connection Options](connection-options.md).  
+- Prise en charge de la Base de données locale, qui a été ajoutée dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Pour plus d’informations, consultez [Prise en charge de LocalDB](php-driver-for-sql-server-support-for-localdb.md).
+- Ajout de l’option de connexion AttachDBFileName. Pour plus d’informations, consultez [Connection Options](connection-options.md).  
+- Prise en charge des fonctionnalités de récupération d’urgence/haute disponibilité. Pour plus d’informations, consultez [Prise en charge de la haute disponibilité et de la récupération d'urgence](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
+- Prise en charge des curseurs côté client (mise en cache d’un jeu de résultats en mémoire). Pour plus d’informations, consultez [Types de curseur &#40;pilote SQLSRV&#41;](cursor-types-sqlsrv-driver.md) et [Types de curseur &#40;pilote PDO_SQLSRV&#41;](cursor-types-pdo-sqlsrv-driver.md).
+- Ajout de l’attribut PDO::ATTR_EMULATE_PREPARES. Pour plus d’informations, consultez [PDO::prepare](pdo-prepare.md).  
 
 ## <a name="whats-new-in-20"></a>Nouveautés de la version 2.0
 
-Dans la version 2.0, la prise en charge du pilote PDO_SQLSRV a été ajoutée. Pour plus d’informations, consultez [Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md).  
+Dans la version 2.0, la prise en charge du pilote PDO_SQLSRV a été ajoutée. Pour plus d’informations, consultez [Référence de pilote PDO_SQLSRV](pdo-sqlsrv-driver-reference.md).  
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](overview-of-the-php-sql-driver.md)

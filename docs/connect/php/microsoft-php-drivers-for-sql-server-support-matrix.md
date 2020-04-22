@@ -1,7 +1,8 @@
 ---
-title: Matrice de prise en charge des pilotes PHP pour SQL Server | Microsoft Docs
+title: Matrice de prise en charge des pilotes Microsoft pour PHP
+description: Cette page contient la matrice de support et la politique de support des pilotes Microsoft PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922825"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632752"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Matrice de prise en charge des pilotes PHP pour SQL Server
 
@@ -106,7 +107,7 @@ Les versions suivantes du système d'exploitation Windows sont prises en charge 
 |Windows Vista SP2                   |   |   |   |   |   |O  |O  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-Les versions suivantes des systèmes d'exploitation Linux et Mac (64 bits uniquement) sont prises en charge avec la version répertoriée des pilotes Microsoft PHP :
+Les versions suivantes des systèmes d'exploitation Linux et macOS (64 bits uniquement) sont prises en charge avec la version répertoriée des pilotes Microsoft PHP :
 
 |PHP pour le pilote SQL Server version &#8594;<br />&#8595; Système d’exploitation|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ Les versions suivantes des systèmes d'exploitation Linux et Mac (64 bits uniqu
 |macOS El Capitan (64 bits)           |   |   |O  |O  |O  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> La prise en charge d’Alpine Linux est expérimentale pour la version 5.8.
+<sup>1</sup> La prise en charge d’Alpine Linux est expérimentale pour la version 5.8.0. La version 5.8.1 ajoute la prise en charge de la production.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes de publication](../../connect/php/release-notes-php-sql-driver.md)
+[Notes de publication](release-notes-php-sql-driver.md)
 
-[Ressources de support](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Ressources de support](support-resources-for-the-php-sql-driver.md)
 
-[Configuration requise](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Configuration requise](system-requirements-for-the-php-sql-driver.md)

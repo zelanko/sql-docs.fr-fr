@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286883"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487988"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -53,7 +53,7 @@ Ce nom d’hôte est le point de terminaison de Scale Out Master, qui est créé
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Installer Scale Out Master sur le nœud secondaire
 Installez les services SQL Server Moteur de base de données, Integration Services et Scale Out Master sur le nœud secondaire pour Scale Out Master. 
 
-Utilisez le même certificat Scale Out Master que celui utilisé sur le nœud principal. Exportez le certificat SSL Scale Out Master sur le nœud principal avec une clé privée, puis installez-le dans le magasin de certificats racine de l’ordinateur local sur le nœud secondaire. Sélectionnez ce certificat quand vous installez Scale Out Master sur le nœud secondaire.
+Utilisez le même certificat Scale Out Master que celui utilisé sur le nœud principal. Exportez le certificat TLS/SSL Scale Out Master sur le nœud principal avec une clé privée, puis installez-le dans le magasin de certificats racine de l’ordinateur local sur le nœud secondaire. Sélectionnez ce certificat quand vous installez Scale Out Master sur le nœud secondaire.
 
 ![Configuration de Master à haute disponibilité 2](media/ha-master-config2.PNG)
 

@@ -1,6 +1,6 @@
 ---
 title: Bien démarrer avec la recherche en texte intégral | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903823"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288149"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
 2.  Avant de créer un index de recherche en texte intégral sur la table Document, assurez-vous que la table dispose d'un index unique qui n'accepte pas les valeurs NULL et ne comporte qu'une seule colonne. L’instruction [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) suivante crée un index unique, `ui_ukDoc`, sur la colonne DocumentID de la table Document :  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  Une fois que vous avez une clé unique, vous pouvez créer un index de recherche en texte intégral sur la table `Document` en utilisant l’instruction [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
+3.  Supprimez l’index de recherche en texte intégral existant sur la table `Document` à l’aide de l’instruction [DROP FULLTEXT INDEX suivante](../../t-sql/statements/drop-fulltext-index-transact-sql.md). 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  Une fois que vous avez une clé unique, vous pouvez créer un index de recherche en texte intégral sur la table `Document` en utilisant l’instruction [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
     GO  
   
     ```  
+    
+  
   
      Le paramètre TYPE COLUMN défini dans cet exemple spécifie la colonne de type dans la table qui contient le type du document dans chaque ligne de la colonne Document (lequel est de type binaire). La colonne de type stocke l’extension de fichier (.doc, .xls, etc.) fournie par l’utilisateur du document dans une ligne donnée. Le moteur d'indexation et de recherche en texte intégral utilise l'extension de fichier dans une ligne donnée afin d'appeler le filtre approprié pour l'analyse des données de cette ligne. Une fois que le filtre a analysé les données binaires de la ligne, l’analyseur lexical spécifié analyse le contenu. (Dans cet exemple, l’analyseur lexical pour l’anglais (R.U.) est utilisé.) Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 

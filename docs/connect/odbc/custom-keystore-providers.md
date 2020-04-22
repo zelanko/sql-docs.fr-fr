@@ -1,5 +1,6 @@
 ---
-title: Fournisseurs de magasins de clés personnalisés | Microsoft Docs
+title: Fournisseurs de magasins de clés personnalisés
+description: Découvrez comment implémenter un fournisseur de magasins de clés personnalisé pour une utilisation avec le pilote ODBC pour SQL Server et la fonctionnalité Always Encrypted.
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 author: David-Engel
-ms.openlocfilehash: c3658c1b7e745ad9b51746b26daf68c1b912f2b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c814fa5e755c46d09d3c02a6ef17e3d4ab562db7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924569"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633193"
 ---
 # <a name="custom-keystore-providers"></a>Fournisseurs de magasins de clés personnalisés
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80924569"
 
 La fonctionnalité de chiffrement de colonne de SQL Server 2016 requiert que les clés de chiffrement de colonne chiffrées (ECEK) stockées sur le serveur soient récupérées par le client, puis déchiffrées en clés de chiffrement de colonne (CEK) afin d’accéder aux données stockées dans des colonnes chiffrées. Les clés ECEK sont chiffrées par les clés principales de colonne (CMK), et la sécurité de la clé CMK est importante pour la sécurité du chiffrement de colonne. Ainsi, la clé CMK doit être stockée dans un emplacement sécurisé. L’objectif d’un fournisseur de magasins de clés de chiffrement de colonne consiste à fournir une interface permettant au pilote ODBC d’accéder à ces clés CMK stockées en toute sécurité. Pour les utilisateurs disposant de leur propre stockage sécurisé, l’interface personnalisée du fournisseur de magasin de clés fournit une infrastructure afin d’implémenter l’accès au stockage sécurisé des clés CMK pour le pilote ODBC, qui permet alors d’effectuer le chiffrement et le déchiffrement de la clé CEK.
 
-Chaque fournisseur de magasin de clés contient et gère une ou plusieurs clés CMK, identifiées par des chemins de clés - chaînes d’un format défini par le fournisseur. Cette approche, avec l’algorithme de chiffrement, également une chaîne définie par le fournisseur, permet d’effectuer le chiffrement d’une clé CEK et le déchiffrement d’une clé ECEK. L’algorithme, ainsi que la clé ECEK et le nom du fournisseur, sont stockés dans les métadonnées de chiffrement de la base de données. Pour plus d’informations, consultez [Créer une clé principale de colonne](../../t-sql/statements/create-column-master-key-transact-sql.md) et [Créer une clé de chiffrement de colonne](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Ainsi, les deux opérations fondamentales de gestion des clés sont les suivantes :
+Chaque fournisseur de magasin de clés contient et gère une ou plusieurs clés CMK, identifiées par des chemins de clés - chaînes d’un format défini par le fournisseur. Ce CMK, avec l’algorithme de chiffrement, également une chaîne définie par le fournisseur, permet d’effectuer le chiffrement d’une clé CEK et le déchiffrement d’une clé ECEK. L’algorithme, ainsi que la clé ECEK et le nom du fournisseur sont stockés dans les métadonnées de chiffrement de la base de données. Pour plus d’informations, consultez [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) et [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Ainsi, les deux opérations fondamentales de gestion des clés sont les suivantes :
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -40,7 +41,7 @@ où `CEKeystoreProvider_name` sert à identifier le fournisseur de magasin de cl
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
-Bien que le pilote n’ait pas besoin de chiffrer les clés CEK, un outil de gestion de clés peut nécessiter cette opération afin de mettre en œuvre des opérations telles que la création et la rotation CMK. Pour cela, vous devez effectuer l’opération inverse :
+Bien que le pilote n’ait pas besoin de chiffrer les clés CEK, un outil de gestion de clés peut nécessiter cette opération afin de mettre en œuvre des opérations telles que la création et la rotation CMK. Ces actions requièrent l’exécution de l’opération inverse :
 
 ```
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
@@ -95,7 +96,7 @@ typedef struct CEKeystoreProvider {
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Nom de l’espace réservé d’une fonction d'initialisation définie par le fournisseur. Le pilote appelle cette fonction une fois, après le chargement d'un fournisseur, mais avant la première fois qu'il en a besoin pour déchiffrer des clés ECEK ou exécuter des requêtes Read()/Write(). Utilisez cette fonction pour effectuer l’initialisation requise. 
+Nom de l’espace réservé d’une fonction d'initialisation définie par le fournisseur. Le pilote appelle cette fonction une fois, après le chargement d'un fournisseur, mais avant la première fois qu'il en a besoin pour déchiffrer des clés ECEK ou exécuter des requêtes Read()/Write(). Utilisez cette fonction pour effectuer l’initialisation requise.
 
 |Argument|Description|
 |:--|:--|
@@ -113,8 +114,8 @@ Nom de l’espace réservé d’une fonction de communication définie par le fo
 |:--|:--|
 |`ctx`|[Input] Contexte d'opération.|
 |`onError`|[Input] Fonction de création de rapports d’erreurs.|
-|`data`|[Output] Pointeur vers une mémoire tampon dans laquelle le fournisseur écrit des données à lire par l'application. Cela correspond au champ data de la structure CEKEYSTOREDATA.|
-|`len`|[InOut] Pointeur vers une valeur de longueur ; lors de l’entrée, il s’agit de la longueur maximale de la mémoire tampon de données, et le fournisseur ne doit pas y écrire plus de *len octets. Lors du retour, le fournisseur doit mettre à jour la valeur *len avec le nombre d’octets réellement écrits.|
+|`data`|[Output] Pointeur vers une mémoire tampon dans laquelle le fournisseur écrit des données à lire par l'application. Ce tampon correspond au champ data de la structure CEKEYSTOREDATA.|
+|`len`|[InOut] Pointeur vers une valeur de longueur ; lors de l’entrée, il s’agit de la longueur maximale de la mémoire tampon de données, et le fournisseur ne doit pas y écrire plus de *len octets. Lors du retour, le fournisseur doit mettre à jour la valeur *len avec le nombre d’octets écrits.|
 |`Return Value`|Retourne une valeur différente de zéro pour indiquer la réussite, ou zéro pour indiquer l’échec.|
 
 ```
@@ -126,7 +127,7 @@ Nom de l’espace réservé d’une fonction de communication définie par le fo
 |:--|:--|
 |`ctx`|[Input] Contexte d'opération.|
 |`onError`|[Input] Fonction de création de rapports d’erreurs.|
-|`data`|[Input] Pointeur vers une mémoire tampon contenant les données que le fournisseur doit lire. Cela correspond au champ data de la structure CEKEYSTOREDATA. Le fournisseur ne doit pas lire plus de len octets à partir de cette mémoire tampon.|
+|`data`|[Input] Pointeur vers une mémoire tampon contenant les données que le fournisseur doit lire. Ce tampon correspond au champ data de la structure CEKEYSTOREDATA. Le fournisseur ne doit pas lire plus de len octets à partir de cette mémoire tampon.|
 |`len`|[Input] Nombre d’octets disponibles dans les données. Cela correspond au champ dataSize de la structure CEKEYSTOREDATA.|
 |`Return Value`|Retourne une valeur différente de zéro pour indiquer la réussite, ou zéro pour indiquer l’échec.|
 
@@ -139,11 +140,11 @@ Nom de l’espace réservé d’une fonction de déchiffrement ECEK définie par
 |:--|:--|
 |`ctx`|[Input] Contexte d'opération.|
 |`onError`|[Input] Fonction de création de rapports d’erreurs.|
-|`keyPath`|[Input] Valeur de l'attribut de métadonnées [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) pour la clé CMK référencée par la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Vise à identifier une clé CMK gérée par ce fournisseur.|
-|`alg`|[Input] Valeur de l’attribut de métadonnées [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Vise à identifier l’algorithme de chiffrement utilisé pour chiffrer la clé ECEK donnée.|
+|`keyPath`|[Input] Valeur de l'attribut de métadonnées [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) pour la clé CMK référencée par la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Cette valeur vise à identifier une clé CMK gérée par ce fournisseur.|
+|`alg`|[Input] Valeur de l’attribut de métadonnées [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Cette valeur vise à identifier l’algorithme de chiffrement utilisé pour chiffrer la clé ECEK donnée.|
 |`ecek`|[Input] Pointeur vers la clé ECEK à déchiffrer.|
 |`ecekLen`|[Input] Longueur de la clé ECEK.|
-|`cekOut`|[Output] Le fournisseur doit allouer de la mémoire pour la clé ECEK déchiffrée et écrire son adresse sur le pointeur pointé par cekOut. Il doit être possible de libérer ce bloc de mémoire à l’aide de la fonction [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou Free (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou d’un autre problème, le fournisseur doit définir *cekOut sur un pointeur Null.|
+|`cekOut`|[Output] Le fournisseur doit allouer de la mémoire pour la clé ECEK déchiffrée et écrire son adresse sur le pointeur pointé par cekOut. Il doit être possible de libérer ce bloc de mémoire à l’aide de la fonction [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou Free (Linux/macOS). Si aucune mémoire n’a été allouée en raison d’une erreur ou d’un autre problème, le fournisseur doit définir *cekOut sur un pointeur Null.|
 |`cekLen`|[Output] Le fournisseur doit écrire dans l’adresse pointée par cekLen la longueur de la clé ECEK déchiffrée dans laquelle il a écrit **cekOut.|
 |`Return Value`|Retourne une valeur différente de zéro pour indiquer la réussite, ou zéro pour indiquer l’échec.|
 
@@ -157,10 +158,10 @@ Nom de l’espace réservé d’une fonction de chiffrement CEK définie par le 
 |`ctx`|[Input] Contexte d'opération.|
 |`onError`|[Input] Fonction de création de rapports d’erreurs.|
 |`keyPath`|[Input] Valeur de l'attribut de métadonnées [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) pour la clé CMK référencée par la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Vise à identifier une clé CMK gérée par ce fournisseur.|
-|`alg`|[Input] Valeur de l’attribut de métadonnées [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Vise à identifier l’algorithme de chiffrement utilisé pour chiffrer la clé ECEK donnée.|
+|`alg`|[Input] Valeur de l’attribut de métadonnées [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour la clé ECEK donnée. Chaîne à caractères larges* se terminant par le caractère Null. Cette valeur vise à identifier l’algorithme de chiffrement utilisé pour chiffrer la clé ECEK donnée.|
 |`cek`|[Input] Pointeur vers la clé CEK à chiffrer.|
 |`cekLen`|[Input] Longueur de la clé CEK.|
-|`ecekOut`|[Output] Le fournisseur doit allouer de la mémoire pour la clé CEK chiffrée et écrire son adresse sur le pointeur pointé par ecekOut. Il doit être possible de libérer ce bloc de mémoire à l’aide de la fonction [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou Free (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou d’un autre problème, le fournisseur doit définir *ecekOut sur un pointeur Null.|
+|`ecekOut`|[Output] Le fournisseur doit allouer de la mémoire pour la clé CEK chiffrée et écrire son adresse sur le pointeur pointé par ecekOut. Il doit être possible de libérer ce bloc de mémoire à l’aide de la fonction [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou Free (Linux/macOS). Si aucune mémoire n’a été allouée en raison d’une erreur ou d’un autre problème, le fournisseur doit définir *ecekOut sur un pointeur Null.|
 |`ecekLen`|[Output] Le fournisseur doit écrire dans l’adresse pointée par ecekLen la longueur de la clé CEK chiffrée dans laquelle il a écrit **ecekOut.|
 |`Return Value`|Retourne une valeur différente de zéro pour indiquer la réussite, ou zéro pour indiquer l’échec.|
 
@@ -207,12 +208,12 @@ En utilisant l’une des valeurs prédéfinies spéciales avec la macro IDS_MSG,
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-Pour que l’erreur soit reconnue par le pilote, la fonction du fournisseur doit retourner un échec. Lorsque cette opération est effectuée dans le contexte d’une opération ODBC, les erreurs publiées deviennent accessibles sur la connexion ou le descripteur d’instruction par le biais du mécanisme de diagnostic ODBC standard (`SQLError`, `SQLGetDiagRec`et `SQLGetDiagField`).
+Pour que l’erreur soit reconnue par le pilote, la fonction du fournisseur doit retourner un échec. En cas d’échec dans le contexte d’une opération ODBC, les erreurs publiées deviennent accessibles sur la connexion ou le descripteur d’instruction par le biais du mécanisme de diagnostic ODBC standard (`SQLError`, `SQLGetDiagRec`et `SQLGetDiagField`).
 
 
 ### <a name="context-association"></a>Association de contextes
 
-La structure `CEKEYSTORECONTEXT`, en plus de fournir le contexte pour le rappel d’erreur, permet également de déterminer le contexte ODBC dans lequel une opération de fournisseur est exécutée. Cela permet à un fournisseur d’associer des données à chacun de ces contextes, par exemple pour implémenter une configuration par connexion. À cet effet, la structure contient 3 pointeurs opaques correspondant à l’environnement, à la connexion et au contexte d’instruction :
+La structure `CEKEYSTORECONTEXT`, en plus de fournir le contexte pour le rappel d’erreur, permet également de déterminer le contexte ODBC dans lequel une opération de fournisseur est exécutée. Ce contexte permet à un fournisseur d’associer des données à chacun de ces contextes, par exemple pour implémenter une configuration par connexion. À cet effet, la structure contient trois pointeurs opaques correspondant à l’environnement, à la connexion et au contexte d’instruction :
 
 ```
 typedef struct CEKeystoreContext
@@ -229,7 +230,7 @@ void *stmtCtx;
 |`dbcCtx`|Contexte de la connexion.|
 |`stmtCtx`|Contexte de l’instruction.|
 
-Chacun de ces contextes représente une valeur opaque qui, bien qu’elle ne corresponde pas au descripteur ODBC correspondant, peut être utilisée comme identificateur unique pour le descripteur : si le descripteur *X* est associé à la valeur de contexte *Y*, aucun autre environnement, descripteur d’instruction ni connexion qui existe simultanément avec *X* aura une valeur de contexte *Y*, et aucune autre valeur de contexte ne sera associée au descripteur *X*. Si l’opération du fournisseur en cours d’exécution ne dispose pas d’un contexte de descripteur particulier, (par exemple, les appels SQLSetConnectAttr pour charger et configurer des fournisseurs, dans lesquels il n’y a aucun descripteur d’instruction), la valeur de contexte correspondante dans la structure est Null.
+Chacun de ces contextes représente une valeur opaque qui, bien qu’elle ne corresponde pas au descripteur ODBC correspondant, peut être utilisée comme identificateur unique pour le descripteur : si le descripteur *X* est associé à la valeur de contexte *Y*, aucun autre environnement, descripteur d’instruction ni connexion qui existe simultanément avec *X* n’aura une valeur de contexte *Y*, et aucune autre valeur de contexte ne sera associée au descripteur *X*. Si l’opération du fournisseur en cours d’exécution ne dispose pas d’un contexte de descripteur particulier, (par exemple, les appels SQLSetConnectAttr pour charger et configurer des fournisseurs, dans lesquels il n’y a aucun descripteur d’instruction), la valeur de contexte correspondante dans la structure est Null.
 
 
 ## <a name="example"></a>Exemple
@@ -242,7 +243,7 @@ Le code suivant est un exemple d’implémentation minimale d’un fournisseur d
 /* Custom Keystore Provider Example
 
 Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
-Linux/Mac: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
+Linux/macOS: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
 
  */
 
@@ -368,7 +369,7 @@ Le code suivant est une démo d’application qui utilise le fournisseur de maga
  Example application for demonstration of custom keystore provider usage
 
 Windows:   compile with cl /MD kspapp.c /link odbc32.lib
-Linux/Mac: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
+Linux/macOS: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
  
  usage: kspapp connstr
 

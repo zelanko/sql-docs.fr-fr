@@ -29,23 +29,26 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252040"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630826"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+> [!NOTE]
+> L’instruction **RAISERROR** ne respecte pas **SET XACT_ABORT**. Les nouvelles applications doivent utiliser **THROW** au lieu de **RAISERROR**.
+
   Génère un message d'erreur et lance le traitement d'erreur pour la session. RAISERROR peut soit faire référence à un message défini par l’utilisateur et stocké dans la vue de catalogue sys.messages, soit générer un message de manière dynamique. Le message est retourné en tant que message d’erreur du serveur à l’application appelante ou à un bloc CATCH associé d’une structure TRY...CATCH. Les nouvelles applications doivent utiliser [THROW](../../t-sql/language-elements/throw-transact-sql.md) à la place.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -176,7 +179,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  Quand *msg_id* spécifie un message défini par l’utilisateur disponible à partir de la vue de catalogue sys.messages, RAISERROR traite le message à partir de la colonne de texte à l’aide des mêmes règles que celles appliquées au texte d’un message défini par l’utilisateur à l’aide de *msg_str*. Le texte du message défini par l'utilisateur peut contenir des spécifications de conversion, dans lesquelles RAISERROR mappera les arguments. Utilisez sp_addmessage pour ajouter des messages d’erreur définis par l’utilisateur et sp_dropmessage pour en supprimer.  
   
- Vous pouvez également utiliser RAISERROR comme alternative à PRINT pour renvoyer des messages aux applications appelantes. Contrairement à l’instruction **PRINT, RAISERROR prend en charge la substitution de caractère proche de la fonctionnalité de la fonction**printf[!INCLUDE[tsql](../../includes/tsql-md.md)] dans la bibliothèque standard C. L'instruction PRINT n'est pas affectée par les blocs TRY, alors que si vous exécutez RAISERROR avec un degré de gravité compris entre 11 et 19 dans un bloc TRY, le contrôle est transféré vers le bloc CATCH associé. Spécifiez une gravité inférieure ou égale à 10 pour utiliser RAISERROR afin de renvoyer un message depuis un bloc TRY sans appeler le bloc CATCH.  
+ Vous pouvez également utiliser RAISERROR comme alternative à PRINT pour renvoyer des messages aux applications appelantes. Contrairement à l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT, RAISERROR prend en charge la substitution de caractère proche de la fonctionnalité de la fonction **printf** dans la bibliothèque standard C. L'instruction PRINT n'est pas affectée par les blocs TRY, alors que si vous exécutez RAISERROR avec un degré de gravité compris entre 11 et 19 dans un bloc TRY, le contrôle est transféré vers le bloc CATCH associé. Spécifiez une gravité inférieure ou égale à 10 pour utiliser RAISERROR afin de renvoyer un message depuis un bloc TRY sans appeler le bloc CATCH.  
   
  En règle générale, des arguments successifs remplacent des spécifications de conversion successives ; le premier argument remplace la première spécification de conversion, le deuxième argument remplace la deuxième spécification, etc. Par exemple, dans l'instruction `RAISERROR` suivante, le premier argument `N'number'` remplace la première spécification de conversion `%s` et le deuxième argument `5` remplace la deuxième spécification de conversion `%d.`  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080249"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486915"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les URL permettent d’accéder au service Web Report Server et au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Avant de pouvoir utiliser l’une ou l’autre de ces applications, vous devez configurer au moins une URL pour le service web et une pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des valeurs par défaut pour les URL des deux applications qui s’accommodent bien à la plupart des scénarios de déploiement, dont les déploiements côte à côte avec d’autres applications et services web.  
@@ -33,7 +33,7 @@ ms.locfileid: "77080249"
 |Nom de l’hôte|Un réseau TCP/IP utilise une adresse IP pour identifier de manière unique un périphérique sur le réseau. Il existe une adresse IP physique pour chaque carte réseau installée dans un ordinateur. Si l'adresse IP est résolue en en-tête d'hôte, vous pouvez spécifier l'en-tête de l'hôte. Si vous déployez le serveur de rapports sur un réseau d'entreprise, vous pouvez utiliser le nom réseau de l'ordinateur.|  
 |Port|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
 |Répertoire virtuel|Un port est souvent partagé par plusieurs applications ou services Web. Pour cette raison, une URL de serveur de rapports inclut toujours un répertoire virtuel qui correspond à l'application obtenant la demande. Vous devez spécifier des noms de répertoire virtuel uniques pour chaque application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui écoute sur les mêmes port et adresse IP.|  
-|Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
+|Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat TLS/SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions TLS sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## <a name="default-urls"></a>URL par défaut  
  Quand vous accédez à un serveur de rapports ou au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] avec son URL, celle-ci doit inclure le nom d’hôte et pas l’adresse IP. Sur un réseau TCP/IP, l'adresse IP se résout en un nom d'hôte (ou le nom de réseau de l'ordinateur). Si vous avez utilisé les valeurs par défaut pour configurer les URL, vous devez être en mesure d'accéder au service Web Report Server à l'aide d'URL qui spécifient le nom d'ordinateur ou localhost comme nom d'hôte :  

@@ -1,7 +1,7 @@
 ---
 title: Configurer l’option de configuration de serveur max worker threads | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776424"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488315"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,30 +55,38 @@ ms.locfileid: "75776424"
   
 -   Le regroupement de threads permet d'optimiser les performances lorsque de nombreux clients sont connectés au serveur. Habituellement, un thread de système d'exploitation séparé est créé pour chaque demande de requête. Cependant, s'il existe des centaines de connexions au serveur, l'utilisation d'un thread par demande de requête peut consommer de grandes quantités de ressources système. L'option **Nombre maximum de threads de travail** permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de créer un pool de threads de travail afin de servir un grand nombre de demandes de requête, ce qui améliore les performances.  
   
--   Le tableau ci-dessous montre le nombre maximal de threads de travail automatiquement configuré pour différentes combinaisons d'UC et de versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Le tableau suivant indique le nombre maximal de threads de travail configurés automatiquement pour différentes combinaisons d’UC, d’architecture d’ordinateur et de versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l’aide de la formule : * **Nombre maximal de Workers par défaut* + ((* UC logiques * - 4) * *Workers par UC*)**.  
   
-    |Nombre d'unités centrales|ordinateur 32 bits|Ordinateur 64 bits|  
-    |------------|------------|------------|  
-    |\<= 4 processeurs|256|512|  
-    |8 processeurs|288|576|  
-    |16 processeurs|352|704|  
-    |32 processeurs|480|960|  
-    |64 processeurs|736|1472|  
-    |128 processeurs|4224|4480|  
-    |256 processeurs|8320|8576| 
+    |Nombre d'unités centrales|Ordinateur 32 bits (jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Ordinateur 64 bits (jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Ordinateur 64 bits (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |------------|------------|------------|------------|  
+    |\<= 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8576|   
     
-    À l’aide de la formule suivante :
+    Jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le nombre de *Workers par UC* dépend uniquement de l’architecture (32 bits ou 64 bits) :
     
-    |Nombre d'unités centrales|ordinateur 32 bits|Ordinateur 64 bits|  
-    |------------|------------|------------| 
-    |\<= 4 processeurs|256|512|
-    |\> 4 processeurs et \<= 64 processeurs|256 + ((UC logiques - 4) * 8)|512 + ((UC logiques - 4) * 16)|
-    |\> 64 processeurs|256 + ((UC logiques - 4) * 32)|512 + ((UC logiques - 4) * 32)|
+    |Nombre d'unités centrales|Ordinateur 32 bits <sup>1</sup>|Ordinateur 64 bits|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4|256 + ((UC logiques - 4) * 8)|512 <sup>2</sup> + ((UC logiques - 4) * 16)|   
+    
+    À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], le nombre de *Workers par UC* dépend de l’architecture et du nombre de processeurs (entre 4 et 64, ou supérieur à 64) :
+    
+    |Nombre d'unités centrales|Ordinateur 32 bits <sup>1</sup>|Ordinateur 64 bits|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4 et \<= 64|256 + ((UC logiques - 4) * 8)|512 <sup>2</sup> + ((UC logiques - 4) * 16)|   
+    |\> 64|256 + ((UC logiques - 4) * 32)|512 <sup>2</sup> + ((UC logiques - 4) * 32)|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut plus être installé sur un système d’exploitation 32 bits. Les valeurs d’ordinateur 32 bits sont répertoriées pour aider les clients exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions antérieures. Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.  
+    <sup>1</sup> À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut plus être installé sur un système d’exploitation 32 bits. Les valeurs d’ordinateur 32 bits sont répertoriées pour aider les clients exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions antérieures. Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.
+    
+    <sup>2</sup> À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la valeur *Nombre maximal de Workers* par défaut est divisée par 2 pour les machines avec moins de 2 Go de mémoire.
   
-    > [!NOTE]  
+    > [!TIP]  
     > Pour obtenir des recommandations concernant l’utilisation de plus de 64 unités centrales, consultez [Recommandations pour l’exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Lorsque tous les threads de travail traitent de longues requêtes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut sembler ne plus répondre jusqu'à ce qu'un thread de travail soit terminé et devienne disponible. Même s'il ne s'agit pas d'une défaillance, ce comportement peut parfois être indésirable. Si un processus semble ne pas répondre et si aucune nouvelle requête n'est traitée, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la connexion administrateur dédiée (DAC) et terminez le processus. Pour éviter cette situation, augmentez la valeur de l'option max worker threads.  

@@ -22,12 +22,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c4d1c2c09c764e1e5102e520ccb2f6152e57ce7c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286568"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529213"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de la publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Cette page décrit les pages disponibles dans la boîte de dialogue Propriétés
  Type de la publication (en lecture seule).  
   
  **Expiration de l'abonnement**  
- Sélectionnez l'une des options d'expiration d'abonnement : **Les abonnements n'expirent jamais** ou **Les abonnements expirent**avec une période explicite (**Intervalle**).  
+ Sélectionnez l'une des options d'expiration d'abonnement : **Les abonnements n’expirent jamais** ou **Les abonnements expirent** avec une période explicite (**Intervalle**).  
   
  Pour les publications d'instantané et transactionnelles, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'accepter la valeur par défaut **Les abonnements n'expirent jamais**.  
   
@@ -85,7 +85,7 @@ Pour accroître au maximum les performances de votre application et réduire le 
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s'affichent : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s’affichent : **Ajouter un filtre**, **Ajouter une jointure pour étendre le filtre sélectionné** et **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   
@@ -146,7 +146,7 @@ Pour accroître au maximum les performances de votre application et réduire le 
  Cette option permet aux abonnés d'utiliser FTP pour extraire les fichiers d'instantanés, mais elle ne les oblige pas à le faire. Si vous sélectionnez cette option, l'Assistant Nouvel abonnement amène par défaut les abonnés à extraire les fichiers d'instantanés via FTP. Pour changer ce paramètre, utilisez la boîte de dialogue **Propriétés de l'abonnement** . Si vous autorisez les abonnés à accéder aux fichiers d'instantanés via FTP, définissez le dossier FTP comme emplacement de stockage des fichiers d'instantanés dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication** . Dans ce cas, l'Agent d'instantané met à jour automatiquement les fichiers du dossier FTP lorsqu'un nouvel instantané est généré. Si l'emplacement ne correspond pas au dossier FTP, vous devez mettre à jour les fichiers manuellement lorsqu'un nouvel instantané est généré. Pour plus d’informations, consultez [Remettre un instantané via FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Synchronisation Web**  
- Réplication de fusion uniquement. Sélectionnez **Autoriser les abonnés à se synchroniser en se connectant à un serveur Web**et définissez une adresse de serveur Web pour permettre aux abonnés d'utiliser la synchronisation Web. Le serveur web doit utiliser le protocole SSL (Secure Sockets Layer) et l’adresse web doit être complète, par exemple `https://server.domain.com/synchronize`. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).  
+ Réplication de fusion uniquement. Sélectionnez **Autoriser les abonnés à se synchroniser en se connectant à un serveur Web**et définissez une adresse de serveur Web pour permettre aux abonnés d'utiliser la synchronisation Web. Le serveur web doit utiliser le protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), et l’adresse web doit être complète, par exemple `https://server.domain.com/synchronize`. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).  
 
 
 ## <a name="agent-security"></a>Sécurité de l’agent

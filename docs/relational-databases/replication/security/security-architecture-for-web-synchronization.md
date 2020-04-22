@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710825"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529253"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "71710825"
  <sup>1</sup> L'authentification intégrée peut être utilisée uniquement si tous les ordinateurs appartiennent au même domaine ou à des domaines différents liés l'un à l'autre par des relations d'approbation.  
   
 > [!NOTE]  
->  La délégation est nécessaire en cas d'utilisation de l'authentification intégrée. Nous vous recommandons d'utiliser l'authentification de base et SSL pour les connexions de l'Abonné vers IIS.  
+>  La délégation est nécessaire en cas d'utilisation de l'authentification intégrée. Nous vous recommandons d'utiliser l'authentification de base et TLS pour les connexions de l'Abonné vers IIS.  
   
 ## <a name="e-connection-to-the-publisher"></a>E. Connexion au serveur de publication  
  L'écouteur de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le réconciliateur de réplication de fusion sont hébergés sur l'ordinateur exécutant IIS. Ces composants réalisent les actions suivantes :  

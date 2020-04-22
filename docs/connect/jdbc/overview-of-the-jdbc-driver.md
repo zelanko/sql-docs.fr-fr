@@ -1,5 +1,6 @@
 ---
 title: Vue d’ensemble du pilote JDBC | Microsoft Docs
+description: Microsoft JDBC Driver pour SQL Server est un pilote compatible avec Java Database Connectivity (JDBC) 4.2 de type 4, qui fournit un accès aux données des bases de données SQL.
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e22698cc939b3ad3d5cea70583ee97166869d19a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920357"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529333"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Présentation du pilote JDBC
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573297"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625868"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurer l’authentification de base sur le serveur de rapports
   Par défaut, Reporting Services accepte les demandes qui spécifient l'authentification Negotiate et NTLM. Si votre déploiement inclut des applications clientes ou des navigateurs qui utilisent l'authentification de base, vous devez l'ajouter à la liste des types pris en charge. De plus, si vous voulez utiliser le Générateur de rapports, vous devez activer l'accès anonyme aux fichiers Générateur de rapports.  
@@ -25,7 +25,7 @@ ms.locfileid: "65573297"
   
  Avant d'activer l'authentification de base, vérifiez que votre infrastructure de sécurité la prend en charge. Sous l'authentification de base, le service Web Report Server passe des informations d'identification à l'autorité de sécurité locale. Si ces informations spécifient un compte d'utilisateur local, l'utilisateur est authentifié par l'autorité de sécurité locale sur le serveur de rapports et l'utilisateur obtient un jeton de sécurité qui est valide pour les ressources locales. Les informations d'identification pour les comptes d'utilisateur de domaine sont transférées et sont authentifiées par un contrôleur de domaine. Le ticket résultant est valide pour les ressources réseau.  
   
- Le chiffrement du canal, tel que SSL (Secure Sockets Layer), est requis si vous souhaitez réduire le risque d'interception des informations d'identification lors de leur transit vers un contrôleur de domaine sur votre réseau. L'authentification de base transmet en texte en clair le nom d'utilisateur et le mot de passe en encodage base 64. L'ajout du chiffrement de canal rend le paquet illisible. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Le chiffrement du canal, tel que TLS (Transport Layer Security), précédemment appelé SSL (Secure Sockets Layer), est requis si vous souhaitez réduire le risque d'interception des informations d'identification lors de leur transit vers un contrôleur de domaine sur votre réseau. L'authentification de base transmet en texte en clair le nom d'utilisateur et le mot de passe en encodage base 64. L'ajout du chiffrement de canal rend le paquet illisible. Pour plus d’informations, consultez [Configurer des connexions TLS sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  Après avoir activé l'authentification de base, n'oubliez pas que les utilisateurs ne peuvent pas sélectionner l'option **Sécurité intégrée de Windows** lors de la définition de propriétés de connexion sur une source de données externe qui fournit des données à un rapport. L'option est grisée dans les pages de propriétés de source de données.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65573297"
   
 |Élément|Obligatoire|Valeurs valides|  
 |-------------|--------------|------------------|  
-|LogonMethod|Oui<br /><br /> Si vous ne spécifiez pas de valeur, 3 est utilisé.|**2** = ouverture de session réseau, destinée aux serveurs hautes performances pour l’authentification des mots de passe en texte brut.<br /><br /> **3** = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur quand il s’agit de se connecter aux autres serveurs du réseau. (Par défaut)<br /><br /> Remarque : Les valeurs 0 (pour l’ouverture de session interactive) et 1 (pour l’ouverture de session par fichier de commande) **NE SONT PAS** prises en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Oui<br /><br /> Si vous ne spécifiez pas de valeur, 3 est utilisé.|**2** = ouverture de session réseau, destinée aux serveurs hautes performances pour l’authentification des mots de passe en texte brut.<br /><br /> **3** = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur quand il s’agit de se connecter aux autres serveurs du réseau. (Par défaut)<br /><br /> Remarque : Les valeurs 0 (pour l'ouverture de session interactive) et 1 (pour l'ouverture de session par lot) ne sont **PAS** prises en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Facultatif|Spécifie une partition de ressource qui inclut les fonctionnalités d'autorisation et d'authentification permettant de contrôler l'accès aux ressources protégées de votre organisation.|  
 |DefaultDomain|Facultatif|Spécifie le domaine utilisé par le serveur pour authentifier l'utilisateur. Cette valeur est facultative, mais si vous l'omettez, le serveur de rapports utilise le nom d'ordinateur comme domaine. Si l'ordinateur est membre du domaine, ce domaine est le domaine par défaut. Si vous avez installé le serveur de rapports sur un contrôleur de domaine, le domaine utilisé est celui contrôlé par l'ordinateur.|  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07a5b8d3e1b34c0bb33f44a20ab5fff867db922
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f431d1598038d0789579697fccbaeffe5ef1fd0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117622"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487838"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Générer des prévisions et des prédictions à l’aide de modèles Machine Learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Les exigences en matière de plateforme imposent souvent la méthodologie de sco
 
 | Plateforme et version du produit | Méthodologie |
 |------------------------------|-------------|
-| SQL Server 2017 sur Windows, SQL Server 2017 Linux et Azure SQL Database | **Scoring natif** avec T-SQL PREDICT |
+| SQL Server 2017 ou version ultérieure sur Windows et Linux | **Scoring natif** avec T-SQL PREDICT |
 | SQL Server 2017 (Windows uniquement), SQL Server 2016 R Services avec SP1 ou une version ultérieure | **Scoring en temps réel** avec la procédure stockée sp\_rxPredict |
 
 Nous recommandons le scoring natif avec la fonction PREDICT. Utiliser sp\_rxPredict nécessite d’activer l’intégration SQLCLR. Tenez compte des implications en matière de sécurité avant d’activer cette option.

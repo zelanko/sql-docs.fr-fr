@@ -16,29 +16,31 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342910"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528263"
 ---
 # <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Microsoft SQL Server Express LocalDB est une fonctionnalité de [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) destinée aux développeurs. Elle est disponible dans Microsoft SQL Server Express with Advanced Services.
+Microsoft SQL Server Express LocalDB est une fonctionnalité de [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) destinée aux développeurs. Elle est disponible dans Microsoft SQL Server Express with Advanced Services.
 
 L'installation de LocalDB copie l'ensemble minimal des fichiers nécessaires pour démarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Une fois LocalDB installé, vous pouvez lancer une connexion à l’aide d’une chaîne de connexion particulière. Lors de la connexion, l’infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessaire est créée et démarrée automatiquement, ce qui permet à l’application d’utiliser la base de données sans tâches de configuration complexes. Les outils de développement incluent un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui permet aux développeurs d'écrire et de tester le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sans devoir gérer une instance de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]complète. 
 
-## <a name="try-it-out"></a>Faites un essai. 
+## <a name="installation-media"></a>Support d’installation 
 
-- Pour télécharger et installer SQL Server Express LocalDB, accédez à **[Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou LocalDB. Dans **Visual Studio Installer**, vous pouvez installer SQL Server Express LocalDB dans le cadre de la charge de travail **Développement .NET Desktop**, ou l’installer comme un composant seul.
+LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation de SQL Server Express et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou LocalDB. 
 
- >[!TIP]
- > Vous pouvez également installer LocalDB dans le cadre de l’installation de Visual Studio. Pendant l’installation de Visual Studio, sélectionnez la charge de travail **Développement .NET Desktop**, qui comprend SQL Server Express LocalDB.
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
+- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-- Vous avez un compte Azure ? [Lancez-vous](https://azure.microsoft.com/services/virtual-machines/sql-server/) et démarrez une machine virtuelle avec SQL Server déjà installé.
+Vous pouvez également installer la base de données locale à l’aide de [Visual Studio Installer](https://visualstudio.microsoft.com/downloads/), dans le cadre de la charge de travail **Stockage et traitement des données**, la charge de travail **Développement web et ASP.NET**, ou en tant que composant individuel.
+
 
 ## <a name="install-localdb"></a>Installer LocalDB
 
@@ -92,8 +94,11 @@ Seul un administrateur sur l'ordinateur peut créer une instance partagée de Lo
 
 La façon la plus simple d'utiliser LocalDB est de se connecter à l'instance automatique possédée par l'utilisateur actuel en utilisant la chaîne de connexion `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Pour vous connecter à une base de données spécifique en utilisant le nom de fichier, connectez-vous à l'aide d'une chaîne de connexion semblable à `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
+La convention d’affectation de noms et la chaîne de connexion pour le format de la base de données locale ont changé dans SQL Server 2014. Auparavant, le nom de l’instance était un seul caractère v suivi de la base de données locale et du numéro de version. À compter de SQL Server 2014, ce format de nom d’instance n’est plus pris en charge, et la chaîne de connexion mentionnée précédemment doit être utilisée à la place.  
+
 >[!NOTE]
->La première fois qu'un utilisateur tentera de se connecter à LocalDB, l'instance automatique devra être créée et démarrée. Le temps supplémentaire requis pour créer l'instance peut entraîner l'échec de la tentative de connexion et l'affichage d'un message de délai de connexion dépassé. Dans ce cas, attendez quelques secondes la fin du processus de création, puis connectez-vous à nouveau.
+> - La première fois qu'un utilisateur tentera de se connecter à LocalDB, l'instance automatique devra être créée et démarrée. Le temps supplémentaire requis pour créer l'instance peut entraîner l'échec de la tentative de connexion et l'affichage d'un message de délai de connexion dépassé. Dans ce cas, attendez quelques secondes la fin du processus de création, puis connectez-vous à nouveau.
+
 
 ### <a name="create-and-connect-to-a-named-instance"></a>Créer une instance nommée et s’y connecter
 

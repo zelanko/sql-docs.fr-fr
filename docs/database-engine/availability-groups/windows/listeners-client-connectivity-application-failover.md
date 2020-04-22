@@ -1,6 +1,6 @@
 ---
 title: Se connecter à un écouteur de groupe de disponibilité
-description: Cet article contient des informations sur le processus de connexion à un écouteur de groupe de disponibilité Always On, notamment sur la connexion au réplica principal et à un réplica secondaire en lecture seule, et sur l’utilisation de SSL et Kerberos.
+description: Cet article contient des informations sur le processus de connexion à un écouteur de groupe de disponibilité Always On, notamment sur la connexion au réplica principal et à un réplica secondaire en lecture seule, et sur l’utilisation de TLS/SSL et Kerberos.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433736"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528493"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  L’option de connexion **MultiSubnetFailover** doit prendre la valeur **True** même si le groupe de disponibilité s’étend sur un seul sous-réseau.  Cela vous permet de préconfigurer de nouveaux clients afin de prendre en charge la future couverture de sous-réseaux, sans recourir à de futures modifications de la chaîne de connexion du client. Par ailleurs, cela permet d'optimiser les performances de basculement pour les basculements au sein d'un seul sous-réseau.  Alors que l’option de connexion **MultiSubnetFailover** n’est pas obligatoire, elle offre l’avantage d’un basculement de sous-réseau plus rapide.  Cela est dû au fait que le pilote client essaie d'ouvrir un socket TCP pour chaque adresse IP en parallèle associée au groupe de disponibilité.  Le pilote client attend une réponse correcte de la première adresse IP et, ceci fait, l'utilise pour la connexion.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> Écouteurs et certificats SSL  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> Écouteurs et certificats TLS/SSL  
 
- Lors de la connexion à un écouteur de groupe de disponibilité, si les instances participantes de SQL Server utilisent des certificats SSL en même temps que le chiffrement de session, le pilote client de la connexion doit prendre en charge le nom SAN (Subject Alternate Name) dans le certificat SSL afin de forcer le chiffrement.  La prise en charge de pilotes SQL Server pour le nom SAN de certificat est planifiée pour ADO.NET (SqlClient), Microsoft JDBC et SQL Native Client (SNAC).  
+Lors de la connexion à un écouteur de groupe de disponibilité, si les instances participantes de SQL Server utilisent des certificats TLS/SSL en même temps que le chiffrement de session, le pilote client de la connexion doit prendre en charge le nom SAN (Subject Alternate Name) dans le certificat TLS/SSL afin de forcer le chiffrement.  La prise en charge de pilotes SQL Server pour le nom SAN de certificat est planifiée pour ADO.NET (SqlClient), Microsoft JDBC et SQL Native Client (SNAC).  
   
- Un certificat X.509 doit être configuré pour chaque nœud serveur participant dans le cluster de basculement, avec une liste de tous les écouteurs de groupe de disponibilité définis dans le nom SAN du certificat.  
-  
- Par exemple, si le WSFC dispose de trois écouteurs de groupe de disponibilité avec les noms `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`et `AG3_listener.Adventure-Works.com`, le nom SAN du certificat doit être défini comme suit :  
-  
+Un certificat X.509 doit être configuré pour chaque nœud serveur participant dans le cluster de basculement, avec une liste de tous les écouteurs de groupe de disponibilité définis dans le nom SAN du certificat. 
+
+Le format des valeurs du certificat est le suivant : 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+Par exemple, si vous avez les valeurs suivantes : 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+Pour un cluster WSFC qui a un seul groupe de disponibilité, le certificat doit avoir le nom de domaine complet (FQDN) du serveur et le nom de domaine complet de l’écouteur : 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+Avec cette configuration, vos connexions seront chiffrées lors de la connexion à l’instance (`WIN2019\SQL2019`) ou à l’écouteur (`Listener2019`). 
+
+En fonction de la configuration de la mise en réseau, il existe un petit sous-ensemble de clients qui peuvent également avoir besoin d’ajouter le NetBIOS au réseau SAN. Dans ce cas, les valeurs du certificat doivent être : 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+Si le cluster WSFC dispose de trois écouteurs de groupe de disponibilité, par exemple : Listener1, Listener2, Listener3
+
+Les valeurs de certificat doivent être les suivantes : 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> Écouteurs et Kerberos (SPN) 
 

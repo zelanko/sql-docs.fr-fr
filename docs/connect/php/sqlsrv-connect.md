@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_connect | Microsoft Docs
+title: sqlsrv_connect
+description: Crée une ressource de connexion et ouvre une connexion avec le pilote sql_srv pour PHP. Par défaut, la connexion est tentée en utilisant l’authentification Windows.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1804d84913a97c114dddf3ae3cbb6e401f4fa949
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 11521a8aed5f3f45ef4b2f7ca8e5a5e8a713376e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902740"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633841"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,19 +39,19 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$serverName*: chaîne spécifiant le nom du serveur auquel une connexion est établie. Un nom d’instance (par exemple, « monServeur\nomInstance ») ou un numéro de port (par exemple, « monServeur, 1521 ») peuvent être inclus dans cette chaîne. Pour obtenir la description complète des options disponibles pour ce paramètre, consultez le mot clé Server dans la section Mots clés de chaîne de connexion du pilote ODBC dans [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+*$serverName* : chaîne spécifiant le nom du serveur auquel une connexion est établie. Un nom d’instance (par exemple, « monServeur\nomInstance ») ou un numéro de port (par exemple, « monServeur, 1521 ») peuvent être inclus dans cette chaîne. Pour obtenir la description complète des options disponibles pour ce paramètre, consultez le mot clé Server dans la section Mots clés de chaîne de connexion du pilote ODBC dans [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-À compter de la version 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez aussi spécifier une instance LocalDB avec `"(localdb)\instancename"`. Pour plus d’informations, consultez [Prise en charge de LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).  
+À compter de la version 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez aussi spécifier une instance LocalDB avec `"(localdb)\instancename"`. Pour plus d’informations, consultez [Prise en charge de LocalDB](php-driver-for-sql-server-support-for-localdb.md).  
   
-Également depuis la version 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez spécifier un nom de réseau virtuel, pour établir une connexion à un groupe de disponibilité AlwaysOn. Pour plus d’informations sur la prise en charge de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pour [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consultez [Prise en charge de la haute disponibilité et de la récupération d'urgence](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
+Également depuis la version 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez spécifier un nom de réseau virtuel, pour établir une connexion à un groupe de disponibilité AlwaysOn. Pour plus d’informations sur la prise en charge de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pour [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consultez [Prise en charge de la haute disponibilité et de la récupération d'urgence](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
-*$connectionInfo* [FACULTATIF]: **tableau** associatif qui contient des attributs de connexion (par exemple, **array**("Database" => "AdventureWorks")). Consultez [Connection Options](../../connect/php/connection-options.md) pour obtenir la liste des clés prises en charge pour le tableau.  
+*$connectionInfo* [facultatif] : **tableau** associatif qui contient des attributs de connexion (par exemple, **array**("Database" => "AdventureWorks")). Consultez [Connection Options](connection-options.md) pour obtenir la liste des clés prises en charge pour le tableau.  
   
 ## <a name="return-value"></a>Valeur de retour  
 Ressource de connexion PHP. Si aucune connexion ne peut être créée et ouverte correctement, **false** est retourné.  
   
 ## <a name="remarks"></a>Notes  
-Si les valeurs des clés *UID* et *PWD* ne sont pas spécifiées dans le paramètre facultatif *$connectionInfo* , la connexion est tentée en utilisant l’authentification Windows. Pour plus d’informations sur la connexion au serveur, consultez [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) et [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Si les valeurs des clés *UID* et *PWD* ne sont pas spécifiées dans le paramètre facultatif *$connectionInfo* , la connexion est tentée en utilisant l’authentification Windows. Pour plus d’informations sur la connexion au serveur, consultez[Guide pratique pour se connecter à l’aide de l’authentification Windows](how-to-connect-using-windows-authentication.md) et [Guide pratique pour se connecter à l’aide de l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant crée et ouvre une connexion en utilisant l’authentification Windows. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://www.codeplex.com/SqlServerSamples) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
@@ -88,9 +89,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+[Informations de référence sur l’API du pilote SQLSRV](sqlsrv-driver-api-reference.md)
 
-[Connexion au serveur](../../connect/php/connecting-to-the-server.md)
+[Connexion au serveur](connecting-to-the-server.md)
 
-[À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+[À propos des exemples de code dans la documentation](about-code-examples-in-the-documentation.md)  
   

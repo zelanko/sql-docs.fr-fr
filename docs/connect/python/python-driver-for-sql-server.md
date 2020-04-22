@@ -1,5 +1,6 @@
 ---
 title: Pilote Python pour SQL Server | Microsoft Docs
+description: Vous pouvez vous connecter à une base de données SQL avec Python sur Windows, Linux ou macOS.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be70fb850262c6825ea45fdf5533f0304b702146
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926758"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487867"
 ---
 # <a name="python-sql-driver"></a>Pilote SQL Python
 
 ![Télécharger-FlècheBas-Entourée](../../ssms/media/download-icon.png)[Installer le pilote SQL pour Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Vous pouvez vous connecter à une base de données SQL avec Python sur Windows, Linux ou Mac.   
+Vous pouvez vous connecter à une base de données SQL avec Python sur Windows, Linux ou macOS.  
   
 ## <a name="getting-started"></a>Mise en route  
 Plusieurs pilotes SQL Python sont disponibles. Cependant, Microsoft place ses efforts de test et sa confiance dans le pilote **pyodbc**. Choisissez un pilote et configurez votre environnement de développement en conséquence :

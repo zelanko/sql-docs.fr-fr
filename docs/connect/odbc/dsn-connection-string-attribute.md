@@ -1,5 +1,6 @@
 ---
-title: Mots clés des noms de source de données et des chaînes de connexion pour le pilote ODBC - SQL Server | Microsoft Docs
+title: ODBC DSN et mots clés de chaîne de connexion
+description: Cette page liste les mots clés des chaînes de connexion et des noms de source de données pour SQLSetConnectAttr et SQLGetConnectAttr, disponibles dans le pilote ODBC pour SQL Server.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911243"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528981"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
 
@@ -22,7 +23,7 @@ Cette page liste les mots clés des chaînes de connexion et des noms de source 
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Attributs de connexion et mots clés de chaîne de connexion et de nom de source de données pris en charge
 
-Le tableau suivant liste les mots clés disponibles et les attributs pour chaque plateforme (L : Linux ; M : Mac ; W : Windows). Pour plus d’informations, cliquez sur le mot clé ou l’attribut.
+Le tableau suivant liste les mots clés disponibles et les attributs pour chaque plateforme (L : Linux, M : macOS, W : Windows). Pour plus d’informations, cliquez sur le mot clé ou l’attribut.
 
 | Mot clé de chaîne de connexion / DSN | Attribut de connexion | Plateforme |
 |-|-|-|
@@ -151,7 +152,7 @@ Contrôle l’utilisation de connexions de secours SQL Server. Cet attribut n’
 
 ###  <a name="authentication---sql_copt_ss_authentication"></a>Authentification - SQL_COPT_SS_AUTHENTICATION
 
-Définit le mode d’authentification à utiliser lors de la connexion à SQL Server. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](using-azure-active-directory.md).
+Définit le mode d’authentification à utiliser lors de la connexion à SQL Server. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](using-azure-active-directory.md).
 
 | Valeur de mot clé | Valeur d'attribut | Description |
 |-|-|-|
@@ -221,7 +222,7 @@ Si le fichier de la clé privée est protégé par un mot de passe, le mot de pa
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-Autorise l’utilisation d’un jeton d’accès Azure Active Directory pour l’authentification. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](using-azure-active-directory.md).
+Autorise l’utilisation d’un jeton d’accès Azure Active Directory pour l’authentification. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](using-azure-active-directory.md).
 
 | Valeur d'attribut | Description |
 |-|-|
@@ -246,7 +247,7 @@ Charge une bibliothèque de fournisseur de magasins de clés pour Always Encrypt
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-Pour activer les transactions XA avec un processeur de transaction (TP) compatible XA, l’application doit appeler **SQLSetConnectAttr** avec SQL_COPT_SS_ENLIST_IN_XA et un pointeur vers un objet `XACALLPARAM`. Cette option est prise en charge sur Windows, Linux (versions 17.3 et ultérieures) et Mac.
+Pour activer les transactions XA avec un processeur de transaction (TP) compatible XA, l’application doit appeler **SQLSetConnectAttr** avec SQL_COPT_SS_ENLIST_IN_XA et un pointeur vers un objet `XACALLPARAM`. Cette option est prise en charge sur Windows, Linux (versions 17.3 et ultérieures) et macOS.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -257,7 +258,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 |Valeur|Description|Plateformes|  
 |-----------|-----------------|-----------------|  
-|Objet XACALLPARAM*|Pointeur vers un objet `XACALLPARAM`.|Windows, Linux et Mac|
+|Objet XACALLPARAM*|Pointeur vers un objet `XACALLPARAM`.|Windows, Linux et macOS|
 |TRUE|Associe la transaction XA à la connexion ODBC. Toutes les activités de base de données connexes seront effectuées sous la protection de la transaction XA.|Windows|  
 |FALSE|Dissocie la transaction de la connexion ODBC.|Windows|
 

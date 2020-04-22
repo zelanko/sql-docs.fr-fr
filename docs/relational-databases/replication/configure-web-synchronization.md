@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907233"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529110"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907233"
   
  La synchronisation web est prise en charge sur IIS à compter de la version 5.0. L'Assistant Configuration de la synchronisation Web n'est pas pris en charge sur IIS version 7.0. À partir de SQL Server 2012, nous recommandons aux utilisateurs d’installer SQL Server avec la réplication pour utiliser le composant de synchronisation web sur le serveur IIS. Il peut s’agir de l’édition gratuite de SQL Server Express.  
   
- SSL est obligatoire pour la synchronisation web. Vous aurez besoin d'un certificat de sécurité délivré par une autorité de certification. Vous pouvez utiliser un certificat de sécurité auto-émis à des fins de test uniquement.  
+ TLS est obligatoire pour la synchronisation web. Vous aurez besoin d'un certificat de sécurité délivré par une autorité de certification. Vous pouvez utiliser un certificat de sécurité auto-émis à des fins de test uniquement.  
    
   
  **Pour configurer IIS pour la synchronisation Web**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907233"
   
 -   Le serveur de distribution et le serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent se trouver sur le même ordinateur (configuration courante pour la réplication de fusion). IIS doit cependant être installé sur un ordinateur distinct.  
   
--   Utilisez SSL (Secure Sockets Layer) pour chiffrer la connexion entre l'Abonné et l'ordinateur exécutant IIS. Ceci est obligatoire pour la synchronisation Web.  
+-   Utilisez TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), pour chiffrer la connexion entre l'Abonné et l'ordinateur exécutant IIS. Ceci est obligatoire pour la synchronisation Web.  
   
 -   Utilisez l'authentification de base pour les connexions de l'Abonné vers IIS. En utilisant l'authentification de base, IIS peut établir des connexions au serveur de publication/distribution au nom de l'Abonné sans recourir à la délégation. La délégation est nécessaire en cas d'utilisation de l'authentification intégrée.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907233"
   
 -   Si les serveurs de la topologie de réplication se trouvent derrière un pare-feu, vous devrez peut-être ouvrir les ports dans le pare-feu afin d'activer la synchronisation Web.  
   
-    -   L'ordinateur de l'abonné se connecte à l'ordinateur qui exécute IIS sur HTTPS à l'aide du protocole SSL, qui est généralement configuré pour utiliser le port 443. Les abonnés[!INCLUDE[ssEW](../../includes/ssew-md.md)] peuvent également se connecter via le protocole HTTP, qui utilise en règle générale le port 80.  
+    -   L'ordinateur de l'abonné se connecte à l'ordinateur qui exécute IIS sur HTTPS à l'aide du protocole TLS, qui est généralement configuré pour utiliser le port 443. Les abonnés[!INCLUDE[ssEW](../../includes/ssew-md.md)] peuvent également se connecter via le protocole HTTP, qui utilise en règle générale le port 80.  
   
     -   L'ordinateur chargé d'exécuter IIS se connecte généralement au serveur de publication ou au serveur de distribution via le port 1433 (instance par défaut). Lorsque le serveur de publication ou le serveur de distribution correspond à une instance nommée sur un serveur avec une autre instance par défaut, le système utilise habituellement le port 1500 pour se connecter à l'instance nommée.  
   

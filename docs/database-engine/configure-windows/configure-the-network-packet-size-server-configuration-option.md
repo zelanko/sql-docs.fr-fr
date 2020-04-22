@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731109"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288256"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Configurer l'option de configuration de serveur network packet size
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68731109"
 -   La taille de paquet réseau maximale pour les connexions chiffrées est 16 383 octets.  
   
 > [!NOTE]  
-> Si MARS est activé, le fournisseur SMUX ajoute un en-tête de 16 octets au paquet avant le chiffrement SSL, ce qui réduit la taille maximale du paquet réseau à 16 368 octets.
+> Si MARS est activé, le fournisseur SMUX ajoute un en-tête de 16 octets au paquet avant le chiffrement TLS, ce qui réduit la taille maximale du paquet réseau à 16368 octets.
    
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   

@@ -1,5 +1,6 @@
 ---
 title: Installer Microsoft ODBC Driver for SQL Server (Linux)
+description: Découvrez comment installer Microsoft ODBC Driver for SQL Server sur des clients Linux pour permettre la connectivité de base de données.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61639d78617cf1b0611729d17010962766d1bf1c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a26c8282ec5afe00c3f23987fb82e3759c77c76e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902073"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487780"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Installer Microsoft ODBC Driver for SQL Server (Linux)
 
@@ -518,7 +519,7 @@ Le pilote ODBC sur Linux est constitué des composants suivants :
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X ou libmsodbcsql-13.X.so.X.X|Fichier bibliothèque dynamique (`so`) d’objets partagés contenant l’ensemble des fonctionnalités du pilote. Ce fichier est installé dans `/opt/microsoft/msodbcsql17/lib64/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/lib64/` pour Driver 13.|  
 |`msodbcsqlr17.rll` ou `msodbcsqlr13.rll`|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h est installé dans `/opt/microsoft/msodbcsql17/include/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/include/` pour Driver 13. |
+|msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  Vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h est installé dans `/opt/microsoft/msodbcsql17/include/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/include/` pour Driver 13. |
 |LICENSE.txt|Fichier texte qui contient les termes du contrat de licence utilisateur final. Ce fichier est placé dans `/usr/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/share/doc/msodbcsql/` pour Driver 13.|
 |RELEASE_NOTES|Fichier texte qui contient les notes de publication. Ce fichier est placé dans `/usr/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/share/doc/msodbcsql/` pour Driver 13.|
 

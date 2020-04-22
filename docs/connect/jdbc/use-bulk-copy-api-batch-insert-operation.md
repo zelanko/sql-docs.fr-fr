@@ -1,5 +1,6 @@
 ---
-title: Utilisation de l'API de copie en bloc pour l'opération d'insertion par lot pour le pilote JDBC MSSQL | Microsoft Docs
+title: API de copie en bloc pour l'insertion dans JDBC
+description: Le pilote Microsoft JDBC pour SQL Server prend en charge l’utilisation de l’API de copie en bloc pour les opérations d’insertion de lot pour Azure Data Warehouse.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62843af006d730c3994519fe4c31182805923478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916885"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633989"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l'API de copie en bloc pour l'opération d'insertion par lot
 
@@ -141,4 +142,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Amélioration des performances et de la fiabilité avec le pilote JDBC](improving-performance-and-reliability-with-the-jdbc-driver.md)

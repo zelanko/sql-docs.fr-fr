@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903806"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488123"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
 
@@ -55,7 +55,7 @@ Vous configurez le service Scale Out Master à l’aide du fichier `<drive>:\Pro
 |Configuration  |Description  |Valeur par défaut  |
 |---------|---------|---------|
 |PortNumber|Numéro de port réseau utilisé pour communiquer avec un Scale Out Worker.|8391|
-|SSLCertThumbprint|Empreinte numérique du certificat SSL utilisé pour protéger les communications avec un Scale Out Worker.|Empreinte numérique du certificat SSL spécifié pendant l’installation de Scale Out Master.|
+|SSLCertThumbprint|Empreinte numérique du certificat TLS/SSL utilisé pour protéger les communications avec un Scale Out Worker.|Empreinte numérique du certificat TLS/SSL spécifié pendant l’installation de Scale Out Master|
 |SqlServerName|Nom du serveur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] qui contient le catalogue SSISDB. Par exemple, nom_serveur\\nom_instance.|Nom du serveur SQL Server installé avec Scale Out Master.|
 |CleanupCompletedJobsIntervalInMs|Intervalle de nettoyage des tâches d’exécution terminées, en millisecondes.|43200000|
 |DealWithExpiredTasksIntervalInMs|Intervalle de traitement des tâches d’exécution ayant expiré, en millisecondes.|300000|

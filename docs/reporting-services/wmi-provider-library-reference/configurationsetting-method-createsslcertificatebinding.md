@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570756"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630645"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Méthode ConfigurationSetting - CreateSSLCertificateBinding
-  Crée une liaison de certificat SSL.  
+  Crée une liaison de certificat TLS/SSL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  Adresse IP de l'application.  
   
  *Port*  
- Port SSL associé à la liaison.  
+ Port TLS associé à la liaison.  
   
  *Lcid*  
  Paramètres régionaux à utiliser pour les messages d'erreur retournés.  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Notes  
  Cette méthode ajoute une liaison à rsreportserver.config pour l'application. Si aucune liaison n'existe déjà dans HTTP.SYS, elle est créée ici.  
   
- Avant de créer la liaison, l'appel de méthode examine les réservations d'URL pour l'application spécifiée afin de déterminer si la liaison de certificat SSL est valide.  
+ Avant de créer la liaison, l'appel de méthode examine les réservations d'URL pour l'application spécifiée afin de déterminer si la liaison de certificat TLS/SSL est valide.  
   
  Les conditions suivantes sont validées et peuvent provoquer des erreurs :  
   

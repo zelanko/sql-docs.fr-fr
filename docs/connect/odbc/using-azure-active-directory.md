@@ -1,5 +1,6 @@
 ---
-title: Utiliser Azure Active Directory avec ODBC Driver for SQL Server | Microsoft Docs
+title: Utilisation d’Azure Active Directory avec ODBC Driver
+description: Microsoft ODBC Driver for SQL Server permet aux applications ODBC de se connecter à une instance Azure SQL Database à l’aide d’Azure Active Directory.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928336"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635408"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>Objectif
 
-La version 13.1 et les versions ultérieures de Microsoft ODBC Driver for SQL Server permettent aux applications ODBC de se connecter à une instance de SQL Azure à l’aide d’une identité fédérée dans Azure Active Directory avec un nom d’utilisateur/mot de passe, un jeton d’accès Azure Active Directory, une identité Managed Service Identity Azure Active Directory ou l’authentification intégrée Windows (_pilote Windows uniquement_). Dans la version 13.1 du pilote ODBC, l’authentification par jeton d’accès Azure Active Directory concerne _Windows uniquement_. La version 17 et les versions ultérieures du pilote ODBC prennent en charge cette authentification sur toutes les plateformes (Windows, Linux et macOS). Une nouvelle authentification interactive Azure Active Directory avec ID de connexion est introduite dans la version 17.1 du pilote ODBC pour Windows. Une nouvelle méthode d’authentification Managed Service Identity Azure Active Directory a été ajoutée dans la version 17.3.1.1 du pilote ODBC pour les identités managées affectées par le système et par l’utilisateur. Toutes ces méthodes utilisent de nouveaux mots clés de chaîne de connexion et de nom de source de données, ainsi que des attributs de connexion.
+La version 13.1 et les versions ultérieures de Microsoft ODBC Driver for SQL Server permettent aux applications ODBC de se connecter à une instance de Azure SQL Database à l’aide d’une identité fédérée dans Azure Active Directory avec un nom d’utilisateur/mot de passe, un jeton d’accès Azure Active Directory, une identité Managed Service Identity Azure Active Directory ou l’authentification intégrée Windows (_pilote Windows uniquement_). Dans la version 13.1 du pilote ODBC, l’authentification par jeton d’accès Azure Active Directory concerne _Windows uniquement_. La version 17 et les versions ultérieures du pilote ODBC prennent en charge cette authentification sur toutes les plateformes (Windows, Linux et macOS). Une nouvelle authentification interactive Azure Active Directory avec ID de connexion est introduite dans la version 17.1 du pilote ODBC pour Windows. Une nouvelle méthode d’authentification Managed Service Identity Azure Active Directory a été ajoutée dans la version 17.3.1.1 du pilote ODBC pour les identités managées affectées par le système et par l’utilisateur. Toutes ces méthodes utilisent de nouveaux mots clés de chaîne de connexion et de nom de source de données, ainsi que des attributs de connexion.
 
 > [!NOTE]
 > Le pilote ODBC sur Linux et macOS prend en charge uniquement l’authentification Azure Active Directory directe auprès d’Azure Active Directory. Si vous utilisez l’authentification Azure Active Directory par nom d’utilisateur/mot de passe à partir d’un client Linux ou macOS et que votre configuration Active Directory exige l’authentification du client auprès d’un point de terminaison ADFS (Active Directory Federation Services), l’authentification risque d’échouer.

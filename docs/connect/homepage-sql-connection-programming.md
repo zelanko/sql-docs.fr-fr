@@ -1,6 +1,6 @@
 ---
 title: Page d’accueil pour la programmation client SQL | Microsoft Docs
-description: Page Hub contenant des liens annotés vers des téléchargements et une documentation pour de nombreuses combinaisons de langages et de systèmes d’exploitation, pour la connexion à SQL Server ou à Azure SQL Database.
+description: Page contenant des liens annotés vers des téléchargements et une documentation pour différents langages et de systèmes d’exploitation, pour la connexion à SQL Server ou à Azure SQL Database.
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924882"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529043"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Page d’accueil pour la programmation client sur Microsoft SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924882"
 Bienvenue dans notre page d’accueil sur la programmation client pour interagir avec Microsoft SQL Server et avec Azure SQL Database dans le cloud. Cet article fournit les informations suivantes :
 
 - Répertorie et décrit les combinaisons de langages et de pilotes disponibles.
-    - Des informations sont fournies pour les systèmes d’exploitation Linux (Ubuntu et autres), MacOS et Windows.
+  - Des informations sont fournies pour les systèmes d’exploitation Linux (Ubuntu et autres), macOS et Windows.
 - Fournit des liens vers la documentation détaillée de chaque combinaison.
 - Affiche les zones et sous-zones de la documentation hiérarchique pour certains langages, le cas échéant.
 
@@ -35,7 +35,7 @@ Dans tous les langages, le code qui se connecte à SQL Server est presque identi
 Pour plus d’informations sur les chaînes de connexion à Azure SQL Database, consultez :
 
 - [Utiliser .NET Core (C#) pour interroger une base de données Azure SQL](/azure/sql-database/sql-database-connect-query-dotnet-core).
-- Autres bases de données Azure SQL Database proches de l’article précédent dans la table des matières, sous à propos des autres langages. Par exemple, consultez [Utiliser PHP pour interroger une base de données Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
+- Autres articles sur les bases de données Azure SQL Database proches de l’article précédent dans la table des matières, sous à propos des autres langages. Par exemple, consultez [Utiliser PHP pour interroger une base de données Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
 
 
 #### <a name="build-an-app-webpages"></a>Pages web Créer une application
@@ -132,7 +132,7 @@ EF et les technologies associées sont puissantes, et un développeur qui souhai
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Logo Java][image-ref-330-java] Java et JDBC
 
-Microsoft fournit un pilote JDBC (Java Database Connectivity) pouvant être utilisé avec SQL Server (ou, bien sûr, avec Azure SQL Database). Il s’agit d’un pilote JDBC de type 4 offrant une connectivité de base de données par le biais des interfaces de programmation d’applications (API) JDBC standard.
+Microsoft fournit un pilote JDBC (Java Database Connectivity) pouvant être utilisé avec SQL Server (ou avec Azure SQL Database). Il s’agit d’un pilote JDBC de type 4 offrant une connectivité de base de données par le biais des interfaces de programmation d’applications (API) JDBC standard.
 
 #### <a name="code-examples"></a>Exemples de code
 
@@ -162,7 +162,7 @@ La documentation JDBC inclut les principaux domaines suivants :
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Logo Node.js][image-ref-340-node] Node.js
 
-Avec Node.js, vous pouvez vous connecter à SQL Server à partir de Windows, Linux ou Mac. La racine de notre documentation Node.js est [ici](./node-js/index.md).
+Avec Node.js, vous pouvez vous connecter à SQL Server à partir de Windows, Linux ou macOS. La racine de notre documentation Node.js est [ici](./node-js/index.md).
 
 Le pilote de connexion Node.js pour SQL Server est implémenté en JavaScript. Le pilote utilise le protocole TDS, qui est pris en charge par toutes les versions récentes de SQL Server. Le pilote est un projet open source, [disponible sur GitHub](https://tediousjs.github.io/tedious/).
 
@@ -179,7 +179,7 @@ Le pilote de connexion Node.js pour SQL Server est implémenté en JavaScript. L
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>ODBC pour C++ 
+## <a name="odbc-for-c"></a>ODBC pour C++
 
 ![Logo ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ Le contenu ODBC de cette section se concentre sur l’accès à SQL Server ou à
 | Domaine | Sous-domaine | Description |
 | :--- | :------ | :---------- |
 | [ODBC pour C++](./odbc/index.md) | Racine de notre documentation. |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informations sur l’utilisation d’ODBC sur les systèmes d’exploitation Linux ou MacOS. |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Informations sur l’utilisation d’ODBC sur les systèmes d’exploitation Linux ou macOS. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Informations sur l’utilisation d’ODBC sur le système d’exploitation Windows. |
 | [Administration](../odbc/admin/index.md) | &nbsp; | Outil d’administration pour la gestion des sources de données ODBC. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Différents pilotes ODBC qui sont créés et fournis par Microsoft. |
@@ -271,7 +271,7 @@ Vous pouvez utiliser Ruby pour interagir avec SQL Server. La racine de notre doc
 | :-- | :-- |
 | [Preuve de concept pour la connexion à SQL avec Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Un petit exemple de code axé sur la connexion et l’interrogation de SQL Server. |
 | [Base de données Azure SQL : utiliser Ruby pour interroger](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Exemple de base de données Azure SQL. |
-| [Créer des applications Ruby pour utiliser SQL Server sur MacOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Informations de configuration ainsi qu’exemples de code. |
+| [Créer des applications Ruby pour utiliser SQL Server sur macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Informations de configuration ainsi qu’exemples de code. |
 | &nbsp; | <br /> |
 
 
@@ -293,7 +293,7 @@ Sur nos sites web [*Créer une application*](https://www.microsoft.com/sql-serve
 
 Voici quelques contours approximatifs des détails fournis sur le site web :
 
-#### <a name="java-on-ubuntu"></a>Java sur Ubuntu :
+#### <a name="java-on-ubuntu"></a>Java sur Ubuntu
 
 1. Configurer votre environnement
     - Étape 1.1 : installer SQL Server
@@ -306,7 +306,7 @@ Voici quelques contours approximatifs des détails fournis sur le site web :
 3. Rendez votre application Java jusqu’à 100 x plus rapide
     - Étape 3.1 : créer une application Java pour faire la démonstration d’index ColumnStore
 
-#### <a name="python-on-windows"></a>Python sur Windows :
+#### <a name="python-on-windows"></a>Python sur Windows
 
 1. Configurer votre environnement
     - Étape 1.1 : installer SQL Server
@@ -325,13 +325,13 @@ Voici quelques contours approximatifs des détails fournis sur le site web :
 
 Les captures d’écran suivantes vous donnent une idée de ce à quoi ressemble notre site web de documentation de développement SQL.
 
-#### <a name="choose-a-language"></a>Choisir un langage :
+#### <a name="choose-a-language"></a>Choisir une langue
 
 ![Site web de développement SQL, prise en main][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>Choisir un système d'exploitation :
+#### <a name="choose-an-operating-system"></a>Choisir un système d'exploitation
 
 ![Site web SQL Dev, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

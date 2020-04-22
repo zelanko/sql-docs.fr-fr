@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117462"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486718"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mappages de types de données entre R et SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Parmi les catégories de types de données pris en charge par le [système SQL 
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>Modifications des types de données entre SQL Server 2016 et les versions antérieures
 
-Microsoft SQL Server 2016 et Microsoft Azure SQL Database apportent des améliorations aux conversions des types de données et à plusieurs autres opérations. Ils offrent une plus grande précision lors de l’utilisation de types à virgule flottante, ainsi que des modifications mineures des opérations sur les types **datetime** classiques.
+Microsoft SQL Server 2016 et les versions ultérieures apportent des améliorations aux conversions des types de données et à plusieurs autres opérations. Ils offrent une plus grande précision lors de l’utilisation de types à virgule flottante, ainsi que des modifications mineures des opérations sur les types **datetime** classiques.
 
 Ces améliorations sont toutes disponibles par défaut lorsque vous utilisez un niveau de compatibilité de base de données de 130 ou ultérieur. Toutefois, si vous utilisez un niveau de compatibilité différent ou si vous vous connectez à une base de données à l’aide d’une version antérieure, vous pouvez constater des différences dans la précision des nombres ou d’autres résultats. 
 
@@ -106,7 +106,7 @@ Si un type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## <a name="examples"></a>Exemples
 
-### <a name="example-1-implicit-conversion"></a>Exemple 1 : conversion implicite
+### <a name="example-1-implicit-conversion"></a>Exemple 1 : Conversion implicite
 
 L’exemple suivant montre comment les données sont transformées lors de la boucle entre SQL Server et R.
 
@@ -168,7 +168,7 @@ Vous pouvez voir que les conversions de types de données suivantes ont été ef
 -   **Colonne C4**. La colonne contient des valeurs générées par le script R et non présentes dans les données d’origine.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Exemple 2 : sélection de colonnes dynamiques à l’aide de R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Exemple 2 : sélection de colonnes dynamiques à l’aide de R
 
 L’exemple suivant montre comment vous pouvez utiliser le code R pour vérifier les types de colonnes non valides. La requête extrait le schéma d’une table spécifiée à l’aide des vues système SQL Server et supprime toutes les colonnes qui ont un type non valide spécifié.
 

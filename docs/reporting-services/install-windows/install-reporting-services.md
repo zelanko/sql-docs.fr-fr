@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429050"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486818"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installation de SQL Server Reporting Services
 
@@ -95,7 +95,7 @@ Les réservations d'URL se composent d'un préfixe, d'un nom d'hôte, d'un port 
 
 |Élément|Description|
 |----------|-----------------|
-|Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
+|Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat TLS (Transport Layer Security), précédemment appelé SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
 |Nom de l’hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `https://<computername>/reportserver`, `https://localhost/reportserver` ou`https://<IPAddress>/reportserver.`|
 |Port|Le port par défaut est 80. Si vous utilisez un port autre que le port 80, vous devez l’ajouter explicitement à l’URL lorsque vous ouvrez un portail web dans une fenêtre de navigateur.|
 |Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer pour le service web Report Server et au format Reports pour le portail web. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Pour le portail web, le répertoire virtuel par défaut est **reports**.|

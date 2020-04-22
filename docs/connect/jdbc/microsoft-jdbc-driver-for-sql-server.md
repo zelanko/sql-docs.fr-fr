@@ -1,5 +1,6 @@
 ---
 title: Microsoft JDBC Driver pour SQL Server | Microsoft Docs
+description: Microsoft fournit un pilote JDBC à utiliser avec SQL Server et Azure SQL Database, qui permet la connectivité à partir d’une application, d’un serveur ou d’une applet Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928222"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487807"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Pilote Microsoft JDBC pour SQL Server
 
@@ -27,9 +28,9 @@ Le pilote Microsoft JDBC pour SQL Server a été testé avec les principaux serv
   
 ## <a name="getting-started"></a>Prise en main  
 
-* [Étape 1 : Configurer l’environnement de développement pour le développement Java](step-1-configure-development-environment-for-java-development.md)  
+* [Étape 1 : Configurer l’environnement de développement pour le développement Java](step-1-configure-development-environment-for-java-development.md)  
 * [Étape 2 : Créer une base de données SQL pour le développement Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentation  
 

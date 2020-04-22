@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136965"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529116"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68136965"
   
  Par exemple, un représentant commercial en déplacement peut se servir de la synchronisation Web. L'entreprise, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], dispose de représentants commerciaux qui se déplacent dans différents magasins et chez différents fournisseurs dans toutes les régions. Lors de déplacements prolongés, les représentants restent à l'hôtel et ont besoin d'un moyen pratique pour charger les chiffres des ventes et télécharger les mises à jour des produits tous les jours en fin de journée.  
   
- Le service informatique de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] a configuré chaque ordinateur portable avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et activé la réplication de fusion pour utiliser la synchronisation Web. L'Agent de fusion de chaque ordinateur portable contient une adresse URL qui pointe vers les composants de réplication installés sur un ordinateur exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Ces composants synchronisent l'Abonné avec le serveur de publication. Chaque représentant peut désormais se connecter par le biais d'une connexion Internet disponible sans avoir recours à une connexion d'accès à distance, et peut charger et télécharger les données appropriées. La connexion Internet utilise SSL (Secure Sockets Layer) ; un réseau privé virtuel (VPN) n'est donc pas nécessaire.  
+ Le service informatique de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] a configuré chaque ordinateur portable avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et activé la réplication de fusion pour utiliser la synchronisation Web. L'Agent de fusion de chaque ordinateur portable contient une adresse URL qui pointe vers les composants de réplication installés sur un ordinateur exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Ces composants synchronisent l'Abonné avec le serveur de publication. Chaque représentant peut désormais se connecter par le biais d'une connexion Internet disponible sans avoir recours à une connexion d'accès à distance, et peut charger et télécharger les données appropriées. La connexion Internet utilise TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), un réseau privé virtuel (VPN) n'est donc pas nécessaire.  
   
  Pour obtenir des informations sur la façon de configurer les composants requis pour la synchronisation Web, consultez [configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md), [Configurer IIS pour la synchronisation Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) et [Configurer IIS 7 pour la synchronisation Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   

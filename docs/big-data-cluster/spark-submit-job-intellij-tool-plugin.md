@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244081"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634949"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Soumettre des travaux Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans IntelliJ
 
@@ -33,9 +33,9 @@ Un des principaux scénarios pour [!INCLUDE[big-data-clusters-2019](../includes/
 ## <a name="link-sql-server-big-data-cluster"></a>Lier un cluster Big Data SQL Server
 1. Ouvrez l’outil IntelliJ IDEA.
 
-2. Si vous utilisez un certificat autosigné, vous devez désactiver la validation des certificats SSL. Pour cela, accédez au menu **Tools**, sélectionnez **Azure**, **Validate Spark Cluster SSL Certificate** (Valider les certificats SSL des clusters Spark), puis **Disable**.
+2. Si vous utilisez un certificat autosigné, vous devez désactiver la validation des certificats TLS/SSL. Pour cela, accédez au menu **Tools**, sélectionnez **Azure**, **Validate Spark Cluster SSL Certificate** (Valider les certificats SSL des clusters Spark), puis **Disable**.
 
-    ![Lier un cluster Big Data SQL Server - Désactiver SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![Lier un cluster Big Data SQL Server - Désactiver TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Pour ouvrir l’explorateur Azure, dans le menu **View**, sélectionnez **Tool Windows**, puis **Azure Explorer**.
 4. Cliquez avec le bouton droit sur **SQL Server big data cluster** (Cluster Big Data SQL Server), puis sélectionnez **Link SQL Server big data cluster** (Lier un cluster Big Data SQL Server). Dans les champs **Server**, **User Name** et **Password**, entrez respectivement un nom de serveur, un nom d’utilisateur et un mot de passe, puis cliquez sur **OK**.

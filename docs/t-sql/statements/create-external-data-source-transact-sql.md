@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705884"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633420"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -58,7 +58,7 @@ Crée une source de données externe pour des requêtes PolyBase. Des sources de
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -106,7 +106,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
 - Vous pouvez utiliser le préfixe d’emplacement `sqlserver` pour connecter [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] à un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou à Azure Synapse Analytics.
 - Spécifiez `Driver={<Name of Driver>}` lors de la connexion via `ODBC`.
-- `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
+- `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion TLS/SSL sécurisée.
 - Pour garantir la réussite des requêtes PolyBase lors du basculement du `Namenode` Hadoop, envisagez d’utiliser une adresse IP virtuelle pour le `Namenode`du cluster Hadoop. Dans le cas contraire, exécutez une commande [ALTER EXTERNAL DATA SOURCE][alter_eds] pour pointer vers le nouvel emplacement.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -405,7 +405,7 @@ Crée une source de données externe pour des requêtes élastiques. Des sources
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -622,7 +622,7 @@ Crée une source de données externe pour PolyBase. Des sources de données exte
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -654,10 +654,10 @@ Chemin d’emplacement :
 
 Remarques et conseils supplémentaires lors de la définition de l’emplacement :
 
-- L’option par défaut consiste à utiliser `enable secure SSL connections` lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions SSL non sécurisées.
+- L’option par défaut consiste à utiliser `enable secure SSL connections` lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion TLS/SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions TLS non sécurisées.
 - Azure Synapse ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. . Pour valider, créez une table externe à l’aide d’une source de données externe.
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
-- `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
+- `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion TLS sécurisée.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -872,7 +872,7 @@ Crée une source de données externe pour des requêtes PolyBase. Des sources de
 
 ## <a name="syntax"></a>Syntaxe
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -908,7 +908,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 
 - Le moteur PDW ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. Pour valider, créez une table externe à l’aide d’une source de données externe.
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
-- `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
+- `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion TLS sécurisée.
 - Pour garantir la réussite des requêtes PolyBase lors du basculement du `Namenode` Hadoop, envisagez d’utiliser une adresse IP virtuelle pour le `Namenode`du cluster Hadoop. Dans le cas contraire, exécutez une commande [ALTER EXTERNAL DATA SOURCE][alter_eds] pour pointer vers le nouvel emplacement.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*

@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982048"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631645"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Spécifie les propriétés d’une colonne calculée qui est ajoutée à une table à l’aide d’[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  Nom de la colonne à ajouter, modifier ou supprimer. *column_name* peut comporter entre 1 et 128 caractères. Pour les nouvelles colonnes, *column_name* peut être omis pour les colonnes créées avec un type de données **timestamp**. Si aucun *column_name* n’est spécifié pour une colonne de type de données **timestamp**, le **timestamp** du nom est utilisé.  
   
 *computed_column_expression*  
- Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas physiquement stockée dans la table, mais traitée à partir d'une expression utilisant d'autres colonnes figurant dans la même table. Par exemple, une colonne calculée peut avoir la définition : cost AS price * qty. L'expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou comporter un type de données d'alias.  
+ Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas physiquement stockée dans la table, mais traitée à partir d'une expression utilisant d'autres colonnes figurant dans la même table. Une expression doit générer une valeur. Par exemple, une colonne calculée peut avoir la définition suivante : cost AS price * qty. Autre exemple avec des opérateurs au niveau du bit : is_finalised AS is_checked | is_approved. L’expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une condition de recherche, une sous-requête ou comporter un type de données d'alias.  
   
  Les colonnes calculées peuvent être utilisées dans les listes de sélections, dans les clauses WHERE ou ORDER BY ou chaque fois qu'une expression régulière peut être utilisée, à l'exception des cas suivants :  
   

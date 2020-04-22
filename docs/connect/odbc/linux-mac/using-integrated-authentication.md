@@ -1,5 +1,6 @@
 ---
-title: Utilisation de l’authentification intégrée | Microsoft Docs
+title: Utilisation de l’authentification intégrée
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921169"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629619"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +35,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Quand vous vous connectez avec un nom de source de données, vous pouvez également ajouter **Trusted_Connection=yes** à l’entrée de ce dernier dans `odbc.ini`.
   
-Vous pouvez également utiliser l’option `-E` de `sqlcmd` et l’option `-T` de `bcp` pour spécifier l’authentification intégrée ; pour plus d’informations, consultez [Connexion avec **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) et [Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+Vous pouvez également utiliser l’option `-E` de `sqlcmd` et l’option `-T` de `bcp` pour spécifier l’authentification intégrée ; pour plus d’informations, consultez [Connexion avec **sqlcmd**](connecting-with-sqlcmd.md) et [Connexion avec **bcp**](connecting-with-bcp.md).
 
 Vérifiez que le principal de client qui va se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est déjà authentifié auprès du centre KDC Kerberos.
   
@@ -119,17 +120,17 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-Si votre ordinateur Linux ou macOS est configuré pour utiliser le protocole DHCP (Dynamic Host Configuration Protocol) avec un serveur DHCP Windows fournissant les serveurs DNS à utiliser, vous pouvez faire appel à **dns_lookup_kdc=true**. À présent, vous pouvez utiliser Kerberos pour vous connecter à votre domaine en exécutant la commande `kinit alias@YYYY.CORP.CONTOSO.COM`. Les paramètres passés à `kinit` sont sensibles à la casse, et vous devez ajouter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’ordinateur `alias@YYYY.CORP.CONTOSO.COM` configuré pour être dans le domaine pour la connexion. À présent, vous pouvez utiliser des connexions approuvées (**Trusted_Connection=YES** dans une chaîne de connexion, **bcp -T** ou **sqlcmd -E**).  
+Si votre ordinateur Linux ou macOS est configuré pour utiliser le protocole DHCP (Dynamic Host Configuration Protocol) avec un serveur DHCP Windows fournissant les serveurs DNS à utiliser, vous pouvez faire appel à **dns_lookup_kdc=true**. À présent, vous pouvez utiliser Kerberos pour vous connecter à votre domaine en exécutant la commande `kinit alias@YYYY.CORP.CONTOSO.COM`. Les paramètres passés à `kinit` sont sensibles à la casse, et vous devez ajouter `alias@YYYY.CORP.CONTOSO.COM` à l’ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configuré pour être dans le domaine pour la connexion. À présent, vous pouvez utiliser des connexions approuvées (**Trusted_Connection=YES** dans une chaîne de connexion, **bcp -T** ou **sqlcmd -E**).  
   
 L’heure sur l’ordinateur Linux ou macOS et l’heure sur le centre de distribution de clés Kerberos (KDC) doivent être proches. Vérifiez que l’heure système est correctement définie, par exemple en utilisant le protocole NTP (Network Time Protocol).  
 
 Si l’authentification Kerberos échoue, le pilote ODBC sur Linux ou macOS n’utilise pas l’authentification NTLM.  
 
-Pour plus d’informations sur l’authentification des ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients Linux avec Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) et [Bonnes pratiques pour intégrer OS X à Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Pour plus d’informations sur l’authentification de vos ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients de Linux à Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Voir aussi  
-[Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[Instructions de programmation](programming-guidelines.md)
 
-[Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notes de publication](release-notes-odbc-sql-server-linux-mac.md)
 
-[Utilisation d’Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Utilisation d’Azure Active Directory](../using-azure-active-directory.md)

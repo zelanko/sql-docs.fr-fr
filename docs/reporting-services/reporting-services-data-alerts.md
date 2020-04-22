@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286623"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487793"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
 
@@ -131,7 +131,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
  Le tableau suivant répertorie les éléments de configuration des alertes de données, leurs valeurs par défaut, les descriptions et les emplacements.  
   
-|Paramètre|Valeur par défaut|Description|Location|  
+|Paramètre|Valeur par défaut|Description|Emplacement|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Nombre de minutes entre les démarrages du cycle de nettoyage.|Fichier de configuration du serveur de rapports|  
 |AlertingExecutionLogCleanupMinutes|10080|Nombre de minutes pendant lesquelles les entrées du journal des exécutions sont conservées.|Fichier de configuration du serveur de rapports|  
@@ -270,12 +270,12 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des compteurs de performances pour d'autres fonctionnalités d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Compteurs de performance pour les objets de performance ReportServer:Service et ReportServerSharePoint:Service](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Compteurs de performance du service web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md), et [Compteurs de performance du service web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Prise en charge d'SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut utiliser le service HTTP SSL (Secure Sockets Layer) pour établir des connexions chiffrées à un serveur de rapports ou à un site SharePoint.  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> Prise en charge de TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut utiliser le service HTTP SSL pour établir des connexions chiffrées à un serveur de rapports ou à un site SharePoint. Le protocole TLS (Transport Layer Security) était précédemment appelé protocole SSL (Secure Sockets Layer).
   
- Le service de runtime des alertes et l'interface utilisateur des alertes de données prend en charge SSL et fonctionne de façon similaire à SSL ou HTTP ; toutefois, il existe de légères différences. Lorsque la définition de l'alerte de données est créée à l'aide d'une connexion SSL, l'URL qui revient à la bibliothèque SharePoint depuis le message d'alerte de données utilise également SSL. Vous pouvez identifier la connexion SSL car elle utilise HTTPS au lieu de HTTP dans son URL. De même, si la définition d'alerte de données a été créée à l'aide d'une connexion HTTP, le lien vers le site SharePoint utilise HTTP. Si la définition d'alerte a été créée avec SSL ou HTTP, l'expérience pour les utilisateurs et les administrateurs des alertes est identique lorsqu'on utilise le Concepteur d'alertes de données ou le Gestionnaire des alertes de données. Si le protocole (HTTP ou SSL) change entre le moment où la définition de l'alerte a été créée et le moment où elle a été mise à jour et resauvegardée, le protocole d'origine est conservé et utilisé dans les URL du lien.  
+ Le service de runtime des alertes et l'interface utilisateur des alertes de données prend en charge TLS et fonctionne de façon similaire à TLS ou HTTP ; toutefois, il existe de légères différences. Lorsque la définition de l'alerte de données est créée à l'aide d'une connexion TLS, l'URL qui revient à la bibliothèque SharePoint depuis le message d'alerte de données utilise également TLS. Vous pouvez identifier la connexion TLS car elle utilise HTTPS au lieu de HTTP dans son URL. De même, si la définition d'alerte de données a été créée à l'aide d'une connexion HTTP, le lien vers le site SharePoint utilise HTTP. Si la définition d'alerte a été créée avec TLS ou HTTP, l'expérience pour les utilisateurs et les administrateurs des alertes est identique lorsqu'on utilise le Concepteur d'alertes de données ou le Gestionnaire des alertes de données. Si le protocole (HTTP ou TLS) change entre le moment où la définition de l'alerte a été créée et le moment où elle a été mise à jour et resauvegardée, le protocole d'origine est conservé et utilisé dans les URL du lien.  
   
- Si vous créez une alerte de données sur un site SharePoint configuré pour utiliser SSL, puis supprimez la spécification SSL, l'alerte continue de fonctionner sur le site. Si le site est supprimé, le site de zone par défaut est utilisé à la place.  
+ Si vous créez une alerte de données sur un site SharePoint configuré pour utiliser TLS, puis supprimez la spécification TLS, l'alerte continue de fonctionner sur le site. Si le site est supprimé, le site de zone par défaut est utilisé à la place.  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Interface utilisateur des alertes de données  
  Les alertes de données fournissent des pages SharePoint pour gérer les alertes et un concepteur pour créer et modifier les définitions des alertes de données.  

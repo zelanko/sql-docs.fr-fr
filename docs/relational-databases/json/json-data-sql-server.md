@@ -2,7 +2,6 @@
 title: Utiliser des données JSON
 ms.date: 05/14/2019
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -11,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9c9498c6bcef8bf07657d17565bd8b596668033
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288143"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485059"
 ---
 # <a name="json-data-in-sql-server"></a>Données JSON dans SQL Server
 
@@ -374,7 +374,7 @@ La sortie de cette requête est un texte JSON entièrement conforme à la spéci
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>Tester la prise en charge de JSON à partir de l’exemple de base de données AdventureWorks
 
-Pour obtenir l’exemple de base de données AdventureWorks, téléchargez au minimum le fichier de base de données et le fichier d’exemples et de scripts à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=49502).
+Pour obtenir l’exemple de base de données AdventureWorks, téléchargez au minimum le fichier de base de données et le fichier d’exemples et de scripts sur [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
 
 Après avoir restauré l’exemple de base de données dans une instance de SQL Server 2016, extrayez le fichier d’exemples, puis ouvrez le fichier *JSON Sample Queries procedures views and indexes.sql* à partir du dossier JSON. Exécutez les scripts de ce fichier pour remettre certaines données existantes au format JSON, testez des exemples de rapports et de requêtes sur les données JSON, indexez les données JSON, puis importez et exportez les données JSON.  
   

@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903787"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305240"
 ---
 # <a name="application-roles"></a>Rôles d’application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72903787"
  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], lorsqu'un utilisateur a démarré un rôle d'application, il peut récupérer son contexte de sécurité initial uniquement en se déconnectant de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et en s'y reconnectant. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **sp_setapprole** a une option qui crée un cookie. Le cookie contient des informations de contexte avant que le rôle d'application soit activé. Le cookie peut être utilisé par **sp_unsetapprole** pour rétablir la session à son contexte d’origine. Pour obtenir des informations sur cette nouvelle option et un exemple, consultez [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 > [!IMPORTANT]  
->  L’option **encrypt** d’ODBC n’est pas prise en charge par **SqlClient**. Lorsque vous transmettez des informations confidentielles sur un réseau, utilisez le protocole SSL (Secure Sockets Layer) ou IPsec pour chiffrer le canal. Si vous devez conserver des informations d'identification dans l'application cliente, chiffrez-les à l'aide des fonctions API de chiffrement. Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures, le paramètre *password* est stocké sous la forme d’un hachage unidirectionnel.  
+>  L’option **encrypt** d’ODBC n’est pas prise en charge par **SqlClient**. Lorsque vous transmettez des informations confidentielles sur un réseau, utilisez le protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), ou IPsec pour chiffrer le canal. Si vous devez conserver des informations d'identification dans l'application cliente, chiffrez-les à l'aide des fonctions API de chiffrement. Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures, le paramètre *password* est stocké sous la forme d’un hachage unidirectionnel.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

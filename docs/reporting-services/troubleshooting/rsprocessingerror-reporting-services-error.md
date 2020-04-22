@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError - Erreur Reporting Services | Microsoft Docs
+description: 'Dans cette page de référence d’erreur, découvrez l’ID d’événement « rsProcessingError » : Des erreurs se sont produites lors du traitement du rapport SQL Server Reporting Services.'
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573819"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487218"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -53,7 +54,7 @@ ms.locfileid: "65573819"
   
 -   Un paramètre dont la propriété Nullable a la valeur **False** a détecté une valeur NULL dans le paramètre.  
   
--   Une expression pour la propriété Hidden d’une région de données contient une erreur : la référence d’objet n’est pas définie à une instance d’un objet.  
+-   Une expression pour la propriété Hidden d'une région de données contient une erreur : La référence d’objet n’a pas la valeur d’une instance d’un objet.  
   
 -   Une expression contenait un appel de fonction non valide ou une erreur de syntaxe.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "65573819"
  Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Le rapport principal avec le sous-rapport n'a pas pu être traité  
- Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version d'un rapport et de ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
+ Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version entre un rapport et ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
   
  Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la cause de l’échec de la mise à niveau d’un rapport, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md).  
   

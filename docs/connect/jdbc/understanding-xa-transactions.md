@@ -1,5 +1,6 @@
 ---
-title: Comprendre les transactions XA | Microsoft Docs
+title: Présentation des transactions XA
+description: Le pilote Microsoft JDBC pour SQL Server prend en charge les transactions distribuées facultatives Java Platform, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916995"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528733"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
 

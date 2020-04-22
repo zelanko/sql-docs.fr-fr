@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080650"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488246"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
   Une carte est un ensemble de couches. Quand vous ajoutez une carte à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous définissez la première couche. Vous pouvez créer des couches supplémentaires à l'aide de l'Assistant Couche.  
@@ -75,7 +75,7 @@ ms.locfileid: "77080650"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**ou **Polygone**.  
+2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**, ou **Polygone**.  
   
     > [!NOTE]  
     >  Bien qu'il soit possible d'ajouter une couche et de la configurer manuellement, nous vous recommandons d'utiliser l'Assistant Couche pour ajouter de nouvelles couches. Pour lancer l’Assistant à partir de la barre d’outils du volet Carte, cliquez sur le bouton de l’Assistant Couche (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -90,7 +90,7 @@ ms.locfileid: "77080650"
   
     2.  Dans **Dataset analytique**, cliquez sur le nom du dataset qui contient les données analytiques et les champs de correspondance pour générer une relation entre des données analytiques et spatiales.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3.  Cliquez sur **Add**.  
   
     4.  Tapez le nom du champ de correspondance du dataset spatial.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "77080650"
   
 3.  Dans le volet Propriétés, attribuez à UseSecureConnection la valeur **True**.  
   
- La connexion au service Web Bing Maps utilise le service HTTP SSL (Secure Sockets Layer) pour récupérer des mosaïques Bing pour cette couche.  
+ La connexion au service Web Bing Maps utilise le service HTTP SSL pour récupérer des mosaïques Bing pour cette couche. Le protocole TLS (Transport Layer Security) était précédemment appelé protocole SSL (Secure Sockets Layer).
   
 ##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> Pour spécifier la langue des étiquettes de mosaïque  
   
@@ -250,6 +250,6 @@ ms.locfileid: "77080650"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

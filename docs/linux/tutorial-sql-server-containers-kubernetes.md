@@ -9,12 +9,12 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216669"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635430"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -52,7 +52,7 @@ Dans le diagramme suivant, le nœud hébergeant le conteneur `mssql-server` a é
 * **Cluster Kubernetes**
    - Ce didacticiel requiert un cluster Kubernetes. Les étapes utilisent [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) pour gérer le cluster. 
 
-   - Consultez [Déployer un cluster Azure Container Service (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) pour créer et se connecter à un cluster Kubernetes à nœud unique dans AKS avec `kubectl`. 
+   - Consultez [Déployer un cluster Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) pour créer et se connecter à un cluster Kubernetes à nœud unique dans AKS avec `kubectl`. 
 
    >[!NOTE]
    >Pour une protection contre les défaillances de nœuds, un cluster Kubernetes requiert plusieurs nœuds.

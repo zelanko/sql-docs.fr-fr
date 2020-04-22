@@ -1,5 +1,6 @@
 ---
-title: Instructions de programmation (ODBC Driver for SQL Server) | Microsoft Docs
+title: Instructions de programmation (pilote ODBC)
+description: Les fonctionnalités de programmation de Microsoft ODBC Driver for SQL Server sur macOS et Linux reposent sur ODBC dans SQL Server Native Client.
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219225"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632789"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
@@ -49,7 +50,7 @@ Les sections suivantes de la documentation de [!INCLUDE[ssNoVersion](../../../in
 Le fonctionnement correct des fonctionnalités suivantes dans cette version du pilote ODBC sur macOS et Linux n’a pas été vérifié :
 
 -   Connexion de cluster de basculement
--   [Résolution d’adresses IP réseau transparente](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (avant ODBC Driver 17)
+-   [Résolution d’adresses IP réseau transparente](../using-transparent-network-ip-resolution.md) (avant ODBC Driver 17)
 -   [Suivi de pilote avancé](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Les fonctionnalités suivantes ne sont pas disponibles dans cette version du pilote ODBC sur macOS et Linux : 
@@ -108,7 +109,7 @@ Pour ODBC Driver 17, les données SQLCHAR dans un des jeux de caractères/encod
 
 Au moment de la connexion, le pilote détecte les paramètres régionaux actuels du processus dans lequel il est chargé. S’il utilise un des encodages ci-dessus, le pilote s’en sert pour les données SQLCHAR (caractères étroits) ; sinon, il utilise par défaut l’encodage UTF-8. Dans la mesure où tous les processus démarrent dans les paramètres régionaux « C » par défaut (amenant le pilote à utiliser par défaut le format UTF-8), si une application doit utiliser un des encodages ci-dessus, elle doit recourir à la fonction **setlocale** pour définir les paramètres régionaux de façon appropriée avant la connexion, soit en spécifiant les paramètres régionaux souhaités explicitement, soit en utilisant une chaîne vide, par exemple `setlocale(LC_ALL, "")`, pour utiliser les paramètres régionaux de l’environnement.
 
-Ainsi, dans un environnement Linux ou Mac standard où l’encodage est UTF-8, les utilisateurs d’ODBC Driver 17 qui effectuent une mise à niveau à partir de la version 13 ou 13.1 ne constatent aucune différence. Toutefois, les applications qui utilisent un codage non-UTF-8 dans la liste ci-dessus par le biais de `setlocale()` doivent recourir à cet encodage pour les données vers et depuis le pilote au lieu d’UTF-8.
+Ainsi, dans un environnement Linux ou macOS standard où l’encodage est UTF-8, les utilisateurs d’ODBC Driver 17 qui effectuent une mise à niveau à partir de la version 13 ou 13.1 ne constatent aucune différence. Toutefois, les applications qui utilisent un codage non-UTF-8 dans la liste ci-dessus par le biais de `setlocale()` doivent recourir à cet encodage pour les données vers et depuis le pilote au lieu d’UTF-8.
 
 Les données SQLWCHAR doivent être au format UTF-16LE (Little Endian).
 
@@ -147,8 +148,8 @@ Au moment de la rédaction de cet article, la taille de la pile par défaut dans
 3.  Lorsque le pilote est utilisé avec des applications fortement multithread, la validation du descripteur d’unixODBC peut devenir un goulot d’étranglement de performances. Dans de tels scénarios, il est possible d’accroître significativement la performance en compilant unixODBC avec l’option `--enable-fastvalidate`. Toutefois, n’oubliez pas que ceci peut entraîner le blocage des applications qui transmettent des descripteurs non valides aux API ODBC au lieu de retourner des erreurs `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Voir aussi  
-[Questions fréquentes (FAQ)](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Questions fréquentes (FAQ)](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Problèmes connus dans cette version du pilote](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Problèmes connus dans cette version du pilote](known-issues-in-this-version-of-the-driver.md)
 
-[Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notes de publication](release-notes-odbc-sql-server-linux-mac.md)

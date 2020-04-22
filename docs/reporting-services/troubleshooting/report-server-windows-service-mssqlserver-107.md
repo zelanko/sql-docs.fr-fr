@@ -1,5 +1,6 @@
 ---
 title: Service Report Server Windows (MSSQLServer) 107 | Microsoft Docs
+description: 'Dans cette page de référence d’erreur, découvrez l’ID d’événement 107 : Le service Report Server Windows (SQL Server) ne peut pas se connecter à la base de données du serveur de rapports.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0133ef77db176910c33ae8e78174cb5c3e507c3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3d37bca818ecd0641f35cc3ff8a08493f7037a9a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575546"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487762"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Service Report Server Windows (MSSQLServer) 107
     

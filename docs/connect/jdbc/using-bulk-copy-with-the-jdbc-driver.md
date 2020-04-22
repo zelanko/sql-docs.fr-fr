@@ -1,5 +1,6 @@
 ---
-title: Utilisation de la copie en bloc avec le pilote JDBC | Microsoft Docs
+title: Utilisation de la copie en bloc avec le pilote JDBC
+description: La classe SQLServerBulkCopy vous permet d’écrire des solutions de chargement de données en Java qui offrent des avantages significatifs en termes de performances par rapport aux API JDBC standard.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9cc73888791f4fb1c4aab58b60fec51119a2408a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 945bdaf05c9a10e3ab72b11e0049c6053dd108b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924037"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634019"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilisation de la copie en bloc avec le pilote JDBC
 
@@ -117,7 +118,7 @@ L'approche la plus simple pour effectuer une opération de copie en bloc SQL Se
   
 > [!NOTE]  
 > Si vous devez restaurer tout ou partie de la copie en bloc en cas d’erreur, vous pouvez utiliser une transaction gérée par SQLServerBulkCopy ou effectuer l’opération de copie en bloc dans une transaction existante.  
-> Pour plus d’informations, consultez [Transaction et opérations de copie en bloc](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations).  
+> Pour plus d’informations, consultez [Transaction et opérations de copie en bloc](#transaction-and-bulk-copy-operations).  
   
  Les étapes générales pour effectuer une opération de copie en bloc sont les suivantes :  
   
@@ -143,7 +144,7 @@ L'approche la plus simple pour effectuer une opération de copie en bloc SQL Se
 L'application suivante montre comment charger des données à l'aide de la classe SQLServerBulkCopy. Dans cet exemple, un ResultSet est utilisé pour copier des données de la table Production.Product de la base de données SQL Server AdventureWorks dans une table semblable de la même base de données.  
   
 > [!IMPORTANT]  
-> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
+> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
 
 ```java
 import java.sql.Connection;
@@ -237,7 +238,7 @@ Vous pouvez effectuer plusieurs opérations de copie en bloc à l'aide d'une seu
 Si vous effectuez plusieurs opérations de copie en bloc à l'aide du même objet SQLServerBulkCopy, aucune restriction ne s'applique selon que les informations sources ou cibles sont égales ou différentes dans chaque opération. Toutefois, vous devez vous assurer que les informations d'association de colonnes sont définies correctement chaque fois que vous écrivez sur le serveur.  
   
 > [!IMPORTANT]  
-> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
+> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
 
 ```java
 import java.sql.Connection;
@@ -366,7 +367,7 @@ Dans l’exemple, la table source et la table de destination incluent chacune un
 L’opération de copie en bloc est exécutée avec la propriété **BatchSize** définie avec la valeur 10. Quand l'opération rencontre la ligne non valide, une exception est levée. Dans ce premier exemple, l'opération de copie en bloc est non transactionnel. Tous les lots copiés avant l'erreur sont validés. Le lot contenant la clé dupliquée est restauré et l'opération de copie en bloc est interrompue avant le traitement des autres lots.  
   
 > [!NOTE]  
-> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
+> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
 
 ```java
 import java.sql.Connection;
@@ -475,7 +476,7 @@ Vous pouvez passer un objet Connection dont les transactions sont activées en t
 L'application suivante est similaire à **BulkCopyNonTransacted**, à une exception près : dans cet exemple, l'opération de copie en bloc est incluse dans une transaction externe plus vaste. Quand l'erreur de violation de clé primaire se produit, toute la transaction est restaurée et aucune ligne n'est ajoutée à la table de destination.
 
 > [!NOTE]  
-> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
+> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](#table-setup). Ce code est fourni pour illustrer la syntaxe pour l'utilisation de SQLServerBulkCopy uniquement. Si les tables source et de destination se trouvent dans la même instance SQL Server, il est plus facile et plus rapide d'utiliser une instruction Transact-SQL INSERT ... SELECT pour copier les données.  
 
 ```java
 import java.sql.Connection;
@@ -570,7 +571,7 @@ public class BulkCopyExistingTransactions {
  L'application suivante montre comment charger des données à l'aide de la classe SQLServerBulkCopy. Dans cet exemple, un fichier CSV est utilisé pour copier des données exportées de la table Production.Product de la base de données SQL Server AdventureWorks dans une table semblable de la base de données.  
   
 > [!IMPORTANT]  
-> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](../../ssms/download-sql-server-management-studio-ssms.md).  
+> Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [Configuration des tables](#table-setup).  
   
 1. Ouvrez **SQL Server Management Studio**, puis connectez-vous à SQL Server avec la base de données AdventureWorks.  
   
@@ -658,7 +659,7 @@ public class BulkCopyCSV {
   
 Selon les options de copie en bloc et le type de chiffrement des tables source et de destination, le pilote JDBC peut de manière transparente déchiffrer les données, puis les chiffrer, ou il peut envoyer les données chiffrées telles quelles. Par exemple, quand il effectue une copie en bloc de données à partir d’une colonne chiffrée vers une colonne non chiffrée, le pilote déchiffre les données de manière transparente avant de les envoyer à SQL Server. De même, quand il effectue une copie en bloc de données à partir d’une colonne non chiffrée (ou d’un fichier CSV) vers une colonne chiffrée, le pilote chiffre les données de manière transparente avant de les envoyer à SQL Server. Si la source et la destination sont toutes deux chiffrées, selon l’option de copie en bloc **allowEncryptedValueModifications**, le pilote envoie les données telles quelles ou les déchiffre, puis les rechiffre avant de les envoyer à SQL Server.  
   
-Pour plus d’informations, consultez l’option de copie en bloc **allowEncryptedValueModifications** ci-dessous et [Utilisation d’Always Encrypted avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+Pour plus d’informations, consultez l’option de copie en bloc **allowEncryptedValueModifications** ci-dessous et [Utilisation d’Always Encrypted avec le pilote JDBC](using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
 > Limites de Microsoft JDBC Driver 6.0 pour SQL Server lors d’une copie en bloc à partir d’un fichier CSV vers des colonnes chiffrées :  
@@ -723,7 +724,7 @@ La classe SQLServerBulkCopy peut être utilisée pour écrire des données uniqu
 | Boolean UseInternalTransaction           | Si spécifié, chaque lot de l'opération de copie en bloc se produit dans une transaction. Si SQLServerBulkCopy utilise une connexion existante (comme spécifié par le constructeur), une exception SQLServerException se produit.  Si SQLServerBulkCopy a créé une connexion dédiée, une transaction est activée.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False : aucune transaction                                               |
 | Int BatchSize                            | Nombre de lignes dans chaque lot. À la fin de chaque lot, les lignes du lot sont envoyées au serveur.<br /><br /> Un lot est terminé quand les lignes BatchSize ont été traitées ou qu'il n'y a plus de ligne à envoyer à la source de données de destination.  Si l'instance de SQLServerBulkCopy a été déclarée sans activer l'option UseInternalTransaction, une ligne BatchSize à la fois est envoyée au serveur, mais aucune action relative à la transaction n'est effectuée. Si UseInternalTransaction est activé, chaque lot de lignes est inséré comme une transaction distincte.                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 : indique que chaque opération writeToServer est un lot unique    |
 | Int BulkCopyTimeout                      | Nombre de secondes pour terminer l'opération avant son expiration. La valeur 0 indique qu'il n'y a aucune limite : la copie en bloc attend indéfiniment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 secondes.                                                          |
-| Boolean allowEncryptedValueModifications | Cette option est disponible avec Microsoft JDBC Driver 6.0 (ou version supérieure) pour SQL Server.<br /><br /> Si elle est spécifiée, **allowEncryptedValueModifications** permet la copie en bloc de données chiffrées entre des tables ou bases de données, sans déchiffrer les données. En règle générale, une application sélectionne les données à partir de colonnes chiffrées d’une table sans déchiffrer les données (elle se connecte à la base de données avec le mot-clé de paramètre de chiffrement de colonne défini sur « Enabled »), puis utilise cette option pour insérer les données en bloc, qui sont toujours chiffrées. Pour plus d’informations, consultez [Utilisation de Always Encrypted avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Faites attention quand vous spécifiez **allowEncryptedValueModifications**, car cela pourrait endommager la base de données. En effet, le pilote ne vérifie pas si les données sont chiffrées, ou si elles le sont avec le même type de chiffrement, le même algorithme et la même clé que la colonne cible. |
+| Boolean allowEncryptedValueModifications | Cette option est disponible avec Microsoft JDBC Driver 6.0 (ou version supérieure) pour SQL Server.<br /><br /> Si elle est spécifiée, **allowEncryptedValueModifications** permet la copie en bloc de données chiffrées entre des tables ou bases de données, sans déchiffrer les données. En règle générale, une application sélectionne les données à partir de colonnes chiffrées d’une table sans déchiffrer les données (elle se connecte à la base de données avec le mot-clé de paramètre de chiffrement de colonne défini sur « Enabled »), puis utilise cette option pour insérer les données en bloc, qui sont toujours chiffrées. Pour plus d’informations, consultez [Utilisation de Always Encrypted avec le pilote JDBC](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Faites attention quand vous spécifiez **allowEncryptedValueModifications**, car cela pourrait endommager la base de données. En effet, le pilote ne vérifie pas si les données sont chiffrées, ou si elles le sont avec le même type de chiffrement, le même algorithme et la même clé que la colonne cible. |
   
  Getters et setters :  
   
@@ -796,4 +797,4 @@ Notes et limitations de l'implémentation :
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Présentation du pilote JDBC](overview-of-the-jdbc-driver.md)  

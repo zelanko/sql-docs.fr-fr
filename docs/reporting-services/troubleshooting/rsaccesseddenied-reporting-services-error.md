@@ -1,5 +1,6 @@
 ---
 title: rsAccessedDenied - Erreur Reporting Services | Microsoft Docs
+description: "Dans cette référence d’erreur, découvrez l’ID d’événement rsAccessedDenied : Les autorisations accordées à l'utilisateur 'mon_domaine\\mon_compte' sont insuffisantes pour vous permettre d'accomplir cette opération."
 ms.date: 05/22/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0063256e371585fe6d63a1a635aa286fca5a7d39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab443e48037add1cc507b71fe87fe7be7bcb43f9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270228"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487239"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - erreur Reporting Services
   L’erreur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**rsAccessedDenied** se produit quand un utilisateur n’est pas autorisé à effectuer une action. Par exemple, il ne dispose pas de l'attribution de rôle lui permettant d'ouvrir un rapport ou il n'a pas ouvert son navigateur avec les autorisations requises.  

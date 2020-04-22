@@ -1,7 +1,7 @@
 ---
 title: Créer et gérer des index de recherche en texte intégral | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304422"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
     |----------|-----------------|  
     |**Généralités**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**|  
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](populate-full-text-indexes.md).|
-    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral** , la planification que vous venez de créer est associée à un travail de SQL Server Agent (Démarrer le remplissage incrémentiel de la table sur *nom_base_de_données*.*nom_table*).|  
+    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral**, la planification que vous venez de créer est associée à un travail de SQL Server Agent (démarrer le remplissage incrémentiel de la table sur *database_name*.*table_name*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **Exemple**  
   
- L'exemple suivant permet de déterminer si l'index `PK_Document_DocumentID` est utilisé pour garantir l'unicité de la colonne clé de texte intégral, comme suit :  
+ L'exemple suivant permet de déterminer si l'index `PK_Document_DocumentNode` est utilisé pour garantir l'unicité de la colonne clé de texte intégral, comme suit :  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- Cet exemple retourne la valeur 1 si l'index `PK_Document_DocumentID` est utilisé pour garantir l'unicité de la colonne clés de texte intégral. Si tel n'est pas le cas, la valeur 0 ou une valeur Null est retournée. La valeur Null signifie que vous utilisez un nom d'index non valide, que le nom d'index ne correspond pas à la table, que la table n'existe pas, etc.  
+ Cet exemple retourne la valeur 1 si l'index `PK_Document_DocumentNode` est utilisé pour garantir l'unicité de la colonne clés de texte intégral. Si tel n'est pas le cas, la valeur 0 ou une valeur Null est retournée. La valeur Null signifie que vous utilisez un nom d'index non valide, que le nom d'index ne correspond pas à la table, que la table n'existe pas, etc.  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Rechercher l’identificateur de la colonne de clés de texte intégral  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  L'exemple ci-après retourne l'identificateur de la colonne clé de texte intégral ou une valeur Null. La valeur Null signifie que vous utilisez un nom d'index non valide, que le nom d'index ne correspond pas à la table, que la table n'existe pas, etc.  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- Cet exemple retourne une colonne de jeu de résultats appelée `Unique Key Column`, qui contient une seule ligne indiquant le nom de la colonne clé unique de la table Document, DocumentID. Notez que, si cette requête contenait un nom d'index non valide, si le nom d'index ne correspondait pas à la table, si la table n'existait pas, etc., une valeur NULL serait retournée.  
+ Cet exemple retourne une colonne de jeu de résultats appelée `Unique Key Column`, qui contient une seule ligne indiquant le nom de la colonne clé unique de la table Document, DocumentNode. Notez que, si cette requête contenait un nom d'index non valide, si le nom d'index ne correspondait pas à la table, si la table n'existait pas, etc., une valeur NULL serait retournée.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Colonnes varbinary(max) et xml d’index  
  Si une colonne **varbinary(max)** , **varbinary**ou **xml** est indexée en texte intégral, elle peut faire l’objet d’une requête à l’aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n’importe quelle autre colonne indexée en texte intégral.

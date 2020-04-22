@@ -1,5 +1,6 @@
 ---
-title: Utilisation des types de données avancés | Microsoft Docs
+title: Utilisation des types de données avancés
+description: Découvrez comment utiliser les types de données avancés JDBC pour convertir des types de données SQL Server en types de données Java à l’aide du pilote Microsoft JDBC pour SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924073"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528723"
 ---
 # <a name="using-advanced-data-types"></a>Utilisation des types de données avancés
 

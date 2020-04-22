@@ -1,5 +1,6 @@
 ---
 title: Utiliser des données XML dans les applications | Microsoft Docs
+description: Découvrez les options dont vous disposez pour utiliser le type de données xml dans vos applications.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,18 +26,18 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa573c4d824d8a1f419335fa0c7b3d451b80f96e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7e4811d4c79a167efbf7f5b40ecf6270caff38df
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664984"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388311"
 ---
 # <a name="use-xml-data-in-applications"></a>Utiliser des données XML dans les applications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit les options dont vous disposez pour utiliser le type de données **xml** dans votre application. Cette rubrique inclut des informations sur les thèmes suivants :  
   
--   Gestion de XML à partir d’une colonne de type **xml** à l’aide d’ADO et de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
+-   Gestion de XML à partir d’une colonne de type **xml[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’ADO et de** Native Client  
   
 -   Gestion de XML à partir d'une colonne de type **xml** à l'aide d'ADO.NET  
   

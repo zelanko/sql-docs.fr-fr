@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742079"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632525"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Pour distribuer un rapport par courrier électronique, vous devez 1) configurer le serveur de rapports pour la remise du courrier électronique et 2) définir un abonnement standard ou piloté par les données. Un abonnement unique ne permet pas de distribuer plusieurs rapports dans un seul message électronique. Toutefois, vous pouvez créer plusieurs abonnements.  
   
- Le serveur de rapports se connecte à un serveur de messagerie à l'aide d'une connexion standard. Il n'utilise pas le chiffrement SSL (Secure Sockets Layer) pour ses communications. Le serveur de messagerie doit être un serveur SMTP (Simple Mail Transport Protocol) local ou distant situé sur le même réseau que le serveur de rapports.  
+ Le serveur de rapports se connecte à un serveur de messagerie à l'aide d'une connexion standard. Il n'utilise pas le chiffrement par protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), pour ses communications. Le serveur de messagerie doit être un serveur SMTP (Simple Mail Transport Protocol) local ou distant situé sur le même réseau que le serveur de rapports.  
   
  Pour plus d’informations sur la procédure détaillées de création d’un abonnement, voir :  
   

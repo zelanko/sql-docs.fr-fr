@@ -1,5 +1,6 @@
 ---
-title: Résoudre les problèmes de connectivité | Microsoft Docs
+title: Résoudre les problèmes de connectivité
+description: En savoir plus sur la connectivité JDBC et sur la résolution des problèmes de connexion potentiels lors de l’utilisation du pilote Microsoft JDBC pour SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ef0a0e1a261996c71b3b75add30ee2f28899484
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928116"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528333"
 ---
 # <a name="troubleshooting-connectivity"></a>Résoudre les problèmes de connectivité
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80928116"
   
  Une tentative de connexion à la base de données peut échouer pour plusieurs raisons. Parmi ces raisons :  
   
--   TCP/IP n’est pas activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou le serveur ou le numéro de port spécifié est incorrect. Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute avec TCP/IP sur le serveur et le port spécifiés. Cela peut être rapporté avec une exception telle que : « Échec de la connexion. La connexion TCP/IP à l'hôte a échoué. » Cela indique l'une des raisons suivantes :  
+-   TCP/IP n’est pas activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou le serveur ou le numéro de port spécifié est incorrect. Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute avec TCP/IP sur le serveur et le port spécifiés. Cela peut être signalé avec une exception du type : « Échec de la connexion. La connexion TCP/IP à l'hôte a échoué. » Cela indique l'une des raisons suivantes :  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, mais TCP/IP n’a pas été installé en tant que protocole réseau pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’utilitaire réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et ultérieur.  
   

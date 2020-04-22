@@ -1,5 +1,6 @@
 ---
-title: Se connecter à sqlcmd | Microsoft Docs
+title: Connexion avec sqlcmd
+description: Découvrez comment utiliser l’utilitaire sqlcmd avec Microsoft ODBC Driver for SQL Server sur Linux et macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2493e3ba903c44cf25bf98a10ddf6f52a56dd7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924557"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632819"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,7 +52,7 @@ Dans la version actuelle, les options suivantes sont disponibles :
   
 - -e Écrire des scripts d’entrée sur le périphérique de sortie standard (stdout).
 
-- -E Utiliser la connexion approuvée (authentification intégrée). Pour savoir comment établir des connexions approuvées qui utilisent l’authentification intégrée à partir d’un client Linux ou macOS, consultez [Utiliser l’authentification intégrée](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- -E Utiliser la connexion approuvée (authentification intégrée). Pour savoir comment établir des connexions approuvées qui utilisent l’authentification intégrée à partir d’un client Linux ou macOS, consultez [Utiliser l’authentification intégrée](using-integrated-authentication.md).
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] Spécifie les pages de codes d’entrée et de sortie. Le numéro de page de codes est une valeur numérique qui spécifie une page de codes Linux installée.
 (disponible depuis 17.5.1.1)
@@ -67,7 +68,7 @@ Dans la version actuelle, les options suivantes sont disponibles :
 - -k Supprimer ou remplacer des caractères de contrôle.  
   
 - **-K**_application\_intent_  
-Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si vous ne spécifiez pas **-K**, `sqlcmd` ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux et macOS de la haute disponibilité et de la reprise d’activité](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si vous ne spécifiez pas **-K**, `sqlcmd` ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux et macOS de la haute disponibilité et de la reprise d’activité](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > L’option **-K** n’est pas prise en charge dans le CTP pour SUSE Linux. Vous pouvez toutefois spécifier le mot clé **ApplicationIntent=ReadOnly** dans un fichier DSN passé à `sqlcmd`. Pour plus d’informations, consultez « Prise en charge du nom de source de données dans `sqlcmd` et `bcp` » à la fin de cette rubrique.  
@@ -77,7 +78,7 @@ Déclare le type de la charge de travail de l'application lors de la connexion �
 - -m *niveau_erreur* Déterminer les messages d’erreur envoyés à stdout.  
   
 - **-M**_multisubnet\_failover_  
-Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou d’une instance de cluster de basculement [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** accélère la détection des basculements et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **-M** , **-M** est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consultez [Pilote ODBC sur Linux et macOS pour la haute disponibilité et la récupération d’urgence](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou d’une instance de cluster de basculement [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** accélère la détection des basculements et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **-M** , **-M** est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consultez [Pilote ODBC sur Linux et macOS pour la haute disponibilité et la récupération d’urgence](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > L’option **-M** n’est pas prise en charge dans le CTP pour SUSE Linux. Vous pouvez toutefois spécifier le mot clé **MultiSubnetFailover=Yes** dans un fichier DSN passé à `sqlcmd`. Pour plus d’informations, consultez « Prise en charge du nom de source de données dans `sqlcmd` et `bcp` » à la fin de cette rubrique.  
@@ -161,7 +162,7 @@ Dans la version actuelle, les commandes suivantes sont disponibles :
 ## <a name="unavailable-options"></a>Options non disponibles
 Dans la version actuelle, les options suivantes ne sont pas disponibles :  
 
-- -A Se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une connexion administrateur dédiée (DAC). Pour plus d’informations sur la façon d’établir une connexion administrateur dédiée, consultez [Recommandations en matière de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A Se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une connexion administrateur dédiée (DAC). Pour plus d’informations sur la façon d’établir une connexion administrateur dédiée, consultez [Recommandations en matière de programmation](programming-guidelines.md).  
   
 - -L Répertorier les serveurs configurés localement et le nom des serveurs diffusant sur le réseau.  
   
@@ -227,5 +228,5 @@ Si vous spécifiez la même option dans le nom de source de données et sur la l
 Vous pouvez modifier les scripts qui appellent `isql` pour qu’ils utilisent `sqlcmd` en définissant l’alias suivant : `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a>Voir aussi  
-[Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[Connexion avec **bcp**](connecting-with-bcp.md)  
  

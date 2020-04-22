@@ -1,5 +1,6 @@
 ---
-title: Se connecter à une base de données Azure SQL | Microsoft Docs
+title: Connexion à une base de données SQL Azure
+description: Cet article traite des problèmes liés à l’utilisation du pilote Microsoft JDBC pour SQL Server pour se connecter à une instance Azure SQL Database.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,33 +11,33 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7ecc575fc444a7f834cd8ed84ee340902199b09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922469"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632527"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Pour plus d’informations sur la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez :  
+Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour la connexion à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Pour plus d’informations sur la connexion à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez :  
   
 - [Base de données SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Guide pratique pour se connecter à SQL Azure avec JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Procédure : Se connecter à SQL Azure avec JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connexion avec l’authentification Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Connexion avec l’authentification Azure Active Directory](connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Détails
 
 Lorsque vous vous connectez à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], connectez-vous à la base de données MASTER pour appeler **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour récupérer les catalogues. Pour comprendre le comportement de [SQLServerDatabaseMetaData.getCatalogs](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) sur une base de données **, consultez la discussion relative aux autorisations dans** sys.databases (Transact-SQL)[!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour récupérer les catalogues. Pour comprendre le comportement de **SQLServerDatabaseMetaData.getCatalogs** sur une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez la discussion relative aux autorisations dans [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="connections-dropped"></a>Connexions supprimées
 
-Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (comme un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
+Lors de la connexion à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (comme un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
 
 - Les connexions inactives sur la couche TCP, lorsque les connexions peuvent être supprimées par n'importe quel dispositif réseau.  
 
@@ -80,7 +81,7 @@ Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>L'utilisation du chiffrement requiert la définition de hostNameInCertificate
 
-Avant [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2, vous devez spécifier [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]hostNameInCertificate**lorsque vous vous connectez à une base de données** si vous choisissez **encrypt=true** (si le nom du serveur dans la chaîne de connexion est *nom_court*.*nom_domaine*, définissez la propriété **hostNameInCertificate** sur \*.*nom_domaine*). Cette propriété est facultative depuis la version 7.2 du pilote.
+Avant [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2, vous devez spécifier **hostNameInCertificate** lorsque vous vous connectez à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] si vous choisissez **encrypt=true** (si le nom du serveur dans la chaîne de connexion est *nom_court*.*nom_domaine*, définissez la propriété **hostNameInCertificate** sur \*.*nom_domaine*). Cette propriété est facultative depuis la version 7.2 du pilote.
 
 Par exemple :
 
@@ -90,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>Voir aussi
 
-[Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connexion à SQL Server avec le pilote JDBC](connecting-to-sql-server-with-the-jdbc-driver.md)  

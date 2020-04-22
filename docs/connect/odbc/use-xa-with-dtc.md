@@ -1,5 +1,6 @@
 ---
-title: Utilisation de XA avec Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Utilisation de XA avec le pilote Microsoft ODBC
+description: Microsoft ODBC Driver for SQL Server assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et macOS.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544925"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635555"
 ---
 # <a name="using-xa-transactions"></a>Utilisation de transactions XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "77544925"
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Microsoft ODBC Driver for SQL Server à partir de la version 17.3 assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et Mac. L’implémentation XA côté pilote permet à l’application cliente d’envoyer des opérations en série (telles que Démarrer, Valider, Restaurer une branche de transaction, etc.) au gestionnaire de transactions (TM). Ensuite, le Gestionnaire de transactions communique avec le Gestionnaire des ressources (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation de Microsoft pour DTC (MS DTC), consultez [Fonctionnement : SQL Server DTC (transactions MSDTC et XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Microsoft ODBC Driver for SQL Server à partir de la version 17.3 assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et macOS. L’implémentation XA côté pilote permet à l’application cliente d’envoyer des opérations en série (telles que Démarrer, Valider, Restaurer une branche de transaction, etc.) au gestionnaire de transactions (TM). Ensuite, le Gestionnaire de transactions communique avec le Gestionnaire des ressources (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation de Microsoft pour DTC (MS DTC), consultez [Fonctionnement : SQL Server DTC (transactions MSDTC et XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
 
 
 
@@ -49,16 +50,16 @@ typedef struct XACallParam {
 Taille de la structure `XACALLPARAM`. Cela exclut la taille des données qui suivent `XACALLPARAM`.
 
 *opération*  
-Opération XA à passer à la commande TM. Les opérations possibles sont définies dans [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Opération XA à passer à la commande TM. Les opérations possibles sont définies dans [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *xid*  
 Identificateur de branche de transaction.
 
 *flags*  
-Indicateurs associés à la requête du TM. Les valeurs possibles sont définies dans [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Indicateurs associés à la requête du TM. Les valeurs possibles sont définies dans [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *statut*  
-Renvoie l’état du TM. Consultez l’en-tête de [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) pour connaître les états de retour possibles.
+Renvoie l’état du TM. Consultez l’en-tête de [xadefs.h](use-xa-with-dtc.md#xadefsh) pour connaître les états de retour possibles.
 
 *sizeData*  
 Taille de la mémoire tampon des données qui suivent `XACALLPARAM`. 
@@ -75,7 +76,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Exemple de code 
 
-L’exemple suivant montre comment communiquer avec le gestionnaire de transactions pour les transactions XA et exécuter différentes opérations à partir d’une application cliente. Si le test est exécuté sur Microsoft SQL Server, MS DTC doit être correctement configuré pour activer les transactions XA. Les définitions XA se trouvent dans le fichier d’en-tête [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh). 
+L’exemple suivant montre comment communiquer avec le gestionnaire de transactions pour les transactions XA et exécuter différentes opérations à partir d’une application cliente. Si le test est exécuté sur Microsoft SQL Server, MS DTC doit être correctement configuré pour activer les transactions XA. Les définitions XA se trouvent dans le fichier d’en-tête [xadefs.h](#xadefsh). 
 
 ```
 

@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 8797219e96083d65d2bad83c83c8aebba783b207
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809858"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299053"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec versions gérées par le système
 
@@ -134,7 +134,7 @@ Par exemple, vous avez peut-être un ensemble de tables où le contrôle de vers
 - Meilleures performances DML
 - Coûts de maintenance minimal
 
- Lors de la conversion d’une table existante, envisagez d’utiliser la clause **HIDDEN** pour masquer les nouvelles colonnes **PERIOD** (les colonnes dateheure2 **SysStartTime** et **SysEndTime**) afin d’éviter tout impact sur des applications existantes non conçues pour gérer de nouvelles colonnes.
+ Lors de la conversion d’une table existante, envisagez d’utiliser la clause **HIDDEN** pour masquer les nouvelles colonnes **PERIOD** (les colonnes dateheure2 **SysStartTime** et **SysEndTime**) afin d’éviter tout impact sur des applications existantes qui ne spécifient pas explicitement les noms de colonne (par ex. SELECT * ou INSERT sans liste de colonne) non conçues pour gérer de nouvelles colonnes.
 
 ### <a name="adding-versioning-to-non-temporal-tables"></a>Ajout du contrôle de version à des tables non temporelles
 

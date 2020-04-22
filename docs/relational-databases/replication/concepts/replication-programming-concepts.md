@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285698"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529107"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "76285698"
   
 2.  Cette application doit non seulement garantir l'accès aux données classique requis pour une application de vente, mais également permettre à un vendeur de synchroniser l'abonnement par extraction de données à la demande en cliquant sur un bouton. Étant donné qu'un représentant installera et exécutera l'application, l'application doit également être en mesure de configurer un abonnement et d'appliquer l'instantané initial au client. L'application utilisera éventuellement l'infrastructure fournie par Windows pour détecter la connectivité sans fil et synchroniser automatiquement l'abonnement lors de la détection d'une connexion.  
   
-3.  Respectez toutes les consignes de sécurité pour la réplication, notamment le recours à l'authentification Windows et à un réseau privé virtuel (VPN) lors de la connexion au serveur de publication. Si vous mettez en œuvre la synchronisation Web, utilisez une connexion SSL (Secure Sockets Layer). Pour plus d’informations, consultez [Configurer la synchronisation Web](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Respectez toutes les consignes de sécurité pour la réplication, notamment le recours à l'authentification Windows et à un réseau privé virtuel (VPN) lors de la connexion au serveur de publication. Si vous implémentez la synchronisation web, utilisez une connexion TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer). Pour plus d’informations, consultez [Configurer la synchronisation Web](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Pour que l'application puisse exploiter les fonctionnalités du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], elle est développée à l'aide d'un langage de code managé.  
   

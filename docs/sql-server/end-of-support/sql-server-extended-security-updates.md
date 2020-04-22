@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256722"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488346"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Que sont les correctifs de sécurité étendus pour SQL Server ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -206,6 +206,25 @@ Pour télécharger des ESU, procédez comme suit :
    ![Vérifier les mises à jour disponibles dans le volet des correctifs de sécurité](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. Téléchargez des correctifs de sécurité à partir d’ici, selon leur disponibilité. 
+
+## <a name="configure-regional-redundancy"></a>Configurer la redondance régionale 
+
+Les clients qui ont besoin d’une redondance régionale pour leur **Registre SQL Server** peuvent créer des données d’inscription dans deux régions distinctes. Les clients peuvent ensuite télécharger les mises à jour de sécurité à partir de l’une ou l’autre région, en fonction de la disponibilité du service **Registre SQL Server**. 
+
+Pour la redondance régionale, le service **Registre SQL Server** doit être créé dans deux régions différentes, et votre inventaire SQL Server doit être réparti entre ces deux services. De cette façon, la moitié de vos serveurs SQL sont inscrits auprès du service de registre dans une région, puis l’autre moitié de vos serveurs SQL Server sont inscrits auprès du service de registre dans l’autre région. 
+
+Pour configurer la redondance régionale, procédez comme suit :
+
+1. Fractionnez votre inventaire SQL Server 2008 ou 2008 R2 en deux fichiers, par exemple upload1.csv et upload2.csv. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Exemple de chargement de fichiers":::
+
+1. Créez le premier service **Registre SQL Server** dans une région, puis inscrivez-y en bloc un des fichiers CSV. Par exemple, créez le premier service **Registre SQL Server** dans la région **USA Ouest** et enregistrez en bloc vos serveurs SQL à l’aide du fichier upload1.csv. 
+1. Créez le deuxième service **Registre SQL Server** dans la deuxième région, puis inscrivez-y en bloc l’autre fichier CSV. Par exemple, créez le deuxième service **Registre SQL Server** dans la région **USA Est** et inscrivez en bloc vos serveurs SQL à l’aide du fichier upload2.csv. 
+
+
+Une fois que vos données ont été enregistrées avec les deux ressources **Registre SQL Server** différentes, vous pouvez télécharger les mises à jour de sécurité à partir de l’une ou l’autre région, en fonction de la disponibilité du service. 
+
 
 ## <a name="faq"></a>Questions fréquentes (FAQ)
 

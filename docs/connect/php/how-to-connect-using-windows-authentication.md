@@ -1,5 +1,6 @@
 ---
-title: 'Procédure : Se connecter avec l’authentification Windows | Microsoft Docs'
+title: 'Procédure : Se connecter avec l’authentification Windows'
+description: Découvrez ce que signifie la connexion à l’aide de l’authentification intégrée de Windows via les pilotes pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066c58d9ee72f1160b84d4f4a3de9f7156a47d6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916501"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634829"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procédure : Se connecter avec l’authentification Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ Prenez en considération les points suivants quand vous utilisez l’authentific
 -   Si SQL Server et le serveur web se trouvent sur des ordinateurs différents, configurez SQL Server de sorte à autoriser les connexions à distance.  
   
 > [!NOTE]  
-> Vous pouvez définir les attributs de connexion comme *Database* et *ConnectionPooling* quand vous établissez une connexion. Pour obtenir la liste complète des attributs de connexion pris en charge, consultez [Connection Options](../../connect/php/connection-options.md).  
+> Vous pouvez définir les attributs de connexion comme *Database* et *ConnectionPooling* quand vous établissez une connexion. Pour obtenir la liste complète des attributs de connexion pris en charge, consultez [Connection Options](connection-options.md).  
   
 Préférez l’authentification Windows pour la connexion à SQL Server dès lors que possible pour les raisons suivantes :  
   
@@ -39,7 +40,7 @@ Préférez l’authentification Windows pour la connexion à SQL Server dès lor
   
 -   Les utilisateurs sont soumis à une gestion centralisée des comptes ; des stratégies de sécurité sont appliquées comme des délais d’expiration des mots de passe, des longueurs minimales des mots de passe et un verrouillage des comptes à l’issue de plusieurs tentatives de connexion non valides.  
   
-Si l’authentification Windows n’est pas envisageable en pratique, consultez [Guide pratique pour se connecter avec l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Si l’authentification Windows n’est pas envisageable en pratique, consultez [Guide pratique pour se connecter avec l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Exemple  
 En utilisant le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l’exemple suivant a recours à l’authentification Windows pour établir une connexion à une instance locale de SQL Server. Une fois la connexion établie, le serveur est interrogé pour déterminer la connexion de l’utilisateur qui accède à la base de données.  
@@ -105,11 +106,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : Se connecter avec l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Procédure : Se connecter avec l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md)
 
-[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](programming-guide-for-php-sql-driver.md)
 
-[À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+[À propos des exemples de code dans la documentation](about-code-examples-in-the-documentation.md)
 
 [Procédure : Créer une connexion SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 

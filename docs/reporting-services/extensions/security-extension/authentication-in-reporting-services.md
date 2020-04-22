@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193847"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488585"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentification dans Reporting Services
   L'authentification est le processus d'établissement du droit d'un utilisateur à une identité. De nombreuses techniques vous permettent d'authentifier un utilisateur. La façon la plus courante consiste à utiliser des mots de passe. Par exemple, lorsque vous implémentez l'authentification par formulaire, vous voulez une implémentation qui interroge les utilisateurs au sujet de leurs informations d'identification (généralement par le biais d'une interface qui demande un nom de connexion et un mot de passe), puis valide les utilisateurs par rapport à une banque de données, telle qu'une table de base de données ou un fichier de configuration. Si les informations d'identification ne peuvent pas être validées, le processus d'authentification échoue et l'utilisateur assume une identité anonyme.  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  Lorsque le service Web authentifie avec succès un utilisateur par le biais de l'extension de sécurité, il génère un cookie qui est utilisé pour les demandes suivantes. Le cookie n'est pas persistant dans l'autorité de sécurité personnalisée puisque celle-ci n'appartient pas au serveur de rapports. Le cookie est retourné par la méthode <xref:ReportService2010.ReportingService2010.LogonUser%2A> du service Web et est utilisé dans les appels de méthode du service Web suivants et dans l'accès URL.  
   
 > [!NOTE]  
->  Pour éviter de compromettre le cookie pendant la transmission, les cookies d'authentification retournés par <xref:ReportService2010.ReportingService2010.LogonUser%2A> doivent être transmis de manière sécurisée à l'aide du chiffrement SSL (Secure Sockets Layer).  
+>  Pour éviter de compromettre le cookie pendant la transmission, les cookies d'authentification retournés par <xref:ReportService2010.ReportingService2010.LogonUser%2A> doivent être transmis de manière sécurisée à l'aide du chiffrement TLS (Transport Layer Security), précédemment appelé SSL (Secure Sockets Layer).  
   
  Si vous accédez au serveur de rapports par l'accès URL lorsqu'une extension de sécurité personnalisée est installée, les services Internet (IIS) et [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] gèrent automatiquement la transmission du ticket d'authentification. Si vous accédez au serveur de rapports par le biais de l'API SOAP, votre implémentation de la classe proxy doit inclure la prise en charge supplémentaire pour gérer le ticket d'authentification. Pour plus d'informations sur l'utilisation de l'API SOAP et la gestion du ticket d'authentification, consultez « Utilisation du service Web avec la sécurité personnalisée ».  
   
 ## <a name="forms-authentication"></a>Authentification par formulaire  
  L'authentification par formulaire est un type d'authentification [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dans laquelle un utilisateur non authentifié est dirigé vers un formulaire HTML. Lorsque l'utilisateur fournit des informations d'identification, le système émet un cookie qui contient un ticket d'authentification. Lors des demandes ultérieures, le système examine d'abord le cookie pour déterminer si l'utilisateur a déjà été authentifié par le serveur de rapports.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut être étendu pour prendre en charge l'authentification par formulaire à l'aide des interfaces d'extensibilité de la sécurité disponibles par le biais de l'API Reporting Services. Si vous étendez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour utiliser l'authentification par formulaire, utilisez le chiffrement SSL pour toutes les communications avec le serveur de rapports pour empêcher des utilisateurs malveillants d'accéder au cookie d'un autre utilisateur. Le chiffrement SSL permet aux clients et au serveur de rapports de s'authentifier mutuellement et garantit qu'aucun autre ordinateur ne peut lire le contenu des communications entre les deux ordinateurs. Toutes les données envoyées par un client par un client une connexion SSL sont chiffrées pour empêcher des utilisateurs malveillants d'intercepter des mots de passe ou des données envoyés à un serveur de rapports.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut être étendu pour prendre en charge l'authentification par formulaire à l'aide des interfaces d'extensibilité de la sécurité disponibles par le biais de l'API Reporting Services. Si vous étendez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour utiliser l'authentification par formulaire, utilisez le chiffrement TLS (Transport Layer Security), précédemment appelé SSL (Secure Sockets Layer) pour toutes les communications avec le serveur de rapports pour empêcher des utilisateurs malveillants d'accéder au cookie d'un autre utilisateur. Le chiffrement TLS permet aux clients et au serveur de rapports de s'authentifier mutuellement et garantit qu'aucun autre ordinateur ne peut lire le contenu des communications entre les deux ordinateurs. Toutes les données envoyées par un client par un client une connexion TLS sont chiffrées pour empêcher des utilisateurs malveillants d'intercepter des mots de passe ou des données envoyés à un serveur de rapports.  
   
  L'authentification par formulaire est généralement implémentée pour prendre en charge des comptes et l'authentification pour des plateformes autres que Windows. Une interface graphique est présentée à un utilisateur qui demande l'accès à un serveur de rapports, et les informations d'identification fournies sont envoyées à une autorité de sécurité pour authentification.  
   

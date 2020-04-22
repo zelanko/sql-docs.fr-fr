@@ -1,6 +1,6 @@
 ---
-title: Utiliser ADO avec le pilote OLE DB pour SQL Server | Microsoft Docs
-description: Utilisation d’ADO avec OLE DB Driver pour SQL Server
+title: Utilisation d’ADO avec OLE DB Driver
+description: Découvrez comment utiliser ADO avec le pilote OLE DB, y compris les nouvelles fonctionnalités comme les jeux MARS (Multiple Active Result Set), les notifications de requête, les types définis par l’utilisateur ou le type de données XML.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72d82433e04ead61ec71eecd3c8771cbe744b751
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989238"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633889"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Utilisation d’ADO avec OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67989238"
 
 -   `DataTypeCompatibility=80`  
 
- Pour plus d’informations sur les mots clés de chaîne de connexion ADO pris en charge dans le pilote OLE DB pour SQL Server, voir [Utiliser des mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexion ADO pris en charge dans le pilote OLE DB pour SQL Server, voir [Utiliser des mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Voici un exemple d’établissement d’une chaîne de connexion ADO entièrement compatible avec OLE DB Driver pour SQL Server, dont l’activation de la fonctionnalité MARS :  
 
@@ -167,4 +167,4 @@ Set con = Nothing
  Dans les versions antérieures du fournisseur OLE DB, ce code provoquait la création d'une connexion implicite lors de la deuxième exécution car un seul jeu de résultats actif par connexion pouvait être ouvert. La connexion implicite n'étant pas mise dans le pool de connexions OLE DB, cela provoquait une charge supplémentaire. Avec la fonctionnalité MARS exposée par OLE DB Driver pour SQL Server, vous obtenez des résultats actifs multiples sur une connexion unique.  
 
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Génération d’applications avec OLE DB Driver pour SQL Server](building-applications-with-oledb-driver-for-sql-server.md)  

@@ -1,6 +1,6 @@
 ---
 title: Installer le pilote OLE DB pour SQL Server | Microsoft Docs
-description: Installation et désinstallation d’OLE DB Driver pour SQL Server
+description: Installation et désinstallation d’OLE DB Driver pour SQL Server. Pour installer OLE DB Driver pour SQL Server, vous avez besoin du programme d’installation msoledbsql.msi
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 08f33d84ee8c035e1e1d3818e2a036f96af2a280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b971b7e537cecc7e94c87e2692707594fda9aebc
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989312"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528384"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installation d’OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
