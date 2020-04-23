@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fda014196d933ef9d5391ab4db798d821e43610
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "62833802"
 ---
 # <a name="ado-connection-manager"></a>Gestionnaire de connexions ADO
   Un gestionnaire de connexions ADO permet à un package de se connecter à des objets ADO (ActiveX Data Objects), comme un recordset. Ce gestionnaire de connexions est généralement utilisé dans les tâches personnalisées écrites dans une version antérieure d’un langage comme Microsoft Visual Basic 6.0 ou dans les tâches personnalisées qui font partie d’une application existante utilisant ADO pour se connecter à une source de données.  
   
- Lorsque vous ajoutez un gestionnaire de connexions ADO à un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crée un gestionnaire de connexions qui sera résolu en connexion ADO au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le `Connections` gestionnaire de connexions à la collection sur le package. La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `ADO`.  
+ Lorsque vous ajoutez un gestionnaire de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] connexion ADO à un package, crée un gestionnaire de connexion qui se résoudra `Connections` à une connexion ADO au moment de l’exécution, définit les propriétés du gestionnaire de connexion et ajoute le gestionnaire de connexion à la collection sur le paquet. La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `ADO`.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>Résolution des problèmes liés au gestionnaire de connexions ADO  
  Lors de la lecture par un gestionnaire de connexions ADO, certains types de données de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génèrent les résultats présentés dans le tableau suivant.  

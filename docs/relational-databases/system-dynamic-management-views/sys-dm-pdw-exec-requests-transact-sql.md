@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301236"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087559"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -62,7 +62,7 @@ ms.locfileid: "81301236"
 |-**0x08**|La mise en cache des ensembles de résultats est désactivée en raison des prédicats de sécurité au niveau de la ligne.|  
 |-**0x10**|La mise en cache des ensembles de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
 |-**0x20**|La mise en cache des ensembles de résultats est désactivée parce que la requête contient des constantes de temps d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
-|-**0x40**|La mise en cache des résultats est désactivée en raison de la taille estimée de l’ensemble de résultats étant trop grande (> 1 million de lignes).|  
+|-**0x40**|La mise en cache des résultats est désactivée en raison de la taille estimée de l’ensemble de résultats est >10 Go.|  
 |-**0x80**|La mise en cache des ensembles de résultats est désactivée parce que l’ensemble de résultats contient des lignes de grande taille (>64kb).|  
   
 ## <a name="permissions"></a>Autorisations

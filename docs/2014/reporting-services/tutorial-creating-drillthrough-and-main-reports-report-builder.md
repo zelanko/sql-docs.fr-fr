@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9fe67c3fe0656924ea8e53c4c937a99b588b46b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388495"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086881"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
@@ -153,7 +153,7 @@ ms.locfileid: "81388495"
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
     > [!TIP]  
-    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Passer en mode Création](../analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 6 de la section [Pour créer le jeu de données](#DSkip).  
+    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Passer en mode Création](media/rsqdicon-designmode.gif "Passer en mode Création"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 6 de la section [Pour créer le jeu de données](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
