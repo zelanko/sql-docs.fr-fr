@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 746f0763ccc8878ea8f4673888c47983b15f28e5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874463"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636242"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -35,7 +35,7 @@ Spécifie le nom de classement Windows dans la clause COLLATE dans [!INCLUDE[ssN
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -234,6 +234,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Lithuanian_Classic|Lithuanian_Classic|
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Macédonien|Macédonien|
+||||
 
 <sup>1</sup> Les classements Windows Unicode seulement ne peuvent être appliqués qu’à des données de niveau colonne ou de niveau expression. Ils ne peuvent pas être utilisés en tant que classements de serveur ou de base de données.
 
