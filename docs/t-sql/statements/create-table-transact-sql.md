@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3645b913b4e806d964a2da420d987ca10b2217f0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80380670"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297315"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -388,7 +388,7 @@ TEXTIMAGE_ON { *filegroup*|  **"default"** } : Indique que les colonnes **text*
 `TEXTIMAGE_ON` n’est pas autorisé s’il n’y a pas de colonne de valeur élevée dans la table. `TEXTIMAGE_ON` ne peut pas être spécifié si *partition_scheme* est spécifié. Si **"default"** est spécifié, ou si `TEXTIMAGE_ON` n’est pas spécifié du tout, les colonnes de valeur élevée sont stockées dans le groupe de fichiers par défaut. Le stockage de données de colonnes de valeur élevée tel que spécifié dans `CREATE TABLE` ne peut plus être modifié ultérieurement.
 
 > [!NOTE]
-> Les valeurs varchar(max), nvarchar(max), varbinary(max), xml ainsi que les valeurs UDT élevées sont stockées directement dans la ligne de données, jusqu’à une limite de 8 000 octets et tant que la valeur peut être contenue dans l’enregistrement. Si la valeur ne tient pas dans l’enregistrement, un pointeur est stocké dans la ligne et le reste est stocké hors de la ligne dans l’espace de stockage LOB. 0 est la valeur par défaut, qui indique que toutes les valeurs sont stockées directement dans la ligne de données.
+> Les valeurs varchar(max), nvarchar(max), varbinary(max), xml ainsi que les valeurs UDT élevées sont stockées directement dans la ligne de données, jusqu’à une limite de 8 000 octets et tant que la valeur peut être contenue dans l’enregistrement. Si la valeur ne tient pas dans l'enregistrement, un pointeur est stocké dans la ligne et le reste est stocké hors de la ligne dans l'espace de stockage LOB. 0 est la valeur par défaut, qui indique que toutes les valeurs sont stockées directement dans la ligne de données.
 >
 > `TEXTIMAGE_ON` change uniquement l’emplacement de l’espace de stockage LOB. Il n’a pas d’impact sur le moment où les données sont stockées dans la ligne. Utilisez l’option hors ligne des types valeur volumineux de sp_tableoption pour stocker la valeur LOB entière hors de la ligne.
 >

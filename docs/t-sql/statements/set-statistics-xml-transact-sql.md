@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e06886ec3a66e4860927a9f953c0bee9da2b902
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004715"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634629"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68004715"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>Exemples  
  Les deux instructions suivantes utilisent les paramètres SET STATISTICS XML pour montrer comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyse et optimise l'utilisation des index dans les requêtes. La première requête utilise l'opérateur de comparaison Égal à (=) dans la clause WHERE sur une colonne indexée. La seconde requête utilise l'opérateur LIKE dans la clause WHERE. Cela oblige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser une analyse d'index cluster pour rechercher les données répondant à la condition spécifiée par la clause WHERE. Les valeurs des attributs **EstimateRows** et **EstimatedTotalSubtreeCost** sont moins élevées pour la première requête indexée, ce qui indique qu’elle a été traitée plus rapidement et qu’elle a utilisé moins de ressources que la requête non indexée.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

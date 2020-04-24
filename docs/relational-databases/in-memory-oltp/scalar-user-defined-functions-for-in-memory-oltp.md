@@ -11,12 +11,12 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3914e8d5138dc2de4481276167165d1f4360c657
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111762"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487759"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68111762"
   
  La procédure stockée [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) peut être utilisée avec la fonction scalaire définie par l’utilisateur compilée en mode natif. La fonction est alors recompilée à l’aide de la définition qui existe dans les métadonnées.  
   
- L’exemple suivant montre une fonction scalaire définie par l’utilisateur figurant dans la base de données exemple [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) .  
+ L’exemple suivant montre une fonction scalaire définie par l’utilisateur figurant dans la base de données exemple [AdventureWorks2016CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) .  
   
 ```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   

@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16c698947dbe8ad6c324f16e644b2dd43276435
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070275"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631833"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +35,7 @@ Modifie l'appartenance d'un rôle serveur ou modifie le nom d'un rôle serveur d
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +46,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -98,7 +98,7 @@ Pour ajouter un membre à un rôle serveur défini par l’utilisateur, vous dev
 ### <a name="a-changing-the-name-of-a-server-role"></a>R. Modification du nom d'un rôle de serveur  
 L'exemple suivant crée un rôle de serveur nommé `Product`, puis modifie le nom du rôle de serveur en `Production`.  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +107,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Ajout d'un compte de domaine à un rôle de serveur  
 L’exemple suivant ajoute un compte de domaine nommé `adventure-works\roberto0` au rôle serveur défini par l’utilisateur nommé `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Ajout d'un compte de connexion SQL Server à un rôle de serveur  
 L’exemple suivant ajoute un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `Ted` au rôle serveur fixe `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +122,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. Suppression d'un compte de domaine d'un rôle de serveur  
 L’exemple suivant supprime un compte de domaine nommé `adventure-works\roberto0` du rôle serveur défini par l’utilisateur nommé `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Suppression d'un compte de connexion SQL Server d'un rôle de serveur  
 L’exemple suivant supprime le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted` du rôle serveur fixe `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +137,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. Octroi à un compte de connexion de l'autorisation d'ajouter des comptes de connexion à un rôle de serveur défini par l'utilisateur  
 L'exemple suivant permet à `Ted` d'ajouter d'autres comptes de connexion au rôle de serveur défini par l'utilisateur nommé `Production`.  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +145,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>G. Pour consulter l'appartenance à un rôle  
 Pour afficher l’appartenance à un rôle, utilisez la page **Rôle serveur (Membres)** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou exécutez la requête suivante :  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -161,14 +161,14 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="h-basic-syntax"></a>H. Syntaxe de base  
 L’exemple suivant ajoute le compte de connexion `Anna` au rôle serveur `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. Supprimer un compte de connexion d’une classe de ressources  
 L’exemple suivant supprime l’appartenance d’Anna au rôle serveur `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   

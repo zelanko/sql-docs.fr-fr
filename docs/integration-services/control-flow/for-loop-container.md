@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294151"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488166"
 ---
 # <a name="for-loop-container"></a>Conteneur de boucles For
 
@@ -72,8 +72,6 @@ ms.locfileid: "71294151"
 
 ##  <a name="configure-the-for-loop-container"></a>Configurer le conteneur de boucles For
 Cette procédure décrit comment configurer un conteneur de boucles For à l’aide de la boîte de dialogue **Éditeur de boucle For** .  
-  
- Pour obtenir un exemple de conteneur de boucles For, consultez [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295) sur le site bimonkey.com.  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur le conteneur de boucles For pour ouvrir l’ **Éditeur de boucle For**.  
   

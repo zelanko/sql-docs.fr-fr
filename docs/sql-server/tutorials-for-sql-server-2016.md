@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fde2b4aa622d420795422dd614ad313106dd586e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665396"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488351"
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fournit des didacticiels pour vous aider à apprendre les nouvelles technologies et fonctionnalités. Les didacticiels pour les versions antérieures peuvent généralement être utilisés avec les versions plus récentes. Quand des didacticiels traitent d’une fonctionnalité plus récente, ils indiquent la version minimale nécessaire pour suivre le didacticiel.  
      
--   Si un didacticiel utilise une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], vous devez télécharger et utiliser la version la plus récente disponible auprès de CodePlex. Pour plus d’informations, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Si un didacticiel utilise une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], vous devez télécharger et utiliser la version la plus récente disponible auprès de CodePlex. Pour plus d’informations, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    
 -   Téléchargez un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels sur [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Exemples Power View pour SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).  
 - Découvrez le nouvel exemple [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponible dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 

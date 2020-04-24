@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053570"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488181"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68053570"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Exemples des différents prédicats et fonctions
 
-Les exemples suivants utilisent l’exemple de base de données AdventureWorks. Pour la version finale d’AdventureWorks, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). Pour exécuter les exemples de requêtes, vous devez également configurer la recherche en texte intégral. Pour plus d’informations, consultez [Bien démarrer avec la recherche en texte intégral](get-started-with-full-text-search.md). 
+Les exemples suivants utilisent l’exemple de base de données AdventureWorks. Pour la version finale d’AdventureWorks, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Pour exécuter les exemples de requêtes, vous devez également configurer la recherche en texte intégral. Pour plus d’informations, consultez [Bien démarrer avec la recherche en texte intégral](get-started-with-full-text-search.md). 
 
 ### <a name="example---contains"></a>Exemple – CONTAINS  
 L’exemple suivant recherche tous les produits dont le prix est `$80.99` et qui contiennent le mot `"Mountain"` :

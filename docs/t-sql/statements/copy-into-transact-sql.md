@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903816"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631964"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -36,7 +36,7 @@ Cet article explique comment utiliser l’instruction COPY dans Azure SQL Data W
 
 ## <a name="syntax"></a>Syntaxe  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -364,7 +364,7 @@ WITH (
 La commande COPY offre de meilleures performances jusqu’à ce que la fonctionnalité soit en disponibilité générale. Pour obtenir de meilleures performances de chargement pendant la préversion publique, envisagez de fractionner votre entrée en plusieurs fichiers lors du chargement du CSV. Actuellement, la commande COPY est à égalité en termes de performances avec Polybase quand vous utilisez INSERT SELECT. 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quelles sont les recommandations de fractionnement de fichiers pour la commande COPY lors du chargement de fichiers CSV ?
-Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le nombre de fichiers recommandé atteint, vous obtenez de meilleures performances, plus les fichiers sont volumineux. Vous n’avez pas besoin de fractionner vos fichiers non compressés une fois que la commande COPY est en disponibilité générale. 
+Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le nombre de fichiers recommandé atteint, vous obtenez de meilleures performances, plus les fichiers sont volumineux. 
 
 | **DWU** | **Nombre de fichiers** |
 | :-----: | :--------: |

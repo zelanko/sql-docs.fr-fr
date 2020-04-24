@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075311"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634939"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075311"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>R. Utilisation d'une expression booléenne simple  
  L'exemple suivant comprend une expression booléenne simple (`1=1`) ayant la valeur true. Par conséquent, il imprime la première instruction.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  L'exemple suivant comprend une expression booléenne simple (`1=2`) ayant la valeur false. Par conséquent, il imprime la seconde instruction.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Utilisation d'une requête dans le cadre d'une expression booléenne  
  L'exemple suivant exécute une requête dans le cadre de l'expression booléenne. Étant donné que 10 vélos de la table `Product` répondent à la clause `WHERE`, la première instruction print s'exécute. Remplacez `> 5` par `> 15` pour voir comment la deuxième partie de l'instruction pourrait s'exécuter.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. Utilisation d'un bloc d'instructions  
  L'exemple suivant exécute une requête dans le cadre de l'expression booléenne, puis exécute des blocs d'instructions légèrement différents selon le résultat de l'expression booléenne. Chaque bloc d'instructions commence par `BEGIN` et se termine par `END`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. Utilisation d'instructions IF...ELSE imbriquées  
  L’exemple suivant montre comment une instruction IF ... ELSE peut s’imbriquer dans une autre. Définissez la variable `@Number` à `5`, `50` et `500` pour tester chaque instruction.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E : Utilisation d'une requête dans le cadre d'une expression booléenne  
  L’exemple suivant utilise `IF...ELSE` pour déterminer quelle réponse donner à l’utilisateur entre deux réponses, en fonction du poids d’un élément dans la table `DimProduct`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

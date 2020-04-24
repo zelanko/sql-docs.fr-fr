@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941690"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634280"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941690"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Type**|Type de nœud. Pour le nœud parent de chaque requête, il s'agit du type d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, SELECT, INSERT, EXECUTE, etc). Pour les sous-nœuds représentant des plans d'exécution, il s'agit du type PLAN_ROW.|  
 |**Parallel**|**0** = L’opérateur n’est pas exécuté en parallèle.<br /><br /> **1** = L’opérateur est exécuté en parallèle.|  
 |**EstimateExecutions**|Estimation du nombre de fois que cet opérateur sera exécuté durant l'exécution de la requête courante.|  
-  
+|||
+
  *Les unités de coût sont basées sur une mesure interne d'heure, et non sur l'horloge murale. Elles permettent de déterminer le coût relatif d'un plan par rapport à d'autres plans.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  Les valeurs des colonnes **EstimateRows** et **TotalSubtreeCost** sont plus petites pour la première requête indexée, ce qui indique qu’elle est traitée beaucoup plus rapidement que la requête non indexée, tout en utilisant moins de ressources.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

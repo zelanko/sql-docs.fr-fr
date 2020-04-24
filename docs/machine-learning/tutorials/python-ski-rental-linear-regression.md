@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f07c056e903f1036bfba15398f7cf54a1985f2d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 877b9ece1fb88f8e46b4d986645fe051fba5fdd7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116412"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487418"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Tutoriel Python : Prédire la location de ski avec régression linéaire dans SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce tutoriel en quatre parties, vous allez utiliser Python et la régression linéaire dans [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) pour prédire le nombre de locations de ski. Ce didacticiel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md), mais vous pouvez également utiliser votre propre environnement de développement intégré (IDE) Python.
+Dans ce tutoriel en quatre parties, vous allez utiliser Python et la régression linéaire dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) pour prédire le nombre de locations de ski. Ce didacticiel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md), mais vous pouvez également utiliser votre propre environnement de développement intégré (IDE) Python.
 
 Imaginez que vous êtes une entreprise de location de ski et que vous souhaitez prédire le nombre de locations à une date ultérieure. Ces informations vous aideront à préparer votre inventaire, votre personnel et vos installations.
 

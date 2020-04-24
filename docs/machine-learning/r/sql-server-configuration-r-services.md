@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117342"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486705"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ L’un des avantages de SQL Server est sa capacité à gérer un volume importan
 
 Vous pouvez également envoyer les données d’entrée sous la forme d’une requête unique, puis SQL Server analyse la requête. Si vous pouvez créer un plan de requête en parallèle pour les données d’entrée, il partitionne automatiquement les données attribuées aux nœuds et effectue également des jointures et des agrégations nécessaires en parallèle.
 
-Si vous êtes intéressé par la manière de définir une procédure stockée pour le scoring, consultez l’exemple de projet sur [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR), en particulier le fichier « step5_score_for_matching.sql ». L’échantillon de script suit également les heures de début et de fin des requêtes et écrit l’heure dans la console SQL pour vous permettre d’évaluer les performances.
+Si vous êtes intéressé par la manière de définir une procédure stockée pour le scoring, consultez l’exemple de projet sur [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR), en particulier le fichier « step5_score_for_matching.sql ». L’échantillon de script suit également les heures de début et de fin des requêtes et écrit l’heure dans la console SQL pour vous permettre d’évaluer les performances.
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>Scoring simultané à l’aide de groupes de ressources
 
@@ -214,7 +214,7 @@ Dans le scénario reprise-correspondance, la concurrence a été conçue comme s
 
 - Chaque groupe de charges de travail doit gérer deux tâches de scoring. Dès qu’une tâche a terminé la lecture des données et commence le scoring, l’autre tâche peut commencer à lire les données de la base de données.
 
-Pour afficher les scripts PowerShell pour ce scénario, ouvrez le fichier experiment.ps1 dans le [projet Github](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips).
+Pour afficher les scripts PowerShell pour ce scénario, ouvrez le fichier experiment.ps1 dans le [projet Github](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching).
 
 ### <a name="storing-models-for-prediction"></a>Stockage des modèles pour la prédiction
 

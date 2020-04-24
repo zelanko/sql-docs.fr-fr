@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530932"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634739"
 ---
 # <a name="restore-statements-transact-sql"></a>Instructions RESTORE (Transact-SQL)
 
@@ -86,7 +86,7 @@ Pour plus d’informations sur les scénarios de restauration [!INCLUDE[ssNoVers
 
 ## <a name="syntax"></a>Syntaxe
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -751,7 +751,7 @@ Pour afficher d’autres commandes RESTORE prises en charge, consultez :
 
 ## <a name="syntax"></a>Syntaxe
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -883,7 +883,7 @@ Restaure une base de données utilisateur [!INCLUDE[ssPDW](../../includes/sspdw-
 
 ## <a name="syntax"></a>Syntaxe
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ L’exemple suivant restaure une sauvegarde complète, puis une sauvegarde diff�
 
 La sauvegarde complète de la base de données est restaurée à partir de la sauvegarde complète, qui est stockée dans le répertoire `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Si la restauration aboutit, la sauvegarde différentielle est restaurée dans la base de données SalesInvoices2013. La sauvegarde différentielle est stockée dans le répertoire `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff`.
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 Cet exemple restaure les informations d’en-tête pour la sauvegarde de base de données `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. La commande génère une ligne d’informations pour la sauvegarde Invoices2013Full.
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

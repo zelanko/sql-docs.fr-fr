@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982668"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634853"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982668"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  Une vue partitionnée sur `Server1` est définie de la façon suivante :  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  En général, une vue est dite partitionnée si elle se présente sous la forme suivante :  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          La contrainte `C1` définie sur la table `T1` doit se présenter sous la forme suivante :  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   La définition des contraintes doit permettre à toute valeur spécifiée de `<col>` de satisfaire au plus une des contraintes `C1, ..., Cn`, de telle sorte que les contraintes forment un ensemble d’intervalles disjoints ou sans chevauchement. La colonne `<col>` sur laquelle les contraintes disjointes sont définies est appelée colonne de partitionnement. Notez que la colonne de partitionnement peut porter différents noms dans les tables sous-jacentes. Les contraintes doivent être dans un état activé et approuvé pour répondre aux conditions précédemment mentionnées de la colonne de partitionnement. Si les contraintes sont désactivées, réactivez la vérification des contraintes à l’aide de l’option CHECK CONSTRAINT *constraint_name* d’ALTER TABLE, puis utilisez l’option WITH CHECK pour valider ces contraintes.  
   
          Voici des exemples d'ensembles valides de contraintes :  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ Les exemples suivants utilisent la base de données AdventureWorks 2012 ou Adve
 ### <a name="a-using-a-simple-create-view"></a>R. Utilisation d'une instruction CREATE VIEW simple  
  L'exemple suivant crée une vue par le biais d'une instruction `SELECT` simple. Une vue simple est utile lorsque vous interrogez régulièrement une combinaison de colonnes. Les données de cette vue sont tirées des tables `HumanResources.Employee` et `Person.Person` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Ces données fournissent les noms et les informations relatives à la date d'embauche des employés de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. La vue doit pouvoir être créée par la personne chargée de suivre les dates anniversaires d'embauche mais sans pour autant l'autoriser à accéder à toutes les données de ces tables.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. Utilisation de WITH CHECK OPTION  
  Cet exemple montre une vue appelée `SeattleOnly` se reportant à cinq tables et n'autorisant des modifications de données que pour les employés vivant à Seattle.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. Utilisation de fonctions intégrées dans une vue  
  L'exemple suivant illustre la définition d'une vue qui inclut une fonction intégrée. Si vous utilisez des fonctions, vous devez attribuer un nom à la colonne dérivée.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. Utilisation de données partitionnées  
  L'exemple suivant s'appuie sur les tables nommées `SUPPLY1`, `SUPPLY2`, `SUPPLY3` et `SUPPLY4`. Ces tables correspondent aux tables des fournisseurs de quatre sièges situées dans des pays/régions distincts.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. Création d’un vue simple  
  L’exemple suivant crée une vue en sélectionnant uniquement certaines des colonnes de la table source.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. Créer une vue en joignant deux tables  
  L’exemple suivant crée une vue à l’aide d’une instruction `SELECT` avec un `OUTER JOIN`. Les résultats de la requête de jointure s’affichent dans la vue.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

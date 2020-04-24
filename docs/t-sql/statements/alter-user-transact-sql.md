@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a322934e89cb0b7b0c7959d3078c52a4a3fac65a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952414"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632199"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -55,7 +55,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER USER userName
@@ -216,7 +216,7 @@ GO
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER USER userName
@@ -391,7 +391,7 @@ GO
 > Seules les options suivantes sont prises en charge pour l’instance managée Azure SQL Database lors de l’application à des utilisateurs avec des connexions Azure AD : `DEFAULT_SCHEMA = { schemaName | NULL }` et `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 > </br> </br> Une nouvelle extension de syntaxe a été ajoutée pour permettre le remappage des utilisateurs dans une base de données qui a été migrée vers une instance managée. La syntaxe ALTER USER permet de mapper les utilisateurs de base de données dans un domaine fédéré et synchronisé avec Azure AD pour les connexions Azure AD.
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
@@ -641,7 +641,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER USER userName
@@ -752,7 +752,7 @@ GO
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER USER userName
