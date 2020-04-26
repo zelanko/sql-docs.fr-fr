@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185395"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Leçon 6 : création et utilisation de prédictions (Didacticiel sur l'exploration de données de base)
@@ -26,7 +26,7 @@ ms.locfileid: "63185395"
   
  Cette leçon contient les rubriques suivantes :  
   
- [Création de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Utilisation de l’extraction sur les données de structure &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63185395"
  [Leçon 5 : tester les modèles &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

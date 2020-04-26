@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657808"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client étend SQLGetStmtAttr pour exposer des attributs d’instruction spécifiques au pilote.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) répertorie les attributs d’instruction qui sont à la fois en lecture et en écriture. Cette rubrique dresse la liste des attributs d'instruction accessibles en lecture seule.  
+ [SQLSetStmtAttr](sqlsetstmtattr.md) répertorie les attributs d'instruction qui sont à la fois accessibles en lecture et en écriture. Cette rubrique dresse la liste des attributs d'instruction accessibles en lecture seule.  
   
 ## <a name="sql_sopt_ss_current_command"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  L'attribut SQL_SOPT_SS_CURRENT_COMMAND expose la commande active d'un lot de commandes. La valeur retournée est un entier qui spécifie l'emplacement de la commande dans le lot. La valeur de *ValuePtr* est de type SQLLEN.  
@@ -32,7 +32,7 @@ ms.locfileid: "62657808"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  L'attribut SQL_SOPT_SS_NOCOUNT_STATUS indique le paramètre actif de l'option NOCOUNT, qui contrôle si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] signale le nombre de lignes affectées par une instruction lorsque [SQLRowCount](sqlrowcount.md) est appelé. La valeur de *ValuePtr* est de type SQLLEN.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT a la valeur OFF. SQLRowCount retourne le nombre de lignes affectées.|  
 |SQL_NC_ON|NOCOUNT a la valeur ON. Le nombre de lignes affectées n’est pas retourné par SQLRowCount et la valeur retournée est 0.|  
@@ -51,6 +51,6 @@ ms.locfileid: "62657808"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLSetStmtAttr, fonction](https://go.microsoft.com/fwlink/?LinkId=59370)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

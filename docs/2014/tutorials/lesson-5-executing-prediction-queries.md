@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822311"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Leçon 5 : exécution des requêtes de prédiction
+# <a name="lesson-5-executing-prediction-queries"></a>Leçon 5 : Exécution des requêtes de prédiction
   Dans cette leçon, vous allez utiliser la forme [Select \<from Model> PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) de l’instruction SELECT pour créer deux types de prédictions différents en fonction du modèle d’arbre de décision que vous avez créé au cours de la [leçon 2 : ajout de modèles d’exploration de données à la structure d’exploration de données d’association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Ces types de prédiction sont définis ci-dessous.  
   
  Requête singleton  

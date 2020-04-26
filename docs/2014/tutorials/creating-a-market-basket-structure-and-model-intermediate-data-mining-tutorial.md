@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190835"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de panier d'achat (Didacticiel sur l'exploration de données intermédiaire)
@@ -56,16 +56,15 @@ ms.locfileid: "63190835"
     |Colonnes|Type de contenu|Type de données|  
     |-------------|------------------|---------------|  
     |IncomeGroup|Discret|Texte|  
-    |Order Number|Clé|Texte|  
+    |Order Number|Touche|Texte|  
     |Région|Discret|Texte|  
     |vAssocSeqLineItems|||  
-    |Modèle|Clé|Texte|  
+    |Modèle|Touche|Texte|  
   
 12. Sur la page **créer un jeu de test** , la valeur par défaut de l’option **pourcentage de données pour le test** est de 30 pour cent. Remplacez cette **valeur par 0**. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents graphiques pour mesurer la précision du modèle. Toutefois, certains types de graphiques d'analyse de précision, tels que le graphique de courbes d'élévation et le rapport de validation croisée, sont conçus pour la classification et l'évaluation. Elles ne sont pas prises en charge à des fins de prédiction associative.  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents graphiques pour mesurer la précision du modèle. Toutefois, certains types de graphiques d'analyse de précision, tels que le graphique de courbes d'élévation et le rapport de validation croisée, sont conçus pour la classification et l'évaluation. Elles ne sont pas prises en charge à des fins de prédiction associative.  
   
 13. Dans la page **fin de l’Assistant** , dans nom de la structure `Association`d’exploration de **données**, tapez.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "63190835"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme d’association Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Types de contenu &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [Types de contenu &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

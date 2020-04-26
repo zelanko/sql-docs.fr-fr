@@ -17,23 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766192"
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le [!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur incluent des fonctionnalités et des outils que vous pouvez utiliser pour dépanner les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] flux de données dans un package.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes des flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS fournit des visionneuses de données.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS fournit des visionneuses de données.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS et les transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournissent des nombres de lignes.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS et les transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournissent des nombres de lignes.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS fournit des rapports de progression au moment de l’exécution.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] - Le concepteur SSIS fournit des rapports de progression au moment de l’exécution.  
   
 ## <a name="data-viewers"></a>Visionneuses de données  
  Les visionneuses de données affichent les données entre deux composants d'un flux de données. Elles permettent d'afficher les données lorsque celles-ci sont extraites d'une source de données et intègrent pour la première fois un flux de données, avant et après la mise à jour des données par une transformation et avant le chargement des données dans leur destination.  
@@ -69,7 +66,7 @@ ms.locfileid: "62766192"
 |Aucune couleur|En attente d'être appelé par le moteur de flux de données.|  
 |Jaune|Exécution d'une transformation, extraction de données ou chargement de données en cours.|  
 |Vert|Exécuté avec succès.|  
-|red|Exécuté avec des erreurs.|  
+|rouge|Exécuté avec des erreurs.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](troubleshooting-tools-for-package-development.md)  

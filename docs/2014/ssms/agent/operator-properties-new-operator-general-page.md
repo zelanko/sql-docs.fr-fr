@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211349"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Propriétés de l’opérateur et Nouvel opérateur (page Général)
@@ -29,19 +29,19 @@ ms.locfileid: "68211349"
  **Activé**  
  Permet d'activer l'opérateur. Aucune notification n'est envoyée à l'opérateur lorsque cette option est désactivée.  
   
- **Nom du courrier électronique**  
+ **Nom de messagerie électronique**  
  Spécifie l'adresse de messagerie de l'opérateur.  
   
- **Adresse d’envoi réseau**  
+ **Adresse d'envoi réseau**  
  Spécifie l’adresse à utiliser pour **net send**.  
   
- **Nom de la messagerie de radiomessagerie**  
+ **Nom de l'adresse de radiomessagerie**  
  Spécifie l'adresse de messagerie à utiliser pour la radiomessagerie de l'opérateur.  
   
- **Planification de la radiomessagerie**  
+ **Planification de la radiomessagerie active**  
  Définit les périodes d'activité de la radiomessagerie.  
   
- **Lundi-dimanche**  
+ **Lundi - Dimanche**  
  Permet de sélectionner les jours d'activité de la radiomessagerie.  
   
  **Début de journée**  

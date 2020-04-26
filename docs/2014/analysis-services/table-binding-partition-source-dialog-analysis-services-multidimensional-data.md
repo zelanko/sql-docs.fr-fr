@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067871"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Détails de la liaison de table (boîte de dialogue Source de partition) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66067871"
  **Groupe de mesures**  
  Affiche le groupe de mesures de la partition.  
   
- **Look in**  
+ **Chercher dans**  
  Permet d'indiquer la source de données ou la vue de source de données contenant les tables source destinées à cette partition. La vue de source de vue de données utilisée par le groupe de mesures sélectionné est sélectionnée par défaut.  
   
  **Filtrer les tables**  

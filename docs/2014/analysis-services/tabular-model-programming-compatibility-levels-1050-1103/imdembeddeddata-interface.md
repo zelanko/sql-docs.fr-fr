@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757776"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
@@ -38,7 +38,7 @@ ms.locfileid: "62757776"
   
 -   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
   
-## <a name="reference"></a>Informations de référence  
+## <a name="reference"></a>Référence  
  La référence suivante documente `IMDEmbedded` l’interface comme présenté dans le fichier d’en-tête **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Fichier source : PXOEmbeddedData.idl  
@@ -103,7 +103,7 @@ HRESULT GetStreamIdentifier (
   
  Les valeurs possibles pour DBPROP_MSMD_EMBEDDED_DATA sont :  
   
-|Name|Valeur|Définition|  
+|Nom|Valeur|Définition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Aucune base de données incorporée disponible|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'application actuelle contient la base de données incorporée|  
@@ -217,7 +217,7 @@ HRESULT Cancel ( void )
  Annule l'opération de base de données incorporée actuelle  
   
 #### <a name="parameters"></a>Paramètres  
- Aucun.  
+ Aucune.  
   
 #### <a name="return-value"></a>Valeur de retour  
  `S_OK`  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767558"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Étape 7 : Ajout et configuration de la destination OLE DB
@@ -24,7 +24,7 @@ ms.locfileid: "62767558"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Pour ajouter et configurer la destination OLE DB fournie en exemple  
   
-1.  Dans la **boîte à outils SSIS**, étendre **d’autres destinations**et faire glisser **OLE DB Destination** sur la surface de conception de **l’onglet Flux** de Données. Placez la destination OLE DB directement en dessous de la transformation **Lookup Date Key.**  
+1.  Dans la **boîte à outils SSIS**, développez **autres destinations**, puis faites glisser **OLE DB destination** sur l’aire de conception de l’onglet de **Workflow** . Placez le OLE DB destination directement sous la transformation **Lookup Date Key** .  
   
 2.  Sélectionnez la transformation **Lookup Date Key** et faites glisser la flèche verte vers la nouvelle **Destination OLE DB** pour connecter les deux composants.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767558"
   
 13. Cliquez avec le bouton droit sur la **Destination OLE DB exemple** , puis cliquez sur **Propriétés**.  
   
-14. Dans la fenêtre Propriétés, vérifiez que la propriété est`DefaultCodePage` réglée à `LocaleID` **l’anglais (États-Unis)** et la propriété est réglée à **1252**.  
+14. Dans la Fenêtre Propriétés, vérifiez que la `LocaleID` propriété est définie sur **anglais (États-Unis)** et que`DefaultCodePage` la propriété a la valeur **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Étape 8 : Comment rendre le package de la leçon 1 plus facile à assimiler](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473637"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Migration de la documentation de SQL Server 2014 vers Docs
@@ -27,7 +27,7 @@ Les liens suivants concernent la documentation SQL Server 2014 que Microsoft a s
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *Documentation en ligne de SQL Server 2014*
+- *Documentation en ligne de SQL Server 2014*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
 MSDN est un initialiseur pour *Microsoft Developer Network*.
@@ -41,7 +41,7 @@ Les adresses HTTP HTTP obsolètes continuent de fonctionner pendant au moins deu
 - Les analyseurs Bing et Google vont commencer à délister et ignorer les anciennes adresses MSDN.
 
 
-## <a name="after-the-move"></a>Après le déplacement
+## <a name="after-the-move"></a>Après le transfert
 
 Après le déplacement vers *docs*, l’adresse de l’article racine SQL Server 2014 de documentation sera la suivante :
 

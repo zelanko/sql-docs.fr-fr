@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301729"
 ---
 # <a name="operator-properties-history-page"></a>Propriétés Opérateur (page Historique)
@@ -29,7 +29,7 @@ ms.locfileid: "63301729"
  **Par radiomessagerie**  
  Tentatives de notification les plus récentes effectuées par radiomessagerie, ou **(Jamais envoyé par radiomessagerie)** si cet opérateur n'a jamais été notifié par radiomessagerie.  
   
- **Par envoi réseau**  
+ **Par le réseau**  
  Tentatives de notification les plus récentes effectuées par envoi réseau, ou **(Jamais notifié par envoi réseau)** si cet opérateur n'a jamais été notifié par envoi réseau.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185427"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Leçon 5 : test de modèles (Didacticiel sur l'exploration de données de base)
@@ -26,7 +26,7 @@ ms.locfileid: "63185427"
   
 1.  Vous allez effectuer des prédictions par rapport au jeu de test afin de déterminer la précision du modèle sur les résultats connus. Vous allez utiliser un *graphique de courbes d’élévation* pour mesurer son efficacité.  
   
-     [Test de précision avec les graphiques de courbes d’élévation &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+     [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 2.  Vous allez tester vos modèles sur un sous-ensemble filtré des données. Comparez plusieurs modèles dans le même graphique de courbes d'élévation.  
   
@@ -35,19 +35,19 @@ ms.locfileid: "63185427"
  Pour plus d’informations sur la validation de modèle en général, consultez [concepts d’exploration de données](../../2014/analysis-services/data-mining/data-mining-concepts.md).  
   
 ## <a name="first-task-in-lesson"></a>Première tâche de la leçon  
- [Test de précision avec les graphiques de courbes d’élévation &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>Leçon précédente  
  [Leçon 4 : exploration des modèles de publipostage ciblés &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : création et utilisation de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Leçon 6 : création et utilisation de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Onglet graphique de courbes d’élévation &#40;vue graphique d’analyse de précision de l’exploration de données&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
  [Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Test et validation &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Onglet matrice de classification &#40;vue graphique d’analyse de précision de l’exploration de données&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [Matrice de classification &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468190"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
@@ -84,7 +84,7 @@ ms.locfileid: "62468190"
   
     -   Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la base de données, cliquez sur **Propriétés**, puis cliquez sur la page **Général** . La valeur de la propriété **Mémoire allouée aux objets mémoire optimisés** indique la mémoire allouée aux objets optimisés en mémoire dans la base de données. La valeur de la propriété **Mémoire utilisée par les objets mémoire optimisés** indique la mémoire utilisée par les objets optimisés en mémoire dans la base de données.  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Fonctionnalités prises en charge dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>Fonctionnalités prises en charge dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge les fonctionnalités et les opérations prises en charge par le moteur de base de données sur les bases de données contenant un groupe de fichiers de données optimisé en mémoire, des tables optimisées en mémoire, des index et des procédures stockées compilées en mode natif.  
   
  Pour la base de données, la table, la procédure stockée, le type de table défini par l'utilisateur ou les objets Index, les fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suivantes ont été mises à jour ou étendues pour prendre en charge OLTP en mémoire.  
@@ -150,7 +150,7 @@ ms.locfileid: "62468190"
   
 -   Explorateur de modèles  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Fonctionnalités non prises en charge dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>Fonctionnalités non prises en charge dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Pour les objets OLTP en mémoire, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne prend pas en charge les fonctionnalités et les opérations qui ne sont pas non plus prises en charge par le moteur de base de données.  
   
  Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités non prises en charge, consultez fonctionnalités de [SQL Server prises en](unsupported-sql-server-features-for-in-memory-oltp.md)charge.  

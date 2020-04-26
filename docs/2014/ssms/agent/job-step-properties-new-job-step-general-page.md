@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510953"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propriétés de l’étape du travail : Nouvelle étape du travail (page Général)
@@ -47,13 +47,13 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné dans le Presse-papiers.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
- **Analyser**  
+ **Analys**  
  Vérifie la syntaxe de la commande.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Options pour les étapes de travail Script ActiveX  
@@ -76,14 +76,14 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
  Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>Options des étapes de travail du système d'exploitation (CmdExec)  
- **Traiter le code de sortie d’une commande réussie**  
+ **Traiter le code de sortie d'une commande réussie**  
  Tapez le code de sortie renvoyé par la commande pour indiquer la réussite de son exécution.  
   
  **Ouvrir**  
@@ -92,7 +92,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -105,7 +105,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte du script.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -115,7 +115,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -125,7 +125,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -138,7 +138,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -148,7 +148,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -158,7 +158,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -174,7 +174,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -193,7 +193,7 @@ ms.locfileid: "62510953"
  **Sélectionner tout**  
  Sélectionne le texte de la commande.  
   
- **Copy**  
+ **Copier**  
  Copie le texte sélectionné.  
   
  **Coller**  
@@ -223,8 +223,7 @@ ms.locfileid: "62510953"
  Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez cette méthode d’authentification, entrez le **Nom d’utilisateur** et le **Mot de passe**appropriés.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fournie dans un souci de compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fournie dans un souci de compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  
   
  **Package**  
  Tapez l'emplacement du package.  
@@ -283,16 +282,16 @@ ms.locfileid: "62510953"
 ### <a name="execution-options-tab"></a>Onglet Options d'exécution  
  Sous cet onglet, vous pouvez consulter ou modifier les options d'exécution pour le package.  
   
- **Échec du package sur les avertissements de validation**  
+ **Mettre le package en échec en cas d'avertissements de validation**  
  Sélectionnez cette option pour faire échouer l'exécution du package en cas d'avertissements de validation.  
   
- **Valider le package sans l’exécuter**  
+ **Valider le package sans l'exécuter**  
  Sélectionnez cette option pour que l'étape du travail valide le package, mais ne l'exécute pas.  
   
- **Nombre maximal d’exécutables simultanés**  
+ **Maximum d'exécutables simultanés**  
  Nombre maximal de fichiers exécutables pouvant être exécutés en même temps.  
   
- **Activer les points de contrôle du package**  
+ **Activer les points de contrôle de package**  
  Sélectionnez cette option pour que l'étape du travail utilise les points de vérification du package.  
   
  **Fichier de point de contrôle**  
@@ -301,7 +300,7 @@ ms.locfileid: "62510953"
  **...**  
  Naviguez jusqu'au fichier de point de vérification du package.  
   
- **Remplacer les options de redémarrage**  
+ **Substituer les options de redémarrage**  
  Sélectionnez cette option pour spécifier les options de redémarrage de cette étape de travail qui sont différentes des options de redémarrage spécifiées dans le package.  
   
  **Option de redémarrage**  
@@ -340,16 +339,16 @@ ms.locfileid: "62510953"
  **Vérifier la build du package**  
  Exécute uniquement les packages dotés d'un numéro de build spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas le numéro de build spécifié.  
   
- **Build**  
+ **Créer**  
  Tapez le numéro de build du package.  
   
- **Vérifier l’ID de package**  
+ **Vérifier l'ID de package**  
  Exécute uniquement les packages dotés d'un ID spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas l'ID spécifié.  
   
  **ID du package**  
  Tapez l'ID du package.  
   
- **Vérifier l’ID de version**  
+ **Vérifier l'ID de version**  
  Exécute uniquement les packages dotés d'un ID de version spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas l'ID de version spécifié.  
   
  **ID de version**  
@@ -358,7 +357,7 @@ ms.locfileid: "62510953"
 ### <a name="command-line-tab"></a>Onglet Ligne de commande  
  Spécifiez les options de ligne de commande du package. Lorsque vous sélectionnez cet onglet, les options suivantes sont disponibles.  
   
- **Restaurer les options d’origine**  
+ **Restaurer les options d'origine**  
  Utilise les options de ligne de commande définies dans cette boîte de dialogue.  
   
  **Modifier la ligne de commande manuellement**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076507"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
@@ -23,13 +23,12 @@ ms.locfileid: "66076507"
 ## <a name="selecting-the-build-method"></a>Sélection de la méthode de construction  
  Dans l’Assistant Cube, dans la page **Sélectionner la méthode de construction** , cliquez sur **Construire le cube sans utiliser de source de données**. Pour construire le cube à l’aide d’un modèle de cube existant, cochez la case **Utiliser un modèle de cube** . . Si vous ne choisissez pas d'utiliser un modèle, vous devez définir les options manuellement.  
   
- Les modèles de cube contiennent des mesures, des groupes de mesures, des dimensions, des hiérarchies et des attributs prédéfinis. Si vous sélectionnez un modèle, l'Assistant utilise les définitions d'objet dans les modèles comme base pour définir des options dans les pages suivantes. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est installé avec plusieurs modèles pour les cubes standard. L'administrateur de serveur peut également ajouter les modèles de cube ou de dimension conçus spécifiquement pour les données de votre organisation.  
+ Les modèles de cube contiennent des mesures, des groupes de mesures, des dimensions, des hiérarchies et des attributs prédéfinis. Si vous sélectionnez un modèle, l'Assistant utilise les définitions d'objet dans les modèles comme base pour définir des options dans les pages suivantes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est installé avec plusieurs modèles pour les cubes standard. L'administrateur de serveur peut également ajouter les modèles de cube ou de dimension conçus spécifiquement pour les données de votre organisation.  
   
 ## <a name="selecting-dimensions"></a>Sélection de dimensions  
  Utilisez la page **Sélectionner des dimensions** de l'Assistant pour ajouter les dimensions existantes au cube. Cette page s'affiche uniquement s'il existe déjà des dimensions partagées sans source de données dans le projet ou la base de données. Elle ne présente pas les dimensions qui ont une source de données.  
   
- Pour ajouter des dimensions existantes, sélectionnez-en une ou plusieurs dans la liste **Dimensions partagées** et cliquez sur le bouton représentant une flèche droite (**>**) pour les placer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux**>>** flèches () pour déplacer toutes les dimensions de la liste.  
+ Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit (**>**) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux**>>** flèches () pour déplacer toutes les dimensions de la liste.  
   
 ## <a name="defining-new-measures"></a>Définition de nouvelles mesures  
  Utilisez la page **Définir de nouvelles mesures** de l’Assistant pour spécifier les mesures et les groupes de mesures du nouveau cube. Les groupes de mesures que vous spécifiez ici correspondront aux tables de faits dans le schéma généré. Les mesures que vous spécifiez ici correspondront aux colonnes non-clés numériques dans les tables.  
@@ -60,7 +59,7 @@ ms.locfileid: "66076507"
 |------------|-----------------|  
 |**Type**|Affiche le type de dimension pour une dimension de modèle. Cliquez sur cette cellule pour modifier le type d'une dimension. Cette colonne définit la propriété **Type** de l’objet de dimension.|  
 |`Name`|Affiche le nom de la dimension. Cliquez sur cette cellule pour taper un nom différent. Cette valeur définit la `Name` propriété pour l’objet de dimension.|  
-|**SCD**|Spécifie qu'il s'agit d'une dimension à variation lente (SCD). Cette case à cocher ajoute l'ID d'origine de date de début et de date de fin SCD, ainsi que les attributs d'état à la dimension. **SCD** est sélectionnée par défaut si vous utilisez un modèle pour créer le cube et que l’Assistant détecte ces quatre types d’attributs dans une dimension de modèle.|  
+|**SCD**|Spécifie qu'il s'agit d'une dimension à variation lente (SCD). Cette case à cocher ajoute l'ID d'origine de date de début et de date de fin SCD, ainsi que les attributs d'état à la dimension. **SCD** est activé par défaut si vous utilisez un modèle pour créer le cube et que l’Assistant détecte ces quatre types d’attribut dans une dimension de modèle.|  
 |**Attributs**|Affiche les attributs qui doivent être créés pour la dimension. Chaque nom d'attribut dans la liste est précédé du nom de la dimension. Cette liste est en lecture seule. Vous pouvez modifier les attributs à l'aide du Concepteur de dimensions une fois l'exécution de l'Assistant terminée.|  
   
 ## <a name="defining-time-periods"></a>Définition de périodes  

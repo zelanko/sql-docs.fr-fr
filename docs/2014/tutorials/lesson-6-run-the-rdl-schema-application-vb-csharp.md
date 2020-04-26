@@ -11,14 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63254506"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Leçon 6 : exécuter l’application de schéma RDL (VB-C #)
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre deux méthodes pour créer et exécuter une application console à partir de l'environnement de développement intégré (IDE) :  
   
 -   Exécuter (avec débogage)  
@@ -48,6 +47,6 @@ ms.locfileid: "63254506"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

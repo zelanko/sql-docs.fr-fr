@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067402"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Créer et gérer des partitions de modèles tabulaires (SSAS Tabulaire)
@@ -33,7 +33,7 @@ ms.locfileid: "66067402"
 ## <a name="tasks"></a>Tâches  
  Pour créer et gérer des partitions d'une base de données de modèle tabulaire déployée, vous utiliserez la boîte de dialogue **Partitions** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour afficher la boîte de dialogue **Partitions** , dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur une table, puis cliquez sur **Partitions**.  
   
-###  <a name="bkmk_create_new"></a>Pour créer une nouvelle partition  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Pour créer une nouvelle partition  
   
 1.  Dans la boîte de dialogue **Partitions** , cliquez sur le bouton **Nouveau** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067402"
   
 4.  Pour valider l'instruction, cliquez sur **Vérifier la syntaxe**.  
   
-###  <a name="bkmk_copy"></a>Pour copier une partition  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> Pour copier une partition  
   
 1.  Dans la boîte de dialogue **Partitions** , dans la liste **Partitions** , sélectionnez la partition à copier, puis cliquez sur le bouton **Copier** .  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66067402"
   
 3.  Dans **Instruction SQL**, modifiez l'instruction de requête SQL.  
   
-###  <a name="bkmk_merge"></a>Pour fusionner deux ou plusieurs partitions  
+###  <a name="to-merge-two-or-more-partitions"></a><a name="bkmk_merge"></a> Pour fusionner deux ou plusieurs partitions  
   
 -   Dans la boîte de dialogue **Partitions** , dans la liste **Partitions** , utilisez Ctrl+clic pour sélectionner les partitions à fusionner, puis cliquez sur le bouton **Fusionner** .  
   
 > [!IMPORTANT]  
 >  Le fait de fusionner les partitions ne met pas à jour les métadonnées des partitions. Les administrateurs doivent modifier l'instruction SQL pour la partition obtenue afin de veiller à ce que les opérations de traitement traitent toutes les données dans la partition fusionnée.  
   
-###  <a name="bkmk_delete"></a>Pour supprimer une partition  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a>Pour supprimer une partition  
   
 -   Dans la boîte de dialogue **Partitions** , dans la liste **Partitions** , sélectionnez la partition à supprimer, puis cliquez sur le bouton **Supprimer** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions de modèles tabulaires &#40;&#41;SSAS tabulaire](partitions-ssas-tabular.md)   
- [Traiter les partitions de modèles tabulaires &#40;les&#41;tabulaires SSAS](process-tabular-model-partitions-ssas-tabular.md)  
+ [Traiter les partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

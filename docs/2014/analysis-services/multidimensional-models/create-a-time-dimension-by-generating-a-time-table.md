@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076289"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l’Assistant dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension de temps lorsque aucune table de temps n’est disponible dans la base de données source. Pour ce faire, sélectionnez l'une des options suivantes dans la page **Sélectionner la méthode de création** :  
   
--   **Générer une table de temps dans la source de données** Sélectionnez cette option lorsque vous avez l’autorisation de créer des objets dans la source de données sous-jacente. L'Assistant génère ensuite une table de temps et stocke cette table dans la source de données. L'Assistant crée ensuite la dimension de temps à partir de cette table de temps.  
+-   **Générer une table de temps dans la source de données** Sélectionnez cette option lorsque vous disposez de l'autorisation de créer des objets dans la source de données sous-jacente. L'Assistant génère ensuite une table de temps et stocke cette table dans la source de données. L'Assistant crée ensuite la dimension de temps à partir de cette table de temps.  
   
--   **Générer une table de temps sur le serveur** Sélectionnez cette option lorsque vous n’êtes pas autorisé à créer des objets dans la source de données sous-jacente. L'Assistant génère et stocke ensuite une table sur le serveur au lieu de le faire dans la source de données. (La dimension créée à partir d'une table de temps sur le serveur est appelée *dimension de temps du serveur*.) L'Assistant crée ensuite la dimension de temps du serveur à partir de cette table.  
+-   **Générer une table de temps sur le serveur** Sélectionnez cette option lorsque vous ne disposez pas de l'autorisation de créer des objets dans la source de données sous-jacente. L'Assistant génère et stocke ensuite une table sur le serveur au lieu de le faire dans la source de données. (La dimension créée à partir d'une table de temps sur le serveur est appelée *dimension de temps du serveur*.) L'Assistant crée ensuite la dimension de temps du serveur à partir de cette table.  
   
  Lorsque vous créez une dimension de temps du serveur, vous spécifiez les périodes, ainsi que les dates de début et de fin de la dimension. L'Assistant utilise les périodes spécifiées pour créer les attributs de temps. Lorsque vous traitez la dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère et stocke les données requises pour prendre en charge les dates et les périodes spécifiées. L'Assistant utilise les attributs créés pour une dimension de temps afin de recommander les hiérarchies de la dimension. Les hiérarchies font apparaître les relations entre les différentes périodes et tiennent compte des différents calendriers. Par exemple, dans une hiérarchie de calendrier standard, un niveau Semaines apparaît sous un niveau Années, mais pas sous un niveau Mois, car les années se divisent en nombre égal de semaines, mais pas les mois. En revanche, dans une hiérarchie de calendrier de fabrication ou de rapports, les mois se divisent en nombre égal de semaines, de sorte qu'un niveau Semaines apparaît sous un niveau Mois.  
   

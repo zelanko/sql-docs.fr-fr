@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721671"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
@@ -26,13 +26,13 @@ ms.locfileid: "62721671"
   
  **Dans cette rubrique**  
   
--   **Pour créer un abonnement pour un abonné non-SQL Server, utilisez :**  
+-   **Pour créer une publication destinée à un Abonné non-SQL Server à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Pour créer une publication destinée à un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 1.  Installez et configurez le logiciel client et le ou les fournisseurs OLE DB approprié sur le serveur de distribution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Oracle Subscribers](non-sql/oracle-subscribers.md) et [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
@@ -68,8 +68,7 @@ ms.locfileid: "62721671"
     > [!NOTE]  
     >  Le choix de la valeur **True** définit alors la valeur de l'article **pre_creation_cmd** à « drop ». Ce paramètre indique que la réplication doit supprimer une table au niveau de l'Abonné si elle correspond au nom de la table dans l'article. Si vous disposez de tables existantes au niveau de l'Abonné que vous souhaitez conserver, utilisez la procédure stockée [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) pour chaque article ; précisez une valeur 'none' pour **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
-5.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Vous êtes invité à créer un nouvel instantané de la publication. Si vous ne souhaitez pas le faire immédiatement, vous utiliserez plus tard la procédure décrite plus loin dans la prochaine procédure.  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Vous êtes invité à créer un nouvel instantané de la publication. Si vous ne souhaitez pas le faire immédiatement, vous utiliserez plus tard la procédure décrite plus loin dans la prochaine procédure.  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>Pour créer une publication destinée à un Abonné non-SQL Server  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62721671"
   
  Lorsque l'Agent d'instantané a terminé, un message s'affiche, par exemple, « [100%] Un instantané de 17 articles a été généré. »  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez créer par programme des abonnements par émission de données pour des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant des procédures stockées de réplication.  
   
 > [!IMPORTANT]  
@@ -176,18 +175,18 @@ ms.locfileid: "62721671"
         > [!NOTE]  
         >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les **@job_login** informations **@job_password**d’identification Windows spécifiées par et. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
-    -   La valeur **0** pour **@subscriber_security_mode** et les informations de connexion du fournisseur OLE DB **@subscriber_login** pour **@subscriber_password**et.  
+    -   La valeur **0** pour **@subscriber_security_mode** et les informations de connexion du fournisseur OLE DB pour **@subscriber_login** et **@subscriber_password**.  
   
-    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
+    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnés IBM DB2](non-sql/ibm-db2-subscribers.md)   
  [Abonnés Oracle](non-sql/oracle-subscribers.md)   
  [Autres abonnés non-SQL Server](non-sql/other-non-sql-server-subscribers.md)   
- [Concepts liés aux procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)   
- [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
+ [Concepts des procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)   
+ [Méthodes préconisées en matière de sécurité de réplication](security/replication-security-best-practices.md)  
   
   

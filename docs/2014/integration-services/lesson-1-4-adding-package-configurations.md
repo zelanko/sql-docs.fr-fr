@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767641"
 ---
 # <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
@@ -40,7 +40,7 @@ ms.locfileid: "62767641"
   
 4.  Dans la boîte de dialogue **Bibliothèque des configurations du package**, sélectionnez **Activer les configurations du package** le cas échéant, et cliquez sur **Ajouter**.  
   
-5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
+5.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant**.  
   
 6.  Dans la page Sélectionner le type de configuration, sélectionnez **fichier de configuration XML** dans la liste **type de configuration** , sélectionnez l’option l' **emplacement de la configuration est stocké dans une variable d’environnement** , puis tapez `DataTransfer,` ou sélectionnez la variable d’environnement **DataTransfer** dans la liste.  
   
@@ -63,13 +63,13 @@ ms.locfileid: "62767641"
   
 4.  Dans la boîte de dialogue Bibliothèque des configurations du package, cochez la case **Activer les configurations du package** , puis cliquez sur **Ajouter**.  
   
-5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
+5.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant**.  
   
 6.  Dans la page Sélectionner le type de configuration, sélectionnez **Fichier de configuration XML** dans la liste **Type de configuration** , puis cliquez sur **Parcourir**.  
   
 7.  Dans la boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** , accédez à C:\DeploymentTutorial et tapez **DataTransferConfig** dans la zone **Nom de fichier** , puis cliquez sur **Enregistrer**.  
   
-8.  Dans la page Sélectionner le type de configuration, cliquez sur **Suivant**.  
+8.  Dans la page Sélectionner le type de configuration, cliquez sur **suivant**.  
   
 9. Dans la page Sélectionner les propriétés à exporter, développez successivement DataTransfer, Gestionnaires de connexions, Journal Didacticiel de déploiement et Propriétés, puis cochez la case **Chaîne de connexion** .  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62767641"
   
 4.  Dans la boîte de dialogue **Bibliothèque des configurations du package**, cliquez sur **Ajouter**.  
   
-5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
+5.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant**.  
   
 6.  Dans la page Sélectionner le type de configuration, sélectionnez **fichier de configuration XML** dans la liste **type de configuration** , sélectionnez l’option l' **emplacement de la configuration est stocké dans une variable d’environnement** , tapez `LoadXMLData` ou sélectionnez la `LoadXMLData` variable d’environnement dans la liste.  
   
@@ -112,13 +112,13 @@ ms.locfileid: "62767641"
   
 4.  Dans la boîte de dialogue Bibliothèque des configurations du package, cochez la case **Activer les configurations du package** et cliquez sur **Ajouter**.  
   
-5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
+5.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant**.  
   
 6.  Dans la page Sélectionner le type de configuration, sélectionnez **Fichier de configuration XML** dans la liste **Type de configuration** , puis cliquez sur **Parcourir**.  
   
 7.  Dans la boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** , accédez à C:\DeploymentTutorial et tapez **LoadXMLDataConfig** dans la zone **Nom de fichier** , puis cliquez sur **Enregistrer**.  
   
-8.  Dans la page Sélectionner le type de configuration, cliquez sur **Suivant**.  
+8.  Dans la page Sélectionner le type de configuration, cliquez sur **suivant**.  
   
 9. Dans la page Sélectionner les propriétés à exporter, développez successivement LoadXMLData, Exécutables, Charger les données XML et Propriétés, puis cochez les cases **[XMLSource].[XMLData]** et **[XMLSource].[XMLSchemaDefinition]** .  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62767641"
 12. Dans la boîte de dialogue **Bibliothèque des configurations du package** , vérifiez que LoadXMLData EV Configuration est en haut de la liste et que LoadXMLData Configuration est second, puis cliquez sur **Fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurations du package](../../2014/integration-services/package-configurations.md)   

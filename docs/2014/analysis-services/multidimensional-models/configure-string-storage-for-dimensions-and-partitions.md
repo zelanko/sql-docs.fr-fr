@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076540"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
@@ -24,7 +24,7 @@ ms.locfileid: "66076540"
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1050**|Spécifie l'architecture de stockage de chaînes par défaut, assujettie à une limite de taille de fichier de 4 Go par magasin.|  
 |**1100**|Spécifie le stockage de chaînes plus important, prend en charge jusqu'à 4 milliards de chaînes uniques par magasin.|  
@@ -36,13 +36,13 @@ ms.locfileid: "66076540"
   
 -   [À propos des magasins de chaînes](#bkmk_background)  
   
--   [Prérequis](#bkmk_prereq)  
+-   [Conditions préalables](#bkmk_prereq)  
   
--   [Étape 1 : définir la propriété StringStoreCompatiblityLevel dans SQL Server Data Tools](#bkmk_step1)  
+-   [Étape 1 : définir la propriété StringStoreCompatiblityLevel dans les outils de données SQL Server](#bkmk_step1)  
   
--   [Étape 2 : traitement des objets](#bkmk_step2)  
+-   [Étape 2 : traitement des objets](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a>À propos des magasins de chaînes  
+##  <a name="about-string-stores"></a><a name="bkmk_background"></a>À propos des magasins de chaînes  
  La configuration du stockage des chaînes est facultative, ce qui signifie que même les nouvelles bases de données que vous créez utilisent l'architecture du magasin de chaînes par défaut, dont la taille de fichier maximale est limitée à 4 Go. L'utilisation de l'architecture de stockage de chaînes plus important a un impact limité mais notable sur les performances. Vous devez l'utiliser uniquement si vos fichiers de stockage de chaînes s'approchent de ou atteignent la limite de 4 Go.  
   
 > [!NOTE]  
@@ -54,14 +54,14 @@ ms.locfileid: "66076540"
   
  Par opposition avec l'architecture de stockage de chaînes par défaut qui limite la taille du fichier physique, le stockage de chaînes plus important est basé sur un nombre maximal de chaînes. La limite maximale pour le stockage de chaînes plus important est de 4 milliards de chaînes uniques ou de 4 milliards d'enregistrements, l'élément qui atteint le premier cette limite étant applicable. Le stockage de chaînes plus important crée des enregistrements de taille égale, où chaque enregistrement est égal à une page de 64 Ko. Si vous avez des chaînes très longues qui ne rentre pas dans un seul enregistrement, votre limite effective sera inférieure à 4 milliards de chaînes.  
   
-##  <a name="bkmk_prereq"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Conditions préalables  
  Vous devez avoir une version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Les dimensions et les partitions doivent utiliser le mode de stockage MOLAP.  
   
  Le niveau de compatibilité de la base de données doit être 1100. Si vous avez créé ou déployé une base de données en utilisant [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] et la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le niveau de compatibilité de la base de données est déjà défini à 1100. Si vous avez déplacé une base de données créée dans une version antérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers ssSQL11 ou ultérieur, vous devez mettre à jour le niveau de compatibilité. Pour les bases de données que vous déplacez, mais ne redéployez pas, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour définir le niveau de compatibilité. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a>Étape 1 : définir la propriété StringStoreCompatiblityLevel dans SQL Server Data Tools  
+##  <a name="step-1-set-the-stringstorecompatiblitylevel-property-in-sql-server-data-tools"></a><a name="bkmk_step1"></a>Étape 1 : définir la propriété StringStoreCompatiblityLevel dans SQL Server Data Tools  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet qui contient les dimensions ou partitions à modifier.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66076540"
   
 8.  Enregistrez le fichier .  
   
-##  <a name="bkmk_step2"></a>Étape 2 : traitement des objets  
+##  <a name="step-2-process-the-objects"></a><a name="bkmk_step2"></a>Étape 2 : traitement des objets  
  La nouvelle architecture de stockage sera utilisée une fois que vous aurez traité les objets. Le traitement des objets prouve également que vous avez résolu les problèmes de limite de stockage parce que l'erreur qui signalait précédemment une condition de dépassement de capacité du magasin de chaînes ne devrait plus apparaître.  
   
 -   Dans l’Explorateur de solutions, cliquez avec le bouton droit sur la dimension que vous venez de modifier et sélectionnez **Traiter**.  

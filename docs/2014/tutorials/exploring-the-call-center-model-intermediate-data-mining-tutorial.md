@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315082"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
@@ -24,7 +24,7 @@ ms.locfileid: "63315082"
   
 -   [Visionneuse de l’arborescence de contenu générique Microsoft](#bkmk_genviewer) **:** cette visionneuse standard fournit des détails détaillés sur les modèles et les statistiques découverts par l’algorithme lorsqu’il a généré le modèle.  
   
-##  <a name="bkmk_NNviewer"></a>Visionneuse de réseau neuronal Microsoft  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Visionneuse de réseau neuronal Microsoft  
  La visionneuse comporte trois volets : **entrée**, **sortie**et **variables**.  
   
  À l’aide du volet **sortie** , vous pouvez sélectionner des valeurs différentes pour l’attribut prévisible ou la variable dépendante. Si votre modèle contient plusieurs attributs prévisibles, vous pouvez sélectionner l’attribut dans la liste **attribut de sortie** .  
@@ -114,7 +114,7 @@ ms.locfileid: "63315082"
   
  [Retour au début](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Visionneuse de l’arborescence de contenu générique Microsoft  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Visionneuse de l’arborescence de contenu générique Microsoft  
  Cette visionneuse peut être utilisée pour afficher des informations encore plus détaillées créées par l'algorithme lors du traitement du modèle. La **visionneuse de l’arborescence de contenu MicrosoftGeneric** représente le modèle d’exploration de données sous la forme d’une série de nœuds, où chaque nœud représente les connaissances apprises sur les données d’apprentissage. Cette visionneuse peut être utilisée avec tous les modèles, mais le contenu des nœuds est différent en fonction du type de modèle.  
   
  Pour les modèles de réseau neuronal ou les modèles de régression logistique, vous pouvez rechercher le nœud des statistiques marginales (`marginal statistics node`), qui est particulièrement utile. Ce nœud contient des statistiques dérivées sur la distribution des valeurs dans vos données. Ces informations peuvent être utiles si vous voulez obtenir un résumé des données sans avoir à écrire de nombreuses requêtes T-SQL. Le graphique des valeurs de placement dans un conteneur dans la rubrique précédente a été dérivé du nœud des statistiques marginales.  

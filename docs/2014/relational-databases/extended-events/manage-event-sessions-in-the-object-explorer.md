@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705517"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Développez la zone déroulante **Modèle** .  
   
-5.  Cliquez sur **\<File From ...> Open**, puis recherchez la session (fichier XML) à importer.  
+5.  Cliquez sur ** \<fichier à partir de... >ouvrir** et recherchez la session (fichier XML) que vous souhaitez importer.  
   
  La session apparaît sous le nœud **Sessions** . Par défaut, la session n'est pas démarrée.  
   
@@ -105,7 +105,7 @@ STATE = STOP
   
  Pour modifier une session d'événements étendus :  
   
-1.  Dans l' **Explorateur d'objets**, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
+1.  Dans **l’Explorateur d’objets**, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
   
 2.  Cliquez avec le bouton droit sur une session et sélectionnez **Propriétés**.  
   
@@ -113,7 +113,7 @@ STATE = STOP
   
 4.  Après avoir modifié la session d'événements, cliquez sur **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Générer le script d'une définition de session d'événements à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Générer le script d'une définition de session d'événements à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  L'Assistant Nouvelle session et la boîte de dialogue Nouvelle session comprennent une option qui génère un script [!INCLUDE[tsql](../../includes/tsql-md.md)] définissant la session événements étendus.  
   
  Vous pouvez accéder à [!INCLUDE[tsql](../../includes/tsql-md.md)] pour une session d'événements étendus existante en cliquant sur le nom de la session, en sélectionnant **Générer un script de la session en tant que**, puis sélectionnant **Créer vers**.  
@@ -123,7 +123,7 @@ STATE = STOP
   
 -   Dans l'Éditeur de requête, à l'aide de `DROP EVENT SESSION`.  
   
--   Dans l' **Explorateur d'objets**.  
+-   Dans l' **Explorateur d’objets**.  
   
  Quand vous supprimez une session d’événements, toutes les informations de configuration sont supprimées, et la définition de session ne s’affiche plus dans l’affichage catalogue sys.server_event_sessions.  
   
@@ -134,7 +134,7 @@ STATE = STOP
   
  Pour supprimer une session d'événements étendus dans l' **Explorateur d'objets**:  
   
-1.  Développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
+1.  Développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
   
 2.  Cliquez avec le bouton droit sur une session et sélectionnez **Supprimer**.  
   

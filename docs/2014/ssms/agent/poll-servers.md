@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062198"
 ---
 # <a name="poll-servers"></a>Interroger des serveurs
@@ -51,7 +51,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   des procédures stockées de travail qui ne modifient pas les planifications ou les étapes de travail.  
   
- **Pour forcer un serveur cible à interroger le serveur maître**  
+ **Pour forcer l'interrogation d'un serveur maître par un serveur cible**  
   
 -   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   

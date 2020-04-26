@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721099"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Leçon 3 : Configuration de la distribution
@@ -47,7 +47,7 @@ ms.locfileid: "62721099"
   
 ### <a name="setting-database-permissions-at-the-publisher"></a>Définition des autorisations de base de données sur le serveur de publication  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **sécurité**, cliquez avec le bouton droit sur **connexions**, puis sélectionnez **nouvelle connexion**.  
   
 2.  Sur la **page général** , cliquez sur **Rechercher**, \<entrez _Machine_Name>_ **\ repl_snapshot** dans la zone **Entrez le nom de l’objet à sélectionner** , où \< *Machine_Name>* est le nom du serveur de publication local, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721361"
 ---
 # <a name="distributor-information-dialog-box"></a>Boîte de dialogue informations sur le serveur de distribution 
@@ -45,7 +45,7 @@ Cette rubrique fournit des informations sur la boîte de dialogue serveur de **d
   Les informations pour les abonnements de publication d'instantané incluent le nom du serveur de publication. Dans le cas contraire, les fonctionnalités et les informations fournies dans cette boîte de dialogue sont les mêmes que celles de la vue Serveur de publication. Pour plus d’informations sur l’utilisation de cette boîte de dialogue, consultez [Informations sur le serveur de distribution, Liste de suivi des abonnements &#40;Publication d’instantané, SQL Server 2005 et versions ultérieures&#41;](publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agents
-  L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication et à l'Abonné.  
+   L’onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication et à l’Abonné.  
   
  Les agents qui sont disponibles dans l'onglet **Agents** pour un serveur de distribution dans la vue Serveur de distribution incluent tous les agents qui sont disponibles dans l'onglet **Agents** pour un serveur de publication. Toutefois, l'onglet **Agents** pour un serveur de distribution dans la vue Serveur de distribution  inclut également un agent de distribution et un agent de fusion.  
   
@@ -160,7 +160,7 @@ Cette rubrique fournit des informations sur la boîte de dialogue serveur de **d
   
  
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
+ [Démarrer le moniteur de réplication](monitor/start-the-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)  
   
   

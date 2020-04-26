@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62668985"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Présentation de l'interface du moniteur de réplication
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le moniteur de réplication présente une vue axée sur le serveur de publication ou une vue axée sur le serveur de distribution de toutes les activités de réplication dans un format à deux volets. Vous ajoutez un serveur de publication au moniteur dans le volet gauche tandis que dans le volet droit, le moniteur affiche des informations sur le serveur de publication, ses publications, les abonnements à ces publications ainsi que les divers agents de réplication. Outre la présentation des informations pour la topologie de réplication, le moniteur de réplication vous permet d'effectuer diverses tâches, telles que le démarrage et l'arrêt d'agents, ainsi que la validation des données.  
+  Le Moniteur de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente une vue axée sur le serveur de publication ou le serveur de distribution de toute l’activité de réplication dans un format à deux volets. Vous ajoutez un serveur de publication au moniteur dans le volet gauche tandis que dans le volet droit, le moniteur affiche des informations sur le serveur de publication, ses publications, les abonnements à ces publications ainsi que les divers agents de réplication. Outre la présentation des informations pour la topologie de réplication, le moniteur de réplication vous permet d'effectuer diverses tâches, telles que le démarrage et l'arrêt d'agents, ainsi que la validation des données.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Affichage d'informations relatives à la topologie complète  
  Le volet gauche du Moniteur de réplication affiche  
@@ -45,11 +45,11 @@ ms.locfileid: "62668985"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Affichage d'informations et réalisation de tâches associées aux serveurs de distribution  
  Le moniteur de réplication présente des informations sur les serveurs de distribution dans trois onglets :  
   
--   Onglet **publications**  
+-   Onglet**Publications**  
   
      Cet onglet fournit des informations de résumé pour toutes les publications d'un serveur de distribution.  
   
--   Onglet **liste de suivi des abonnements**  
+-   Onglet**Liste de suivi des abonnements**  
   
      Cet onglet fournit des informations sur les abonnements pour le serveur de distribution sélectionné. Vous pouvez filtrer la liste des abonnements pour identifier les erreurs, les avertissements et les abonnements qui ne fonctionnent pas correctement. Cet onglet vous permet également d'effectuer les tâches suivantes : accéder aux propriétés d'abonnement, accéder aux informations détaillées sur l'agent ou les agents associés à un abonnement, réinitialiser des abonnements et valider des abonnements.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62668985"
   
      Cet onglet n'est pas disponible pour les serveurs de distribution qui exécutent des versions de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou versions antérieures.  
   
--   Onglet **agents**  
+-   Onglet**Agents**  
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "62668985"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Affichage d'informations et réalisation de tâches associées aux serveurs de publication  
  Le moniteur de réplication présente des informations sur les serveurs de publication dans trois onglets :  
   
--   Onglet **publications**  
+-   Onglet**Publications**  
   
      Cet onglet fournit des informations de résumé pour toutes les publications sur un serveur de publication.  
   
--   Onglet **liste de suivi des abonnements**  
+-   Onglet**Liste de suivi des abonnements**  
   
      Cet onglet affiche des informations sur les abonnements provenant de toutes les publications disponibles sur le serveur de publication sélectionné. Vous pouvez filtrer la liste des abonnements pour identifier les erreurs, les avertissements et les abonnements qui ne fonctionnent pas correctement. Cet onglet vous permet également de : accéder aux propriétés d'abonnement, accéder aux informations détaillées sur l'agent ou les agents associés à un abonnement, réinitialiser des abonnements et valider des abonnements.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "62668985"
   
      Cet onglet ne s'affiche pas pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Onglet **agents**  
+-   Onglet**Agents**  
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
- Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+ Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
  Le moniteur de réplication fournit également un menu contextuel pour le nœud Serveur de publication. Cliquez avec le bouton droit sur un serveur de publication dans le volet gauche pour effectuer les tâches suivantes :  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62668985"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Affichage d'informations et réalisation de tâches associées aux publications  
  Le moniteur de réplication présente des informations sur les publications dans trois onglets ainsi que dans plusieurs fenêtres de détails :  
   
--   Onglet **tous les abonnements**  
+-   Onglet**Tous les abonnements**  
   
      Cet onglet montre des informations sur tous les abonnements à la publication sélectionnée. Par défaut, cet onglet est trié par ordre de priorité : erreurs, puis avertissements, ensuite dans l'ordre croissant des performances (les abonnements les moins performants étant tout en haut).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62668985"
   
          La grille de cet onglet présente des icônes d'erreur et d'avertissement pour tous les abonnements qui nécessitent une attention particulière.  
   
--   Onglet **agents**  
+-   Onglet**Agents**  
   
      Cet onglet affiche des informations sur les agents utilisés par la réplication. Cet onglet affiche des informations sur les agents suivants :  
   
@@ -145,11 +145,11 @@ ms.locfileid: "62668985"
   
      L'onglet permet aussi d'effectuer les tâches suivantes : accéder aux informations détaillées à propos de chaque agent, et démarrer ou arrêter chaque agent. Pour plus d'informations sur les agents associés aux abonnements (l'Agent de distribution et l'Agent de fusion), consultez la section « Affichage d'informations et réalisation de tâches associées aux abonnements » dans cette rubrique.  
   
--   Onglet **avertissements**  
+-   Onglets**Avertissements**  
   
      Cet onglet permet de spécifier des avertissements et des alertes pour les agents. Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   Onglet **jetons** de suivi (réplication transactionnelle uniquement)  
+-   Onglet**Jetons de suivi** (réplication transactionnelle uniquement)  
   
      Cet onglet permet de mesurer la latence, à savoir le temps écoulé entre la validation d'une transaction sur le serveur de publication et la validation de la transaction correspondante sur l'Abonné.  
   
@@ -192,23 +192,23 @@ ms.locfileid: "62668985"
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>Affichage d'informations et réalisation de tâches associées aux abonnements  
  Le moniteur de réplication présente des informations sur les abonnements dans plusieurs onglets. Dans le moniteur de réplication, double-cliquez sur un abonnement pour accéder à ces onglets dans une fenêtre de détails. Tous les onglets sont utiles pour répondre à la question « Pourquoi un agent ne s'exécute-t-il pas ? » Les messages d'erreur disponibles fournissent des informations détaillées sur la raison de la non-exécution d'un agent et constituent un point de départ à la résolution des problèmes liés aux agents associés à un abonnement.  
   
--   **Onglet tous les abonnements** et **liste de suivi des abonnements.**  
+-   **Tous les abonnements** et **Liste de suivi des abonnements**  
   
      Ces onglets sont décrits plus haut dans cette rubrique.  
   
--   Onglet **historique du serveur de publication vers le serveur de distribution** (réplication transactionnelle uniquement)  
+-   Onglet**Historique du serveur de publication vers le serveur de distribution** (réplication transactionnelle uniquement)  
   
      Cet onglet présente des informations sur l'Agent de lecture du journal pour une publication (identique à la fenêtre de détails de l'Agent de lecture du journal).  
   
--   Onglet **historique du serveur de distribution vers l’abonné** (réplication d’instantané et réplication transactionnelle)  
+-   Onglet**Historique du serveur de distribution vers l'Abonné** (réplication d'instantané et réplication transactionnelle)  
   
      Cet onglet présente des informations sur l'Agent de distribution pour un abonnement.  
   
--   Onglet **commandes non distribuées** (réplication transactionnelle uniquement)  
+-   Onglet**Commandes non distribuées** (réplication transactionnelle uniquement)  
   
      Cet onglet présente des informations sur le nombre de commandes de la base de données de distribution qui n'ont pas été remises à l'Abonné sélectionné, ainsi que le temps estimé de remise de ces commandes. Cet onglet vous aide à répondre à la question « Quel est le retard de mon abonnement ? » Cet onglet ne s'affiche pas pour les serveurs de distribution exécutant des versions antérieures à SQL Server 2005.  
   
--   Onglet **historique de synchronisation** (réplication de fusion uniquement)  
+-   Onglet**Historique de synchronisation** (réplication de fusion uniquement)  
   
      Cet onglet présente des informations sur l'Agent de fusion pour un abonnement. Il vous aide à répondre à la question suivante :  
   
@@ -216,7 +216,7 @@ ms.locfileid: "62668985"
   
          Cet onglet fournit des statistiques détaillées sur chaque article traité pendant la synchronisation, notamment la durée de chaque phase de traitement (téléchargement des modifications amont/aval, etc.). Il permet d'identifier les tables qui provoquent des ralentissements et il est l'emplacement idéal pour résoudre les problèmes de performances posés par les abonnements de fusion.  
   
- Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).
+ Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Affichage d'informations et réalisation de tâches associées aux profils d'agents  
  Le moniteur de réplication inclut plusieurs boîtes de dialogue permettant de gérer les profils d'agents. Les profils d'agents sont des ensembles de paramètres qui déterminent le comportement des agents. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md). Les boîtes de dialogue sont les suivantes :  
@@ -225,7 +225,7 @@ ms.locfileid: "62668985"
   
      Cette boîte de dialogue vous permet de : modifier les propriétés des profils, créer et supprimer des profils, spécifier un profil par défaut et spécifier que tous les agents d'un type donné (tels les Agents d'instantané) doivent utiliser un profil donné.  
   
--   **\<Propriétés de> AgentProfileName**  
+-   **Propriétés de \<Nom_Profil_Agent>**  
   
      Cette boîte de dialogue vous permet d'afficher et de modifier les paramètres d'un profil.  
   

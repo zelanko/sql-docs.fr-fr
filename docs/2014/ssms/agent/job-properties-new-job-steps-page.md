@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695658"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Propriétés du travail : Nouveau travail (page Étapes)
@@ -26,13 +26,13 @@ ms.locfileid: "62695658"
  **Liste des étapes du travail**  
  Répertorie les étapes de ce travail.  
   
- **Déplacer l’étape**  
+ **Déplacer l'étape**  
  Déplace le travail d'une étape, vers le haut ou vers le bas, dans la liste.  
   
  **Étape de démarrage**  
  Sélectionnez l'étape que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent va effectuer en premier lorsque le travail commence.  
   
- **Nouveau**  
+ **Nouvelle**  
  Crée une nouvelle étape de travail au-dessous de l'étape de travail sélectionnée.  
   
  **Insérer**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745540"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Utilisation de l'extraction sur les données de structure (Didacticiel sur l'exploration de données de base)
@@ -24,9 +24,9 @@ ms.locfileid: "62745540"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l'onglet **Modèles d'exploration de données** du Concepteur d'exploration de données, cliquez avec le bouton droit sur le modèle **TM_Decision_Tree** , et sélectionnez **Propriétés**.  
   
-2.  Dans les fenêtres Propriétés , cliquez sur **AllowDrillthrough**et sélectionnez **True**.  
+2.  Dans les fenêtres Propriétés, cliquez sur **AllowDrillthrough**et sélectionnez **True**.  
   
-3.  Sous l’onglet Modèles d’exploration de données , cliquez avec le bouton droit sur le modèle et sélectionnez **Traiter le modèle**.  
+3.  Sous l'onglet Modèles d'exploration de données, cliquez avec le bouton droit sur le modèle et sélectionnez **Traiter le modèle**.  
   
  Pour plus d’informations, consultez [requêtes d’extraction &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62745540"
  Félicitations, vous avez terminé le didacticiel sur l'exploration de données de base. Maintenant que vous maîtrisez les outils d'exploration de données, nous vous recommandons de compléter également le didacticiel intermédiaire sur l'exploration de données qui montre comment créer des modèles pour la prévision, l'analyse du panier d'achat et Sequence Clustering.  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
- [Création de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

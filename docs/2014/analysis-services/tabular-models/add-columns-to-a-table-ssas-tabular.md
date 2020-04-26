@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067770"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Ajouter des colonnes à une table (SSAS Tabulaire)
@@ -40,7 +40,7 @@ ms.locfileid: "66067770"
 2.  Dans la boîte de dialogue **Modifier les propriétés de la table** , dans la fenêtre d’aperçu de la table, sélectionnez la colonne source à ajouter, puis cliquez sur OK. Les colonnes déjà incluses dans la définition de la table sont déjà activées.  
   
 ## <a name="add-a-calculated-column"></a>Ajouter une colonne calculée  
- Dans une colonne calculée, une formule DAX est utilisée pour définir une valeur pour chaque ligne. Par exemple, vous pouvez créer une colonne calculée avec une formule simple (=1) qui ajoute la valeur 1 à chaque ligne. Les colonnes calculées peuvent également avoir des formules plus complexes qui calculent des valeurs en fonction d'autres données dans le modèle. Les colonnes calculées sont couvertes plus en détail dans d'autres rubriques. Pour plus d’informations, consultez [Calculated Columns &#40;SSAS Tabular&#41;](ssas-calculated-columns.md).  
+ Dans une colonne calculée, une formule DAX est utilisée pour définir une valeur pour chaque ligne. Par exemple, vous pouvez créer une colonne calculée avec une formule simple (=1) qui ajoute la valeur 1 à chaque ligne. Les colonnes calculées peuvent également avoir des formules plus complexes qui calculent des valeurs en fonction d'autres données dans le modèle. Les colonnes calculées sont couvertes plus en détail dans d'autres rubriques. Pour plus d’informations, consultez [Colonnes calculées &#40;SSAS tabulaire&#41;](ssas-calculated-columns.md).  
   
 #### <a name="to-create-a-calculated-column"></a>Pour créer une colonne calculée  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66067770"
   
 ## <a name="see-also"></a>Voir aussi  
  [Boîte de dialogue Modifier les propriétés de la table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Modifier les mappages de filtres de lignes, de tables ou de colonnes &#40;SSAS tabulaire&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Changer des mappages de filtres de lignes, de tables ou de colonnes &#40;SSAS Tabulaire&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488383"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Tâche 2 : Ajout de valeurs de domaine manuellement
+# <a name="task-2-adding-domain-values-manually"></a>Tâche 2 : Ajout de valeurs de domaine manuellement
   Dans cette tâche, vous ajoutez une valeur pour le domaine **Country** manuellement. Pour plus d’informations sur les champs de cette page, consultez la rubrique [modifier les valeurs de domaine](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
 1.  Dans la **liste domaine**, cliquez sur domaine **Country** .  
@@ -33,6 +33,6 @@ ms.locfileid: "65488383"
      ![États-Unis comme valeur de domaine](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "États-Unis comme valeur de domaine")  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 3 : Importer des valeurs de domaine d'un fichier Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+ [Tâche 3 : Importer des valeurs de domaine d’un fichier Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

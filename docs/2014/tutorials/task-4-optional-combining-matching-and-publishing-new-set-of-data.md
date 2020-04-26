@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489269"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (Facultatif) : Combiner, mettre en correspondance et publier un nouvel ensemble de données
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (facultatif) : Combinaison, mise en correspondance et publication d’un nouvel ensemble de données
   Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile de comparer les nouvelles données aux données qui sont déjà gérées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou inexactes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Pour plus d’informations, consultez [correspondance de la qualité des données dans les rubriques complément MDS pour Excel](https://msdn.microsoft.com/library/hh548681.aspx) et [combiner les données](https://msdn.microsoft.com/library/hh548680.aspx) .  
   
 1.  Lancez une nouvelle instance d' **Excel**. Cliquez sur **Démarrer**, pointez sur **exécuter**, tapez **Excel**, puis cliquez sur **OK**.  
@@ -111,6 +111,6 @@ ms.locfileid: "65489269"
 34. Maintenant, fermez le fichier **Classeur1-fenêtre Microsoft Excel** sans enregistrer le fichier.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 5 : Créer un attribut basé sur un domaine à partir d'Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

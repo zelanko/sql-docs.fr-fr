@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076254"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
@@ -27,15 +27,14 @@ ms.locfileid: "66076254"
   
  Une base de données secondaire dédiée peut stocker les partitions distantes pour une seule base de données master, mais la base de données master peut utiliser plusieurs bases de données secondaires, tant que toutes les bases de données secondaires se trouvent sur la même instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les dimensions dans une base de données dédiée aux partitions distantes sont créées en tant que dimensions liées.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour vous permettre de créer une partition distante, les conditions suivantes doivent être remplies :  
   
 -   Vous devez disposer d’une seconde instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et d’une base de données dédiée pour stocker les partitions. La base de données secondaire a une fonction unique ; elle fournit le stockage des partitions distantes pour une base de données master.  
   
 -   Les deux instances du serveur doivent présenter la même version. Les deux bases de données doivent avoir le même niveau fonctionnel.  
   
--   Les instances doivent être configurées en vue de connexions TCP. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
+-   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
   
 -   Les paramètres de pare-feu sur les deux ordinateurs doivent être définis de manière à accepter les connexions externes. Pour plus d’informations sur la configuration du pare-feu, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -125,8 +124,7 @@ ms.locfileid: "66076254"
 5.  Sur le serveur maître : cliquez avec le bouton droit sur le nom du cube dans l’Explorateur de solutions, sélectionnez **Traiter** et traitez entièrement le cube.  
   
 ## <a name="administering-remote-partitions"></a>Administration de partitions distantes  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge à la fois le traitement parallèle et séquentiel des partitions distantes. La base de données master, dans laquelle les partitions ont été définies, coordonne les transactions entre toutes les instances qui participent au traitement des partitions d'un cube. Les rapports de traitement sont ensuite envoyés à toutes les instances qui ont traité une partition.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge à la fois le traitement parallèle et séquentiel des partitions distantes. La base de données master, dans laquelle les partitions ont été définies, coordonne les transactions entre toutes les instances qui participent au traitement des partitions d'un cube. Les rapports de traitement sont ensuite envoyés à toutes les instances qui ont traité une partition.  
   
  Un cube qui contient des partitions distantes peut être administré avec ses partitions sur une instance unique de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Toutefois, les métadonnées de la partition distante ne peuvent être affichées et mises à jour que sur l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] où la partition et son cube parent ont été définis. La partition distante ne peut pas être visualisée ni mise à jour sur l’instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -134,6 +132,6 @@ ms.locfileid: "66076254"
 >  Bien que les bases de données dédiées au stockage des partitions distantes ne soient pas exposées aux ensembles de lignes de schéma, les applications utilisant des objets AMO (Analysis Management Objects) peuvent toujours découvrir une base de données dédiée à l'aide de XML pour la commande Analysis Discover. Toute commande CREATE ou DELETE envoyée directement à une base de données dédiée à l'aide d'un protocole TCP ou client HTTP réussit, mais le serveur retourne un avertissement indiquant que l'action peut endommager cette base de données étroitement gérée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

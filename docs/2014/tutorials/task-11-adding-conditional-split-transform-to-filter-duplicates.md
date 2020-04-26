@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476751"
 ---
-# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tâche 11 : Ajouter la transformation de fractionnement conditionnel pour filtrer les doublons
+# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tâche 11 : Ajout d’une transformation de fractionnement conditionnel pour filtrer les doublons
   Dans cette tâche, vous allez ajouter la transformation de fractionnement conditionnel au flux de données. Cette transformation vous permet de filtrer les doublons à partir d'un jeu d'enregistrements entrant. La transformation de regroupement probable regroupe les enregistrements qu'elle identifie comme étant correspondants et choisit l'un des enregistrements comme enregistrement pivot. Tous les enregistrements d'un groupe possèdent la même valeur _key_out. L'enregistrement pivot dans le groupe a un _key_in identique à la valeur _key_out. Les autres enregistrements du groupe ont des valeurs différentes pour _key_in et _key_out. Par conséquent, lorsque vous filtrez en utilisant la condition _key_in==_key_out, vous obtenez uniquement la ligne pivot du groupe.  
   
 1.  Glissez-déplacez la transformation de **fractionnement conditionnel** de la section **commun** dans la **boîte à outils SSIS** vers l’onglet de **Workflow** .  
@@ -41,6 +41,6 @@ ms.locfileid: "65476751"
 9. Cliquez sur **OK** pour fermer la boîte de dialogue **éditeur de transformation de fractionnement conditionnel** .  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 12 : Ajout d'une transformation de colonne dérivée pour ajouter les colonnes requises par MDS](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
+ [Tâche 12 : Ajout d’une transformation de colonne dérivée pour ajouter les colonnes requises par MDS](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
   
   

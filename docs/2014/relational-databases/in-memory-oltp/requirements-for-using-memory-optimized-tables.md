@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467891"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Conditions requises pour l'utilisation des tables optimisées en mémoire
@@ -22,8 +22,7 @@ ms.locfileid: "62467891"
   
 -   Édition 64 bits Enterprise, Developer ou Evaluation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite une quantité de mémoire suffisante pour contenir les données des tables et des index optimisés en mémoire. Pour prendre en compte les versions de ligne, vous devez disposer d'une quantité de mémoire deux fois plus importante que la taille prévue pour les tables et les index optimisés en mémoire. Mais le volume réel de mémoire nécessaire dépendra de votre charge de travail. Vous devez surveiller votre utilisation de la mémoire et l'ajuster selon vos besoins. La taille des données dans les tables optimisées en mémoire ne doit pas dépasser le pourcentage autorisé pour le pool. Pour découvrir la taille d’une table optimisée en mémoire, consultez [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite une quantité de mémoire suffisante pour contenir les données des tables et des index optimisés en mémoire. Pour prendre en compte les versions de ligne, vous devez disposer d'une quantité de mémoire deux fois plus importante que la taille prévue pour les tables et les index optimisés en mémoire. Mais le volume réel de mémoire nécessaire dépendra de votre charge de travail. Vous devez surveiller votre utilisation de la mémoire et l'ajuster selon vos besoins. La taille des données dans les tables optimisées en mémoire ne doit pas dépasser le pourcentage autorisé pour le pool. Pour découvrir la taille d’une table optimisée en mémoire, consultez [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      Si la base de données contient des tables sur disque, vous devez prévoir suffisamment de mémoire pour le pool de mémoires tampons et le traitement des requêtes sur ces tables.  
   
@@ -39,14 +38,13 @@ ms.locfileid: "62467891"
   
      Pour installer la génération de rapports (en[déterminant si une table ou une procédure stockée doit être migrée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et (pour gérer [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] l’OLTP en mémoire via l’Explorateur d’objets), sélectionnez **outils de gestion-de base** ou outils de **gestion-avancé lors de** l’installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]de.  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Notes importantes lors de l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-hek_2"></a>Notes importantes lors de l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   La taille totale en mémoire des tables durables dans une base de données ne doit pas dépasser 250 Go. Pour plus d’informations, consultez [durabilité pour les tables optimisées en mémoire](durability-for-memory-optimized-tables.md).  
   
 -   Cette version de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] cible des systèmes avec 2 ou 4 sockets et moins de 60 cœurs.  
   
--   Les fichiers de point de contrôle ne doivent pas être supprimés manuellement. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue automatiquement l'opération de garbage collection sur les fichiers de point de contrôle inutiles. Pour plus d’informations, consultez la discussion sur la fusion de fichiers de données et delta dans [durabilité pour les tables optimisées en mémoire](durability-for-memory-optimized-tables.md).  
+-   Les fichiers de point de contrôle ne doivent pas être supprimés manuellement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue automatiquement l'opération de garbage collection sur les fichiers de point de contrôle inutiles. Pour plus d’informations, consultez la discussion sur la fusion de fichiers de données et delta dans [durabilité pour les tables optimisées en mémoire](durability-for-memory-optimized-tables.md).  
   
 -   Dans cette première version de l'OLTP en mémoire (dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), la seule façon de supprimer un groupe de fichiers optimisé en mémoire consiste à supprimer la base de données.  
   
@@ -58,6 +56,6 @@ ms.locfileid: "62467891"
  Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous écoutons vos commentaires afin d’améliorer le contenu. Veuillez envoyer vos commentaires à [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

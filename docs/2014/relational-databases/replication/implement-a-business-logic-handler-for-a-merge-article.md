@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721203"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implémenter un gestionnaire de logique métier pour un article de fusion
@@ -48,9 +48,9 @@ ms.locfileid: "62721203"
   
      [Programmation de la réplication](#ReplProg)  
   
-     [Objets RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> Utilisation de la programmation de la réplication  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> Utilisation de la programmation de la réplication  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>Pour créer et déployer un gestionnaire de logique métier  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62721203"
   
 2.  Ajoutez des références au projet pour les espaces de noms ci-dessous.  
   
-    |Référence d'assembly|Location|  
+    |Référence d'assembly|Emplacement|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (installation par défaut)|  
     |<xref:System.Data>|GAC (composant du .NET Framework)|  
@@ -112,7 +112,7 @@ ms.locfileid: "62721203"
   
 1.  Exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en **@publication** **@article**spécifiant,, une valeur de **@property** **article_resolver** pour et le nom convivial du gestionnaire de logique métier **@value**pour.  
   
-###  <a name="TsqlExample"></a> Exemples (programmation de la réplication)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Exemples (programmation de la réplication)  
  Cet exemple illustre un gestionnaire de logique métier qui crée un journal d'audit.  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -123,7 +123,7 @@ ms.locfileid: "62721203"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../snippets/tsql/SQL15/replication/howto/tsql/registerblh_10.sql#sp_registerblh_10)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
 #### <a name="to-create-a-business-logic-handler"></a>Pour créer un gestionnaire de logique métier  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62721203"
   
 2.  Ajoutez des références au projet pour les espaces de noms ci-dessous.  
   
-    |Référence d'assembly|Location|  
+    |Référence d'assembly|Emplacement|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (installation par défaut)|  
     |<xref:System.Data>|GAC (composant du .NET Framework)|  
@@ -182,8 +182,7 @@ ms.locfileid: "62721203"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> – nom convivial que vous utilisez lorsque vous accédez au gestionnaire de logique métier ;  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> – valeur `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> – valeur `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Pour déployer un gestionnaire de logique métier  
   
@@ -219,7 +218,7 @@ ms.locfileid: "62721203"
   
 6.  Définissez le nom convivial du gestionnaire de logique métier pour <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Il s'agit de la valeur de la propriété <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> spécifiée lors de l'inscription du gestionnaire de logique métier.  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple illustre un gestionnaire de logique métier qui enregistre les informations sur les insertions, les mises à jour et les suppressions sur l'Abonné.  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -240,8 +239,8 @@ ms.locfileid: "62721203"
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [Déboguer un gestionnaire de logique métier &#40;programmation de la réplication&#41;](debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Déboguer un gestionnaire de logique métier &#40;&#41;de programmation de la réplication](debug-a-business-logic-handler-replication-programming.md)   
+ [Meilleures pratiques pour la sécurité de la réplication](security/replication-security-best-practices.md)   
  [Concepts liés à Replication Management Objects](concepts/replication-management-objects-concepts.md)  
   
   

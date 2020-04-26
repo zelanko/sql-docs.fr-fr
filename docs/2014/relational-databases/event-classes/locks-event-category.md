@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ebbd488cd85fde3003f6e54c5f08fd05c601d3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62662313"
 ---
 # <a name="locks-event-category"></a>Verrous, catégorie d’événement
@@ -33,14 +33,14 @@ ms.locfileid: "62662313"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Deadlock Graph (classe d'événements)](deadlock-graph-event-class.md)|Fournit une description XML d'un blocage.|  
+|[Deadlock Graph, classe d’événements](deadlock-graph-event-class.md)|Fournit une description XML d'un blocage.|  
 |[Classe d'événements Lock:Acquired](lock-acquired-event-class.md)|Indique qu'un verrou a été acquis sur une ressource, par exemple une ligne d'une table.|  
 |[Classe d'événements Lock:Cancel](lock-cancel-event-class.md)|Trace les requêtes de verrous qui ont été annulées avant l'acquisition du verrou (par exemple pour empêcher un blocage).|  
 |[Classe d'événements Lock:Deadlock Chain](lock-deadlock-chain-event-class.md)|Contrôle les conditions de blocage et les objets impliqués.|  
-|[Lock:Deadlock, classe d’événements](lock-deadlock-event-class.md)|Trace à quel moment une transaction a demandé un verrou sur une ressource déjà verrouillée par une autre transaction, ce qui provoque un blocage.|  
+|[Classe d'événements Lock:Deadlock](lock-deadlock-event-class.md)|Trace à quel moment une transaction a demandé un verrou sur une ressource déjà verrouillée par une autre transaction, ce qui provoque un blocage.|  
 |[Classe d'événements Lock:Escalation](lock-escalation-event-class.md)|Indique qu'un verrouillage spécifique s'est transformé en verrouillage de plus grande ampleur.|  
-|[Classe d'événements Lock:Released](lock-released-event-class.md)|Trace la libération d'un verrou.|  
-|[Verrou : Timeout &#40;délai d’expiration &#62; 0&#41; classe d’événements](lock-timeout-timeout-0-event-class.md)|Trace à quel moment les demandes de verrous ne sont pas possibles car une autre transaction possède un verrou de blocage sur la ressource demandée. Cet événement se produit uniquement lorsque la valeur d'expiration du verrou est supérieure à zéro (0).|  
-|[Classe d'événements Lock:Timeout](lock-timeout-event-class.md)|Trace à quel moment les demandes de verrous ne sont pas possibles car une autre transaction possède un verrou de blocage sur la ressource demandée.|  
+|[Lock:Released, classe d’événements](lock-released-event-class.md)|Trace la libération d'un verrou.|  
+|[Classe d’événements Lock:Timeout &#40;timeout &#62; 0&#41;](lock-timeout-timeout-0-event-class.md)|Trace à quel moment les demandes de verrous ne sont pas possibles car une autre transaction possède un verrou de blocage sur la ressource demandée. Cet événement se produit uniquement lorsque la valeur d'expiration du verrou est supérieure à zéro (0).|  
+|[Lock:Timeout, classe d’événements](lock-timeout-event-class.md)|Trace à quel moment les demandes de verrous ne sont pas possibles car une autre transaction possède un verrou de blocage sur la ressource demandée.|  
   
   

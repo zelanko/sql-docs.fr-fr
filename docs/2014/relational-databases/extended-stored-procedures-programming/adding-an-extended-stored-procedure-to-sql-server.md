@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512347"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Ajout d'une procédure stockée étendue à SQL Server
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Une DLL qui contient des fonctions de procédure stockée étendue joue le rôle d'extension pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer la DLL, copiez le fichier dans un répertoire, tel que celui qui contient les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dll standard (C:\Program Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn par défaut).  
   

@@ -15,28 +15,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721492"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
   La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
--   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut être établie en usurpant l’identité du compte Windows ou dans le contexte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un compte que vous spécifiez.  
+-   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut avoir lieu en empruntant l’identité du compte Windows ou dans le contexte d’un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
--   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés (**...**) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](view-and-modify-push-subscription-properties.md) et la procédure indiquant comment [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md).  
+-   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés ( **...** ) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](view-and-modify-push-subscription-properties.md) et la procédure indiquant comment [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md).  
   
  Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
   
 ## <a name="options"></a>Options  
- **Compte de processus**  
+ **Process Account**  
  Entrez un compte Windows sous lequel l'Agent de distribution s'exécute :  
   
 -   Pour les abonnements par envoi de données, le compte doit :  
   
-    -   Au minimum être membre du rôle de base de données fixe **db_owner** dans la base de données de distribution.  
+    -   être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données de distribution ;  
   
     -   être membre de la liste d'accès à la publication (PAL) ;  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62721492"
   
  Des autorisations supplémentaires sont indispensables si l'identité du compte de processus est empruntée lorsque les connexions sont établies. Voir les paragraphes **Se connecter au serveur de distribution** et **Connexion à l'Abonné** ci-dessous.  
   
- Le **compte de processus** ne peut pas être spécifié [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]pour des abonnements par extraction, car l’agent de distribution [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ne s’exécute pas sur des instances de.  
+ Le**compte de processus** ne peut être indiqué à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] pour des abonnements par extraction, car l’Agent de distribution ne s’exécute pas sur des instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
- **Mot de passe** et **confirmer le mot de passe**  
+ **Mot de passe** et **Confirmer le mot de passe**  
  Entrez le mot de passe du compte Windows.  
   
  **Se connecter au serveur de distribution**  
@@ -67,7 +67,7 @@ ms.locfileid: "62721492"
   
 -   avoir les autorisations de lecture sur le partage des fichiers d'instantanés.  
   
- **Connexion à l’abonné**  
+ **Connexion à l'Abonné**  
  Pour les abonnements par extraction, les connexions à l'Abonné ont toujours lieu en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** .  
   
  Pour les abonnements par envoi de données, les options sont différentes pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -94,8 +94,8 @@ Persist Security Info=False;Connection Pooling=True;
  La plupart des options de cette chaîne sont spécifiques du serveur DB2 que vous configurez, mais vous devez attribuer à l'option **Traiter les données binaires comme des caractères** la valeur **False**. Une valeur est exigée de façon que l'option **Catalogue initial** identifie la base de données d'abonnement. Pour plus d’informations, voir [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les comptes de connexion et les mots de passe dans la réplication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
- [Modèle de sécurité de l’agent de réplication](security/replication-agent-security-model.md)   
+ [Gérer les connexions et les mots de passe dans la réplication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md)   
  [Présentation des Agents de réplication](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  

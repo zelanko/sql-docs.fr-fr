@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766625"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62766625"
 -   Importation et exportation de packages  
   
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
 ## <a name="package-store"></a>Magasin de packages  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fournit deux dossiers de niveau supérieur pour l’accès [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] aux packages : **exécution** des packages et des **packages stockés**. Le dossier **Exécution des packages** répertorie les packages en cours d'exécution sur le serveur. Le dossier **Packages stockés** répertorie les packages enregistrés dans le magasin de packages. Ce sont les seuls packages gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le magasin de packages peut comprendre la base de données msdb et/ou les dossiers du système de fichiers répertoriés dans le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le fichier de configuration indique la base de données msdb et les dossiers du système de fichiers à gérer. Il est possible que vous disposiez également de packages stockés ailleurs dans le système de fichiers qui ne sont pas gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -73,8 +73,7 @@ ms.locfileid: "62766625"
  Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importation et exportation de packages  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les packages peuvent être enregistrés dans le système de fichiers ou dans la base de données msdb. Vous pouvez copier un package d'un type de stockage à un autre à l'aide de la fonctionnalité d'importation ou d'exportation fournie par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez également importer un package du même type de stockage et donner un nom différent à ce package, afin de créer une copie du package. L’utilitaire d’invite de commandes **dtutil** (dtutil.exe) permet également d’importer et d’exporter des packages.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les packages peuvent être enregistrés dans le système de fichiers ou dans la base de données msdb. Vous pouvez copier un package d'un type de stockage à un autre à l'aide de la fonctionnalité d'importation ou d'exportation fournie par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez également importer un package du même type de stockage et donner un nom différent à ce package, afin de créer une copie du package. L’utilitaire d’invite de commandes **dtutil** (dtutil.exe) permet également d’importer et d’exporter des packages.  
   
  Pour plus d’informations, consultez [dtutil Utility](../dtutil-utility.md).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62766625"
   
 -   [Importer et exporter des packages &#40;service SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Afficher les packages de Integration Services dans SQL Server Management Studio &#40;service SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Afficher les packages Integration Services dans SQL Server Management Studio &#40;Service SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](integration-services-service-ssis-service.md)  

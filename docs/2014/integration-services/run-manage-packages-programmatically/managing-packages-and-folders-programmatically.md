@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766851"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Gestion des packages et des dossiers par programme
   Lorsque vous travaillez par programme avec des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez avoir besoin de déterminer si un package ou un dossier individuel existe, ou de gérer les dossiers dans lesquels les packages sont stockés. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.  
   
-##  <a name="exists"></a> Détermination de l’existence d’un package ou dossier  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Détermination de l’existence d’un package ou dossier  
  Pour déterminer par programmation si un package enregistré existe, appelez l’une des méthodes suivantes avant de tenter de le charger et l’exécuter :  
   
 |Emplacement de stockage|Méthode à appeler|  
@@ -41,10 +41,10 @@ ms.locfileid: "62766851"
   
 
   
-##  <a name="managing"></a> Gestion des packages et des dossiers  
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Gestion des packages et des dossiers  
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit des méthodes supplémentaires pour gérer les packages et les dossiers dans lesquels ils sont stockés.  
   
-###  <a name="managing_rempkg"></a> Suppression d’un package  
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Suppression d’un package  
  Pour supprimer un package enregistré par programme, appelez l'une des méthodes suivantes :  
   
 |Emplacement de stockage|Méthode à appeler|  
@@ -54,7 +54,7 @@ ms.locfileid: "62766851"
   
 
   
-###  <a name="managing_create"></a> Création d’un dossier  
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Création d’un dossier  
  Pour créer un dossier de stockage par programme, appelez l'une des méthodes suivantes :  
   
 |Emplacement de stockage|Méthode à appeler|  
@@ -64,7 +64,7 @@ ms.locfileid: "62766851"
   
 
   
-###  <a name="managing_remfldr"></a> Suppression d’un dossier  
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Suppression d’un dossier  
  Pour supprimer un dossier de stockage par programme, appelez l'une des méthodes suivantes :  
   
 |Emplacement de stockage|Méthode à appeler|  
@@ -74,7 +74,7 @@ ms.locfileid: "62766851"
   
   
   
-###  <a name="managing_rename"></a> Renommage d’un dossier  
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Renommage d’un dossier  
  Pour renommer un dossier de stockage par programme, appelez l'une des méthodes suivantes :  
   
 |Emplacement de stockage|Méthode à appeler|  
@@ -84,10 +84,10 @@ ms.locfileid: "62766851"
   
 
   
-![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion de packages &#40;Service SSIS&#41;](../service/package-management-ssis-service.md)   
- [Énumération des packages disponibles par programmation](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Package Management &#40;service SSIS&#41;](../service/package-management-ssis-service.md)   
+ [Énumération des packages disponibles par programme](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   

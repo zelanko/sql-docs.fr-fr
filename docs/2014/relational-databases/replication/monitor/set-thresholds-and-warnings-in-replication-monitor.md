@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667182"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Définir des seuils et des avertissements dans le Moniteur de réplication
@@ -53,9 +53,9 @@ ms.locfileid: "62667182"
   
 -   [Définir des seuils et des avertissements pour une publication de fusion](#Merge)  
   
--   [Définir des seuils et des avertissements pour une publication d’instantané](#Snapshot)  
+-   [Définir des seuils et des avertissements pour une publication d'instantané](#Snapshot)  
   
-##  <a name="Transactional"></a>Pour définir des seuils et des avertissements pour une publication transactionnelle  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> Pour définir des seuils et des avertissements pour une publication transactionnelle  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62667182"
   
 4.  Définissez un seuil pour les avertissements dans la colonne **Seuil** . Si, par exemple, vous avez sélectionné **Avertir si la latence dépasse le seuil** à l'étape 3, vous pouvez choisir une latence de **60 secondes** dans la colonne **Seuil** .  
   
-5.  Cliquez sur **Save Changes**.  
+5.  Cliquez sur **Enregistrer les modifications**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Pour configurer une alerte pour un seuil  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62667182"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="Merge"></a>Définir des seuils et des avertissements pour une publication de fusion  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>Définir des seuils et des avertissements pour une publication de fusion  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
@@ -95,19 +95,19 @@ ms.locfileid: "62667182"
   
 3.  Sélectionnez un avertissement en activant la case à cocher appropriée :  
   
-    -   **Avertir si un abonnement expire dans le seuil**  
+    -   **Avertir si un abonnement expire avant le seuil défini**  
   
-    -   **Avertir si la durée de la fusion pour les connexions d’accès à distance dépasse le seuil**  
+    -   **Avertir si la durée de la fusion pour les connexions d'accès à distance dépasse le seuil**  
   
     -   **Avertir si la durée de la fusion pour les connexions LAN dépasse le seuil**  
   
     -   **Avertir si les lignes fusionnées par seconde pour les connexions LAN sont inférieures au seuil**  
   
-    -   **Avertir si les lignes fusionnées par seconde pour les connexions d’accès à distance sont inférieures au seuil**  
+    -   **Avertir si les lignes fusionnées par seconde pour les connexions d'accès à distance sont inférieures au seuil**  
   
 4.  Définissez les seuils pour les avertissements dans la colonne **Seuil** . Par exemple, si vous avez sélectionné **Avertir si la durée de la fusion pour les connexions d'accès à distance dépasse le seuil** à l'étape 3, vous pouvez sélectionner une durée de **10 minutes** dans la colonne **Seuil** .  
   
-5.  Cliquez sur **Save Changes**.  
+5.  Cliquez sur **Enregistrer les modifications**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Pour configurer une alerte pour un seuil  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62667182"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="Snapshot"></a>Définir des seuils et des avertissements pour une publication d’instantané  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a>Définir des seuils et des avertissements pour une publication d’instantané  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62667182"
   
 4.  Définissez un seuil pour l'avertissement dans la colonne **Seuil** . Par exemple, vous pouvez sélectionner une valeur de **70%** dans la colonne **Seuil** .  
   
-5.  Cliquez sur **Save Changes**.  
+5.  Cliquez sur **Enregistrer les modifications**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Pour configurer une alerte pour un seuil  
   

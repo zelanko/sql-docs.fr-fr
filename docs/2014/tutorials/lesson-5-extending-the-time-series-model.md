@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822063"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension du modèle de série chronologique
+# <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension du modèle de série chronologique
   Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, vous pouvez ajouter de nouvelles données à un modèle de série chronologique et les incorporer automatiquement au modèle. Vous ajoutez de nouvelles données à un modèle d'exploration de données de série chronologique de l'une des deux manières suivantes :  
   
 -   Utilisez une instruction PREDICTION JOIN pour joindre des données d'une source externe aux données d'apprentissage.  
@@ -234,6 +234,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries&#41;DMX &#40;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

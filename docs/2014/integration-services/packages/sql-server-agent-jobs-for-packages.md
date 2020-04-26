@@ -16,27 +16,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767171"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Travaux de l'Agent SQL Server pour les packages
-  Vous pouvez automatiser et planifier l’exécution des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide de l’agent. Vous pouvez planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
+  Automatisez et planifiez l’exécution des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
   
 ## <a name="sections-in-this-topic"></a>Rubriques de cette section  
  Cette rubrique contient les sections suivantes :  
   
--   [Planification de travaux dans SQL Server Agent](#jobs)  
+-   [Planification de travaux dans l'Agent SQL Server](#jobs)  
   
 -   [Planification des packages de Integration Services](#packages)  
   
--   [Résolution des problèmes des packages planifiés](#trouble)  
+-   [Dépannage de packages planifiés](#trouble)  
   
-##  <a name="jobs"></a>Planification de travaux dans SQL Server Agent  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est le service installé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui vous permet d’automatiser et de planifier des tâches en exécutant les travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit s’exécuter avant que les travaux puissent s’exécuter automatiquement. Pour plus d’informations, consultez [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a>Planification de travaux dans SQL Server Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est le service installé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui vous permet d’automatiser et de planifier des tâches en exécutant les travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit s’exécuter avant que les travaux puissent s’exécuter automatiquement. Pour plus d’informations, consultez [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  Le nœud **SQL Server Agent** s’affiche dans l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quand vous vous connectez à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62767171"
   
  Vous pouvez améliorer le travail en définissant des options de notification, par exemple en spécifiant l'envoi de messages électroniques à un opérateur à la fin du travail ou en ajoutant des alertes. Pour plus d’informations, consultez [Alertes](../../ssms/agent/alerts.md).  
   
-##  <a name="packages"></a>Planification des packages de Integration Services  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Quand vous créez un travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour planifier des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez ajouter au moins une étape et affecter à son type la valeur **Package SQL Server Integration Services**. Un travail peut inclure plusieurs étapes, et chaque étape peut exécuter un package différent.  
   
  L’exécution d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à partir d’une étape du travail revient à exécuter un package à l’aide des utilitaires **dtexec** (dtexec.exe) et **DTExecUI** (dtexecui.exe). Au lieu de définir les options d’exécution pour un package à l’aide des options de ligne de commande ou de la boîte de dialogue **Utilitaire d’exécution de package** , vous définissez les options d’exécution dans la boîte de dialogue **Nouvelle étape de travail** . Pour plus d’informations sur les options de ligne de commande pour l’exécution d’un package, consultez [Utilitaire dtexec](dtexec-utility.md).  
@@ -57,10 +56,10 @@ ms.locfileid: "62767171"
   
  Pour visionner une vidéo qui montre comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour exécuter un package, consultez la page [Procédure : automatiser l’exécution du package SSIS à l’aide de l’Agent SQL Server (vidéo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), dans MSDN Library.  
   
-##  <a name="trouble"></a> Dépannage  
- Une étape de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer un package même si le package est exécuté correctement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et à partir de la ligne de commande. Ce problème est connu et plusieurs solutions sont recommandées. Pour plus d'informations, consultez les ressources suivantes.  
+##  <a name="troubleshooting"></a><a name="trouble"></a>Dépannage  
+ Une étape de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer un package même si le package est exécuté correctement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et à partir de la ligne de commande. Ce problème est connu et plusieurs solutions sont recommandées. Pour plus d'informations, consultez les ressources ci-dessous.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Article [de la base de connaissances, un package SSIS ne s’exécute pas lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Article de la Base de connaissances intitulé [Un package SSIS n’est pas exécuté quand vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
 -   Vidéo, [résolution des problèmes : exécution du package à l’aide d’SQL Server Agent (SQL Server vidéo)](https://go.microsoft.com/fwlink/?LinkId=141772), dans MSDN Library.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62767171"
   
 -   Pour les packages enregistrés dans la base de données MSDB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans le magasin de packages d’ [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou dans un dossier sur votre ordinateur local, vous pouvez utiliser la **Visionneuse du fichier journal** ainsi que tous les journaux et les fichiers de vidage du débogage générés pendant l’exécution du package.  
   
-     **Pour utiliser la visionneuse du fichier journal, procédez comme suit.**  
+     **Pour utiliser la Visionneuse du fichier journal, procédez comme suit.**  
   
     1.  Cliquez avec le bouton droit sur le travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans l’Explorateur d’objets, puis cliquez sur **Afficher l’historique**.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62767171"
   
 -   Pour les packages enregistrés dans la base de données SSISDB, vous pouvez également utiliser la **Visionneuse du fichier journal** ainsi que tous les journaux et les fichiers de vidage du débogage générés pendant l’exécution du package. En outre, vous pouvez utiliser les rapports pour le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     **Pour rechercher des informations dans les rapports pour l’exécution du package associée à une exécution du travail, procédez comme suit.**  
+     **Pour rechercher des informations dans les rapports sur l'exécution du package associée à une exécution de travail, procédez comme suit.**  
   
     1.  Suivez les étapes ci-dessus pour afficher les détails du message de l'étape de travail.  
   

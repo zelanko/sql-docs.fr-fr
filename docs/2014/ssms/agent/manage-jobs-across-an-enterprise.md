@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188170"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Gérer des travaux à l'échelle d'une entreprise
@@ -47,13 +47,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  Ci-dessous figurent des tâches courantes permettant de gérer les travaux à l'échelle d'une entreprise :  
   
- **Pour vérifier l’état d’un serveur cible**  
+ **Pour vérifier l'état d'un serveur cible**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)  
   
 -   [SMO (SQL Server Management Objects)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Pour modifier les serveurs cibles pour un travail**  
+ **Pour modifier les serveurs cibles associés à un travail**  
   
 -   [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
@@ -61,7 +61,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SMO (SQL Server Management Objects)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Pour modifier l’emplacement d’un serveur cible**  
+ **Pour modifier l'emplacement d'un serveur cible**  
   
 -   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
@@ -75,7 +75,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)  
   
- **Pour forcer un serveur cible à interroger le serveur maître**  
+ **Pour forcer l'interrogation d'un serveur maître par un serveur cible**  
   
 -   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   

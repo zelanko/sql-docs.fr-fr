@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667128"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication
@@ -38,10 +38,10 @@ Le moniteur de réplication fournit un certain nombre d’onglets et d’options
     -   Agent de lecture du journal, utilisé par toutes les publications transactionnelles    
     -   Agent de lecture de la file d'attente, utilisé par les publications transactionnelles qui possèdent des abonnements mis à jour en attente  
   
--   **Avertissements** (pour les serveurs [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] de distribution exécutant et versions ultérieures)   
+-   **Avertissements** (pour les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et ultérieurement)   
     -   Cet onglet permet de spécifier des avertissements et des alertes pour les agents.  
   
--   **Jetons** de suivi (réplication transactionnelle uniquement, pour les serveurs de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] distribution exécutant et versions ultérieures)  
+-   **Jetons de suivi** (uniquement pour la réplication transactionnelle, sur les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et version ultérieure)  
   
      Cet onglet permet de mesurer la latence, à savoir le temps écoulé entre la validation d'une transaction sur le serveur de publication et la validation de la transaction correspondante sur l'Abonné.  
   

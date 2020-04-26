@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62651488"
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
@@ -34,15 +34,15 @@ ms.locfileid: "62651488"
   
      [Sécurité](#Security)  
   
--   **Pour créer un index non-cluster à l’aide de :**  
+-   **Pour créer un index non-cluster à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Implementations"></a> Implémentations types  
+###  <a name="typical-implementations"></a><a name="Implementations"></a>Implémentations typiques  
  Les index non-cluster sont implémentés comme ceci :  
   
 -   **Contraintes uniques**  
@@ -57,12 +57,12 @@ ms.locfileid: "62651488"
   
      Une fois qu'un index cluster unique a été créé sur une vue, vous pouvez créer des index non-cluster. Pour plus d’informations, consultez [Créer des vues indexées](../views/views.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>Pour créer un index non-cluster à l'aide du Concepteur de tables  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62651488"
   
 8.  Cliquez sur **Fermer**.  
   
-9. Dans le menu **fichier** , cliquez sur **Enregistrer**_table_name_.  
+9. Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Pour créer un index non-cluster à l'aide de l'Explorateur d'objets  
   
@@ -92,19 +92,19 @@ ms.locfileid: "62651488"
   
 3.  Développez la table sur laquelle vous souhaitez créer un index non-cluster.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
+4.  Cliquez avec le bouton droit sur le dossier **index** , pointez sur **nouvel index**, puis sélectionnez **index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
+6.  Sous **colonnes clés d’index**, cliquez sur **Ajouter.**...  
   
-7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non cluster.  
+7.  Dans la boîte de dialogue **Sélectionner les colonnes à partir de**_table_name_ , activez la ou les cases à cocher de la ou des colonnes de table à ajouter à l’index non cluster.  
   
 8.  Cliquez sur **OK**.  
   
 9. Dans la boîte de dialogue **Nouvel index** , cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Pour créer un index non-cluster sur une table  
   

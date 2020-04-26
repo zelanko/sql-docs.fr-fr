@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705740"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "62705740"
 ## <a name="session-states"></a>États de la session  
  L'illustration ci-dessous indique les divers états d'une session Événements étendus.  
   
- ![État de session d'événements étendus](../../database-engine/media/xesessionstate.gif "État de session d'événements étendu")  
+ ![État de session d'événements étendu](../../database-engine/media/xesessionstate.gif "État de session d'événements étendu")  
   
  En vous référant à l'illustration précédente, notez que l'état de la session change au fur et à mesure que les commandes DDL sont exécutées pour une session d'événements. Ces changements d'état sont décrits dans le tableau ci-dessous.  
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489705"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tâche 8 : Ajout d'une nouvelle valeur pour l'entité État dans Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tâche 8 : Ajout d’une nouvelle valeur pour l’entité État dans Excel
   Dans cette tâche, vous allez ajouter une valeur pour l'entité État dans Excel et publier la modification sur le serveur MDS.  
   
 1.  Ajoutez une **feuille de travail** dans Excel en cliquant sur l’onglet nouveau situé en bas.  
@@ -53,6 +53,6 @@ ms.locfileid: "65489705"
 12. Dans Excel, cliquez avec le bouton droit sur la feuille de calcul **État** en bas, puis cliquez sur **supprimer** pour supprimer la feuille de calcul. La suppression de la feuille de calcul ne supprime aucune donnée dans le serveur MDS.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 9 : Création d'une hiérarchie dérivée à l'aide de Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [Tâche 9 : Création d’une hiérarchie dérivée à l’aide de Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

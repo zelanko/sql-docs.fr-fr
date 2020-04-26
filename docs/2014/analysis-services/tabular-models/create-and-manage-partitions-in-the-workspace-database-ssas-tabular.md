@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067458"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Créer et gérer des partitions dans la base de données de l'espace de travail (SSAS Tabulaire)
-  Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Les tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Gestionnaire de partition** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Les tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Gestionnaire de partition** dans[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Une fois que le modèle a été déployé sur une autre instance Analysis Services, les administrateurs de bases de données peuvent créer et gérer des partitions dans le modèle (déployé) à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66067458"
 ## <a name="tasks"></a>Tâches  
  Pour créer et gérer des partitions, vous allez utiliser la boîte de dialogue **Gestionnaire de partition** . Pour consulter la boîte de dialogue **Gestionnaire de partition** , dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Table** , puis sur **Partitions**.  
   
-###  <a name="bkmk_create_new"></a>Pour créer une nouvelle partition  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Pour créer une nouvelle partition  
   
 1.  Dans le générateur de modèles, sélectionnez la table pour laquelle vous souhaitez définir une partition.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067458"
   
      Pour utiliser une instruction SQL, cliquez sur le bouton **Éditeur de requête** en haut à droite dans la fenêtre d’aperçu, puis tapez ou collez une instruction de requête SQL dans la fenêtre de requête. Pour valider votre instruction, cliquez sur **Valider**. Pour utiliser le concepteur de requêtes, cliquez sur **Conception**.  
   
-###  <a name="bkmk_copy"></a>Pour copier une partition  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> Pour copier une partition  
   
 1.  Dans **Gestionnaire de partition**, dans la zone de liste **Table** , vérifiez ou sélectionnez la table qui contient la partition que vous souhaitez copier.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067458"
   
 3.  Dans **Nom de la partition**, tapez un nouveau nom pour la partition.  
   
-###  <a name="bkmk_delete"></a>Pour supprimer une partition  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a>Pour supprimer une partition  
   
 1.  Dans **Gestionnaire de partition**, dans la zone de liste **Table** , vérifiez ou sélectionnez la table qui contient la partition à supprimer.  
   

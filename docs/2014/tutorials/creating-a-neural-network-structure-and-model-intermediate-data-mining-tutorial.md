@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856330"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de réseau neuronal (Didacticiel sur l'exploration de données intermédiaire)
@@ -42,7 +42,7 @@ ms.locfileid: "62856330"
   
  [Traiter tous les modèles](#bkmk_SeedProcess)  
   
-## Créer la structure de centre d’appels par défaut<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>Créer la structure de centre d’appels par défaut<a name="bkmk_defaul"></a>  
   
 1.  Dans Explorateur de solutions dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez avec le bouton droit sur **structures d’exploration de données** et sélectionnez **nouvelle structure d’exploration de données**.  
   
@@ -75,16 +75,16 @@ ms.locfileid: "62856330"
     |AutomaticResponses|Entrée|  
     |AverageTimePerIssue|Entrée/Prédire|  
     |Calls|Entrée|  
-    |DateKey|Ne pas utiliser|  
+    |DateKey|À ne pas utiliser|  
     |DayOfWeek|Entrée|  
-    |FactCallCenterID|Clé|  
+    |FactCallCenterID|Touche|  
     |IssuesRaised|Entrée|  
     |LevelOneOperators|Entrée/Prédire|  
     |LevelTwoOperators|Entrée|  
-    |Commandes|Entrée/Prédire|  
+    |Orders|Entrée/Prédire|  
     |ServiceGrade|Entrée/Prédire|  
     |Shift|Entrée|  
-    |TotalOperators|Ne pas utiliser|  
+    |TotalOperators|À ne pas utiliser|  
     |WageType|Entrée|  
   
      Notez que plusieurs colonnes prédictibles ont été sélectionnées. L'une des forces de l'algorithme de réseau neuronal réside dans sa possibilité à analyser toutes les combinaisons possibles des attributs d'entrée et de sortie. Vous ne souhaitez pas effectuer cette opération pour un jeu de données volumineux, car cela peut augmenter de façon exponentielle le temps de traitement.  
@@ -97,11 +97,11 @@ ms.locfileid: "62856330"
     |AverageTimePerIssue|Continue|Long|  
     |Calls|Continue|Long|  
     |DayOfWeek|Discret|Texte|  
-    |FactCallCenterID|Clé|Long|  
+    |FactCallCenterID|Touche|Long|  
     |IssuesRaised|Continue|Long|  
     |LevelOneOperators|Continue|Long|  
     |LevelTwoOperators|Continue|Long|  
-    |Commandes|Continue|Long|  
+    |Orders|Continue|Long|  
     |ServiceGrade|Continue|Double|  
     |Shift|Discret|Texte|  
     |WageType|Discret|Texte|  
@@ -181,12 +181,12 @@ ms.locfileid: "62856330"
   
  Au lieu d’utiliser les valeurs numériques, vous pouvez également ajouter une colonne dérivée distincte qui classifie les notes de service en plages cibles prédéfinies, telles que **Best** ( \<ServiceGrade = 0,05), **Acceptable** (0,10 > ServiceGrade > 0,05) et **médiocre** (ServiceGrade >= 0,10).  
   
-###  <a name="bkmk_newColumn"></a>Créer une copie d’une colonne et modifier la méthode de discrétisation  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>Créer une copie d’une colonne et modifier la méthode de discrétisation  
  Vous allez effectuer une copie de la colonne d’exploration de données qui contient l’attribut cible, ServiceGrade et modifier la façon dont les nombres sont regroupés. Vous pouvez créer plusieurs copies d'une colonne d'une structure d'exploration de données, y compris de l'attribut prédictible.  
   
  Pour ce didacticiel, vous allez utiliser la méthode EQUAL_AREAS de discrétisation et spécifier quatre compartiments. Les regroupements qui résultent de cette méthode sont très proches des valeurs cibles présentant un intérêt pour les utilisateurs professionnels.  
   
-####  <a name="bkmk_ColumnCopy"></a>Pour créer une copie personnalisée d’une colonne dans la structure d’exploration de données  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>Pour créer une copie personnalisée d’une colonne dans la structure d’exploration de données  
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur la structure d'exploration de données que vous venez de créer.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "62856330"
   
      Notez que lorsque vous ajoutez une copie d'une colonne de structure d'exploration de données, l'indicateur d'utilisation de la copie a automatiquement la valeur `Ignore`. En règle générale, lorsque vous ajoutez une copie d'une colonne à une structure d'exploration de données, vous ne devez pas utiliser la copie conjointement avec la colonne d'origine à des fins d'analyse ; sinon, l'algorithme trouvera une forte corrélation entre les deux colonnes, ce qui risque de masquer d'autres relations.  
   
-##  <a name="bkmk_NewModel"></a>Ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>Ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données  
  À présent que vous avez créé un regroupement pour l'attribut cible, vous devez ajouter un nouveau modèle d'exploration de données qui utilise la colonne discrétisée. Une fois que vous aurez terminé, la structure d'exploration de données CallCenter disposera de deux modèles d'exploration de données :  
   
 -   Le modèle d'exploration de données, Call Center Default NN (Centre d'appels par défaut NN), gère les valeurs ServiceGrade sous forme de plage continue.  
@@ -243,10 +243,10 @@ ms.locfileid: "62856330"
   
 6.  De même, localisez ServiceGrade Binned (ServiceGrade placé dans un conteneur), puis remplacez l'indicateur d'utilisation `Ignore` par `Predict`.  
   
-##  <a name="bkmk_Alias2"></a>Créer un alias pour la colonne cible  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>Créer un alias pour la colonne cible  
  D'ordinaire, vous ne pouvez pas comparer des modèles d'exploration de données qui utilisent des attributs prédictibles différents. Toutefois, vous pouvez créer un alias pour une colonne de modèle d'exploration de données. Autrement dit, vous pouvez renommer la colonne ServiceGrade Binned (dans le modèle d’exploration de données afin qu’elle porte le même nom que la colonne d’origine. Vous pouvez ensuite comparer directement ces deux modèles dans un graphique d'analyse de précision, même si les données sont discrétisées de manière différente.  
   
-###  <a name="bkmk_Alias"></a>Pour ajouter un alias pour une colonne de structure d’exploration de données dans un modèle d’exploration de données  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>Pour ajouter un alias pour une colonne de structure d’exploration de données dans un modèle d’exploration de données  
   
 1.  Sous l’onglet **modèles d’exploration de données** , sous **structure**, sélectionnez ServiceGrade Binned (.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "62856330"
     |Propriété|Valeur|  
     |--------------|-----------|  
     |**Description**|Temporary column alias (Alias de colonne temporaire)|  
-    |**IDENTIFI**|ServiceGrade Binned (|  
+    |**Identifiant**|ServiceGrade Binned (|  
     |**Indicateurs de modélisation**||  
     |**Nom**|Service Grade (Niveau de service)|  
     |**ID SourceColumn**|Service Grade 1 (Niveau de service 1)|  
@@ -282,11 +282,11 @@ ms.locfileid: "62856330"
     |AverageTimePerIssue|Prédire|Prédire|  
     |Calls|Entrée|Entrée|  
     |DayOfWeek|Entrée|Entrée|  
-    |FactCallCenterID|Clé|Clé|  
+    |FactCallCenterID|Touche|Touche|  
     |IssuesRaised|Entrée|Entrée|  
     |LevelOneOperators|Entrée|Entrée|  
     |LevelTwoOperators|Entrée|Entrée|  
-    |Commandes|Entrée|Entrée|  
+    |Orders|Entrée|Entrée|  
     |ServiceGrade Binned (ServiceGrade placé dans un conteneur)|Ignorer|Prédire (ServiceGrade)|  
     |ServiceGrade|Prédire|Ignorer|  
     |Shift|Entrée|Entrée|  
@@ -299,7 +299,7 @@ ms.locfileid: "62856330"
 > [!NOTE]  
 >  Si vous ne spécifiez pas de valeur numérique pour le paramètre de valeur initiale, SQL Server Analysis Services générera une valeur initiale basée sur le nom du modèle. Puisque les modèles ont toujours des noms différents, vous devez définir une valeur initiale afin de garantir qu'ils traitent les données dans le même ordre.  
   
-###  <a name="bkmk_SeedProcess"></a>Pour spécifier la valeur initiale et traiter les modèles  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>Pour spécifier la valeur initiale et traiter les modèles  
   
 1.  Dans l’onglet **modèle d’exploration de données** , cliquez avec le bouton droit sur la colonne du modèle nommé Call Center-LR, puis sélectionnez définir les paramètres d' **algorithme**.  
   
@@ -320,6 +320,6 @@ ms.locfileid: "62856330"
  [Exploration du modèle de centre d’appels &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

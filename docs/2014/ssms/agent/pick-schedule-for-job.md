@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472929"
 ---
 # <a name="pick-schedule-for-job"></a>Choisir une planification pour le travail
@@ -37,7 +37,7 @@ ms.locfileid: "62472929"
  **Description**  
  Décrit les conditions dans lesquelles la planification déclenche l'exécution du travail.  
   
- **Travaux dans la planification**  
+ **Travaux planifiés**  
  Répertorie les numéros des travaux associés à la planification. Cliquez sur un numéro pour afficher les propriétés du travail correspondant.  
   
  **Propriétés**  

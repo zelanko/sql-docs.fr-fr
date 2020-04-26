@@ -13,32 +13,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473048"
 ---
 # <a name="post-download-instructions"></a>Publier les instructions de téléchargement
   Utilisez cette page pour spécifier les instructions de téléchargement pour un serveur cible.  
   
 ## <a name="options"></a>Options  
- **Type d’instruction**  
+ **Type d'instruction**  
  Spécifiez le type d'instruction de téléchargement à publier.  
   
  **Description**  
  Affiche la description de l'instruction de téléchargement.  
   
- **Intervalle d’interrogation**  
+ **Fréquence d’interrogation**  
  Définissez la fréquence d'interrogation pour le serveur cible. S'applique uniquement à l'instruction **Définir la fréquence d'interrogation** .  
   
  **Tous les serveurs cibles**  
  Sélectionnez cette option pour publier l'instruction de téléchargement sur tous les serveurs cibles.  
   
- **Serveurs cibles**  
+ **Serveurs cibles sélectionnés**  
  Sélectionnez cette option pour publier l'instruction de téléchargement sur les serveurs cibles sélectionnés.  
   
- **Sélectionné**  
+ **Select**  
  Spécifie que le serveur cible doit recevoir l'instruction de téléchargement.  
   
  **Serveur cible**  
@@ -47,7 +47,7 @@ ms.locfileid: "62473048"
  **Heure locale**  
  Affiche la date et l'heure du serveur cible correspondant au fuseau horaire local de ce serveur.  
   
- **Intervalle d’interrogation**  
+ **Fréquence d’interrogation**  
  Affiche la fréquence d'interrogation actuelle pour le serveur cible.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481312"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d'une stratégie de correspondance
+# <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d’une stratégie de correspondance
   Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura un élément requis : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines de la règle. La règle utilise deux autres domaines : **nom du fournisseur** avec une valeur **de similarité** définie sur **70%** et **adresse de messagerie du contact** avec une valeur **de similarité** définie à **30%**.  
   
 1.  Dans la page principale du **client DQS**, cliquez sur la **flèche droite** en regard de la base de connaissances **fournisseurs** , puis sélectionnez **stratégie de correspondance**.  
@@ -66,6 +66,6 @@ ms.locfileid: "65481312"
 16. Cliquez sur **suivant** pour passer à la page **résultats de correspondance** .  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 2 : Test et publication de la stratégie de correspondance](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [Tâche 2 : Test et publication de la stratégie de correspondance](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704622"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nouvelle planification du travail : Propriétés de la planification du travail
@@ -27,7 +27,7 @@ ms.locfileid: "62704622"
  **Nom**  
  Tapez un nouveau nom pour la planification.  
   
- **Travaux dans la planification**  
+ **Travaux planifiés**  
  Indique les travaux qui utilisent la planification.  
   
  **Type de planification**  
@@ -37,22 +37,22 @@ ms.locfileid: "62704622"
  Cliquez pour activer ou désactiver la planification.  
   
 ## <a name="recurring-schedule-types-options"></a>Options des types de planification périodique  
- **Cet**  
+ **Périodicité**  
  Permet de sélectionner l'intervalle après lequel la planification se répète.  
   
- **Répéter toutes les**  
+ **Répéter à chaque**  
  Permet de sélectionner le nombre de jours ou de semaines entre deux occurrences de la planification. Cette option n'est pas disponible pour les planifications périodiques mensuelles.  
   
  **Lundi**  
  Exécute le travail le lundi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
- **Mardi**  
+ **16:00**  
  Exécute le travail le mardi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
  **Mercredi**  
  Exécute le travail le mercredi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
- **Jeudi**  
+ **May**  
  Exécute le travail le jeudi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
  **21**  
@@ -70,13 +70,13 @@ ms.locfileid: "62704622"
  **de chaque**  
  Sélectionnez le nombre de mois entre deux occurrences de la planification. Disponible uniquement pour les planifications périodiques mensuelles.  
   
- **Le**  
+ **Les**  
  Spécifiez une planification pour un jour de la semaine spécifique, dans une semaine spécifique dans le mois. Disponible uniquement pour les planifications périodiques mensuelles.  
   
- **Se produit une fois à**  
+ **Une fois à**  
  Définit l'heure à laquelle le travail est exécuté chaque jour.  
   
- **A lieu tous les**  
+ **Toutes les**  
  Définit le nombre d'heures, de minutes ou de secondes entre deux occurrences.  
   
  **Date de début**  
@@ -97,6 +97,6 @@ ms.locfileid: "62704622"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et attacher des planifications à des travaux](create-and-attach-schedules-to-jobs.md)   
- [Schedule a Job](schedule-a-job.md)  
+ [Planifier un travail](schedule-a-job.md)  
   
   

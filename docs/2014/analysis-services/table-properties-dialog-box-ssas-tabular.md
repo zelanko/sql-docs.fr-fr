@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067851"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Propriétés de la table, boîte de dialogue (SSAS - Tabulaire)
@@ -29,7 +29,7 @@ ms.locfileid: "66067851"
 |Terme|Définition|  
 |----------|----------------|  
 |**Nom**|Affiche le nom de la table.|  
-|**IDENTIFI**|Affiche l'identificateur de la table.|  
+|**Identifiant**|Affiche l'identificateur de la table.|  
 |**Description**|Affiche la description de la table.|  
 |**Créer un horodateur**|Affiche la date et l'heure de la création de la table.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière modification apportée aux métadonnées de la table.|  

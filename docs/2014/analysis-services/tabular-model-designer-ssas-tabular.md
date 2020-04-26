@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067824"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Générateur de modèles tabulaires (SSAS Tabulaire)
@@ -30,14 +30,14 @@ ms.locfileid: "66067824"
   
 -   [Fenêtres et menus](#bkmk_wind_men)  
   
--   [Intégration de Visual Studio](#bkmk_vsint)  
+-   [Intégration à Visual Studio](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  
   
  Outres de nouveaux modèles et outils permettant de créer des solutions professionnelles de modèles multidimensionnels et tabulaires, l'environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fournit des fonctionnalités de débogage et de cycle de vie de projet qui vous permettent de créer des solutions décisionnelles les plus puissantes possibles pour votre organisation. Pour plus d'informations sur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consultez [Mise en route de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Modèles de projet  
+##  <a name="project-templates"></a>Modèles de projet <a name="bkmk_proj_temp"></a>  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], les modèles de projet de modèles tabulaires suivants sont ajoutés aux types de projets Business Intelligence :  
   
  **Projet tabulaire Analysis Services**  
@@ -52,7 +52,7 @@ ms.locfileid: "66067824"
 > [!NOTE]  
 >  Les projets de modèle tabulaire requièrent une instance de serveur Analysis Services en mode tabulaire, localement ou sur le réseau.  
   
-##  <a name="bkmk_wind_men"></a>Fenêtres et menus  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a> Fenêtres et menus  
  L'environnement de création de modèles tabulaires de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] inclut ce qui suit :  
   
 ### <a name="designer-window"></a>Fenêtre de concepteur  
@@ -61,7 +61,7 @@ ms.locfileid: "66067824"
  **Vue de données**  
  La vue de données affiche les tables dans un format de grille tabulaire. Vous pouvez également définir des mesures à l'aide de la grille de mesures, qui peut être affichée pour chaque table dans la vue de données uniquement.  
   
- **Vue du diagramme**  
+ **Affichage des diagrammes**  
  La vue de diagramme affiche les tables, avec les relations entre celles-ci, dans un format graphique. Les colonnes, les mesures, les hiérarchies et les indicateurs de performance clés peuvent être filtrés, et vous pouvez choisir d'afficher le modèle à l'aide d'une perspective définie.  
   
  La plupart des tâches de création de modèles peuvent être effectuées dans l'une ou l'autre vue.  
@@ -114,11 +114,11 @@ ms.locfileid: "66067824"
 ### <a name="toolbar"></a>Barre d'outils  
  La barre d'outils Analysis Services fournit un accès rapide et aisé aux commandes de création de modèles utilisées les plus fréquemment.  
   
-##  <a name="bkmk_vsint"></a>Intégration de Visual Studio  
+##  <a name="visual-studio-integration"></a>Intégration à <a name="bkmk_vsint"></a> Visual Studio  
  **Contrôle de code source**  
  Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
   
- **Police**  
+ **Polices**  
  Les modèles tabulaires utilisent la police d’environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour contrôler les polices dans l’affichage. Il peut être nécessaire de modifier cette police si la police par défaut de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ne dispose pas de tous les caractères Unicode dont vous avez besoin pour votre langage. Pour modifier les polices, cliquez sur le menu **Outils** , puis sur **Options**et sur **Polices et couleurs**.  
   
  **Raccourcis clavier**  
@@ -126,6 +126,6 @@ ms.locfileid: "66067824"
   
 ## <a name="see-also"></a>Voir aussi  
  [Projets de modèles tabulaires &#40;&#41;SSAS tabulaire](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propriétés &#40;&#41;SSAS tabulaire](tabular-models/properties-ssas-tabular.md)  
+ [Propriétés &#40;SSAS Tabulaire&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

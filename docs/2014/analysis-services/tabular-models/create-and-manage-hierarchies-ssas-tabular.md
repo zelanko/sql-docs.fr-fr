@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067497"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Créer et gérer des hiérarchies (SSAS Tabulaire)
@@ -28,7 +28,7 @@ ms.locfileid: "66067497"
   
 -   [Supprimer une hiérarchie](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a>Créer une hiérarchie  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> Créer une hiérarchie  
  Vous pouvez créer une hiérarchie en utilisant les colonnes et le menu contextuel de table. Lorsque vous créez une hiérarchie, un nouveau niveau parent s'affiche avec les colonnes sélectionnées en tant que niveaux enfants.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Pour créer une hiérarchie à partir du menu contextuel  
@@ -46,7 +46,7 @@ ms.locfileid: "66067497"
 > [!NOTE]  
 >  La commande Créer une hiérarchie est désactivée dans le menu contextuel si vous sélectionnez plusieurs mesures avec une ou plusieurs colonnes, ou si vous sélectionnez des colonnes à partir de plusieurs tables.  
   
-##  <a name="bkmk_edit"></a>Modifier une hiérarchie  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>Modifier une hiérarchie  
  Vous pouvez renommer une hiérarchie, renommer un niveau enfant, modifier l'ordre des niveaux enfants, ajouter des colonnes supplémentaires en tant que niveaux enfants, supprimer un niveau enfant d'une hiérarchie, afficher le nom de la source d'un niveau enfant (le nom de la colonne) et masquer un niveau enfant s'il a le même nom que le niveau de hiérarchie parent.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Pour modifier le nom d'une hiérarchie ou d'un niveau enfant  
@@ -85,7 +85,7 @@ ms.locfileid: "66067497"
   
 -   Cliquez avec le bouton droit sur un niveau enfant de la hiérarchie, puis sélectionnez **Afficher le nom de la source**. Le nom de la colonne à partir de laquelle il a été copié s'affiche.  
   
-##  <a name="bkmk_delete"></a>Supprimer une hiérarchie  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a>Supprimer une hiérarchie  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Pour supprimer une hiérarchie et ses niveaux enfants  
   
@@ -96,6 +96,6 @@ ms.locfileid: "66067497"
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-designer-ssas-tabular.md)   
  [Hiérarchies &#40;&#41;tabulaires SSAS](hierarchies-ssas-tabular.md)   
- [Mesures &#40;&#41;tabulaire SSAS](measures-ssas-tabular.md)  
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067449"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Créer et gérer des mesures (SSAS Tabulaire)
@@ -22,11 +22,11 @@ ms.locfileid: "66067449"
   
  Cette rubrique inclut les tâches suivantes :  
   
--   [Pour créer une mesure à l’aide d’une formule d’agrégation standard](#bkmk_create_stand)  
+-   [Pour créer une mesure qui utilise une formule d'agrégation standard](#bkmk_create_stand)  
   
 -   [Pour créer une mesure à l’aide d’une formule personnalisée](#bkmk_create_custom)  
   
--   [Pour modifier des propriétés de mesures](#bkmk_edit)  
+-   [Pour modifier les propriétés de mesure](#bkmk_edit)  
   
 -   [Pour renommer une mesure](#bkmk_rename)  
   
@@ -35,33 +35,33 @@ ms.locfileid: "66067449"
 ## <a name="tasks"></a>Tâches  
  Pour créer et gérer des mesures, vous allez utiliser la grille de mesures d’une table. Vous pouvez afficher la grille de mesures pour une table dans le générateur de modèles dans la vue de données uniquement. Vous ne pouvez pas créer de mesures ni afficher la grille de mesures dans la vue de diagramme ; toutefois, vous pouvez afficher des mesures existantes dans la vue de diagramme. Pour afficher la grille de mesures d'une table, cliquez sur le menu **Table** , puis sur **Afficher la grille de mesures**.  
   
-###  <a name="bkmk_create_stand"></a>Pour créer une mesure à l’aide d’une formule d’agrégation standard  
+###  <a name="to-create-a-measure-using-a-standard-aggregation-formula"></a><a name="bkmk_create_stand"></a>Pour créer une mesure à l’aide d’une formule d’agrégation standard  
   
 -   Cliquez sur la colonne pour laquelle vous souhaitez créer la mesure, puis dans le menu **Colonne** , pointez sur **Somme automatique**, puis cliquez sur un type d'agrégation.  
   
      La mesure est créée automatiquement avec un nom par défaut, suivi de la formule dans la première cellule de la grille de mesures directement sous la colonne.  
   
-###  <a name="bkmk_create_custom"></a>Pour créer une mesure à l’aide d’une formule personnalisée  
+###  <a name="to-create-a-measure-using-a-custom-formula"></a><a name="bkmk_create_custom"></a> Pour créer une mesure qui utilise une formule personnalisée  
   
 -   Dans la grille de mesures, sous la colonne pour laquelle vous souhaitez créer la mesure, cliquez sur une cellule, puis dans la barre de formule, tapez un nom, suivi de deux-points (:), d’un signe égal (=) et de la formule. Appuyez sur Entrée pour accepter la formule.  
   
-###  <a name="bkmk_edit"></a>Pour modifier des propriétés de mesures  
+###  <a name="to-edit-measure-properties"></a><a name="bkmk_edit"></a>Pour modifier des propriétés de mesures  
   
 -   Dans la grille de mesures, cliquez sur une mesure, puis dans la fenêtre **Propriétés** , tapez ou sélectionnez une valeur de propriété différente.  
   
-###  <a name="bkmk_rename"></a>Pour renommer une mesure  
+###  <a name="to-rename-a-measure"></a><a name="bkmk_rename"></a>Pour renommer une mesure  
   
 -   Dans la grille de mesures, cliquez sur une mesure, puis dans la fenêtre **Propriétés** , dans **Nom de la mesure**, tapez un nouveau nom et cliquez sur ENTRÉE.  
   
      Vous pouvez également renommer une mesure dans la barre de formule. Le nom de la mesure précède la formule, suivi de deux-points.  
   
-###  <a name="bkmk_delete"></a>Pour supprimer une mesure  
+###  <a name="to-delete-a-measure"></a><a name="bkmk_delete"></a>Pour supprimer une mesure  
   
 -   Dans la grille de mesures, cliquez avec le bouton droit sur une mesure, puis sélectionnez **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mesures &#40;&#41;tabulaire SSAS](measures-ssas-tabular.md)   
  [KPI &#40;&#41;tabulaires SSAS](kpis-ssas-tabular.md)   
- [Colonnes calculées &#40;&#41;tabulaires SSAS](ssas-calculated-columns.md)  
+ [Colonnes calculées &#40;SSAS tabulaire&#41;](ssas-calculated-columns.md)  
   
   

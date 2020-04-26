@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136417"
 ---
 # <a name="create-an-operator"></a>Créer un opérateur
@@ -35,29 +35,28 @@ ms.locfileid: "63136417"
   
      [Sécurité](#Security)  
   
--   **Pour créer un opérateur, utilisez :**  
+-   **Pour créer un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les options de radiomessagerie et **net send** seront [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprimées de l’agent dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]une version ultérieure de. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
 -   Remarque : SQL Server Agent doit être configuré pour utiliser la messagerie de base de données pour envoyer des notifications aux opérateurs par messagerie électronique ou radiomessagerie. Pour plus d'informations, consultez [Affecter des alertes à un opérateur](assign-alerts-to-an-operator.md).  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des opérateurs.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-an-operator"></a>Pour créer un opérateur  
   
@@ -75,19 +74,19 @@ ms.locfileid: "63136417"
      **Activé**  
      Permet d'activer l'opérateur. Aucune notification n'est envoyée à l'opérateur lorsque cette option est désactivée.  
   
-     **Nom du courrier électronique**  
+     **Nom de messagerie électronique**  
      Spécifie l'adresse de messagerie de l'opérateur.  
   
-     **Adresse d’envoi réseau**  
+     **Adresse d'envoi réseau**  
      Spécifie l’adresse à utiliser pour **net send**.  
   
-     **Nom de la messagerie de radiomessagerie**  
+     **Nom de l'adresse de radiomessagerie**  
      Spécifie l'adresse de messagerie à utiliser pour la radiomessagerie de l'opérateur.  
   
-     **Planification de la radiomessagerie**  
+     **Planification de la radiomessagerie active**  
      Définit les périodes d'activité de la radiomessagerie.  
   
-     **Lundi-dimanche**  
+     **Lundi - Dimanche**  
      Permet de sélectionner les jours d'activité de la radiomessagerie.  
   
      **Début de journée**  
@@ -101,10 +100,10 @@ ms.locfileid: "63136417"
      **Alertes**  
      Affiche les alertes dans l'instance.  
   
-     **travaux**  
+     **Tâches**  
      Affiche les travaux dans l'instance.  
   
-     **Liste des alertes**  
+     **Liste d'alertes**  
      Affiche la liste des alertes dans l'instance.  
   
      **Liste des travaux**  
@@ -121,7 +120,7 @@ ms.locfileid: "63136417"
   
 4.  Lorsque la création du nouvel opérateur est terminée, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-an-operator"></a>Pour créer un opérateur  
   

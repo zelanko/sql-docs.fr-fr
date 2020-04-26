@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224599"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Exploration du modèle Decision Tree (Didacticiel sur l'exploration de données de base)
@@ -22,7 +22,7 @@ ms.locfileid: "63224599"
   
 
   
-##  <a name="Decision_Tree_Tab"></a>Onglet arbre de décision  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>Onglet arbre de décision  
  Sous l’onglet **arbre de décision** , vous pouvez afficher les arbres de décision pour chaque attribut prévisible dans le jeu de données.  
   
  Dans ce cas, le modèle prédit une seule colonne, Bike Buyer, de sorte qu’il n’y a qu’un seul arbre à afficher. S’il y avait plus d’arborescences, vous pouvez utiliser la zone d' **arborescence** pour choisir une autre arborescence.  
@@ -76,7 +76,7 @@ ms.locfileid: "63224599"
      La même feuille de calcul s'affiche avec les colonnes de structure ajoutées à la fin.  
   
   
-###  <a name="Dependency_Network_Tab"></a>Onglet réseau de dépendances  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>Onglet réseau de dépendances  
  L’onglet **réseau de dépendances** affiche les relations entre les attributs qui contribuent à la capacité prédictive du modèle d’exploration de données. La Visionneuse du réseau de dépendance renforce nos conclusions selon lesquelles l'âge et la région sont des facteurs importants pour prédire l'achat de vélos.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Pour explorer le modèle sous l'onglet Réseau de dépendances  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467299"
 ---
 # <a name="table-valued-parameters-odbc"></a>Paramètres table (ODBC)
@@ -41,16 +41,16 @@ ms.locfileid: "62467299"
  [Scénarios d'utilisation des paramètres table ODBC](uses-of-odbc-table-valued-parameters.md)  
  Décrit les principaux scénarios utilisateur pour les paramètres table et ODBC.  
   
- [type ODBC SQL pour les paramètres table](odbc-sql-type-for-table-valued-parameters.md)  
+ [Type ODBC SQL pour les paramètres table](odbc-sql-type-for-table-valued-parameters.md)  
  Décrit le type SQL_SS_TABLE. ll s'agit d'un nouveau type SQL ODBC qui prend en charge les paramètres table.  
   
- [Champs de descripteur de paramètre table](table-valued-parameter-descriptor-fields.md)  
+ [Champs de descripteur de paramètres table](table-valued-parameter-descriptor-fields.md)  
  Décrit les champs de descripteur qui prennent en charge les paramètres table.  
   
  [Champs de descripteur pour les colonnes constituantes des paramètres table](descriptor-fields-for-table-valued-parameter-constituent-columns.md)  
  Décrit des champs de descripteur qui ont une signification pour les paramètres table.  
   
- [champs d'enregistrement de diagnostic de paramètre table](table-valued-parameter-diagnostic-record-fields.md)  
+ [Champs d’enregistrement de diagnostic de paramètres table](table-valued-parameter-diagnostic-record-fields.md)  
  Décrit deux champs de diagnostic qui ont été ajoutés aux enregistrements de diagnostic pour prendre en charge les paramètres table.  
   
  [Attributs d'instruction qui affectent des paramètres table](statement-attributes-that-affect-table-valued-parameters.md)  
@@ -59,19 +59,19 @@ ms.locfileid: "62467299"
  [Liaison et transfert de données de paramètres table et de valeurs de colonnes](binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)  
  Décrit la liaison de paramètre et comment passer un paramètre table au serveur.  
   
- [Métadonnées de paramètre table pour les instructions préparées](table-valued-parameter-metadata-for-prepared-statements.md)  
+ [Métadonnées de paramètres table pour les instructions préparées](table-valued-parameter-metadata-for-prepared-statements.md)  
  Décrit comment une application peut obtenir des métadonnées pour un appel de procédure préparé.  
   
  [Métadonnées de paramètres table supplémentaires](additional-table-valued-parameter-metadata.md)  
  Décrit comment utiliser SQLProcedureColumns, SQLTables et SQLColumns pour récupérer les métadonnées d’un paramètre table.  
   
- [Conversion des données des paramètres table et autres erreurs et avertissements](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
+ [Conversion des données des paramètres table, et autres erreurs et avertissements](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Décrit comment traiter les erreurs sur les valeurs de colonne de paramètre table.  
   
  [Compatibilité des versions](cross-version-compatibility.md)  
  Décrit les conflits qui peuvent se produire lorsque des paramètres table sont utilisés par un client ou un serveur utilisant une version antérieure de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- [Résumé des API de paramètre table ODBC](odbc-table-valued-parameter-api-summary.md)  
+ [Récapitulatif des API de paramètre table ODBC](odbc-table-valued-parameter-api-summary.md)  
  Répertorie les fonctions ODBC qui prennent en charge les paramètres table.  
   
  [Exemples de programmation de paramètres table ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  

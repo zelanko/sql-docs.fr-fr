@@ -19,22 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185642"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Didacticiel DMX Market Basket
   Dans ce didacticiel, vous allez apprendre à créer et explorer des modèles d'exploration de données, ou à en effectuer l'apprentissage, à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles d'exploration pour établir des prédictions décrivant les produits susceptibles d'être achetés simultanément.  
   
- Les modèles d'exploration de données seront créés à partir des données de la société fictive [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] stockées dans l'exemple de base de données [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une importante société de fabrication multinationale. L'entreprise fabrique et vend des vélos métalliques et des vélos en alliage sur les marchés nord-américain, européen et asiatique. Son siège qui compte 290 employés est situé à Bothell dans l'état de Washington aux États-Unis ; elle dispose de plusieurs équipes commerciales réparties dans diverses régions du monde constituant son marché de base.  
+ Les modèles d'exploration de données seront créés à partir des données de la société fictive [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] stockées dans l'exemple de base de données [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une importante société de fabrication multinationale. L'entreprise fabrique et vend des vélos métalliques et des vélos en alliage sur les marchés nord-américain, européen et asiatique. Son siège qui compte 290 employés est situé à Bothell dans l'état de Washington aux États-Unis ; elle dispose de plusieurs équipes commerciales réparties dans diverses régions du monde constituant son marché de base.  
   
 ## <a name="tutorial-scenario"></a>Scénario du didacticiel  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a choisi de créer une application personnalisée qui exploite des fonctionnalités d'exploration de données capables de prévoir les types de produits que ses clients sont susceptibles d'acheter en même temps. L'objectif de cette application personnalisée est de pouvoir spécifier un ensemble de produits et de prédire les autres produits qui seront achetés avec ces produits. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] utilisera ensuite ces informations pour ajouter un outil de « suggestion » sur son site Web et mieux organiser la manière dont l'information est présentée à ses clients.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a choisi de créer une application personnalisée qui exploite des fonctionnalités d'exploration de données capables de prévoir les types de produits que ses clients sont susceptibles d'acheter en même temps. L'objectif de cette application personnalisée est de pouvoir spécifier un ensemble de produits et de prédire les autres produits qui seront achetés avec ces produits. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] utilisera ensuite ces informations pour ajouter un outil de « suggestion » sur son site Web et mieux organiser la manière dont l'information est présentée à ses clients.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit plusieurs outils qui peuvent être utilisés pour accomplir cette [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tâche :  
   
@@ -82,26 +79,26 @@ ms.locfileid: "63185642"
   
  Puisque vous allez créer une structure d'exploration de données dotée de plusieurs modèles d'exploration de données, vous devrez adopter la deuxième méthode de ce didacticiel.  
   
- **Pour plus d'informations**  
+ **Pour plus d’informations**  
   
  [Informations de référence sur les extensions DMX (Data Mining Extensions &#40;dmx&#41;](/sql/dmx/data-mining-extensions-dmx-reference), [Présentation de l’instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement), de la [structure et de l’utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Leçon 1 : Création de la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : traitement de la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Leçon 3 : Traitement de la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `INSERT INTO` pour traiter des structures d'exploration de données et les modèles qui y sont associés.  
   
  [Leçon 4 : Exécution de prédictions Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Avant d'entamer ce didacticiel, assurez-vous que les éléments suivants sont installés :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -118,6 +115,6 @@ ms.locfileid: "63185642"
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel DMX pour les acheteurs de vélos](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Leçon 3 : création d’un scénario de panier de marché &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

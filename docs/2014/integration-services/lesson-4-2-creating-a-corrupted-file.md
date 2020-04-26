@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767381"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d'un fichier corrompu
+# <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d’un fichier corrompu
   Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
   
  Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant. Vous ouvrirez ensuite ce fichier dans le Bloc-notes et modifierez la colonne **CurrencyID** pour vous assurer qu'aucune correspondance ne peut être établie au cours de la recherche de transformations. Lors du traitement du nouveau fichier, l'échec de la recherche provoquera à son tour l'échec de la transformation Lookup Currency Key et, par conséquent, celui du reste du package. Une fois le fichier exemple corrompu créé, vous exécuterez le package pour examiner son échec.  
@@ -28,9 +28,9 @@ ms.locfileid: "62767381"
   
      Les exemples de données sont inclus dans les packages de leçons SSIS. Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Accédez à [Integration Services exemples de produits](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
-    2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
+    2.  Cliquez sur l’onglet **téléchargements** .  
   
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62767381"
     >  Le nombre 27 désigne l'ID du composant. Cette valeur est attribuée lors de la création du flux de données ; la valeur définie dans votre package peut être différente.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Ajout de redirection de flux d'erreurs](lesson-4-3-adding-error-flow-redirection.md)  
+ [Étape 3 : Ajout de redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
   
   

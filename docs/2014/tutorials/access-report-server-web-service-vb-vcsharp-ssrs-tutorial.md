@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824501"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accès au service Web Report Server avec Visual Basic ou Visual C# (didacticiel SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "62824501"
   
 -   Exécuter l'application console en mode débogage.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Pour exécuter ce didacticiel, vous devez disposer des éléments suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -54,11 +54,11 @@ ms.locfileid: "62824501"
  **Durée estimée pour suivre le didacticiel :** 60 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : création du projet client du service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Leçon 1 : Création du projet client du service web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Leçon 2 : ajout d'une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Leçon 2 : Ajout d’une référence web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Leçon 3 : accès au service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Leçon 3 : Accès au service web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
  [Leçon 4 : exécution de l’application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   

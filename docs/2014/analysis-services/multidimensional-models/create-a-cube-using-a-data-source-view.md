@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076554"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
@@ -49,7 +49,7 @@ ms.locfileid: "66076554"
 -   L'onglet **Diagramme** affiche le schéma de vue de source de données. Les tables sont codées par couleur pour indiquer un fait ou une dimension. Cliquez sur une table dans le schéma, puis sur **Fait** ou sur **Dimension** pour activer ou désactiver le paramètre sur cette table. Utilisez le bouton **Zoom** pour modifier le grossissement.  
   
 > [!NOTE]  
->  Sous l’onglet **Diagramme** , vous pouvez agrandir ou maximiser la fenêtre de l’Assistant pour visualiser le schéma.  
+>   Dans l'onglet **Diagramme** , vous pouvez agrandir ou maximiser la fenêtre de l'Assistant afin de visualiser le schéma.  
   
  S'il existe une table de dimension de temps dans la vue de source de données, sélectionnez-la dans la liste **Table de dimension de temps** . S’il n’y en a pas, laissez ** \<aucun>** sélectionné. Il s'agit de l'élément par défaut dans la liste. La sélection d'une table comme table de dimension de temps sélectionne également cette dernière comme table de dimension sous les onglets **Tables** et **Diagramme** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66076554"
 ## <a name="selecting-dimensions"></a>Sélection de dimensions  
  Utilisez la page **Sélectionner des dimensions** de l'Assistant pour ajouter les dimensions existantes au cube. Cette page s'affiche uniquement s'il existe déjà des dimensions partagées qui correspondent aux tables de dimension dans le nouveau cube.  
   
- Pour ajouter des dimensions existantes, sélectionnez-en une ou plusieurs dans la liste **Dimensions partagées** et cliquez sur le bouton représentant une flèche droite (**>**) pour les placer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux**>>** flèches () pour déplacer toutes les dimensions de la liste.  
+ Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit (**>**) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux**>>** flèches () pour déplacer toutes les dimensions de la liste.  
   
  Si une dimension existante n'apparaît pas dans la liste et que vous pensez qu'elle le devrait, vous pouvez cliquer sur **Précédent** et modifier les paramètres de type de table pour une ou plusieurs tables. Une dimension existante doit également être liée à au moins une des tables de faits du cube pour apparaître dans la liste des **dimensions partagées** .  
   

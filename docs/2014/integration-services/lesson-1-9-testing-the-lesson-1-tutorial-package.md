@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767605"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Étape 9 : Test de la leçon 1 du Package du didacticiel
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Étape 9 : Test du package du tutoriel de la leçon 1
   Au cours de cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
@@ -37,7 +37,7 @@ ms.locfileid: "62767605"
   
  **Flux de données**  
   
- ![Transmission de données dans le package](../../2014/tutorials/media/task9lesson1data.gif "Transmission de données dans le package")  
+ ![Flux de données dans le package](../../2014/tutorials/media/task9lesson1data.gif "Flux de données dans le package")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Pour exécuter le package du didacticiel de la leçon 1  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767605"
 2.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout d'un bouclage](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Leçon 2 : Ajout d’un bouclage](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md)  

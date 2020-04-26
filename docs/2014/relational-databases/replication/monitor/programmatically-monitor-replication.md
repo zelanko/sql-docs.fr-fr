@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667245"
 ---
 # <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programme
@@ -54,7 +54,7 @@ ms.locfileid: "62667245"
   
  [Objets RMO (Replication Management Objects)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Analyser les serveurs de publication, les publications et les abonnements du serveur de distribution.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667245"
   
     -   Une valeur de **1** pour **@mode** afin d'activer la métrique du seuil d'analyse ou valeur de **2** pour la désactiver.  
   
-##  <a name="RMO"></a> Objets RMO (Replication Management Objects)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Objets RMO (Replication Management Objects)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Pour surveiller un abonnement à une publication de fusion sur l'Abonné  
   
@@ -268,20 +268,13 @@ ms.locfileid: "62667245"
   
         |Valeur|Description|  
         |-----------|-----------------|  
-        |1|
-  `expiration` : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
-        |2|
-  `latency` : contrôle les performances des abonnements aux publications transactionnelles.|  
-        |4|
-  `mergeexpiration` : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
-        |5|
-  `mergeslowrunduration` : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
-        |6|
-  `mergefastrunduration` : contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).|  
-        |7|
-  `mergefastrunspeed` - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
-        |8|
-  `mergeslowrunspeed` : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions lentes (accès distant).|  
+        |1|`expiration` : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
+        |2|`latency` : contrôle les performances des abonnements aux publications transactionnelles.|  
+        |4|`mergeexpiration` : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
+        |5|`mergeslowrunduration` : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
+        |6|`mergefastrunduration` : contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).|  
+        |7|`mergefastrunspeed` - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
+        |8|`mergeslowrunspeed` : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions lentes (accès distant).|  
   
     -   *enable* - <xref:System.Boolean> qui indique si le métrique est activé pour la publication.  
   

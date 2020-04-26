@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476985"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tâche 13 : Ajout d'une destination OLE DB pour écrire des données dans une table intermédiaire MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tâche 13 : Ajout d’une destination OLE DB pour écrire des données dans une table intermédiaire MDS
   Maintenant que vous avez ajouté des valeurs **ImportType** et **BatchTag** à tous les enregistrements, vous êtes prêt à les envoyer à MDS pour la mise en lots. Au cours de cette tâche, vous allez utiliser la destination de la OLE DB pour écrire les données dans **STG. supplier_Leaf** table de mise en lots.  
   
 1.  Faites **glisser OLE DB** la section destination à partir d' **autres destinations** de la **boîte à outils SSIS** vers l’onglet de **Workflow** et déposez-la sous **Ajouter les colonnes requises par MDS**.  
@@ -49,6 +49,6 @@ ms.locfileid: "65476985"
      ![Flux de données terminé](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Flux de données terminé")  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 14 : Ajout d'une tâche d'exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [Tâche 14 : Ajout d’une tâche d’exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

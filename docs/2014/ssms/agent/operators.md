@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189018"
 ---
 # <a name="operators"></a>Opérateurs
@@ -49,11 +49,11 @@ ms.locfileid: "68189018"
 > [!IMPORTANT]  
 >  Les options de radiomessagerie et **net send** seront [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprimées de l’agent dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]une version ultérieure de. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
--   **Notification par courrier électronique**  
+-   **Notification par e-mail**  
   
      La notification par courrier électronique envoie un message électronique à l'opérateur. Fournissez l'adresse électronique de l'opérateur.  
   
--   **Notification de radiomessagerie**  
+-   **Notification par radiomessagerie**  
   
      La radiomessagerie est mise en place à l'aide du courrier électronique. Fournissez l'adresse électronique de l'opérateur à laquelle il recevra les messages de radiomessagerie. Pour définir une notification par radiomessagerie, vous devez installer sur le serveur de messagerie un logiciel qui traite le courrier entrant et qui le convertit en message de radiomessagerie. Plusieurs approches sont possibles avec le logiciel, notamment :  
   
@@ -73,14 +73,14 @@ ms.locfileid: "68189018"
   
          **Objet:**  
   
-         **CC**:  
+         **Cc** :  
   
-         **À**:  
+         **À** :  
   
     > [!NOTE]  
     >  Si vous utilisez un système de radiomessagerie alphanumérique à faible capacité, vous pouvez raccourcir le texte à envoyer en éliminant le texte d'erreur de la notification par radiomessagerie. C'est le cas par exemple des systèmes limités à 64 caractères par page.  
   
--   **SendNotification net**  
+-   **Notification net send**  
   
      Envoie un message à l’opérateur par le biais de la commande **net send** . Pour **net send**, spécifiez le destinataire (ordinateur ou utilisateur) du message réseau.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189018"
   
      Cela peut être dû à l'impossibilité de joindre les principaux opérateurs, par exemple si les adresses de radiomessagerie sont incorrectes ou si les opérateurs ne sont pas en service.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent ne peut pas accéder aux tables système de la base de données **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut pas avoir accès aux tables système de la base de données **msdb** .  
   
      La table système **sysnotifications** précise les responsabilités des opérateurs en ce qui concerne les alertes.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "68189018"
   
 |||  
 |-|-|  
-|**Tâches :**|**Rubrique**|  
+|**Tâches**|**Rubrique**|  
 |Tâches associées à la création d'un opérateur|[Créer un opérateur](create-an-operator.md)<br /><br /> [Désigner un opérateur de prévention de défaillance](designate-a-fail-safe-operator.md)|  
-|Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](assign-alerts-to-an-operator.md)<br /><br /> [Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Affecter des alertes à un opérateur](assign-alerts-to-an-operator.md)|  
+|Tâches associées à l'affectation d'alertes|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638744"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
@@ -81,7 +81,7 @@ ms.locfileid: "62638744"
 |Analytiques|Les événements analytiques sont publiés selon un volume élevé. Ils décrivent le fonctionnement des programmes et sont généralement utilisés dans les enquêtes sur les performances.|  
 |Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Remarque : les événements du canal de débogage renvoient des données d’État propres à l’implémentation interne. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
   
- **Mot clé**  
+ **Mot**  
   
  Un mot clé est spécifique à une application et permet un regroupement plus fin d'événements associés, ce qui vous permet de spécifier et de récupérer plus aisément un événement que vous souhaitez utiliser dans une session. Vous pouvez utiliser la requête suivante pour obtenir des informations sur un mot clé.  
   
@@ -137,7 +137,7 @@ where name = 'keyword_map'
 ### <a name="types"></a>Types  
  Comme les données sont une collection d'octets enchaînés, la longueur et les caractéristiques de la collection d'octets sont requises pour interpréter les données. Ces informations sont encapsulées dans l'objet Type. Les types suivants sont fournis pour les objets de package :  
   
--   événement  
+-   event  
   
 -   action  
   
@@ -214,8 +214,8 @@ where name = 'lock_mode'
  En utilisant cette table comme exemple, supposez que vous possédez une colonne nommée mode et que sa valeur est 5. Le tableau indique que 5 correspond à X, ce qui signifie que le type de verrou est Exclusif.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sessions Événements étendus SQL Server](sql-server-extended-events-sessions.md)   
- [Moteur des Événements étendus SQL Server](sql-server-extended-events-engine.md)   
+ [SQL Server les sessions événements étendus](sql-server-extended-events-sessions.md)   
+ [Moteur d’événements étendus SQL Server](sql-server-extended-events-engine.md)   
  [Cibles des Événements étendus SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

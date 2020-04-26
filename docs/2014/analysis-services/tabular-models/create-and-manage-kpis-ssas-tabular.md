@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067509"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Créer et gérer les indicateurs de performance clés (SSAS Tabulaire)
@@ -24,7 +24,7 @@ ms.locfileid: "66067509"
   
  Cette rubrique inclut les tâches suivantes :  
   
--   [Pour créer un indicateur de performance clé](#bkmk_create_KPI)  
+-   [Pour créer un KPI](#bkmk_create_KPI)  
   
 -   [Pour modifier un KPI](#bkmk_edit_KPI)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66067509"
 > [!IMPORTANT]  
 >  Avant de créer un KPI, vous devez d'abord créer une mesure de base qui retourne une valeur. La mesure de base doit ensuite être étendue à un KPI. Pour savoir comment créer des mesures, consultez la rubrique [Créer et gérer des mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md). Un KPI nécessite également une valeur cible. Cette valeur peut être obtenue à partir d'une autre valeur prédéfinie ou d'une valeur absolue. Une fois que vous avez étendu une mesure de base à un KPI, vous pouvez sélectionner la valeur cible et définir les seuils d’état dans la boîte de dialogue Indicateur de performance clé.  
   
-###  <a name="bkmk_create_KPI"></a>Pour créer un indicateur de performance clé  
+###  <a name="to-create-a-kpi"></a><a name="bkmk_create_KPI"></a>Pour créer un indicateur de performance clé  
   
 1.  Dans la Grille de mesures, cliquez avec le bouton droit sur la mesure qui sert de mesure de base (valeur), puis cliquez sur **Créer un KPI**.  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66067509"
 > [!TIP]  
 >  Vous pouvez utiliser la fonctionnalité Analyser dans Excel pour tester votre indicateur de performance clé. Pour plus d'informations, consultez la section [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
-###  <a name="bkmk_edit_KPI"></a>Pour modifier un KPI  
+###  <a name="to-edit-a-kpi"></a><a name="bkmk_edit_KPI"></a>Pour modifier un KPI  
   
 -   Dans la grille de mesures, cliquez avec le bouton droit sur la mesure qui sert de mesure de base (valeur) du KPI, puis cliquez sur **Modifier les paramètres du KPI**.  
   
-###  <a name="bkmk_delete"></a>Pour supprimer un KPI et la mesure de base  
+###  <a name="to-delete-a-kpi-and-the-base-measure"></a><a name="bkmk_delete"></a>Pour supprimer un KPI et la mesure de base  
   
 -   Dans la grille de mesures, cliquez avec le bouton droit sur la mesure qui sert de mesure de base (valeur) du KPI, puis cliquez sur **Supprimer**.  
   
-###  <a name="bkmk_delete_KPI"></a>Pour supprimer un KPI, mais conserver la mesure de base  
+###  <a name="to-delete-a-kpi-but-keep-the-base-measure"></a><a name="bkmk_delete_KPI"></a>Pour supprimer un KPI, mais conserver la mesure de base  
   
 -   Dans la grille de mesures, cliquez avec le bouton droit sur la mesure qui sert de mesure de base (valeur) du KPI, puis cliquez sur **Supprimer le KPI**.  
   
@@ -73,18 +73,18 @@ ms.locfileid: "66067509"
 |Section de l'interface utilisateur|Combinaison de touches|  
 |----------------|-----------------|  
 |Mesure de base du KPI|Alt+B|  
-|État du KPI|ALT + S|  
+|État du KPI|Alt+S|  
 |Measure|Alt+M|  
 |Valeur absolue|ALT + A|  
 |Définir les seuils d’état|Alt+U|  
 |Sélectionner le style d’icône|Alt+I|  
 |Tendance|Alt+T|  
-|Descriptions|ALT + D|  
+|Descriptions|Alt+D|  
 |Tendance|Alt+T|  
   
 ## <a name="see-also"></a>Voir aussi  
  [KPI &#40;&#41;tabulaires SSAS](kpis-ssas-tabular.md)   
  [Mesures &#40;&#41;tabulaire SSAS](measures-ssas-tabular.md)   
- [Créer et gérer des mesures &#40;&#41;SSAS tabulaire](create-and-manage-measures-ssas-tabular.md)  
+ [Créer et gérer des mesures &#40;SSAS Tabulaire&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

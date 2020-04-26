@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067538"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Créer une relation entre deux tables (SSAS Tabulaire)
@@ -49,7 +49,7 @@ ms.locfileid: "66067538"
   
 6.  Pour **Colonne de recherche associée**, sélectionnez une colonne qui comporte des valeurs uniques qui correspondent aux valeurs dans la colonne que vous avez sélectionnée pour **Colonne**.  
   
-7.  Cliquez sur **Créer**.  
+7.  Cliquez sur **Créer**.  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Pour créer une relation entre deux tables dans la vue de données  
   
@@ -67,10 +67,10 @@ ms.locfileid: "66067538"
   
 5.  Pour **Colonne de recherche associée**, sélectionnez une colonne qui comporte des valeurs uniques qui correspondent aux valeurs dans la colonne que vous avez sélectionnée pour **Colonne**.  
   
-6.  Cliquez sur **Créer**.  
+6.  Cliquez sur **Créer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer des relations &#40;&#41;tabulaire SSAS](delete-relationships-ssas-tabular.md)   
- [Relations &#40;&#41;tabulaires SSAS](relationships-ssas-tabular.md)  
+ [Relations &#40;SSAS Tabulaire&#41;](relationships-ssas-tabular.md)  
   
   

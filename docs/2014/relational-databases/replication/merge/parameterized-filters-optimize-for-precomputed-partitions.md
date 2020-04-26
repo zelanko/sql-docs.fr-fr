@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250547"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimiser les performances des filtres paramétrés avec des partitions précalculées
@@ -30,7 +30,7 @@ ms.locfileid: "63250547"
   
  En plus d'utiliser des partitions précalculées, prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent. Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
- **Pour utiliser des partitions précalculées**  
+ **Pour utiliser les partitions précalculées**  
   
  Les partitions précalculées sont activées par défaut sur toutes les publications, nouvelles ou existantes, répondant aux conditions décrites ci-dessous. Le paramétrage peut être modifié via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou par programme. Pour plus d’informations, consultez [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250547"
   
 ### <a name="database-collation"></a>Classement de base de données  
   
--   Lorsque les partitions précalculées sont utilisées, le classement de base de données est toujours utilisé lorsque des comparaisons sont effectuées, plutôt que le classement de la table ou de la colonne. Examinez le scénario suivant :  
+-   Lorsque les partitions précalculées sont utilisées, le classement de base de données est toujours utilisé lorsque des comparaisons sont effectuées, plutôt que le classement de la table ou de la colonne. Examinez le cas suivant :  
   
     -   Une base de données avec un classement respectant les accents contient une table avec un classement ne respectant pas les accents.  
   

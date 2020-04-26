@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638783"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Guide des&#39;pour les développeurs (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "62638783"
  [Analysis Services&#41; référence du langage de script &#40;ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Décrit les extensions ASSL à XMLA. ASSL propose un langage de manipulation et de définition de données pour les modèles multidimensionnels Analysis Services qui complète la spécification XMLA.  
   
- [Référence de&#41; XML for Analysis &#40;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Référence XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Décrit les concepts XMLA qui peuvent vous aider à comprendre comment XMLA contribue à votre solution personnalisée. Décrit également le niveau de compatibilité avec la spécification XMLA 1.1.  
   
   

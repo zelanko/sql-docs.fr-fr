@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657702"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -38,10 +38,10 @@ ms.locfileid: "62657702"
   
 |Code de fonction dynamique|Source|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instruction ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, instruction|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT (instruction)|  
 |SQL_DIAG_DFC_SS_CONDITION|Une erreur est survenue dans les clauses WHERE ou HAVING d'une instruction.|  
-|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instruction CREATE DATABASE|  
+|SQL_DIAG_DFC_SS_CREATE_DATABASE|CREATE DATABASE, instruction|  
 |SQL_DIAG_DFC_SS_CREATE_DEFAULT|CREATE DEFAULT (instruction)|  
 |SQL_DIAG_DFC_SS_CREATE_PROCEDURE|CREATE PROCEDURE (instruction)|  
 |SQL_DIAG_DFC_SS_CREATE_RULE|CREATE RULE (instruction)|  
@@ -73,7 +73,7 @@ ms.locfileid: "62657702"
 |SQL_DIAG_DFC_SS_READTEXT|READTEXT (instruction)|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|RECONFIGURE (instruction)|  
 |SQL_DIAG_DFC_SS_RETURN|Instruction de contrôle de flux RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|Instruction SELECT INTO|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO, instruction|  
 |SQL_DIAG_DFC_SS_SET|SET (instruction) (générique, toutes les options)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT (instruction)|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT (instruction)|  
@@ -101,6 +101,6 @@ ms.locfileid: "62657702"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetDiagField, fonction](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

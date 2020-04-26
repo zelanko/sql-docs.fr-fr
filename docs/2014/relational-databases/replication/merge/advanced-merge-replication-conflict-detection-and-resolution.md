@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000348"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Détection et résolution avancées des conflits de réplication de fusion
@@ -40,7 +40,7 @@ ms.locfileid: "63000348"
   
     -   Un *gestionnaire de logique métier* écrit en code managé  
   
-    -   Un *programme de résolution personnalisé*basé sur COM  
+    -   Un programme de *résolution personnalisé*basé sur com.  
   
     -   Un programme de résolution basé sur COM fourni par [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
@@ -81,11 +81,11 @@ ms.locfileid: "63000348"
   
 -   Un programme de résolution personnalisé basé sur COM  
   
-     La réplication de fusion fournit une API permettant d’écrire des programmes de résolution en tant qu’objets COM dans des langages tels que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Pour plus d’informations, consultez [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La réplication de fusion fournit une API permettant d’écrire des programmes de résolution en tant [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] qu' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]objets COM dans des langages tels que ou. Pour plus d’informations, consultez [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un programme de résolution personnalisé basé sur COM fourni par [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut plusieurs programmes de résolution basés sur COM. Pour plus d’informations, consultez [Programmes de résolution COM Microsoft](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend un certain nombre de programmes de résolution com. Pour plus d’informations, consultez [Programmes de résolution COM Microsoft](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Pour plus d’informations sur le choix du type de programme de résolution approprié, consultez [Choisir un programme de résolution](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "63000348"
   
  L'Outil de résolution des conflits affiche des informations issues de trois tables système :  
   
--   La réplication crée une table de conflits pour chaque table d’un article de fusion, dont le nom se présente sous la forme **MSmerge_conflict_\<nom_publication>_\<nom_article>** .  
+-   La réplication crée une table de conflits pour chaque table d’un article de fusion, dont le nom se présente sous la forme **MSmerge_conflict_\<nom_publication>_\<nom_article>**.  
   
      Les tables de conflits possèdent la même structure que les tables sur lesquelles elles sont basées. Une ligne de l'une de ces tables se compose de la version perdante d'une ligne conflictuelle (la version gagnante de la ligne réside dans la table utilisateur réelle).  
   

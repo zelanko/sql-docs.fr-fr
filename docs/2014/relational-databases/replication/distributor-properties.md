@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721398"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Propriétés du serveur de distribution Réplication SQL Server
@@ -51,12 +51,12 @@ Cette rubrique présente les propriétés disponibles dans les pages **général
   
 ### <a name="options"></a>Options  
  **Serveurs de publication**  
- Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton des propriétés **(...)** en regard d’un serveur de publication pour afficher et définir des propriétés supplémentaires.  
+ Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton Propriétés **(...)** situé en regard d'un serveur de publication pour voir et définir d'autres propriétés.  
   
  **Ajouter**  
  Si le serveur souhaité ne figure pas dans la liste, cliquez sur **Ajouter** afin d'ajouter un serveur de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un serveur de publication Oracle à la liste des serveurs de publication disponibles. Si le serveur ajouté est le premier à utiliser ce serveur de distribution en tant que serveur de distribution distant, vous serez invité à fournir un mot de passe de lien d'administration.  
   
- **Mot de passe du lien d’administration**  
+ **Mot de passe du lien d'administration**  
  Permet de spécifier ou de mettre à jour le mot de passe utilisé pour assurer la réplication de connexion entre le serveur de publication et le serveur de distribution distant à l'aide de la connexion **distributor_admin** :  
   
 -   Si le serveur de distribution sert uniquement au niveau local, ce mot de passe est généré de manière aléatoire et configuré automatiquement.  
@@ -66,7 +66,7 @@ Cette rubrique présente les propriétés disponibles dans les pages **général
  Pour plus d’informations sur la sécurité des serveurs de distribution, consultez [Sécuriser le serveur de distribution](security/secure-the-distributor.md).  
 
 ## <a name="distribution-database"></a>Base de données de distribution
- La boîte de dialogue **Propriétés de la base de données de distribution** permet d’afficher un certain nombre de propriétés et de définir la période de rétention des transactions et la période de rétention de l’historique pour la base de données.  
+  La boîte de dialogue **Propriétés de la base de données de distribution** vous permet d’afficher certaines propriétés et de définir la période de rétention des transactions, ainsi que la période de rétention de l’historique de la base de données.  
   
 ### <a name="options"></a>Options  
  **Nom**  
@@ -78,7 +78,7 @@ Cette rubrique présente les propriétés disponibles dans les pages **général
  **Période de rétention des transactions**  
  Également appelée période de rétention de distribution. Durée de stockage des transactions pour une réplication transactionnelle. Pour plus d’informations, voir [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
- **Période de rétention de l’historique**  
+ **Période de rétention de l'historique**  
  Durée de stockage des métadonnées de l'historique pour tous les types de réplications.  
   
  **Sécurité Agent de lecture de la file d’attente**  
@@ -95,7 +95,7 @@ Cette rubrique présente les propriétés disponibles dans les pages **général
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](configure-distribution.md)   
- [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
 
   
   
