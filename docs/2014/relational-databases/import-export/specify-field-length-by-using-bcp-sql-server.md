@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011839"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
   La longueur de champ indique le nombre maximal de caractères nécessaires pour représenter les données au format caractères. La longueur de champ est déjà connue si les données sont enregistrées au format natif. Par exemple, les données de type `int` occupent 4 octets. Si vous avez indiqué 0 comme longueur de préfixe, la commande **BCP** vous demande la longueur du champ, les longueurs de champ par défaut et l’impact de la longueur de champ sur le stockage des `char` données dans les fichiers de données qui contiennent des données.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Invite bcp pour la longueur des champs  
- Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), la commande demande la longueur de champ de chaque champ de données, comme suit :  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format ( **-f**) ou sans commutateur de format de données ( **-n**, **-c**, **-w** ou **-N**), la commande demande la longueur de champ de chaque champ de données, comme suit :  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -42,11 +42,10 @@ ms.locfileid: "66011839"
   
 -   Lors de la conversion de données non caractères en données caractères, la commande **bcp** suggère une longueur de champ par défaut suffisamment importante pour stocker les données.  
   
--   Si le type de stockage de fichier est non caractère, la commande **bcp** ne demande pas de longueur de champ. Les données sont stockées dans la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représentation de données native (format natif).  
+-   Si le type de stockage de fichier est non caractère, la commande **bcp** ne demande pas de longueur de champ. Les données sont stockées dans la représentation de données native de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (format natif).  
   
 ## <a name="using-default-field-lengths"></a>Utilisation des longueurs de champs par défaut  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande généralement d’accepter les valeurs par défaut de longueur de champ suggérées par la commande **bcp**. Lors de la création d'un fichier de données en mode caractère, l'utilisation de la longueur de champ par défaut garantit que les données ne sont pas tronquées et que des erreurs de dépassement de capacité numérique ne se produiront pas.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande généralement d’accepter les valeurs par défaut de longueur de champ suggérées par la commande **bcp**. Lors de la création d'un fichier de données en mode caractère, l'utilisation de la longueur de champ par défaut garantit que les données ne sont pas tronquées et que des erreurs de dépassement de capacité numérique ne se produiront pas.  
   
  Des problèmes peuvent se produire si vous spécifiez une longueur de champ incorrecte. Par exemple, si cous copiez des données numériques et si vous spécifiez une longueur de champ trop faible pour ces données, l'utilitaire **bcp** affiche un message de dépassement de capacité et ne copie pas les données. En outre, si vous `datetime` exportez des données et que vous spécifiez une longueur de champ inférieure à 26 octets pour la chaîne de caractères, l’utilitaire **BCP** tronque les données sans message d’erreur.  
   
@@ -124,9 +123,9 @@ ms.locfileid: "66011839"
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
  [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

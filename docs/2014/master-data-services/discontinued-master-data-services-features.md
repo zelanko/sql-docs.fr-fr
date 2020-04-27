@@ -11,21 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479443"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Fonctionnalités Master Data Services supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] supprimées  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] supprimées  
  Il n'y a pas de fonctionnalités supprimées dans cette version.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supprimées  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supprimées  
   
 ### <a name="security"></a>Sécurité  
  Pour faciliter la sécurité d'attribution, vous ne pouvez plus affecter des autorisations d'objet de modèle aux objets de hiérarchie dérivée, de hiérarchie explicite et de groupe d'attributs.  

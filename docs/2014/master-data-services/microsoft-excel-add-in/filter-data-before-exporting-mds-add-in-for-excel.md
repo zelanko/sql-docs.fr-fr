@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478921"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>Filtrer les données avant le chargement (Complément MDS pour Excel)
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtrez les données lorsque vous souhaitez limiter la taille ou l’étendue des données que vous chargez dans Excel.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -53,6 +53,6 @@ ms.locfileid: "65478921"
 ## <a name="see-also"></a>Voir aussi  
  [Chargement de données &#40;Complément MDS pour Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Boîte de dialogue Filtrer &#40;Complément MDS pour Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [Réorganiser les colonnes &#40;Complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [Réorganiser des colonnes &#40;Complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
   
   

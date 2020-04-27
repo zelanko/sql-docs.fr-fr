@@ -18,17 +18,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014059"
 ---
 # <a name="spatial-data-sql-server"></a>Données spatiales (SQL Server)
   Données spatiales représentent des informations sur l’emplacement physique et la forme d’objets géométriques. Ces objets peuvent être des emplacements précis ou des objets plus complexes, tels que des pays, des routes ou des lacs.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de données spatiales : le type de données `geometry` et le type de données `geography`.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de données spatiales : le type de données `geometry` et le type de données `geography`.  
   
 -   Le type `geometry` représente des données dans un système de coordonnées euclidien (plat).  
   
@@ -39,17 +38,17 @@ ms.locfileid: "66014059"
 > [!IMPORTANT]  
 >  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], téléchargez le livre blanc intitulé [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctionnalités spatiales dans SQL Server 2012).  
   
-##  <a name="reltasks"></a> Tâches associées  
- [Créer, construire et interroger des instances géométriques](create-construct-and-query-geometry-instances.md)  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tâches associées  
+ [Créer, construire et interroger des instances geometry](create-construct-and-query-geometry-instances.md)  
  Décrit les méthodes que vous pouvez utiliser avec des instances du type de données geometry.  
   
- [Créer, construire et interroger des instances géographiques](create-construct-and-query-geography-instances.md)  
+ [Créer, construire et interroger des instances geography](create-construct-and-query-geography-instances.md)  
  Décrit les méthodes que vous pouvez utiliser avec des instances du type de données geography.  
   
  [Interroger des données spatiales au sujet du plus proche voisin](query-spatial-data-for-nearest-neighbor.md)  
  Décrit le modèle de requête commun qui est utilisé pour rechercher les objets spatiaux les plus proches d'un objet spatial spécifique.  
   
- [Créer, modifier et supprimer des index spatiaux](create-modify-and-drop-spatial-indexes.md)  
+ [Créer, modifier et supprimer les index spatiaux](create-modify-and-drop-spatial-indexes.md)  
  Fournit des informations sur la création, la modification et la suppression d'un index spatial.  
   
 ## <a name="related-content"></a>Contenu associé  
@@ -64,7 +63,7 @@ ms.locfileid: "66014059"
   
 -   [CompoundCurve](compoundcurve.md)  
   
--   [Polygon](polygon.md)  
+-   [Polygone](polygon.md)  
   
 -   [CurvePolygon](curvepolygon.md)  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66014059"
   
 -   [GeometryCollection](geometrycollection.md)  
   
- [Vue d’ensemble des index spatiaux](spatial-indexes-overview.md)  
+ [Vue d'ensemble des index spatiaux](spatial-indexes-overview.md)  
  Présente les index spatiaux et décrit le pavage et les schémas de pavage.  
   
   

@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014230"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
@@ -50,8 +50,7 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` n'est pas valide car l'instance `Polygon` dans l'instance `GeometryCollection` n'est pas valide.  
+ `@g4` n'est pas valide car l'instance `Polygon` dans l'instance `GeometryCollection` n'est pas valide.  
   
  Pour plus d’informations sur les instances acceptées et valides, consultez [Point](point.md), [MultiPoint](multipoint.md), [LineString](linestring.md), [MultiLineString](multilinestring.md), [polygone](polygon.md)et [MultiPolygon](multipolygon.md).  
   

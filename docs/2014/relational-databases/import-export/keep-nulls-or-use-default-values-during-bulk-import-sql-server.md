@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011900"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "66011900"
  Pour exécuter les exemples proposés dans cette rubrique, vous devez créer un exemple de table et un exemple de fichier de données.  
   
 ### <a name="sample-table"></a>Exemple de table  
- Les exemples requièrent la création d'une table nommée **MyTestDefaultCol2** dans l'exemple de base de données **AdventureWorks** sous le schéma **dbo** . Pour créer cette table, dans l'éditeur de requêtes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
+ Les exemples requièrent la création d'une table nommée **MyTestDefaultCol2** dans l'exemple de base de données **AdventureWorks** sous le schéma **dbo** . Pour créer cette table, dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête, exécutez :  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Commande|Qualificateur|Type de qualificateur|  
 |-------------|---------------|--------------------|  
-|**BCP**|`-k`|Commutateur|  
+|**bcp**|`-k`|Commutateur|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argument|  
   
  <sup>1</sup> pour Bulk Insert, si les valeurs par défaut ne sont pas disponibles, la colonne de table doit être définie de façon à autoriser les valeurs NULL.  
@@ -171,11 +171,11 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
--   [Conserver les valeurs d’identité lors de l’importation en bloc de données &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Préparer les données pour l’exportation ou l’importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Pour utiliser un fichier de format**  
   
@@ -189,25 +189,25 @@ GO
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **Pour utiliser des formats de données pour l’importation en bloc ou l’exportation en bloc**  
+ **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  
   
--   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Pour spécifier des formats de données pour la compatibilité lors de l’utilisation de BCP**  
+ **Pour spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp**  
   
--   [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

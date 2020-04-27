@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489717"
 ---
-# <a name="lesson-4-storing-supplier-data-in-mds"></a>Leçon 4 : Stockage des données sur les fournisseurs dans MDS
+# <a name="lesson-4-storing-supplier-data-in-mds"></a>Leçon 4 : Stockage des données sur les fournisseurs dans MDS
   Master Data Services (MDS) est une solution SQL Server de gestion des données de référence. La gestion des données de référence (MDM) correspond aux efforts d'une organisation en vue de découvrir et de définir des listes de données non transactionnelles.  
   
  Les modèles correspondent au niveau le plus élevé de l'organisation dans Master Data Services, et organisent la structure de vos données de référence. Votre implémentation MDS peut comporter un ou plusieurs modèles où chaque modèle regroupe des données similaires. En général, les données de référence peuvent figurer dans l'une des quatre catégories suivantes : personnes, lieux, choses ou concepts. Par exemple, vous pouvez créer un modèle Product pour contenir des données relatives à un produit ou un modèle Customer pour contenir des données relatives à un client. Consultez [Modèles (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx) pour plus de détails.  
@@ -49,6 +49,6 @@ ms.locfileid: "65489717"
 8.  Créer et utiliser une hiérarchie dérivée à l'aide de la relation d'attribut basé sur un domaine entre l'entité **Fournisseur** et l'entité **État** (l'attribut État de l'entité Fournisseur est un type d'entité État) à l'aide de **Master Data Manager**.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 1 : Créer un modèle Fournisseurs à l'aide de Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tâche 1 : Création d’un modèle Fournisseurs à l’aide de Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

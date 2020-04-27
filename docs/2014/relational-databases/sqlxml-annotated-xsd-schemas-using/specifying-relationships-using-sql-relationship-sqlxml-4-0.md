@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013673"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Spécification de relations à l'aide de sql:relationship (SQLXML 4.0)
@@ -59,7 +59,7 @@ ms.locfileid: "66013673"
  **parent-key**  
  Spécifie la clé parente du parent. Si la clé parente est composée de plusieurs colonnes, les valeurs sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé enfant correspondante.  
   
- **Enfant**  
+ **Division**  
  Spécifie la relation enfant (table).  
   
  **child-key**  
@@ -75,7 +75,7 @@ ms.locfileid: "66013673"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Spécification de l'annotation sql:relationship sur un élément  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Spécification de l'annotation sql:relationship sur un élément  
  Le schéma XSD annoté suivant comprend ** \<les éléments Customer>** et ** \<Order>** . L' ** \<élément Order>** est un élément enfant de l' ** \<élément Customer>** .  
   
  Dans le schéma, l' `sql:relationship` annotation est spécifiée sur la ** \<commande>** élément enfant. La relation elle-même est définie dans l' ** \<élément xsd : appinfo>** .  

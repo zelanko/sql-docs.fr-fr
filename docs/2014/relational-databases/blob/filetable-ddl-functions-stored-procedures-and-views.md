@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010102"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues FileTable
@@ -26,7 +26,7 @@ ms.locfileid: "66010102"
   
  Pour obtenir la liste des instructions et des objets de base de données qui prennent en charge FILESTREAM, consultez [FILESTREAM DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
-##  <a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
   
 |Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "66010102"
 |[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|Modifié|[Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)|  
 |[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)<br /><br /> [Arguments RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)|Modifié||  
   
-##  <a name="func"></a> Fonctions  
+##  <a name="functions"></a><a name="func"></a> Fonctions  
   
 |Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
@@ -44,13 +44,13 @@ ms.locfileid: "66010102"
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
 |[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
   
-##  <a name="sproc"></a> Procédures stockées  
+##  <a name="stored-procedures"></a><a name="sproc"></a> Procédures stockées  
   
 |Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**Ajouté**|[Gérer des FileTables](manage-filetables.md)|  
   
-##  <a name="cv"></a> Affichages catalogue  
+##  <a name="catalog-views"></a><a name="cv"></a> Affichages catalogue  
   
 |Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "66010102"
 |[sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)|**Ajouté**|[Gérer des FileTables](manage-filetables.md)|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Modifié|[Gérer des FileTables](manage-filetables.md)|  
   
-##  <a name="dmv"></a> Vues de gestion dynamique  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> Vues de gestion dynamique  
   
 |Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  

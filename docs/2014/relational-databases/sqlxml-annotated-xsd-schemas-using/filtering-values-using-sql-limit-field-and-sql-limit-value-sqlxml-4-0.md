@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013806"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "66013806"
   
  Dans ces exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitation des adresses de clients retournées à un type d'adresse spécifique  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitation des adresses de clients retournées à un type d'adresse spécifique  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Customer (CustomerID, CompanyName)  

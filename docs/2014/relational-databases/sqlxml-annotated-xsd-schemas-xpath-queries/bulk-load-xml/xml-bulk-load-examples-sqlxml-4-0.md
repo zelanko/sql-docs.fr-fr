@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013265"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemples de chargement en masse XML (SQLXML 4.0)
@@ -110,7 +110,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>R. Chargement en masse XML dans une table  
+## <a name="a-bulk-loading-xml-in-a-table"></a>A. Chargement en masse XML dans une table  
  Cet exemple établit une connexion à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifiée dans la propriété ConnectionString (MyServer). L’exemple spécifie également la propriété ErrorLogFile. Par conséquent, la sortie d'erreur est enregistrée dans le fichier spécifié (« C:\error.log »), dont l'emplacement peut également être modifié. Notez également que la méthode Execute a comme paramètres le fichier de schéma de mappage (SampleSchema. Xml) et le fichier de données XML (sous nom SampleXMLData. Xml). Lorsque le chargement en masse s’exécute, la table Cust que vous avez créée dans la base de données **tempdb** contient de nouveaux enregistrements basés sur le contenu du fichier de données XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Pour tester un exemple de chargement en masse  
@@ -1203,7 +1203,7 @@ End Sub
     Microsoft ActiveX Data objects 2.6 Library  
     ```  
   
-5.  Exécutez l’application.  
+5.  Exécutez l'application.  
   
  Voici le schéma XDR équivalent :  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012823"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral
@@ -30,9 +30,9 @@ ms.locfileid: "66012823"
 > [!IMPORTANT]  
 >  Il est possible d'importer des catalogues de texte intégral lors de la mise à niveau d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Chaque catalogue de texte intégral importé est un fichier de base de données dans son propre groupe de fichiers. Pour sauvegarder un catalogue importé, sauvegardez simplement son groupe de fichiers. Pour plus d’informations, consultez [Sauvegarde et restauration de catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkID=121052)dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-##  <a name="backingup"></a> Sauvegarde des index de recherche en texte intégral d'un catalogue de texte intégral  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Sauvegarde des index de recherche en texte intégral d'un catalogue de texte intégral  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> Recherche des index de recherche en texte intégral d'un catalogue de texte intégral  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> Recherche des index de recherche en texte intégral d'un catalogue de texte intégral  
  Vous pouvez extraire les propriétés des index de recherche en texte intégral en utilisant l’instruction [SELECT](/sql/t-sql/queries/select-transact-sql) suivante, qui sélectionne des colonnes à partir des affichages catalogue [sys.fulltext_indexes](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql) et [sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql) .  
   
 ```  
@@ -49,7 +49,7 @@ GO
   
 
   
-###  <a name="Find_FG_of_FTI"></a> Recherche du groupe de fichiers ou du fichier qui contient un index de recherche en texte intégral  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> Recherche du groupe de fichiers ou du fichier qui contient un index de recherche en texte intégral  
  Lorsqu'un index de recherche en texte intégral est créé, il est placé à l'un des emplacements suivants :  
   
 -   Groupe de fichiers spécifié par l'utilisateur.  
@@ -73,7 +73,7 @@ GO
   
 
   
-###  <a name="Back_up_FTIs_of_FTC"></a> Sauvegarde des groupes de fichiers qui contiennent des index de recherche en texte intégral  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> Sauvegarde des groupes de fichiers qui contiennent des index de recherche en texte intégral  
  Après avoir recherché les groupes de fichiers qui contiennent les index d'un catalogue de texte intégral, vous devez sauvegarder chacun des groupes de fichiers. Durant le processus de sauvegarde, il est impossible de supprimer ou d'ajouter des catalogues de texte intégral.  
   
  La première sauvegarde d'un groupe de fichiers doit être une sauvegarde de fichiers complète. Après avoir créé une sauvegarde complète d'un fichier ou d'un groupe de fichiers, vous pouvez créer une série d'une ou de plusieurs sauvegardes de fichiers différentielles basées sur cette sauvegarde de fichiers complète.  
@@ -86,7 +86,7 @@ GO
   
 
   
-##  <a name="Restore_FTI"></a> Restauration d'un index de recherche en texte intégral  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> Restauration d'un index de recherche en texte intégral  
  La restauration d'un groupe de fichiers sauvegardés restaure les fichiers de l'index de recherche en texte intégral, ainsi que les autres fichiers dans le groupe de fichiers. Par défaut, le groupe de fichiers est restauré à l'emplacement du disque sur lequel le groupe de fichiers a été sauvegardé.  
   
  Si une table indexée de texte intégral était en ligne et qu'un remplissage s'exécutait lorsque la sauvegarde a été créée, le remplissage reprend après la restauration.  

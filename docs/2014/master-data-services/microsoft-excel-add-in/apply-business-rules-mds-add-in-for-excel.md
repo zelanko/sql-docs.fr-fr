@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482602"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>Appliquer des règles d'entreprise (Complément MDS pour Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482602"
 > [!NOTE]  
 >  La validation des données se produit automatiquement lorsque vous les publiez. Pour plus d’informations, consultez [Procédure stockée de validation &#40;Master Data Services&#41;](../validation-stored-procedure-master-data-services.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir accès à la zone fonctionnelle **Explorateur** .  

@@ -11,20 +11,20 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481247"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d'une base de connaissances et de domaines
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d’une base de connaissances et de domaines
   Au cours de cette tâche, vous allez créer la base de connaissances **fournisseurs** et créer des domaines qui sont utilisés pour nettoyer les données et les données correspondantes pour supprimer les doublons.  
   
 1.  Lancez **Data Quality client**. Cliquez sur **Démarrer**, pointez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2012**, sur **Data Quality Services**, puis sur **Data Quality client**.  
   
 2.  Dans la boîte de dialogue **se connecter au serveur** , sélectionnez l’instance de serveur de base de données sur laquelle le DQS est installé, puis cliquez sur **se connecter**.  
   
-     ![Boîte de dialogue se connecter au serveur](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Boîte de dialogue Se connecter au serveur")  
+     ![Boîte de dialogue se connecter au serveur](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Boîte de dialogue Connexion au serveur")  
   
 3.  Dans la page d’espace de Data Quality Client, dans le volet gestion de la **base de connaissances** , cliquez sur **nouvelle base de connaissances**.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "65481247"
     -   Zip  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 2 : Ajout de valeurs de domaine manuellement](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [Tâche 2 : Ajout de valeurs de domaine manuellement](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

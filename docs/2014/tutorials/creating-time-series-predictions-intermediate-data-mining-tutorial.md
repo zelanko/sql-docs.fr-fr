@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313890"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Création de prédictions de série chronologique (Didacticiel intermédiaire sur l'exploration de données)
@@ -172,7 +172,7 @@ ms.locfileid: "63313890"
   
 3.  Dans la colonne nom de la **table** , tapez un nouveau nom de table temporaire, tel que **tester les prédictions**.  
   
-4.  Cliquez sur **Enregistrer**.  
+4.  Cliquez sur **Save**.  
   
     > [!NOTE]  
     >  Pour consulter la table que vous avez créée, créez une connexion au moteur de base de données de l'instance où vous avez enregistré les données, et créez une requête.  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054118"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
@@ -181,7 +181,7 @@ ms.locfileid: "66054118"
   
 5.  Calculez la taille de la ligne d'index :  
   
-     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (pour la surcharge de l’en-tête de ligne d’une ligne d’index) + 6 (pour le pointeur de l’ID de la page enfant)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (pour la surcharge de l’en-tête de ligne d’une ligne d’index) + 6 (pour le pointeur de l’ID de la page enfant)  
   
 6.  Calculez le nombre de lignes d'index par page (8 096 octets libres par page) :  
   

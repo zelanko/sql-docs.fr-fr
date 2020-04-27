@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092039"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -37,8 +37,7 @@ ms.locfileid: "65092039"
   
 -   Suivant les types de requêtes fréquemment exécutées et la configuration matérielle, vous pouvez améliorer les performances des requêtes. Par exemple, l'optimiseur de requête peut traiter les requêtes d'équijointure entre plusieurs tables partitionnées plus rapidement lorsque les colonnes de partitionnement dans les tables sont identiques, car les partitions elles-mêmes peuvent être jointes.  
   
-     Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trie des données pour des opérations d'entrée/sortie, il trie d'abord les données par partition. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accède à un lecteur à la fois, ce qui peut réduire les performances. Pour améliorer les performances de tri des données, distribuez les fichiers de données des partitions sur plusieurs disques en définissant un volume RAID. Ainsi, bien que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trie toujours les données par partition, il peut accéder à tous les lecteurs de chaque partition au même moment.  
+     Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trie des données pour des opérations d'entrée/sortie, il trie d'abord les données par partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accède à un lecteur à la fois, ce qui peut réduire les performances. Pour améliorer les performances de tri des données, distribuez les fichiers de données des partitions sur plusieurs disques en définissant un volume RAID. Ainsi, bien que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trie toujours les données par partition, il peut accéder à tous les lecteurs de chaque partition au même moment.  
   
      De plus, il est possible d'améliorer les performances en activant l'escalade de verrous au niveau de la partition plutôt qu'au niveau de la table entière. Cela peut réduire les conflits de verrouillage de la table.  
   
@@ -103,14 +102,14 @@ ms.locfileid: "65092039"
   
 |||  
 |-|-|  
-|**Tâches :**|**Rubrique**|  
+|**Tâches**|**Rubrique**|  
 |Décrit comment créer des fonctions de partition et des schémas de partition et les appliquer ensuite à une table ou à un index.|[Créer des tables et des index partitionnés](create-partitioned-tables-and-indexes.md)|  
 |||  
   
 ## <a name="related-content"></a>Contenu associé  
  Les livres blancs suivants relatifs aux stratégies et implémentations de tables et index partitionnés pourront se révéler utiles.  
   
--   [Stratégies de tables et d’index partitionnées à l’aide de SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Stratégies de tables et d’index partitionnés avec SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
 -   [Comment implémenter une fenêtre glissante automatique](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
@@ -118,6 +117,6 @@ ms.locfileid: "65092039"
   
 -   [Améliorations du traitement des requêtes sur les tables et les index partitionnés](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [10 meilleures pratiques pour la création d’une Data Warehouse relationnelle à grande échelle](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [10 meilleures pratiques pour générer un entrepôt de données relationnelles à grande échelle](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

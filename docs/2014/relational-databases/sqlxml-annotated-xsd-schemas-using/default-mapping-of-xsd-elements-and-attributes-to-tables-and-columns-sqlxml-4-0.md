@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013884"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66013884"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>R. Spécification du mappage par défaut  
+### <a name="a-specifying-default-mapping"></a>A. Spécification du mappage par défaut  
  Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. L' ** \<élément person. contact>** est de type complexe et, par conséquent, est mappé par défaut à la table Person. contact de la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de l' ** \<élément person. contact>** sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person. contact.  
   
 ```  
@@ -205,7 +205,7 @@ ctions">
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations sur la sécurité des schémas annotés &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Données XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
+ [SQL Server de &#40;de données XML&#41;](../xml/xml-data-sql-server.md)   
  [Prise en charge du type de données xml dans SQLXML 4.0](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012479"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Exécution d'un DiffGram à l'aide d'ADO (SQLXML 4.0)
@@ -100,6 +100,6 @@ End Sub
   
 6.  Modifiez le code pour spécifier le DiffGram et les noms de fichier XSD. Modifiez aussi la chaîne de connexion si nécessaire.  
   
-7.  Exécutez l’application. Le résultat de l'exécution dépend du DiffGram que vous exécutez.  
+7.  Exécutez l'application. Le résultat de l'exécution dépend du DiffGram que vous exécutez.  
   
   

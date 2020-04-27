@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014464"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilisation de schémas XSD annotés dans les requêtes (SQLXML 4.0)
@@ -116,8 +116,7 @@ ms.locfileid: "66014464"
   
  Le modèle spécifie également deux requêtes XPath. Chaque élément ** \<XPath-Query>** identifie de façon unique le schéma de mappage en spécifiant `mapping-schema` l’attribut.  
   
- Lorsque vous spécifiez un schéma inline dans le modèle, `sql:is-mapping-schema` l’annotation doit également être spécifiée sur l' ** \<élément xsd : Schema>** . 
-  `sql:is-mapping-schema` accepte une valeur booléenne (0 = false, 1 = true). Un schéma Inline avec **SQL : is-mapping-schema = "1"** est traité comme un schéma annoté inline et n’est pas retourné dans le document XML.  
+ Lorsque vous spécifiez un schéma inline dans le modèle, `sql:is-mapping-schema` l’annotation doit également être spécifiée sur l' ** \<élément xsd : Schema>** . `sql:is-mapping-schema` accepte une valeur booléenne (0 = false, 1 = true). Un schéma Inline avec **SQL : is-mapping-schema = "1"** est traité comme un schéma annoté inline et n’est pas retourné dans le document XML.  
   
  L'annotation `sql:is-mapping-schema` appartient à l'espace de noms du modèle `urn:schemas-microsoft-com:xml-sql`.  
   

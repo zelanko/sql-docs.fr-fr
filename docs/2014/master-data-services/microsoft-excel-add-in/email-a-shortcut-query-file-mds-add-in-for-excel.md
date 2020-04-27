@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478893"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Envoyer par courrier électronique un fichier de requête de raccourci (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez envoyer par e-mail un fichier de requête de raccourci à un autre utilisateur quand vous voulez vous assurer qu’il utilise les mêmes données que vous. Il est préférable de partager les requêtes plutôt qu'enregistrer la feuille de calcul et l'envoyer par courrier électronique.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir installé Outlook 2010 ou une version ultérieure.  

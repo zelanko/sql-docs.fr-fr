@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013680"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66013680"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>R. Spécification d'un espace de noms cible  
+### <a name="a-specifying-a-target-namespace"></a>A. Spécification d'un espace de noms cible  
  Le schéma XSD suivant spécifie un espace de noms cible à l’aide de l’attribut **xsd : targetNamespace** . Le schéma définit également les valeurs des attributs **elementFormDefault** et **attributeFormDefault** sur **« Unqualified »** (valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale qui affecte tous les éléments locaux (**\<ordre>** dans le schéma) et les attributs (**CustomerID**, **ContactName**et **OrderID** dans le schéma).  
   
 ```  

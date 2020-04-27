@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011878"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Fichiers de format non-XML (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011878"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Avantages des fichiers de format non XML  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Avantages des fichiers de format non XML  
   
 -   Vous pouvez créer automatiquement un fichier de format non XML en spécifiant l’option **format** dans une commande **bcp** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011878"
 > [!NOTE]  
 >  Les fichiers de format XML offrent différents avantages par rapport aux fichiers de format non XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Structure des fichiers de format non XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Structure des fichiers de format non XML  
  Un fichier de format non XML est un fichier texte contenant une structure particulière. Il contient des informations sur le type de stockage du fichier, la longueur du préfixe et celle des champs, ainsi que le caractère de fin de champ de chaque colonne constituant la table.  
   
  L'exemple suivant présente les champs de fichier de format d'un fichier de format non XML.  
@@ -58,7 +58,7 @@ ms.locfileid: "66011878"
   
 |Champ du fichier de format|Description|  
 |------------------------|-----------------|  
-|Version|Ce numéro de version n’est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Remarque : La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Version|Ce numéro de version n’est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Remarque : la version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Nombre de colonnes|Nombre de champs dans le fichier de données. Il doit être identique pour toutes les lignes.|  
   
  Les autres champs de fichier de format décrivent les champs de données à importer ou exporter en bloc. Chaque champ de données nécessite une ligne séparée dans le fichier de format. Chaque ligne de fichier de format contient les valeurs des champs de fichier de format décrits dans le tableau suivant.  
@@ -77,7 +77,7 @@ ms.locfileid: "66011878"
 > [!NOTE]  
 >  Vous pouvez modifier un fichier de format afin de pouvoir importer des données en bloc à partir d'un fichier de données dans lequel le nombre et/ou l'ordre des champs diffèrent du nombre ou de l'ordre des colonnes de la table. Pour plus d'informations, consultez la liste [Tâches associées](#RelatedTasks) , plus loin dans cette rubrique.  
   
-##  <a name="Examples"></a> Exemple de fichier de format non XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Exemple de fichier de format non XML  
  L'exemple suivant affiche un fichier de format non XML créé précédemment (`myDepartmentIdentical-f-c.fmt`). Ce fichier décrit un champ de données de type caractère pour chaque colonne de la table `HumanResources.Department` dans la base de données exemple `AdventureWorks2012` .  
   
  Le fichier de format généré, `myDepartmentIdentical-f-c.fmt`, contient les informations suivantes :  
@@ -94,7 +94,7 @@ ms.locfileid: "66011878"
 > [!NOTE]  
 >  Pour une illustration des champs de fichier de format par rapport à cet exemple de fichier de format non XML, consultez [Structure des fichiers de format non XML](#Structure), plus haut dans cette rubrique.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca2bc726b0bf017ec4b3dd0451313d60ef57696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012143"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Nouveautés&#39;dans SQLXML 4,0 SP1
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 inclut différentes mises à jour et améliorations. Cette rubrique résume les mises à jour et fournit, le cas échéant, des liens vers des pages contenant des informations plus détaillées. SQLXML 4.0 SP1 fournit des améliorations supplémentaires pour prendre en charge les nouveaux types de données présentés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette rubrique traite des sujets suivants :  
   
 -   Installation de SQLXML 4.0 SP1  
@@ -85,11 +84,9 @@ ms.locfileid: "66012143"
 ## <a name="support-for-sql-server-native-client"></a>Prise en charge de SQL Server Native Client  
  SQLXML 4,0 prend en charge les fournisseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLOLEDB et Native Client. Nous vous recommandons d’utiliser la même [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version du fournisseur Native Client et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est développé pour prendre en charge tous les nouveaux types de données fournis avec le serveur, `Date, Time`tels `DateTime2`que les `dateTimeOffset` types de données [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , et dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et pris en charge par Native Client.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est une technologie d'accès aux données qui a été introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Elle associe le fournisseur SQLOLEDB et le pilote SQLODBC dans une même bibliothèque de liens dynamiques (DLL), tout en proposant également de nouvelles fonctionnalités distinctes des composants MDAC (Microsoft Data Access Components).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est une technologie d'accès aux données qui a été introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Elle associe le fournisseur SQLOLEDB et le pilote SQLODBC dans une même bibliothèque de liens dynamiques (DLL), tout en proposant également de nouvelles fonctionnalités distinctes des composants MDAC (Microsoft Data Access Components).  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client peut être utilisé pour créer des applications ou améliorer des applications existantes qui doivent tirer parti des fonctionnalités introduites dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne sont pas prises en charge par SQLOLEDB et SQLODBC dans MDAC et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est requis pour que des fonctionnalités SQLXML côté client, telles que FOR XML, puissent utiliser le type de données `xml`. Pour plus d’informations, consultez [mise en forme XML côté Client &#40;SQLXML 4,0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md), [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](using-ado-to-execute-sqlxml-4-0-queries.md)et [programmation de SQL Server Native Client](../native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client peut être utilisé pour créer des applications ou améliorer des applications existantes qui doivent tirer parti des fonctionnalités introduites dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne sont pas prises en charge par SQLOLEDB et SQLODBC dans MDAC et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est requis pour que des fonctionnalités SQLXML côté client, telles que FOR XML, puissent utiliser le type de données `xml`. Pour plus d’informations, consultez [mise en forme XML côté Client &#40;SQLXML 4,0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md), [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](using-ado-to-execute-sqlxml-4-0-queries.md)et [programmation de SQL Server Native Client](../native-client/sql-server-native-client-programming.md).  
   
 > [!NOTE]  
 >  SQLXML 4.0 n'assure pas une compatibilité descendante complète avec SQLXML 3.0. En raison de quelques résolutions de bogue et d'autres modifications fonctionnelles, en particulier la suppression de la prise en charge de l'interface ISAPI SQLXML, vous ne pouvez pas utiliser de répertoires virtuels IIS avec SQLXML 4.0. Bien que la plupart des applications s'exécutent avec des modifications mineures, vous devez les tester avant de les mettre en production avec SQLXML 4.0.  

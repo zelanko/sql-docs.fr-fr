@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011310"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues de recherche en texte intégral
@@ -24,7 +24,7 @@ ms.locfileid: "66011310"
   
  Pour obtenir la liste des objets de base de données qui prennent en charge la recherche sémantique, consultez [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
-##  <a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011310"
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql)  
   
-##  <a name="func"></a> Prédicats et fonctions système  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> Prédicats et fonctions système  
   
 -   [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66011310"
   
 -   [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)  
   
-##  <a name="meta"></a> Fonctions de métadonnées système  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> Fonctions de métadonnées système  
   
 -   [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011310"
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
-##  <a name="proc"></a> Procédures stockées système  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> Procédures stockées système  
   
 -   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66011310"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="cat"></a> Vues système - Affichages catalogue  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> Vues système - Affichages catalogue  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66011310"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
-##  <a name="dmv"></a> Vues système – Vues de gestion dynamique  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Vues système – Vues de gestion dynamique  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   

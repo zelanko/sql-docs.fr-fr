@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489097"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tâche 6 : Importation de valeurs depuis le projet de nettoyage de la liste des fournisseurs
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tâche 6 : Importation de valeurs depuis le projet de nettoyage de la liste des fournisseurs
   Dans cette tâche, vous allez importer les connaissances de qualité des données collectées pendant le processus de nettoyage. Pour plus d’informations, consultez [importation de valeurs de projet de nettoyage dans un domaine](https://msdn.microsoft.com/library/hh479581.aspx) . Vous exportez également la base de connaissances dans un fichier DQS avant de publier la base de connaissances **fournisseurs** mise à jour.  
   
 1.  Dans la page principale du **client DQS**, cliquez sur la **flèche droite** en regard de **fournisseurs** sous **bases de connaissances récentes** , puis cliquez sur **gestion de domaine**.  
@@ -32,14 +32,14 @@ ms.locfileid: "65489097"
   
 5.  Notez que toutes les adresses électroniques sont importées avec les deux corrections effectuées lors du nettoyage interactif. Faites défiler la liste pour afficher les deux corrections.  
   
-    |Valeur|Corriger vers|  
+    |Value|Corriger vers|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  Répétez l’étape précédente pour importer des valeurs de projet pour le domaine **Country** et Notez qu’une nouvelle entrée est ajoutée pour corriger l' **État des États-Unis** à **États-Unis** (avec').  
   
-    |Valeur|Corriger vers|  
+    |Value|Corriger vers|  
     |-----------|----------------|  
     |United State|États-Unis|  
   

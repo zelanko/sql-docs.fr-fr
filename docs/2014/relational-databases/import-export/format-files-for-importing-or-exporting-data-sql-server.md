@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011953"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Fichiers de format pour l'importation ou l'exportation de données (SQL Server)
   Lorsque vous importez en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données depuis une table, utilisez un *fichier de format* pour stocker toutes les informations de format nécessaires à l'exportation ou l'importation en bloc des données. Cela inclut les informations de format pour chaque champ dans un fichier de données relatif à cette table.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : XML et non XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : les fichiers de formats XML et de format non-XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
  
   
-##  <a name="Benefits"></a> Avantages des fichiers de format  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> Avantages des fichiers de format  
   
 -   Fournit un système souple d'écriture de fichiers de données, nécessitant peu ou aucune édition pour se conformer aux autres formats de données, ou de lecture de fichiers de données provenant d'autres logiciels.  
   
 -   Vous permet d'importer les données en bloc sans avoir à ajouter ou supprimer des données inutiles ou à réorganiser les données du fichier de données. Les fichiers de format sont particulièrement utiles lorsqu'il existe des différences entre les champs du fichier de données et les colonnes dans la table.  
   
-##  <a name="ExamplesOfFFs"></a> Exemples de fichiers de format  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Exemples de fichiers de format  
  Les exemples suivants illustrent la structure d'un fichier de format XML et non XML. Ces fichiers de format correspondent à la table `HumanResources.myTeam` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cette table contient quatre colonnes : `EmployeeID`, `Name`, `Title`et `ModifiedDate`.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-##  <a name="WhenFFrequired"></a> Quand faut-il utiliser un format de fichier ?  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> Quand faut-il utiliser un format de fichier ?  
  Une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...) nécessite toujours un fichier de format.  
   
 -   Pour **bcp** ou BULK INSERT, dans les cas simples, l’utilisation d’un fichier de format est facultative et rarement nécessaire. Toutefois, pour les importations en bloc complexes, un fichier de format est souvent nécessaire.  
@@ -114,7 +114,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

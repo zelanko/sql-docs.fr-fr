@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484090"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Types de données SQL Server et SSIS pris en charge pour les domaines DQS
@@ -23,7 +23,7 @@ ms.locfileid: "65484090"
 > [!NOTE]  
 >  Dans les fichiers .xlsx et .xls, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes. Si une cellule n'est pas conforme à ce type de données, elle recevra une valeur NULL. De la même manière, dans les fichiers .csv, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes.  
   
-##  <a name="SQLServer"></a>Types de données SQL Server pris en charge  
+##  <a name="supported-sql-server-data-types"></a><a name="SQLServer"></a>Types de données SQL Server pris en charge  
  Le tableau suivant fournit des informations sur les types de données SQL Server pris en charge pour chaque type de données de domaine DQS :  
   
 |Type de données de domaine DQS|Type de données SQL Server pris en charge|  
@@ -35,7 +35,7 @@ ms.locfileid: "65484090"
   
  Les autres types de données SQL Server ne sont pas pris en charge dans DQS. Pour plus d’informations sur les types de données SQL Server, consultez [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
-##  <a name="SSIS"></a>Types de données SSIS pris en charge  
+##  <a name="supported-ssis-data-types"></a><a name="SSIS"></a>Types de données SSIS pris en charge  
  Le tableau suivant fournit des informations sur les types de données SSIS pris en charge pour chaque type de données de domaine DQS :  
   
 |Type de données de domaine DQS|Type de données SSIS pris en charge|  

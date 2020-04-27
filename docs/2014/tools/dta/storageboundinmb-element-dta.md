@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460105"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB, élément (Assistant Paramétrage de base de données)
@@ -38,8 +38,7 @@ ms.locfileid: "63460105"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|
-  `unsignedInt`, longueur illimitée.|  
+|**Type de données et longueur**|`unsignedInt`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour l'élément `TuningOptions`.|  
   

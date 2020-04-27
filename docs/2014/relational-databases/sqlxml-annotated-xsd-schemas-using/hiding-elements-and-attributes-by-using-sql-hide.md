@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013837"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Masquage d'éléments et d'attributs à l'aide de sql:hide
@@ -39,7 +39,7 @@ ms.locfileid: "66013837"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Spécification de sql:hide sur un attribut  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Spécification de sql:hide sur un attribut  
  Dans cet exemple, le schéma XSD se compose d’un ** \<élément person. contact>** avec les attributs **ContactID**, **FirstName**et **LastName** .  
   
  L' ** \<élément person. contact>** est de type complexe et, par conséquent, est mappé à la table du même nom (mappage par défaut). Tous les attributs de ** \<l’élément person. contact>** sont de type simple et sont mappés à des colonnes portant le même nom dans Person. Contacttable dans la base de données AdventureWorks. Dans le schéma, l' `sql:hide` annotation est spécifiée sur l’attribut **ContactID** . Lorsqu’une requête XPath est spécifiée sur ce schéma, le **ContactID** n’est pas renvoyé dans le document XML.  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66009848"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
@@ -55,17 +55,17 @@ ms.locfileid: "66009848"
 ## <a name="rbs-security"></a>Sécurité relative au magasin d'objets blob distants (RBS)  
  Lorsque vous utilisez un fournisseur personnalisé pour stocker des objets blob en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets blob peuvent être disponibles pour d'autres processus contournant le système de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Assurez-vous de protéger les objets blob stockés à l'aide d'autorisations et d'options de chiffrement convenant au support de stockage utilisé par le fournisseur personnalisé.  
   
-##  <a name="rbsresources"></a>Ressources RBS  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a>Ressources RBS  
  **Documentation relative au magasin d'objets blob distants (RBS)**  
  La documentation relative au magasin d'objets blob distants (RBS) est comprise dans le package Windows Installer. Si vous souhaitez consulter la documentation relative au magasin d'objets blob distants sans installer ce dernier, vous pouvez consulter la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de la documentation [en ligne sur le site MSDN Library](https://go.microsoft.com/fwlink/?LinkId=210192).  
   
  **Livre blanc du magasin d'objets blob distants (RBS)**  
  Le livre blanc «[Stockage étendu des objets blob](https://go.microsoft.com/fwlink/?LinkId=210422)», disponible au téléchargement sous la forme d'un document Microsoft Word, fournit des informations détaillées à propos de l'installation et de la configuration du magasin d'objets blob distants.  
   
- **Exemples RBS**  
+ **Exemples de magasins d'objets blob distants (RBS)**  
  Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
   
- **Blog RBS**  
+ **Blog du magasin d'objets blob distants (RBS)**  
  Le [blog du magasin d'objets blob distants (RBS)](https://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
   
   

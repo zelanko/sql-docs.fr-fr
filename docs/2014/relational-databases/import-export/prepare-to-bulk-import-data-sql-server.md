@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011861"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Préparer l'importation de données en bloc (SQL Server)
@@ -34,11 +34,11 @@ ms.locfileid: "66011861"
 > [!NOTE]  
 >  L'importation de données en bloc dans une table distante n'est pas prise en charge.  
   
- Utilisez les instructions suivantes lorsque vous importez en bloc des données d’un fichier de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données vers une instance de :  
+ Quand vous importez des données en bloc dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un fichier de données, respectez les consignes suivantes :  
   
 -   Procurez-vous les autorisations nécessaires à votre compte d'utilisateur.  
   
-     Le compte d’utilisateur dans lequel vous utilisez **bcp** , l’instruction BULK INSERT ou l’instruction INSERT... SELECT * FROM OPENROWSET(BULK...) doit bénéficier des autorisations nécessaires sur la table (affectées par le propriétaire de la table). Pour plus d’informations sur les autorisations requises par chaque méthode, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)et [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
+     Le compte d’utilisateur dans lequel vous utilisez **bcp**, l’instruction BULK INSERT ou l’instruction INSERT... SELECT * FROM OPENROWSET(BULK...) doit bénéficier des autorisations nécessaires sur la table (affectées par le propriétaire de la table). Pour plus d’informations sur les autorisations requises par chaque méthode, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)et [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 -   Utilisez le mode de récupération utilisant les journaux de transactions.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "66011861"
      De nombreux utilitaires et éditeurs de texte affichent les caractères masqués qui figurent généralement à la fin du fichier de données. Durant une opération d'importation en bloc, les caractères masqués d'un fichier de données ASCII peuvent causer des problèmes qui génèrent une erreur de type « une valeur NULL inattendue a été trouvée ». Il suffit en général de rechercher et de supprimer les caractères masqués pour éviter ce problème.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importez et exportez des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Formats de données pour l’importation en bloc ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

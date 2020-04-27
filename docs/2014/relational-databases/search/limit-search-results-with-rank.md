@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011148"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
@@ -35,7 +35,7 @@ ms.locfileid: "66011148"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] classe les correspondances par rang et ne retourne au maximum que le nombre de lignes spécifié. Ce choix peut considérablement améliorer les performances. Par exemple, une requête qui doit normalement retourner 100 000 lignes d'une table en comprenant 1 million est traitée plus rapidement si seules les 100 premières lignes sont demandées.  
   
-##  <a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : recherche des trois premières correspondances uniquement  
  L'exemple suivant utilise CONTAINSTABLE pour retourner uniquement les trois premières correspondances.  
@@ -90,7 +90,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Classement des résultats d'une requête de recherche  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Classement des résultats d'une requête de recherche  
  Une recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut générer un score facultatif (ou valeur de classement) qui indique la pertinence des données retournées par une requête de texte intégral. Cette valeur de classement est calculée sur chaque ligne et peut être utilisée comme critère de tri pour trier le jeu de résultats d'une requête donnée par pertinence. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes contenues dans le jeu de résultats. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre. La valeur de classement n'a pas de signification entre les requêtes.  
   
 ### <a name="statistics-for-ranking"></a>Statistiques de classement  

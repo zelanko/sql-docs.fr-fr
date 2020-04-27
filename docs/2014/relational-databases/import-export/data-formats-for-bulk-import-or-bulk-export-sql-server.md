@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012075"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formats de données pour l'importation en bloc ou l'exportation en bloc (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66012075"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Formats de données pour l'importation ou l'exportation en bloc  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> Formats de données pour l'importation ou l'exportation en bloc  
  Le tableau suivant indique le format de données à utiliser en fonction de la représentation des données et de la source ou de la cible de l'opération.  
   
 |Opération|Natif|Natif Unicode|Caractère|Caractère Unicode|  
@@ -43,7 +43,7 @@ ms.locfileid: "66012075"
   
  <sup>1</sup> méthode la plus rapide pour l’exportation en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données à partir de lors de l’utilisation de **BCP**.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

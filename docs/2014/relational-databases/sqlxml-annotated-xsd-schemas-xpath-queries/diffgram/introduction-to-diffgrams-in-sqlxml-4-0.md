@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013017"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introduction aux DiffGrams dans SQLXML 4.0
@@ -59,7 +59,7 @@ ms.locfileid: "66013017"
 ## <a name="diffgram-annotations"></a>Annotations DiffGram  
  Ces annotations sont définies dans l’espace de noms DiffGram **« urn : schemas-microsoft-com : XML-DiffGram-01 »**:  
   
- **identifi**  
+ **id**  
  Cet attribut est utilisé pour coupler les éléments dans les ** \<blocs Before>** et ** \<DataInstance>** .  
   
  **hasChanges**  
@@ -74,7 +74,7 @@ ms.locfileid: "66013017"
 |Opération|Description|  
 |---------------|-----------------|  
 |Insérer|Un DiffGram indique une opération d’insertion lorsqu’un élément apparaît dans le ** \<bloc DataInstance>** , mais pas dans le bloc ** \<Before>** correspondant, et l’attribut **diffgr : hasChanges** est spécifié (**diffgr : hasChanges = inserted**) sur l’élément. Dans ce cas, le DiffGram insère l’instance d’enregistrement spécifiée dans le ** \<bloc DataInstance>** dans la base de données.<br /><br /> Si l’attribut **diffgr : hasChanges** n’est pas spécifié, l’élément est ignoré par la logique de traitement et aucune insertion n’est effectuée. Pour obtenir des exemples fonctionnels, consultez [exemples DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
-|Update|Le DiffGram indique une opération de mise à jour lorsqu’il existe un \<élément dans le bloc Before> pour lequel il existe un élément correspondant dans le ** \<bloc DataInstance>** (autrement dit, les deux éléments ont un attribut **diffgr : ID** avec la même valeur) et l’attribut **diffgr : hasChanges** est spécifié avec la valeur **modifiée** sur l’élément dans le ** \<bloc de>DataInstance** .<br /><br /> Si l’attribut **diffgr : hasChanges** n’est pas spécifié sur l’élément du bloc ** \<DataInstance>** , une erreur est retournée par la logique de traitement. Pour obtenir des exemples fonctionnels, consultez [exemples DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr : ParentId** est spécifié dans le ** \<bloc Before>** , la relation parent-enfant des éléments spécifiés par **ParentId** est utilisée pour déterminer l’ordre dans lequel les enregistrements sont mis à jour.|  
+|Mettre à jour/Mise à jour|Le DiffGram indique une opération de mise à jour lorsqu’il existe un \<élément dans le bloc Before> pour lequel il existe un élément correspondant dans le ** \<bloc DataInstance>** (autrement dit, les deux éléments ont un attribut **diffgr : ID** avec la même valeur) et l’attribut **diffgr : hasChanges** est spécifié avec la valeur **modifiée** sur l’élément dans le ** \<bloc de>DataInstance** .<br /><br /> Si l’attribut **diffgr : hasChanges** n’est pas spécifié sur l’élément du bloc ** \<DataInstance>** , une erreur est retournée par la logique de traitement. Pour obtenir des exemples fonctionnels, consultez [exemples DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr : ParentId** est spécifié dans le ** \<bloc Before>** , la relation parent-enfant des éléments spécifiés par **ParentId** est utilisée pour déterminer l’ordre dans lequel les enregistrements sont mis à jour.|  
 |DELETE|Un DiffGram indique une opération de suppression lorsqu’un élément apparaît dans le ** \<bloc Before>** , mais pas dans le bloc de ** \<>DataInstance** correspondant. Dans ce cas, le DiffGram supprime l’instance d’enregistrement spécifiée dans le ** \<bloc Before>** de la base de données. Pour obtenir des exemples fonctionnels, consultez [exemples DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr : ParentId** est spécifié dans le ** \<bloc Before>** , la relation parent-enfant des éléments spécifiés par **ParentId** est utilisée pour déterminer l’ordre dans lequel les enregistrements sont supprimés.|  
   
 > [!NOTE]  

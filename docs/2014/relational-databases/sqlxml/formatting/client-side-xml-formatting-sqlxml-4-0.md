@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012317"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Mise en forme XML côté client (SQLXML 4.0)
@@ -52,7 +52,7 @@ FROM   Person.Contact
   
  Le tableau suivant montre les modes que vous pouvez spécifier avec FOR XML côté client.  
   
-|Mode FOR XML côté client|Commentaire|  
+|Mode FOR XML côté client|Comment|  
 |-------------------------------|-------------|  
 |RAW|Produit des résultats identiques lors de la spécification de FOR XML côté client ou côté serveur.|  
 |NESTED|Est semblable au mode FOR XML AUTO côté serveur.|  

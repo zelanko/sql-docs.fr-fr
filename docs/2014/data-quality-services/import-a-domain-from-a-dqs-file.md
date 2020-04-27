@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484261"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importer un domaine à partir d'un fichier .dqs
@@ -24,17 +24,17 @@ ms.locfileid: "65484261"
   
  Lorsque vous importez un domaine, le nom du domaine reste le même que le nom du domaine exporté à l’origine, à moins que ce nom de domaine existe déjà, auquel cas DQS ajoute « _1 » au nom. C'est également le cas si vous importez un domaine composite qui contient un domaine individuel portant le même nom qu'un domaine existant.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour importer un domaine à partir d'un fichier .dqs, vous devez avoir déjà exporté un domaine unique ou un domaine composite (contenant plusieurs domaines uniques) vers le fichier .dqs. Le fichier .dqs doit contenir un seul domaine. Vous devez également avoir créé et ouvert une base de connaissances dans laquelle importer le domaine.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer un domaine à partir d'un fichier de données .dqs.  
   
-##  <a name="Import"></a>Importer un domaine à partir d’un fichier. DQS  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>Importer un domaine à partir d’un fichier. DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65484261"
   
 6.  Vérifiez que le domaine que vous avez importé s'affiche dans la liste **Domaine** . Si vous avez importé un domaine composite, vérifiez que le domaine composite et les domaines uniques qu'il contient figurent tous dans la liste **Domaine** .  
   
-##  <a name="FollowUp"></a>Suivi : après l’importation d’un domaine à partir d’un fichier. DQS  
+##  <a name="follow-up-after-importing-a-domain-from-a-dqs-file"></a><a name="FollowUp"></a> Suivi : Après l'importation d'un domaine à partir d'un fichier .dqs  
  Après avoir importé un domaine à partir d'un fichier .dqs, vous pouvez ajouter des connaissances au domaine ou utiliser le domaine dans un projet de nettoyage ou de correspondance, en fonction du contenu du domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md), [Gestion d’un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md), [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md), [Nettoyage des données](../../2014/data-quality-services/data-cleansing.md) ou [Correspondance de données](../../2014/data-quality-services/data-matching.md).  
   
   

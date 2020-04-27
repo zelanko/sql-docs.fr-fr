@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011859"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
-  Pour les champs de données de caractères, des caractères de fin facultatifs vous permettent de marquer la fin de chaque champ dans un fichier de données avec une marque de fin de *champ* et la fin de chaque ligne avec une marque de fin de *ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
+  Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
   
 > [!IMPORTANT]  
 >  Lorsque vous utilisez le format natif ou natif Unicode, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent en effet entrer en conflit avec les indicateurs de fin, car les fichiers de données sont stockés au format de données binaire interne de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -67,12 +67,12 @@ ms.locfileid: "66011859"
   
     -   Utilisation du commutateur **-t** pour préciser l’indicateur de fin de ligne pour tous les champs à l’exception du dernier champ de la ligne et utilisation du commutateur **-r** pour préciser un indicateur de fin de ligne.  
   
-    -   Utilisation d’un commutateur de format caractère (**-c** ou **-w**) sans le commutateur **-t** , qui définit l’indicateur de fin de champ sur la tabulation, \t. Cette option est équivalente à la spécification de **-t**\t.  
+    -   Utilisation d’un commutateur de format caractère ( **-c** ou **-w**) sans le commutateur **-t** , qui définit l’indicateur de fin de champ sur la tabulation, \t. Cette option est équivalente à la spécification de **-t**\t.  
   
         > [!NOTE]  
         >  Si vous ajoutez le commutateur **-n** (correspondant aux données natives) ou **-N** (format natif Unicode), les indicateurs de fin ne sont pas insérés.  
   
-    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format (**-f**) ou celui du fichier de données (**-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
+    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format ( **-f**) ou celui du fichier de données ( **-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
   
          `Enter field terminator [none]:`  
   
@@ -100,9 +100,9 @@ ms.locfileid: "66011859"
 |Commutateur|Description|  
 |------------|-----------------|  
 |**-c**|Chargement des champs de données en tant que données sous forme de caractères.|  
-|**-t**`,`|Virgule (,) servant d'indicateur de fin de champ.|  
+|**-t** `,`|Virgule (,) servant d'indicateur de fin de champ.|  
 |**-r** \n|Indicateur de fin de ligne en tant que caractère de saut de ligne. Il s'agit de l'indicateur par défaut ; le préciser est donc facultatif.|  
-|**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez spécifier **-U** et **-P** pour vous connecter avec succès.|  
+|**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour vous connecter.|  
   
  Pour plus d’informations, consultez [bcp Utility](../../tools/bcp-utility.md).  
   
@@ -117,7 +117,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ## <a name="specifying-terminators-for-bulk-import"></a>Spécification des terminateurs pour l'importation en bloc  
  Lorsque vous procédez à une importation en bloc de données de type `char` ou `nchar`, la commande prévue à cet effet doit reconnaître les indicateurs de fin utilisés dans le fichier de données. Voici comment les indicateurs de fin doivent être précisés selon la commande d'importation en bloc :  
   
--   **BCP**  
+-   **bcp**  
   
      Spécifier des terminateurs pour une opération d'importation revient à utiliser la même syntaxe que pour une opération d'exportation. Pour plus d'informations, consultez la section « Spécification des terminateurs pour l'exportation en bloc », plus haut dans cette rubrique.  
   
@@ -127,8 +127,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualificateur|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
+    |FIELDTERMINATOR **= '*`field_terminator`*'**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
+    |ROWTERMINATOR **= '*`row_terminator`*'**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
   
      Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -170,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Option|Attribut|  
 |------------|---------------|  
 |DATAFILETYPE **= '`char`'**|Chargement des champs de données en tant que données sous forme de caractères.|  
-|FIELDTERMINATOR **= '**`,`**'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
-|ROWTERMINATOR **= '**`\n`**'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
+|FIELDTERMINATOR **='** `,` **'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
+|ROWTERMINATOR **='** `\n` **'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
@@ -191,8 +191,8 @@ GO
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Spécifiez la longueur du champ à l’aide de BCP &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

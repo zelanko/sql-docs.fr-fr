@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484730"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
   Au cours de cette tâche, vous allez tester et publier la stratégie de suppression de la correspondance **Supprimer les fournisseurs en double** .  
   
 1.  Dans la page **résultats de correspondance** , cliquez sur **Démarrer** pour tester l’ensemble de la stratégie. Dans ce cas, vous disposez d'une seule règle dans la stratégie, par conséquent, les résultats du test de la règle et du test de la stratégie devraient être identiques.  
@@ -50,6 +50,6 @@ ms.locfileid: "65484730"
 7.  Dans la boîte de dialogue SQL Server Data Quality Services, cliquez sur **publier** , puis sur **OK** dans la boîte de message. À présent, la stratégie de correspondance que vous avez définie est publiée dans la base de connaissances **fournisseurs** . Vous pouvez utiliser la base de connaissances pour exécuter le processus de correspondance dans un fichier d'entrée afin d'identifier et supprimer les doublons.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 3 : Création et exécution d'un projet de qualité des données pour la mise en correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Tâche 3 : Création et exécution d’un projet de qualité des données pour la mise en correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

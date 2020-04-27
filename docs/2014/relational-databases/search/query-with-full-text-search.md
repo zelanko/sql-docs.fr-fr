@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011110"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
   Pour définir des recherches en texte intégral, les requêtes de texte intégral de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les prédicats de texte intégral (CONTAINS et FREETEXT) et les fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE). Ces derniers prennent en charge la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] enrichie qui accepte divers formulaires de termes de requête. Pour écrire des requêtes de texte intégral, vous devez apprendre quand et comment utiliser ces prédicats et ces fonctions.  
   
-##  <a name="OV_ft_predicates"></a>Vue d’ensemble des prédicats de texte intégral (CONTAINs et FREETEXT)  
+##  <a name="overview-of-the-full-text-predicates-contains-and-freetext"></a><a name="OV_ft_predicates"></a>Vue d’ensemble des prédicats de texte intégral (CONTAINs et FREETEXT)  
  Les prédicats CONTAINS et FREETEXT retournent une valeur TRUE ou FALSE. Ils peuvent être utilisés uniquement pour spécifier des critères de sélection permettant de déterminer si une ligne donnée correspond à la requête de texte intégral. Les lignes correspondantes sont retournées dans le jeu de résultats. CONTAINS et FREETEXT sont spécifiés dans la clause WHERE ou HAVING d'une instruction SELECT. Ils peuvent être associés à l'un quelconque des autres prédicats [!INCLUDE[tsql](../../includes/tsql-md.md)] tels que LIKE et BETWEEN.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Vue d’ensemble des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE)  
+##  <a name="overview-of-the-full-text-functions-containstable-and-freetexttable"></a><a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Vue d’ensemble des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE)  
  Les fonctions CONTAINSTABLE et FREETEXTTABLE sont référencées comme un nom de table régulier dans la clause FROM d'une instruction SELECT. Ils retournent une table contenant aucune, une ou plusieurs ligne(s) correspondant à la requête de texte intégral. La table retournée contient uniquement les lignes de la table de base qui correspondent aux critères de sélection spécifiés dans la condition de recherche en texte intégral de la fonction.  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ GO
   
  CONTAINSTABLE est utile pour les mêmes types de correspondance que CONTAINS, et FREETEXTTABLE est utile pour les mêmes types de correspondance que FREETEXT. Pour plus d’informations, consultez [Vue d’ensemble des prédicats de texte intégral (CONTAINS et FREETEXT)](#OV_ft_predicates), plus haut dans cette rubrique. Lors de l'exécution de requêtes utilisant les fonctions CONTAINSTABLE et FREETEXTTABLE, vous devez joindre de manière explicite les lignes retournées aux lignes de la table de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- En général, le résultat des fonctions CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Cette colonne, qui est présente dans toutes les tables activées pour la recherche en texte intégral, garantit l’unicité des lignes de la table (*colonne clé**unique*). Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](../indexes/indexes.md).  
+ En général, le résultat des fonctions CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Cette colonne, qui se trouve dans toutes les tables activées pour la recherche en texte intégral, est utilisée pour appliquer des lignes uniques pour la table ( *colonne clé * * unique*). Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](../indexes/indexes.md).  
   
  
   
@@ -165,7 +165,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a>Utilisation d’opérateurs booléens-AND, OR et NOT-in CONTAINs et CONTAINSTABLE  
+##  <a name="using-boolean-operators---and-or-and-not---in-contains-and-containstable"></a><a name="Using_Boolean_Operators"></a>Utilisation d’opérateurs booléens-AND, OR et NOT-in CONTAINs et CONTAINSTABLE  
  Le prédicat CONTAINS et la fonction CONTAINSTABLE utilisent les mêmes conditions de recherche. Les deux prennent en charge la combinaison de plusieurs termes de recherche à l’aide d’opérateurs booléens (AND, OR et NOT) pour effectuer des opérations logiques. Par exemple, vous pouvez utiliser AND pour rechercher des lignes qui contiennent à la fois « latte » et « New York-style bagel ». Vous pouvez utiliser AND NOT pour rechercher les lignes qui contiennent « bagel » mais qui ne contiennent pas « cream cheese ».  
   
 > [!NOTE]  
@@ -189,7 +189,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a>Considérations supplémentaires pour les requêtes de texte intégral  
+##  <a name="additional-considerations-for-full-text-queries"></a><a name="Additional_Considerations"></a>Considérations supplémentaires pour les requêtes de texte intégral  
  Lors de l'écriture de requêtes de texte intégral, prenez également en considération les points suivants :  
   
 -   LANGUAGE (option)  
@@ -210,15 +210,14 @@ GO
   
 
   
-##  <a name="varbinary"></a>Interrogation de colonnes varbinary (max) et XML  
+##  <a name="querying-varbinarymax-and-xml-columns"></a><a name="varbinary"></a>Interrogation de colonnes varbinary (max) et XML  
  Si une colonne `varbinary(max)`, `varbinary` ou `xml` est indexée en texte intégral, elle peut faire l'objet d'une requête à l'aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n'importe quelle autre colonne indexée en texte intégral.  
   
 > [!IMPORTANT]  
 >  La recherche en texte intégral fonctionne également avec des colonnes de type image. Cependant, le type de données `image` sera supprimé dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ce type de données dans un nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent actuellement. Utilisez à la place le type de données `varbinary(max)`.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>Données varbinary(max) ou varbinary  
- Une même colonne `varbinary(max)` ou `varbinary` peut stocker de nombreux types de documents. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge tout type de document pour lequel un filtre est installé et disponible dans le système d'exploitation. Le type d'un document est identifié par l'extension de fichier de celui-ci. Par exemple, pour une extension de fichier .doc, la recherche en texte intégral utilise le filtre qui prend en charge les documents Microsoft Word. Pour obtenir la liste des types de documents disponibles, interrogez l’affichage catalogue [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
+ Une même colonne `varbinary(max)` ou `varbinary` peut stocker de nombreux types de documents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge tout type de document pour lequel un filtre est installé et disponible dans le système d'exploitation. Le type d'un document est identifié par l'extension de fichier de celui-ci. Par exemple, pour une extension de fichier .doc, la recherche en texte intégral utilise le filtre qui prend en charge les documents Microsoft Word. Pour obtenir la liste des types de documents disponibles, interrogez l’affichage catalogue [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
  Notez que le Moteur d'indexation et de recherche en texte intégral peut bénéficier des filtres installés dans le système d'exploitation. Avant de pouvoir utiliser des filtres de système d'exploitation, des analyseurs lexicaux et des générateurs de formes dérivées, vous devez les charger dans l'instance de serveur, comme suit :  
   
@@ -237,7 +236,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  
   
-##  <a name="supported"></a>Formes de termes de requête prises en charge  
+##  <a name="supported-forms-of-query-terms"></a><a name="supported"></a>Formes de termes de requête prises en charge  
  Cette section récapitule la prise en charge fournie pour chaque formulaire de requête par les prédicats de texte intégral et les fonctions d'ensemble de lignes.  
   
 > [!NOTE]  
@@ -245,16 +244,16 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |Formulaire de terme de la requête|Description|Pris en charge par|  
 |----------------------|-----------------|------------------|  
-|Un ou plusieurs mots ou expressions spécifiques (*terme simple*)|Dans une recherche en texte intégral, un mot (ou *jeton*) est une chaîne dont les limites sont identifiées par les analyseurs lexicaux appropriés, qui suivent les règles linguistiques de la langue spécifiée. Une expression valide est constituée de plusieurs mots, avec ou sans signes de ponctuation entre eux.<br /><br /> Par exemple, « croissant » est un mot et «CAF ?? le lait est une expression. De tels mots et expressions sont considérés comme des termes simples.<br /><br /> Pour plus d’informations, consultez [Recherche d’un mot ou d’une expression spécifique (terme simple)](#Simple_Term), dans la suite de cette rubrique.|[Contains](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) recherchent une correspondance exacte pour l’expression.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) découpent l’expression en mots distincts.|  
-|Un mot ou une expression commençant par un texte spécifié (*préfixe*)|Un terme de préfixe fait référence à une chaîne apposée au devant d'un mot pour produire un mot dérivatif ou une forme fléchie.<br /><br /> Pour un terme de préfixe unique, tout mot qui démarre avec le terme spécifié fera partie du jeu de résultats. Par exemple, le terme « auto* » correspond à « automatique », « automobile », etc.<br /><br /> Dans le cas d'une expression, chaque mot faisant partie de l'expression est considéré comme un terme préfixe. Par exemple, le terme « auto tran\*» correspond à « automatic transmission » et « automobile transducer » mais pas à « automatic motor transmission ».<br /><br /> Pour plus d’informations, consultez [Recherche de préfixes (terme de préfixe)](#Prefix_Term), dans la suite de cette rubrique.|[Contains](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|Formes fléchies d’un mot spécifique (*génération de termes de génération*)|Les formes fléchies correspondent aux différents temps et conjugaisons d'un verbe ou au pluriel et au singulier d'un non. Par exemple, rechercher les formes fléchies du verbe « drive ». Si plusieurs lignes de la table comportent les mots « drive », « drives », « drove », « driving » et « driven », tous ces termes apparaîtront dans le jeu de résultats, dans la mesure où chacun d'entre eux peut être généré à partir du mot « drive ».<br /><br /> Pour plus d’informations, consultez [Recherche de formes fléchies d’un mot spécifique (forme canonique)](#Inflectional_Generation_Term), dans la suite de cette rubrique.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) recherchent par défaut des termes fléchis de tous les mots spécifiés.<br /><br /> [Contains](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) prennent en charge un argument fléchial facultatif.|  
+|Un ou plusieurs mots ou expressions spécifiques (*terme simple*)|Dans une recherche en texte intégral, un mot (ou *jeton*) est une chaîne dont les limites sont identifiées par les analyseurs lexicaux appropriés, en suivant les règles linguistiques de la langue spécifiée. Une expression valide est constituée de plusieurs mots, avec ou sans signes de ponctuation entre eux.<br /><br /> Par exemple, « croissant » est un mot et «CAF ?? le lait est une expression. De tels mots et expressions sont considérés comme des termes simples.<br /><br /> Pour plus d’informations, consultez [Recherche d’un mot ou d’une expression spécifique (terme simple)](#Simple_Term), dans la suite de cette rubrique.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) recherchent une correspondance exacte pour l'expression.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) décomposent l'expression en mots distincts.|  
+|Un mot ou une expression commençant par un texte spécifié (*préfixe*)|Un terme de préfixe fait référence à une chaîne apposée au devant d'un mot pour produire un mot dérivatif ou une forme fléchie.<br /><br /> Pour un terme de préfixe unique, tout mot qui démarre avec le terme spécifié fera partie du jeu de résultats. Par exemple, le terme « auto* » correspond à « automatique », « automobile », etc.<br /><br /> Dans le cas d'une expression, chaque mot faisant partie de l'expression est considéré comme un terme préfixe. Par exemple, le terme « auto tran\*» correspond à « automatic transmission » et « automobile transducer » mais pas à « automatic motor transmission ».<br /><br /> Pour plus d’informations, consultez [Recherche de préfixes (terme de préfixe)](#Prefix_Term), dans la suite de cette rubrique.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Formes fléchies d’un mot spécifique (*génération de termes de génération*)|Les formes fléchies correspondent aux différents temps et conjugaisons d'un verbe ou au pluriel et au singulier d'un non. Par exemple, rechercher les formes fléchies du verbe « drive ». Si plusieurs lignes de la table comportent les mots « drive », « drives », « drove », « driving » et « driven », tous ces termes apparaîtront dans le jeu de résultats, dans la mesure où chacun d'entre eux peut être généré à partir du mot « drive ».<br /><br /> Pour plus d’informations, consultez [Recherche de formes fléchies d’un mot spécifique (forme canonique)](#Inflectional_Generation_Term), dans la suite de cette rubrique.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) recherchent par défaut des termes fléchis de tous les mots spécifiés.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) prennent en charge un argument INFLECTIONAL facultatif.|  
 |Formes synonymes d’un mot spécifique (*terme de génération-Thésaurus*)|Un dictionnaire des synonymes définit des synonymes spécifiés par l'utilisateur pour les termes. Par exemple, si une entrée « {car, automobile, truck, van} » est ajoutée à un dictionnaire des synonymes, vous pouvez rechercher la forme du dictionnaire des synonymes pour le mot « car ». Toutes les lignes de la table interrogée qui contiennent les mots « automobile », « truck », « van » ou « car » s'affichent dans le jeu de résultats, car chacun de ces mots appartient au jeu d'expansion des synonymes contenant le mot « car ».<br /><br /> Pour plus d’informations sur la structure des fichiers de dictionnaire des synonymes, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) utilisent le dictionnaire des synonymes par défaut.<br /><br /> [Contains](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) prennent en charge un argument thesaurus facultatif.|  
-|Un mot ou une expression proches d’un autre mot ou d’une autre expression (*terme de proximité*)|Un terme de proximité indique des mots ou expressions qui sont proches les uns des autres. Vous pouvez également spécifier le nombre maximal de termes n'entrant pas dans le cadre de la recherche qui séparent le premier et le dernier termes de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre, ou dans l'ordre dans lequel vous les spécifiez.<br /><br /> Par exemple, vous pouvez rechercher les lignes dans lesquelles le mot « ice » est voisin du mot « hockey » et celles dans lesquelles l'expression « ice skating » est voisine de « ice hockey ».<br /><br /> Pour plus d’informations, consultez [Recherche de mots dans le voisinage d’autres mots avec NEAR](search-for-words-close-to-another-word-with-near.md).|[Contains](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Un mot ou une expression proches d’un autre mot ou d’une autre expression (*terme de proximité*)|Un terme de proximité indique des mots ou expressions qui sont proches les uns des autres. Vous pouvez également spécifier le nombre maximal de termes n'entrant pas dans le cadre de la recherche qui séparent le premier et le dernier termes de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre, ou dans l'ordre dans lequel vous les spécifiez.<br /><br /> Par exemple, vous pouvez rechercher les lignes dans lesquelles le mot « ice » est voisin du mot « hockey » et celles dans lesquelles l'expression « ice skating » est voisine de « ice hockey ».<br /><br /> Pour plus d’informations, consultez [Recherche de mots dans le voisinage d’autres mots avec NEAR](search-for-words-close-to-another-word-with-near.md).|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |Mots ou expressions utilisant des valeurs pondérées (*termes pondérés*)|Une valeur pondérée indique le degré d'importance de chaque mot et expression au sein d'un ensemble de mots et d'expressions. L'échelle de valeurs oscille entre un minimum de 0,0 et un maximum de 1,0.<br /><br /> Par exemple, dans une requête de recherche de plusieurs termes, vous pouvez affecter à chaque mot de recherche une valeur de pondération indiquant son importance par rapport aux autres mots figurant dans la condition de recherche. Les résultats de ce type de requête renvoient les lignes les plus pertinentes en premier, en fonction du poids relatif affecté aux mots de recherche. Les jeux de résultats contiennent des documents ou des lignes qui contiennent chacun des termes spécifiés (ou contenu entre eux) ; toutefois, certains résultats seront considérés comme plus pertinents que d'autres à cause de la variation dans les valeurs pondérées associées aux différents termes recherchés.<br /><br /> Pour plus d’informations, consultez [Recherche de mots et d’expressions à l’aide de valeurs pondérées (termes pondérés)](#Weighted_Term), dans la suite de cette rubrique.|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
-###  <a name="Simple_Term"></a>Recherche d’un mot ou d’une expression spécifique (terme simple)  
+###  <a name="searching-for-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>Recherche d’un mot ou d’une expression spécifique (terme simple)  
  Vous pouvez utiliser [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) pour rechercher une expression spécifique dans une table. Par exemple, si vous souhaitez effectuer une recherche dans la table `ProductReview` de la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] afin de trouver tous les commentaires de produits contenant l'expression « learning curve », vous pouvez utiliser le prédicat CONTAINS en procédant comme suit :  
   
 ```  
@@ -271,7 +270,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a>Réalisation de recherches de préfixes (terme de préfixe)  
+###  <a name="performing-prefix-searches-prefix-term"></a><a name="Prefix_Term"></a>Réalisation de recherches de préfixes (terme de préfixe)  
  Vous pouvez utiliser [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) pour rechercher des mots ou des expressions ayant un préfixe que vous spécifiez. Toutes les entrées de la colonne qui contiennent le texte commençant par le préfixe spécifié sont retournées. Par exemple, rechercher toutes les lignes qui contiennent le préfixe `top`-, comme dans `top``ple`, `top``ping`et `top`. La requête ressemble à ceci :  
   
 ```  
@@ -290,7 +289,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a>Recherche de formes fléchies d’un mot spécifique (terme de génération)  
+###  <a name="searching-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>Recherche de formes fléchies d’un mot spécifique (terme de génération)  
  Vous pouvez utiliser [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) pour rechercher tous les différents temps et conjugaisons d’un verbe, le pluriel et le singulier d’un nom (recherche des formes fléchies) ou les formes synonymes d’un mot spécifique (recherche dans le dictionnaire des synonymes).  
   
  L'exemple suivant recherche toutes les formes de « foot » (« foot », « feet », etc.) dans la colonne `Comments` de la table `ProductReview` dans la base de données `AdventureWorks` .  
@@ -310,7 +309,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a>Recherche de mots ou d’expressions à l’aide de valeurs pondérées (termes pondérés)  
+###  <a name="searching-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>Recherche de mots ou d’expressions à l’aide de valeurs pondérées (termes pondérés)  
  Vous pouvez utiliser [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) pour rechercher des mots ou des expressions et spécifier une valeur pondérée. La pondération d'un terme, qui est une mesure numérique comprise entre 0.0 et 1.0, indique l'importance de chaque mot et expression au sein d'un ensemble de mots et d'expressions. L'échelle de pondération oscille entre un minimum de 0.0 et un maximum de 1.0.  
   
  L'exemple suivant affiche une requête qui recherche toutes les adresses de client à l'aide de pondérations, où tout texte qui commence par la chaîne « Bay » comporte soit « Street » soit « View ». Les résultats accordent un rang plus élevé aux lignes qui contiennent le plus de mots, parmi ceux spécifiés.  
@@ -334,13 +333,13 @@ GO
   
 
   
-##  <a name="tokens"></a>Affichage du résultat de la création de jetons d’une combinaison d’analyseur lexical, de dictionnaire des synonymes et de la STOPLIST  
+##  <a name="viewing-the-tokenization-result-of-a-word-breaker-thesaurus-and-stoplist-combination"></a><a name="tokens"></a>Affichage du résultat de la création de jetons d’une combinaison d’analyseur lexical, de dictionnaire des synonymes et de la STOPLIST  
  Après avoir appliqué une combinaison d’analyseur lexical, de dictionnaire des synonymes et de liste de mots vides à une entrée de chaîne de requête, vous pouvez afficher le résultat de la segmentation du texte en unités lexicales à l’aide de la vue de gestion dynamique **sys.dm_fts_parser**. Pour plus d’informations, consultez [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  
   
 ## <a name="see-also"></a>Voir aussi  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [CONTIENT &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   

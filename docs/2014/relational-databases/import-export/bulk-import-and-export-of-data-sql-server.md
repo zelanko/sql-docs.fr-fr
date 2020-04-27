@@ -25,67 +25,65 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012118"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importation et exportation en bloc de données (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée. L'importation et l'exportation en bloc sont essentielles pour transférer efficacement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des sources de données hétérogènes. L' *exportation en bloc* fait référence à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copie de données d’une table dans un fichier de données. L' *importation en bloc* fait référence au chargement de données à partir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un fichier de données dans une table. Par exemple, vous pouvez exporter des données d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel vers un fichier de données, puis importer en bloc ces données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée. L'importation et l'exportation en bloc sont essentielles pour transférer efficacement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des sources de données hétérogènes. L'*exportation en bloc* consiste à copier des données d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données. Le terme*importation en bloc* fait référence au chargement de données d’un fichier de données vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez exporter des données d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel vers un fichier de données, puis importer en bloc ces données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Présentation des opérations d'exportation et d'importation en bloc](#Intro)  
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Intro"></a>Vue d’ensemble de l’importation et de l’exportation en bloc  
+##  <a name="bulk-import-and-bulk-export-overview"></a><a name="Intro"></a>Vue d’ensemble de l’importation et de l’exportation en bloc  
  Cette section répertorie et compare brièvement les diverses méthodes disponibles pour l'importation et l'exportation de données en bloc. La section présente également des fichiers de format.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Méthodes pour l’importation et l’exportation de données en bloc](#MethodsForBuliIE)  
   
 -   [Fichiers de format](#FFs)  
   
-###  <a name="MethodsForBuliIE"></a>Méthodes pour l’importation et l’exportation de données en bloc  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'exportation en bloc de données à partir d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'importation en bloc de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les méthodes de base disponibles sont les suivantes.  
+###  <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a>Méthodes pour l’importation et l’exportation de données en bloc  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'exportation en bloc de données à partir d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'importation en bloc de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les méthodes de base disponibles sont les suivantes.  
   
 |Méthode|Description|Importe les données|Exporte les données|  
 |------------|-----------------|------------------|------------------|  
-|[utilitaire bcp](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilitaire en ligne de commande (Bcp.exe) qui exporte et importe en bloc des données et génère des fichiers de format.|Oui|Oui|  
+|[Utilitaire bcp](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilitaire en ligne de commande (Bcp.exe) qui exporte et importe en bloc des données et génère des fichiers de format.|Oui|Oui|  
 |[Instruction BULK INSERT](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui importe des données directement d'un fichier de données dans une table de base de données ou une vue non partitionnée.|Oui|Non|  
-|[INSÉRER... SELECT * FROM OPENROWSET (BULK...), instruction](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui utilise le fournisseur d’ensembles de lignes OPENROWSET pour importer en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant la fonction OPENROWSET(BULK...) afin de sélectionner des données dans une instruction INSERT.|Oui|Non|  
+|instruction [INSERT ... instruction SELECT * FROM OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui utilise le fournisseur d’ensembles de lignes OPENROWSET pour importer en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant la fonction OPENROWSET(BULK...) afin de sélectionner des données dans une instruction INSERT.|Oui|Non|  
   
 > [!IMPORTANT]  
 >  Les fichiers de valeurs séparées par des virgules (CSV, Comma-Separated Value) ne sont pas pris en charge par les opérations d'importation en bloc SQL Server. Toutefois, dans certains cas, un fichier CSV peut être utilisé comme fichier de données pour une importation en bloc de données dans SQL Server. Notez que la marque de fin de champ d'un fichier CSV n'est pas nécessairement une virgule. Pour plus d’informations, consultez [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md).  
   
-###  <a name="FFs"></a>Fichiers de format  
+###  <a name="format-files"></a><a name="FFs"></a>Fichiers de format  
  L’utilitaire **BCP** , Bulk Insert et l’instruction INSERT... SELECT \* from OPENROWSET (BULK...) prennent toutes en charge l’utilisation d’un *fichier de format* spécialisé qui stocke les informations de format de chaque champ dans un fichier de données. Un fichier de format peut également contenir des informations sur la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante. Le fichier de format peut être utilisé pour fournir toutes les informations de format nécessaires pour exporter en bloc des données à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et pour importer en bloc des données vers une instance du même type.  
   
  Les fichiers de format procurent une souplesse qui permet d'une part l'interprétation des données tel qu'elles existent dans le fichier de données au moment de l'importation, et d'autre part le formatage des données dans le fichier de données au moment de l'exportation. Cette souplesse vous dispense d'écrire un code spécial en vue d'interpréter ou de reformater les données en fonction des exigences spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l'application externe. Ainsi, si les données exportées en bloc doivent être chargées dans une application nécessitant des valeurs séparées par une virgule, vous pouvez utiliser un fichier de format pour insérer des virgules comme terminateurs de champ dans les données exportées.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux genres de fichiers de format : XML et non-XML.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichiers de format : les fichiers de formats XML et de format non-XML.  
   
  L’utilitaire **BCP** est le seul outil capable de générer un fichier de format. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md). Pour plus d’informations sur les fichiers de format, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   
 > [!NOTE]  
 >  Si, à l'occasion d'une opération d'exportation ou d'importation en bloc, aucun fichier de format n'est fourni, vous pouvez choisir de remplacer le formatage par défaut via la ligne de commande.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
--   [Importez et exportez des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
+-   [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
   
 -   [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
   
--   [Conserver les valeurs d’identité lors de l’importation en bloc de données &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Préparer les données pour l’exportation ou l’importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Pour utiliser un fichier de format**  
   
@@ -99,25 +97,25 @@ ms.locfileid: "66012118"
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **Pour utiliser des formats de données pour l’importation en bloc ou l’exportation en bloc**  
+ **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  
   
--   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Pour spécifier des formats de données pour la compatibilité lors de l’utilisation de BCP**  
+ **Pour spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp**  
   
-1.  [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+1.  [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conditions préalables à la journalisation minimale dans l’importation en bloc](prerequisites-for-minimal-logging-in-bulk-import.md)   

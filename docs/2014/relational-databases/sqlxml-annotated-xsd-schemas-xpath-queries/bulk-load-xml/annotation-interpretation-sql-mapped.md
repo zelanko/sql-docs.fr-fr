@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013477"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
@@ -53,7 +53,7 @@ ms.locfileid: "66013477"
 </xsd:schema>  
 ```  
   
- Étant donné **** que l’attribut `sql:mapped="false"`HomePhone spécifie, le chargement en masse XML ne mappe pas cet attribut à la colonne correspondante. Le schéma XSD identifie une colonne de dépassement (**OverflowColumn**) dans laquelle le chargement en masse XML stocke ces données non consommées.  
+ Étant donné **HomePhone** que l’attribut `sql:mapped="false"`HomePhone spécifie, le chargement en masse XML ne mappe pas cet attribut à la colonne correspondante. Le schéma XSD identifie une colonne de dépassement (**OverflowColumn**) dans laquelle le chargement en masse XML stocke ces données non consommées.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

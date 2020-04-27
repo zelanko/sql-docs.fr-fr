@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011757"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011757"
 > [!IMPORTANT]  
 >  Lorsque vous utilisez le format natif, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent entrer en conflit avec les indicateurs de fin, car ces fichiers sont au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="PrefixLengthsExport"></a> Longueurs de préfixe pour l'exportation en bloc  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Longueurs de préfixe pour l'exportation en bloc  
   
 > [!NOTE]  
 >  La valeur par défaut fournie lors de la demande de longueur de préfixe lorsque vous exportez un champ indique la longueur de champ la plus efficace pour le champ.  
@@ -83,7 +83,7 @@ ms.locfileid: "66011757"
   
  <sup>1</sup> les `ntext`types `text`de données `image` , et seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez `nvarchar(max)`, `varchar(max)`et `varbinary(max)` à la place.  
   
-##  <a name="PrefixLengthsImport"></a>Longueurs de préfixe pour l’importation en bloc  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longueurs de préfixe pour l'importation en bloc  
  Lorsque vous importez des données en bloc, la longueur de préfixe correspond à la valeur spécifiée lors de la création du fichier de données. Si le fichier de données n’a pas été créé à l’aide d’une commande **bcp** , il n’existe probablement pas de caractères de longueur de préfixe. Dans ce cas, vous devez préciser la valeur 0 comme longueur de préfixe.  
   
 > [!NOTE]  
@@ -92,8 +92,8 @@ ms.locfileid: "66011757"
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Spécifiez la longueur du champ à l’aide de BCP &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

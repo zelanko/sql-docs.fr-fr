@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d0fa10fa26f46857bd4f6848bd98bdcf1d65253a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484073"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilisation de la base de connaissances par défaut DQS
   Cette rubrique décrit la base de connaissances par défaut, **DQS Data**, qui est installée avec [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Il s'agit d'une base de connaissances par défaut prégénérée qui contient les domaines suivants :  
   
--   **Pays/région**: contient le nom long conventionnel (nom officiel tel que désigné par le pays/région) et les noms courts (nom commun utilisé dans les listes, sur les cartes, etc.), l’abréviation à deux lettres, l’abréviation à trois lettres et le code à trois chiffres pour chaque emplacement.  La valeur principale est le nom long du pays.  
+-   **Pays/Région**: contient le nom long conventionnel (nom officiel tel que désigné par le pays/la région) et le nom court (nom commun utilisé dans les listes, sur les cartes, etc.), une abréviation à deux lettres, une abréviation à trois lettres et le code de trois chiffres pour chaque lieu.  La valeur principale est le nom long du pays.  
   
--   **Pays/région (de début à trois lettres)**: contient le nom long conventionnel (nom officiel tel que désigné par le pays/région) et le nom court (nom commun utilisé dans les listes, sur les cartes, etc.), l’abréviation à deux lettres, l’abréviation à trois lettres et le code à trois chiffres pour chaque emplacement.  Les valeurs principales sont l'abréviation de trois lettres pour Compté.  
+-   **Pays/Région (valeur principale de trois lettres)**: contient le nom long conventionnel (nom officiel tel que désigné par le pays/région) et le nom court (nom commun utilisé dans les listes, sur des cartes, etc.), une abréviation à deux lettres, une abréviation à trois lettres et le code de trois chiffres pour chaque lieu.  Les valeurs principales sont l'abréviation de trois lettres pour Compté.  
   
--   **Pays/région (début à deux lettres)**: contient le nom long conventionnel (nom officiel tel que désigné par le pays/région) et le nom court (nom commun utilisé dans les listes, sur les cartes, etc.), l’abréviation à deux lettres, l’abréviation à trois lettres et le code à trois chiffres pour chaque emplacement.  La valeur principale est l'abréviation de deux lettres pour Pays.  
+-   **Pays/Région (valeur principale de deux lettres)**: contient le nom long conventionnel (nom officiel tel que désigné par le pays/la région) et le nom court (nom commun utilisé dans les listes, sur les cartes, etc.), une abréviation à deux lettres, une abréviation à trois lettres et le code de trois chiffres pour chaque lieu.  La valeur principale est l'abréviation de deux lettres pour Pays.  
   
--   **US-countings**: contient la liste des comtés américains.  
+-   **États-Unis - Comtés**: contient la liste des comtés américains.  
   
--   **US-Last Name**: contient une liste de noms (noms) qui se produisent 100 ou plusieurs fois dans le recensement 2000.  
+-   **États-Unis - Nom**: contient la liste des noms (de famille) survenant 100 fois ou plus dans le recensement 2000.  
   
--   **US-places**: contient la liste des emplacements des États 50, du district de Columbia et de Porto Rico extraits du recensement 2010.  
+-   **États-Unis - Emplacements**: contient la liste des emplacements des 50 états, du District de Columbia et de Porto Rico, extrait du recensement 2010.  
   
--   États- **Unis-État**: contient le nom long conventionnel (officiel) et l’abréviation à deux lettres de chaque État en France. La valeur principale est le nom conventionnel de l'État.  
+-   **États-Unis - État**: contient le nom long conventionnel (officiel) et l'abréviation à deux lettres de chaque État des États-unis. La valeur principale est le nom conventionnel de l'État.  
   
--   États- **Unis-État (en-tête à 2 lettres)**: contient le nom long conventionnel (officiel) et l’abréviation à deux lettres de chaque État en France. La valeur principale est l'abréviation de deux lettres pour le nom de l'État.  
+-   **États-Unis - État (en-tête à deux lettres)**  : contient le nom long conventionnel (officiel) et l’abréviation à deux lettres de chaque État des États-unis. La valeur principale est l'abréviation de deux lettres pour le nom de l'État.  
   
 ## <a name="using-the-default-knowledge-base"></a>Utilisation de la base de connaissances par défaut  
  Vous pouvez utiliser la base de connaissances par défaut, Données DQS, comme suit :  

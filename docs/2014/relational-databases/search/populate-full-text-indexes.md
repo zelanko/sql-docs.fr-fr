@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011176"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
   
-##  <a name="types"></a>Types de remplissage  
+##  <a name="types-of-population"></a><a name="types"></a>Types de remplissage  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge les types de remplissage suivants : alimentation complète, alimentation automatique ou manuelle basée sur le suivi des modifications et alimentation incrémentielle basée sur l’horodatage.  
   
 ### <a name="full-population"></a>Alimentation complète  
@@ -91,8 +91,7 @@ ms.locfileid: "66011176"
   
  Pour permettre une alimentation incrémentielle, la table indexée doit disposer d'une colonne dont le type de données est `timestamp`. S'il n'existe pas de colonne de type `timestamp`, l'alimentation incrémentielle ne peut s'effectuer. Une demande d'alimentation incrémentielle dans une table sans colonne de type `timestamp` entraîne une alimentation complète. En outre, si des métadonnées concernant l'index de recherche en texte intégral de la table ont été modifiées depuis la dernière alimentation, les demandes d'alimentation incrémentielle sont implémentées comme des alimentations complètes. Cela concerne les modifications de métadonnées provoquées par des modifications de définitions de colonne, d'index ou d'index de recherche en texte intégral.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne `timestamp` pour identifier des lignes qui ont été modifiées depuis la dernière alimentation. L'alimentation incrémentielle met alors à jour l'index de recherche en texte intégral avec les lignes ajoutées, supprimées ou modifiées après la dernière alimentation ou pendant l'exécution de cette dernière. Si une table fait l'objet d'un nombre important d'insertions, l'alimentation incrémentielle peut s'avérer plus efficace que l'alimentation manuelle.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne `timestamp` pour identifier des lignes qui ont été modifiées depuis la dernière alimentation. L'alimentation incrémentielle met alors à jour l'index de recherche en texte intégral avec les lignes ajoutées, supprimées ou modifiées après la dernière alimentation ou pendant l'exécution de cette dernière. Si une table fait l'objet d'un nombre important d'insertions, l'alimentation incrémentielle peut s'avérer plus efficace que l'alimentation manuelle.  
   
  À la fin d'une alimentation, le Moteur d'indexation et de recherche en texte intégral enregistre une nouvelle valeur `timestamp`. Il s'agit de la plus grande valeur `timestamp` rencontrée par l'utilitaire de rassemblement SQL. Cette valeur sera utilisée au démarrage de la prochaine alimentation incrémentielle.  
   
@@ -100,12 +99,12 @@ ms.locfileid: "66011176"
   
 
   
-##  <a name="examples"></a>Exemples de remplissage d’index de recherche en texte intégral  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>Exemples de remplissage d’index de recherche en texte intégral  
   
 > [!NOTE]  
 >  Les exemples de cette section utilisent la table `Production.Document` ou `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>R. Création d'un index de recherche en texte intégral sans exécuter une alimentation complète  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Création d'un index de recherche en texte intégral sans exécuter une alimentation complète  
  L'exemple ci-après crée un index de recherche en texte intégral sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` . Cet exemple utilise WITH CHANGE_TRACKING OFF, NO POPULATION pour différer l'alimentation complète initiale.  
   
 ```  
@@ -168,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>Création ou modification d’une planification pour l’alimentation incrémentielle  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>Création ou modification d’une planification pour l’alimentation incrémentielle  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Pour créer ou modifier une planification pour l'alimentation incrémentielle dans Management Studio  
   
@@ -209,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>Résolution des erreurs dans une alimentation de texte intégral (analyse)  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Résolution des erreurs dans une alimentation de texte intégral (analyse)  
  Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par défaut, les journaux d'analyse d'une instance donnée (dans le cas présent, la première instance) sont situés dans le dossier %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. Le fichier journal de l'analyse respecte le modèle de dénomination suivant :  
   
  SQLFT\<DatabaseID>\<FullTextCatalogID>. Journal [\<n>]  
@@ -229,7 +228,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
- [Prise en main de la recherche en texte intégral](get-started-with-full-text-search.md)   
+ [Commencer à utiliser la recherche en texte intégral](get-started-with-full-text-search.md)   
  [Créer et gérer des index de recherche en texte intégral](create-and-manage-full-text-indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  

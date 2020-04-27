@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489113"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>Tâche 5 : Définition des relations basées sur des termes
+# <a name="task-5-setting-term-based-relationships"></a>Tâche 5 : Définition des relations basées sur des termes
   Au cours de cette tâche, vous allez définir quelques relations à base de termes pour les valeurs du domaine **nom du fournisseur** . Une relation à base de termes vous permet d’effectuer une correction sur un terme qui fait partie d’une valeur dans un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, **Inc.** peut être corrigé pour être **incorporé**. DQS utilise ces relations lors des processus de découverte des connaissances, de nettoyage, ou de mise en correspondance. Pour plus d’informations, consultez [créer des relations à base de termes](https://msdn.microsoft.com/library/hh510404.aspx) .  
   
 1.  Sélectionnez **nom du fournisseur** dans la **liste domaine**.  
@@ -30,7 +30,7 @@ ms.locfileid: "65489113"
   
 5.  Répétez les deux étapes précédentes pour les valeurs suivantes :  
   
-    |Valeur|Corriger vers|  
+    |Value|Corriger vers|  
     |-----------|----------------|  
     |Corp.|Corporation|  
     |Inc.|Incorporated|  
@@ -38,6 +38,6 @@ ms.locfileid: "65489113"
      ![Relations à base de termes](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "Relations à base de termes")  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 6 : Définition des synonymes](../../2014/tutorials/task-6-setting-synonyms.md)  
+ [Tâche 6 : Définition des synonymes](../../2014/tutorials/task-6-setting-synonyms.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054518"
 ---
 # <a name="web-service-task-editor-input-page"></a>Éditeur de tâche de service Web (page Entrée)
@@ -27,14 +27,14 @@ ms.locfileid: "66054518"
  Pour en savoir plus sur cette tâche, consultez [Tâche de service web](control-flow/web-service-task.md).  
   
 ## <a name="options"></a>Options  
- **Services**  
+ **Service**  
  Sélectionnez un service Web dans la liste pour l'utiliser afin d'exécuter la méthode Web.  
   
  **Méthode**  
  Dans la liste, sélectionnez la méthode Web que doit exécuter la tâche.  
   
  **WebMethodDocumentation**  
- Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(...)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web**.  
+ Tapez une description de la méthode Web ou cliquez sur le bouton Parcourir **(...)** , puis tapez la description dans la boîte de dialogue documentation de la **méthode Web** .  
   
  **Nom**  
  Contient la liste des noms des entrées dans la méthode Web.  
@@ -52,7 +52,7 @@ ms.locfileid: "66054518"
  Si les cases Variable sont cochées, sélectionnez les variables dans la liste pour fournir les entrées ; sinon, tapez les valeurs à utiliser en guise d’entrées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de service Web &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur de tâche de service Web &#40;page sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Page Expressions](expressions/expressions-page.md)  

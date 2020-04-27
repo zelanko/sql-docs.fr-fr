@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84e4dccb97b045e5077d75c4280cee066a154d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483049"
 ---
 # <a name="custom-workflow-example-master-data-services"></a>Exemple personnalisé de flux de travail (Master Data Services)
@@ -69,6 +69,6 @@ namespace MDSWorkflowTestLib
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un &#40;de flux de travail personnalisé Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
+ [Créer un flux de travail personnalisé &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
   
   

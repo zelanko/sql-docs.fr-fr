@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054539"
 ---
 # <a name="web-service-task-editor-general-page"></a>Éditeur de tâche de service Web (page Général)
@@ -28,15 +28,15 @@ ms.locfileid: "66054539"
   
 ## <a name="options"></a>Options  
  **HTTPConnection**  
- Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions dans la liste ou cliquez \<sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions http](connection-manager/http-connection-manager.md), [éditeur du gestionnaire de connexions http &#40;page serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions HTTP](connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions HTTP &#40;page Server (Serveur)&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(...)** et recherchez ce fichier.  
+ Tapez le chemin d’accès complet d’un fichier WSDL qui est local à l’ordinateur, ou cliquez sur le bouton Parcourir **(...)** et recherchez ce fichier.  
   
  Si vous avez déjà téléchargé manuellement le fichier WSDL sur l'ordinateur, sélectionnez-le. Toutefois, si le fichier WSDL n'a pas encore été téléchargé, procédez comme suit :  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66054539"
  Ce bouton n’est pas activé tant que vous n’avez pas indiqué le nom d’un fichier local existant dans la zone **WSDLFile** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de service Web &#40;page d’entrée&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Éditeur de tâche de service Web &#40;page sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Page Expressions](expressions/expressions-page.md)  

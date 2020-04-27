@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015088"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Résoudre l’indexation de texte intégral
      
-##  <a name="failure"></a> Dépanner les échecs de l'indexation de texte intégral  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Dépanner les échecs de l'indexation de texte intégral  
  Lors du remplissage ou de la gestion d'un index de recherche en texte intégral, il est possible que l'indexeur de texte intégral, pour les raisons détaillées ci-dessous, ne parvienne pas à indexer une ou plusieurs lignes. Ces erreurs au niveau des lignes n'empêchent pas l'achèvement du remplissage. L'indexeur ignore ces lignes, et leur contenu ne peut donc pas être interrogé.  
   
  Les défaillances d'indexation peuvent se produire dans les cas suivants :  
@@ -54,7 +54,7 @@ ms.locfileid: "66015088"
   
 
   
-##  <a name="state"></a> Index de recherche en texte intégral dans un état non cohérent une fois le journal des transactions restauré  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Index de recherche en texte intégral dans un état non cohérent une fois le journal des transactions restauré  
  Lors de la restauration du journal des transactions d'une base de données, il arrive qu'un message d'avertissement s'affiche en indiquant que l'index de recherche en texte intégral n'est pas dans un état cohérent. Cela se produit lorsque l'index de recherche en texte intégral d'une table est modifié après la sauvegarde de la base de données. Pour rendre un état cohérent à l'index de recherche en texte intégral, vous devez exécuter un remplissage complet (analyse) sur la table. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../indexes/indexes.md).  
   
 

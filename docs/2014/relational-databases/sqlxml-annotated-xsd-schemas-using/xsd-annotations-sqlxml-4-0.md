@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013544"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Annotations XSD (SQLXML 4.0)
@@ -26,15 +26,15 @@ ms.locfileid: "66013544"
 |Annotation XSD|Description|Lien de rubrique|Annotation XDR|  
 |--------------------|-----------------|----------------|--------------------|  
 |`sql:encode`|Lorsqu'un élément ou un attribut XML est mappé à une colonne BLOB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], autorise la demande d'un URI de référence. Cet URI peut être utilisé ultérieurement pour retourner les données BLOB.|[Demande de références URL à des données BLOB à l’aide de SQL : encode &#40;SQLXML 4,0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|`url-encode`|  
-|`sql:guid`|Vous permet de spécifier s'il convient d'utiliser une valeur GUID générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'utiliser la valeur fournie dans le code de mise à jour (updategram) pour cette colonne.|[Utilisation des annotations sql:identity et sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non pris en charge|  
-|`sql:hide`|Masque l'élément ou l'attribut spécifié dans le schéma dans le document XML résultant.|[Masquage d'éléments et d'attributs à l'aide de sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)|Non pris en charge|  
-|`sql:identity`|Peut être spécifié sur un nœud quelconque qui est mappé à une colonne de base de données de type IDENTITY. La valeur spécifiée pour cette annotation définit comment la colonne de type IDENTITY correspondante dans la base de données est mise à jour.|[Utilisation des annotations sql:identity et sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non pris en charge|  
-|`sql:inverse`|Indique à la logique mise à jour d’inverser son interprétation de la relation parent-enfant qui a été spécifiée à l’aide ** \<de SQL : Relationship>**.|[Spécification de l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4,0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Non pris en charge|  
+|`sql:guid`|Vous permet de spécifier s'il convient d'utiliser une valeur GUID générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'utiliser la valeur fournie dans le code de mise à jour (updategram) pour cette colonne.|[Utilisation des annotations sql:identity et sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non prise en charge|  
+|`sql:hide`|Masque l'élément ou l'attribut spécifié dans le schéma dans le document XML résultant.|[Masquage d'éléments et d'attributs à l'aide de sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)|Non prise en charge|  
+|`sql:identity`|Peut être spécifié sur un nœud quelconque qui est mappé à une colonne de base de données de type IDENTITY. La valeur spécifiée pour cette annotation définit comment la colonne de type IDENTITY correspondante dans la base de données est mise à jour.|[Utilisation des annotations sql:identity et sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non prise en charge|  
+|`sql:inverse`|Indique à la logique mise à jour d’inverser son interprétation de la relation parent-enfant qui a été spécifiée à l’aide ** \<de SQL : Relationship>**.|[Spécification de l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4,0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Non prise en charge|  
 |`sql:is-constant`|Crée un élément XML qui n'est mappé à aucune table. L'élément apparaît dans le résultat de la requête.|[Création d’éléments constants à l’aide de SQL : is-constant &#40;SQLXML 4,0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|Identique|  
 |`sql:key-fields`|Permet de spécifier une ou des colonnes qui identifient de façon unique les lignes d'une table.|[Identification des colonnes clés à l’aide de SQL : key-fields &#40;SQLXML 4,0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|Identique|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|Permet de limiter les valeurs retournées en fonction d'une valeur de limitation.|[Filtrage des valeurs à l’aide de SQL : Limit-Field et SQL : limit-value &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|Identique|  
 |`sql:mapped`|Permet à des éléments de schéma d'être exclus du résultat.|[Exclusion d’éléments de schéma du document XML obtenu à l’aide de SQL : mapped &#40;SQLXML 4,0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)|`map-field`|  
-|`sql:max-depth`|Vous permet de spécifier la profondeur dans les relations récursives spécifiées dans le schéma.|[Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth](specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|Non pris en charge|  
+|`sql:max-depth`|Vous permet de spécifier la profondeur dans les relations récursives spécifiées dans le schéma.|[Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth](specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|Non prise en charge|  
 |`sql:overflow-field`|Identifie la colonne de la base de données qui contient les données de dépassement.|[Récupération de données non consommées à l’aide de SQL : overflow-field &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)|Identique|  
 |`sql:prefix`|Crée des attributs ID, IDREF et IDREFS XML valides. Ajoute les valeurs des attributs ID, IDREF et IDREFS avec une chaîne.|[Création d’attributs de type ID, IDREF et IDREFS valides à l’aide de SQL : prefix &#40;SQLXML 4,0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)|Identique|  
 |`sql:relationship`|Spécifie des relations entre des éléments XML. Les attributs `parent`, `child`, `parent-key` et `child-key` sont utilisés pour établir la relation.|[Spécification de relations à l’aide de SQL : Relationship &#40;SQLXML 4,0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|Les noms des attributs sont différents :<br /><br /> `key-relation`<br /><br /> `foreign-relation`<br /><br /> `key`<br /><br /> `foreign-key`|  

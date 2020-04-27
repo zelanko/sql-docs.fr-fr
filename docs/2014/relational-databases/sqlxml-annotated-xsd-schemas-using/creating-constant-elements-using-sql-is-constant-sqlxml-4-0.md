@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013937"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66013937"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>R. Spécification de sql:is-constant pour ajouter un élément conteneur  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Spécification de sql:is-constant pour ajouter un élément conteneur  
  Dans ce schéma XSD annoté, ** \<CustomerOrders>** est défini en tant qu’élément constant en spécifiant `sql:is-constant` l’attribut avec la valeur 1. Par conséquent, ** \<le>CustomerOrders** n’est mappé à aucune table ou colonne de base de données. Cet élément constant est constitué de l' ** \<ordre>** éléments enfants.  
   
  Bien que ** \<le>CustomerOrders** ne soit mappé à aucune table ou colonne de base de données, il apparaît toujours dans le XML résultant en tant qu’élément conteneur contenant l' ** \<ordre>** éléments enfants.  

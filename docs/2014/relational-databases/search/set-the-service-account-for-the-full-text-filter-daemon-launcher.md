@@ -14,19 +14,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010935"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
-  Cette rubrique explique comment définir le compte du service du Lanceur de démon de filtre de texte intégral SQL (MSSQLFDLauncher) à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le service du Lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral ssNoVersion pour démarrer le processus hôte de démon de filtre, qui gère les césures de mots et le filtrage de recherche en texte intégral. Ce service doit être en cours d'exécution pour que la recherche en texte intégral puisse être utilisée.  
+  Cette rubrique explique comment définir le compte du service du Lanceur de démon de filtre de texte intégral SQL (MSSQLFDLauncher) à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service du Lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral ssNoVersion pour démarrer le processus hôte de démon de filtre, qui gère les césures de mots et le filtrage de recherche en texte intégral. Ce service doit être en cours d'exécution pour que la recherche en texte intégral puisse être utilisée.  
   
  Le service du Lanceur de démon de filtre de texte intégral SQL est un service dépendant associé à une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le service du Lanceur de démon de filtre de texte intégral SQL propage les informations du compte de service à chaque processus hôte de démon de filtre.  
   
   
-##  <a name="setting"></a>Définition du compte de service  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>Définition du compte de service  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>Pour définir le compte du service du Lanceur de démon de filtre de texte intégral SQL pour la recherche en texte intégral  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66010935"
 4.  Après avoir fermé la boîte de dialogue, cliquez sur **Redémarrer** pour redémarrer le service du Lanceur de démon de filtre de texte intégral SQL.  
   
   
-##  <a name="error"></a>Si le service de Lanceur de démon de filtre de texte intégral SQL ne démarre pas  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>Si le service de Lanceur de démon de filtre de texte intégral SQL ne démarre pas  
  L'échec du démarrage du service du Lanceur de démon de filtre de texte intégral SQL peut être dû à l'une ou plusieurs des causes suivantes :  
   
 -   Le mot de passe associé au compte du service du Lanceur de démon de filtre de texte intégral SQL a expiré.  
@@ -48,7 +48,7 @@ ms.locfileid: "66010935"
   
     1.  Définissez un nouveau mot de passe Windows pour le compte.  
   
-    2.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mettez à jour le service du Lanceur de démon de filtre de texte intégral SQL de sorte qu'il utilise le nouveau mot de passe.  
+    2.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mettez à jour le service du Lanceur de démon de filtre de texte intégral SQL de sorte qu'il utilise le nouveau mot de passe.  
   
 -   Le compte ou le mot de passe d'utilisateur du compte de service est incorrect.  
   

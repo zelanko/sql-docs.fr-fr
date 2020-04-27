@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65995087"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet affichage catalogue fournit une liste des fichiers d’extension de langage externe dans la base de données. **R** et **python** sont des noms réservés et aucune langue externe ne peut être créée avec ces noms spécifiques.
+Cet affichage catalogue fournit une liste des fichiers d’extension de langage externe dans la base de données. **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers.
 
 Quand une langue externe est créée à partir d’un file_spec, l’extension elle-même et ses propriétés sont répertoriées dans cette vue. Cette vue contient une entrée par langue, par système d’exploitation.
 
@@ -40,7 +40,7 @@ L’affichage catalogue sys. external_language_files répertorie une ligne pour 
 |Nom de la colonne |Type de données | Description|
 |------|------|------|
 |external_language_id |int | ID de la langue externe|
-|Contenu|varbinary(max) |Contenu du fichier d’extension de langage externe|
+|contenu|varbinary(max) |Contenu du fichier d’extension de langage externe|
 |file_name|nvarchar (266)|Nom du fichier d’extension de langage|
 |plateforme|TINYINT|ID de la plateforme hôte sur laquelle SQL Server est installé|
 |platform_desc |nvarchar(60)|Nom de la plateforme hôte. Les valeurs valides sont « WINDOWS », « LINUX ».|

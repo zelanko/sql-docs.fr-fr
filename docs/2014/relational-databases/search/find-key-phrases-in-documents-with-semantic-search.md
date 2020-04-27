@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011345"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Rechercher des expressions clés dans les documents avec la recherche sémantique
   Explique comment rechercher des expressions clés dans des documents ou des colonnes de texte configurés pour l'indexation sémantique statistique.  
   
-##  <a name="BasicsQueryKey"></a>Recherche d’expressions clés dans des documents  
+##  <a name="finding-key-phrases-in-documents"></a><a name="BasicsQueryKey"></a>Recherche d’expressions clés dans des documents  
   
-###  <a name="howtofind"></a>Comment : Rechercher les expressions clés dans des documents avec SEMANTICKEYPHRASETABLE  
+###  <a name="how-to-find-the-key-phrases-in-documents-with-semantickeyphrasetable"></a><a name="howtofind"></a>Comment : Rechercher les expressions clés dans des documents avec SEMANTICKEYPHRASETABLE  
  Pour identifier les expressions clés dans des documents spécifiques, ou pour identifier des documents qui contiennent des expressions clés spécifiques, vous pouvez interroger la fonction [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
  SEMANTICKEYPHRASETABLE retourne une table avec zéro, une ou plusieurs lignes pour les expressions clés associées aux colonnes de la table spécifiée. Cette fonction d'ensemble de lignes peut uniquement être référencée dans la clause FROM d'une instruction SELECT comme tout nom de table standard.  
@@ -37,7 +37,7 @@ ms.locfileid: "66011345"
 > [!IMPORTANT]  
 >  L'indexation sémantique et de texte intégral doit être activée pour les colonnes que vous ciblez.  
   
-###  <a name="HowToTopPhrases"></a>Exemple 1 : Rechercher les expressions clés de niveau supérieur dans un document spécifique  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Exemple 1 : Rechercher les expressions clés de niveau supérieur dans un document spécifique  
  L’exemple suivant extrait les 10 expressions clés de niveau supérieur du document spécifié par la variable @DocumentId dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. La variable @DocumentId représente une valeur de la colonne clé de l’index de recherche en texte intégral.  
   
 ```sql  
@@ -54,7 +54,7 @@ GO
   
  La fonction **SEMANTICKEYPHRASETABLE** récupère efficacement ces résultats en utilisant une recherche d'index au lieu d'une analyse de table.  
   
-###  <a name="HowToTopDocuments"></a>Exemple 2 : Rechercher les documents de niveau supérieur qui contiennent une expression clé spécifique  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Exemple 2 : Rechercher les documents de niveau supérieur qui contiennent une expression clé spécifique  
  L’exemple suivant récupère les 25 premiers documents qui contiennent l’expression clé « bracket » dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks.  
   
 ```sql  

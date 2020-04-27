@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011265"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Améliorer les performances des requêtes de texte intégral
@@ -26,8 +26,7 @@ ms.locfileid: "66011265"
   
 -   Réorganisez le catalogue de texte intégral à l’aide de [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Assurez-vous d'effectuer ces opérations avant de tester les performances car l'exécution de cette instruction entraîne une fusion principale des index de texte intégral dans ce catalogue.  
   
--   Limitez le choix de vos colonnes clés de texte intégral à une petite colonne. Même si une colonne de 900 octets est prise en charge, il est recommandé d'utiliser une colonne clé inférieure à cette taille dans un index de recherche en texte intégral. 
-  `int` et `bigint` offrent les meilleures performances.  
+-   Limitez le choix de vos colonnes clés de texte intégral à une petite colonne. Même si une colonne de 900 octets est prise en charge, il est recommandé d'utiliser une colonne clé inférieure à cette taille dans un index de recherche en texte intégral. `int` et `bigint` offrent les meilleures performances.  
   
 -   L’utilisation d’une clé de texte intégral de type entier évite une jointure avec la table de mappage **docid** . Par conséquent, une clé de texte intégral de type entier améliore considérablement les performances des requêtes et renforce les performances d'analyse. Des avantages en matière de performances supplémentaires peuvent résulter si la clé de texte intégral est également une clé d'index cluster.  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011034"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues de recherche sémantique
@@ -24,14 +24,14 @@ ms.locfileid: "66011034"
   
  Pour obtenir la liste des objets de base de données qui prennent en charge la recherche en texte intégral, consultez [DDL, fonctions, procédures stockées et vues de recherche en texte intégral](../views/views.md).  
   
-##  <a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Instructions DDL (Data Definition Language) Transact-SQL  
   
 |Object|Informations complémentaires|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[Activer la recherche sémantique sur les tables et les colonnes](enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)|[Activer la recherche sémantique sur les tables et les colonnes](enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> Fonctions système  
+##  <a name="system-functions"></a><a name="func"></a> Fonctions système  
   
 |Object|Informations complémentaires|  
 |------------|----------------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "66011034"
 |[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql)|[Rechercher des documents similaires ou connexes avec la recherche sémantique](find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql)|[Rechercher des documents similaires ou connexes avec la recherche sémantique](find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> Fonctions de métadonnées système  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> Fonctions de métadonnées système  
   
 |Object|Informations complémentaires|  
 |------------|----------------------|  
@@ -50,14 +50,14 @@ ms.locfileid: "66011034"
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|[Activer la recherche sémantique sur les tables et les colonnes](enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|[Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> Procédures stockées système  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> Procédures stockées système  
   
 |Object|Informations complémentaires|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> Vues système - Affichages catalogue  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a>Vues système-affichages catalogue  
   
 |Object|Informations complémentaires|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "66011034"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Installer et configurer la recherche sémantique](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> Vues système – Vues de gestion dynamique  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Vues système – Vues de gestion dynamique  
   
 |Object|Informations complémentaires|  
 |------------|----------------------|  

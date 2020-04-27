@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 793107e91425e4fa0df23211a6d4ea42afef8c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010801"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Exécution de requêtes XPath avec des espaces de noms (classes managées SQLXML)
@@ -36,8 +36,7 @@ ms.locfileid: "66010801"
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- Dans SQLXML 4.0, spécifiez cette requête XPath avec un préfixe d'espace de noms. 
-  `x:Contact` constitue un exemple, où `x` est le préfixe d'espace de noms. Prenons le schéma XSD suivant :  
+ Dans SQLXML 4.0, spécifiez cette requête XPath avec un préfixe d'espace de noms. `x:Contact` constitue un exemple, où `x` est le préfixe d'espace de noms. Prenons le schéma XSD suivant :  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  

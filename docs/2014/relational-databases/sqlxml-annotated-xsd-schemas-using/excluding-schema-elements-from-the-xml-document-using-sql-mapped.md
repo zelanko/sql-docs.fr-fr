@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013861"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Exclusion d'éléments du schéma du document XML obtenu à l'aide de sql:mapped (SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66013861"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Spécification de l'annotation sql:mapped  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Spécification de l'annotation sql:mapped  
  Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un ** \<élément person. contact>** avec les attributs **ContactID**, **FirstName**, **LastName**et **HomeAddress** .  
   
  Lors du mappage de ce schéma XSD à la table Person. contact de la base `sql:mapped` de données AdventureWorks, est spécifié sur l’attribut **HomeAddress** parce que la table Employees ne stocke pas les adresses personnelles des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  

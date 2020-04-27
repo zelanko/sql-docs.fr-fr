@@ -28,10 +28,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e4a0c3d8b7a01f43b03d3f94b48d5bba800b64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014555"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
@@ -69,11 +69,9 @@ ms.locfileid: "66014555"
  Les conversions des éléments node-set ne sont pas toujours intuitives. Un élément node-set est converti en type `string` par extraction de la valeur de chaîne du premier nœud du jeu uniquement. Pour être converti en type `number`, un élément node-set est d'abord converti en type `string`, puis le type `string` est converti en type `number`. Pour convertir un élément node-set en type `boolean`, vous devez d'abord le tester pour vérifier s'il existe.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, les conversions d'élément node-set en `string` ou d'élément node-set en `number`, telles que décrites dans la recommandation XPath, ne sont pas implémentées. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, en fonction de la spécification XPath du W3C, la `Order[OrderDetail/@UnitPrice > 10.0]` requête XPath sélectionne les commandes avec le premier **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec un **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, les conversions d'élément node-set en `string` ou d'élément node-set en `number`, telles que décrites dans la recommandation XPath, ne sont pas implémentées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, en fonction de la spécification XPath du W3C, la `Order[OrderDetail/@UnitPrice > 10.0]` requête XPath sélectionne les commandes avec le premier **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec un **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0.  
   
- La conversion en valeur `boolean` implique un test de vérification d'existence ; la requête XPath `Products[@Discontinued=true()]` équivaut donc à l'expression SQL « Products.Discontinued is not null » et non à l'expression SQL « Products.Discontinued = 1 ». Pour que la requête équivaille à la dernière expression SQL, convertissez avant tout l'élément node-set en type non `boolean`, tel que `number`. Par exemple : `Products[number(@Discontinued) = true()]`.  
+ La conversion en valeur `boolean` implique un test de vérification d'existence ; la requête XPath `Products[@Discontinued=true()]` équivaut donc à l'expression SQL « Products.Discontinued is not null » et non à l'expression SQL « Products.Discontinued = 1 ». Pour que la requête équivaille à la dernière expression SQL, convertissez avant tout l'élément node-set en type non `boolean`, tel que `number`. Par exemple, `Products[number(@Discontinued) = true()]`.  
   
  Du fait que la plupart des opérateurs sont définis pour être vrais (TRUE) s'ils le sont pour un nœud quelconque ou l'un des nœuds de l'élément node-set, ces opérations prennent toujours la valeur FALSE si l'élément node-set est vide. Ainsi donc, si A est vide, `A = B` et `A != B` ont tous les deux la valeur FALSE et `not(A=B)` et `not(A!=B)` ont la valeur TRUE.  
   
@@ -89,7 +87,7 @@ ms.locfileid: "66014555"
   
 |Type de données XDR|Équivalent<br /><br /> Type de données XPath|Conversion SQL Server utilisée|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
+|Nonebin.base64bin.hex|NON APPLICABLE|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|nombre|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
@@ -156,7 +154,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
- Lors de la conversion des valeurs dans la requête XPath, la première conversion convertit le type de données XDR en type de données XPath. Étant donné que le type de **** données XSD `fixed14.4`de UnitPrice est, comme décrit dans le tableau précédent, il s’agit de la première conversion utilisée :  
+ Lors de la conversion des valeurs dans la requête XPath, la première conversion convertit le type de données XDR en type de données XPath. Étant donné que le type de **UnitPrice** données XSD `fixed14.4`de UnitPrice est, comme décrit dans le tableau précédent, il s’agit de la première conversion utilisée :  
   
 ```  
 CONVERT(money, OrderDetail.UnitPrice))   

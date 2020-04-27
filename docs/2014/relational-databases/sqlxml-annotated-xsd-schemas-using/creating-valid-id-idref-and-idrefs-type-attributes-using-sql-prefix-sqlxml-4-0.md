@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013920"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Création d'attributs de type Valid ID, IDREF et IDREFS à l'aide de sql:prefix (SQLXML 4.0)
@@ -51,7 +51,7 @@ ms.locfileid: "66013920"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>R. Spécification des types ID et IDREFS  
+### <a name="a-specifying-id-and-idrefs-types"></a>A. Spécification des types ID et IDREFS  
  Dans le schéma suivant, l' ** \<élément Customer>** se compose de l' ** \<ordre>** élément enfant. L' ** \<élément Order>** possède également un élément enfant, l' ** \<élément OrderDetail>** .  
   
  L’attribut **attribut OrderIDList** de ** \<Customer>** est un attribut de type IDREFS qui fait référence à l’attribut **OrderID** de l' ** \<élément Order>** .  

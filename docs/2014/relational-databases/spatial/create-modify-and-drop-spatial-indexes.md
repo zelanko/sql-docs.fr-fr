@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014265"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
@@ -31,13 +31,13 @@ ms.locfileid: "66014265"
 > [!NOTE]  
 >  Pour plus d’informations sur la relation entre les index spatiaux et les partitions et groupes de fichiers, consultez la section « Remarques » dans [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a>Création, modification et suppression d’index spatiaux  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Création, modification et suppression d'index spatiaux  
   
-###  <a name="create"></a>Pour créer un index spatial  
- **Pour créer un index spatial à l’aide de Transact-SQL**  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Pour créer un index spatial  
+ **Pour créer un index spatial à l'aide de Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **Pour créer un index spatial à l’aide de la boîte de dialogue nouvel index dans Management Studio**  
+ **Pour créer un index spatial à l'aide de la boîte de dialogue Nouvel index dans Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Pour créer un index spatial dans Management Studio  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
@@ -76,7 +76,7 @@ ms.locfileid: "66014265"
 >  Pour créer un autre index spatial sur la même colonne spatiale ou sur une colonne spatiale différente, répétez les étapes précédentes.  
   
   
- **Pour créer un index spatial à l’aide de Concepteur de tables dans Management Studio**  
+ **Pour créer un index spatial à l'aide du Concepteur de tables dans Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>Pour créer un index spatial dans le Concepteur de tables  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table pour laquelle vous souhaitez créer un index spatial, puis cliquez sur **Conception**.  
@@ -92,7 +92,7 @@ ms.locfileid: "66014265"
 5.  Sélectionnez le nouvel index dans la liste **Index spatial sélectionné** et, dans la grille située à droite, définissez les propriétés de l'index spatial. Pour plus d’informations sur les propriétés, consultez [Boîte de dialogue Index spatiaux &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a>Pour modifier un index spatial  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Pour modifier un index spatial  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66014265"
 -   [Déplacer un index existant dans un autre groupe de fichiers](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a>Pour supprimer un index spatial  
- **Pour supprimer un index spatial à l’aide de Transact-SQL**  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Pour supprimer un index spatial  
+ **Pour supprimer un index spatial à l'aide de Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- **Pour supprimer un index à l’aide de Management Studio**  
- [Supprimer un index](../indexes/delete-an-index.md)  
+ **Pour supprimer un index à l'aide de Management Studio**  
+ [Suppression d'index](../indexes/delete-an-index.md)  
   
- **Pour supprimer un index spatial à l’aide de Concepteur de tables dans Management Studio**  
+ **Pour supprimer un index spatial à l'aide du Concepteur de tables dans Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Pour supprimer un index spatial dans le Concepteur de tables  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table contenant l’index spatial que vous souhaitez supprimer et cliquez sur **Conception**.  
@@ -127,7 +127,7 @@ ms.locfileid: "66014265"
 4.  Cliquez sur **Supprimer**.  
   
   
-##  <a name="restrictions"></a>Restrictions sur les index spatiaux  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Restrictions sur les index spatiaux  
  Un index spatial peut être créé uniquement sur une colonne de type `geometry` ou `geography`.  
   
 ### <a name="table-and-view-restrictions"></a>Restrictions sur les tables et les vues  

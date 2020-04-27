@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054600"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Affichage et arrêt des packages exécutés sur le serveur Integration Services
@@ -62,6 +62,6 @@ ms.locfileid: "66054600"
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md)   
- [Rapports de dépannage pour l’exécution des packages](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Dépannage des rapports pour l'exécution des packages](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011475"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les requêtes de texte intégral peuvent rechercher les synonymes des termes spécifiés par l'utilisateur grâce à un dictionnaire des synonymes. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) et pour les requêtes [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) qui spécifient la clause FORMSOF THESAURUS.  
   
-##  <a name="tasks"></a>Tâches de base pour la configuration d’un fichier de dictionnaire des synonymes  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>Tâches de base pour la configuration d’un fichier de dictionnaire des synonymes  
  Pour que vos requêtes de recherche en texte intégral sur votre instance de serveur puissent rechercher les synonymes dans une langue donnée, vous devez au préalable définir des mappages de dictionnaire des synonymes pour cette langue. Chaque dictionnaire des synonymes doit être configuré manuellement de façon à définir les éléments suivants :  
   
 -   Paramètre de signes diacritiques  
@@ -42,7 +42,7 @@ ms.locfileid: "66011475"
      Un jeu de remplacement contient un modèle de texte à remplacer par un jeu de substitution. Reportez-vous à l'exemple de la section « Structure XML d'un jeu de remplacement », plus loin dans cette rubrique.  
   
   
-##  <a name="initial_thesaurus_files"></a>Contenu initial des fichiers de dictionnaire des synonymes  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>Contenu initial des fichiers de dictionnaire des synonymes  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un fichier de dictionnaire des synonymes XML par langue prise en charge. Ces fichiers sont essentiellement vides. Ils contiennent uniquement la structure XML de niveau supérieur commune à tous les dictionnaires des synonymes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un exemple commenté de dictionnaire des synonymes.  
   
  Les fichiers de dictionnaires des synonymes fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiennent tous le code XML suivant :  
@@ -74,7 +74,7 @@ ms.locfileid: "66011475"
 ```  
   
   
-##  <a name="location"></a>Emplacement des fichiers de dictionnaire des synonymes  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>Emplacement des fichiers de dictionnaire des synonymes  
  L'emplacement par défaut des fichiers de dictionnaires des synonymes est :  
   
  *<SQL_Server_data_files_path>* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
@@ -102,18 +102,18 @@ ms.locfileid: "66011475"
  Le fichier du dictionnaire des synonymes global correspond à la langue « neutre », avec le LCID 0. Cette valeur ne peut être modifiée que par des administrateurs.  
   
   
-##  <a name="how_queries_use_tf"></a>Utilisation des fichiers de dictionnaire des synonymes dans les requêtes  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>Utilisation des fichiers de dictionnaire des synonymes dans les requêtes  
  Une requête de dictionnaire des synonymes utilise à la fois le dictionnaire des synonymes spécifique à la langue et le dictionnaire des synonymes global. En premier lieu, la requête recherche le fichier spécifique à la langue et le charge en vue du traitement (à moins qu'il ne soit déjà chargé). La requête est développée pour inclure les synonymes spécifiques à la langue spécifiés par les règles de jeu d'expansion et de jeu de remplacement définies dans le fichier du dictionnaire des synonymes. Ces étapes sont ensuite répétées pour le dictionnaire des synonymes global. Toutefois, si un terme fait déjà partie d'une correspondance dans le fichier du dictionnaire des synonymes spécifique à la langue, ce terme est inéligible pour la mise en correspondance dans le dictionnaire des synonymes global.  
   
   
-##  <a name="structure"></a>Fonctionnement de la structure d’un fichier de dictionnaire des synonymes  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>Fonctionnement de la structure d’un fichier de dictionnaire des synonymes  
  Chaque fichier de dictionnaire des synonymes définit un conteneur XML dont l’ID est `Microsoft Search Thesaurus` et un commentaire, `<!--` ... `-->`, qui contient un exemple de dictionnaire des synonymes. Le dictionnaire des synonymes est \<défini dans un élément de dictionnaire des synonymes> qui contient des exemples d’éléments enfants qui définissent le paramètre de signes diacritiques, les jeux d’expansion et les jeux de remplacement, comme suit :  
   
 -   Structure XML du paramètre de signes diacritiques  
   
      Le paramètre de signes diacritiques d'un dictionnaire des synonymes est spécifié dans un élément <diacritics_sensitive> unique. Cet élément contient une valeur entière qui contrôle le respect des accents, comme suit :  
   
-    |Paramètre de signes diacritiques|Valeur|XML|  
+    |Paramètre de signes diacritiques|Value|XML|  
     |------------------------|-----------|---------|  
     |ne respectent pas les accents|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |respectent les accents|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -173,7 +173,7 @@ ms.locfileid: "66011475"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>Utilisation des fichiers de dictionnaire des synonymes  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>Utilisation des fichiers de dictionnaire des synonymes  
  **Pour modifier un fichier de dictionnaire des synonymes**  
   
 -   [Modification d'un fichier de dictionnaire des synonymes](#editing)  
@@ -184,10 +184,10 @@ ms.locfileid: "66011475"
   
  **Pour consulter le résultat de la segmentation du texte en unités lexicales d'une combinaison d'analyseur lexical, de dictionnaire des synonymes et de liste de mots vides**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [sys. dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>Modification d’un fichier de dictionnaire des synonymes  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>Modification d’un fichier de dictionnaire des synonymes  
  Le dictionnaire des synonymes d'une langue donnée peut être configuré en modifiant son fichier XML. Pendant l’installation, les fichiers de dictionnaire des synonymes vides qui contiennent uniquement le \<conteneur de> \<XML et un exemple de dictionnaire des synonymes> sont installés. Pour que les requêtes de recherche en texte intégral qui recherchent des synonymes fonctionnent correctement, vous devez créer un \<élément de dictionnaire des synonymes> qui définit un ensemble de synonymes. Vous pouvez définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement.  
   
  **Restrictions applicables aux fichiers de dictionnaires des synonymes**  
@@ -235,7 +235,7 @@ ms.locfileid: "66011475"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [CONTIENT &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012664"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
@@ -44,17 +44,14 @@ ms.locfileid: "66012664"
 ## <a name="abbreviated-syntax-for-the-axes"></a>Syntaxe abrégée des axes  
  La syntaxe abrégée suivante est prise en charge pour le chemin d'accès d'emplacement :  
   
--   
-  `attribute::` peut être abrégé en `@`.  
+-   `attribute::` peut être abrégé en `@`.  
   
      Le chemin d'accès d'emplacement `Customer[@CustomerID="ALFKI"]` est identique à `child::Customer[attribute::CustomerID="ALFKI"]`.  
   
--   
-  `child::` peut être omis dans un niveau d'emplacement.  
+-   `child::` peut être omis dans un niveau d'emplacement.  
   
      Par conséquent, `child` est l'axe par défaut. Le chemin d'accès d'emplacement `Customer/Order` est identique à `child::Customer/child::Order`.  
   
--   
-  `self::node()` peut être abrégé en un point et `parent::node()` peut être abrégé en deux points (..).  
+-   `self::node()` peut être abrégé en un point et `parent::node()` peut être abrégé en deux points (..).  
   
   
