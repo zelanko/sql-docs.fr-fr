@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284916"
 ---
 # <a name="calculations-ssas-tabular"></a>Calculs (SSAS Tabulaire)
@@ -24,7 +24,7 @@ ms.locfileid: "67284916"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Présentation de DAX dans les modèles tabulaires &#40;&#41;SSAS tabulaire](understanding-dax-in-tabular-models-ssas-tabular.md)|Décrit le langage de formule DAX (Data Analysis Expressions) utilisé pour créer des calculs pour les colonnes calculées, les mesures et les filtres de lignes dans les modèles tabulaires.|  
+|[Fonctionnement de DAX dans les modèles tabulaires &#40;SSAS Tabulaire&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Décrit le langage de formule DAX (Data Analysis Expressions) utilisé pour créer des calculs pour les colonnes calculées, les mesures et les filtres de lignes dans les modèles tabulaires.|  
 |[Compatibilité des formules en mode DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Décrit les différences, répertorie les fonctions qui ne sont pas prises en charge en mode DirectQuery et les fonctions prises en charge mais pouvant retourner des résultats différents.|  
 |[Expressions d’analyse de données &#40;référence de&#41; DAX](/dax/data-analysis-expressions-dax-reference)|Cette section fournit une description détaillée de la syntaxe, des opérateurs et des fonctions DAX.|  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 51e364650f8b8f8dae386126bdc820f9c72e571c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899521"
 ---
 # <a name="sysdm_pdw_component_health_status-transact-sql"></a>sys. dm_pdw_component_health_status (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67899521"
 |property_id|**int**|ID de la propriété. Consultez [sys. pdw_health_component_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md).|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|Identifie une instance d’un composant. Par exemple, une instance d’un processeur peut être identifiée par component_instance_id = « CPU1 ».<br /><br /> pdw_node_id, component_id, property_id et component_instance_id forment la clé de cette vue.|NOT NULL|  
 |property_value|**nvarchar(255)**|Valeur de la propriété actuelle.|NULL|  
-|update_time|**DATETIME**|Heure de la dernière mise à jour de la mesure.|NOT NULL|  
+|update_time|**datetime**|Heure de la dernière mise à jour de la mesure.|NOT NULL|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

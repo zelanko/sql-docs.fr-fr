@@ -14,10 +14,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412694"
 ---
 # <a name="glossary"></a>Glossaire
@@ -240,7 +240,7 @@ ms.technology:
 |réparation de cluster|Opération de réparation dans laquelle tous les fichiers manquants ou endommagés sont remplacés, toutes les clés de Registre manquantes ou endommagées sont remplacées et toutes les valeurs de configuration manquantes ou non valides sont définies avec les valeurs par défaut.|  
 |index cluster|Index d'arbre B (B-tree) dans lequel l'ordre logique des valeurs de clés détermine l'ordre physique des lignes correspondantes dans une table.|  
 |serveur en cluster|Serveur qui appartient à un cluster de serveurs.|  
-|clustering.|Technique d'exploration de données permettant d'analyser les données afin de regrouper les enregistrements en fonction de leur emplacement dans un espace attributaire multidimensionnel.|  
+|clustering|Technique d'exploration de données permettant d'analyser les données afin de regrouper les enregistrements en fonction de leur emplacement dans un espace attributaire multidimensionnel.|  
 |verrou de granularité grossière|Verrou qui s'applique à un volume important de code ou de données.|  
 |sécurité d'accès du code|Mécanisme fourni par le common language runtime grâce auquel le code managé se voit accorder des autorisations par la stratégie de sécurité et qui applique ces autorisations afin de limiter les opérations que le code sera autorisé à accomplir.|  
 |élément de code|Combinaison minimale de bits qui peut représenter une unité de texte encodé à traiter ou échanger.|  
@@ -271,7 +271,7 @@ ms.technology:
 |columnstore index|Stocke chaque colonne dans un ensemble distinct de pages disque au lieu de stocker plusieurs lignes par page.|  
 |COM|Modèle de programmation basé sur des objets et conçu pour promouvoir l'interopérabilité des logiciels ; il permet à deux applications ou composants ou plus de coopérer facilement les uns avec les autres, même s'ils ont été écrits par des fournisseurs différents, à des moments différents, dans des langages de programmation différents, ou s'ils s'exécutent sur des ordinateurs différents qui exécutent des systèmes d'exploitation différents.|  
 |tampon de commande|Zone de la mémoire dans laquelle les commandes entrées par l'utilisateur sont conservées. Un tampon de commande peut permettre à l'utilisateur de répéter des commandes sans les retaper totalement, de modifier des commandes passées afin de modifier un argument ou de corriger une erreur, d'annuler des commandes ou d'obtenir une liste de commandes passées.|  
-|invite de commande|Interface entre le système d'exploitation et l'utilisateur, dans laquelle l'utilisateur tape des chaînes de texte en langage de commande qui sont passées à l'interpréteur de commandes pour être exécutées.|  
+|invite de commandes|Interface entre le système d'exploitation et l'utilisateur, dans laquelle l'utilisateur tape des chaînes de texte en langage de commande qui sont passées à l'interpréteur de commandes pour être exécutées.|  
 |relation de commande|Fournit des instructions à du matériel à partir de questions ou de commandes exprimées en langage naturel.|  
 |validation|Opération qui enregistre toutes les modifications apportées aux bases de données, cubes ou dimensions depuis le début d'une transaction.|  
 |Aperçu Validation|Titre d'une fenêtre qui affiche les actions à entreprendre pendant l'opération de validation.|  
@@ -580,8 +580,8 @@ ms.technology:
 |numéro d'état de l'erreur|Numéro associé aux messages SQL Server qui permet aux ingénieurs du support technique de Microsoft de localiser la partie du code à l'origine du message.|  
 |ETL|Action d'extraire des données de différentes sources, de transformer ces données en types cohérents et de charger les données transformées pour qu'elles soient utilisées par des applications.|  
 |récepteur de journal ETW (suivi des événements Windows)|Moyen de capturer des événements de trace sur le client de cache ou l'hôte de cache avec l'infrastructure de suivi d'événements pour Windows (ETW) dans Windows.|  
-|événement|Unité de données de base traitée par le serveur StreamInsight. Chaque événement contient un en-tête qui définit le genre d'événement et les propriétés temporelles de l'événement. Un événement (à l'exception de l'événement CTI) contient en général une charge utile d'événement, qui est une structure de données .NET contenant les données associées à l'événement.|  
-|événement|Toute occurrence significative se produisant dans le système ou dans une application qui doit être signalée à un utilisateur ou entrée à ajouter dans un journal.|  
+|event|Unité de données de base traitée par le serveur StreamInsight. Chaque événement contient un en-tête qui définit le genre d'événement et les propriétés temporelles de l'événement. Un événement (à l'exception de l'événement CTI) contient en général une charge utile d'événement, qui est une structure de données .NET contenant les données associées à l'événement.|  
+|event|Toute occurrence significative se produisant dans le système ou dans une application qui doit être signalée à un utilisateur ou entrée à ajouter dans un journal.|  
 |catégorie d'événement|Dans Trace SQL, regroupement de classes d'événements semblables et associées de façon logique.|  
 |chronique d'événements|Table qui stocke des informations sur l'état des événements.|  
 |règle de chronique d'événements|Une ou plusieurs instructions Transact-SQL qui gèrent les données dans la chronique d'événements.|  
@@ -882,7 +882,7 @@ ms.technology:
 |serveur de distribution local|Serveur configuré à la fois comme éditeur et distributeur pour la réplication SQL Server.|  
 |vue partitionnée locale|Vue joignant horizontalement des données partitionnées d'un ensemble de tables membres sur un serveur unique pour représenter les données comme si elles provenaient d'une même table.|  
 |abonnement local|Abonnement à une publication de fusion utilisant la valeur de priorité du serveur de publication pour la détection et la résolution des conflits.|  
-|local|Collection de règles et de données propres à une langue et à une zone géographique. Les paramètres régionaux comportent des informations sur le tri des règles, la mise en forme de la date et de l'heure, des conventions numériques et monétaires ainsi que la classification des caractères.|  
+|locale|Collection de règles et de données propres à une langue et à une zone géographique. Les paramètres régionaux comportent des informations sur le tri des règles, la mise en forme de la date et de l'heure, des conventions numériques et monétaires ainsi que la classification des caractères.|  
 |localisation|Processus d'adaptation d'un produit et/ou d'un contenu (y compris le texte et les éléments non textuels) pour répondre aux attentes linguistiques, culturelles et politiques et/ou aux exigences d'un marché local spécifique (paramètres régionaux).|  
 |lock|Restriction d'accès à une ressource dans un environnement multi-utilisateur.|  
 |escalade de verrous|Processus de conversion de nombreux verrous de granularité fine en un nombre moindre de verrous de granularité grossière, réduisant ainsi la charge système.|  
@@ -971,7 +971,7 @@ ms.technology:
 |algorithme MSC (Microsoft Sequence Clustering)|Algorithme combinant l'analyse et le clustering des séquences, ce qui permet d'identifier les clusters d'événements classés de façon semblable dans une séquence. Les clusters peuvent être utilisés pour prédire le classement d'événements dans une séquence selon des caractéristiques connues.|  
 |Importation des données d'utilisation de Microsoft SharePoint Foundation|Travail du minuteur par défaut pour SharePoint Foundation qui importe les fichiers journaux d'utilisation dans la base de données de journalisation.|  
 |Microsoft SharePoint Server|Famille de serveurs portail d'entreprise Microsoft, basée sur Windows SharePoint Services, utilisée pour agréger des sites, des informations et des applications SharePoint dans un seul portail.|  
-|Microsoft SQL Server|Famille de systèmes de gestion et d'analyse de base de données relationnelle Microsoft pour les solutions de commerce électronique, métier et d'entreposage de données.|  
+|Microsoft SQL Server|Famille de systèmes de gestion et d'analyse de base de données relationnelle Microsoft pour les solutions de commerce électronique, métier et d'entreposage de données.|  
 |Microsoft SQL Server 2008 Express|Version allégée et intégrable de Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Système de conception et de gestion de base de données relationnelle Microsoft pour les solutions de commerce électronique, métier et d'entreposage de données.|  
 |Microsoft SQL Server 2008 Express with Tools|Version gratuite et conviviale de la plateforme de données SQL Server Express qui inclut l'outil de gestion graphique SQL Server Management Studio (SMSS) Express.|  
@@ -1085,8 +1085,8 @@ ms.technology:
 |Paquet|Unité d'information transmise d'un ordinateur ou périphérique à un autre sur un réseau.|  
 |index de remplissage|Option qui spécifie l'espace à laisser ouvert sur chaque page dans les niveaux intermédiaires de l'index.|  
 |remplissage|En matière de stockage des données, ajout d'un ou plusieurs bits, généralement des zéros, à un bloc de données pour le remplir, en vue de forcer les bits des données réelles à une position particulière ou d'empêcher les données de dupliquer une série de bits ayant une signification établie, telle qu'une commande incorporée.|  
-|Page|Utilisée pour retourner les résultats d'une requête en sous-ensembles de données plus petits, permettant ainsi à l'utilisateur de naviguer dans le jeu de résultats en affichant des « pages » de données.|  
-|Page|Dans un système de stockage virtuel, bloc de longueur fixe d'adresses virtuelles contiguës copiées comme une unité de la mémoire vers le disque, et vice versa, pendant des opérations de pagination.|  
+|page|Utilisée pour retourner les résultats d'une requête en sous-ensembles de données plus petits, permettant ainsi à l'utilisateur de naviguer dans le jeu de résultats en affichant des « pages » de données.|  
+|page|Dans un système de stockage virtuel, bloc de longueur fixe d'adresses virtuelles contiguës copiées comme une unité de la mémoire vers le disque, et vice versa, pendant des opérations de pagination.|  
 |défaut de page|Interruption qui se produit lorsque le logiciel tente de lire ou d'écrire dans un emplacement de mémoire virtuelle marqué comme n'étant pas présent.|  
 |restauration de pages|Opération qui restaure une ou plusieurs pages de données. La restauration de pages permet de réparer des pages endommagées.|  
 |pager|Appareil électronique sans fil de poche qui utilise des signaux radio pour enregistrer des numéros de téléphone entrants ou des messages texte courts. Certains récepteurs de radiomessagerie permettent également aux utilisateurs d'envoyer des messages.|  
@@ -1212,7 +1212,7 @@ ms.technology:
 |base de données de publication|Base de données sur le serveur de publication à partir de laquelle des données et des objets de base de données sont marqués en vue de leur réplication et propagés jusqu'aux Abonnés.|  
 |période de rétention de publication|Dans la réplication de fusion, durée pendant laquelle un abonnement peut demeurer non synchronisé.|  
 |données publiées|Données répliquées situées sur le serveur de publication.|  
-|Serveur de publication|Serveur qui rend des données disponibles pour la réplication vers d'autres serveurs. Un serveur de publication détecte également les données modifiées et conserve des informations sur toutes les publications sur le site.|  
+|Éditeur|Serveur qui rend des données disponibles pour la réplication vers d'autres serveurs. Un serveur de publication détecte également les données modifiées et conserve des informations sur toutes les publications sur le site.|  
 |base de données du serveur de publication|Serveur qui rend des données disponibles pour la réplication vers d'autres serveurs. Un serveur de publication détecte également les données modifiées et conserve des informations sur toutes les publications sur le site.|  
 |serveur de publication|Serveur exécutant une instance d'Analysis Services qui stocke le cube source d'un ou de plusieurs cubes liés.|  
 |table de publication|Table située sur le serveur de publication dans laquelle des données ont été marquées en vue d'une réplication et font partie d'une publication.|  
@@ -1227,7 +1227,7 @@ ms.technology:
 |qualificateur|Modificateur qui contient des informations qui décrivent une classe, une instance, une propriété, une méthode ou un paramètre. Les qualificateurs sont définis par le modèle CIM (Common Information Model), par le Gestionnaire d'objets CIMOM et par les développeurs.|  
 |type de qualificateur|Indicateur qui fournit des informations supplémentaires sur un qualificateur, par exemple si une classe ou une instance dérivée peut remplacer ou non la valeur d'origine du qualificateur.|  
 |quantum|Brève période au cours de laquelle un thread donné s'exécute dans un système d'exploitation multitâche. Il effectue les travaux multitâches avant qu'il ne soit replanifié sur d'autres threads avec la même priorité. Anciennement appelé « tranche horaire ».|  
-|requête|Instance d'un modèle de requête exécutée en continu sur le serveur StreamInsight qui traite les événements reçus des instances d'adaptateurs d'entrée auxquelles la requête est liée et envoie les événements traités aux instances d'adaptateurs de sortie auxquelles elle est liée.|  
+|query|Instance d'un modèle de requête exécutée en continu sur le serveur StreamInsight qui traite les événements reçus des instances d'adaptateurs d'entrée auxquelles la requête est liée et envoie les événements traités aux instances d'adaptateurs de sortie auxquelles elle est liée.|  
 |module de liaison de requête|Objet qui lie un modèle de requête StreamInsight existant à des adaptateurs d'entrée et de sortie spécifiques.|  
 |liaison de requête|Processus de liaison d'instances d'adaptateurs d'entrée et d'instances d'adaptateurs de sortie à une instance d'un modèle de requête.|  
 |concepteur de requêtes|Outil qui aide un utilisateur à créer la commande de requête qui spécifie les données souhaitées par l'utilisateur dans un dataset de rapport.|  
@@ -1281,7 +1281,7 @@ ms.technology:
 |region|Conteneur de données, au sein d'un cache, qui fait cohabiter tous les objets mis en cache sur un hôte de cache unique. Les zones de cache permettent de rechercher tous les objets mis en cache dans la zone à l'aide de chaînes descriptives, appelées « balises ».|  
 |region|Collection de 128 pages de niveau feuille en ordre logique dans un fichier unique. Permet d'identifier les zones d'un fichier qui sont fragmentées.|  
 |modèle d'inscription|Méthode définie pour soumettre et approuver des requêtes d'inscription. Une entreprise choisit généralement un modèle d'inscription et modifie ses stratégies de gestion en conséquence.|  
-|régression ;|Processus statistique de prévision d'une ou plusieurs variables continues, telles que les bénéfices ou les pertes, en fonction d'autres attributs du dataset.|  
+|régression|Processus statistique de prévision d'une ou plusieurs variables continues, telles que les bénéfices ou les pertes, en fonction d'autres attributs du dataset.|  
 |régresseur|Variable d'entrée ayant une relation linéaire avec la variable de sortie.|  
 |système de gestion de base de données relationnelle|Système de base de données qui organise les données en lignes et en colonnes connexes, comme spécifié par un modèle relationnel.|  
 |moteur relationnel|Composant de SQL Server qui fonctionne avec le moteur de stockage. Le moteur relationnel est chargé de l'interprétation des requêtes de recherche Transact-SQL et du mappage des méthodes les plus efficaces pour rechercher les données physiques brutes fournies par le moteur de stockage et retourner les résultats à l'utilisateur.|  
@@ -1402,7 +1402,7 @@ ms.technology:
 |mémoire de script|Mémoire locale (RAM du client) utilisée par un script PHP.|  
 |volet de script|Partie éditeur de texte du Concepteur de tables.|  
 |création de scripts|Caractérise l'automatisation d'actions utilisateur ou la configuration d'un état standard sur un ordinateur au moyen de scripts.|  
-|Kit SDK |Ensemble de routines (habituellement dans une ou plusieurs bibliothèques) conçu pour permettre aux développeurs d'écrire plus facilement des programmes pour un ordinateur, un système d'exploitation ou une interface utilisateur donnés.|  
+|Kit SDK|Ensemble de routines (habituellement dans une ou plusieurs bibliothèques) conçu pour permettre aux développeurs d'écrire plus facilement des programmes pour un ordinateur, un système d'exploitation ou une interface utilisateur donnés.|  
 |condition de recherche|Dans une clause WHERE ou HAVING, prédicats qui définissent les conditions que les lignes sources doivent respecter pour figurer dans l'instruction SQL.|  
 |clé de recherche|Valeur à rechercher dans un document ou dans toute collection de données.|  
 |base de données secondaire|Copie en lecture seule d'une base de données primaire.|  
@@ -1775,7 +1775,7 @@ ms.technology:
 |formule de clôture pondérée|Formule qui calcule la moyenne des prix haut, bas et de clôture, en assignant plus de poids au cours de clôture.|  
 |caractère large|Code de caractère multilingue de 2 octets.|  
 |window|Sous-ensemble d'événements dans un flux qui se produit dans une période donnée ; autrement dit, une fenêtre contenant des données d'événements le long d'une chronologie.|  
-|Windows Management Instrumentation|Extension Microsoft de l'initiative WBEM (Web-based Enterprise Management) de la Commission spéciale pour la gestion de bureau (DMTF).|  
+|WMI (Windows Management Instrumentation)|Extension Microsoft de l'initiative WBEM (Web-based Enterprise Management) de la Commission spéciale pour la gestion de bureau (DMTF).|  
 |sécurité intégrée de Windows NT|Mode de sécurité qui utilise le processus d'authentification Windows NT.|  
 |serveur témoin|Dans la mise en miroir de bases de données, instance de serveur qui surveille l'état des serveurs principal et miroir et qui, par défaut, peut initialiser un basculement automatique en cas d'échec du serveur principal. Une session de mise en miroir de bases de données peut avoir un seul serveur témoin (ou « témoin ») facultatif.|  
 |WMI|Extension Microsoft de l'initiative WBEM (Web-based Enterprise Management) de la Commission spéciale pour la gestion de bureau (DMTF).|  

@@ -18,10 +18,10 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910117"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
@@ -34,18 +34,18 @@ ms.locfileid: "67910117"
 |**artid**|**int**|Colonne d'identité fournissant un numéro d'identification unique pour l'article|  
 |**creation_script**|**nvarchar(255)**|Script de création du schéma de l'article.|  
 |**del_cmd**|**nvarchar(255)**|Commande à exécuter en cas d'instruction DELETE, sinon création à partir du journal|  
-|**description**|**nvarchar(255)**|Entrée descriptive de l’article.|  
+|**descriptive**|**nvarchar(255)**|Entrée descriptive de l’article.|  
 |**dest_table**|**nvarchar(128)**|Nom de la table de destination|  
-|**filtres**|**int**|Identificateur d'objet de la procédure stockée utilisée pour le partitionnement horizontal.|  
+|**filter**|**int**|Identificateur d'objet de la procédure stockée utilisée pour le partitionnement horizontal.|  
 |**filter_clause**|**ntext**|Clause WHERE de l'article utilisée pour le filtrage horizontal.|  
 |**ins_cmd**|**nvarchar(255)**|Commande à exécuter lors d'une opération INSERT.|  
-|**nomme**|**nvarchar(128)**|Nom associé à l'article et unique dans la publication|  
-|**ID**|**int**|Identificateur de l'objet de la table publiée|  
+|**name**|**nvarchar(128)**|Nom associé à l'article et unique dans la publication|  
+|**objid**|**int**|Identificateur de l'objet de la table publiée|  
 |**pubid**|**int**|Identificateur de la publication à laquelle appartient l'article|  
 |**pre_creation_cmd**|**tinyint**|Commande de précréation pour les instructions DROP TABLE, DELETE TABLE ou TRUNCATE :<br /><br /> **0** = aucun.<br /><br /> **1** = suppression.<br /><br /> **2** = suppression.<br /><br /> **3** = tronquer.|  
-|**statu**|**int**|Masque de bits de l'état et des options d'article, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **1** = l’article est actif.<br /><br /> **8** = inclure le nom de colonne dans les instructions INSERT.<br /><br /> **16** = utiliser des instructions paramétrables.<br /><br /> **24** = les deux incluent le nom de colonne dans les instructions INSERT et utilisent des instructions paramétrables.<br /><br /> Par exemple, un article actif utilisant des instructions paramétrables posséderait la valeur 17 dans cette colonne. La valeur 0 signifie que l'article est inactif et qu'aucune propriété supplémentaire n'est définie.|  
+|**statut**|**int**|Masque de bits de l'état et des options d'article, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **1** = l’article est actif.<br /><br /> **8** = inclure le nom de colonne dans les instructions INSERT.<br /><br /> **16** = utiliser des instructions paramétrables.<br /><br /> **24** = les deux incluent le nom de colonne dans les instructions INSERT et utilisent des instructions paramétrables.<br /><br /> Par exemple, un article actif utilisant des instructions paramétrables posséderait la valeur 17 dans cette colonne. La valeur 0 signifie que l'article est inactif et qu'aucune propriété supplémentaire n'est définie.|  
 |**sync_objid**|**int**|Identificateur de la table ou de la vue représentant la définition de l'article.|  
-|**entrer**|**tinyint**|Type d'article :<br /><br /> **1** = article basé sur le journal.<br /><br /> **3** = article basé sur un journal avec filtre manuel.<br /><br /> **5** = article basé sur un journal avec vue manuelle.<br /><br /> **7** = article basé sur le journal avec filtre manuel et vue manuelle.|  
+|**type**|**tinyint**|Type d'article :<br /><br /> **1** = article basé sur le journal.<br /><br /> **3** = article basé sur un journal avec filtre manuel.<br /><br /> **5** = article basé sur un journal avec vue manuelle.<br /><br /> **7** = article basé sur le journal avec filtre manuel et vue manuelle.|  
 |**upd_cmd**|**nvarchar(255)**|Commande à exécuter en cas d'instruction UPDATE, sinon création à partir du journal|  
 |**schema_option**|**binary**|Indique quelles sont les propriétés de l'objet publié qui donnent lieu à un script dans l'instantané. Pour obtenir la liste des options de schéma prises en charge, consultez [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Propriétaire de la table dans la base de données de destination|  

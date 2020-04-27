@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284929"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Types de données pris en charge (SSAS Tabulaire)
   Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
   
- Cet article contient les sections suivantes :  
+ Cet article contient les sections suivantes :  
   
 -   [Types de données utilisés dans les modèles tabulaires](#bkmk_data_types)  
   
--   [Conversion de types de données implicites et explicites dans les formules DAX](#bkmk_implicit)  
+-   [Conversion implicite et explicite de types de données dans les formules DAX](#bkmk_implicit)  
   
 -   [Gestion des valeurs vides, des chaînes vides et des valeurs zéro](#bkmk_hand_blanks)  
   
-##  <a name="bkmk_data_types"></a>Types de données utilisés dans les modèles tabulaires  
+##  <a name="data-types-used-in-tabular-models"></a><a name="bkmk_data_types"></a>Types de données utilisés dans les modèles tabulaires  
  Les types de données suivants sont pris en charge. Lorsque vous importez des données ou utilisez une valeur dans une formule, même si la source de données d'origine contient un type de données différent, les données sont converties dans l'un des types de données suivants. Les valeurs issues des formules utilisent également ces types de données.  
   
  En règle générale, ces types de données sont implémentés pour permettre des calculs exacts dans les colonnes calculées, et les mêmes restrictions s'appliquent au reste des données dans les modèles à des fins de cohérence.  
@@ -44,7 +44,7 @@ ms.locfileid: "67284929"
 |Texte|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
 |Date|Date/time|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Devise|Devise|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
-|N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
+|NON APPLICABLE|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  <sup>1</sup> les formules DAX ne prennent pas en charge les types de données inférieurs à ceux répertoriés dans le tableau.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67284929"
   
 ||  
 |-|  
-|Valeur|  
+|Value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -68,9 +68,9 @@ ms.locfileid: "67284929"
 >  Vous ne pouvez pas importer à partir d’une colonne **varchar(max)** qui contient une chaîne de plus de 131 072 caractères.  
   
 ### <a name="table-data-type"></a>Type de données table  
- En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](/dax/dax-function-reference).  
+ En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d’informations sur les exigences relatives à des fonctions spécifiques, consultez [Référence des fonctions DAX](/dax/dax-function-reference).  
   
-##  <a name="bkmk_implicit"></a>Conversion de types de données implicites et explicites dans les formules DAX  
+##  <a name="implicit-and-explicit-data-type-conversion-in-dax-formulas"></a><a name="bkmk_implicit"></a>Conversion de types de données implicites et explicites dans les formules DAX  
  Chaque fonction DAX a des exigences spécifiques en ce qui concerne les types des données utilisés comme entrées et sorties. Par exemple, certaines fonctions requièrent des entiers pour certains arguments et des dates pour les autres ; d'autres fonctions requièrent du texte ou des tables.  
   
  Si les données de la colonne que vous spécifiez comme argument sont incompatibles avec le type de données requis par la fonction, DAX, dans de nombreux cas, retourne une erreur. Toutefois, DAX essaie chaque fois que possible de convertir implicitement les données dans le type de données requis. Par exemple :  
@@ -148,14 +148,11 @@ ms.locfileid: "67284929"
   
  Les expressions DAX suivantes illustrent ce comportement :  
   
- 
-  `=IF(FALSE()>"true","Expression is true", "Expression is false")` retourne `"Expression is true"`.  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")` retourne `"Expression is true"`.  
   
- 
-  `=IF("12">12,"Expression is true", "Expression is false")` retourne `"Expression is true"`.  
+ `=IF("12">12,"Expression is true", "Expression is false")` retourne `"Expression is true"`.  
   
- 
-  `=IF("12"=12,"Expression is true", "Expression is false")` retourne `"Expression is false"`.  
+ `=IF("12"=12,"Expression is true", "Expression is false")` retourne `"Expression is false"`.  
   
  Les conversions sont effectuées implicitement pour les types numérique ou date/heure comme décrit dans le tableau suivant :  
   
@@ -167,7 +164,7 @@ ms.locfileid: "67284929"
 |real|real|real|real|real|  
 |Date/time|real|real|real|Date/time|  
   
-##  <a name="bkmk_hand_blanks"></a>Gestion des valeurs vides, des chaînes vides et des valeurs zéro  
+##  <a name="handling-of-blanks-empty-strings-and-zero-values"></a><a name="bkmk_hand_blanks"></a>Gestion des valeurs vides, des chaînes vides et des valeurs zéro  
  Le traitement DAX des valeurs zéro, des valeurs Null et des chaînes vides n'est pas le même que dans Microsoft Excel et SQL Server. Cette section décrit les différences et explique la manière dont sont gérés ces types de données.  
   
  Le point essentiel à retenir est que les valeurs vides, cellules vides ou valeurs manquantes sont toutes représentées par le même nouveau type de valeur, BLANK. La façon dont les valeurs de ce type sont gérées dans des opérations telles que l'addition ou la concaténation dépend de la fonction en question. Vous pouvez également générer des valeurs vides à l'aide de la fonction BLANK ou les tester à l'aide de la fonction ISBLANK. Les valeurs Null de base de données ne sont pas prises en charge dans un modèle sémantique, et les valeurs Null sont converties implicitement en valeurs vides (blank) lorsqu'une colonne qui contient une valeur Null est référencée dans une formule DAX.  
@@ -195,6 +192,6 @@ ms.locfileid: "67284929"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données &#40;&#41;tabulaire SSAS](../data-sources-ssas-tabular.md)   
- [Importer des données &#40;&#41;tabulaire SSAS](../import-data-ssas-tabular.md)  
+ [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)  
   
   

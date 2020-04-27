@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8cb9980f74bdb37b1fab43db352e35c43151c390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899144"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-SQL)
@@ -26,13 +26,13 @@ ms.locfileid: "67899144"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|événement|**nvarchar (60)**|Clé pour cette vue.||  
+|event|**nvarchar(60)**|Clé pour cette vue.||  
 |event_id|**nvarchar (36)**|||  
-|create_time|**DATETIME**|||  
+|create_time|**datetime**|||  
 |session_id|**int**|ID de la session.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |cpu|**int**|||  
-|reads|**int**|Nombre de lectures logiques depuis le début de l’événement.||  
-|writes|**int**|Nombre d’écritures logiques depuis le début de l’événement.||  
+|lectures|**int**|Nombre de lectures logiques depuis le début de l’événement.||  
+|écritures|**int**|Nombre d’écritures logiques depuis le début de l’événement.||  
 |sql_text|**nvarchar(4000)**|||  
 |client_app_name|**nvarchar(255)**|||  
 |tsql_stack|**nvarchar(255)**|||  

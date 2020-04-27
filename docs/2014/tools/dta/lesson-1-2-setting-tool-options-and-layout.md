@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110200"
 ---
 # <a name="setting-tool-options-and-layout"></a>Définition des options du menu Outils et de la disposition
@@ -36,13 +36,13 @@ ms.locfileid: "66110200"
   
     -   Vous pouvez affecter à l'option **Nombre d'éléments dans les listes des derniers fichiers utilisés** une valeur comprise entre **1** et **10**. Cela permet de définir le nombre maximal d'éléments qui s'affichent dans les listes lorsque vous cliquez sur **Sessions récentes** ou sur **Fichiers récents** dans le menu **Fichier** . Par défaut, la valeur affectée à cette option est **4**.  
   
-    -   Lorsque l'option **Mémoriser mes dernières options de paramétrage** est activée, l'Assistant Paramétrage du moteur de base de données utilise par défaut les options de paramétrage que vous avez spécifiées au cours de la dernière session de paramétrage pour la session de paramétrage suivante. Désactivez cette case à cocher pour utiliser les valeurs par défaut des options de paramétrage de l'Assistant Paramétrage du moteur de base de données. Cette option est sélectionnée par défaut.  
+    -   Lorsque l'option **Mémoriser mes dernières options de paramétrage** est activée, l'Assistant Paramétrage du moteur de base de données utilise par défaut les options de paramétrage que vous avez spécifiées au cours de la dernière session de paramétrage pour la session de paramétrage suivante. Désactivez cette case à cocher pour utiliser les valeurs par défaut des options de paramétrage de l'Assistant Paramétrage du moteur de base de données. Cette option est activée par défaut.  
   
     -   Par défaut, l'option **Demander avant de supprimer définitivement les sessions** est activée pour éviter la suppression accidentelle des sessions de paramétrage.  
   
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

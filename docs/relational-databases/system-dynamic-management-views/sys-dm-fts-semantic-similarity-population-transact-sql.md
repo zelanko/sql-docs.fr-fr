@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900874"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "67900874"
 |**document_count**|**int**|Nombre de documents totaux dans le remplissage|  
 |**document_processed_count**|**int**|Nombre de documents traités depuis le démarrage de ce cycle de remplissage|  
 |**completion_type**|**int**|État de la manière dont ce remplissage s'est terminé.|  
-|**completion_type_description**|**nvarchar (120)**|Description du type d'achèvement.|  
+|**completion_type_description**|**nvarchar(120)**|Description du type d'achèvement.|  
 |**worker_count**|**int**|Nombre de threads de travail associés à l'extraction de ressemblance|  
-|**statu**|**int**|État de ce remplissage. Remarque : certains états sont transitoires. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> 11 = Remplissage abandonné|  
-|**status_description**|**nvarchar (120)**|Description de l'état du remplissage.|  
-|**start_time**|**DATETIME**|Heure de début du remplissage.|  
-|**incremental_timestamp**|**confirmé**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  
+|**statut**|**int**|État de ce remplissage. Remarque : certains états sont transitoires. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> 11 = Remplissage abandonné|  
+|**status_description**|**nvarchar(120)**|Description de l'état du remplissage.|  
+|**start_time**|**datetime**|Heure de début du remplissage.|  
+|**incremental_timestamp**|**timestamp**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Pour plus d’informations, consultez [gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md).  

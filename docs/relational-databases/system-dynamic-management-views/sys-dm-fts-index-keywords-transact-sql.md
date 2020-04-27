@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900946"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -55,7 +55,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**mot**|**nvarchar(4000)**|Représentation hexadécimale du mot clé stocké dans l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou d’un jeu de données.|  
+|**keyword**|**nvarchar(4000)**|Représentation hexadécimale du mot clé stocké dans l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou d’un jeu de données.|  
 |**display_term**|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format hexadécimal.<br /><br /> Remarque : la valeur de **display_term** pour OxFF est « fin de fichier ».|  
 |**column_id**|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |**document_count**|**int**|Nombre de documents ou de lignes contenant le terme actuel.|  
@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  Le **document_count** retourné par **sys. dm_fts_index_keywords** peut être moins précis pour un document spécifique que le nombre retourné par **sys. dm_fts_index_keywords_by_document** ou une requête **Contains** . Cette imprécision éventuelle est estimée inférieure à 1 %. Ce problème peut se produire si un **document_id** peut être compté deux fois lorsqu’il continue sur plusieurs lignes dans le fragment d’index, ou lorsqu’il apparaît plusieurs fois dans la même ligne. Pour obtenir un nombre plus précis pour un document spécifique, utilisez **sys. dm_fts_index_keywords_by_document** ou une requête **Contains** .  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   

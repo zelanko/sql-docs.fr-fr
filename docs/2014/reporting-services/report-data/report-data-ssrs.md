@@ -11,45 +11,45 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: be36e61a44a416283e77638f01005f1b3e16883b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413058"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Données des rapports dans SQL Server Reporting Services (SSRS)
 
   Les données de rapport peuvent provenir de plusieurs sources de données de votre organisation. Votre première étape lors de la conception d'un rapport consiste à créer des sources de données et des datasets qui représentent les données de rapport sous-jacentes. Chaque source de données inclut des informations de connexion de données. Chaque dataset inclut une commande de requête qui définit le jeu de champs à utiliser comme données d'une source de données. Pour visualiser des données de chaque dataset, ajoutez une région de données, telle qu'une table, une matrice, un graphique ou une carte. Lorsque le rapport est traité, les requêtes s'exécutent sur la source de données, et chaque région de données s'étend autant que nécessaire pour afficher les résultats de la requête pour le dataset.  
   
-##  <a name="BkMk_ReportDataTerms"></a>Vue
+##  <a name="terms"></a><a name="BkMk_ReportDataTerms"></a>Vue
 
  Si vous n’êtes pas familiarisé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec les concepts, passez en revue les termes suivants dans [Reporting Services concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *connexion de données*, *sources de données incorporées*, sources de *données partagées*, *Datasets incorporés*, *datasets partagés*, *requêtes de DataSet*, parties de *rapports*et *alertes de données*.  
   
-##  <a name="BkMk_ReportDataTips"></a>Conseils pour la spécification des données de rapport
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Conseils pour spécifier les données de rapport
 
  Utilisez les informations suivantes pour concevoir votre stratégie de données de rapport.  
   
 - **Sources de données** Les sources de données peuvent être publiées et gérées indépendamment des rapports sur un serveur de rapports ou un site SharePoint. Pour chaque source de données, vous ou le propriétaire de la base de données pouvez gérer les informations de connexion dans un seul emplacement. Les informations d'identification de la source de données sont stockées de manière sécurisée sur le serveur de rapports ; n'incluez pas de mots de passe dans la chaîne de connexion. Vous pouvez rediriger une source de données d'un serveur de test vers un serveur de production. Vous pouvez désactiver une source de données pour interrompre tous les rapports qui l'utilisent. Pour obtenir la liste des sources de données prises en charge, consultez [connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
-- **Jeux de données** Les jeux de données peuvent être publiés et gérés indépendamment des rapports ou des sources de données partagées dont ils dépendent. Vous ou le propriétaire de la base de données pouvez fournir des requêtes optimisées pour les auteurs de rapport à utiliser. Lorsque vous modifiez la requête, tous les rapports qui se servent des datasets partagés utilisent la requête mise à jour. Vous pouvez autoriser la mise en cache du dataset pour améliorer les performances. Vous pouvez planifier la mise en cache de requête à un moment donné ou utiliser une planification partagée.  
+- **Datasets** Les datasets peuvent être publiés et gérés indépendamment des rapports ou des sources de données partagées desquels ils dépendent. Vous ou le propriétaire de la base de données pouvez fournir des requêtes optimisées pour les auteurs de rapport à utiliser. Lorsque vous modifiez la requête, tous les rapports qui se servent des datasets partagés utilisent la requête mise à jour. Vous pouvez autoriser la mise en cache du dataset pour améliorer les performances. Vous pouvez planifier la mise en cache de requête à un moment donné ou utiliser une planification partagée.  
   
-- **Données utilisées par les parties de rapports** Les parties de rapport peuvent inclure les données dont elles dépendent. Pour plus d’informations sur les parties de rapport, consultez [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
+- **Données utilisées par les parties de rapports** Les parties de rapport peuvent incluent les données dont elles dépendent. Pour plus d’informations sur les parties de rapport, consultez [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 - **Filtrer les données** Les données de rapport peuvent être filtrées dans la requête ou dans le rapport. Vous pouvez utiliser des datasets et interroger des variables pour créer des paramètres en cascade et fournir à l'utilisateur la possibilité de limiter les choix parmi des milliers de sélections à un nombre plus gérable. Vous pouvez filtrer les données dans une table ou un graphique en fonction des valeurs des paramètres ou d'autres valeurs que vous spécifiez.  
   
-- **Paramètres** Les commandes de requête de DataSet qui incluent des variables de requête créent automatiquement des paramètres de rapport correspondants. Vous pouvez également créer des paramètres manuellement. Lorsque vous affichez un rapport, la barre d'outils Rapport affiche les paramètres. Les utilisateurs peuvent sélectionner des valeurs pour contrôler l'apparence des données de rapport ou du rapport. Pour personnaliser les données du rapport pour un public donné, vous pouvez créer des ensembles de paramètres de rapport avec différentes valeurs par défaut liées à la même définition de rapport ou utiliser le champ prédéfini `UserID`. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
+- **Paramètres** Les commandes de requête de datasets qui incluent des variables de requêtes créent automatiquement les paramètres de rapport correspondants. Vous pouvez également créer des paramètres manuellement. Lorsque vous affichez un rapport, la barre d'outils Rapport affiche les paramètres. Les utilisateurs peuvent sélectionner des valeurs pour contrôler l'apparence des données de rapport ou du rapport. Pour personnaliser les données du rapport pour un public donné, vous pouvez créer des ensembles de paramètres de rapport avec différentes valeurs par défaut liées à la même définition de rapport ou utiliser le champ prédéfini `UserID`. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
-- **Alertes de données** Une fois qu’un rapport a été publié, vous pouvez créer des alertes basées sur les données de rapport et recevoir des messages électroniques lorsqu’il respecte les règles que vous spécifiez.  
+- **Alertes de données** Après la publication d'un rapport, vous pouvez créer des alertes sur des données de rapport et recevoir des messages électroniques lorsqu'elle satisfait aux règles que vous spécifiez.  
   
-- **Regrouper et agréger des données** Les données de rapport peuvent être regroupées et agrégées dans la requête ou dans le rapport. Si vous agrégez des valeurs dans la requête, vous pouvez continuer à combiner des valeurs dans le rapport dans des limites de ce qui est explicite.  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) et [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md).  
+- **Groupe et données agrégées** Les données de rapport peuvent être regroupées et agrégées dans la requête ou dans le rapport. Si vous agrégez des valeurs dans la requête, vous pouvez continuer à combiner des valeurs dans le rapport dans des limites de ce qui est explicite.  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) et [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md).  
   
-- **Trier les données** Les données de rapport peuvent être triées dans la requête ou dans le rapport. Dans les tables, vous pouvez également ajouter un bouton de tri interactif pour permettre à l'utilisateur de contrôler l'ordre de tri.  
+- **Trier des données** Les données de rapport peuvent être triées dans la requête ou dans le rapport. Dans les tables, vous pouvez également ajouter un bouton de tri interactif pour permettre à l'utilisateur de contrôler l'ordre de tri.  
   
-- **Données basées sur une expression** Étant donné que la plupart des propriétés de rapport peuvent être basées sur des expressions, et que les expressions peuvent inclure des références à des champs de DataSet et des paramètres de rapport, vous pouvez écrire des expressions puissantes pour contrôler les données et l’apparence des rapports. Vous pouvez fournir à l'utilisateur la possibilité de contrôler les données qu'il consulte en définissant des paramètres.  
+- **Données basées sur des expressions** Comme la plupart des propriétés de rapport peuvent être basées sur des expressions, et que les expressions peuvent inclure des références à des champs de dataset et à des paramètres de rapport, vous pouvez écrire des expressions puissantes pour contrôler les données et l’apparence du rapport. Vous pouvez fournir à l'utilisateur la possibilité de contrôler les données qu'il consulte en définissant des paramètres.  
   
-- **Afficher les données d’un DataSet** Les données d’un DataSet sont généralement affichées sur une ou plusieurs régions de données, par exemple une table et un graphique.  
+- **Afficher les données d'un dataset** Les données d'un dataset sont généralement affichées sur une ou plusieurs régions de données, par exemple, une table et un graphique.  
   
-- **Afficher des données de plusieurs datasets**  Vous pouvez écrire des expressions dans une région de données basée sur un DataSet qui recherche des valeurs ou des agrégats dans d’autres jeux de données. Vous pouvez inclure des sous-rapports dans une table selon un dataset pour afficher les données d'une source de données différente.  
+- **Afficher les données de plusieurs datasets**  Vous pouvez écrire des expressions dans une région de données basée sur un dataset qui recherche des valeurs ou des agrégats dans d'autres datasets. Vous pouvez inclure des sous-rapports dans une table selon un dataset pour afficher les données d'une source de données différente.  
   
 ## <a name="data-connections-data-sources-and-datasets"></a>Connexions de données, sources de données et datasets
 

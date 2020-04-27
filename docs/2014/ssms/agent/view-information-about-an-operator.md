@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188748"
 ---
 # <a name="view-information-about-an-operator"></a>Afficher des informations relatives à un opérateur
@@ -33,17 +33,17 @@ ms.locfileid: "68188748"
   
      [Sécurité](#Security)  
   
--   **Pour afficher des informations sur un opérateur, utilisez :**  
+-   **Pour afficher des informations relatives à un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -52,9 +52,9 @@ ms.locfileid: "68188748"
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](sql-server-agent-fixed-database-roles.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-operator"></a>Pour afficher des informations relatives à un opérateur  
   
@@ -66,17 +66,17 @@ ms.locfileid: "68188748"
   
 4.  Cliquez avec le bouton droit sur l’opérateur à afficher, puis sélectionnez **Propriétés**.  
   
-     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue**Propriétés** de la _operator_name_, consultez :  
+     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de_**nom_opérateur** , consultez :  
   
     -   [Propriétés de l’opérateur et nouvel opérateur &#40;&#41;page général](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
     -   [Propriétés de l’opérateur : nouvel opérateur &#40;page notifications&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriétés de l’opérateur &#40;page historique&#41;](operator-properties-history-page.md)  
+    -   [Propriétés Opérateur &#40;page Historique&#41;](operator-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-information-about-an-operator"></a>Pour afficher des informations relatives à un opérateur  
   

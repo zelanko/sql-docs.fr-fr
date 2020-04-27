@@ -18,10 +18,10 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909056"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67909056"
 |**validation_level**|**int**|Type de validation à réaliser sur l'abonnement. Le niveau de validation spécifié peut prendre l'une des valeurs suivantes :<br /><br /> **0** = aucune validation.<br /><br /> **1** = validation de RowCount uniquement.<br /><br /> **2** = RowCount et validation de la somme de contrôle.<br /><br /> **3** = RowCount et validation de somme de contrôle binaire.|  
 |**resync_gen**|**bigint**|Numéro de génération utilisé pour la resynchronisation de l'abonnement. La valeur **-1** indique que l’abonnement n’est pas marqué pour la resynchronisation.|  
 |**login_name**|**sysname**|Nom de l'utilisateur qui a créé l'abonnement.|  
-|**nom d’hôte**|**sysname**|Valeur utilisée par le filtre de lignes paramétré lors de la génération de la partition de l'abonnement.|  
+|**hostname**|**sysname**|Valeur utilisée par le filtre de lignes paramétré lors de la génération de la partition de l'abonnement.|  
 |**merge_jobid**|**Binary(16**|Identificateur du travail de fusion pour cet abonnement.|  
 |**sync_info**|**int**|À usage interne uniquement.|  
   

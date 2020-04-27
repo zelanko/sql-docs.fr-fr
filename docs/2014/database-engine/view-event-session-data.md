@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67131790"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
@@ -63,7 +63,7 @@ ms.locfileid: "67131790"
 ### <a name="watching-live-data"></a>Surveiller les données actives  
  Vous pouvez surveiller les données actives à mesure qu'elles sont capturées.  
   
--   Dans l’Explorateur d’objets, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
+-   Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
 
 -   Cliquez avec le bouton droit sur le nom de session, puis cliquez sur **Surveiller les données actives** pour commencer à afficher les données de suivi.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67131790"
   
  Vous pouvez créer, modifier ou supprimer des colonnes fusionnées :  
   
-1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.)  
+1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.)  
   
 2.  Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne, puis sélectionnez **Choisir les colonnes**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "67131790"
   
  Pour créer un filtre :  
   
-1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.)  
+1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.)  
   
 2.  Dans la fenêtre des résultats de trace, sélectionnez les résultats que vous souhaitez filtrer, puis dans la barre d'outils **Événements étendus** , cliquez sur le bouton **Filtres**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "67131790"
 ### <a name="sort-results"></a>Trier les résultats  
  Pour trier les résultats dans l'ordre croissant ou décroissant :  
   
-1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **Surveiller les données actives**, puis cliquer sur le bouton **Arrêter le flux de données** dans la barre d'outils.)  
+1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **surveiller les données actives**, puis cliquer sur le bouton **arrêter le flux de données** dans la barre d’outils.)  
   
 2.  Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne à trier et cliquez sur **Tri croissant** ou **Tri décroissant**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67131790"
   
  Vous pouvez grouper des résultats par une seule colonne ou par plusieurs colonnes.  
   
- Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **Surveiller les données actives**, puis cliquer sur le bouton **Arrêter le flux de données** dans la barre d'outils.)  
+ Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **surveiller les données actives**, puis cliquer sur le bouton **arrêter le flux de données** dans la barre d’outils.)  
   
  Pour grouper les résultats par une seule colonne, cliquez avec le bouton droit sur l'en-tête de colonne dans la fenêtre des résultats de trace et cliquez sur **Regrouper par cette colonne**. Pour annuler le regroupement, sélectionnez l'une des lignes et cliquez sur **Supprimer tous les regroupements**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "67131790"
 ### <a name="aggregate-results"></a>Agréger les résultats  
  Vous pouvez afficher les résultats de trace, puis poursuivre l'analyse de vos données d'événement en agrégeant des colonnes dans les résultats. Les événements étendus prennent en charge cinq fonctions d'agrégation :  
   
--   sum  
+-   Sum  
   
 -   min  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67131790"
   
  L'agrégation est effectuée sur un groupe ; vous devez donc regrouper les résultats avant de pouvoir exécuter l'agrégation. Pour agréger les résultats :  
   
-1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **Surveiller les données actives**, puis cliquer sur le bouton **Arrêter le flux de données** dans la barre d'outils.)  
+1.  Ouvrez un fichier .XEL pour consulter les résultats de trace. (Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **surveiller les données actives**, puis cliquer sur le bouton **arrêter le flux de données** dans la barre d’outils.)  
   
 2.  Dans la barre d'outils **Événements étendus** , cliquez sur le bouton **Agrégation** . La boîte de dialogue Agrégation apparaît avec les colonnes disponibles pour l'agrégation.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131790"
   
  Pour afficher le graphique de blocage :  
   
--   Dans l’Explorateur d’objets, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
+-   Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
   
 -   Cliquez avec le bouton droit sur la session qui contient l'événement de blocage configuré à afficher, puis sélectionnez **Surveiller les données actives**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131790"
   
  Pour afficher les graphiques de plan de requête :  
   
-1.  Dans l’Explorateur d’objets, développez les nœuds **gestion**, **événements étendus**, puis **sessions** .  
+1.  Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
   
 2.  Cliquez avec le bouton droit sur la session qui contient le graphique du plan de requête que vous souhaitez afficher (par exemple, query_post_compilation_showplan), puis sélectionnez **Surveiller les données actives**.  
   

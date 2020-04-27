@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898407"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -59,8 +59,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom du compte**|**sysname**|Nom de compte Windows complet.|  
-|**entrer**|**Char (8)**|Type de compte Windows. Les valeurs valides sont **User** ou **Group**.|  
-|**limités**|**Char (9)**|Privilège d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les valeurs valides sont **admin**, **User**ou **null**.|  
+|**type**|**Char (8)**|Type de compte Windows. Les valeurs valides sont **User** ou **Group**.|  
+|**limités**|**char(9)**|Privilège d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les valeurs valides sont **admin**, **User**ou **null**.|  
 |**mapped login name**|**sysname**|Pour les comptes d’utilisateur dotés de privilèges utilisateur, le **nom de connexion mappé** indique le nom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de connexion mappé qui tente d’être utilisé lors de la connexion avec ce compte à l’aide des règles mappées avec le nom de domaine ajouté avant.|  
 |**permission path**|**sysname**|Membre du groupe qui autorise l'accès au compte|  
   
@@ -71,8 +71,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  Si *account_name* et **All** sont spécifiés, tous les chemins d’autorisation pour l’utilisateur ou le groupe Windows sont retournés. Si *account_name* est membre de plusieurs groupes, tous bénéficiant d’un accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], plusieurs lignes sont retournées. Les lignes des privilèges d' **administrateur** sont retournées avant les lignes de privilège de l' **utilisateur** et, dans un niveau de privilège, les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lignes sont retournées dans l’ordre dans lequel les connexions correspondantes ont été créées.  
   
- Si *account_name* et **les membres** sont spécifiés, une liste des membres de niveau suivant du groupe est retournée. Si *account_name* est un groupe local, la liste peut inclure des utilisateurs locaux, des utilisateurs de domaine et des groupes. Si *account_name* est un compte de domaine, la liste est composée d’utilisateurs de domaine. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit se connecter au contrôleur de domaine pour extraire les informations d'appartenance au groupe. Si le serveur ne peut pas contacter le contrôleur de domaine, aucune information n'est renvoyée.  
+ Si *account_name* et **les membres** sont spécifiés, une liste des membres de niveau suivant du groupe est retournée. Si *account_name* est un groupe local, la liste peut inclure des utilisateurs locaux, des utilisateurs de domaine et des groupes. Si *account_name* est un compte de domaine, la liste est composée d’utilisateurs de domaine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit se connecter au contrôleur de domaine pour extraire les informations d'appartenance au groupe. Si le serveur ne peut pas contacter le contrôleur de domaine, aucune information n'est renvoyée.  
   
  **xp_logininfo** renvoie uniquement les informations des groupes globaux Active Directory, et non des groupes universels.  
   
@@ -90,7 +89,7 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

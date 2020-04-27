@@ -19,10 +19,10 @@ ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900087"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
@@ -44,16 +44,16 @@ ms.locfileid: "67900087"
 |**private_build**|**bit**|1 = le module est une version privée du module chargé.|  
 |**special_build**|**bit**|1 = le module est une version spéciale du module chargé.|  
 |**sous**|**int**|Langue des informations de version du module.|  
-|**entreprise**|**nvarchar (256)**|Nom de la société qui a créé le module.|  
-|**description**|**nvarchar (256)**|Description du module.|  
-|**nomme**|**nvarchar(255)**|Nom du module. Inclut le chemin d'accès complet du module.|  
-|**pdw_node_id**|**int**|**S’applique à**:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**société**|**nvarchar(256)**|Nom de la société qui a créé le module.|  
+|**descriptive**|**nvarchar(256)**|Description du module.|  
+|**name**|**nvarchar(255)**|Nom du module. Inclut le chemin d'accès complet du module.|  
+|**pdw_node_id**|**int**|**S’applique à** : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

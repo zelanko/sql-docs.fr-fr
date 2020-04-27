@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727206"
 ---
 # <a name="managing-transactions-xmla"></a>Gestion des transactions (XMLA)
@@ -34,8 +34,7 @@ ms.locfileid: "62727206"
  Une transaction est soit implicite, soit explicite :  
   
  **Transaction implicite**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crée une transaction *implicite* pour une commande XMLA si `BeginTransaction` la commande ne spécifie pas le début d’une transaction. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] valide toujours une transaction implicite si la commande aboutit et l'annule si la commande échoue.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crée une transaction *implicite* pour une commande XMLA si `BeginTransaction` la commande ne spécifie pas le début d’une transaction. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] valide toujours une transaction implicite si la commande aboutit et l'annule si la commande échoue.  
   
  **Transaction explicite**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crée une transaction *explicite* si la `BeginTransaction` commande démarre une transaction. Toutefois, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne valide une transaction explicite que si une commande `CommitTransaction` est envoyée et l'annule si une commande `RollbackTransaction` est envoyée.  
@@ -43,8 +42,7 @@ ms.locfileid: "62727206"
  De plus, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] annule les transactions implicites et explicites si la session active se termine avant que la transaction active n'ait abouti.  
   
 ## <a name="transactions-and-reference-counts"></a>Transactions et nombres de référence  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comptabilise le nombre de référence de transactions pour chaque session. Toutefois, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge les transactions imbriquées dans la mesure où une seule transaction active est gérée par session. Si aucune transaction n'est active dans la session active, le nombre de références de transaction est défini à zéro.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comptabilise le nombre de référence de transactions pour chaque session. Toutefois, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge les transactions imbriquées dans la mesure où une seule transaction active est gérée par session. Si aucune transaction n'est active dans la session active, le nombre de références de transaction est défini à zéro.  
   
  En d'autres termes, chaque commande `BeginTransaction` incrémente le nombre de références d'une unité, et chaque commande `CommitTransaction` décrémente le nombre de références d'une unité. Si une commande `CommitTransaction` définit le nombre de transactions à zéro, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] valide la transaction.  
   

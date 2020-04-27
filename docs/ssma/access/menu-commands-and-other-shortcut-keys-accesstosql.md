@@ -10,10 +10,10 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907128"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Commandes de menu et autres touches de raccourci (AccessToSQL)
@@ -57,7 +57,7 @@ Pour accéder au menu Edition, le raccourci clavier utilisé est ALT + E. Le tab
 |Rechercher précédent.|ALT + E + F + P ou CTRL + Maj + F3|  
 |Suivant|ALT + E + F + N ou CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Commandes du menu Affichage  
+## <a name="view-menu-commands"></a>commandes du menu Affichage  
 Pour accéder au menu Affichage, le raccourci clavier utilisé est ALT + V. Le tableau suivant décrit les raccourcis clavier utilisés pour accéder aux éléments de menu du menu Affichage.  
   
 |POUR EFFECTUER CETTE OPÉRATION|COMPRESSION|  
@@ -96,7 +96,7 @@ Pour accéder au menu Outils, le raccourci clavier utilisé est ALT + T. Le tabl
 |Exporter le schéma.|ALT + T + E|  
 |Supprimer localement.|ALT + T + D|  
   
-## <a name="help-menu-commands"></a>Commandes du menu aide  
+## <a name="help-menu-commands"></a>commandes du menu Aide  
 Pour accéder au menu aide, le raccourci clavier utilisé est ALT + H. Le tableau suivant décrit les raccourcis clavier utilisés pour accéder aux éléments de menu dans le menu aide.  
   
 |POUR EFFECTUER CETTE OPÉRATION|COMPRESSION|  

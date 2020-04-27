@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284891"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonnes calculées (SSAS Tabulaire)
@@ -33,7 +33,7 @@ ms.locfileid: "67284891"
   
 -   [Tâches associées](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>Avantageuse  
  Les formules dans les colonnes calculées ressemblent aux formules dans Excel. Toutefois, contrairement à Excel, vous ne pouvez pas créer des formules différentes pour des lignes distinctes de la table ; la formule DAX est appliquée automatiquement à la colonne entière.  
   
  Lorsqu'une colonne contient une formule, la valeur est calculée pour chaque ligne. Les résultats sont calculés pour la colonne lorsque vous entrez une formule valide. Les valeurs de colonne sont ensuite recalculées si nécessaire, par exemple lorsque les données sous-jacentes sont actualisées.  
@@ -51,7 +51,7 @@ ms.locfileid: "67284891"
   
  Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
   
-##  <a name="bkmk_naming"></a>Attribution d’un nom à une colonne calculée  
+##  <a name="naming-a-calculated-column"></a><a name="bkmk_naming"></a>Attribution d’un nom à une colonne calculée  
  Par défaut, les nouvelles colonnes calculées sont ajoutées à droite des autres colonnes d'une table, et le nom par défaut **CalculatedColumn1**, **CalculatedColumn2**, etc. est automatiquement affecté à la colonne. Vous pouvez également cliquer avec le bouton droit sur une colonne, puis sélectionner Insérer une colonne pour créer une nouvelle colonne entre deux colonnes existantes. Vous pouvez réorganiser les colonnes dans la même table en cliquant et en faisant glisser, et vous pouvez renommer des colonnes une fois créées ; toutefois, tenez compte des restrictions suivantes relatives aux modifications apportées aux colonnes calculées :  
   
 -   Chaque nom de colonne doit être unique à l'intérieur d'une table.  
@@ -62,7 +62,7 @@ ms.locfileid: "67284891"
   
 -   Certains caractères ne peuvent pas être utilisés dans les noms de colonnes. Pour plus d'informations, consultez « Exigences concernant l'affectation des noms » dans [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference).  
   
-##  <a name="bkmk_perf"></a>Performances des colonnes calculées  
+##  <a name="performance-of-calculated-columns"></a><a name="bkmk_perf"></a>Performances des colonnes calculées  
  La formule d'une colonne calculée peut solliciter beaucoup plus de ressources que la formule utilisée pour une mesure. L'une des raisons en est que le résultat d'une colonne calculée est toujours calculé pour chaque ligne d'une table, alors qu'une mesure est calculée uniquement pour les cellules définies par le filtre utilisé dans le rapport, le tableau croisé dynamique ou le graphique croisé dynamique. Par exemple, une table d'un million de lignes aura toujours une colonne calculée avec un million de résultats et les conséquences que cela implique en termes de performances. Toutefois, un tableau croisé dynamique filtre généralement les données en appliquant des titres de lignes et de colonnes ; par conséquent, une mesure est calculée uniquement pour le sous-ensemble de données dans chaque cellule du tableau croisé dynamique.  
   
  Une formule présente des dépendances vis-à-vis des objets auxquels elle fait référence, tels que d'autres colonnes ou expressions qui évaluent des valeurs. Par exemple, une colonne calculée qui est basée sur une autre colonne, ou un calcul qui contient une expression avec une référence de colonne, ne peuvent pas être évalués tant que l'autre colonne n'a pas été évaluée. Par défaut, l'actualisation automatique est activée dans les classeurs, ce qui signifie que de telles dépendances peuvent affecter les performances lorsque les valeurs sont mises à jour et les formules actualisées.  
@@ -77,15 +77,15 @@ ms.locfileid: "67284891"
   
 -   Si vous créez une formule qui contient une dépendance circulaire ou faisant référence à elle-même, une erreur se produit.  
   
-##  <a name="bkmk_rel_tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> Tâches associées  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer une colonne calculée &#40;&#41;tabulaire SSAS](ssas-calculated-columns-create-a-calculated-column.md)|Les tâches de cette rubrique décrivent comment ajouter une nouvelle colonne calculée dans une table.|  
+|[Créer une colonne calculée &#40;SSAS Tabulaire&#41;](ssas-calculated-columns-create-a-calculated-column.md)|Les tâches de cette rubrique décrivent comment ajouter une nouvelle colonne calculée dans une table.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables et colonnes &#40;SSAS tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
  [Mesures &#40;&#41;tabulaire SSAS](measures-ssas-tabular.md)   
- [Calculs &#40;&#41;tabulaire SSAS](calculations-ssas-tabular.md)  
+ [Calculs &#40;SSAS Tabulaire&#41;](calculations-ssas-tabular.md)  
   
   

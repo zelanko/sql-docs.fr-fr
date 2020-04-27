@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899718"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
@@ -38,9 +38,9 @@ ms.locfileid: "67899718"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  *database_id*  
- ID de la base de données. *database_id* est de **type int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
+ ID de la base de données. *database_id* est de type **int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
   
  *file_id*  
  ID du fichier. *file_id* est de **type int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  

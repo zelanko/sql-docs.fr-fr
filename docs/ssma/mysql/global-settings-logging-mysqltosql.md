@@ -10,10 +10,10 @@ ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896393"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Paramètres globaux (Journalisation) (MySQLToSQL)
@@ -29,7 +29,7 @@ Les options suivantes sont disponibles sous **niveau des messages**:
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
 |**Collecteur**|Collecte les métadonnées relatives au schéma source et les enregistre dans le projet.|  
-|**Onduleur**|Convertit les structures des objets de base de données sources, tels que les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les procédures stockées, en structures correspondantes.|  
+|**Converter**|Convertit les structures des objets de base de données sources, tels que les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les procédures stockées, en structures correspondantes.|  
 |**Data Migrator**|Migre les données de la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données source vers.|  
 |**Formateur**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma.|  
 |**Interface utilisateur graphique**|Messages qui s’affichent lorsque vous utilisez l’outil SSMA.|  
@@ -46,7 +46,7 @@ Pour chaque option sous **niveau de messages**, configurez l’un des niveaux de
 |**Erreur irrécupérable**|Écrit uniquement les messages d’erreur fatale dans le journal.|  
 |**Error**|Erreur d’écriture et messages d’erreur irrécupérable dans le journal.|  
 |**Avertissement**|Écrire les messages d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
-|**Méta**|Écrire les messages d’information, d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
+|**Info**|Écrire les messages d’information, d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
 |**Débogage**|Écrit tous les messages, y compris les messages de débogage, dans le journal.|  
   
 **Chemin du fichier journal**  

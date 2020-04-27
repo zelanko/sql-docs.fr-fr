@@ -20,10 +20,10 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900226"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67900226"
 
 |Nom de la colonne|Propriété|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|Niveau de journalisation pour le cluster de basculement SQL Server. La journalisation détaillée peut être activée pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage. L’une des valeurs suivantes :<br /><br /> 0 - La journalisation est désactivée (valeur par défaut)<br /><br /> 1 - Erreurs uniquement<br /><br /> 2 - Erreurs et avertissements<br /><br /> Pour plus d’informations, consultez [ALTER Server CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|VerboseLogging|bigint|Niveau de journalisation pour le cluster de basculement SQL Server. La journalisation détaillée peut être activée pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage. Une des valeurs suivantes :<br /><br /> 0 - La journalisation est désactivée (valeur par défaut)<br /><br /> 1 - Erreurs uniquement<br /><br /> 2 - Erreurs et avertissements<br /><br /> Pour plus d’informations, consultez [ALTER Server CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|bigint|Les indicateurs de vidage SQLDumper déterminent le type de fichiers dump généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le paramètre par défaut est 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Emplacement où l'utilitaire SQLDumper génère les fichiers dump.|  
 |SqlDumperDumpTimeOut|bigint|Valeur du délai d'attente, en millisecondes, nécessaire à l'utilitaire SQLDumper pour générer un vidage en cas d'échec de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est 0.|  

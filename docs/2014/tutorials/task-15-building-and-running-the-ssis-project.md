@@ -10,13 +10,13 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822994"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>Tâche 15 : Générer et exécuter le projet SSIS
+# <a name="task-15-building-and-running-the-ssis-project"></a>Tâche 15 : Génération et exécution du projet SSIS
 
   Dans cette tâche, vous allez générer et exécuter le projet SSIS. Si la version 64 bits d’Excel 2010 est installée sur votre ordinateur, vous devez définir la valeur de **Run64BitRuntime** sur **false** pour que la source Excel fonctionne.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66822994"
   
      ![Propriétés du projet CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "Propriétés du projet CleanseAndCurateSuppliers")  
   
-4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés** .  
+4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés**.  
   
 5.  Dans la barre de menus, cliquez sur **générer** , puis sur **générer CleanseAndCurateSuppliers**. Vérifiez l'absence d'erreurs de génération.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66822994"
 8.  Cliquez sur **Déboguer** dans la barre de menus et cliquez sur **arrêter le débogage** pour arrêter la session de débogage. Si le package échoue, vous devez activer les visionneuses de données pour voir comment les données circulent entre les composants.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 16 : Vérification à l'aide de Master Data Manage](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+ [Tâche 16 : Vérification à l’aide de Master Data Manager](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

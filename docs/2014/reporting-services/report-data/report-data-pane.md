@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: fc09c100cc8391bb1fd025b4bb5ac5f3b5e4379a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413131"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Volet Données du rapport dans SQL Server Reporting Services (SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "67413131"
  **Source de données**  
  Représente une référence de source de données unique à une source de données incorporée ou partagée. Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les sources de données partagées apparaissent dans l’Explorateur de solutions, dans le dossier Sources de données partagées. Une source de données spécifie l'un des types de sources de données pris en charge par Reporting Services. Une source de données est le nœud parent de la collection de datasets auxquels elle sert de base. Pour plus d’informations, consultez [connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
   
- **Ensemble**  
+ **Dataset**  
  Représente un dataset unique. Un dataset est le nœud parent de la collection de champs spécifiée par la requête et comprenant les champs calculés. Reporting Services prend en charge des concepteurs de requêtes qui vous aident dans la spécification des requêtes. Pour plus d’informations, consultez [Ajouter des données à un rapport &#40;générateur de rapports et ssrs&#41;](report-datasets-ssrs.md) et [outils de conception de requêtes dans Concepteur de rapports ](query-design-tools-ssrs.md)SQL Server Data Tools &#40;SSRS&#41;.  
   
 ## <a name="next-steps"></a>Étapes suivantes

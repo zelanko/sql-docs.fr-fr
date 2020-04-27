@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899371"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "67899371"
 |handle_count|**bigint**|Nombre total de handles en cours d’utilisation sur ce nœud.||  
 |total_elapsed_time|**bigint**|Temps total écoulé depuis le démarrage ou le redémarrage du système.|Temps total écoulé depuis le démarrage ou le redémarrage du système. Si total_elapsed_time dépasse la valeur maximale d’un entier (24,8 jours en millisecondes), cela entraînera un échec de matérialisation en raison d’un dépassement de capacité.<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |is_available|**bit**|Indicateur précisant si ce nœud est disponible.||  
-|sent_time|**DATETIME**|Dernière fois qu’un package réseau a été envoyé par ce nœud.||  
-|received_time|**DATETIME**|Heure de la dernière réception d’un package réseau par ce nœud.||  
+|sent_time|**datetime**|Dernière fois qu’un package réseau a été envoyé par ce nœud.||  
+|received_time|**datetime**|Heure de la dernière réception d’un package réseau par ce nœud.||  
 |error_id|**nvarchar (36)**|Identificateur unique de la dernière erreur qui s’est produite sur ce nœud.||  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793926"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -49,7 +49,7 @@ ms.locfileid: "67793926"
  Les scénarios suivants illustrent des utilisations standard de la réplication d'égal à égal.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topologie comprenant deux bases de données participantes  
- ![Réplication d'égal à égal, deux nœuds](../media/repl-multinode-01.gif "Réplication d'égal à égal, deux nœuds")  
+ ![Réplication d’égal à égal, deux nœuds](../media/repl-multinode-01.gif "Réplication d’égal à égal, deux nœuds")  
   
  Les deux illustrations ci-dessus montrent deux bases de données participantes dont le trafic utilisateur est dirigé vers les bases de données par le biais d'un serveur d'applications. Cette configuration peut être utilisée avec de nombreuses applications (des sites Web aux applications de groupe de travail) et présente les avantages suivants :  
   
@@ -61,22 +61,22 @@ ms.locfileid: "67793926"
   
 -   À gauche, les mises à jour sont partitionnées entre les deux serveurs. Si la base de données contenait un catalogue de produits, une application personnalisée pourrait par exemple diriger vers le nœud **A** les mises à jour des produits dont le nom commence par les lettres A à M et vers le nœud **B** les mises à jour des produits dont le nom commence par les lettres N à Z. Les mises à jour sont ensuite répliquées sur l'autre nœud.  
   
--   À droite, toutes les mises à jour sont dirigées vers le nœud **B**. À partir de là, les mises à jour sont répliquées sur **le nœud A**. Si **B** est hors connexion (par exemple, pour la maintenance), le serveur d’applications peut diriger toutes les activités vers **un**. Lorsque **B** est de nouveau en ligne, les mises à jour peuvent être transmises à celui-ci et le serveur d’applications peut retransférer toutes les mises à jour vers **B** ou continuer à les diriger vers **un**.  
+-   À droite, toutes les mises à jour sont dirigées vers le nœud **B**. De là, les mises à jour sont répliquées sur le nœud **A**. Si le nœud **B** est hors connexion (pour cause de maintenance, par exemple), le serveur d’applications peut diriger toutes les activités vers le nœud **A**. Lorsque le nœud **B** revient en ligne, il peut de nouveau recevoir les mises à jour ; le serveur d’applications peut alors retransférer toutes les mises à jour vers **B** ou continuer à les diriger vers **A**.  
   
  Si la réplication d'égal à égal prend en charge les deux méthodes, l'exemple de mise à jour centralisée à droite est également souvent utilisé avec la réplication transactionnelle standard.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topologie comprenant au moins trois bases de données participantes  
- ![Réplication d'égal à égal vers des emplacements dispersés](../media/repl-multinode-02.gif "Réplication d'égal à égal vers des emplacements dispersés")  
+ ![Réplication d’égal à égal vers des emplacements dispersés](../media/repl-multinode-02.gif "Réplication d’égal à égal vers des emplacements dispersés")  
   
  L'illustration ci-dessus montre trois bases de données participantes qui fournissent des données à une entreprise internationale d'assistance technique de logiciels dont les bureaux se trouvent à Los Angeles, Londres et Taipei. Les ingénieurs de support enregistrent les appels clients dans chaque bureau et ils entrent et mettent à jour les informations sur chaque appel client. Les fuseaux horaires des trois bureaux ayant huit heures d'écart, il n'y a pas de chevauchement pendant une journée de travail : lorsque le bureau de Taipei ferme, le bureau de Londres ouvre. Si un appel n'est pas terminé à la fermeture d'un bureau, il est transféré à un conseiller client dans un autre bureau qui ouvre.  
   
  Chaque bureau possède un serveur de base de données et un serveur d'applications dont se servent les ingénieurs de support lorsqu'ils entrent et mettent à jour les informations sur les appels clients. La topologie est partitionnée selon l'horaire. Les mises à jour n'ont donc lieu que sur le nœud actuellement ouvert, puis elles sont acheminées aux autres bases de données participantes. Cette topologie présente les avantages suivants :  
   
--   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
+-   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
   
 -   disponibilité élevée en cas de panne ou de maintenance sur une ou plusieurs bases de données participante.  
   
-     ![Réplication d'égal à égal, trois et quatre nœuds](../media/repl-multinode-04.gif "Réplication d'égal à égal, trois et quatre nœuds")  
+     ![Réplication d’égal à égal, trois et quatre nœuds](../media/repl-multinode-04.gif "Réplication d’égal à égal, trois et quatre nœuds")  
   
  L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793926"
   
     -   Les noms d'objets, le schéma d'objet et les noms de publication doivent être identiques.  
   
-    -   Les publications doivent autoriser la réplication des modifications de schéma. (Il s’agit du paramètre **1** pour la propriété de publication **replicate_ddl**, qui est le paramètre par défaut.) Pour plus d’informations, consultez [modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
+    -   Les publications doivent autoriser la réplication des modifications de schéma. (Pour cela la propriété de publication **replicate_ddl** doit avoir la valeur **1**, ce qui est le paramètre par défaut.) Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   Le filtrage des lignes et des colonnes n'est pas pris en charge.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "67793926"
 -   Vous ne pouvez pas réinitialiser les abonnements dans une topologie d'égal à égal. Si vous devez faire en sorte qu'un nœud dispose d'une nouvelle copie des données, restaurez une sauvegarde sur le nœud.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administrer une topologie d’égal à égal &#40;la programmation Transact-SQL de la réplication&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Types de publication pour la réplication transactionnelle](transactional-replication.md)  
   

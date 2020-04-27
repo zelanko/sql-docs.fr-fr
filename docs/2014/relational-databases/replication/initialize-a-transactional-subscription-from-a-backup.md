@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793302"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>Initialiser un abonnement transactionnel à partir d'une sauvegarde (programmation Transact-SQL de la réplication)
@@ -36,7 +36,7 @@ ms.locfileid: "67793302"
   
     -   Si la valeur est **0**, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) au niveau du serveur de publication sur la base de données de publication. Spécifiez une valeur de **allow_initialize_from_backup** pour ** \@propriété** et une valeur `true` pour ** \@valeur**.  
   
-2.  Pour une nouvelle publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) au niveau du serveur de publication sur la base de données de publication. Spécifiez une valeur `true` pour **allow_initialize_from_backup**. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
+2.  Pour une nouvelle publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) au niveau du serveur de publication sur la base de données de publication. Spécifiez une valeur `true` pour **allow_initialize_from_backup**. Pour plus d’informations, consultez [créer une publication](publish/create-a-publication.md).  
   
     > [!WARNING]  
     >  Afin d'éviter les données d'abonnés manquantes, lorsque vous utilisez **sp_addpublication** avec `@allow_initialize_from_backup = N'true'`, utilisez toujours `@immediate_sync = N'true'`.  
@@ -70,7 +70,7 @@ ms.locfileid: "67793302"
 7.  (Facultatif) Démarrez l'Agent de distribution. Pour plus d'informations, consultez [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) ou [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   
- [Sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Copier les bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   
+ [Sauvegarde et restauration des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

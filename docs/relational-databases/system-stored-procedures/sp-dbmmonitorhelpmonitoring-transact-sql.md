@@ -19,10 +19,10 @@ ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91668795513969c9c0bda7a2a1a7203e557f1819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899196"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
@@ -49,7 +49,7 @@ sp_dbmmonitorhelpmonitoring
  Retourne la période de mise à jour actuelle, c'est-à-dire le nombre de minutes qui s'écoulent entre les mises à jour de la table d'état de la mise en miroir de bases de données. Cette valeur est comprise entre 1 et 120.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne la période de mise à jour actuelle.  

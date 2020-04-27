@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728495"
 ---
 # <a name="database-dimension-properties"></a>Propriétés de dimension d'une base de données
@@ -55,6 +55,6 @@ ms.locfileid: "62728495"
  [Attributs et hiérarchies d’attributs](attributes-and-attribute-hierarchies.md)   
  [Hiérarchies utilisateur](user-hierarchies.md)   
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

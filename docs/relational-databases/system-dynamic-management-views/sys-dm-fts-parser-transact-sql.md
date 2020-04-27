@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900919"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *query_string*  
  Requête à analyser. *QUERY_STRING* peut être une chaîne de chaîne qui [contient](../../t-sql/queries/contains-transact-sql.md) la prise en charge de la syntaxe. Par exemple, vous pouvez inclure des formes fléchies, un dictionnaire des synonymes et des opérateurs logiques.  
   
- *LCID*  
+ *lcid*  
  Identificateur de paramètres régionaux (LCID) de l’analyseur lexical à utiliser pour l’analyse des *QUERY_STRING*.  
   
  *stoplist_id*  
@@ -55,7 +55,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valeur booléenne qui indique si la recherche en texte intégral respecte ou non les signes diacritiques. *accent_sensitivity* est de **bits**, avec l’une des valeurs suivantes :  
   
-|Valeur|Le respect des accents est...|  
+|Value|Le respect des accents est...|  
 |-----------|----------------------------|  
 |0|Respect<br /><br /> Les mots tels que « café » et « cafe » sont traités de la même manière.|  
 |1|Sensible<br /><br /> Les mots tels que « café » et « cafe » ne sont pas traités de la même manière.|  
@@ -67,18 +67,13 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|mot clé|**varbinary (128)**|Représentation hexadécimale d'un mot clé donné retournée par un analyseur lexical. Cette représentation permet de stocker le mot clé dans l'index de recherche en texte intégral. Cette valeur n’est pas explicite, mais elle est utile pour lier un mot clé donné à la sortie retournée par d’autres vues de gestion dynamique qui retournent le contenu d’un index de recherche en texte intégral, tel que [sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) et [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Remarque :** OxFF représente le caractère spécial qui indique la fin d’un fichier ou d’un jeu de données.|  
+|mot clé|**varbinary(128)**|Représentation hexadécimale d'un mot clé donné retournée par un analyseur lexical. Cette représentation permet de stocker le mot clé dans l'index de recherche en texte intégral. Cette valeur n’est pas explicite, mais elle est utile pour lier un mot clé donné à la sortie retournée par d’autres vues de gestion dynamique qui retournent le contenu d’un index de recherche en texte intégral, tel que [sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) et [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Remarque :** OxFF représente le caractère spécial qui indique la fin d’un fichier ou d’un jeu de données.|  
 |group_id|**int**|Contient une valeur entière qui est utile pour différencier le groupe logique à partir duquel un terme donné a été généré. Par exemple, « `Server AND DB OR FORMSOF(THESAURUS, DB)"` » produit les valeurs group_id suivantes en anglais :<br /><br /> 1 : serveur<br />2 : BASE DE CONNAISSANCES<br />3 : BASE DE CONNAISSANCES|  
 |phrase_id|**int**|Contient une valeur entière qui est utile pour différencier les cas dans lesquels les formes alternatives de mots composés, tels que le texte intégral, sont émises par l'analyseur lexical. Il peut arriver qu'en présence de mots composés (« multi-million ») des formes alternatives soient émises par l'analyseur lexical. Ces formes alternatives (expressions) doivent parfois être différenciées.<br /><br /> Par exemple, « `multi-million` » produit les valeurs phrase_id suivantes en anglais :<br /><br /> 1 pour`multi`<br />1 pour`million`<br />2 pour`multimillion`|  
 |occurrence|**int**|Indique l'ordre de chaque terme dans le résultat de l'analyse. Par exemple, pour l'expression « `SQL Server query processor` », l'occurrence contiendrait les valeurs d'occurrence suivantes pour les termes de l'expression, en anglais :<br /><br /> 1 pour`SQL`<br />2 pour`Server`<br />3 pour`query`<br />4 pour`processor`|  
 |special_term|**nvarchar(4000)**|Contient des informations sur les caractéristiques du terme émis par l'analyseur lexical, informations qui peuvent être l'une des suivantes :<br /><br /> Concordance exacte<br /><br /> Mot parasite<br /><br /> Fin de phrase<br /><br /> Fin de paragraphe<br /><br /> Fin de chapitre|  
 |display_term|**nvarchar(4000)**|Contient la forme explicite du mot clé. Comme avec les fonctions conçues pour accéder au contenu de l'index de recherche en texte intégral, ce terme affiché peut ne pas être identique au terme d'origine en raison des limitations inhérentes à la dénormalisation. Toutefois, il doit être suffisamment précis pour vous permettre de l'identifier à partir de l'entrée d'origine.|  
-|expansion_type|**int**|Contient des informations sur la nature de l'expansion d'un terme donné, informations qui peuvent être l'une des suivantes :<br /><br /> 0 =Cas de mot unique<br /><br /> 2=Expansion fléchie<br /><br /> 4=Expansion/remplacement du dictionnaire des synonymes<br /><br /> Par exemple, considérez un cas dans lequel le dictionnaire des synonymes définit run comme expansion de `jog` :<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Le terme `FORMSOF (FREETEXT, run)` génère la sortie suivante :<br /><br /> 
-  `run` with expansion_type=0<br /><br /> 
-  `runs` with expansion_type=2<br /><br /> 
-  `running` with expansion_type=2<br /><br /> 
-  `ran` with expansion_type=2<br /><br /> 
-  `jog` with expansion_type=4|  
+|expansion_type|**int**|Contient des informations sur la nature de l'expansion d'un terme donné, informations qui peuvent être l'une des suivantes :<br /><br /> 0 =Cas de mot unique<br /><br /> 2=Expansion fléchie<br /><br /> 4=Expansion/remplacement du dictionnaire des synonymes<br /><br /> Par exemple, considérez un cas dans lequel le dictionnaire des synonymes définit run comme expansion de `jog` :<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Le terme `FORMSOF (FREETEXT, run)` génère la sortie suivante :<br /><br /> `run` with expansion_type=0<br /><br /> `runs` with expansion_type=2<br /><br /> `running` with expansion_type=2<br /><br /> `ran` with expansion_type=2<br /><br /> `jog` with expansion_type=4|  
 |source_term|**nvarchar(4000)**|Terme ou expression à partir duquel un terme donné à été généré ou analysé. Par exemple, une requête sur '"`word breakers" AND stemmers'` produit les valeurs source_term suivantes en anglais :<br /><br /> `word breakers`pour le display_term`word`<br />`word breakers`pour le display_term`breakers`<br />`stemmers`pour le display_term`stemmers`|  
   
 ## <a name="remarks"></a>Notes  
@@ -171,9 +166,9 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)   
  [Configurer et gérer les analyseurs lexicaux et les générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Interroger avec la recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
- [Interroger avec la recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
+ [Configurer et gérer mots vides et mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
+ [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
  [Éléments sécurisables](../../relational-databases/security/securables.md)  
   
   

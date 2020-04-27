@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899175"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
@@ -84,7 +84,7 @@ sp_dbmmonitorresults database_name
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nom d'une base de données mise en miroir.|  
-|**actif**|**int**|Rôle de mise en miroir actuel de l'instance du serveur :<br /><br /> 1 = Principal<br /><br /> 2 = Miroir|  
+|**role**|**int**|Rôle de mise en miroir actuel de l'instance du serveur :<br /><br /> 1 = Principal<br /><br /> 2 = Miroir|  
 |**mirroring_state**|**int**|État de la base de données :<br /><br /> 0 = suspendu<br /><br /> 1 = déconnecté<br /><br /> 2 = Synchronisation<br /><br /> 3 = Basculement en attente<br /><br /> 4 = Synchronisé|  
 |**witness_status**|**int**|L'état de connexion du témoin dans la session de mise en miroir de la base de données peut être :<br /><br /> 0 = Inconnu<br /><br /> 1 = connecté<br /><br /> 2 = Déconnecté|  
 |**log_generation_rate**|**int**|Quantité de journal générée, en kilo-octets/s, depuis la précédente mise à jour de l'état de mise en miroir de cette base de données.|  
@@ -95,9 +95,9 @@ sp_dbmmonitorresults database_name
 |**transaction_delay**|**int**|Délai total, en millisecondes, de toutes les transactions.|  
 |**transactions_per_sec**|**int**|Nombre de transactions par seconde sur l'instance du serveur principal.|  
 |**average_delay**|**int**|Délai moyen de chaque transaction sur l'instance du serveur principal grâce à la mise en miroir de bases de données. En mode hautes performances (c'est-à-dire, lorsque la propriété SAFETY a pour valeur OFF), cette valeur est généralement 0.|  
-|**time_recorded**|**DATETIME**|Heure à laquelle la ligne a été enregistrée lors de la surveillance de la mise en miroir de bases de données. Il s'agit de l'heure système du principal.|  
-|**time_behind**|**DATETIME**|Heure système approximative du principal sur laquelle la base de données miroir est actuellement synchronisée. Cette valeur n'est significative que sur l'instance du serveur principal.|  
-|**local_time**|**DATETIME**|Heure système sur l'instance du serveur local à laquelle cette ligne a été mise à jour.|  
+|**time_recorded**|**datetime**|Heure à laquelle la ligne a été enregistrée lors de la surveillance de la mise en miroir de bases de données. Il s'agit de l'heure système du principal.|  
+|**time_behind**|**datetime**|Heure système approximative du principal sur laquelle la base de données miroir est actuellement synchronisée. Cette valeur n'est significative que sur l'instance du serveur principal.|  
+|**local_time**|**datetime**|Heure système sur l'instance du serveur local à laquelle cette ligne a été mise à jour.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_dbmmonitorresults** ne peut être exécutée que dans le contexte de la base de données **msdb** .  

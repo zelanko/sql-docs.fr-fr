@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916871"
 ---
 # <a name="stat-method"></a>Stat, méthode
@@ -42,7 +42,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Spécifie que cette méthode ne retourne pas certains membres de la structure STATSTG, ce qui entraîne l’enregistrement d’une opération d’allocation de mémoire. Les valeurs sont extraites de l’énumération STATFLAG. L’énumération STATFLAG a deux valeurs  
   
-|Constant|Valeur|  
+|Constant|Value|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
@@ -54,16 +54,16 @@ Long stream.Stat(StatStg, StatFlag)
  Chaîne contenant le nom du flux, s’il en existe un et que la valeur StatFlag STATFLAG_NONAME n’a pas été spécifiée.  
   
  *cbSize*  
- Spécifie la taille en octets du flux ou du tableau d’octets.  
+ Spécifie la taille en octets du flux ou du tableau d'octets.  
   
  *mtime*  
- Indique l’heure de la dernière modification pour ce stockage, ce flux ou ce tableau d’octets.  
+ Indique l'heure de la dernière modification de ce stockage, flux ou tableau d'octets.  
   
- *CTime*  
- Indique l’heure de création de ce stockage, flux ou tableau d’octets.  
+ *ctime*  
+ Indique l'heure de création de ce stockage, flux ou tableau d'octets.  
   
  *atime*  
- Indique l’heure du dernier accès pour ce stockage, ce flux ou ce tableau d’octets.  
+ Indique l’heure du dernier accès à ce stockage, flux ou tableau d’octets.  
   
  Si STATFLAG_NONAME est spécifié dans le paramètre StatFlag, le nom du flux n’est pas retourné.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189831"
 ---
 # <a name="alert-properties-history-page"></a>Propriétés de l'alerte (page Historique)
@@ -26,10 +26,10 @@ ms.locfileid: "68189831"
  **Date de la dernière alerte**  
  Affiche la date à laquelle l’événement spécifié s’est produit en dernier lieu ou indique **(Jamais survenue)** si l’événement n’a pas eu lieu depuis la création de l’alerte.  
   
- **Date de la dernière réponse**  
+ **Date de la dernière réponse à**  
  Affiche la date à laquelle l’alerte a répondu à l’événement en dernier lieu ou indique **(Sans réponse)** si l’événement n’a pas eu lieu depuis la création de l’alerte.  
   
- **Nombre d’occurrences**  
+ **Nombre d'occurrences**  
  Indique le nombre total d'occurrences de l'événement depuis la création de l'alerte ou depuis la dernière réinitialisation du compteur.  
   
  **Réinitialiser le nombre**  

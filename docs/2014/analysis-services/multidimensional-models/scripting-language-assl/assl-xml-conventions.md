@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736392"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
@@ -150,7 +150,7 @@ ms.locfileid: "62736392"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (chaîne vide)|  
-|`Integer`ni`Long`|0 (zéro)|  
+|`Integer` ou `Long`|0 (zéro)|  
 |`Timestamp`|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework `System.DateTime` avec 0 graduations)|  
   
  Un élément qui est présent mais vide est considéré comme ayant une valeur de chaîne null, et non la valeur par défaut.  

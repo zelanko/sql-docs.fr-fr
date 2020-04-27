@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735631"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting, élément (Assistant Paramétrage de base de données)
@@ -38,8 +38,7 @@ ms.locfileid: "62735631"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|
-  `string`, limite de longueur appliquée par le serveur.|  
+|**Type de données et longueur**|`string`, limite de longueur appliquée par le serveur.|  
 |**Valeurs autorisées**|**NONE**<br /> Aucune structure existante.<br /><br /> **ALL**<br /> Toutes les structures existantes.<br /><br /> **ALIGNED**<br /> Toutes les structures alignées sur les partitions.<br /><br /> **CL_IDX**<br /> Tous les index cluster sur les tables.<br /><br /> **IDX**<br /> Tous les index cluster et non cluster sur les tables.<br /><br /> Utilisez une seule de ces valeurs avec cet élément.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément `TuningOptions`.|  

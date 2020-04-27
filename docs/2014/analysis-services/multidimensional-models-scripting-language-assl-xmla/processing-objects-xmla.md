@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727595"
 ---
 # <a name="processing-objects-xmla"></a>Traitement d'objets (XMLA)
@@ -54,7 +54,7 @@ ms.locfileid: "62727595"
   
  Le tableau suivant répertorie les constantes associées à la propriété `Type` et les différents objets qui peuvent être traités avec chaque constant.  
   
-|`Type`ajoutée|Objets applicables|  
+|Valeur `Type`|Objets applicables|  
 |--------------------|------------------------|  
 |*ProcessFull*|Cube, base de données, dimension, groupe de mesures, modèle d'exploration de données, structure d'exploration de données, partition|  
 |*ProcessAdd*|Dimension, partition|  
@@ -72,7 +72,7 @@ ms.locfileid: "62727595"
 ## <a name="specifying-objects-to-be-processed"></a>Spécification des objets à traiter  
  La propriété [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) de la `Process` commande contient l’identificateur d’objet de l’objet à traiter. Seul un objet peut être spécifié dans une commande `Process`, mais le traitement d'un objet porte également sur les objets enfants. Par exemple, le traitement d'un groupe de mesures dans un cube englobe toutes les partitions de ce groupe de mesures. De même, le traitement d'une base de données porte sur tous ses objets, notamment les cubes, les dimensions et les structures d'exploration de données contenus dans la base de données.  
   
- Si vous définissez l'attribut `ProcessAffectedObjects` de la commande `Process` à true, les objets connexes affectés par le traitement de l'objet spécifié sont égalements traités. Par exemple, si une dimension est mise à jour de façon incrémentielle ** à l’aide de l' `Process` option de traitement ProcessUpdate de la commande, toute partition dont les agrégations sont invalidées en raison de l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajout `ProcessAffectedObjects` ou de la suppression de membres est également traitée par si a la valeur true. Dans ce cas, une seule commande `Process` peut traiter plusieurs objets dans une même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais c'est [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui détermine quels sont les objets, outre l'objet unique spécifié dans la commande `Process`, qui doivent également être traités.  
+ Si vous définissez l'attribut `ProcessAffectedObjects` de la commande `Process` à true, les objets connexes affectés par le traitement de l'objet spécifié sont égalements traités. Par exemple, si une dimension est mise à jour de façon incrémentielle *ProcessUpdate* à l’aide de l' `Process` option de traitement ProcessUpdate de la commande, toute partition dont les agrégations sont invalidées en raison de l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajout `ProcessAffectedObjects` ou de la suppression de membres est également traitée par si a la valeur true. Dans ce cas, une seule commande `Process` peut traiter plusieurs objets dans une même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais c'est [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui détermine quels sont les objets, outre l'objet unique spécifié dans la commande `Process`, qui doivent également être traités.  
   
  Toutefois, vous pouvez traiter simultanément plusieurs objets, tels que des dimensions, en utilisant plusieurs commandes `Process` au sein d'une commande `Batch`. Lorsqu'il s'agit de traiter les objets d'une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en série ou en parallèle, les opérations de traitement par lot offrent un niveau de contrôle plus fin qu'en utilisant l'attribut `ProcessAffectedObjects`. Elles vous permettent en outre d'affiner votre approche de traitement pour les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] plus volumineuses. Pour plus d’informations sur l’exécution d’opérations par lots, consultez [exécution d’opérations par lots &#40;&#41;XMLA ](performing-batch-operations-xmla.md).  
   

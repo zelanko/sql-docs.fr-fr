@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904902"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilisation de projets SSMA (MySQLToSQL)
@@ -65,9 +65,9 @@ SSMA contient plusieurs paramètres pour la conversion et le chargement de la ba
 ## <a name="creating-new-projects"></a>Création de projets  
 Pour migrer des données de bases de données MySQL vers SQL Server ou SQL Azure, vous devez créer un projet.  
   
-##### <a name="to-create-a-new-project"></a>Pour créer un nouveau projet  
+##### <a name="to-create-a-new-project"></a>Pour créer un projet  
   
-1.  Dans le menu **fichier** , sélectionnez **nouveau projet** . La boîte de dialogue **Nouveau projet** s'affiche. Dans le menu **Fichier**, sélectionnez **Nouveau projet**. La boîte de dialogue **Nouveau projet** s'affiche.  
+1.  Dans le menu **fichier** , sélectionnez **nouveau projet** . La boîte de dialogue **Nouveau projet** apparaît. Dans le menu **Fichier**, sélectionnez **Nouveau projet**. La boîte de dialogue **Nouveau projet** apparaît.  
   
 2.  Dans la zone **Nom** , tapez le nom de votre projet.  
   
@@ -75,11 +75,11 @@ Pour migrer des données de bases de données MySQL vers SQL Server ou SQL Azure
   
 4.  Dans la liste déroulante **migration vers** , sélectionnez la version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la cible utilisée pour la migration. Voici les options disponibles :  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -105,7 +105,7 @@ Si les bases de données dans le projet ont été modifiées ou n’ont pas ét�
   
 1.  Pour chaque base de données qui affiche l’état des **métadonnées manquantes**, activez la case à cocher en regard du nom de la base de données. L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées à ce stade, n’activez pas les cases à cocher.  
   
-2.  Cliquez sur **Enregistrer**.  
+2.  Cliquez sur **Save**.  
   
 SSMA analyse les schémas MySQL et enregistre les métadonnées dans le fichier projet.  
   

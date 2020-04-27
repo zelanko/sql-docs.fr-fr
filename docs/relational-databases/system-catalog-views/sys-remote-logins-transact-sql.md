@@ -20,10 +20,10 @@ ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904575"
 ---
 # <a name="sysremote_logins-transact-sql"></a>sys.remote_logins (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67904575"
 |**server_id**|**int**|ID du serveur dans **sys.** Servers. Le nom est fourni par la connexion à partir du serveur « distant ».|  
 |**remote_name**|**sysname**|Nom de connexion fourni pour un mappage. Si la valeur est NULL, le nom de connexion spécifié dans la connexion est utilisé.|  
 |**local_principal_id**|**int**|ID du principal de serveur auquel la connexion est mappée. Si la valeur est 0, la connexion distante est mappée à la connexion portant le même nom.|  
-|**modify_date**|**DATETIME**|Date de la dernière modification de la connexion liée.|  
+|**modify_date**|**datetime**|Date de la dernière modification de la connexion liée.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

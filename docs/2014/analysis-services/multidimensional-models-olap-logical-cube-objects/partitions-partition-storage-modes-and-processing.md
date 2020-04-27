@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727575"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Traitement et modes de stockage des partitions
@@ -50,8 +50,7 @@ ms.locfileid: "62727575"
  Dans le mode de stockage ROLAP, les agrégations de la partition sont stockées dans des vues indexées de la base de données relationnelle spécifiée dans la source de données de la partition. Contrairement au mode de stockage MOLAP, le mode ROLAP ne débouche pas sur le stockage d'une copie des données sources dans les dossiers de données d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Au lieu de cela, lorsque les résultats ne peuvent pas être dérivés du cache de requête, le système accède aux vues indexées de la source de données pour répondre aux requêtes. Les temps de réponses aux requêtes sont généralement plus longs dans le mode de stockage ROLAP que dans les modes de stockage MOLAP ou HOLAP. De la même façon, le temps de traitement est généralement plus lent avec le mode ROLAP. Cependant, le mode ROLAP permet d'afficher les données en temps réel et d'économiser l'espace de stockage si vous utilisez des ensembles de données volumineux fréquemment interrogés, notamment des données purement historiques.  
   
 > [!NOTE]  
->  Lorsque le mode ROLAP est utilisé, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut retourner des informations incorrectes sur le membre inconnu si une jointure est combinée avec une clause GROUP BY. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] élimine les erreurs d'intégrité relationnelles plutôt que de retourner la valeur du membre inconnu.  
+>  Lorsque le mode ROLAP est utilisé, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut retourner des informations incorrectes sur le membre inconnu si une jointure est combinée avec une clause GROUP BY. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] élimine les erreurs d'intégrité relationnelles plutôt que de retourner la valeur du membre inconnu.  
   
  Si une partition utilise le mode de stockage ROLAP et que ses données sources sont stockées dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de créer des vues indexées pour contenir les agrégations de la partition. Si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne peut pas créer de vues indexées, il ne crée pas de tables d'agrégation. Même si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gère les exigences en matière de session pour créer des vues indexées sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la création par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vues indexées pour les agrégations exigent que la partition ROLAP et les tables de son schéma remplissent les conditions suivantes :  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62727575"
 -   L'option suivante doit être désactivée (OFF) pour la session de création de la vue indexée : NUMERIC_ROUNDABORT. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
- Le mode de stockage HOLAP combine les attributs des modes de stockage MOLAP et ROLAP. Comme MOLAP, HOLAP entraîne le stockage des agrégations de la partition dans une structure multidimensionnelle dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Dans le mode HOLAP, aucune copie des données source n'est stockée. Pour les requêtes qui accèdent uniquement aux données de synthèse dans les agrégations d'une partition, le stockage HOLAP est similaire au stockage MOLAP. Requêtes qui accèdent aux données sources : par exemple, si vous souhaitez descendre dans la pile jusqu’à une cellule atomique de cube pour laquelle il n’existe pas de données d’agrégation, vous devez récupérer les données de la base de données relationnelle et ne pas être aussi rapide qu’elles le seraient si les données sources étaient stockées dans le structur MOLAP. Envoyer. Dans le mode HOLAP, les temps de requête sont généralement très différents selon que la requête peut être résolue dans le cache ou les agrégations, ou dans les données sources.  
+ Le mode de stockage HOLAP combine les attributs des modes de stockage MOLAP et ROLAP. Comme MOLAP, HOLAP entraîne le stockage des agrégations de la partition dans une structure multidimensionnelle dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Dans le mode HOLAP, aucune copie des données source n'est stockée. Pour les requêtes qui accèdent uniquement aux données de synthèse dans les agrégations d'une partition, le stockage HOLAP est similaire au stockage MOLAP. Requêtes qui accèdent aux données sources : par exemple, si vous souhaitez descendre dans la pile jusqu’à une cellule atomique de cube pour laquelle il n’existe pas de données d’agrégation, vous devez récupérer les données de la base de données relationnelle et n’est pas aussi rapide qu’elles le seraient si les données sources étaient stockées dans la structure MOLAP. Dans le mode HOLAP, les temps de requête sont généralement très différents selon que la requête peut être résolue dans le cache ou les agrégations, ou dans les données sources.  
   
  Les partitions stockées dans le mode HOLAP sont plus petites que leurs homologues MOLAP car elles ne contiennent pas de données sources, et elles permettent de répondre plus rapidement que les partitions ROLAP aux requêtes portant sur des données de synthèse. Le mode de stockage HOLAP convient généralement pour les partitions de cubes qui nécessitent des réponses rapides aux requêtes sur des données de synthèse calculées à partir d'un volume important de données source. Toutefois, lorsque les utilisateurs génèrent des requêtes touchant des données de niveau feuille, comme pour le calcul de valeurs médianes, le stockage MOLAP constitue généralement le meilleur choix.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en cache proactive &#40;les partitions&#41;](partitions-proactive-caching.md)   
  [Synchroniser les bases de données Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

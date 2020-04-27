@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62729068"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
@@ -55,7 +55,7 @@ ms.locfileid: "62729068"
 |NestLevel|Integer|Niveau de la transaction pour laquelle l'événement s'est produit.|  
 |NumSegments|Entier long|Nombre de segments de données affectés ou atteints par la commande pour laquelle l'événement s'est produit.|  
 |severity|Integer|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> Valeur : 0 = réussite<br /><br /> Valeur : 1 = informations<br /><br /> Valeur : 2 = avertissement<br /><br /> Valeur : 3 = erreur|  
-|Succès|Boolean|Indique si une commande a abouti ou échoué.|  
+|Opération réussie|Boolean|Indique si une commande a abouti ou échoué.|  
 |Error|Entier long|Numéro d'erreur de l'événement, le cas échéant.|  
 |ConnectionID|String|Identificateur de la connexion pour laquelle l'événement s'est produit.|  
 |nom_base_de_données|String|Nom de la base de données pour laquelle l'événement s'est produit.|  

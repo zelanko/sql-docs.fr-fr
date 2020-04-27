@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67343894"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
-Le langage DAX (Data Analysis expression) peut être utilisé pour créer des mesures et d’autres formules personnalisées à utiliser dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] des modèles tabulaires Analysis Services, des modèles de données dans des classeurs Excel et des modèles de données Power bi Desktop. Dans la plupart des aspects, les modèles que vous créez dans ces environnements sont identiques et vous pouvez utiliser les mêmes mesures, relations et indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et que vous le déployez en mode DirectQuery, certaines restrictions s’appliquent aux formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas prises en charge dans le modèle SQL Server 2014 Analysis Services tabulaires au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions prises en charge mais pouvant retourne des résultats différents.  
+Le langage DAX (Data Analysis expression) peut être utilisé pour créer des mesures et d’autres formules personnalisées à utiliser dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] des modèles tabulaires Analysis Services, des modèles de données dans des classeurs Excel et des modèles de données Power bi Desktop. Dans la plupart des aspects, les modèles que vous créez dans ces environnements sont identiques et vous pouvez utiliser les mêmes mesures, relations et indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et que vous le déployez en mode DirectQuery, certaines restrictions s’appliquent aux formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas prises en charge dans le modèle SQL Server 2014 Analysis Services tabulaires au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions prises en charge, mais qui peuvent retourner des résultats différents.  
   
 Dans cette rubrique, nous utilisons le terme *modèle en mémoire* pour faire référence aux modèles tabulaires, qui sont des données en mémoire cache entièrement hébergées sur un serveur Analysis Services s’exécutant en mode tabulaire. Nous utilisons les *modèles DirectQuery* pour faire référence aux modèles tabulaires qui ont été créés et/ou déployés en mode DirectQuery. Pour plus d’informations sur le mode DirectQuery, consultez [mode DirectQuery (SSAS tabulaire)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
-## <a name="bkmk_SemanticDifferences"></a>Différences entre le mode en mémoire et le mode DirectQuery  
+## <a name="differences-between-in-memory-and-directquery-mode"></a><a name="bkmk_SemanticDifferences"></a>Différences entre le mode en mémoire et le mode DirectQuery  
 Les requêtes sur un modèle déployé en mode DirectQuery peuvent retourner des résultats différents de ceux du même modèle déployé en mode en mémoire. En effet, avec DirectQuery, les données sont interrogées directement à partir d’une banque de données relationnelle et les agrégations requises par les formules sont effectuées à l’aide du moteur relationnel approprié, au lieu d’utiliser le moteur d’analyse en mémoire xVelocity (VertiPaq) pour le stockage et le calcul.  
   
 Par exemple, il existe des différences dans la façon dont certaines banques de données relationnelles gèrent les valeurs numériques, les dates, les valeurs Null, etc.  
@@ -35,7 +35,7 @@ En outre, certaines fonctions ne peuvent pas être utilisées du tout en mode Di
 ## <a name="semantic-differences"></a>Différences sémantiques  
 Cette section répertorie les types de différences sémantiques que vous pouvez attendre, et décrit toutes les limitations qui peuvent s'appliquer à l'utilisation des fonctions ou aux résultats de la requête.  
   
-### <a name="bkmk_Comparisons"></a>Comparaisons  
+### <a name="comparisons"></a><a name="bkmk_Comparisons"></a>Comparaisons  
 Dans les modèles en mémoire, DAX prend en charge les comparaisons de deux expressions qui se résolvent en valeurs scalaires de types de données différents. Toutefois, les modèles qui sont déployés en mode DirectQuery utilisent les types de données et les opérateurs de comparaison du moteur relationnel, et peuvent donc retourner des résultats différents.  
   
 Les comparaisons suivantes retournent toujours une erreur quand elles sont utilisées dans un calcul sur une source de données de DirectQuery :  
@@ -62,14 +62,14 @@ EXEMPLE : `"VERDADERO" = TRUE`
   
 Cette expression compare une chaîne de texte avec une valeur booléenne. En général, pour les modèles DirectQuery ou en mémoire, la comparaison d'une valeur de chaîne avec une valeur booléenne provoque une erreur. Les seules exceptions à cette règle sont quand la chaîne contient le mot **true** ou le mot **false**; si la chaîne contient une de ces valeurs, une conversion en valeur booléenne est effectuée et la comparaison a lieu, donnant le résultat logique.  
   
-**Comparaison des valeurs null**  
+**Comparaison de valeurs Null**  
 EXEMPLE : `EVALUATE ROW("X", BLANK() = BLANK())`  
   
 Cette formule compare l'équivalent SQL d'une valeur Null avec une valeur Null. Elle retourne **true** dans les modèles en mémoire et DirectQuery ; un approvisionnement est effectué dans le modèle DirectQuery pour assurer un comportement similaire au modèle en mémoire.  
   
 Notez que dans Transact-SQL une valeur Null n'est jamais égale à une valeur Null. Toutefois, dans DAX, un espace est égal à un autre espace. Ce comportement est le même pour tous les modèles en mémoire. Il est important de noter que le mode DirectQuery utilise la plupart de la sémantique SQL Server ; mais, dans ce cas il s'en sépare en lui donnant un nouveau comportement dans les comparaisons NULL.  
   
-### <a name="bkmk_Casts"></a>Casts  
+### <a name="casts"></a><a name="bkmk_Casts"></a>Casts  
   
 Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites sont effectués dans nombre de comparaisons et d'opérations arithmétiques. La comparaison ou l'opération arithmétique détermine le type de données du résultat. Par exemple,  
   
@@ -77,19 +77,19 @@ Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites s
   
 -   Les valeurs booléennes sont toujours traitées comme des valeurs logiques dans les comparaisons et quand elles sont utilisées avec EXACT, AND, OR, &amp;&amp;||.  
   
-**Conversion d’une chaîne en valeur booléenne**  
+**Conversion d'une chaîne en valeur booléenne**  
 Dans les modèles en mémoire et DirectQuery, les casts sont autorisés aux valeurs booléennes de ces chaînes uniquement : **""** (chaîne vide), **"true"**, **"false"**; où une chaîne vide est convertie en valeur false.  
   
 Les conversions en type de données booléen d'une autre chaîne génèrent une erreur.  
   
-**Conversion d’une chaîne en date/heure**  
+**Conversion d'une chaîne en date/heure**  
 En mode DirectQuery, les conversions des représentations sous forme de chaîne des dates et heures en valeurs **datetime** réelles se comportent de la même façon que dans SQL Server.  
   
-Pour plus d’informations sur les règles régissant les casts **** de types de données [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] String en DateTime dans les modèles, consultez la [référence de syntaxe DAX](/dax/dax-syntax-reference).
+Pour plus d’informations sur les règles régissant les casts **datetime** de types de données [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] String en DateTime dans les modèles, consultez la [référence de syntaxe DAX](/dax/dax-syntax-reference).
   
 Les modèles qui utilisent la banque de données en mémoire utilisent une plage plus limitée de formats de texte pour les dates que les formats de chaîne pour les dates prises en charge par SQL Server. Toutefois, DAX prend en charge les formats de date et d'heure personnalisés.  
   
-**Conversion d’une chaîne en d’autres valeurs non booléennes**  
+**Conversion d'une chaîne en d'autres valeurs non booléennes**  
 Lors de la conversion de chaînes en valeurs non booléennes, le mode DirectQuery se comporte de la même manière que SQL Server. Pour plus d’informations, consultez [CAST et CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Conversion de nombres en chaîne non autorisée**  
@@ -108,10 +108,10 @@ Dans cette expression, le premier paramètre est de type **datetime** et le deux
   
 En mode DirectQuery, seule la conversion directe de **string** en **double** est appliquée. Si cette conversion échoue, la formule retourne une erreur.  
   
-### <a name="bkmk_Math"></a>Fonctions mathématiques et opérations arithmétiques  
+### <a name="math-functions-and-arithmetic-operations"></a><a name="bkmk_Math"></a>Fonctions mathématiques et opérations arithmétiques  
 Certaines fonctions mathématiques retournent des résultats différents en mode DirectQuery, en raison de différences dans le type de données sous-jacent ou des conversions qui peuvent être appliquées dans les opérations. En outre, les restrictions décrites ci-dessus relatives à la plage de valeurs autorisée peuvent affecter les résultats des opérations arithmétiques.  
   
-**Ordre d’ajout**  
+**Ordre d'ajout**  
 Lorsque vous créez une formule qui ajoute une série de nombres, un modèle en mémoire peut traiter les nombres dans un ordre différent de celui d'un modèle DirectQuery.  Par conséquent, lorsque vous avez de très grands nombres positifs et de très grands nombres négatifs, vous pouvez obtenir une erreur dans une opération et des résultats dans une autre opération.  
   
 **Utilisation de la fonction POWER**  
@@ -121,12 +121,12 @@ En mode DirectQuery, la fonction POWER ne peut pas utiliser de valeurs négative
   
 Dans un modèle en mémoire, la formule retourne -4.  
   
-**Opérations de dépassement de capacité numérique**  
+**Opérations numériques de dépassement de capacité**  
 Dans Transact-SQL, les opérations qui génèrent un dépassement de capacité numérique génèrent une erreur de dépassement de capacité ; par conséquent, les formules qui génèrent un dépassement de capacité génèrent également une erreur en mode DirectQuery.  
   
 Toutefois, la même formule utilisée dans un modèle en mémoire retourne un entier sur huit octets. Cela est dû au fait que le moteur de formule ne recherche pas les dépassements de capacité numériques.  
   
-**Les fonctions de JOURNALisation avec des espaces retournent des résultats différents**  
+**Les fonctions LOG avec des espaces retournent des résultats différents**  
 SQL Server gère les valeurs Null et les espaces différemment du moteur xVelocity. Par conséquent, la formule suivante retourne une erreur en mode DirectQuery, mais retourne Infinity (-INF) en mode in-Memory.  
   
 `EXAMPLE: LOG(blank())`  
@@ -154,7 +154,7 @@ Les expressions suivantes sont toutes valides dans les modèles en mémoire, mai
   
 L'expression `BLANK/BLANK` est un cas spécial qui retourne `BLANK` dans les modèles en mémoire et en mode DirectQuery.  
   
-### <a name="bkmk_Ranges"></a>Plages numériques et de date/heure prises en charge  
+### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>Plages numériques et de date/heure prises en charge  
 Les formules [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] dans les modèles tabulaires et en mémoire sont soumises aux mêmes limitations qu’Excel en ce qui concerne les valeurs maximales autorisées pour les nombres réels et les dates. Toutefois, des différences peuvent survenir lorsque la valeur maximale est retournée à partir d'un calcul ou d'une requête, ou lorsque les valeurs sont converties, castées, arrondies ou tronquées.  
   
 -   Si des valeurs des types **Currency** et **Real** sont multipliées, et que le résultat est supérieur à la valeur maximale possible, en mode DirectQuery, aucune erreur n’est générée et une valeur Null est retournée.  
@@ -169,12 +169,12 @@ En général, étant donné que les plages de dates acceptées sont différentes
   
 Si les dates utilisées dans les formules n'appartiennent pas à cette plage, la formule génère une erreur ou les résultats ne correspondent pas.  
   
-**Valeurs à virgule flottante prises en charge par le plafond**  
+**Valeurs à virgule flottante prises en charge par CEILING**  
 EXEMPLE : `EVALUATE ROW("x", CEILING(-4.398488E+30, 1))`  
   
 L'équivalent Transact-SQL de la fonction DAX CEILING prend uniquement en charge les valeurs avec une grandeur de 10^19 ou inférieure. Une règle empirique consiste à utiliser des valeurs en virgule flottante pour le type **bigint**.  
   
-**DatePart fonctionne avec des dates qui sont hors limites**  
+**Datepart fonctionne avec des dates qui sont hors limites**  
 Les résultats en mode DirectQuery sont garantis pour correspondre à ceux des modèles en mémoire uniquement lorsque la date utilisée comme argument se trouve dans la plage de dates valide. Si ces conditions ne sont pas satisfaites, une erreur est générée, ou la formule retourne des résultats différents dans DirectQuery et dans le mode en mémoire.  
   
 EXEMPLE : `MONTH(0)` ou `YEAR(0)`  
@@ -191,7 +191,7 @@ EXEMPLE : `EOMONTH(blank(), blank())` ou `EDATE(blank(), blank())`
   
 Les résultats de cette expression doivent être identiques en mode DirectQuery et en mode en mémoire.  
   
-**Troncation des valeurs d’heure**  
+**Troncation des valeurs d'heure**  
 EXEMPLE : `SECOND(1231.04097222222)`  
   
 En mode DirectQuery, le résultat est tronqué, selon les règles de SQL Server, et l'expression renvoie la valeur 59.  
@@ -212,14 +212,14 @@ L'exemple suivant montre comment cette valeur est calculée :
   
 6.  60 correspond à 0.  
   
-**Type de données de temps SQL non pris en charge**  
+**Type de données d'heure SQL non pris en charge**  
 Les modèles en mémoire ne prennent pas en charge l’utilisation du nouveau type de données SQL **Time** . En mode DirectQuery, les formules qui référencent les colonnes de ce type de données retournent une erreur. Les colonnes de données d'heure ne peuvent pas être importées dans un modèle en mémoire.  
   
 Toutefois, dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et dans les modèles mis en cache, parfois le moteur convertit la valeur d’heure en un type de données acceptable, et la formule retourne un résultat.  
   
 Ce comportement affecte toutes les fonctions qui utilisent une colonne de date comme paramètre.  
   
-### <a name="bkmk_Currency"></a>Accès  
+### <a name="currency"></a><a name="bkmk_Currency"></a>Devise  
 En mode DirectQuery, si le résultat d’une opération arithmétique est de type **Currency**, la valeur doit être dans la plage suivante :  
   
 -   Minimum : -922337203685477,5808  
@@ -233,15 +233,15 @@ Si des types **Currency** et **Real** sont multipliés et que le résultat est s
   
 Dans un modèle en mémoire, une erreur est générée si la valeur absolue du résultat est supérieure à 922337203685477,4784.  
   
-**L’opération génère une valeur hors limites**  
+**L'opération génère une valeur hors limites**  
 EXEMPLE : `Currency sample 2`  
   
 Si des opérations sur deux valeurs monétaires quelconques génèrent une valeur qui est en dehors de la plage spécifiée, une erreur est générée dans les modèles en mémoire, mais pas dans les modèles DirectQuery.  
   
-**Combinaison de devises et d’autres types de données**  
+**Combinaison du type de données Currency avec d'autres types de données**  
 La division de valeurs monétaires par des valeurs d'autres types numériques peut entraîner des résultats différents.  
   
-### <a name="bkmk_Aggregations"></a>Fonctions d’agrégation  
+### <a name="aggregation-functions"></a><a name="bkmk_Aggregations"></a>Fonctions d’agrégation  
 Les fonctions statistiques sur une table avec une ligne retournent des résultats différents. Les fonctions d'agrégation sur les tables vides se comportent différemment dans les modèles en mémoire et en mode DirectQuery.  
   
 **Fonctions statistiques sur une table avec une seule ligne**  
@@ -249,14 +249,14 @@ Si la table utilisée comme argument contient une seule ligne, en mode DirectQue
   
 Dans un modèle en mémoire, une formule qui utilise STDEV ou VAR sur une table avec une seule ligne retourne une erreur de division par zéro.  
   
-### <a name="bkmk_Text"></a>Fonctions de texte  
+### <a name="text-functions"></a><a name="bkmk_Text"></a>Fonctions de texte  
 Étant donné que les banques de données relationnelles fournissent différents types de données texte par rapport à Excel, vous pouvez voir des résultats différents lors de la recherche de chaînes ou lorsque vous utilisez des sous-chaînes. La longueur des chaînes peut également être différente.  
   
 En général toutes les fonctions de manipulation de chaînes qui utilisent des colonnes de taille fixe comme arguments peuvent avoir des résultats différents.  
   
 De plus, dans SQL Server, certaines fonctions de texte prennent en charge des arguments supplémentaires qui ne sont pas fournis dans Excel. Si la formule requiert l'argument manquant vous pouvez obtenir des résultats différents ou des erreurs dans le modèle en mémoire.  
   
-**Les opérations qui retournent un caractère en utilisant LEFT, RIGHT, etc. peuvent retourner le caractère correct, mais dans un cas différent, ou aucun résultat**  
+**Les opérations qui retournent un caractère en utilisant LEFT, RIGHT, etc., peuvent retourner le caractère correct mais avec une casse différente, ou aucun résultat**  
 EXEMPLE : `LEFT(["text"], 2)`  
   
 En mode DirectQuery, la casse du caractère qui est retourné est toujours exactement la même que celle de la lettre stockée dans la base de données. Toutefois, le moteur xVelocity utilise un algorithme différent pour la compression et l'indexation des valeurs, afin d'améliorer les performances.  
@@ -287,12 +287,12 @@ Le mode DirectQuery convertit la fonction DAX TRIM en instruction SQL `LTRIM(RTR
   
 En revanche, la même formule dans un modèle en mémoire supprime les espaces dans la chaîne, d'après le comportement d'Excel.  
   
-**RTRIM implicite avec utilisation de la fonction LEN**  
+**RTRIM implicite avec l'utilisation de la fonction LEN**  
 EXEMPLE : `LEN('string_column')`  
   
 Comme SQL Server, le mode DirectQuery supprime automatiquement les espaces de fin des colonnes de chaîne : autrement dit, il effectue un RTRIM implicite. Par conséquent, les formules qui utilisent la fonction LEN peuvent retourner des valeurs différentes si la chaîne possède des espaces de fin.  
   
-**In-Memory prend en charge des paramètres supplémentaires pour le remplacement**  
+**Le mode en mémoire prend en charge des paramètres supplémentaires pour SUBSTITUTE**  
 EXEMPLE : `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
 EXEMPLE : `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
@@ -301,7 +301,7 @@ En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonctio
   
 Dans les modèles en mémoire, vous pouvez utiliser un quatrième paramètre facultatif pour spécifier le nombre d'instances de la chaîne à remplacer. Par exemple, vous pouvez remplacer uniquement la deuxième instance, etc.  
   
-**Restrictions sur les longueurs de chaîne pour les opérations REPT**  
+**Restrictions relatives aux longueurs de chaîne pour les opérations REPT**  
 Dans les modèles en mémoire, la longueur d'une chaîne résultant d'une opération en utilisant REPT doit être inférieure à 32 767 caractères.  
   
 Cette restriction ne s'applique pas en mode DirectQuery.  
@@ -315,7 +315,7 @@ Toutefois, si le texte est un caractère de longueur fixe et que la valeur * &lt
   
 Dans un modèle en mémoire, le résultat se termine au dernier caractère de chaîne, sans remplissage.  
   
-## <a name="bkmk_SupportedFunc"></a>Fonctions prises en charge en mode DirectQuery  
+## <a name="functions-supported-in-directquery-mode"></a><a name="bkmk_SupportedFunc"></a>Fonctions prises en charge en mode DirectQuery  
 Les fonctions DAX suivantes peuvent être utilisées en mode DirectQuery, mais avec les qualifications comme décrit dans la section précédente.  
   
 **Fonctions de texte**  
@@ -392,7 +392,7 @@ Il existe des limitations lorsque vous calculez des formules par rapport à un m
   
 Dans un modèle en mémoire, la répétition de la clause ORDER BY n'a aucun effet sur les résultats.  
   
-## <a name="bkmk_NotSupportedFunc"></a>Fonctions non prises en charge en mode DirectQuery  
+## <a name="functions-not-supported-in-directquery-mode"></a><a name="bkmk_NotSupportedFunc"></a>Fonctions non prises en charge en mode DirectQuery  
 Certaines fonctions DAX ne sont pas prises en charge dans les modèles qui sont déployés en mode DirectQuery. Les raisons pour lesquelles une fonction particulière n'est pas prise en charge peuvent notamment inclure une ou plusieurs de celles indiquées ci-après :  
   
 -   Le moteur relationnel sous-jacent ne peut pas effectuer des calculs identiques à ceux effectués par le moteur xVelocity.  
@@ -504,6 +504,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Voir aussi  
-[Mode DirectQuery (SSAS tabulaire)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Mode DirectQuery (SSAS Tabulaire)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

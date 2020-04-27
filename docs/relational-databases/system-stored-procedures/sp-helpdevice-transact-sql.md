@@ -18,10 +18,10 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902990"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
@@ -53,10 +53,10 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nom de périphérique logique.|  
 |**physical_name**|**nvarchar(260)**|Nom de fichier physique.|  
-|**description**|**nvarchar(255)**|Description du périphérique.|  
-|**statu**|**int**|Numéro qui correspond à la description de l’État dans la colonne **Description** .|  
-|**CntrlType**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
-|**corps**|**int**|Taille du périphérique (en pages de 2 Ko).|  
+|**descriptive**|**nvarchar(255)**|Description du périphérique.|  
+|**statut**|**int**|Numéro qui correspond à la description de l’État dans la colonne **Description** .|  
+|**cntrltype**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
+|**size**|**int**|Taille du périphérique (en pages de 2 Ko).|  
   
 ## <a name="remarks"></a>Notes  
  Si le *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si le *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur tous les périphériques de vidage dans l’affichage catalogue **sys. backup_devices** .  

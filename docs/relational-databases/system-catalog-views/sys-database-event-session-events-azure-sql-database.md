@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915133"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
@@ -34,7 +34,7 @@ ms.locfileid: "67915133"
 |name|**sysname**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. N'accepte pas la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. N'accepte pas la valeur NULL.|  
-|predicate|**nvarchar (3000)**|Expression de prédicat qui est appliquée à l’événement. Autorise la valeur NULL.|  
+|prédicat|**nvarchar (3000)**|Expression de prédicat qui est appliquée à l’événement. Autorise la valeur NULL.|  
 |predicate_xml|**nvarchar (3000)**|Expression de prédicat XML qui est appliquée à l'événement. Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -45,7 +45,7 @@ ms.locfileid: "67915133"
   
 ||||  
 |-|-|-|  
-|De|À|Relation|  
+|À partir|À|Relation|  
 |sys. database_event_session_events. event_session_id|sys. database_event_sessions. event_session_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  

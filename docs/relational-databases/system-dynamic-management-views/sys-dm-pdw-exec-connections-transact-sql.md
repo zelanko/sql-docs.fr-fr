@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899416"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
@@ -27,10 +27,10 @@ ms.locfileid: "67899416"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifie la session associée à cette connexion. Utilisez `SESSION_ID()` pour retourner le `session_id` de la connexion actuelle.|  
-|connect_time|**DATETIME**|Cachet temporel d'établissement de la connexion. N'accepte pas la valeur NULL.|  
-|encrypt_option|**nvarchar (40)**|Indique la valeur TRUE (la connexion est chiffrée) ou FALSe (la connexion n’est pas enctypred).|  
-|auth_scheme|**nvarchar (40)**|Spécifie le schéma d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows utilisé avec cette connexion. N'accepte pas la valeur NULL.|  
-|client_id|**varchar (48)**|Adresse IP du client qui se connecte à ce serveur. Autorise la valeur NULL.|  
+|connect_time|**datetime**|Cachet temporel d'établissement de la connexion. N'accepte pas la valeur NULL.|  
+|encrypt_option|**nvarchar(40)**|Indique la valeur TRUE (la connexion est chiffrée) ou FALSe (la connexion n’est pas enctypred).|  
+|auth_scheme|**nvarchar(40)**|Spécifie le schéma d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows utilisé avec cette connexion. N'accepte pas la valeur NULL.|  
+|client_id|**varchar(48)**|Adresse IP du client qui se connecte à ce serveur. Autorise la valeur NULL.|  
 |sql_spid|**int**|ID de processus serveur de la connexion. Utilisez `@@SPID` pour retourner le `sql_spid` de la connexion actuelle. Pour la plupart des cas, utilisez `session_id` à la place.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -40,10 +40,10 @@ ms.locfileid: "67899416"
   
 ||||  
 |-|-|-|  
-|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Un-à-un|  
+|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Un à un|  
 |dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Plusieurs-à-un|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Requête typique pour collecter des informations sur une connexion propre aux requêtes.  
   
 ```  
