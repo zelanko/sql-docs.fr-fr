@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103053"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint
@@ -40,19 +40,19 @@ ms.locfileid: "66103053"
 ## <a name="web-part-components"></a>Composants WebPart  
  La zone d'affichage montre un rapport au format HTML. Selon la configuration du composant WebPart, la zone d'affichage peut soit être agrandie à sa taille maximale afin de montrer le rapport en mode page entière, soit partager l'espace disponible avec les volets adjacents et une barre d'outils.  
   
- La barre d'outils fournit des fonctionnalités de navigation entre les pages, de recherche, de zoom et d'exportation, de sorte que vous puissiez afficher un rapport dans un autre format d'application. Elle fournit également une fonctionnalité d'impression facultative, elle permet d'obtenir une sortie imprimée paginée pour les rapports HTML et de modifier les paramètres relatifs à la mise en page et aux marges. **Ouvrez avec générateur de rapports, abonner**, **Exporter**et **Imprimer** sont fournis dans le menu **actions** de la barre d’outils. Les contrôles de navigation entre les pages et de zoom se trouvent directement sur la barre d'outils.  
+ La barre d'outils fournit des fonctionnalités de navigation entre les pages, de recherche, de zoom et d'exportation, de sorte que vous puissiez afficher un rapport dans un autre format d'application. Elle fournit également une fonctionnalité d'impression facultative, elle permet d'obtenir une sortie imprimée paginée pour les rapports HTML et de modifier les paramètres relatifs à la mise en page et aux marges. Le menu**Imprimer**, **Ouvrir avec le Générateur de rapports, S’abonner**, **Exporter** et **Imprimer** . Les contrôles de navigation entre les pages et de zoom se trouvent directement sur la barre d'outils.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas personnaliser la barre d'outils sauf si vous écrivez le code correspondant ; toutefois, vous pouvez définir des propriétés permettant de masquer une partie ou l'ensemble de ses contrôles.  
   
 ### <a name="export-action-on-the-report-toolbar"></a>Action d'exportation sur la barre d'outils Rapport  
- **Exporter** dans le menu **actions** affiche les formats d’application associés aux extensions de rendu déployées sur un serveur de rapports. Pour déterminer si un format spécifique est disponible, vous pouvez ajouter ou supprimer une extension de rendu sur le serveur de rapports ; par ailleurs, vous pouvez également modifier les paramètres de configuration afin de supprimer un format d'exportation particulier de la liste. Vous pouvez également spécifier des paramètres de configuration sur le serveur de rapports afin de contrôler les formats disponibles. Vous pouvez modifier le comportement par défaut d'un format spécifique en ajoutant et en modifiant les paramètres de configuration de l'extension de rendu correspondante.  
+ Dans le menu**Exporter** , la commande **Exporter** affiche les formats d’application associés aux extensions de rendu déployées sur un serveur de rapports. Pour déterminer si un format spécifique est disponible, vous pouvez ajouter ou supprimer une extension de rendu sur le serveur de rapports ; par ailleurs, vous pouvez également modifier les paramètres de configuration afin de supprimer un format d'exportation particulier de la liste. Vous pouvez également spécifier des paramètres de configuration sur le serveur de rapports afin de contrôler les formats disponibles. Vous pouvez modifier le comportement par défaut d'un format spécifique en ajoutant et en modifiant les paramètres de configuration de l'extension de rendu correspondante.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Action d'impression sur la barre d'outils Rapport  
- **Imprimer** dans le menu **actions** est une fonctionnalité d’impression personnalisée qui est [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fournie par le biais de. Quand vous cliquez sur **Imprimer**, un contrôle d’impression ActiveX côté client est téléchargé sur l’ordinateur client. Dans la plupart des cas, l’utilisateur qui clique sur **Imprimer** doit avoir les autorisations d’administrateur sur l’ordinateur local. Il est usuel de restreindre les téléchargements de contrôles ActiveX aux utilisateurs qui disposent d'autorisations d'administrateur. Vous pouvez utiliser l’administration centrale de SharePoint pour activer ou désactiver le téléchargement du contrôle d’impression côté client.  
+ La commande**Imprimer** du menu **Actions** fournit des fonctionnalités d’impression personnalisées via [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quand vous cliquez sur **Imprimer**, un contrôle d’impression ActiveX côté client est téléchargé sur l’ordinateur client. Dans la plupart des cas, l’utilisateur qui clique sur **Imprimer** doit avoir les autorisations d’administrateur sur l’ordinateur local. Il est usuel de restreindre les téléchargements de contrôles ActiveX aux utilisateurs qui disposent d'autorisations d'administrateur. Vous pouvez utiliser l’administration centrale de SharePoint pour activer ou désactiver le téléchargement du contrôle d’impression côté client.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Action de Recherche sur la barre d'outils Rapport  
- **Dans le** menu **actions** , vous pouvez accéder à un emplacement cible dans le rapport. Vous pouvez rechercher un contenu dans un rapport en tapant un mot ou une expression que vous souhaitez rechercher. La valeur maximale d'une chaîne de recherche est 256 caractères. Si votre recherche trouve une valeur correspondante dans le rapport, le focus est placé sur la partie du rapport qui contient cette valeur.  
+ La commande**Rechercher** du menu **Actions** permet d’accéder à un emplacement cible dans le rapport. Vous pouvez rechercher un contenu dans un rapport en tapant un mot ou une expression que vous souhaitez rechercher. La valeur maximale d'une chaîne de recherche est 256 caractères. Si votre recherche trouve une valeur correspondante dans le rapport, le focus est placé sur la partie du rapport qui contient cette valeur.  
   
  Quand vous entrez une valeur à rechercher, tapez-la telle qu’elle est censée apparaître dans le rapport. Ne posez pas une question de type « quel est le bénéfice moyen pour ce mois-ci » à moins que chaque mot de la phrase ne soit censé figurer dans le rapport.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66103053"
  Les paramètres de sécurité de base de données et de modèle qui restreignent l'accès aux données de rapport s'appliquent également aux opérations de recherche. Si vous recherchez une valeur dans un rapport généré interactif qui utilise un modèle comme source de données, et si vous n'avez pas accès à une partie du modèle, les données représentées par cette partie du modèle sont exclues de la recherche.  
   
 ### <a name="panes-for-specifying-credentials-and-parameters"></a>Volets destinés à la définition des paramètres et des informations d'identification  
- Les **paramètres** et les **informations d’identification** sont des volets qui s’affichent en regard de la zone d’affichage. Les **informations d’identification** s’affichent lorsque la connexion à la source de données du rapport est configurée pour inviter l’utilisateur à entrer un compte et un mot de passe disposant des droits nécessaires pour accéder à la source de données. Les **paramètres** s’affichent lorsque le rapport accepte une entrée utilisateur pour les paramètres définis dans le rapport.  
+ Les volets**Informations d’identification** et **Paramètres** apparaissent en regard de la zone d’affichage. Le volet**Informations d’identification** s’affiche quand la connexion à la source de données du rapport est configurée pour inviter l’utilisateur à entrer un compte et un mot de passe ayant des droits d’accès à la source de données. Le volet**Paramètres** s’affiche quand le rapport accepte une entrée utilisateur liée aux paramètres définis dans le rapport.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Définition des propriétés du composant WebPart Visionneuse de rapports  
  Les propriétés du composant WebPart incluent des propriétés personnalisées qui sont propres à la visionneuse de rapports et des propriétés générales que vous pouvez définir pour n'importe quel composant WebPart. Pour plus d’informations, consultez [Personnaliser le composant WebPart Visionneuse de rapports](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  

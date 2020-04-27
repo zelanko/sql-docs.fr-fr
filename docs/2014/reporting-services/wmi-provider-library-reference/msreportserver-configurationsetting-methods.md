@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d3fc7ae8ad4c3018bcc512296a670fdaac3b64e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097354"
 ---
 # <a name="msreportserver_configurationsetting-methods"></a>Méthodes MSReportServer_ConfigurationSetting
@@ -43,7 +43,7 @@ ms.locfileid: "66097354"
 |[Méthode GetAdminSiteUrl &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Obtient l'URL absolue vers le site Web Administration centrale.|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Obtient le nom complet de la chaîne de version d'une base de données de serveur de rapports spécifique.|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Initialise l'instance de serveur de rapports spécifiée.|  
-|[Méthode ListInstalledSharePointVersions &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Retourne un ensemble de jetons qui représentent les versions [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]de Microsoft, [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] installées sur le même ordinateur que le serveur de rapports.|  
+|[Méthode ListInstalledSharePointVersions &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Retourne un ensemble de jetons qui représentent les versions de Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] installés sur le même ordinateur que le serveur de rapports.|  
 |[Méthode ListIPAddresses &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|Répertorie les adresses IP de l'ordinateur.|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|Retourne une liste des installations du serveur de rapports qui sont présentes dans la base de données du serveur de rapports, même si ces installations n'ont pas accès aux informations sécurisées.|  
 |[Méthode ListReservedURLs &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|Répertorie les URL réservées pour toutes les applications sur le serveur de rapports.|  
@@ -53,7 +53,7 @@ ms.locfileid: "66097354"
 |[Méthode RemoveSSLCertificateBindings &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removesslcertificatebinding.md)|Supprime une liaison de certificat SSL.|  
 |[RemoveUnattendedExecutionAccount](configurationsetting-method-removeunattendedexecutionaccount.md)|Supprime l'entrée de compte d'exécution sans assistance de la configuration du serveur de rapports.|  
 |[Méthode RemoveURL &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removeurl.md)|Supprime une URL réservée pour le serveur de rapports.|  
-|[Méthode re&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-reserveurl.md)|Ajoute une réservation d'URL pour une application donnée.|  
+|[Méthode ReserveURL &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-reserveurl.md)|Ajoute une réservation d'URL pour une application donnée.|  
 |[RestoreEncryptionKey](configurationsetting-method-restoreencryptionkey.md)|Réapplique la clé de chiffrement spécifiée à la base de données du serveur de rapports.|  
 |[SetDatabaseConnection](configurationsetting-method-setdatabaseconnection.md)|Définit la connexion à une base de données de serveur de rapports spécifique.|  
 |[SetDatabaseLogonTimeout](configurationsetting-method-setdatabaselogontimeout.md)|Spécifie la valeur du délai d'attente par défaut pour les tentatives d'ouverture de session de base de données du serveur de rapports.|  

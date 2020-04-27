@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099549"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
@@ -65,7 +65,7 @@ ms.locfileid: "66099549"
   
 10. Dans la zone de texte **TargetServerURL** , tapez l'URL du serveur de rapports cible. Avant de publier un rapport, vous devez affecter à cette propriété une URL de serveur de rapports valide. Quand vous publiez sur un serveur de rapports qui s’exécute en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports (par exemple, http: *//serveur/serveur_rapports* ou https: *//serveur/serveur_rapports)* . Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports.  
   
-     Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, http://*nom_serveur*, http://*nom_serveur*/*site* ou http://*nom_serveur*/*site*/*sous-site*).  
+     Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, http://*ServerName*, http://*ServerName*/*site* ou http://*NomServeur*/*site*/*subsite*).  
   
 ### <a name="to-set-configuration-manager-properties"></a>Pour définir les propriétés du Gestionnaire de configuration  
   

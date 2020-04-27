@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098172"
 ---
 # <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>Méthode RemoveURL (WMI MSReportServer_ConfigurationSetting)
@@ -42,20 +42,20 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL pour la réservation.  
   
- *LCID*  
+ *lcid*  
  Paramètres régionaux à utiliser pour les messages d'erreur retournés.  
   
  *Error*  
  [out] Description de l'erreur qui s'est produite.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
 ## <a name="remarks"></a>Notes  
- *UrlString* n’inclut pas le nom du répertoire virtuel : la [méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) méthode est fournie à cet effet.  
+ *UrlString* n’inclut pas le nom du répertoire virtuel. La [méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) est fournie à cet effet.  
   
  Avant d’appeler la méthode [ReserveURL](configurationsetting-method-reserveurl.md) , vous devez fournir une valeur pour la propriété de configuration VirtualDirectory du paramètre *Application* . Utilisez la [méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) pour définir la propriété VirtualDirectory.  
   
@@ -64,7 +64,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Cette méthode entraîne un recyclage et un arrêt forcés de tous les domaines d'application autres que de configuration au cours de cette opération ; les domaines d'application sont redémarrés une fois cette opération terminée.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

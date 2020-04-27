@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101008"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66101008"
   
  Lorsque vous créez un abonnement, il existe trois méthodes pour spécifier sa remise :  
   
--   **Bibliothèque de documents**: vous pouvez créer un abonnement qui remet un document basé sur le rapport d'origine dans une bibliothèque située sur le même site SharePoint que le rapport d'origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
+-   **Bibliothèque de documents**  : vous pouvez créer un abonnement qui remet un document basé sur le rapport d’origine dans une bibliothèque située sur le même site SharePoint que le rapport d’origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
   
--   **Dossier de fichiers :** vous pouvez remettre un document basé sur le rapport d'origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
+-   **Dossier de fichiers :** vous pouvez remettre un document basé sur le rapport d’origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
   
--   **Courrier électronique :** si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
+-   **E-mail :** si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
   
  **Dans cette rubrique :**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101008"
   
 -   [Pour supprimer un abonnement](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Exigences générales pour les abonnements  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Exigences générales pour les abonnements  
  Pour créer un abonnement, le rapport doit utiliser des informations d'identification stockées et vous devez être autorisé à afficher le rapport et à créer des alertes.  
   
  Lorsque vous créez un abonnement, vous pouvez sélectionner un format de fichier de sortie. Tous les rapports ne fonctionnent pas de manière optimale dans tous les formats. Avant de sélectionner un format dans un abonnement, ouvrez le rapport et exportez-le vers différents formats afin de vous assurer qu'il s'affiche comme vous le souhaitez.  
@@ -66,7 +66,7 @@ ms.locfileid: "66101008"
   
  Les formats de sortie que vous sélectionnez pour un abonnement sont basés sur les extensions de rendu installées sur le serveur de rapports. Vous pouvez uniquement sélectionner les formats de sortie qui sont pris en charge par les extensions de rendu sur le serveur de rapports.  
   
-###  <a name="bkmk_tosharepoint_library"></a> Pour créer un abonnement afin de livrer un rapport à une bibliothèque SharePoint.  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> Pour créer un abonnement afin de livrer un rapport à une bibliothèque SharePoint.  
   
 1.  Accédez à une bibliothèque SharePoint qui contient votre rapport.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101008"
   
 10. Dans **Paramètres**, si vous créez un abonnement à un rapport paramétrable, spécifiez les valeurs à utiliser avec le rapport lors du traitement de l'abonnement. La section de paramètres n'est pas visible dans cette page si le rapport que vous sélectionnez ne contient pas de paramètres. Pour plus d’informations sur les paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> Pour créer un abonnement pour une remise par dossier partagé  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Pour créer un abonnement pour une remise par dossier partagé  
   
 1.  Accédez à une bibliothèque SharePoint qui contient votre rapport.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66101008"
   
 12. Dans **Paramètres**, si vous créez un abonnement à un rapport paramétrable, spécifiez les valeurs à utiliser avec le rapport lors du traitement de l'abonnement. Pour plus d’informations sur les paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> Pour créer un abonnement pour une remise par messagerie du serveur de rapports  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Pour créer un abonnement pour une remise par messagerie du serveur de rapports  
   
 1.  Accédez à une bibliothèque SharePoint qui contient votre rapport.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66101008"
   
 10. Dans **Paramètres**, si vous créez un abonnement à un rapport paramétrable, spécifiez les valeurs à utiliser avec le rapport lors du traitement de l'abonnement. Pour plus d’informations sur les paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> Pour afficher ou modifier un abonnement  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Pour afficher ou modifier un abonnement  
   
 1.  Accédez à une bibliothèque SharePoint qui contient votre rapport.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66101008"
   
 3.  Chaque abonnement est identifié par le type de remise. Cliquez sur le type d'abonnement pour afficher et modifier les propriétés existantes.  
   
-###  <a name="bkmk_to_delete_subscription"></a> Pour supprimer un abonnement  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> Pour supprimer un abonnement  
   
 1.  Accédez à une bibliothèque SharePoint qui contient votre rapport.  
   

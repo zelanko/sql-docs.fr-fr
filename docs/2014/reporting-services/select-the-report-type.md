@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101429"
 ---
 # <a name="select-the-report-type"></a>Sélectionner le type de rapport
@@ -28,7 +28,7 @@ ms.locfileid: "66101429"
   
  Les pages suivantes de l'Assistant fournissent les options nécessaires à la définition du tableau.  
   
- **Matrix**  
+ **Comparatif**  
  Permet de créer un rapport qui contient une matrice. Une matrice est une région de données où les données sont organisées en colonnes et en lignes. Une matrice fournit des fonctionnalités similaires à celles des analyses croisées et des tableaux croisés dynamiques. À la différence d'une table, qui est un ensemble statique de colonnes, une matrice peut comporter des colonnes dynamiques.  
   
  Les pages suivantes de l'Assistant fournissent les options nécessaires à la définition de la matrice.  

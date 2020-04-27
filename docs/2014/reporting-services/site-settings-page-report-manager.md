@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101123"
 ---
 # <a name="site-settings-page-report-manager"></a>Page Paramètres du site (Gestionnaire de rapports)
@@ -57,7 +57,7 @@ ms.locfileid: "66101123"
   
  Mode intégré SharePoint : l’URL par défaut se présente sous la forme\<http://*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0. application.»  
   
- **Appliquer**  
+ **appliquer**  
  Cliquez pour enregistrer les modifications apportées au serveur de rapports.  
   
  **Sécurité**  

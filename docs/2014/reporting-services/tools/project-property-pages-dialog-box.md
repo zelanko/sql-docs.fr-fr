@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100039"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
-  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **projet** , cliquez sur _ \<nom du projet de rapport>_ **Propriétés**.  
+  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Nom du projet de rapport>_ **Propriétés**.  
   
  Après avoir défini les propriétés de configuration, sélectionnez une configuration dans la liste déroulante **Configurations de solutions** de la barre d’outils.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66100039"
  Pour créer d’autres configurations, cliquez sur **Gestionnaire de configurations** dans la barre d’outils.  
   
  **Gestionnaire de configuration**  
- Gérer les configurations de l'ensemble de la solution ou ajouter des configurations supplémentaires. Pour plus d’informations, consultez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] la documentation.  
+ Gérer les configurations de l'ensemble de la solution ou ajouter des configurations supplémentaires. Pour plus d’informations, consultez la documentation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **OutputPath**  
  Tapez ou collez le chemin d'accès pour stocker la définition de rapport utilisée dans la vérification de la génération, le déploiement et l'aperçu de rapports. Le chemin d'accès doit être différent de celui que vous utilisez pour le projet et un chemin d'accès relatif qui est un dossier enfant sous le chemin d'accès du projet.  
@@ -43,7 +43,7 @@ ms.locfileid: "66100039"
 > [!NOTE]  
 >  Vous pouvez utiliser plusieurs configurations pour passer d'un chemin d'accès à un autre selon la tâche que vous effectuez.  
   
- **Appuie**  
+ **ErrorLevel**  
  Tapez la gravité des problèmes de génération signalés comme erreurs. Les problèmes avec des niveaux de gravité inférieurs ou égaux à la valeur **ErrorLevel** sont signalés comme des erreurs. Sinon, les problèmes sont signalés comme des avertissements. Toute erreur provoquera l'échec de la tâche de génération. Les niveaux de gravité valides sont compris entre 0 et 4. La valeur par défaut est 2.  
   
  **StartItem**  
@@ -78,8 +78,8 @@ ms.locfileid: "66100039"
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des rapports](../publish-reports.md)   
- [publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
- [Aide sur le concepteur de rapports via la touche F1](report-designer-f1-help.md)  
+ [Publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Définir les propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [Aide sur le Concepteur de rapports via la touche F1](report-designer-f1-help.md)  
   
   

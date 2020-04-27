@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 62428860419dd42b263b9408bb2c0d39514ca0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101187"
 ---
 # <a name="sharepoint-list-query-designer"></a>Concepteur de requêtes de liste SharePoint
@@ -54,28 +54,28 @@ ms.locfileid: "66101187"
  [Résultats de la requête](#QueryResults)  
  Affiche des exemples de données pour le jeu de résultats de la requête générée automatiquement.  
   
-###  <a name="DatabaseView"></a>Volet listes SharePoint  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> Volet Listes SharePoint  
  Le volet Listes SharePoint affiche les métadonnées des objets de base de données que vous êtes autorisés à afficher, selon la connexion à la source de données et les informations d'identification. La vue hiérarchique affiche les objets de base de données organisés par le schéma de base de données. Développez le nœud de chaque schéma pour afficher les tables, les vues, les procédures stockées et les fonctions table. Développez une table ou une vue pour afficher les colonnes.  
   
-###  <a name="SelectedFields"></a>Volet champs sélectionnés  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a>Volet champs sélectionnés  
  Le volet Champs sélectionnés affiche les champs des éléments de liste que vous sélectionnez pour les éléments de liste SharePoint. Les champs qui sont affichés dans ce volet deviennent la collection de champs du dataset de rapport. Après avoir créé un dataset et une requête, utilisez le volet des données de rapportpour afficher la collection de champs d'un dataset de rapport. Ces champs représentent les données que vous pouvez afficher dans les tables, graphiques et autres éléments de rapport lorsque vous examinez un rapport.  
   
  Pour ajouter des champs à ce volet ou en supprimer, activez ou désactivez les cases à cocher en regard des champs de table ou de vue dans le volet Vue de base de données.  
   
-###  <a name="AppliedFilters"></a>Volet filtres appliqués  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Volet Filtres appliqués  
  Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause WHERE [!INCLUDE[tsql](../includes/tsql-md.md)] . Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
   
- Les colonnes suivantes sont affichées :  
+ Les colonnes suivantes s’affichent :  
   
 -   **Nom du champ** Affiche le nom du champ auquel appliquer les critères.  
   
 -   **Opérateur** Affiche l’opération à utiliser dans l’expression de filtre.  
   
--   **Valeur** Affiche la valeur à utiliser dans l’expression de filtre.  
+-   **Valeur** Affiche la valeur à utiliser dans l'expression de filtrage.  
   
--   **Paramètre** Affiche l’option permettant d’ajouter un paramètre de requête à la requête. Utilisez les propriétés de dataset pour afficher la relation entre le paramètre de requête et le paramètre de rapport.  
+-   **Paramètre** Affiche l'option pour ajouter un paramètre de requête à la requête. Utilisez les propriétés de dataset pour afficher la relation entre le paramètre de requête et le paramètre de rapport.  
   
-###  <a name="QueryResults"></a>Volet résultats de la requête  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Volet Résultats de la requête  
  Le volet Résultats de la requête affiche les résultats pour la requête générée automatiquement qui est spécifiée par des sélections dans d'autres volets. Les colonnes dans le jeu de résultats sont les champs que vous spécifiez dans le volet Champs sélectionnés et les données de ligne sont limitées par les filtres que vous spécifiez dans le volet Filtres appliqués.  
   
  Ces données représentent les valeurs de la source de données au moment de l'exécution de la requête. Les données ne sont pas enregistrées dans la définition du rapport. Les données réelles dans le rapport sont récupérées lors du traitement du rapport.  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104161"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurer un pare-feu pour accéder au serveur de rapports
@@ -45,7 +45,7 @@ ms.locfileid: "66104161"
   
 3.  Cliquez sur **Règles de trafic entrant**.  
   
-4.  Cliquez sur **nouvelle règle** dans la fenêtre **actions** **.**  
+4.  Cliquez sur **Nouvelle règle** dans la fenêtre **Actions****.**  
   
 5.  Cliquez sur **Type de règle** de **Port**.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "66104161"
   
 13. Cliquez sur **Suivant**.  
   
-14. Dans la page **Nom** , entrez un nom de**ReportServer (TCP sur le port 80)** .  
+14. Dans la page **Nom** , entrez un nom de**ReportServer (TCP sur le port 80)**.  
   
 15. Cliquez sur **Terminer**.  
   
-16. Redémarrez l'ordinateur.  
+16. Redémarrez l’ordinateur.  
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Pour ouvrir le port 80 sur Windows Vista ou Windows Server 2008  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66104161"
   
 10. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-11. Redémarrez l'ordinateur.  
+11. Redémarrez l’ordinateur.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Après avoir ouvert le port et avant de confirmer si les utilisateurs distants peuvent accéder au serveur de rapports sur le port que vous ouvrez, vous devez accorder l'accès utilisateur au serveur de rapports à travers les attributions de rôle sur la page d'Accueil et au niveau du site. Vous pouvez ouvrir un port correctement et que les connexions du serveur de rapports échouent si les utilisateurs n'ont pas les autorisations suffisantes. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../security/grant-user-access-to-a-report-server.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -103,7 +103,7 @@ ms.locfileid: "66104161"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gérer un serveur de rapports Reporting Services en mode natif](manage-a-reporting-services-native-mode-report-server.md)  
   

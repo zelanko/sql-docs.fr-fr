@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099784"
 ---
 # <a name="schedule-properties-reports-page"></a>Propriétés de planification (page Rapports)
@@ -27,19 +27,19 @@ ms.locfileid: "66099784"
  Pour ouvrir cette page, démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à un serveur de rapports, ouvrez le dossier **Planifications partagées** , cliquez avec le bouton droit sur une planification partagée, sélectionnez **Propriétés**, puis cliquez sur **Rapports**.  
   
 > [!NOTE]  
->  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Options  
- **Folder**  
+ **Répertoire**  
  Spécifie le chemin d'accès au rapport.  
   
- **Report**  
+ **Rapport**  
  Définit le nom du rapport qui utilise la planification.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   
  [Planifications](../subscriptions/schedules.md)   
- [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
+ [Serveur de rapports dans Management Studio aide (F1)](report-server-in-management-studio-f1-help.md)   
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Configurer les propriétés générales d’un rapport &#40;Gestionnaire de rapports&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   

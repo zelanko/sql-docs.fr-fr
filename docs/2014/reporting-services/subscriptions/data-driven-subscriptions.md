@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100865"
 ---
 # <a name="data-driven-subscriptions"></a>abonnements pilotés par les données
@@ -46,7 +46,7 @@ ms.locfileid: "66100865"
   
 -   Pour plus d’informations sur les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
--   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles, Oracle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] les bases de données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] les données de package, les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences relatives à la source de données des abonnés, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences relatives à la source de données des abonnés, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Utilisation des abonnements pilotés par les données  
  Les rubriques suivantes fournissent des informations supplémentaires sur les abonnements pilotés par les données.  
@@ -54,7 +54,7 @@ ms.locfileid: "66100865"
 |Rubriques|Description|  
 |------------|-----------------|  
 |[Créer, modifier et supprimer des abonnements pilotés par les données](data-driven-subscriptions.md)|Explique comment créer, modifier ou supprimer un abonnement piloté par les données.|  
-|[Utilisez une source de données externe pour les données de l’abonné &#40;abonnement piloté par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fournit des informations sur les sources de données que vous pouvez utiliser pour un abonnement piloté par les données.|  
+|[Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Fournit des informations sur les sources de données que vous pouvez utiliser pour un abonnement piloté par les données.|  
 |[Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Fournit des instructions pas à pas pour apprendre à créer un abonnement piloté par les données.|  
 |[Mise en cache de rapports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Décrit comment utiliser le fournisseur de remise Null avec un abonnement piloté par les données pour précharger la mémoire cache.|  
   

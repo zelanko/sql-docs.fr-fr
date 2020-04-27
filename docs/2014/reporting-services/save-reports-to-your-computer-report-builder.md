@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102309"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Enregistrer des rapports sur votre ordinateur (Générateur de rapports)
@@ -22,7 +22,7 @@ ms.locfileid: "66102309"
   
 ### <a name="to-save-a-report"></a>Pour enregistrer un rapport  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous** _\<élément de rapport>_ s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **enregistrer en tant qu'**_\<élément de rapport>_ s’ouvre.  
   
     > [!NOTE]  
     >  Si vous réenregistrez un rapport, il est automatiquement stocké à son emplacement précédent. Utilisez l’option **Enregistrer sous** pour modifier l’emplacement.  
@@ -35,7 +35,7 @@ ms.locfileid: "66102309"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Pour enregistrer un rapport sous un nom différent  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous** _\<élément de rapport>_ s’affiche.  
+1.  À partir du bouton Générateur de rapports , cliquez sur **Enregistrer sous**. La boîte de dialogue **enregistrer en tant qu'**_\<élément de rapport>_ s’ouvre.  
   
 2.  Sur votre ordinateur, accédez à l'emplacement où vous souhaitez enregistrer le rapport.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66102309"
 4.  Dans **Éléments de type**, sélectionnez le type d’élément de rapport à enregistrer. Le type des rapports est Rapports (*.rdl).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](report-builder/saving-reports-report-builder.md)   
  [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  

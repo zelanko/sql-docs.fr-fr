@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103930"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
@@ -45,7 +45,7 @@ ms.locfileid: "66103930"
  Le contrôle ActiveX **RSClientPrint** est signé, ce qui signifie qu’il contient un certificat [!INCLUDE[msCoName](../../includes/msconame-md.md)]numérique valide de.  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Activation et désactivation de l'impression côté client  
- Les administrateurs du serveur de rapports ont la possibilité de désactiver la fonctionnalité d’impression en affectant à **** la propriété `false`système du serveur de rapports EnableClientPrinting la valeur. Cela entraîne la désactivation de l'impression côté client pour tous les rapports gérés par ce serveur. Par défaut, **EnableClientPrinting** a la valeur `true`. Vous pouvez désactiver l'impression côté client de différentes façons :  
+ Les administrateurs du serveur de rapports ont la possibilité de désactiver la fonctionnalité d’impression en affectant à **EnableClientPrinting** la propriété `false`système du serveur de rapports EnableClientPrinting la valeur. Cela entraîne la désactivation de l'impression côté client pour tous les rapports gérés par ce serveur. Par défaut, **EnableClientPrinting** a la valeur `true`. Vous pouvez désactiver l'impression côté client de différentes façons :  
   
 -   Pour un **serveur de rapports en mode natif**:  
   

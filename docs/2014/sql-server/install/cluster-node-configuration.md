@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096431"
 ---
 # <a name="cluster-node-configuration"></a>Configuration du nœud de cluster
@@ -26,6 +26,6 @@ ms.locfileid: "66096431"
 ## <a name="options"></a>Options  
  Nom de l’instance : utilisez la liste déroulante pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionner l’instance de cluster de basculement à modifier. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Nom de ce nœud** : ce champ est renseigné avec le nom de l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation. Il s'agit du nœud de cluster de basculement qui sera ajouté ou supprimé de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Nom de ce nœud** - Ce champ contiendra le nom de l’ordinateur qui exécute le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il s'agit du nœud de cluster de basculement qui sera ajouté ou supprimé de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

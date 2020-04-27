@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103193"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activer ou désactiver les fonctionnalités Reporting Services
@@ -35,7 +35,7 @@ ms.locfileid: "66103193"
   
 -   [Sécurité intégrée de Windows pour les sources de données de rapport](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a>Service Web Report Server  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a>Service Web Report Server  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Pour activer le service Web Report Server en modifiant la configuration  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66103193"
   
 4.  Sous **Propriétés de la facette**:  
   
-    -   Pour activer le service Web Report Server, affectez **** à `True`WebServiceAndHTTPAccessEnabled la valeur.  
+    -   Pour activer le service Web Report Server, affectez **WebServiceAndHTTPAccessEnabled** à `True`WebServiceAndHTTPAccessEnabled la valeur.  
   
-    -   Pour désactiver le service Web Report Server, affectez **** à `False`WebServiceAndHTTPAccessEnabled la valeur.  
+    -   Pour désactiver le service Web Report Server, affectez **WebServiceAndHTTPAccessEnabled** à `False`WebServiceAndHTTPAccessEnabled la valeur.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a>Scheduled Events et remise  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Événements planifiés et remise  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Pour activer ou désactiver les événements planifiés et la remise en modifiant la configuration  
   
@@ -108,16 +108,16 @@ ms.locfileid: "66103193"
   
 4.  Sous **Propriétés de la facette**:  
   
-    -   Pour activer les événements planifiés et la remise **** , affectez à `True`ScheduleEventsAndReportDeliveryEnabled la valeur.  
+    -   Pour activer les événements planifiés et la remise **ScheduleEventsAndReportDeliveryEnabled** , affectez à `True`ScheduleEventsAndReportDeliveryEnabled la valeur.  
   
-    -   Pour désactiver les événements planifiés et la remise **** , affectez à `False`ScheduleEventsAndReportDeliveryEnabled la valeur.  
+    -   Pour désactiver les événements planifiés et la remise **ScheduleEventsAndReportDeliveryEnabled** , affectez à `False`ScheduleEventsAndReportDeliveryEnabled la valeur.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  Vous ne pouvez pas désactiver complètement le traitement en arrière-plan car il fournit des fonctionnalités de maintenance de base de données requises pour les opérations de serveur.  
   
-##  <a name="ReportManager"></a>Gestionnaire de rapports  
+##  <a name="report-manager"></a><a name="ReportManager"></a>Gestionnaire de rapports  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>Pour activer ou désactiver le Gestionnaire de rapports en modifiant la configuration  
   
@@ -147,13 +147,13 @@ ms.locfileid: "66103193"
   
 4.  Sous **Propriétés de la facette**:  
   
-    -   Pour activer Gestionnaire de rapports, affectez **** à `True`affectez ReportManagerEnabled la valeur.  
+    -   Pour activer Gestionnaire de rapports, affectez **ReportManagerEnabled** à `True`affectez ReportManagerEnabled la valeur.  
   
-    -   Pour désactiver Gestionnaire de rapports, affectez **** à `False`affectez ReportManagerEnabled la valeur.  
+    -   Pour désactiver Gestionnaire de rapports, affectez **ReportManagerEnabled** à `False`affectez ReportManagerEnabled la valeur.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a>Générateur de rapports  
+##  <a name="report-builder"></a>Générateur de rapports <a name="ReportBuilder"></a>  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Pour activer ou désactiver le Générateur de rapports en utilisant SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103193"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a>Sécurité intégrée de Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Sécurité intégrée de Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Pour activer ou désactiver la sécurité intégrée de Windows en utilisant SQL Server Management Studio  
   
@@ -179,9 +179,9 @@ ms.locfileid: "66103193"
   
 3.  Dans la boîte de dialogue **Propriétés du serveur** , sous **Sélectionner une page**, cliquez sur **Sécurité**.  
   
-    -   Pour activer la sécurité intégrée de Windows, sélectionnez l’option **activer la sécurité intégrée de Windows pour les sources de données de rapport** .  
+    -   Pour activer la sécurité intégrée de Windows, sélectionnez l'option **Activer la sécurité intégrée Windows pour les sources de données de rapport** .  
   
-    -   Pour désactiver la sécurité intégrée de Windows, désélectionnez l’option **activer la sécurité intégrée de Windows pour les sources de données de rapport** .  
+    -   Pour désactiver la sécurité intégrée de Windows, désélectionnez l'option **Activer la sécurité intégrée Windows pour les sources de données de rapport** .  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099810"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
@@ -76,8 +76,7 @@ ms.locfileid: "66099810"
  Configure une instance de serveur de rapports distante de manière à partager la base de données de serveur de rapports qui est utilisée par l'instance de serveur de rapports locale.  
   
  **-r**  *installationID*  
- Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. 
-  *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
+ Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
   
  `-f`  *txt*  
  Définit un chemin d'accès complet au fichier qui stocke une copie de sauvegarde des clés symétriques.  
@@ -176,8 +175,8 @@ rskeymgmt -r <installationID>
  Pour plus d’informations sur les clés de chiffrement, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) et [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services serveur de rapports &#40;le mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitaires de ligne de commande du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

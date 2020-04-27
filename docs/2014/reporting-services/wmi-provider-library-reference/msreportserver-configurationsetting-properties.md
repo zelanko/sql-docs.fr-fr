@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c3937d888089f06435fece25e791b10ebbab785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097330"
 ---
 # <a name="msreportserver_configurationsetting-properties"></a>Propriétés MSReportServer_ConfigurationSetting
@@ -33,12 +33,12 @@ ms.locfileid: "66097330"
   
 |||  
 |-|-|  
-|[ConnectionPoolSize](configurationsetting-property-connectionpoolsize.md)|Retourne la taille du pool de connexions utilisée par le serveur de rapports pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] communiquer avec l’instance qui héberge la base de données du serveur de rapports. Lecture seule.|  
-|[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)|Spécifie le compte d’ouverture de session utilisé par le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] rapports pour se connecter à l’instance qui héberge la base de données du serveur de rapports. Lecture seule.|  
+|[ConnectionPoolSize](configurationsetting-property-connectionpoolsize.md)|Retourne la taille du pool de connexions qu'utilise le serveur de rapports pour communiquer avec l'instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Lecture seule.|  
+|[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)|Spécifie le compte d'ouverture de session utilisé par le serveur de rapports pour se connecter à l'instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Lecture seule.|  
 |[DatabaseLogonTimeout](configurationsetting-property-databaselogontimeout.md)|Spécifie le délai d'attente, en secondes, avant l'échec d'une tentative de connexion à la base de données du serveur de rapports. Lecture seule.|  
 |[DatabaseLogonType](configurationsetting-property-databaselogontype.md)|Spécifie si le serveur de rapports utilise un compte de service Windows, un compte d'utilisateur Windows ou un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accéder à la base de données du serveur de rapports. Lecture seule.|  
 |[DatabaseName](configurationsetting-property-databasename.md)|Spécifie le nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de rapports.|  
-|[DatabaseQueryTimeout](configurationsetting-property-databasequerytimeout.md)|Spécifie le nombre de secondes qui doivent s’écouler avant que la commande échoue ou expire. Le serveur de rapports temporise le processus par rapport au catalogue de SQL Server, et non une source de données pour le rapport.|  
+|[DatabaseQueryTimeout](configurationsetting-property-databasequerytimeout.md)|Spécifie le délai, en secondes, au terme duquel la commande échoue ou expire. Le serveur de rapports établit la valeur de minutage du processus par rapport au catalogue SQL Server et non par rapport à une source de données du rapport.|  
 |[DatabaseServerName](configurationsetting-property-databaseservername.md)|Spécifie le nom du serveur sur lequel la base de données du serveur de rapports est installée.|  
 |[Propriété InstallationID](configurationsetting-property-installationid.md)|Retourne un identificateur unique pour une instance de serveur de rapports spécifique.|  
 |[InstanceName](configurationsetting-property-instancename.md)|Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique.|  

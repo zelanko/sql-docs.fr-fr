@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103239"
 ---
 # <a name="set-report-processing-properties"></a>Définir les propriétés de traitement d'un rapport
@@ -56,10 +56,10 @@ ms.locfileid: "66103239"
  Lorsque ces conditions sont réunies, le serveur de rapports désactive l'abonnement dès qu'une planification prévoit son exécution. Pour réactiver l'abonnement, ouvrez-le, puis enregistrez-le. Lorsque vous ouvrez l'abonnement, le serveur de rapports met à jour les valeurs de paramètre de l'abonnement en utilisant celles spécifiées pour l'instantané. Pour plus d’informations sur les abonnements, consultez [Abonnements et remise &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Définissez les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurer les propriétés d’exécution d’un rapport &#40;Gestionnaire de rapports&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Procédure : ajouter un instantané à un historique de rapport](add-a-snapshot-to-report-history-report-manager.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

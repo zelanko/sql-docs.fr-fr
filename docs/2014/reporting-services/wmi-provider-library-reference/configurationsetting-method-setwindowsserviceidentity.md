@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097876"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>Méthode SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
@@ -41,7 +41,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *UseBuiltInAccount a*  
+ *UseBuiltInAccount*  
  Indique si le compte spécifié est un compte Windows intégré.  
   
  *Compte*  
@@ -50,7 +50,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *Mot de passe*  
  Mot de passe du compte.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -63,10 +63,10 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
   
  La méthode SetWindowsServiceIdentity définit des autorisations d’accès aux fichiers sur les fichiers et les dossiers dans le répertoire d’installation du serveur de rapports.  
   
- Le compte spécifié dans le ** paramètre de compte `LogonAsService` requiert des droits dans Windows. La méthode accorde ce droit au compte spécifié.  
+ Le compte spécifié dans le *Account* paramètre de compte `LogonAsService` requiert des droits dans Windows. La méthode accorde ce droit au compte spécifié.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

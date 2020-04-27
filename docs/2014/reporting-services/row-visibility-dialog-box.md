@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe9af16c34fa70bb8fcda0dcaae64a39786e3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102405"
 ---
 # <a name="row-visibility-dialog-box"></a>Boîte de dialogue Visibilité de ligne
@@ -36,7 +36,7 @@ ms.locfileid: "66102405"
  **Afficher ou masquer en fonction d'une expression**  
  Sélectionnez cette option pour faire varier la visibilité initiale à l'aide d'une expression.  
   
- Tapez une expression prenant la valeur `Boolean``True` pour masquer l'élément et la valeur `False` pour l'afficher. Cliquez sur le bouton Expression (**FX**) pour modifier l’expression.  
+ Tapez une expression prenant la valeur `Boolean``True` pour masquer l'élément et la valeur `False` pour l'afficher. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
   
  **L'affichage peut être activé ou désactivé par cet élément de rapport**  
  Choisissez cette option pour afficher une image bascule qui permet à l'utilisateur d'afficher ou de masquer cet élément de rapport dans une visionneuse de rapports HTML.  
@@ -47,6 +47,6 @@ ms.locfileid: "66102405"
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ajouter une action développer ou réduire à un élément &#40;Générateur de rapports et SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Aide sur le concepteur de rapports via la touche F1](tools/report-designer-f1-help.md)  
+ [Aide sur le Concepteur de rapports via la touche F1](tools/report-designer-f1-help.md)  
   
   

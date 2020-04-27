@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103718"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
@@ -26,15 +26,13 @@ ms.locfileid: "66103718"
   
 -   Les planifications sont recréées la première fois que vous redémarrerez le service Report Server.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
   
 -   Les abonnements, les instantanés et les rapports mis en cache sont préservés dans la base de données déplacée. Si un instantané ne collecte pas des données actualisées après le déplacement de la base de données, désactivez les options d’instantané dans le Gestionnaire de rapports, cliquez sur **Appliquer** pour enregistrer les modifications apportées, recréez la planification, puis cliquez à nouveau sur **Appliquer** pour enregistrer les modifications apportées.  
   
 -   Les données temporaires de session utilisateur et de rapport qui sont stockées dans reportservertempdb sont conservées lorsque vous déplacez la base de données.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose plusieurs approches pour déplacer les bases de données, notamment la sauvegarde et la restauration, l’attachement et le détachement, ainsi que la copie. Les approches ne sont pas toutes appropriées lorsqu'il s'agit de déplacer une base de données vers une nouvelle instance de serveur. L'approche à utiliser pour déplacer la base de données du serveur de rapports varie selon les impératifs de disponibilité de votre système. Pour déplacer les bases de données du serveur de rapports, la méthode la plus simple consiste à les attacher et à les détacher. Cependant, cette approche exige une mise hors connexion du serveur de rapports durant le détachement de la base de données. La méthode de sauvegarde et de restauration est un choix plus judicieux si vous voulez minimiser les perturbations de service, mais vous devez exécuter des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer les opérations. La copie de la base de données n'est pas recommandée (surtout à l'aide de l'Assistant Copie de base de données), car elle ne conserve pas les paramètres d'autorisation dans la base de données.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose plusieurs approches pour déplacer les bases de données, notamment la sauvegarde et la restauration, l’attachement et le détachement, ainsi que la copie. Les approches ne sont pas toutes appropriées lorsqu'il s'agit de déplacer une base de données vers une nouvelle instance de serveur. L'approche à utiliser pour déplacer la base de données du serveur de rapports varie selon les impératifs de disponibilité de votre système. Pour déplacer les bases de données du serveur de rapports, la méthode la plus simple consiste à les attacher et à les détacher. Cependant, cette approche exige une mise hors connexion du serveur de rapports durant le détachement de la base de données. La méthode de sauvegarde et de restauration est un choix plus judicieux si vous voulez minimiser les perturbations de service, mais vous devez exécuter des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer les opérations. La copie de la base de données n'est pas recommandée (surtout à l'aide de l'Assistant Copie de base de données), car elle ne conserve pas les paramètres d'autorisation dans la base de données.  
   
 > [!IMPORTANT]  
 >  Les procédures décrites dans cette rubrique sont recommandées lorsque le déplacement de la base de données du serveur de rapports est la seule modification que vous apportez à l'installation existante. Procéder à la migration de toute une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (c’est-à-dire déplacer la base de données et modifier l’identité du service Windows Report Server utilisant la base de données) nécessite la reconfiguration de la connexion et la réinitialisation de la clé de chiffrement.  
@@ -225,7 +223,7 @@ GO
  [Configurer le compte d’exécution sans assistance &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Utilitaire rsconfig &#40;&#41;SSRS](../tools/rsconfig-utility-ssrs.md)   
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Configurer et gérer des clés de chiffrement &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)  
   
   

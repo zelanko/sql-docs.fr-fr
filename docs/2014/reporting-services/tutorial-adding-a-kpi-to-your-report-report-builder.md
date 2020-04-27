@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098977"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
@@ -24,7 +24,7 @@ ms.locfileid: "66098977"
   
  ![rs_AddKPITutorial](../../2014/tutorials/media/rs-addkpitutorial.gif "rs_AddKPITutorial")  
   
-##  <a name="BackToTop"></a>Ce que vous allez apprendre  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Ce que vous allez apprendre  
  Dans ce didacticiel, vous allez apprendre à ajouter un indicateur de performance clé en définissant la couleur d'arrière-plan des cellules de tableau selon la valeur de la cellule. Vous apprendrez à ajouter et configurer une jauge et un indicateur. Vous apprendrez également à écrire l'expression qui définit la couleur d'arrière-plan des cellules de tableau.  
   
  Ce didacticiel contient les procédures suivantes :  
@@ -48,10 +48,10 @@ ms.locfileid: "66098977"
   
  Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Table"></a>1. créer un rapport de tableau et un DataSet à partir de l’Assistant tableau ou matrice  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. créer un rapport de tableau et un DataSet à partir de l’Assistant tableau ou matrice  
  Dans la boîte de dialogue **prise en main** , choisissez une source de données partagée, créez un dataset incorporé et affichez les données dans une table.  
   
 > [!NOTE]  
@@ -61,7 +61,7 @@ ms.locfileid: "66098977"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.  
   
-     La boîte de dialogue **Mise en route** s'affiche.  
+     La boîte de dialogue **prise en main** s’affiche.  
   
     > [!NOTE]  
     >  Si la boîte de dialogue **prise en main** n’apparaît pas, à partir du bouton Générateur de rapports, cliquez sur **nouveau**.  
@@ -74,11 +74,11 @@ ms.locfileid: "66098977"
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports et sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
-8.  Sur la page **créer une requête** , cliquez sur **modifier en tant que texte**.  
+8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 9. Copiez et collez la requête suivante dans le volet de requête :  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66098977"
   
 10. Cliquez sur **Suivant**.  
   
-##  <a name="CompleteWizard"></a>2. organiser les données, choisir la disposition et le style à partir de l’Assistant tableau ou matrice  
+##  <a name="2-organize-data-choose-layout-and-style-from-the-table-or-matrix-wizard"></a><a name="CompleteWizard"></a>2. organiser les données, choisir la disposition et le style à partir de l’Assistant tableau ou matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>Pour organiser les données en groupes, choisir une mise en page et un style  
@@ -164,7 +164,7 @@ ms.locfileid: "66098977"
   
  Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du produit, la quantité vendue et le total des ventes. Les données sont organisées par date de vente, puis par sous-catégorie.  
   
-##  <a name="BackgroundColors"></a>3. utiliser les couleurs d’arrière-plan pour afficher un indicateur de performance clé  
+##  <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. utiliser les couleurs d’arrière-plan pour afficher un indicateur de performance clé  
  Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est évaluée lorsque vous exécutez le rapport.  
   
 #### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Pour afficher l'état actuel d'un KPI en utilisant des couleurs d'arrière-plan  
@@ -183,7 +183,7 @@ ms.locfileid: "66098977"
   
  Dans la ligne de sous-total qui affiche les ventes d'une sous-catégorie, la couleur d'arrière-plan de la cellule est le rouge, le jaune ou le vert, selon la valeur de la somme des ventes.  
   
-##  <a name="Gauge"></a>4. afficher un indicateur de performance clé à l’aide d’une jauge  
+##  <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. afficher un indicateur de performance clé à l’aide d’une jauge  
  Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise une jauge linéaire horizontale, car sa forme et sa simplicité la rendent facile à lire, même lorsqu'elle est de petite taille et qu'elle est utilisée dans une cellule de tableau. Pour plus d’informations, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
   
 #### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Pour afficher l'état présent d'un KPI à l'aide d'une jauge  
@@ -238,13 +238,13 @@ ms.locfileid: "66098977"
   
     3.  Dans la catégorie **échelles** , développez le nœud **MaximumPin** .  
   
-    4.  Affectez **** à `True`la propriété activer la valeur. Une aiguille s'affiche alors derrière la valeur maximale de l'échelle.  
+    4.  Affectez **Enable** à `True`la propriété activer la valeur. Une aiguille s'affiche alors derrière la valeur maximale de l'échelle.  
   
     5.  Affectez à `Lime` **BorderColor** la valeur.  
   
 17. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Indicator"></a>5. afficher un indicateur de performance clé à l’aide d’un indicateur  
+##  <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. afficher un indicateur de performance clé à l’aide d’un indicateur  
  Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un coup d'œil des valeurs de données. En raison de leur taille et de leur simplicité, les indicateurs sont souvent utilisés dans les tableaux et les matrices. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
   
 #### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Pour afficher l'état présent d'un KPI à l'aide d'un indicateur  
@@ -281,7 +281,7 @@ ms.locfileid: "66098977"
   
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Title"></a>6. Ajouter un titre de rapport  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. Ajouter un titre de rapport  
  Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
   
  Vous pouvez améliorer le texte en appliquant différents types de styles de police, de tailles et de couleurs à des expressions et des caractères spécifiques. Pour plus d’informations, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -296,7 +296,7 @@ ms.locfileid: "66098977"
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Save"></a>7. enregistrer le rapport  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. enregistrer le rapport  
  Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vous n'enregistrez pas le rapport sur le serveur de rapports, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  
@@ -311,7 +311,7 @@ ms.locfileid: "66098977"
   
 4.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
   
-5.  Cliquez sur **Enregistrer**.  
+5.  Cliquez sur **Save**.  
   
  Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.  
   
@@ -326,7 +326,7 @@ ms.locfileid: "66098977"
   
 1.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
   
-2.  Cliquez sur **Enregistrer**.  
+2.  Cliquez sur **Save**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d’informations, consultez indicateurs de jauges (Générateur de rapports) [&#40;générateur de rapports et&#41;SSRS ](report-design/indicators-report-builder-and-ssrs.md).  

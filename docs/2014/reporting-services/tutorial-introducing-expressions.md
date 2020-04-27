@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098844"
 ---
 # <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
@@ -26,7 +26,7 @@ ms.locfileid: "66098844"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>Ce que vous allez apprendre  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Ce que vous allez apprendre  
  Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :  
   
 1.  [Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice](#Setup)  
@@ -55,10 +55,10 @@ ms.locfileid: "66098844"
   
  Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. créer un rapport de tableau et un DataSet à partir de l’Assistant tableau ou matrice  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. créer un rapport de tableau et un DataSet à partir de l’Assistant tableau ou matrice  
  Créez un rapport de tableau, une source de données et un dataset. Lorsque vous créez le tableau, n'incluez que quelques champs. Après avoir terminé l'Assistant, vous ajouterez manuellement des colonnes. L'Assistant vous permet de disposer facilement un tableau et d'appliquer un style.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66098844"
   
 1.  Cliquez sur **Démarrer**, pointez sur **programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Générateur de rapports**, puis sur **Générateur de rapports**.  
   
-     La boîte de dialogue **Mise en route** s'affiche.  
+     La boîte de dialogue **prise en main** s’affiche.  
   
     > [!NOTE]  
     >  Si la boîte de dialogue **prise en main** n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.  
@@ -91,7 +91,7 @@ ms.locfileid: "66098844"
   
 7.  Cliquez sur **Suivant**.  
   
-8.  Sur la page **créer une requête** , cliquez sur **modifier en tant que texte**.  
+8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 9. Collez la requête suivante dans le volet de requête :  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66098844"
   
      La requête spécifie les noms de colonne, notamment la date de naissance, le prénom, le nom, l'État ou la province, l'identifiant de pays/région, le sexe et les achats de l'année en cours jusqu'à ce jour.  
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). Le jeu de résultats affiche 20 lignes de données et comprend les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
+10. Dans la barre d’outils du concepteur de requêtes, cliquez sur **exécuter** (**!**). Le jeu de résultats affiche 20 lignes de données et comprend les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
   
 11. Cliquez sur **Suivant**.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66098844"
   
 17. Dans la page **choisir un style** , cliquez sur **ardoise**, puis sur **Terminer**.  
   
-##  <a name="UpdateNames"></a>2. mettre à jour les noms par défaut de la source de données et du DataSet  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. mettre à jour les noms par défaut de la source de données et du DataSet  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>Pour mettre à jour le nom par défaut de la source de données  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098844"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. afficher le prénom, le nom et le prénom  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. afficher le prénom, le nom et le prénom  
  Utilisez la fonction **Left** et l’opérateur **Concaténer** (**&**) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .  
   
 #### <a name="to-add-the-name-column"></a>Pour ajouter la colonne Name  
@@ -205,7 +205,7 @@ ms.locfileid: "66098844"
   
      Cette expression extrait un caractère de la valeur **FirstName** , en partant de la gauche.  
   
-9. & de type **«» &**  
+9. Tapez **&" "&**  
   
 10. Dans la liste **Valeurs** , double-cliquez sur **LastName**.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098844"
   
 12. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Gender"></a>4. utiliser des images pour afficher le sexe  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. utiliser des images pour afficher le sexe  
  Utilisez des images pour afficher le sexe d'une personne et identifiez les valeurs de sexe inconnues à l'aide d'une troisième image. Ajoutez trois images cachées au rapport et une nouvelle colonne pour afficher les images, puis déterminez l'image qui apparaît dans la colonne en fonction de la valeur du champ Sexe.  
   
  Pour appliquer une couleur à la cellule du tableau qui contient l'image lors de la conversion du rapport en rapport en barres, ajoutez un rectangle puis ajoutez l'image au rectangle. Vous devez utiliser un rectangle car vous pouvez appliquez une couleur d'arrière-plan à un rectangle et non à une image.  
@@ -296,7 +296,7 @@ ms.locfileid: "66098844"
   
 14. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Lookup"></a>5. Rechercher le nom PaysRégion  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. Rechercher le nom PaysRégion  
  Créez le dataset CountryRegion et utilisez la fonction **Lookup** pour afficher le nom d’un pays/région au lieu de l’identifiant de pays/région.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>Pour créer le dataset CountryRegion  
@@ -370,7 +370,7 @@ ms.locfileid: "66098844"
   
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Count"></a>6. compter les jours depuis le dernier achat  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. compter les jours depuis le dernier achat  
  Ajoutez une colonne, puis utilisez la fonction **Now** ou la `ExecutionTime` variable globale intégrée pour calculer le nombre de jours à partir d’aujourd’hui depuis les derniers achats d’une personne.  
   
 #### <a name="to-add-the-days-ago-column"></a>Pour ajouter la colonne Days Ago  
@@ -416,7 +416,7 @@ ms.locfileid: "66098844"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. utiliser un indicateur pour afficher la comparaison des ventes  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. utiliser un indicateur pour afficher la comparaison des ventes  
  Ajoutez une nouvelle colonne et utilisez un indicateur pour indiquer si les achats de l’année en cours (CÀJ) d’une personne sont au-dessus ou en dessous de la moyenne des achats AAJ. La fonction **Round** supprime les décimales des valeurs.  
   
  La configuration de l'indicateur et de ses états nécessite plusieurs étapes. Si vous le souhaitez, dans la procédure « pour configurer l’indicateur », vous pouvez ignorer et copier/coller les expressions terminées à partir de ce didacticiel dans la boîte de dialogue **expression** .  
@@ -521,7 +521,7 @@ ms.locfileid: "66098844"
   
 38. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="GreenBar"></a>8. transformer le rapport en rapport « barre verte »  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. transformer le rapport en rapport « barre verte »  
  Utilisez un paramètre pour spécifier la couleur à appliquer aux lignes alternées dans le rapport, pour en faire un rapport en barres.  
   
 #### <a name="to-add-a-parameter"></a>Pour ajouter un paramètre  
@@ -638,7 +638,7 @@ ms.locfileid: "66098844"
   
      Le rapport est généré et les lignes alternées sont de la couleur d'arrière-plan que vous avez choisie.  
   
-##  <a name="DateFormat"></a>facultatif Formater la colonne de date  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>facultatif Formater la colonne de date  
  Formatez la colonne **Last Purchase** qui contient des dates.  
   
 #### <a name="to-format-date-column"></a>Pour formater la colonne de dates  
@@ -651,7 +651,7 @@ ms.locfileid: "66098844"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>facultatif Ajouter un titre de rapport  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>facultatif Ajouter un titre de rapport  
  Ajoutez un titre au rapport.  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
@@ -672,7 +672,7 @@ ms.locfileid: "66098844"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>facultatif Enregistrer le rapport  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>facultatif Enregistrer le rapport  
  Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur. Pour plus d’informations, consultez [Enregistrement des rapports &#40;Générateur de rapports&#41;](report-builder/saving-reports-report-builder.md).  
   
  Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
@@ -689,7 +689,7 @@ ms.locfileid: "66098844"
   
 4.  Dans **Nom**, remplacez le nom par défaut par **Synthèse de la comparaison des ventes**.  
   
-5.  Cliquez sur **Enregistrer**.  
+5.  Cliquez sur **Save**.  
   
  Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.  
   
@@ -701,7 +701,7 @@ ms.locfileid: "66098844"
   
 3.  Dans **Nom**, remplacez le nom par défaut par **Synthèse de la comparaison des ventes**.  
   
-4.  Cliquez sur **Enregistrer**.  
+4.  Cliquez sur **Save**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099657"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
@@ -64,11 +64,11 @@ ms.locfileid: "66099657"
  **SnapshotCompression**  
  Définit le mode de compression des instantanés. La valeur par défaut est `SQL`. Les valeurs valides sont les suivantes :  
   
- **SQL =** Les instantanés sont compressés lorsqu’ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.  
+ **SQL =** les instantanés sont compressés quand ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.  
   
  **None** = les instantanés ne sont pas compressés.  
   
- **Tout =** Les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.  
+ **All =** les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.  
   
  **SystemReportTimeout**  
  Valeur (en secondes) du délai d'exécution du traitement du rapport par défaut pour tous les rapports gérés dans l'espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, les rapports de l'espace de noms ne spécifient pas de délai d'exécution pendant le traitement. La valeur par défaut est `1800`.  
@@ -79,11 +79,9 @@ ms.locfileid: "66099657"
  **EnableIntegratedSecurity**  
  Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. Par défaut, il s’agit de `True`. Les valeurs valides sont les suivantes :  
   
- 
-  `True` = la sécurité intégrée de Windows est activée.  
+ `True` = la sécurité intégrée de Windows est activée.  
   
- 
-  `False` = la sécurité intégrée de Windows n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée de Windows ne seront pas exécutées.  
+ `False` = la sécurité intégrée de Windows n'est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée de Windows ne seront pas exécutées.  
   
  `EnableLoadReportDefinition`  
  Sélectionnez cette option pour spécifier si les utilisateurs peuvent effectuer une exécution de rapport ad hoc à partir d'un rapport du Générateur de rapports. La définition de cette option détermine la valeur de la propriété `EnableLoadReportDefinition` sur le serveur de rapports.  
@@ -111,7 +109,7 @@ ms.locfileid: "66099657"
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Propriétés de la Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
- [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
+ [Serveur de rapports dans Management Studio aide (F1)](report-server-in-management-studio-f1-help.md)   
  [Propriétés système du serveur de rapports](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Script de déploiement et tâches administratives](script-deployment-and-administrative-tasks.md)   
  [Activer et désactiver Mes rapports](../report-server/enable-and-disable-my-reports.md)  

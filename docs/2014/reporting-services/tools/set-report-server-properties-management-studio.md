@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099510"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Définir les propriétés du serveur de rapports (Management Studio)
-  Vous pouvez définir les propriétés système du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de rapports dans pour activer les fonctionnalités ou définir les valeurs par défaut du serveur.  
+  Vous pouvez définir les propriétés système du serveur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] afin d’activer des fonctionnalités ou de définir les valeurs par défaut du serveur.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>Pour ouvrir la page de propriétés avancées du serveur  
   
@@ -30,6 +30,6 @@ ms.locfileid: "66099510"
   
 ## <a name="see-also"></a>Voir aussi  
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Propriétés système de Report Server](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Propriétés système du serveur de rapports](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

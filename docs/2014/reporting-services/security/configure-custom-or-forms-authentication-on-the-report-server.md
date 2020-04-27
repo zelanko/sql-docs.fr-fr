@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102136"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports
@@ -93,7 +93,7 @@ ms.locfileid: "66102136"
  [Implémentation d’une extension de sécurité](../extensions/security-extension/implementing-a-security-extension.md)   
  [Authentification avec le serveur de rapports](authentication-with-the-report-server.md)   
  [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Configurer une authentification de base sur le serveur de rapports](configure-basic-authentication-on-the-report-server.md)   
+ [Configurer l’authentification de base sur le serveur de rapports](configure-basic-authentication-on-the-report-server.md)   
  [Configurer une authentification Windows sur le serveur de rapports](configure-windows-authentication-on-the-report-server.md)  
   
   

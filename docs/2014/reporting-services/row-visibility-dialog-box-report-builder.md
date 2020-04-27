@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5ad7e47457aa2d1f1d5e36adec7e988de7b8bbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102348"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Boîte de dialogue Visibilité de ligne (Générateur de rapports)
@@ -35,7 +35,7 @@ ms.locfileid: "66102348"
  **Afficher ou masquer en fonction d'une expression**  
  Sélectionnez cette option pour faire varier la visibilité initiale à l'aide d'une expression.  
   
- Tapez une expression prenant la valeur `Boolean``True` pour masquer l'élément et la valeur `False` pour l'afficher. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
+ Tapez une expression prenant la valeur `Boolean``True` pour masquer l'élément et la valeur `False` pour l'afficher. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
  **L'affichage peut être activé ou désactivé par cet élément de rapport**  
  Choisissez cette option pour afficher une image bascule qui permet à l'utilisateur d'afficher ou de masquer la ligne de rapport dans une visionneuse de rapports HTML.  

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101748"
 ---
 # <a name="role-definitions"></a>Définitions de rôles
-  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une ***définition de rôle* est une collection nommée de tâches définissant les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  
+  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une *définition de rôle * ** est une collection nommée de tâches qui définissent les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Utilisation de rôles pour autoriser l'accès à un serveur de rapports  
  Un rôle devient opérationnel lorsqu'il est utilisé dans le cadre d'une attribution de rôle. Pour plus d’informations sur la manière dont les rôles renforcent la sécurité, consultez [Attributions de rôles](role-assignments.md).  
@@ -32,8 +32,7 @@ ms.locfileid: "66101748"
  Il existe deux types de définitions de rôles : les définitions au niveau élément et les définitions au niveau système. Une *définition de rôle au niveau élément* décrit les tâches associées aux éléments qui sont stockés et gérés sur un serveur de rapports, comme des rapports, des dossiers et des modèles. Gérer les rapports, Afficher les dossiers et Gérer les abonnements individuels sont des exemples de tâches que vous pouvez inclure dans une définition de rôle au niveau élément. Une *définition de rôle système* inclut les tâches qui s’appliquent au site dans son ensemble. Afficher les propriétés du serveur de rapports est un exemple de tâche que vous pouvez inclure dans un rôle système.  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend des rôles prédéfinis qui correspondent à différents niveaux d’interaction de l’utilisateur. Les rôles prédéfinis que vous pouvez utiliser sont répertoriés ci-dessous :  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend des rôles prédéfinis qui correspondent à différents niveaux d’interaction de l’utilisateur. Les rôles prédéfinis que vous pouvez utiliser sont répertoriés ci-dessous :  
   
 -   Gestionnaire de contenu, Serveur de publication, Lecteur, Générateur de rapports et Mes rapports sont des définitions de rôles au niveau élément que vous pouvez utiliser lors de la création d'attributions de rôles pour accéder au contenu du serveur de rapports.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66101748"
   
  Pour créer une définition de rôle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]utilisez. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
- Après avoir créé une définition de rôle, vous pouvez l'utiliser en la sélectionnant dans une attribution de rôle. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
+ Après avoir créé une définition de rôle, vous pouvez l'utiliser en la sélectionnant dans une attribution de rôle. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="customize-or-delete-a-role-definition"></a>Personnaliser ou supprimer une définition de rôle  
  Les rôles prédéfinis peuvent être modifiés ou remplacés par des rôles personnalisés. Pour modifier un rôle, vous ajoutez ou supprimez des tâches de la définition de rôle. Vous ne pouvez pas renommer un rôle. Toute modification d'une définition de rôle est immédiatement appliquée à toutes les attributions de rôles qui incluent cette définition de rôle.  

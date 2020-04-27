@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102644"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Rechercher la version du schéma de définition de rapport (SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "66102644"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rapports de mise à niveau](../install-windows/upgrade-reports.md)   
- [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md)  
+ [RDL (Report Definition Language) &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 095929c60d586fa0ed6c857412a369171acdaa10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097926"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserver_configurationsetting"></a>Méthode SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
@@ -41,13 +41,13 @@ public void SetUnattendedExecutionAccount (string UserName,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *Nom d’utilisateur*  
+ *UserName*  
  Compte Windows à utiliser pour les exécutions sans assistance.  
   
  *Mot de passe*  
  Mot de passe du compte spécifié.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -59,7 +59,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  Il est impossible d’utiliser la méthode SetUnattendedExecutionAccount pour exécuter des exécutions sans assistance dans le contexte du service Windows de serveur de rapports.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099124"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
@@ -30,7 +30,7 @@ ms.locfileid: "66099124"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>Ce que vous allez apprendre  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Ce que vous allez apprendre  
  Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :  
   
 1.  [Créer un graphique à partir de l'Assistant Graphique](#Chart)  
@@ -56,10 +56,10 @@ ms.locfileid: "66099124"
   
  Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. créer un rapport de graphique à partir de l’Assistant graphique  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. créer un rapport de graphique à partir de l’Assistant graphique  
  À partir de la boîte de dialogue **prise en main** , utilisez l’Assistant graphique pour créer un dataset incorporé, choisir une source de données partagée et créer un histogramme.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "66099124"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.  
   
-     La boîte de dialogue **Mise en route** s'affiche.  
+     La boîte de dialogue **prise en main** s’affiche.  
   
     > [!NOTE]  
     >  Si la boîte de dialogue **prise en main** n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.  
@@ -78,14 +78,14 @@ ms.locfileid: "66099124"
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**.  
   
-4.  Dans la **page choisir un DataSet**, cliquez sur **créer un DataSet**, puis cliquez sur **suivant**.  
+4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset**, puis sur **Suivant**.  
   
 5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
     > [!NOTE]  
     >  La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Sur la page **créer une requête** , cliquez sur **modifier en tant que texte**.  
+6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 7.  Collez la requête suivante dans le volet de requête :  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099124"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
+8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
 9. Cliquez sur **Suivant**.  
   
-##  <a name="ChartType"></a>2. choisir le type de graphique  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. choisir le type de graphique  
  Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
   
 #### <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
@@ -137,7 +137,7 @@ ms.locfileid: "66099124"
   
 8.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Horizontal"></a>3. mettre en forme et étiqueter l’axe horizontal  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. mettre en forme et étiqueter l’axe horizontal  
  Par défaut, l'axe horizontal affiche les valeurs dans un format général qui est mis à l'échelle automatiquement pour s'ajuster à la taille du graphique.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>Pour mettre en forme une date sur l'axe horizontal  
@@ -154,7 +154,7 @@ ms.locfileid: "66099124"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Sous l’onglet Dossier de base , cliquez sur **Exécuter** pour afficher l’aperçu du rapport.  
+7.  Sous l’onglet Accueil, cliquez sur **Exécuter** pour afficher l’aperçu du rapport.  
   
  La date s'affiche dans le format de date que vous avez sélectionné. Notez que le graphique ne répertorie pas chaque catégorie sur l'axe horizontal. Par défaut, seules sont incluses les étiquettes qui n'empiètent pas sur l'axe.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66099124"
   
  Sur le graphique, les étiquettes pivotent et sont affichées à raison d'une date sur trois.  
   
-##  <a name="Legend"></a>4. déplacer la légende  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. déplacer la légende  
  La légende est créée automatiquement à partir des données de catégories et de séries.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>Pour déplacer la légende sous la zone de graphique d'un histogramme  
@@ -203,7 +203,7 @@ ms.locfileid: "66099124"
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="ChartTitle"></a>5. titre du graphique  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. titre du graphique  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>Pour modifier le titre d'un graphique au-dessus de la zone de graphique  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099124"
   
 3.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Vertical"></a>6. mettre en forme et étiqueter l’axe vertical  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. mettre en forme et étiqueter l’axe vertical  
  Par défaut, l'axe vertical affiche les valeurs dans un format général qui est mis à l'échelle automatiquement pour s'ajuster à la taille du graphique.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>Pour appliquer le format monétaire aux chiffres figurant sur l'axe vertical  
@@ -242,7 +242,7 @@ ms.locfileid: "66099124"
   
 12. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Average"></a>7. Ajouter une moyenne mobile  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. Ajouter une moyenne mobile  
   
 #### <a name="to-add-a-moving-average"></a>Pour ajouter une moyenne mobile  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099124"
   
  Le graphique présente une ligne qui indique la moyenne mobile pour le total des ventes par date. La moyenne est ici calculée toutes les quatre dates.  
   
-##  <a name="Title"></a>8. Ajouter un titre de rapport  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. Ajouter un titre de rapport  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
   
@@ -276,7 +276,7 @@ ms.locfileid: "66099124"
   
 3.  Tapez **graphique des ventes**, appuyez sur entrée, puis tapez **janvier à décembre 2009**pour obtenir l’aspect suivant :  
   
-     **Graphique des ventes**  
+     **Graphique sur les ventes**  
   
      **Janvier à décembre 2009**  
   
@@ -290,17 +290,17 @@ ms.locfileid: "66099124"
   
 7.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Save"></a>9. enregistrer le rapport  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. enregistrer le rapport  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   
 1.  Basculez en mode création de rapport.  
   
-2.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**.  
+2.  À partir du bouton Générateur de rapports , cliquez sur **Enregistrer sous**.  
   
 3.  Dans **Nom**, tapez **Histogramme des commandes client**.  
   
-4.  Cliquez sur **Enregistrer**.  
+4.  Cliquez sur **Save**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 95e7bade956c791feceddc32f2a0423c331fe77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097108"
 ---
 # <a name="issharepointintegrated-property-wmi-msreportserver_instance"></a>Propriété IsSharePointIntegrated (WMI MSReportServer_Instance)
@@ -36,7 +36,7 @@ public Boolean IsSharePointIntegrated;
  Valeur `Boolean` qui indique si le serveur de rapports fonctionne en mode intégré SharePoint.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](msreportserver-instance-members.md)   

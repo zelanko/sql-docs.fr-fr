@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101159"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Page de propriétés Options d'instantanés (Gestionnaire de rapports)
@@ -57,11 +57,11 @@ ms.locfileid: "66101159"
   
  L'historique de rapport est stocké dans la base de données du serveur de rapports. Si vous avez des rapports volumineux ou en nombre important pour lesquels vous souhaitez conserver un historique, envisagez de limiter le volume d'historique de rapport pour mieux gérer l'espace disque nécessaire de la base de données du serveur de rapports.  
   
- **Appliquer**  
+ **appliquer**  
  Cliquez pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Ajoutez un instantané à l’historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Créer, modifier et supprimer des instantanés dans l'historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  

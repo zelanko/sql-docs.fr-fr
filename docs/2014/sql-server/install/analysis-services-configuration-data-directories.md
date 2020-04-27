@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096811"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuration de Analysis Services – Répertoires de données
@@ -22,7 +22,7 @@ ms.locfileid: "66096811"
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
   
-|Description|Annuaire par défaut|Recommandations|  
+|Description|Répertoire par défaut|Recommandations|  
 |-----------------|-----------------------|---------------------|  
 |Répertoire de données racine|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Data\|Assurez-vous que le dossier \Program Files\Microsoft SQL Server \ est protégé avec des autorisations limitées. Le fonctionnement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dépend, dans de nombreuses configurations, de la performance de l'emplacement de stockage sur lequel le répertoire de données se trouve. Placez ce répertoire sur l'emplacement de stockage le plus performant raccordé au système. Pour les installations de cluster de basculement, vérifiez que les répertoires de données sont placés sur le disque partagé.|  
 |Répertoire de fichiers journaux|C:\Program Files\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Log\|il s’agit du répertoire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les fichiers journaux et il comprend le journal FlightRecorder. Si vous augmentez la durée de la boîte noire, assurez-vous que le répertoire de journal dispose de l'espace adéquat.|  

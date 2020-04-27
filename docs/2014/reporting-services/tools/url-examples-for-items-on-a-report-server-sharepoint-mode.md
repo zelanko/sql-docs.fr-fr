@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099452"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemples d'URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint (SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66099452"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL d'un site ou sous-site de serveur SharePoint  
  Lorsque vous déployez un rapport ou une source de données de rapport, vous devez utiliser une URL vers un site et un sous-site SharePoint, le cas échéant. Dans l’URL, le nom du site apparaît juste après celui du serveur, par exemple, http://*nom_serveur/site* ou http://*nom_serveur/site/sous-site*.  
   
- Sur une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] application 2007 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou Web, le site et le sous-site correspondent fréquemment aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
+ Dans une application web [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], le site et le sous-site correspondent le plus souvent aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL d'une bibliothèque SharePoint  
  Si vous déployez un rapport ou un élément connexe vers une bibliothèque SharePoint, vous devez utiliser une URL vers la bibliothèque SharePoint. L'URL à utiliser pour une bibliothèque varie selon votre version de SharePoint.  
@@ -94,7 +94,7 @@ ms.locfileid: "66099452"
 ## <a name="examples-of-urls"></a>Exemples d'URL  
  Lors de la publication d'éléments dans une bibliothèque SharePoint, il est important de spécifier des URL complètes vers la bibliothèque cible. Une URL SharePoint complète inclut l'application Web SharePoint, le site, la bibliothèque, le dossier (facultatif), le fichier et l'extension de nom de fichier. Les exemples ci-dessous illustrent la syntaxe à utiliser.  
   
-|Cible|Exemple d'URL|  
+|Cible|Exemple d’URL|  
 |------------|-----------------|  
 |Serveur SharePoint.|http://TestServer|  
 |Site ou sous-site de serveur SharePoint.|http://TestServer/toplevelsite/subsite|  
@@ -102,7 +102,7 @@ ms.locfileid: "66099452"
 |Exemple de rapport Company Sales dans le dossier **Documents/Doc** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Exemple de rapport Company Sales dans le dossier **Report Center** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a>Publication depuis un outil de création vers une bibliothèque SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Publication dans une bibliothèque SharePoint à partir d’un outil de création  
  Lorsque vous utilisez un outil de création de rapports pour publier des rapports et des fichiers associés dans une bibliothèque, les fichiers sont validés avant d'être ajoutés. Si vous téléchargez les rapports et les fichiers associés via l’action **Télécharger** dans une bibliothèque SharePoint, aucune vérification de validation n’a lieu. Vous ne saurez pas si le fichier est valide tant que vous n'accéderez pas au rapport en le gérant, le modifiant ou l'exécutant.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ms.locfileid: "66099452"
   
 ## <a name="see-also"></a>Voir aussi  
  [publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publier une source de données partagée dans une bibliothèque SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Publier une source de données partagée sur une bibliothèque SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Pages de propriétés du projet, boîte de dialogue](project-property-pages-dialog-box.md)  
   
   

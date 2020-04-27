@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100110"
 ---
 # <a name="preview-view"></a>Vue Aperçu
@@ -60,10 +60,10 @@ ms.locfileid: "66100110"
  **Arrêter le rendu**  
  Choisissez cette option pour arrêter le processus de rendu.  
   
- **Actualiser**  
+ **Actualisation**  
  Choisissez cette option pour actualiser le cache des données et exécutez de nouveau le rapport.  
   
- **Étendue**  
+ **Imprimer**  
  Choisissez cette option pour imprimer le rapport.  
   
  **Page**  
@@ -84,11 +84,11 @@ ms.locfileid: "66100110"
  **Trouver**  
  Choisissez cette option pour commencer la recherche du texte dans le rapport.  
   
- **Rechercher suivant**  
+ **Suivant**  
  Choisissez cette option pour rechercher l'instance suivante du texte recherché.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aperçu des rapports](../reports/previewing-reports.md)   
- [Aide sur le concepteur de rapports via la touche F1](report-designer-f1-help.md)  
+ [Aide sur le Concepteur de rapports via la touche F1](report-designer-f1-help.md)  
   
   

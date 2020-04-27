@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098605"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Méthode BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
@@ -46,13 +46,13 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Mot de passe*  
  Chaîne utilisée pour chiffrer la clé de chiffrement avant qu'elle soit retournée.  
   
- *Keyfile []*  
+ *KeyFile[]*  
  [out] Tableau contenant la clé de chiffrement chiffrée.  
   
  *Longueur*  
  [out] Longueur du tableau retourné par la méthode.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
  *ExtendedErrors[]*  
@@ -62,7 +62,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

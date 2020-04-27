@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: c89596d916f9a8ec2fea91cdea8f72b1958c5b6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102826"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Serveur de rapports Reporting Services (mode SharePoint)
@@ -38,15 +38,15 @@ Pour plus d'informations sur l'installation et la configuration, consultez les r
   
 -   [Fonctionnalités SharePoint non prises en charge](#bkmk_unsupportedsharepoint)  
   
--   [Combinaisons prises en charge du complément SharePoint et du serveur de rapports](#bkmk_supportedcombinations)  
+-   [Combinaisons prises en charge du complément SharePoint et de Report Server](#bkmk_supportedcombinations)  
   
 -   [Composants qui fournissent l’intégration](#bkmk_components)  
   
--   [Considérations relatives au langage](#bkmk_language)  
+-   [Observations relatives au langage](#bkmk_language)  
   
 -   [Tâches associées](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_featuresum"></a>Résumé des fonctionnalités
+##  <a name="feature-summary"></a><a name="bkmk_featuresum"></a>Résumé des fonctionnalités
 
  Configurer un serveur de rapports pour qu'il s'exécute en mode intégré SharePoint fournit les fonctionnalités supplémentaires ci-dessous, qui sont disponibles uniquement lorsque vous déployez un serveur de rapports dans ce mode :  
   
@@ -74,15 +74,15 @@ Pour plus d'informations sur l'installation et la configuration, consultez les r
   
 -   Zones AAM (mappages d'accès de substitution), déploiements exposés à Internet et jetons utilisateur SharePoint pour les listes SharePoint.  
   
-##  <a name="bkmk_connectedandlocal"></a>Mode connecté et mode local
+##  <a name="connected-mode-and-local-mode"></a><a name="bkmk_connectedandlocal"></a>Mode connecté et mode local
 
  La version SQL Server 2008 R2 a introduit un nouveau *mode local* pour consulter des rapports d’un serveur SharePoint 2010 qui inclut le complément Microsoft SQL Server 2008 R2 Reporting Services (ou version ultérieure) pour les produits SharePoint 2010 installés.  
   
--   *Mode local*: le mode local permet un rendu local des rapports à partir de la bibliothèque de documents SharePoint, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sans intégration avec un serveur de rapports. Le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint est requis, mais un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne l'est pas. Le complément peut être installé de différentes façons, notamment avec l'Outil de préparation des produits SharePoint 2010. Pour plus d’informations sur le mode local, consultez rapports en mode [local et rapports en mode connecté dans la visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) et [où trouver le complément Reporting Services pour les produits SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Mode local*: le mode local permet un rendu local des rapports à partir de la bibliothèque de documents SharePoint sans intégration avec un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint est requis, mais un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne l'est pas. Le complément peut être installé de différentes façons, notamment avec l'Outil de préparation des produits SharePoint 2010. Pour plus d’informations sur le mode local, consultez rapports en mode [local et rapports en mode connecté dans la visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) et [où trouver le complément Reporting Services pour les produits SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Mode connecté*: le mode connecté est pris en charge [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en intégrant un serveur de rapports dans la batterie de serveurs SharePoint à l’aide de l’administration centrale de SharePoint. L'intégration à un serveur de rapports permet la création de rapports complète de bout en bout, l'utilisation des fonctionnalités de collaboration de SharePoint 2010 et des fonctionnalités de serveur d'un serveur de rapports notamment : abonnements, instantanés et traitement par le serveur.  
+-   *Mode connecté*: le mode connecté est pris en charge en intégrant un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans la batterie de serveurs SharePoint à l'aide de l'Administration centrale de SharePoint. L'intégration à un serveur de rapports permet la création de rapports complète de bout en bout, l'utilisation des fonctionnalités de collaboration de SharePoint 2010 et des fonctionnalités de serveur d'un serveur de rapports notamment : abonnements, instantanés et traitement par le serveur.  
   
-##  <a name="bkmk_unsupportedsharepoint"></a>Fonctionnalités SharePoint non prises en charge
+##  <a name="unsupported-sharepoint-features"></a><a name="bkmk_unsupportedsharepoint"></a>Fonctionnalités SharePoint non prises en charge
 
  Certaines fonctionnalités SharePoint ne sont pas disponibles en mode intégré. La liste suivante présente les fonctionnalités SharePoint avec lesquelles [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne s'intègre pas directement :  
   
@@ -100,14 +100,14 @@ Pour plus d'informations sur l'installation et la configuration, consultez les r
   
      L’historique des versions de la bibliothèque de documents est configuré dans la page Paramètres de contrôle de version de Paramètres de la bibliothèque.  
   
-##  <a name="bkmk_supportedcombinations"></a>Combinaisons prises en charge du complément SharePoint et du serveur de rapports
+##  <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a><a name="bkmk_supportedcombinations"></a>Combinaisons prises en charge du complément SharePoint et du serveur de rapports
 
  Certaines fonctionnalités ne sont pas prises en charge dans toutes les combinaisons de serveur de rapports, complément Reporting Services pour SharePoint et produits SharePoint. Pour plus d’informations, consultez [combinaisons de serveurs et compléments pris en charge par SharePoint et Reporting Services &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  La version correcte du complément Reporting Services doit être utilisée avec la version correspondante des produits SharePoint.  
   
-##  <a name="bkmk_components"></a>Composants qui fournissent l’intégration
+##  <a name="components-that-provide-integration"></a><a name="bkmk_components"></a>Composants qui fournissent l’intégration
 
  Pour combiner les serveurs dans un déploiement unique, vous intégrez une installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de à une instance de produits SharePoint  
   
@@ -122,10 +122,9 @@ Pour plus d'informations sur l'installation et la configuration, consultez les r
   
  Une fois que vous avez installé le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans SharePoint et configuré les deux serveurs pour l'intégration, vous pouvez télécharger ou publier les types de contenu du serveur de rapports vers une bibliothèque SharePoint, puis afficher et gérer ces documents à partir d'un site SharePoint. Le téléchargement ou la publication du contenu du serveur de rapports constitue une première étape importante ; le composant WebPart et les pages deviennent accessibles lorsque vous sélectionnez des définitions de rapport (.rdl), des modèles de rapport (.smdl) et des sources de données partagées (.rsds) sur un site SharePoint.  
   
-##  <a name="bkmk_language"></a>Considérations relatives au langage
+##  <a name="language-considerations"></a><a name="bkmk_language"></a>Considérations relatives au langage
 
- 
-  [!INCLUDE[SPF2010](../includes/spf2010-md.md)] et [!INCLUDE[SPS2010](../includes/sps2010-md.md)] sont disponibles dans beaucoup plus de langues que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ [!INCLUDE[SPF2010](../includes/spf2010-md.md)] et [!INCLUDE[SPS2010](../includes/sps2010-md.md)] sont disponibles dans beaucoup plus de langues que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  Lorsque vous configurez un serveur de rapports pour qu'il s'exécute dans un déploiement d'un produit SharePoint, vous pouvez éventuellement constater une combinaison de langues. L'interface utilisateur, la documentation et les messages apparaissent dans les langues suivantes :  
   
@@ -137,7 +136,7 @@ Pour plus d'informations sur l'installation et la configuration, consultez les r
   
  Si la langue de votre produit ou technologie SharePoint diffère de la langue du serveur de rapports, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] essaie d'utiliser une langue de la même famille de langues qui correspond le mieux. Si aucun substitut proche n'est disponible, le serveur de rapports utilise l'anglais.  
   
-##  <a name="bkmk_relatedtasks"></a> Tâches associées
+##  <a name="related-tasks"></a><a name="bkmk_relatedtasks"></a> Tâches associées
 
  Le tableau suivant récapitule les tâches liées à un serveur de rapports en mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098512"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>Méthode GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)
@@ -42,10 +42,10 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *DatabaseName*  
+ *Databasename*  
  Chaîne contenant le nom de la base de données du serveur de rapports à créer.  
   
- *LCID*  
+ *Lcid*  
  Valeur utilisée pour la localisation des noms de rôles.  
   
  *IsSharePointMode*  
@@ -54,10 +54,10 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 > [!IMPORTANT]  
 >  À compter [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de, *IsSharePointMode* = `True` n’est pas pris en charge, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] car en mode SharePoint, est un service partagé SharePoint et n’est pas contrôlé par le fournisseur WMI. Ce paramètre doit toujours avoir la valeur `False`.  
   
- *Conseils*  
+ *Script*  
  [out] Chaîne contenant le script SQL généré.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -75,7 +75,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Le script généré prend en charge [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

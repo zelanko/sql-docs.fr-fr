@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100884"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100884"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode SharePoint &#124; SharePoint 2010 et SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode SharePoint &#124; SharePoint 2010 et SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif|  
   
 ## <a name="e-mail-delivery-options"></a>Options de remise des rapports par messagerie  
  La remise de rapports par messagerie du serveur de rapports s'effectue de différentes manières :  
@@ -47,8 +47,7 @@ ms.locfileid: "66100884"
   
      Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous choisissez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. Vous pouvez désactiver cette fonction dans le fichier de configuration RSReportServer.  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport n'est pas remis. Choisissez une des autres options de remise (URL ou notification) si le rapport est volumineux.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport n'est pas remis. Choisissez une des autres options de remise (URL ou notification) si le rapport est volumineux.  
   
  C'est au moment de la création de l'abonnement que vous définissez les options de remise d'un rapport. Par exemple, si vous sélectionnez **Inclure un lien** dans l’abonnement, le message e-mail contient un lien hypertexte vers le rapport.  
   

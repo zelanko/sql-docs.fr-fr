@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099319"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guide de référence des erreurs et des événements (Reporting Services)
@@ -35,11 +35,11 @@ ms.locfileid: "66099319"
 |ID de l’événement|Type|Category|Source|Description|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Error|Planification|Serveur de rapports|L'Agent SQL Server doit être en cours d'exécution lorsque vous définissez une opération de planification (par exemple, un abonnement à un rapport et une remise).|  
-|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Error|Démarrage/Fermeture|Serveur de rapports<br /><br /> Processeur de planification et de remise|La>source ne peut pas se connecter à la base de données du serveur de rapports. * \<* Pour plus d’informations, consultez [Service Report Server Windows &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
-|108|Error|Extension|Serveur de rapports<br /><br /> Gestionnaire de rapports|La>source ne peut pas charger une extension de remise, de traitement de données ou de rendu. * \<*<br /><br /> Ce problème est vraisemblablement dû à un déploiement incomplet ou à la suppression d'une extension. Pour plus d'informations, consultez [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md) et [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
+|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Error|Démarrage/Fermeture|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source>* ne peut pas se connecter à la base de données du serveur de rapports. Pour plus d’informations, consultez [Service Report Server Windows &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
+|108|Error|Extension|Serveur de rapports<br /><br /> Gestionnaire de rapports|*\<Source>* ne peut pas charger une extension de remise, de traitement de données ou de rendu.<br /><br /> Ce problème est vraisemblablement dû à un déploiement incomplet ou à la suppression d'une extension. Pour plus d'informations, consultez [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md) et [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
 |109|Information|Gestion|Serveur de rapports<br /><br /> Gestionnaire de rapports|Un fichier de configuration a été modifié. Pour plus d’informations, consultez [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
 |110|Avertissement|Gestion|Serveur de rapports<br /><br /> Gestionnaire de rapports|Un paramètre a été modifié dans l'un des fichiers de configuration et n'est donc plus valide. La valeur par défaut sera utilisée à la place. Pour plus d’informations, consultez [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
-|111|Error|Journalisation|Serveur de rapports<br /><br /> Gestionnaire de rapports|La>source ne peut pas créer le journal des traces. * \<* Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
+|111|Error|Journalisation|Serveur de rapports<br /><br /> Gestionnaire de rapports|*\<Source>* ne peut pas créer le journal des traces. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
 |112|Avertissement|Sécurité|Serveur de rapports|Le serveur de rapports a détecté une possible attaque par déni de service. Pour plus d’informations, consultez [Sécurité et protection de Reporting Services](../security/reporting-services-security-and-protection.md).|  
 |113|Error|Journalisation|Serveur de rapports|Le serveur de rapports ne peut pas créer le compteur de performance.|  
 |114|Error|Démarrage/Fermeture|Gestionnaire de rapports|Le Gestionnaire de rapports ne peut pas se connecter au service Report Server.|  
@@ -47,7 +47,7 @@ ms.locfileid: "66099319"
 |116|Error|Interne|Serveur de rapports<br /><br /> Gestionnaire de rapports<br /><br /> Processeur de planification et de remise|Une erreur interne s’est produite.|  
 |117|Error|Démarrage/Fermeture|Serveur de rapports|La version de la base de données du serveur de rapports n'est pas valide.|  
 |118|Avertissement|Journalisation|Serveur de rapports<br /><br /> Gestionnaire de rapports|Le journal des traces ne se trouve pas à l'emplacement attendu. Un nouveau journal des traces sera créé dans le répertoire par défaut. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
-|119|Error|Activation|Serveur de rapports<br /><br /> Processeur de planification et de remise|Le>source n’a pas obtenu l’autorisation d’accéder au contenu de la base de données du serveur de rapports. * \<*|  
+|119|Error|Activation|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source>* n’a pas obtenu l’autorisation d’accéder au contenu de la base de données du serveur de rapports.|  
 |120|Error|Activation|Serveur de rapports|Impossible de déchiffrer la clé symétrique. Le compte sous lequel le service est exécuté a vraisemblablement été modifié. Pour plus d’informations, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Démarrage/Fermeture|Serveur de rapports|Échec de démarrage du service d'appel de procédure distante (RPC).|  
 |122|Avertissement|Livraison|Processeur de planification et de remise|Le processeur de planification et de remise ne peut pas se connecter au serveur SMTP qui est utilisé pour la remise du courrier électronique. Pour plus d’informations sur les connexions au serveur SMTP, consultez [configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
@@ -56,10 +56,9 @@ ms.locfileid: "66099319"
 |125|Information|Activation|Serveur de rapports|Extraction réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |126|Information|Activation|Serveur de rapports|Application réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |127|Information|Activation|Serveur de rapports|Suppression réussie du contenu chiffré dans la base de données du serveur de rapports. Pour plus d’informations sur la suppression des données chiffrées non récupérables, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|128|Error|Activation|Serveur de rapports|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de différentes éditions ne fonctionnent pas ensemble.|  
+|128|Error|Activation|Serveur de rapports|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de différentes éditions ne fonctionnent pas ensemble.|  
 |129|Error|Gestion|Serveur de rapports<br /><br /> Processeur de planification et de remise|Impossible de déchiffrer un paramètre chiffré d'un fichier de configuration.|  
-|130|Error|Gestion|Serveur de rapports<br /><br /> Processeur de planification et de remise|Le>source ne peut pas trouver le fichier de configuration. * \<* Des fichiers de configuration sont nécessaires pour le serveur de rapports.|  
+|130|Error|Gestion|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source>* ne trouve pas le fichier de configuration. Des fichiers de configuration sont nécessaires pour le serveur de rapports.|  
 |131|Error|Sécurité|Serveur de rapports<br /><br /> Processeur de planification et de remise|Une valeur de données utilisateur chiffrée n'a pas pu être déchiffrée.|  
 |132|Error|Sécurité|Serveur de rapports|Une erreur s'est produite au cours du chiffrement des données utilisateur. La valeur ne peut pas être enregistrée.|  
 |133|Error|Gestion|Serveur de rapports<br /><br /> Gestionnaire de rapports<br /><br /> Processeur de planification et de remise|Échec de chargement du fichier de configuration. Cette erreur peut se produire si le fichier XML n'est pas valide.|  

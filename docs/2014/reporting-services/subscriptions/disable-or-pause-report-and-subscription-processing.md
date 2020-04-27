@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100920"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Suspendre le traitement des rapports et des abonnements
@@ -47,8 +47,8 @@ ms.locfileid: "66100920"
  Si un rapport ou un abonnement s'exécute à partir d'une planification partagée, vous pouvez suspendre la planification pour empêcher le traitement. Tous les traitements de rapports et d'abonnements pilotés par la planification sont reportés jusqu'à la reprise de la planification. Pour plus d’informations, consultez [suspendre et reprendre des planifications partagées](schedules.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Reporting Services serveur de rapports &#40;le mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Page Propriétés de sécurité, éléments &#40;Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)  
+ [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)  
   
   

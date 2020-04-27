@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098739"
 ---
 # <a name="view-page-reports-report-manager"></a>Page Vue, Rapports (Gestionnaire de rapports)
   La page Afficher des rapports vous permet d'afficher un rapport. Lorsque vous ouvrez pour la première fois un rapport dans le Gestionnaire de rapports, il est au format HTML. Les rapports HTML incluent une barre d'outils Rapport qui s'affiche en haut du rapport et vous permet de parcourir les pages du rapport, d'effectuer une recherche dans un rapport et d'exporter le rapport dans un format différent. L'illustration suivante représente la barre d'outils Rapport :  
   
- ![Barre d’outils rapport](media/htmlviewer-toolbar.gif "Barre d'outils Rapports")  
+ ![Barre d'outils Rapports](media/htmlviewer-toolbar.gif "Barre d'outils Rapports")  
 Barre d'outils Rapports  
   
  Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous pouvez configurer les rapports de manière à ce qu'ils s'exécutent à la demande ou à partir d'un instantané d'exécution de rapport. Si un rapport est exécuté à la demande, le traitement des données et du rapport s'effectue à chaque ouverture. Si vous visualisez un rapport configuré de manière à ce qu'il s'exécute en tant qu'instantané d'exécution de rapport, le traitement des données s'est produit à la création de l'instantané.  
@@ -35,7 +35,7 @@ Barre d'outils Rapports
  Un rapport qui contient des champs d'entrée et un bouton **Afficher le rapport** est un rapport paramétrable. Pour afficher un rapport paramétrable, il est possible que vous deviez fournir des valeurs utilisées pour exécuter le rapport.  
   
 > [!NOTE]  
->  Les instantanés d'exécution de rapport et certains formats d'exportation ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Les instantanés d'exécution de rapport et certains formats d'exportation ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

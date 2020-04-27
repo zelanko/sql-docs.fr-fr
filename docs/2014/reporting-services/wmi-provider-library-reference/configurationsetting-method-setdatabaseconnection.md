@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098102"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Méthode SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
@@ -49,7 +49,7 @@ public void BackupEncryptionKey(string Server,
  *DatabaseName*  
  Nom de la base de données du serveur de rapports.  
   
- *CredentialsType a*  
+ *CredentialsType*  
  Type d'informations d'identification à utiliser pour la connexion. Les valeurs peuvent être les suivantes :  
   
 -   0 - Windows  
@@ -58,13 +58,13 @@ public void BackupEncryptionKey(string Server,
   
 -   2 - Service Windows  
   
- *Nom d’utilisateur*  
+ *UserName*  
  Nom du compte utilisé pour établir la connexion à la base de données du serveur de rapports.  
   
  *Mot de passe*  
  Mot de passe utilisé pour établir la connexion à la base de données du serveur de rapports.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -86,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  La méthode SetDatabaseConnection n’accorde pas d’autorisations aux comptes spécifiés. Vous devez appeler la méthode [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) pour chaque compte qui doit accéder à la base de données du serveur de rapports et exécuter le script obtenu.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097187"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>Méthode GetReportServerUrls (WMI MSReportServer_Instance)
@@ -35,16 +35,16 @@ public void GetReportServerUrls(out string[] applicationName,
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *ApplicationName []*  
+ *ApplicationName[]*  
  Tableau qui contient les applications installées. Les valeurs possibles sont `ReportServerWebService` et `ReportManager`.  
   
- *URL []*  
+ *URLs[]*  
  Tableau qui contient les URL inscrites avec succès.  
   
  *Longueur*  
  Valeur entière qui contient la longueur des tableaux retournés.  
   
- *SIGNÉ*  
+ *HRESULT*  
  Valeur qui indique le succès ou un code d'erreur.  
   
 ## <a name="return-values"></a>Valeurs de retour  
@@ -53,7 +53,7 @@ public void GetReportServerUrls(out string[] applicationName,
  Les méthodes exposées par les objets de gestion WMI sont appelées par le biais de la fonction InvokeMethod. Pour plus d’informations, consultez la section relative à l’exécution des méthodes sur des objets de gestion dans la documentation WMI du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

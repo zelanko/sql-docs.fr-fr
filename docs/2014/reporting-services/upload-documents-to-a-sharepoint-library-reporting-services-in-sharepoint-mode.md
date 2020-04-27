@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098837"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint)
@@ -48,7 +48,7 @@ ms.locfileid: "66098837"
  Un rapport peut contenir des paramètres permettant aux utilisateurs de filtrer les données. Vous pouvez configurer les paramètres pour utiliser des valeurs spécifiques ou modifier la manière dont elles apparaissent à l'utilisateur. Pour plus d’informations, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [publier un rapport dans une bibliothèque SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Publier un rapport dans une bibliothèque SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publier une source de données partagée dans une bibliothèque SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

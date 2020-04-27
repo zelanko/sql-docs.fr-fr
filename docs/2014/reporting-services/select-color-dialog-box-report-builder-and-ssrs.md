@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101381"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Sélectionner une couleur (Générateur de rapports et SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66101381"
  **Sélecteur de couleurs**  
  Choisissez une option parmi les trois proposées permettant de spécifier la façon dont vous souhaitez sélectionner des couleurs :  
   
--   **Sélecteur-cercle de couleur** Choisissez une couleur à l’aide des valeurs de couleur teinte/saturation/luminosité (TSL).  
+-   **Sélecteur - Cercle de couleur** Choisissez une couleur à l’aide des valeurs de couleur Teinte/Saturation/Luminosité (TSL).  
   
--   **Sélecteur-carré de couleur** Choisissez une couleur à l’aide des valeurs de couleur rouge/vert/bleu (RVB).  
+-   **Sélecteur - Carré de couleur** Choisissez une couleur à l’aide des valeurs de couleur Rouge/Vert/Bleu (RVB).  
   
--   **Palette-couleurs standard** Choisissez une couleur dans une liste prédéfinie de valeurs de couleur.  
+-   **Palette - Couleurs standard** Choisissez une couleur dans une liste prédéfinie de valeurs de couleur.  
   
  **Cercle de couleur**  
  Utilisez cette option pour les couleurs TSL, car les valeurs TSL sont associées à un système de coordonnées cylindriques. La teinte représente la couleur réelle, la saturation correspond à la pureté de la couleur et la luminosité est la luminosité ou l'obscurité relative.  
@@ -65,7 +65,7 @@ ms.locfileid: "66101381"
  **Alpha**  
  Valeur décimale pour la composante alpha ou de transparence de la couleur. Lorsque cette valeur est activée, vous pouvez utiliser le commutateur de curseur pour ajuster le degré de transparence voulu.  
   
- **Hue**  
+ **Teinte**  
  Valeur décimale pour la teinte de la couleur TSL. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
  **Saturation**  

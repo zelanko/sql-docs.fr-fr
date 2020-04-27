@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099995"
 ---
 # <a name="server-properties-general-page"></a>Propriétés du serveur (page Général)
@@ -36,7 +36,7 @@ ms.locfileid: "66099995"
  **Édition**  
  Cette propriété est en lecture seule. Spécifie l'instance de serveur de rapports actuelle. Le Gestionnaire de rapports n’est pas disponible dans certaines éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- **Mode d’authentification**  
+ **Mode d'authentification**  
  Cette propriété est en lecture seule. Elle identifie les types de demandes d'authentification acceptés par l'instance de serveur de rapports. Pour changer le mode d'authentification, vous devez modifier le fichier RSReportServer.config. Pour plus d’informations, consultez [Authentification avec le serveur de rapports](../security/authentication-with-the-report-server.md).  
   
  **URL**  
@@ -45,7 +45,7 @@ ms.locfileid: "66099995"
  **Activer un dossier Mes rapports pour chaque utilisateur**  
  Mettez Mes rapports à la disposition des utilisateurs. Cette option est disponible uniquement pour les serveurs de rapports en mode natif.  
   
- **Sélectionner le rôle à appliquer à chaque Mes rapports dossier**  
+ **Sélectionner le rôle à appliquer à chaque dossier Mes Rapports**  
  Spécifiez une définition de rôle à utiliser pour la sécurité de Mes rapports. La définition de rôle identifie l'ensemble des tâches qui sont prises en charge dans chaque dossier Mes rapports.  
   
  **Activer le téléchargement du contrôle d'impression du client ActiveX**  
@@ -55,7 +55,7 @@ ms.locfileid: "66099995"
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Activer et désactiver les Mes rapports](../report-server/enable-and-disable-my-reports.md)   
- [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
+ [Serveur de rapports dans Management Studio aide (F1)](report-server-in-management-studio-f1-help.md)   
  [Sécuriser Mes Rapports](../security/secure-my-reports.md)  
   
   

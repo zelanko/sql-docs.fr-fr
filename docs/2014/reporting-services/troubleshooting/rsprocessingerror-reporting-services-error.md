@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099143"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
@@ -55,7 +55,7 @@ ms.locfileid: "66099143"
   
 -   Un paramètre dont la propriété Nullable a la valeur `False` a détecté une valeur null dans le paramètre.  
   
--   Une expression pour la propriété Hidden d’une région de données contient une erreur : la référence d’objet n’est pas définie à une instance d’un objet.  
+-   Une expression pour la propriété Hidden d'une région de données contient une erreur : La référence d’objet n’a pas la valeur d’une instance d’un objet.  
   
 -   Une expression contenait un appel de fonction non valide ou une erreur de syntaxe.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099143"
  Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Le rapport principal avec le sous-rapport n'a pas pu être traité  
- Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version d'un rapport et de ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
+ Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version entre un rapport et ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
   
  Vous devez modifier le rapport principal ou les sous-rapports pour que tous les rapports puissent être traités par la même version du processeur de rapports. Pour plus d’informations sur la cause de l’échec de la mise à niveau d’un rapport, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md).  
   

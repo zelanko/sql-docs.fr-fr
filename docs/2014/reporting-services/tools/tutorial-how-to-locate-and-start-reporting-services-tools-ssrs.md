@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099479"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Didacticiel : comment localiser et démarrer les outils Reporting Services (SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66099479"
   
 -   [Management Studio](#bkmk_managements_studio)  
   
--   [SQL Server Data Tools avec l’Assistant Concepteur de rapports et de rapport](#bkmk_ssdt)  
+-   [SQL Server Data Tools avec le Concepteur de rapports et l'Assistant Rapport](#bkmk_ssdt)  
   
 -   [Générateur de rapports](#bkmk_report_builder)  
   
-##  <a name="bkmk_configuration_manager"></a>Gestionnaire de configuration de Reporting Services (mode natif)  
+##  <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a>Gestionnaire de configuration de Reporting Services (mode natif)  
  Utilisez le Gestionnaire de configuration en mode natif pour terminer les opérations suivantes : , , , , et.  
   
 -   Spécifiez le compte de service.  
@@ -58,13 +58,13 @@ ms.locfileid: "66099479"
   
 -   Configurez le traitement des rapports sans assistance et la remise de rapports par courrier électronique.  
   
- **Installation :** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager est installé lorsque vous installez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le mode natif. Pour plus d’informations, consultez [installer Reporting Services serveur de rapports en mode natif](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Installation :** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est installé en même temps que le mode natif de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Installer le serveur de rapports Reporting Services en mode natif](../install-windows/install-reporting-services-native-mode-report-server.md).  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Pour démarrer le Gestionnaire de configuration de Reporting Services  
   
 1.  Sur l’écran d’accueil de Windows `reporting` , tapez et dans les résultats de la recherche d' **applications** , cliquez sur **Gestionnaire de configuration de Reporting Services**.  
   
-     ![Gestionnaire de configuration de Reporting Services au cours du démarrage](../media/bi-ssrs-configmanager-win8-startscreen.gif "Gestionnaire de configuration de Reporting Services au cours du démarrage")  
+     ![Gestionnaire de configuration de Reporting Services au démarrage](../media/bi-ssrs-configmanager-win8-startscreen.gif "Gestionnaire de configuration de Reporting Services au démarrage")  
   
      **Ni**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66099479"
   
      Si vous spécifiez un ordinateur distant, cliquez sur **Rechercher** pour établir une connexion. Le serveur de rapports doit être configuré à l'avance pour l'administration à distance. Pour plus d’informations, consultez [Configurer un serveur de rapports pour l’administration à distance](../report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  Dans **Dansstance Name**, choisissez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] figurent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+3.  Dans **Nom de l’instance**, choisissez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] figurent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 4.  Cliquez sur **Connecter**.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66099479"
   
      ![Outil de configuration de Reporting Services](../media/rs-ui-reportserverconfigkatmai.gif "Outil de configuration de Reporting Services")  
   
- **Étapes suivantes :** [configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) et [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ **Étapes suivantes :** [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) et [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-##  <a name="bkmk_report_manager"></a>Gestionnaire de rapports (mode natif)  
+##  <a name="report-manager-native-mode"></a><a name="bkmk_report_manager"></a>Gestionnaire de rapports (mode natif)  
  Utilisez [Gestionnaire de rapports &#40;le mode natif SSRS&#41;](../report-manager-ssrs-native-mode.md) pour définir des autorisations, gérer des abonnements et des planifications et utiliser des rapports. Pour afficher les rapports, vous pouvez aussi utiliser le Gestionnaire de rapports.  
   
  **Installation :** Gestionnaire de rapports est installé lorsque vous installez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le mode natif : [installer Reporting Services serveur de rapports en mode natif](../install-windows/install-reporting-services-native-mode-report-server.md)  
@@ -105,7 +105,7 @@ ms.locfileid: "66099479"
   
  **Étapes suivantes :** [configurez gestionnaire de rapports &#40;&#41;en mode natif ](../report-server/configure-web-portal.md).  
   
-##  <a name="bkmk_managements_studio"></a>Management Studio  
+##  <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Management Studio  
  Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer le serveur de rapports en même temps que d'autres composants serveur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md).  
   
 #### <a name="to-start-sql-server-management-studio"></a>Pour démarrer SQL Server Management Studio  
@@ -126,7 +126,7 @@ ms.locfileid: "66099479"
   
 5.  Cliquez sur **Connecter**. Vous pouvez développer le nœud racine pour définir les propriétés du serveur, modifier les définitions de rôle ou désactiver des fonctionnalités du serveur de rapports.  
   
-##  <a name="bkmk_ssdt"></a>SQL Server Data Tools avec l’Assistant Concepteur de rapports et de rapport  
+##  <a name="sql-server-data-tools-with-report-designer-and-report-wizard"></a><a name="bkmk_ssdt"></a>SQL Server Data Tools avec l’Assistant Concepteur de rapports et de rapport  
  Le Concepteur de rapports est disponible dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] - Business Intelligence pour Visual Studio 2012. La surface de dessin des outils inclut des fenêtres avec onglets, des Assistants et des menus pour accéder aux fonctions de création des modèles et des rapports. L'outil de concepteur de rapports devient disponible lorsque vous choisissez un projet Report Server ou un modèle de l'Assistant Report Server. Pour en savoir plus, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 #### <a name="to-start-report-designer"></a>Pour démarrer le Concepteur de rapports  
@@ -151,14 +151,14 @@ ms.locfileid: "66099479"
   
  Pour commencer votre premier rapport, consultez [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md). Pour en savoir plus sur les concepteurs de requêtes que vous pouvez utiliser dans Concepteur de rapports, consultez [outils de conception de requêtes dans Concepteur de rapports SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
-##  <a name="bkmk_report_builder"></a>Générateur de rapports  
+##  <a name="report-builder"></a>Générateur de rapports <a name="bkmk_report_builder"></a>  
  Utilisez [Générateur de rapports &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md) pour créer des rapports dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] un environnement de création semblable à Office. Vous pouvez personnaliser et mettre à jour tous les rapports existants, qu'ils aient été créés dans le Concepteur de rapports ou dans les versions précédentes du Générateur de rapports. Contactez votre administrateur afin de connaître l'emplacement du fichier ReportBuilder3.msi que vous exécutez pour installer le Générateur de rapports sur votre ordinateur local.  
   
- **Installation :** La version en un clic du générateur de rapports est installée soit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode natif, soit en mode SharePoint. La version autonome du Générateur de rapports est disponible sous forme d'un téléchargement distinct.  Consultez [installer la version autonome de Générateur de rapports &#40;Générateur de rapports&#41;](../install-windows/install-report-builder.md)  
+ **Installation :** la version en un clic du Générateur de rapports est installée par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode natif ou en mode SharePoint. La version autonome du Générateur de rapports est disponible sous forme d'un téléchargement distinct.  Consultez [installer la version autonome de Générateur de rapports &#40;Générateur de rapports&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>Pour démarrer la version ClickOnce du Générateur de rapports à partir du Gestionnaire de rapports (mode natif)  
   
-1.  Dans le navigateur Web, tapez l'URL du Gestionnaire de rapports pour votre serveur de rapports. Par défaut, l’URL est http://\<*nom_serveur*>/reports. Le Gestionnaire de rapports s'ouvre.  
+1.  Dans le navigateur Web, tapez l'URL du Gestionnaire de rapports pour votre serveur de rapports. Par défaut, l’URL est http://\<*ServerName*>/Reports. Le Gestionnaire de rapports s'ouvre.  
   
 2.  Cliquez sur **Générateur de rapports**.  
   

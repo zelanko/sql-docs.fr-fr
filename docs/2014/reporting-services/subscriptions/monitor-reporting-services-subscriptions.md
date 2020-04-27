@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100762"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100762"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint|  
   
  **Dans cette rubrique :**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66100762"
   
 -   [Gestion des abonnements inactifs](#bkmk_manage_inactive)  
   
-##  <a name="bkmk_native_mode"></a>Interface utilisateur en mode natif  
+##  <a name="native-mode-user-interface"></a><a name="bkmk_native_mode"></a> Interface utilisateur en mode natif  
  Chaque utilisateur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut surveiller l'état d'un abonnement dans la page **Mes abonnements** ou sous l'onglet **Abonnements** du Gestionnaire de rapports. Les pages d'abonnement présentent des colonnes qui indiquent l'état de l'abonnement et à quel moment l'abonnement a été exécuté pour la dernière fois. Les messages d'état sont mis à jour à chaque traitement planifié de l'abonnement. Si le déclencheur ne se produit jamais (par exemple, si un instantané d'exécution de rapport n'est jamais actualisée ou si une planification n'est jamais exécutée), le message d'état ne sera pas mis à jour.  
   
  Le tableau suivant répertorie les valeurs possibles de la colonne **État** .  
@@ -51,18 +51,17 @@ ms.locfileid: "66100762"
 |Inactif|Apparaît lorsqu'un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cette rubrique.|  
 |Terminé : \<*nombre*> traité(s) sur un total de \<*nombre*> ; \<*nombre*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
 |\<*nombre*> traités|Nombre de notifications que le processeur de planification et de livraison a réussi à remettre ou n'essaie plus de remettre. Lorsqu'une remise pilotée par les données est terminée, le nombre de notifications traitées doit être égal au nombre total de notifications générées.|  
-|\<*nombre*> total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
-|\<Erreur de *nombre*>|Nombre de notifications que le processeur de planification et de livraison n'a pas réussi à remettre ou n'essaie plus de remettre.|  
+|\<*nombre*> au total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
+|\<*nombre*> erreurs|Nombre de notifications que le processeur de planification et de livraison n'a pas réussi à remettre ou n'essaie plus de remettre.|  
 |Échec de l'envoi du message électronique : le transport a échoué dans sa connexion au serveur.|Indique que le serveur de rapports ne s'est pas connecté au serveur de messagerie ; ce message provient de l'extension de remise par messagerie électronique.|  
 |Le fichier \<*nom_fichier*> a été écrit dans \<chemin>.|Indique que la remise à l'emplacement du partage de fichiers a réussi ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |Une erreur inconnue s'est produite lors de l'écriture du fichier.|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |Échec lors de la connexion au dossier de destination, \<chemin>. Assurez-vous que le dossier de destination ou le partage de fichiers existe.|Indique que le dossier que vous avez spécifié n'a pas pu être trouvé ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |Impossible d’écrire le fichier \<nom_fichier> dans \<chemin>. Nouvelle tentative d'écriture en cours.|Indique que le fichier n'a pas pu être mis à jour avec une version plus récente ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |Échec lors de l’écriture dans le fichier \<nom_fichier>: \<message>|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|
-  \<messages d’état personnalisés>|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
+|\<messages d’état personnalisés>|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
   
- Les administrateurs de serveur de rapports peuvent également surveiller les abonnements standard en cours de traitement. Les abonnements pilotés par les données ne peuvent pas être analysés. Pour plus d’informations, consultez [gérer un processus en cours d’exécution](manage-a-running-process.md).  
+ Les administrateurs de serveur de rapports peuvent également surveiller les abonnements standard en cours de traitement. Les abonnements pilotés par les données ne peuvent pas être analysés. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](manage-a-running-process.md).  
   
  En cas d'échec de remise d'un abonnement (par exemple, si le serveur de messagerie est indisponible), l'extension de remise réessaye la remise. Un paramètre de configuration spécifie le nombre de tentatives qui seront effectuées. Par défaut, il n'y en a aucune. Dans certains cas, le rapport peut avoir été traité sans données (par exemple, si la source de données est hors connexion), auquel cas le texte à cet effet est fourni dans le corps du message.  
   
@@ -79,18 +78,18 @@ ms.locfileid: "66100762"
   
  Voici un exemple de message d'erreur de fichier journal de trace lié aux abonnements :  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO : Initialisation de EnableExecutionLogging sur 'True' comme spécifié dans les propriétés du système Server.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO : Initialisation de EnableExecutionLogging sur 'True' comme spécifié dans les propriétés du système Server.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Le fichier journal ne contient aucune information indiquant si le rapport a été ouvert ou si la remise a réussi. Une remise réussie signifie qu'aucune erreur n'a été générée par le processeur de planification et de livraison et que le serveur de rapports s'est connecté au serveur de messagerie. Si le message électronique a entraîné l'envoi d'un message d'erreur de non-remise dans la boîte aux lettres de l'utilisateur, cette information ne figurera pas dans le fichier journal. Pour plus d’informations sur les fichiers journaux, consultez [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint_mode"></a>Mode SharePoint  
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepoint_mode"></a>Mode SharePoint  
  Pour surveiller un abonnement en mode SharePoint : l'état de l'abonnement peut être surveillé à partir de la page **Gérer les abonnements** .  
   
 1.  Accédez à la bibliothèque de documents qui contient le rapport.  
   
-2.  Ouvrez le menu contextuel du rapport (**...**).  
+2.  Ouvrez le menu contextuel du rapport ( **...** ).  
   
-3.  Sélectionnez l’option de menu développé (**...**).  
+3.  Sélectionnez l’option de menu développé ( **...** ).  
   
 4.  Sélectionnez **Gérer les abonnements**  
   
@@ -99,13 +98,13 @@ ms.locfileid: "66100762"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|Date|Procédure|Domaine|Category|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(empty)|**Erreur lors de l’envoi du courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|Date|Process|Domaine|Category|Level|Correlation|Message|  
+|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(empty)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: Boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
-##  <a name="bkmk_use_powershell"></a>Utiliser PowerShell pour surveiller les abonnements  
+##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  
  Pour obtenir des exemples de scripts PowerShell permettant de vérifier l'état des abonnements en mode natif ou SharePoint, voir [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
   
-##  <a name="bkmk_manage_inactive"></a>Gestion des abonnements inactifs  
+##  <a name="managing-inactive-subscriptions"></a><a name="bkmk_manage_inactive"></a>Gestion des abonnements inactifs  
  Lorsqu'un abonnement devient inactif, vous devez soit le supprimer, soit le réactiver en résolvant les conditions sous-jacentes qui empêchent son traitement. Les abonnements peuvent devenir inactifs si certaines conditions empêchant leur traitement se produisent. Ces conditions sont les suivantes :  
   
 -   Suppression ou désinstallation de l'extension de remise spécifiée dans l'abonnement.  

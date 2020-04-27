@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101366"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>Définir un intervalle d'alignement sur une jauge (Générateur de rapports et SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66101366"
   
 3.  Dans la propriété **pointeurs** , cliquez sur le bouton (...). L'Éditeur de collections du pointeur s'ouvre.  
   
-4.  Affectez **** à `True`la propriété SnappingEnabled la valeur.  
+4.  Affectez **SnappingEnabled** à `True`la propriété SnappingEnabled la valeur.  
   
 5.  Définissez **SnappingInterval** sur une valeur qui représente l’intervalle d’alignement. Le pointeur sera aligné sur le multiple rond le plus proche de la valeur que vous avez spécifiée.  
   

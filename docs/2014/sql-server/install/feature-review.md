@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095332"
 ---
 # <a name="feature-review"></a>Vérification des fonctionnalités
@@ -26,11 +26,8 @@ ms.locfileid: "66095332"
   
 |Groupe de composants|Composants et fonctionnalités|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Services|Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est le service central qui permet de stocker, traiter et sécuriser les données. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclut les composants suivants :<br /><br /> Réplication : (Facultatif) La réplication est un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser les bases de données afin de préserver leur cohérence.<br /><br /> Recherche en texte intégral : (facultatif) La recherche en texte intégral fournit les fonctionnalités nécessaires à l'émission de requêtes de texte intégral sur les données caractères en texte brut des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (facultatif) : [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) est une solution de nettoyage des données qui vous permet d'identifier les données incohérentes et incorrectes dans votre source de données et qui offre des solutions automatiques et interactives de nettoyage des données.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut les composants serveur et clients permettant de créer, de gérer et de déployer des rapports tabulaires, de matrice, graphiques et de forme libre. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est également une plateforme évolutive que vous pouvez utiliser pour développer des applications de création de rapports.|  
+| du[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est le service central qui permet de stocker, traiter et sécuriser les données. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclut les composants suivants :<br /><br /> Réplication : (Facultatif) La réplication est un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser les bases de données afin de préserver leur cohérence.<br /><br /> Recherche en texte intégral : (facultatif) La recherche en texte intégral fournit les fonctionnalités nécessaires à l'émission de requêtes de texte intégral sur les données caractères en texte brut des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (facultatif) : [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) est une solution de nettoyage des données qui vous permet d'identifier les données incohérentes et incorrectes dans votre source de données et qui offre des solutions automatiques et interactives de nettoyage des données.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut les composants serveur et clients permettant de créer, de gérer et de déployer des rapports tabulaires, de matrice, graphiques et de forme libre. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est également une plateforme évolutive que vous pouvez utiliser pour développer des applications de création de rapports.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installation de SQL Server 2014 à l'aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  

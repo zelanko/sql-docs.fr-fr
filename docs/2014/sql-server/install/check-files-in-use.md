@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096529"
 ---
 # <a name="check-files-in-use"></a>Vérifier les fichiers en cours d'utilisation
@@ -44,9 +44,9 @@ ms.locfileid: "66096529"
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|Procédure|Affiche le nom complet du processus qui utilise les fichiers à mettre à jour.|  
+|Process|Affiche le nom complet du processus qui utilise les fichiers à mettre à jour.|  
 |Type|Affiche le type de processus.|  
 |Compte|Affiche le compte sous lequel le processus est en cours d'exécution.|  
 |ID du processus|Affiche l'ID de processus.|  

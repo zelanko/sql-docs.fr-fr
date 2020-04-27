@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101270"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Page Sélection d'un dataset partagé (Gestionnaire de rapports)
@@ -45,7 +45,7 @@ ms.locfileid: "66101270"
   
  Cliquez sur le bouton **OK** lorsque vous avez sélectionné un dataset partagé ou cliquez sur **Annuler** pour annuler la recherche d'un dataset partagé.  
   
- **Appliquer**  
+ **appliquer**  
  Enregistrez vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -53,7 +53,7 @@ ms.locfileid: "66101270"
  [Page contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Gérer des datasets partagés](report-data/manage-shared-datasets.md)   
  [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
- [Parties de rapports et datasets dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parties de rapports et datasets dans Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

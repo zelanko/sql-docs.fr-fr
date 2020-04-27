@@ -22,19 +22,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099910"
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d’outils graphiques et de script qui prennent en charge le développement et l’utilisation de rapports enrichis dans un environnement géré. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement managé. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Pour rechercher un outil immédiatement, consultez [Didacticiel : comment localiser et démarrer les outils Reporting Services &#40;SSRS&#41;](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="tools-for-report-authoring"></a>Outils de création de rapports  
- Le tableau suivant répertorie les outils disponibles pour la création de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]rapports dans.  
+ La table suivante répertorie les outils disponibles pour la création de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Outil|Description|Procédure accès|  
 |----------|-----------------|-------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "66099910"
 ## <a name="tools-for-report-server-administration"></a>Outils pour l'administration de Report Server  
  Un ensemble d’outils graphiques et de script sont disponibles pour administrer le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]rapports dans. Les outils à utiliser dépendent du mode de déploiement de votre serveur de rapports.  
   
-### <a name="native-mode"></a>en mode natif  
+### <a name="native-mode"></a>Mode natif  
  La table suivante répertorie les outils disponibles pour administrer le serveur de rapports qui est déployé en mode natif.  
   
 |Outil|Description|Procédure accès|  
@@ -70,8 +70,8 @@ ms.locfileid: "66099910"
   
 |Outil|Description|Procédure accès|  
 |----------|-----------------|-------------------|  
-|URL de service Web de Report Server|Utilisez cet outil pour parcourir le contenu du catalogue de rapport dans une page de navigation d'élément générique.<br /><br /> Pour plus d'informations, consultez [Report Server Web Service](../report-server-web-service/report-server-web-service.md).|Browser|  
-|Gestionnaire de rapports|**(Mode natif uniquement)** Utilisez cet outil pour administrer une instance de serveur de rapports unique à partir d’un emplacement distant via une connexion HTTP. Vous pouvez effectuer les opérations suivantes :<br /><br /> Afficher, rechercher, imprimer et s'abonner à des rapports,<br /><br /> Créer, sécuriser et gérer l'arborescence des dossiers pour organiser les éléments sur le serveur.<br /><br /> configurer la sécurité basée sur les rôles qui définit l'accès aux éléments et aux opérations,<br /><br /> configurer l'historique, les paramètres et les propriétés d'exécution des rapports,<br /><br /> créer des modèles de rapport qui se connectent et récupérer les données d'une source de données Microsoft SQL Server Analysis Services ou d'une source de données relationnelle SQL Server,<br /><br /> définir la sécurité de l'élément de modèle de façon à autoriser l'accès à des entités spécifiques dans le modèle ou mapper des entités à des rapports générés interactifs prédéfinis que vous créez par avance,<br /><br /> créer des planifications partagées et des sources de données partagées pour faciliter la gestion des planifications et des connexions aux sources de données,<br /><br /> créer des abonnements pilotés par les données qui assurent la présentation des rapports à un nombre important de destinataires,<br /><br /> créer des rapports liés pour réutiliser de différentes manières ou adapter à d'autres fins un rapport existant,<br /><br /> Lancer le Générateur de rapports pour créer des rapports que vous pouvez enregistrer et exécuter sur le serveur de rapports.<br /><br /> <br /><br /> Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md).||  
+|URL de service Web de Report Server|Utilisez cet outil pour parcourir le contenu du catalogue de rapport dans une page de navigation d'élément générique.<br /><br /> Pour plus d'informations, consultez [Report Server Web Service](../report-server-web-service/report-server-web-service.md).|Navigateur|  
+|Gestionnaire de rapports|**(Mode natif uniquement)** Utilisez cet outil pour administrer l’instance de serveur de rapports unique d’un emplacement distant par le biais d’une connexion HTTP. Vous pouvez effectuer les opérations suivantes :<br /><br /> Afficher, rechercher, imprimer et s'abonner à des rapports,<br /><br /> Créer, sécuriser et gérer l'arborescence des dossiers pour organiser les éléments sur le serveur.<br /><br /> configurer la sécurité basée sur les rôles qui définit l'accès aux éléments et aux opérations,<br /><br /> configurer l'historique, les paramètres et les propriétés d'exécution des rapports,<br /><br /> créer des modèles de rapport qui se connectent et récupérer les données d'une source de données Microsoft SQL Server Analysis Services ou d'une source de données relationnelle SQL Server,<br /><br /> définir la sécurité de l'élément de modèle de façon à autoriser l'accès à des entités spécifiques dans le modèle ou mapper des entités à des rapports générés interactifs prédéfinis que vous créez par avance,<br /><br /> créer des planifications partagées et des sources de données partagées pour faciliter la gestion des planifications et des connexions aux sources de données,<br /><br /> créer des abonnements pilotés par les données qui assurent la présentation des rapports à un nombre important de destinataires,<br /><br /> créer des rapports liés pour réutiliser de différentes manières ou adapter à d'autres fins un rapport existant,<br /><br /> Lancer le Générateur de rapports pour créer des rapports que vous pouvez enregistrer et exécuter sur le serveur de rapports.<br /><br /> <br /><br /> Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md).||  
 |Utilitaire RS|Cet outil est un hôte de script que vous pouvez utiliser pour réaliser des opérations contenant des scripts. Par son intermédiaire, vous exécutez des scripts [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour publier des rapports, créer des éléments dans une base de données de serveur de rapports, copier des données entre des bases de données de serveurs de rapports, etc.<br /><br /> Pour plus d’informations, consultez [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md).|Invite de commande|  
   
 ## <a name="see-also"></a>Voir aussi  

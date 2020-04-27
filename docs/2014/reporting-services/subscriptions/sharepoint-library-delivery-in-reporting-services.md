@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100694"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Remise à une bibliothèque SharePoint dans Reporting Services
   Un serveur de rapports configuré en mode intégré SharePoint inclut une extension de remise que vous pouvez utiliser pour envoyer un rapport à une bibliothèque SharePoint.  
   
- Pour utiliser l’extension de remise SharePoint, vous devez créer un abonnement dans une page d’application sur un site SharePoint, puis sélectionner **Bibliothèque de documents SharePoint** comme type de remise. Vous ne pouvez pas utiliser l’extension de remise SharePoint pour les abonnements que vous créez dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou gestionnaire de rapports.  
+ Pour utiliser l’extension de remise SharePoint, vous devez créer un abonnement dans une page d’application sur un site SharePoint, puis sélectionner **Bibliothèque de documents SharePoint** comme type de remise. Vous ne pouvez pas utiliser l’extension de remise SharePoint pour des abonnements que vous créez dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le Gestionnaire de rapports.  
   
 > [!NOTE]  
 >  L'extension de remise ne prend pas en charge la remise des rapports à un site SharePoint si le serveur de rapports s'exécute en mode natif. Si vous tentez d'appeler par programme l'extension de remise pour un serveur de rapports en mode natif, le serveur retourne l'erreur `rsDeliveryExtensionNotFound` et enregistre l'erreur `rsOperationNotSupportedSharePointMode` dans les fichiers journaux du serveur de rapports.  
@@ -70,7 +70,7 @@ ms.locfileid: "66100694"
  Nom et extension de fichier  
  Spécifiez le nom et l'extension de fichier du rapport tel que vous souhaitez qu'ils apparaissent dans la bibliothèque cible. Si vous ne spécifiez d'extension de fichier, le serveur de rapports va en créer une basée sur le format de sortie du rapport. Cette valeur est requise. Le nom de fichier ne doit pas inclure les caractères suivants : : \ / * ? « \< > | # { } %  
   
- Intitulé  
+ Titre  
  Spécifie une propriété `Title` facultative pour le rapport dans la bibliothèque cible. Il s'agit d'une propriété standard pour tous les éléments stockés dans une bibliothèque. Les utilisateurs peuvent choisir de montrer ou de masquer cette propriété lorsqu'ils consultent le contenu de la bibliothèque sur un site SharePoint.  
   
  Path  
@@ -85,8 +85,8 @@ ms.locfileid: "66100694"
  Si vous utilisez cette fonctionnalité pour copier automatiquement la dernière version d’un fichier dans plusieurs emplacements, le fichier est copié si l’option **Remplacer** est activée. Si vous avez utilisé **AutoIncrement** ou **None**, la remise échoue et l' `rsDeliveryError` erreur se produit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer des abonnements pour les serveurs de rapports en mode SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

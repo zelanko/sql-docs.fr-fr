@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102314"
 ---
 # <a name="schedules-page-report-manager"></a>Page Planifications (Gestionnaire de rapports)
@@ -46,13 +46,13 @@ ms.locfileid: "66102314"
  **Suspendre**  
  Cliquez pour arrêter l'exécution d'une planification partagée de façon temporaire. La suspension d'une planification empêche l'exécution des abonnements et des autres processus planifiés.  
   
- **Reprendre**  
+ **Sort**  
  Cliquez pour reprendre une planification partagée. Les processus dont l'exécution était planifiée pendant la suspension de la planification ne sont pas exécutés.  
   
  **Planification**  
  Affiche les planifications partagées actuellement définies. Cliquez sur une planification partagée pour afficher ou modifier les informations de fréquence.  
   
- **Dernier**  
+ **Créateur**  
  Affiche le nom de l'utilisateur qui a créé la planification partagée.  
   
  **Dernière exécution, Prochaine exécution**  

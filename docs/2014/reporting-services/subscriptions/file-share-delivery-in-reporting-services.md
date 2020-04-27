@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100906"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
@@ -27,7 +27,7 @@ ms.locfileid: "66100906"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint|  
   
  Dans cette rubrique :  
   
@@ -35,14 +35,14 @@ ms.locfileid: "66100906"
   
 -   [Dossiers cibles](#bkmk_target_folders)  
   
--   [Formats de fichiers](#bkmk_file_formats)  
+-   [Formats de fichier](#bkmk_file_formats)  
   
 -   [Options de fichier](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a>Caractéristiques d’un rapport qui est remis à un dossier partagé  
+##  <a name="characteristics-of-a-report-that-is-delivered-to-a-shared-folder"></a><a name="bkmk_Characteristics"></a>Caractéristiques d’un rapport qui est remis à un dossier partagé  
  Contrairement aux rapports qui sont hébergés et gérés par un serveur de rapports, les rapports qui sont remis dans un dossier partagé sont des fichiers statiques. Les fonctionnalités interactives qui sont définies pour le rapport ne fonctionnent pas pour les rapports qui sont stockés en tant que fichiers dans le système de fichiers. Les fonctionnalités d'interaction sont représentées comme des éléments statiques. Par exemple, si vous remettez un rapport de matrice, le fichier généré offre une vue de niveau supérieur du rapport ; vous ne pouvez pas étendre les lignes et les colonnes pour afficher les données associées. Si le rapport contient des graphiques, la présentation par défaut est utilisée. Si le rapport contient un lien vers un autre rapport, le lien apparaît sous forme de texte statique. Si vous voulez conserver les fonctionnalités interactives dans un rapport remis, utilisez la remise par courrier électronique à la place. Pour plus d’informations, consultez [Remise par courrier électronique dans Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a>Dossiers cibles  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a>Dossiers cibles  
  Lorsque vous définissez un abonnement qui utilise la remise dans un partage de fichiers, vous devez spécifier un dossier existant comme dossier cible. Le serveur de rapports ne crée pas de dossiers sur le système de fichiers. Le dossier que vous spécifiez doit être accessible via une connexion réseau.  
   
  Vérifiez que les utilisateurs qui afficheront les rapports dans le dossier partagé ont une autorisation Lecture.  
@@ -55,12 +55,12 @@ ms.locfileid: "66100906"
   
  Lorsque vous créez le dossier, tenez compte des limites de connexion requises. Le serveur de rapports nécessite deux connexions, mais vous devez inclure suffisamment de connexions pour la prise en charge des utilisateurs complémentaires qui veulent ouvrir des rapports sur le dossier partagé.  
   
-##  <a name="bkmk_file_formats"></a>Formats de fichiers  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formats de fichier  
  Les rapports peuvent être rendus dans plusieurs formats de fichier, tels que HTML ou Excel. Pour enregistrer le rapport dans un format de fichier spécifique, sélectionnez le format de rendu au moment de la création de l'abonnement. Par exemple, en choisissant **Excel** , vous enregistrez le rapport sous la forme d'un fichier [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Bien que vous puissiez choisir n'importe quel format de rendu pris en charge, certains formats sont mieux adaptés que d'autres.  
   
  Pour la remise par partage de fichiers, choisissez un format qui assure la remise du rapport dans un seul fichier, où toutes les images et le contenu associé sont inclus dans le rapport. Les formats appropriés sont les suivants : archive Web, PDF, TIFF et Excel. Évitez le format HTML 4.0. Si votre rapport comporte des images, le format HTML 4.0 ne permettra pas de les inclure dans le fichier.  
   
-##  <a name="bkmk_file_options"></a>Options de fichier  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Options de fichier  
  Lorsque vous créez un abonnement, vous pouvez choisir les options qui déterminent comment le nom de fichier est créé et s'il est remplacé par des versions plus récentes dans le temps. Un nom de fichier complet comprend trois parties : un nom, une extension et du texte ou un nombre ajouté au fichier pour créer un nom de fichier unique. Les options de remplacement déterminent si le texte ou le nombre est ajouté au nom de fichier.  
   
  Le nom de fichier est basé sur le nom du rapport, mais vous pouvez indiquer un nom personnalisé dans l'abonnement. L'extension est facultative, mais si vous la spécifiez, le serveur de rapports créera une extension qui correspond au format de rendu.  

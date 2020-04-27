@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099046"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
@@ -26,8 +26,8 @@ ms.locfileid: "66099046"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>Ce que vous allez apprendre  
- Ce didacticiel vous apprendra à effectuer les opérations suivantes :  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Ce que vous allez apprendre  
+ Dans ce didacticiel, vous apprendrez à :  
   
 1.  [Créer un graphique à secteurs à partir de l'Assistant Graphique](#Chart)  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66099046"
   
  Durée estimée pour effectuer le didacticiel : 10 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. créer un graphique à secteurs à partir de l’Assistant graphique  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. créer un graphique à secteurs à partir de l’Assistant graphique  
  Dans la boîte de dialogue Mise en route, utilisez l'Assistant Graphique pour créer un dataset incorporé, choisissez une source de données partagée et créez un graphique à secteurs.  
   
 > [!NOTE]  
@@ -64,20 +64,20 @@ ms.locfileid: "66099046"
      La boîte de dialogue Mise en route s'affiche.  
   
     > [!NOTE]  
-    >  Si la boîte de dialogue Mise en route ne s'affiche pas, à partir du bouton Générateur de rapports, cliquez sur **Nouveau**.  
+    >   Si la boîte de dialogue Mise en route ne s'affiche pas, à partir du bouton Générateur de rapports, cliquez sur **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**.  
   
-4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**, puis sur **Suivant**.  
+4.  Dans la page **choisir un DataSet** , cliquez sur **créer un DataSet**, puis cliquez sur **suivant**.  
   
 5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
     > [!NOTE]  
     >  La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
+6.  Sur la page **créer une requête** , cliquez sur **modifier en tant que texte**.  
   
 7.  Collez la requête suivante dans le volet de requête :  
   
@@ -92,11 +92,11 @@ ms.locfileid: "66099046"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
+8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
 9. Cliquez sur **Suivant**.  
   
-##  <a name="ChartType"></a>2. choisir le type de graphique  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. choisir le type de graphique  
  Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
   
 #### <a name="to-add-a-pie-chart"></a>Pour ajouter un graphique à secteurs  
@@ -123,7 +123,7 @@ ms.locfileid: "66099046"
   
  Le rapport affiche le graphique à secteurs avec huit secteurs, un pour chaque produit. La taille de chaque secteur représente les ventes de ce produit. Trois des secteurs sont assez fins.  
   
-##  <a name="Percentages"></a>3. afficher les pourcentages dans chaque secteur  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. afficher les pourcentages dans chaque secteur  
  Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secteur par rapport à l'ensemble.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>Pour afficher des pourcentages dans chaque secteur du graphique à secteurs  
@@ -149,7 +149,7 @@ ms.locfileid: "66099046"
   
  Le rapport affiche le pourcentage de chaque secteur par rapport à l'ensemble.  
   
-##  <a name="CombineSlices"></a>4. combiner les petits secteurs en un seul secteur  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. combiner les petits secteurs en un seul secteur  
  Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combiner plusieurs petits secteurs en un secteur plus grand qui représente l'ensemble de ces secteurs.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>Pour regrouper dans un même secteur les secteurs du graphique représentant moins de 5 pour cent  
@@ -172,7 +172,7 @@ ms.locfileid: "66099046"
   
  Dans la légende, la catégorie « Autre » est désormais présente. Le nouveau secteur regroupe tous les secteurs de moins de 5 % dans un seul secteur qui représente 6 % de l'ensemble.  
   
-##  <a name="DrawingEffect"></a>5. personnaliser l’effet de dessin  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. personnaliser l’effet de dessin  
  Dans l'Assistant Graphique, le style par défaut d'un graphique à secteurs est Océan, qui représente un effet de dessin concave. Vous pouvez le changer après avoir exécuté l'Assistant.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>Pour ajouter un effet de dessin au graphique à secteurs  
@@ -196,7 +196,7 @@ ms.locfileid: "66099046"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. Ajouter un titre de rapport  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. Ajouter un titre de rapport  
   
 #### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
   
@@ -218,17 +218,17 @@ ms.locfileid: "66099046"
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Save"></a>7. enregistrer le rapport  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. enregistrer le rapport  
   
 #### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   
 1.  Basculez en mode création de rapport.  
   
-2.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**.  
+2.  À partir du bouton Générateur de rapports , cliquez sur **Enregistrer sous**.  
   
 3.  Dans **Nom**, tapez **Graphique à secteurs des ventes**.  
   
-4.  Cliquez sur **Enregistrer**.  
+4.  Cliquez sur **Save**.  
   
  Votre rapport est enregistré sur le serveur de rapports.  
   

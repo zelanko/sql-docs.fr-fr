@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098406"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>Méthode GetDatabaseVersionDisplayName (WMI)
@@ -39,26 +39,20 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *DisplayName*  
  [out] Chaîne qui contient le nom complet correspondant à la version fournie.  
   
- *SIGNÉ*  
+ *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
   
 ## <a name="remarks"></a>Notes  
  Le tableau suivant indique la correspondance entre la version de la base de données et la chaîne d'affichage.  
   
-|**Libérer**|`Version`|**Nom complet**|  
+|**Version release**|`Version`|**Nom complet**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|
-  @DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
-|RS 2005 SP1|
-  @DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
-|RS 2005 RTM|
-  @DBVersion = 'C.0.8.40'|SQL Server 2005|  
-|RS 2000 SP2|
-  @DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
-|RS 2000 SP1|
-  @DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
-|RS 2000 RTM|
-  @DBVersion = 'C.0.6.43'|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |Correctif logiciel||Version applicable la plus proche|  
   
  Pour une *Version* antérieure à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000, le paramètre HRESULT ACT_E_BAD_VERSION est retourné.  
@@ -67,7 +61,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="requirements"></a>Spécifications  
- **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

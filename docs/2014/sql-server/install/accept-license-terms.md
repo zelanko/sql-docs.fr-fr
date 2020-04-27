@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096838"
 ---
 # <a name="accept-license-terms"></a>Accepter les termes du contrat de licence
@@ -27,9 +27,8 @@ ms.locfileid: "66096838"
   
  Vous pouvez imprimer le contrat de licence ou le copier dans le Presse-papiers. Pour continuer, acceptez le contrat de licence, puis cliquez sur **Suivant**. Pour quitter l’installation, cliquez sur **Annuler**.  
   
-## <a name="customer-experience-improvement-program-ceip"></a>Programme d’amélioration du produit (CEIP)  
- Si vous activez la création de rapports CEIP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour envoyer régulièrement un rapport à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports incluent des informations sur votre configuration matérielle et sur la façon dont vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les composants. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise les données sur l'utilisation des fonctionnalités pour améliorer les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les composants suivants font partie des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analysés :  
+## <a name="customer-experience-improvement-program-ceip"></a>Customer Experience Improvement Program (CEIP)  
+ Si vous activez la création de rapports CEIP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour envoyer régulièrement un rapport à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports incluent des informations sur votre configuration matérielle et sur la façon dont vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les composants. [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise les données sur l'utilisation des fonctionnalités pour améliorer les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les composants suivants font partie des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analysés :  
   
 -   Le [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66096838"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Comptabilisation  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programme d'installation  
   
  Les informations sur l'utilisation des fonctionnalités sont envoyées à [!INCLUDE[msCoName](../../includes/msconame-md.md)], puis stockées avec un accès limité.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66096838"
   
 -   Le [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -78,8 +77,7 @@ ms.locfileid: "66096838"
   
 -   Réplication  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise les rapports d'erreurs pour améliorer le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces informations sont traitées en toute confidentialité.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise les rapports d'erreurs pour améliorer le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces informations sont traitées en toute confidentialité.  
   
  Des informations sur les erreurs sont envoyées à [!INCLUDE[msCoName](../../includes/msconame-md.md)]par le biais d'une connexion sécurisée (https) et elles sont stockées avec un accès limité. Des rapports d'erreurs peuvent également être envoyés sur votre propre serveur de rapports d'erreurs d'entreprise.  
   
@@ -95,8 +93,7 @@ ms.locfileid: "66096838"
   
 -   des informations provenant de la mémoire ou des fichiers du processus à l'origine de l'erreur.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne regroupe pas de manière intentionnelle vos fichiers, nom, adresse, adresse électronique ou tout autre forme d'informations personnelles. Le rapport d'erreurs peut toutefois contenir des informations personnelles qui proviennent de la mémoire ou des fichiers du processus à l'origine de l'erreur. Bien que ces informations permettent à priori de déterminer votre identité, [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne les exploite pas à cette fin.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne regroupe pas de manière intentionnelle vos fichiers, nom, adresse, adresse électronique ou tout autre forme d'informations personnelles. Le rapport d'erreurs peut toutefois contenir des informations personnelles qui proviennent de la mémoire ou des fichiers du processus à l'origine de l'erreur. Bien que ces informations permettent à priori de déterminer votre identité, [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne les exploite pas à cette fin.  
   
  Pour plus d’informations sur la politique de confidentialité et la procédure de collecte de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez la [déclaration de confidentialité de Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   

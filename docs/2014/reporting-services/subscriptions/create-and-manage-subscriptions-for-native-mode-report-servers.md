@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100991"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Créer, modifier et supprimer les abonnements standard (Reporting Services en mode natif)
@@ -26,7 +26,7 @@ ms.locfileid: "66100991"
  Un utilisateur qui crée un abonnement en est le propriétaire. Chaque utilisateur peut modifier ou supprimer les abonnements qu'il possède.  
   
 > [!NOTE]  
->  Depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez transférer par programme la propriété d'un abonnement. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  Depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez transférer par programme la propriété d'un abonnement. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d'informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  Suivant les paramètres du fichier de configuration **RSReportServer.config** , les utilisateurs ont la possibilité d'ajouter des utilisateurs supplémentaires à un abonnement. Un responsable peut ainsi ajouter les adresses de messagerie de ses subordonnés directs pour qu'ils reçoivent une copie du rapport. La prise en charge de ceci varie selon que le champ À : est visible ou non lors de la définition d'abonnements individuels. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100991"
   
 -   [Pour supprimer un abonnement](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a>Pour créer un abonnement  
+##  <a name="to-create-a-subscription"></a><a name="bkmk_create_subscription"></a>Pour créer un abonnement  
  Pour créer un abonnement, choisissez l'outil et l'approche appropriés au déploiement de votre serveur de rapports :  
   
 -   Le contenu de cette rubrique explique comment créer des abonnements sur un serveur de rapports en mode natif à l'aide du Gestionnaire de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Après avoir défini un abonnement, vous avez la possibilité d'y accéder dans le Gestionnaire de rapports via la page Mes abonnements ou l'onglet **Abonnements** d'un rapport spécifique.  
@@ -61,7 +61,7 @@ ms.locfileid: "66100991"
   
  Cette rubrique n'explique pas comment créer un abonnement piloté par les données. Pour obtenir des instructions sur la création d’un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) ou recherchez la page d’informations relatives à la création d’un abonnement piloté par les données dans l’aide en ligne du Gestionnaire de rapports.  
   
-###  <a name="bkmk_create_fileshare_subscription"></a>Pour créer un abonnement de partage de fichiers  
+###  <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a>Pour créer un abonnement de partage de fichiers  
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100991"
   
 8.  Dans Format du rendu, sélectionnez un format de sortie du rapport pour la remise de fichier. Choisissez un format qui correspond à l'application bureautique qui sera utilisée pour ouvrir le rapport. Évitez les formats qui n'effectuent pas le rendu d'un rapport en un seul flux ou qui introduisent une interactivité non prise en charge dans un fichier statique (par exemple le format HTML 4.0).  
   
-9. Dans les zones de texte **nom d’utilisateur** et **mot de passe** , spécifiez les informations d’identification requises pour accéder au partage de fichiers, en utilisant le format * \<domaine>* \\ * \<nom d’utilisateur>* pour le nom d’utilisateur.  
+9. Dans les zones de texte **Nom d’utilisateur** et **Mot de passe**, indiquez les informations d’identification nécessaires pour accéder au partage de fichiers en respectant le format *\<domaine>* \\ *\<nom_utilisateur>* pour le nom d’utilisateur.  
   
 10. Spécifiez les options de remplacement. En activant l'option **Ne pas remplacer le fichier si une version précédente existe**, vous empêchez la remise d'avoir lieu si un fichier existant est détecté. Si vous cliquez sur **Incrémenter les noms des fichiers au fur et à mesure que des versions plus récentes sont ajoutées**, le serveur de rapports ajoute un numéro au nom du fichier pour le distinguer des fichiers existants qui portent le même nom.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100991"
   
  Le rapport est remis sous forme de fichier statique. Si le rapport comprend des fonctionnalités interactives (par exemple des liens vers des lignes et colonnes supplémentaires), ces fonctionnalités ne sont pas disponibles.  
   
-###  <a name="bkmk_create_email_subscription"></a>Pour créer un abonnement par courrier électronique  
+###  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a>Pour créer un abonnement par courrier électronique  
   
 1.  Dans le Gestionnaire de rapports, dans la page **Contenu** , naviguez jusqu'au rapport auquel vous voulez vous abonner. Cliquez sur le rapport pour l'ouvrir.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66100991"
   
 9. Pour les rapports paramétrables, spécifiez les paramètres à utiliser pour le rapport correspondant à cet abonnement. Les paramètres spécifiés peuvent différer de ceux utilisés pour exécuter le rapport à la demande ou de ceux mis en œuvre dans les autres opérations planifiées.  
   
-##  <a name="bkmk_modify_subscription"></a>Pour modifier un abonnement  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a>Pour modifier un abonnement  
  Vous pouvez modifier un abonnement à tout moment. Lorsque vous modifiez un abonnement lors de son traitement, les paramètres mis à jour sont utilisés s'ils sont enregistrés dans la base de données du serveur de rapports avant que l'extension de remise ne reçoive les données d'abonnement. Dans le cas contraire, les paramètres existants sont utilisés.  
   
  Pour localiser un abonnement, utilisez la page **Mes abonnements** ou affichez les définitions d'abonnement associées à un rapport. Vous ne pouvez pas rechercher directement les abonnements, pas plus que vous ne pouvez rechercher un abonnement par nom de propriétaire, informations de déclencheur, informations d'état, etc.  
@@ -151,7 +151,7 @@ ms.locfileid: "66100991"
 > [!NOTE]  
 >  Un administrateur de serveur de rapports ne peut pas centraliser la gestion de tous les abonnements individuels en cours d'utilisation sur un serveur de rapports donné. Il peut toutefois accéder à chaque abonnement pour le modifier ou le supprimer.  
   
-##  <a name="bkmk_delete_subscription"></a>Pour supprimer un abonnement  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a>Pour supprimer un abonnement  
  Pour supprimer un abonnement  
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md).  
@@ -172,7 +172,7 @@ ms.locfileid: "66100991"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../security/tasks-and-permissions.md)   
- [Créer et gérer des abonnements pour les serveurs de rapports en mode SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   

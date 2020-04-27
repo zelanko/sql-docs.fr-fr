@@ -11,23 +11,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfb62ec0bbd16a2b77e2f05f64d36ef31498a100
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095898"
 ---
 # <a name="database-engine-configuration---data-directories"></a>Configuration du moteur de base de données – Répertoires de données
-  Cette page vous permet de spécifier l’emplacement d’installation pour les fichiers programme et les fichiers de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Selon le type d'installation, le stockage pris en charge peut inclure un disque local, un stockage partagé ou un serveur de fichiers SMB.  
+  Cette page vous permet de spécifier l’emplacement d’installation pour les fichiers programme et les fichiers de données de [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Selon le type d'installation, le stockage pris en charge peut inclure un disque local, un stockage partagé ou un serveur de fichiers SMB.  
   
  Pour spécifier un partage de fichiers SMB comme répertoire, vous devez taper manuellement le chemin d'accès UNC pris en charge. La navigation vers un partage de fichiers SMB n'est pas prise en charge. Vous trouverez ci-dessous un format de chemin UNC pris en charge d’un partage de fichiers SMB : \\\NomServeur\NomPartage\\….  
   
-## <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="stand-alone-instance-of-ssnoversion"></a>Instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont configurables par l'utilisateur pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
   
-|Description|Type de stockage pris en charge|Annuaire par défaut|Recommandations|  
+|Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Répertoire de données racine|Disque local, serveur de fichiers SMB, stockage partagé <sup>1</sup>|C:\Program\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Files\| Setup configure les listes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de contrôle d’accès pour les répertoires et interrompt l’héritage dans le cadre de la configuration.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Répertoire de base de données utilisateur|Disque local, serveur de fichiers SMB, stockage partagé <sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceId> \MSSQL\DATA|Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.|  
@@ -38,13 +38,12 @@ ms.locfileid: "66095898"
   
  <sup>1</sup> bien que les disques partagés soient pris en charge, il n’est pas recommandé pour une instance autonome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
-## <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="failover-cluster-instance-of-ssnoversion"></a>Instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont configurables par l'utilisateur pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Répertoire de données racine|Stockage partagé, serveur de fichiers SMB|
-  \<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le programme d’installation configure les ACL pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] répertoires et interrompt l’héritage dans le cadre de la configuration.|  
+|Répertoire de données racine|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d’accès pour les répertoires de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et met fin à l’héritage dans le cadre de la configuration.|  
 |Répertoire de base de données utilisateur|Stockage partagé, serveur de fichiers SMB|\<Lecteur : >Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceId> \MSSQL\DATA<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.|  
 |Répertoire du journal de la base de données utilisateur|Stockage partagé, serveur de fichiers SMB|\<Lecteur : > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceId> \MSSQL\DATA<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Assurez-vous que le répertoire du journal a un espace adéquat.|  
 |Répertoire Temp de base de données|Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur : > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. \<InstanceId> \MSSQL\DATA<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Assurez-vous que le répertoire spécifié est valide pour tous les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en ligne.|  
@@ -80,6 +79,6 @@ ms.locfileid: "66095898"
   
 ## <a name="see-also"></a>Voir aussi  
  [Emplacements des fichiers pour les instances par défaut et nommées de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [Partager des autorisations NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Autorisations de partage et NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkID=206571)  
   
   
