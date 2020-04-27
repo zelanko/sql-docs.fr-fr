@@ -17,10 +17,10 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918940"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset, événement (ADO)
@@ -37,14 +37,14 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *fMoreData*  
  Valeur **VARIANT_BOOL** qui, si elle est définie sur VARIANT_TRUE, indique que des lignes supplémentaires ont été ajoutées au **Recordset**.  
   
- *Statu*  
+ *adStatus*  
  Valeur d’état [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
  Lorsque **EndOfRecordset** est appelé, ce paramètre a la valeur **adStatusOK** si l’opération à l’origine de l’événement a réussi. Elle a la valeur **adStatusCantDeny** si cet événement ne peut pas demander l’annulation de l’opération qui a provoqué cet événement.  
   
  Avant le retour de **EndOfRecordset** , définissez ce paramètre sur **adStatusUnwantedEvent** pour empêcher les notifications suivantes.  
   
- *jeu d’enregistrements*  
+ *pRecordset*  
  Objet **Recordset** . **Jeu d’enregistrements** pour lequel cet événement s’est produit.  
   
 ## <a name="remarks"></a>Notes  

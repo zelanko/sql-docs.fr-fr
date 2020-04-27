@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918075"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord, méthode (ADO)
@@ -35,22 +35,22 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- facultatif. Valeur de **chaîne** qui contient une URL identifiant l' **enregistrement** à déplacer. Si la *source* est omise ou qu’elle spécifie une chaîne vide, l’objet représenté par cet **enregistrement** est déplacé. Par exemple, si l' **enregistrement** représente un fichier, le contenu du fichier est déplacé vers l’emplacement spécifié par *destination*.  
+ Facultatif. Valeur de **chaîne** qui contient une URL identifiant l' **enregistrement** à déplacer. Si la *source* est omise ou qu’elle spécifie une chaîne vide, l’objet représenté par cet **enregistrement** est déplacé. Par exemple, si l' **enregistrement** représente un fichier, le contenu du fichier est déplacé vers l’emplacement spécifié par *destination*.  
   
  *Destination*  
- facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’emplacement où la *source* sera déplacée.  
+ Facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’emplacement où la *source* sera déplacée.  
   
  *Nom d’utilisateur*  
- facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, le cas échéant, autorise l’accès à la *destination*.  
+ Facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, le cas échéant, autorise l’accès à la *destination*.  
   
  *Mot de passe*  
- facultatif. **Chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
+ Facultatif. **Chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
   
  *Options*  
- facultatif. Valeur [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
+ Facultatif. Valeur [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
   
- *Suppr*  
- facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que cette opération doit être asynchrone.  
+ *Async*  
+ Facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que cette opération doit être asynchrone.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Valeur de **chaîne**. En règle générale, la valeur de *destination* est retournée. Toutefois, la valeur exacte retournée est dépendante du fournisseur.  

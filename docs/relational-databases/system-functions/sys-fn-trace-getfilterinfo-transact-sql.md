@@ -21,10 +21,10 @@ ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059248"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
@@ -54,10 +54,10 @@ fn_trace_getfilterinfo ( trace_id )
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**ColumnID**|**int**|ID de la colonne sur laquelle le filtre est appliqué.|  
+|**columnid**|**int**|ID de la colonne sur laquelle le filtre est appliqué.|  
 |**logical_operator**|**int**|Indique si l'opérateur AND ou OR est appliqué.|  
 |**comparison_operator**|**int**|Spécifie le type de comparaison effectué :<br /><br /> 0 = Égal<br /><br /> 1 = Différent de<br /><br /> 2 = Supérieur à<br /><br /> 3 = Inférieur à<br /><br /> 4 = Supérieur ou égal à<br /><br /> 5 = Inférieur ou égal à<br /><br /> 6 = Identique<br /><br /> 7 = Non identique|  
-|**ajoutée**|**sql_variant**|Indique la valeur sur laquelle le filtre est appliqué.|  
+|**value**|**sql_variant**|Indique la valeur sur laquelle le filtre est appliqué.|  
   
 ## <a name="remarks"></a>Notes  
  L’utilisateur définit *trace_id* valeur pour identifier, modifier et contrôler la trace. Lorsqu’il reçoit l’ID d’une trace spécifique, **fn_trace_getfilterinfo** retourne des informations sur n’importe quel filtre de cette trace. Si la trace spécifiée n'a pas de filtre, cette fonction retourne un ensemble de lignes vide. Lorsqu'un identificateur non valide lui est passé, cette fonction renvoie un ensemble de lignes vide. Pour obtenir des informations similaires sur les traces, consultez [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
@@ -75,14 +75,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [Créer une trace &#40;&#41;Transact-SQL](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sys. fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046516"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  Valeur LSN. *lsn_value* est **de type binaire (10)**.  
   
 ## <a name="return-type"></a>Type de retour  
- **binaire (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Notes  
  Le numéro séquentiel dans le journal retourné par la fonction est toujours inférieur à la valeur spécifiée, et aucune valeur LSN n'existe entre les deux valeurs.  

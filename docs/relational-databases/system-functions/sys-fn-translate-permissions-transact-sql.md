@@ -22,10 +22,10 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68055373"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
@@ -50,7 +50,7 @@ sys.fn_translate_permissions ( level , perms )
  Masque de bits retourné dans la colonne d'autorisations. *perms* est **de type varbinary (16)**.  
   
 ## <a name="returns"></a>Retours  
- **Tableau**  
+ **table**  
   
 ## <a name="remarks"></a>Notes  
  La valeur retournée dans la colonne **permissions** d’une trace SQL est une représentation d’entier d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un masque de réutilisation utilisé par pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **sys. fn_translate_permissions** convertit ce masque de masque en une table de noms d’autorisations.  

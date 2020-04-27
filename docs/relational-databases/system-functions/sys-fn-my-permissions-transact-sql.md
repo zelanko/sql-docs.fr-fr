@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122631"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -43,7 +43,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>Arguments  
  *élément sécurisable*  
- Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur ou une base de données, cette valeur doit être définie sur NULL. l’élément *sécurisable* est une expression scalaire de type **sysname**. l’élément *sécurisable* peut être un nom en plusieurs parties.  
+ Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur ou une base de données, cette valeur doit être définie sur NULL. *securable* est une expression scalaire de type **sysname**. l’élément *sécurisable* peut être un nom en plusieurs parties.  
   
  '*securable_class*'  
  Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est de **type sysname**. *securable_class* doit correspondre à l’un des éléments suivants : rôle d’application, assembly, clé asymétrique, certificat, contrat, base de données, point de terminaison, catalogue de texte intégral, connexion, type de message, objet, liaison de service distant, rôle, itinéraire, schéma, serveur, service, clé symétrique, type, utilisateur, collection de schémas XML.  
@@ -160,11 +160,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Fonctions de sécurité &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
  [Autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Éléments sécurisables](../../relational-databases/security/securables.md)   
  [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [sys. fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   

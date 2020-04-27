@@ -17,10 +17,10 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919084"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord, méthode (ADO)
@@ -35,10 +35,10 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- facultatif. Valeur de **chaîne** qui contient une URL identifiant l’entité (par exemple, le fichier ou le répertoire) à supprimer. Si la *source* est omise ou qu’elle spécifie une chaîne vide, l’entité représentée par l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) en cours est supprimée. Si l’enregistrement est un enregistrement de collection ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, tel qu’un répertoire), tous les enfants (par exemple, les sous-répertoires) sont également supprimés.  
+ Facultatif. Valeur de **chaîne** qui contient une URL identifiant l’entité (par exemple, le fichier ou le répertoire) à supprimer. Si la *source* est omise ou qu’elle spécifie une chaîne vide, l’entité représentée par l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) en cours est supprimée. Si l’enregistrement est un enregistrement de collection ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, tel qu’un répertoire), tous les enfants (par exemple, les sous-répertoires) sont également supprimés.  
   
- *Suppr*  
- facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que l’opération de suppression est asynchrone.  
+ *Async*  
+ Facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que l’opération de suppression est asynchrone.  
   
 ## <a name="remarks"></a>Notes  
  Les opérations sur l’objet représenté par cet **enregistrement** peuvent échouer après la fin de cette méthode. Après l’appel de **DeleteRecord**, l' **enregistrement** doit être fermé, car le comportement de l' **enregistrement** peut devenir imprévisible, en fonction du moment où le fournisseur met à jour l' **enregistrement** avec la source de données.  

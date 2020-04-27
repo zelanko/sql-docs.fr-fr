@@ -16,17 +16,17 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919219"
 ---
 # <a name="datamember-property"></a>DataMember, propriété
 Indique le nom du membre de données qui sera récupéré à partir du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) référencé par la propriété [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne une valeur de **chaîne** . Le nom ne respecte pas la casse.  
+ Définit ou retourne une valeur de **chaîne** . Ce nom ne respecte pas la casse.  
   
 ## <a name="remarks"></a>Notes  
  Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (membres de données) qui seront représentés sous la forme d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  

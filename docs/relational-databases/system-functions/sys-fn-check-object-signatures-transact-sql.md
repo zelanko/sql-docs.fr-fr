@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046311"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@la *classe* est de **type sysname**.  
+ \@*class* est **sysname**.  
   
  { \@ *empreinte numérique* }  
  Hachage SHA-1 du certificat avec lequel la clé est chiffrée ou GUID de la clé asymétrique avec laquelle la clé est chiffrée. \@l' *empreinte numérique* est **varbinary (20)**.  
@@ -62,7 +62,7 @@ fn_ check_object_signatures (
   
 |Colonne|Type|Description|  
 |------------|----------|-----------------|  
-|type|**nvarchar (120)**|Retourne une description de type ou un assembly.|  
+|type|**nvarchar(120)**|Retourne une description de type ou un assembly.|  
 |entity_id|**int**|Retourne l'ID de l'objet en cours d'évaluation.|  
 |is_signed|**int**|Retourne la valeur 0 lorsque l'objet n'est pas signé par l'empreinte numérique fournie. Retourne la valeur 1 lorsque l'objet est signé par l'empreinte numérique fournie.|  
 |is_signature_valid|**int**|Lorsque is_signed a la valeur 1, retourne la valeur 0 lorsque la signature n'est pas valide. Retourne la valeur 1 lorsque la signature est valide.<br /><br /> Lorsque is_signed a la valeur 0, retourne toujours la valeur 0.|  

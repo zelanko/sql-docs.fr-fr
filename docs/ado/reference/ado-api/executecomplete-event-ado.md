@@ -17,10 +17,10 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918783"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete, événement (ADO)
@@ -40,7 +40,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pError*  
  Objet d' [erreur](../../../ado/reference/ado-api/error-object.md) . Il décrit l’erreur qui s’est produite si la valeur de **adStatus** est **adStatusErrorsOccurred**; dans le cas contraire, il n’est pas défini.  
   
- *Statu*  
+ *adStatus*  
  Valeur d’état [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Lorsque cet événement est appelé, ce paramètre a la valeur **adStatusOK** si l’opération à l’origine de l’événement s’est déroulée correctement ou **adStatusErrorsOccurred** si l’opération a échoué.  
   
  Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour empêcher les notifications suivantes.  
@@ -48,7 +48,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pCommand*  
  Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) qui a été exécuté. Contient un objet **Command** même si vous **appelez connection. Execute** ou **Recordset. Open** sans créer explicitement une **commande**, auquel cas l’objet **Command** est créé en interne par ADO.  
   
- *jeu d’enregistrements*  
+ *pRecordset*  
  Objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui est le résultat de la commande exécutée. Ce **jeu d’enregistrements** peut être vide. Vous ne devez jamais détruire cet objet Recordset dans ce gestionnaire d’événements. Cela entraînera une violation d’accès lorsque ADO tente d’accéder à un objet qui n’existe plus.  
   
  *pConnection*  

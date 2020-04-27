@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 021e9e66b281a8bbca6d5c9e21e78ffa4069c5c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950796"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67950796"
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nom de la table.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nom de la colonne.|  
-|**ORDINAL_POSITION**|**int**|Numéro d’identification de la colonne.|  
+|**ORDINAL_POSITION**|**int**|Numéro d'identification de colonne.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|Valeur NULL possible dans la colonne. Si cette colonne accepte des valeurs NULL, elle renvoie YES. Dans le cas contraire, elle renvoie NO.|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Type de données fourni par le système.|  

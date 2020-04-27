@@ -16,16 +16,16 @@ ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919446"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Spécifie si une boîte de dialogue doit être affichée pour demander des paramètres manquants lors de l’ouverture d’une connexion à une source de données.  
   
-|Constant|Valeur|Description|  
+|Constant|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Les invites s’affichent toujours.|  
 |**adPromptComplete**|2|Demande si des informations supplémentaires sont requises.|  

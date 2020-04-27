@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918626"
 ---
 # <a name="find-method-ado"></a>Find, méthode (ADO)
@@ -38,13 +38,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Valeur de **chaîne** qui contient une instruction spécifiant le nom de colonne, l’opérateur de comparaison et la valeur à utiliser dans la recherche.  
   
  *SkipRows*  
- facultatif. Valeur de **type long** , dont la valeur par défaut est zéro, qui spécifie l’offset de ligne à partir de la ligne actuelle ou du signet de *début* pour commencer la recherche. Par défaut, la recherche commence sur la ligne actuelle.  
+ Facultatif. Valeur de **type long** , dont la valeur par défaut est zéro, qui spécifie l’offset de ligne à partir de la ligne actuelle ou du signet de *début* pour commencer la recherche. Par défaut, la recherche commence sur la ligne actuelle.  
   
  *SearchDirection*  
- facultatif. Valeur de [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) qui spécifie si la recherche doit commencer sur la ligne actuelle ou sur la ligne suivante disponible dans le sens de la recherche. Une recherche ayant échoué s’arrête à la fin de l’ensemble d' **enregistrements** si la valeur est **adSearchForward**. Une recherche ayant échoué s’arrête au début de l’ensemble d' **enregistrements** si la valeur est **adSearchBackward**.  
+ Facultatif. Valeur de [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) qui spécifie si la recherche doit commencer sur la ligne actuelle ou sur la ligne suivante disponible dans le sens de la recherche. Une recherche ayant échoué s’arrête à la fin de l’ensemble d' **enregistrements** si la valeur est **adSearchForward**. Une recherche ayant échoué s’arrête au début de l’ensemble d' **enregistrements** si la valeur est **adSearchBackward**.  
   
  *Start*  
- facultatif. Signet de **variante** qui fonctionne comme position de départ pour la recherche.  
+ Facultatif. Signet de **variante** qui fonctionne comme position de départ pour la recherche.  
   
 ## <a name="remarks"></a>Notes  
  Seul un nom de colonne unique peut être spécifié dans *critères*. Cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  

@@ -24,10 +24,10 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120263"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
@@ -61,7 +61,7 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|Identificateur de l'objet de base de données. NULL pour les instructions SQL ad hoc.|  
 |nombre|**smallint**|Indique le numéro du groupe, si les procédures sont groupées.<br /><br /> 0 = les entrées ne sont pas des procédures.<br /><br /> NULL = instructions SQL ad hoc.|  
 |encrypted|**bit**|Indique si l'objet est chiffré.<br /><br /> 0 = Non chiffrée<br /><br /> 1 = Chiffrée|  
-|text|**text**|Texte de l'instruction SQL. NULL pour les objets chiffrés.|  
+|texte|**text**|Texte de l'instruction SQL. NULL pour les objets chiffrés.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez obtenir un handle SQL valide à partir de la colonne sql_handle de la vue de gestion dynamique [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  

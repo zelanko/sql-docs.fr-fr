@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918630"
 ---
 # <a name="filter-property"></a>Filter, propriété
@@ -56,7 +56,7 @@ La chaîne de critères est composée de clauses au format *fieldName-Operator-v
 -   Au lieu de cela, vous construisez ce filtre en tant que  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle. Par exemple, vous pouvez utiliser `LastName Like '*mit*'`. Ou avec **Like** , vous pouvez utiliser un caractère générique uniquement à la fin du modèle. Par exemple : `LastName Like 'Smit*'`.  
+-   Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle. Par exemple, vous pouvez utiliser `LastName Like '*mit*'`. Ou avec **Like** , vous pouvez utiliser un caractère générique uniquement à la fin du modèle. Par exemple, `LastName Like 'Smit*'`.  
   
  Les constantes de filtre facilitent la résolution des conflits d’enregistrements individuels pendant le mode de mise à jour par lot en vous permettant d’afficher, par exemple, uniquement les enregistrements qui ont été affectés lors du dernier appel de la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
@@ -93,8 +93,8 @@ Le tableau suivant récapitule les effets de **adFilterPendingRecords** dans dif
 ||Non-clés|Clé unique|Clés multiples|
 |-|--------------|----------------|-------------------|
 |**Non-clés**|+|+|+|
-|**Clé unique**|+|-|N/A|
-|**Clés multiples**|+|N/A|+|
+|**Clé unique**|+|-|NON APPLICABLE|
+|**Clés multiples**|+|NON APPLICABLE|+|
 |||||
   
 ## <a name="applies-to"></a>S'applique à

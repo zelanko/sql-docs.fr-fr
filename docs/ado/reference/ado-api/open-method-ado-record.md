@@ -17,10 +17,10 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917922"
 ---
 # <a name="open-method-ado-record"></a>Open, méthode (objet Record ADO)
@@ -35,25 +35,25 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- facultatif. **Variante** qui peut représenter l’URL de l’entité à représenter par cet objet **Record** , une **commande**, un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ouvert ou un autre objet **Record** , une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
+ Facultatif. **Variante** qui peut représenter l’URL de l’entité à représenter par cet objet **Record** , une **commande**, un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ouvert ou un autre objet **Record** , une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
   
  *ActiveConnection*  
- facultatif. **Variant** qui représente la chaîne de connexion ou l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ouvert.  
+ Facultatif. **Variant** qui représente la chaîne de connexion ou l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ouvert.  
   
  *Mode*  
- facultatif. Valeur [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) qui spécifie le mode d’accès pour l’objet **enregistrement** obtenu. La valeur par défaut est **adModeUnknown**.  
+ Facultatif. Valeur [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) qui spécifie le mode d’accès pour l’objet **enregistrement** obtenu. La valeur par défaut est **adModeUnknown**.  
   
  *CreateOptions*  
- facultatif. Valeur de [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) qui spécifie si un fichier ou un répertoire existant doit être ouvert ou si un nouveau fichier ou répertoire doit être créé. La valeur par défaut est **adFailIfNotExists**. Si la valeur par défaut est définie, le mode d’accès est obtenu à partir de la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Ce paramètre est ignoré lorsque le paramètre *source* ne contient pas d’URL.  
+ Facultatif. Valeur de [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) qui spécifie si un fichier ou un répertoire existant doit être ouvert ou si un nouveau fichier ou répertoire doit être créé. La valeur par défaut est **adFailIfNotExists**. Si la valeur par défaut est définie, le mode d’accès est obtenu à partir de la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Ce paramètre est ignoré lorsque le paramètre *source* ne contient pas d’URL.  
   
  *Options*  
- facultatif. Valeur de [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) qui spécifie les options d’ouverture de l' **enregistrement**. La valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
+ Facultatif. Valeur de [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) qui spécifie les options d’ouverture de l' **enregistrement**. La valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
   
  *Nom d’utilisateur*  
- facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, s’il est requis, autorise l’accès à la *source*.  
+ Facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, s’il est requis, autorise l’accès à la *source*.  
   
  *Mot de passe*  
- facultatif. Valeur de **chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
+ Facultatif. Valeur de **chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
   
 ## <a name="remarks"></a>Notes  
  La *source* peut être :  

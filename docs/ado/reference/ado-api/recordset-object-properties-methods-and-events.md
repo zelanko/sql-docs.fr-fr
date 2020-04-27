@@ -13,10 +13,10 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917335"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Recordset
@@ -92,7 +92,7 @@ ms.locfileid: "67917335"
   
  [Delete, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Find, méthode](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Méthode Find](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [GetRows, méthode](../../../ado/reference/ado-api/getrows-method-ado.md)  
   

@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122571"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -61,11 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Ce paramètre peut prendre l’une des deux significations, selon la valeur choisie pour @closed_high_end_point lorsque sys. sp_cdc_generate_wrapper_function est appelé pour générer le script pour créer la fonction wrapper :  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      Seules les lignes du CDC. <capture_instance>_CT table de modifications qui ont une valeur \_ \_dans $START _lsn et une heure de validation correspondante inférieure ou égale à **start_time** sont incluses dans le jeu de résultats.  
   
--   @closed_high_end_point= 0  
+-   @closed_high_end_point = 0  
   
      Seules les lignes du CDC. <capture_instance>_CT table de modifications qui ont une valeur \_ \_dans $START _lsn et une heure de validation correspondante strictement inférieure à **start_time** sont incluses dans le jeu de résultats.  
   
@@ -74,7 +74,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* :: = {All | all with mask | all with Merge}  
  Option qui régit le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats. Il peut s'agir de l'une des options suivantes :  
   
- tout  
+ all  
  Retourne le contenu final d'une ligne modifiée dans les colonnes de contenu ainsi que l'opération requise pour appliquer la ligne dans la colonne de métadonnées __CDC_OPERATION.  
   
  all with mask  
@@ -120,6 +120,6 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   
