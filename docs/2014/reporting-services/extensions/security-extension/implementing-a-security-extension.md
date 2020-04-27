@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211536"
 ---
 # <a name="implementing-a-security-extension"></a>Implémentation d'une extension de sécurité
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]L’authentification Windows est le système principal pour la sécurisation des rapports dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Dans certains cas, en revanche, vous pouvez avoir besoin d'étendre le système de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour personnaliser la sécurité dans votre entreprise. Pour cela, vous pouvez utiliser la plate-forme de développement fournie par l'API [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Cette section présente une vue d'ensemble des extensions de sécurité dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  L’authentification Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] constitue le principal système permettant de sécuriser des rapports dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Dans certains cas, en revanche, vous pouvez avoir besoin d'étendre le système de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour personnaliser la sécurité dans votre entreprise. Pour cela, vous pouvez utiliser la plate-forme de développement fournie par l'API [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Cette section présente une vue d'ensemble des extensions de sécurité dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Pour plus d’informations sur l’implémentation, le déploiement et la suppression d’une extension de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   

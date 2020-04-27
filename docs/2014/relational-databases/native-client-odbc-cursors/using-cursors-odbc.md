@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206823"
 ---
 # <a name="using-cursors-odbc"></a>Utilisation de curseurs (ODBC)
@@ -60,17 +60,17 @@ ms.locfileid: "68206823"
   
 -   [Détails de programmation de curseur &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
   
--   [Défilement et extraction de lignes](../native-client-ole-db-rowsets/fetching-rows.md)  
+-   [Défilement et récupération (fetch) de lignes](../native-client-ole-db-rowsets/fetching-rows.md)  
   
 -   [Mises à jour positionnées &#40;ODBC&#41;](positioned-updates-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;&#41;ODBC](../native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
+ [FERMER &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/close-transact-sql)   
  [Curseurs](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [FETCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
+ [LIBÉRER &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/deallocate-transact-sql)   
+ [DÉCLARER un curseur &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [RÉCUPÉRATION &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/fetch-transact-sql)   
  [OPEN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/open-transact-sql)  
   
   

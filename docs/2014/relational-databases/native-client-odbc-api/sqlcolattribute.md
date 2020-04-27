@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067666"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
@@ -56,7 +56,7 @@ ms.locfileid: "63067666"
   
  Les attributs de colonne suivants sont des extensions exposées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le pilote ODBC Native Client. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toutes les valeurs dans le paramètre *NumericAttrPtr* . Les valeurs sont retournées en tant qu'éléments SDWORD (long signé) sauf SQL_CA_SS_COMPUTE_BYLIST qui désigne un pointeur vers un tableau WORD.  
   
-|Identificateur de champ|Valeur renvoyée|  
+|Identificateur de champ|Valeur retournée|  
 |----------------------|--------------------|  
 |SQL_CA_SS_COLUMN_HIDDEN*|TRUE si la colonne référencée appartient à une clé primaire masquée et créée afin de prendre en charge une instruction Transact-SQL SELECT contenant la clause FOR BROWSE.|  
 |SQL_CA_SS_COLUMN_ID|Position ordinale d'une colonne de résultats d'une clause COMPUTE dans l'instruction Transact-SQL SELECT actuelle.|  
@@ -99,8 +99,7 @@ ms.locfileid: "63067666"
  Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Prise en charge SQLColAttribute pour les types CLR volumineux définis par l'utilisateur  
- 
-  `SQLColAttribute` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColAttribute` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Prise en charge SQLColAttribute pour les colonnes éparses  
  SQLColAttribute interroge le nouveau champ de descripteur de ligne d’implémentation (IRD), SQL_CA_SS_IS_COLUMN_SET, pour déterminer `column_set` si une colonne est une colonne.  

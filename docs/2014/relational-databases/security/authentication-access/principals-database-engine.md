@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011916"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
-  Les *principaux* sont des entités qui peuvent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] demander des ressources. Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. Le champ d'influence d'un principal dépend de l'étendue de sa définition : Windows, serveur, base de données, et du fait qu'il est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID).  
+  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. Le champ d'influence d'un principal dépend de l'étendue de sa définition : Windows, serveur, base de données, et du fait qu'il est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID).  
   
  **Principaux au niveau de Windows**  
   
@@ -44,11 +44,11 @@ ms.locfileid: "63011916"
   
 -   Connexion locale Windows  
   
- ****-**** **Principaux** de niveau SQL Server  
+ **SQL Server**-**level** **Principaux** de niveau SQL Server  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Connexion  
+-   Connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   Rôle serveur  
+-   Rôle de serveur  
   
  **Principaux au niveau des bases de données**  
   
@@ -70,26 +70,19 @@ ms.locfileid: "63011916"
 ## <a name="certificate-based-sql-server-logins"></a>Connexions SQL Server basées sur des certificats  
  Les principaux de serveur compris entre deux signes dièse (##) sont destinés uniquement à une utilisation système interne. Les principaux suivants sont créés à partir de certificats lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; ils ne doivent pas être supprimés.  
   
--   
-  \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   
-  \##MS_SQLReplicationSigningCertificate##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   
-  \##MS_SQLAuthenticatorCertificate##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   
-  \##MS_AgentSigningCertificate##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Utilisateur invité  
  Chaque base de données inclut un **invité**. Les autorisations accordées à l'utilisateur **invité** sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. L’utilisateur **invité** ne peut pas être supprimé, mais il peut être désactivé en révoquant `CONNECT` son autorisation. L' `CONNECT` autorisation peut être révoquée en exécutant `REVOKE CONNECT FROM GUEST` dans une base de données autre que Master ou tempdb.  
@@ -102,7 +95,7 @@ ms.locfileid: "63011916"
   
 -   [Rubriques de procédures relatives à la gestion des connexions, des utilisateurs et des schémas](managing-logins-users-and-schemas-how-to-topics.md)  
   
--   [Rôles au niveau du serveur](server-level-roles.md)  
+-   [Rôles de niveau serveur](server-level-roles.md)  
   
 -   [Rôles au niveau de la base de données](database-level-roles.md)  
   
@@ -111,9 +104,9 @@ ms.locfileid: "63011916"
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation de SQL Server](../securing-sql-server.md)   
  [sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [sys. sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+ [sys. database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Rôles au niveau du serveur](server-level-roles.md)   
  [Rôles au niveau de la base de données](database-level-roles.md)  
   

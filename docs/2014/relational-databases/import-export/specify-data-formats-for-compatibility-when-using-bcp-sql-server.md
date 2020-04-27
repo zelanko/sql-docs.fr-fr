@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011827"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66011827"
 > [!NOTE]  
 >  Si vous ne maîtrisez pas les formats de données pour l’importation ou l’exportation de données, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Attributs de format de données BCP](#bcpDataFormatAttr)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66011827"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="bcpDataFormatAttr"></a>Attributs de format de données BCP  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> Attributs de format de données bcp  
  La commande `bcp` vous permet de spécifier la structure de chaque champ dans un fichier de données, selon les attributs de format de données suivants :  
   
 -   type de stockage de fichier  
@@ -58,8 +58,8 @@ ms.locfileid: "66011827"
   
      Pour les champs de données caractères, des caractères de fin facultatifs vous permettent de marquer la fin de chaque champ dans un fichier de données (à l’aide d’une *marque de fin de champ*), ainsi que la fin de chaque ligne (avec une *marque de fin de ligne*). Les caractères de fin constituent un moyen d'indiquer aux programmes lisant le fichier de données la fin d'un champ ou d'une ligne et le début du suivant. Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
-##  <a name="FieldSpecificPrompts"></a>Vue d’ensemble des invites spécifiques aux champs  
- Si une commande `bcp` interactive contient l’option in **ou out** , mais ne contient pas le commutateur de fichier **de** format **(-f**) ou un commutateur de format de données (**-n**, **-c**, **-w**ou **-n**), chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents, à leur tour. À chaque invite, la commande `bcp` fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif (**-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
+ Si une commande `bcp` interactive contient l’option in **ou out** , mais ne contient pas le commutateur de fichier **de** format **(-f**) ou un commutateur de format de données (**-n**, **-c**, **-w**ou **-n**), chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents, à leur tour. À chaque invite, la commande `bcp` fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif ( **-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant utilise la commande `bcp` pour l'exportation en bloc interactive de données à partir de la table `HumanResources.myTeam` vers le fichier `myTeam.txt`. Avant de pouvoir exécuter cet exemple, vous devez créer cette table. Pour plus d’informations sur la table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
@@ -92,7 +92,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
  Des messages équivalents (si nécessaire) s'affichent pour chacune des colonnes de table dans l'ordre.  
   
-##  <a name="FieldByFieldNonXmlFF"></a>Stockage des données champ par champ dans un fichier de format non XML  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> Stockage de données champ par champ dans un fichier de format non-XML  
  Une fois toutes les colonnes de table spécifiées, la commande `bcp` vous invite à générer facultativement un fichier de format non-XML qui stocke les informations champ par champ venant d'être fournies (voir l'exemple précédent). Si vous choisissez de générer un fichier de format, vous pouvez effectuer cette opération dès que vous exportez des données vers cette table ou que vous importez des données structurées de la sorte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -109,22 +109,22 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 > [!NOTE]  
 >  Pour un fichier de données qui utilise un seul format de données pour son type de stockage de fichiers, tel qu’un format caractère ou natif, vous pouvez créer rapidement un fichier de format sans exportation ni importation de données, à l’aide de l’option **format** . Cette approche présente les avantages d'être aisée et de vous permettre de créer un fichier de format XML ou non-XML. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
--   [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
--   [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Spécifiez la longueur du champ à l’aide de BCP &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)  
+-   [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)  
   
--   [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [Formats de données pour l’importation en bloc ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  
   

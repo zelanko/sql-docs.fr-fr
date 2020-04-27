@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211744"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68211744"
 ## <a name="change-data-capture-data-flow"></a>Flux de données de capture de données modifiées  
  L'illustration suivante décrit le flux de données principal pour la capture de données modifiées.  
   
- ![Flux de données de capture des changements de données](../../database-engine/media/cdcdataflow.gif "Flux de données de capture de données modifiées")  
+ ![Flux de données de capture de données modifiées](../../database-engine/media/cdcdataflow.gif "Flux de données de capture de données modifiées")  
   
  La source des données modifiées pour la capture de données modifiées est le journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . À mesure que des insertions, des mises à jour et des suppressions sont appliquées aux tables sources suivies, les entrées qui décrivent ces modifications sont ajoutées au journal. Le journal sert d’entrée au processus de capture. Le journal est lu et les informations relatives aux modifications sont ajoutées à la table de modifications associée de la table faisant l’objet d’un suivi. Des fonctions sont fournies afin d'énumérer les modifications qui apparaissent dans les tables de modifications sur une plage spécifiée ; ces fonctions retournent les informations sous la forme d'un jeu de résultats filtré. Le jeu de résultats filtré est utilisé en général par un processus d'application pour mettre à jour une représentation de la source dans un environnement externe.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "68211744"
  La capture de données modifiées ne peut pas fonctionner correctement lorsque le service Moteur de base de données ou le service SQL Server Agent s'exécute sous la compte SERVICE RÉSEAU. Cela peut entraîner l'erreur 22832.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Suivi des modifications de données &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
+ [Suivre les modifications de données &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [Utiliser les données modifiées &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
+ [Utiliser des données modifiées &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
  [Administrer et surveiller la capture de données modifiées &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211258"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
-  La boîte de dialogue **options** vous permet de définir un modèle de polices et de couleurs personnalisé pour différents [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]éléments de l’interface utilisateur dans. Dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Environnement** et sélectionnez **Polices et couleurs**.  
+# <a name="options-environment-fonts-and-colors-page"></a>Options (Environnement : page Polices et couleurs)
+  La boîte de dialogue **Options** vous permet de définir un modèle personnalisé de polices et de couleurs pour différents éléments de l’interface utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Environnement** et sélectionnez **Polices et couleurs**.  
   
  Les modifications apportées à un modèle de couleurs ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué ces changements. Vous pouvez évaluer les changements de couleurs en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et en reproduisant les conditions dans lesquelles vous souhaitez appliquer ces modifications.  
   
@@ -34,14 +34,14 @@ ms.locfileid: "68211258"
 |Fenêtre Résultats de la recherche|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Résultats de la recherche.|  
 |Fenêtre Sortie|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Sortie.|  
 |Résultats de grille|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres **Résultats de grille** .|  
-|Plan d'exécution|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent [!INCLUDE[ssEW](../../includes/ssew-md.md)] l’apparence du texte dans le plan d’exécution des requêtes et.|  
+|Plan d'exécution|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans le plan d’exécution de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans les requêtes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |Résultats de texte|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la zone **Résultats de texte** des fenêtres Requête.|  
 |Concepteurs Business Intelligence|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Concepteurs Business Intelligence.|  
   
- **Utiliser les valeurs par défaut**  
+ **Par défaut**  
  Le bouton **Par défaut** réinitialise les valeurs par défaut des paramètres de police et de couleur de l’élément sélectionné dans la liste **Afficher les paramètres de** .  
   
- **Police (le type gras indique des polices à largeur fixe)**  
+ **Police (les polices à largeur fixe sont en gras)**  
  Répertorie toutes les polices installées sur votre ordinateur. Quand la liste déroulante s’ouvre, c’est la police actuelle de l’élément choisi dans la liste **Afficher les paramètres de** qui est sélectionnée. Les polices fixes, qui sont plus faciles à aligner dans un éditeur, apparaissent en gras.  
   
  **Taille**  
@@ -59,7 +59,7 @@ ms.locfileid: "68211258"
   
 -   Réduction du texte : bloc de texte ou de code que vous pouvez faire apparaître ou masquer dans l’éditeur de code (XML uniquement).  
   
- **Premier plan de l’élément**  
+ **Premier plan**  
  Répertorie les couleurs disponibles pour le premier plan de l’élément sélectionné dans **Éléments affichés**. Dans la mesure où certains éléments sont liés entre eux, veillez à conserver un modèle d'affichage cohérent. Par exemple, si vous changez la couleur de premier plan du texte, la couleur de premier plan des éléments tels que Chaîne est également modifiée.  
   
  **Personnalisée**  
@@ -74,7 +74,7 @@ ms.locfileid: "68211258"
  **Personnalisée**  
  Affiche la boîte de dialogue **Couleurs** , où vous pouvez définir une couleur personnalisée pour l’élément sélectionné dans la liste **Éléments affichés** .  
   
- **Format**  
+ **Gras**  
  Cochez cette case pour afficher le texte des éléments affichés sélectionnés en gras. Le texte en gras est plus facilement repérable dans un éditeur.  
   
  **Exemple**  

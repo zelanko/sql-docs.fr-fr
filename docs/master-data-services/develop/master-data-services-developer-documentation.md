@@ -11,10 +11,10 @@ ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728256"
 ---
 # <a name="master-data-services-developer-documentation"></a>Documentation du développeur Master Data Services
@@ -38,20 +38,18 @@ ms.locfileid: "73728256"
  [Créer des classes proxy de service Web Master Data Manager](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  Décrit comment activer la publication des métadonnées à partir du site Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et comment créer les classes proxy qui peuvent être utilisées pour accéder par programmation aux opérations du service Web.  
   
- [Opérations de service Web catégorisées &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [Opérations de service web par catégorie &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  Liste par catégorie des opérations de service Web de la classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Flux de travail personnalisés  
- 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base. Vous pouvez automatiquement mettre à jour et valider les données et recevoir des notifications par courrier électronique en fonction des conditions que vous spécifiez. Les règles d'entreprise dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] sont prévues pour gérer les scénarios de flux de travail les plus courants. Si votre flux de travail nécessite le traitement d'événements plus complexes, tels que les approbations multicouche ou les arbres décisionnels complexes, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour envoyer des données à un assembly personnalisé que vous créez. Pour gérer des flux de travail personnalisés, vous devez configurer et démarrer le service d'intégration de flux de travail SQL Server MDS sur l'ordinateur de l'application Web, et vous devez créer un assembly qui implémente l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base. Vous pouvez automatiquement mettre à jour et valider les données et recevoir des notifications par courrier électronique en fonction des conditions que vous spécifiez. Les règles d'entreprise dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] sont prévues pour gérer les scénarios de flux de travail les plus courants. Si votre flux de travail nécessite le traitement d'événements plus complexes, tels que les approbations multicouche ou les arbres décisionnels complexes, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour envoyer des données à un assembly personnalisé que vous créez. Pour gérer des flux de travail personnalisés, vous devez configurer et démarrer le service d'intégration de flux de travail SQL Server MDS sur l'ordinateur de l'application Web, et vous devez créer un assembly qui implémente l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Contenu personnalisé de flux de travail  
- [Créer un &#40;de flux de travail personnalisé Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [Créer un flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  Instructions sur la création d'un assembly de gestionnaire de flux de travail, sur la configuration et le démarrage du service d'intégration de flux de travail MDS SQL Server et sur la création d'une règle d'entreprise dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] qui démarre un flux de travail personnalisé.  
   
 ## <a name="web-server-namespaces"></a>Espaces de noms de serveur Web  
- 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installe un ensemble d'assemblys sur le serveur Web. Ces assemblys contiennent des espaces de noms qui peuvent être utilisés pour des scénarios avancés qui personnalisent le comportement du serveur Web. Le tableau suivant décrit ces espaces de noms.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installe un ensemble d'assemblys sur le serveur Web. Ces assemblys contiennent des espaces de noms qui peuvent être utilisés pour des scénarios avancés qui personnalisent le comportement du serveur Web. Le tableau suivant décrit ces espaces de noms.  
   
 |Espace de noms|Description|  
 |---------------|-----------------|  

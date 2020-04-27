@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058260"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Éditeur du gestionnaire de connexions HTTP (page Proxy)
@@ -33,10 +33,10 @@ ms.locfileid: "66058260"
  **URL du proxy**  
  Tapez l'URL du serveur proxy.  
   
- **Ignorer le proxy sur l’local**  
+ **Ne pas utiliser de proxy en local**  
  Indiquez si vous voulez que le gestionnaire de connexions HTTP contourne le serveur proxy pour les adresses locales.  
   
- **Utiliser les informations d’identification**  
+ **Utiliser les informations d'identification**  
  Indiquez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité pour le serveur proxy.  
   
  **Nom d'utilisateur**  
@@ -48,7 +48,7 @@ ms.locfileid: "66058260"
  **Domain**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
- **Liste de contournement du proxy**  
+ **Liste de contournement proxy**  
  Liste d'adresses pour lesquelles vous ne souhaitez pas utiliser le serveur proxy.  
   
  **Ajouter**  
@@ -58,7 +58,7 @@ ms.locfileid: "66058260"
  Sélectionnez une adresse, puis supprimez-la en cliquant sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur du gestionnaire de connexions HTTP &#40;page du serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

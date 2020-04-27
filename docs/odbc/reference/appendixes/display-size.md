@@ -1,5 +1,5 @@
 ---
-title: Taille de l’affichage (en anglais) Microsoft Docs
+title: Taille d’affichage | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,31 +16,31 @@ ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 578bf0cbdf2dd1dbd06dd4a248f4efa5eb839916
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307030"
 ---
 # <a name="display-size"></a>Taille d’affichage
-La taille d’affichage d’une colonne est le nombre maximum de caractères nécessaires pour afficher les données sous forme de caractère. Le tableau suivant définit la taille de l’affichage pour chaque type de données SQL ODBC.  
+La taille d’affichage d’une colonne est le nombre maximal de caractères nécessaires pour afficher les données sous forme de caractère. Le tableau suivant définit la taille d’affichage pour chaque type de données SQL ODBC.  
   
-|Identifiant de type SQL|Taille de l’écran|  
+|Identificateur de type SQL|Taille de l’écran|  
 |-------------------------|------------------|  
-|Tous les types de personnages[a]|Le nombre défini (pour les types fixes) ou le nombre maximum (pour les types variables) des caractères nécessaires pour afficher les données sous forme de caractère.|  
-|SQL_DECIMAL SQL_NUMERIC|La précision de la colonne plus 2 (un signe, des chiffres de *précision,* et un point décimal). Par exemple, la taille d’affichage d’une colonne définie comme NUMERIC(10,3) est de 12.|  
+|Tous les types de caractères [a]|Nombre de caractères définis (pour les types fixes) ou maximum (pour les types de variable) nécessaires à l’affichage des données sous forme de caractère.|  
+|SQL_DECIMAL SQL_NUMERIC|Précision de la colonne plus 2 (signe, chiffres de *précision* et virgule décimale). Par exemple, la taille d’affichage d’une colonne définie en tant que valeur numérique (10, 3) est 12.|  
 |SQL_BIT|1 (1 chiffre).|  
-|SQL_TINYINT|4 si signé (un signe et 3 chiffres) ou 3 si non signé (3 chiffres).|  
-|SQL_SMALLINT|6 si signé (un signe et 5 chiffres) ou 5 si non signé (5 chiffres).|  
-|SQL_INTEGER|11 si signé (un signe et 10 chiffres) ou 10 si non signé (10 chiffres).|  
-|SQL_BIGINT|20 (un signe et 19 chiffres s’ils sont signés ou 20 chiffres s’ils ne sont pas signés).|  
-|SQL_REAL|14 (un signe, 7 chiffres, un point décimal, la lettre *E*, un signe, et 2 chiffres).|  
-|SQL_FLOAT SQL_DOUBLE|24 (un signe, 15 chiffres, un point décimal, la lettre *E*, un signe, et 3 chiffres).|  
-|Tous les types binaires[a]|La longueur définie ou maximale (pour les types variables) de la colonne fois 2. (Chaque byte binaire est représenté par un nombre hexadecimal à 2 chiffres.)|  
-|SQL_TYPE_DATE|10 (une date dans le format *yyyy-mm-dd*).|  
-|SQL_TYPE_TIME|8 (un temps dans le format *hh:mm:ss*)<br /><br /> - ou -<br /><br /> 9 *s* (un temps dans le format *hh:mm:ss*[.fff...], où *s* est la précision fractionnelle secondes).|  
-|SQL_TYPE_TIMESTAMP|19 (pour un timestamp dans le *yyyy-mm-dd hh:mm:ss* format)<br /><br /> - ou -<br /><br /> 20 *s* (pour un horodatage dans le *yyyy-mm-dd hh:mm:ss*[.fff...] format, où *s* est la précision fractionnelle secondes).|  
-|Tous les types de données d’intervalle|Voir [Interval Data Type Length](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
-|SQL_GUID|36 (le nombre de caractères dans le format *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeeeeeee*|  
+|SQL_TINYINT|4 s’il est signé (signe et 3 chiffres) ou 3 Si non signé (3 chiffres).|  
+|SQL_SMALLINT|6 s’ils sont signés (signe et 5 chiffres) ou 5 s’ils ne sont pas signés (5 chiffres).|  
+|SQL_INTEGER|11 si signé (signe et 10 chiffres) ou 10 si non signé (10 chiffres).|  
+|SQL_BIGINT|20 (signe et 19 chiffres s’ils sont signés ou 20 chiffres s’ils ne sont pas signés).|  
+|SQL_REAL|14 (signe, 7 chiffres, virgule décimale, lettre *E*, signe et 2 chiffres).|  
+|SQL_FLOAT SQL_DOUBLE|24 (signe, 15 chiffres, virgule décimale, lettre *E*, signe et 3 chiffres).|  
+|Tous les types binaires [a]|La longueur définie ou maximale (pour les types de variable) de la colonne Times 2. (Chaque octet binaire est représenté par un nombre hexadécimal à 2 chiffres.)|  
+|SQL_TYPE_DATE|10 (une date au format *aaaa-mm-jj*).|  
+|SQL_TYPE_TIME|8 (une heure au format *hh : mm : SS*)<br /><br /> - ou -<br /><br /> 9 + *s* (une heure au format *hh : mm : SS*[. fff...], où *s* est la précision en fractions de seconde).|  
+|SQL_TYPE_TIMESTAMP|19 (pour un horodateur au format *aaaa-mm-jj hh : mm : SS* )<br /><br /> - ou -<br /><br /> 20 + *s* (pour un horodateur au format *aaaa-mm-jj hh : mm : SS*[. fff...], où *s* est la précision en fractions de seconde).|  
+|Tous les types de données Interval|Consultez [longueur des types de données d’intervalle](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
+|SQL_GUID|36 (nombre de caractères au format *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*|  
   
- [a] Si le conducteur ne peut pas déterminer la longueur de colonne ou de paramètre des types variables, il retourne SQL_NO_TOTAL.
+ [a] si le pilote ne peut pas déterminer la longueur de la colonne ou du paramètre des types de variable, il retourne SQL_NO_TOTAL.

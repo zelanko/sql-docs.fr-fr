@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025661"
 ---
 # <a name="complete-the-post-installation-steps"></a>Suivre les étapes consécutives à l'installation
@@ -22,7 +22,7 @@ ms.locfileid: "63025661"
   
 ### <a name="to-complete-the-post-installation-steps"></a>Pour suivre les étapes consécutives à l'installation  
   
-1.  **Créer des règles de pare-feu**: sur le contrôleur et les ordinateurs clients, vous devez autoriser le trafic entrant via le pare-feu pour le service correspondant. Spécifiez des règles de pare-feu pour les exécutables du service, situés dans les dossiers d'installation.  
+1.  **Créez des règles de pare-feu**: sur les ordinateurs contrôleurs et clients, vous devez autoriser le trafic entrant à travers le pare-feu pour le service correspondant. Spécifiez des règles de pare-feu pour les exécutables du service, situés dans les dossiers d'installation.  
   
     1.  Pour le service contrôleur, créez une règle pour **DReplayController.exe**, situé dans le dossier d’installation. Par exemple, la commande suivante active cette règle, sachant que `%InstallPath%` est le dossier d'installation du service :  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63025661"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2.  **Accordez à chaque client des autorisations sur le serveur cible**: une fois que vous avez terminé l’installation du service client sur les ordinateurs clients, vous devez ajouter manuellement les comptes de service du client au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]rôle sysadmin sur l’instance cible de.  
+2.  **Accordez à chaque client des autorisations sur le serveur cible**: après avoir achevé l’installation du service client sur les ordinateurs clients, vous devez ajouter manuellement les comptes de services clients au rôle sysadmin sur l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="net-framework-security"></a>Sécurité du .NET Framework  
  Vous devez posséder des autorisations administratives pour installer les fonctionnalités de Distributed Replay. Seule une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disposant d’autorisations sysadmin peut ajouter des comptes de services clients au rôle serveur sysadmin du serveur de test. Pour plus d'informations sur les questions de sécurité de Distributed Replay, consultez [Distributed Replay Security](distributed-replay-security.md).  

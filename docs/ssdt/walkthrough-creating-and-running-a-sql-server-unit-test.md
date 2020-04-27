@@ -10,12 +10,12 @@ manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242695"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087506"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d’un test unitaire SQL Server
 
@@ -122,12 +122,12 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
     PRINT N'Creating Sales.CK_Orders_FilledDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.CK_Orders_OrderDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.uspCancelOrder...';  
     GO  

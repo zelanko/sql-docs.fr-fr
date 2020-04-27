@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211093"
 ---
 # <a name="profiler-utility"></a>Utilitaire profiler
@@ -77,26 +77,26 @@ ms.locfileid: "68211093"
  **/D** *base de données*  
  Spécifie le nom de la base de données à utiliser avec la connexion. Cette option sélectionne la base de données par défaut pour l'utilisateur spécifié si aucune base de données n'est spécifiée.  
   
- **/B «** *trace_table_name* **»**  
+ **/B "** *trace_table_name* **"**  
  Spécifie une table de trace à charger lors du démarrage du générateur de profils. Vous devez spécifier la base de données, l'utilisateur ou le schéma, ainsi que la table.  
   
- **/T «** *template_name* **»**  
+ **/T"** *template_name* **"**  
  Spécifie le modèle qui sera chargé pour configurer la trace. Le nom du modèle doit être entre guillemets. Le nom du modèle doit être le répertoire de modèles système ou le répertoire de modèles utilisateur. Si deux modèles portant le même nom existent dans les deux répertoires, le modèle du répertoire système est chargé. Si aucun modèle n'existe sous le nom spécifié, le modèle standard est chargé. Notez que l’extension de fichier du modèle (.tdf) ne doit pas être spécifiée dans *template_name*. Par exemple :  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** *nom_fichier* **"**  
+ **/F"** *nom de fichier* **"**  
  Spécifie le chemin et le nom d'un fichier de trace à charger lors du démarrage du générateur de profils. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/O**.  
   
- **/O "** *nom_fichier*  **"**  
+ **/O "** *nom de fichier*  **"**  
  Spécifie le chemin d'accès et le nom d'un fichier dans lequel les résultats de trace doivent être écrits. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/F**.  
   
  **/L** *locale_ID*  
- Non disponible  
+ Non disponible.  
   
- **/M "** *mm-jj-aa hh : mm : SS* **"**  
+ **/M "** *MM-DD-YY hh:mm:ss* **"**  
  Spécifie la date et l'heure auxquelles la trace doit s'arrêter. L'heure d'arrêt doit être indiquée entre guillemets. Spécifiez l'heure d'arrêt conformément aux paramètres du tableau ci-dessous :  
   
 |Paramètre|Définition|  
@@ -125,6 +125,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’utilitaire d’invite de commandes &#40;Moteur de base de données&#41;](command-prompt-utility-reference-database-engine.md)  
+ [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

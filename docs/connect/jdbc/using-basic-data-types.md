@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625561"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728381"
 ---
 # <a name="using-basic-data-types"></a>Utilisation des types de données de base
 
@@ -101,20 +101,20 @@ Si vous devez mettre à jour la valeur d'un champ dans une source de données, u
 
 Si vous devez mettre à jour des données dans une source de données en utilisant une requête paramétrable, vous pouvez définir le type de données des paramètres à l’aide de l’une des méthodes set\<Type> de la classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), également connues comme *méthodes d’accesseur Set*. Dans l’exemple suivant, la méthode [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) est utilisée pour précompiler la requête paramétrable, puis la méthode [setString](reference/setstring-method-sqlserverpreparedstatement.md) est utilisée pour définir la valeur de chaîne du paramètre avant d’appeler la méthode [executeUpdate](reference/executeupdate-method.md).  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-Pour plus d’informations sur les requêtes paramétrables, consultez [Utilisation d'une instruction SQL avec paramètres](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Pour plus d’informations sur les requêtes paramétrables, consultez [Utilisation d'une instruction SQL avec paramètres](using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Transmission de paramètres à une procédure stockée
 
 Si vous devez transmettre des paramètres typés dans une procédure stockée, vous pouvez définir les paramètres par index ou par nom à l’aide de l’une des méthodes set\<Type> de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Dans l’exemple suivant, la méthode [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) est utilisée pour configurer l’appel de la procédure stockée, puis la méthode [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) est utilisée pour définir le paramètre de l’appel avant l’appel de la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > Dans cet exemple, un jeu de résultats est retourné avec les résultats de l'exécution de la procédure stockée.
 
-Pour plus d'informations sur l'utilisation du pilote JDBC avec les procédures stockées et les paramètres d'entrée, consultez [Utilisation d'une procédure stockée avec des paramètres d'entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Pour plus d'informations sur l'utilisation du pilote JDBC avec les procédures stockées et les paramètres d'entrée, consultez [Utilisation d'une procédure stockée avec des paramètres d'entrée](using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Extraction de paramètres à partir d'une procédure stockée
 

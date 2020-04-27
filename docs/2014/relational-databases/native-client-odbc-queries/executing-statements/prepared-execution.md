@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207054"
 ---
 # <a name="prepared-execution"></a>Exécution préparée
@@ -31,8 +31,7 @@ ms.locfileid: "68207054"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]réduit la différence de performances entre l’exécution directe et préparée via des algorithmes améliorés pour la détection et la réutilisation des plans d’exécution à partir de **SQLExecDirect**. Les avantages de l'exécution préparée en termes de performances s'étendent ainsi dans une certaine mesure aux instructions exécutées directement. Pour plus d’informations, consultez [exécution directe](direct-execution.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proposent également la prise en charge native de l'exécution préparée. Un plan d’exécution est créé sur **SQLPrepare** et exécuté ultérieurement lorsque **SQLExecute** est appelé. Étant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donné que n’est pas requis pour générer des procédures stockées temporaires sur **SQLPrepare**, il n’y a aucune surcharge supplémentaire sur les tables système dans **tempdb**.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proposent également la prise en charge native de l'exécution préparée. Un plan d’exécution est créé sur **SQLPrepare** et exécuté ultérieurement lorsque **SQLExecute** est appelé. Étant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donné que n’est pas requis pour générer des procédures stockées temporaires sur **SQLPrepare**, il n’y a aucune surcharge supplémentaire sur les tables système dans **tempdb**.  
   
  Pour des raisons de performances, la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou qu’une opération de métapropriété (telle que [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) dans ODBC) soit exécutée. Il s'agit du comportement par défaut. Toute erreur dans l'instruction en cours de préparée reste inconnue tant que l'instruction n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. La définition de l'attribut SQL_SOPT_SS_DEFER_PREPARE de l'instruction spécifique au pilote ODBC  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  Native Client sur  SQL_DP_OFF peut désactiver ce comportement par défaut.  
   

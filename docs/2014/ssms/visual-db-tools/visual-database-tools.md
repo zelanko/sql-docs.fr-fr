@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211223"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]contient des concepteurs visuels [!INCLUDE[tsql](../../includes/tsql-md.md)] pour générer des requêtes, des tables et des bases de données de diagrammes.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclut des concepteurs visuels pour générer des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , des tables et des bases de données de diagramme.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Utilisez les tâches suivantes pour commencer à utiliser Visual Database Tools :  

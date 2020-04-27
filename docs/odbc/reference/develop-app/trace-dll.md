@@ -1,5 +1,5 @@
 ---
-title: Trace DLL - France Microsoft Docs
+title: DLL de trace | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8e1f9dc57415ad9865ca1b2ad02487b62a93f18f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "81298069"
 ---
 # <a name="trace-dll"></a>DLL de traçage
-Le DLL qui effectue le traçage est l’un des composants de base ODBC. La trace DLL est actuellement fournie comme un échantillon DLL dans le composant ODBC de la SDK Windows, et a été précédemment inclus le Microsoft Data Access Components (MDAC) SDK. Par conséquent, l’entrée de registre, l’interface, et le code d’échantillon pour le DLL trace sont disponibles. Ce DLL peut être remplacé par une trace DLL produite soit par un utilisateur d’ODBC ou un fournisseur tiers. Une trace personnalisée DLL doit être donné un nom différent de l’échantillon original trace DLL. Les DLL de trace doivent être installés dans le répertoire du système, ou ils ne se chargeront pas. Les chaînes de connexion ne seront pas transmises à la trace DLL par le Driver Manager.  
+La DLL qui effectue le suivi est l’un des composants ODBC Core. La DLL de suivi est actuellement fournie en tant qu’exemple de DLL dans le composant ODBC du SDK Windows et a été précédemment incluse dans le kit de développement logiciel (SDK) Microsoft Data Access Components (MDAC). Par conséquent, l’entrée de Registre, l’interface et l’exemple de code de la DLL de trace sont disponibles. Cette DLL peut être remplacée par une DLL de trace générée par un utilisateur ODBC ou un fournisseur tiers. Un nom différent de la DLL de trace d’origine doit être attribué à une DLL de trace personnalisée. Les dll de trace doivent être installées dans le répertoire système ou ne pas se charger. Les chaînes de connexion ne sont pas transmises à la DLL de trace par le gestionnaire de pilotes.  
   
- La trace DLL retrace les arguments d’entrée, les arguments de sortie, les arguments différés, les codes de retour et les SQLSTATEs. Lorsque le traçage est activé, le Driver Manager appelle la trace DLL à deux points : une fois sur l’entrée de la fonction (avant validation de l’argument) et encore juste avant le retour de la fonction.  
+ La DLL de suivi trace les arguments d’entrée, les arguments de sortie, les arguments différés, les codes de retour et les SQLSTATEs. Lorsque le suivi est activé, le gestionnaire de pilotes appelle la DLL de trace à deux points : une fois lors de l’entrée de la fonction (avant la validation de l’argument) et de nouveau juste avant le retour de la fonction.  
   
- Lorsqu’une application appelle une fonction, le gestionnaire de conducteur appelle une fonction de trace dans la trace DLL avant d’appeler la fonction dans le pilote ou le traitement de l’appel lui-même. Chaque fonction ODBC a une fonction de trace correspondante (préfixée avec *Trace*) qui est identique à la fonction ODBC à l’exception du nom. Lorsque la fonction de trace est appelée, la trace DLL capture les arguments d’entrée et renvoie un code de retour. Étant donné que la trace DLL est appelée avant que le gestionnaire de conducteur valide les arguments, les appels de fonction invalides sont tracés, de sorte que les erreurs de transition de l’État et les arguments invalides sont enregistrés.  
+ Quand une application appelle une fonction, le gestionnaire de pilotes appelle une fonction de trace dans la DLL de trace avant d’appeler la fonction dans le pilote ou de traiter l’appel lui-même. Chaque fonction ODBC a une fonction trace correspondante (avec le préfixe *trace*) qui est identique à la fonction ODBC, à l’exception du nom. Lorsque la fonction trace est appelée, la DLL de trace capture les arguments d’entrée et retourne un code de retour. Étant donné que la DLL de trace est appelée avant que le gestionnaire de pilotes valide les arguments, les appels de fonction non valides sont suivis, de sorte que les erreurs de transition d’État et les arguments non valides sont journalisés.  
   
- Après avoir appelé la fonction trace dans la trace DLL, le gestionnaire de conducteur appelle la fonction ODBC dans le conducteur. Il appelle alors **TraceReturn** dans la trace DLL. Cette fonction comporte deux arguments : la valeur retournée par la trace DLL pour la fonction de trace, et le code de retour retourné par le conducteur au gestionnaire de conducteur pour la fonction ODBC (ou la valeur retournée par le gestionnaire de conducteur lui-même si elle traitait la fonction). La fonction utilise la valeur retournée pour la fonction de trace pour manipuler les valeurs d’argument d’entrée capturées. Il écrit le code retourné pour la fonction ODBC au fichier journal (ou l’affiche dynamiquement, si cela est activé). Il dérefère l’argument de sortie pointeurs et enregistre les valeurs de l’argument de sortie.
+ Après l’appel de la fonction trace dans la DLL de trace, le gestionnaire de pilotes appelle la fonction ODBC dans le pilote. Il appelle ensuite **TraceReturn** dans la dll de trace. Cette fonction accepte deux arguments : la valeur retournée par la DLL de trace pour la fonction trace et le code de retour renvoyé par le pilote au gestionnaire de pilotes pour la fonction ODBC (ou la valeur retournée par le gestionnaire de pilotes lui-même si elle a traité la fonction). La fonction utilise la valeur retournée pour la fonction trace pour manipuler les valeurs d’argument d’entrée capturées. Elle écrit le code retourné pour la fonction ODBC dans le fichier journal (ou l’affiche de manière dynamique, si elle est activée). Il déréférence les pointeurs d’argument de sortie et journalise les valeurs d’argument de sortie.

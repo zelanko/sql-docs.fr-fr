@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056700"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Éditeur de destination de traitement de partition (page Mappages)
@@ -30,7 +30,7 @@ ms.locfileid: "66056700"
 >  Les tâches décrites ici ne s’appliquent pas aux modèles tabulaires Analysis Services.  Vous ne pouvez pas mapper des colonnes d’entrée aux colonnes de partition pour les modèles tabulaires. Vous pouvez en revanche utiliser la tâche DDL d'exécution [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) d'Analysis Services pour traiter la partition.  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
   
  **Colonnes de destination disponibles**  
@@ -43,8 +43,8 @@ ms.locfileid: "66056700"
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination de traitement de partition &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Éditeur de destination de traitement de partition &#40;page avancé&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Éditeur de destination de traitement de partition &#40;page Avancé&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

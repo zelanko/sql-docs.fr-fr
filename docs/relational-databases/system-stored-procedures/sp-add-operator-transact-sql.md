@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095501"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
@@ -81,13 +81,13 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days`Nombre qui indique les jours pendant lesquels l’opérateur est disponible pour les pages (selon les heures de début et de fin spécifiées). *pager_days*est de **type tinyint**, avec **0** comme valeur par défaut indiquant que l’opérateur n’est jamais disponible pour recevoir une page. Les valeurs valides sont comprises entre **0** et **127**. *pager_days*est calculé en ajoutant les valeurs individuelles pour les jours requis. Par exemple, du lundi au vendredi, il s’agit de **2**+**4**+**8**+**16**+**32** = **62**. Le tableau ci-après indique la valeur correspondant à chaque jour de la semaine.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
 |**4**|Mardi|  
 |**version8**|Mercredi|  
-|**16**|Jeudi|  
+|**16bits**|Jeudi|  
 |**32**|Vendredi|  
 |**64**|Samedi|  
   
@@ -106,15 +106,13 @@ sp_add_operator [ @name = ] 'name'
   
  Les appels de radiomessagerie reposent sur le système de courrier électronique qui doit pouvoir passer du courrier électronique au récepteur de radiomessagerie si vous désirez utiliser ce dernier.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_add_operator**.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant définit les informations relatives à l'opérateur `danwi`. L'opérateur est activé. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envoie des informations par radiomessagerie du lundi au vendredi de 8 heures à 17 heures.  
+ L'exemple suivant définit les informations relatives à l'opérateur `danwi`. L'opérateur est activé. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envoie des informations par radiomessagerie du lundi au vendredi de 8 heures à 17 heures.  
   
 ```  
 USE msdb ;  

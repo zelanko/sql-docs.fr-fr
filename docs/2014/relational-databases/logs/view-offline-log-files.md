@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144595"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
@@ -45,7 +45,7 @@ ms.locfileid: "63144595"
   
 -   [Classe SqlErrorLogFile](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (cette rubrique indique comment récupérer des informations concernant tous les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-##  <a name="BeforeYouBegin"></a> Autorisations  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorisations  
  Pour vous connecter à un fichier journal hors connexion, vous devez disposer des autorisations suivantes sur les ordinateurs local et distant :  
   
 -   Accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Par défaut, tout le monde dispose de l'accès en lecture via l'autorisation Activer le compte. Pour plus d'informations, consultez la procédure « Pour vérifier les autorisations WMI », plus loin dans cette section.  
@@ -74,7 +74,7 @@ ms.locfileid: "63144595"
   
     3.  Entrez le nom de l'ordinateur distant, puis cliquez sur **OK**.  
   
-3.  Cliquez avec le bouton droit sur **contrôle WMI (local)** ou **contrôle WMI (***remotecomputername***)**, puis cliquez sur **Propriétés**.  
+3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)**, puis cliquez sur **Propriétés**.  
   
 4.  Dans la boîte de dialogue **Propriétés du Contrôle WMI** , cliquez sur l'onglet **Sécurité** .  
   

@@ -14,10 +14,10 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728178"
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorisations d'entité (Master Data Services)
@@ -39,8 +39,8 @@ ms.locfileid: "73728178"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|L’utilisateur peut lire des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
-|**Créés**|L’utilisateur peut créer des membres et affecter des valeurs d’attribut lors de la création.|  
+|**En lecture**|L’utilisateur peut lire des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
+|**Créer**|L’utilisateur peut créer des membres et affecter des valeurs d’attribut lors de la création.|  
 |**Mise à jour**|L’utilisateur peut mettre à jour des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
 |**Supprimer**|Un utilisateur peut supprimer des membres.|  
 |**Deny**|Refusez tous les accès à l’entité.|  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023912"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
@@ -49,8 +49,8 @@ ms.locfileid: "63023912"
  En tant que membre de ce groupe de sécurité, le nouveau compte est habilité à exécuter le travail de l'agent de réplication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
- [Gérer les comptes de connexion et les mots de passe dans la réplication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [Référence des erreurs et des événements &#40;&#41;de réplication](errors-and-events-reference-replication.md)   
+ [Gérer les connexions et les mots de passe dans la réplication](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Gestionnaire de configuration SQL Server](../sql-server-configuration-manager.md)  
   
   

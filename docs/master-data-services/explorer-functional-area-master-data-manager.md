@@ -11,10 +11,10 @@ ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729466"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Zone fonctionnelle Explorateur (Master Data Manager)
@@ -26,7 +26,7 @@ ms.locfileid: "73729466"
 ## <a name="data-management"></a>Gestion des données  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
- [Modifiez le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [Modifier le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
  [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73729466"
   
  [Inverser une transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
- [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
  [Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   

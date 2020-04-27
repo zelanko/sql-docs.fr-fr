@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210759"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour
@@ -26,17 +26,17 @@ ms.locfileid: "68210759"
   
   
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous pouvez basculer à tout instant d’une mise à jour immédiate vers une mise à jour en file d’attente. Après que vous avez basculé, cependant, vous ne pouvez pas repasser en mise à jour immédiate avant que l'abonné et le serveur de publication ne soient connectés et que l'Agent de lecture de la file d'attente n'ait appliqué tous les messages en attente dans la file d'attente sur le serveur de publication.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Lorsqu'un abonnement avec mise à jour à une publication transactionnelle prend en charge le basculement d'un mode de mise à jour vers un autre, vous pouvez basculer par programmation les modes de mise à jour pour gérer les situations où la connectivité change pendant une courte période de temps. Le mode de mise à jour peut être défini par programmation et à la demande à l'aide de procédures stockées de réplication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 > [!NOTE]  
 >  Pour modifier le mode de mise à jour après que l'abonnement a été créé, vous devez affecter à la propriété **update_mode** la valeur **failover** (qui permet de basculer de la mise à jour immédiate vers la mise à jour en attente) ou **queued failover** (qui permet de basculer de la mise à jour en attente vers la mise à jour immédiate) lors de la création de l'abonnement. Ces propriétés sont automatiquement définies dans l'Assistant Nouvel abonnement.  
@@ -49,19 +49,19 @@ ms.locfileid: "68210759"
   
 3.  Cliquez avec le bouton droit sur l'abonnement dont vous voulez définir le mode de mise à jour puis cliquez sur **Définir la méthode de mise à jour**.  
   
-4.  Dans la boîte de dialogue **Définir la méthode de mise à jour - \<Abonné> : \<Base_de_données_d’abonnement>** , sélectionnez **Mise à jour immédiate** ou **Mise à jour en attente**.  
+4.  Dans la boîte de dialogue **Définir la méthode de mise à jour - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez **Mise à jour immédiate** ou **Mise à jour en attente**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Pour définir le mode de mise à jour d'un abonnement extrait  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication> : \<Base_de_données_de_publication>** , sélectionnez une valeur **Répliquer les modifications immédiatement** ou **Mettre les modifications en file d’attente** pour l’option **Méthode de mise à jour de l’Abonné**.  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication> : \<Base_de_données_de_publication>**, sélectionnez une valeur **Répliquer les modifications immédiatement** ou **Mettre les modifications en file d’attente** pour l’option **Méthode de mise à jour de l’Abonné**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication>: \<Base_de_données_de_publication>** , consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
+ Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication>: \<Base_de_données_de_publication>**, consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-switch-between-update-modes"></a>Pour basculer d'un mode de mise à jour vers un autre  
   

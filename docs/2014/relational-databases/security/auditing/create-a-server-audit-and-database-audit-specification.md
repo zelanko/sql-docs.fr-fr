@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211985"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification de l'audit du serveur et de la base de données
@@ -35,30 +35,30 @@ ms.locfileid: "68211985"
   
      [Sécurité](#Security)  
   
--   **Pour créer un audit de serveur et une spécification d’audit de base de données, utilisez :**  
+-   **Pour créer un audit de serveur et une spécification d'audit de base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Les spécifications d'audit de base de données sont des objets non sécurisables qui résident dans une base de données spécifiée. Lorsqu'une spécification d'audit de base de données est créée, elle se trouve dans un état désactivé.  
   
  Lorsque vous créez ou modifiez une spécification de l'audit de la base de données dans une base de données utilisateur, n'incluez pas d'actions d'audit sur des objets dans l'étendue du serveur, tels que les vues système. Sinon, l'audit est créé. Toutefois, les objets dans l'étendue du serveur ne sont pas inclus, et aucune erreur n'est retournée. Pour auditer des objets dans l'étendue du serveur, utilisez une spécification de l'audit de la base de données dans la base de données MASTER.  
   
  Les spécifications d'audit de base de données résident dans la base de données où elles sont créées, à l'exception de la base de données système `tempdb`.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
 -   Les utilisateurs disposant de l'autorisation ALTER ANY DATABASE AUDIT peuvent créer des spécifications d'audit de base de données et les lier à un audit quelconque.  
   
 -   Une fois qu’une spécification d’audit de la base de données est créée, elle peut être affichée par des principaux disposant des autorisations CONTROL SERVER, ALTER ANY DATABASE AUDIT ou du compte sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Pour créer un audit de serveur  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211985"
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données...**.  
+3.  Cliquez avec le bouton droit sur le dossier **spécifications de l’audit de la base de données** et sélectionnez **nouvelle spécification de l’audit de la base de données.**  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit de la base de données** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68211985"
   
 4.  Lorsque vous avez fini de sélectionner l'option, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Pour créer un audit de serveur  
   

@@ -11,10 +11,10 @@ ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728230"
 ---
 # <a name="edit-a-model-deployment-package"></a>Modifier un package de déploiement de modèle
@@ -27,10 +27,10 @@ ms.locfileid: "73728230"
   
  Vous utilisez l'Éditeur de package de modèle pour sélectionner des parties d'un modèle dans un fichier de package créé par l'outil MDSModelDeploy (qui crée un fichier de package incluant des objets et données) ou l'assistant Déploiement de modèle (qui crée un fichier comprenant uniquement la structure de modèle). Après modification du modèle dans le package, vous utilisez l'outil MDSModelDeploy pour déployer les objets et données, ou l'assistant Déploiement de modèle pour déployer uniquement la structure du modèle.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Pour que vous puissiez le modifier, un package de modèle doit exister. Pour plus d’informations, consultez [Déploiement de modèles &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md) et [Créer un package de déploiement de modèle à l’aide de l’Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md) ou [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73728230"
   
 5.  Vérifiez la liste des sélections à déployer. Pour effectuer une modification, cliquez sur **Précédent** et répétez l'étape 4.  
   
-6.  Cliquez sur **Parcourir**, accédez au dossier dans lequel vous souhaitez enregistrer le package partiel, puis entrez le nom de fichier du package partiel (avec l’extension .pkg). Cliquez sur **Enregistrer**.  
+6.  Cliquez sur **Parcourir**, accédez au dossier dans lequel vous souhaitez enregistrer le package partiel, puis entrez le nom de fichier du package partiel (avec l’extension .pkg). Cliquez sur **Save**.  
   
 7.  Cliquez sur **Terminer**.  
   

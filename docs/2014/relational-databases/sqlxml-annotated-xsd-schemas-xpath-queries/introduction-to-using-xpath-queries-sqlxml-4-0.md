@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012708"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "66012708"
   
  Dans ce document, ** \<Customer>** est un nœud d’élément, **CID** est un nœud d’attribut et **« important »** est un nœud de texte.  
   
- XPath est un langage de navigation graphique utilisé pour sélectionner une collection de nœuds à partir d'un document XML. Chaque opérateur XPath sélectionne un élément node-set sur la base d'un élément node-set sélectionné par un opérateur XPath précédent. Par exemple, à partir d’un ensemble de **** ** \<** ** \<nœuds Customer>** , XPath peut sélectionner tous les nœuds>de commande avec la valeur d’attribut date **« 7/14/1999 »**. L'élément node-set résultant contient toutes les commandes avec la date de commande 7/14/1999.  
+ XPath est un langage de navigation graphique utilisé pour sélectionner une collection de nœuds à partir d'un document XML. Chaque opérateur XPath sélectionne un élément node-set sur la base d'un élément node-set sélectionné par un opérateur XPath précédent. Par exemple, à partir d’un ensemble de **date** ** \<** ** \<nœuds Customer>** , XPath peut sélectionner tous les nœuds>de commande avec la valeur d’attribut date **« 7/14/1999 »**. L'élément node-set résultant contient toutes les commandes avec la date de commande 7/14/1999.  
   
  Le langage XPath est défini par le W3C (World Wide Web Consortium) en tant que langage de navigation standard. SQLXML 4,0 implémente un sous-ensemble de la spécification XPath W3C, qui se http://www.w3.org/TR/1999/PR-xpath-19991008.htmltrouve dans.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66012708"
   
      La spécification XPath W3C ne définit pas de conditions d'erreur. Les requêtes XPath qui ne sélectionnent aucun nœud retournent un élément node-set vide. Dans SQLXML 4.0, une requête peut retourner de nombreux types de messages d'erreur.  
   
--   **Ordre de document**  
+-   **Ordre du document**  
   
      Dans SQLXML 4.0, l'ordre du document n'est pas toujours déterminé. Par conséquent, les axes et les prédicats numériques qui utilisent l'ordre de document (comme `following`) ne sont pas implémentés.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66012708"
 |Tous les opérateurs relationnels|=, ! =, <, \<=, >, >=|[La spécification d’opérateurs relationnels dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Opérateurs arithmétiques|+, -, *, div|[La spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Fonctions de conversion explicite|`number()`, `string()`, `Boolean()`|[Spécification de fonctions de conversion explicite dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|Opérateurs booléens|AND, OR|[La spécification d’opérateurs booléens dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|opérateurs booléens|AND, OR|[La spécification d’opérateurs booléens dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |fonctions booléennes|`true()`, `false()`, `not()`|[Spécification de fonctions booléennes dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variables XPath||[Spécification de variables XPath dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
@@ -109,9 +109,9 @@ ms.locfileid: "66012708"
 |Prédicats à valeurs numériques||  
 |Opérateurs arithmétiques|mod|  
 |Fonctions de nœuds|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
-|Fonctions de chaîne|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
+|Fonctions de chaînes|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |fonctions booléennes|`lang()`|  
-|Fonctions numériques|`sum()`, `floor()`, `ceiling()`, `round()`|  
+|Fonctions Numériques|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |Opérateur d'union|&#124;|  
   
  Lorsque vous spécifiez des requêtes XPath dans un modèle, notez le comportement suivant :  

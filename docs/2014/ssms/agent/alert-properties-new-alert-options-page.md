@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061266"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>Propriétés de l’alerte : Nouvelle alerte (page Options)
@@ -41,7 +41,7 @@ ms.locfileid: "63061266"
  **Minutes**  
  Spécifiez un délai en minutes. Pour répondre chaque fois qu'un événement se produit, spécifiez 0 minutes et 0 secondes.  
   
- **Durée**  
+ **Secondes**  
  Spécifiez un délai en secondes. Pour répondre chaque fois qu'un événement se produit, spécifiez 0 minutes et 0 secondes.  
   
 ## <a name="see-also"></a>Voir aussi  

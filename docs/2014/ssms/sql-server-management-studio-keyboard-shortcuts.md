@@ -21,16 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127052"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Raccourcis clavier dans SQL Server Management Studio
-  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose deux schémas de clavier. Par défaut, il utilise le [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] schéma, avec les raccourcis clavier basés [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sur 2010. 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre également un schéma de clavier semblable au schéma standard de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Pour modifier le schéma de clavier ou ajouter d'autres raccourcis clavier, cliquez dans le menu **Outils** sur **Options**. Sélectionnez le schéma de clavier désiré dans la page **Environnement**, **Clavier** .  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose deux schémas de clavier. Par défaut, il utilise le schéma [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] avec les raccourcis clavier basés sur [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre également un schéma de clavier semblable au schéma standard de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Pour modifier le schéma de clavier ou ajouter d'autres raccourcis clavier, cliquez dans le menu **Outils** sur **Options**. Sélectionnez le schéma de clavier désiré dans la page **Environnement**, **Clavier** .  
   
 > [!NOTE]  
 >  Pour afficher uniquement les titres, cliquez sur **Réduire tout** en haut de cette page.  
@@ -49,16 +47,16 @@ ms.locfileid: "63127052"
 |Afficher la boîte de dialogue **Ajouter un nouvel élément** pour ajouter un nouveau fichier au projet actif|Ctrl+Maj+A|Ctrl+Maj+A|  
 |Afficher la boîte de dialogue **Ajouter un élément existant** pour ajouter un fichier existant au projet actif|Maj+Alt+A|Maj+Alt+A|  
 |Afficher le Concepteur de requêtes|Ctrl+Maj+Q|Ctrl+Maj+Q|  
-|Annuler l'action en fermant un menu ou une boîte de dialogue|ÉCHAP|ÉCHAP|  
+|Annuler l'action en fermant un menu ou une boîte de dialogue|Échap|Échap|  
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>Raccourcis clavier des barres d'outils et pour la gestion des fenêtres  
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Fermer la fenêtre enfant MDI active|Ctrl+F4|Ctrl+F4|  
-|Fermer un menu ou une boîte de dialogue, annuler une opération en cours, ou afficher la fenêtre de document actuelle|ÉCHAP|ÉCHAP|  
+|Fermer un menu ou une boîte de dialogue, annuler une opération en cours, ou afficher la fenêtre de document actuelle|Échap|Échap|  
 |Print|Ctrl+P|Ctrl+P|  
-|Quitter|ALT+F4|ALT+F4|  
+|Quitter|Alt+F4|Alt+F4|  
 |Basculer vers le mode plein écran|Maj+Alt+Entrée|Maj+Alt+Entrée|  
 |Fermer la fenêtre Outil active|Maj+Échap|Maj+Échap|  
 |Afficher les fenêtres enfants MDI suivantes|Ctrl+F6|Ctrl+Tab|  
@@ -99,7 +97,7 @@ ms.locfileid: "63127052"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Déplacer le curseur vers la gauche|Gauche|Gauche|  
-|Déplacer le curseur vers la droite|FLÈCHE DROITE|FLÈCHE DROITE|  
+|Déplacer le curseur vers la droite|Flèche droite|Flèche droite|  
 |Déplacer le curseur vers le haut|Flèche haut|Flèche haut|  
 |Déplacer le curseur vers le bas|Bas|Bas|  
 |Placer le curseur au début de la ligne|Origine|Origine|  
@@ -121,10 +119,10 @@ ms.locfileid: "63127052"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Sélectionner le texte à partir du curseur et jusqu'au début du document|Ctrl+Maj+Origine|Ctrl+Maj+Origine|  
-|Sélectionner le texte à partir du curseur et jusqu'à la fin du document|Ctrl+Maj+Fin|Ctrl+Maj+Fin|  
-|Sélectionner le texte à partir du curseur et jusqu'au début de la ligne active|Maj+Origine|Maj+Origine|  
+|Sélectionner le texte à partir du curseur et jusqu'à la fin du document|CTRL+MAJ+FIN|CTRL+MAJ+FIN|  
+|Sélectionner le texte à partir du curseur et jusqu'au début de la ligne active|MAJ+ORIGNE|MAJ+ORIGNE|  
 |Déplace le curseur au début de la ligne en cours et étend la sélection des colonnes|Maj+Alt+Origine|Pas d'équivalent|  
-|Sélectionner le texte à partir du curseur et jusqu'à la fin de la ligne active|Maj+Fin|Maj+Fin|  
+|Sélectionner le texte à partir du curseur et jusqu'à la fin de la ligne active|MAJ+FIN|MAJ+FIN|  
 |Déplace le curseur à la fin de la ligne et étend la sélection des colonnes.|Maj+Alt+Fin|Pas d'équivalent|  
 |Sélectionner le texte ligne par ligne vers le bas à partir du curseur|Maj+Flèche bas|Maj+Flèche bas|  
 |Déplace le curseur d'une ligne et étend la sélection des colonnes|Maj+Ctrl+Maj+Suppr||  
@@ -188,7 +186,7 @@ ms.locfileid: "63127052"
 |Enregistrer tout|Ctrl+Maj+S|Ctrl+Maj+S|  
 |fermez|Ctrl+F4|Ctrl+F4|  
 |Print|Ctrl+P|Ctrl+P|  
-|Quitter|ALT+F4|ALT+F4|  
+|Quitter|Alt+F4|Alt+F4|  
 |Ouvrir le fichier actuel dans un navigateur|Ctrl+Maj+W|Pas d'équivalent|  
 |Supprimer tout le texte du fichier actif|Ctrl+Maj+Suppr|Ctrl+Maj+Suppr|  
 |Afficher la boîte de dialogue **Atteindre la ligne**|Ctrl+G|Ctrl+G|  
@@ -305,7 +303,7 @@ ms.locfileid: "63127052"
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Répertorier les membres|CTRL+J|Ctrl+ESPACE<br /><br /> or<br /><br /> CTRL+J|  
+|Répertorier les membres|Ctrl+J|Ctrl+ESPACE<br /><br /> or<br /><br /> Ctrl+J|  
 |Compléter le mot|Ctrl+ESPACE<br /><br /> or<br /><br /> Alt+Flèche droite|Alt+Flèche droite|  
 |Afficher des informations rapides|Ctrl+K, Ctrl+I|Pas d'équivalent|  
 |Afficher les informations de paramètre|Ctrl+Maj+ESPACE|Ctrl+Maj+ESPACE|  
@@ -329,7 +327,7 @@ ms.locfileid: "63127052"
 |Se placer dans le volet précédent d'un document comportant plusieurs volets de fractionnement|Maj+F6|Maj+F6|  
 |Afficher la page précédente dans l'historique d'affichage|Alt+Gauche|Alt+Gauche|  
 |Afficher la page suivante de l'historique d'affichage|Alt+Flèche droite|Alt+Flèche droite|  
-|Ferme un menu ou une boîte de dialogue, annule une opération en cours, ou affiche la fenêtre de document actuelle|ÉCHAP|Pas d'équivalent|  
+|Ferme un menu ou une boîte de dialogue, annule une opération en cours, ou affiche la fenêtre de document actuelle|Échap|Pas d'équivalent|  
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>Raccourcis clavier de l'Explorateur de solutions  
   
@@ -385,7 +383,7 @@ ms.locfileid: "63127052"
 |------------|-----------------------------|---------------------------------|  
 |Couper (supprimer l'élément actuellement sélectionné et le placer dans le Presse-papiers)|Ctrl+X<br /><br /> or<br /><br /> SHIFTRLT+DELETE|Ctrl+X<br /><br /> or<br /><br /> Maj+Suppr|  
 |Coupe toutes les lignes sélectionnées, ou la ligne active si aucune ligne n'est sélectionnée.|Ctrl+L<br /><br /> or<br /><br /> Ctrl+Maj+L|Pas d'équivalent|  
-|Copier dans le Presse-papiers|Ctrl+C<br /><br /> or<br /><br /> Ctrl+Insert|Ctrl+C<br /><br /> or<br /><br /> Ctrl+Insert|  
+|Copier dans le Presse-papiers|CTRL+C<br /><br /> or<br /><br /> Ctrl+Insert|CTRL+C<br /><br /> or<br /><br /> Ctrl+Insert|  
 |Coller à partir du Presse-papiers au point d'insertion|Ctrl+V<br /><br /> or<br /><br /> Maj+Insert|Ctrl+V<br /><br /> or<br /><br /> Maj+Insert|  
 |Colle un élément de la boucle du presse-papiers au point d'insertion et sélectionne automatiquement l'élément collé|Ctrl+Maj+V<br /><br /> or<br /><br /> Ctrl+enseSHIFT+Insert|Pas d'équivalent|  
   
@@ -395,7 +393,7 @@ ms.locfileid: "63127052"
 |------------|-----------------------------|---------------------------------|  
 |Actualiser|Pas d'équivalent|F5|  
 |Se déplacer entre les volets **Sélectionner les journaux** et **Résumé du fichier journal**|Pas d'équivalent|F6|  
-|Se placer dans le volet **Résumé du fichier journal**|Pas d'équivalent|ALT + S|  
+|Se placer dans le volet **Résumé du fichier journal**|Pas d'équivalent|Alt+S|  
 |Charger un nouveau journal|Pas d'équivalent|Ctrl+Maj+L|  
 |Exporter un journal|Pas d'équivalent|Ctrl+Maj+E|  
 |Filtrer un journal|Pas d'équivalent|Ctrl+Maj+F|  
@@ -412,7 +410,7 @@ ms.locfileid: "63127052"
 |Afficher les panneaux|F6|F6|  
 |Développer ou réduire le volet sélectionné|Ctrl et + ou -|Ctrl et + ou -|  
 |Développer ou réduire tous les volets|+ ou -|+ ou -|  
-|Copie la ligne entière sélectionnée dans la grille|Ctrl+C|Ctrl+C|  
+|Copie la ligne entière sélectionnée dans la grille|CTRL+C|CTRL+C|  
 |Copier une cellule|Ctrl+Maj+C|Ctrl+Maj+C|  
 |Liste déroulante pour le filtrage dans la grille|Alt+Bas|Alt+Bas|  
 |Faire défiler vers le haut ou vers le bas dans le Moniteur d'activité|Ctrl+Alt+Haut/Bas|Ctrl+Alt+Haut/Bas|  
@@ -451,7 +449,7 @@ ms.locfileid: "63127052"
 |------------|-----------------------------|---------------------------------|  
 |Déplace le contrôle sélectionné vers le bas par incréments de 8 sur l'aire de conception|Bas|Pas d'équivalent|  
 |Déplace le contrôle sélectionné à gauche par incréments de 8 sur l'aire de conception|Gauche|Pas d'équivalent|  
-|Déplace le contrôle sélectionné à droite par incréments de 8 sur l'aire de conception|FLÈCHE DROITE|Pas d'équivalent|  
+|Déplace le contrôle sélectionné à droite par incréments de 8 sur l'aire de conception|Flèche droite|Pas d'équivalent|  
 |Déplace le contrôle sélectionné vers le haut par incréments de 8 sur l'aire de conception|Flèche haut|Pas d'équivalent|  
 |Augmente la hauteur du contrôle sélectionné par incréments de 8|Maj+Flèche bas|Pas d'équivalent|  
 |Réduit la largeur du contrôle sélectionné par incréments de 8|Maj+Flèche gauche|Pas d'équivalent|  

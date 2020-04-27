@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174458"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algorithme MNB (Microsoft Naive Bayes)
@@ -55,7 +55,7 @@ ms.locfileid: "78174458"
 
  Les spécifications liées à un modèle Naive Bayes se présentent comme suit :
 
--   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
+-   **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
 
 -   **Colonnes d’entrée** Dans un modèle Naive Bayes, toutes les colonnes doivent être des colonnes discrètes ou discrètes. Pour plus d’informations sur la discrétisation des colonnes, consultez [méthodes de discrétisation &#40;&#41;d’exploration de données ](discretization-methods-data-mining.md).
 
@@ -65,7 +65,7 @@ ms.locfileid: "78174458"
 
      Inversement, la capacité de l'algorithme à identifier les corrélations entre les variables est utile lorsque vous explorez un modèle ou un dataset, pour d'identifier les relations entre des entrées.
 
--   **Au moins une colonne prévisible** L’attribut prévisible doit contenir des valeurs discrètes ou discrètes.
+-   **Au moins une colonne prévisible** L’attribut prédictible doit contenir des valeurs discrètes ou discrétisées.
 
      Les valeurs de la colonne prédictible peuvent être traitées comme entrées. Cette approche peut être utile lorsque vous explorez un nouveau dataset, afin de rechercher des relations entre les colonnes.
 

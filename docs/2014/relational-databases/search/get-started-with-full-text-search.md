@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011286"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
   Les bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge le texte intégral par défaut. Cependant, pour utiliser l'index de recherche en texte intégral dans une table, vous devez configurer l'outil d'indexation de texte intégral dans les colonnes des tables auxquelles vous souhaitez accéder via le moteur de texte intégral.  
   
-##  <a name="configure"></a>Configuration d’une base de données pour la recherche en texte intégral  
+##  <a name="configuring-a-database-for-full-text-search"></a><a name="configure"></a>Configuration d’une base de données pour la recherche en texte intégral  
  Dans n'importe quel scénario, un administrateur de base de données effectue les étapes de base suivantes afin de configurer les colonnes de table d'une base de données pour la recherche en texte intégral :  
   
 1.  Création d'un catalogue de texte intégral.  
@@ -42,7 +42,7 @@ ms.locfileid: "66011286"
   
  La recherche en texte intégral prend en charge plusieurs langues par le biais de l’utilisation des *composants linguistiques* suivants : analyseurs lexicaux et générateurs de formes dérivées, listes de mots vides qui contiennent des mots vides (également appelés mots parasites) et fichiers de dictionnaire des synonymes. Les fichiers de dictionnaire des synonymes et, dans certains cas, les listes de mots vides, doivent être configurés par un administrateur de base de données. Un fichier de dictionnaire des synonymes donné prend en charge tous les index de recherche en texte intégral qui utilisent la langue correspondante, et une liste de mots vides donnée peut être associée à autant d'index de recherche en texte intégral que nécessaire.  
   
-##  <a name="setup"></a>Configuration d’un catalogue de texte intégral et d’un index  
+##  <a name="setting-up-a-full-text-catalog-and-index"></a><a name="setup"></a>Configuration d’un catalogue de texte intégral et d’un index  
  Cette opération implique les étapes fondamentales suivantes :  
   
 1.  Créez un catalogue de texte intégral pour stocker les index de recherche en texte intégral.  
@@ -62,7 +62,7 @@ ms.locfileid: "66011286"
 |Sont groupés à l'intérieur d'une même base de données dans un ou plusieurs catalogues de texte intégral.|Ne sont pas groupés.|  
   
   
-##  <a name="options"></a>Choix des options pour un index de recherche en texte intégral  
+##  <a name="choosing-options-for-a-full-text-index"></a><a name="options"></a>Choix des options pour un index de recherche en texte intégral  
  Cette section couvre ce qui suit :  
   
 -   Sélection du langage de la colonne  
@@ -99,8 +99,7 @@ ms.locfileid: "66011286"
   
   
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Association d'une liste de mots vides à l'index de recherche en texte intégral  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit les listes de mots vides. Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Toutefois, vous pouvez créer et utiliser à la place votre propre liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit les listes de mots vides. Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Toutefois, vous pouvez créer et utiliser à la place votre propre liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante crée une nouvelle STOPLIST de texte intégral nommée myStoplist3 en copiant à partir de la STOPLIST système :  
   
@@ -130,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  En règle générale, si un remplissage complet est en cours, le résultat retourné est 1.  
   
   
-##  <a name="example"></a>Exemple : configuration de la recherche en texte intégral  
+##  <a name="example-setting-up-full-text-search"></a><a name="example"></a>Exemple : configuration de la recherche en texte intégral  
  L'exemple en deux parties ci-dessous crée un catalogue de texte intégral nommé `AdvWksDocFTCat` sur la base de données AdventureWorks, puis crée un index de recherche en texte intégral sur la table `Document` dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cette instruction permet de créer le catalogue de texte intégral dans le répertoire par défaut spécifié durant l'installation. Le dossier nommé `AdvWksDocFTCat` se trouve dans le répertoire par défaut.  
   
 1.  Pour créer un catalogue de texte intégral nommé `AdvWksDocFTCat`, l’exemple utilise une instruction [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) :  
@@ -165,7 +164,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
      Le paramètre TYPE COLUMN défini dans cet exemple spécifie la colonne de type dans la table qui contient le type du document dans chaque ligne de la colonne Document (lequel est de type binaire). La colonne de type stocke l’extension de fichier fournie par l’utilisateur, « . doc », « . xls », et ainsi de suite, le document dans une ligne donnée. Le moteur d'indexation et de recherche en texte intégral utilise l'extension de fichier dans une ligne donnée afin d'appeler le filtre approprié pour l'analyse des données de cette ligne. Une fois que le filtre a analysé les données binaires de la ligne, l'analyseur lexical spécifié analyse le contenu (dans cet exemple, c'est l'analyseur lexical pour l'anglais britannique qui est utilisé). Notez que le processus de filtrage se produit uniquement au moment de l'indexation ou si un utilisateur insère ou met à jour une colonne dans la table de base alors que le suivi automatique des modifications est activé pour l'index de recherche en texte intégral. Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](configure-and-manage-filters-for-search.md).  
   
   
-##  <a name="tasks"></a>Tâches courantes  
+##  <a name="common-tasks"></a><a name="tasks"></a>Tâches courantes  
   
 ### <a name="to-create-a-full-text-catalog"></a>Pour créer un catalogue de texte intégral  
   
@@ -181,7 +180,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [Ouvrez Concepteur de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
+-   [Ouvrir le Concepteur de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### <a name="to-create-a-full-text-index"></a>Pour créer un index de recherche en texte intégral  
   
@@ -203,9 +202,9 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER un catalogue de texte intégral &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [CRÉER une STOPLIST de texte intégral &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [Remplir les index de recherche en texte intégral](populate-full-text-indexes.md)   
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   

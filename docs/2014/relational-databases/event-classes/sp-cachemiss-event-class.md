@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050925"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss (classe d'événements)
-  La classe d'événements SP:CacheMiss indique que la procédure est introuvable dans le cache. Si la classe d’événements SP : CacheMiss se produit fréquemment, cela peut indiquer que davantage de mémoire est disponible [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour, augmentant ainsi la taille du cache de procédure.  
+  La classe d'événements SP:CacheMiss indique que la procédure est introuvable dans le cache. Si la classe d’événements SP:CacheMiss intervient fréquemment, cela peut indiquer qu’un supplément de mémoire doit être mis à la disposition de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], augmentant ainsi la taille du cache de procédure.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Colonnes de données de la classe d'événements SP:CacheMiss  
   

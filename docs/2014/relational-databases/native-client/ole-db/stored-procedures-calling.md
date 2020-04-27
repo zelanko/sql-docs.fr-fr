@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206577"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Appel d'une procédure stockée (OLE DB)
@@ -43,7 +43,7 @@ ms.locfileid: "68206577"
   
 1.  Indiquez les informations de paramètre dans un tableau de structures DBPARAMBINDINFO, notamment le nom du paramètre, le nom spécifique au fournisseur pour le type de données du paramètre ou un nom de type de données standard, etc. Chaque structure du tableau décrit un paramètre. Ce tableau est ensuite passé à la méthode **SetParameterInfo**.  
   
-2.  Appelez la méthode **ICommandWithParameters::SetParameterInfo** pour décrire les paramètres au fournisseur. **SetParameterInfo** spécifie le type de données natif de chaque paramètre. Les arguments **SetParameterInfo** sont les suivants :  
+2.  Appelez la méthode **ICommandWithParameters::SetParameterInfo** pour décrire les paramètres au fournisseur. **SetParameterInfo** spécifie le type de données natif de chaque paramètre. Les arguments de **SetParameterInfo** sont :  
   
     -   le nombre de paramètres pour lesquels définir des informations de type ;  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68206577"
 {rpc SalesByCategory}  
 ```  
   
- Pour obtenir un exemple d’application qui illustre une séquence d’échappement RPC, consultez [exécuter une procédure stockée &#40;à l’aide de la syntaxe rpc&#41; et traiter les codes de retour et les paramètres de sortie &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Pour obtenir un exemple d’application qui illustre une séquence d’échappement RPC, consultez [Exécuter une procédure stockée (avec la syntaxe RPC) et traiter les codes de retour et les paramètres de sortie &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instruction Transact-SQL EXECUTE  
  La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée, plutôt que l’instruction [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client utilise le mécanisme RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de pour optimiser le traitement des commandes. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  

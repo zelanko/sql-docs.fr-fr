@@ -15,17 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011905"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d'identité lors de l'importation de données en bloc (SQL Server)
   Les fichiers de données qui contiennent des valeurs d’identité peuvent être importés en bloc dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, les valeurs de la colonne d'identité du fichier de données importé sont ignorées et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques. Ces valeurs uniques reposent sur les valeurs de départ et d'incrément spécifiées lors de la création de la table.  
   
- Si les fichiers de données ne contiennent pas de valeurs pour la colonne d'identificateur de la table, vous devez utiliser un fichier de format pour préciser si la colonne d'identificateur de la table doit être ignorée lors de l'importation de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne automatiquement des valeurs uniques pour la colonne.  
+ Si les fichiers de données ne contiennent pas de valeurs pour la colonne d'identificateur de la table, vous devez utiliser un fichier de format pour préciser si la colonne d'identificateur de la table doit être ignorée lors de l'importation de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne automatiquement des valeurs uniques pour la colonne.  
   
  Pour empêcher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'assigner des valeurs d'identité lors de l'importation en bloc de lignes de données dans une table, utilisez le qualificateur de commande de conservation d'identité approprié. Lorsque vous spécifiez un qualificateur de conservation d'identité, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les valeurs d'identité du fichier de données. Ces qualificateurs sont les suivants :  
   
@@ -74,7 +73,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Pour plus d’informations sur la création d’un fichier de format, consultez [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>R. Utilisation de bcp et conservation des valeurs d'identité  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Utilisation de bcp et conservation des valeurs d'identité  
  Cet exemple montre comment conserver les valeurs d'identité dans le cadre d'une importation de données en bloc avec la commande `bcp`. La commande `bcp`, qui utilise le fichier de format `myDepartment-f-n-x.Xml`, contient les commutateurs suivants :  
   
 |Qualificateurs|Description|  
@@ -131,11 +130,11 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Préparer les données pour l’exportation ou l’importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Pour utiliser un fichier de format**  
   
@@ -149,25 +148,25 @@ GO
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **Pour utiliser des formats de données pour l’importation en bloc ou l’exportation en bloc**  
+ **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  
   
--   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Pour spécifier des formats de données pour la compatibilité lors de l’utilisation de BCP**  
+ **Pour spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp**  
   
-1.  [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+1.  [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Spécifiez le type de stockage de fichier à l’aide de l' &#40;BCP SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

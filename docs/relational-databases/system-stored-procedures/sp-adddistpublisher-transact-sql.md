@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771389"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
@@ -53,12 +53,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode`Est le mode de sécurité implémenté. Ce paramètre est utilisé uniquement par les agents de réplication pour se connecter au serveur de publication pour les abonnements de mise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à jour en attente ou avec un serveur de publication non-. *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Les Agents de réplication situés sur le serveur de distribution utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter au serveur de publication.|  
 |**1** (par défaut)|Les agents de réplication situés sur le serveur de distribution utilisent l'authentification Windows pour se connecter au serveur de publication.|  
   
-`[ @login = ] 'login'`Nom de la connexion. Ce paramètre est obligatoire si *security_mode* a la **valeur 0**. *login* est de **type sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
+`[ @login = ] 'login'`Nom de la connexion. Ce paramètre est obligatoire si *security_mode* a la **valeur 0**. *login* est de type **sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
 `[ @password = ] 'password']`Est le mot de passe. *Password* est de **type sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
@@ -79,14 +79,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @thirdparty_flag = ] thirdparty_flag`Est lorsque le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]publication est. *thirdparty_flag* est de **bits**et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**0** (par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Database.|  
+|**0** (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Database.|  
 |**1**|Base de données autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 `[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le serveur de publication n’est pas. *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (par défaut)|Spécifie un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**SOLUTION**|Spécifie un serveur de publication Oracle standard.|  
@@ -111,7 +111,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  
   
   

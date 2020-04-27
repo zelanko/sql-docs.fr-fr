@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206610"
 ---
 # <a name="using-user-defined-types"></a>Utilisation des types définis par l'utilisateur
@@ -42,28 +42,28 @@ ms.locfileid: "68206610"
 ### <a name="data-bindings-and-coercions"></a>Liaisons de données et forçages de type  
  Le tableau suivant décrit la liaison et le forçage de type survenant lorsque vous utilisez les types de données répertoriés avec un UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les colonnes UDT sont exposées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le biais du fournisseur OLE DB Native Client comme DBTYPE_UDT. Vous pouvez obtenir les métadonnées par le biais des ensembles de lignes de schéma appropriés et ainsi gérer en tant qu'objets vos propres types définis.  
   
-|Type de données|Vers le serveur<br /><br /> **UDT**|Vers le serveur<br /><br /> **non UDT**|Depuis le serveur<br /><br /> **UDT**|Depuis le serveur<br /><br /> **non UDT**|  
+|Type de données|Vers le serveur<br /><br /> **ASSORTI**|Vers le serveur<br /><br /> **Non-UDT**|Depuis le serveur<br /><br /> **ASSORTI**|Depuis le serveur<br /><br /> **Non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Pris en charge<sup>6</sup>|Erreur<sup>1</sup>|Pris en charge<sup>6</sup>|Erreur<sup>5</sup>|  
 |DBTYPE_BYTES|Pris en charge<sup>6</sup>|N/A<sup>2</sup>|Pris en charge<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Non pris en charge|N/A<sup>2</sup>|Non pris en charge|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|Pris en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|Pris en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|Pris en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Non prise en charge|N/A<sup>2</sup>|Non prise en charge|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge<sup>6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pris en charge<sup>3,6</sup>|N/A<sup>2</sup>|NON APPLICABLE|N/A<sup>2</sup>|  
   
- <sup>1</sup> Si un type de serveur autre que DBTYPE_UDT est spécifié avec **ICommandWithParameters :: SetParameterInfo** et que le type d’accesseur est DBTYPE_UDT, une erreur se produit lorsque l’instruction est exécutée (DB_E_ERRORSOCCURRED ; l’état du paramètre est DBSTATUS_E_BADACCESSOR). Sinon, les données sont envoyées au serveur, mais le serveur retourne une erreur indiquant qu'il n'existe pas de conversion implicite entre l'UDT et le type de données du paramètre.  
+ <sup>1</sup>Si un type de serveur autre que DBTYPE_UDT est spécifié avec **ICommandWithParameters::SetParameterInfo** et si le type d’accesseur est DBTYPE_UDT, une erreur se produit lors de l’exécution de l’instruction (DB_E_ERRORSOCCURRED, l’état du paramètre est DBSTATUS_E_BADACCESSOR). Sinon, les données sont envoyées au serveur, mais le serveur retourne une erreur indiquant qu'il n'existe pas de conversion implicite entre l'UDT et le type de données du paramètre.  
   
  <sup>2</sup> Au-delà du cadre de cette rubrique.  
   
- <sup>3</sup> la conversion de données de chaîne hexadécimale en données binaires se produit.  
+ <sup>3</sup> La conversion de données d’une chaîne hexadécimale en données binaires est réalisée.  
   
- <sup>4</sup> la conversion de données binaires en chaîne hexadécimale est effectuée.  
+ <sup>4</sup> La conversion de données binaires en chaîne hexadécimale est réalisée.  
   
- <sup>5</sup> La validation peut se produire au moment de la création de l’accesseur, ou au moment de l’extraction, l’erreur est DB_E_ERRORSOCCURRED, l’état de la liaison est défini sur DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>5</sup>La validation peut avoir lieu au moment de créer l’accesseur ou au moment de l’extraction, l’erreur est DB_E_ERRORSOCCURRED ; l’état de la liaison est défini sur DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>6</sup> BY_REF peut être utilisé.  
+ <sup>6</sup>BY_REF peut être utilisé.  
   
  Les types DBTYPE_NULL et DBTYPE_EMPTY peuvent être liés pour des paramètres d'entrée mais pas pour des paramètres de résultats ou pour des sorties. S’ils sont liés pour des paramètres d’entrée, l’état doit être défini sur DBSTATUS_S_ISNULL ou DBSTATUS_S_DEFAULT.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "68206610"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Afin de prendre en charge les UDT via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, Native Client implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER qui contient les valeurs suivantes.  
   
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Identificateur de nom en trois parties.<br /><br /> Pour les paramètres UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le type défini par l'utilisateur est défini.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Identificateur de nom en trois parties.<br /><br /> Pour les paramètres UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le type défini par l'utilisateur est défini.|  
@@ -146,9 +146,9 @@ ms.locfileid: "68206610"
  SSPROP_PARAM_UDT_NAME est obligatoire. SSPROP_PARAM_UDT_CATALOGNAME et SSPROP_PARAM_UDT_SCHEMANAME sont facultatifs. Si l'une des propriétés est spécifiée de manière incorrecte, DB_E_ERRORSINCOMMAND est retourné. Si SSPROP_PARAM_UDT_CATALOGNAME et SSPROP_PARAM_UDT_SCHEMANAME ne sont pas spécifiés, le type défini par l'utilisateur (UDT) doit être défini dans la même base de données et dans le même schéma que la table. Si la définition du type défini par l'utilisateur ne se trouve pas dans le même schéma que la table (mais dans la même base de données), SSPROP_PARAM_UDT_SCHEMANAME doit être spécifié. Si la définition du type défini par l'utilisateur se trouve dans une base de données différente, SSPROP_PARAM_UDT_CATALOGNAME et SSPROP_PARAM_UDT_SCHEMANAME doivent être spécifiés.  
   
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
- Pour prendre en charge la création de tables **** dans l’interface [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ITableDefinition, Native Client ajoute les trois nouvelles colonnes suivantes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
+ Pour prendre en charge la création de tables **ITableDefinition** dans l’interface [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ITableDefinition, Native Client ajoute les trois nouvelles colonnes suivantes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Name|Description|Type|Description|  
+|Nom|Description|Type|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Pour les colonnes de type DBTYPE_UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le type défini par l'utilisateur (UDT) est défini.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Pour les colonnes de type DBTYPE_UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le type défini par l'utilisateur (UDT) est défini.|  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035708"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tâche de nettoyage de maintenance (Plan de maintenance)
@@ -58,10 +58,10 @@ ms.locfileid: "63035708"
  **Inclure les sous-dossiers de premier niveau**  
  Supprimez les fichiers portant l’extension spécifiée pour l’option **Extension de fichier** , des sous-dossiers de premier niveau situés dans le dossier défini dans l’option **Dossier**.  
   
- **Supprimer les fichiers en fonction de l’ancienneté du fichier au moment de l’exécution de la tâche**  
+ **Supprimer les fichiers en fonction de l'ancienneté du fichier au moment de l'exécution de la tâche**  
  Spécifiez l’ancienneté minimale des fichiers à supprimer en entrant un chiffre et une unité de temps dans la zone **Supprimer les fichiers antérieurs à** .  
   
- **Supprimer les fichiers antérieurs à ce qui suit**  
+ **Supprimer les fichiers antérieurs à**  
  Spécifiez l'ancienneté minimale des fichiers à supprimer en fournissant un chiffre et une unité de temps (Jour, Semaine, Mois ou Année). Les fichiers antérieurs au délai spécifié seront supprimés.  
   
  **Vue T-SQL**  

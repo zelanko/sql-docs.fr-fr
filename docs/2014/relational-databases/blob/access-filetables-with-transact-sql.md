@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010430"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Accéder aux FileTables avec Transact-SQL
   Décrit le fonctionnement des commandes de langage de manipulation de données (DML) [!INCLUDE[tsql](../../includes/tsql-md.md)] avec des FileTables.  
   
-##  <a name="BasicsInsert"></a> Opérations INSERT sur les FileTables  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> Opérations INSERT sur les FileTables  
  Les points suivants s'appliquent aux opérations **INSERT** sur les FileTables :  
   
 -   Toutes les colonnes d'attribut de fichier ont des contraintes NOT NULL. Si les valeurs ne sont pas définies explicitement, les valeurs par défaut appropriées sont fournies.  
@@ -31,7 +31,7 @@ ms.locfileid: "66010430"
   
 -   L’application peut obtenir la valeur **path_locator** pour un fichier ou un répertoire en fournissant le chemin d’accès au système de fichiers à la fonction [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql).  
   
-##  <a name="BasicsUpdate"></a> Opérations UPDATE sur les FileTables  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> Opérations UPDATE sur les FileTables  
  Les points suivants s'appliquent aux opérations **UPDATE** sur les FileTables :  
   
 -   Les mises à jour apportées aux données définies par l'utilisateur sont autorisées.  
@@ -40,14 +40,14 @@ ms.locfileid: "66010430"
   
 -   Les mises à jour peuvent être apportées aux données FILESTREAM dans la colonne **file_stream** sans affecter aucune des autres colonnes, dont les horodateurs.  
   
-##  <a name="BasicsDelete"></a> Opérations DELETE sur les FileTables  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> Opérations DELETE sur les FileTables  
  Les points suivants s'appliquent aux opérations **DELETE** sur les FileTables :  
   
 -   La suppression d'une ligne supprime également le fichier ou répertoire correspondant du système de fichiers.  
   
 -   La suppression d'une ligne échoue si la ligne correspond à un répertoire qui contient d'autres fichiers ou répertoires.  
   
-##  <a name="BasicsConstraints"></a> Contraintes appliquées pour les opérations DML sur les FileTables  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> Contraintes appliquées pour les opérations DML sur les FileTables  
  Les contraintes définies par le système garantissent que les actions DML ne compromettent pas l'intégrité de la hiérarchie de l'espace de noms de fichier. Les contraintes appliquées sont les suivantes :  
   
 -   Lorsque vous définissez ou modifiez le **nom** du fichier ou du répertoire :  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054359"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Éditeur de tâche Lecteur de données WMI (page Options WMI)
@@ -28,14 +28,14 @@ ms.locfileid: "66054359"
   
 ## <a name="static-options"></a>Options statiques  
  **WMIConnectionName**  
- Sélectionnez un gestionnaire de connexions WMI dans la liste ou cliquez sur \<**Nouvelle connexion WMI...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions WMI dans la liste ou cliquez \<sur **nouvelle connexion WMI...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions WMI](connection-manager/wmi-connection-manager.md), [éditeur du gestionnaire de connexions WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions WMI](connection-manager/wmi-connection-manager.md), [Éditeur du gestionnaire de connexions WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Sélectionnez le type de la source de la requête WQL que la tâche exécute. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définit la source d'une requête WQL. Si vous sélectionnez cette valeur, l'option dynamique **WQLQuerySourceType**s'affiche.|  
 |**Connexion de fichiers**|Sélectionnez un fichier qui contient la requête WQL. Si vous sélectionnez cette valeur, l'option dynamique **WQLQuerySourceType**s'affiche.|  
@@ -50,7 +50,7 @@ ms.locfileid: "66054359"
  **DestinationType**  
  Sélectionnez le type de la destination de la requête WQL que la tâche exécute. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Sélectionnez un fichier pour y enregistrer le résultat de la requête WQL. Cette valeur affiche l'option dynamique **DestinationType**.|  
 |**Variable**|Définissez la variable de stockage du résultat de la requête WQL. Cette valeur affiche l'option dynamique **DestinationType**.|  
@@ -59,13 +59,13 @@ ms.locfileid: "66054359"
   
 ### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Entrée directe  
  **WQLQuerySource**  
- Fournissez une requête ou cliquez sur le bouton de sélection (...) et entrez une requête en utilisant la boîte de dialogue **Requête WQL**.  
+ Fournissez une requête ou cliquez sur les points de suspension (...) et entrez une requête à l’aide de la boîte de dialogue **requête WQL** .  
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Connexion de fichiers  
  **WQLQuerySource**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou \<cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variable  
  **WQLQuerySource**  
@@ -79,7 +79,7 @@ ms.locfileid: "66054359"
  **Destination**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou \<cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = Variable  
  **Destination**  
@@ -88,9 +88,9 @@ ms.locfileid: "66054359"
  **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche lecteur de données WMI &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Tâche Observateur d'événement WMI](control-flow/wmi-event-watcher-task.md)  
   
   

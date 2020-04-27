@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206792"
 ---
 # <a name="process-odbc-errors-odbc"></a>Traiter les erreurs ODBC (ODBC)
   Deux appels de fonctions ODBC peuvent être utilisés pour récupérer les messages ODBC : [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Pour obtenir les informations ODBC de base dans les champs de diagnostic **SQLState**, **pfNative** et **ErrorMessage**, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) jusqu’à ce que SQL_NO_DATA soit retourné. Pour chaque enregistrement de diagnostic, [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) peut être appelé pour extraire les champs individuels. Tous les champs spécifiques au pilote doivent être extraits à l'aide de `SQLGetDiagField`.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) sont traités par le gestionnaire de pilotes ODBC, et non par un pilote individuel. Le Gestionnaire de pilote ODBC ne met pas en cache les champs de diagnostic spécifiques aux pilotes tant qu'une connexion n'a pas été établie avec succès. L’appel de [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) pour les champs de diagnostic spécifiques aux pilotes n’est pas possible avant une connexion réussie. Les commandes de connexion ODBC sont incluses dans ce cas de figure, même si elles retournent SQL_SUCCESS_WITH_INFO. Les champs de diagnostic spécifiques au pilote ne seront pas disponibles jusqu'au prochain appel d'une fonction ODBC.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) sont traités par le gestionnaire de pilote ODBC, et non par un pilote individuel. Le Gestionnaire de pilote ODBC ne met pas en cache les champs de diagnostic spécifiques aux pilotes tant qu'une connexion n'a pas été établie avec succès. L’appel de [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) pour les champs de diagnostic spécifiques aux pilotes n’est pas possible avant une connexion réussie. Les commandes de connexion ODBC sont incluses dans ce cas de figure, même si elles retournent SQL_SUCCESS_WITH_INFO. Les champs de diagnostic spécifiques au pilote ne seront pas disponibles jusqu'au prochain appel d'une fonction ODBC.  
   
 ## <a name="example"></a>Exemple  
   
@@ -236,6 +236,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures ODBC](odbc-how-to-topics.md)  
+ [Rubriques de procédures liées à ODBC](odbc-how-to-topics.md)  
   
   

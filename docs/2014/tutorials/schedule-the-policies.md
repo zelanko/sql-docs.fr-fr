@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033501"
 ---
 # <a name="schedule-the-policies"></a>Planifier les stratégies
@@ -38,7 +38,7 @@ ms.locfileid: "63033501"
     > [!NOTE]  
     >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, cliquez avec le bouton droit sur **gestion des stratégies**, puis cliquez sur **afficher l’historique**.  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Vous avez configuré l'exécution de stratégies planifiées sur une instance unique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si vous souhaitez déployer des stratégies planifiées vers plusieurs instances, passez à la tâche suivante dans ce didacticiel.  
   
 ## <a name="next-steps"></a>Étapes suivantes  

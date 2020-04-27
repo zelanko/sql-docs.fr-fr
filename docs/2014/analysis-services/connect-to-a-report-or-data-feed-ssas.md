@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151827"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connexion à un flux de rapport ou de données (SSAS)
@@ -26,7 +26,7 @@ ms.locfileid: "70151827"
  **Nom convivial de la connexion**  
  Tapez un nom convivial pour la connexion au flux de données.  
   
- **Chemin d’accès du rapport**  
+ **Chemin d'accès au rapport**  
  Indique l'URL d'un rapport SQL Server Reporting Services qui génère des sources de données. Cliquez sur **Parcourir** pour spécifier l'URL du rapport.  
   
  Cliquez sur **Afficher le rapport** pour afficher le rapport.  
@@ -34,7 +34,7 @@ ms.locfileid: "70151827"
  **Parcourir**  
  Naviguez jusqu'à un emplacement où un rapport est disponible.  
   
- **Avancée**  
+ **Avancé**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Tester la connexion**  
@@ -61,7 +61,7 @@ ms.locfileid: "70151827"
  **Enregistrer ma clé de compte**  
  Enregistre la clé de compte (chiffrée) avec la connexion de données.  
   
- **Avancée**  
+ **Avancé**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Tester la connexion**  
@@ -79,7 +79,7 @@ ms.locfileid: "70151827"
  **Parcourir**  
  Naviguez jusqu'à un emplacement où un flux de données est disponible.  
   
- **Avancée**  
+ **Avancé**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **Définir les propriétés avancées** .  
   
  **Tester la connexion**  

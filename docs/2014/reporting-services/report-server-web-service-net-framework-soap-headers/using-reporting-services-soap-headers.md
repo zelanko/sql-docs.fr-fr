@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f48be183398d4d441b5781c9f9467178c3011e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012288"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Utilisation des en-têtes SOAP de Reporting Services
@@ -36,7 +36,7 @@ ms.locfileid: "63012288"
 |-----------|-----------------|  
 |[Méthodes de traitement par lot](batching-methods.md)|Décrit comment traiter en lot plusieurs opérations dans une transaction unique à l'aide de <xref:ReportService2005.BatchHeader>.|  
 |[Identification de l'état d'exécution](identifying-execution-state.md)|Explique comment gérer l’état de session dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide de **SessionHeader**.|  
-|[Définition de l'espace de noms des éléments pour la méthode GetProperties](setting-the-item-namespace-for-the-getproperties-method.md)|Décrit comment extraire des propriétés selon le chemin d'accès ou l'ID d'un élément, en utilisant la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> et l'en-tête SOAP <xref:ReportService2010.ItemNamespaceHeader>.|  
+|[Définition de l'espace de noms d'élément pour la méthode GetProperties](setting-the-item-namespace-for-the-getproperties-method.md)|Décrit comment extraire des propriétés selon le chemin d'accès ou l'ID d'un élément, en utilisant la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> et l'en-tête SOAP <xref:ReportService2010.ItemNamespaceHeader>.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054271"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Ajouter, mettre à jour et supprimer des données (Master Data Services)
   Vous pouvez ajouter des données et apporter des modifications de données à un modèle en bloc dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- **Prérequis**  
+ **Conditions préalables**  
   
 -   Vous devez avoir l’autorisation d’insérer des données dans la table stg.\<nom>_Leaf, the stg.\<nom>_Consolidated ou stg.\<nom>_Relationship de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060888"
 ---
 # <a name="conditional-split-transformation-editor"></a>Éditeur de transformation de fractionnement conditionnel
@@ -30,10 +30,10 @@ ms.locfileid: "66060888"
  Pour en savoir plus sur la transformation de fractionnement conditionnel, consultez [Transformation de fractionnement conditionnel](data-flow/transformations/conditional-split-transformation.md).  
   
 ## <a name="options"></a>Options  
- **JSON**  
+ **Commande**  
  Sélectionnez une ligne et utilisez les touches de direction à droite pour modifier l'ordre dans lequel les expressions sont évaluées.  
   
- **Nom de la sortie**  
+ **Nom de sortie**  
  Donnez un nom à la sortie. Par défaut, il s'agit d'une liste de cas numérotée ; vous pouvez néanmoins choisir un nom unique et illustratif.  
   
  **Condition**  
@@ -41,16 +41,16 @@ ms.locfileid: "66060888"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes :**  [Integration Services &#40;expressions de&#41; ssis](expressions/integration-services-ssis-expressions.md), [opérateurs &#40;&#41;d’expression SSIS ](expressions/operators-ssis-expression.md)et [fonctions &#40;Expression SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;Expression SSIS&#41;](expressions/operators-ssis-expression.md), et [Fonctions &#40;Expression SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nom de sortie par défaut**  
  Tapez un nom pour la sortie par défaut ou utilisez le nom par défaut.  
   
- **Configurer la sortie d’erreur**  
+ **Configurer l'affichage des erreurs**  
  Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Fractionner un dataset à l'aide de la transformation de fractionnement conditionnel](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

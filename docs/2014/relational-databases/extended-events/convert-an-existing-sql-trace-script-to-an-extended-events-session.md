@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015771"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
@@ -100,7 +100,7 @@ ms.locfileid: "63015771"
 ## <a name="to-create-the-extended-events-session"></a>Pour créer la session d'événements étendus  
  Utilisez l'Éditeur de requête pour créer la session d'événements étendus, et écrire la sortie dans une cible de fichier. Les étapes suivantes décrivent une requête unique, avec les explications indiquant comment générer la requête. Pour obtenir un exemple de requête complet, consultez la section Exemple de cette rubrique.  
   
-1.  Ajoutez des instructions pour créer la session d’événements, en remplaçant s*ession_name* par le nom que vous souhaitez utiliser pour la session d’événements étendus.  
+1.  Ajoutez les instructions pour créer la session d’événements, en remplaçant*session_name* par le nom à utiliser pour la session d’événements étendus.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -248,6 +248,6 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Consulter les événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+ [Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

@@ -17,21 +17,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140544"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Didacticiel DMX Bike Buyer
   Dans ce didacticiel, vous allez apprendre à créer, assimiler et explorer des modèles d'exploration de données à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles pour créer des tâches de prédiction déterminant si un client envisage ou non d'acheter un vélo.  
   
- Les modèles d'exploration de données seront créés à partir des données de la société fictive [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] stockées dans l'exemple de base de données [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une importante société de fabrication multinationale. L'entreprise fabrique et vend des vélos métalliques et des vélos en alliage sur les marchés nord-américain, européen et asiatique. Son siège qui compte 290 employés est situé à Bothell dans l'état de Washington aux États-Unis ; elle dispose de plusieurs équipes commerciales réparties dans diverses régions du monde constituant son marché de base.  
+ Les modèles d'exploration de données seront créés à partir des données de la société fictive [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] stockées dans l'exemple de base de données [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une importante société de fabrication multinationale. L'entreprise fabrique et vend des vélos métalliques et des vélos en alliage sur les marchés nord-américain, européen et asiatique. Son siège qui compte 290 employés est situé à Bothell dans l'état de Washington aux États-Unis ; elle dispose de plusieurs équipes commerciales réparties dans diverses régions du monde constituant son marché de base.  
   
 ## <a name="tutorial-scenario"></a>Scénario du didacticiel  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a décidé d'étendre l'analyse de ses données en créant une application personnalisée qui exploite des fonctionnalités d'exploration de données. Son application personnalisée vise les objectifs suivants :  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a décidé d'étendre l'analyse de ses données en créant une application personnalisée qui exploite des fonctionnalités d'exploration de données. Son application personnalisée vise les objectifs suivants :  
   
 -   Recueillir en guise de données les caractéristiques spécifiques d'un client potentiel et déterminer son intention ou non d'acheter un vélo.  
   
@@ -74,29 +72,29 @@ ms.locfileid: "63140544"
   
  Puisque vous allez créer une structure d'exploration de données dotée de plusieurs modèles d'exploration de données, vous devrez adopter la deuxième méthode de ce didacticiel.  
   
- **Pour plus d'informations**  
+ **Pour plus d’informations**  
   
  [Informations de référence sur les extensions DMX (Data Mining Extensions &#40;dmx&#41;](/sql/dmx/data-mining-extensions-dmx-reference), [Présentation de l’instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement), de la [structure et de l’utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création de la structure d'exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Leçon 1 : Création de la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
- [Leçon 3 : traitement de la structure d'exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Leçon 3 : Traitement de la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `INSERT INTO` pour traiter des structures d'exploration de données et les modèles qui y sont associés.  
   
- [Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `SELECT` pour explorer le contenu des modèles d'exploration de données.  
   
- [Leçon 5 : exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Leçon 5 : Exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `PREDICTION JOIN` pour établir des prédictions par rapport à des modèles d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Avant d'entamer ce didacticiel, assurez-vous que les éléments suivants sont installés :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  

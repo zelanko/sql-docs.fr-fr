@@ -1,5 +1,5 @@
 ---
-title: Séquences d’évasion d’intervalles Microsoft Docs
+title: Séquences d’échappement d’intervalle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9fe7f6941e9ec9fba8b6698faaa18a678732dd6f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304954"
 ---
 # <a name="interval-escape-sequences"></a>Séquences d’échappement des intervalles
-ODBC utilise des séquences d’évasion pour les littérals d’intervalle. La syntaxe de cette séquence d’évasion est la suivante :  
+ODBC utilise des séquences d’échappement pour les littéraux d’intervalle. La syntaxe de cette séquence d’échappement est la suivante :  
   
- -*intervalle-littéral*-  
+ {*Interval-Literal*}  
   
- Pour la syntaxe BNF de *l’intervalle-littérale*, voir la section [Syntaxe littérale d’intervalle](../../../odbc/reference/appendixes/interval-literal-syntax.md) plus tard dans cette annexe.  
+ Pour la syntaxe BNF du *littéral Interval*, consultez la section [syntaxe du littéral d’intervalle](../../../odbc/reference/appendixes/interval-literal-syntax.md) plus loin dans cette annexe.  
   
- La séquence d’évacuation littérale d’intervalle est prise en charge si les types de données d’intervalle sont pris en charge par la source de données. Une application devrait appeler **SQLGetTypeInfo** pour déterminer si ces types de données sont pris en charge.
+ La séquence d’échappement littérale d’intervalle est prise en charge si les types de données Interval sont pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ces types de données sont pris en charge.

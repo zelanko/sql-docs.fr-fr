@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45118f75161fc8877edad53bce9abef4f5e00a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046111"
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Utilisation de la propriété Detail pour gérer des erreurs spécifiques
@@ -84,7 +84,7 @@ Console.WriteLine(ex.Detail["ErrorCode"].InnerXml);
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [SoapException, classe Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)   
+ [Reporting Services SoapException (classe)](../soapexception-class/reporting-services-soapexception-class.md)   
  [Table d'erreurs SoapException](../soapexception-class/soapexception-errors-table.md)  
   
   

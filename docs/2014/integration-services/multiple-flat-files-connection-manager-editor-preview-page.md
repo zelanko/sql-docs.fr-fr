@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057486"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Éditeur du gestionnaire de connexions de fichiers plats multiples (page Aperçu)
@@ -40,9 +40,9 @@ ms.locfileid: "66057486"
  Permet d'afficher les données d'exemple dans le premier fichier plat sélectionné, divisées en colonnes et en lignes à l'aide des options sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page colonnes&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
   

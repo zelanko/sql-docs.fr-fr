@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062193"
 ---
 # <a name="access-to-files-used-by-packages"></a>Accéder aux fichiers utilisés par des packages
@@ -38,8 +38,7 @@ ms.locfileid: "66062193"
  Ces fichiers doivent être protégés séparément, notamment s'ils contiennent des informations sensibles.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
- Si une configuration contient des informations sensibles, telles que des informations de connexion et de mot de passe, vous devez penser à enregistrer la configuration dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou à utiliser une liste de contrôle d’accès pour limiter l’accès à l’emplacement ou au dossier de stockage des fichiers et pour autoriser l’accès uniquement à certains comptes. En règle générale, vous accordez l'accès aux comptes que vous autorisez à exécuter des packages et à ceux qui gèrent et résolvent les problèmes des packages, ce qui peut comprendre l'inspection du contenu des fichiers de configuration, des fichiers de point de contrôle et des fichiers journaux. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit le stockage le plus sécurisé, car il offre une protection aux niveaux du serveur et des bases de données. Pour enregistrer des configurations dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous utilisez le type de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour enregistrer dans le système de fichiers, vous utilisez le type de configuration XML.  
+ Si une configuration contient des informations sensibles, telles que des informations de connexion et de mot de passe, vous devez penser à enregistrer la configuration dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou à utiliser une liste de contrôle d’accès pour limiter l’accès à l’emplacement ou au dossier de stockage des fichiers et pour autoriser l’accès uniquement à certains comptes. En règle générale, vous accordez l'accès aux comptes que vous autorisez à exécuter des packages et à ceux qui gèrent et résolvent les problèmes des packages, ce qui peut comprendre l'inspection du contenu des fichiers de configuration, des fichiers de point de contrôle et des fichiers journaux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit le stockage le plus sécurisé, car il offre une protection aux niveaux du serveur et des bases de données. Pour enregistrer des configurations dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous utilisez le type de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour enregistrer dans le système de fichiers, vous utilisez le type de configuration XML.  
   
  Pour plus d’informations, consultez [Configurations de package](../../2014/integration-services/package-configurations.md), [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)et [Considérations sur la sécurité pour une installation SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   

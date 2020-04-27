@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144727"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
@@ -99,7 +99,7 @@ ms.locfileid: "63144727"
 ## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Gérer la taille du fichier journal des transactions](manage-the-size-of-the-transaction-log-file.md)   
- [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [Sauvegardes du journal des transactions &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

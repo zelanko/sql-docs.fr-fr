@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211415"
 ---
 # <a name="disable-or-enable-a-job"></a>Activer ou désactiver un travail
@@ -31,22 +31,22 @@ ms.locfileid: "68211415"
   
      [Sécurité](#Security)  
   
--   **Pour désactiver ou activer un travail, utilisez :**  
+-   **Pour activer ou désactiver un travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-job"></a>Pour activer ou désactiver un travail  
   
-1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
+1.  Dans **Object Explorer**l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Explorateur d’objets, connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **Agent SQL Server**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68211415"
   
 4.  Pour désactiver un travail, cliquez sur **Désactiver**. Pour activer un travail, cliquez sur **Activer**.  
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-job"></a>Pour activer ou désactiver un travail  
   

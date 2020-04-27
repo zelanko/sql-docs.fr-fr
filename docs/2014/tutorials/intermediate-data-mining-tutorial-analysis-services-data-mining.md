@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017179"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Didacticiel sur l'exploration de données intermédiaire (Analysis Services - Exploration de données)
@@ -52,24 +52,23 @@ ms.locfileid: "63017179"
   
  Vous allez générer des modèles pour des régions individuelles, puis générer un modèle général utilisable à des fins de prédiction croisée.  
   
- [Leçon 3 : création d’un scénario de panier de marché &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez ajouter une nouvelle vue de source de données et apprendre à utiliser des tables imbriquées et des clés. En fonction de ces données, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario d'analyse de panier d'achat. Vous allez également découvrir les modèles d'exploration de données créés avec l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
   
  [Leçon 4 : génération d’un scénario Sequence Clustering &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  Dans cette leçon, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario Sequence Clustering. Vous apprendrez également à explorer des modèles d'exploration de données créés avec l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering).  
   
- [Leçon 5 : génération de modèles de réseau neuronal et de régression logistique &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Leçon 5 : Génération de modèles de réseau neuronal et de régression logistique &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer plusieurs modèles d'exploration de données connexes, à l'aide des algorithmes MNN (Microsoft Neural Network) et MLR (Microsoft Logistic Regression). Vous apprendrez également à utiliser des vues de sources de données pour explorer les données sous-jacentes des modèles.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Assurez-vous que les éléments suivants sont installés sur votre système :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
  Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données officielles [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]pour, visitez la page des [exemples de bases de données Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) et sélectionnez la version appropriée de l’exemple de base de données.  
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022017"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Informations sur la publication, onglet Tous les abonnements (Publication de fusion)
-  L'onglet **Tous les abonnements** affiche des informations sur tous les abonnements à la publication de fusion sélectionnée.  
+   L’onglet **Tous les abonnements** affiche des informations sur tous les abonnements à la publication de fusion sélectionnée.  
   
 ## <a name="options"></a>Options  
  Pour plus d'informations et en savoir plus sur les tâches associées à un abonnement, cliquez avec le bouton droit de la souris sur la ligne de l'abonnement, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
@@ -36,7 +36,7 @@ ms.locfileid: "63022017"
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
  **Afficher**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Sélectionnez les états d'abonnement à afficher pour le type d'abonnement sélectionné. Par exemple, vous pouvez afficher uniquement les abonnements associés à une erreur.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Sélectionnez les états d'abonnement à afficher pour le type d'abonnement sélectionné. Par exemple, vous pouvez afficher uniquement les abonnements associés à une erreur.  
   
  **État**  
  État de chaque abonnement déterminé par l'état de l'Agent de fusion.  
@@ -69,7 +69,7 @@ ms.locfileid: "63022017"
  Nom de chaque abonnement, au format :*NomAbonné: NomBaseDonnéesAbonnements*.  
   
  **Nom convivial**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Description de chaque abonnement. La description est entrée dans la boîte de dialogue **Propriétés** de l’abonnement ou **@description** spécifiée avec le paramètre de [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) ou [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Les utilisateurs utilisent souvent la description sous la forme d'un « nom convivial » ou d'un alias pour l'abonnement.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Description de chaque abonnement. La description est entrée dans la boîte de dialogue **Propriétés de l'abonnement** ou définie avec le paramètre **@description** de [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) ou de [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Les utilisateurs utilisent souvent la description sous la forme d'un « nom convivial » ou d'un alias pour l'abonnement.  
   
  **Performances**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Valeur de performance de chaque abonnement en fonction de la dernière mesure de vitesse de transmission relevée par le Moniteur de réplication. L'évaluation repose sur une comparaison des performances individuelles d'abonnements avec les performances historiques moyennes des abonnements à la publication au type de connexion identique (accès à distance ou LAN). Le moniteur de réplication affiche une valeur après cinq synchronisations avec au moins 50 modifications chacune via le même type de connexion. S'il y a eu moins de cinq synchronisations avec au moins 50 modifications ou que la synchronisation la plus récente possède moins de 50 modifications, cette colonne est vide.  
@@ -102,7 +102,7 @@ ms.locfileid: "63022017"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Type de connexion entre l'Abonné et le serveur de publication. Les valeurs possibles sont **LAN**, **Connexion à distance**et **Internet**. La valeur **Internet** s'affiche si l'abonnement utilise la synchronisation Web.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
+ [Démarrer le moniteur de réplication](monitor/start-the-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)   
  [Synchronisation web pour la réplication de fusion](web-synchronization-for-merge-replication.md)  

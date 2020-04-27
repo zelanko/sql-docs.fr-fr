@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046534"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Prise en charge du type de paramètre table OLE DB (Propriétés)
   Cette rubrique fournit des informations sur les propriétés et les jeux de propriétés OLE DB associés aux objets d'ensemble de lignes de paramètre table.  
   
 ## <a name="properties"></a>Propriétés  
- Voici la liste les propriétés exposées par la méthode IRowsetInfo::GetProperties sur des objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, toute tentative de définition des propriétés via IOpenRowset :: OpenRowset ou ITableDefinitionWithConstraints :: CreateTableWithConstraints des méthodes sur leurs valeurs non définies par défaut génère une erreur et aucun objet n’est créé.  
+ Voici la liste les propriétés exposées par la méthode IRowsetInfo::GetProperties sur des objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, toute tentative de définition des propriétés via les méthodes IOpenRowset::OpenRowset ou ITableDefinitionWithConstraints::CreateTableWithConstraints sur leurs valeurs non définies par défaut génère une erreur et aucun objet n’est créé.  
   
  Les propriétés non implémentées dans l'objet d'ensemble de lignes de paramètre table n'apparaissent pas dans cette liste. Pour obtenir une liste complète des propriétés, consultez la documentation OLE DB dans Windows Data Access Components.  
   
-|ID de propriété|Valeur|  
+|ID de propriété|Value|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -74,14 +74,14 @@ ms.locfileid: "63046534"
  Les jeux de propriétés suivants prennent en charge les paramètres table.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Cette propriété est utilisée par le consommateur dans le processus de création d’un objet d’ensemble de lignes de paramètre table à l’aide de ITableDefinitionWithConstraints :: CreateTableWithConstraints pour chaque colonne via la structure DBCOLUMNDESC, si nécessaire.  
+ Cette propriété est utilisée par le consommateur au cours du processus de création d'un objet d'ensemble de lignes de paramètre table en utilisant ITableDefinitionWithConstraints::CreateTableWithConstraints pour chaque colonne via la structure DBCOLUMNDESC (si nécessaire).  
   
 |ID de propriété|Valeur de propriété|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Type : VT_BOOL<br /><br /> Description : cette propriété, si elle est définie sur VARIANT_TRUE, indique que la colonne est une colonne calculée. La valeur VARIANT_FALSE indique qu'il ne s'agit pas d'une colonne calculée.|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Ces propriétés sont lues par le consommateur tout en détectant les informations de type de paramètre table dans les appels à ISSCommandWithParameters :: GetParameterProperties et définies par le consommateur lors de la définition de propriétés spécifiques sur le paramètre table. Via ISSCommandWithParameters :: SetParameterProperties.  
+ Ces propriétés sont lues par le consommateur lors de la détection des informations sur le type de paramètre table lors des appels à ISSCommandWithParameters::GetParameterProperties et sont définies par le consommateur au moment de définir les propriétés spécifiques relatives au paramètre table via ISSCommandWithParameters::SetParameterProperties.  
   
  Le tableau qui suit offre des descriptions détaillées de ces propriétés.  
   

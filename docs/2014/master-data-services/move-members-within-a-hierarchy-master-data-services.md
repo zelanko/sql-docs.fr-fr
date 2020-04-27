@@ -16,16 +16,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054089"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Déplacer des membres au sein d'une hiérarchie (Master Data Services)
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], déplacez les membres au sein d'une hiérarchie pour modifier leur emplacement ou l'affectation du parent.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  

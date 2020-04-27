@@ -23,20 +23,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011925"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des rôles au niveau du serveur pour vous aider à gérer les autorisations sur les serveurs. Ces rôles sont des principaux de sécurité qui regroupent d'autres principaux. Les autorisations des rôles serveur ont une portée à l'échelle du serveur. (Les*rôles* sont semblables aux *groupes* du système d’exploitation Microsoft Windows.)  
   
  Les rôles serveur fixes sont fournis pour des raisons de commodité et de compatibilité descendante. Attribuez des autorisations plus spécifiques chaque fois que cela est possible.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations attribuées aux rôles serveur fixes ne peuvent pas être modifiées. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations attribuées aux rôles serveur fixes ne peuvent pas être modifiées. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
   
  Vous pouvez ajouter des principaux au niveau du serveur (connexions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , comptes et groupes Windows) à des rôles serveur. Chaque membre d'un rôle serveur fixe peut ajouter des connexions à ce rôle. Les membres de rôles serveur définis par l'utilisateur ne peuvent pas ajouter d'autres principaux de serveur à ces rôles.  
   
@@ -90,7 +88,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="see-also"></a>Voir aussi  
  [Rôles au niveau de la base de données](../authentication-access/database-level-roles.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
- [Fonctions de sécurité &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
+ [Fonctions de sécurité &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)   
  [Sécurisation de SQL Server](../securing-sql-server.md)   
  [OCTROI d’autorisations de principal de serveur &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
  [REVOKE-RÉVOQUer des autorisations de principal de serveur &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   

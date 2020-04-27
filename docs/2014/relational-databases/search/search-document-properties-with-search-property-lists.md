@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011082"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
@@ -30,7 +30,7 @@ ms.locfileid: "66011082"
   
  Le [filtre](configure-and-manage-filters-for-search.md) associé (IFilter) détermine si la recherche de propriétés est possible sur un type spécifique de document. Pour certains types de document, l'IFilter associé extrait tout ou partie des propriétés définies pour ce le type de document, ainsi que le contenu du corps du document. Vous pouvez configurer un index de recherche en texte intégral de façon à prendre en charge la recherche de propriétés portant uniquement sur les propriétés extraites par un IFilter lors de l'indexation de texte intégral. Parmi les IFilters qui extraient plusieurs propriétés de document, il existe des IFilters pour les types de fichier document Microsoft Office (tels que .docx, .xlsx et .pptx). En revanche, XML IFilter n'émet pas des propriétés.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> Fonctionnement de la recherche en texte intégral avec les propriétés de recherche  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> Fonctionnement de la recherche en texte intégral avec les propriétés de recherche  
   
 ### <a name="internal-property-ids"></a>ID de propriétés internes  
  Le moteur d'indexation et de recherche en texte intégral affecte arbitrairement un ID de propriété interne à chaque propriété enregistrée, qui l'identifie de façon unique dans cette liste de recherche particulière et qui est spécifique à cette liste de propriétés de recherche. Par conséquent, si une propriété est ajoutée à plusieurs listes de propriétés de recherche, son ID de propriété interne est susceptible de varier entre les différentes listes.  
@@ -58,16 +58,16 @@ ms.locfileid: "66011082"
   
   
   
-##  <a name="impact"></a> Impact de l'activation de la recherche de propriétés  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> Impact de l'activation de la recherche de propriétés  
  Configurer un index de recherche en texte intégral pour prendre en charge la recherche sur une ou plusieurs propriétés augmente quelque peu la taille de l'index, en fonction du nombre de propriétés spécifiées dans votre liste de propriétés de recherche et du contenu de chaque propriété.  
   
  Comment tester des corpus types de Microsoft Word<sup>??</sup>, Excel<sup>??</sup>et PowerPoint<sup>??</sup> documents, nous avons configuré un index de recherche en texte intégral pour indexer les propriétés de recherche typiques. L'indexation de ces propriétés a augmenté la taille de l'index de recherche en texte intégral d'environ 5 pour cent. Nous estimons que cette augmentation de taille approximative correspondra à la plupart des corpus de documents. Toutefois, l'augmentation de la taille dépend finalement du volume des données de propriété dans un corpus de documents donné, par rapport au volume total des données.  
   
   
   
-##  <a name="creating"></a> Création d'une liste de propriétés de recherche et activation de la recherche de propriétés  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a> Création d'une liste de propriétés de recherche et activation de la recherche de propriétés  
   
-###  <a name="creating_sub"></a> Création d'une liste de propriétés de recherche  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a> Création d'une liste de propriétés de recherche  
  **Pour créer une liste de propriétés de recherche avec Transact-SQL**  
   
  Utilisez l’instruction [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) et fournissez au moins un nom pour la liste.  
@@ -98,7 +98,7 @@ ms.locfileid: "66011082"
   
  
   
-###  <a name="adding"></a> Ajout de propriétés à une liste de propriétés de recherche  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>Ajout de propriétés à une liste de propriétés de recherche  
  La recherche de propriétés requiert la création d'une *liste de propriétés de recherche* et la spécification d'une ou plusieurs propriétés sur lesquelles vous allez pouvoir effectuer des recherches. Lorsque vous ajoutez une propriété à une liste de propriétés de recherche, cette propriété est enregistrée pour cette liste spécifique. Pour ajouter une propriété à une liste de propriétés de recherche, les valeurs suivantes sont nécessaires :  
   
 -   GUID du jeu de propriétés  
@@ -149,7 +149,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
   
-###  <a name="associating"></a> Association d'une liste de propriétés de recherche à un index de recherche en texte intégral  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> Association d'une liste de propriétés de recherche à un index de recherche en texte intégral  
  Pour qu'un index de recherche en texte intégral prenne en charge la recherche sur les propriétés enregistrées dans une liste de propriétés de recherche, vous devez associer celle-ci à l'index et remplir l'index à nouveau. Remplir à nouveau l'index de recherche en texte intégral crée des entrées d'index pour des termes de recherche spécifiques à la propriété dans chacune des propriétés enregistrées.  
   
  Tant que l'index de recherche en texte intégral est associé à cette liste de propriétés de recherche, la requête de texte intégral peut utiliser l'option PROPERTY du prédicat CONTAINS pour effectuer des recherches sur les propriétés qui sont enregistrées pour cette liste.  
@@ -162,11 +162,11 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Pour associer une liste de propriétés de recherche à un index de recherche en texte intégral à l'aide de Management Studio**  
   
- Spécifiez une valeur pour **Liste de propriétés de recherche** dans la page **Général** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** .  
+ Spécifiez une valeur pour **Liste de propriétés de recherche** dans la page **Général** de la boîte de dialogue **Propriétés d'index de recherche en texte intégral**.  
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Interrogation des propriétés de recherche avec CONTAINS  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> Interrogation des propriétés de recherche avec CONTAINS  
  La syntaxe [CONTAINS](/sql/t-sql/queries/contains-transact-sql) de base pour une requête de texte intégral avec étendue aux propriétés se présente comme suit :  
   
 ```sql  
@@ -188,9 +188,9 @@ GO
   
   
   
-##  <a name="managing"></a> Gestion des listes des propriétés de recherche  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a> Gestion des listes des propriétés de recherche  
   
-###  <a name="viewing"></a> Affichage et modification d'une liste de propriétés de recherche  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a> Affichage et modification d'une liste de propriétés de recherche  
  **Pour modifier une liste de propriétés de recherche avec Transact-SQL**  
   
  Utilisez l’instruction [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) pour ajouter ou supprimer des propriétés de recherche.  
@@ -211,7 +211,7 @@ GO
   
     1.  Pour supprimer une propriété de document, cliquez sur l’en-tête de ligne à gauche de la propriété, puis appuyez sur Suppr.  
   
-    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\*** , et entrez les valeurs de la nouvelle propriété.  
+    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite du **\***, puis entrez les valeurs de la nouvelle propriété.  
   
          Pour plus d'informations sur ces valeurs, consultez [Éditeur de liste de propriétés de recherche](../../database-engine/search-property-list-editor.md). Pour plus d’informations sur la façon d’obtenir ces valeurs pour les propriétés définies par Microsoft, consultez [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Pour plus d'informations sur les propriétés définies par un éditeur de logiciels indépendant (ISV), consultez la documentation de ce dernier.  
   
@@ -219,7 +219,7 @@ GO
   
   
   
-###  <a name="deleting"></a> Suppression d'une liste de propriétés de recherche  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Suppression d'une liste de propriétés de recherche  
  Vous ne pouvez pas supprimer une liste de propriétés d'une base de données tant que la liste est associée à un index de recherche en texte intégral.  
   
  **Pour supprimer une propriété d'une liste de propriétés de recherche avec Transact-SQL**  
@@ -232,7 +232,7 @@ GO
   
 2.  Développez **Bases de données**, puis développez la base de données.  
   
-3.  Développez **Stockage**, puis développez le nœud **Listes de propriétés de recherche** .  
+3.  Développez **Stockage**, puis développez le nœud **Listes de propriétés de recherche**.  
   
 4.  Cliquez avec le bouton droit sur la liste de propriétés à supprimer, puis cliquez sur **Supprimer**.  
   
@@ -240,7 +240,7 @@ GO
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [Rechercher des GUID de jeu de propriétés et des ID d’entier de propriété pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurer et gérer des filtres pour la recherche](configure-and-manage-filters-for-search.md)  
   
   

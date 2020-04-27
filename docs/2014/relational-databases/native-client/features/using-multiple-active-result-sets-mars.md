@@ -19,14 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206631"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilisation de MARS (Multiple Active Result Sets)
-  
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit la prise en charge de MARS (Multiple Active Result Sets) dans les applications accédant au [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les applications de base de données ne pouvaient pas gérer plusieurs instructions actives sur une connexion. Lors de l'utilisation de jeux de résultats [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut, l'application devait traiter ou annuler tous les jeux de résultats d'un lot avant de pouvoir exécuter tout autre lot sur cette connexion. Un nouvel attribut de connexion a été introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] de manière à ce que les applications puissent gérer plus d'une demande en attente par connexion et, plus spécifiquement, pour qu'elles puissent avoir plus d'un jeu de résultats par défaut actif par connexion.  
   
  MARS simplifie la conception d'applications grâce aux nouvelles fonctionnalités suivantes :  
@@ -50,8 +49,7 @@ ms.locfileid: "68206631"
 > [!NOTE]  
 >  Par défaut, la fonctionnalités MARS n'est pas activée. Pour utiliser MARS lors de la connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vous devez l'activer spécifiquement dans une chaîne de connexion. Pour plus d'informations, consultez les sections relatives au fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et au pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, plus loin dans cette rubrique.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne limite pas le nombre d'instructions actives sur une connexion.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne limite pas le nombre d'instructions actives sur une connexion.  
   
  Les applications conventionnelles n'ayant pas besoin que plus d'un traitement à instructions multiples ou plus d'une procédure stockée s'exécute simultanément peuvent tirer parti de MARS sans avoir à comprendre comment ce dernier est implémenté. Toutefois, les applications ayant des exigences plus complexes doivent prendre ceci compte.  
   
@@ -72,7 +70,7 @@ ms.locfileid: "68206631"
  Évitez des problèmes en utilisant des appels d'API plutôt que des instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour gérer l'état de la connexion (SET, USE) et les transactions (BEGIN TRAN, COMMIT, ROLLBACK) en n'incluant pas ces instructions dans des traitements à instructions multiples qui contiennent également des points d'interruption, et en sérialisant l'exécution de tels traitements par la consommation ou l'annulation de tous les résultats.  
   
 > [!NOTE]  
->  Un traitement ou une procédure stockée qui démarre une transaction manuelle ou implicite lorsque MARS est activé doit terminer la transaction avant que le traitement ne quitte. S'il ne le fait pas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restaure toutes les modifications apportées par la transaction lorsque le traitement se termine. Une telle transaction est gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que transaction dont l'étendue est définie par traitement. Il s'agit d'un nouveau type de transaction introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pour permettre aux procédures stockées valides existantes d'être utilisées lorsque MARS est activé. Pour plus d’informations sur les transactions dont l’étendue est définie par traitement, consultez [instructions de Transaction &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transactions-transact-sql).  
+>  Un traitement ou une procédure stockée qui démarre une transaction manuelle ou implicite lorsque MARS est activé doit terminer la transaction avant que le traitement ne quitte. S'il ne le fait pas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restaure toutes les modifications apportées par la transaction lorsque le traitement se termine. Une telle transaction est gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que transaction dont l'étendue est définie par traitement. Il s'agit d'un nouveau type de transaction introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pour permettre aux procédures stockées valides existantes d'être utilisées lorsque MARS est activé. Pour plus d’informations sur les transactions dont l’étendue est définie par lot, consultez [Instructions de transaction &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql).  
   
  Pour obtenir un exemple d’utilisation de MARS à partir d’ADO, consultez [utilisation d’ADO avec SQL Server Native Client](../applications/using-ado-with-sql-server-native-client.md).  
   
@@ -81,7 +79,7 @@ ms.locfileid: "68206631"
   
  Le propriété de source de données DBPROP_MULTIPLECONNECTIONS a la valeur par défaut VARIANT_TRUE. Cela signifie que le fournisseur générera dynamiquement plusieurs connexions pour prendre en charge plusieurs objets command et rowset simultanés. Lorsque MARS est activé, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut prendre en charge plusieurs objets Command et rowset sur une seule connexion, donc MULTIPLE_CONNECTIONS est défini sur VARIANT_FALSE par défaut.  
   
- Pour plus d’informations sur les améliorations apportées au jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [propriétés d’initialisation et d’autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d'informations sur les améliorations apportées au jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [Propriétés d'initialisation et d'autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Exemple de fournisseur OLE DB de SQL Server Native Client  
  Dans cet exemple, un objet de source de données est créé [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du fournisseur de OLE DB natif et mars est activé à l’aide de la propriété DBPROPSET_SQLSERVERDBINIT définie avant la création de l’objet de session.  

@@ -15,40 +15,40 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015880"
 ---
 # <a name="modify-a-stored-procedure"></a>Modifier une procédure stockée
     
-##  <a name="Top"></a> Cette rubrique explique comment modifier une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="this-topic-describes-how-to-modify-a-stored-procedure-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> Cette rubrique explique comment modifier une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
 -   **Pour modifier une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les transformer en procédures stockées CLR et inversement.  
   
  Si la procédure précédente a été créée avec les options WITH ENCRYPTION ou WITH RECOMPILE, ces options sont activées seulement si elles figurent dans l'instruction ALTER PROCEDURE.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER PROCEDURE sur la procédure.  
   
-##  <a name="Procedures"></a> Pour modifier une procédure stockée  
+##  <a name="how-to-modify-a-stored-procedure"></a><a name="Procedures"></a> Pour modifier une procédure stockée  
  Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier une procédure dans Management Studio**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
@@ -68,7 +68,7 @@ ms.locfileid: "63015880"
 > [!IMPORTANT]  
 >  Validez toutes les entrées utilisateur. Ne concaténez pas les entrées utilisateur avant de les avoir validées. N'exécutez jamais une commande élaborée à partir d'une entrée utilisateur non validée.  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une procédure dans l'Éditeur de requête**  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  

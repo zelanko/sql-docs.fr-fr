@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059167"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Éditeur de source Excel (page Gestionnaire de connexions)
@@ -33,21 +33,21 @@ ms.locfileid: "66059167"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions Excel existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions Excel** .  
   
  **Mode d'accès aux données**  
  Spécifiez la méthode de sélection des données dans la source.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Table ou vue|Récupérez des données à partir d'une feuille de calcul ou d'une plage nommée dans le fichier Excel.|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes :** [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
 |Commande SQL|Récupérez des données à partir du fichier Excel à l'aide d'une requête SQL. Pour plus d’informations sur la syntaxe de la requête, consultez [Source Excel](data-flow/excel-source.md).|  
 |Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
   
- **Préversion**  
- Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
+ **PRÉVERSION**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66059167"
  **Texte de la commande SQL**  
  Entrez le texte d’une requête SQL, créez la requête en cliquant sur **Générer une requête**ou parcourez l’arborescence jusqu’au fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
- **Paramètres**  
+ **Parameters**  
  Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
   
  **Générer la requête**  
@@ -80,7 +80,7 @@ ms.locfileid: "66059167"
  Sélectionnez la variable qui contient le texte de la requête SQL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de source Excel &#40;page colonnes&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Éditeur de source Excel &#40;page sortie d’erreur&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gestionnaire de connexions Excel](connection-manager/excel-connection-manager.md)   

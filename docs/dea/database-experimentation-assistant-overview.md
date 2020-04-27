@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247124"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Vue d’ensemble de l’Assistant Expérimentation de base de données

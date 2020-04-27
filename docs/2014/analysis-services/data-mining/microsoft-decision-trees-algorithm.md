@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174639"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algorithme MDT (Microsoft Decision Trees)
@@ -72,18 +72,18 @@ ms.locfileid: "78174639"
 
  Les spécifications liées à un modèle d'arbre de décision sont les suivantes :
 
--   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
+-   **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
 
--   **Colonne prévisible** Nécessite au moins une colonne prévisible. Vous pouvez inclure dans un modèle plusieurs attributs prédictibles, lesquels peuvent être de types différents, numériques ou discrets. Toutefois, l'augmentation du nombre d'attributs prédictibles peut augmenter le temps de traitement.
+-   **Colonne prédictible** : nécessite au moins une colonne prédictible. Vous pouvez inclure dans un modèle plusieurs attributs prédictibles, lesquels peuvent être de types différents, numériques ou discrets. Toutefois, l'augmentation du nombre d'attributs prédictibles peut augmenter le temps de traitement.
 
--   **Colonnes d’entrée** Nécessite des colonnes d’entrée, qui peuvent être discrètes ou continues. L'augmentation du nombre d'attributs d'entrée affecte le temps de traitement.
+-   **Colonnes d’entrée** : nécessitent des colonnes d’entrée, qui peuvent être discrètes ou continues. L'augmentation du nombre d'attributs d'entrée affecte le temps de traitement.
 
  Pour plus d’informations sur les types de contenu et les types de données pris en charge pour les modèles d’arbre de décision, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md).
 
 ## <a name="viewing-a-decision-trees-model"></a>Affichage d'un modèle d'arbre de décision
  Pour explorer le modèle, vous pouvez utiliser la **Visionneuse d’arborescences Microsoft**. Si votre modèle génère plusieurs arbres, vous pouvez sélectionner un arbre. La visionneuse vous montre alors le détail de la façon dont les cas sont organisés pour chaque attribut prédictible. Vous pouvez également afficher l'interaction des arbres en utilisant la visionneuse du réseau de dépendance. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md).
 
- Si vous voulez en savoir plus sur une branche ou un nœud de l’arbre, vous pouvez aussi parcourir le modèle en utilisant la [Visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs pour chaque nœud, des probabilités à chaque niveau de l'arbre et des formules de régression pour les attributs continus. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).
+ Si vous voulez en savoir plus sur une branche ou un nœud de l’arbre, vous pouvez aussi parcourir le modèle en utilisant la [Visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs pour chaque nœud, des probabilités à chaque niveau de l'arbre et des formules de régression pour les attributs continus. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).
 
 ## <a name="creating-predictions"></a>Création de prédictions
  Une fois le modèle traité, les résultats sont stockés sous la forme d'un jeu de modèles et de statistiques, que vous pouvez utiliser pour explorer les relations ou élaborer des prédictions.

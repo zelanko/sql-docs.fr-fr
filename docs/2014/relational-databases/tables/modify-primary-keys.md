@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211824"
 ---
 # <a name="modify-primary-keys"></a>Modifier des clés primaires
@@ -35,14 +35,14 @@ ms.locfileid: "68211824"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-modify-a-primary-key"></a>Pour modifier une clé primaire  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68211824"
   
 4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé primaire**  
   
  Pour modifier une contrainte PRIMARY KEY à l'aide de Transact-SQL, vous devez supprimer auparavant la contrainte PRIMARY KEY existante, puis la créer à nouveau en précisant sa nouvelle définition. Pour plus d'informations, consultez [Delete Primary Keys](delete-primary-keys.md) et [Create Primary Keys](create-primary-keys.md).  

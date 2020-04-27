@@ -216,10 +216,12 @@
               href: big-data-cluster/spark-history-server.md
         - name: Dépanner
           items:
-            - name: Résoudre les problèmes de Kubernetes
+            - name: Résoudre les problèmes liés à Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Étendue du groupe Active Directory
+            - name: Intégration d’Active Directory
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: Droits d’administrateur HDFS
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Informations de référence
       items:
         - name: Partenaires BDC

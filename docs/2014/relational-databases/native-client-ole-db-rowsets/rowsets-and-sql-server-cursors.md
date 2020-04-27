@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes et curseurs de SQL Server | Microsoft Docs
+title: Ensembles de lignes et curseurs SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207003"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne les jeux de résultats aux consommateurs à l'aide de deux méthodes :  
   
 -   Les jeux de résultats par défaut qui :  
@@ -61,7 +60,7 @@ ms.locfileid: "68207003"
   
  Les propriétés d'ensemble de lignes suivantes font en sorte que le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise des curseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certaines propriétés peuvent être combinées avec d'autres sans risque. Par exemple, un ensemble de lignes qui expose les propriétés DBPROP_IRowsetScroll et DBPROP_IRowsetChange sera un ensemble de lignes signet présentant un comportement de mise à jour immédiat. Les autres propriétés s'excluent mutuellement. Par exemple, un ensemble de lignes exposant DBPROP_OTHERINSERT ne peut pas contenir de signets.  
   
-|ID de propriété|Valeur|Comportement d'ensemble de lignes|  
+|ID de propriété|Value|Comportement d'ensemble de lignes|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes est séquentiel et prend en charge l'extraction et le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS ou DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY.|  
@@ -86,12 +85,11 @@ ms.locfileid: "68207003"
   
  T = VARIANT_TRUE  
   
- 
-  \- = VARIANT_TRUE or VARIANT_FALSE  
+ \- = VARIANT_TRUE or VARIANT_FALSE  
   
  Pour utiliser un certain type de modèle de curseur, recherchez la colonne correspondant au modèle de curseur et recherchez toutes les propriétés d'ensemble de lignes avec la valeur « T » dans la colonne. Affectez la valeur VARIANT_TRUE à ces propriétés d'ensemble de lignes pour utiliser le modèle de curseur spécifique. Les propriétés d'ensemble de lignes avec '-' comme valeur peuvent être définies à VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Propriétés d’ensemble de lignes/modèles de curseur|Default<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
+|Propriétés d’ensemble de lignes/modèles de curseur|Par défaut<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

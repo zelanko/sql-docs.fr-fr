@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127111"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Retourne des informations sur une connexion de base de données.  
   
@@ -58,7 +58,7 @@ len
  *case*  
  Spécifie des données sur la connexion à retourner.  
   
-|Valeur|Retours|  
+|Value|Retours|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nom d'application fourni par le client au moment d'établir la connexion.|  
 |SRV_BCPFLAG|Indicateur possédant la valeur TRUE si le client prépare une opération de copie en bloc ou la valeur FALSE dans le cas contraire.|  

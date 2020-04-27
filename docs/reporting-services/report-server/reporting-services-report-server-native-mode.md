@@ -1,6 +1,6 @@
 ---
 title: Serveur de rapports Reporting Services (mode natif) | Microsoft Docs
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826896"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086838"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Serveur de rapports Reporting Services (mode natif)
   Un serveur de rapports configuré en mode natif s’exécute comme un serveur d’applications qui fournit toutes les fonctions de traitement et de gestion exclusivement par le biais de composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,9 +50,13 @@ ms.locfileid: "66826896"
 -   Membre du groupe Administrateurs local sur le serveur de rapports. Si votre installation comporte des fonctionnalités serveur exécutées sur des ordinateurs distants, vous devez disposer d'autorisations d'administrateur pour ces ordinateurs afin de gérer les serveurs sur une connexion distante.  
   
 -   Autorisations d'administrateur de base de données pour l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chargée d'héberger la base de données.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un contrôleur de domaine, vous devez être administrateur de domaine.  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Gestion du contenu  
  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des rapports, des modèles, des dossiers, des ressources et des sources de données partagées. Tous ces éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu.  
   

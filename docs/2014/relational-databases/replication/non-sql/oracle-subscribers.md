@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022224"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
@@ -127,7 +127,7 @@ ms.locfileid: "63022224"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|NON APPLICABLE|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -144,6 +144,6 @@ ms.locfileid: "63022224"
   
 ## <a name="see-also"></a>Voir aussi  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [S'abonner à des publications](../subscribe-to-publications.md)  
+ [S’abonner aux Publications](../subscribe-to-publications.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140626"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
@@ -41,7 +41,7 @@ ms.locfileid: "63140626"
 ## <a name="how-to-set-large-data"></a>Définir des données volumineuses  
  Pour transmettre un pointeur à son propre objet de stockage, le consommateur crée un accesseur qui lie la valeur de la colonne BLOB, puis appelle les méthodes **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Pour définir des données BLOB :  
   
-1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément *dwFlag* de la structure DBOBJECT sur STGM_READ, puis définissez l’élément *iid* sur IID_ISequentialStream (l’interface à exposer).  
+1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément *dwFlag* de la structure DBOBJECT sur STGM_READ et définissez l’élément *IID* sur IID_ISequentialStream (l’interface à exposer).  
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   

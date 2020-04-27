@@ -1,5 +1,5 @@
 ---
-title: Utiliser des UDT (OLE DB) CLR volumineux | Microsoft Docs
+title: Utiliser des table UDT CLR volumineuses (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206661"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utiliser des table UDT CLR volumineuses (OLE DB)
-  Cet exemple indique comment extraire des lignes avec les types volumineux définis par l'utilisateur depuis un jeu de résultats. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
+  Cet exemple indique comment extraire des lignes avec les types volumineux définis par l'utilisateur depuis un jeu de résultats. Pour plus d’informations, consultez [Types larges CLR définis par l’utilisateur &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple contient deux projets. Un projet crée un assembly (DLL) à partir du code source C#. Cet assembly contient le type CLR. Une table sera ajoutée à la base de données. Une colonne dans la table sera d'un type défini dans l'assembly ; par défaut, cet exemple utilisera la base de données master. Le deuxième projet est une application C native qui lit des données de la table.  

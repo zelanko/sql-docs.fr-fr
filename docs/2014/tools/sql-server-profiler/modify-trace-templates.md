@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035036"
 ---
 # <a name="modify-trace-templates"></a>Modifier des modèles de trace
@@ -32,7 +32,7 @@ ms.locfileid: "63035036"
   
  [Créer un modèle de trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)  
   
- **Pour exécuter une trace à partir d’un modèle de trace**  
+ **Pour exécuter une trace à partir d'un modèle de trace**  
   
  [Créer une trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)  
   

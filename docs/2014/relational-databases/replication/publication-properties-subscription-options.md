@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021703"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
-  La page **options d’abonnement** de la boîte de dialogue Propriétés de la **publication** vous permet d’afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  
+  La page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** vous permet d'afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  
   
 -   Propriétés qui s'appliquent à toutes les publications.  
   
@@ -35,15 +35,15 @@ ms.locfileid: "63021703"
   
 ### <a name="creation-and-synchronization"></a>Création et synchronisation  
  **Autoriser les abonnements anonymes**  
- Détermine s'il est nécessaire d'autoriser les extractions d'abonnements anonymes. Les abonnements anonymes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)]sont [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]pris en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge pour, et pour Windows CE. Pour utiliser cette option pour les publications d'instantané et transactionnelles, l'option **Instantané toujours disponible** doit avoir la valeur **True**.  
+ Détermine s'il est nécessaire d'autoriser les extractions d'abonnements anonymes. Les abonnements anonymes sont pris en charge pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows CE. Pour utiliser cette option pour les publications d'instantané et transactionnelles, l'option **Instantané toujours disponible** doit avoir la valeur **True**.  
   
- **Base de données d’abonnement pouvant être attachée**  
+ **Base de données d'abonnement pouvant être attachée**  
  Détermine s'il est possible de créer des abonnements en attachant une copie d'une base de données d'abonnement (nécessite que l'option **Instantané toujours disponible** ait la valeur **True** pour les publications d'instantané et transactionnelles).  
   
 > [!IMPORTANT]  
 >  Les abonnements attachables ne seront pas disponibles dans une version ultérieure. Cette fonctionnalité est déconseillée.  
   
- **Autoriser les abonnements par extraction**  
+ **Autoriser les abonnements extraits**  
  Détermine s'il est nécessaire d'autoriser les abonnés à créer des extractions d'abonnements sur cette publication. Pour plus d’informations, consultez [S’abonner à des publications](subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Réplication de schéma  
@@ -59,11 +59,11 @@ ms.locfileid: "63021703"
  **Instantané toujours disponible**  
  Détermine si les fichiers d'instantanés sont créés lors de chaque exécution de l'Agent d'instantané (nécessite l'option **Agent de distribution indépendant**). Cette option est en lecture seule. Elle a la valeur **True** si vous sélectionnez **Créer un instantané immédiatement et garder cette dernière disponible pour l'initialisation des abonnements** à la page **Agent d'instantané** de l'Assistant Nouvelle publication (valeur par défaut). Pour plus d’informations, consultez [Créer et appliquer un instantané](create-and-apply-the-snapshot.md).  
   
- **Autoriser l’initialisation à partir des fichiers de sauvegarde**  
+ **Autoriser l'initialisation à partir de fichiers de sauvegarde**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'autoriser l'utilisation de fichiers de sauvegarde pour initialiser les abonnements. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Autoriser les abonnés non-SQL Server**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’attribution de la **valeur true** à cette option définit d’autres propriétés[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication pour prendre en charge les abonnés non-. Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformation des données  
  **Autoriser les transformations de données**  
@@ -73,13 +73,13 @@ ms.locfileid: "63021703"
 >  Les abonnements transformables ne seront pas disponibles dans une version ultérieure. Cette fonctionnalité est déconseillée.  
   
 ### <a name="peer-to-peer-replication"></a>Réplication d'égal à égal  
- **Autoriser les abonnements d’égal à égal**  
+ **Autoriser les abonnements d'égal à égal**  
  S'applique uniquement à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. Détermine si la publication prend en charge la réplication d'égal à égal. Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge la réplication d'égal à égal. Cette option est en lecture seule si des abonnements existent. Cette option ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement** , **Autoriser les abonnements mis à jour en attente**ou **Autoriser les Abonnés non-SQL Server** a la valeur **True**. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md).  
   
- **Autoriser la détection de conflit d’égal à égal**  
- S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie si la détection de conflit est activée pour cette publication. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure, et la détection doit être activée pour tous les nœuds. Pour utiliser la détection de conflit, vous devez également spécifier une valeur pour ID d’appelant de l' **homologue**. Pour plus d’informations, consultez [détection de conflit dans la réplication d’égal à égal](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ **Autoriser la détection de conflit d'égal à égal**  
+ S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie si la détection de conflit est activée pour cette publication. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure, et la détection doit être activée pour tous les nœuds. Pour utiliser la détection de conflit, vous devez également spécifier une valeur pour **ID d'appelant de l'homologue**. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- **ID d’appelant de l’homologue**  
+ **ID d'appelant de l'homologue**  
  S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie un ID pour un nœud dans une topologie d'égal à égal. Cet ID est utilisé pour détection de conflit si **Autoriser la détection de conflit d'égal à égal** a la valeur **True**. Spécifiez un ID positif différent de zéro qui n'a jamais été utilisé dans la topologie. Pour obtenir la liste des ID qui ont déjà été utilisés, interrogez la table système [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) .  
   
 ### <a name="updatable-subscriptions"></a>Abonnements pouvant être mis à jour  
@@ -89,10 +89,10 @@ ms.locfileid: "63021703"
  **Autoriser les abonnements mis à jour en attente**  
  Détermine si les modifications de données de l'abonné peuvent être mises en file d'attente et répliquées ultérieurement sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- **Signaler les conflits de manière centralisée**  
+ **Signaler les conflits de manière centrale**  
  Détermine s'il est nécessaire de signaler les conflits de modifications de données uniquement sur le serveur de publication ou à la fois sur le serveur de publication et à l'abonné (nécessite l'option **Autoriser les abonnements mis à jour en attente**). Cette option est en lecture seule. Par défaut, elle a la valeur **True** pour les publications créées à l'aide de l'Assistant Nouvelle publication et ne peut être modifiée une fois la publication créée. Lorsque cette option a la valeur **True** , les conflits sont uniquement signalés sur le serveur de publication. Vous pouvez uniquement voir les conflits lors de leur signalement.  
   
- **Stratégie de résolution des conflits**  
+ **Stratégie de résolution de conflit**  
  Spécifie l'action à entreprendre lorsqu'une modification d'abonné entre en conflit avec une modification de serveur de publication (nécessite l'option **Autoriser les abonnements mis à jour en attente**). Pour plus d’informations, consultez [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md).  
   
  **Type de file d'attente**  
@@ -101,7 +101,7 @@ ms.locfileid: "63021703"
 ## <a name="options-for-merge-publications"></a>Options des publications de fusion  
   
 ### <a name="conflict-reporting"></a>Rapport de conflit  
- **Signaler les conflits de manière centralisée**  
+ **Signaler les conflits de manière centrale**  
  Détermine s'il est nécessaire de signaler les conflits de modifications de données uniquement sur le serveur de publication ou à la fois sur le serveur de publication et à l'abonné. Cette option est en lecture seule. Par défaut, elle a la valeur **True** pour les publications créées à l'aide de l'Assistant Nouvelle publication et ne peut être modifiée une fois la publication créée. Lorsque cette option a la valeur **True** , les conflits sont uniquement signalés sur le serveur de publication. Vous pouvez uniquement voir les conflits lors de leur signalement. Pour plus d'informations, consultez la section relative à l'affichage des conflits de [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="filtering"></a>Filtrage  

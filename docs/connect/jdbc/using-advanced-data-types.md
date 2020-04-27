@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528723"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727932"
 ---
 # <a name="using-advanced-data-types"></a>Utilisation des types de données avancés
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-Vous pouvez également utiliser la méthode [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) pour lire les données sous forme de tableau d'octets, comme dans l’exemple suivant :  
+Vous pouvez également utiliser la méthode [getBytes](reference/getbytes-method-sqlserverresultset.md) pour lire les données sous forme de tableau d'octets, comme dans l’exemple suivant :  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Modification de types de données de grande valeur dans une base de données
 
-Dans la plupart des cas, la méthode recommandée pour mettre à jour ou modifier des données avec des valeurs élevées dans la base de données consiste à passer des paramètres via les classes [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), avec des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] comme `UPDATE`, `WRITE` et `SUBSTRING`.  
+Dans la plupart des cas, la méthode recommandée pour mettre à jour ou modifier des données avec des valeurs élevées dans la base de données consiste à passer des paramètres via les classes [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md), avec des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] comme `UPDATE`, `WRITE` et `SUBSTRING`.  
 
 Si vous devez remplacer l'instance d'un mot dans un fichier texte volumineux, comme un fichier HTML archivé, vous pouvez utiliser un objet Clob, comme dans l’exemple suivant :  
 
@@ -173,12 +173,12 @@ Pour plus d’informations sur les types de données définis par l’utilisateu
   
 ## <a name="sql_variant-data-type"></a>Type de données Sql_variant
 
-Pour plus d’informations sur le type de données sql_variant, consultez [Utilisation du type de données Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Pour plus d’informations sur le type de données sql_variant, consultez [Utilisation du type de données Sql_variant](using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Types de données spatiales
 
-Pour plus d’informations sur le type de données spatiales, consultez [Utilisation du type de données spatiales](../../connect/jdbc/use-spatial-datatypes.md).  
+Pour plus d’informations sur le type de données spatiales, consultez [Utilisation du type de données spatiales](use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Présentation des types de données du pilote JDBC](understanding-the-jdbc-driver-data-types.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174418"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algorithme MLR (Microsoft Linear Regression)
@@ -44,9 +44,9 @@ ms.locfileid: "78174418"
 ## <a name="data-required-for-linear-regression-models"></a>Données requises pour les modèles de régression linéaire
  Lorsque vous préparez des données à utiliser dans un modèle de régression linéaire, vous devez comprendre les spécifications liées à l'algorithme. Cela comprend la quantité de données requise et le mode d'utilisation de ces données. Les spécifications pour ce type de modèle sont les suivantes :
 
--   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
+-   **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
 
--   **Colonne prévisible** Nécessite au moins une colonne prévisible. Vous pouvez inclure dans un modèle plusieurs attributs prédictibles, mais ces attributs doivent être des types de données numériques continues. Vous ne pouvez pas utiliser un type de données datetime comme attribut prédictible même si le stockage natif pour les données est numérique.
+-   **Colonne prédictible** : nécessite au moins une colonne prédictible. Vous pouvez inclure dans un modèle plusieurs attributs prédictibles, mais ces attributs doivent être des types de données numériques continues. Vous ne pouvez pas utiliser un type de données datetime comme attribut prédictible même si le stockage natif pour les données est numérique.
 
 -   **Colonnes d’entrée** Les colonnes d’entrée doivent contenir des données numériques continues et recevoir le type de données approprié.
 

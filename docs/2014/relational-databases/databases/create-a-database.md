@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872317"
 ---
 # <a name="create-a-database"></a>Créer une base de données
@@ -30,54 +30,54 @@ ms.locfileid: "62872317"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Prérequis](#Prerequisites)  
+     [Conditions préalables](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour créer une base de données, utilisez :**  
+-   **Pour créer une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous pouvez spécifier un maximum de 32 767 bases de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   L'instruction CREATE DATABASE doit être exécutée en mode de validation automatique (mode de gestion des transactions par défaut) et n'est pas autorisée dans une transaction explicite ou implicite.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
--   La base de données [Master](master-database.md) doit être sauvegardée chaque fois qu’une base de données utilisateur est créée, modifiée ou supprimée.  
+-   La base de données [master](master-database.md) doit être sauvegardée chaque fois qu'une base de données utilisateur est créée, modifiée ou supprimée.  
   
 -   Lorsque vous créez une base de données, attribuez aux fichiers une taille aussi grande que possible, en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE DATABASE sur la base de données master, ou l'autorisation ALTER ANY DATABASE ou VIEW ANY DEFINITION.  
   
  Pour garder le contrôle de l'utilisation du disque sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorisation de création de bases de données est généralement limitée à quelques comptes de connexion.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>Pour créer une base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
+1.  Dans l' **Explorateur d’objets**, connectez-vous à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] une instance du, puis développez cette instance.  
   
-2.  Cliquez avec le bouton droit sur **Bases de données**, puis cliquez sur **Nouvelle base de données**.  
+2.  Cliquez avec le bouton droit sur **bases de données**, puis cliquez sur **nouvelle base de données**.  
   
 3.  Dans **Nouvelle base de données**, entrez le nom de la base de données.  
   
 4.  Pour créer la base de données en acceptant toutes les valeurs par défaut, cliquez sur **OK**, sinon effectuez les étapes facultatives ci-après.  
   
-5.  Pour changer le nom du propriétaire, cliquez sur (**...**) pour sélectionner un autre propriétaire.  
+5.  Pour modifier le nom du propriétaire, cliquez sur (**...**) pour sélectionner un autre propriétaire.  
   
     > [!NOTE]  
     >  L’option **Utiliser l’indexation de texte intégral** est toujours activée et estompée, car toutes les bases de données utilisateur sont activées pour la recherche en texte intégral à compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "62872317"
   
 12. Pour créer la base de données, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-database"></a>Pour créer une base de données  
   
@@ -132,7 +132,7 @@ GO
  Pour obtenir plus d’exemples, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Database Files and Filegroups](database-files-and-filegroups.md)   
+ [Fichiers de base de données et groupes de fichiers](database-files-and-filegroups.md)   
  [Détachement et attachement de la base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Ajouter des fichiers de données ou journaux à une base de données](add-data-or-log-files-to-a-database.md)  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042875"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la structure et des modèles de série chronologique
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la structure et des modèles de série chronologique
   Dans cette leçon, vous allez utiliser l’instruction [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) pour traiter les structures d’exploration de données de série chronologique et les modèles d’exploration de données que vous avez créés.  
   
  Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Vous devez toujours traiter un modèle et une structure d'exploration de données au moment où vous les créez. Si vous spécifiez la structure d'exploration de données lors de l'utilisation de l'instruction INSERT INTO, l'instruction traite la structure et tous ses modèles d'exploration de données associés.  
@@ -146,7 +146,7 @@ OPENQUERY (<source data definition>)
  Une fois que l'exécution de la requête est terminée, vous pouvez créer des prédictions en utilisant les modèles d'exploration de données traités. Dans la leçon suivante, vous allez créer plusieurs prédictions basées sur les modèles d'exploration de données que vous avez créés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Création de prédictions de série chronologique à l'aide d'extensions DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Leçon 4 : Création de prédictions de série chronologique à l’aide d’extensions DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   

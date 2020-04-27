@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63073914"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
@@ -74,7 +74,7 @@ ms.locfileid: "63073914"
 |Si la colonne a été modifiée|Oui|Oui|  
 |Type DML|Oui|Oui|  
   
-##  <a name="Capture"></a> Capture de données modifiées  
+##  <a name="change-data-capture"></a><a name="Capture"></a>Capture de données modifiées  
  La capture de données modifiées fournit des informations de modification historiques pour une table utilisateur en capturant à la fois le fait que des modifications DML aient été apportées et les données effectivement modifiées. Les modifications sont capturées à l'aide d'un processus asynchrone qui lit le journal des transactions et n'a qu'un faible impact sur le système.  
   
  Comme indiqué dans l'illustration suivante, les modifications apportées aux tables utilisateur sont capturées dans des tables de modifications correspondantes. Ces tables de modifications fournissent une vue historique des modifications au fil du temps. Les fonctions de [capture de données modifiées](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorisent une utilisation facile et systématique des données modifiées.  
@@ -98,7 +98,7 @@ ms.locfileid: "63073914"
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considérations relatives aux types de données pour la capture de données modifiées  
  Tous les types de colonne de base sont pris en charge par la capture de données modifiées. Le tableau suivant indique le comportement et les limites de plusieurs types de colonne.  
   
-|Type de colonne|Modifications capturées dans les tables de modifications|Limites|  
+|Type de colonne|Modifications capturées dans les tables de modifications|Limitations|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonnes éparses|Oui|Ne prend pas en charge la capture des modifications lors de l'utilisation d'un jeu de colonnes.|  
 |Colonnes calculées|Non|Les modifications apportées aux colonnes calculées ne sont pas suivies. La colonne apparaîtra dans la table de modifications avec le type approprié, mais aura une valeur NULL.|  
@@ -150,7 +150,7 @@ ms.locfileid: "63073914"
  Vous pouvez utiliser [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) pour supprimer la capture de données modifiées d’une base de données restaurée ou attachée.  
  
 
-  ##  <a name="Tracking"></a> Suivi des modifications  
+  ##  <a name="change-tracking"></a><a name="Tracking"></a>Change Tracking  
  Le suivi des modifications capture le fait que des lignes d'une table ont été modifiées, mais ne capture pas les données modifiées. Cela permet aux applications de déterminer les lignes qui ont changé, les données de ligne les plus récentes étant obtenues directement à partir des tables utilisateur. Le suivi des modifications est par conséquent plus limité dans les questions historiques auxquelles il peut répondre, comparé à la capture de données modifiées. Toutefois, pour les applications qui ne requièrent pas d'informations historiques, la charge de stockage est largement inférieure puisque les données modifiées ne sont pas capturées. Un mécanisme de suivi synchrone est utilisé pour assurer le suivi des modifications. Ce mécanisme a été conçu pour imposer une charge minimale sur les opérations DML.  
   
  L'illustration suivante montre un scénario de synchronisation qui pourrait tirer parti du suivi des modifications. Dans ce scénario, une application requiert les informations suivantes : toutes les lignes de la table qui ont été modifiées depuis la dernière synchronisation de la table et uniquement les données de la ligne actuelle. Étant donné qu'un mécanisme synchrone est utilisé pour assurer le suivi des modifications, une application peut effectuer la synchronisation bidirectionnelle et détecter de manière fiable tout conflit pouvant survenir.  
@@ -186,10 +186,10 @@ ms.locfileid: "63073914"
 |Décrit comment les applications qui utilisent le suivi des modifications peuvent obtenir les modifications suivies, appliquer ces modifications à une autre banque de données et mettre à jour la base de données source. Cette rubrique décrit également le rôle joué par le suivi des modifications lorsqu'un basculement se produit et qu'une base de données doit être restaurée à partir d'une sauvegarde.|[Utiliser le suivi des modifications &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de capture de données modifiées &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
- [Fonctions de suivi des modifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
- [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
- [Tables de capture des données modifiées &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
+ [Fonctions de capture de données modifiées &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
+ [Fonctions Change Tracking &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
+ [Procédures stockées de capture de données modifiées &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
+ [Tables de capture de données modifiées &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
  [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](../views/views.md)  
   
   

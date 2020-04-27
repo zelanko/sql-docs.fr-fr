@@ -16,25 +16,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 134ac290601e463063f78a59ea8fd5923d095663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211266"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Créer des projets de base de données à l'aide de SQL Server Management Studio
-  Un projet de script de base de données est un ensemble organisé de scripts, d'informations de connexion et de modèles qui sont tous associés à une base de données ou une partie d'une base de données. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit le [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour l’administration et la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conception des bases de données dans le contexte d’un projet de script. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclut des concepteurs, des éditeurs, des guides et des assistants pour aider les utilisateurs lors du développement, du déploiement et de la gestion de bases de données.  
+  Un projet de script de base de données est un ensemble organisé de scripts, d'informations de connexion et de modèles qui sont tous associés à une base de données ou une partie d'une base de données. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour l’administration et la conception de bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans le contexte d’un projet de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclut des concepteurs, des éditeurs, des guides et des assistants pour aider les utilisateurs lors du développement, du déploiement et de la gestion de bases de données.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est une suite d’outils d’administration pour la gestion des composants appartenant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cet environnement intégré permet aux utilisateurs d'effectuer de nombreuses tâches, telles que la sauvegarde de données, l'édition de requêtes et l'automatisation de fonctions courantes, au sein d'une même interface.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est une suite d’outils d’administration pour la gestion des composants appartenant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cet environnement intégré permet aux utilisateurs d'effectuer de nombreuses tâches, telles que la sauvegarde de données, l'édition de requêtes et l'automatisation de fonctions courantes, au sein d'une même interface.  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose les outils suivants :  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose les outils suivants :  
   
--   L'Éditeur de code, qui est un éditeur de scripts très fourni pour l'écriture et l'édition de scripts. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fournit quatre versions de l’Éditeur de code : l’Éditeur de requête de [!INCLUDE[ssDE](../includes/ssde-md.md)] pour les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , l’Éditeur de requête DMX, l’Éditeur de requête MDX et l’Éditeur de requête XML/A.  
+-   L'Éditeur de code, qui est un éditeur de scripts très fourni pour l'écriture et l'édition de scripts. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fournit quatre versions de l’Éditeur de code : l’Éditeur de requête de [!INCLUDE[ssDE](../includes/ssde-md.md)] pour les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , l’Éditeur de requête DMX, l’Éditeur de requête MDX et l’Éditeur de requête XML/A.  
   
 -   L'Explorateur d'objets pour la localisation, la modification, l'écriture de script ou l'exécution d'objets appartenant aux instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -44,8 +40,7 @@ ms.locfileid: "68211266"
   
 -   La fenêtre Propriétés pour l'affichage des propriétés actuelles des objets sélectionnés.  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] prend en charge des processus de travail efficaces en fournissant :  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] prend en charge des processus de travail efficaces en fournissant :  
   
 -   L'accès déconnecté. Vous pouvez écrire et éditer des scripts sans vous connecter à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -64,7 +59,7 @@ ms.locfileid: "68211266"
   
 -   Enregistrer les informations de connexion avec des scripts.  
   
- L'Explorateur de solutions est un outil destiné aux développeurs qui créent et réutilisent des scripts associés à un même projet. Si une tâche similaire est requise ultérieurement, vous pouvez réutiliser un groupe de scripts stockés dans un projet. Si vous avez créé des applications à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]l’aide de, vous trouverez Explorateur de solutions très familier.  
+ L'Explorateur de solutions est un outil destiné aux développeurs qui créent et réutilisent des scripts associés à un même projet. Si une tâche similaire est requise ultérieurement, vous pouvez réutiliser un groupe de scripts stockés dans un projet. Si vous avez déjà créé des applications avec [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l’Explorateur de solutions vous semblera très familier.  
   
  Une solution est constituée d'un ou plusieurs projets de script. Un projet est constitué d'un ou plusieurs scripts ou connexions. Un projet peut également comprendre des fichiers qui ne sont pas des scripts.  
   

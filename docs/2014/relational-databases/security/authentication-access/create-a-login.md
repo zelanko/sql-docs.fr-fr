@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012028"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
@@ -46,38 +46,38 @@ ms.locfileid: "63012028"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [étapes à suivre après avoir créé une connexion](#FollowUp)  
+-   **Suivi :**  [Mesures à prendre après avoir créé une connexion](#FollowUp)  
   
-##  <a name="Background"></a> Arrière-plan  
+##  <a name="background"></a>Informations générales sur la <a name="Background"></a>  
  Un compte de connexion est un principal de sécurité, ou une entité qui peut être authentifiée par un système sécurisé. Pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les utilisateurs doivent disposer d'un compte de connexion. Vous pouvez créer un compte de connexion basé sur un principal Windows (tel qu'un utilisateur de domaine ou un groupe de domaines Windows) ou créer un compte de connexion qui n'est pas basé sur un principal Windows (tel qu'un compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > [!NOTE]  
->  Pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit utiliser une authentification en mode mixte. Pour plus d’informations, consultez [Choisir un mode d’authentification](../choose-an-authentication-mode.md).  
+>  Pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit utiliser une authentification en mode mixte. Pour plus d’informations, consultez [choisir un mode d’authentification](../choose-an-authentication-mode.md).  
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des comptes de connexion. L'étendue d'un compte de connexion est l'intégralité du [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion. Les autorisations dont l'étendue englobe la totalité de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par exemple, l'autorisation `CREATE ENDPOINT`), peuvent être accordées à un compte de connexion.  
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation `ALTER ANY LOGIN` ou `ALTER LOGIN` sur le serveur.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 ##### <a name="to-create-a-sql-server-login"></a>Pour créer un compte de connexion SQL Server  
   
 1.  Dans l'Explorateur d'objets, développez le dossier de l'instance du serveur où vous souhaitez créer le compte de connexion.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Connexion…** .  
+2.  Cliquez avec le bouton droit sur le dossier **sécurité** , pointez sur **nouveau**, puis sélectionnez **connexion...**.  
   
-3.  Dans la boîte de dialogue **Nouvelle connexion**, dans la page **Général**, entrez le nom d’un utilisateur dans la zone **Nom de la connexion**. Vous pouvez également cliquer sur **Rechercher…** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
+3.  Dans la boîte de dialogue **nouvelle connexion** , dans la page **général** , entrez le nom d’un utilisateur dans la zone **nom de connexion** . Vous pouvez également cliquer sur **Rechercher…** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
   
-     Si vous cliquez sur **Rechercher…**  :  
+     Si vous cliquez sur **Rechercher...**:  
   
-    1.  Sous **Sélectionner ce type d’objet**, cliquez sur **Types d’objet...** pour ouvrir la boîte de dialogue **Types d’objet** et sélectionnez tout ou partie des éléments suivants : **Entités de sécurité intégrées**, **Groupes** et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
+    1.  Sous **Sélectionner ce type d’objet**, cliquez sur **Types d’objets…** pour ouvrir la boîte de dialogue **Types d’objets** et sélectionnez l’ensemble ou certains des éléments suivants : **Principaux de sécurité intégrés**, **Groupes** et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
-    3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)** , entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)**, entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](https://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Cliquez sur **Avancé…** pour obtenir davantage d’options de recherche avancée. Pour plus d’informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes - Page Avancé](https://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -87,15 +87,15 @@ ms.locfileid: "63012028"
   
 5.  Pour créer un compte de connexion qui est enregistré sur une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sélectionnez **Authentification SQL Server**.  
   
-    1.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouvel utilisateur. Entrez de nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
+    1.  Dans la zone **Mot de passe**, entrez un mot de passe pour le nouvel utilisateur. Entrez à nouveau ce mot de passe dans la zone **Confirmer le mot de passe**.  
   
     2.  Lorsque vous modifiez un mot de passe existant, sélectionnez **Spécifier l'ancien mot de passe**, puis tapez l'ancien mot de passe dans la zone **Ancien mot de passe** .  
   
-    3.  Pour appliquer des options de stratégie de mot de passe pour la complexité et l'application, sélectionnez **Conserver la stratégie de mot de passe**. Pour plus d'informations, consultez [Password Policy](../password-policy.md). Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
+    3.  Pour appliquer des options de stratégie de mot de passe pour la complexité et l'application, sélectionnez **Conserver la stratégie de mot de passe**. Pour plus d'informations, consultez [Password Policy](../password-policy.md). Il s’agit d’une option par défaut lorsque **l’authentification SQL Server** est sélectionnée.  
   
-    4.  Pour appliquer des options de stratégie de mot de passe pour l'expiration, sélectionnez **Conserver l'expiration du mot de passe**. L'option**Conserver la stratégie de mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
+    4.  Pour appliquer des options de stratégie de mot de passe pour l'expiration, sélectionnez **Conserver l'expiration du mot de passe**. L’option **appliquer la stratégie de mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s’agit d’une option par défaut lorsque **l’authentification SQL Server** est sélectionnée.  
   
-    5.  Pour forcer l'utilisateur à créer un nouveau mot de passe après la première utilisation du compte de connexion, sélectionnez **L'utilisateur doit changer de mot de passe à la prochaine connexion**. L'option**Conserver l'expiration du mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
+    5.  Pour forcer l'utilisateur à créer un nouveau mot de passe après la première utilisation du compte de connexion, sélectionnez **L'utilisateur doit changer de mot de passe à la prochaine connexion**. L’option **appliquer l’expiration du mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s’agit d’une option par défaut lorsque **l’authentification SQL Server** est sélectionnée.  
   
 6.  Pour associer le compte de connexion à un certificat de sécurité autonome, sélectionnez **Mappé au certificat** , puis sélectionnez le nom d’un certificat existant dans la liste.  
   
@@ -103,14 +103,14 @@ ms.locfileid: "63012028"
   
 8.  Pour associer le compte de connexion à des informations d'identification de sécurité, activez la case à cocher **Mappé aux informations d'identification** , puis sélectionnez des informations d'identification existantes dans la liste ou cliquez sur **Ajouter** pour créer de nouvelles informations d'identification. Pour supprimer du compte de connexion un mappage à des informations d'identification de sécurité, sélectionnez les informations d'identification dans **Informations d'identification mappées** et cliquez sur **Supprimer**. Pour plus d’informations sur les informations d’identification en général, consultez [Informations d’identification &#40;moteur de base de données&#41;](credentials-database-engine.md).  
   
-9. Sélectionnez une base de données par défaut pour le compte de connexion dans la liste **Base de données par défaut** . **Master** est la valeur par défaut pour cette option.  
+9. Sélectionnez une base de données par défaut pour le compte de connexion dans la liste **Base de données par défaut** . **Master** est la valeur par défaut de cette option.  
   
 10. Dans la liste **Langue par défaut** , sélectionnez une langue par défaut pour le compte de connexion.  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Connexion – Nouvelle** offre également des options sur quatre pages supplémentaires : **Rôles de serveur**, **Mappage utilisateur**, **Éléments sécurisables** et **État**.  
+ La boîte de dialogue **nouvelle connexion** offre également des options sur quatre pages supplémentaires **: rôles de serveur**, **mappage utilisateur**, éléments **sécurisables**et **État**.  
   
 ### <a name="server-roles"></a>Rôles de serveur  
  La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
@@ -179,21 +179,21 @@ ms.locfileid: "63012028"
 2.  Dans la boîte de dialogue **Ajouter des objets** , sélectionnez l’une des options suivantes : **objets spécifiques...**, **tous les objets des types...** ou **le serveur**_SERVER_NAME_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  La sélection de **la**_SERVER_NAME_ serveur remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
+    >  La sélection de l’option **Le serveur**_nom_serveur_ remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
-3.  Si vous sélectionnez **Objets spécifiques…**  :  
+3.  Si vous sélectionnez **des objets spécifiques...**:  
   
-    1.  Dans la boîte de dialogue **Sélectionner les objets**, sous **Sélectionnez ces types d’objets**, cliquez sur **Types d’objets…** .  
+    1.  Dans la boîte de dialogue **Sélectionner des objets** , sous **sélectionnez ces types**d’objets, cliquez sur types d’objets **...**.  
   
-    2.  Dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Dans la boîte de dialogue **Sélectionner les types d'objets** , sélectionnez tout ou partie des types d'objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité**et **Rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Sous **Entrez les noms d’objets à sélectionner (exemples)** , cliquez sur **Parcourir…** .  
+    3.  Sous **Entrez les noms des objets à sélectionner (exemples)**, cliquez sur **Parcourir...**.  
   
     4.  Dans la boîte de dialogue **Rechercher des objets** , sélectionnez les objets disponibles du type sélectionné dans la boîte de dialogue **Sélectionner les types d'objets** , puis cliquez sur **OK**.  
   
     5.  Dans la boîte de dialogue **Sélectionner des objets** , cliquez sur **OK**.  
   
-4.  Si vous sélectionnez **Tous les objets des types...** , dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si vous sélectionnez **tous les objets des types...**, dans la boîte de dialogue **Sélectionner les types** d’objets, sélectionnez tout ou partie des types d’objets suivants : **points de terminaison**, **connexions**, **serveurs**, **groupes de disponibilité**et **rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nom**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  
@@ -207,10 +207,10 @@ ms.locfileid: "63012028"
  **autorisations**  
  Nom de l'autorisation.  
   
- **Fournisseur d'autorisations**  
+ **Fournisseur**  
  Principal ayant accordé l'autorisation.  
   
- **Octroyer**  
+ **Licence**  
  Sélectionnez cette option pour octroyer cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
  **Avec autorisation**  
@@ -219,7 +219,7 @@ ms.locfileid: "63012028"
  **Deny**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
-### <a name="status"></a>Statut  
+### <a name="status"></a>État  
  La page **État** répertorie certaines des options d'authentification et d'autorisation qui peuvent être configurées sur la connexion sélectionnée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Les options suivantes sont disponibles sur cette page :  
@@ -237,9 +237,9 @@ ms.locfileid: "63012028"
  Sélectionnez cette option pour activer ou désactiver cette connexion. Cette option utilise l'instruction ALTER LOGIN avec l'option ENABLE ou DISABLE.  
   
  **Authentification SQL Server**  
- La case à cocher **La connexion est verrouillée** est disponible uniquement si la connexion sélectionnée se connecte à l’aide de l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elle a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
+ La case à cocher la **connexion est verrouillée** est disponible uniquement si la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sélectionnée se connecte à l’aide de l’authentification et que la connexion a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>Pour créer une connexion à l'aide de l'authentification Windows  
   
@@ -278,7 +278,7 @@ ms.locfileid: "63012028"
   
  Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a>Suivi : étapes à suivre après avoir créé une connexion  
  Une fois le compte de connexion créé, celui-ci peut se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il ne dispose pas nécessairement des autorisations suffisantes pour effectuer des tâches utiles. La liste suivante fournit des liens vers des actions de compte de connexion courantes.  
   
 -   Pour effectuer une jointure entre le compte de connexion et un rôle de base de données, consultez [Attacher un rôle](join-a-role.md).  

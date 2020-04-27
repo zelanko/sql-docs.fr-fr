@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022511"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
-  La publication à partir d’une base de données Oracle est conçue pour fonctionner de façon similaire à la publication à partir d’une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, soyez conscient des problèmes et limitations suivants :  
+  La publication à partir d’une base de données Oracle est conçue pour fonctionner presque de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la même façon que la publication à partir d’une base de données. Toutefois, soyez conscient des problèmes et limitations suivants :  
   
 -   L'option Oracle Gateway offre de meilleures performances que l'option Oracle Complete ; il n'est cependant pas possible de l'utiliser pour publier la même table dans plusieurs publications transactionnelles. Une table peut faire partie d'un nombre quelconque de publications d'instantané mais d'une seule publication transactionnelle uniquement. Si vous devez publier la même table dans plusieurs publications transactionnelles, choisissez l'option Oracle Complete.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "63022511"
  Pour plus d’informations sur la sécurité de la réplication, consultez [réplication SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Considérations sur l’administration des serveurs de publication Oracle](administrative-considerations-for-oracle-publishers.md)   
+ [Considérations administratives pour les serveurs de publication Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Configurer un serveur de publication Oracle](configure-an-oracle-publisher.md)   
  [Vue d’ensemble de la publication Oracle](oracle-publishing-overview.md)  
   

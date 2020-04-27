@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022688"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Initialisation d'un nouvel homologue (réplication d'égal à égal)
-  Utilisez la page **initialisation d’un nouvel homologue** pour spécifier comment les bases de données homologues ont été initialisées. (Les homologues doivent être initialisés avant que vous ne terminiez cet Assistant.) Les homologues sont initialisés manuellement ou à l’aide de la fonctionnalité **Initialize with backup** fournie par la réplication transactionnelle. (La réplication transactionnelle d’égal à égal ne prend pas en charge l’initialisation d’homologues à l’aide d’un instantané.) Si différents homologues doivent être initialisés à l’aide de différentes méthodes, vous devez ajouter les homologues séparément en exécutant l’Assistant plusieurs fois.  
+  Utilisez la page **Initialisation d'un nouvel homologue** pour spécifier comment les bases de données d'homologues ont été initialisées. (Les homologues doivent être initialisés avant que vous ne terminiez cet Assistant.) Les homologues sont initialisés manuellement ou à l’aide de la fonctionnalité **Initialize with backup** fournie par la réplication transactionnelle. (La réplication transactionnelle d’égal à égal ne prend pas en charge l’initialisation d’homologues à l’aide d’un instantané.) Si différents homologues doivent être initialisés à l’aide de différentes méthodes, vous devez ajouter les homologues séparément en exécutant l’Assistant plusieurs fois.  
   
 ## <a name="options"></a>Options  
- **Spécifiez comment la ou les nouvelles bases de données d’homologues ont été initialisées**  
+ **Spécifiez comment la ou les nouvelles bases de données d'homologues ont été initialisées**  
  Chaque homologue doit comporter le schéma et les données pour tous les objets publiés. Sélectionnez l’une des options suivantes :  
   
 -   Sélectionnez la première option si vous avez créé manuellement le schéma pour les objets publiés ou si vous avez restauré une sauvegarde et qu'aucune modification de données n'a été apportée dans la première base de données de publication depuis la sauvegarde. Si vous avez créé le schéma manuellement, vous devez vous assurer que chaque homologue comporte toutes les données requises. Cette option correspond à une valeur de **replication support only** pour la propriété de l'abonnement **sync_type**.  
@@ -39,13 +39,13 @@ ms.locfileid: "63022688"
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Désactivé|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Désactivé|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Désactivé|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|activé|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Activé|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|activé|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|activé|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|activé|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Activé|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
+ [Administrer une topologie d’égal à égal &#40;la programmation Transact-SQL de la réplication&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Réplication transactionnelle d’égal à égal](transactional/peer-to-peer-transactional-replication.md)  
   
   

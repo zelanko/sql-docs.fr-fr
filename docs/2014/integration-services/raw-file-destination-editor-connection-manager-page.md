@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056566"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Éditeur de destination de fichier brut (page Gestionnaire de connexions)
@@ -24,19 +24,19 @@ ms.locfileid: "66056566"
   
  **Que voulez-vous faire ?**  
   
--   [Ouvrir l'Éditeur de destination de fichier brut](#open)  
+-   [Ouvrir l’éditeur de destination de fichier brut](#open)  
   
--   [Définir les options de l'onglet Gestionnaires de connexions](#connection)  
+-   [Définir les options de l’onglet Gestionnaire de connexions](#connection)  
   
 -   [Définir les options de l'onglet Colonnes](#mapping)  
   
-##  <a name="open"></a> Ouvrir l'Éditeur de destination de fichier brut  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Ouvrir l'Éditeur de destination de fichier brut  
   
 1.  Ajoutez la destination de fichier brut à un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
-##  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
  **Mode d’accès**  
  Sélectionnez la façon dont le nom de fichier est spécifié. Sélectionnez **Nom de fichier** pour entrer directement le nom de fichier et le chemin d'accès, ou bien **Nom de fichier à partir d'une variable** pour spécifier une variable qui contient le nom de fichier.  
   
@@ -51,8 +51,8 @@ ms.locfileid: "66056566"
   
  Lorsque vous cliquez sur **Générer le fichier brut initial**, un message s'affiche. Cliquez sur **OK** pour commencer la création du fichier. Cliquez sur **Annuler** pour sélectionner une autre liste de colonnes sur la page **Colonnes** .  
   
-##  <a name="mapping"></a> Définir les options de l'onglet Colonnes  
- **Colonnes d'entrée disponibles**  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>Définir les options de l’onglet colonnes  
+ **Colonnes d’entrée disponibles**  
  Sélectionnez une ou plusieurs colonnes d'entrée pour écrire dans le fichier brut.  
   
  **Colonne d'entrée**  

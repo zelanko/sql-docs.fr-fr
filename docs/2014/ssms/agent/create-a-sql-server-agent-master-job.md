@@ -15,24 +15,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211450"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Créer un travail principal SQL Server Agent
   Cette rubrique explique comment créer un travail de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent maître [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de ou de.  
   
  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Les modifications apportées aux travaux principaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doivent être appliquées à tous les serveurs cibles concernés. Étant donné que les serveurs cibles ne téléchargent pas le travail tant que ces cibles ne sont pas spécifiées, [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande d'achever toutes les étapes et planifications de travail pour un travail donné avant de spécifier des serveurs cibles. Sinon, vous devez demander manuellement que les serveurs cibles retéléchargent le travail modifié, soit en exécutant la procédure stockée **sp_post_msx_operation** , soit en modifiant le travail à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [sp_post_msx_operation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) ou [modifier un travail](modify-a-job.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les travaux distribués dont les étapes sont associées à un proxy sont exécutés dans le contexte du compte proxy du serveur cible. Assurez-vous que les conditions suivantes sont remplies ou que les étapes de travail associées à un proxy ne seront pas téléchargées du serveur maître vers la cible :  
   
 -   La sous-clé de Registre **\\\<HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) a la valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
@@ -45,7 +45,7 @@ ms.locfileid: "68211450"
   
 -   « Proxy introuvable. » Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>Pour créer un travail principal SQL Server Agent  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68211450"
   
 2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Nouveau travail...**.  
+3.  Cliquez avec le bouton droit sur le dossier **travaux** et sélectionnez **nouveau travail...**.  
   
 4.  Dans la boîte de dialogue **Nouveau travail** , sur la page **Général** , modifiez les propriétés générales du travail. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail et nouveau travail &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68211450"
   
 
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>Pour créer un travail principal SQL Server Agent  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68211450"
     GO  
     ```  
   
- Pour plus d'informations, consultez les pages suivantes :  
+ Pour plus d’informations, voir :  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

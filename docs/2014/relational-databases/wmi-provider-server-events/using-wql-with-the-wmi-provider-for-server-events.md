@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211588"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
@@ -63,8 +63,7 @@ WHERE where_condition
   
 ## <a name="arguments"></a>Arguments  
  *event_property*  
- Est la propriété d'un événement. 
-  `PostTime`, `SPID` et `LoginName` en sont des exemples. Recherchez chaque événement listé dans [fournisseur WMI pour les classes et propriétés d’événements de serveur](wmi-provider-for-server-events-classes-and-properties.md) afin de déterminer les propriétés qu’il contient. Par exemple, l'événement DDL_DATABASE_LEVEL_EVENTS contient les propriétés `DatabaseName` et `UserName`. Il hérite également des propriétés `SQLInstance`, `LoginName`, `PostTime`, `SPID` et `ComputerName` de ses événements parents.  
+ Est la propriété d'un événement. `PostTime`, `SPID` et `LoginName` en sont des exemples. Recherchez chaque événement listé dans [fournisseur WMI pour les classes et propriétés d’événements de serveur](wmi-provider-for-server-events-classes-and-properties.md) afin de déterminer les propriétés qu’il contient. Par exemple, l'événement DDL_DATABASE_LEVEL_EVENTS contient les propriétés `DatabaseName` et `UserName`. Il hérite également des propriétés `SQLInstance`, `LoginName`, `PostTime`, `SPID` et `ComputerName` de ses événements parents.  
   
  **,** *... n*  
  Indique que les *event_property* peuvent être interrogées plusieurs fois, séparées par des virgules.  
@@ -79,7 +78,7 @@ WHERE where_condition
 >  Certaines procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATe TYPE et la procédure stockée **sp_addtype** déclenchent toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Toutefois, la procédure stockée **sp_rename** ne déclenche pas de notifications d’événements. Pour plus d’informations, consultez[événements DDL](../triggers/ddl-events.md).  
   
  *where_condition*  
- Est un prédicat de requête de la clause WHERE constitué de noms de *event_property* et d’opérateurs logiques et de comparaison. Le *where_condition* détermine l’étendue dans laquelle la notification d’événements correspondante est inscrite dans la base de données cible. Il peut également servir de filtre pour cibler un schéma ou un objet particulier à partir duquel interroger *event_type.* Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.  
+ Est un prédicat de requête de la clause WHERE constitué de noms de *event_property* et d’opérateurs logiques et de comparaison. Le *where_condition* détermine l’étendue dans laquelle la notification d’événements correspondante est inscrite dans la base de données cible. Il peut également servir de filtre pour cibler un schéma ou un objet particulier à partir duquel interroger *event_type.* Pour plus d'informations, consultez la section « Notes » plus loin dans cette rubrique.  
   
  Seul l'opérande `=` peut être utilisé avec `DatabaseName`, `SchemaName` et `ObjectName`. D'autres expressions ne peuvent pas être utilisées avec ces propriétés d'événement.  
   

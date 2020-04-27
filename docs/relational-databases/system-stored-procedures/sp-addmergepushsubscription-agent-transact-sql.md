@@ -16,10 +16,10 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769161"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769161"
   Ajoute un nouveau travail d'Agent permettant de planifier la synchronisation d'un abonnement par envoi de données (push) à une publication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]  
->  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,16 +97,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de fusion. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
-|**128**|Récurrent|  
+|**128**|Périodique|  
 |NULL (par défaut)||  
   
 > [!NOTE]  
@@ -114,36 +114,36 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Jours d’exécution de la Agent de fusion. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
-|**1,3**|Mardi|  
+|**3**|Mardi|  
 |**4**|Mercredi|  
-|**5,5**|Jeudi|  
+|**5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
 |**version8**|jour|  
-|**0,9**|Les jours de la semaine|  
+|**9**|Jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Date de la Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
 |NULL (par défaut)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
   
 `[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -176,7 +176,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addmergepushsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Créer un abonnement par émission de notification](../../relational-databases/replication/create-a-push-subscription.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   

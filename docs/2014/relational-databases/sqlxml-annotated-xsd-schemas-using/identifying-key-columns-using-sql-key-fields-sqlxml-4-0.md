@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013822"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "66013822"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Production de l’imbrication appropriée lorsque \<SQL : Relationship> ne fournit pas d’informations suffisantes  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Production de l’imbrication appropriée lorsque \<SQL : Relationship> ne fournit pas d’informations suffisantes  
  Cet exemple montre où `sql:key-fields` doit être spécifié.  
   
  Prenons le schéma suivant : Le schéma spécifie une hiérarchie entre les ** \<éléments Order>** et ** \<Customer>** dans lequel l' ** \<élément Order>** est le parent et l' ** \<élément Customer>** est un enfant.  

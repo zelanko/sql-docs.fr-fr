@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729299"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modifier une entité (Master Data Services)
@@ -25,18 +25,18 @@ ms.locfileid: "73729299"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier une entité.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-edit-an-entity"></a>Pour modifier une entité  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
-2.  Dans la page **Gérer le modèle** , sélectionnez un modèle dans la grille et cliquez sur **Entités**.  
+2.  Sur la page **gérer le modèle** , sélectionnez un modèle dans la grille, puis cliquez sur **entités**.  
   
 3.  Dans la grille de la page **Gérer l’entité** , sélectionnez la ligne de l’entité à modifier, puis cliquez sur **Modifier**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73729299"
   
      Pour plus d’informations, consultez [compression des données](../relational-databases/data-compression/data-compression.md) .  
   
-## <a name="status"></a>Statut  
+## <a name="status"></a>État  
  La colonne d’état de la grille affiche l’état de l’opération sur l’entité. Lorsque vous cliquez sur **Enregistrer l’entité**, l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.  
   
  ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État")  

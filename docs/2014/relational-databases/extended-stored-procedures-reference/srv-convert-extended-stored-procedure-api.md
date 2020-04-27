@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127279"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Modifie des données d'un type de données en un autre.  
   
@@ -70,7 +70,7 @@ destlen
  *srctype*  
  Spécifie le type des données à convertir. Ce paramètre peut être n'importe lequel des types de données d'API de procédure stockée étendue.  
   
- *sources*  
+ *src*  
  Pointeur vers les données à convertir. Ce paramètre peut être n'importe lequel des types de données d'API de procédure stockée étendue.  
   
  *srclen*  

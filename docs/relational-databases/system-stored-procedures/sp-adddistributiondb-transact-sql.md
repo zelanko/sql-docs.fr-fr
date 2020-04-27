@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771353"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`Mode de sécurité à utiliser lors de la connexion au serveur de distribution. *security_mode* est de **type int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** spécifie l’authentification intégrée de Windows.  
   
-`[ @login = ] 'login'`Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est requis si *security_mode* a la valeur **0**. *login* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @login = ] 'login'`Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est requis si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
 `[ @password = ] 'password'`Mot de passe utilisé lors de la connexion au serveur de distribution. Cela est requis si *security_mode* a la valeur **0**. *Password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @createmode = ] createmode`*createmode* est de **type int**, avec 1 comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (par défaut)|Créez la base de données ou utilisez une base de données existante, puis appliquez le fichier **instdist. SQL** pour créer des objets de réplication dans la base de données de distribution.|  
@@ -168,7 +168,7 @@ GO
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  
   
   

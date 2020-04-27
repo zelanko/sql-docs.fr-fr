@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046711"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
@@ -26,8 +26,7 @@ ms.locfileid: "63046711"
   
  `SQLProcedureColumns`retourne SQL_SUCCESS si des valeurs existent pour les paramètres *nomcatalogue*, *SchemaName*, *procname*ou *ColumnName* . **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  
   
- 
-  `SQLProcedureColumns` peut être exécuté sur un curseur côté serveur statique. Une tentative d'exécution de `SQLProcedureColumns` sur un curseur pouvant être mis à jour (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
+ `SQLProcedureColumns` peut être exécuté sur un curseur côté serveur statique. Une tentative d'exécution de `SQLProcedureColumns` sur un curseur pouvant être mis à jour (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
   
  Le tableau suivant répertorie les colonnes retournées par le jeu de résultats et la façon dont elles ont été étendues pour gérer les types de données **udt** et **xml** via le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client :  
   
@@ -73,11 +72,10 @@ ms.locfileid: "63046711"
  Pour plus d’informations générales, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Prise en charge par SQLProcedureColumns des grands types CLR définis par l'utilisateur  
- 
-  `SQLProcedureColumns` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLProcedureColumns` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLProcedureColumns fonction)](https://go.microsoft.com/fwlink/?LinkId=59363)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

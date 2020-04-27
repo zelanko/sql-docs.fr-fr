@@ -18,14 +18,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130767"
 ---
 # <a name="smo-namespaces"></a>Espaces de noms SMO
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les objets SMO ont différents espaces de noms. Les différents espaces de noms représentent différentes zones de fonctionnalités au sein de SMO.  
   
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys SMO sont situés dans le dossier [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] .  

@@ -1,5 +1,5 @@
 ---
-title: Types CLR volumineux définis par l’utilisateur | Microsoft Docs
+title: Types CLR volumineux définis par l'utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033532"
 ---
 # <a name="large-clr-user-defined-types"></a>Types CLR volumineux définis par l'utilisateur
@@ -29,7 +29,7 @@ ms.locfileid: "63033532"
   
  Pour OLE DB, la prise en charge des types définis par l’utilisateur volumineux offre la possibilité de diffuser des valeurs UDT vers et depuis le serveur au moyen d’une liaison ISequentialStream.  
   
- Les types définis par l'utilisateur dont la taille est inférieure ou égale à 8 000 octets se comporteront de la même manière que dans SQL Server 2005. Par OLE DB, vous pouvez toujours diffuser en continu de petits UDT à l’aide d’une liaison ISequentialStream.  
+ Les types définis par l'utilisateur dont la taille est inférieure ou égale à 8 000 octets se comporteront de la même manière que dans SQL Server 2005. Pour OLE DB, vous pouvez toujours transmettre en continu des types définis par l'utilisateur de petite taille à l'aide de la liaison ISequentialStream.  
   
  Le code natif doit quelquefois comprendre le contenu des types CLR définis par l'utilisateur mais n'a pas besoin d'instancier les objets managés. Dans ce cas, vous pouvez utiliser la sérialisation personnalisée pour convertir des valeurs de type défini par l'utilisateur (UDT) sur le serveur dans un format bien connu des clients.  
   

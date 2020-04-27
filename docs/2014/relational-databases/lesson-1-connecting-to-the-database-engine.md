@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63145481"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
@@ -22,7 +22,7 @@ ms.locfileid: "63145481"
   
   
   
-##  <a name="tools"></a>Outils pour Prise en main  
+##  <a name="tools-for-getting-started"></a><a name="tools"></a>Outils pour Prise en main  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d’outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l’outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer**. Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu’éléments inhérents aux composants clients lors de l’installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
   
 ### <a name="basic-tools"></a>Outils de base  
@@ -42,7 +42,7 @@ ms.locfileid: "63145481"
   
 -   Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-##  <a name="connect"></a>Connexion avec Management Studio  
+##  <a name="connecting-with-management-studio"></a><a name="connect"></a>Connexion avec Management Studio  
  La connexion au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d'outils s'exécutant sur le même ordinateur est un jeu d'enfant si vous connaissez le nom de l'instance et si vous vous connectez en tant que membre du groupe Administrateurs sur l'ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Pour définir le nom de l'instance du moteur de base de données  
@@ -76,7 +76,7 @@ ms.locfileid: "63145481"
   
 4.  Cliquez sur **Connecter**.  
   
-##  <a name="additional"></a>Autorisation de connexions supplémentaires  
+##  <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorisation de connexions supplémentaires  
  Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'administrateur, l'une de vos premières tâches consiste à autoriser d'autres utilisateurs à se connecter. Pour cela, vous pouvez créer une connexion et l'autoriser à accéder à une base de données en tant qu'utilisateur. Les connexions peuvent désigner des connexions d'authentification Windows qui exploitent les informations d'identification Windows, ou bien des connexions d'authentification SQL Server qui stockent les données d'authentification dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et qui n'ont aucun lien avec vos informations d'identification Windows. Utilisez l'authentification Windows chaque fois que cela est possible.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Créer une connexion d'authentification Windows  
@@ -101,6 +101,6 @@ ms.locfileid: "63145481"
 >  Ces informations sont des notions de base destinées à vous aider au démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un environnement de sécurité de qualité. La sécurité est à l'évidence un aspect primordial des opérations de base de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Connexion depuis un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
+ [Leçon 2 : Connexion depuis un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206963"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
@@ -31,8 +31,7 @@ ms.locfileid: "68206963"
 |------------------------------------------------------|-----------------|  
 |'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
 |Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` * \< function_name>* `()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
-|
-  \@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
+|\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
 |ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice`tape`' 'a été rencontrée. Utilisez sp_addumpdevice'`disk`'à la place. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Nombre total d'utilisations de l'option TORN_PAGE_DETECTION de la fonctionnalité déconseillée ALTER DATABASE depuis le démarrage de l'instance du serveur. Utilisez à la place la syntaxe PAGE_VERIFY. Se produit une fois par utilisation dans une instruction DDL.|  

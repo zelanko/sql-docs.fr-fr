@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211384"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propriétés du travail et Nouveau travail (page Général)
@@ -44,10 +44,10 @@ ms.locfileid: "68211384"
  **Source**  
  Affiche le serveur principal du travail. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
- **Créé le**  
+ **Créer**  
  Affiche la date et l'heure de création du travail. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
- **Dernière modification**  
+ **Date de la dernière modification**  
  Affiche la date et l'heure de la dernière modification du travail. Cette option est disponible uniquement dans la page **Général** des Propriétés du travail.  
   
  **Dernière exécution**  
@@ -58,6 +58,6 @@ ms.locfileid: "68211384"
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter des travaux](implement-jobs.md)   
- [Catégories de travaux : Gérer les catégories de travaux](job-categories-manage-job-categories.md)  
+ [Catégories de travaux : Gérer les catégories de travaux](job-categories-manage-job-categories.md)  
   
   

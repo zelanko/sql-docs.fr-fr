@@ -13,20 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022038"
 ---
 # <a name="oracle-publisher"></a>Serveur de publication Oracle
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]À partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous permet de publier des données à partir d’une base de données Oracle à l’aide de la réplication transactionnelle et d’instantané. Pour plus d’informations, consultez [Présentation de la publication Oracle](non-sql/oracle-publishing-overview.md).  
+  Depuis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de publier des données à partir d’une base de données Oracle à l’aide de la réplication transactionnelle et d’instantané. Pour plus d’informations, consultez [Présentation de la publication Oracle](non-sql/oracle-publishing-overview.md).  
   
  Le serveur de publication Oracle doit utiliser un serveur de distribution distant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; cet Assistant doit être exécuté sur ce serveur après l'installation et le test du logiciel réseau Oracle nécessaire. Pour plus d’informations, consultez [Configurer un serveur de publication Oracle](non-sql/configure-an-oracle-publisher.md).  
   
 > [!IMPORTANT]  
->  Si un autre administrateur a configuré la base de données Oracle en tant que serveur de publication, après avoir cliqué sur **Suivant** , le système vous demande d'entrer le mot de passe de la connexion de réplication utilisée en vue de vous connecter à la base de données Oracle. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée ensuite un mappage entre votre nom d'accès et la connexion de serveur liée à la base de données Oracle. Vous ne devez pas entrer un mot de passe pour les connexions ultérieures à la base de données Oracle.  
+>  Si un autre administrateur a configuré la base de données Oracle en tant que serveur de publication, après avoir cliqué sur **Suivant** , le système vous demande d'entrer le mot de passe de la connexion de réplication utilisée en vue de vous connecter à la base de données Oracle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée ensuite un mappage entre votre nom d'accès et la connexion de serveur liée à la base de données Oracle. Vous ne devez pas entrer un mot de passe pour les connexions ultérieures à la base de données Oracle.  
   
 ## <a name="options"></a>Options  
  **Serveurs de publication Oracle**  
@@ -39,7 +38,7 @@ ms.locfileid: "63022038"
 >  Si le serveur, sur lequel s'exécute l'Assistant, n'a pas été configuré en tant que serveur de distribution, le système vous demande alors de le faire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une publication à partir d’une Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
+ [Créer une publication à partir d’une base de données Oracle](publish/create-a-publication-from-an-oracle-database.md)   
 
   
   

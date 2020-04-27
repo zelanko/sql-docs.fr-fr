@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175198"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architecture physique (Analysis Services - Exploration de données)
@@ -46,12 +46,11 @@ ms.locfileid: "78175198"
 ## <a name="server-configuration"></a>Configuration du serveur
  Une instance de serveur peut prendre en charge plusieurs bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , chacune avec sa propre instance du service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui répond aux demandes des clients et traite les objets.
 
- Des instances distinctes doivent être installées si vous souhaitez utiliser les modèles tabulaires et l'exploration de données et/ou les modèles multidimensionnels. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge l’installation côte à côte des instances s’exécutant en mode tabulaire (qui utilise le moteur d’analyse en mémoire xVelocity (VertiPaq)) et des instances s’exécutant dans l’une des configurations standard OLAP, MOLAP ou ROLAP. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).
+ Des instances distinctes doivent être installées si vous souhaitez utiliser les modèles tabulaires et l'exploration de données et/ou les modèles multidimensionnels. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge l’installation côte à côte des instances s’exécutant en mode tabulaire (qui utilise le moteur d’analyse en mémoire xVelocity (VertiPaq)) et des instances s’exécutant dans l’une des configurations standard OLAP, MOLAP ou ROLAP. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).
 
  Toutes les communications entre un client et le serveur Analysis Services utilisent la spécification XMLA, qui est un protocole indépendant de la plateforme et de la langue. Lorsqu'une demande est reçue d'un client, Analysis Services détermine si elle est liée à OLAP ou à l'exploration de données, avant de l'acheminer de manière appropriée. Pour plus d’informations, consultez [Composants serveur du moteur OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Architecture logique &#40;Analysis Services d’exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)
+ [Architecture logique &#40;Analysis Services - Exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)
 
 

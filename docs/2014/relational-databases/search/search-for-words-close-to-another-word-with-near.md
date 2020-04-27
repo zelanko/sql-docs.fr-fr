@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011065"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
   Vous pouvez utiliser un terme de proximité (NEAR) dans un prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou une fonction [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) pour rechercher des mots ou des expressions à proximité les uns des autres. Vous pouvez également spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre ou dans un ordre spécifié. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]prend en charge à la fois le [terme de proximité générique](#Generic_NEAR)précédent, qui est maintenant déconseillé et le [terme de proximité personnalisé](#Custom_NEAR), [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]qui est nouveau dans.  
   
-##  <a name="Custom_NEAR"></a>Terme de proximité personnalisé  
+##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Terme de proximité personnalisé  
  Le terme de proximité personnalisé présente les nouvelles fonctions suivantes :  
   
 -   Vous pouvez spécifier le nombre maximal de termes de non-recherche, ou *distance maximale*, qui sépare le premier et le dernier terme de recherche pour établir une correspondance.  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a>Considérations supplémentaires pour les recherches de proximité  
+##  <a name="additional-considerations-for-proximity-searches"></a><a name="Additional_Considerations"></a>Considérations supplémentaires pour les recherches de proximité  
  Cette section présente des points à prendre en considération qui concernent à la fois les recherches de proximité génériques et personnalisées :  
   
 -   Chevauchement des occurrences des termes de recherche  
@@ -153,10 +153,10 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a>Terme de proximité générique déconseillé  
+##  <a name="the-deprecated-generic-proximity-term"></a><a name="Generic_NEAR"></a>Terme de proximité générique déconseillé  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser le [terme de proximité personnalisé](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d'utiliser le [terme de proximité personnalisé](#Custom_NEAR).  
   
  Un terme de proximité générique indique que les termes de recherche spécifiés doivent figurer dans un document pour qu’une correspondance soit retournée, indépendamment du nombre de termes de non-recherche (la *distance*) entre les termes de recherche. La syntaxe de base est la suivante :  
   
@@ -226,7 +226,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 ## <a name="see-also"></a>Voir aussi  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
- [Interroger avec la recherche en texte intégral](query-with-full-text-search.md)   
+ [Exécuter une requête avec une recherche en texte intégral](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
   

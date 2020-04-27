@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212097"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Spécifier un programme de résolution d'articles de fusion
@@ -30,15 +30,15 @@ ms.locfileid: "68212097"
   
      [Recommandations](#Recommendations)  
   
--   **Pour spécifier un programme de résolution d’Articles de fusion à l’aide de :**  
+-   **Pour spécifier un programme de résolution d'articles de fusion à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   La réplication de fusion accepte les types de programmes de résolution d'articles suivants :  
   
@@ -56,12 +56,12 @@ ms.locfileid: "68212097"
   
     -   le serveur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] IIS (Internet Information Services) pour un abonnement extrait qui utilise la synchronisation Web.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Après l’inscription du programme de résolution, spécifiez qu’un article doit l’utiliser sous l’onglet **Résolveur** de la boîte de dialogue **Propriétés de l’article - \<Article>**, accessible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Pour spécifier un programme de résolution  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table.  
   
 2.  Cliquez sur **Propriétés de l'article**puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "68212097"
   
 7.  Répétez la procédure pour chaque article exigeant un programme de résolution.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Pour inscrire un outil personnalisé de résolution des conflits  
   
 1.  Si vous projetez d'inscrire votre propre outil personnalisé de résolution des conflits, créez-en un répondant à l'un des types suivants :  
   
-    -   Programme de résolution s'appuyant sur le code managé, comme un gestionnaire de logique métier. Pour plus d’informations, consultez [implémenter un gestionnaire de logique métier pour un article de fusion](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Programme de résolution s'appuyant sur le code managé, comme un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Programme de résolution s'appuyant sur des procédures stockées et sur COM. Pour plus d’informations, consultez [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68212097"
   
 2.  Exécutez [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) sur le serveur de distribution. Spécifiez le nom complet du programme de résolution personnalisé de l' **@article_resolver**étape 1 pour.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
  Cet exemple crée un article et spécifie que l'Outil de résolution des conflits de moyenne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être utilisé pour calculer la moyenne de la colonne **UnitPrice** en cas de conflit.  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  

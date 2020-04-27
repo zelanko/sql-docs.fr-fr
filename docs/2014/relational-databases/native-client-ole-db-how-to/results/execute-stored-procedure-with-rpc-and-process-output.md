@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206684"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Exécuter une procédure stockée (avec la syntaxe RPC) et traiter des codes de retour et des paramètres de sortie (OLE DB)
@@ -34,8 +34,7 @@ ms.locfileid: "68206684"
   
 3.  Créez un jeu de liaisons (une pour chaque fabricant de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-4.  Créez un accesseur pour les paramètres définis à l'aide de la méthode `IAccessor::CreateAccessor`. 
-  `CreateAccessor` crée un accesseur à partir d'un jeu de liaisons.  
+4.  Créez un accesseur pour les paramètres définis à l'aide de la méthode `IAccessor::CreateAccessor`. `CreateAccessor` crée un accesseur à partir d'un jeu de liaisons.  
   
 5.  Remplissez la structure DBPARAMS.  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011916"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importer des données au format natif et caractère à partir de versions antérieures de SQL Server
@@ -55,23 +55,23 @@ ms.locfileid: "66011916"
  Lorsque vous exportez des données en bloc à l’aide `nvarchar(max)`du `varchar(max)`commutateur `varbinary(max)` **-V80** , les données,,, XML et UDT en mode natif sont stockées avec un préfixe `image`à 4 `ntext` octets, comme `text`les données, et, plutôt qu’avec un préfixe de 8 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] octets, qui est la valeur par défaut pour et les versions ultérieures.  
   
 ## <a name="copying-date-values"></a>Copie de valeurs de date  
- **BCP** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
+ **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  
   
  La commande **BCP** exporte des fichiers de données au format caractère à l' `datetime` aide `smalldatetime` du format par défaut ODBC pour les valeurs et. Par exemple, une colonne `datetime` contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
 >  Lorsque vous importez `smalldatetime` des données dans un champ à l’aide de **BCP**, vérifiez que la valeur des secondes est 00,000 ; dans le cas contraire, l’opération échoue. Le type de données `smalldatetime` ne conserve que les valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour utiliser des formats de données pour l’importation en bloc ou l’exportation en bloc**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
+ **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  
   
--   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66011916"
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [SQL Server Moteur de base de données la compatibilité descendante](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Compatibilité descendante du moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

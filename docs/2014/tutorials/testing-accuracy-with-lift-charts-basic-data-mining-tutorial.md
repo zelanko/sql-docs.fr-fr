@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042642"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Test de la précision à l'aide de graphiques de courbes d'élévation (Didacticiel sur l'exploration de données de base)
@@ -26,7 +26,7 @@ ms.locfileid: "63042642"
   
 -   [Configurer les paramètres du graphique d'analyse de précision](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>Choix des données d’entrée  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>Choix des données d’entrée  
  La première étape du test de précision de vos modèles d'exploration de données consiste à sélectionner la source de données que vous allez utiliser pour les tests. Vous allez tester le degré de précision des modèles avec vos données de test, puis vous les utiliserez avec des données externes.  
   
 #### <a name="to-select-the-data-set"></a>Pour sélectionner le jeu de données  
@@ -37,7 +37,7 @@ ms.locfileid: "63042642"
   
      Pour plus d’informations sur les autres options, consultez [choisir un type de graphique d’exactitude et définir des options de graphique](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-##  <a name="BKMK_Selecting"></a>Définition des paramètres du graphique de précision  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>Définition des paramètres du graphique de précision  
  Pour créer un graphique d'analyse de précision, vous devez définir trois éléments :  
   
 -   Les modèles à inclure dans le graphique d'analyse de précision  

@@ -1,5 +1,5 @@
 ---
-title: Utiliser les fonctionnalités de date et d’heure améliorées (OLE DB) | Microsoft Docs
+title: Utiliser les fonctionnalités de date et d’heure améliorées (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207019"
 ---
-# <a name="use-enhanced-date-and-time-features-ole-db"></a>Utiliser les fonctionnalités de date et d’heure améliorées (OLE DB)
+# <a name="use-enhanced-date-and-time-features-ole-db"></a>Utiliser les fonctionnalités de date et d’heure améliorées (OLE DB)
   Cet exemple montre comment utiliser les fonctionnalités de date et d'heure introduites dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. L’exemple utilise les quatre nouveaux types de date et d'`date`heure (, `datetime2` **Time**, `datetimeoffset`et) pour exécuter des commandes avec des paramètres et récupérer les résultats de l’ensemble de lignes.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  

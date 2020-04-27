@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050080"
 ---
-# <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
-  Dans une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , un seul nœud peut posséder le groupe de ressources de cluster de basculement Windows Server (WSFC) à un moment donné. Les demandes des clients sont servies par ce nœud dans la FCI. En cas d'échec et d'un redémarrage infructueux, la propriété du groupe est déplacée vers un autre nœud WSFC dans la FCI. Ce processus s'appelle le basculement. 
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] augmente la fiabilité de la détection de pannes et fournit une stratégie de basculement flexible.  
+# <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
+  Dans une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , un seul nœud peut posséder le groupe de ressources de cluster de basculement Windows Server (WSFC) à un moment donné. Les demandes des clients sont servies par ce nœud dans la FCI. En cas d'échec et d'un redémarrage infructueux, la propriété du groupe est déplacée vers un autre nœud WSFC dans la FCI. Ce processus s'appelle le basculement. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] augmente la fiabilité de la détection de pannes et fournit une stratégie de basculement flexible.  
   
  Une FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dépend du service WSFC sous-jacent pour la détection de basculement. Par conséquent, deux mécanismes déterminent le comportement du basculement pour la FCI : l'ancien mécanisme est une fonctionnalité WSFC native et le dernier est une fonctionnalité ajoutée par la configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -34,28 +33,28 @@ ms.locfileid: "63050080"
 > [!IMPORTANT]  
 >  Les basculements automatiques vers et depuis une FCI ne sont pas autorisés dans un groupe de disponibilité AlwaysOn. Toutefois, les basculements manuels vers et depuis une FCI dans un groupe de disponibilité AlwaysOn sont possibles.  
   
-##  <a name="Concepts"></a>Vue d’ensemble de la stratégie de basculement  
+##  <a name="failover-policy-overview"></a><a name="Concepts"></a> Présentation de la stratégie de basculement  
  Le processus de basculement comporte les étapes suivantes :  
   
-1.  [Surveiller l’état d’intégrité](failover-policy-for-failover-cluster-instances.md#monitor)  
+1.  [Surveillance de l'état d'intégrité](failover-policy-for-failover-cluster-instances.md#monitor)  
   
 2.  [Détermination des échecs](failover-policy-for-failover-cluster-instances.md#determine)  
   
 3.  [Réponse aux échecs](failover-policy-for-failover-cluster-instances.md#respond)  
   
-###  <a name="monitor"></a>Surveiller l’état d’intégrité  
+###  <a name="monitor-the-health-status"></a><a name="monitor"></a>Surveiller l’état d’intégrité  
  Il existe trois types d'états qui sont surveillés pour la FCI :  
   
 -   [État du service de SQL Server](failover-policy-for-failover-cluster-instances.md#service)  
   
--   [Réactivité de l’instance de SQL Server](failover-policy-for-failover-cluster-instances.md#instance)  
+-   [Réactivité de l'instance SQL Server](failover-policy-for-failover-cluster-instances.md#instance)  
   
--   [Diagnostics du composant SQL Server](failover-policy-for-failover-cluster-instances.md#component)  
+-   [Diagnostics de composant SQL Server](failover-policy-for-failover-cluster-instances.md#component)  
   
-####  <a name="service"></a>État du service de SQL Server  
+####  <a name="state-of-the-sql-server-service"></a><a name="service"></a> État de l'instance du service SQL Server  
  Le service WSFC surveille l'état de démarrage du service SQL Server sur le nœud FCI actif pour détecter l'arrêt du service SQL Server.  
   
-####  <a name="instance"></a>Réactivité de l’instance de SQL Server  
+####  <a name="responsiveness-of-the-sql-server-instance"></a><a name="instance"></a>Réactivité de l’instance de SQL Server  
  Pendant le démarrage de SQL Server, le service WSFC utilise la DLL de ressource du moteur de base de données SQL Server pour créer une nouvelle connexion sur un thread séparé utilisé exclusivement pour surveiller l'état d'intégrité. Cela garantit que l'instance SQL dispose des ressources requises pour signaler son état d'intégrité lorsqu'elle est sous charge. En utilisant cette connexion dédiée, SQL Server exécute la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) en mode de répétition pour signaler périodiquement l’état d’intégrité des composants SQL Server à la DLL de ressource.  
   
  La DLL de ressource détermine la réactivité de l'instance SQL en utilisant un délai d'attente de contrôle d'intégrité. La propriété HealthCheckTimeout définit la durée pendant laquelle la DLL de ressource doit attendre la procédure stockée sp_server_diagnostics avant de signaler que l'instance SQL ne répond pas au service WSFC. Cette propriété est configurable à l'aide de T-SQL ainsi que dans le composant logiciel enfichable Gestionnaire du cluster de basculement. Pour plus d’informations, consultez [Configurer les paramètres de propriété HealthCheckTimeout](configure-healthchecktimeout-property-settings.md). Les éléments suivants décrivent comment cette propriété affecte le délai d'attente et les paramètres d'intervalle de répétition :  
@@ -66,7 +65,7 @@ ms.locfileid: "63050080"
   
 -   Si la connexion dédiée est perdue, la DLL de ressource retentera la connexion à l'instance SQL à l'intervalle spécifié par HealthCheckTimeout avant de signaler au service WSFC que l'instance SQL ne répond pas.  
   
-####  <a name="component"></a>Diagnostics du composant SQL Server  
+####  <a name="sql-server-component-diagnostics"></a><a name="component"></a>Diagnostics du composant SQL Server  
  La procédure stockée système sp_server_diagnostics collecte périodiquement les diagnostics de composant sur l'instance SQL. Les informations de diagnostic collectées sont exposées en surface sous forme de ligne pour chacun des composants suivants et passées au thread appelant.  
   
 1.  système  
@@ -86,7 +85,7 @@ ms.locfileid: "63050080"
 > [!TIP]  
 >  Lorsque la procédure stockée sp_server_diagnostic est utilisée par la technologie SQL Server AlwaysOn, elle peut être utilisée dans n'importe quelle instance de SQL Server pour aider à détecter et résoudre les problèmes.  
   
-####  <a name="determine"></a>Détermination des échecs  
+####  <a name="determining-failures"></a><a name="determine"></a> Détermination des échecs  
  La DLL de ressource du moteur de base de données SQL Server détermine si l'état d'intégrité détecté est une condition d'échec à l'aide de la propriété FailureConditionLevel. La propriété FailureConditionLevel définit les états d'intégrité détectés qui causent les redémarrages ou les basculements. Plusieurs niveaux d'options sont disponibles : il est possible de définir qu'aucun redémarrage ou du basculement automatique ne sera effectué ou bien de configurer les conditions d'échec possibles aboutissant à un redémarrage ou un basculement automatique. Pour plus d’informations sur la configuration de cette propriété, consultez [Configurer les paramètres de propriété FailureConditionLevel](configure-failureconditionlevel-property-settings.md).  
   
  Les conditions d'échec sont définies sur une échelle croissante. Pour les niveaux 1-5, chaque niveau inclut toutes les conditions des niveaux précédents en plus de ses propres conditions. Cela signifie qu'à chaque niveau, la probabilité de basculement ou de redémarrage est plus importante. Les niveaux de la condition d'échec sont décrits dans le tableau suivant.  
@@ -104,7 +103,7 @@ ms.locfileid: "63050080"
   
  *Valeur par défaut  
   
-####  <a name="respond"></a>Réponse aux échecs  
+####  <a name="responding-to-failures"></a><a name="respond"></a> Réponse aux échecs  
  Lorsqu'une ou plusieurs conditions d'échec sont détectées, la manière dont le service WSFC y répond dépend de l'état du quorum WSFC et des paramètres de redémarrage et de basculement du groupe de ressources de la FCI. Si la FCI a perdu le quorum WSFC, alors elle est entièrement mise hors connexion et perd sa haute disponibilité. Si la FCI conserve son quorum WSFC, le service WSFC peut répondre en tentant d'abord de redémarrer le nœud en échec, puis tente un basculement si les tentatives de redémarrage ont échoué. Les paramètres de redémarrage et de basculement sont configurés dans le composant logiciel enfichable Gestionnaire du cluster de basculement. Pour plus d’informations sur ces paramètres, consultez [ \<propriétés de la> des ressources : onglet stratégies](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Pour plus d’informations sur la conservation de l’intégrité du quorum, consultez [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  

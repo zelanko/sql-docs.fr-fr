@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501918"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087419"
 ---
 # <a name="power-query-source-preview"></a>Source Power Query (préversion)
 
@@ -70,7 +70,7 @@ Dans **l’éditeur du Gestionnaire de connexion Power Query**, vous devez spéc
 
 ![Source PQ, Gestionnaires de connexions, Éditeur, Type](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Certaines de ces sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) nécessitent l’installation de pilotes ADO.NET supplémentaires qui peuvent être obtenus à partir de l’article [Prérequis pour Power Query](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a). Vous pouvez utiliser l’interface de configuration personnalisée pour les installer sur votre runtime d’intégration Azure-SSIS, consultez l’article [Personnalisation du runtime d’intégration Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Certaines de ces sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) nécessitent l’installation de pilotes ADO.NET supplémentaires qui peuvent être obtenus à partir de l’article [Prérequis pour Power Query](/power-bi/desktop-data-source-prerequisites). Vous pouvez utiliser l’interface de configuration personnalisée pour les installer sur votre runtime d’intégration Azure-SSIS, consultez l’article [Personnalisation du runtime d’intégration Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 Pour le **Chemin d’accès à la source de données**, vous pouvez entrer des propriétés spécifiques à la source de données formant une chaîne de connexion sans les informations d’authentification. Par exemple, le chemin d’accès à la source de données **SQL** est `<Server>;<Database>`. Vous pouvez sélectionner le bouton **Modifier** pour attribuer des valeurs aux propriétés spécifiques à la source de données qui forment le chemin d’accès.
 

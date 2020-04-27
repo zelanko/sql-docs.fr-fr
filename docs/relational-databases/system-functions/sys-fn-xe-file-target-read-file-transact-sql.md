@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982993"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -47,17 +47,17 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *d*  
- Chemin d'accès aux fichiers à lire. le *chemin d’accès* peut contenir des caractères génériques et inclure le nom d’un fichier. *path* est **de type nvarchar (260)**. Aucune valeur par défaut. Dans le contexte de Azure SQL Database, cette valeur est une URL HTTP vers un fichier dans le stockage Azure.
+ *path*  
+ Chemin d'accès aux fichiers à lire. le *chemin d’accès* peut contenir des caractères génériques et inclure le nom d’un fichier. *path* est **de type nvarchar (260)**. Il n'y a pas de valeur par défaut. Dans le contexte de Azure SQL Database, cette valeur est une URL HTTP vers un fichier dans le stockage Azure.
   
  *mdpath*  
- Chemin d’accès au fichier de métadonnées qui correspond aux fichiers spécifiés par l’argument *path* . *mdpath* est **de type nvarchar (260)**. Aucune valeur par défaut. À compter de SQL Server 2016, ce paramètre peut être spécifié comme null.
+ Chemin d’accès au fichier de métadonnées qui correspond aux fichiers spécifiés par l’argument *path* . *mdpath* est **de type nvarchar (260)**. Il n'y a pas de valeur par défaut. À compter de SQL Server 2016, ce paramètre peut être spécifié comme null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ne nécessite pas le paramètre *mdpath* . Toutefois, celui-ci est conservé pour la compatibilité descendante des fichiers journaux générés dans les versions antérieures de SQL Server.  
   
  *initial_file_name*  
- Premier fichier à lire à partir du *chemin d’accès*. *initial_file_name* est **de type nvarchar (260)**. Aucune valeur par défaut. Si **null** est spécifié en tant qu’argument, tous les fichiers trouvés dans le *chemin d’accès* sont lus.  
+ Premier fichier à lire à partir du *chemin d’accès*. *initial_file_name* est **de type nvarchar (260)**. Il n'y a pas de valeur par défaut. Si **null** est spécifié en tant qu’argument, tous les fichiers trouvés dans le *chemin d’accès* sont lus.  
   
 > [!NOTE]  
 >  *initial_file_name* et *initial_offset* sont des arguments associés. Si vous spécifiez une valeur pour l'un des arguments, vous devez en spécifier une pour l'autre.  
@@ -71,11 +71,11 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|GUID du module d'événements. N'accepte pas la valeur NULL.|  
 |package_guid|**uniqueidentifier**|GUID du package d'événement. N'accepte pas la valeur NULL.|  
-|object_name|**nvarchar (256)**|Nom de l’événement. N'accepte pas la valeur NULL.|  
+|object_name|**nvarchar(256)**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |event_data|**nvarchar(max)**|Contenu de l'événement, au format XML. N'accepte pas la valeur NULL.|  
 |file_name|**nvarchar(260)**|Nom du fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
 |file_offset|**bigint**|Offset du bloc dans le fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
-|timestamp_utc|**datetime2**|**S’applique à**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] et versions [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]ultérieures et.<br /><br />Date et heure (fuseau horaire UTC) de l’événement. N'accepte pas la valeur NULL.|  
+|timestamp_utc|**datetime2**|**S’applique à** : [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Date et heure (fuseau horaire UTC) de l’événement. N'accepte pas la valeur NULL.|  
 
   
 ## <a name="remarks"></a>Notes  
@@ -94,7 +94,7 @@ SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\meta
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique des Événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
+ [Vues de gestion dynamique des événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   

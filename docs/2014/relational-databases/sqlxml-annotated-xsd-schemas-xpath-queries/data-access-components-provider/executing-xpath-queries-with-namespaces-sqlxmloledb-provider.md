@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013080"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB)
@@ -35,8 +35,7 @@ ms.locfileid: "66013080"
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- Dans SQLXML 4.0, cette requête XPath doit être spécifiée avec un préfixe d'espace de noms. 
-  `x:Contact` constitue un exemple, où `x` est le préfixe d'espace de noms. Prenons le schéma XSD suivant :  
+ Dans SQLXML 4.0, cette requête XPath doit être spécifiée avec un préfixe d'espace de noms. `x:Contact` constitue un exemple, où `x` est le préfixe d'espace de noms. Prenons le schéma XSD suivant :  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -93,7 +92,7 @@ End Sub
     "Microsoft ActiveX Data Objects 2.8 Library"  
     ```  
   
-4.  Exécutez l’application.  
+4.  Exécutez l'application.  
   
  Voici le résultat partiel :  
   

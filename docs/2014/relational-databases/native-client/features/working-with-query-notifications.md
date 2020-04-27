@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206603"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
  Afin de prendre en charge les notifications de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requêtes par le biais de OLE DB, Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  Si une demande d'abonnement est soumise pour un lot ou une procédure stockée, une demande d'abonnement séparée est soumise pour chaque instruction exécutée dans le traitement ou la procédure stockée. Les instructions EXECUTE n'inscrivent aucune notification mais la demande de notification est envoyée à la commande exécutée. S'il s'agit d'un lot, le contexte est appliqué aux instructions exécutées et les mêmes règles décrites ci-dessus sont appliquées.  
   
- La soumission d’une requête de notification envoyée par le même utilisateur sous le même contexte de base de données et ayant le même modèle, les mêmes valeurs de paramètres, l’ID de notification identique et l’emplacement de remise d’un abonnement actif existant, renouvellera la abonnement, réinitialisation du nouveau délai d’attente spécifié. Cela signifie que si une notification est demandée pour des requêtes identiques, une seule notification est envoyée. Cette situation concerne une requête dupliquée dans un lot ou une requête dans une procédure stockée qui a été appelée plusieurs fois.  
+ La soumission d’une requête pour notification qui a été envoyée par le même utilisateur sous le même contexte de base de données et qui a le même modèle, les mêmes valeurs de paramètre, le même ID de notification et l’emplacement de remise d’un abonnement actif existant, renouvelle l’abonnement existant, en réinitialisant le nouveau délai d’attente spécifié. Cela signifie que si une notification est demandée pour des requêtes identiques, une seule notification est envoyée. Cette situation concerne une requête dupliquée dans un lot ou une requête dans une procédure stockée qui a été appelée plusieurs fois.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](sql-server-native-client-features.md)  

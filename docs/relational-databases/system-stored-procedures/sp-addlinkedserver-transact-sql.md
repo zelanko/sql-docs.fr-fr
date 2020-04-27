@@ -18,10 +18,10 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72313744"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="arguments"></a>Arguments  
 [ @server = ] * \'serveur\' *          
-Nom du serveur lié à créer. *Server* est de **type sysname**, sans valeur par défaut.  
+Nom du serveur lié à créer. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
 [ @srvproduct = ] * \'product_name\' *          
 Nom de produit de la source de données OLE DB à ajouter comme serveur lié. *product_name* est de type **nvarchar (** 128 **)**, avec NULL comme valeur par défaut. Si **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*et *Catalog* n’ont pas besoin d’être spécifiés.  
@@ -79,22 +79,22 @@ ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la sourc
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Le tableau suivant présente les façons dont un serveur lié peut être configuré pour des sources de données accessibles via OLE DB. Un serveur lié peut être configuré au moyen de plusieurs méthodes pour une même source de données ; il peut y avoir plusieurs lignes pour un type de source de données. Ce tableau indique également les valeurs de paramètres de **sp_addlinkedserver** à utiliser pour configurer le serveur lié.  
   
-|Source de données OLE DB distante|Fournisseur OLE DB|product_name|provider_name|data_source|location|provider_string|catalog|  
+|Source de données OLE DB distante|Fournisseur OLE DB|product_name|provider_name|data_source|location|provider_string|catalogue|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (par défaut)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (par défaut)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client||**SQLNCLI**|Nom réseau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (pour l'instance par défaut)|||Nom de base de données (facultatif)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client||**SQLNCLI**|*ServerName*\\*InstanceName* (pour une instance spécifique)|||Nom de base de données (facultatif)|  
 |Oracle, version 8 et ultérieure|Fournisseur Oracle pour OLE DB|Quelconque|**OraOLEDB.Oracle**|Alias de la base de données Oracle||||  
 |Access/Jet|Fournisseur Microsoft OLE DB pour Jet|Quelconque|**Microsoft.Jet.OLEDB.4.0**|Nom d'accès complet du fichier de base de données Jet||||  
 |Source de données ODBC|Fournisseur Microsoft OLE DB pour ODBC|Quelconque|**MSDASQL**|Système DSN de la source de données ODBC||||  
-|Source de données ODBC|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Fournisseur OLE DB pour ODBC|Quelconque|**MSDASQL**|||Chaîne de connexion ODBC||  
+|Source de données ODBC|Fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour ODBC|Quelconque|**MSDASQL**|||Chaîne de connexion ODBC||  
 |Système de fichiers|Fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour le service d'indexation|Quelconque|**MSIDXS**|Nom du catalogue du Service d'indexation||||  
-|Feuille de calcul [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Fournisseur de OLE DB pour jet|Quelconque|**Microsoft.Jet.OLEDB.4.0**|Chemin complet du fichier Excel||Excel 5,0||  
+|Feuille de calcul [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel|Fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet|Quelconque|**Microsoft.Jet.OLEDB.4.0**|Chemin complet du fichier Excel||Excel 5,0||  
 |Base de données IBM DB2|Fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour DB2|Quelconque|**DB2OLEDB**|||Consultez [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB fournisseur pour la documentation DB2.|Nom de catalogue de base de données DB2|  
   
  <sup>1</sup> cette méthode de configuration d’un serveur lié force le nom du serveur lié à être le même que le nom réseau de l’instance distante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Utilisez *data_source* pour spécifier le serveur.  
@@ -284,7 +284,7 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Ajouter [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] en tant que serveur lié pour une utilisation avec des requêtes distribuées sur des bases de données Cloud et locales  
+### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Ajouter [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] en tant que serveur lié pour une utilisation avec des requêtes distribuées sur des bases de données Cloud et locales  
  Ajoutez [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] en tant que serveur lié, puis utilisez-le avec des requêtes distribuées qui couvrent les bases de données du cloud et locales. Il s’agit d’un composant pour les solutions hybrides de base de données couvrant des réseaux d’entreprise locaux et le Cloud Azure.  
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit Box contient la fonctionnalité de requête distribuée, qui vous permet d’écrire des requêtes pour combiner des données provenant de sources de données locales et de données provenant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sources distantes (y compris des données provenant de sources autres que des données) définies en tant que serveurs liés. Chaque [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (sauf le maître virtuel) peut être ajoutée en tant que serveur lié individuel, puis être utilisée directement dans vos applications de base de données comme toute autre base de données.  
@@ -331,7 +331,7 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Tables système &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

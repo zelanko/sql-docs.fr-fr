@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892530"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;Model &gt; (DMX)
@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier spécifiant le nombre de lignes à retourner.  
+ Facultatif. Entier spécifiant le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste séparée par des virgules des identificateurs des colonnes associées (dérivées du modèle) ou expressions.  
@@ -41,8 +41,8 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *liste de conditions*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
- *formule*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ *expression*  
+ Facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  L’instruction **Select distinct from** ne fonctionne qu’avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
@@ -69,7 +69,7 @@ SELECT DISTINCT [Gender]
 FROM [TM Decision Tree]  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |Sexe|  
 |------------|  
@@ -89,7 +89,7 @@ SELECT DISTINCT [Age] AS [Midpoint Age],
 FROM [TM Decision Tree]  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |Midpoint Age|Minimum Age|Maximum Age|  
 |------------------|-----------------|-----------------|  
@@ -111,7 +111,7 @@ SELECT DISTINCT [Yearly Income] AS [Bucket Average],
 FROM [TM Decision Tree]  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |Bucket Average|Bucket Minimum|Bucket Maximum|  
 |--------------------|--------------------|--------------------|  
@@ -136,6 +136,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>Voir aussi  
  [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
- [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014662"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66014662"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Création d'un code de mise à jour avec un schéma de mappage simple  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Création d'un code de mise à jour avec un schéma de mappage simple  
  Le schéma XSD suivant (SampleSchema. Xml) est un schéma de mappage qui mappe l' ** \<élément Customer>** à la table Sales. Customer :  
   
 ```  
@@ -234,11 +234,9 @@ ms.locfileid: "66014662"
   
  Cet exemple suppose que les tables suivantes se trouvent dans la base de données **tempdb** :  
   
--   
-  `Cust (CustomerID, CompanyName)`, où `CustomerID` est la clé primaire  
+-   `Cust (CustomerID, CompanyName)`, où `CustomerID` est la clé primaire  
   
--   
-  `Ord (OrderID, CustomerID)`, où `CustomerID` est une clé étrangère qui fait référence à la clé primaire `CustomerID` dans la table `Cust`.  
+-   `Ord (OrderID, CustomerID)`, où `CustomerID` est une clé étrangère qui fait référence à la clé primaire `CustomerID` dans la table `Cust`.  
   
  Le code de mise à jour utilise le schéma XSD suivant pour insérer des enregistrements dans les tables Cust et Ord :  
   

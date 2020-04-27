@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211808"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Spécifier les colonnes calculées dans une table
@@ -36,22 +36,22 @@ ms.locfileid: "68211808"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Limitations"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitations et restrictions  
   
 -   Une colonne calculée ne peut pas être utilisée en tant que définition de contrainte DEFAULT ou FOREIGN KEY ou avec une définition de contrainte NOT NULL. Toutefois, si sa valeur est définie par une expression déterministe et que le type de données du résultat est autorisé dans les colonnes d'index, elle peut être utilisée en tant que colonne clé dans un index ou composante d'une contrainte PRIMARY KEY ou UNIQUE quelconque. Par exemple, si la table possède les colonnes d'entiers a et b, la colonne calculée a + b peut être indexée, contrairement à la colonne calculée a + DATEPART(dd, GETDATE()) dont la valeur est susceptible d'évoluer au fil des appels.  
   
 -   Une colonne calculée ne peut pas être la cible d'une instruction INSERT ou UPDATE.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-###  <a name="NewColumn"></a> Pour ajouter une nouvelle colonne calculée  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Pour ajouter une nouvelle colonne calculée  
   
 1.  Dans l' **Explorateur d'objets**, développez la table à laquelle vous voulez ajouter une nouvelle colonne calculée. Cliquez avec le bouton droit sur **Colonnes** et sélectionnez **Nouvelle colonne**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211808"
   
 3.  Ajoutez une nouvelle colonne et spécifiez la formule de colonne calculée en suivant la procédure précédente pour ajouter une nouvelle colonne calculée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>Pour ajouter une colonne calculée lors de la création d'une table  
   

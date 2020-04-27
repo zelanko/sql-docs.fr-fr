@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211505"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "68211505"
   
  Avant d’aller plus loin dans cette rubrique, vous devez vous familiariser avec les informations fournies dans la rubrique [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Cette rubrique contient des informations de base sur le fonctionnement des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le pare-feu.  
   
- **Hypothèses pour cet exemple :**  
+ **Hypothèses pour cet exemple :**  
   
 -   Il y a deux cartes réseau installées dans l'ordinateur. Une ou plusieurs des cartes réseau peuvent être sans fil. Vous pouvez simuler l'existence de deux cartes réseau en utilisant l'adresse IP d'une carte réseau et l'adresse IP de bouclage (127.0.0.1) en tant que deuxième carte réseau.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211505"
   
 -   Cet exemple configure l’accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide du port TCP 1433. Les autres ports qui correspondent à l'utilisation de composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] différents peuvent être configurés à l'aide des mêmes étapes générales.  
   
- **Les étapes générales de cet exemple sont les suivantes :**  
+ **Les étapes générales de cet exemple sont les suivantes :**  
   
 -   Déterminez les adresses IP de l'ordinateur.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68211505"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Pour déterminer les adresses IP disponibles sur l'ordinateur  
   
-1.  Sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, cliquez sur **Démarrer**, **** puis sur exécuter `cmd` , tapez [!INCLUDE[clickOK](../../includes/clickok-md.md)], puis.  
+1.  Sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, cliquez sur **Démarrer**, **Run**puis sur exécuter `cmd` , tapez [!INCLUDE[clickOK](../../includes/clickok-md.md)], puis.  
   
 2.  Dans la fenêtre d’invite de commandes, tapez `ipconfig,`, puis appuyez sur Entrée pour visualiser la liste des adresses IP disponibles sur cet ordinateur.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "68211505"
   
 3.  Notez les adresses IPv4 et IPv6 qui sont utilisées. Les autres informations de la liste, telles que les adresses temporaires, les masques de sous-réseau et les passerelles par défaut sont des informations importantes pour la configuration d'un réseau TCP/IP. Toutefois, ces informations ne sont pas utilisées dans cet exemple.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Pour déterminer les adresses IP et les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Pour déterminer les adresses IP et les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   
-2.  Dans ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, dans le volet de la console, développez ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration du réseau**, développez **protocoles pour nom \<d’instance>**, puis double-cliquez sur **TCP/IP**.  
+2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>** , puis double-cliquez sur **TCP/IP**.  
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses IP apparaissent pour chaque adresse IP configurée sur l'ordinateur.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68211505"
   
 4.  Dans la page **Vue d'ensemble** , assurez-vous que le Pare-feu Windows est activé.  
   
-5.  Dans le volet gauche, cliquez sur **règles de trafic entrant**.  
+5.  Dans le volet gauche, cliquez sur **Règles de trafic entrant**.  
   
 6.  Cliquez avec le bouton droit sur **Règles de trafic entrant**, puis cliquez sur **Nouvelle règle** pour ouvrir **l’Assistant Nouvelle règle de trafic entrant**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68211505"
 9. Pour configurer les autres adresses IP sur un ordinateur multirésident, répétez cette procédure en utilisant une autre adresse IP et une autre règle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Browser &#40;service Moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Connectez-vous à SQL Server par le biais d’un serveur proxy &#40;Gestionnaire de configuration SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
+ [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Se connecter à SQL Server par le biais d’un serveur proxy &#40;Gestionnaire de configuration SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

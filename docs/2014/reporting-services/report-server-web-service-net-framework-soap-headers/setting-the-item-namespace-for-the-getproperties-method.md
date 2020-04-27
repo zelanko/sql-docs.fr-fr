@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012276"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Définition de l'espace de noms d'élément pour la méthode GetProperties
@@ -120,7 +120,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [Utilisation d’en-têtes SOAP Reporting Services](using-reporting-services-soap-headers.md)  
+ [Référence technique &#40;SSRS&#41;](../technical-reference-ssrs.md)   
+ [Utilisation des en-têtes SOAP de Reporting Services](using-reporting-services-soap-headers.md)  
   
   

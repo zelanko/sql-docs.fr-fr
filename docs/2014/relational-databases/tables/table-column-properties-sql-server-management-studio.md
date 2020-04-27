@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211796"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriétés des colonnes de table (SQL Server Management Studio)
@@ -87,42 +87,42 @@ ms.locfileid: "68211796"
 > [!NOTE]  
 >  Pour modifier la valeur affichée pour la propriété **Spécification de texte intégral** , vous devez la développer et modifier la propriété enfant **Est d’index de recherche en texte intégral** .  
   
--   **Est un index de recherche en texte intégral** Indique si cette colonne est indexée en texte intégral. Cette propriété ne peut prendre la valeur **Oui** que si le type de données de cette colonne peut être soumis à une recherche en texte intégral et si la table contenant cette colonne contient un index de texte intégral. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une valeur.  
+-   **Est d’index de recherche en texte intégral** Indique si cette colonne est indexée en texte intégral. Cette propriété ne peut prendre la valeur **Oui** que si le type de données de cette colonne peut être soumis à une recherche en texte intégral et si la table contenant cette colonne contient un index de texte intégral. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une valeur.  
   
--   **Colonne de type de texte intégral** Affiche le nom de la colonne sur laquelle cette colonne est indexée en texte intégral. Cette propriété doit être définie si la propriété **Type de données** de cette colonne est soit **image** , soit **varbinary**. La colonne nommée dans cette propriété doit être de type **[n]char, [n]varchar** ou **xml**, et la liste déroulante de cette propriété contient uniquement les colonnes avec l’un de ces trois types de données. Les lignes situées dans la colonne nommée par cette propriété indiquent le type de document des lignes correspondantes de la colonne faisant l'objet d'une recherche en texte intégral. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
+-   **Colonne de type de texte intégral** Affiche le nom de la colonne à partir de laquelle cette colonne est indexée en texte intégral. Cette propriété doit être définie si la propriété **Type de données** de cette colonne est soit **image** , soit **varbinary**. La colonne nommée dans cette propriété doit être de type **[n]char, [n]varchar** ou **xml**, et la liste déroulante de cette propriété contient uniquement les colonnes avec l’un de ces trois types de données. Les lignes situées dans la colonne nommée par cette propriété indiquent le type de document des lignes correspondantes de la colonne faisant l'objet d'une recherche en texte intégral. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
--   **Langue** Indique la langue de l’analyseur lexical utilisé pour indexer la colonne. La valeur stockée dans la propriété est en réalité l'identificateur de paramètres régionaux pour l'analyseur lexical. Pour plus d'informations sur les analyseurs lexicaux et les LCID, consultez Analyseurs lexicaux et Générateurs de formes dérivées. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
+-   **Langue** Indique la langue utilisée par l'analyseur lexical pour indexer la colonne. La valeur stockée dans la propriété est en réalité l'identificateur de paramètres régionaux pour l'analyseur lexical. Pour plus d'informations sur les analyseurs lexicaux et les LCID, consultez Analyseurs lexicaux et Générateurs de formes dérivées. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
  **Sémantique statistique**  
  Sélectionnez s'il faut activer l'indexation sémantique statistique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
  Si vous sélectionnez une **langue** avant de sélectionner **Sémantique statistique**, et que la langue sélectionnée n'est pas associée à un modèle linguistique sémantique, l'option **Sémantique statistique** est définie avec la valeur **Non** et ne peut pas être modifiée. Si vous sélectionnez **Oui** pour l'option **Sémantique statistique** avant de sélectionner une **langue**, les langues disponibles dans la colonne **Langue** sont limitées à celles pour lesquelles il existe une prise en charge de modèle linguistique sémantique.  
   
- **A un abonné non-SQL Server**  
+ **A un abonné autre que SQL Server**  
  Indique si la colonne est en cours de réplication vers un abonné autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Spécification de l’identité**  
+ **Spécification du compteur**  
  Indique si et comment cette colonne applique l'unicité sur ses valeurs. La valeur de cette propriété indique si cette colonne est une colonne d'identité ou non, et si elle est identique à la valeur de la propriété enfant **Est d'identité**.  
   
 > [!NOTE]  
->  Pour modifier la valeur affichée pour la propriété **Spécification du compteur** , vous devez la développer et modifier la propriété enfant **Est d’identité** .  
+>   Pour modifier la valeur affichée pour la propriété **Spécification du compteur** , vous devez la développer et modifier la propriété enfant **Est d'identité** .  
   
--   **Est une identité** Indique si cette colonne est une colonne d’identité. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
+-   **Est une identité** Indique si cette colonne est une colonne d'identité ou non. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
--   **Valeur initiale d’identité** Affiche la valeur de départ spécifiée lors de la création de cette colonne d’identité. Cette valeur sera assignée à la première ligne de la table. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
+-   **Début du compteur** Affiche la valeur de départ spécifiée au cours de la création de cette colonne d'identité. Cette valeur sera assignée à la première ligne de la table. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
   
--   **Incrément d’identité** Affiche la valeur d’incrément spécifiée pendant la création de cette colonne d’identité. Cette valeur correspond à l'incrément qui sera ajouté à la valeur **Incrément du compteur** à chaque nouvelle ligne. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
+-   **Incrément du compteur** Affiche la valeur de départ spécifiée au cours de la création de cette colonne d'identité. Cette valeur correspond à l'incrément qui sera ajouté à la valeur **Incrément du compteur** à chaque nouvelle ligne. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
   
  **Indexable**  
  Indique si la colonne sélectionnée peut être indexée. Par exemple, les colonnes calculées non déterministes ne peuvent pas être indexées.  
   
- **Publication de fusion**  
+ **Publiée par fusion**  
  Indique si la colonne est publiée par fusion.  
   
  **Pas pour la réplication**  
  Indique si les valeurs d'identité d'origine sont préservées pendant la réplication. Pour plus d'informations sur la réplication, consultez CREATE TABLE. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
- **Répliquées**  
+ **Répliquée**  
  Indique si cette colonne est répliquée dans un autre emplacement.  
   
  **RowGuid**  
@@ -132,7 +132,6 @@ ms.locfileid: "68211796"
  Affiche la taille en octets autorisée par le type de données de la colonne. Par exemple, un type de données nchar peut avoir une longueur de 10 (nombre de caractères), mais une taille de 20 pour tenir compte des jeux de caractères Unicode.  
   
 > [!NOTE]  
->  La longueur des types de données **(max)** varie pour chaque ligne. **sp_help** retourne (-1) comme longueur des colonnes **(max)** . 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche -1 comme taille de colonne.  
+>  La longueur des types de données **(max)** varie pour chaque ligne. **sp_help** retourne (-1) comme longueur des colonnes **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche -1 comme taille de colonne.  
   
   

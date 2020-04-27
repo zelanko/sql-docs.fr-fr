@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022591"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
@@ -26,20 +26,20 @@ ms.locfileid: "63022591"
   
 2.  S'agissant des tables à publier, attribuez directement l'autorisation SELECT à chacune d'elles (et non un rôle) à l'utilisateur administratif Oracle que vous avez créé à l'étape 1.  
   
-3.  Installez le logiciel client Oracle et le fournisseur de OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de distribution, puis arrêtez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et redémarrez l’instance. Si le serveur de distribution s'exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
+3.  Installez le logiciel client et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis arrêtez et redémarrez l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le serveur de distribution s'exécute sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB Oracle.  
   
 4.  Configurez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Pour obtenir la liste des objets pouvant être répliqués à partir d’une base de données Oracle, consultez [Problèmes et limitations de conception des serveurs de publication Oracle](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
->  Vous devez être membre du rôle serveur fixe **sysadmin** pour activer un serveur de publication ou un serveur de distribution, et pour créer une publication ou un abonnement Oracle à partir d'une publication Oracle.  
+>   Vous devez être membre du rôle serveur fixe **sysadmin** pour activer un serveur de publication ou un serveur de distribution, et pour créer une publication ou un abonnement Oracle à partir d'une publication Oracle.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Création du schéma utilisateur administratif de réplication dans la base de données Oracle  
- Les agents de réplication se connectent à la base de données Oracle et effectuent des opérations dans le cadre d'un schéma utilisateur que vous devez créer. Ce schéma doit bénéficier d'autorisations qui sont répertoriées dans la section suivante. Le schéma utilisateur possède tous les objets créés par le processus de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de publication Oracle, à l'exception d'un synonyme public, **MSSQLSERVERDISTRIBUTOR**. Pour plus d'informations sur les objets créés dans la base de données Oracle, consultez [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
+ Les agents de réplication se connectent à la base de données Oracle et effectuent des opérations dans le cadre d'un schéma utilisateur que vous devez créer. Ce schéma doit bénéficier d'autorisations qui sont répertoriées dans la section suivante. Le schéma utilisateur possède tous les objets créés par le processus de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de publication Oracle, à l’exception d’un synonyme public, **MSSQLSERVERDISTRIBUTOR**. Pour plus d'informations sur les objets créés dans la base de données Oracle, consultez [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
->  La suppression du synonyme public **MSSQLSERVERDISTRIBUTOR** et de l’utilisateur de réplication Oracle configuré à l’aide de l’option **CASCADE** supprime tous les objets de réplication du serveur de publication Oracle.  
+>   La suppression du synonyme public **MSSQLSERVERDISTRIBUTOR** et de l’utilisateur de réplication Oracle configuré à l’aide de l’option **CASCADE** supprime tous les objets de réplication du serveur de publication Oracle.  
   
  Un exemple de script est fourni pour vous aider à configurer le schéma utilisateur de réplication Oracle. Le script est disponible dans le répertoire suivant après l’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de : * \<lecteur>*:\\\Program Files\Microsoft\\SQL Server*\<nom_instance>* \MSSQL\Install\oracleadmin.Sql. Il est également fourni dans la rubrique [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63022591"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Par exemple : `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Par exemple : `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  Si la configuration du réseau a réussi, la connexion réussira et vous verrez une invite `SQL` .  
   
@@ -129,8 +129,8 @@ ms.locfileid: "63022591"
  Pour configurer un serveur de publication Oracle et créer une publication, consultez [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Considérations sur l’administration des serveurs de publication Oracle](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
+ [Considérations administratives pour les serveurs de publication Oracle](administrative-considerations-for-oracle-publishers.md)   
+ [Mappage de type de données pour les serveurs de publication Oracle](data-type-mapping-for-oracle-publishers.md)   
  [Glossaire des termes de la publication Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Vue d’ensemble de la publication Oracle](oracle-publishing-overview.md)  
   

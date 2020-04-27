@@ -22,15 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210730"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utiliser les alertes pour les événements des agents de réplication
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’agent offrent un moyen de surveiller les événements, tels que les événements de l’agent de réplication, à l’aide d’alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent permettent de surveiller les événements, par exemple, les événements de l’Agent de réplication, en utilisant des alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
   
  Les alertes suivantes sont installées lorsqu'un ordinateur est configuré en tant que serveur de distribution :  
   
@@ -40,9 +39,9 @@ ms.locfileid: "68210730"
 |14151|**Réplication : échec de l'agent**|Arrêt de l'Agent en raison d'une erreur.|Oui|  
 |14152|**Réplication : nouvelle tentative de l'agent**|L'agent s'arrête après l'échec du renouvellement d'une opération (l'Agent a rencontré une erreur de type serveur non disponible, interblocage, échec de la connexion, ou dépassement du délai d'attente).|Oui|  
 |14157|**Réplication : suppression de l'abonnement expiré**|Suppression de l'abonnement expiré|Non|  
-|20572|**Réplication : abonnement réinitialisé après l’échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
-|20574|**Réplication : l’abonné n'a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
-|20575|**Réplication : l’abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
+|20572|**Réplication : abonnement réinitialisé après l'échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
+|20574|**Réplication : l'Abonné n'a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
+|20575|**Réplication : l'Abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
 |20578|**Réplication : arrêt personnalisé de l'Agent**|||  
 |22815|**Alerte de détection de conflit d'égal à égal**|L'Agent de distribution a détecté un conflit lorsqu'il essaie d'appliquer une modification à un nœud d'égal à égal.|Oui|  
   
@@ -50,7 +49,7 @@ ms.locfileid: "68210730"
   
  **Pour configurer des alertes de réplication prédéfinies**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurez les alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Affichage direct du journal des applications  
  Pour consulter le journal des applications Windows, utilisez l'Observateur d'événements [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Le journal des applications comporte les messages d'erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ainsi que des messages se rapportant à toutes les activités de l'ordinateur. À la différence du journal des erreurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , chaque démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne crée pas un nouveau journal des applications (chaque session [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] écrit des nouveaux événements dans un journal des applications existant) ; en revanche, vous pouvez spécifier la durée de rétention des événements enregistrés. Lorsque vous affichez le journal des applications Windows, vous pouvez filtrer le journal en fonction d'événements spécifiques. Pour plus d'informations, consultez la documentation Windows.  
@@ -88,8 +87,8 @@ deallocate hc
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de l’Agent de réplication](replication-agent-administration.md)   
+ [Administration de l’agent de réplication](replication-agent-administration.md)   
  [Meilleures pratiques pour l’administration de la réplication](../administration/best-practices-for-replication-administration.md)   
- [Surveillance de la réplication &#40;&#41;](../monitoring-replication.md)  
+ [Supervision &#40;réplication&#41;](../monitoring-replication.md)  
   
   

@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211182"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Création des vues et des procédures stockées
-  Maintenant que Mary peut accéder à la base de données **TestData** , vous souhaiterez peut-être créer des objets de base de données, tels qu’une vue et une procédure stockée, puis accorder à Mary l’accès à celles-ci. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
+   Dans la mesure où Mary peut accéder à la base de données **TestData**, vous pouvez créer des objets de base de données, tels qu’une vue et une procédure stockée, puis autoriser Mary à y accéder. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
   
  Les vues peuvent être interrogées comme des tables et n'acceptent pas de paramètres. Les procédures stockées sont plus complexes que les vues. Elles peuvent contenir des paramètres d'entrée et de sortie et peuvent contenir des instructions pour contrôler le flux du code, comme les instructions IF et WHILE. Il est recommandé de faire appel aux procédures stockées pour coder toutes les actions répétitives dans la base de données  
   

@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633876"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728460"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Windows
 
@@ -256,8 +256,8 @@ Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?li
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ajoute la prise en charge d’[Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) et d’[Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Ces nouvelles prises en charge sont disponibles lors de la connexion à Microsoft SQL Server version 2016 ou ultérieure. |
-| Il existe des mots clés et attributs de regroupement de connexions, qui correspondent aux prises en charge d’Always Encrypted et d’Azure Active Directory. | Ces mots clés et attributs sont décrits dans [Regroupement de connexions prenant en charge le pilote dans ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ajoute la prise en charge d’[Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) et d’[Azure Active Directory](../using-azure-active-directory.md). | Ces nouvelles prises en charge sont disponibles lors de la connexion à Microsoft SQL Server version 2016 ou ultérieure. |
+| Il existe des mots clés et attributs de regroupement de connexions, qui correspondent aux prises en charge d’Always Encrypted et d’Azure Active Directory. | Ces mots clés et attributs sont décrits dans [Regroupement de connexions prenant en charge le pilote dans ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

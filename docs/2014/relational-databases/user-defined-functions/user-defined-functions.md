@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211699"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
@@ -25,7 +25,7 @@ ms.locfileid: "68211699"
   
  **Dans cette rubrique**  
   
- [Avantages des fonctions définies par l’utilisateur](#Benefits)  
+ [Avantages des fonctions définies par l'utilisateur](#Benefits)  
   
  [Types de fonctions](#FunctionTypes)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68211699"
   
  [Tâches associées](#Tasks)  
   
-##  <a name="Benefits"></a>Avantages des fonctions définies par l’utilisateur  
+##  <a name="user-defined-function-benefits"></a><a name="Benefits"></a>Avantages des fonctions définies par l’utilisateur  
  Les avantages de l'utilisation des fonctions définies par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont les suivants :  
   
 -   Elles permettent d'utiliser la programmation modulaire.  
@@ -59,7 +59,7 @@ ms.locfileid: "68211699"
 > [!NOTE]  
 >  Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l'utilisateur figurant dans les requêtes peuvent être exécutées uniquement sur un thread (plan d'exécution en série).  
   
-##  <a name="FunctionTypes"></a>Types de fonctions  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a>Types de fonctions  
  Fonction scalaire  
  Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Une fonction scalaire incluse ne contient pas de corps ; la valeur scalaire est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples, défini dans un bloc BEGIN...END, contient une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n'importe quel type de données à l'exception de `text`, `ntext`, `image`, `cursor` et `timestamp`.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211699"
  Fonctions système  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit de nombreuses fonctions système que vous pouvez utiliser pour effectuer diverses opérations. Elles ne peuvent pas être modifiées. Pour plus d’informations, consultez [Fonctions intégrées &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Fonctions stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) et [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
   
-##  <a name="Guidelines"></a> Instructions  
+##  <a name="guidelines"></a><a name="Guidelines"></a>Instructions  
  Les erreurs [!INCLUDE[tsql](../../includes/tsql-md.md)] qui provoquent l’annulation d’une instruction et la poursuite avec l’instruction suivante dans le module (comme les déclencheurs ou les procédures stockées) sont traitées différemment à l’intérieur d’une fonction. Dans les fonctions, ces erreurs provoquent l'arrêt de l'exécution de la fonction, lequel provoque à son tour l'annulation de l'instruction qui a invoqué la fonction.  
   
  Les instructions contenues dans un bloc BEGIN...END ne peuvent pas avoir d'effets secondaires. Les effets secondaires d'une fonction sont toutes les modifications définitives de l'état d'une ressource dont la portée s'étend hors de la fonction, comme la modification d'une table de base de données. Les instructions d'une fonction ne peuvent modifier que les objets locaux de cette fonction, tels les variables ou les curseurs locaux. Les modifications apportées aux tables de base de données, les opérations portant sur des curseurs non locaux par rapport à la fonction, l'envoi de courrier électronique, les tentatives de modification de catalogue et la génération d'un jeu de résultats retourné à l'utilisateur sont autant d'actions qui ne peuvent pas être exécutées dans une fonction.  
@@ -79,7 +79,7 @@ ms.locfileid: "68211699"
   
  Le nombre d'exécutions effectives d'une fonction spécifiée dans une requête peut varier d'un plan d'exécution de l'optimiseur à l'autre. C'est par exemple le cas d'une fonction invoquée par une sous-requête dans une clause WHERE. Le nombre d'exécutions de la sous-requête et de sa fonction peut varier en fonction du chemin d'accès choisi par l'optimiseur.  
   
-##  <a name="ValidStatements"></a>Instructions valides dans une fonction  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a>Instructions valides dans une fonction  
  Les types d'instructions valides dans une fonction sont les suivants :  
   
 -   les instructions DECLARE permettant de définir des curseurs et des variables de données locaux de la fonction ;  
@@ -120,7 +120,7 @@ ms.locfileid: "68211699"
   
  Pour obtenir la liste des fonctions système intégrées déterministes et non déterministes, consultez [Fonctions déterministes et non déterministes](../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a>Fonctions liées au schéma  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a>Fonctions liées au schéma  
  L'instruction CREATE FUNCTION prend en charge une clause SCHEMABINDING qui lie la fonction au schéma de tout objet auquel elle fait référence, tel qu'une table, une vue ou une fonction définie par l'utilisateur. Toute tentative de modification (ALTER) ou de suppression (DROP) d'un objet référencé par une fonction liée au schéma est vouée à l'échec.  
   
  Les conditions suivantes doivent être respectées pour que la clause SCHEMABINDING puisse être spécifiée dans CREATE FUNCTION :  
@@ -133,21 +133,21 @@ ms.locfileid: "68211699"
   
  Vous pouvez utiliser l'instruction ALTER FUNCTION pour supprimer la liaison au schéma. Cette instruction doit redéfinir la fonction sans spécifier WITH SCHEMABINDING.  
   
-##  <a name="Parameters"></a>Spécification des paramètres  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>Spécification des paramètres  
  Une fonction définie par l'utilisateur accepte ou n'accepte pas de paramètres d'entrée et retourne une valeur scalaire ou une table. Une fonction peut comprendre jusqu'à 1 024 paramètres d'entrée. Lorsqu'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin d'obtenir la valeur par défaut. Ce comportement est différent de celui des paramètres avec valeurs par défaut des procédures stockées définies par l'utilisateur pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut. Les fonctions définies par l'utilisateur ne prennent pas en charge les paramètres de sortie.  
   
-##  <a name="Tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tâches associées  
   
 |||  
 |-|-|  
 |**Description de la tâche**|**Rubrique**|  
 |Décrit comment créer une fonction Transact-SQL définie par l'utilisateur.|[Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Décrit comment créer une fonction CLR.|[Créer des fonctions CLR](../user-defined-functions/create-clr-functions.md)|  
-|Décrit comment créer une fonction d'agrégation définie par l'utilisateur.|[Créer des agrégats définis par l’utilisateur](../user-defined-functions/create-user-defined-aggregates.md)|  
-|Décrit comment modifier une fonction Transact-SQL définie par l'utilisateur.|[Modifier des fonctions définies par l’utilisateur](../user-defined-functions/user-defined-functions.md)|  
+|Décrit comment créer une fonction d'agrégation définie par l'utilisateur.|[Créer des agrégats définis par l'utilisateur](../user-defined-functions/create-user-defined-aggregates.md)|  
+|Décrit comment modifier une fonction Transact-SQL définie par l'utilisateur.|[Modifier les fonctions définies par l'utilisateur](../user-defined-functions/user-defined-functions.md)|  
 |Décrit comment supprimer une fonction définie par l'utilisateur.|[Supprimer des fonctions définies par l’utilisateur](../user-defined-functions/delete-user-defined-functions.md)|  
 |Décrit comment exécuter une fonction définie par l'utilisateur.|[Exécuter des fonctions définies par l’utilisateur](../user-defined-functions/execute-user-defined-functions.md)|  
-|Décrit comment renommer une fonction définie par l'utilisateur.|[Renommer des fonctions définies par l’utilisateur](../user-defined-functions/rename-user-defined-functions.md)|  
+|Décrit comment renommer une fonction définie par l'utilisateur.|[Renommer des fonctions définies par l'utilisateur](../user-defined-functions/rename-user-defined-functions.md)|  
 |Décrit comment afficher la définition d'une fonction définie par l'utilisateur.|[Afficher des fonctions définies par l’utilisateur](view-user-defined-functions.md)|  
   
   

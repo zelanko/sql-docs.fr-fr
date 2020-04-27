@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174443"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personnaliser les modèles et les structures d'exploration de données
@@ -43,7 +43,7 @@ ms.locfileid: "78174443"
 ### <a name="using-feature-selection"></a>Utilisation de la sélection des fonctionnalités
  La plupart des algorithmes d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un processus appelé *sélection des fonctionnalités* pour sélectionner uniquement les attributs les plus utiles pour l'ajout à un modèle. Le fait de réduire le nombre de colonnes et d'attributs peut améliorer les performances et la qualité du modèle. Les méthodes de sélection de fonctionnalités qui sont disponibles diffèrent en fonction de l'algorithme que vous choisissez.
 
- [Sélection des fonctionnalités &#40;&#41;d’exploration de données ](feature-selection-data-mining.md).
+ [Sélection des fonctionnalités &#40;exploration de données&#41;](feature-selection-data-mining.md).
 
 ### <a name="changing-usage"></a>Modification de l'utilisation
  Vous pouvez modifier les colonnes incluses dans un modèle d'exploration de données et la façon dont chaque colonne est utilisée. Si vous n'obtenez pas les résultats attendus, vous devez référencer les colonnes vous avez utilisées comme entrée et vous demander si les colonnes sont un choix adéquat et si vous pouvez faire quelque chose pour améliorer la gestion des données, notamment :
@@ -101,7 +101,7 @@ ms.locfileid: "78174443"
 |CLUSTER_SEED|[Références techniques relatives à l'algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md)|
 |CLUSTERING_METHOD|[Références techniques relatives à l'algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md)|
 |COMPLEXITY_PENALTY|[Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|
-|FORCE_REGRESSOR|[Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Indicateurs de modélisation &#40;&#41;d’exploration de données](modeling-flags-data-mining.md)|
+|FORCE_REGRESSOR|[Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|
 |FORECAST_METHOD|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|
 |HIDDEN_NODE_RATIO|[Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)|
 |HISTORIC_MODEL_COUNT|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)|

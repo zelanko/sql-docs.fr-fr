@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9c58b1837eb017a3cc51652ff404b37690b3849
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046427"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Paramètres table (OLE DB)
-  Cette section décrit la prise en charge des paramètres table dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Pour plus d’informations sur la vue d’ensemble, consultez [paramètres Table &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Pour obtenir un exemple, consultez [utiliser des paramètres Table &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  Cette section décrit la prise en charge des paramètres table dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Pour plus d’informations sur la vue d’ensemble, consultez [paramètres Table &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Pour obtenir un exemple, consultez [Utiliser les paramètres table &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez actuellement envoyer des données à lignes multiples au serveur en tant que paramètres à une procédure avec des jeux de paramètres (le paramètre DBPARAMS dans `ICommand::Execute`). Avec des jeux de paramètres, chaque élément du jeu doit être envoyé dans une demande d'appel de procédure distante séparée au serveur. Les paramètres table fournissent des fonctionnalités semblables, mais l'intégration avec le serveur est meilleure. Cela réduit le nombre de demandes d'appel de procédure distante et autorise des opérations basées sur des jeux sur le serveur.  
@@ -42,9 +42,9 @@ ms.locfileid: "63046427"
   
 -   [Prise en charge du type de paramètre table OLE DB](ole-db-table-valued-parameter-type-support.md)  
   
--   [OLE DB type de paramètre table prend en charge les méthodes de &#40;&#41;](ole-db-table-valued-parameter-type-support-methods.md)  
+-   [Prise en charge des types de paramètre table OLE DB &#40;méthodes&#41;](ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [OLE DB type de paramètre table prend en charge les propriétés de &#40;&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
+-   [Prise en charge des types de paramètre table OLE DB &#40;propriétés&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)   

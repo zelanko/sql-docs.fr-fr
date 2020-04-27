@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d6edc91257b31703573923ae8d7e63f2e1ccf1c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174700"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algorithme de clustering Microsoft
@@ -53,11 +53,11 @@ ms.locfileid: "78174700"
 
  Les spécifications pour un modèle de clustering sont les suivantes :
 
--   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
+-   **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
 
--   **Colonnes d’entrée** Chaque modèle doit contenir au moins une colonne d’entrée qui contient les valeurs utilisées pour générer les clusters. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.
+-   **Des colonnes d’entrée** Chaque modèle doit posséder au moins une colonne d’entrée qui contient les valeurs utilisées pour générer les clusters. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.
 
--   **Colonne prévisible facultative** L’algorithme n’a pas besoin d’une colonne prévisible pour générer le modèle, mais vous pouvez ajouter une colonne prévisible de presque n’importe quel type de données. Les valeurs de la colonne prédictible peuvent être traitées en tant qu'entrée du modèle de clustering, ou vous pouvez spécifier qu'elles soit uniquement utilisées à des fins de prédiction. Par exemple, si vous souhaitez prédire les revenus de vos clients en mettant en cluster les données démographiques telles que la région ou l'âge, vous spécifiez le revenu en tant que `PredictOnly` et vous ajoutez toutes les autres colonnes, telles que la région ou l'âge, en tant qu'entrées.
+-   **Une colonne prédictible facultative** L’algorithme n’a pas besoin de colonne prédictible pour générer le modèle, mais vous pouvez ajouter une colonne prédictible de n’importe quel type de données ou presque. Les valeurs de la colonne prédictible peuvent être traitées en tant qu'entrée du modèle de clustering, ou vous pouvez spécifier qu'elles soit uniquement utilisées à des fins de prédiction. Par exemple, si vous souhaitez prédire les revenus de vos clients en mettant en cluster les données démographiques telles que la région ou l'âge, vous spécifiez le revenu en tant que `PredictOnly` et vous ajoutez toutes les autres colonnes, telles que la région ou l'âge, en tant qu'entrées.
 
  Pour des informations plus détaillées sur les types de contenu et les types de données pris en charge pour les modèles de clustering, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md).
 

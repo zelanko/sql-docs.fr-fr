@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013443"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Règles et limitations du chargement en masse XML (SQLXML 4.0)
@@ -171,7 +171,6 @@ ms.locfileid: "66013443"
   
 -   Si vous insérez des valeurs de date à l'aide du chargement en masse XML, les valeurs doivent être spécifiées au format (-)SSAA-MM-JJ((+-)TZ). Ceci est le format XSD standard pour la date.  
   
--   Certains indicateurs de propriété ne sont pas compatibles avec d'autres indicateurs de propriété. Par exemple, le chargement en masse ne prend pas en charge `Ignoreduplicatekeys=true` avec `Keepidentity=false`. Lorsque `Keepidentity=false`, le chargement en masse attend que le serveur génère les valeurs de clés. Les tables doivent avoir une contrainte `IDENTITY` sur la clé. Le serveur ne générera pas de clés dupliquées, ce qui signifie qu'il est inutile d'affecter la valeur `Ignoreduplicatekeys` à `true`. 
-  `Ignoreduplicatekeys` ne doit avoir la valeur `true` que lors du téléchargement des valeurs de clés primaires à partir du flux de données entrant dans une table qui comporte des lignes et qu'il existe un risque potentiel de conflit des valeurs de clés primaires.  
+-   Certains indicateurs de propriété ne sont pas compatibles avec d'autres indicateurs de propriété. Par exemple, le chargement en masse ne prend pas en charge `Ignoreduplicatekeys=true` avec `Keepidentity=false`. Lorsque `Keepidentity=false`, le chargement en masse attend que le serveur génère les valeurs de clés. Les tables doivent avoir une contrainte `IDENTITY` sur la clé. Le serveur ne générera pas de clés dupliquées, ce qui signifie qu'il est inutile d'affecter la valeur `Ignoreduplicatekeys` à `true`. `Ignoreduplicatekeys` ne doit avoir la valeur `true` que lors du téléchargement des valeurs de clés primaires à partir du flux de données entrant dans une table qui comporte des lignes et qu'il existe un risque potentiel de conflit des valeurs de clés primaires.  
   
   

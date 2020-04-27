@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63143829"
 ---
 # <a name="log-file-viewer-f1-help"></a>Aide sur la visionneuse du fichier journal via la touche F1
@@ -32,7 +32,7 @@ ms.locfileid: "63143829"
  **Charger le journal**  
  Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
   
- **Exporter**  
+ **Export**  
  Ouvre une boîte de dialogue qui vous permet d’exporter les informations figurant dans la grille **Résumé du fichier journal** vers un fichier texte.  
   
  **Actualiser**  
@@ -48,13 +48,13 @@ ms.locfileid: "63143829"
  Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
  **Résumé du fichier journal**  
- Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
+ Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
   
  **Détails de la ligne sélectionnée**  
  Sélectionnez une ligne pour afficher des détails supplémentaires sur la ligne d'événement sélectionnée en bas de la page. Vous pouvez changer l'ordre des colonnes en les faisant glisser sur la grille. Vous pouvez redimensionner les colonnes en faisant glisser les barres de séparation des colonnes dans l'en-tête de la grille vers la gauche ou la droite. Double-cliquez sur les barres de séparation des colonnes dans l'en-tête de la grille pour ajuster automatiquement la largeur de la colonne au contenu.  
   
  **Instance**  
- Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme nom d' *ordinateur*\\nom de l'*instance*.  
+ Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme *nom de l'ordinateur*\\*nom de l'instance*.  
   
 ## <a name="frequently-displayed-columns"></a>Colonnes fréquemment affichées  
  **Date**  
@@ -79,7 +79,7 @@ ms.locfileid: "63143829"
   
 ## <a name="see-also"></a>Voir aussi  
  [Visionneuse du fichier journal](log-file-viewer.md)   
- [Ouvrir la visionneuse du fichier journal](open-log-file-viewer.md)   
+ [Ouvrir la Visionneuse du fichier journal](open-log-file-viewer.md)   
  [Afficher les fichiers journaux hors connexion](view-offline-log-files.md)  
   
   

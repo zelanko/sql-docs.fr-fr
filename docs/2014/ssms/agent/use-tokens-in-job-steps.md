@@ -17,20 +17,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211311"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vous permet d’utiliser des jetons dans des scripts d’étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ces jetons avec lesquels vous rédigez des étapes de travail vous offrent la même flexibilité que les variables lors de l'écriture de programmes logiciels. Après que vous avez inséré un jeton dans un script d'étape de travail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent le remplace au moment de l'exécution avant que le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)] n'exécute l'étape de travail.  
   
 > [!IMPORTANT]  
 >  Depuis le Service Pack 1 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la syntaxe des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a changé. Une macro d'échappement doit désormais accompagner tous les jetons employés dans les étapes de travail, sans quoi ces dernières échoueront. L'emploi de macros d'échappement et la mise à jour des étapes de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilisant des jetons sont abordés dans les sections « Utilisation de jetons », « Jetons et macros[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent » et « Mise à jour des étapes de travail pour l'utilisation de macros » ci-après. De plus, la syntaxe [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] qui faisait usage de crochets pour identifier des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (par exemple, «`[DATE]`») a également changé. Vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Par exemple :  
 >   
->  `$(ESCAPE_`*nom* de la macro`(DATE))`  
+>  `$(ESCAPE_` *macro name* `(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Utilisation de jetons  
   
@@ -39,15 +38,13 @@ ms.locfileid: "68211311"
 >   
 >  Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent : Le remplacement du jeton est simple et efficace, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent : Le remplacement du jeton est simple et efficace, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
   
  Par exemple, vous pouvez utiliser l'instruction suivante pour imprimer le nom de la base de données dans une étape de travail :  
   
  `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
- Dans cet exemple, la macro **ESCAPE_SQUOTE** est insérée avec le jeton **A-DBN** . Au moment de l’exécution, le jeton **A-DBN** est remplacé par le nom de base de données approprié. La macro d'échappement interprète comme des caractères d'échappement tous les guillemets simples transmis par inadvertance à la chaîne de remplacement des jetons. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace un guillemet simple par un guillemet double dans la chaîne finale.  
+ Dans cet exemple, la macro **ESCAPE_SQUOTE** est insérée avec le jeton **A-DBN** . Au moment de l’exécution, le jeton **A-DBN** est remplacé par le nom de base de données approprié. La macro d'échappement interprète comme des caractères d'échappement tous les guillemets simples transmis par inadvertance à la chaîne de remplacement des jetons. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace un guillemet simple par un guillemet double dans la chaîne finale.  
   
  Par exemple, si la chaîne transmise en vue de remplacer le jeton est `AdventureWorks2012'SELECT @@VERSION --`, la commande exécutée par l'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sera la suivante :  
   
@@ -67,32 +64,32 @@ ms.locfileid: "68211311"
 |**(A-DBN)**|Nom de la base de données. Si le travail est exécuté par une alerte, la valeur du nom de la base de données remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-SVR)**|Nom du serveur. Si le travail est exécuté par une alerte, la valeur du nom du serveur remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-ERR)**|Numéro d’erreur. Si le travail est exécuté par une alerte, la valeur du numéro d'erreur remplace automatiquement ce jeton dans l'étape de travail.|  
-|**(A-GRAVITÉ)**|Gravité de l'erreur Si le travail est exécuté par une alerte, la valeur de la gravité de l'erreur remplace automatiquement ce jeton dans l'étape de travail.|  
+|**(A-SEV)**|Gravité de l'erreur Si le travail est exécuté par une alerte, la valeur de la gravité de l'erreur remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-MSG)**|Texte du message. Si le travail est exécuté par une alerte, la valeur du texte du message remplace automatiquement ce jeton dans l'étape de travail.|  
 |**Date**|Date actuelle (au format AAAAMMJJ).|  
 |**INST**|Nom de l’instance. Pour une instance par défaut, ce jeton aura le nom de l'instance par défaut : MSSQLSERVER.|  
 |**JobID**|ID de travail.|  
-|**Mach**|Nom de l’ordinateur.|  
+|**(MACH)**|Nom de l’ordinateur.|  
 |**(MSSA)**|Nom du service SQLServerAgent principal.|  
 |**(OSCMD)**|Préfixe du programme utilisé pour exécuter les étapes de travail **CmdExec** .|  
 |**(SQLDIR)**|Répertoire d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL.|  
-|**SQLLOGDIR**|Jeton de remplacement pour le chemin du dossier des fichiers journaux des erreurs SQL Server, par exemple, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Jeton de remplacement pour le chemin du dossier des fichiers journaux des erreurs SQL Server, par exemple, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Nombre de fois où cette étape a été exécutée (ne tient pas compte des nouvelles tentatives). Peut être utilisé par la commande d'étape pour forcer l'arrêt d'une boucle multi-étape.|  
 |**ID**|Numéro d'identification de l'étape.|  
-|**Srvr**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée, le nom de l'instance est compris.|  
+|**(SRVR)**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée, le nom de l'instance est compris.|  
 |**SIMULTANÉMENT**|Heure actuelle (au format HHMMSS).|  
 |**(STRTTM)**|Heure (au format HHMMSS) à laquelle l'exécution du travail a débuté.|  
 |**(STRTDT)**|Date (au format AAAAMMJJ) à laquelle l'exécution du travail a débuté.|  
-|**(WMI (** *propriété* **))**|Pour les travaux qui s’exécutent en réponse à des alertes WMI, la valeur de la propriété est spécifiée par *propriété*. Par exemple, `$(WMI(DatabaseName))` fournit la valeur de la propriété **DatabaseName** pour l’événement WMI qui a entraîné l’exécution de l’alerte.|  
+|**(WMI(** *property* **))**|Pour les travaux qui s’exécutent en réponse à des alertes WMI, la valeur de la propriété est spécifiée par *propriété*. Par exemple, `$(WMI(DatabaseName))` fournit la valeur de la propriété **DatabaseName** pour l’événement WMI qui a entraîné l’exécution de l’alerte.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros d'échappement de SQL Server Agent  
   
 |Macros d'échappement|Description|  
 |-------------------|-----------------|  
-|**$ (ESCAPE_SQUOTE (** *token_name* **))**|Interprète les guillemets simples (') comme caractères d'échappement dans la chaîne de remplacement des jetons. Remplace un guillemet simple par un guillemet double.|  
-|**$ (ESCAPE_DQUOTE (** *token_name* **))**|Interprète les guillemets doubles (") comme caractères d'échappement dans la chaîne de remplacement des jetons. Remplace un guillemet double par deux guillemets doubles.|  
-|**$ (ESCAPE_RBRACKET (** *token_name* **))**|Interprète les crochets droits (]) comme caractères d'échappement dans la chaîne de remplacement des jetons. Remplace un crochet droit par deux crochets droits.|  
-|**$ (ESCAPE_NONE (** *token_name* **))**|Remplace le jeton sans interpréter de caractères comme caractères d'échappement dans la chaîne. La macro est fournie pour des raisons de prise en charge de la compatibilité descendante dans des environnements où l'usage de chaînes de remplacement de jetons est généralement réservé à des utilisateurs approuvés. Pour plus d'informations, consultez la section « Mise à jour des étapes de travail pour l'utilisation de macros » plus loin dans cette rubrique.|  
+|**$(ESCAPE_SQUOTE(** *token_name* **))**|Interprète les guillemets simples (') comme caractères d'échappement dans la chaîne de remplacement des jetons. Remplace un guillemet simple par un guillemet double.|  
+|**$(ESCAPE_DQUOTE(** *token_name* **))**|Interprète les guillemets doubles (") comme caractères d'échappement dans la chaîne de remplacement des jetons. Remplace un guillemet double par deux guillemets doubles.|  
+|**$(ESCAPE_RBRACKET(** *nom_jeton* **))**|Interprète les crochets droits (]) comme caractères d'échappement dans la chaîne de remplacement des jetons. Remplace un crochet droit par deux crochets droits.|  
+|**$(ESCAPE_NONE(** *token_name* **))**|Remplace le jeton sans interpréter de caractères comme caractères d'échappement dans la chaîne. La macro est fournie pour des raisons de prise en charge de la compatibilité descendante dans des environnements où l'usage de chaînes de remplacement de jetons est généralement réservé à des utilisateurs approuvés. Pour plus d'informations, consultez la section « Mise à jour des étapes de travail pour l'utilisation de macros » plus loin dans cette rubrique.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Mise à jour des étapes de travail pour l'utilisation de macros  
  Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, les étapes de travail munies de jetons sans macros d'échappement échouent et retournent un message d'erreur indiquant que l'étape de travail contenant un ou plusieurs jetons doit être mise à jour à l'aide d'une macro avant l'exécution du travail.  
@@ -108,7 +105,7 @@ ms.locfileid: "68211311"
   
 ## <a name="token-syntax-update-examples"></a>Exemples de mise à jour de syntaxe de jeton  
   
-### <a name="a-using-tokens-in-non-nested-strings"></a>R. Utilisation de jetons dans des chaînes non imbriquées  
+### <a name="a-using-tokens-in-non-nested-strings"></a>A. Utilisation de jetons dans des chaînes non imbriquées  
  L'exemple suivant explique comment mettre à jour un script non imbriqué simple avec la macro d'échappement appropriée. Avant d'exécuter le script de mise à jour, le script d'étape de travail suivant utilise un jeton d'étape de travail pour imprimer le nom de base de données correct :  
   
  `PRINT N'Current database name is $(A-DBN)' ;`  

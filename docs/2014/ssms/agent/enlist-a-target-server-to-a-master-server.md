@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211393"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrire un serveur cible dans un serveur maître
@@ -32,7 +32,7 @@ ms.locfileid: "68211393"
   
  **Dans cette rubrique**  
   
--   **Pour inscrire un serveur cible à l’aide de :**  
+-   **Pour inscrire un serveur cible à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68211393"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Pour inscrire un serveur cible  
   
@@ -50,13 +50,13 @@ ms.locfileid: "68211393"
   
 3.  Exécutez l'Assistant Création d'un serveur cible, qui vous guide tout au long du processus.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Pour inscrire un serveur cible  
   
 1.  Utilisez la procédure stockée `sp_msx_enlist`.  Pour plus d’informations, consultez [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a>Utilisation de SQL Server Management Objects (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Utilisation de SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)  

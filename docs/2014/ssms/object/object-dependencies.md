@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032415"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
@@ -33,7 +33,7 @@ ms.locfileid: "63032415"
  **Objets**dont **dépend** l'_\<objet sélectionné>_      
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
- **Dépendent**  
+ **Dépendances**  
  Si l’utilisateur clique sur **des objets qui dépendent de** _ \<l’objet sélectionné>_ , cette option affiche une vue hiérarchique des objets qui dépendent de l’objet sélectionné. Si vous cliquez sur **objets sur lesquels** _ \<l’objet sélectionné>_ **dépend** , vous affichez une vue hiérarchique des objets dont dépend l’objet sélectionné.  
   
  **Nom**  
@@ -42,7 +42,7 @@ ms.locfileid: "63032415"
  **Type**  
  Affiche le type de l'objet sélectionné dans l'arborescence **Dépendances** affichée plus haut.  
   
- **Heure de la dernière synchronisation**  
+ **Dernière heure de synchronisation**  
  > [!NOTE]  
 >  Cette option est disponible uniquement dans la page **Avancé** .  
   

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070879"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Trier et regrouper des résultats de requête (Visual Database Tools)
@@ -35,25 +35,25 @@ ms.locfileid: "63070879"
  Pour en savoir plus sur la création de telles requêtes, consultez les rubriques répertoriées dans le tableau ci-dessous.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Trier les lignes &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Trier des lignes &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Décrit les différentes manières de trier des lignes et pourquoi les utiliser.  
   
- [Réduire les groupes de lignes &#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
+ [Réduire des groupes de lignes &#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
  Décrit les différentes manières de réduire des lignes, par exemple le calcul ou l'élimination des doublons.  
   
- [Tri par ordre de &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
+ [Trier avec ORDER BY &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
  Fournit la procédure de retour de résultats dans un ordre spécifié.  
   
- [Trier dans l’ordre croissant ou décroissant &#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
+ [Trier par ordre croissant ou décroissant &#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
  Fournit la procédure de modification ou de définition du sens du tri.  
   
  [Trier plusieurs colonnes dans des requêtes &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  Fournit la procédure de définition de l'ordre de jeux de résultats pour plusieurs colonnes.  
   
- [Regrouper les lignes dans les résultats de la requête &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
+ [Regrouper des lignes dans les résultats de requête &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
  Fournit la procédure de création de sous-ensembles d'informations de synthèse par l'organisation des données en groupes.  
   
- [Spécifier des conditions pour les groupes &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  
+ [Spécifier des conditions pour des groupes &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  
  Fournit la procédure de création des conditions de recherche à appliquer à des groupes de lignes.  
   
  [Réorganiser les colonnes de sortie &#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  

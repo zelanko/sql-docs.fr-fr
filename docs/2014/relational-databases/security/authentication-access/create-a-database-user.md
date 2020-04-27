@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211969"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
@@ -47,9 +47,9 @@ ms.locfileid: "68211969"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Arrière-plan  
+###  <a name="background"></a>Informations générales sur la <a name="Restrictions"></a>  
  Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement autonome, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données autonome, consultez [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
   
 > [!IMPORTANT]  
@@ -57,12 +57,12 @@ ms.locfileid: "68211969"
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des utilisateurs. L'étendue d'un utilisateur est la base de données. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation `ALTER ANY USER` sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>Pour créer un utilisateur de base de données  
   
@@ -74,15 +74,15 @@ ms.locfileid: "68211969"
   
 4.  Dans la **boîte de dialogue utilisateur de base de données-nouveau** , dans la page **général** , sélectionnez l’un des types d’utilisateur suivants dans la liste **type d’utilisateur** : **utilisateur SQL avec connexion**, **utilisateur SQL sans connexion**, **utilisateur mappé à un certificat**, **utilisateur mappé à une clé asymétrique**ou **utilisateur Windows**.  
   
-5.  Dans la zone **Nom d'utilisateur** , entrez un nom pour le nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur**, vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
+5.  Dans la zone **Nom d'utilisateur** , entrez un nom pour le nouvel utilisateur. Si vous avez choisi **utilisateur Windows** dans la liste **type d’utilisateur** , vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** .  
   
-6.  Dans la zone **Nom de connexion** , entrez l'identifiant de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. Le **nom de connexion** est disponible si vous sélectionnez **utilisateur SQL avec connexion** ou **utilisateur Windows** dans la liste **type d’utilisateur** .  
+6.  Dans la zone **Nom de connexion** , entrez l'identifiant de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
-7.  Dans la zone **Schéma par défaut** , spécifie le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma**. **Le schéma par défaut** est disponible si vous **Sélectionnez utilisateur SQL avec connexion**, **utilisateur SQL sans connexion**ou **utilisateur Windows** dans la liste **type d’utilisateur** .  
+7.  Dans la zone **Schéma par défaut** , spécifie le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma**. **Schéma par défaut** est disponible si vous sélectionnez **Utilisateur SQL avec connexion**, **Utilisateur SQL sans connexion**ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
-8.  Dans la zone **Nom du certificat** , entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le certificat**. Le **nom du certificat** est disponible si vous sélectionnez **utilisateur mappé à un certificat** dans la liste **type d’utilisateur** .  
+8.  Dans la zone **Nom du certificat** , entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le certificat**. **Nom du certificat** est disponible si vous sélectionnez **Utilisateur mappé à un certificat** dans la liste **Type d'utilisateur** .  
   
-9. Dans la zone **Nom de la clé asymétrique**  , entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique**. Le nom de la **clé asymétrique** est disponible si vous sélectionnez **utilisateur mappé à une clé asymétrique** dans la liste **type d’utilisateur** .  
+9. Dans la zone **Nom de la clé asymétrique**  , entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique**. **Nom de la clé asymétrique** est disponible si vous sélectionnez **Utilisateur mappé à une clé asymétrique** dans la liste **Type d'utilisateur** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -107,12 +107,12 @@ ms.locfileid: "68211969"
      Affiche ou spécifie les propriétés étendues de l'objet. Chaque propriété étendue est constituée d'une paire nom/valeur de métadonnées associées à l'objet.  
   
      **Points de suspension (...)**  
-     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue**. Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](../../databases/value-for-extended-property-dialog-box.md).  
+     Cliquez sur le bouton de sélection **(...)** après **valeur** pour ouvrir la boîte **de dialogue valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Supprimer**  
      Supprime la propriété étendue sélectionnée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>Pour créer un utilisateur de base de données  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 091b1f40d293515617e369b750a5f18dfe12951b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012325"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Présentation de la gestion des exceptions dans Reporting Services
@@ -34,9 +34,9 @@ ms.locfileid: "63012325"
 |-----------|-----------------|  
 |[Gestion des exceptions dans Reporting Services](handling-exceptions-in-reporting-services.md)|Fournit une vue d'ensemble des exceptions dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et le rôle de SOAP dans le renvoi d'erreurs depuis un service Web.|  
 |[Meilleures pratiques pour la gestion des exceptions Reporting Services](best-practices/best-practices-for-reporting-services-exception-handling.md)|Fournit des recommandations sur la manière de gérer les exceptions dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[Classe SoapException Reporting Services](soapexception-class/reporting-services-soapexception-class.md)|Décrit la classe **SoapException** dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|[Classe SoapException Reporting Services](soapexception-class/reporting-services-soapexception-class.md)|Décrit la classe **SoapException** dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications à l’aide du service web et de .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Création d’applications à l’aide du service web et du .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211642"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
@@ -46,14 +46,14 @@ ms.locfileid: "68211642"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'utilisation de `sp_helptext` pour retourner la définition d'une vue nécessite l'appartenance au rôle **public** . L'utilisation de `sys.sql_expression_dependencies` pour rechercher toutes les dépendances d'une vue nécessite l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur `sys.sql_expression_dependencies` pour la base de données. Les définitions d'objets système, telles que celles retournées dans SELECT OBJECT_DEFINITION, sont visibles publiquement.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtenir les propriétés de vue à l'aide de l'Explorateur d'objets  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68211642"
   
 4.  Sélectionnez **Objets dont dépend [nom de la vue]** pour afficher les objets référencés par la vue.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Pour obtenir la définition et les propriétés d'une vue  
   

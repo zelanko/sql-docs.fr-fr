@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149993"
 ---
 # <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
-  Avant de pouvoir démarrer une relecture distribuée avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la fonctionnalité Distributed Replay, vous devez préparer les données de trace d’entrée en initialisant l’étape de prétraitement à partir de l’outil d’administration Distributed Replay. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
+  Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d’entrée en lançant l’étape de prétraitement de l’outil d’administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
   
  ![Étape de prétraitement Distributed Replay](../../database-engine/media/preprocess.gif "Étape de prétraitement Distributed Replay")  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63149993"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Pour préparer les données de trace d'entrée  
   
-1.  **(Facultatif) modifier les paramètres de configuration de prétraitement**: Si vous souhaitez modifier les paramètres de configuration de prétraitement, par exemple s’il faut filtrer les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l' `<PreprocessModifiers>` élément du fichier de `DReplay.exe.preprocess.config`configuration de prétraitement XML,. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
+1.  **(Facultatif) Modifier les paramètres de configuration du prétraitement**: si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
   
     1.  Faites une copie du fichier par défaut de configuration de prétraitement, `DReplay.exe.preprocess.config`, et renommez le nouveau fichier. Le fichier par défaut de configuration de prétraitement se trouve dans le dossier d'installation de l'outil d'administration.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63149993"
   
      Pour plus d'informations sur le fichier de configuration de prétraitement, consultez [Configurer Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Initier l’étape de prétraitement**: pour préparer les données de trace d’entrée, vous devez exécuter l’outil d’administration avec l’option de **prétraitement** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Initialiser l’étape de prétraitement**: pour préparer les données de trace d’entrée, vous devez exécuter l’outil d’administration avec l’option **preprocess** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Ouvrez l'utilitaire d'invite de commandes Windows (`CMD.exe`) et accédez à l'emplacement d'installation de l'outil d'administration Distributed Replay (`DReplay.exe`).  
   

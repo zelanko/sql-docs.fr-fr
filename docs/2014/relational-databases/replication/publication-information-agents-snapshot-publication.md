@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021787"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informations de publication, Agents (Publication d'instantané)
@@ -47,7 +47,7 @@ ms.locfileid: "63021787"
 -   Completed  
   
  **Agent**  
- L'Agent d'instantané. Il s'agit du seul Agent associé à une publication d'instantané. L'Agent de distribution est associé aux abonnements à cette publication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ L'Agent d'instantané. Il s'agit du seul Agent associé à une publication d'instantané. L'Agent de distribution est associé aux abonnements à cette publication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Dernière heure de début**  
  Heure du dernier démarrage de l'Agent.  
@@ -59,7 +59,7 @@ ms.locfileid: "63021787"
  La dernière action effectuée au cours de la dernière exécution de l'Agent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
+ [Démarrer le moniteur de réplication](monitor/start-the-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)  
   

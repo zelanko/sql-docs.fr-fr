@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020133"
 ---
 # <a name="batching-methods"></a>Méthodes de traitement par lot
@@ -102,7 +102,7 @@ class Sample
 ## <a name="see-also"></a>Voir aussi  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Informations techniques de référence &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [Utilisation d’en-têtes SOAP Reporting Services](using-reporting-services-soap-headers.md)  
+ [Référence technique &#40;SSRS&#41;](../technical-reference-ssrs.md)   
+ [Utilisation des en-têtes SOAP de Reporting Services](using-reporting-services-soap-headers.md)  
   
   

@@ -17,14 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022196"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les abonnements par émission de données à IBM DB2/AS 400, DB2/MVS et DB2/Universal Database par l'intermédiaire de fournisseurs OLE DB inclus avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Configuration d'un Abonné IBM DB2  
@@ -63,7 +62,7 @@ ms.locfileid: "63022196"
   
      Les scripts sont modifiés pour diverses raisons mais le plus souvent pour changer les mappages des types de données. Pour plus d'informations, consultez la section « Considérations sur le mappage des types de données », plus loin dans cette rubrique. Si vous modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] , limitez vos modifications aux mappages des types de données (le script ne doit par ailleurs contenir aucun commentaire). Si des modifications plus importantes sont nécessaires, créez un script DB2.  
   
-     **Pour modifier un script d’article et le fournir en tant que script de création personnalisé**  
+     **Pour modifier un script d'article et le fournir en tant que script de création personnalisé**  
   
     1.  Après la génération de l'instantané pour la publication, accédez au dossier d'instantanés de la publication.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63022196"
   
     5.  Exécutez sp_changearticle, en indiquant le chemin et le nom de fichier de la propriété *creation_script*. Pour plus d’informations, consultez [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
-     **Pour créer un script d’article et le fournir en tant que script de création personnalisé**  
+     **Pour créer un script d'article et le fournir en tant que script de création personnalisé**  
   
     1.  Créez un script d'article en langage SQL DB2. Vérifiez que la première ligne du fichier contient **bypass_translation**et rien d'autre.  
   
@@ -90,8 +89,7 @@ ms.locfileid: "63022196"
   
 -   Si vous souhaitez créer préalablement ces tables sur l'Abonné plutôt qu'elles soient créées par la réplication, utilisez l'option Prise en charge de la réplication uniquement. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorise des noms de colonnes et de tables plus longs que DB2 :  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorise des noms de colonnes et de tables plus longs que DB2 :  
   
     -   Si la base de données de publication comprend des tables dont les noms sont plus longs que ceux pris en charge par la version DB2 de l'Abonné, spécifiez un autre nom pour la propriété de l'article destination_table. Pour plus d’informations sur la définition des propriétés lors de la création d’une publication, consultez [Créer une publication](../publish/create-a-publication.md) et [Définir un article](../publish/define-an-article.md).  
   
@@ -132,7 +130,7 @@ ms.locfileid: "63022196"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|N/A|  
+|`sql_variant`|NON APPLICABLE|  
 |`sysname`|VARCHAR (128)|  
 |`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -169,6 +167,6 @@ ms.locfileid: "63022196"
   
 ## <a name="see-also"></a>Voir aussi  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [S'abonner à des publications](../subscribe-to-publications.md)  
+ [S’abonner aux Publications](../subscribe-to-publications.md)  
   
   

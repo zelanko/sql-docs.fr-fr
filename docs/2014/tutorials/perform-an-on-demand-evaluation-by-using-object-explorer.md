@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210945"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Effectuer une évaluation à la demande à l'aide de l'Explorateur d'objets
@@ -23,7 +23,7 @@ ms.locfileid: "68210945"
 > [!NOTE]  
 >  Vous pouvez également évaluer des stratégies sur une instance unique via des serveurs inscrits. Pour plus d’informations, consultez [effectuer une évaluation à la demande à l’aide de serveurs inscrits](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette leçon est basée sur la version de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "68210945"
   
 3.  Dans la boîte de dialogue **évaluer les stratégies** , en regard de la zone **source** , cliquez sur le bouton de sélection (**...**).  
   
-4.  Dans la boîte de dialogue **Sélectionner une source** , vous pouvez sélectionner **fichiers** ou **serveur** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **serveur**, vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur des stratégies sur un serveur local ou distant. Dans ce didacticiel, vous allez cliquer sur **fichiers**, puis sélectionner les fichiers de stratégie individuels que vous souhaitez évaluer. Pour ce faire, procédez comme suit :  
+4.  Dans la boîte de dialogue **Sélectionner une source** , vous pouvez sélectionner **fichiers** ou **serveur** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **serveur**, vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur des stratégies sur un serveur local ou distant. Dans ce didacticiel, vous allez cliquer sur **fichiers**, puis sélectionner les fichiers de stratégie individuels que vous souhaitez évaluer. Pour cela, procédez comme suit :  
   
     1.  Cliquez sur **fichiers**.  
   
