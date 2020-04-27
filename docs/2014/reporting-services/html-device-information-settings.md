@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c300945fee14b353e5c3be1b42a59440bdbfd4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109036"
 ---
 # <a name="html-device-information-settings"></a>Paramètres d'informations de périphérique HTML
@@ -31,7 +31,7 @@ ms.locfileid: "66109036"
 |`AccessibleTablix`|Indique s'il faut effectuer le rendu avec des métadonnées d'accessibilité supplémentaires en vue de l'utilisation d'un lecteur d'écran. Ce paramètre est uniquement applicable aux rapports qui contiennent une seule table ou une structure matricielle avec regroupement simple. La valeur par défaut est `false`. Les métadonnées d'accessibilité supplémentaires imposent la mise en conformité du rapport eu égard des normes techniques suivantes décrites dans la section « Intranet Web et Applications et Informations Internet » (1194.22) du document relatif aux normes d'accessibilité dans le domaine de l'électronique et des technologies de l'information (Section 508) :<br /><br /> (g) les en-têtes de ligne et de colonne doivent être identifiés pour les tables de données.<br /><br /> (h) le balisage doit être utilisé pour associer les cellules de données aux cellules d'en-tête pour les tables de données qui ont plusieurs niveaux logiques d'en-têtes de ligne ou de colonne.<br /><br /> (i) les cadres doivent porter un titre qui facilite l'identification du cadre et la navigation.<br /><br /> Ce paramètre est pris en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)]charge dans, mais [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]pas dans.|  
 |**ActionScript (\*)**|Spécifie le nom de la fonction JavaScript à utiliser lorsqu'un événement d'action se produit, tel qu'une extraction ou un clic pour atteindre un signet. Si ce paramètre est spécifié, un événement d'action déclenchera la fonction JavaScript nommée au lieu d'une publication sur le serveur.|  
 |**BookmarkID**|Identificateur du signet à atteindre dans le rapport.|  
-|**Explorateur**|Indique s'il faut afficher ou masquer l'Explorateur de documents du rapport. La valeur par défaut de ce paramètre est `true`.|  
+|**DocMap**|Indique s'il faut afficher ou masquer l'Explorateur de documents du rapport. La valeur par défaut de ce paramètre est `true`.|  
 |`ExpandContent`|Indique si le rapport doit être placé dans une structure de table qui restreint la taille horizontale.|  
 |**FindString**|Texte à rechercher dans le rapport. La valeur par défaut de cette propriété est une chaîne vide.|  
 |**GetImage (\*)**|Obtient une icône particulière pour l'interface utilisateur de la visionneuse HTML.|  
@@ -41,7 +41,7 @@ ms.locfileid: "66109036"
 |`LinkTarget`|Cible des liens hypertexte contenus dans le rapport. Vous pouvez cibler une fenêtre ou un frame en fournissant le nom de la fenêtre, `LinkTarget` =comme *window_name*, ou vous pouvez cibler une nouvelle fenêtre `LinkTarget`à l’aide de = _blank. D'autres noms de cibles valides incluent _self, _parent et _top.|  
 |**OnlyVisibleStyles (\*)**|Indique que seuls les styles partagés pour la page actuellement rendue sont générés.|  
 |`OutlookCompat`|Indique s'il convient d'effectuer le rendu avec des métadonnées supplémentaires qui font que l'aspect du rapport est meilleur dans Outlook. Pour d'autres, la valeur par défaut est `false`.|  
-|**Paramètres**|Indique s'il faut afficher ou masquer la zone des paramètres de la barre d'outils. Si vous affectez à ce paramètre la valeur `true`, la zone des paramètres de la barre d'outils s'affiche. La valeur par défaut de ce paramètre est `true`.|  
+|**Parameters**|Indique s'il faut afficher ou masquer la zone des paramètres de la barre d'outils. Si vous affectez à ce paramètre la valeur `true`, la zone des paramètres de la barre d'outils s'affiche. La valeur par défaut de ce paramètre est `true`.|  
 |`PrefixId`|Lorsque ce paramètre est utilisé avec `HTMLFragment`, ajoute le préfixe spécifié à tous les attributs `ID` dans le fragment HTML qui est créé.|  
 |**ReplacementRoot (\*)**|Chaîne à ajouter à tous les liens d'extraction, de bascule et de signet dans le rapport lors du rendu hors du contrôle ReportViewer. Par exemple, ce paramètre est utilisé pour rediriger le clic d’un utilisateur vers une page personnalisée.|  
 |**ResourceStreamRoot (\*)**|Chaîne à ajouter à l'URL pour toutes les ressources d'image, telles que les images bascule ou de tri.|  
@@ -54,8 +54,8 @@ ms.locfileid: "66109036"
 |**DataVisualizationFitSizing**|Indique le comportement d'ajustement de la visualisation des données à l'intérieur d'un tableau matriciel. Cela inclut le graphique, la jauge et la carte.<br /><br /> Les valeurs possibles sont **Approximatif** et **Exact**.<br /><br /> La valeur par défaut est **Approximatif**. Si le paramètre est supprimé du fichier **rsreportserver.config** , le comportement par défaut est **Exact**.<br /><br /> L’activation de l’option **Exact** peut avoir un impact sur les performances, car le traitement permettant de déterminer la taille peut prendre plus de temps.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transmission de paramètres d'informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passage de paramètres d’informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personnaliser les paramètres d’extension de rendu dans RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

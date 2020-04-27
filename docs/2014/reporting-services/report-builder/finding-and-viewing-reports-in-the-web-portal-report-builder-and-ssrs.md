@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107864"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Recherche et affichage de rapports dans le Gestionnaire de rapports (Générateur de rapports et SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66107864"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navigation dans l'arborescence des dossiers du Gestionnaire de rapports  
- Pour parcourir les rapports que vous souhaitez exécuter, vous pouvez utiliser la page d'accueil, qui s'affiche automatiquement lorsque vous démarrez le Gestionnaire de rapports et lorsque vous ouvrez un dossier dans l'arborescence des dossiers. La page d'accueil affiche uniquement les éléments que vous êtes autorisé à afficher. Le chemin d'accès de dossier est affiché sous la forme d'une ligne de liens en haut de la page d'accueil. Les noms des dossiers sont répertoriés en séquence, en commençant par le dossier racine (dossier de base). Chaque fois que vous ouvrez un dossier supplémentaire, son nom est ajouté au chemin d'accès de dossier en haut de la page. **(1)** dans l’image ci-dessous. Lorsque vous ouvrez un rapport, le nom du rapport est également ajouté au chemin d'accès de dossier.  
+ Pour parcourir les rapports que vous souhaitez exécuter, vous pouvez utiliser la page d'accueil, qui s'affiche automatiquement lorsque vous démarrez le Gestionnaire de rapports et lorsque vous ouvrez un dossier dans l'arborescence des dossiers. La page d'accueil affiche uniquement les éléments que vous êtes autorisé à afficher. Le chemin d'accès de dossier est affiché sous la forme d'une ligne de liens en haut de la page d'accueil. Les noms des dossiers sont répertoriés en séquence, en commençant par le dossier racine (dossier de base). Chaque fois que vous ouvrez un dossier supplémentaire, son nom est ajouté au chemin d'accès de dossier en haut de la page. **(1)** dans l’illustration ci-dessous. Lorsque vous ouvrez un rapport, le nom du rapport est également ajouté au chemin d'accès de dossier.  
   
  ![Ruban et navigation du Gestionnaire de rapports](../media/rs-reportmanager-ribbon.gif "Ruban et navigation du Gestionnaire de rapports")  
 Ruban du Gestionnaire de rapports  
@@ -37,7 +37,7 @@ Ruban du Gestionnaire de rapports
   
 -   Pour vous déplacer vers le bas de l'arborescence des dossiers, ouvrez un sous-dossier du dossier en cours. Les dossiers contiennent des rapports, des ressources, des éléments de sources de données partagées et d'autres dossiers. Un clic sur une icône de dossier ouvre le dossier correspondant et affiche le contenu du niveau inférieur de l'arborescence.  
   
--   Pour vous déplacer vers le haut de l'arborescence des dossiers, dans la ligne de liens en haut de la page, cliquez sur le nom du dossier dont vous voulez afficher le contenu. **(1)** dans l’image ci-dessus.  
+-   Pour vous déplacer vers le haut de l'arborescence des dossiers, dans la ligne de liens en haut de la page, cliquez sur le nom du dossier dont vous voulez afficher le contenu. **(1)** dans l’illustration ci-dessus.  
   
 ## <a name="opening-a-report"></a>Ouverture d'un rapport  
  Une fois le rapport trouvé, cliquez sur son nom pour l'ouvrir. Le rapport est rendu en HTML et s'affiche dans la page Contenu du Gestionnaire de rapports. Les rapports sont toujours mis en cache par la session du navigateur, de sorte que si vous ouvrez un rapport, vous pouvez généralement y revenir en cliquant sur le bouton **Précédent** . Ceci est vrai même s'il vous a été demandé de fournir un nom d'utilisateur et un mot de passe pour exécuter le rapport. Vous ne pouvez pas véritablement fermer un rapport rendu tant que le navigateur n'est pas fermé.  
@@ -48,7 +48,7 @@ Ruban du Gestionnaire de rapports
   
 ## <a name="to-search-for-a-items"></a>Pour rechercher des éléments  
   
--   Pour rechercher des éléments dans le Gestionnaire de rapports, tapez une chaîne dans la zone de texte **Rechercher** en haut de la page. **(2)** dans l’image ci-dessus. La recherche débute par le nœud supérieur de l'arborescence des dossiers et se poursuit dans tous les niveaux. Si vous ne disposez pas des autorisations requises pour accéder à un niveau particulier, ce niveau est ignoré. Ceci concerne les dossiers Mes rapports qui appartiennent à d'autres utilisateurs et également ceux des autres dossiers qui ne sont généralement pas disponibles. Seuls les rapports et les éléments que vous êtes autorisé à visualiser sont inclus dans les résultats de la recherche.  
+-   Pour rechercher des éléments dans le Gestionnaire de rapports, tapez une chaîne dans la zone de texte **Rechercher** en haut de la page. **(2)** dans l’illustration ci-dessus. La recherche débute par le nœud supérieur de l'arborescence des dossiers et se poursuit dans tous les niveaux. Si vous ne disposez pas des autorisations requises pour accéder à un niveau particulier, ce niveau est ignoré. Ceci concerne les dossiers Mes rapports qui appartiennent à d'autres utilisateurs et également ceux des autres dossiers qui ne sont généralement pas disponibles. Seuls les rapports et les éléments que vous êtes autorisé à visualiser sont inclus dans les résultats de la recherche.  
   
 -   Pour rechercher un élément en fonction de son nom ou de sa description, spécifiez tout ou partie du texte recherché. La fonction de recherche ne distingue pas les majuscules des minuscules. Vous ne pouvez pas utiliser des opérateurs de recherche comme les symboles plus (+) ou moins (-) pour exiger ou exclure des critères de recherche.  
   

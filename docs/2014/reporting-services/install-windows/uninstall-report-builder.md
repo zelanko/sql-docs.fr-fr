@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108660"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Désinstaller la version autonome du Générateur de rapports (Générateur de rapports)
@@ -30,7 +30,7 @@ ms.locfileid: "66108660"
   
 2.  Dans le Panneau de configuration, cliquez sur **Programmes et fonctionnalités**.  
   
-3.  Recherchez Générateur de rapports [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans la liste **Nom** , puis cliquez dessus.  
+3.  Recherchez Générateur de rapports  dans la liste Nom , puis cliquez dessus.  
   
 4.  Cliquez sur **Désinstaller**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66108660"
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>Pour désinstaller le Générateur de rapports à partir de la ligne de commande  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
+1.  Dans le menu **Démarrer**, cliquez sur **Exécuter**.  
   
 2.  Dans la zone de texte **ouvrir** , tapez`cmd.`  
   

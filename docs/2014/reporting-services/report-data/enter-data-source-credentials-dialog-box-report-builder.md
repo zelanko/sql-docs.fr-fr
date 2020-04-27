@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107317"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Boîte de dialogue Entrez les informations d'identification pour la source de données (Générateur de rapports)
@@ -33,6 +33,6 @@ ms.locfileid: "66107317"
  [Connexions de données, sources de données et chaînes de connexion dans Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Boîte de dialogue Propriétés de la source de données, général &#40;Générateur de rapports&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [Spécifier les informations d’identification dans Générateur de rapports](../specify-credentials-in-report-builder.md)   
- [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

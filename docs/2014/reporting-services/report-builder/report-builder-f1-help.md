@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107733"
 ---
 # <a name="report-builder-f1-help"></a>Aide du Générateur de rapports obtenue via la touche F1
@@ -28,7 +28,7 @@ ms.locfileid: "66107733"
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide pour les boîtes de dialogue, les volets et les assistants (F1)](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) en [mode création de rapport &#40;générateur de rapports&#41;](report-design-view-report-builder.md)   
- [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Assistant Carte et Assistant couche &#40;Générateur de rapports et SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Résolution des problèmes liés au Générateur de rapports](../troubleshoot-report-builder.md)  
   
   

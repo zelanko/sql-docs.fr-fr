@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbb3fd9ec10c5e1ca11a7e150f0d8a4c0fec883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106518"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
@@ -42,9 +42,9 @@ ms.locfileid: "66106518"
   
      Le volet **Données du graphique** s’ouvre.  
   
-6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs **+** , puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
+6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
   
-7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs **+** , puis sur le champ selon lequel vous voulez regrouper les valeurs.  
+7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ selon lequel vous voulez regrouper les valeurs.  
   
      En général, pour les graphiques sparkline et les barres de données, vous n’ajoutez pas de champ à la zone **Groupes de séries** car vous voulez une seule série pour chaque ligne.  
   

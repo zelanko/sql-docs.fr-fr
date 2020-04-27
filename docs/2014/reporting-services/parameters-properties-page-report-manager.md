@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108118"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Page de propriétés des paramètres (Gestionnaire de rapports)
@@ -52,7 +52,7 @@ ms.locfileid: "66108118"
   
  Si vous spécifiez ultérieurement qu'une invite doit être affichée, la valeur par défaut devient une valeur initiale que les utilisateurs peuvent utiliser ou modifier. Si vous ne demandez pas une valeur de paramètre, cette valeur est utilisée pour tous les utilisateurs qui exécutent le rapport.  
   
- **Null**  
+ **Nul**  
  Activez cette case à cocher pour spécifier comme Null la valeur par défaut. Une valeur Null signifie que le rapport s'exécute même si l'utilisateur ne fournit pas de valeur de paramètre. Si cette colonne ne contient aucune case à cocher, cela signifie que le paramètre n'accepte pas les valeurs Null.  
   
  **Masquer**  

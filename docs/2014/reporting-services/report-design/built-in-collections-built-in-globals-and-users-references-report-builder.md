@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106440"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Références à des champs Globals et Users prédéfinis (Générateur de rapports et SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66106440"
   
 |Membre|Type|Description|  
 |------------|----------|-----------------|  
-|Name|`String`|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
+|Nom|`String`|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
 |IsInteractive|`Boolean`|Indique si la demande de rendu actuelle utilise un format de rendu interactif.|  
 |DeviceInfo|Collection nom/valeur en lecture seule|Paires clé/valeur pour les paramètres deviceinfo de la demande de rendu actuelle.<br /><br /> Les valeurs de chaîne peuvent être spécifiées en utilisant la clé ou un index dans la collection.|  
   
@@ -63,9 +63,7 @@ ms.locfileid: "66106440"
   
 -   Cette expression, placée dans la boîte de dialogue **Visibilité de la colonne** pour une colonne sélectionnée, affiche la colonne uniquement lorsque le rapport est exporté vers Excel. Dans les autres cas, cette colonne est masquée.  
   
-     
-  `EXCELOPENXML` fait référence au format Excel inclus dans Office 2007. 
-  `EXCEL` fait référence au format Excel inclus dans Office 2003.  
+     `EXCELOPENXML` fait référence au format Excel inclus dans Office 2007. `EXCEL` fait référence au format Excel inclus dans Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -76,7 +74,7 @@ ms.locfileid: "66106440"
   
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Langue de l'utilisateur qui exécute le rapport. Par exemple : `en-US`.|  
+|`Language`|`String`|Langue de l'utilisateur qui exécute le rapport. Par exemple, `en-US`.|  
 |`UserID`|`String`|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
   
  Pour plus d’informations sur la prise en charge de plusieurs langues dans un rapport, consultez « Considérations sur la conception de la solution pour les déploiements multilingues ou globaux » dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  

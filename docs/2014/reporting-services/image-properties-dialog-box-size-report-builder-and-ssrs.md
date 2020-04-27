@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108989"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'image, Taille (Générateur de rapports et SSRS)
@@ -36,22 +36,22 @@ ms.locfileid: "66108989"
  **Capture**  
  Choisissez cette option pour afficher une image à partir de l'angle supérieur gauche de l'image à la hauteur et à la largeur de la cellule ou de la zone de texte. Les bordures de l'image peuvent diminuer ou s'agrandir pour ajuster l'image. Si l'image est plus grande que la cellule ou la zone de texte, seule une partie de l'image est affichée.  
   
- **Gauche**  
+ **Left**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord gauche d'une cellule ou d'une zone de texte et la valeur affichée dans celle-ci.  
   
- **Oui**  
+ **Right**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord droit d'une cellule ou d'une zone de texte et la valeur affichée dans celle-ci.  
   
- **Retour au début**  
+ **Top**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord droit d'une cellule ou d'une zone de texte et la valeur affichée dans celle-ci.  
   
- **Bas**  
+ **Ballon**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord droit d'une cellule ou d'une zone de texte et la valeur affichée dans celle-ci.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Boîte de dialogue Propriétés de l’image, général &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Images &#40;Générateur de rapports et SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

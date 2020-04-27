@@ -18,20 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109140"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Page Filtres, boîtes de dialogue Graphique (Générateur de rapports et SSRS)
   Cliquez sur **filtres** dans :  
   
--   Boîte de dialogue **Propriétés du groupe de catégories** pour filtrer les points de données dans une série regroupée par catégorie.  
+-   la boîte de dialogue**Propriétés du groupe de catégories** pour filtrer les points de données dans une série regroupée par catégorie ;  
   
--   Boîte de dialogue **Propriétés du graphique** pour définir les options de filtrage du graphique.  
+-   la boîte de dialogue**Propriétés du graphique** pour définir les options de filtrage du graphique ;  
   
--   Boîte de dialogue **Propriétés du groupe de séries** pour limiter le nombre de séries dans le groupe sélectionné.  
+-   la boîte de dialogue**Propriétés du groupe de séries** pour limiter le nombre de séries dans le groupe sélectionné.  
   
 ## <a name="options"></a>Options  
  **Ajouter**  
@@ -47,7 +47,7 @@ ms.locfileid: "66109140"
  Cliquez pour déplacer le filtre sélectionné vers le bas dans la liste.  
   
  **Expression**  
- Tapez ou choisissez l'expression à laquelle vous souhaitez appliquer un filtre. Cliquez sur le bouton Expression (**FX**) pour modifier l’expression.  
+ Tapez ou choisissez l'expression à laquelle vous souhaitez appliquer un filtre. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
   
  **Type de données**  
  Sélectionnez le type de données du champ **Valeur**. Lorsque cela est possible, sélectionnez un type de données correspondant à celui du champ **Expression**.  
@@ -63,7 +63,7 @@ ms.locfileid: "66109140"
  Tapez l’expression ou la valeur à comparer au contenu de l’expression dans **Expression**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupe &#40;Générateur de rapports et SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

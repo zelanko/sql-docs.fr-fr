@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106095"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personnaliser des données et l'affichage d'une carte ou d'une couche (Générateur de rapports et SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66106095"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> Modifier les options d'une carte  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> Modifier les options d'une carte  
  Sur un élément de rapport cartographique, vous pouvez contrôler les éléments suivants :  
   
 -   ajouter plusieurs titres ;  
@@ -73,7 +73,7 @@ ms.locfileid: "66106095"
   
  
   
-##  <a name="Viewport"></a> Modifier les options de la fenêtre d'affichage  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> Modifier les options de la fenêtre d'affichage  
  Utilisez les options de la fenêtre d'affichage pour modifier la vue de la carte qui s'affiche dans votre rapport.  
   
  La source de données spatiales peut fournir une zone plus étendue que celle dont vous avez besoin dans le rapport. Vous pouvez utiliser la fenêtre d'affichage pour définir le centre et le niveau de zoom, et rogner la zone affichée dans la carte.  
@@ -94,7 +94,7 @@ ms.locfileid: "66106095"
   
 
   
-##  <a name="Legends"></a> Modifier les options des légendes  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> Modifier les options des légendes  
  Les légendes aident les utilisateurs à interpréter les données sur une carte.  
   
  Par défaut, toutes les règles que vous spécifiez pour une couche ajoutent des éléments à la première légende. De plus, toutes les règles de couleur affichent des valeurs dans l'échelle de couleurs.  
@@ -107,7 +107,7 @@ ms.locfileid: "66106095"
   
 
   
-##  <a name="Layer"></a> Modifier les options de la couche  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> Modifier les options de la couche  
  Pour afficher les couches d'une carte, cliquez sur la carte pour la sélectionner. Le volet Carte s'affiche. Pour modifier des options pour une couche, cliquez avec le bouton droit sur la couche et utilisez le menu contextuel.  
   
  Une couche peut être de trois types, selon les données spatiales retournées par la source de données spatiales : couche de polygones, couche de lignes ou couche de points.  
@@ -124,7 +124,7 @@ ms.locfileid: "66106095"
   
  Pour plus d’informations sur les couches, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="DataGrouping"></a> Modifier le groupement de données de la couche  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> Modifier le groupement de données de la couche  
  Vous pouvez personnaliser la façon d'agréger des données spatiales pour vos propres formes. Pour définir les propriétés de groupe pour une couche, sélectionnez la couche dans le volet Carte puis, dans le volet Propriétés de la couche, cliquez sur **Groupe** et sur les points de suspension (...) pour ouvrir les propriétés du groupe. Dans cette boîte de dialogue, vous pouvez spécifier des expressions de groupe, créer des variables de groupe et filtrer les données utilisées pour le regroupement.  
   
  L'expression de groupe spécifie comment les données analytiques en relation avec les données spatiales sont regroupées pour chaque élément cartographique de la couche. Par défaut, l'expression de groupe est le jeu de champs de correspondance spécifié pour la relation entre les données spatiales et les données analytiques. Par exemple, pour une carte à bulles affichant les villes et la taille de la population d'un pays ou d'une région, les champs de correspondance incluent le nom de ville [Ville] et le nom de région [Région] parce que plusieurs villes peuvent avoir le même nom. L'expression de groupe correspondante inclut deux champs : [Ville] et [Région].  
@@ -133,7 +133,7 @@ ms.locfileid: "66106095"
   
  
   
-##  <a name="MapElements"></a> Modifier les options des éléments cartographiques sur la couche  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Modifier les options des éléments cartographiques sur la couche  
  Les éléments cartographiques sont les points, lignes ou polygones d'une couche basés sur les données spatiales. Pour les éléments cartographiques, les options suivantes peuvent être définies. Ces options s'appliquent à tous les éléments cartographiques de la couche, qu'ils soient incorporés ou non :  
   
 -   étiquettes, visibilité des étiquettes, décalage des étiquettes et mise en forme ;  
@@ -150,7 +150,7 @@ ms.locfileid: "66106095"
   
 
   
-##  <a name="Precedence"></a> Ordre de priorité des options d'affichage  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> Ordre de priorité des options d'affichage  
  Pour contrôler l'apparence de l'affichage d'un point, d'une ligne ou d'un polygone sur une couche, vous devez savoir où les options d'affichage peuvent être définies et quelles options ont une priorité plus élevée. Les options d'affichage suivantes sont répertoriées dans l'ordre de priorité de la plus basse à la plus élevée. Les options d'affichage répertoriées plus haut remplacent les options d'affichage plus bas dans cette liste :  
   
 -   Options relatives aux couches.  

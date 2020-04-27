@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108430"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
@@ -22,13 +22,13 @@ ms.locfileid: "66108430"
   
  Dans cette rubrique :  
   
--   [Mettre en forme la date](#bkmk_format_date)  
+-   [Mise en forme de la date](#bkmk_format_date)  
   
 -   [Mettre en forme la devise](#bkmk_format_currency)  
   
--   [Modifier le style de texte et les largeurs de colonne](#bkmk_change_textstyle)  
+-   [Modification du style du texte et de la largeur des colonnes](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>Mettre en forme la date  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>Mettre en forme la date  
  Le champ Date affiche les informations de date et d'heure par défaut. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
   
 #### <a name="to-format-a-date-field"></a>Pour appliquer un format de date  
@@ -45,7 +45,7 @@ ms.locfileid: "66108430"
   
 6.  Affichez un aperçu du rapport pour voir la modification apportée au champ `[Date]` , puis repassez en mode Conception.  
   
-##  <a name="bkmk_format_currency"></a>Mettre en forme la devise  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Mettre en forme la devise  
  Le champ LineTotal affiche un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire.  
   
 #### <a name="to-format-a-currency-field"></a>Pour mettre en forme un champ monétaire  
@@ -56,11 +56,11 @@ ms.locfileid: "66108430"
   
 3.  Si votre paramètre régional est Anglais (États-Unis), les valeurs par défaut doivent être :  
   
-    -   **Nombre de décimales : 2**  
+    -   **Nombre de décimales : 2**  
   
-    -   **Nombres négatifs : ($12345,00)**  
+    -   **Nombres négatifs : ($12345.00)**  
   
-    -   **Symbole : $ English (États-Unis)**  
+    -   **Symbole : $ Anglais (États-Unis)**  
   
 4.  Sélectionnez **Utiliser le séparateur de milliers (,)**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108430"
   
 6.  Affichez un aperçu du rapport pour voir la modification apportée au champ `[LineTotal]` , puis repassez en mode Conception.  
   
-##  <a name="bkmk_change_textstyle"></a>Modifier le style de texte et les largeurs de colonne  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Modifier le style de texte et les largeurs de colonne  
  Vous pouvez également modifier la mise en forme de la ligne d'en-tête afin de la différencier des lignes de données du rapport. Enfin, vous pouvez ajuster les largeurs de colonnes.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Pour mettre en forme les lignes d'en-tête et les colonnes de la table  

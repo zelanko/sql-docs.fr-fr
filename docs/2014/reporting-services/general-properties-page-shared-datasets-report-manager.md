@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109064"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Page Propriétés générales, Datasets partagés (Gestionnaire de rapports)
@@ -48,7 +48,7 @@ ms.locfileid: "66109064"
  **Délai de requête**  
  Tapez le nombre de secondes avant l’expiration de la requête. Si la valeur est égale à 0, la requête n’expire pas.  
   
- **Appliquer**  
+ **appliquer**  
  Enregistrez vos modifications.  
   
  **Supprimer**  
@@ -57,10 +57,10 @@ ms.locfileid: "66109064"
  **Déplacer**  
  Permet de déplacer un dataset partagé dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [page déplacer des éléments &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Downloader**  
+ **Télécharger**  
  Permet d'extraire une copie de la définition du dataset partagé. Selon les associations de fichiers définies sur votre ordinateur, le fichier s'ouvre dans Visual Studio ou une autre application. Dans la plupart des cas, le dataset partagé s'ouvre dans un fichier XML.  
   
- **Lieu**  
+ **Replace**  
  Permet de remplacer la définition du dataset partagé par une définition différente d'un fichier .rds situé dans le système de fichiers.  
   
 ## <a name="see-also"></a>Voir aussi  

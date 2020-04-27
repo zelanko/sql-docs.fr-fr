@@ -16,18 +16,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7cc94e2945ac50537bd3ee42241909b5dc9c2cef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107129"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Récupérer des données d'un modèle d'exploration de données (DMX) (SSRS)
-  Pour utiliser les données d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] un modèle d’exploration de données dans votre rapport, vous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] devez définir une source de données et un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  
+  Pour utiliser les données d’un modèle d’exploration de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez définir une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ainsi qu’un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  
   
  Vous pouvez créer une définition de source de données incorporée à utiliser par un seul rapport ou une définition de source de données partagée utilisable par plusieurs rapports. Les procédures de cette rubrique décrivent la création d'une source de données incorporée. Pour plus d’informations sur les sources de données partagées, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) et [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Après avoir créé une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] source de données, vous pouvez créer un ou plusieurs datasets. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
+ Après avoir créé une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vous pouvez créer un ou plusieurs datasets. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   
  Le nom du dataset créé apparaît dans le volet des données de rapport sous la forme d'un nœud sous la source de données correspondante.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66107129"
   
 ### <a name="to-create-an-embedded-microsoft-sql-server-analysis-services-data-source"></a>Pour créer une source de données Microsoft SQL Server Analysis Services incorporée  
   
-1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **nouveau**, puis sur **source de données**.  
+1.  Dans la barre d'outils du volet Données du rapport, cliquez sur **Nouveau**, puis sur **Source de données**.  
   
 2.  Dans la boîte de dialogue **Propriétés de la source de données** , tapez un nom dans la zone de texte **Nom** ou acceptez le nom par défaut.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66107129"
   
 6.  Cliquez sur **Informations d'identification**.  
   
-     Définissez les informations d'identification à utiliser pour se connecter à la source de données. Pour plus d’informations, consultez [spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md).  
+     Définissez les informations d'identification à utiliser pour se connecter à la source de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md).  
   
     > [!NOTE]  
     >  Pour tester la connexion à la source de données, cliquez sur **Modifier**. Dans la boîte de dialogue **Propriétés de connexion** , cliquez sur **Tester la connexion**. Si le test a réussi, le message « Le test de la connexion a réussi. » s’affiche. Si le test échoue, un message d'avertissement apparaît avec d'autres informations sur la cause de l'échec.  
@@ -64,13 +64,13 @@ ms.locfileid: "66107129"
   
 ### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Pour créer un dataset pour Microsoft SQL Server Analysis Services  
   
-1.  Dans le volet **Données du rapport** , cliquez avec le bouton droit sur le nom de la source de données qui se connecte à une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , puis cliquez sur **Ajouter un dataset**.  
+1.  Dans le volet **Données du rapport** , cliquez avec le bouton droit sur le nom de la source de données qui se connecte à une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], puis cliquez sur **Ajouter un dataset**.  
   
 2.  Dans la boîte de dialogue **Propriétés du dataset** , tapez un nom dans la zone de texte **Nom** .  
   
 3.  Dans la zone **Source de données**, vérifiez que le nom est celui d’une source de données qui se connecte à une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
-4.  Cliquez sur **Concepteur de requêtes** pour ouvrir le concepteur de requêtes graphique afin de créer une requête de manière interactive. Si le concepteur de requêtes s’ouvre en mode MDX, cliquez sur **type de commande DMX** (![basculer vers la vue langage de requête DMX](../media/rsqdicon-commandtypedmx.gif "Basculer vers l'affichage de langage de requête DMX")) dans la barre d’outils pour basculer vers le concepteur de requêtes d’exploration de données. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
+4.  Cliquez sur **Concepteur de requêtes** pour ouvrir le concepteur de requêtes graphique afin de créer une requête de manière interactive. Si le concepteur de requêtes s’ouvre en mode MDX, cliquez sur **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../media/rsqdicon-commandtypedmx.gif "Basculer vers l'affichage de langage de requête DMX")) dans la barre d’outils pour basculer vers le concepteur de requêtes d’exploration de données. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   
      Vous pouvez également importer une requête DMX existante à partir d’un autre rapport. Pour ce faire, cliquez sur **Importer**, puis naviguez jusqu’au fichier .rdl contenant la requête DMX. L'importation d'une requête à partir d'un fichier .dmx n'est pas prise en charge.  
   

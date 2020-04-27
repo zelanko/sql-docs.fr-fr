@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108690"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Stocker des données chiffrées du serveur de rapports (Gestionnaire de configuration de SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  
   
 ## <a name="encrypted-values"></a>Valeurs chiffrées  
@@ -33,7 +32,7 @@ ms.locfileid: "66108690"
   
 -   Informations de connexion et informations d'identification utilisées par un serveur de rapports pour la connexion à une base de données de serveur de rapports qui stocke des données de serveur internes.  
   
-     Ces valeurs sont spécifiées et chiffrées au cours de l'installation ou de la configuration du serveur de rapports. Vous pouvez mettre à jour les informations de connexion à tout moment par le biais de l’outil de configuration de Reporting Services ou de l’utilitaire **rsconfig** . Le chiffrement des paramètres de configuration s'effectue à l'aide de la clé au niveau machine de l'ordinateur local qui est disponible pour tous les utilisateurs. Les informations chiffrées de connexion au serveur de rapports sont stockées dans le fichier rsreportserver.config (aucun autre fichier de configuration ne possède de paramètres chiffrés). Pour plus d’informations, consultez [configurer une connexion à la base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+     Ces valeurs sont spécifiées et chiffrées au cours de l'installation ou de la configuration du serveur de rapports. Vous pouvez mettre à jour les informations de connexion à tout moment par le biais de l’outil de configuration de Reporting Services ou de l’utilitaire **rsconfig** . Le chiffrement des paramètres de configuration s'effectue à l'aide de la clé au niveau machine de l'ordinateur local qui est disponible pour tous les utilisateurs. Les informations chiffrées de connexion au serveur de rapports sont stockées dans le fichier rsreportserver.config (aucun autre fichier de configuration ne possède de paramètres chiffrés). Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Informations d'identification stockées, utilisées par un serveur de rapports pour se connecter à des sources de données externes qui fournissent des données à un rapport.  
   
@@ -50,8 +49,7 @@ ms.locfileid: "66108690"
      Cette valeur est créée pendant l'installation ou la configuration du serveur, elle est ensuite stockée sous forme de valeur chiffrée dans la base de données du serveur de rapports. Le service Windows Report Server utilise cette clé pour chiffrer et déchiffrer des données stockées dans la base de données du serveur de rapports.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Fonctionnalité de chiffrement dans Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des fonctions de chiffrement qui font partie du système d'exploitation Windows. Des chiffrements symétriques et asymétriques sont utilisés.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des fonctions de chiffrement qui font partie du système d'exploitation Windows. Des chiffrements symétriques et asymétriques sont utilisés.  
   
  Les données de la base de données du serveur de rapports sont chiffrées à l'aide d'une clé symétrique. Il existe une clé symétrique pour chaque base de données de serveur de rapports. Cette clé symétrique est elle-même chiffrée à l'aide de la clé publique d'une paire de clés asymétriques générée par Windows. La clé privée est détenue par le compte du service Report Server Windows.  
   
@@ -64,8 +62,7 @@ ms.locfileid: "66108690"
  Un serveur de rapports stocke d'autres données non chiffrées, mais qui contiennent des informations sensibles que vous voulez protéger. Plus particulièrement, les instantanés d'historique de rapport et d'exécution de rapport contiennent des résultats de requêtes pouvant inclure des données destinées exclusivement à des utilisateurs autorisés. Si vous utilisez la fonction d'instantané pour des rapports qui contiennent des données confidentielles, sachez que les utilisateurs capables d'ouvrir des tables dans une base de données du serveur de rapports peuvent être en mesure d'afficher des parties d'un rapport stocké en inspectant le contenu de la table.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge la mise en cache ou l’historique de rapport pour les rapports basés sur l’identité de sécurité de l’utilisateur.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge la mise en cache ou l’historique de rapport pour les rapports basés sur l’identité de sécurité de l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105788"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66105788"
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Explique comment mettre en forme le texte et personnaliser les options de mise en forme pour différents blocs de texte dans une zone de texte.  
   
- [Importation de code HTML dans un rapport &#40;Générateur de rapports et SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importation de données HTML dans un rapport &#40;Générateur de rapports et SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Explique comment insérer et utiliser du contenu HTML dans un rapport.  
   
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66105788"
  [Mise en forme des lignes, des couleurs et des images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md)  
  Décrit comment mettre en forme des lignes, quadrillages, couleurs et images dans les éléments de rapport et régions de données.  
   
- [Définissez les paramètres régionaux d’un rapport ou d’une zone de texte &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Définir les paramètres régionaux d’un rapport ou d’une zone de texte &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Explique comment modifier le paramètre pour les formats d'affichage de données qui diffèrent par langue et zone, telle que la date, la devise et les valeurs du nombre.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109144"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Boîte de dialogue Expression (Générateur de rapports)
@@ -40,13 +40,13 @@ ms.locfileid: "66109144"
  **Champs prédéfinis**  
  Donne la liste des éléments de la collection globale que vous pouvez utiliser dans une expression. Certaines collections ne sont prises en charge qu'après la publication du rapport sur le serveur. Pour plus d’informations, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Paramètres**  
+ **Parameters**  
  Fournit la liste des paramètres de rapport.  
   
  **Champs (jeu de** _ \<données>sélectionné_ **)**  
  Affiche la liste des champs du dataset sélectionné dans la catégorie Datasets. Double-cliquez sur un champ pour le copier dans la zone **Expression** .  
   
- **Groupes de données**  
+ **Jeux de données**  
  Donne la liste des datasets disponibles et affiche les champs membres du dataset.  
   
  **Variables**  
@@ -55,7 +55,7 @@ ms.locfileid: "66109144"
  **Opérateurs**  
  Affiche les opérateurs que vous pouvez inclure dans un calcul ou une manipulation de chaîne. Pour plus d’informations, consultez [Opérateurs dans les expressions &#40;Générateur de rapports et SSRS&#41;](report-design/operators-in-expressions-report-builder-and-ssrs.md).  
   
- **Fonctions courantes**  
+ **Fonctions communes**  
  Affiche des fonctions communes, regroupées par type. Lorsque vous sélectionnez une fonction dans le volet Élément, une description et un exemple s'affichent.  
   
  Les fonctions communes incluent les fonctions de rapport et d'agrégation intégrées, les fonctions de la bibliothèque d'exécutables [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] et les classes Common Language Runtime (CLR) [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] de l'espace de noms <xref:System.Math> et <xref:System.Convert>. Vous pouvez également ajouter des références à des classes CLR et à des assemblys externes qui n'apparaissent pas dans la liste des catégories. Pour plus d’informations, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "66109144"
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Références à la collection Parameters&#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [La collection Parameters fait référence &#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [La collection de champs de DataSet fait référence &#40;Générateur de rapports et SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   

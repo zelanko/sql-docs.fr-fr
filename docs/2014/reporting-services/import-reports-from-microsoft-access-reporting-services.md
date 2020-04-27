@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108930"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Importer des rapports depuis Microsoft Access (Reporting Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66108930"
  Lorsque vous utilisez la fonctionnalité d'importation, tous les états contenus dans le fichier de base de données ou de projet sont importés. Si votre fichier Access contient plusieurs états, vous pouvez créer un projet de rapport séparé dans lequel importer les états, puis ouvrir les fichiers RDL individuels dans votre projet de rapport principal. Vous pouvez modifier les états après les avoir importés dans le Concepteur de rapports.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend pas en charge tous les objets de rapport Access. Les éléments qui ne sont pas convertis sont affichés dans la fenêtre **liste des tâches** . Pour plus d’informations, consultez [fonctionnalités de rapport d’accès prises en charge &#40;&#41;SSRS ](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend pas en charge tous les objets de rapport Access. Les éléments qui ne sont pas convertis sont affichés dans la fenêtre **liste des tâches** . Pour plus d’informations, consultez [fonctionnalités de rapport d’accès prises en charge &#40;&#41;SSRS ](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>Pour importer des rapports à partir de Microsoft Access  
   

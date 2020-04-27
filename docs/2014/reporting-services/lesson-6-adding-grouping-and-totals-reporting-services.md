@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services) | Microsoft Docs'
+title: 'Leçon 6 : Ajouter un regroupement et des totaux (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108413"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : Ajout d'un regroupement et de totaux (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  
   
  Pour plus d’informations sur l’ajout de totaux cumulés à des rapports, voir : [Ajout de totaux à des rapports Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
@@ -34,25 +34,25 @@ ms.locfileid: "66108413"
   
 -   [Pour publier le rapport sur le serveur de rapports (facultatif)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>Pour regrouper des données dans un rapport  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>Pour regrouper des données dans un rapport  
   
 1.  Cliquez sur l'onglet **Conception** .  
   
-2.  Si vous ne voyez pas le volet **groupes de lignes** , cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Afficher** , puis sur **regroupement**.  
+2.  Si vous ne voyez pas le volet **Groupes de lignes** , cliquez avec le bouton droit sur l'aire de conception, puis sélectionnez **Vue** et cliquez sur **Regroupement**.  
   
-3.  Faites glisser le champ ** du volet **Données du rapport`Date` vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)**.  
+3.  Faites glisser le champ `Date` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant un crochet, qui indique un groupe. En outre, le tableau présente désormais deux colonnes Date, placées de part et d'autre d'une ligne verticale en pointillé.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Faites glisser le champ ** du volet **Données du rapport`Order` vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
+4.  Faites glisser le champ `Order` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant deux crochets, qui indiquent deux groupes. La table comporte désormais deux `Order` colonnes.  
   
 5.  Supprimez les colonnes Date et Order d’origine, à **droite** du double trait. Cette opération supprime les différentes valeurs d'enregistrement afin que seule la valeur de groupe soit affichée. Sélectionnez les descripteurs des deux colonnes, cliquez avec le bouton droit, puis cliquez sur **Supprimer les colonnes**.  
   
-     ![Sélectionnez les colonnes à supprimer](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Sélectionnez les colonnes à supprimer")  
+     ![Sélectionner les colonnes à supprimer](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Sélectionner les colonnes à supprimer")  
   
      Vous pouvez de nouveau mettre en forme la date et les en-têtes de colonne.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108413"
   
      ![Table regroupée par date, puis par commande](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Table regroupée par date, puis par commande")  
   
-##  <a name="bkmk_addtotals"></a>Pour ajouter des totaux à un rapport  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>Pour ajouter des totaux à un rapport  
   
 1.  Basculez en mode Conception.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108413"
   
      ![Mode Conception : table de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Mode Conception : table de base avec total des commandes")  
   
-##  <a name="bkmk_adddailytotal"></a>Pour ajouter un total quotidien à un rapport  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>Pour ajouter un total quotidien à un rapport  
   
 1.  Cliquez avec le bouton droit dans la cellule Order , pointez sur **Ajouter un total**, puis cliquez sur **Après**.  
   
      Cela ajoute une nouvelle ligne contenant les sommes des quantités et des montants en dollars pour chaque jour, et l’étiquette «**total**» dans la colonne Order.  
   
-2.  Tapez le mot **quotidiennement** avant le mot **total** dans la même cellule, afin qu’il Lise le **total quotidien**.  
+2.  Tapez le mot **quotidien** après le mot **Total** dans la même cellule. Vous obtenez : **Total quotidien**.  
   
 3.  Sélectionnez la cellule **Total quotidien** , les deux cellules de **somme** et la cellule vide qui les sépare.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66108413"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>Pour ajouter un total général à un rapport  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>Pour ajouter un total général à un rapport  
   
 1.  Cliquez avec le bouton droit dans la cellule Date, pointez sur **Ajouter un total**, puis cliquez sur **Après**.  
   
-     Cette opération ajoute une nouvelle ligne contenant la somme des quantités et des montants en dollars pour l’intégralité du **** rapport, ainsi que `Date` l’étiquette totale de la colonne.  
+     Cette opération ajoute une nouvelle ligne contenant la somme des quantités et des montants en dollars pour l’intégralité du **Total** rapport, ainsi que `Date` l’étiquette totale de la colonne.  
   
 2.  Tapez le mot **général** après le mot **Total** dans la même cellule. Vous obtenez : **Total général**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66108413"
   
      ![Aperçu : table de base avec total général](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : table de base avec total général")  
   
-##  <a name="bkmk_publishreport"></a>Pour publier le rapport sur le serveur de rapports (facultatif)  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>Pour publier le rapport sur le serveur de rapports (facultatif)  
   
 1.  Une étape facultative consiste à publier le rapport terminé sur le serveur de rapports en mode natif afin de pouvoir consulter le rapport à partir du Gestionnaire de rapports.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66108413"
   
 3.  Dans **TargetServerURL** , tapez le nom du serveur de rapports, par exemple **http://\<ServerName>/ReportServer** .  
   
-4.  Cliquez sur **OK** .  
+4.  Cliquez sur **OK**  
   
 5.  Dans la barre d'outils, cliquez sur **Générer** , puis sur **Déployer le didacticiel**.  
   

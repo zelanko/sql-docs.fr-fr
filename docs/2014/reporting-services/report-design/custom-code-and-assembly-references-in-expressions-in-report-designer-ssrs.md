@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df09ab032929de0eca51c9640f5c5cb23d1cde21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106109"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "66106109"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RB3"></a>Utilisation de code personnalisé dans Générateur de rapports  
+##  <a name="working-with-custom-code-in-report-builder"></a><a name="RB3"></a>Utilisation de code personnalisé dans Générateur de rapports  
  Dans le Générateur de rapports, vous pouvez ouvrir un rapport d'un serveur de rapports qui inclut des références aux assemblys personnalisés. Par exemple, vous pouvez modifier les rapports qui sont créés et déployés à l'aide du Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les assemblys personnalisés doivent être déployés sur le serveur de rapports.  
   
  Vous ne pouvez pas effectuer les opérations suivantes :  
@@ -49,22 +49,22 @@ ms.locfileid: "66106109"
   
 2.  Afficher l'aperçu d'un rapport avec des références aux assemblys personnalisés en mode local.  
   
-##  <a name="Common"></a>Inclusion de références aux fonctions couramment utilisées  
+##  <a name="including-references-to-commonly-used-functions"></a><a name="Common"></a>Inclusion de références aux fonctions couramment utilisées  
  Utilisez la boîte de dialogue **Expression** pour consulter une liste classée par catégorie de fonctions courantes intégrées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Lorsque vous développez **Fonctions communes** et cliquez sur une catégorie, le volet **Élément** affiche la liste des fonctions que vous incluez dans une expression. Les fonctions courantes incluent des classes des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> espaces <xref:System.Convert> de noms et [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et des fonctions de la bibliothèque Runtime. Pour plus de commodité, vous pouvez consulter les fonctions le plus communément utilisées dans la boîte de dialogue **Expression** , où elles sont répertoriées par catégorie : Texte, Date et heure, Math, Inspection, Flux de programme, Agrégat, Financier, Conversion et Divers. Les fonctions moins souvent utilisées n'apparaissent pas dans la liste, mais peuvent cependant être utilisées dans une expression.  
   
- Pour utiliser une fonction intégrée, double-cliquez sur son nom dans le volet Élément. Une description de la fonction s'affiche dans le volet Description et un exemple de l'appel de la fonction apparaît dans le volet d'exemple. Dans le volet du code, quand vous tapez le nom de la fonction suivi d’une parenthèse ouvrante **(**, l’aide d’IntelliSense affiche chaque syntaxe valide pour l’appel de la fonction. Par exemple, pour calculer la valeur maximale pour un champ nommé `Quantity` dans une table, ajoutez l'expression simple `=Max(` au volet du code, puis utilisez les balises actives pour consulter toutes les syntaxes valides possibles pour l'appel de la fonction. Pour compléter cet exemple, tapez `=Max(Fields!Quantity.Value)`.  
+ Pour utiliser une fonction intégrée, double-cliquez sur son nom dans le volet Élément. Une description de la fonction s'affiche dans le volet Description et un exemple de l'appel de la fonction apparaît dans le volet d'exemple. Dans le volet de code, lorsque vous tapez le nom de la fonction suivi d’une parenthèse ouvrante **(**, l’aide d’IntelliSense affiche chaque syntaxe valide pour l’appel de fonction. Par exemple, pour calculer la valeur maximale pour un champ nommé `Quantity` dans une table, ajoutez l'expression simple `=Max(` au volet du code, puis utilisez les balises actives pour consulter toutes les syntaxes valides possibles pour l'appel de la fonction. Pour compléter cet exemple, tapez `=Max(Fields!Quantity.Value)`.  
   
  Pour plus d’informations sur chaque fonction, consultez <xref:System.Math>, <xref:System.Convert>et [Membres de la bibliothèque runtime Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
-##  <a name="NotCommon"></a>Inclusion de références à des fonctions moins couramment utilisées  
+##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a>Inclusion de références à des fonctions moins couramment utilisées  
  Pour inclure une référence à d’autres espaces de noms CLR moins couramment utilisés, vous devez utiliser une référence complète, par exemple <xref:System.Text.StringBuilder>. IntelliSense n'est pas pris en charge dans le volet du code de la boîte de dialogue **Expression** pour ces fonctions moins couramment utilisées.  
   
  Pour plus d'informations, consultez [Membres de la bibliothèque runtime Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
-##  <a name="External"></a>Inclusion de références à des assemblys externes  
+##  <a name="including-references-to-external-assemblies"></a><a name="External"></a>Inclusion de références à des assemblys externes  
  Pour inclure une référence à une classe dans un assembly externe, vous devez identifier l'assembly pour le processeur de rapports. Utilisez la page **Références** de la boîte de dialogue **Propriétés du rapport** pour spécifier le nom complet de l'assembly à ajouter au rapport. Dans votre expression, vous devez utiliser le nom complet de la classe dans l'assembly. Les classes dans un assembly externe n'apparaissent pas dans la boîte de dialogue **Expression** ; vous devez fournir le nom correct de la classe. Un nom complet comprend l'espace de noms, le nom de la classe et le nom du membre.  
   
-##  <a name="Embedded"></a>Inclure du code incorporé  
+##  <a name="including-embedded-code"></a><a name="Embedded"></a>Inclure du code incorporé  
  Pour ajouter du code incorporé à un rapport, utilisez l'onglet Code de la boîte de dialogue **Propriétés du rapport** . Le bloc de code que vous créez peut contenir plusieurs méthodes. Les méthodes du code incorporé doivent être [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] écrites dans et doivent être basées sur une instance. Le processeur de rapports ajoute automatiquement des références pour les espaces de noms System.Convert et System.Math. Utilisez la page **Références** de la boîte de dialogue **Propriétés du rapport** pour ajouter des références d'assembly supplémentaires. Pour plus d’informations, consultez [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
  Les méthodes du code incorporé sont disponibles par l'intermédiaire d'un membre `Code` globalement défini. Pour y accéder, vous devez faire référence au membre `Code` et au nom de la méthode. L'exemple ci-dessous appelle la méthode `ToUSD`, qui convertit la valeur du champ `StandardCost` en une valeur exprimée en dollars :  
@@ -116,7 +116,7 @@ End Function
   
  Pour plus d’informations sur les collections d’objets intégrées et leur initialisation, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) et [Initialisation d’objets Assembly personnalisés](../custom-assemblies/initializing-custom-assembly-objects.md).  
   
-##  <a name="Parameters"></a>Inclusion de références à des paramètres à partir du code  
+##  <a name="including-references-to-parameters-from-code"></a><a name="Parameters"></a>Inclusion de références à des paramètres à partir du code  
  Vous pouvez référencer la collection globale de paramètres via du code personnalisé dans un bloc de code de la définition de rapport ou dans un assembly personnalisé que vous fournissez. La collection de paramètres est en lecture seule et ne possède aucun itérateur public. Vous ne pouvez pas [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` utiliser une construction pour parcourir la collection. Vous devez connaître le nom du paramètre défini dans la définition de rapport pour pouvoir ensuite le référencer dans votre code. Cependant, vous pouvez effectuer une itération dans toutes les valeurs d'un paramètre à valeurs multiples.  
   
  Le tableau suivant présente des exemples du référencement de la collection `Parameters` intégrée à partir du code personnalisé :  
@@ -126,7 +126,7 @@ End Function
 |Transmission de l'intégralité de la collection globale de paramètres au code personnalisé.<br /><br /> Cette fonction retourne la valeur d'un paramètre de rapport spécifique *MyParameter*.|`=Code.DisplayAParameterValue(Parameters)`|`Public Function DisplayAParameterValue(`<br /><br /> `ByVal parameters as Parameters) as Object`<br /><br /> `Return parameters("MyParameter").Value`<br /><br /> `End Function`|  
 |Transmission d'un seul paramètre au code personnalisé.<br /><br /> Cet exemple retourne la valeur du paramètre transmis. Si le paramètre est un paramètre à valeurs multiples, la chaîne de retour est une concaténation de toutes les valeurs.|`=Code.ShowParametersValues(Parameters!DayOfTheWeek)`|`Public Function ShowParameterValues(ByVal parameter as Parameter)` <br />  `as String` <br /> `Dim s as String`  <br />  `If parameter.IsMultiValue then` <br />  `s = "Multivalue: "`  <br /> `For i as integer = 0 to parameter.Count-1` <br />  `s = s + CStr(parameter.Value(i)) + " "`  <br />  `Next` <br /> `Else` <br /> `s = "Single value: " + CStr(parameter.Value)` <br /> `End If` <br />  `Return s` <br /> `End Function`|  
   
-##  <a name="Custom"></a>Intégration de références à du code d’assemblys personnalisés  
+##  <a name="including-references-to-code-from-custom-assemblies"></a><a name="Custom"></a>Intégration de références à du code d’assemblys personnalisés  
  Pour utiliser un assembly personnalisé dans un rapport, vous devez créer l'assembly, le rendre accessible au Concepteur de rapports, ajouter une référence à l'assembly dans le rapport et utiliser une expression dans le rapport qui fait référence aux méthodes contenues dans cet assembly. Lorsque le rapport est déployé sur le serveur de rapports, vous devez également déployer l'assembly personnalisé sur le serveur de rapports.  
   
  Pour plus d’informations sur la création d’un assembly personnalisé et sur la façon de le rendre disponible pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Utilisation d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md).  
@@ -148,14 +148,14 @@ End Function
   
  Pour plus d'informations sur l'accès à votre code, consultez [Accessing Custom Assemblies Through Expressions](../custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
-##  <a name="collections"></a>Passage de collections intégrées dans les assemblys personnalisés  
+##  <a name="passing-built-in-collections-into-custom-assemblies"></a><a name="collections"></a>Passage de collections intégrées dans les assemblys personnalisés  
  Si vous voulez transmettre des collections intégrées, telles que les collections *Globals* ou *Parameters* , dans un assembly personnalisé pour le traitement, vous devez ajouter une référence d’assembly dans votre projet de code au niveau de l’assembly qui définit les collections intégrées, et vous devez accéder à l’espace de noms correct. Selon que vous développez l'assembly personnalisé pour un rapport exécuté sur un serveur de rapports (rapport du serveur) ou un rapport exécuté localement dans une application .NET. (rapport local), l'assembly que vous devez référencer est différent. Voir les détails ci-dessous.  
   
--   **Espace de noms :** Microsoft. ReportingServices. ReportProcessing. ReportObjectModel  
+-   **Espace de noms :** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
--   **Assembly (rapport local) :** Microsoft. ReportingServices. ProcessingObjectModel. dll  
+-   **Assembly (rapport local) :** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
--   **Assembly (rapport du serveur) :** Microsoft. ReportViewer. ProcessingObjectModel. dll  
+-   **Assembly (rapport du serveur) :** Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
  Comme le contenu des collections *Fields* et *ReportItems* peut changer dynamiquement pendant l’exécution, vous ne devriez pas les conserver entre les appels à l’assembly personnalisé (par exemple, dans une variable membre). La même recommandation s'applique généralement à toutes les collections intégrées.  
   
@@ -163,7 +163,7 @@ End Function
  [Ajouter du code à un rapport &#40;&#41;SSRS](add-code-to-a-report-ssrs.md)   
  [Utilisation d’assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
- [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [Didacticiels de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

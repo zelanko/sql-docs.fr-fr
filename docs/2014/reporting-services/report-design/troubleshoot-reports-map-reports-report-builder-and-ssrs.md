@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104635"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Dépanner les rapports : Rapports cartographiques (Générateur de rapports et SSRS)
   Vous pouvez rencontrer des problèmes lorsque vous ajoutez une carte ou une couche à votre rapport, lorsque vous personnalisez une carte ou une couche existante de votre rapport, lorsque vous affichez l'aperçu d'une carte dans un rapport ou lorsque vous publiez un rapport contenant une carte. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a>Problèmes de taille de la définition de rapport  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a>Problèmes de taille de la définition de rapport  
  Utilisez cette section pour résoudre des problèmes liés à la taille de la définition de rapport.  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>Comment puis-je réduire la taille de la définition de rapport ?  
@@ -49,7 +49,7 @@ ms.locfileid: "66104635"
   
   
   
-##  <a name="Spatial"></a>Problèmes de données spatiales  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a>Problèmes de données spatiales  
  Utilisez cette section pour résoudre des problèmes liés aux données spatiales.  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Des exemples de données spatiales sont affichés sur l'aire de conception.  
@@ -102,7 +102,7 @@ ms.locfileid: "66104635"
   
   
   
-##  <a name="Viewport"></a>Centre de la fenêtre d’affichage et problèmes d’affichage  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>Centre de la fenêtre d’affichage et problèmes d’affichage  
  Utilisez cette section pour résoudre des problèmes liés aux options de la fenêtre d'affichage.  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Je ne peux pas définir le centre et la vue sur un élément cartographique incorporé.  
@@ -126,7 +126,7 @@ ms.locfileid: "66104635"
   
   
   
-##  <a name="Layers"></a>Problèmes de couche  
+##  <a name="layer-issues"></a><a name="Layers"></a>Problèmes de couche  
  Utilisez cette section pour résoudre des problèmes liés aux options de couches.  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Je ne vois pas une ou plusieurs couches dans ma carte.  
@@ -134,7 +134,7 @@ ms.locfileid: "66104635"
   
 -   **Type de couche et type de données spatiales.** Le type de couche affiche uniquement les données spatiales qui correspondent à ce type. Par exemple, si le type de couche est Point mais que les données spatiales sont de type Ligne, aucunes données ne s'afficheront.  
   
--   **Correspondance des valeurs de champ.** Les valeurs des champs que vous spécifiez pour mettre en relation des données analytiques et des données spatiales doivent identifier chaque élément cartographique de façon unique. Les champs doivent avoir le même type de données. Les valeurs des champs doivent être identiques. Pour plus d'informations, consultez [Problèmes liés à la légende, à l'échelle de couleurs et à l'échelle des distances](#Legend).  
+-   **Valeurs des champs de correspondance.** Les valeurs des champs que vous spécifiez pour mettre en relation des données analytiques et des données spatiales doivent identifier chaque élément cartographique de façon unique. Les champs doivent avoir le même type de données. Les valeurs des champs doivent être identiques. Pour plus d'informations, consultez [Problèmes liés à la légende, à l'échelle de couleurs et à l'échelle des distances](#Legend).  
   
 -   **Ordre des couches.** L'ordre des couches dans le volet Carte correspond à l'ordre dans lequel les couches sont dessinées dans le convertisseur de rapport. Les données spatiales des couches dessinées en premier peuvent être remplacées par celles de couches dessinées ultérieurement. Les couches figurant en haut de la liste sont dessinées en premier. Lorsque vous changez l'ordre des couches dans la liste, vous modifiez l'ordre de dessin des couches.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66104635"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>J'ai défini un filtre sur la couche et il n'a aucun effet.  
  Pour filtrer des données d'une couche, le type de données de l'expression de filtre doit être spécifié. Vérifiez que vous avez spécifié le type de données sous-jacent correct afin que l'équation de filtre évalue correctement la condition spécifiée. Pour plus d’informations, consultez [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a>Problèmes de légende, d’échelle de couleurs et de règle  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a>Problèmes de légende, d’échelle de couleurs et de règle  
  Utilisez cette section pour résoudre des problèmes liés aux règles et aux options de légende et d'échelle de couleurs.  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>Comment puis-je contrôler les valeurs de la légende de carte ?  
@@ -172,8 +172,7 @@ ms.locfileid: "66104635"
 -   Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>Qu'est-ce que la valeur NaN sur l'échelle de couleurs ?  
- 
-  `NaN` signifie Non numérique (Not a Number). Les valeurs d'échelles de couleurs sont supposées être numériques. Vérifiez les paramètres de distribution et la valeur du texte de légende pour les règles associées à l'échelle de couleurs. Si vous avez créé des plages de distribution personnalisées, vérifiez que vous avez spécifié la limite inférieure sur la première plage et la limite supérieure sur la dernière plage.  
+ `NaN` signifie Non numérique (Not a Number). Les valeurs d'échelles de couleurs sont supposées être numériques. Vérifiez les paramètres de distribution et la valeur du texte de légende pour les règles associées à l'échelle de couleurs. Si vous avez créé des plages de distribution personnalisées, vérifiez que vous avez spécifié la limite inférieure sur la première plage et la limite supérieure sur la dernière plage.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Mon échelle de couleurs ne s'affiche pas lorsque j'exécute le rapport.  
  L'échelle de couleurs affiche des informations à l'intention de l'utilisateur lorsqu'une couche spécifie des règles de couleur pour les polygones, les lignes ou les points de l'ensemble de la couche ou pour les éléments cartographiques incorporés. Si aucun élément cartographique ne spécifie une règle de couleur, ou si les règles de couleur sont spécifiées à l'aide d'une légende plutôt que de l'échelle de couleurs, l'échelle de couleurs ne s'affiche pas dans le rapport rendu.  
@@ -182,7 +181,7 @@ ms.locfileid: "66104635"
   
   
   
-##  <a name="Tile"></a>Problèmes de vignette  
+##  <a name="tile-issues"></a><a name="Tile"></a>Problèmes de vignette  
  Utilisez cette section pour résoudre des problèmes liés aux options d'arrière-plan de mosaïques.  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>Je ne peux pas voir l'arrière-plan de mosaïques Bing.  
@@ -205,7 +204,7 @@ ms.locfileid: "66104635"
   
   
   
-##  <a name="Tooltip"></a>Problèmes d’info-bulle et d’étiquette  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a>Problèmes d’info-bulle et d’étiquette  
  Utilisez cette section pour résoudre des problèmes liés aux options d'étiquettes ou d'info-bulles.  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>J'obtiens une erreur d'expression concernant l'étendue du dataset lorsque je définis une étiquette ou une info-bulle sur une expression.  

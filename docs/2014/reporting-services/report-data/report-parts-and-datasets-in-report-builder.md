@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107170"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parties de rapports et datasets dans le Générateur de rapports
@@ -28,7 +28,7 @@ ms.locfileid: "66107170"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> Ajout d'une partie de rapport avec les datasets dépendants à votre rapport  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a>Ajout d’une partie de rapport avec des datasets dépendants à votre rapport  
  Lorsque vous ajoutez une partie de rapport à votre rapport, les datasets dépendants qu'elle contient sont également ajoutés à votre rapport. Étant donné qu'une partie de rapport peut inclure un rectangle qui contient de nombreux autres éléments de rapport, elle peut ajouter plusieurs datasets dépendants à votre rapport. Chaque dataset partagé est une référence indépendante ; la source de données partagée de laquelle il dépend n'est pas ajoutée à votre rapport. Chaque dataset incorporé ajoute également la source de données incorporée ou partagée de laquelle il dépend.  
   
  Les informations d'identification pour une source de données incorporée ne sont pas enregistrées dans le cadre de la partie de rapport. Si une source de données incorporée est ajoutée à votre rapport, vous êtes invité à entrer des informations d'identification lorsque vous exécutez le rapport. Pour éviter d'être invité à entrer des informations d'identification, utilisez les parties de rapport basées sur les sources de données partagées avec des informations d'identification stockées.  
@@ -36,7 +36,7 @@ ms.locfileid: "66107170"
  Une fois que vous avez ajouté une partie de rapport à votre rapport, les datasets ajoutés ne sont pas différents des datasets incorporés ou partagés que vous créez. Vous pouvez consulter les datasets supplémentaires dans le volet des données de rapport. Les datasets incorporés s'affichent sous la source de données partagée correspondante et les datasets partagés s'affichent sous le dossier Datasets partagés.  
   
   
-##  <a name="Customizing"></a> Personnalisation des datasets dépendants  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a>Personnalisation des datasets dépendants  
  Après avoir ajouté des parties de rapport à votre rapport, vous pouvez en afficher un aperçu et décider d'apporter des modifications aux données. Les modifications possibles dépendent du type de dataset que vous utilisez.  
   
  Pour modifier les données et options de données pour un dataset incorporé, vous pouvez modifier les propriétés de dataset, notamment la requête, comme si vous aviez créé le dataset vous-même.  
@@ -46,7 +46,7 @@ ms.locfileid: "66107170"
  Pour plus d’informations sur la modification de la définition d’un dataset partagé ou sur l’affichage des dernières modifications des données d’un dataset partagé dans votre rapport, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) et [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
   
-##  <a name="Publishing"></a> Publication des datasets dépendants comme datasets partagés  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a> Publication des datasets dépendants comme datasets partagés  
  Lorsque vous publiez un élément de rapport qui a des datasets dépendants, vous avez la possibilité de publier chaque dataset comme un dataset partagé ou comme un dataset incorporé qui reste incorporé dans l'élément de rapport.  
   
  Lorsque vous sélectionnez l'option de dataset partagé, le dataset est enregistré sur le serveur de rapports en tant que définition de dataset partagé. Dans votre rapport, chaque élément de rapport qui utilise ce dataset est mis à jour pour pointer vers le dataset partagé qui est maintenant sur le serveur de rapports. Deux conséquences :  
@@ -60,9 +60,9 @@ ms.locfileid: "66107170"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue Conception de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
- [Sécurité &#40;Générateur de rapports&#41;](../report-builder/security-report-builder.md)   
- [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Mode création de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
+ [&#40;de sécurité Générateur de rapports&#41;](../report-builder/security-report-builder.md)   
+ [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

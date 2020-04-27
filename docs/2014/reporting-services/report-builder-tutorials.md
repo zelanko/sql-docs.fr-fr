@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107968"
 ---
 # <a name="tutorials-report-builder"></a>Didacticiels (Générateur de rapports)
@@ -68,8 +68,8 @@ ms.locfileid: "66107968"
  Suivez les étapes de ce didacticiel pour apprendre à utiliser des expressions pour concaténer, calculer et rechercher des valeurs de champs et les afficher dans un rapport. Vous apprendrez également à afficher de manière conditionnelle différents états d'image et d'indicateur à l'aide d'expressions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue Conception de rapport &#40;Générateur de rapports&#41;](report-builder/report-design-view-report-builder.md)   
+ [Mode création de rapport &#40;Générateur de rapports&#41;](report-builder/report-design-view-report-builder.md)   
  [Générateur de rapports SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Didacticiel : créer un rapport de graphique rapide &#40;en mode hors connexion Générateur de rapports&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Didacticiel : Créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

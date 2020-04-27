@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b90bb5624e5b5cdbf3f1542ad0bef0d2765da248
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108964"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Ajouter un serveur de rapports supplémentaire à une batterie (montée en puissance SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66108964"
 >  Le déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas pris en charge par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la section des [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!TIP]  
->  À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , vous n'utilisez pas le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour ajouter des serveurs et déployer des serveurs de rapports avec montée en puissance parallèle. Les produits SharePoint gèrent le déploiement avec montée en puissance parallèle de Reporting Services sous forme de serveurs SharePoint avec l'ajout du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la batterie de serveurs.  
+>  À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous n'utilisez pas le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour ajouter des serveurs et effectuer un scale-out des serveurs de rapports. Les produits SharePoint gèrent le déploiement avec montée en puissance parallèle de Reporting Services sous forme de serveurs SharePoint avec l'ajout du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la batterie de serveurs.  
   
  Pour plus d’informations sur le déploiement de serveurs de rapports en mode natif avec montée en puissance parallèle, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 -   [Équilibrage de charge](#bkmk_loadbalancing)  
   
--   [Prérequis](#bkmk_prerequisites)  
+-   [Conditions préalables](#bkmk_prerequisites)  
   
 -   [Étapes](#bkmk_steps)  
   
 -   [Configuration supplémentaire](#bkmk_additional)  
   
-##  <a name="bkmk_loadbalancing"></a>Équilibrage de charge  
+##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a>Équilibrage de charge  
  L'équilibrage de la charge des applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sera géré automatiquement par SharePoint à moins que votre environnement n'ait une solution d'équilibrage de charge tierce ou personnalisée. Le comportement d'équilibrage de la charge SharePoint par défaut fait que chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sera équilibrée à travers tous les serveurs d'applications sur lesquels vous avez démarré le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour vérifier si le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé et démarré, cliquez sur **Gérer les services sur le serveur** dans l'Administration centrale de SharePoint.  
   
-##  <a name="bkmk_prerequisites"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Conditions préalables  
   
 -   Vous devez être administrateur local pour exécuter le programme d'installation de SQL Server.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66108964"
   
      [Instructions d'utilisation des fonctionnalités BI de SQL Server dans une batterie de serveurs SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="bkmk_steps"></a>Étapes  
+##  <a name="steps"></a><a name="bkmk_steps"></a>Étapes  
  Les étapes de cette rubrique partent du principe qu'un administrateur de batterie de serveurs SharePoint installe et configure le serveur. Le diagramme illustre un environnement à trois niveaux classique et les éléments numérotés sont décrits dans la liste suivante :  
   
 -   (1) Plusieurs serveurs Web frontaux. Les serveurs Web frontaux ont besoin du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour SharePoint 2010.  
@@ -80,7 +80,7 @@ ms.locfileid: "66108964"
 |Installez et configurez le mode SharePoint de Reporting Services.|Exécutez l'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour plus d’informations sur l’installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] du mode SharePoint, consultez [installer Reporting Services mode sharepoint pour SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) si le serveur ne sera utilisé qu’en tant que serveur d’applications et que le serveur ne sera pas utilisé comme WFE, vous n’avez pas besoin de sélectionner **Reporting Services complément pour les produits SharePoint** sur :<br /><br /> la page **rôle d’installation** , sélectionnez **installation de fonctionnalités SQL Server**<br /><br /> la page **sélection de fonctionnalités** , sélectionnez **Reporting Services-SharePoint**<br /><br /> OU<br /><br /> la page **configuration de Reporting Services** Vérifiez que l’option **installer uniquement** est sélectionnée pour **Reporting Services mode SharePoint**.|  
 |Vérifiez que Reporting Services est opérationnel.|1) Dans l’Administration centrale de SharePoint, cliquez sur **Gérer les serveurs de cette batterie** dans le groupe **Paramètres système** .<br /><br /> 2) Vérifiez le service **SQL Server Reporting Services**.<br /><br /> Pour plus d’informations, consultez [vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
-##  <a name="bkmk_additional"></a>Configuration supplémentaire  
+##  <a name="additional-configuration"></a><a name="bkmk_additional"></a>Configuration supplémentaire  
  Vous pouvez optimiser des serveurs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] individuels dans un déploiement avec montée en puissance parallèle afin d'effectuer un traitement en arrière-plan uniquement, de sorte que ces serveurs ne soient pas en concurrence en matière d'utilisation des ressources pour l'exécution de rapports interactifs. Le traitement en arrière-plan comprend les planifications, les abonnements et les alertes de données.  
   
  Pour modifier le comportement des serveurs de rapports individuels, affectez ** \<à IsWebServiceEnable>** la valeur false dans le fichier de configuration **RSreportServer. config** .  

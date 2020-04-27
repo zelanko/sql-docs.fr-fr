@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105586"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
@@ -31,7 +31,7 @@ ms.locfileid: "66105586"
  Lorsque les parties de rapports sont publiées à partir d'une application de création de rapports telle que le Générateur de rapports, sur un serveur de rapports en mode intégré SharePoint, le catalogue du serveur de rapports est également mis à jour et les recherches à partir de la bibliothèque reflètent précisément la partie de rapport nouvelle ou mise à jour.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Téléchargement direct de parties de rapports dans un dossier SharePoint  
- Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d'informations, consultez [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité de file Sync du serveur de rapports dans l’administration centrale de SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  Les fichiers peuvent également être synchronisés en appelant certaines API d'administration Reporting Services telles que GetProperties et SetProperties.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66105586"
   
 |Propriété|Description|Partie de rapport<br /><br /> Critères de recherche de bibliothèque|  
 |--------------|-----------------|---------------------------------------------|  
-|Name|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
+|Nom|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |Description|Vous pouvez organiser les noms des parties de rapports de manière à simplifier les recherches des utilisateurs dans la bibliothèque. Par exemple, vous pouvez rechercher la description qui commence par « Ventes>> » pour trouver toutes les parties de rapports impliquant une présentation et des données associées aux ventes.|Oui|  
 |CreatedBy|ID de l'utilisateur qui a ajouté la partie de rapport à la base de données du serveur de rapports. Le format exact dépend de la méthode d'authentification. Par exemple, certaines méthodes d'authentification provoquent l'affichage complet du domaine\nom_utilisateur dans les champs CreatedBy et ModifiedBy.|Oui|  
 |CreationDate|Date à laquelle la partie de rapport a été créée à l'origine.<br /><br /> Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
@@ -70,18 +70,18 @@ ms.locfileid: "66105586"
 |Actions|Rôles|  
 |-------------|-----------|  
 |Ajouter, supprimer, modifier les propriétés de l'élément, gérer la sécurité et télécharger des parties de rapport|Gestionnaire de contenu<br /><br /> Mes rapports|  
-|Ajouter, supprimer et télécharger des parties de rapport|Serveur de publication|  
-|Rechercher et réutiliser|Browser<br /><br /> Générateur de rapports|  
+|Ajouter, supprimer et télécharger des parties de rapport|Éditeur|  
+|Rechercher et réutiliser|Navigateur<br /><br /> Générateur de rapports|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Serveur en mode intégré SharePoint  
   
-|Actions|Role|  
+|Actions|Rôle|  
 |-------------|----------|  
 |Ajouter, supprimer, modifier les propriétés de l'élément, gérer la sécurité et télécharger des parties de rapport|Contrôle total|  
-|Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Participez|  
+|Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Collaboration|  
 |Rechercher et réutiliser|Lire<br /><br /> Vue seule|  
   
-### <a name="security-considerations"></a>Considérations relatives à la sécurité  
+### <a name="security-considerations"></a>Éléments à prendre en compte en matière de sécurité  
   
 -   Quand les définitions de parties de rapport sont réutilisées dans un rapport, elles sont copiées en intégralité dans la définition de rapport, avec la propriété ComponentID d’identification. Si une partie de rapport est mise à jour sur le serveur, les utilisateurs peuvent choisir de télécharger les parties de rapports mises à jour dans leur rapport. Les mises à jour sont également des copies complètes de la partie de rapport et remplacent la version existante de la partie de rapport qui était dans le rapport.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66105586"
 -   Les parties de rapports utilisent les mêmes stratégies d’autorisation que le type d’élément « Resource » existant. Dans un dossier, il n'y a aucune différenciation entre les éléments de ressource traditionnels et les parties de rapports, du point de vue de l'héritage de la sécurité. La partie de rapport héritera de la même stratégie d'autorisation que les images qui figurent dans le même dossier. Lorsque cette distinction est nécessaire, la sécurité au niveau des éléments peut être configurée pour les parties de rapports souhaitées. Sinon, vous pouvez placer les parties de rapports dans des dossiers séparés avec les autorisations appropriées configurées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Parties de rapports et datasets dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parties de rapports et datasets dans Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Page Propriétés générales, parties de rapport &#40;Gestionnaire de rapports&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Page déplacer les éléments &#40;Gestionnaire de rapports&#41;](../move-items-page-report-manager.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105388"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectangles et lignes (Générateur de rapports et SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66105388"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RectanglesLinesReportParts"></a> Rectangles et lignes en tant que parties de rapports  
+##  <a name="rectangles-and-lines-as-report-parts"></a><a name="RectanglesLinesReportParts"></a> Rectangles et lignes en tant que parties de rapports  
  Vous pouvez publier des rectangles avec les éléments qu'ils contiennent, séparément des rapports, sous forme de parties de rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  Vous ne pouvez pas publier les éléments de rapport dans le rectangle en tant que parties de rapport. Lorsque des utilisateurs ajoutent le rectangle à un rapport, ils obtiennent le rectangle et les éléments qu'il contient.  
   
 
   
-##  <a name="RectangleAsContainer"></a> Utilisation d'un rectangle en tant que conteneur  
+##  <a name="using-a-rectangle-as-a-container"></a><a name="RectangleAsContainer"></a>Utilisation d’un rectangle comme conteneur  
  Vous pouvez utiliser un rectangle comme conteneur d'autres éléments. Lorsque vous le déplacez, les éléments qu'il contient se déplacent avec lui. Un élément dans le rectangle indique le nom du rectangle dans sa propriété **Parent** . Pour plus d’informations sur l’utilisation d’un rectangle comme conteneur, consultez [Ajouter un rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md) et [Afficher les mêmes données dans une matrice et sur un graphique &#40;Générateur de rapports&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "66105388"
   
 
   
-##  <a name="ReportBorder"></a> Ajout d'une bordure de rapport  
+##  <a name="adding-a-report-border"></a><a name="ReportBorder"></a> Ajout d'une bordure de rapport  
  Vous pouvez entourer un rapport d'une bordure en plaçant celle-ci dans les en-têtes, les pieds de page et le corps du rapport, sans ajouter de lignes ou de rectangles. Pour plus d’informations, consultez [Ajouter une bordure à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures  
  [Ajouter une bordure à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
  [Ajouter un rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  

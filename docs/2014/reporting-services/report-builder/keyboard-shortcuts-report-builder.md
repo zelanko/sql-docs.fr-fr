@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107779"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
@@ -93,7 +93,7 @@ ms.locfileid: "66107779"
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports SQL Server 2014](report-builder-in-sql-server-2016.md)   
- [Vue Conception de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)   
- [&#40;du Glossaire Générateur de rapports&#41;](glossary-report-builder.md)  
+ [Mode création de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)   
+ [Glossaire &#40;Générateur de rapports&#41;](glossary-report-builder.md)  
   
   

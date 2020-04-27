@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106132"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Créer un rapport en escalier (Générateur de rapports et SSRS)
@@ -80,9 +80,9 @@ ms.locfileid: "66106132"
   
      ![Région de données pour un rapport par palier](../media/steppedreportdataregion.gif "Région de données pour un rapport par palier")  
   
-     **Région de données pour la mise en page de rapport en escalier**  
+     **Région de données pour une mise en page de rapport en escalier**  
   
-     Dans l’onglet dossier de **démarrage** , cliquez sur **exécuter**. Le rapport affiche le groupe avec des niveaux en retrait pour les valeurs des groupes enfants.  
+     Sous l’onglet **Accueil** , cliquez sur **Exécuter**. Le rapport affiche le groupe avec des niveaux en retrait pour les valeurs des groupes enfants.  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>Pour créer un rapport par palier avec plusieurs groupes  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106132"
     1.  Dans le volet Groupes de lignes, cliquez avec le bouton droit sur le groupe, cliquez sur **Ajouter un groupe**, puis choisissez le type du groupe à ajouter.  
   
         > [!NOTE]  
-        >  Il existe plusieurs façons d'ajouter des groupes à une région de données. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+        >  Il existe plusieurs façons d'ajouter des groupes à une région de données. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;générateur de rapports et des&#41;SSRS ](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  Dans la boîte de dialogue **Groupe de tableaux matriciels** , tapez un nom.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66106132"
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Listes &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Répertorie &#40;Générateur de rapports et SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

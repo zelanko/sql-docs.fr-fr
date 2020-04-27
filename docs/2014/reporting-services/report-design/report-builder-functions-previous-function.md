@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105197"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Fonction Previous (Générateur de rapports et SSRS)
@@ -38,7 +38,7 @@ Previous(expression, scope)
  (`String`) Facultatif. Nom d’un groupe ou d’une région de données, ou`Nothing` valeur [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null (en), qui spécifie l’étendue à partir de laquelle récupérer la valeur précédente spécifiée par *expression*.  
   
 ## <a name="return-type"></a>Type de retour  
- Retourne `Variant` ou `Binary`.  
+ Retourne un type `Variant` ou `Binary`.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `Previous` retourne la valeur précédente de l'expression évaluée dans l'étendue spécifiée après que cette dernière a été correctement triée et filtrée.  
@@ -52,7 +52,7 @@ Previous(expression, scope)
   
  Si *expression* contient une fonction d’agrégation qui utilise une étendue par `Previous` défaut, agrège les données dans l’instance précédente de l’étendue spécifiée dans l’appel de la fonction d’agrégation.  
   
- Si *expression* contient une fonction d’agrégation qui spécifie une étendue autre que la valeur ** par défaut, le `Previous` paramètre scope de la fonction doit être une étendue contenante pour l’étendue spécifiée dans l’appel de la fonction d’agrégation.  
+ Si *expression* contient une fonction d’agrégation qui spécifie une étendue autre que la valeur *scope* par défaut, le `Previous` paramètre scope de la fonction doit être une étendue contenante pour l’étendue spécifiée dans l’appel de la fonction d’agrégation.  
   
  Les fonctions `Level`, `InScope` `Aggregate` et `Previous` ne peuvent pas être utilisées dans le paramètre d' *expression*. La spécification du paramètre *recursive* pour une fonction d’agrégation n’est pas prise en charge.  
   

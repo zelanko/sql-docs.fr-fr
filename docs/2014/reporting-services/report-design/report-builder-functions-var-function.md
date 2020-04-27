@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a10d92d8492f9f07f18d2edccd7f3074b7c584c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105092"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Fonction Var (Générateur de rapports et SSRS)
@@ -38,8 +38,7 @@ Var(expression, scope, recursive)
  (`String`) Facultatif. Constante qui est le nom d'un dataset, d'un groupe ou d'une région de données contenant les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
  *recursive*  
- (**Type énuméré**) Facultatif. 
-  `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne une valeur `Decimal` pour les expressions décimales et une valeur `Double` pour toutes les autres expressions.  

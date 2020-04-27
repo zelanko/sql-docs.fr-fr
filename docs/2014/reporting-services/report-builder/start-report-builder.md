@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107601"
 ---
 # <a name="start-report-builder-report-builder"></a>Démarrer le Générateur de rapports (Générateur de rapports)
@@ -36,7 +36,7 @@ ms.locfileid: "66107601"
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Pour démarrer la version ClickOnce du Générateur de rapports à partir du Gestionnaire de rapports  
   
-1.  Dans le navigateur Web, tapez l'URL du serveur de rapports dans la barre d'adresses. Par défaut, l’URL est http://\<*nom_serveur*>/reports. Le Gestionnaire de rapports s'ouvre.  
+1.  Dans le navigateur Web, tapez l'URL du serveur de rapports dans la barre d'adresses. Par défaut, l’URL est http://\<*ServerName*>/Reports. Le Gestionnaire de rapports s'ouvre.  
   
 2.  Cliquez sur **Générateur de rapports**.  
   

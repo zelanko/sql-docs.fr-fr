@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108146"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : page modifier la planification (Gestionnaire de rapports)
@@ -76,15 +76,15 @@ ms.locfileid: "66108146"
  **Détails de la planification**  
  Sélectionnez les options qui déterminent la fréquence et le moment d'exécution d'un rapport. Les options de fréquence sont en couche. Le premier ensemble d'options spécifie une catégorie de fréquences (toutes les heures, tous les jours, toutes les semaines, etc.) Le second ensemble d'options qui apparaît dépend de votre sélection initiale.  
   
--   L' **heure** définit une planification qui s’exécute toutes les heures. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification.  
+-   **Heure** définit une planification qui s'exécute toutes les heures. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification.  
   
--   **Day** définit une planification qui s’exécute les jours sélectionnés à une heure et une minute spécifiques. Vous pouvez spécifier les jours des façons suivantes : chaque \< *jour*>, tous les jours ouvrables \<et tous les *nombres*> jour. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+-   **Jour** définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours des façons suivantes : chaque \< *jour*>, tous les jours ouvrables \<et tous les *nombres*> jour. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
--   La **semaine** définit une planification qui s’exécute à intervalles hebdomadaires à une heure et une minute spécifiques. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
+-   **Semaine** définit une planification qui s'exécute toutes les semaines à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   
--   **Mois** définit une planification qui s’exécute sur une base mensuelle. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
+-   **Mois** définit une planification qui s'exécute tous les mois. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
   
--   Une **fois** définit une planification qui s’exécute une seule fois. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification. La planification expire dès qu'elle a été traitée.  
+-   **Une fois** définit une planification qui s'exécute une seule fois. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification. La planification expire dès qu'elle a été traitée.  
   
  **Dates de début et de fin**  
  Spécifie une date de début qui détermine à quel moment la planification prend effet et une date de fin qui détermine à quel moment la planification expire.  

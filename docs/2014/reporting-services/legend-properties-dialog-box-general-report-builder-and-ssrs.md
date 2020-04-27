@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108554"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la légende, Général (Générateur de rapports et SSRS)
@@ -27,18 +27,18 @@ ms.locfileid: "66108554"
  **Nom**  
  Tapez un nom pour la légende.  
   
- **Disposition**  
+ **Mise en page**  
  Sélectionnez une option pour indiquer la mise en page de la légende. La mise en page de la légende par défaut est Tableau automatique.  
   
--   **Table haute** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende verticalement.  
+-   **Tableau haut** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende verticalement.  
   
--   **Colonne** Affichez le contenu de la légende dans une seule colonne.  
+-   **Colonne** Affichez le contenu de la légende dans une colonne.  
   
--   **Ligne** Affichez le contenu de la légende sur une seule ligne.  
+-   **Ligne** Affichez le contenu de la légende dans une ligne.  
   
--   **Tableau étendu** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement.  
+-   **Tableau large** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement.  
   
--   **Table automatique** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement ou verticalement en fonction de l'espace disponible dans le graphique.  
+-   **Tableau automatique** Affichez le contenu de la légende dans un tableau. Les entrées de la légende seront ajoutées de manière à ce que la légende s'étende horizontalement ou verticalement en fonction de l'espace disponible dans le graphique.  
   
  **Ancrer à la zone de graphique**  
  Sélectionnez cette option pour associer la légende à une zone de graphique.  
@@ -50,8 +50,8 @@ ms.locfileid: "66108554"
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Mise en forme des étiquettes d’axe sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Définir des couleurs sur un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Tracer des données sur un axe secondaire &#40;Générateur de rapports et SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

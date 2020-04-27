@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107661"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Boîte de dialogue Ouverture de session Reporting Services (Générateur de rapports)
@@ -24,7 +24,7 @@ ms.locfileid: "66107661"
   
 ## <a name="options"></a>Options  
  **Serveur**  
- Affiche le nom du serveur de rapports. Par exemple : `http://localhost/reportserver`. Pour les serveurs de rapports qui utilisent un autre port que le port par défaut 80, incluez le numéro de port. Par exemple : `http://localhost:8080/reportserver`.  
+ Affiche le nom du serveur de rapports. Par exemple, `http://localhost/reportserver`. Pour les serveurs de rapports qui utilisent un autre port que le port par défaut 80, incluez le numéro de port. Par exemple, `http://localhost:8080/reportserver`.  
   
  **Nom d'utilisateur**  
  Tapez le nom d'utilisateur pour la connexion au service Web.  
@@ -33,6 +33,6 @@ ms.locfileid: "66107661"
  Tapez le mot de passe pour la connexion au service Web.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

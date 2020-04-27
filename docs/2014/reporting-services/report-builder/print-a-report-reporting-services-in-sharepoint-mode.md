@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107748"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimer un rapport (Reporting Services en mode SharePoint)
@@ -46,7 +46,7 @@ ms.locfileid: "66107748"
   
      Pour modifier les paramètres par défaut, cliquez sur le bouton **Propriétés** . La taille de la page est déterminée par la hauteur et la largeur par défaut de la taille de la page de rapport, conformément à la définition de rapport. Les possibilités de modification des dimensions des pages dépendent des fonctionnalités de l'imprimante utilisée.  
   
-     Pour afficher le rapport avant de l’imprimer, cliquez sur le bouton **Aperçu** . Cela entraîne l’ouverture de la première page du rapport dans une fenêtre d’aperçu distincte. Les pages supplémentaires sont disponibles lors du rendu du rapport sur le serveur de rapports. L'aperçu d'un rapport est rendu au format EMF. Vous pouvez accéder aux pages précédentes ou suivantes tant que la dernière page n'est pas atteinte et que le bouton **Suivant** n'est pas désactivé. Pour modifier les marges d’impression de la page d’aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue **Marges** s’affiche. Configurez les marges supérieure, inférieure, gauche et droite selon vos besoins, puis cliquez sur **OK**. La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
+     Pour afficher le rapport avant de l’imprimer, cliquez sur le bouton **Aperçu** . Cela entraîne l’ouverture de la première page du rapport dans une fenêtre d’aperçu distincte. Les pages supplémentaires sont disponibles lors du rendu du rapport sur le serveur de rapports. L'aperçu d'un rapport est rendu au format EMF. Vous pouvez accéder aux pages précédentes ou suivantes tant que la dernière page n'est pas atteinte et que le bouton **Suivant** n'est pas désactivé. Pour modifier les marges d’impression de la page d’aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue **marges** s’affiche. Configurez les marges supérieure, inférieure, gauche et droite selon vos besoins, puis cliquez sur **OK**. La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer et désactiver l'impression côté client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  

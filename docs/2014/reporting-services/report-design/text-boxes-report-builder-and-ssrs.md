@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104628"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Zones de texte (Générateur de rapport et SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104628"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>Agrandissement et réduction d’une zone de texte  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Agrandissement et réduction d'une zone de texte  
  Par défaut, les zones de texte ont une taille fixe. Vous pouvez autoriser la réduction ou l'agrandissement d'une zone de texte de manière verticale en fonction de son contenu. Pour plus d’informations, consultez [Autoriser l’agrandissement ou la réduction d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientation d'une zone de texte  
@@ -55,12 +55,12 @@ ms.locfileid: "66104628"
   
  Pour vous familiariser rapidement avec la modification de l’orientation du texte, consultez la section relative à la rotation du texte dans le [Didacticiel : mettre en forme le texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md). Pour plus d’informations, consultez définir l’orientation d’une [zone de texte &#40;générateur de rapports et&#41;SSRS ](set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures  
  [Ajouter, déplacer ou supprimer une zone de texte &#40;Générateur de rapports et SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Définir l’orientation de la zone de texte &#40;Générateur de rapports et SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Définir l’orientation d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
  [Autoriser l’agrandissement ou la réduction d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   

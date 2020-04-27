@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106149"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listes (Générateur de rapports et SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106149"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a>Ajout d’une liste à votre rapport  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>Ajout d’une liste à votre rapport  
  Ajoutez une liste à l'aire de conception depuis l'onglet Insérer sur le ruban. Par défaut, la liste comporte initialement une cellule unique dans une ligne associée au groupe de détails.  
   
  ![Nouvel élément de rapport Liste sur l'aire de conception](../media/rs-listtemplatenew.gif "Nouvel élément de rapport Liste sur l'aire de conception")  
@@ -43,7 +43,7 @@ ms.locfileid: "66106149"
   
 
   
-##  <a name="DisplayingLayout"></a>Affichage des données dans une disposition de forme libre  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a>Affichage des données dans une disposition de forme libre  
  Pour organiser les données de rapport dans une disposition libre au lieu de les présenter sous forme de grille, vous pouvez ajouter une liste à l'aire de conception. Faites glisser les champs du volet des données de rapportvers la cellule. Par défaut, la cellule contient un rectangle qui joue le rôle de conteneur. Déplacez chaque champ dans le conteneur jusqu'à ce que vous obteniez la conception voulue. Utilisez les lignes d'alignement qui apparaissent lorsque vous faites glisser des zones de texte dans le conteneur rectangle pour vous aider à aligner les contours verticalement et horizontalement. Supprimez l'espace vide inutile en ajustant la taille de la cellule. Pour plus d’informations, consultez [Modifier la hauteur de ligne ou la largeur de colonne &#40;Générateur de rapports et SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre une liste qui affiche des informations sur une commande et comporte les champs suivants : Date, Order, Qty, Product, LineTotal et une image.  
@@ -59,7 +59,7 @@ ms.locfileid: "66106149"
   
 
   
-##  <a name="DisplayingGrouping"></a>Affichage des données avec un niveau de regroupement  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a>Affichage des données avec un niveau de regroupement  
  Comme une liste fournit automatiquement un conteneur, vous pouvez utiliser une liste pour afficher des données regroupées avec plusieurs vues. Pour modifier la liste par défaut pour spécifier un groupe, modifiez le groupe de détails, indiquez un nouveau nom et spécifiez une expression de groupe.  
   
  Par exemple, vous pouvez incorporer un tableau et un graphique qui affiche différentes vues du même dataset. Vous pouvez ajouter un groupe à la liste afin que les éléments de rapport imbriqués soient utilisés à une seule reprise pour chaque valeur de groupe. L'illustration suivante représente une liste regroupée par catégorie de produit. Notez l'absence de ligne de détails. Deux tableaux sont imbriqués côte à côte dans la liste. Le premier tableau affiche les sous-catégories avec les ventes totales. Le deuxième tableau affiche la catégorie regroupée par zone géographique, avec un graphique représentant la distribution des sous-catégories.  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109234"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Boîte de dialogue Entrez les informations d'identification pour la source de données
@@ -32,6 +32,6 @@ ms.locfileid: "66109234"
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Aide sur le concepteur de rapports via la touche F1](tools/report-designer-f1-help.md)  
+ [Aide sur le Concepteur de rapports via la touche F1](tools/report-designer-f1-help.md)  
   
   

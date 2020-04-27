@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109084"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Page Propriétés générales, parties de rapport (Gestionnaire de rapports)
@@ -61,7 +61,7 @@ ms.locfileid: "66109084"
  **Type**  
  Type de la partie de rapport. Lecture seule.  
   
- **Appliquer**  
+ **appliquer**  
  Enregistrez vos modifications.  
   
  **Supprimer**  
@@ -70,17 +70,17 @@ ms.locfileid: "66109084"
  **Déplacer**  
  Ouvre la page Déplacer des éléments qui permet de déplacer une partie de rapport dans l'arborescence des dossiers du serveur de rapports. Pour plus d’informations, consultez [page déplacer des éléments &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Downloader**  
+ **Télécharger**  
  Permet d'extraire une copie de la définition de partie de rapport à enregistrer en tant que fichier .rsc. Le fichier .rsc peut être soit téléchargé dans un dossier du serveur de rapports, soit utilisé pour remplacer une partie de rapport existante dans un dossier du serveur de rapports.  
   
- **Lieu**  
+ **Replace**  
  Permet de remplacer la définition de partie de rapport par une autre à partir d'un fichier .rsc.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des parties de rapports](report-design/managing-report-parts.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Page contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Parties de rapports et datasets dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md)  
   

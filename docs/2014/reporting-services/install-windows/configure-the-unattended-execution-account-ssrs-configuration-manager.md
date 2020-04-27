@@ -19,14 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108893"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
   
 -   Envoyez les demandes de connexion sur le réseau pour les rapports qui utilisent l'authentification de base de données ou connectez-vous aux sources de données de rapport externes qui ne requièrent pas ou n'utilisent pas l'authentification. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md) dans la documentation en ligne de SQL Server.  
@@ -58,9 +57,9 @@ ms.locfileid: "66108893"
   
 3.  Tapez la commande suivante pour configurer le compte sur une instance de serveur de rapports locale :  
   
-     **rsconfig-e-u\<domaine/nom d’utilisateur>\<-p mot de passe>**  
+     **rsconfig -e -u\<domaine/nom utilisateur> -p\<mot de passe>**  
   
- **rsconfig-e** prend en charge des arguments supplémentaires. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
+ **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Comment les informations sur le compte sont stockées  
  Lorsque vous définissez le compte, les paramètres suivants sont spécifiés comme valeurs chiffrées dans le fichier RSreportserver.config sur une instance de serveur de rapports locale ou distante :  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106411"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Références à la collection Parameters (Générateur de rapports et SSRS)
@@ -27,31 +27,31 @@ ms.locfileid: "66106411"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a>Utilisation d’un paramètre à valeur unique dans une expression  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> Utilisation d'un paramètre à valeur unique dans une expression  
  Le tableau suivant présente des exemples de la syntaxe à utiliser lorsque vous incluez une référence à un paramètre à valeur unique de n'importe quel type de données dans une expression.  
   
 |Exemple|Description|  
 |-------------|-----------------|  
-|`=Parameters!`* \<>ParameterName*`.IsMultiValue`|Retourne `False`.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si `True`la valeur est, le paramètre est à valeurs multiples et il s’agit d’une collection d’objets. Si `False`la valeur est, le paramètre est à valeur unique et est un objet unique.|  
-|`=Parameters!`* \<>ParameterName*`.Count`|Retourne la valeur entière 1. Pour un paramètre à valeur unique, le nombre est toujours 1.|  
-|`=Parameters!`* \<>ParameterName*`.Label`|Retourne l'étiquette du paramètre, qui est souvent utilisée comme nom complet dans une liste déroulante de valeurs disponibles.|  
-|`=Parameters!`* \<>ParameterName*`.Value`|Retourne la valeur du paramètre. Si la propriété Libellé n’a pas été définie, cette valeur apparaît dans la liste déroulante des valeurs disponibles.|  
-|`=CStr(Parameters!`  * \<>ParameterName*`.Value)`|Retourne la valeur du paramètre sous forme de chaîne.|  
-|`=Fields(Parameters!`* \<>ParameterName*`.Value).Value`|Retourne la valeur du champ qui possède le même nom que le paramètre.|  
+|`=Parameters!` *\<ParameterName>* `.IsMultiValue`|Retourne `False`.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si `True`la valeur est, le paramètre est à valeurs multiples et il s’agit d’une collection d’objets. Si `False`la valeur est, le paramètre est à valeur unique et est un objet unique.|  
+|`=Parameters!` *\<ParameterName>* `.Count`|Retourne la valeur entière 1. Pour un paramètre à valeur unique, le nombre est toujours 1.|  
+|`=Parameters!` *\<ParameterName>* `.Label`|Retourne l'étiquette du paramètre, qui est souvent utilisée comme nom complet dans une liste déroulante de valeurs disponibles.|  
+|`=Parameters!` *\<ParameterName>* `.Value`|Retourne la valeur du paramètre. Si la propriété Libellé n’a pas été définie, cette valeur apparaît dans la liste déroulante des valeurs disponibles.|  
+|`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|Retourne la valeur du paramètre sous forme de chaîne.|  
+|`=Fields(Parameters!` *\<ParameterName>* `.Value).Value`|Retourne la valeur du champ qui possède le même nom que le paramètre.|  
   
  Pour plus d’informations sur l’utilisation de paramètres dans un filtre, consultez [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
-##  <a name="Multi"></a>Utilisation d’un paramètre à valeurs multiples dans une expression  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> Utilisation d'un paramètre à valeurs multiples dans une expression  
  Le tableau suivant présente des exemples de la syntaxe à utiliser lorsque vous incluez une référence à un paramètre à valeurs multiples de n'importe quel type de données dans une expression.  
   
 |Exemple|Description|  
 |-------------|-----------------|  
-|`=Parameters!`* \<MultivalueParameterName>*`.IsMultiValue`|Retourne `True` ou `False`.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si la valeur retournée est `True`, le paramètre est à valeurs multiples et il s'agit d'une collection d'objets. Si la valeur retournée est `False`, le paramètre est à valeur unique et il s'agit d'un seul objet.|  
-|`=Parameters!`* \<MultivalueParameterName>*`.Count`|Retourne une valeur entière.<br /><br /> Fait référence au nombre de valeurs. Pour un paramètre à valeur unique, le nombre est toujours 1. Pour un paramètre à valeurs multiples, le nombre est 0 ou plus.|  
-|`=Parameters!`* \<MultivalueParameterName>*`.Value(0)`|Retourne la première valeur dans un paramètre à valeurs multiples.|  
-|`=Parameters!``.Value(Parameters!` * \<MultivalueParameterName* *>\<MultivalueParameterName>*`.Count-1)`|Retourne la dernière valeur dans un paramètre à valeurs multiples.|  
+|`=Parameters!` *\<MultivalueParameterName>* `.IsMultiValue`|Retourne `True` ou `False`.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si la valeur retournée est `True`, le paramètre est à valeurs multiples et il s'agit d'une collection d'objets. Si la valeur retournée est `False`, le paramètre est à valeur unique et il s'agit d'un seul objet.|  
+|`=Parameters!` *\<MultivalueParameterName>* `.Count`|Retourne une valeur entière.<br /><br /> Fait référence au nombre de valeurs. Pour un paramètre à valeur unique, le nombre est toujours 1. Pour un paramètre à valeurs multiples, le nombre est 0 ou plus.|  
+|`=Parameters!` *\<MultivalueParameterName>* `.Value(0)`|Retourne la première valeur dans un paramètre à valeurs multiples.|  
+|`=Parameters!` *\<MultivalueParameterName>* `.Value(Parameters!` *\<MultivalueParameterName>* `.Count-1)`|Retourne la dernière valeur dans un paramètre à valeurs multiples.|  
 |`=Split("Value1,Value2,Value3",",")`|Retourne un tableau de valeurs.<br /><br /> Permet de créer un tableau de valeurs pour un paramètre de type `String` à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir un fractionnement (Split). Cette expression peut être utilisée pour définir les valeurs par défaut d'un paramètre à valeurs multiples ou pour créer un paramètre à valeurs multiples à envoyer à un rapport d'extraction ou de type sous-rapport.|  
-|`=Join(Parameters!`* \<MultivalueParameterName>*`.Value,", ")`|Retourne une valeur de type `String` qui est composée d'une liste de valeurs délimitées par des virgules dans un paramètre à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir une liaison (Join).|  
+|`=Join(Parameters!` *\<MultivalueParameterName>* `.Value,", ")`|Retourne une valeur de type `String` qui est composée d'une liste de valeurs délimitées par des virgules dans un paramètre à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir une liaison (Join).|  
   
  Pour plus d’informations sur l’utilisation de paramètres dans un filtre, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md).  
   

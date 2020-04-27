@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108030"
 ---
 # <a name="publish-reports"></a>Publier des rapports
@@ -27,7 +27,7 @@ ms.locfileid: "66108030"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Pour publier tous les rapports d'un projet  
   
--   Dans le menu **Générer**, cliquez sur **Déployer \<nom_projet_rapport>** . Vous pouvez également, dans l’Explorateur de solutions, cliquer avec le bouton droit sur le projet de rapport, puis cliquer sur **Déployer**. Vous pouvez consulter l'état du processus de publication dans la fenêtre Sortie.  
+-   Dans le menu **Générer**, cliquez sur **Déployer \<nom_projet_rapport>**. Vous pouvez également, dans l’Explorateur de solutions, cliquer avec le bouton droit sur le projet de rapport, puis cliquer sur **Déployer**. Vous pouvez consulter l'état du processus de publication dans la fenêtre Sortie.  
   
     > [!NOTE]  
     >  Lorsque vous déployez un projet Report Server, les sources de données partagées dans le projet de rapport sont également déployées.  
@@ -43,7 +43,7 @@ ms.locfileid: "66108030"
  [Publication de sources de données et de rapports](reports/publishing-data-sources-and-reports.md)   
  [Aperçu des rapports](reports/previewing-reports.md)   
  [Publication de rapports sur un serveur de rapports](reports/publishing-reports-to-a-report-server.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

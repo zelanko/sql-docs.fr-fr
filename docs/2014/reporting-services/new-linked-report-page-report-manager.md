@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108169"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Page Nouveau rapport lié (Gestionnaire de rapports)
@@ -50,7 +50,7 @@ ms.locfileid: "66108169"
  **Description**  
  Tapez une description du contenu du rapport. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au rapport.  
   
- **Location**  
+ **Emplacement**  
  Spécifie le chemin d'accès au dossier qui contient le rapport. Par défaut, les rapports liés sont créés comme des frères du rapport de base. Cliquez sur **Modifier l'emplacement** pour placer le rapport lié dans un autre dossier.  
   
  **OK**  

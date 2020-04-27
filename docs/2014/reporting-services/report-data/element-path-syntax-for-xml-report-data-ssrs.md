@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107297"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107297"
 |&#124; (barre verticale)|Sépare les éléments de la syntaxe. Vous ne pouvez choisir qu'un seul de ces éléments.|  
 |`[ ] (brackets)`|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |**{ }** (accolades)|Délimitent les paramètres des éléments de syntaxe.|  
-|[ **,** ...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
+|[**,**... *n*]|Indique que l’élément précédent peut être répété *n* fois. Les occurrences sont séparées par des virgules.|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,25 +78,22 @@ XMLLocalName :: =
 |`ElementNode`|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<Customers> est le nœud de l’élément racine. \<Customer> est un sous-élément de \<Customers>.|  
 |`XMLName`|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. Un `XMLName` peut porter comme préfixe un identificateur d'espace de noms qui identifie de façon unique chaque nœud.|  
 |`Encoding`|Indique que `Value` pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
-|`FieldList`|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée ( **{}** ), aucun champ de ce nœud n’est utilisé.<br /><br /> 
-  `FieldList` ne peut pas contenir à la fois `Value` et `Element` ou `ElementNode`.|  
+|`FieldList`|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée**{}**(), aucun champ de ce nœud n’est utilisé.<br /><br /> `FieldList` ne peut pas contenir à la fois `Value` et `Element` ou `ElementNode`.|  
 |`Field`|Spécifie les données qui sont extraites en tant que champ de dataset.|  
 |`Attribute`|Paire nom-valeur dans `ElementNode`. Par exemple, dans le \<nœud d’élément Customer ID = « 1 » `ID` >, est un `@ID(Integer)` attribut et retourne « 1 » comme type d’entier dans le champ `ID`de données correspondant.|  
-|`Value`|Valeur de l'élément. 
-  `Value` ne peut être utilisé que sur le dernier `ElementNode` dans le chemin de l'élément. Par exemple, étant \<donné que return> est un nœud terminal, si vous l’incluez à la fin d’un chemin d' `Return {@}` accès `Chair`à un élément, la valeur de est.|  
+|`Value`|Valeur de l'élément. `Value` ne peut être utilisé que sur le dernier `ElementNode` dans le chemin de l'élément. Par exemple, étant \<donné que return> est un nœud terminal, si vous l’incluez à la fin d’un chemin d' `Return {@}` accès `Chair`à un élément, la valeur de est.|  
 |`Element`|Valeur du sous-élément nommé. Par exemple, Customers {}/Customer {}/LastName récupère des valeurs pour l'élément LastName uniquement.|  
 |`Type`|Type de données facultatif utilisé pour le champ créé à partir de cet élément.|  
-|`NamespacePrefix`|
-  `NamespacePrefix` est défini dans l'élément de requête XML. S'il n'existe aucun élément de requête XML, les espaces de noms dans `ElementPath` XML sont ignorés. S'il existe un élément de requête XML, `ElementPath` XML possède un attribut `IgnoreNamespaces` facultatif. Si IgnoreNamespaces a `true`la la, les espaces de `ElementPath` noms dans le XML et le document XML sont ignorés. Pour plus d’informations, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` est défini dans l'élément de requête XML. S'il n'existe aucun élément de requête XML, les espaces de noms dans `ElementPath` XML sont ignorés. S'il existe un élément de requête XML, `ElementPath` XML possède un attribut `IgnoreNamespaces` facultatif. Si IgnoreNamespaces a `true`la la, les espaces de `ElementPath` noms dans le XML et le document XML sont ignorés. Pour plus d’informations, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Exemples - Aucun espace de noms  
  Les exemples suivants utilisent le document XML Customers.xml. Ce tableau présente des exemples de syntaxe du chemin d'accès à l'élément et les résultats de l'utilisation du chemin d'accès à l'élément dans une requête qui définit un dataset, en fonction du document XML comme source de données.  
   
  Notez que lorsque le chemin d’accès à l’élément est vide, la requête utilise le chemin d’accès à l’élément par défaut : le premier chemin d’accès à une collection de nœuds feuille. Dans le premier exemple, laisser un chemin d'accès à l'élément vide équivaut à spécifier le chemin d'accès à l'élément /Customers/Customer/Orders/Order. L'ensemble des attributs et des valeurs de nœud, ainsi que le chemin d'accès, sont retournés dans le jeu de résultats, et les noms de nœuds et les noms d'attributs apparaissent en tant que champs du dataset.  
   
--   *Vidé*  
+-   *Vide*  
   
-    |JSON|Qté|id|FirstName|LastName|Customer.ID|xmlns|  
+    |JSON|Qté|ID|FirstName|LastName|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
     |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
     |Table de charge de travail|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
@@ -105,7 +102,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer`  
   
-    |FirstName|LastName|id|  
+    |FirstName|LastName|ID|  
     |---------------|--------------|--------|  
     |Bobby|Moore|11|  
     |Crystal|Hu|20|  
@@ -130,7 +127,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-    |Order.ID|FirstName|LastName|id|  
+    |Order.ID|FirstName|LastName|ID|  
     |--------------|---------------|--------------|--------|  
     |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  
@@ -206,8 +203,8 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de connexion XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
- [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [Type de connexion XML &#40;&#41;SSRS](xml-connection-type-ssrs.md)   
+ [Didacticiels de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

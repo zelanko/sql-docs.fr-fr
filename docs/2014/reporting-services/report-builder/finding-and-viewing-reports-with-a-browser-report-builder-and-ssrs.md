@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107857"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Recherche et affichage de rapports à l'aide d'un navigateur (Générateur de rapports et SSRS)
@@ -49,8 +49,7 @@ Dossiers dans un navigateur
 -   Une extension de nom de fichier indique une ressource. L'extension de nom de fichier identifie le type MIME de la ressource. Par exemple, l'extension .jpg indique une image au format JPEG.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>Saisie de l'adresse URL d'un rapport  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l'accès URL à des éléments spécifiques sur un serveur de rapports. L'URL doit inclure un chemin d'accès complet au rapport et les commandes pour rendre le rapport. Si le rapport inclut des paramètres, vous devez également spécifier les valeurs requises pour ouvrir le rapport. Si vous tapez une URL pour un rapport qui comprend des espaces dans le chemin d'accès, des valeurs de paramètres ou une extension de rendu, vous devez intégrer des caractères encodés dans l'URL pour obtenir les résultats attendus. L'exemple suivant représente une URL de rapport qui contient, dans son chemin d'accès, l'encodage des espaces, des paramètres et une extension de rendu :  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l'accès URL à des éléments spécifiques sur un serveur de rapports. L'URL doit inclure un chemin d'accès complet au rapport et les commandes pour rendre le rapport. Si le rapport inclut des paramètres, vous devez également spécifier les valeurs requises pour ouvrir le rapport. Si vous tapez une URL pour un rapport qui comprend des espaces dans le chemin d'accès, des valeurs de paramètres ou une extension de rendu, vous devez intégrer des caractères encodés dans l'URL pour obtenir les résultats attendus. L'exemple suivant représente une URL de rapport qui contient, dans son chemin d'accès, l'encodage des espaces, des paramètres et une extension de rendu :  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -59,6 +58,6 @@ Dossiers dans un navigateur
  Pour plus d'informations sur l'accès à un rapport via une URL, notamment des informations sur la construction d'une URL, consultez « Accès URL » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et affichage de rapports dans Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

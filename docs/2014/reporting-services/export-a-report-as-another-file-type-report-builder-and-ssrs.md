@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109181"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exporter un rapport dans un autre type de fichier (Générateur de rapports et SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "66109181"
   
      À l'aide de l'application associée au format que vous avez choisi, le rapport est affiché ou enregistré. Si vous cliquez sur **Enregistrer**, vous devrez indiquer un emplacement pour enregistrer votre rapport.  
   
-     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi, car vous n’avez pas de programme associé à ce type de fichier, vous êtes invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
+     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi car vous ne disposez pas d'un programme associé à ce type de fichier, vous serez invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>Pour exporter un rapport dans un autre type de fichier dans une bibliothèque SharePoint  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66109181"
   
      Modifiez éventuellement le nom de fichier du rapport exporté.  
   
-     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi, car vous n’avez pas de programme associé à ce type de fichier, vous êtes invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
+     **Remarque** Si le programme ne peut pas ouvrir le rapport dans le format que vous avez choisi car vous ne disposez pas d'un programme associé à ce type de fichier, vous serez invité à enregistrer le rapport exporté ou à rechercher un programme en ligne pour ouvrir le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   

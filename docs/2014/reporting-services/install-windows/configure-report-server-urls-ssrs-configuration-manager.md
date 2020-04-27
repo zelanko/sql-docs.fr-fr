@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108847"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66108847"
 |Nom de l’hôte|Un réseau TCP/IP utilise une adresse IP pour identifier de manière unique un périphérique sur le réseau. Il existe une adresse IP physique pour chaque carte réseau installée dans un ordinateur. Si l'adresse IP est résolue en en-tête d'hôte, vous pouvez spécifier l'en-tête de l'hôte. Si vous déployez le serveur de rapports sur un réseau d'entreprise, vous pouvez utiliser le nom réseau de l'ordinateur.|  
 |Port|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
 |Répertoire virtuel|Un port est souvent partagé par plusieurs applications ou services Web. Pour cette raison, une URL de serveur de rapports inclut toujours un répertoire virtuel qui correspond à l'application obtenant la demande. Vous devez spécifier des noms de répertoire virtuel uniques pour chaque application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui écoute sur les mêmes port et adresse IP.|  
-|Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../security/configure-ssl-connections-on-a-native-mode-report-server.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../security/configure-ssl-connections-on-a-native-mode-report-server.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="default-urls"></a>URL par défaut  
  Lorsque vous accédez à un serveur de rapports ou au Gestionnaire de rapports via son URL, celle-ci doit inclure le nom d'hôte et pas l'adresse IP. Sur un réseau TCP/IP, l'adresse IP se résout en un nom d'hôte (ou le nom de réseau de l'ordinateur). Si vous avez utilisé les valeurs par défaut pour configurer les URL, vous devez être en mesure d'accéder au service Web Report Server à l'aide d'URL qui spécifient le nom d'ordinateur ou localhost comme nom d'hôte :  
@@ -67,20 +67,20 @@ ms.locfileid: "66108847"
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
  Cette rubrique fournit des instructions pour définir et modifier une réservation d'URL dans l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- [À propos des réservations et de l’inscription d’URL &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  Les URL sont utilisées pour accéder aux applications et aux rapports. Cette rubrique explique les URL d'application et les URL par défaut, ainsi que la façon dont l'inscription et les réservations d'URL fonctionnent dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Syntaxe de réservation d’URL &#40;SSRS Configuration Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Syntaxe de réservation d’URL &#40;Gestionnaire de configuration de SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
  Les réservations d’URL par défaut que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise sont valides pour la plupart des scénarios. Toutefois, si vous souhaitez restreindre l'accès ou étendre le déploiement pour activer l'accès Internet ou extranet, il se peut que vous ayez à personnaliser les paramètres pour qu'ils correspondent à vos impératifs. Cette rubrique décrit la syntaxe d'une réservation d'URL et fournit des recommandations pour créer des réservations personnalisées pour votre déploiement.  
   
- [URL dans les fichiers de configuration &#40;SSRS Configuration Manager&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [URL des fichiers de configuration &#40;Gestion de configuration de SSRS&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  Le fichier RSReportServer.config contient plusieurs entrées pour les réservations d'URL et les URL utilisées par le Gestionnaire de rapports et la remise du courrier électronique du serveur de rapports. Cette rubrique résume les paramètres de configuration d'URL afin que vous puissiez apprendre à les comparer.  
   
- [Réservations d’URL pour les déploiements de serveur de rapports multi-instance &#40;SSRS Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [Réservations d’URL pour les déploiements de serveur de rapports multi-instance &#40;Gestionnaire de configuration de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Lorsque vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un même ordinateur, vous augmentez la probabilité de rencontrer une duplication d'URL lors de l'inscription. Pour éviter ces erreurs, suivez les recommandations de cette rubrique pour créer des réservations d'URL spécifiques à l'instance.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [URL du service Web &#40;SSRS en mode natif&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

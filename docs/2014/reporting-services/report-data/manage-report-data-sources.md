@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107252"
 ---
 # <a name="manage-report-data-sources"></a>Gérer des sources de données de rapports
@@ -62,12 +62,12 @@ ms.locfileid: "66107252"
 |Tâche|Outil|Lien|  
 |----------|----------|----------|  
 |Afficher des exemples de chaînes de connexion.||[Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Choisir une stratégie pour obtenir des informations d'identification pour se connecter à une source de données.||[Spécifier des informations d'identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md)|  
+|Choisir une stratégie pour obtenir des informations d'identification pour se connecter à une source de données.||[Spécifier des informations d'identification et de connexion pour les sources de données de rapports](specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Ajouter des propriétés de connexion à la source de données à un fichier de définition de rapport (.rdl).|Concepteur de rapports|[Créer une source de données incorporée ou partagée &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Ajouter et créer un lien vers un fichier de source de données partagée (.rds) dans un projet de rapport.|Concepteur de rapports|[Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Créer une liste prédéfinie des sources de données que les utilisateurs peuvent sélectionner au moment de l'exécution. Lorsqu'un utilisateur demande un rapport, celui-ci fournit une liste des sources de données. L'utilisateur doit sélectionner quelle source de données utiliser avant d'exécuter le rapport. Pour ajouter une liste de sélection de la source de données à un rapport, utilisez une expression.<br /><br /> Il s'agit d'une connexion dynamique à la source de données.|Concepteur de rapports|[Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Créer un élément de source de données partagée sur un serveur de rapports.|Gestionnaire de rapports|[Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
-|Stocker des informations d'identification comme condition préalable à la création des abonnements ou des instantanés de rapport.|Gestionnaire de rapports|[Stocker des informations d’identification dans une source de données Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
+|Stocker des informations d'identification comme condition préalable à la création des abonnements ou des instantanés de rapport.|Gestionnaire de rapports|[Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)|  
 |Modifier les propriétés de connexion à la source de données sur un rapport publié.|Gestionnaire de rapports|[Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Créer un élément de source de données partagée sur un serveur de rapports.|Site SharePoint|[Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
 |Utiliser des informations de connexion .odc existantes avec un rapport.|Site SharePoint|[Utiliser une connexion de données Office &#40;.odc&#41; avec les rapports &#40;Reporting Services en mode intégré SharePoint&#41;](use-an-office-data-connection-odc-with-reports.md)|  

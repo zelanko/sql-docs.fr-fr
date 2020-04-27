@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109157"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Remplissage (Générateur de rapports et SSRS)
@@ -36,9 +36,9 @@ ms.locfileid: "66109157"
  **Sélectionner la source de l'image**  
  Indiquez l'endroit où l'image est stockée afin que lorsque le rapport est rendu, le processeur de rapports puisse l'afficher.  
   
--   **Externe** Choisissez cette option lorsque vous souhaitez que l’image continue à exister sous la forme d’un fichier sur un serveur de rapports ou un serveur Web.  
+-   **Externe** Choisissez cette option lorsque vous souhaitez que l'image continue à exister sous la forme d'un fichier sur un serveur de rapports ou un serveur Web.  
   
--   **Intégré** Choisissez cette option lorsque vous souhaitez incorporer l’image dans le rapport.  
+-   **Rapport** Choisissez cette option lorsque vous souhaitez incorporer l’image dans le rapport.  
   
 -   **Base de données** Choisissez cette option lorsque vous souhaitez inclure un nom de champ de base de données qui représente les images que vous souhaitez inclure dans votre rapport.  
   

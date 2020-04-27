@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107449"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Lier un rapport ou un modèle à une source de données partagée (SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "66107449"
   
 5.  Dans la zone **Type de connexion** , vérifiez que **Source de données partagée** est activée.  
   
-6.  Dans la zone **Lien de source de données**, cliquez sur le bouton de sélection (...).  
+6.  Dans la zone lien de la **source de données** , cliquez sur le bouton de sélection (...).  
   
 7.  Localisez la source de données que vous souhaitez utiliser.  
   

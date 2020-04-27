@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107757"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimer des rapports à partir d'un navigateur à l'aide du contrôle d'impression (Générateur de rapports et SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66107757"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>Options d'impression  
- Pour configurer les propriétés d'impression de votre rapport, cliquez dans la boîte de dialogue **Imprimer** sur le bouton **Propriétés** . Le **format de papier** est déterminé par la hauteur et la largeur par défaut de la taille de la page de rapport, telles qu’elles sont définies dans la définition de rapport. Les valeurs disponibles dépendent du type d'imprimante et des fonctionnalités de cette dernière. La largeur et la hauteur indiquent les valeurs par défaut définies par les pilotes d'impression configurés sur l'ordinateur. La modification de ces valeurs permet d'imprimer le rapport selon de nouvelles dimensions. La largeur et la hauteur de page sont déterminées chacune par l' **orientation**, qui a pour valeur **Portrait** ou **Paysage**. L'orientation par défaut affichée dépend de la largeur et de la hauteur de page du rapport.  
+ Pour configurer les propriétés d'impression de votre rapport, cliquez dans la boîte de dialogue **Imprimer** sur le bouton **Propriétés** . Le**format de papier** est déterminé par la hauteur et la largeur par défaut de la taille de la page de rapport, conformément à la définition de rapport. Les valeurs disponibles dépendent du type d'imprimante et des fonctionnalités de cette dernière. La largeur et la hauteur indiquent les valeurs par défaut définies par les pilotes d'impression configurés sur l'ordinateur. La modification de ces valeurs permet d'imprimer le rapport selon de nouvelles dimensions. La largeur et la hauteur de page sont déterminées chacune par l' **orientation**, qui a pour valeur **Portrait** ou **Paysage**. L'orientation par défaut affichée dépend de la largeur et de la hauteur de page du rapport.  
   
 > [!NOTE]  
 >  La boîte de dialogue **Imprimer** et les paramètres d’impression par défaut pour la largeur, la hauteur et l’orientation de la page sont déterminés par la définition de rapport.  
@@ -37,7 +37,7 @@ ms.locfileid: "66107757"
  Pour afficher l'aperçu avant impression d'un rapport, cliquez dans la boîte de dialogue **Imprimer** sur le bouton **Aperçu** . Cela entraîne l'ouverture de la première page du rapport dans une fenêtre d'aperçu distincte. Les pages supplémentaires sont disponibles lors du rendu du rapport sur le serveur de rapports. L'aperçu d'un rapport est rendu au format EMF. Vous pouvez accéder aux pages précédentes ou suivantes tant que la dernière page n'est pas atteinte et que le bouton **Suivant** n'est pas désactivé.  
   
 ### <a name="adjusting-print-margins"></a>Réglage des marges d'impression  
- Vous pouvez modifier les marges d'impression dans le rendu du rapport EMF avant l'impression de ce dernier. Pour ce faire, cliquez dans la boîte de dialogue **Imprimer** sur le bouton **Aperçu** . En haut de la page d'aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue Marges s'affiche. Configurez la marge supérieure, inférieure, de gauche et de droite selon vos besoins. [!INCLUDE[clickOK](../../includes/clickok-md.md)]La boîte de dialogue se ferme et les paramètres sont stockés pour le rendu de l’aperçu et de l’impression.  
+ Vous pouvez modifier les marges d'impression dans le rendu du rapport EMF avant l'impression de ce dernier. Pour ce faire, cliquez dans la boîte de dialogue **Imprimer** sur le bouton **Aperçu** . En haut de la page d'aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue Marges s'affiche. Configurez la marge supérieure, inférieure, de gauche et de droite selon vos besoins. [!INCLUDE[clickOK](../../includes/clickok-md.md)] La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](print-reports-report-builder-and-ssrs.md)   

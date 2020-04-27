@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107927"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107927"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Rendu CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Rendu CSV  
  Si un rapport CSV est rendu avec les paramètres par défaut, il présente les caractéristiques suivantes :  
   
 -   La chaîne séparateur de champs par défaut est la virgule (,).  
@@ -96,7 +96,7 @@ ms.locfileid: "66107927"
   
  
   
-##  <a name="RenderingModes"></a> Modes du convertisseur  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modes du convertisseur  
  L'extension de rendu CSV peut fonctionner dans deux modes : l'un est optimisé pour Excel, l'autre pour les applications tierces qui requièrent une conformité stricte à la spécification CSV décrite dans le document RFC 4180. Selon le mode que vous utilisez, les régions de données d'homologue sont gérées différemment.  
   
 ### <a name="default-mode"></a>Mode par défaut  
@@ -120,7 +120,7 @@ ms.locfileid: "66107927"
 #### <a name="formatting"></a>Mise en forme  
  Les valeurs sont dépourvues de mise en forme.  
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interactivité  
  L'interactivité n'est pas prise en charge par les formats CSV générés par ce convertisseur. Les éléments interactifs suivants ne sont pas rendus :  
   
 -   Liens hypertexte  
@@ -139,7 +139,7 @@ ms.locfileid: "66107927"
   
 
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Paramètres d’informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, les caractères à utiliser comme séparateurs et ceux à utiliser comme chaîne par défaut d'identificateur de texte, ce en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [CSV Device Information Settings](../csv-device-information-settings.md).  
   
   
@@ -147,7 +147,7 @@ ms.locfileid: "66107927"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives pour différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

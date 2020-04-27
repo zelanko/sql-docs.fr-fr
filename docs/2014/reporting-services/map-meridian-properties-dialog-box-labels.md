@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108271"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des méridiens de la carte, Étiquettes
@@ -30,7 +30,7 @@ ms.locfileid: "66108271"
  Cliquez sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l'option.  
   
 ## <a name="options"></a>Options  
- **Défini**  
+ **Intervalle**  
  Tapez une valeur entière en degrés pour spécifier l'intervalle entre les méridiens. Par défaut, la valeur **Auto** est sélectionnée. **Auto** indique que la valeur est déterminée automatiquement par les données spatiales.  
   
  **Afficher les étiquettes**  
@@ -39,15 +39,15 @@ ms.locfileid: "66108271"
  **Placement**  
  Sélectionnez un emplacement pour afficher les étiquettes par rapport à la partie supérieure, centrale ou inférieure de la fenêtre d'affichage. L'emplacement par défaut est **Rapproché**.  
   
--   **Près** de Affichez les étiquettes sur le bord gauche.  
+-   **Rapproché** Affiche les étiquettes sur le bord gauche.  
   
--   **Un quart** Affichez les étiquettes à mi-chemin entre le bord gauche et le centre.  
+-   **Un quart** Affiche les étiquettes à mi-chemin entre le bord gauche et le centre.  
   
--   **Centre** Affichez les étiquettes au centre.  
+-   **Centre** Affiche les étiquettes au centre.  
   
--   **Trois quarts** Affichez les étiquettes à mi-chemin entre le centre et le bord droit.  
+-   **Trois quarts** Affiche les étiquettes à mi-chemin entre le centre et le bord droit.  
   
--   **Loin** Affichez les étiquettes sur le bord droit.  
+-   **Espacé** Affiche les étiquettes sur le bord droit.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  

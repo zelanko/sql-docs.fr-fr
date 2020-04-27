@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108507"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
@@ -41,7 +41,7 @@ ms.locfileid: "66108507"
   
 -   [Étape 6 - Pour planifier un abonnement](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>Démarrer l’Assistant abonnement piloté par les données  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Démarrer l’Assistant abonnement piloté par les données  
   
 1.  Dans le Gestionnaire de rapports, cliquez sur **Accueil**, puis naviguez jusqu'au dossier contenant le rapport **Sales Orders** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108507"
   
 3.  Cliquez sur **Nouvel abonnement piloté par les données**. Si ce bouton n'apparaît pas, il se peut que vous n'ayez pas les autorisations relatives au Gestionnaire de contenu.  
   
-##  <a name="bkmk_definesubscription"></a>Étape 1-définir une description  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>Étape 1-définir une description  
   
 1.  Tapez **Sales Order delivery** comme description.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108507"
   
 3.  Sélectionnez **Spécifier pour cet abonnement uniquement**, puis cliquez sur **Suivant**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>Étape 2-définir une connexion à la source de données de l’abonné  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>Étape 2-définir une connexion à la source de données de l’abonné  
   
 1.  Sélectionnez **Microsoft SQL Server** comme type de source de données.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108507"
   
 5.  Sélectionnez l'option **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**, puis cliquez sur **Suivant**.  
   
-##  <a name="bkmk_definequery"></a>Étape 3-définir une requête pour récupérer les données de l’abonné  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>Étape 3-définir une requête pour récupérer les données de l’abonné  
   
 1.  Dans la zone de requête, tapez la requête suivante :  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108507"
   
 3.  Cliquez sur **Valider**, puis sur **Suivant**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a>Étape 4 : définir les options de remise  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>Étape 4 : définir les options de remise  
   
 1.  Pour **Nom de fichier**, sélectionnez **Obtenir la valeur de la base de données**. Sélectionnez le champ **Order**.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "66108507"
   
 8.  Cliquez sur **Suivant**.  
   
-##  <a name="bkmk_configure_parameter"></a>Étape 5-configurer une valeur de paramètre pour une sortie de rapport très importante  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>Étape 5-configurer une valeur de paramètre pour une sortie de rapport très importante  
   
 1.  Pour **OrderNumber**, sélectionnez **Obtenir la valeur de la base de données**. Dans Valeur, sélectionnez **Ordre**. Cliquez sur **Suivant**.  
   
-##  <a name="bkmk_schedule_subscription"></a>Étape 6-pour planifier un abonnement  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>Étape 6-pour planifier un abonnement  
   
 1.  Cliquez sur **Suivant une planification créée pour cet abonnement**, puis sur **Suivant**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66108507"
 ## <a name="next-steps"></a>Étapes suivantes  
  Lors de l'exécution de l'abonnement, quatre fichiers de rapport sont remis au partage de fichiers que vous avez défini, un pour chaque commande dans la source de données *Abonnés* . Chaque remise doit être unique en termes de données (les données doivent être propres à chaque commande), de format de rendu et de format de fichier. Vous pouvez ouvrir chaque rapport à partir du dossier partagé pour vérifier que chaque version est personnalisée en fonction des options d'abonnement que vous avez définies.  
   
- ![Liste de fichiers créé par l'abonnement](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste de fichiers créé par l'abonnement")  
+ ![Liste de fichiers créés par l'abonnement](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste de fichiers créés par l'abonnement")  
   
  La page des abonnements dans le Gestionnaire de rapports contiendra la date **Dernière exécution** et l' **État** de l'abonnement.  
   
@@ -142,6 +142,6 @@ ms.locfileid: "66108507"
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Créer, modifier et supprimer un abonnement piloté par les données](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Utilisez une source de données externe pour les données de l’abonné &#40;abonnement piloté par les données&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

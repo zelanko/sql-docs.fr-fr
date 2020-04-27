@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105465"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planifier un rapport cartographique (Générateur de rapports et SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105465"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a>Spécifier l’objectif de la carte  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Spécifier l'objectif de la carte  
  Une conception de rapport efficace fournit des informations permettant aux utilisateurs de prendre des mesures pour résoudre les éventuels problèmes. Pour créer un affichage de carte efficace et facilement compréhensible, déterminez en premier lieu les questions auxquelles la carte doit aider à répondre. Par exemple, vous pouvez visualiser les types suivants de données pour identifier des possibilités commerciales sur une carte :  
   
 -   Chiffres des ventes relatifs pour chaque magasin.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105465"
   
  
   
-##  <a name="Data"></a>Spécifier les données spatiales et analytiques  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Spécifier les données spatiales et analytiques  
  Vous devez spécifier de quelles données spatiales et analytiques vous avez besoin.  
   
  Les données analytiques proviennent d'un dataset de rapport, des exemples de données incluses avec une carte de la bibliothèque de cartes ou de données analytiques incluses avec les données spatiales dans un fichier de forme ESRI.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105465"
   
  Les données spatiales doivent contenir les champs suivants :  
   
--   **Données spatiales.** Champ de données spatiales comprenant les jeux de coordonnées qui définissent chaque point, ligne ou polygone.  
+-   **Spatial data.** Champ de données spatiales comprenant les jeux de coordonnées qui définissent chaque point, ligne ou polygone.  
   
 -   **Champs de correspondance.** Un ou plusieurs champs qui identifient de manière unique chaque champ de données spatiales. Par exemple, pour un point d'emplacement de magasin, vous souhaiterez peut-être utiliser le nom du magasin. Si le nom de magasin n'est pas unique dans les données spatiales, vous pouvez inclure le nom de la ville avec celui du magasin.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105465"
   
 
   
-##  <a name="MapType"></a>Choisir un type de carte  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Choisir un type de carte  
  Lorsque vous exécutez l'Assistant Carte, vous ajoutez une carte et la première couche de carte à votre rapport. L'Assistant vous permet d'ajouter l'un des types de cartes suivants à votre rapport :  
   
 -   une carte simple qui affiche des emplacements sans données analytiques associées ;  
@@ -126,7 +126,7 @@ ms.locfileid: "66105465"
   
  
   
-##  <a name="Legend"></a>Planifier des légendes  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Planifier les légendes  
  Pour aider vos utilisateurs à interpréter une carte, vous pouvez ajouter plusieurs légendes de carte, une échelle de couleurs et une échelle des distances. Lorsque vous concevez une carte, planifiez l'emplacement où vous souhaitez que les légendes s'affichent. Vous pouvez spécifier les informations suivantes à propos de chaque légende :  
   
 -   **Emplacement de la légende.** Par exemple, les légendes peuvent être affichées à l'intérieur ou à l'extérieur de la fenêtre d'affichage, et dans 12 emplacements discrets par rapport à la fenêtre d'affichage.  
@@ -135,7 +135,7 @@ ms.locfileid: "66105465"
   
 -   **Titre de la légende.** Par exemple, vous pouvez spécifier le texte du titre, et contrôler indépendamment s'il faut afficher un titre pour une légende de la carte ou pour l'échelle de couleurs.  
   
--   **Disposition de la légende de la carte.** Par exemple, les légendes de carte peuvent être affichées comme tables verticales ou horizontales.  
+-   **Mise en page de la légende de carte.** Par exemple, les légendes de carte peuvent être affichées comme tables verticales ou horizontales.  
   
  Le contenu de la légende est créé automatiquement pendant le traitement des rapports en fonction des options de règle définies pour chaque couche.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66105465"
   
 
   
-##  <a name="Embedding"></a>Équilibrer la taille de la définition de rapport et le temps de traitement  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Trouver un compromis entre la taille de la définition de rapport et le temps de traitement du rapport  
  Une conception de rapport efficace en matière de cartes nécessite de trouver un compromis entre les options qui contrôlent les performances du rapport et la taille de la définition de rapport. Les éléments cartographiques basés sur des données spatiales, ou les mosaïques Bing, peuvent être statiques et incorporés dans la définition de rapport, ou dynamiques et créés chaque fois que le rapport est traité. Vous devez évaluer les avantages et inconvénients présentés par des données cartographiques statiques et dynamiques et rechercher un compromis approprié pour votre scénario. Considérez les points suivants lorsque vous prenez cette décision :  
   
 -   Les éléments cartographiques incorporés peuvent augmenter considérablement la taille de la définition de rapport, mais ils réduisent le temps nécessaire pour afficher la carte dans le rapport. Votre serveur de rapports peut être soumis à des limites de taille que vous devez prendre en considération.  
@@ -161,9 +161,9 @@ ms.locfileid: "66105465"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Personnaliser les données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Didacticiel : &#40;de rapport cartographique Générateur de rapports&#41;](../tutorial-map-report-report-builder.md)   
+ [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Didacticiel : rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

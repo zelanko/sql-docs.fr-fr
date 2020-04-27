@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108245"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des parallèles de la carte, Étiquettes
@@ -30,7 +30,7 @@ ms.locfileid: "66108245"
  Cliquez sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l'option.  
   
 ## <a name="options"></a>Options  
- **Défini**  
+ **Intervalle**  
  Tapez une valeur entière en degrés pour spécifier l'intervalle entre les parallèles. Par défaut, la valeur **Auto** est sélectionnée. Si cette option est définie sur **Auto**, la valeur est déterminée par les données provenant du dataset de la carte.  
   
  **Afficher les étiquettes**  
@@ -39,15 +39,15 @@ ms.locfileid: "66108245"
  **Placement**  
  Sélectionnez un emplacement pour afficher les étiquettes par rapport à la partie supérieure, centrale ou inférieure de la fenêtre d'affichage. L'emplacement par défaut est **Rapproché**.  
   
--   **Près** de Affichez les étiquettes en haut.  
+-   **Rapproché** Affiche les étiquettes en haut.  
   
--   **Un quart** Affichez les étiquettes à mi-chemin entre le haut et le centre.  
+-   **Un quart** Affiche les étiquettes à mi-chemin entre le haut et le centre.  
   
--   **Centre** Affichez les étiquettes au centre.  
+-   **Centre** Affiche les étiquettes au centre.  
   
--   **Trois quarts** Affichez les étiquettes à mi-chemin entre le centre et le bas.  
+-   **Trois quarts** Affiche les étiquettes à mi-chemin entre le centre et le bas.  
   
--   **Loin** Affichez les étiquettes en bas.  
+-   **Espacé** Affiche les étiquettes en bas.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

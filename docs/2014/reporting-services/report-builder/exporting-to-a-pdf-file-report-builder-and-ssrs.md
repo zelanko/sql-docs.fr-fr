@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107922"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107922"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Incorporation de police  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>Incorporation de polices  
  Lorsque cela est possible, l'extension de rendu PDF incorpore le sous-ensemble de chaque police nécessaire pour afficher le rapport dans le fichier PDF. Les polices utilisées dans le rapport doivent être installées sur le serveur de rapports. Lorsque le serveur de rapports génère un rapport au format PDF, il utilise les informations stockées dans la police référencée par le rapport pour créer les mappages de caractères dans le fichier PDF. Si la police demandée n'est pas installée sur le serveur de rapports, le fichier PDF qui est créé peut ne pas contenir les mappages requis et donc ne pas s'afficher correctement lorsqu'il est ouvert.  
   
  Les polices sont incorporées dans le fichier PDF lorsque les conditions suivantes s'appliquent :  
@@ -57,7 +57,7 @@ ms.locfileid: "66107922"
   
  Les polices incorporées dans le fichier PDF sont incluses dans la propriété Fonts qui est enregistrée avec le fichier, en tant que métadonnées.  
   
-##  <a name="Metadata"></a> Métadonnées  
+##  <a name="metadata"></a><a name="Metadata"></a>Metadata  
  En plus de la mise en page du rapport, l'extension de rendu PDF écrit les métadonnées suivantes dans le dictionnaire des informations du document PDF.  
   
 |Propriété PDF|Créée à partir de|  
@@ -65,14 +65,13 @@ ms.locfileid: "66107922"
 |`Title`|Attribut `Name` de l'élément RDL `Report`|  
 |`Author`|Élément RDL `Author`|  
 |`Subject`|Élément RDL `Description`|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nom et version de l'extension de rendu|  
 |`CreationDate`|Heure de l'exécution du rapport au format `datetime` PDF|  
   
   
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interactivité  
  Certains éléments interactifs sont pris en charge en PDF. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -94,7 +93,7 @@ ms.locfileid: "66107922"
   
   
   
-##  <a name="Compression"></a>Compressé  
+##  <a name="compression"></a><a name="Compression"></a>Compressé  
  La compression d'image est basée sur le type de fichier d'origine de l'image. L'extension de rendu PDF compresse les fichiers PDF par défaut.  
   
  Pour conserver la compression des images incluses dans le fichier PDF lorsque cela est possible, les images JPEG sont stockées au format JPEG et tous les autres types d'images sont stockés au format BMP.  
@@ -104,7 +103,7 @@ ms.locfileid: "66107922"
   
   
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Paramètres d’informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut pour ce convertisseur en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [PDF Device Information Settings](../pdf-device-information-settings.md).  
   
   
@@ -112,7 +111,7 @@ ms.locfileid: "66107922"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives pour différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

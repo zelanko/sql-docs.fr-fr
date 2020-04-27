@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108188"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Page Mes abonnements (Gestionnaire de rapports)
@@ -44,16 +44,16 @@ ms.locfileid: "66108188"
  **Modifier**  
  Cliquez pour afficher ou modifier la description.  
   
- **Report**  
+ **Rapport**  
  Affiche le rapport défini dans l'abonnement. Cliquez sur le nom du rapport pour afficher ce dernier.  
   
  **Description**  
  Affiche une description de l'abonnement. Cliquez sur la description pour afficher ou modifier les informations sur l'abonnement du rapport.  
   
- **Folder**  
+ **Répertoire**  
  Affiche le dossier qui contient le rapport défini dans l'abonnement. Cliquez sur le nom du dossier pour afficher le contenu de ce dernier.  
   
- **Stead**  
+ **Déclencheur**  
  Identifie les critères qui entraînent l'exécution de l'abonnement. Un déclencheur **TimedSubscription** est basé sur une planification qui définit à quel moment l'abonnement s'exécute. Un déclencheur **SnapshotUpdated** est basé sur une mise à jour d'un instantané de rapport.  
   
  **Dernière exécution**  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105491"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Graphiques à secteurs (Générateur de rapports et SSRS)
@@ -35,9 +35,9 @@ ms.locfileid: "66105491"
   
 -   **Anneau éclaté**. Graphique en anneau où tous les secteurs sont déplacés loin du centre de l'anneau.  
   
--   **secteurs 3D**. Graphique à secteurs 3D.  
+-   **Secteurs 3D**. Graphique à secteurs 3D.  
   
--   **secteurs éclatés 3D**. Graphique à secteurs éclatés 3D.  
+-   **Secteurs éclatés 3D**. Graphique à secteurs éclatés 3D.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Considérations relatives aux données pour l'affichage sur un graphique en secteurs  
   

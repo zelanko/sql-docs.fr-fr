@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106751"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Ajouter une action Développer ou Réduire à un élément (Générateur de rapports et SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106751"
 3.  Dans le volet Groupe approprié, cliquez sur le nom du groupe de lignes ou du groupe de colonnes dont vous souhaitez masquer les lignes ou les colonnes qui y sont associées. Le groupe est sélectionné et le volet Propriétés affiche les propriétés **Membre du tableau matriciel** .  
   
     > [!NOTE]  
-    >  Si vous ne voyez pas le volet Propriétés, cliquez sur **Affichage** sur le ruban, puis cliquez sur **Propriétés**.  
+    >   Si vous ne voyez pas le volet Propriétés, cliquez sur **Affichage** sur le ruban, puis cliquez sur **Propriétés**.  
   
 4.  Dans `Hidden`, choisissez l’une des options suivantes pour définir la visibilité de cet élément de rapport la première fois que vous exécutez un rapport :  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66106751"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Pour ajouter une action Développer/Réduire à un élément de rapport  
   
-1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **** * \<* propriétés de l’élément de rapport>. La * \<* boîte de dialogue **Propriétés** de l’élément de rapport>de l’élément de rapport s’ouvre.  
+1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **Properties** * \<* propriétés de l’élément de rapport>. La * \<* boîte de dialogue **Propriétés** de l’élément de rapport>de l’élément de rapport s’ouvre.  
   
 2.  Cliquez sur **Visibilité**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66106751"
   
     -   Sélectionnez **Masquer** pour masquer l'élément de rapport.  
   
-    -   Sélectionnez **Afficher ou masquer en fonction d'une expression** pour utiliser une expression évaluée au moment de l'exécution pour déterminer la visibilité. Cliquez sur (**fx**) pour ouvrir la boîte de dialogue **Expression** et créer une expression.  
+    -   Sélectionnez **Afficher ou masquer en fonction d'une expression** pour utiliser une expression évaluée au moment de l'exécution pour déterminer la visibilité. Cliquez sur (**FX**) pour ouvrir la boîte de dialogue **expression** et créer une expression.  
   
         > [!NOTE]  
         >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport. L'expression prend la valeur `Boolean``True` pour masquer l'élément, et la valeur `False` pour l'afficher.  
@@ -86,7 +86,7 @@ ms.locfileid: "66106751"
   
      Dans l'image suivante, la table est configurée de manière à permettre aux utilisateurs de la développer et de la réduire. L'affichage de la table peut être activé et désactivé depuis la zone de texte Table de Produits.  
   
-     ![Configurer une table de rapport pour qu’elle soit développée](../media/expandcollapse-reporttable.png "Configurer le développement d'une table rapport")  
+     ![Configurer le développement d'une table rapport](../media/expandcollapse-reporttable.png "Configurer le développement d'une table rapport")  
   
     > [!NOTE]  
     >  La zone de texte que vous choisissez doit figurer dans l'étendue actuelle ou contenante de cet élément de rapport (jusqu'au corps du rapport inclus). Par exemple, pour afficher ou masquer un graphique, sélectionnez une zone de texte qui est dans la même étendue contenante que le graphique, par exemple le corps du rapport ou un rectangle. La zone de texte doit figurer dans la même hiérarchie de conteneurs ou à un niveau plus élevé.  

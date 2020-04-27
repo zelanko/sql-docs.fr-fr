@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f97567188cc3c1f4e4082be1c4c1378ca97122f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108597"
 ---
 # <a name="upgrade-reports"></a>Mettre à niveau des rapports
@@ -55,16 +55,14 @@ ms.locfileid: "66108597"
   
 -   [Boîte de dialogue de conversion des éléments de rapport personnalisés](#bkmk_convertCRIdialog)  
   
-##  <a name="bkmk_versionsupported"></a>Versions prises en charge par la mise à niveau  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Versions prises en charge par la mise à niveau  
  Les rapports créés dans une version précédente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être mis à niveau. Les versions concernées sont les suivantes :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 avec Service Pack 1  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 avec Service Pack 1  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 avec Service Pack 2  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 avec Service Pack 2  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
@@ -72,7 +70,7 @@ ms.locfileid: "66108597"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a>Fichiers de définition de rapport (. rdl) et Concepteur de rapports  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> Fichiers de définition de rapport (.rdl) et Concepteur de rapports  
  Un fichier de définition de rapport comprend une référence à l'espace de noms RDL qui indique la version du schéma de définition de rapport utilisé pour valider le fichier .rdl.  
   
  Lorsque vous ouvrez un fichier .rdl dans le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], si le rapport a été créé pour un espace de noms antérieur, le Concepteur de rapports crée automatiquement un fichier de sauvegarde et met à niveau le rapport d'après l'espace de noms actuel. Il s'agit de la seule façon dont vous pouvez mettre à niveau un fichier de définition de rapport.  
@@ -86,15 +84,15 @@ ms.locfileid: "66108597"
   
  Pour identifier le schéma RDL actuel d’un rapport, d’un serveur de rapports ou du Concepteur de rapports, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a>Rapports publiés et instantanés de rapport  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Rapports publiés et instantanés de rapport  
  Lors de la première utilisation, le serveur de rapports essaie de mettre à niveau les rapports publiés et les instantanés de rapport existants vers le nouveau schéma de définition de rapport, en ne requérant aucune action spécifique de votre part. Lorsqu'un utilisateur affiche un rapport ou un instantané de rapport, ou lorsque le serveur de rapports traite un abonnement, la mise à niveau s'effectue. La définition de rapport n'est pas remplacée, mais continue à être stockée sur le serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans son schéma d'origine. Si un rapport ne peut pas être mis à niveau, le rapport s'exécute en mode compatibilité descendante.  
   
-##  <a name="bkmk_backcompat"></a>Mode de compatibilité descendante  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Mode compatibilité descendante  
  Un rapport mis à niveau avec succès est traité par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Un rapport qui ne peut pas être mis à niveau est traité par le processeur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode compatibilité descendante. Un rapport ne peut pas être traité par les deux processeurs de rapports. Lors de la première utilisation, un rapport est mis à niveau avec succès ou marqué pour la compatibilité descendante.  
   
  Seul le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] prend en charge les nouvelles fonctionnalités. Si un rapport ne peut pas être mis à niveau, vous pouvez toujours consulter le rapport rendu, mais les nouvelles fonctionnalités ne sont pas disponibles. Pour tirer parti des nouvelles fonctionnalités, un rapport doit être mis à niveau avec succès.  
   
-##  <a name="bkmk_subreports"></a>Mise à niveau d’un rapport avec des sous-rapports  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Mise à niveau d'un rapport avec les sous-rapports  
  Quand un rapport contient des sous-rapports, l'un des quatre états suivants peut se produire pendant la mise à niveau :  
   
 -   Le rapport principal et tous les sous-rapports peuvent être mis à niveau avec succès. Ils sont traités par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -109,7 +107,7 @@ ms.locfileid: "66108597"
   
  Les rapports d'extraction n'ont pas cette limitation parce qu'ils sont traités en tant que rapports indépendants.  
   
-##  <a name="bkmk_CRIs"></a>Mise à niveau d’un rapport avec des éléments de rapport personnalisés  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Mise à niveau d'un rapport avec les éléments de rapport personnalisés  
  Les rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent contenir les éléments de rapport personnalisés proposés par les fournisseurs de logiciels tiers et installés par l'administrateur système sur l'ordinateur de création de rapports et le serveur de rapports. Les rapports qui contiennent des éléments de rapport personnalisés peuvent être mis à niveau de différentes façons :  
   
 -   Un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est mis à niveau vers un serveur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Les rapports publiés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation.  
@@ -139,7 +137,7 @@ ms.locfileid: "66108597"
 |Éléments de rapport personnalisés Dundas 2005 Chart avec fonctionnalités non prises en charge|Mise à niveau non effectuée.<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |Éléments de rapport personnalisés Dundas 2005 Gauge avec fonctionnalités non prises en charge|Mise à niveau non effectuée.<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a>Ouverture d’un rapport avec éléments dans Concepteur de rapports  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Ouverture d'un rapport avec éléments de rapport personnalisés dans le Concepteur de rapports  
  Quand vous ouvrez un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 avec éléments dans Concepteur de rapports dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le rapport est mis à niveau vers le nouveau schéma de définition de rapport. Selon les éléments de rapport personnalisés contenus dans le rapport, l'une des actions suivantes a lieu :  
   
 -   Éléments de rapport personnalisés tiers détectés. Si la version du CRI installé sur l'ordinateur de création de rapports n'est pas compatible avec le nouveau schéma RDL, l'aire de conception affiche une zone de texte avec une croix de couleur rouge. Vous devez contacter votre administrateur système pour installer les nouvelles versions des éléments de rapport personnalisés des fournisseurs tiers compatibles avec le nouveau schéma RDL.  
@@ -187,11 +185,11 @@ ms.locfileid: "66108597"
   
 -   Images personnalisées.  
   
-###  <a name="bkmk_convertCRIdialog"></a>Boîte de dialogue convertir un élément personnalisé  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a>Boîte de dialogue convertir un élément personnalisé  
  Ce rapport contient des éléments de rapport personnalisés (CRI, Custom Report Item) avec des fonctionnalités non prises en charge. Les éléments de rapport personnalisés sont des extensions du langage RDL (Report Definition Language) qui prennent en charge les objets personnalisés qui affichent les données dans un rapport. Les CRI incluent des composants du moment du design et du moment de l'exécution fournis par des éditeurs de logiciels tiers.  
   
 > [!NOTE]  
->  Le choix de prendre en charge des éléments de rapport personnalisés sur un serveur de rapports est une décision qui revient à l'administrateur système. Pour permettre l'affichage des éléments de rapport personnalisés (CRI) dans un rapport, les composants CRI doivent être installés sur le client de création de rapports pour l'aperçu d'un rapport et sur le serveur de rapports pour l'affichage d'un rapport publié et téléchargé. Pour plus d’informations, consultez [Éléments de rapport personnalisés](../custom-report-items/custom-report-items.md) et la documentation de l’éditeur de logiciels tiers.  
+>  Le choix de prendre en charge des éléments de rapport personnalisés sur un serveur de rapports est une décision qui revient à l'administrateur système. Pour permettre l'affichage des éléments de rapport personnalisés (CRI) dans un rapport, les composants CRI doivent être installés sur le client de création de rapports pour l'aperçu d'un rapport et sur le serveur de rapports pour l'affichage d'un rapport publié et téléchargé. Pour plus d’informations, consultez [éléments de rapport personnalisés](../custom-report-items/custom-report-items.md) et documentation de l’éditeur de logiciels tiers.  
   
  Certains CRI peuvent être convertis en éléments de rapport dans le nouveau format de définition de rapport. Pour obtenir la liste des CRI qui peuvent être convertis, consultez [Upgrading Reports](upgrade-reports.md). Utilisez la liste suivante pour décider s'il est nécessaire de convertir les CRI dans ce rapport :  
   

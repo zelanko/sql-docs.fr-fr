@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107638"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Enregistrer des rapports sur un serveur de rapports (Générateur de rapports)
@@ -40,7 +40,7 @@ ms.locfileid: "66107638"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Pour enregistrer un rapport sous un nom différent  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer comme**_\<élément\> de rapport_ s’ouvre.  
+1.  À partir du bouton Générateur de rapports , cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer comme**_\<élément\> de rapport_ s’ouvre.  
   
 2.  Naviguez jusqu'à l'emplacement du serveur de rapports ou jusqu'au partage de fichiers où vous souhaitez enregistrer le rapport.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66107638"
 4.  Dans **Éléments de type**, sélectionnez le type d’élément de rapport à enregistrer. Le type des rapports est Rapports (*.rdl).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](saving-reports-report-builder.md)   
  [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
