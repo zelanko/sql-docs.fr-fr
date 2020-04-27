@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164336"
 ---
 # <a name="debugging-delivery-extension-code"></a>Débogage du code d'extension de remise
-  Le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit plusieurs outils de débogage qui peuvent vous aider à analyser votre code d’extension de remise et à localiser les erreurs qu’il contient. L'outil le plus approprié dépend de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit plusieurs outils de débogage qui peuvent vous aider à analyser le code de vos extensions de remise et à localiser les erreurs qu’il contient. L'outil le plus approprié dépend de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
   
 #### <a name="to-debug-your-delivery-extension-code"></a>Pour déboguer votre code d'extension de remise  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63164336"
   
 7.  Définissez un nouvel abonnement à l'aide de votre extension de remise. Vous utiliserez très probablement le Gestionnaire de rapports ou l'API SOAP. Celle-ci doit appeler le débogueur et exécuter le code correspondant à vos points d'arrêt.  
   
-8.  Exécutez pas à pas votre code à l’aide de la touche **F11** . Pour plus d'informations sur l'utilisation de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pour le débogage, consultez votre documentation [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+8.  Exécutez le code pas à pas à l’aide de la touche **F11**. Pour plus d'informations sur l'utilisation de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pour le débogage, consultez votre documentation [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de remise](implementing-a-delivery-extension.md)   

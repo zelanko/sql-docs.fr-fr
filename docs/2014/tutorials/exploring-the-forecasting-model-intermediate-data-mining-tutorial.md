@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992269"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
@@ -28,7 +28,7 @@ ms.locfileid: "62992269"
   
 -   [Visionneuse de contenu générique Microsoft](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>Onglet graphiques  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>Onglet graphiques  
  L’onglet **graphiques** de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de la série chronologique vous montre graphiquement chacune des séries, y compris les données d’historique et les prédictions. Chaque ligne dans le graphique de série chronologique représente une combinaison unique de produit, région et attribut prédictible.  
   
  La légende à droite de la visionneuse répertorie la série chronologique disponible, en fonction des sélections de la liste déroulante. Vous pouvez cocher et décocher les cases de la légende pour indiquer la série chronologique à afficher dans le graphique.  
@@ -87,7 +87,7 @@ ms.locfileid: "62992269"
   
  [Retour au début](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>Onglet modèle  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>Onglet modèle  
  L’onglet **modèle** de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de la série chronologique dans le concepteur d’exploration de données vous permet d’afficher le modèle de prévision sous la forme d’un graphique d’arborescence.  
   
  D'abord, notez qu'en raison de la description faite par vos données de deux mesures différentes (Montant et Quantité) pour les ventes de plusieurs lignes de produits (T1000, etc.) dans trois régions différentes (Europe, Amérique du Nord, et Pacifique), le modèle que vous avez généré contient réellement 24 arborescences différentes, chacune représentant un modèle des modèles de ventes pour une autre combinaison de région, produit, et attribut prédictible.  
@@ -100,7 +100,7 @@ ms.locfileid: "62992269"
   
 -   Lorsqu'un graphique d'arbre pour une série chronologique a plusieurs branches, cela signifie que la série chronologique qui a été détectée est trop complexe pour être représentée sous la forme d'une équation unique. Au lieu de cela, le graphique d’arborescence peut contenir plusieurs branches, chaque branche portant les conditions qui ont provoqué le *fractionnement*de l’arborescence. Lorsque l'arborescence se fractionne, chaque branche représente un segment de temps différent, à l'intérieur duquel la tendance peut être décrite comme une équation unique.  
   
-     Par exemple, si vous examinez le graphique du graphique et que vous voyez un saut soudain dans le volume des ventes à partir de septembre et que vous continuez jusqu’à la fin de l’année, vous pouvez basculer vers la vue de **modèle** pour afficher la date exacte à laquelle la tendance a changé. Les branches de l’arborescence qui représentent « avant septembre » et « après septembre » contiennent des formules différentes : une formule qui décrit mathématiquement les tendances des ventes jusqu’au fractionnement, et une autre formule qui décrit les tendances des ventes pour septembre jusqu’à vacances de fin d’année.  
+     Par exemple, si vous examinez le graphique du graphique et que vous voyez un saut soudain dans le volume des ventes à partir de septembre et que vous continuez jusqu’à la fin de l’année, vous pouvez basculer vers la vue de **modèle** pour afficher la date exacte à laquelle la tendance a changé. Les branches de l’arborescence qui représentent « avant septembre » et « après septembre » contiennent des formules différentes : une formule qui décrit mathématiquement les tendances des ventes jusqu’au fractionnement, et une autre formule qui décrit les tendances des ventes pour septembre jusqu’au jour férié de fin de l’année.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Pour explorer l'arbre de décision d'un modèle de série chronologique  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992269"
   
  [Retour au début](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>Facultatif Visionneuse de l’arborescence de contenu générique  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>Facultatif Visionneuse de l’arborescence de contenu générique  
  En plus de la visionneuse personnalisée pour la série [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] chronologique, fournit la **visionneuse de l’arborescence de contenu MicrosoftGeneric** à utiliser avec tous les modèles d’exploration de données. Cette visionneuse offre quelques avantages :  
   
 -   Visionneuse de l’algorithme **MTS (Microsoft Time Series**) : cette vue fusionne les résultats des deux algorithmes. Bien que vous puissiez afficher chaque série séparément, vous ne pouvez pas déterminer comment les résultats de chaque algorithme ont été combinés. De plus, dans cette vue, les info-bulles et la légende d'exploration de données affichent uniquement les statistiques les plus importantes.  

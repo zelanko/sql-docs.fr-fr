@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137465"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Leçon 4 : Mise à jour par programme de la définition du rapport
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Leçon 4 : Mettre à jour la définition du rapport par programmation
   Maintenant que la définition du rapport a été chargée depuis le serveur de rapports et que vous pouvez y faire référence à l'aide du champ du rapport, vous devez la mettre à jour. Pour cet exemple, vous allez mettre à jour la propriété `Description` du rapport.  
   
 ### <a name="to-update-the-report-definition"></a>Pour mettre à jour la définition du rapport  

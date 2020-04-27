@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036215"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Déplacer un index existant dans un autre groupe de fichiers
@@ -34,26 +34,26 @@ ms.locfileid: "63036215"
   
      [Sécurité](#Security)  
   
--   **Pour déplacer un index existant vers un autre groupe de fichiers, utilisez :**  
+-   **Pour placer un index existant dans un autre groupe de fichiers à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Si une table possède un index cluster, le déplacement de celui-ci vers un nouveau groupe de fichiers entraîne le déplacement de la table vers ce groupe de fichiers.  
   
 -   Vous ne pouvez pas déplacer des index créés à l'aide de la contrainte UNIQUE ou PRIMARY KEY en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour déplacer ces index, utilisez l’instruction [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) avec l’option (DROP_EXISTING=ON) dans [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Pour placer un index existant dans un autre groupe de fichiers à l'aide du Concepteur de tables  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63036215"
   
 3.  Cliquez avec le bouton droit sur la table avec l’index que vous souhaitez déplacer et sélectionnez **Conception**.  
   
-4.  Dans le menu **Concepteur de tables** , cliquez sur **index/clés**.  
+4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
 5.  Sélectionnez l'index à déplacer.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "63036215"
   
  Les informations suivantes sont disponibles dans la page **Stockage** de la boîte de dialogue **Propriétés de l’index -** _nom_index_ :  
   
- **Fichiers**  
+ **Groupe de fichiers**  
  Stocke l'index dans le groupe de fichiers spécifié. La liste répertorie uniquement les groupes de fichiers standard (row). Le groupe de fichiers PRIMARY de la base de données est sélectionné par défaut dans la liste.  
   
- **Groupe de fichiers FILESTREAM**  
+ **Groupe de fichiers Filestream**  
  Spécifie le groupe de fichiers pour les données FILESTREAM. Cette liste affiche uniquement des groupes de fichiers FILESTREAM. Le groupe de fichiers sélectionné par défaut dans la liste est le groupe PRIMARY FILESTREAM.  
   
  **Schéma de partition**  
@@ -112,12 +112,12 @@ ms.locfileid: "63036215"
   
  L'option Schéma de partition n'est pas disponible s'il n'y a pas de schémas de partition dans la base de données.  
   
- **Schéma de partition FileStream**  
+ **Schéma de partition Filestream**  
  Spécifie le schéma de partition utilisé pour les données FILESTREAM. Ce schéma de partition doit être symétrique avec celui spécifié dans l'option **Schéma de partition** .  
   
  Si la table n'est pas partitionnée, le champ est vide.  
   
- **Paramètre de schéma de partition**  
+ **Paramètre du schéma de partition**  
  Affiche le nom de la colonne qui participe au schéma de partition.  
   
  **Colonne de table**  
@@ -129,7 +129,7 @@ ms.locfileid: "63036215"
 > [!NOTE]  
 >  Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
   
- **Autoriser le traitement en ligne des instructions DML lors du déplacement de l’index**  
+ **Autoriser le traitement en ligne des instructions DML lors du déplacement de l'index**  
  Permet aux utilisateurs d'accéder à la table sous-jacente ou aux données des index cluster et à tous les index non-cluster associés pendant l'opération d'index.  
   
 > [!NOTE]  
@@ -141,7 +141,7 @@ ms.locfileid: "63036215"
 > [!NOTE]  
 >  Si une valeur supérieure au nombre d'UC disponibles est spécifiée, le nombre réel d'UC est utilisé.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Pour placer un index existant dans un autre groupe de fichiers  
   

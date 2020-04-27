@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989082"
 ---
 # <a name="filter-published-data"></a>Filtrer des données publiées
@@ -61,7 +61,7 @@ ms.locfileid: "62989082"
 ## <a name="static-row-filters"></a>filtres de lignes statiques  
  L'illustration suivante montre une table publiée filtrée pour que seules les lignes 2, 3 et 6 soient intégrées à la publication.  
   
- ![Filtrage de lignes](../media/repl-16.gif "Filtrage de ligne")  
+ ![Filtrage de lignes](../media/repl-16.gif "Filtrage de lignes")  
   
  Un filtre de lignes statiques utilise une clause WHERE pour sélectionner les données appropriées à publier, c'est à vous de spécifier la dernière partie de la clause WHERE. Considérez la table **Product** dans l'exemple de base de données Adventure Works, qui contient la colonne **ProductLine**. Pour publier uniquement les lignes comportant des données relatives aux vélos tout terrain, spécifiez `ProductLine = 'M'`.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62989082"
   
  Vous pouvez également combiner le filtrage de lignes et de colonnes, comme le montre l'illustration suivante.  
   
- ![Filtrage de ligne et de colonne](../media/repl-18.gif "Filtrage de ligne et de colonne")  
+ ![Filtrage de lignes et de colonnes](../media/repl-18.gif "Filtrage de lignes et de colonnes")  
   
  Après qu'une publication soit créée, vous pouvez utiliser le filtrage de colonnes pour supprimer une colonne d'une publication existante, mais la conserver dans la table sur le serveur de publication, et vous pouvez également inclure une colonne existante dans la publication. Pour les autres modifications, comme l'ajout d'une nouvelle colonne à une table puis à l'article publié, utilisez la réplication de modification de schéma. Pour plus d’informations, consultez les sections « Ajout de colonnes » et « Suppression de colonnes » dans la rubrique [Apporter des modifications au schéma sur des bases de données de publication](make-schema-changes-on-publication-databases.md).  
   
@@ -129,9 +129,7 @@ ms.locfileid: "62989082"
   
 -   La réplication transactionnelle vous permet de répliquer une vue indexée comme une vue ou une table. Si vous répliquez la vue comme une table, vous ne pouvez pas filtrer les colonnes de la table.  
   
- Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). 
-  `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sécurité, limite l’exécution de cette logique afin qu’un malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
+ Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sécurité, limite l’exécution de cette logique afin qu’un malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)  

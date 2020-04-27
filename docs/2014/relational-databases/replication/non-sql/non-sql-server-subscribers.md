@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022248"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
@@ -35,7 +35,7 @@ ms.locfileid: "63022248"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
-|Base de données|Système d'exploitation|Fournisseur|  
+|Base de données|Système d’exploitation|Fournisseur|  
 |--------------|----------------------|--------------|  
 |Oracle|Toute plateforme prenant en charge Oracle|Fournisseur OLE DB Oracle (fourni par Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
@@ -87,8 +87,7 @@ ms.locfileid: "63022248"
   
 ### <a name="replication-feature-support"></a>Prise en charge de la fonctionnalité de réplication  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent utiliser les abonnements par envoi de données (push), dans lesquels l'Agent de distribution est exécuté sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent utiliser les abonnements par envoi de données (push), dans lesquels l'Agent de distribution est exécuté sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre deux formats d'instantanés : le mode bcp natif et le mode caractère. Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessitent des instantanés en mode caractère.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "63022248"
 -   Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peuvent pas être initialisés automatiquement à partir d'une sauvegarde.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication de base de données hétérogène](heterogeneous-database-replication.md)   
- [S'abonner à des publications](../subscribe-to-publications.md)  
+ [Réplication de bases de données hétérogènes](heterogeneous-database-replication.md)   
+ [S’abonner aux Publications](../subscribe-to-publications.md)  
   
   

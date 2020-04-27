@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150714"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Surveiller et régler les performances
@@ -67,18 +67,18 @@ ms.locfileid: "63150714"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |[Surveiller les composants SQL Server](monitor-sql-server-components.md)|Fournit les étapes nécessaires requises pour surveiller efficacement n'importe quel composant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Outils d'analyse et de paramétrage des performances](performance-monitoring-and-tuning-tools.md)|Répertorie les outils de surveillance et de paramétrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Outils de surveillance et de réglage des performances](performance-monitoring-and-tuning-tools.md)|Répertorie les outils de surveillance et de paramétrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Établir un niveau de référence des performances](establish-a-performance-baseline.md)|Fournit des informations sur l'établissement d'une a génération d'une ligne de base des performances.|  
 |[Isoler les problèmes de performance](isolate-performance-problems.md)|Explique comment isoler les problèmes de performances de base de données.|  
 |[Identifier les goulots d'étranglement](identify-bottlenecks.md)|Explique comment surveiller et suivre les performances du serveur afin d'identifier les goulots d'étranglement.|  
 |[Analyse des performances et surveillance de l'activité du serveur](server-performance-and-activity-monitoring.md)|Explique comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l'activité et des performances Windows.|  
 |[Afficher et enregistrer des plans d'exécution](display-and-save-execution-plans.md)|Explique comment afficher et enregistrer des plans d'exécution dans un fichier au format XML.|  
-|[Analyse des performances à l'aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md)|Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation.|  
+|[Analyse des performances à l’aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md)|Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration automatisée à l’échelle d’une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md)   
- [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Surveiller l’utilisation des ressources &#40;Moniteur système&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

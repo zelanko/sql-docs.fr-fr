@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070826"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Récupérer des données d'une colonne FILESTREAM à l'aide d'ISequentialStream (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "63070826"
   
  Utilisez l'un des exemples suivants pour créer la table à partir de laquelle cet exemple lit :  
   
--   [Envoyer des données à une colonne FILESTREAM à l’aide de ISequentialStream liée au paramètre ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Envoyer des données à une colonne FILESTREAM avec l’interface ISequentialStream liée au paramètre ICommandText (OLE DB) &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Envoyer des données à une colonne FILESTREAM à l’aide de IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Envoyer des données à une colonne FILESTREAM avec IRowsetFastUpload (OLE DB) &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copiez la première liste de code et collez-la dans un fichier appelé ISSHelper.h.  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 869c74a0a739ce95ccb91861d031da1d5d0c6510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151056"
 ---
 # <a name="display-and-save-execution-plans"></a>Afficher et enregistrer des plans d'exécution
@@ -31,10 +31,10 @@ ms.locfileid: "63151056"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Afficher le plan d’exécution estimé](display-the-estimated-execution-plan.md)  
+-   [Affichage du plan d'exécution estimé](display-the-estimated-execution-plan.md)  
   
 -   [Afficher un plan d'exécution réel](display-an-actual-execution-plan.md)  
   
--   [Enregistrer un plan d’exécution au format XML](save-an-execution-plan-in-xml-format.md)  
+-   [Enregistrer un plan d'exécution au format XML](save-an-execution-plan-in-xml-format.md)  
   
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150596"
 ---
 # <a name="sql-server-services"></a>Services SQL Server
-  Cette section contient des rubriques d’aide F1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les boîtes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dialogue services de Configuration Manager.  
+  Cette section contient des rubriques d'aide (accessibles via la touche F1) relatives aux boîtes de dialogue des Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration.  
   
 > [!NOTE]  
 >  Si vous ouvrez le **Gestionnaire de configuration SQL Server** sur un nœud d’un cluster qui n’héberge pas les ressources, les services apparaissent comme arrêtés.  

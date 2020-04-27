@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162351"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
@@ -50,9 +50,9 @@ ms.locfileid: "63162351"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Benefits"></a> Avantages d'un index unique  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Avantages d'un index unique  
   
 -   Les index uniques multicolonnes garantissent que chaque combinaison de valeurs dans la clé d'index est unique. Par exemple, si un index unique est créé sur une combinaison des colonnes **LastName**, **FirstName**et **MiddleName** , deux lignes de la table ne peuvent pas posséder la même combinaison de valeurs pour ces colonnes.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63162351"
   
 -   Les index uniques fournissent des informations supplémentaires utiles à l'optimiseur de requête qui peut produire des plans d'exécution plus efficaces.  
   
-###  <a name="Implementations"></a> Implémentations types  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Implémentations types  
  Les index uniques sont implémentés à l'aide des méthodes suivantes :  
   
 -   **Contrainte PRIMARY KEY ou UNIQUE**  
@@ -83,18 +83,18 @@ ms.locfileid: "63162351"
   
      Pour créer une vue indexée, vous devez définir un index cluster unique sur une ou plusieurs colonnes de vue. La vue est exécutée et le jeu de résultats est stocké au niveau feuille de l'index de la même manière que les données de table sont stockées dans un index cluster. Pour plus d’informations, consultez [Créer des vues indexées](../views/views.md).  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Un index unique, une contrainte UNIQUE ou une contrainte PRIMARY KEY ne peuvent pas être créés si les données comportent des valeurs de clé dupliquées.  
   
 -   Un index non cluster unique peut contenir des colonnes non-clés incluses. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Pour créer un index unique à l'aide du Concepteur de tables  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63162351"
   
 13. Cliquez sur **Fermer**.  
   
-14. Dans le menu **fichier** , cliquez sur **Enregistrer**_table_name_.  
+14. Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Créer un index unique à l'aide de l'Explorateur d'objets  
   
@@ -142,13 +142,13 @@ ms.locfileid: "63162351"
   
 7.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
-8.  Dans la boîte de dialogue **Sélectionner les colonnes à partir de**_table_name_ , activez la ou les cases à cocher de la ou des colonnes de table à ajouter à l’index unique.  
+8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   
 9. Cliquez sur **OK**.  
   
 10. Dans la boîte de dialogue **Nouvel index** , cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Pour créer un index unique sur une table  
   

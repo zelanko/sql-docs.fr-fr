@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3fe78e6b1ed4513fff8d6ea6fafc15b8f90c43c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137303"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>Propriété InstanceName (classe ServerSettingsGeneralFlag)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  Objet de [classe ServerSettingsGeneralFlag](serversettingsgeneralflag-class.md) qui représente un indicateur général pour les paramètres du serveur.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067716"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -27,12 +27,11 @@ ms.locfileid: "63067716"
 > [!NOTE]  
 >  Pour les types de valeur de grande taille, tous les paramètres « length » sont retournés avec la valeur SQL_SS_LENGTH_UNLIMITED.  
   
- 
-  `SQLColumns` peut être exécuté sur un curseur côté serveur statique. Une tentative d'exécution de `SQLColumns` sur un curseur pouvant être mis à jour (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
+ `SQLColumns` peut être exécuté sur un curseur côté serveur statique. Une tentative d'exécution de `SQLColumns` sur un curseur pouvant être mis à jour (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
   
  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les informations de création de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le paramètre *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
- Pour ODBC 2. *x* les applications qui n’utilisent pas ** de caractères `SQLColumns` génériques dans TableName, retourne des informations sur toutes les tables dont les noms correspondent à *TableName* et qui sont détenues par l’utilisateur actuel. Si l’utilisateur actuel ne possède pas de table dont le ** nom correspond au `SQLColumns` paramètre TableName, retourne des informations sur toutes les tables détenues par d’autres utilisateurs où le nom de la table correspond au paramètre *TableName* . Pour ODBC 2. *x* les applications utilisant des caractères `SQLColumns` génériques, retourne toutes les tables dont les noms correspondent à *TableName*. Pour ODBC 3. *x* applications `SQLColumns` retourne toutes les tables dont les noms correspondent à *TableName* , quel que soit le propriétaire ou si des caractères génériques sont utilisés.  
+ Pour ODBC 2. *x* les applications qui n’utilisent pas *TableName*de caractères `SQLColumns` génériques dans TableName, retourne des informations sur toutes les tables dont les noms correspondent à *TableName* et qui sont détenues par l’utilisateur actuel. Si l’utilisateur actuel ne possède pas de table dont le *TableName* nom correspond au `SQLColumns` paramètre TableName, retourne des informations sur toutes les tables détenues par d’autres utilisateurs où le nom de la table correspond au paramètre *TableName* . Pour ODBC 2. *x* les applications utilisant des caractères `SQLColumns` génériques, retourne toutes les tables dont les noms correspondent à *TableName*. Pour ODBC 3. *x* applications `SQLColumns` retourne toutes les tables dont les noms correspondent à *TableName* , quel que soit le propriétaire ou si des caractères génériques sont utilisés.  
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par le jeu de résultats :  
   
@@ -73,8 +72,7 @@ ms.locfileid: "63067716"
  Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Prise en charge SQLColumns pour les types CLR volumineux définis par l'utilisateur  
- 
-  `SQLColumns` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColumns` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Prise en charge SQLColumns pour les colonnes éparses  
  Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonnes spécifiques ont été ajoutées au jeu de résultats pour SQLColumns :  
@@ -92,6 +90,6 @@ ms.locfileid: "63067716"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonction SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

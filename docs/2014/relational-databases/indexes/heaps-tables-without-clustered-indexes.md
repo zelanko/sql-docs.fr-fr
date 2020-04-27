@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162150"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Segments (tables sans index cluster)
@@ -54,6 +54,6 @@ ms.locfileid: "63162150"
   
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- [Description des index cluster et non cluster](clustered-and-nonclustered-indexes-described.md)  
+ [Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md)  
   
   

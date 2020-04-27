@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015648"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
@@ -31,20 +31,20 @@ ms.locfileid: "63015648"
   
      [Sécurité](#Security)  
   
--   **Pour afficher les propriétés des statistiques à l’aide de :**  
+-   **Pour afficher les propriétés des statistiques, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour afficher l’objet des statistiques, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>Pour afficher les propriétés des statistiques  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63015648"
   
 5.  Cliquez avec le bouton droit sur l’objet Statistiques dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ , dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_, dans le volet **Sélectionner une page** , sélectionnez **Détails**.  
   
-     Les propriétés suivantes s’affichent dans la page **Détails** dans la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_ .  
+     Les propriétés suivantes s’affichent dans la page **Détails** de la boîte de dialogue **Propriétés des statistiques -** _nom_statistiques_.  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
@@ -68,7 +68,7 @@ ms.locfileid: "63015648"
      **Nom des statistiques**  
      Spécifie le nom de l'objet de base de données dans lequel les statistiques sont stockées.  
   
-     **Statistiques pour INDEXstatistics_name**  
+     **Statistiques de l’INDEX statistics_name**  
      Cette zone de texte affiche les propriétés retournées par l'objet de statistiques. Ces propriétés sont divisées en trois sections : en-tête de statistiques, vecteur de densité et histogramme.  
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats de l'en-tête de statistiques.  
@@ -76,7 +76,7 @@ ms.locfileid: "63015648"
      **Nom**  
      Nom de l'objet de statistiques.  
   
-     **Mettre**  
+     **Updated**  
      Date et heure de la dernière mise à jour des statistiques.  
   
      **Lignes**  
@@ -88,14 +88,14 @@ ms.locfileid: "63015648"
      **Étapes**  
      Nombre d'étapes dans l'histogramme. Chaque étape couvre une plage de valeurs de colonnes suivie d'une valeur de colonne de limite supérieure. Les étapes d'histogramme sont définies sur la première colonne clé des statistiques. Le nombre maximal d'étapes est 200.  
   
-     **Masse**  
+     **Densité**  
      La formule 1 / *valeurs distinctes* est utilisée pour toutes les valeurs de la première colonne clé de l’objet de statistiques, à l’exception des valeurs limites de l’histogramme. Cette valeur de densité n'est pas utilisée par l'optimiseur de requête ; elle est affichée pour la compatibilité descendante avec les versions antérieures à SQL Server 2008.  
   
-     **Longueur moyenne de la clé**  
+     **Longueur moyenne d'une clé**  
      Nombre moyen d'octets par valeur pour toutes les colonnes clés de l'objet de statistiques.  
   
-     **Index de chaîne**  
-     La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet de statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**ou **ntext**.  
+     **String Index**  
+     La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet de statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**ou **ntext**.  
   
      **Expression de filtre**  
      Prédicat pour le sous-ensemble des lignes de table incluses dans l'objet de statistiques. NULL = statistiques non filtrées.  
@@ -105,7 +105,7 @@ ms.locfileid: "63015648"
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats du vecteur de densité.  
   
-     **Toute la densité**  
+     **Toutes les densités**  
      La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l'objet de statistiques contient des colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A,B) et (A, B, C). Avec le préfixe (A, B, C), chacune des listes suivantes est une liste de valeurs distincte : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Avec le préfixe (A, B), les listes de valeurs distinctes suivantes sont associées aux mêmes valeurs de colonnes : (3, 5), (4, 4) et (4, 5).  
   
      **Longueur moyenne**  
@@ -133,7 +133,7 @@ ms.locfileid: "63015648"
   
 7.  Cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Pour afficher les propriétés des statistiques  
   

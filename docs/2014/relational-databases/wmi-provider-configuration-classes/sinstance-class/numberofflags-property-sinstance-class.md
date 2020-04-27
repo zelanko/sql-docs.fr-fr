@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137245"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Propriété NumberOfFlags (classe SInstance)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  Objet de [classe SInstance](sinstance-class.md) qui représente une instance de serveur.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150146"
 ---
 # <a name="configuration-element-dta"></a>Configuration, élément (Assistant Paramétrage de base de données)
@@ -48,16 +48,16 @@ ms.locfileid: "63150146"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Aucun.|  
-|**Valeur par défaut**|Aucun.|  
-|**Occurrence**|facultatif. Peut être utilisé une seule fois pour chaque élément `DTAInput`.|  
+|**Type de données et longueur**|Aucune.|  
+|**Valeur par défaut**|Aucune.|  
+|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Éléments enfants**|[Élément Server pour la configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Élément parent**|[DTAInput, élément &#40;DTA&#41;](dtainput-element-dta.md)|  
+|**Éléments enfants**|[Server, élément pour les configurations &#40;Assistant Paramétrage de base de données&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162400"
 ---
 # <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
@@ -47,9 +47,9 @@ ms.locfileid: "63162400"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L'index n'est pas géré pendant qu'il est désactivé.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "63162400"
   
 -   La création d'un nouvel index cluster active les index non cluster précédemment désactivés. Pour plus d’informations, consultez [Enable Indexes and Constraints](enable-indexes-and-constraints.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour pouvoir exécuter l'instruction ALTER INDEX, vous devez obligatoirement bénéficier au minimum d'autorisations nécessaires pour exécuter les instructions ALTER sur la table ou la vue.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Pour désactiver un index  
   
@@ -159,7 +159,7 @@ ms.locfileid: "63162400"
   
 -   Cliquez sur le lien hypertexte pour afficher une boîte de dialogue indiquant le message d'erreur.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Pour désactiver un index  
   

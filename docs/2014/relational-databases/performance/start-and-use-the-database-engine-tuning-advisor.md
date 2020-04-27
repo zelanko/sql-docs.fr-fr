@@ -20,16 +20,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150649"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
   Cette rubrique décrit comment démarrer et utiliser l'Assistant Paramétrage du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur l’affichage et l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
-##  <a name="Initialize"></a>Initialiser le Assistant Paramétrage du moteur de base de données  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Initialiser l'Assistant Paramétrage du moteur de base de données  
  Pour la première utilisation, un utilisateur membre du rôle serveur fixe **sysadmin** doit initialiser l'Assistant Paramétrage du moteur de base de données. Cela est dû au fait que plusieurs tables système doivent être créées dans la base de données `msdb` pour prendre en charge les opérations de paramétrage. L’initialisation permet aussi aux utilisateurs membres du rôle de base de données fixe **db_owner** de paramétrer des charges de travail sur les tables des bases de données dont ils sont propriétaires.  
   
  Un utilisateur disposant d'autorisations d'administrateur système doit exécuter l'une des actions suivantes :  
@@ -38,7 +38,7 @@ ms.locfileid: "63150649"
   
 -   Recourir à l’utilitaire **dta** pour paramétrer la première charge de travail. Pour plus d'informations, consultez [Utilisation de l'utilitaire dta](#dta) , plus loin dans cette rubrique.  
   
-##  <a name="Start"></a>Démarrer le Assistant Paramétrage du moteur de base de données  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> Démarrer l'Assistant Paramétrage du moteur de base de données  
  Vous pouvez démarrer l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données de plusieurs façons différentes pour prendre en charge le paramétrage des bases de données dans de nombreux scénarios. L'Assistant Paramétrage du moteur de base de données peut être démarré : à partir du menu **Démarrer** , du menu **Outils** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de l'éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], et du menu **Outils** dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Lorsque vous démarrez l'Assistant Paramétrage du moteur de base de données pour la première fois, l'application affiche une boîte de dialogue **Se connecter au serveur** dans laquelle vous pouvez spécifier l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous souhaitez vous connecter.  
   
 > [!WARNING]  
@@ -50,7 +50,7 @@ ms.locfileid: "63150649"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Pour démarrer l'Assistant Paramétrage du moteur de base de données dans SQL Server Management Studio  
   
-1.  Dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Outils** , cliquez sur **Assistant Paramétrage du moteur de base de données**.  
+1.  Dans le menu **Outils** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur **Assistant Paramétrage du moteur de base de données**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Pour démarrer l'Assistant Paramétrage du moteur de base de données à partir de l'Éditeur de requête SQL Server Management Studio  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63150649"
   
 1.  Dans le menu **Outils** du Générateur de profils SQL Server Profiler, cliquez sur **Assistant Paramétrage du moteur de base de données**.  
   
-##  <a name="Create"></a>Créer une charge de travail  
+##  <a name="create-a-workload"></a><a name="Create"></a> Créer une charge de travail  
  Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. L'Assistant Paramétrage du moteur de base de données analyse ces charges de travail pour recommander des index ou des stratégies de partitionnement qui amélioreront les performances des requêtes de votre serveur.  
   
  Vous pouvez créer une charge de travail à l'aide de l'une des méthodes suivantes.  
@@ -78,7 +78,7 @@ ms.locfileid: "63150649"
   
 -   Les charges de travail peuvent également être intégrées à un fichier d'entrée XML, où vous pouvez également spécifier un poids pour chaque événement. Pour plus d'informations sur la spécification des charges de travail incorporées, consultez [Créer un fichier d'entrée XML](#XMLInput) plus loin dans cette rubrique.  
   
-###  <a name="SSMS"></a>Pour créer des charges de travail de script Transact-SQL  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a>Pour créer des charges de travail de script Transact-SQL  
   
 1.  Lancez l'éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63150649"
   
 3.  Enregistrez le fichier avec une extension **.sql** . L’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données et l’utilitaire en ligne de commande **dta** peuvent utiliser ce script [!INCLUDE[tsql](../../includes/tsql-md.md)] comme charge de travail.  
   
-###  <a name="Profiler"></a>Pour créer des charges de travail de fichier de trace et de table de trace  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a>Pour créer des charges de travail de fichier de trace et de table de trace  
   
 1.  Lancez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] au moyen de l'une des méthodes suivantes :  
   
@@ -94,15 +94,15 @@ ms.locfileid: "63150649"
   
     -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur le menu **Outils** , puis sur **SQL Server Profiler**.  
   
-2.  Créez un fichier ou une table de trace comme décrit dans les procédures suivantes, qui utilise le modèle [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **du** :  
+2.  Créez un fichier ou une table de trace comme décrit dans les procédures suivantes, qui utilise le modèle  **Réglage** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] :  
   
     -   [Créer une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
-    -   [Enregistrer les résultats d’une trace dans un fichier &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
+    -   [Enregistrer des résultats d’une trace dans un fichier &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
          L'Assistant Paramétrage du moteur de base de données suppose que le fichier de trace de la charge de travail est un fichier de substitution. Pour plus d'informations sur les fichiers de substitution, consultez [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
-    -   [Enregistrer les résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
+    -   [Enregistrer des résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
   
          Vérifiez que le suivi de trace s'est arrêté avant d'utiliser une table de trace en tant que charge de travail.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "63150649"
   
 -   **SQL : BatchCompleted**  
   
--   **SP : StmtCompleted**  
+-   **SP:StmtCompleted**  
   
  Vous pouvez également utiliser les versions **Starting** de ces événements trace. Par exemple, **SQL:BatchStarting**. Toutefois, les versions **Completed** de ces événements trace contiennent la colonne **Duration** , qui permet à l'Assistant Paramétrage du moteur de base de données de paramétrer plus efficacement la charge de travail. L'Assistant Paramétrage du moteur de base de données ne paramètre pas d'autres types d'événements trace. Pour plus d'informations sur ces événements trace, consultez [Stored Procedures Event Category](../event-classes/stored-procedures-event-category.md) et [TSQL Event Category](../event-classes/tsql-event-category.md). Pour plus d’informations sur l’utilisation des procédures stockées Trace SQL pour créer une charge de travail par fichier de trace, consultez [Créer une trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63150649"
   
  L'Assistant Paramétrage du moteur de base de données va procéder au paramétrage de cette nouvelle charge de travail, parce qu'aucune information de connexion n'est spécifiée dans la trace. S’il n’existe pas de **LoginName** pour une instruction, l’Assistant Paramétrage du moteur de base de données paramètre cette instruction en empruntant l’identité de l’utilisateur qui a démarré la session de paramétrage (membre du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** ).  
   
-##  <a name="Tune"></a>Paramétrer une base de données  
+##  <a name="tune-a-database"></a><a name="Tune"></a>Paramétrer une base de données  
  Pour paramétrer une base de données, vous pouvez travailler dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données ou dans l'utilitaire **dta** .  
   
 > [!NOTE]  
@@ -142,7 +142,7 @@ ms.locfileid: "63150649"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Travailler dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données  
  Dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données, vous pouvez paramétrer une base de données au moyen du cache du plan, de fichiers de charge de travail ou de tables de charge de travail. Vous pouvez utiliser l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour visualiser de façon simple les résultats de votre session de paramétrage en cours et des sessions précédentes. Pour plus d'informations sur les options de l'interface utilisateur, consultez [Descriptions de l'interface utilisateur](#UI) plus loin dans cette rubrique. Pour plus d’informations sur l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
-####  <a name="PlanCache"></a>Pour paramétrer une base de données à l’aide du cache du plan  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a>Pour paramétrer une base de données à l’aide du cache du plan  
   
 1.  Lancez l'Assistant Paramétrage du moteur de base de données, puis connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Démarrer l'Assistant Paramétrage du moteur de base de données](#Start) plus haut dans cette rubrique.  
   
@@ -162,9 +162,9 @@ ms.locfileid: "63150649"
   
      Si vous souhaitez arrêter la session de paramétrage après son démarrage, choisissez une des options suivantes dans le menu **Actions** :  
   
-    -   **Arrêter l’analyse (avec recommandations)** arrête la session de paramétrage et vous invite à décider si vous souhaitez Assistant Paramétrage du moteur de base de données générer des recommandations en fonction de l’analyse effectuée jusqu’à ce point.  
+    -   **Arrêter l’analyse (avec recommandations)** arrête la session de paramétrage et vous demande de spécifier si l’Assistant Paramétrage du moteur de base de données doit générer des recommandations sur la base de l’analyse réalisée jusqu’à ce point.  
   
-    -   **Arrêter l’analyse** arrête la session de paramétrage sans générer de recommandations.  
+    -   **Arrêter l'analyse** arrête la session de paramétrage sans générer de recommandation.  
   
 > [!NOTE]  
 >  La suspension de l'Assistant Paramétrage du moteur de base de données n'est pas acceptée. Si vous cliquez sur le bouton de barre d’outils **Démarrer l’analyse** après avoir cliqué soit sur **Arrêter l’analyse** soit sur **Arrêter l’analyse (avec recommandations)** , l’Assistant Paramétrage du moteur de base de données démarre une nouvelle session de paramétrage.  
@@ -204,14 +204,14 @@ ms.locfileid: "63150649"
   
      Si vous souhaitez arrêter la session de paramétrage après son démarrage, choisissez une des options suivantes dans le menu **Actions** :  
   
-    -   **Arrêter l’analyse (avec recommandations)** arrête la session de paramétrage et vous invite à décider si vous souhaitez Assistant Paramétrage du moteur de base de données générer des recommandations en fonction de l’analyse effectuée jusqu’à ce point.  
+    -   **Arrêter l’analyse (avec recommandations)** arrête la session de paramétrage et vous demande de spécifier si l’Assistant Paramétrage du moteur de base de données doit générer des recommandations sur la base de l’analyse réalisée jusqu’à ce point.  
   
-    -   **Arrêter l’analyse** arrête la session de paramétrage sans générer de recommandations.  
+    -   **Arrêter l'analyse** arrête la session de paramétrage sans générer de recommandation.  
   
 > [!NOTE]  
 >  La suspension de l'Assistant Paramétrage du moteur de base de données n'est pas acceptée. Si vous cliquez sur le bouton de barre d’outils **Démarrer l’analyse** après avoir cliqué soit sur **Arrêter l’analyse** soit sur **Arrêter l’analyse (avec recommandations)** , l’Assistant Paramétrage du moteur de base de données démarre une nouvelle session de paramétrage.  
   
-###  <a name="dta"></a>Utiliser l’utilitaire dta  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a>Utiliser l’utilitaire dta  
  L' [utilitaire dta](../../tools/dta/dta-utility.md) fournit un fichier exécutable d'invite de commandes qui vous permet de paramétrer des bases de données. Il vous permet d'utiliser l'Assistant Paramétrage du moteur de base de données dans les scripts et les fichiers de commandes. L’utilitaire **dta** accepte les entrées de cache du plan, les fichiers de trace, les tables de trace et les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en tant que charges de travail. Il accepte également les entrées XML qui sont conformes aux schéma XML de l'Assistant Paramétrage du moteur de base de données, qui est disponible sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Prenez en considération les points suivants avant de paramétrer une charge de travail à l’aide de l’utilitaire **dta** :  
@@ -295,7 +295,7 @@ ms.locfileid: "63150649"
   
 5.  Une fois que l'utilitaire a terminé de paramétrer la charge de travail, vous pouvez visualiser les résultats des sessions de paramétrage à l'aide de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Par ailleurs, à l’aide de l’option **-ox** , vous pouvez aussi demander à ce que les recommandations de paramétrage soient écrites dans un fichier XML. Pour plus d’informations, consultez [dta Utility](../../tools/dta/dta-utility.md).  
   
-##  <a name="XMLInput"></a>Créer un fichier d’entrée XML  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>Créer un fichier d’entrée XML  
  Si vous êtes développeur XML expérimenté, vous pouvez créer des fichiers formatés en XML que l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut utiliser pour paramétrer les charges de travail. Pour créer ces fichiers XML, utilisez vos outils XML préférés pour modifier un exemple de fichier ou pour générer une instance à partir du schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] schéma XML de l’Assistant Paramétrage du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible dans votre installation à l’emplacement suivant :  
@@ -310,9 +310,9 @@ ms.locfileid: "63150649"
   
 1.  Créez une charge de travail. Vous pouvez utiliser un fichier ou une table de trace à l'aide du modèle de paramétrage de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], ou bien créer un script [!INCLUDE[tsql](../../includes/tsql-md.md)] qui reproduit une charge de travail représentative de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Créer une charge de travail](#Create) plus haut dans cette rubrique.  
   
-2.  Créez un fichier d'entrée XML par l'une des méthodes suivantes :  
+2.  Créez un fichier d'entrée XML par l'une des méthodes suivantes :  
   
-    -   Copiez et collez l’un des [exemples de fichier d’entrée XML &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-samples-dta.md) dans votre éditeur XML préféré. Modifiez les valeurs pour qu'elles traduisent les arguments appropriés à votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis enregistrez les fichiers XML.  
+    -   Copiez et collez l’un des [exemples de fichier d’entrée XML &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-samples-dta.md) dans votre éditeur XML préféré. Modifiez les valeurs pour qu'elles traduisent les arguments appropriés à votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis enregistrez les fichiers XML.  
   
     -   À l'aide de votre outil XML préféré, générez une instance à partir du schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -321,7 +321,7 @@ ms.locfileid: "63150649"
 > [!NOTE]  
 >  Si vous voulez utiliser une charge de travail inline, qui est une charge de travail spécifiée directement dans le fichier d’entrée XML, utilisez l’[exemple de fichier d’entrée XML avec une charge de travail Inline &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-##  <a name="UI"></a>Descriptions de l’interface utilisateur  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descriptions de l'interface utilisateur  
   
 ### <a name="tools-menuoptions-page"></a>Menu Outils/page Options  
  Utilisez cette boîte de dialogue pour spécifier les paramètres de configuration généraux de l'Assistant Paramétrage du moteur de base de données.  
@@ -332,7 +332,7 @@ ms.locfileid: "63150649"
  **Modifier la police**  
  Spécifiez la police d'affichage utilisée pour les tables de l'Assistant Paramétrage du moteur de base de données.  
   
- **Nombre d’éléments dans les listes des derniers fichiers utilisés**  
+ **Nombre d'éléments dans les listes des derniers fichiers utilisés**  
  Indiquez le nombre de sessions ou de fichiers à afficher sous **Sessions récentes** ou **Fichiers récents** dans le menu **Fichier** .  
   
  **Mémoriser mes dernières options de paramétrage**  
@@ -341,7 +341,7 @@ ms.locfileid: "63150649"
  **Demander avant de supprimer définitivement les sessions**  
  Affiche une boîte de dialogue de confirmation avant de supprimer des sessions.  
   
- **Demander avant d’arrêter l’analyse de la session**  
+ **Demander avant d'arrêter l'analyse de la session**  
  Affiche une boîte de dialogue de confirmation avant d'arrêter l'analyse d'une charge de travail.  
   
 #### <a name="general-tab-options"></a>Options de l'onglet Général  
@@ -350,10 +350,10 @@ ms.locfileid: "63150649"
  **Nom de session**  
  Donnez un nom à la session. Le nom de session associe un nom à la session de paramétrage. Vous pouvez faire référence à ce nom pour revenir ultérieurement à la session de paramétrage.  
   
- **Fichier**  
+ **File**  
  Spécifiez un fichier de script ou de trace .sql pour une charge de travail. Indiquez le chemin d'accès et le nom de fichier dans la zone de texte correspondante. L'Assistant Paramétrage du moteur de base de données suppose que le fichier de trace de la charge de travail est un fichier de substitution. Pour plus d'informations sur les fichiers de substitution, consultez [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Table**  
+ **Table de charge de travail**  
  Spécifiez une table de trace pour une charge de travail. Indiquez le nom complet de la table de trace dans la zone de texte correspondante sous la forme suivante :  
   
 ```  
@@ -376,19 +376,19 @@ database_name.owner_name.table_name
   
 2.  Cliquez avec le bouton droit sur la requête en surbrillance et cliquez sur **Analyser la requête dans l’Assistant Paramétrage de base de données**.  
   
- **Rechercher une charge de travail [fichier ou table]**  
+ **Rechercher [un fichier ou une table] de charge de travail**  
  Quand **Fichier** ou **Table** est sélectionné en tant que source de charge de travail, utilisez ce bouton d’exploration pour sélectionner la cible.  
   
  **Afficher un aperçu de la charge de travail XML**  
  Affichez une charge de travail XML qui a été importée à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Base de données pour l’analyse de la charge de travail**  
+ **Base de données pour l'analyse de la charge de travail**  
  Spécifiez la première base de données à laquelle l'Assistant Paramétrage du moteur de base de données se connecte lors du paramétrage d'une charge de travail. Dès que le paramétrage commence, l'Assistant Paramétrage du moteur de base de données se connecte aux bases de données spécifiées par les instructions `USE DATABASE` contenues dans la charge de travail.  
   
- **Sélectionner les bases de données et les tables à analyser**  
+ **Sélectionnez les bases de données et les tables à analyser**  
  Spécifiez les bases de données et les tables à paramétrer. Pour sélectionner toutes les bases de données, activez la case à cocher de l'en-tête de la colonne **Nom** . Pour sélectionner seulement certaines bases de données, activez la case à cocher en regard du nom de chaque base de données à paramétrer. Par défaut, toutes les tables des bases de données sélectionnées sont automatiquement incluses dans la session de paramétrage. Pour exclure certaines tables, cliquez sur la flèche de la colonne **Tables sélectionnées** , puis désactivez la case à cocher en regard des tables que vous ne voulez pas paramétrer.  
   
- Flèche vers le bas des **tables sélectionnées**  
+ Flèche de déroulement**Tables sélectionnées**  
  Développe la liste des tables pour vous permettre de sélectionner chacune des tables à paramétrer.  
   
  **Enregistrer le journal de paramétrage**  
@@ -404,13 +404,12 @@ database_name.owner_name.table_name
  Limite la durée de la session de paramétrage actuelle. L'augmentation de la durée du paramétrage améliore la qualité des recommandations. Pour obtenir des recommandations optimales, n'activez pas cette option.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] consomme des ressources système pendant l'analyse. Utilisez l'option **Limiter la durée du paramétrage** pour arrêter le paramétrage avant des périodes de lourdes charges de travail anticipées sur le serveur qui est paramétré.  
+>  [!INCLUDE[ssDE](../../includes/ssde-md.md)] consomme des ressources système pendant l'analyse. Utilisez l'option **Limiter la durée du paramétrage** pour arrêter le paramétrage avant des périodes de lourdes charges de travail anticipées sur le serveur qui est paramétré.  
   
  **Options avancées**  
  Utilisez la boîte de dialogue **Options de paramétrage avancées** pour configurer l’espace maximal, le nombre de colonnes clés maximal et les recommandations d’index en ligne.  
   
- **Définissez max. espace pour les recommandations (Mo)**  
+ **Définir une quantité d'espace max. pour les recommandations (Mo)**  
  Tapez la quantité d'espace maximale pouvant être utilisée par les structures PDS (Physical Design Structures) recommandées par l'Assistant Paramétrage du moteur de base de données.  
   
  Si aucune valeur n'est entrée dans cette zone, l'Assistant Paramétrage du moteur de base de données prend en compte la plus petite limite d'espace suivante :  
@@ -422,8 +421,8 @@ database_name.owner_name.table_name
  **Inclure les événements du cache du plan de toutes les bases de données**  
  Spécifiez que les événements du cache du plan de toutes les bases de données sont analysés.  
   
- **Max. colonnes par index**  
- Spécifiez le nombre maximal de colonnes à inclure dans un index quelconque. La valeur par défaut est 1023.  
+ **Nombre de colonnes max. par index**  
+ Spécifiez le nombre maximal de colonnes à inclure dans un index quelconque. La valeur par défaut est 1 023.  
   
  **Toutes les recommandations sont hors connexion**  
  Génère les meilleures recommandations possibles, mais sans recommander que les structures PDS (Physical Design Structure) soient créées en ligne.  
@@ -452,7 +451,7 @@ database_name.owner_name.table_name
  **Index non cluster**  
  Incluez des recommandations pour les index non-cluster uniquement. Les index cluster et les vues indexées ne sont pas concernés par les recommandations.  
   
- **Évaluer l’utilisation du PDS existant uniquement**  
+ **Évaluer l'utilisation des structures PDS (Physical Design Structures) existantes uniquement**  
  Évaluez l'efficacité des index actuels, mais n'incluez pas de recommandation pour des index ou des vues indexées supplémentaires.  
   
  **Aucun partitionnement**  
@@ -464,13 +463,13 @@ database_name.owner_name.table_name
  **Partitionnement aligné**  
  Les nouveaux partitionnements recommandés sont alignés pour faciliter la gestion des partitionnements.  
   
- **Ne conservez pas de PDS existant**  
+ **Ne pas conserver de structures PDS (Physical Design Structures) existantes**  
  Recommandez la suppression des index, vues et partitionnements existants inutiles. Si une structure PDS existante est utile à la charge de travail, l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne recommande pas sa suppression.  
   
  **Conserver les index uniquement**  
  Conservez tous les index existants, mais recommandez la suppression des vues indexées et des partitionnements inutiles.  
   
- **Conserver tous les PDS existants**  
+ **Conserver toutes les structures PDS (Physical Design Structures) existantes**  
  Conservez tous les index, vues indexées et partitionnements existants.  
   
  **Conserver les index cluster uniquement**  
@@ -484,9 +483,9 @@ database_name.owner_name.table_name
   
  Si vous souhaitez arrêter la session de paramétrage après son démarrage, choisissez une des options suivantes dans le menu **Actions** :  
   
--   **Arrêter l’analyse (avec recommandations)** arrête la session de paramétrage et vous invite à décider si vous souhaitez Assistant Paramétrage du moteur de base de données générer des recommandations en fonction de l’analyse effectuée jusqu’à ce point.  
+-   **Arrêter l’analyse (avec recommandations)** arrête la session de paramétrage et vous demande de spécifier si l’Assistant Paramétrage du moteur de base de données doit générer des recommandations sur la base de l’analyse réalisée jusqu’à ce point.  
   
--   **Arrêter l’analyse** arrête la session de paramétrage sans générer de recommandations.  
+-   **Arrêter l'analyse** arrête la session de paramétrage sans générer de recommandation.  
   
  **Progression du paramétrage**  
  Indique l'état actuel de la progression. Cette option contient le nombre d'actions exécutées ainsi que le nombre d'erreurs, de réussites et de messages d'avertissement reçus.  

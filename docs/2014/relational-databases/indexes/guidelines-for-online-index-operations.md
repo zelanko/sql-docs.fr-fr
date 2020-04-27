@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162487"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
@@ -77,9 +77,9 @@ ms.locfileid: "63162487"
  Les opérations d'index à grande échelle, réalisées hors connexion ou en ligne, peuvent générer de fortes charges de données susceptibles de remplir rapidement le journal de transactions. Pour garantir que l'opération d'index peut être restaurée, le journal des transactions ne doit pas être tronqué tant que l'opération d'index n'est pas terminée ; toutefois, le journal peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit disposer d'un espace suffisant pour stocker les transactions des opérations d'index et les éventuelles transactions utilisateur simultanées pendant la durée de l'opération d'index. Pour plus d’informations, consultez [Espace disque du journal des transactions pour les opérations d’index](transaction-log-disk-space-for-index-operations.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- [Fonctionnement des opérations d’index en ligne](how-online-index-operations-work.md)  
+ [Fonctionnement des opérations d'index en ligne](how-online-index-operations-work.md)  
   
- [Exécuter des opérations en ligne sur les index](perform-index-operations-online.md)  
+ [Exécuter des opérations d’index en ligne](perform-index-operations-online.md)  
   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   

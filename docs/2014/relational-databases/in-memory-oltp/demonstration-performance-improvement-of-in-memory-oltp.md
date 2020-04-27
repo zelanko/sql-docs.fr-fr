@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071784"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : optimisation des performances de l'OLTP en mémoire
@@ -183,12 +183,12 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions à AdventureWorks pour présenter l’OLTP en mémoire](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [&#40;de l’optimisation en mémoire de l’OLTP en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Tables optimisées en mémoire](memory-optimized-tables.md)   
  [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)   
  [Conditions requises pour l’utilisation de tables optimisées en mémoire](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [Options de fichier et de groupe de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [CRÉER des tables à procédure et à mémoire optimisée](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150459"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>Propriétés TCP-IP (onglet Protocoles)
@@ -35,8 +35,7 @@ ms.locfileid: "63150459"
  Spécifiez si SQL Server doit écouter sur toutes les adresses IP liées aux cartes réseau de l'ordinateur. Si vous choisissez la valeur **No**, configurez chaque adresse IP séparément en utilisant la boîte de dialogue des propriétés de chaque adresse IP. Si vous choisissez la valeur **Yes**, les paramètres de la zone des propriétés de **IPAll** s’appliquent à toutes les adresses IP. La valeur par défaut est **Yes**.  
   
  **Aucun délai**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'implémente pas les modifications apportées à cette propriété.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'implémente pas les modifications apportées à cette propriété.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Choix d'un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

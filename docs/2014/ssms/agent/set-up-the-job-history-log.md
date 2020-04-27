@@ -16,28 +16,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033575"
 ---
 # <a name="set-up-the-job-history-log"></a>Configurer le journal d'historique des travaux
   Cette rubrique décrit comment configurer le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal d’historique des travaux de l’agent.  
   
--   **Avant de commencer :**  [sécurité](#Security)  
+-   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour configurer le journal d’historique des travaux à l’aide de :**  [SQL Server Management Studio](#SSMS)  
+-   **Pour configurer le journal d’historique des travaux, avec :**  [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
- **Pour configurer le journal d’historique des travaux**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+ **Pour définir le journal d'historique des travaux**  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent**, puis cliquez sur **Propriétés**.  
   

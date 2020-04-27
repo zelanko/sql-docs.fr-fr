@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63016067"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
@@ -47,9 +47,9 @@ ms.locfileid: "63016067"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Le classement de la base de données d'appel est utilisé pour mettre en correspondance les noms des procédures système. Par conséquent, utilisez systématiquement la casse exacte des noms des procédures système dans vos appels de procédure. Par exemple, le code suivant ne fonctionnera pas s'il est exécuté dans le contexte d'une base de données dotée d'un classement qui respecte la casse :  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63016067"
   
 -   Si une procédure définie par l'utilisateur a le même nom qu'une procédure système, elle peut ne jamais s'exécuter.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Exécution de procédures stockées système  
   
@@ -119,13 +119,13 @@ ms.locfileid: "63016067"
   
     2.  supprimer l'exécution automatique d'une procédure au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d’informations, consultez [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) et [Clause EXECUTE AS &#40;Transact-SQL& #41;](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez la section « Autorisations » dans [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Pour exécuter une procédure stockée  
   
@@ -154,7 +154,7 @@ ms.locfileid: "63016067"
   
 5.  Pour exécuter la procédure stockée, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Pour exécuter une procédure stockée  
   
@@ -202,7 +202,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier les paramètres](specify-parameters.md)   

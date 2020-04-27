@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127015"
 ---
 # <a name="replication-log-reader-agent"></a>Agent de lecture du journal des réplications
@@ -68,20 +68,20 @@ ms.locfileid: "63127015"
  **-?**  
  Affiche des informations sur l’utilisation.  
   
- **-** _SERVER_NAME_du serveur**\\**de publication [_instance_name_]  
- Nom du serveur de publication. Spécifiez *SERVER_NAME* pour l’instance par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] défaut de sur ce serveur. Spécifiez _SERVER_NAME_**\\**_instance_name_ pour une instance nommée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de sur ce serveur.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Nom du serveur de publication. Spécifiez *server_name* pour l’instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
   
- **-Continu**  
+ **-Continuous**  
  Spécifie si l'Agent tente d'interroger les transactions répliquées de manière continue. S'il est spécifié, l'Agent interroge les transactions répliquées à partir de la source à des fréquences d'interrogation définies, même s'il n'y a pas de transactions en attente.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Chemin d'accès du fichier de définition d'agent. Un fichier de définition d'agent contient des arguments de ligne de commande pour l'agent. Le contenu du fichier est analysé en tant que fichier exécutable. Utilisez des guillemets doubles (") pour spécifier des valeurs d'argument qui contiennent des caractères arbitraires.  
   
- **-** _SERVER_NAME_du serveur**\\**de distribution [_instance_name_]  
- Nom du serveur de distribution. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _SERVER_NAME_**\\**_instance_name_ pour une instance nommée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de sur ce serveur.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Nom du serveur de distribution. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-DistributorLogin** _distributor_login_  
  Nom de connexion du serveur de distribution.  
@@ -115,14 +115,14 @@ ms.locfileid: "63127015"
 |Valeur HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**||  
-|**1**|valeur par défaut. Met toujours à jour un message d'historique précédent du même état (démarrage, progression, succès, et ainsi de suite). Si aucun enregistrement précédent du même état n'existe, insère un nouvel enregistrement.|  
+|**1**|Par défaut. Met toujours à jour un message d'historique précédent du même état (démarrage, progression, succès, et ainsi de suite). Si aucun enregistrement précédent du même état n'existe, insère un nouvel enregistrement.|  
 |**2**|Insère de nouveaux enregistrements d'historique, sauf s'il s'agit d'un enregistrement concernant notamment un message inactif ou un message de travail de longue durée, auquel cas les enregistrements précédents sont mis à jour.|  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Durée en secondes au terme de laquelle le thread d'historique doit vérifier si l'une des connexions existantes attend une réponse du serveur. Vous pouvez réduire cette valeur pour éviter que l'agent de vérification ne marque l'Agent de lecture du journal comme suspect lors de l'exécution d'un lot de longue durée. La valeur par défaut est 300 secondes.  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- Nombre de secondes avant l’expiration du délai d’attente de la connexion. La valeur par défaut est 15 secondes.  
+ Nombre de secondes avant l'expiration de la connexion. La valeur par défaut est 15 secondes.  
   
  **-LogScanThreshold** _scan_threshold_  
  À usage interne uniquement  
@@ -141,7 +141,7 @@ ms.locfileid: "63127015"
  **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **** 3 | **4** ]  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Spécifie si la sortie doit être en clair.  
   
 |Valeur|Description|  
@@ -149,12 +149,12 @@ ms.locfileid: "63127015"
 |**0**|Seuls les messages d'erreur sont imprimés.|  
 |**1**|Tous les messages du rapport de progression de l'agent sont imprimés.|  
 |**2** (par défaut)|Tous les messages d'erreur et tous les messages du rapport de progression sont imprimés.|  
-|**1,3**|Les 100 premiers octets de chaque commande répliquée sont imprimés.|  
+|**3**|Les 100 premiers octets de chaque commande répliquée sont imprimés.|  
 |**4**|Toutes les commandes répliquées sont imprimées.|  
   
  Les valeurs 2-4 sont utiles lors du débogage.  
   
- **-Taille paquet** _packet_size_  
+ **-PacketSize** _packet_size_  
  Taille du paquet en octets. La valeur par défaut est 4 096 octets.  
   
  **-PollingInterval** _polling_interval_  
@@ -163,7 +163,7 @@ ms.locfileid: "63127015"
  **-ProfileName** _profile_name_  
  Spécifie un profil d'agent à utiliser pour les paramètres d'agent. Si **ProfileName** a la valeur NULL, le profil d'agent est désactivé. Si **ProfileName** n'est pas spécifié, le profil par défaut du type d'agent est utilisé. Pour plus d’informations, consultez [Profils de l’Agent de réplication](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _SERVER_NAME_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -176,7 +176,7 @@ ms.locfileid: "63127015"
  Mot de passe du serveur de publication.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- Nombre de secondes avant l’expiration de la requête. La valeur par défaut est 1800 secondes.  
+ Nombre de secondes avant l'expiration de la requête. La valeur par défaut est 1800 secondes.  
   
  **-ReadBatchSize** _number_of_transactions_  
  Nombre maximal de transactions lues dans le journal des transactions de la base de données de publication par cycle de traitement, avec 500 comme valeur par défaut. L'agent continue à lire les transactions par lots jusqu'à ce que toutes les transactions aient été lues dans le journal. Ce paramètre n'est pas pris en charge pour les serveurs de publication Oracle.  

@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156216"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par Transact-SQL
   Vous pouvez accédez aux tables optimisées en mémoire à l'aide d'une requête Transact-SQL ou d'une instruction DML (SELECT, INSERT, UPDATE ou DELETE), d'une instruction ad hoc et d'un module SQL, par exemple des procédures stockées, des fonctions table, des fonctions scalaires, des déclencheurs et des vues. Pour plus d’informations, consultez [accès aux tables optimisées en mémoire à l’aide de Transact-SQL interprété](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
- Les procédures stockées qui font référence uniquement aux tables optimisées en mémoire peuvent être nativement compilées en code machine ce qui offre des gains de performances par rapport à des procédures stockées (disques) interprétées. Pour bénéficier d'un accès optimisé aux tables optimisées en mémoire, utilisez des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md).  
+ Les procédures stockées qui font référence uniquement aux tables optimisées en mémoire peuvent être nativement compilées en code machine ce qui offre des gains de performances par rapport à des procédures stockées (disques) interprétées. Pour bénéficier d'un accès optimisé aux tables optimisées en mémoire, utilisez des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md).  
   
  Lors de la création et de la modification d'objets de base de données (instructions DDL), les instructions suivantes ont été modifiées :  
   
@@ -49,9 +49,9 @@ ms.locfileid: "63156216"
 -   [Vues système, procédures stockées, DMV et types d’attente pour l’OLTP en mémoire](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [&#40;de l’optimisation en mémoire de l’OLTP en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Problèmes de migration pour les procédures stockées compilées en mode natif](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Fonctionnalités de SQL Server prises en charge](unsupported-sql-server-features-for-in-memory-oltp.md)   
- [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
+ [procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
   
   

@@ -13,14 +13,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137482"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>Leçon 4 : exécution de l’application (VB-VC #)
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre plusieurs méthodes pour créer et exécuter une application console à partir de l'interface IDE, notamment :  
   
 -   Exécuter (avec débogage)  

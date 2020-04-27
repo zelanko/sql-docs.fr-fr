@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151044"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151044"
 ## <a name="new-xevents"></a>Nouveaux XEvents  
  Il y a deux nouveaux XEvents query_optimizer_estimate_cardinality pour prendre en charge les nouveaux plans de requête.  
   
--   *query_optimizer_estimate_cardinality* se produit lorsque l’optimiseur de requête estime la cardinalité sur une expression relationnelle.  
+-   *query_optimizer_estimate_cardinality* se produit lorsque l'optimiseur de requête estime la cardinalité sur une expression relationnelle.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors se produit lorsque les deux éléments TraceFlags 2312 et 9481 sont activés, tentant de forcer l’ancien et le nouveau comportement d’estimation de la cardinalité en même temps.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors se produit lorsque les deux indicateurs de trace 2312 et 9481 sont activés, tentant de forcer l'ancien et le nouveau comportement d'estimation de cardinalité en même temps.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent certaines des modifications apportées aux nouvelles estimations de cardinalité. Le code d'estimation de la cardinalité a été réécrit. La logique est complexe et il est impossible de fournir une liste exhaustive de toutes les modifications.  
@@ -88,6 +88,6 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
  Ce comportement a changé. Maintenant, la logique du nouvel estimateur de cardinalité suppose que s.type n'est pas mis en corrélation avec r.date. En pratique, l'hypothèse est que les jouets sont retournés tous les jours et non un seul jour spécifique. Dans ce cas, les nouvelles estimations de cardinalité sont un nombre inférieur aux estimations de cardinalité précédentes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Surveiller et régler les performances](monitor-and-tune-for-performance.md)  
+ [Surveillance et réglage des performances](monitor-and-tune-for-performance.md)  
   
   

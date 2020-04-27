@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046005"
 ---
 # <a name="detail-property"></a>Propriété Detail
@@ -30,7 +30,7 @@ ms.locfileid: "63046005"
  **ErrorCode**  
  Code d'erreur propre à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- **HttpStatus**  
+ **httpStatus**  
  Code d’état HTTP.  
   
  **Message**  
@@ -39,7 +39,7 @@ ms.locfileid: "63046005"
  **HelpLink**  
  URL du lien d'aide vers un site Web sur lequel des informations complémentaires sur l'erreur sont disponibles. Pour plus d’informations, consultez [HelpLink, élément](helplink-element.md).  
   
- **Égale**  
+ **LinkID**  
  ID assigné au lien.  
   
  **ProductName**  
@@ -71,7 +71,7 @@ ms.locfileid: "63046005"
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [SoapException, classe Reporting Services](reporting-services-soapexception-class.md)   
- [Utilisation de la propriété des détails pour gérer des erreurs spécifiques](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Reporting Services SoapException (classe)](reporting-services-soapexception-class.md)   
+ [Utilisation de la propriété Detail pour gérer des erreurs spécifiques](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

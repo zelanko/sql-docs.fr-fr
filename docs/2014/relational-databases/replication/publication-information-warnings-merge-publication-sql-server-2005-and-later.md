@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021684"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informations de publication, Avertissements (Publication de fusion, SQL Server 2005 et version ultérieure)
@@ -29,7 +29,7 @@ ms.locfileid: "63021684"
 -   définir des alertes associées aux avertissements ;  
   
 ## <a name="warnings-thresholds-and-alerts"></a>Avertissements, seuils et alertes  
- Le moniteur de réplication affiche par défaut des avertissements quant aux abonnements non initialisés : l'état **Abonnement non initialisé** s'affiche en tant qu'avertissement dans la colonne **État** des pages incluant des informations propres aux abonnements. Dans le cas de publications de fusion, vous pouvez indiquer si les conditions complémentaires suivantes constituent un motif pour lancer un avertissement :  
+ Le moniteur de réplication affiche par défaut des avertissements relatifs aux abonnements non initialisés : l’état **Abonnement non initialisé** s’affiche en tant qu’avertissement dans la colonne **État** des pages incluant des informations propres aux abonnements. Dans le cas de publications de fusion, vous pouvez indiquer si les conditions complémentaires suivantes constituent un motif pour lancer un avertissement :  
   
 -   Expiration d'abonnement imminente.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "63021684"
  **Activé**  
  Permet d'activer un avertissement et de définir un seuil.  
   
- **Alerte**  
+ **Alert**  
  Sélectionnez pour activer le paramètre d'alerte pour un avertissement de réplication donné.  
   
  **Avertissement**  
  Description de l'avertissement associé à un seuil.  
   
- **Durée**  
+ **Seuil**  
  Permet de spécifier une valeur pour le seuil.  
   
  **Configurer des alertes**  
@@ -73,13 +73,13 @@ ms.locfileid: "63021684"
 > [!NOTE]  
 >  Cliquer sur **Ignorer les modifications** n'affecte en rien les alertes définies dans la boîte de dialogue **Configurer les alertes de réplication** .  
   
- **Save Changes**  
+ **Enregistrer les modifications**  
  Permet d'enregistrer toute modification apportée aux avertissements et aux seuils.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md)   
+ [Démarrer le moniteur de réplication](monitor/start-the-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Analyser les performances avec le moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md)   
+ [Surveiller les performances avec le moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md)   
  [Surveillance de la réplication](monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

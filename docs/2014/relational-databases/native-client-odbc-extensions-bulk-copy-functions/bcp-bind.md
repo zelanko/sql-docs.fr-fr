@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140562"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Notes  
  Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans une table dans.  
   
- Appelez [bcp_init](bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L' **** appel de bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit la table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
+ Appelez [bcp_init](bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L' **bcp_init** appel de bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit la table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
   
  Effectuez un appel de **bcp_bind** distinct pour chaque colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table dans laquelle vous souhaitez effectuer la copie. Une fois les appels de **bcp_bind** nécessaires effectués, appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programme vers. La reliaison des colonnes n'est pas prise en charge.  
   

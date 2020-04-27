@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180552"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et interrogation de modèles d'exploration de données à l'aide du langage DMX : didacticiels (Analysis Services - Exploration de données)
@@ -38,10 +38,10 @@ ms.locfileid: "63180552"
   
      Ce didacticiel crée un modèle de prévision pour illustrer l'utilisation de l'instruction CREATE MODEL (DMX). Vous ajoutez ensuite des modèles liés et personnalisez le comportement de chacun en modifiant les paramètres de l'algorithme MTS (Microsoft Time Series). Enfin, vous créez des prédictions et mettez à jour ces prédictions avec les nouvelles données. La possibilité de mettre à jour une série chronologique tout en faisant des prédictions a été ajoutée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-## <a name="reference"></a>Informations de référence  
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Référence  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Référence DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sections connexes  
   

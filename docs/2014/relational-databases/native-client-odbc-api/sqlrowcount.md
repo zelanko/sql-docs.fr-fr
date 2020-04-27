@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046604"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
@@ -32,6 +32,6 @@ ms.locfileid: "63046604"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLRowCount fonction)](https://go.microsoft.com/fwlink/?LinkId=59367)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

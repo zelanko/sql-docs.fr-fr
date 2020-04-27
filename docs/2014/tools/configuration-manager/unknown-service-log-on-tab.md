@@ -11,17 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150532"
 ---
 # <a name="unknown-service-log-on-tab"></a>Service inconnu (onglet Ouvrir une session)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager n’est pas en mesure d’identifier ce service.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration n'est pas en mesure d'identifier ce service.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit des informations de service émanant du fournisseur WMI installé sur l'ordinateur exécutant le service. Une erreur s'est produite lors de la lecture des propriétés du service ou celles-ci sont incomplètes. Pour résoudre le problème, essayez de fermer puis de rouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou vérifiez le fournisseur WMI installé sur l'ordinateur exécutant le service.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit des informations de service émanant du fournisseur WMI installé sur l'ordinateur exécutant le service. Une erreur s'est produite lors de la lecture des propriétés du service ou celles-ci sont incomplètes. Pour résoudre le problème, essayez de fermer puis de rouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou vérifiez le fournisseur WMI installé sur l'ordinateur exécutant le service.  
   
  Le fournisseur WMI est un composant Windows. Pour plus d'informations sur la manière de vérifier les autorisations sur le fournisseur WMI, consultez « Procédure : configurer WMI pour afficher l'état du serveur dans les outils SQL Server », dans la documentation en ligne.  
   

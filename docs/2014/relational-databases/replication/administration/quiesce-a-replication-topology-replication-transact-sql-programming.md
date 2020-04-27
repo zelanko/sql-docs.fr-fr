@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161724"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Suspendre une topologie de réplication (programmation Transact-SQL de la réplication)
-  *Suspendre* un système revient à interrompre toute activité sur les tables publiées de tous les nœuds et à vérifier que chaque nœud a reçu toutes les modifications des autres nœuds. Cette rubrique explique comment suspendre une topologie de réplication, requise pour plusieurs tâches d'administration et comment garantir qu'un nœud a reçu toutes les modifications d'autres nœuds.  
+  *Suspendre* un système revient à interrompre toute activité des tables publiées dans l’ensemble des nœuds, et à vérifier que chaque nœud a reçu toutes les modifications des autres nœuds. Cette rubrique explique comment suspendre une topologie de réplication, requise pour plusieurs tâches d'administration et comment garantir qu'un nœud a reçu toutes les modifications d'autres nœuds.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>Pour suspendre une topologie de réplication transactionnelle avec les abonnements en lecture seule  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63161724"
     >  Si les conflits se produisent pendant la synchronisation, il est possible que les modifications requises par la résolution de conflit ne soient pas propagées à tous les nœuds après que l'Agent de fusion a été exécuté deux fois.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administrer une topologie d’égal à égal &#40;la programmation Transact-SQL de la réplication&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

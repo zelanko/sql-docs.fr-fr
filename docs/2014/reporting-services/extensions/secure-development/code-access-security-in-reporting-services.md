@@ -18,17 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985739"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sécurité d'accès du code dans Reporting Services
-  La sécurité d'accès du code est axée sur les concepts principaux suivants : preuve, groupes de codes et jeux d'autorisations nommés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les composants du Gestionnaire de rapports, du Concepteur de rapports et de Report Server ont chacun un fichier de stratégie qui configure la sécurité d'accès du code pour les assemblys personnalisés, ainsi que pour les extensions de remise des données, de rendu et de sécurité. Les sections suivantes fournissent une vue d'ensemble de la sécurité d'accès du code. Pour plus d’informations sur les rubriques traitées dans cette section, consultez « modèle de stratégie de sécurité » [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans la documentation du kit de développement logiciel (SDK).  
+  La sécurité d'accès du code est axée sur les concepts principaux suivants : preuve, groupes de codes et jeux d'autorisations nommés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les composants du Gestionnaire de rapports, du Concepteur de rapports et de Report Server ont chacun un fichier de stratégie qui configure la sécurité d'accès du code pour les assemblys personnalisés, ainsi que pour les extensions de remise des données, de rendu et de sécurité. Les sections suivantes fournissent une vue d'ensemble de la sécurité d'accès du code. Pour obtenir des détails sur les rubriques traitées dans cette section, consultez les informations relatives au modèle de stratégie de sécurité dans la documentation du SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise la sécurité d'accès du code, car bien que le serveur de rapports repose sur la technologie [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], il existe une différence considérable entre une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique et le serveur de rapports. Une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique n'exécute pas de code utilisateur. En revanche, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se sert d’une architecture ouverte et extensible qui permet aux utilisateurs de programmer des fichiers de définitions de rapports à l’aide de l’élément **Code** du langage RDL (Report Definition Language), et de développer des fonctionnalités spécialisées dans un assembly personnalisé à utiliser dans les rapports. En outre, les développeurs peuvent concevoir et déployer de puissantes extensions visant à améliorer les fonctionnalités du serveur de rapports. Cette puissance et cette souplesse doivent être complétées par un niveau de protection et de sécurité optimal.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise la sécurité d'accès du code, car bien que le serveur de rapports repose sur la technologie [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], il existe une différence considérable entre une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique et le serveur de rapports. Une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique n'exécute pas de code utilisateur. En revanche, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se sert d’une architecture ouverte et extensible qui permet aux utilisateurs de programmer des fichiers de définitions de rapports à l’aide de l’élément **Code** du langage RDL (Report Definition Language), et de développer des fonctionnalités spécialisées dans un assembly personnalisé à utiliser dans les rapports. En outre, les développeurs peuvent concevoir et déployer de puissantes extensions visant à améliorer les fonctionnalités du serveur de rapports. Cette puissance et cette souplesse doivent être complétées par un niveau de protection et de sécurité optimal.  
   
  Les développeurs [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peuvent utiliser n'importe quel assembly du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans leurs rapports et faire appel en mode natif à toutes les fonctionnalités des assemblys déployés dans le Global Assembly Cache. La seule chose que le serveur de rapports peut contrôler est l'autorisation accordée aux expressions de rapport et aux assemblys personnalisés chargés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les assemblys personnalisés reçoivent les autorisations **Execute** uniquement par défaut.  
   
@@ -94,6 +93,6 @@ ms.locfileid: "62985739"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Reporting Services de &#40;de développement sécurisé&#41;](secure-development-reporting-services.md)  
+ [Développement sécurisé &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150441"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Afficher le journal des applications Windows (Windows)
@@ -37,13 +37,13 @@ ms.locfileid: "63150441"
   
 3.  Les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont identifiés par l’entrée **MSSQLSERVER** (les instances nommées sont identifiées par **MSSQL$** _<nom_instance>_ ) dans la colonne **Source**. Les événements de SQL Server Agent sont identifiés par l’entrée SQLSERVERAGENT (pour les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommées, les événements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sont identifiés par **SQLAgent$** \<*nom_instance*>). Les événements du service Microsoft Search sont identifiés par l'entrée **Microsoft Search**.  
   
-4.  Pour afficher le journal d’un autre ordinateur, cliquez avec le bouton droit sur **Observateur d’événements**, cliquez sur **Se connecter à un autre ordinateur**, et renseignez la boîte de dialogue **Sélectionner un ordinateur**.  
+4.  Pour afficher le journal d’un autre ordinateur, cliquez avec le bouton droit sur **Observateur d’événements**, cliquez sur **Se connecter à un autre ordinateur** , et renseignez la boîte de dialogue **Sélectionner un ordinateur**.  
   
 5.  Pour afficher uniquement les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans le menu **Affichage** , cliquez sur **Filtrer**et dans la liste **Source de l'événement** , sélectionnez **MSSQLSERVER**. Pour afficher uniquement les événements de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez **SQLSERVERAGENT** dans la liste **Source de l'événement** .  
   
 6.  Pour obtenir plus de détails sur un événement particulier, double-cliquez sur cet événement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichez le journal des erreurs SQL Server &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+ [Afficher le journal des erreurs SQL Server &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

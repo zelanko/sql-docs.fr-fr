@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157834"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
@@ -28,7 +28,7 @@ ms.locfileid: "63157834"
   
  La figure ci-dessous illustre les contrôles de version multiples. Elle représente une table de trois lignes ayant chacune plusieurs versions.  
   
- ![Multi-version.](../../database-engine/media/hekaton-tables-1.gif "Contrôles de version multiples.")  
+ ![Contrôles de version multiples.](../../database-engine/media/hekaton-tables-1.gif "Contrôles de version multiples.")  
   
  La table a trois lignes : r1, r2 et r3. r1 a trois versions, r2 a deux versions, et r3 a quatre versions. Notez que les différentes versions de la même ligne n'occupent pas nécessairement des emplacements de mémoire consécutifs. Les différentes versions de ligne peuvent être dispersées dans l'ensemble de la structure de données de la table.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "63157834"
 |Fonctionnalité|Accès à l'aide d'une procédure stockée compilée en mode natif|Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété|Accès CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tables optimisées en mémoire|Oui|Oui|Non <sup>1</sup>|  
-|[Variables de table optimisée en mémoire](../../database-engine/memory-optimized-table-variables.md)|Oui|Oui|Non|  
-|[Procédures stockées compilées en mode natif](https://msdn.microsoft.com/library/dn133184.aspx)|Vous ne pouvez pas utiliser l'instruction EXECUTE pour exécuter une procédure stockée à partir d'une procédure stockée compilée en mode natif.|Oui|Non <sup>1</sup>|  
+|[Variables de table mémoire optimisée](../../database-engine/memory-optimized-table-variables.md)|Oui|Oui|Non|  
+|[procédures stockées compilées en mode natif](https://msdn.microsoft.com/library/dn133184.aspx)|Vous ne pouvez pas utiliser l'instruction EXECUTE pour exécuter une procédure stockée à partir d'une procédure stockée compilée en mode natif.|Oui|Non <sup>1</sup>|  
   
  <sup>1</sup> vous ne pouvez pas accéder à une table optimisée en mémoire ou à une procédure stockée compilée en mode [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] natif à partir de la connexion contextuelle (connexion à partir de lors de l’exécution d’un module CLR). Cependant, vous pouvez créer et ouvrir une autre connexion à partir de laquelle vous accédez aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif. Pour plus d’informations, consultez [connexions régulières et contextuelles](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63157834"
  Communication  
  Une application comportant de nombreux appels à des procédures stockées courtes aura un moindre gain de performances par rapport à une application comportant moins d'appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]Production  
+ Exécution [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
  L'OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l'exécution de requêtes. Les procédures stockées qui exécutent d'autres procédures stockées ne peuvent pas être compilées en mode natif, mais elles sont avantageuses pour l'accès aux tables optimisées en mémoire.  
   
  Comparaison entre l'analyse de plage et la recherche de points  
@@ -85,6 +85,6 @@ ms.locfileid: "63157834"
 |Extensibilité<br /><br /> La plupart des problèmes de mise à l'échelle dans les applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont dus à des problèmes d'accès concurrentiel tels que la contention dans les verrous, les verrous internes et les verrouillages tournants.|Contention de verrous internes<br /> Un scénario typique est la contention dans la dernière page d'un index lors de l'insertion simultanée de lignes dans l'ordre des clés. Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrous internes.<br /><br /> Contention de verrouillage tournant<br /> Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrouillage tournant.<br /><br /> Contention liée au verrouillage<br /> Si votre application de base de données rencontre des problèmes de blocage entre les opérations de lecture et d'écriture, l'OLTP en mémoire les supprime, car il utilise une nouvelle forme de contrôle d'accès concurrentiel optimiste pour implémenter tous les niveaux d'isolation des transactions. L'OLTP en mémoire n'utilise pas TempDB pour stocker les versions de ligne.<br /><br /> Si le problème de mise à l'échelle est provoqué par un conflit entre deux opérations d'écriture, telles que deux transactions simultanées tentant de mettre à jour la même ligne, l'OLTP en mémoire laisse une transaction aboutir et fait échouer l'autre. La transaction en échec doit être retentée par un nouvel envoi explicite ou implicite. Dans les deux cas, vous devez apporter des modifications à l'application.<br /><br /> Si votre application crée des conflits fréquents entre deux opérations d'écriture, la valeur du verrouillage optimiste est diminuée. L'application ne convient pas pour l'OLTP en mémoire. La plupart des applications OLTP ne connaissent pas de conflits d’écriture à moins que le conflit ne soit induit par une escalade de verrous.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162455"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
@@ -36,11 +36,11 @@ ms.locfileid: "63162455"
   
 -   Conditions requises liées à l'option SET  
   
- **Exigences en matière de propriété**  
+ **Ownership Requirements**  
   
  Toutes les références de fonctions dans la colonne calculée doivent avoir le même propriétaire que la table.  
   
- **Exigences en matière de déterminisme**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  Une expression est déterministe lorsqu'elle retourne toujours le même résultat pour un ensemble donné d'entrées. La propriété **IsDeterministic** de la fonction [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) indique si un paramètre *computed_column_expression* est déterministe ou non.  
@@ -58,13 +58,13 @@ ms.locfileid: "63162455"
  Une colonne calculée qui contient une expression CLR (Common Language Runtime) doit être déterministe et marquée comme PERSISTED avant de pouvoir être indexée. Les expressions de type CLR définies par l'utilisateur sont permises dans les définitions de colonnes calculées. Les colonnes calculées de type CLR définies par l'utilisateur peuvent être indexées à condition que le type soit comparable. Pour plus d’informations, consultez [Types CLR définis par l’utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 > [!NOTE]  
->  Lorsque vous faites référence aux littéraux de chaîne de type de données de date dans des colonnes calculées indexées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est recommandé de convertir explicitement le littéral dans le type de date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date déterministes, consultez [CAST et CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Les expressions qui impliquent une conversion implicite des chaînes de caractères en type de données de date sont considérées comme non déterministes, à moins que le niveau de compatibilité de la base de données ne soit réglé sur 80 ou sur une valeur inférieure. Cela est dû au fait que les résultats dépendent des paramètres [Language](/sql/t-sql/statements/set-language-transact-sql) et [DateFormat](/sql/t-sql/statements/set-dateformat-transact-sql) de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`30 listopad 1996`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interprète la chaîne `'2000-12-01'` en se basant sur le paramètre DATEFORMAT.  
+>  Lorsque vous faites référence aux littéraux de chaîne de type de données de date dans des colonnes calculées indexées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est recommandé de convertir explicitement le littéral dans le type de date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date déterministes, consultez [CAST et CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Les expressions qui impliquent une conversion implicite des chaînes de caractères en type de données de date sont considérées comme non déterministes, à moins que le niveau de compatibilité de la base de données ne soit réglé sur 80 ou sur une valeur inférieure. Cela est dû au fait que les résultats dépendent des paramètres [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) et [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`30 listopad 1996`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interprète la chaîne `'2000-12-01'` en se basant sur le paramètre DATEFORMAT.  
 >   
 >  La conversion implicite de données de caractères non Unicode entre les classements est aussi considérée comme non déterministe, à moins que le niveau de compatibilité soit égal ou inférieur à 80.  
 >   
 >  Lorsque le niveau de compatibilité de la base de données est égal à 90, vous ne pouvez pas créer d'index sur les colonnes calculées qui contiennent ces expressions. Cependant, les colonnes calculées existantes qui contiennent ces expressions provenant d'une base de données mise à niveau sont gérables. Si vous utilisez des colonnes calculées indexées contenant une chaîne implicite pour les conversions de dates, afin d'éviter tout endommagement éventuel d'index, assurez-vous que les paramètres LANGUAGE et DATEFORMAT sont cohérents dans vos bases de données et applications.  
   
- **Exigences de précision**  
+ **Precision Requirements**  
   
  Le paramètre *computed_column_expression* doit être précis. Un paramètre *computed_column_expression* est précis quand une ou plusieurs des conditions suivantes sont remplies :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63162455"
   
  La propriété **IsPrecise** de la fonction COLUMNPROPERTY indique si un paramètre *computed_column_expression* est précis ou non.  
   
- **Exigences relatives aux types de données**  
+ **Data Type Requirements**  
   
 -   La *computed_column_expression* définie pour la colonne calculée ne peut pas correspondre aux `text`types `ntext`de données `image` , ou.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63162455"
   
 -   Les colonnes calculées dérivées des types de données `image`, `ntext` et `text` peuvent être des colonnes (incluses) non-clés dans un index non-cluster tant que le type de données utilisé dans la colonne calculée lui permet d'être une colonne d'index non-clés.  
   
- **Conditions requises pour l’option SET**  
+ **Conditions requises liées à l'option SET**  
   
 -   L'option de niveau de connexion ANSI_NULLS doit être activée (ON) lors de l'exécution de l'instruction CREATE TABLE ou ALTER TABLE qui définit la colonne calculée. La fonction [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) indique si l’option est activée par le biais de la propriété **IsAnsiNullsOn** .  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63162455"
   
      L'affectation de la valeur ON à ANSI_WARNINGS affecte de manière implicite la valeur ON à ARITHABORT, lorsque le niveau de compatibilité de la base de données est d'au moins 90.  
   
-##  <a name="BKMK_persisted"></a> Création d’index sur des colonnes calculées persistantes  
+##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Création d’index sur des colonnes calculées persistantes  
  Vous pouvez créer un index sur une colonne calculée définie par une expression déterministe mais non précise si la colonne est marquée comme PERSISTED dans l'instruction CREATE TABLE ou ALTER TABLE. Cela signifie que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utilise ces valeurs persistantes lorsqu’il crée un index sur la colonne et lorsque l’index est référencé dans une requête. Cette option vous permet de créer un index sur une colonne calculée lorsque [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]est à la fois déterministe et précis.  
   
 ## <a name="related-content"></a>Contenu associé  

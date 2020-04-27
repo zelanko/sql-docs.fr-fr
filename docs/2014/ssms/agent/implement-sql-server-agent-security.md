@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137518"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implémenter la sécurité de l'Agent SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent permet à l’administrateur de la base de données d’exécuter chaque étape de travail dans un contexte de sécurité qui a uniquement les autorisations requises pour effectuer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cette étape, ce qui est déterminé par un proxy de l’agent. Pour définir des autorisations pour une étape de travail particulière, créez un proxy possédant les autorisations requises, puis assignez ce proxy à l'étape de travail. Un proxy peut être spécifié pour plusieurs étapes de travail. Pour les étapes de travail qui requièrent les mêmes autorisations, vous utilisez le même proxy.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent permet à l’administrateur de la base de données d’exécuter chaque étape de travail dans un contexte de sécurité qui a uniquement les autorisations requises pour effectuer cette étape, ce qui est déterminé par un proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour définir des autorisations pour une étape de travail particulière, créez un proxy possédant les autorisations requises, puis assignez ce proxy à l'étape de travail. Un proxy peut être spécifié pour plusieurs étapes de travail. Pour les étapes de travail qui requièrent les mêmes autorisations, vous utilisez le même proxy.  
   
  La section suivante explique quel rôle de base de données vous devez accorder aux utilisateurs pour qu'ils puissent créer ou exécuter des travaux à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "63137518"
   
 -   ACE dépend des DLL de configuration suivantes détenues par SSDP, car ces API de DLL sont appelées par ACE :  
   
-    -   **SCO** -Microsoft. SqlServer. Configuration. SCO. dll, y compris les nouvelles validations SCO pour les comptes virtuels  
+    -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll, y compris les nouvelles validations SCO pour les comptes virtuels  
   
-    -   **Cluster** -Microsoft. SqlServer. Configuration. cluster. dll  
+    -   **Cluster** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** -Microsoft. SqlServer. Configuration. SqlConfigBase. dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** -Microsoft. SqlServer. Configuration. ConfigExtension. dll  
+    -   **Extension** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)   

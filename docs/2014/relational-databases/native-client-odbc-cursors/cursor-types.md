@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d88b48c1fc4166b32821da9cdaaa5eb7f6c2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070997"
 ---
 # <a name="cursor-types"></a>Types de curseurs
@@ -29,8 +29,7 @@ ms.locfileid: "63070997"
   
 -   Les curseurs avant uniquement ne prennent pas en charge le défilement, mais seulement l'extraction de lignes en séquence à partir du début jusqu'à la fin du curseur.  
   
--   Les curseurs statiques sont créés dans **tempdb** lorsque le curseur est ouvert. Ils affichent toujours l'ensemble de résultats tel qu'il était au moment où le curseur a été ouvert. Ils ne reflètent jamais les modifications apportées aux données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les curseurs statiques sont toujours en lecture seule. Étant donné qu’un curseur de serveur statique est créé en tant que table de travail dans **tempdb**, la taille du jeu de résultats du curseur ne peut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pas dépasser la taille de ligne maximale autorisée par.  
+-   Les curseurs statiques sont créés dans **tempdb** lorsque le curseur est ouvert. Ils affichent toujours l'ensemble de résultats tel qu'il était au moment où le curseur a été ouvert. Ils ne reflètent jamais les modifications apportées aux données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les curseurs statiques sont toujours en lecture seule. Étant donné qu’un curseur de serveur statique est créé en tant que table de travail dans **tempdb**, la taille du jeu de résultats du curseur ne peut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pas dépasser la taille de ligne maximale autorisée par.  
   
 -   L'appartenance et l'ordre des lignes dans le jeu de résultats des curseurs de jeux de clés sont fixés au moment de l'ouverture du curseur. Les modifications aux colonnes non-clés sont visibles à travers le curseur.  
   

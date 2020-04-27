@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162013"
 ---
 # <a name="metadata-discovery"></a>Découverte des métadonnées
@@ -57,7 +57,7 @@ ms.locfileid: "63162013"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters :: GetParameterInfo (pour plus d’informations, consultez [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) )  
+-   ICommandWithParameters::GetParameterInfo (voir [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) pour plus d’informations)  
   
  Vous noterez également une amélioration des performances lors de la spécification du format de métadonnées avec IBCPSession::BCPSetBulkMode  
   

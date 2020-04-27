@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032340"
 ---
 # <a name="parameter-and-result-metadata"></a>Métadonnées de paramètres et de résultats
@@ -37,21 +37,18 @@ ms.locfileid: "63032340"
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_TYPE|SQL_TYPE_DATE|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|`date`|`time`|
-  `smalldatetime` dans IRD, `datetime2` dans IPD|
-  `datetime` dans IRD, `datetime2` dans IPD|`datetime2`|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime` dans IRD, `datetime2` dans IPD|`datetime` dans IRD, `datetime2` dans IPD|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
+|SQL_CA_SS_SERVER_TYPE|NON APPLICABLE|NON APPLICABLE|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|NON APPLICABLE|  
   
  Il y a parfois des discontinuités dans les plages de valeurs. Par exemple, 9 est manquant dans 8,10.. 6. Cela est dû à l'ajout d'une virgule décimale lorsque la précision fractionnaire est supérieure à zéro.  
   
- 
-  `datetime2` est retourné comme typename pour `smalldatetime` et `datetime` car le pilote utilise ceci comme type commun pour transmettre toutes les valeurs `SQL_TYPE_TIMESTAMP` au serveur.  
+ `datetime2` est retourné comme typename pour `smalldatetime` et `datetime` car le pilote utilise ceci comme type commun pour transmettre toutes les valeurs `SQL_TYPE_TIMESTAMP` au serveur.  
   
  SQL_CA_SS_VARIANT_SQL_TYPE est un nouveau champ de descripteur. Ce champ a été ajouté à l'IRD et à l'IPD pour permettre aux applications de spécifier le type valeur associé aux colonnes et aux paramètres `sqlvariant` (SQL_SSVARIANT)  
   
- SQL_CA_SS_SERVER_TYPE est un nouveau champ IPD uniquement destiné à permettre aux applications de contrôler la façon dont les valeurs des paramètres liés comme SQL_TYPE_TYPETIMESTAMP (ou comme SQL_SS_VARIANT avec un type C de SQL_C_TYPE_TIMESTAMP) sont envoyées au serveur. Si SQL_DESC_CONCISE_TYPE est SQL_TYPE_TIMESTAMP (ou si est SQL_SS_VARIANT et que le type C est SQL_C_TYPE_TIMESTAMP) lorsque SQLExecute ou SQLExecDirect est appelé, la valeur de SQL_CA_SS_SERVER_TYPE détermine le type de tabular data stream (TDS) de la valeur de paramètre. , comme suit :  
+ SQL_CA_SS_SERVER_TYPE est un nouveau champ IPD uniquement destiné à permettre aux applications de contrôler la façon dont les valeurs des paramètres liés comme SQL_TYPE_TYPETIMESTAMP (ou comme SQL_SS_VARIANT avec un type C de SQL_C_TYPE_TIMESTAMP) sont envoyées au serveur. Si SQL_DESC_CONCISE_TYPE est SQL_TYPE_TIMESTAMP (ou si est SQL_SS_VARIANT et que le type C est SQL_C_TYPE_TIMESTAMP) lorsque SQLExecute ou SQLExecDirect est appelé, la valeur de SQL_CA_SS_SERVER_TYPE détermine le type de tabular data stream (TDS) de la valeur de paramètre, comme suit :  
   
 |Valeur de SQL_CA_SS_SERVER_TYPE|Valeurs valides pour SQL_DESC_PRECISION|Valeurs valides pour SQL_DESC_LENGTH|Type TDS|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  

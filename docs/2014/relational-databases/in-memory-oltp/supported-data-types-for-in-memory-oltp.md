@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155149"
 ---
 # <a name="supported-data-types"></a>Types de données pris en charge
@@ -86,8 +86,8 @@ ms.locfileid: "63155149"
 |sql_variant|Fonctions CLR|Types définis par l'utilisateur (UDT)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge d'OLTP en mémoire par Transact-SQL](transact-sql-support-for-in-memory-oltp.md)   
+ [Prise en charge de Transact-SQL pour l’OLTP en mémoire](transact-sql-support-for-in-memory-oltp.md)   
  [Implémentation de colonnes LOB dans une table optimisée en mémoire](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
- [Implémentation de SQL_VARIANT dans un tableau mémoire optimisé](implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Implémentation de SQL_VARIANT dans une table optimisée en mémoire](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

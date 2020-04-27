@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151446"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriétés TCP-IP (onglet adresses IP)
@@ -57,8 +57,8 @@ ms.locfileid: "63151446"
  Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche les adresses IP qui étaient disponibles au moment de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les adresses IP disponibles peuvent changer lorsque : des cartes réseau sont ajoutées ou supprimées, une adresse IP affectée dynamiquement arrive à expiration, une structure de réseau est reconfigurée ou un ordinateur est déplacé physiquement, par exemple si un ordinateur portable est connecté au réseau d'un autre bâtiment. Pour changer une adresse IP, modifiez la zone **Adresse IP** , puis redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d'un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Création d’une chaîne de connexion valide avec TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Service SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [Choix d’un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Création d’une chaîne de connexion valide à l’aide de l’adresse IP TCP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

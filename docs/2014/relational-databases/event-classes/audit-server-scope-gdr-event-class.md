@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 07016bd61abc84617c8a32935417b7ec936d3dce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015863"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR (classe d'événements)
@@ -45,7 +45,7 @@ ms.locfileid: "63015863"
 |**ObjectName**|**nvarchar**|Nom de l'objet référencé.|34|Oui|  
 |**ObjectType**|**int**|Valeur représentant le type de l'objet qui intervient dans l'événement. Cette valeur correspond à la colonne type de l'affichage catalogue **sys.objects** . Pour connaître les valeurs, consultez [Colonne d’événements de trace ObjectType](objecttype-trace-event-column.md).|28|Oui|  
 |**OwnerName**|**nvarchar**|Nom d'utilisateur de base de données du propriétaire de l'objet.|37|Oui|  
-|**autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (procédures uniquement)<br /><br /> 4096 = SELECT ANY (au moins une colonne)<br /><br /> 8192 = UPDATE ANY|19|Oui|  
+|**Autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (procédures uniquement)<br /><br /> 4096 = SELECT ANY (au moins une colonne)<br /><br /> 8192 = UPDATE ANY|19|Oui|  
 |**RequestID**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  

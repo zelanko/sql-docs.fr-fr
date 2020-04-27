@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033725"
 ---
 # <a name="statistics"></a>Statistiques
   L'optimiseur de requête utilise des statistiques dans l'optique de créer des plans de requête qui améliorent les performances des requêtes. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires ou modifier la conception des requêtes pour obtenir des résultats optimaux. Cette rubrique traite des concepts de statistiques et fournit des instructions pour vous permettre d'utiliser efficacement les statistiques d'optimisation de requête.  
   
-##  <a name="DefinitionQOStatistics"></a> Composants et concepts  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Composants et concepts  
  Statistiques  
- Les statistiques utilisées dans le cadre de l'optimisation de requête sont des objets qui contiennent des informations statistiques sur la distribution des valeurs dans une ou plusieurs colonnes d'une table ou d'une vue indexée. L’optimiseur de requête utilise ces statistiques pour estimer la *cardinalité*, ou le nombre de lignes, dans le résultat de la requête. Ces *estimations de cardinalité* permettent à l’optimiseur de requête de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête peut utiliser des estimations de cardinalité pour choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index, plus vorace en ressources, contribuant ainsi à améliorer les performances des requêtes.  
+ Les statistiques utilisées dans le cadre de l'optimisation de requête sont des objets qui contiennent des informations statistiques sur la distribution des valeurs dans une ou plusieurs colonnes d'une table ou d'une vue indexée. L'optimiseur de requête utilise ces statistiques pour estimer le nombre de lignes, également appelé *cardinalité*, dans le résultat de la requête. Ces *estimations de cardinalité* permettent à l’optimiseur de requête de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête peut utiliser des estimations de cardinalité pour choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index, plus vorace en ressources, contribuant ainsi à améliorer les performances des requêtes.  
   
  Chaque objet de statistiques est créé dans une liste constituée d'une ou de plusieurs colonnes de table et comprend un histogramme présentant la distribution des valeurs dans la première colonne. Les objets de statistiques sur plusieurs colonnes stockent également des informations statistiques sur la corrélation des valeurs entre les colonnes. Ces statistiques de corrélation, également appelées *densités*, sont dérivées du nombre de lignes distinctes de valeurs de colonne. Pour plus d’informations sur les objets de statistiques, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
@@ -103,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**S’applique à** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]jusqu’à.|  
+|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-##  <a name="CreateStatistics"></a>Quand créer des statistiques  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> Quand créer des statistiques  
  L'optimiseur de requête crée déjà des statistiques selon les méthodes suivantes :  
   
 1.  L'optimiseur de requête crée des statistiques pour les index de tables ou de vues lors de la création des index. Ces statistiques sont créées sur les colonnes de clés de l'index. Si l'index est un index filtré, l'optimiseur de requête crée des statistiques filtrées sur le même sous-ensemble de lignes spécifié pour l'index filtré. Pour plus d’informations sur les index filtrés, consultez [Créer des index filtrés](../indexes/create-filtered-indexes.md) et [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
@@ -191,11 +191,11 @@ GO
   
 -   Supprimez les statistiques temporaires à l’aide de l’instruction [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) .  
   
--   Surveillez les statistiques en utilisant les vues du catalogue **sys.stats** et **sys.stats_columns**. **sys_stats** comprend la colonne **is_temporary** , pour indiquer les statistiques permanentes et temporaires.  
+-   Analysez les statistiques à l’aide des affichages catalogue **sys.stats** et **sys.stats_columns** . **sys_stats** inclut la colonne **is_temporary** pour indiquer les statistiques permanentes et temporaires.  
   
  Étant donné que les statistiques temporaires sont stockées dans `tempdb`, un redémarrage du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoque la disparition de toutes les statistiques temporaires.  
   
-##  <a name="UpdateStatistics"></a>Quand mettre à jour les statistiques  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> Quand mettre à jour des statistiques  
  L'optimiseur de requête détermine si les statistiques sont obsolètes et les met éventuellement à jour lorsqu'elles sont requises par un plan de requête. Dans certains cas, vous pouvez améliorer le plan de requête et donc les performances des requêtes en mettant à jour les statistiques de façon plus régulière que lorsque l'option AUTO_UPDATE_STATISTICS est activée. Vous pouvez mettre à jour les statistiques à l'aide de l'instruction UPDATE STATISTICS ou de la procédure stockée sp_updatestats.  
   
  La mise à jour des statistiques est l'assurance que les requêtes sont compilées avec des statistiques à jour. Toutefois, la mise à jour des statistiques entraîne une recompilation des requêtes. À ce titre, il est déconseillé de mettre à jour les statistiques de façon trop régulière eu égard aux performances. Un compromis doit être trouvé entre le souhait d'améliorer les plans de requête et le temps nécessaire à la recompilation des requêtes. Ce compromis peut varier en fonction de votre application.  
@@ -225,7 +225,7 @@ GO
   
  Les opérations de reconstruction, de défragmentation ou de réorganisation d'index ne modifient pas la distribution des données. Par conséquent, vous n'avez pas besoin de mettre à jour les statistiques après avoir effectué des opérations ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG ou ALTER INDEX REORGANIZE. Si l'optimiseur de requête met effectivement à jour les statistiques lors de la reconstruction d'un index sur une table ou une vue via ALTER INDEX REBUILD ou DBCC DBREINDEX, cette mise à jour des statistiques est une conséquence de la recréation de l'index. L'optimiseur de requête ne met pas à jour les statistiques suite à des opérations DBCC INDEXDEFRAG ou ALTER INDEX REORGANIZE.  
   
-##  <a name="DesignStatistics"></a>Requêtes qui utilisent les statistiques efficacement  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> Requêtes pour une utilisation efficace des statistiques  
  Certaines implémentations de requête, telles que les variables locales et les expressions complexes contenues dans le prédicat de requête, peuvent produire des plans de requête non optimaux. Cela peut s'éviter en suivant les recommandations en matière de conception de requêtes pour une utilisation efficace des statistiques. Pour plus d’informations sur les prédicats de requête, consultez [Condition de recherche &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
   
  Vous pouvez améliorer les plans de requête en appliquant les recommandations en matière de conception de requêtes pour une utilisation efficace des statistiques. Les *estimations de cardinalité* relatives aux expressions, aux variables et aux fonctions utilisées dans les prédicats de requête s'en trouveront améliorées. Lorsque l'optimiseur de requête ne connaît pas la valeur d'une expression, d'une variable ou d'une fonction, il ne sait pas quelle valeur rechercher dans l'histogramme et ne peut donc pas extraire la meilleure estimation de cardinalité de l'histogramme. Au lieu de cela, l'optimiseur de requête base l'estimation de cardinalité sur le nombre moyen de lignes par valeur distincte pour toutes les lignes échantillonnées dans l'histogramme. Il en résulte des estimations de cardinalité non optimales et une altération potentielle des performances des requêtes.  
@@ -324,11 +324,11 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [CRÉER des statistiques &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [METTRE à jour les statistiques &#40;&#41;Transact-SQL](/sql/t-sql/statements/update-statistics-transact-sql)   
  [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
- [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [Options ALTER DATABASE SET &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [DROP STATISTICs &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Créer des index filtrés](../indexes/create-filtered-indexes.md)  

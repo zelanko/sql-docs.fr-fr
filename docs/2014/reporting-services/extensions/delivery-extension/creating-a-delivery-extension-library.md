@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d97cc2d4c04e147d5f4a88c13674429f5c784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164908"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Création d'une bibliothèque d'extensions de remise
@@ -50,7 +50,7 @@ csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll
 /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- L’exemple de code suivant affiche la commande qui serait utilisée pour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] les fichiers avec l’extension. vb.  
+ L’exemple de code suivant affiche la commande utilisée pour les fichiers [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] avec l’extension .vb.  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll   

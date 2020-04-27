@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157241"
 ---
 # <a name="supported-sql-server-features"></a>Fonctionnalités SQL Server prises en charge
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont prises en charge, et celles qui ne le sont pas, avec les objets mémoire optimisés.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge pour l'OLTP en mémoire  
+## <a name="ssnoversion-features-supported-for-in-memory-oltp"></a>Fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge pour l'OLTP en mémoire  
  Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes sont prises en charge sur une base de données qui contient des objets mémoire optimisés (y compris des groupes de fichiers mémoire optimisés).  
   
  Pour plus d'informations sur les types de données pris en charge, consultez [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -37,11 +37,11 @@ ms.locfileid: "63157241"
   
 -   Affichages catalogue, vues de gestion dynamique et événements étendus pour la prise en charge. Pour plus d’informations, consultez [Vues système, procédures stockées, DMV et types d’attente pour l’OLTP en mémoire](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Objets de gestion. Pour plus d’informations, consultez [Prise en charge d’objets SMO (SQL Server Management Objects) pour l’OLTP en mémoire](sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   Objets de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Prise en charge d’objets SMO (SQL Server Management Objects) pour l’OLTP en mémoire](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Prise en charge de SQL Server Management Studio pour l’OLTP en mémoire](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell. Pour plus d'informations, consultez [Présentation de SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Pour plus d'informations, consultez [Présentation de SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importez et exportez des données en bloc à l'aide de l'utilitaire bcp. Pour plus d’informations, consultez [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63157241"
   
 -   Copie des journaux de transaction : la copie des journaux de transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'envoyer automatiquement les sauvegardes du journal des transactions à partir d'une base de données primaire sur une instance du serveur principal vers une ou plusieurs bases de données secondaires sur des instances distinctes du serveur secondaire. Pour plus d’informations, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
--   La réplication transactionnelle vers des tables mémoire optimisées sur les abonnés est prise en charge avec certaines restrictions. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../replication/replication-to-memory-optimized-table-subscribers.md).  
+-   La réplication transactionnelle vers des tables mémoire optimisées sur les abonnés est prise en charge avec certaines restrictions. Pour plus d’informations, consultez [Replication to Memory-Optimized table subscribers](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
 -   Gouverneur de ressources : le gouverneur de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le gouverneur des ressources vous permet de spécifier des limites sur la quantité d’UC,d’E/S physiques et de mémoire utilisables par les requêtes d’application entrantes. Pour plus d'informations, consultez [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) et [Resource Governor](../resource-governor/resource-governor.md).  
   
@@ -73,16 +73,15 @@ ms.locfileid: "63157241"
   
 -   Prise en charge de BACPAC.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fonctionnalités non prises en charge pour l’OLTP en mémoire  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fonctionnalités non prises en charge pour l’OLTP en mémoire  
  Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes ne sont pas prises en charge sur une base de données qui contient des objets à mémoire optimisée (notamment des groupes de fichiers à mémoire optimisée).  
   
 |Fonctionnalités non prises en charge|Description de la fonctionnalité|  
 |-------------------------|-------------------------|  
-|Compression de données pour les tables à mémoire optimisée.|Vous pouvez utiliser la fonctionnalité de compression de données pour compresser les données dans une base de données et réduire la taille de la base de données. Pour plus d’informations, consultez [Data Compression](../data-compression/data-compression.md).|  
+|Compression de données pour les tables à mémoire optimisée.|Vous pouvez utiliser la fonctionnalité de compression de données pour compresser les données dans une base de données et réduire la taille de la base de données. Pour plus d’informations, consultez [Compression de données](../data-compression/data-compression.md).|  
 |Partitionnement des tables et des index HASH mémoire optimisés.|Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Pour plus d’informations, consultez [Tables et index partitionnés](../partitions/partitioned-tables-and-indexes.md).|  
 |Chiffrement transparent des données (TDE) sur le groupe de fichiers mémoire optimisé d'une base de données.|Le chiffrement transparent des données (TDE, Transparent Data Encryption) effectue le chiffrement et le déchiffrement des E/S en temps réel des fichiers de données et des fichiers journaux. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> Le chiffrement transparent des données (TDE) peut être activé sur une base de données contenant des objets de l'OLTP en mémoire. Les enregistrements de journal de l'OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé. Les fichiers de point de contrôle des tables durables ne sont pas chiffrés, même si le chiffrement transparent des données (TDE) est activé sur la base de données.|  
-|Réplication|Les configurations de réplication autres que la réplication transactionnelle vers des tables mémoire optimisées sur les abonnés sont incompatibles avec des tables ou des vues qui référencent des tables mémoire optimisées. La réplication à l’aide de sync_mode = 'Database Snapshot’n’est pas prise en charge s’il existe un groupe de fichiers mémoire optimisé. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Réplication|Les configurations de réplication autres que la réplication transactionnelle vers des tables mémoire optimisées sur les abonnés sont incompatibles avec des tables ou des vues qui référencent des tables mémoire optimisées. La réplication à l’aide de sync_mode = 'Database Snapshot’n’est pas prise en charge s’il existe un groupe de fichiers mémoire optimisé. Pour plus d’informations, consultez [Replication to Memory-Optimized table subscribers](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |MARS (Multiple Active Result Sets)|Multiple Active Result Sets (MARS) n'est pas pris en charge avec les tables mémoire optimisées. Cette erreur peut également indiquer l'utilisation d'un serveur lié. Un serveur lié peut utiliser MARS. Les serveurs liés ne sont pas pris en charge avec les tables mémoire optimisées. À la place, connectez-vous directement au serveur et à la base de données qui héberge les tables mémoire optimisées.|  
 |Mise en miroir|La mise en miroir de bases de données est une solution permettant d'accroître la disponibilité d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Reconstruire le journal|La reconstruction du journal, via un attachement ou ALTER DATABASE, n'est pas prise en charge pour les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
@@ -90,9 +89,9 @@ ms.locfileid: "63157241"
 |Journalisation en bloc|Quel que soit le mode de récupération de la base de données, toutes les opérations sur les tables à mémoire optimisée durables sont toujours entièrement journalisées.|  
 |Journalisation minimale|La journalisation minimale n'est pas prise en charge pour les tables à mémoire optimisée. Pour plus d’informations sur la journalisation minimale, consultez [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) et [Prérequis pour une journalisation minimale dans l’importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |Suivi des modifications|Le suivi des modifications peut être activé sur une base de données avec des objets de l'OLTP en mémoire. Toutefois, les modifications apportées aux tables à mémoire optimisée ne sont pas suivies.|  
-|Déclencheurs DDL|Les déclencheurs DDL aux niveaux de la base de données et du serveur ne sont pas pris en charge avec les tables de l'OLTP en mémoire et les procédures stockées compilées en mode natif.|  
+|déclencheurs DDL|Les déclencheurs DDL aux niveaux de la base de données et du serveur ne sont pas pris en charge avec les tables de l'OLTP en mémoire et les procédures stockées compilées en mode natif.|  
 |Capture de données modifiées (CDC)|La capture de données modifiées ne doit pas être activée sur une base de données qui possède des objets de l'OLTP en mémoire, car elle empêche certaines opérations telles que DROP.|  
-|Relation contenant-contenu de base de données|La relation contenant-contenu de la base de données n'est pas prise en charge dans une base de données contenant des procédures stockées compilées en mode natif et des tables optimisées en mémoire. Pour plus d’informations, consultez [contained databases](../databases/contained-databases.md) .|  
+|Relation contenant-contenu de base de données|La relation contenant-contenu de la base de données n'est pas prise en charge dans une base de données contenant des procédures stockées compilées en mode natif et des tables optimisées en mémoire. Pour plus d'informations, consultez [Bases de données autonomes](../databases/contained-databases.md)|  
 |Connexions contextuelles|L'accès aux tables optimisées en mémoire à l'aide de la connexion contextuelle depuis des procédures stockées CLR n'est pas pris en charge.|  
 |Curseurs|Curseurs de jeu de clés et dynamiques sur les requêtes qui accèdent aux tables à mémoire optimisée. Ces requêtes sont dégradées en requêtes statiques en lecture seule.|  
 |TABLESTAMP|TABLESTAMP n'est pas pris en charge. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql).|  

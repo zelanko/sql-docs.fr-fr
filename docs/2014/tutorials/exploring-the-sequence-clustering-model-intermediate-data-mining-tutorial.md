@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164056"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Exploration du modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
@@ -32,7 +32,7 @@ ms.locfileid: "63164056"
   
 -   [Vue de contenu générique](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>Onglet diagramme de cluster  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>Onglet diagramme de cluster  
  L’onglet **diagramme de cluster** affiche graphiquement les clusters découverts par l’algorithme dans la base de données. La disposition du diagramme représente les relations entre les clusters. Dans cette présentation, les clusters similaires sont regroupés. Par défaut, la nuance de chaque nœud représente la densité de tous les cas présents dans le cluster : plus le nœud est foncé, plus le nombre de cas qu'il contient est élevé. Vous pouvez changer la signification de la nuance des nœuds afin qu'elle représente la prise en charge, dans chaque nœud, d'un attribut et d'un état.  
   
  Vous pouvez renommer également les clusters pour simplifier l'identification et l'utilisation des clusters cibles. Pour ce didacticiel, vous renommerez le cluster qui a le pourcentage le plus élevé de clients de la région Pacific, et le cluster qui a le plus de cas en général.  
@@ -87,7 +87,7 @@ ms.locfileid: "63164056"
   
  [Retour au début](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>Onglet Profils du cluster  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>Onglet Profils du cluster  
  L’onglet **profils du cluster** affiche les séquences qui se trouvent dans chaque cluster. Les clusters sont répertoriés dans des colonnes individuelles à droite de la colonne **États** .  
   
  Dans la visionneuse, la ligne de **modèle** décrit la distribution globale des éléments d’un cluster, et la ligne **Model. Samples** contient les séquences des éléments. Chaque ligne des séquences de couleurs dans chaque cellule de la ligne **Model. Samples** représente le comportement d’un utilisateur sélectionné de façon aléatoire dans le cluster.  
@@ -132,12 +132,12 @@ ms.locfileid: "63164056"
   
  [Retour au début](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>Onglet caractéristiques du cluster  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>Onglet caractéristiques du cluster  
  L’onglet **caractéristiques du cluster** résume les transitions entre les États d’un cluster en affichant des barres qui représentent visuellement l’importance de la valeur de l’attribut pour le cluster sélectionné. La colonne **variables** indique ce que le modèle a jugé important pour le cluster ou le remplissage sélectionnés : une valeur particulière ou la relation entre les valeurs, appelée *transition*. La colonne **valeurs** fournit plus de détails sur la valeur ou la transition, et la colonne **probabilité** représente visuellement le poids de cet attribut ou de cette transition.  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>Pour consulter les attributs importants pour un cluster  
   
-1.  Dans la **** liste déroulante cluster `Pacific Cluster`, sélectionnez.  
+1.  Dans la **Cluster** liste déroulante cluster `Pacific Cluster`, sélectionnez.  
   
      La liste est mise à jour pour afficher les caractéristiques du cluster que vous avez renommé `Pacific Cluster`. Dans ce cluster, la caractéristique la plus importante `Region`est.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "63164056"
   
  [Retour au début](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>Onglet discrimination de cluster  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>Onglet discrimination de cluster  
  L’onglet **discrimination de cluster** vous permet de comparer deux clusters, afin de déterminer les attributs qui distinguent un cluster particulier d’un autre cluster. L’onglet contient quatre colonnes : **variables**, **valeurs**, **cluster 1**et **cluster 2**.  Vous pouvez choisir n’importe quel cluster à utiliser comme **cluster 1** et **cluster 2**.  
   
  La colonne **variables** indique le nom de l’attribut, qui peut être un nom de colonne ou une combinaison de nom de colonne et de la **transition**de mot. La colonne **valeurs** indique la valeur exacte de l’attribut ou de la transition. Les barres ombrées dans les colonnes pour **cluster 1** et **cluster 2** indiquent la force de l’attribut dans les clusters que vous comparez. Plus la barre est longue, plus grande est la probabilité que le cluster inclus des cas avec cet attribut.  
@@ -188,7 +188,7 @@ ms.locfileid: "63164056"
   
  [Retour au début](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>Onglet transitions d’État  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>Onglet transitions d’État  
  Sous l’onglet **transitions d’État** , vous pouvez sélectionner un cluster et parcourir ses transitions d’État. Si vous sélectionnez **remplissage (tout)** dans la liste déroulante cluster, le diagramme affiche la distribution des États pour l’ensemble du modèle d’exploration de données.  
   
  Chaque nœud dans le graphique représente un état, ou une valeur possible, des séquences que vous essayez d'analyser. La couleur d'arrière-plan des nœuds représente la fréquence de cet état. Les lignes connectent des états et indiquent une transition entre des états. Vous pouvez déplacer le curseur vers le haut ou le bas pour modifier le seuil de probabilité pour les transitions. Des nombres sont associés à certains nœuds et indiquent la probabilité de cet état.  
@@ -227,7 +227,7 @@ ms.locfileid: "63164056"
   
  [Retour au début](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>Visionneuse de l’arborescence de contenu générique  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>Visionneuse de l’arborescence de contenu générique  
  Cette visionneuse peut être utilisée pour tous les modèles, quels que soient l'algorithme ou le type de modèle. La **visionneuse de l’arborescence de contenu MicrosoftGeneric** est disponible dans la liste déroulante **visionneuse** .  
   
  Un arbre de contenu est une représentation de n'importe quel modèle d'exploration de données sous la forme d'une série de nœuds, où chaque nœud représente ce qui a été appris sur certaines données d'apprentissage. Le nœud peut contenir un modèle, un ensemble de règles, un cluster ou la définition d'une plage de dates qui partagent certains attributs. Le contenu exact du nœud diffère en fonction de l'algorithme et de l'attribut prédictible, mais la représentation générale du contenu reste la même.  

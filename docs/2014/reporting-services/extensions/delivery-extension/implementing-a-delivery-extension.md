@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165130"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implémentation d'une extension de remise
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Pour un exemple d’implémentation d’extension de remise, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
@@ -31,19 +31,19 @@ ms.locfileid: "63165130"
  [Présentation des extensions de remise] Delivery-extensions-overview.md)  
  Explique comment écrire une extension de remise personnalisée pour [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Préparation à l'implémentation d'une extension de remise](preparing-to-implement-a-delivery-extension.md)  
+ [Préparation pour la mise en œuvre d'une extension de remise](preparing-to-implement-a-delivery-extension.md)  
  Décrit les interfaces et les classes disponibles lors de l'implémentation d'une extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ainsi que les problèmes à prendre en considération avant l'implémentation.  
   
  [Création d'une bibliothèque d'extensions de remise](creating-a-delivery-extension-library.md)  
  Décrit comment assigner un espace de noms à votre extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et comment compiler votre extension de remise dans une DLL de bibliothèque.  
   
- [Implémentation de l'interface IDeliveryExtension pour une extension de remise](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
+ [Mise en œuvre de l'interface IDeliveryExtension pour une extension de remise](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  Décrit les attributs d'une extension de remise et comment implémenter votre propre classe d'extension de remise.  
   
- [Utilisation d'une classe Notification pour une extension de remise](using-a-notification-class-for-a-delivery-extension.md)  
+ [Utilisation d'une classe de notification pour une extension de remise](using-a-notification-class-for-a-delivery-extension.md)  
  Décrit les attributs d’une classe **Notification** et comment l’utiliser dans l’implémentation de votre extension de remise.  
   
- [Utilisation de la classe Setting pour une extension de remise](using-the-setting-class-for-a-delivery-extension.md)  
+ [Utilisation de la classe Paramètre pour une extension de remise](using-the-setting-class-for-a-delivery-extension.md)  
  Décrit les attributs d’une classe **Setting** et comment l’utiliser dans l’implémentation de votre extension de remise.  
   
  [Utilisation de l'interface IDeliveryReportServerInformation pour une extension de remise](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "63165130"
  Décrit comment supprimer une extension de remise d'un serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions Reporting Services](../reporting-services-extensions.md)   
+ [Extensions de Reporting Services](../reporting-services-extensions.md)   
  [Bibliothèque d'extensions Reporting Services](../reporting-services-extension-library.md)  
   
   

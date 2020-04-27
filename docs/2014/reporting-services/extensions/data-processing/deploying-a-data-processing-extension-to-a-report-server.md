@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164065"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procédure : déployer une extension pour le traitement des données sur un serveur de rapports
@@ -30,7 +30,7 @@ ms.locfileid: "63164065"
 1.  Copiez l'assembly en question depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension pour le traitement des données doit être utilisée. L’emplacement par défaut du répertoire bin du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*nom_instance*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
-    >  Cette étape permet d'éviter la mise à niveau vers une instance de SQL Server plus récente. Pour plus d’informations, consultez [mettre à niveau et migrer Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
+    >  Cette étape permet d'éviter la mise à niveau vers une instance de SQL Server plus récente. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Ce fichier se trouve dans le répertoire ReportServer. Dans le fichier de configuration, créez une entrée correspondant au fichier d'assembly copié. Vous pouvez ouvrir le fichier de configuration dans Visual Studio ou simplement à l’aide d’un éditeur de texte, tel que le Bloc-notes.  
   

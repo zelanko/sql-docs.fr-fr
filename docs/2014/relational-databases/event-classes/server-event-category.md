@@ -17,21 +17,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044214"
 ---
 # <a name="server-event-category"></a>Serveur, catégorie d’événement
-  La catégorie d’événement **serveur** contient des événements de serveur généraux.  
+  La catégorie d’événement **Serveur** contient des événements généraux relatifs au serveur.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Mount Tape (classe d'événements)](mount-tape-event-class.md)|Indique qu'une requête de montage de bande a été reçue.|  
-|[Server Memory Change (classe d'événements)](server-memory-change-event-class.md)|Indique que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilisation de la mémoire a changé.|  
-|[classe d'événements Trace File Close](trace-file-close-event-class.md)|Indique qu'un fichier de trace a été fermé durant une substitution de fichier de trace.|  
+|[Mount Tape, classe d’événements](mount-tape-event-class.md)|Indique qu'une requête de montage de bande a été reçue.|  
+|[Classe d'événements Server Memory Change](server-memory-change-event-class.md)|Indique que l’utilisation de mémoire de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a évolué.|  
+|[Trace File Close, classe d’événements](trace-file-close-event-class.md)|Indique qu'un fichier de trace a été fermé durant une substitution de fichier de trace.|  
   
   

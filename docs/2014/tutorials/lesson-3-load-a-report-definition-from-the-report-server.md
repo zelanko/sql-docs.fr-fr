@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042512"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : chargement d'une définition de rapport à partir du serveur de rapports
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : Charger une définition de rapport à partir du serveur de rapports
   Après avoir créé votre projet et généré les classes à partir du schéma RDL, vous êtes prêt à charger une définition du rapport depuis le serveur de rapports.  
   
 ### <a name="to-load-a-report-definition"></a>Pour charger une définition de rapport  
@@ -101,6 +101,6 @@ ms.locfileid: "63042512"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

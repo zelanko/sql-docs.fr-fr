@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164413"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
@@ -26,7 +26,7 @@ ms.locfileid: "63164413"
   
  Si une extension de remise est remplacée ou mise à niveau, tous les abonnements qui référencent cette extension restent valides.  
   
- Une fois que vous avez écrit et [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] compilé votre extension de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] remise dans une bibliothèque, vous devez copier l’extension dans le répertoire approprié et ajouter une entrée [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] au fichier de configuration approprié afin que le serveur de rapports puisse la localiser.  
+ Après avoir écrit et compilé votre extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la copier dans le répertoire approprié et ajouter une entrée au fichier de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] approprié afin que le serveur de rapports puisse la trouver.  
   
 ## <a name="configuration-file-extension-element"></a>Élément Extension du fichier de configuration  
  Les extensions de remise que vous déployez sur le serveur de rapports doivent être entrées sous la forme d'éléments `Extension` dans le fichier de configuration. Le fichier de configuration du serveur de rapports est RSReportServer.config.  
@@ -51,7 +51,7 @@ ms.locfileid: "63164413"
     > [!IMPORTANT]  
     >  Si vous essayez de remplacer un assembly d'extension de remise existant, vous devez commencer par arrêter le service Report Server avant de copier l'assembly mis à jour. Redémarrez le service une fois l'assembly copié.  
   
-2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer. config se trouve dans le répertoire%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> répertoire \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration à l’aide de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l’aide d’un simple éditeur de texte tel que le Bloc-notes.  
+2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer. config se trouve dans le répertoire%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<Nom_instance> répertoire \Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] avec ou un éditeur de texte simple, tel que le bloc-notes.  
   
 3.  Localisez l'élément `Delivery` dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
   

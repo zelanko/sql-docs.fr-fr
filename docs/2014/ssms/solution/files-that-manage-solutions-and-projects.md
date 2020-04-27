@@ -19,33 +19,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044374"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Fichiers gérant les solutions et les projets
-  Cette rubrique décrit les types de fichiers spécifiques à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Par défaut, toutes les solutions et leurs projets sont créés dans \Mes documents\SQL Server Management Studio\Projects.  
+  Cette rubrique décrit les types de fichiers spécifiques de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Par défaut, toutes les solutions et leurs projets sont créés dans \Mes documents\SQL Server Management Studio\Projects.  
   
 ## <a name="management-studio-solution-files"></a>Fichiers solutions Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]utilise différents types de fichiers [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] que [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou Visual Studio. Cela signifie que vous ne pouvez pas ouvrir une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans Visual Studio. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Les fichiers solutions permettent à l’Explorateur de solutions d’afficher une interface graphique pour gérer vos fichiers.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise d’autres types de fichiers que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Cela signifie que vous ne pouvez pas ouvrir une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans Visual Studio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Les fichiers solutions permettent à l’Explorateur de solutions d’afficher une interface graphique pour gérer vos fichiers.  
   
 |Extension|Type de fichier|Description|Créé par|  
 |---------------|---------------|-----------------|----------------|  
-|.ssmssln|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Objet Solution|Fournit l’environnement avec des références à l’emplacement sur le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disque des projets, des éléments de projet et de la solution|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
+|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Objet Solution|Fournit l’environnement avec des références à l’emplacement sur le disque des projets, des éléments de projets et de la solution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
 ## <a name="management-studio-project-files"></a>Fichiers projet Management Studio  
  À l'instar des solutions qui contiennent des fichiers solutions qui gèrent les objets d'une solution, les projets contiennent des fichiers projet. Le type de fichier projet créé par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour un projet dépend du modèle utilisé pour créer le projet. Le tableau ci-dessous décrit le type de fichier créé pour chaque projet.  
   
 |Extension|Modèle de projet|  
 |---------------|----------------------|  
-|.ssmssqlproj|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Projet de script|  
-|.ssmsasproj|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projet de script|  
+|.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Projet de script|  
+|.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projet de script|  
   
 ## <a name="location-of-solution-level-files"></a>Emplacement des fichiers de niveau solution  
  Par défaut, les fichiers de niveau solution sont créés dans le répertoire physique du premier projet créé avec la solution. Vous pouvez spécifier un répertoire pour la solution lors de la création d'une solution ou lors de la création d'un nouveau projet.  

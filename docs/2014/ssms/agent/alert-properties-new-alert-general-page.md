@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062145"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Propriétés de l’alerte-nouvelle alerte (page général)
@@ -32,11 +32,11 @@ ms.locfileid: "63062145"
  **Type**  
  Sélectionnez le type d'alerte :  
   
--   **SQL Server alerte d’événement** répond aux messages dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] le journal des événements Windows.  
+-   Une**alerte d'événement SQL Server** répond aux messages dans le journal des événements de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
--   **SQL Server alerte de condition de performance** répond à une condition spécifique dans un compteur de performance.  
+-   Une**alerte de condition de performances SQL Server** répond à une condition spécifique liée à un compteur de performance.  
   
--   L' **alerte d’événement WMI** répond à un événement de Windows Management Instrumentation (WMI).  
+-   Une**alerte d’événement WMI** répond à un événement WMI (Windows Management Instrumentation).  
   
 ## <a name="sql-server-event-alert-options"></a>Options des alertes d'événement SQL Server  
  **Nom de la base de données**  
@@ -45,7 +45,7 @@ ms.locfileid: "63062145"
  **Numéro d’erreur**  
  Indique que cet événement répond à une erreur. Précisez le numéro de l'erreur.  
   
- **severity**  
+ **Gravité**  
  Indique que cet événement répond à un message quelconque d'un niveau de gravité spécifique. Précisez le niveau de gravité.  
   
  **Déclencher une alerte quand le message contient**  
@@ -55,7 +55,7 @@ ms.locfileid: "63062145"
  Spécifiez la chaîne à utiliser pour filtrer les événements.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertes de condition de performances de SQL Server  
- **Object**  
+ **Dessin**  
  Précisez l'objet de performance à surveiller.  
   
  **Compteur**  
@@ -64,7 +64,7 @@ ms.locfileid: "63062145"
  **Instance**  
  Indiquez l'instance du compteur à surveiller.  
   
- **Alerte si le compteur**  
+ **Alerte si compteur**  
  Spécifiez le comportement du compteur auquel l'alerte répond. Par exemple, vous pouvez faire en sorte que l’alerte réponde à une baisse de la valeur du compteur **Espace disponible dans tempdb (Ko)** en deçà d’une valeur spécifiée, ou à un dépassement d’une valeur spécifiée par la valeur du compteur **Compilations SQL/s** .  
   
  **Valeur**  
@@ -78,7 +78,7 @@ ms.locfileid: "63062145"
  Spécifiez l'instruction WQL identifiant l'événement auquel l'alerte répond.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Alerts](alerts.md)   
+ [Aucune](alerts.md)   
  [Utilisation de WQL avec le fournisseur WMI pour les événements de serveur](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Créer une alerte en utilisant un numéro d’erreur](create-an-alert-using-an-error-number.md)   
  [Créer une alerte à l'aide d'un niveau de gravité](create-an-alert-using-severity-level.md)  

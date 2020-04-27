@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182890"
 ---
 # <a name="select-objects-object-explorer"></a>Sélectionner des objets (Explorateur d'objets)
-  Utilisez la boîte de dialogue **Sélectionner des objets** pour ajouter un objet à une liste dans une autre boîte de dialogue. Le titre de la boîte de dialogue et les options disponibles dans cette boîte de dialogue dépendent de la manière dont elle a été ouverte. Seules les options disponibles apparaissent ; par exemple, seuls des noms de connexion sont disponibles lorsque vous sélectionnez un propriétaire pour un nouvel objet.  
+  La boîte de dialogue **Sélectionner des objets** vous permet d’ajouter un objet dans une liste d’une autre boîte de dialogue. Le titre de la boîte de dialogue et les options disponibles dans cette boîte de dialogue dépendent de la manière dont elle a été ouverte. Seules les options disponibles apparaissent ; par exemple, seuls des noms de connexion sont disponibles lorsque vous sélectionnez un propriétaire pour un nouvel objet.  
   
 ## <a name="options"></a>Options  
- **Sélectionner ces types d’objets**  
- Affiche la liste des types auxquels les objets à sélectionner appartiennent. Les types incluent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les principaux et les éléments sécurisables au niveau de la base de données et du niveau. Cette zone est remplie à partir des sélections effectuées dans la boîte de dialogue **Sélectionner les types d’objets** , accessible à l’aide du bouton **Types d’objets** .  
+ **Sélectionnez ces types d'objets**  
+ Affiche la liste des types auxquels les objets à sélectionner appartiennent. Les types incluent les principaux et éléments sécurisables de niveau de base de données et de niveau [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette zone est remplie à partir des sélections effectuées dans la boîte de dialogue **Sélectionner les types d’objets** , accessible à l’aide du bouton **Types d’objets** .  
   
- **Entrez les noms des objets à sélectionner**  
+ **Entrez les noms d'objets à sélectionner**  
  Entrez la liste séparée par des points-virgules des noms des objets à sélectionner. Les objets à sélectionner doivent être d’un type répertorié dans la zone **Sélectionnez ces types d’objets** . Les objets peuvent être sélectionnés dans une liste accessible en cliquant sur le bouton **Parcourir** .  
   
  **Types d’objets**  

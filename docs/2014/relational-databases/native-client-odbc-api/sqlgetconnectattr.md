@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128664"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -32,7 +32,7 @@ ms.locfileid: "63128664"
 > [!NOTE]  
 >  L'attribut de connexion ODBC standard SQL_ATTR_CONNECTION_DEAD retourne l'état le plus récent de la connexion. Cela peut ne pas être l'état actuel de la connexion.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connexion au serveur a été perdue.|  
 |SQL_CD_FALSE|La connexion est ouverte et disponible pour le traitement d'instruction.|  
@@ -48,7 +48,7 @@ ms.locfileid: "63128664"
   
  Pour plus d’informations, consultez [accès aux informations de diagnostic dans le journal des événements étendus](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|La connexion a échoué.|  
 |SQL_SUCCESS|La connexion a abouti. L'ID de connexion client se trouve dans le tampon de sortie.|  
@@ -56,7 +56,7 @@ ms.locfileid: "63128664"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  L'attribut SQL_COPT_SS_PERF_DATA retourne un pointeur vers une structure SQLPERF contenant les statistiques actuelles de performances de pilote. `SQLGetConnectAttr`retourne la valeur NULL si la journalisation des performances n’est pas activée. Les statistiques dans la structure SQLPERF ne sont pas mises à jour de manière dynamique par le pilote. Appelez `SQLGetConnectAttr` chaque fois que les statistiques de performances doivent être actualisées.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|L'enregistrement des performances n'est pas activé.|  
 |Toute autre valeur|Pointeur vers une structure SQLPERF.|  
@@ -67,7 +67,7 @@ ms.locfileid: "63128664"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  L'attribut SQL_COPT_SS_USER_DATA extrait le pointeur de données utilisateur. Les données utilisateur sont stockées dans la mémoire détenue par le client et enregistrées par connexion. Si le pointeur de données utilisateur n'a pas été défini, SQL_UD_NOTSET, un pointeur NULL, est retourné.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Aucun pointeur de données utilisateur n'est défini.|  
 |Toute autre valeur|Pointeur vers les données utilisateur.|  
@@ -85,8 +85,8 @@ ms.locfileid: "63128664"
  [SQLGetConnectAttr fonction)](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Détails de l’implémentation de l’API ODBC](odbc-api-implementation-details.md)   
  [DÉFINIR QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [DÉFINIR ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [DÉFINIR ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

@@ -27,16 +27,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127892"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considérations sur la sécurité pour une installation SQL Server
   La sécurité est importante pour chaque produit et chaque activité. En respectant les recommandations les plus simples, vous pouvez éviter de nombreuses failles de sécurité. Cette rubrique traite des recommandations qu'il est conseillé de prendre en considération en matière de sécurité avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après l'avoir installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Des conseils en matière de sécurité concernant des fonctionnalités spécifiques sont inclus dans les rubriques de référence de ces fonctionnalités.  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Avant d’effectuer l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>Avant d’effectuer l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Suivez ces recommandations lors de la définition de l'environnement du serveur :  
   
 -   [Renforcez la sécurité physique.](#physical_security)  
@@ -51,7 +51,7 @@ ms.locfileid: "63127892"
   
 -   [Installation de SQL Server sur un contrôleur de domaine](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  L'isolement au niveau physique et logique est à la base de la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour améliorer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau physique, procédez comme suit :  
   
 -   Placez le serveur dans une pièce à laquelle seules les personnes autorisées peuvent accéder.  
@@ -62,7 +62,7 @@ ms.locfileid: "63127892"
   
 -   Sauvegardez régulièrement toutes les données et conservez les copies de sauvegarde dans un lieu sécurisé situé en dehors de l'entreprise.  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  Les pare-feu sont importants afin d'aider à sécuriser l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les pare-feu seront d'autant plus efficaces que vous suivrez ces directives :  
   
 -   Placez un pare-feu entre le serveur et Internet. Activez votre pare-feu. Si votre pare-feu est désactivé, activez-le. Si votre pare-feu est activé, ne le désactivez pas.  
@@ -77,12 +77,12 @@ ms.locfileid: "63127892"
   
  Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  Le fait d'isoler les services réduit le risque qu'un service compromis soit utilisé pour en compromettre d'autres. Pour isoler des services, tenez compte des consignes suivantes :  
   
 -   Exécutez chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des comptes Windows distincts. Si possible, utilisez des comptes d'utilisateurs locaux ou Windows distincts et à faibles droits pour chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  L'utilisation du système de fichiers correct accroît la sécurité. Pour les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez effectuer les tâches suivantes :  
   
 -   Utiliser le système de fichiers NTFS. NTFS est le système de fichiers par défaut pour les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] car il est plus stable et récupérable que les systèmes de fichiers FAT. NTFS active également des options de sécurité telles que les listes de contrôle d'accès de fichiers et de répertoires et le chiffrement de fichiers EFS (Encrypting File System). Pendant l'installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit les listes de contrôle d'accès appropriées sur les clés de Registre et les fichiers s'il détecte NTFS. Ces autorisations ne doivent pas être modifiées. Il se peut que les versions futures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prennent pas en charge l'installation sur des ordinateurs dotés de systèmes de fichiers FAT.  
@@ -92,7 +92,7 @@ ms.locfileid: "63127892"
   
 -   Utilisez la technologie RAID pour les fichiers de données critiques.  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  Les protocoles non nécessaires doivent tous être désactivés sur les serveurs du réseau de périmètre, y compris les protocoles NetBIOS et SMB.  
   
  Le protocole NetBIOS utilise les ports suivants :  
@@ -111,7 +111,7 @@ ms.locfileid: "63127892"
   
  Les serveurs Web et les serveurs DNS (Domain Name System) ne nécessitent pas l'utilisation du protocole NetBIOS ou SMB. Désactivez ces protocoles sur ces serveurs afin de réduire le risque lié à l'énumération utilisateur.  
   
-###  <a name="Install_DC"></a> Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine  
  Pour des raisons de sécurité, nous recommandons de ne pas installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur un contrôleur de domaine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne bloquera pas l'installation sur un ordinateur qui est contrôleur de domaine, mais les limitations suivantes s'appliquent :  
   
 -   Vous ne pouvez pas exécuter les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine sous un compte de service local.  
@@ -124,7 +124,7 @@ ms.locfileid: "63127892"
   
 -   Le programme d'installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer de groupes de sécurité ni configurer de comptes de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine en lecture seule. Dans ce scénario, le programme d'installation échoue.  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Pendant ou après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>Pendant ou après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Après l'installation, vous pouvez renforcer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en suivant les recommandations suivantes pour les comptes et les modes d'authentification :  
   
  **Comptes de service**  

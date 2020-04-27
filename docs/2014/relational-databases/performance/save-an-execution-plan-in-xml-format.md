@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150862"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Enregistrer un plan d'exécution au format XML
@@ -65,9 +65,9 @@ ms.locfileid: "63150862"
   
 4.  Dans le volet **Résultats** , cliquez avec le bouton droit sur le **Plan d’exécution XML Microsoft SQL Server** contenant le plan de requête, puis cliquez sur **Enregistrer les résultats sous**.  
   
-5.  Dans la boîte de dialogue **Enregistrer** \<les résultats **de la grille ou du texte>**, dans la zone **Type de fichier**, cliquez sur **Tous les fichiers (\*.\*)**.  
+5.  Dans la boîte de dialogue **Enregistrer**les résultats** de la ** \<grille ou du texte>, dans la zone **Type de fichier**, cliquez sur **Tous les fichiers (\*.\*)**.  
   
-6.  Dans la boîte de dialogue **Nom de fichier**, fournissez un nom au format \<nom **>.sqlplan**, puis cliquez sur **Enregistrer**.  
+6.  Dans la **zone nom de fichier** , entrez un nom, au \<format nom **>. sqlplan**, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Pour enregistrer un plan d'exécution avec les options de SQL Server Management Studio  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63150862"
   
 3.  Dans la boîte de dialogue **Enregistrer sous**, assurez-vous que **Type de fichier** est défini à **Fichiers de plan d’exécution (\*.sqlplan)**.  
   
-4.  Dans la boîte de dialogue **Nom de fichier**, fournissez un nom au format \<nom **>.sqlplan**, puis cliquez sur **Enregistrer**.  
+4.  Dans la **zone nom de fichier** , entrez un nom, au \<format nom **>. sqlplan**, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Pour ouvrir un plan de requête XML dans SQL Server Management Studio  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63150862"
      En guise d’alternative, dans l’Explorateur Windows, double-cliquez sur un fichier avec l’extension **.sqlplan**. Le plan s'ouvre dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICs XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [DÉFINIR SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

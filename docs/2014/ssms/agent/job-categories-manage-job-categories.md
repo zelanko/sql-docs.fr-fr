@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937016"
 ---
 # <a name="job-categories-manage-job-categories"></a>Catégories de travaux : Gérer les catégories de travaux
-  Utilisez la boîte de dialogue **catégories de travaux** pour ajouter ou supprimer des catégories de travaux. Les catégories de travaux prédéfinies ne peuvent pas être supprimées.  
+  Utilisez la boîte de dialogue **Catégories de travaux** pour ajouter ou supprimer des catégories de travaux. Les catégories de travaux prédéfinies ne peuvent pas être supprimées.  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -40,7 +40,7 @@ ms.locfileid: "62937016"
  **Supprimer**  
  Supprime la catégorie de travaux sélectionnée. Cette option est activée uniquement pour les catégories de travaux définies par l'utilisateur.  
   
- **Actualiser**  
+ **Actualisation**  
  Demande les informations actuelles au serveur.  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>Pour accéder à la boîte de dialogue Catégories de travaux  

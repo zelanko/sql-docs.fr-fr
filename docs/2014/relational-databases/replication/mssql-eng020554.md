@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057119"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -70,15 +70,15 @@ ms.locfileid: "63057119"
   
     -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
+    -   [Concepts des exécutables de l’agent de réplication](concepts/replication-agent-executables-concepts.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de l’Agent de réplication](agents/replication-agent-administration.md)   
- [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
- [Replication Distribution Agent](agents/replication-distribution-agent.md)   
- [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
- [Replication Merge Agent](agents/replication-merge-agent.md)   
- [Agent de lecture de la file d'attente de réplication](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [Administration de l’agent de réplication](agents/replication-agent-administration.md)   
+ [Référence des erreurs et des événements &#40;&#41;de réplication](errors-and-events-reference-replication.md)   
+ [Agent de distribution de réplication](agents/replication-distribution-agent.md)   
+ [Agent de lecture du journal de réplication](agents/replication-log-reader-agent.md)   
+ [Agent de fusion de réplication](agents/replication-merge-agent.md)   
+ [Agent de lecture de la file d’attente de réplication](agents/replication-queue-reader-agent.md)   
+ [Agent d'instantané de réplication](agents/replication-snapshot-agent.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990704"
 ---
 # <a name="extended-events"></a>Événements étendus
@@ -25,8 +25,8 @@ ms.locfileid: "62990704"
   
  Vous pouvez rechercher plus d'informations sur les événements étendus sur le Web sur le site [Événements étendus SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Avantages des événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Les événements étendus sont un système léger d'analyse des performances qui utilise très peu de ressources de performances. Les événements étendus fournissent deux interfaces utilisateur graphiques (**Assistant nouvelle session** et **nouvelle session**) pour créer, modifier, afficher et analyser vos données de session.  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Avantages des événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Les événements étendus sont un système léger d'analyse des performances qui utilise très peu de ressources de performances. Les événements étendus fournissent deux interfaces utilisateur graphiques (**Assistant Nouvelle session** et **Nouvelle session**) permettant de créer, modifier, afficher et analyser vos données de session.  
   
 ## <a name="extended-events-concepts"></a>Concepts liés aux événements étendus  
  Les événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’appuient sur des concepts existants, tels qu’un événement ou un consommateur d’événements, utilisent les concepts provenant du suivi d’événements pour Windows et introduisent de nouveaux concepts.  
@@ -73,7 +73,7 @@ ms.locfileid: "62990704"
   
 -   la capacité de surveiller dynamiquement les processus actifs tout en ayant un impact minime sur ces processus.  
   
--   une session de l'intégrité du système par défaut qui s'exécute sans effet de performance notable ; Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances. Pour plus d’informations, consultez [Utiliser la session system_health](use-the-ssms-xe-profiler.md).  
+-   une session de l'intégrité du système par défaut qui s'exécute sans effet de performance notable ; Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances. Pour plus d’informations, consultez [utiliser la session de system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="extended-events-tasks"></a>Tâches relatives aux événements étendus  
  En utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour exécuter des instructions DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] , des vues et des fonctions de gestion dynamiques ou des affichages catalogue, vous pouvez créer des solutions de dépannage des Événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simples ou complexes pour votre environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -81,7 +81,7 @@ ms.locfileid: "62990704"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Utilisez l' **Explorateur d'objets** pour gérer les sessions d'événements.|[Gérer les sessions d’événements dans l’Explorateur d’objets](../../ssms/object/object-explorer.md)|  
-|Explique comment créer une session d'événements étendus.|[Créer une session d’événements étendus](../../database-engine/create-an-extended-events-session.md)|  
+|Explique comment créer une session d'événements étendus.|[Créer une session d'événements étendus](../../database-engine/create-an-extended-events-session.md)|  
 |Explique comment afficher et actualiser des données cibles.|[Afficher des données de session d'événements](../../database-engine/view-event-session-data.md)|  
 |Explique comment utiliser des outils d'événements étendus pour créer et gérer vos sessions d'événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Outils associés aux événements étendus](extended-events-tools.md)|  
 |Explique comment altérer une session d'événements étendus.|[Modifier une session d’événements étendus](alter-an-extended-events-session.md)|  
@@ -90,9 +90,9 @@ ms.locfileid: "62990704"
 |Explique comment obtenir des informations sur les champs associés aux événements.|[Obtenir les champs pour tous les événements](../../database-engine/get-the-fields-for-all-events.md)|  
 |Explique comment déterminer quels sont les événements disponibles dans les packages enregistrés.|[Consulter les événements pour les packages enregistrés](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Explique comment déterminer quelles cibles d'événements étendus sont disponibles dans les packages enregistrés.|[Afficher les cibles d’événements étendus pour les packages enregistrés](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
-|Explique comment afficher les événements Événements étendus et les actions qui sont équivalents à chaque événement SQL Trace et à ses colonnes associées.|[Consulter les événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Explique comment afficher les événements Événements étendus et les actions qui sont équivalents à chaque événement SQL Trace et à ses colonnes associées.|[Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Explique comment rechercher les paramètres que vous pouvez définir lorsque vous utilisez l'argument ADD TARGET dans CREATE EVENT SESSION ou ALTER EVENT SESSION.|[Obtenir les paramètres configurables pour l’argument ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
-|Explique comment convertir un script Trace SQL existant en session d'événements étendus.|[Convertir un script Trace SQL existant en session d’événements étendus](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
+|Explique comment convertir un script Trace SQL existant en session d'événements étendus.|[Convertir un script Trace SQL existant en session d'événements étendus](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Explique comment déterminer quelles requêtes détiennent le verrou, le plan de la requête et la pile [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment où le verrou a été mis.|[Déterminer quelles requêtes détiennent des verrous](determine-which-queries-are-holding-locks.md)|  
 |Explique comment identifier la source des verrous qui gênent les performances de la base de données.|[Trouver les objets comportant le plus de verrous](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Explique comment utiliser les événements étendus avec le suivi d'événements pour Windows pour surveiller l'activité système.|[Surveiller l’activité système à l’aide d’événements étendus](monitor-system-activity-using-extended-events.md)|  
@@ -102,7 +102,7 @@ ms.locfileid: "62990704"
  [Prise en charge DAC pour les objets et versions SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Déployer une application de la couche données](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Surveiller les applications de la couche données](../data-tier-applications/monitor-data-tier-applications.md)   
- [Vues de gestion dynamique des Événements étendus](../views/views.md)   
+ [Vues de gestion dynamique des événements étendus](../views/views.md)   
  [Affichages catalogue des événements étendus &#40;&#41; Transact-SQL] (~/Relational-databases/System-Catalog-views/Extended-Events-Catalog-views-Transact-SQL  
   
   

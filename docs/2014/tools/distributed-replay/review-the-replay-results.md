@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149707"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
-  Une fois [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que la fonctionnalité de Distributed Replay a effectué une relecture distribuée, l’activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay** . Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l’activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay** . Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  L'emplacement où sont stockés les fichiers de trace de résultats est spécifié par l'élément XML `<ResultDirectory>` dans le fichier de configuration client, `DReplayClient.xml`, situé sur chaque client. Les fichiers de trace dans le répertoire des résultats du client sont remplacés à chaque relecture.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63149707"
 ## <a name="event-class-column-mapping"></a>Mappage de colonne de la classe d'événements  
  La figure suivante répertorie les colonnes de trace de résultats disponibles pour chaque type de classe d'événements capturée lors de la relecture.  
   
- ![Mappage de colonnes de la classe d’événements](../../database-engine/media/eventclassmappings.gif "Mappage de colonne de la classe d'événements")  
+ ![Mappage de colonne de la classe d'événements](../../database-engine/media/eventclassmappings.gif "Mappage de colonne de la classe d'événements")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descriptions des colonnes de la trace de résultats  
  Le tableau suivant décrit les colonnes des données de la trace de résultats.  
@@ -78,8 +78,8 @@ ms.locfileid: "63149707"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](distributed-replay-requirements.md)   
- [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurer Distributed Replay](configure-distributed-replay.md)  
+ [Configuration requise pour la Distributed Replay](distributed-replay-requirements.md)   
+ [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay utilitaire&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

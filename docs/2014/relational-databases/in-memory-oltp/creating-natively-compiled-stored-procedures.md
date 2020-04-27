@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071816"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Création de procédures stockées compilées en mode natif
@@ -55,8 +55,7 @@ go
   
 |Option|Description|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liées au schéma des objets auxquels elle fait référence. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Les tables référencées dans la procédure doivent inclure leur nom de schéma, et les\*caractères génériques () ne sont pas autorisés dans les requêtes. 
-  `SCHEMABINDING` est uniquement prise en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liées au schéma des objets auxquels elle fait référence. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Les tables référencées dans la procédure doivent inclure leur nom de schéma, et les\*caractères génériques () ne sont pas autorisés dans les requêtes. `SCHEMABINDING` est uniquement prise en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Les procédures stockées compilées en mode natif ne prennent pas en charge `EXECUTE AS CALLER`, qui est le contexte d'exécution par défaut. Par conséquent, vous devez spécifier le contexte d'exécution. Les options `EXECUTE AS OWNER`, `EXECUTE AS` *User*et `EXECUTE AS SELF` sont prises en charge.|  
 |`BEGIN ATOMIC`|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> `TRANSACTION ISOLATION LEVEL`. Consultez [niveaux](../../database-engine/transaction-isolation-levels.md) d’isolement des transactions pour les niveaux d’isolement pris en charge.<br /><br /> `LANGUAGE`. Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
   
@@ -111,6 +110,6 @@ go
  L'avantage de cette méthode est que l'application n'est pas mise hors connexion. En revanche, cette méthode nécessite davantage de travail pour gérer les références et veiller à ce qu'elles pointent toujours vers la version la plus récente de la procédure stockée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
+ [procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
   
   

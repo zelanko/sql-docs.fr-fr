@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155392"
 ---
 # <a name="create-filtered-indexes"></a>Créer des index filtrés
@@ -56,15 +56,15 @@ ms.locfileid: "63155392"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Design"></a> Remarques sur la conception  
+###  <a name="design-considerations"></a><a name="Design"></a> Remarques sur la conception  
   
 -   Lorsqu'une colonne contient seulement un petit nombre de valeurs pertinentes pour les requêtes, vous pouvez créer un index filtré sur ce sous-ensemble de valeurs. Ainsi, lorsque les valeurs d'une colonne sont principalement NULL et que la requête effectue uniquement des sélections dans les valeurs non NULL, vous pouvez créer un index filtré pour les lignes de données non NULL. L'index ainsi créé sera plus petit et coûtera moins cher en maintenance qu'un index non cluster de table entière défini sur les mêmes colonnes clés.  
   
 -   Lorsqu'une table contient des lignes des données hétérogènes, vous pouvez créer un index filtré pour une ou plusieurs catégories de données. Ceci peut améliorer les performances des requêtes sur ces lignes de données en limitant la portée d'une requête à une région spécifique de la table. En outre, l'index ainsi créé sera plus petit et coûtera moins cher en maintenance qu'un index non cluster de table entière.  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous ne pouvez pas créer un index filtré sur une vue. Toutefois, l'optimiseur de requête peut tirer parti d'un index filtré défini sur une table référencée dans une vue. L'optimiseur de requête prend en considération un index filtré pour une requête qui effectue des sélections dans une vue si les résultats de la requête sont corrects.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155392"
   
 -   Si l'opérateur de comparaison spécifié dans l'expression d'index filtré de l'index filtré provoque une conversion de données implicite ou explicite, une erreur se produit si cette conversion se produit du côté gauche d'un opérateur de comparaison. Une solution consiste à écrire l'expression d'index filtré avec l'opérateur de conversion de données (CAST ou CONVERT) à droite de l'opérateur de comparaison.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** . Pour modifier l'expression d'index filtré, utilisez CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   
@@ -105,13 +105,13 @@ ms.locfileid: "63155392"
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index filtré.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
+4.  Cliquez avec le bouton droit sur le dossier **index** , pointez sur **nouvel index**, puis sélectionnez **index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
+6.  Sous **colonnes clés d’index**, cliquez sur **Ajouter.**...  
   
-7.  Dans la boîte de dialogue **Sélectionner les colonnes à partir de**_table_name_ , activez la ou les cases à cocher de la ou des colonnes de table à ajouter à l’index unique.  
+7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   
 8.  Cliquez sur **OK**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63155392"
   
 10. Cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   

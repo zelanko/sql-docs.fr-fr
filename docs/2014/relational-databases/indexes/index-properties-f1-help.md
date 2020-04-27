@@ -19,28 +19,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161907"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
   Les sections de cette rubrique font référence aux différentes propriétés d'index disponibles au moyen des boîtes de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
- [Propriétés de l’index (page général)](#General)  
+ [Propriétés de l'index (page Général)](#General)  
   
- [Boîte de dialogue Sélectionner les colonnes (index)](#Columns)  
+ [Boîte de dialogue Sélectionner les colonnes à partir de (Propriétés de l'index)](#Columns)  
   
- [Propriétés de l’index (page stockage)](#Storage)  
+ [Propriétés de l'index (page Stockage)](#Storage)  
   
- [Propriétés de l’index, page spatiale](#Spatial)  
+ [Propriétés de l'index (page Spatial)](#Spatial)  
   
- [Page filtre des propriétés de l’index](#Filter)  
+ [Propriétés de l'index (page Filtre)](#Filter)  
   
-##  <a name="General"></a>Propriétés de l’index (page général)  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Propriétés de l'index (page Général)  
  La page Général vous permet d'afficher et de modifier les propriétés de l'index de la table ou de la vue sélectionnée. Les options de chaque page peuvent changer en fonction du type d'index sélectionné.  
   
  **Nom de la table**  
@@ -48,10 +48,10 @@ ms.locfileid: "63161907"
   
  Des index spatiaux ne peuvent pas être spécifiés sur des vues indexées. Les index spatiaux peuvent être uniquement définis pour une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15. La taille par ligne combinée des colonnes clés primaires est limitée à 895 octets.  
   
- **Nom d’index**  
+ **Nom de l'index**  
  Affiche le nom de l'index. Ce champ est en lecture seule pour un index existant. Permet de taper le nom de l'index, si vous en créez un nouveau.  
   
- **Type d’index**  
+ **Type d'index**  
  Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **Non cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **Columnstore cluster**ou **Columnstore non cluster**.  
   
  **Remarque** Un seul index cluster est autorisé pour chaque table. Un seul index columnstore optimisé en mémoire xVelocity est autorisé pour chaque table.  
@@ -61,7 +61,7 @@ ms.locfileid: "63161907"
   
  Si vous sélectionnez **Spatial** dans le champ **Type d'index** , la case à cocher **Unique** est estompée.  
   
- **Colonnes clés d’index**  
+ **Colonnes clés d'index**  
  Ajoutez les colonnes de votre choix dans la grille **Colonnes de clés d’index** . Lorsque plusieurs colonnes sont ajoutées, elles doivent être répertoriées dans l'ordre souhaité. L'ordre des colonnes dans un index peut avoir un impact important sur les performances de l'index.  
   
  Un maximum de 16 colonnes peuvent être utilisées dans un index composé individuel. Si la valeur est supérieure à 16 colonnes, consultez la section traitant des colonnes incluses à la fin de cette rubrique.  
@@ -86,14 +86,14 @@ ms.locfileid: "63161907"
  **Taille**  
  Affiche le nombre maximal d'octets requis pour stocker le type de données de la colonne. Affiche zéro (0) pour une colonne spatiale ou XML.  
   
- **Personnelles**  
+ **Identité**  
  Indique si la colonne utilisée dans la clé d'index est une colonne d'identité.  
   
  **Autoriser les valeurs NULL**  
  Indique si la colonne utilisée dans la clé d'index autorise le stockage de valeurs NULL dans la colonne de la table ou de la vue.  
   
  **Ajouter**  
- Ajoute une colonne à la clé d'index. Sélectionnez les colonnes de la table dans la boîte de dialogue **sélectionnez les colonnes dans le nom de** * \<la table>* qui s’affiche lorsque vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
+ Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom de la table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
   
  **Remove**  
  Supprime la colonne sélectionnée de la clé d'index.  
@@ -104,13 +104,13 @@ ms.locfileid: "63161907"
  **Descendre**  
  Déplace la colonne sélectionnée vers le bas dans la grille de clé d'index.  
   
- **Colonnes ColumnStore**  
+ **Colonnes columnstore**  
  Cliquez sur **Ajouter** pour sélectionner des colonnes pour l’index columnstore. Pour connaître les limitations sur un index columnstore, consultez [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  **Colonnes incluses**  
- Inclut des colonnes non-clés dans l'index non cluster. Cette option vous permet de contourner les limites actuelles de l'index relatives à la taille totale d'une clé d'index et au nombre maximal de colonnes pouvant faire partie d'une clé d'index, en ajoutant des colonnes en tant que colonnes non-clés au niveau feuille de l'index non cluster. Pour plus d’informations, consultez [créer des index avec des colonnes incluses](create-indexes-with-included-columns.md)  
+ Inclut des colonnes non-clés dans l'index non cluster. Cette option vous permet de contourner les limites actuelles de l'index relatives à la taille totale d'une clé d'index et au nombre maximal de colonnes pouvant faire partie d'une clé d'index, en ajoutant des colonnes en tant que colonnes non-clés au niveau feuille de l'index non cluster. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](create-indexes-with-included-columns.md)  
   
-##  <a name="Columns"></a>Boîte de dialogue Sélectionner les colonnes (index)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> Boîte de dialogue Sélectionner les colonnes à partir de (Propriétés de l'index)  
  Utilisez cette page pour ajouter des colonnes à la page **Propriétés de l'index (page Général)** lors de la création ou de la modification d'un index.  
   
  **Case à cocher**  
@@ -122,22 +122,22 @@ ms.locfileid: "63161907"
  **Type de données**  
  Type de données de la colonne.  
   
- **Bits**  
+ **Octets**  
  Taille de la colonne en octets.  
   
- **Personnelles**  
+ **Identité**  
  Affiche **Oui** pour les colonnes d’identité et **Non** pour les autres.  
   
  **Null autorisé**  
  Affiche **Oui** si la définition de table autorise la présence de valeurs Null dans la colonne. Affiche **Non** si la définition de la table interdit la présence de valeurs Null dans la colonne.  
   
-##  <a name="Storage"></a>Options de la page de stockage  
+##  <a name="storage-page-options"></a><a name="Storage"></a> Options (page Stockage)  
  Utilisez cette page pour consulter ou modifier les propriétés de groupe de fichiers ou de schéma de partition pour l'index sélectionné. Affiche uniquement les options relatives au type d'index.  
   
  **Fichiers**  
  Stocke l'index dans le groupe de fichiers spécifié. La liste répertorie uniquement les groupes de fichiers standard (row). Le groupe de fichiers PRIMARY de la base de données est sélectionné par défaut dans la liste. Pour plus d'informations, consultez [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
   
- **Groupe de fichiers FILESTREAM**  
+ **Groupe de fichiers Filestream**  
  Spécifie le groupe de fichiers pour les données FILESTREAM. Cette liste affiche uniquement des groupes de fichiers FILESTREAM. Le groupe de fichiers sélectionné par défaut dans la liste est le groupe PRIMARY FILESTREAM. Pour plus d’informations, consultez [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Schéma de partition**  
@@ -150,7 +150,7 @@ ms.locfileid: "63161907"
   
  Si la table n'est pas partitionnée, le champ est vide.  
   
- **Paramètre de schéma de partition**  
+ **Paramètre du schéma de partition**  
  Affiche le nom de la colonne qui participe au schéma de partition.  
   
  **Colonne de table**  
@@ -160,9 +160,9 @@ ms.locfileid: "63161907"
  Affiche des informations sur les types de données figurant dans la colonne.  
   
 > [!NOTE]  
->  Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
+>   Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
   
- **Autoriser le traitement en ligne des instructions DML lors du déplacement de l’index**  
+ **Autoriser le traitement en ligne des instructions DML lors du déplacement de l'index**  
  Permet aux utilisateurs d'accéder à la table sous-jacente ou aux données des index cluster et à tous les index non-cluster associés pendant l'opération d'index. Pour plus d'informations, consultez [Perform Index Operations Online](perform-index-operations-online.md).  
   
 > [!NOTE]  
@@ -174,7 +174,7 @@ ms.locfileid: "63161907"
 > [!NOTE]  
 >  Si une valeur supérieure au nombre d'UC disponibles est spécifiée, le nombre réel d'UC est utilisé.  
   
-##  <a name="Spatial"></a>Options d’index de page spatiale  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> Options de l'index (page Spatial)  
  Utilisez la page **Spatial** pour afficher ou spécifier les valeurs des propriétés spatiales. Pour plus d’informations, consultez [Données spatiales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Cadre englobant  
@@ -201,7 +201,7 @@ ms.locfileid: "63161907"
  **Grille géométrique**  
  Spécifie le schéma de pavage de la grille géométrique qui s'applique à une colonne du type de données `geometry`.  
   
- **Grille automatique Geometry**  
+ **Grille automatique géométrique**  
  Cette option est activée pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quand le niveau de compatibilité de la base de données a la valeur 110 ou une valeur supérieure.  
   
  **Grille géographique**  
@@ -218,7 +218,7 @@ ms.locfileid: "63161907"
  Au niveau supérieur, si un objet couvre plus de cellules que le nombre spécifié par *n*, l’indexation utilise autant de cellules que nécessaire pour fournir un pavage de niveau supérieur complet. Dans de tels cas, un objet peut recevoir plus de cellules que le nombre spécifié. Dans ce cas, le nombre maximal est le nombre de cellules générées par la grille de niveau supérieur, qui dépend de la densité du **Niveau 1** .  
   
 ### <a name="grids"></a>Grilles  
- Ce panneau affiche la densité de la grille à chaque niveau du schéma de pavage. La densité est spécifiée comme suit : **Basse**, **Moyenne**ou **Haute**. La valeur par défaut est **Moyenne**. **Low** représente une grille 4x4 (16 cellules), **Medium** représente une grille de x 4 (64 cellules) et **High** représente une grille 16x16 (256 cellules). Ces options ne sont pas disponibles lorsque les options de pavage **Grille automatique géométrique** ou **Grille automatique géographique** sont choisies.  
+ Ce panneau affiche la densité de la grille à chaque niveau du schéma de pavage. La densité est spécifiée comme suit : **Basse**, **Moyenne**ou **Haute**. La valeur par défaut est **Moyenne**. **Basse** représente une grille 4x4 (16 cellules), **Moyenne** une grille 8x8 (64 cellules) et **Haute** une grille 16x16 (256 cellules). Ces options ne sont pas disponibles lorsque les options de pavage **Grille automatique géométrique** ou **Grille automatique géographique** sont choisies.  
   
  **Niveau 1**  
  Densité de la grille de premier niveau (haut).  
@@ -232,14 +232,14 @@ ms.locfileid: "63161907"
  **Niveau 4**  
  Densité de la grille de quatrième niveau.  
   
-##  <a name="Filter"></a>Page filtre  
+##  <a name="filter-page"></a><a name="Filter"></a> Page Filtre  
  Utilisez cette page pour entrer le prédicat de filtre d'un index filtré. Pour plus d'informations, consultez [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Expression de filtre**  
- Définit quelles lignes de données inclure dans l'index filtré. Par exemple : `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Définit quelles lignes de données inclure dans l'index filtré. Par exemple, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les options d'index](set-index-options.md)   
+ [Définir les options d’index](set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   

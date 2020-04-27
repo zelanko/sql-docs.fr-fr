@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63138906"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Alloue la mémoire dynamiquement.  
   
@@ -45,7 +45,7 @@ size
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *corps*  
+ *size*  
  Spécifie le nombre d'octets à allouer.  
   
 ## <a name="returns"></a>Retours  

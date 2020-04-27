@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156813"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
@@ -49,21 +49,21 @@ ms.locfileid: "63156813"
   
      [Sécurité](#Security)  
   
--   **Pour créer un index avec des colonnes non-clés, utilisez :**  
+-   **Pour créer un index avec des colonnes non-clés, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="DesignRecs"></a> Recommandations relatives à la conception  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a> Recommandations relatives à la conception  
   
 -   La conception d'index non-cluster doit être réalisée avec une clé d'index de grande taille, de sorte que seules les colonnes utilisées pour la recherche sont les colonnes clés. Toutes les autres colonnes qui couvrent la requête doivent être des colonnes non-clés. De cette manière, vous disposez de toutes les colonnes nécessaires pour couvrir la requête, mais la clé d'index elle-même est petite et efficace.  
   
 -   Incluez les colonnes non-clés dans un index non cluster pour éviter de dépasser les limitations actuelles de taille d'index, établies à 16 colonnes clés au maximum et une taille de clé d'index de 900 octets au maximum. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne tient pas compte des colonnes non-clés lors du calcul du nombre de colonnes clés d'index ou de la taille de la clé d'index.  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les colonnes non-clés peuvent uniquement être définies sur des index non cluster.  
   
@@ -81,12 +81,12 @@ ms.locfileid: "63156813"
   
     -   augmenter la longueur des colonnes `varchar`, `nvarchar` ou `varbinary`.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Pour créer un index avec des colonnes non-clés  
   
@@ -96,25 +96,25 @@ ms.locfileid: "63156813"
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index avec des colonnes non-clés.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
+4.  Cliquez avec le bouton droit sur le dossier **index** , pointez sur **nouvel index**, puis sélectionnez **index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous l’onglet **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
+6.  Sous l’onglet **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
-7.  Dans la boîte de dialogue **Sélectionner les colonnes à partir de**_table_name_ , activez la ou les cases à cocher de la ou des colonnes de table à ajouter à l’index.  
+7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index.  
   
 8.  Cliquez sur **OK**.  
   
-9. Sous l’onglet **Colonnes incluses**, cliquez sur **Ajouter...** .  
+9. Sous l’onglet **Colonnes incluses**, cliquez sur **Ajouter...**.  
   
-10. Dans la boîte de dialogue **Sélectionner les colonnes à partir de**_table_name_ , activez la ou les cases à cocher de la ou des colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
+10. Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
   
 11. Cliquez sur **OK**.  
   
 12. Dans la boîte de dialogue **Nouvel index** , cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Pour créer un index avec des colonnes non-clés  
   

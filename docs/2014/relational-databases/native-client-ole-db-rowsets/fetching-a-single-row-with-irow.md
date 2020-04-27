@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183667"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Extraction d'une ligne unique avec IRow
-  L' **** implémentation de l’interface IRow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le fournisseur OLE DB Native Client est simplifiée pour améliorer les performances. **IRow** autorise l’accès direct aux colonnes d’un objet Row unique. Si vous savez à l’avance que le résultat d’une exécution de commande produira une ligne exactement, **IRow** récupèrera les colonnes de cette ligne. Si le jeu de résultats comprend plusieurs lignes, **IRow** exposera uniquement la première ligne.  
+  L' **IRow** implémentation de l’interface IRow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le fournisseur OLE DB Native Client est simplifiée pour améliorer les performances. **IRow** autorise l’accès direct aux colonnes d’un objet ligne unique. Si vous savez à l’avance que le résultat d’une exécution de commande produira une ligne exactement, **IRow** récupèrera les colonnes de cette ligne. Si le jeu de résultats comprend plusieurs lignes, **IRow** exposera uniquement la première ligne.  
   
  L’implémentation **IRow** ne permet aucune navigation de la ligne. Chaque colonne dans la ligne est accédée une seule fois, à une exception près : une colonne peut être accédée une fois pour rechercher la taille de colonne et une autre fois pour extraire les données.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63183667"
   
 -   [Utilisation d'IRow::GetColumns](using-irow-getcolumns.md)  
   
--   [Extraction de données Blob à l’aide d’IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
+-   [Extraction de données BLOB à l'aide d'IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](rowsets.md)  

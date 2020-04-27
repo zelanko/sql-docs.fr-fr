@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4741c822dab24026d823a0e08571ac6aacea9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165171"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Déploiement d'une extension pour le traitement des données
-  Une fois que vous avez écrit et [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] compilé votre extension pour le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] traitement des données dans une bibliothèque, vous devez la rendre détectable par le serveur de rapports et par concepteur de rapports. Cette opération est aussi simple que de copier l'extension vers les répertoires appropriés et d'ajouter des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
+  Une fois que vous avez écrit et compilé votre extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la rendre détectable par le serveur de rapports et par le Concepteur de rapports. Cette opération est aussi simple que de copier l'extension vers les répertoires appropriés et d'ajouter des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
   
 ## <a name="configuration-file-extension-element"></a>Élément Extension du fichier de configuration  
  Les extensions pour le traitement des données que vous déployez sur le serveur de rapports ou le Concepteur de rapports doivent être entrées en tant qu’éléments **Extension** dans les fichiers de configuration. Ces fichiers sont RSReportServer.config pour le serveur de rapports et RSReportDesigner.config pour le Générateur de rapports.  
@@ -45,7 +45,7 @@ ms.locfileid: "63165171"
 |[Procédure : déployer une extension pour le traitement des données sur le Concepteur de rapports](deploying-a-data-processing-extension-to-report-designer.md)|Décrit comment déployer votre extension pour le traitement des données sur le Générateur de rapports.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions Reporting Services](../reporting-services-extensions.md)   
+ [Extensions de Reporting Services](../reporting-services-extensions.md)   
  [Implémentation d’une extension pour le traitement des données](implementing-a-data-processing-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../reporting-services-extension-library.md)  
   

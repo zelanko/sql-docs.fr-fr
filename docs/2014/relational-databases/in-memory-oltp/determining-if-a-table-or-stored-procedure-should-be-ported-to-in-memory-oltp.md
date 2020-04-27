@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072370"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
@@ -46,7 +46,7 @@ ms.locfileid: "63072370"
   
  Le collecteur de performances de transaction et la capacité à générer un rapport d’analyse des performances de transaction sont installés lorsque vous sélectionnez **outils de gestion-de base** ou **outils de gestion-avancé lors de** l’installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]de.  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Le flux de travail recommandé est illustré dans l'organigramme suivant. Les nœuds jaunes représentent les procédures facultatives :  
   
  ![Flux de travail AMR](../../database-engine/media/amr-1.gif "Flux de travail AMR")  
@@ -99,7 +99,7 @@ ms.locfileid: "63072370"
   
 7.  Dans l’écran suivant, cliquez sur **Terminer** pour quitter l’Assistant.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurer la collecte de données sur une instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurer la collecte de données sur une instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  La collecte de données requiert le démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne devez configurer qu'un collecteur de données sur un serveur.  
   
  Un collecteur de données peut être configuré sur un SQL Server 2012 ou une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]version ultérieure de.  
@@ -118,7 +118,7 @@ ms.locfileid: "63072370"
   
 6.  Vérifiez les sélections. Cliquez sur **précédent** pour modifier les paramètres. Cliquez sur **Terminer** lorsque vous avez terminé.  
   
-###  <a name="xxx"></a>Configurer la collecte de données sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une instance distante  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurer la collecte de données sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une instance distante  
  La collecte de données nécessite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] soit démarré sur l'instance qui va collecter les données.  
   
  Un collecteur de données peut être configuré sur un SQL Server 2012 ou une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]version ultérieure de.  

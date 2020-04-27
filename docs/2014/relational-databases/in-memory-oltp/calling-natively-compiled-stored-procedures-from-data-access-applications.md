@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156832"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
@@ -48,8 +48,7 @@ ms.locfileid: "63156832"
   
 -   Exécutez la procédure stockée plusieurs fois avec `SQLExecute`.  
   
- Le fragment de code suivant illustre l'exécution préparée d'une procédure stockée conçue pour ajouter des lignes d'article à une commande. 
-  `SQLPrepare` est appelé une seule fois et `SQLExecute` est appelé plusieurs fois, à chaque exécution de la procédure.  
+ Le fragment de code suivant illustre l'exécution préparée d'une procédure stockée conçue pour ajouter des lignes d'article à une commande. `SQLPrepare` est appelé une seule fois et `SQLExecute` est appelé plusieurs fois, à chaque exécution de la procédure.  
   
 ```  
 // Bind parameters  
@@ -394,6 +393,6 @@ int _tmain() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
+ [procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
   
   

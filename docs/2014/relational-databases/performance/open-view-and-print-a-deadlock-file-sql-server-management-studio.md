@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150692"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Ouvrir, afficher et imprimer un fichier d'interblocage (SQL Server Management Studio)
@@ -27,13 +27,13 @@ ms.locfileid: "63150692"
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>Pour ouvrir et consulter un fichier de blocage  
   
-1.  Dans le menu **Fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pointez sur **Ouvrir**, puis cliquez sur **Fichier**.  
+1.  Dans le menu **fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pointez sur **ouvrir**, puis cliquez sur **fichier**.  
   
 2.  Dans la boîte de dialogue **Ouvrir un fichier** , sélectionnez le type de fichier .xdl dans la zone **Fichiers de type** . Vous obtenez alors une liste filtrée comportant uniquement les fichiers de blocage.  
   
 ### <a name="to-print-a-deadlock-file"></a>Pour imprimer un fichier de blocage  
   
-1.  Dans le menu **fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pointez sur **ouvrir,** puis cliquez sur **fichier**.  
+1.  Dans le menu **Fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pointez sur **Ouvrir** , puis cliquez sur **Fichier**.  
   
 2.  Dans la boîte de dialogue **Ouvrir un fichier** , sélectionnez le type de fichier .xdl dans la zone **Fichiers de type** . Vous obtenez alors une liste filtrée comportant uniquement les fichiers de blocage.  
   

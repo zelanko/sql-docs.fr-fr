@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046503"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Prise en charge du type de paramètre table OLE DB
   Cette rubrique décrit la prise en charge du type OLE DB pour les paramètres table.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Objet d'ensemble de lignes de paramètre table  
- Vous pouvez créer un objet d'ensemble de lignes spécialisé pour des paramètres table. Vous créez l’objet d’ensemble de lignes de paramètre table à l’aide de ITableDefinitionWithConstraints :: CreateTableWithConstraints ou IOpenRowset :: OpenRowset. Pour ce faire, définissez le membre *eKind* du paramètre *pTableID* sur DBKIND_GUID_NAME, et fournissez CLSID_ROWSET_INMEMORY comme membre *guid*. Le nom de type de serveur pour le paramètre table doit être spécifié dans le membre *pwszName* de *pTableID* lors de l’utilisation de IOpenRowset :: OPENROWSET. L'objet d'ensemble de lignes de paramètre table se comporte comme un objet Fournisseur OLE DB SQL Server Native Client normal.  
+ Vous pouvez créer un objet d'ensemble de lignes spécialisé pour des paramètres table. Vous créez l’objet d’ensemble de lignes de paramètre table à l’aide de ITableDefinitionWithConstraints::CreateTableWithConstraints ou IOpenRowset::OpenRowset. Pour ce faire, définissez le membre *eKind* du paramètre *pTableID* sur DBKIND_GUID_NAME, et fournissez CLSID_ROWSET_INMEMORY comme membre *guid*. Le nom de type de serveur pour le paramètre table doit être spécifié dans le membre *pwszName* de *pTableID* lors de l’utilisation de IOpenRowset::OpenRowset. L'objet d'ensemble de lignes de paramètre table se comporte comme un objet Fournisseur OLE DB SQL Server Native Client normal.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -54,10 +54,10 @@ CoType RowsetTVP
  Les conversions vers et depuis DBTYPE_TABLE pour tout autre type ne sont pas prises en charge. IConvertType::CanConvert retourne S_FALSE pour les conversions non prises en charge, pour toute demande autre qu’une conversion DBTYPE_TABLE en DBTYPE_TABLE. Cela suppose DBCONVERTFLAGS_PARAMETER sur l’objet Command.  
   
 ## <a name="methods"></a>Méthodes  
- Pour plus d’informations sur les méthodes de OLE DB qui prennent en charge les paramètres table, consultez [OLE DB type de paramètre table prend en charge les méthodes &#40;&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
+ Pour plus d’informations sur les méthodes de OLE DB qui prennent en charge les paramètres table, consultez [Prise en charge des types de paramètre table OLE DB &#40;Méthodes&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Propriétés  
- Pour plus d’informations sur les propriétés de OLE DB qui prennent en charge les paramètres table, consultez [OLE DB type de paramètre table prend en charge les propriétés de &#40;&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
+ Pour plus d’informations sur les propriétés de OLE DB qui prennent en charge les paramètres table, consultez [Prise en charge des types de paramètre table OLE DB &#40;Propriétés&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   

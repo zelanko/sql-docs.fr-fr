@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63045991"
 ---
 # <a name="soapexception-errors-table"></a>Table d'erreurs SoapException
@@ -101,8 +101,8 @@ ms.locfileid: "63045991"
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
- [SoapException, classe Reporting Services](reporting-services-soapexception-class.md)   
- [Utilisation de la propriété des détails pour gérer des erreurs spécifiques](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Informations de référence sur les erreurs et les événements &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
+ [Reporting Services SoapException (classe)](reporting-services-soapexception-class.md)   
+ [Utilisation de la propriété Detail pour gérer des erreurs spécifiques](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

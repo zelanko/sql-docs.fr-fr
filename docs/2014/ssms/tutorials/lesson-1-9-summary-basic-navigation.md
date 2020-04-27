@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151503"
 ---
-# <a name="summary-basic-navigation"></a>Résumé : Navigation de base
+# <a name="summary-basic-navigation"></a>Résumé : Navigation de base
   La zone de conception [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut être personnalisée en fonction de vos préférences personnelles et des besoins propres à votre activité.  
   
  La section qui suit présente les meilleures pratiques pour utiliser efficacement l'espace de travail [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] :  
@@ -31,6 +31,6 @@ ms.locfileid: "63151503"
 -   Définissez l'option **Au démarrage** pour personnaliser la disposition par défaut.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Écriture d'instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Leçon 2 : Écriture d'instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
   
   

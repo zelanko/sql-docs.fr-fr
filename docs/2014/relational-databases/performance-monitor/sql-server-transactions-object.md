@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182986"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
@@ -40,7 +40,7 @@ ms.locfileid: "63182986"
 |**Transactions d'instantanés de mise à jour**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané et qui ont modifié des données.|  
 |**Taux de nettoyage de version (Ko/s)**|Taux (en kilo-octets par seconde) auquel des versions de lignes sont supprimées de la banque de versions avec isolement d’instantané dans **tempdb**.|  
 |**Taux de génération de version (Ko/s)**|Taux (en kilo-octets par seconde) auquel de nouvelles versions de lignes sont ajoutées à la banque de versions avec isolement d’instantané dans **tempdb**.|  
-|**Taille du magasin de versions (Ko)**|Quantité d’espace (en kilo-octets) dans **tempdb** utilisée pour stocker des versions de lignes avec niveau d’isolement d’instantané.|  
+|**Taille de la Banque des versions (Ko)**|Quantité d’espace (en kilo-octets) dans **tempdb** utilisée pour stocker des versions de lignes avec niveau d’isolement d’instantané.|  
 |**Nombre d'unités dans le magasin de versions**|Nombre d'unités d'allocation actives dans le magasin de versions avec isolement d'instantané dans **tempdb**.|  
 |**Création d'unité dans le magasin de versions**|Nombre d'unités d'allocation ayant été créées dans le magasin d'isolement d'instantané depuis le démarrage de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
 |**Troncation d'unité dans le magasin de versions**|Nombre d'unités d'allocation ayant été supprimées du magasin d'isolement d'instantané depuis le démarrage de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  

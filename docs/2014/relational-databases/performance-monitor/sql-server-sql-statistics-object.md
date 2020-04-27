@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183081"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Objet SQLServer:SQL Statistics
@@ -31,25 +31,24 @@ ms.locfileid: "63183081"
   
  Pour plus d’informations sur le paramétrage simple et forcé, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Voici les compteurs SQL Statistics[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** de **.  
+ Voici les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Statistiques SQL**de**.  
   
 |Compteurs statistiques SQL de SQL Server|Description|  
 |----------------------------------------|-----------------|  
-|**Échecs de la fonction param automatique/s**|Nombre de tentatives d'autoparamétrage par seconde. Le total devrait être la somme des autoparamétrages qui sont sûrs, non sûrs ou qui ont échoué. L'autoparamétrage a lieu lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de paramétrer une demande [!INCLUDE[tsql](../../../includes/tsql-md.md)] en remplaçant certains littéraux par des paramètres pour permettre la réutilisation du plan d'exécution résultant en cache sur plusieurs demandes d'apparence comparable. Notez que les autoparamétrages sont également appelés paramétrages simples dans les versions plus récentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compteur ne tient pas compte des paramétrages forcés.|  
-|**Requêtes de lots/s**|Nombre de lots de commandes [!INCLUDE[tsql](../../../includes/tsql-md.md)] reçus par seconde. Cette statistique est affectée par toutes les contraintes (comme les E/S, le nombre d'utilisateurs, la taille du cache, la complexité des requêtes, etc.). Un nombre élevé de requêtes de lots traduit un bon débit.|  
-|**Échecs d’autoparamétrage/s**|Nombre d'échecs de tentatives d'autoparamétrage par seconde. Ce nombre doit être faible. Notez que les autoparamétrages sont également appelés paramétrages simples dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Nombre de tentatives d'autoparamétrage/s**|Nombre de tentatives d'autoparamétrage par seconde. Le total devrait être la somme des autoparamétrages qui sont sûrs, non sûrs ou qui ont échoué. L'autoparamétrage a lieu lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de paramétrer une demande [!INCLUDE[tsql](../../../includes/tsql-md.md)] en remplaçant certains littéraux par des paramètres pour permettre la réutilisation du plan d'exécution résultant en cache sur plusieurs demandes d'apparence comparable. Notez que les autoparamétrages sont également appelés paramétrages simples dans les versions plus récentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compteur ne tient pas compte des paramétrages forcés.|  
+|**Nombre de requêtes de lots/s**|Nombre de lots de commandes [!INCLUDE[tsql](../../../includes/tsql-md.md)] reçus par seconde. Cette statistique est affectée par toutes les contraintes (comme les E/S, le nombre d'utilisateurs, la taille du cache, la complexité des requêtes, etc.). Un nombre élevé de requêtes de lots traduit un bon débit.|  
+|**Nombre d'échecs d'autoparamétrage/s**|Nombre d'échecs de tentatives d'autoparamétrage par seconde. Ce nombre doit être faible. Notez que les autoparamétrages sont également appelés paramétrages simples dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Paramétrages forcés/s**|Nombre de paramétrages forcés réussis par seconde.|  
 |**Exécutions guidées du plan/s**|Nombre d'exécutions de plan par seconde dans lesquelles le plan de requête a été généré à l'aide d'un repère de plan.|  
-|**Exécutions de plan inproprement guidées/s**|Nombre d'exécutions de plan par seconde dans lesquelles un repère de plan n'a pas pu être honoré au cours de la génération du plan. Le repère de plan a été ignoré et la compilation normale a été utilisée pour générer le plan exécuté.|  
-|**Paramètres automatiques sécurisés/s**|Nombre de tentatives d'autoparamétrage sûres par seconde. Le qualificatif « sûr » fait référence à la détermination selon laquelle un plan d'exécution mis en cache peut être partagé entre plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] d'apparence comparable. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue de nombreuses tentatives d’autoparamétrage, dont certaines se révèlent sûres alors que d’autres échouent. Notez que les autoparamétrages sont également appelés paramétrages simples dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compteur ne tient pas compte des paramétrages forcés.|  
-|**Taux d’attention SQL**|Nombre d'avertissements par seconde. Un avertissement est une demande émise par le client pour terminer la demande en cours d'exécution.|  
+|**Exécutions du plan non correctement guidées/s**|Nombre d'exécutions de plan par seconde dans lesquelles un repère de plan n'a pas pu être honoré au cours de la génération du plan. Le repère de plan a été ignoré et la compilation normale a été utilisée pour générer le plan exécuté.|  
+|**Nombre d'autoparamétrages sûrs/s**|Nombre de tentatives d'autoparamétrage sûres par seconde. Le qualificatif « sûr » fait référence à la détermination selon laquelle un plan d'exécution mis en cache peut être partagé entre plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] d'apparence comparable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue de nombreuses tentatives d’autoparamétrage, dont certaines se révèlent sûres alors que d’autres échouent. Notez que les autoparamétrages sont également appelés paramétrages simples dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compteur ne tient pas compte des paramétrages forcés.|  
+|**Taux d'avertissements SQL**|Nombre d'avertissements par seconde. Un avertissement est une demande émise par le client pour terminer la demande en cours d'exécution.|  
 |**Compilations SQL/s**|Nombre de compilations SQL par seconde. Indique le nombre de fois où le chemin d'accès du code de compilation est entré. Inclut les compilations provoquées par les recompilations au niveau des instructions dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une fois l'activité de l'utilisateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stable, cette valeur atteint un état d'équilibre.|  
 |**Recompilations SQL/s**|Nombre de recompilations d'instructions par seconde. Compte le nombre de fois où les recompilations d'instruction sont déclenchées. En général, il faut que le nombre de recompilations soit faible.|  
-|**Autoparamétrages non sûrs/s**|Nombre de tentatives d'autoparamétrage non sûres par seconde. Par exemple, la requête possède des caractéristiques qui empêchent le partage du plan mis en cache. Elles sont qualifiées de non sûres. Ce compteur ne tient pas compte du nombre de paramétrages forcés.|  
+|**Nombre d'autoparamétrages non sûrs/s**|Nombre de tentatives d'autoparamétrage non sûres par seconde. Par exemple, la requête possède des caractéristiques qui empêchent le partage du plan mis en cache. Elles sont qualifiées de non sûres. Ce compteur ne tient pas compte du nombre de paramétrages forcés.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server, objet du cache du plan](sql-server-plan-cache-object.md)   
+ [SQL Server - Objet Plan Cache](sql-server-plan-cache-object.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)  
   
   

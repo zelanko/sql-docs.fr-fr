@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158801"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
@@ -30,7 +30,7 @@ ms.locfileid: "63158801"
 ## <a name="create-the-database-and-resource-pool"></a>Créer la base de données et le pool de ressources  
  Vous pouvez créer la base de données et le pool de ressources dans n'importe quel ordre. L'important est de créer les deux avant de procéder à leur liaison.  
   
-### <a name="create-the-database"></a>Création de la base de données  
+### <a name="create-the-database"></a>Créer la base de données  
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée la base de données IMOLTP_DB destinée à contenir une ou plusieurs tables mémoire optimisées. Le chemin \<lecteur_et_chemin> doit exister avant d’exécuter cette commande.  
   
 ```sql  
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>Déterminer la valeur minimale pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT  
  Après avoir déterminé les besoins en mémoire des tables mémoire optimisées, vous devez déterminer le pourcentage de mémoire disponible dont vous avez besoin, et définir les pourcentages de mémoire sur cette valeur ou sur une valeur supérieure.  
   
- **Exemple :**    
+ **Exemple :**    
 Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les tables et les index mémoire optimisés ont besoin de 16 Go de mémoire. Supposons que vous disposez de 32 Go de mémoire allouée.  
   
  À première vue, il semblerait que vous deviez définir MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT à 50 (16 est 50 % de 32).  Cependant, cela ne permettrait pas de fournir à vos tables mémoire optimisées suffisamment de mémoire. En observant la table ci-dessous ([Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)), nous voyons que si vous disposez de 32 Go de mémoire allouée, seulement 80 % est disponible pour les tables et les index optimisés en mémoire.  Par conséquent, il convient de calculer les pourcentages minimum et maximum en fonction de la mémoire, et non de la mémoire allouée.  
@@ -119,13 +119,13 @@ GO
  Maintenant, la base de données est liée au pool de ressources.  
   
 ## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Modifier le pourcentage de mémoire minimal et le pourcentage de mémoire maximal sur un pool existant  
- Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Consultez la rubrique [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
+ Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Pour plus d’informations, consultez la rubrique [meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 1.  Utilisez `ALTER RESOURCE POOL` pour modifier à la fois la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT.  
   
 2.  Utilisez `ALTER RESURCE GOVERNOR` pour reconfigurer Resource Governor avec les nouvelles valeurs.  
   
- **Exemple de Code**  
+ **Exemple de code**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -142,7 +142,7 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>Pourcentage de mémoire disponible pour les tables et index mémoire optimisés  
  Si vous mappez une base de données avec des tables mémoire optimisées et une charge de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au même pool de ressources, Resource Governor définit un seuil interne pour l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] afin que les utilisateurs du pool ne rencontrent aucun conflit au niveau de l'utilisation du pool. D'une manière générale, le seuil d'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] représente environ 80 % du pool. Le tableau suivant montre les seuils réels pour différentes capacités de mémoire.  
   
- Lorsque vous créez un pool de ressources dédié pour la base de données [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , vous devez estimer la quantité de mémoire physique dont vous avez besoin pour les tables en mémoire compte tenu de la croissance des versions de ligne et des données. Après avoir estimé la mémoire nécessaire, créez un pool de ressources avec un pourcentage de la mémoire cible allouée à l’instance SQL comme indiqué par la colonne « committed_target_kb » dans la DMV `sys.dm_os_sys_info` (reportez-vous à [sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Par exemple, créez un pool de ressources P1 avec 40 % de la mémoire totale disponible sur l'instance. Parmi ces 40 %, le moteur [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] obtient un pourcentage plus petit pour enregistrer les données [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  Cela a pour but de s'assurer que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ne consomme pas toute la mémoire de ce pool.  Cette valeur de pourcentage inférieur dépend de la mémoire allouée cible. Le tableau suivant décrit la mémoire disponible pour la base de données [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] dans un pool de ressources (nommé ou par défaut) avant qu'une situation d'insuffisance de mémoire soit déclenchée.  
+ Lorsque vous créez un pool de ressources dédié pour la base de données [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , vous devez estimer la quantité de mémoire physique dont vous avez besoin pour les tables en mémoire compte tenu de la croissance des versions de ligne et des données. Une fois que vous avez estimé la mémoire nécessaire, vous créez un pool de ressources avec un pourcentage de la mémoire cible de validation pour l’instance SQL comme indiqué par `sys.dm_os_sys_info` la colonne « committed_target_kb » dans la DMV (voir [sys. dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Par exemple, créez un pool de ressources P1 avec 40 % de la mémoire totale disponible sur l'instance. Parmi ces 40 %, le moteur [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] obtient un pourcentage plus petit pour enregistrer les données [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  Cela a pour but de s'assurer que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ne consomme pas toute la mémoire de ce pool.  Cette valeur de pourcentage inférieur dépend de la mémoire allouée cible. Le tableau suivant décrit la mémoire disponible pour la base de données [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] dans un pool de ressources (nommé ou par défaut) avant qu'une situation d'insuffisance de mémoire soit déclenchée.  
   
 |Mémoire validée cible|Pourcentage disponible pour les tables en mémoire|  
 |-----------------------------|---------------------------------------------|  
@@ -169,7 +169,7 @@ SELECT pool_id
   
  Les résultats indiquent que la mémoire consommée par les objets mémoire optimisés est de 1356 Mo dans le pool de ressources, PoolIMOLTP, avec une limite supérieure de 2307 Mo. Cette limite supérieure contrôle la mémoire totale pouvant être consommée par les objets mémoire optimisés système et utilisateur mappés à ce pool.  
   
- **Résultat de l'exemple**   
+ **Exemple de sortie**   
 Ce résultat concerne la base de données et les tables créées précédemment.  
   
 ```  
@@ -185,12 +185,12 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  Si vous ne liez pas votre base de données à un pool de ressources nommé, elle est liée au pool « par défaut ». Étant donné que le pool de ressources par défaut est utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la plupart des autres allocations, vous ne pourrez pas surveiller la mémoire consommée par les tables mémoire optimisées à l'aide de la DMV sys.dm_resource_governor_resource_pools précisément pour la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
+ [sys. sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+ [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [Resource Governor](../resource-governor/resource-governor.md)   
- [Pool de ressources de Resource Governor](../resource-governor/resource-governor-resource-pool.md)   
+ [Liste de ressources partagées Resource Governor](../resource-governor/resource-governor-resource-pool.md)   
  [Créer un pool de ressources](../resource-governor/create-a-resource-pool.md)   
- [Modifier les paramètres de pool de ressources](../resource-governor/change-resource-pool-settings.md)   
+ [Modifier les paramètres du pool de ressources](../resource-governor/change-resource-pool-settings.md)   
  [Supprimer un pool de ressources](../resource-governor/delete-a-resource-pool.md)  
   
   

@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165028"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Préparation à l'implémentation d'une extension pour le traitement des données
-  Avant d’implémenter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] votre extension pour le traitement des données, vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] comme un pont entre le jeu de résultats et votre source de données.  
+  Avant d’implémenter votre extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] comme un pont entre le jeu de résultats et votre source de données.  
   
  Vous pouvez implémenter des extensions pour le traitement des données selon l'une des deux manières suivantes :  
   
--   Vos classes d’extension pour le traitement des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] données peuvent implémenter les interfaces de fournisseur de données et éventuellement les interfaces [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]d’extension pour le traitement des données étendues fournies par.  
+-   Vos classes d’extension pour le traitement des données peuvent implémenter les interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] et, le cas échéant, les interfaces d’extension pour le traitement des données étendues fournies par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 -   Vos classes d'extension pour le traitement des données peuvent implémenter les interfaces d'extension pour le traitement des données fournies par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et, le cas échéant, les interfaces d'extension pour le traitement des données étendues.  
   

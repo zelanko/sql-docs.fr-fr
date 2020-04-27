@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162380"
 ---
 # <a name="enable-indexes-and-constraints"></a>Activer les index et contraintes
@@ -41,9 +41,9 @@ ms.locfileid: "63162380"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Après la reconstruction de l'index, toutes les contraintes qui étaient désactivées du fait de la désactivation de l'index doivent être réactivées manuellement. Les contraintes PRIMARY KEY et UNIQUE sont activées par la reconstruction de l'index associé. Cet index doit être reconstruit (activé) avant que les contraintes FOREIGN KEY qui font référence à la contrainte PRIMARY KEY ou UNIQUE puissent être activées. Les contraintes FOREIGN KEY sont activées à l'aide de l'instruction ALTER TABLE CHECK CONSTRAINT.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162380"
     |DROP INDEX|L'action réussit.|L'action réussit.|  
     |CREATE INDEX WITH DROP_EXISTING|L'action échoue.|L'action réussit.|  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. S’il utilise DBCC DBREINDEX, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>Pour activer un index désactivé  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63162380"
   
  Les informations suivantes sont disponibles dans la boîte de dialogue **Reconstruire les index** :  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Pour activer un index désactivé à l'aide de ALTER INDEX  
   

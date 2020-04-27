@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154607"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup, élément pour les index (Assistant Paramétrage de base de données)
@@ -39,8 +39,7 @@ ms.locfileid: "63154607"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|
-  `string`, longueur illimitée.|  
+|**Type de données et longueur**|`string`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|facultatif. Peut être utilisé une seule fois pour chaque élément `Index`. Cet élément ne peut pas être utilisé si les éléments `PartitionScheme` et `PartitionColumn` sont spécifiés pour l'élément `Index`.|  
   

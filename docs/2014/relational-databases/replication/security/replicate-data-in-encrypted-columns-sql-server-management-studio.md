@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62955842"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Répliquer des données dans des colonnes chiffrées (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "62955842"
   
 4.  Exécutez [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) pour fermer la clé.  
   
-5.  Publiez la table contenant la colonne chiffrée. Pour plus d’informations, voir [Create a Publication](../publish/create-a-publication.md).  
+5.  Publiez la table contenant la colonne chiffrée. Pour plus d’informations, consultez [créer une publication](../publish/create-a-publication.md).  
   
 6.  Abonnez-vous à la publication. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../create-a-pull-subscription.md) ou [Créer un abonnement par émission (push)](../create-a-push-subscription.md).  
   

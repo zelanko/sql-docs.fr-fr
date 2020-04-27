@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62936988"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>Propriétés des catégories de travaux et Nouvelle catégorie de travaux
@@ -32,7 +32,7 @@ ms.locfileid: "62936988"
  **Afficher tous les travaux**  
  Affiche la liste de tous les travaux.  
   
- **Sélectionné**  
+ **Select**  
  Permet de changer la catégorie du travail en l'activant ou en la désactivant.  
   
  **Travail**  

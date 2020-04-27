@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067815"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
@@ -48,13 +48,12 @@ ms.locfileid: "63067815"
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLBindParameter pour les fonctionnalités de date et heure améliorées  
- Les valeurs de paramètre de types date/heure sont converties comme décrit dans [conversions de C en SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Notez que les paramètres de `time` type `datetimeoffset` et doivent ** avoir un ValueType `SQL_C_DEFAULT` spécifié `SQL_C_BINARY` comme ou si leurs structures`SQL_SS_TIME2_STRUCT` correspondantes (et `SQL_SS_TIMESTAMPOFFSET_STRUCT`) sont utilisées.  
+ Les valeurs de paramètre de types date/heure sont converties comme décrit dans [conversions de C en SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Notez que les paramètres de `time` type `datetimeoffset` et doivent *ValueType* avoir un ValueType `SQL_C_DEFAULT` spécifié `SQL_C_BINARY` comme ou si leurs structures`SQL_SS_TIME2_STRUCT` correspondantes (et `SQL_SS_TIMESTAMPOFFSET_STRUCT`) sont utilisées.  
   
  Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Prise en charge SQLBindParameter pour les types CLR volumineux définis par l'utilisateur  
- 
-  `SQLBindParameter` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLBindParameter` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détails de l’implémentation de l’API ODBC](odbc-api-implementation-details.md)   

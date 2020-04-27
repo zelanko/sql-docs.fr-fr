@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985813"
 ---
 # <a name="rendering-extensions-overview"></a>Vue d'ensemble des extensions de rendu
-  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend sept extensions de rendu : HTML, Excel, Word, CSV ou texte, XML, image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
+  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut sept extensions de rendu : HTML, Excel, Word, CSV ou Texte, XML, Image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
   
 > [!NOTE]  
 >  Pour déterminer quelles extensions de rendu sont disponibles, vous pouvez consulter la liste des extensions installées dans le fichier RSReportServer.config.  
@@ -36,10 +36,8 @@ ms.locfileid: "62985813"
 |`PDF`|Effectue le rendu d'un rapport dans Adobe Acrobat Reader. Le format est affiché comme **Fichier Acrobat (PDF)** dans le menu déroulant Exporter de la barre d’outils Rapport.|  
 |`EXCEL`|Effectue le rendu d'un rapport dans [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)].|  
 |`WORD`|Effectue le rendu d’un rapport dans [!INCLUDE[ofprword](../../../includes/ofprword-md.md)].|  
-|
-  `HTML 4.0` (partie de l'extension de rendu HTML)|HTML est le format de restitution utilisé initialement pour le rapport. Si votre navigateur prend en charge le HTML 4.0, il s'agit du format utilisé. Autrement, il s'agit du HTML 3.2.|  
-|
-  `MHTML` (partie de l'extension de rendu HTML)|Effectue le rendu d'un rapport au format MHTML. Le rapport peut être ouvert dans Internet Explorer. Le format est affiché comme **Archive web** dans le menu déroulant Exporter de la barre d’outils Rapport.|  
+|`HTML 4.0` (partie de l'extension de rendu HTML)|HTML est le format de restitution utilisé initialement pour le rapport. Si votre navigateur prend en charge le HTML 4.0, il s'agit du format utilisé. Autrement, il s'agit du HTML 3.2.|  
+|`MHTML` (partie de l'extension de rendu HTML)|Effectue le rendu d'un rapport au format MHTML. Le rapport peut être ouvert dans Internet Explorer. Le format est affiché comme **Archive web** dans le menu déroulant Exporter de la barre d’outils Rapport.|  
 |`NULL`|N'effectue pas le rendu d'un rapport dans un format spécifique. Cette extension de rendu est utile pour placer des rapports dans le cache. Le rendu Null doit être utilisé conjointement avec une exécution ou remise planifiée.|  
   
  Pour plus d’informations sur les formats recommandés et leurs utilisations, consultez [Exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../../report-builder/export-reports-report-builder-and-ssrs.md).  

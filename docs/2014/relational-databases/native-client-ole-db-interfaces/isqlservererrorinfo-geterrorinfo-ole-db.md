@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127785"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -47,7 +47,7 @@ OLECHAR**ppErrorStrings);
  S_OK  
   
  E_INVALIDARG  
- L’argument *ppSSErrorInfo* ou *ppErrorStrings* a la valeur null.  
+ L'argument *ppSSErrorInfo* ou *ppErrorStrings* était NULL.  
   
  E_OUTOFMEMORY  
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client n’a pas pu allouer suffisamment de mémoire pour terminer la demande.  

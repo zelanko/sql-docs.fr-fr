@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126003"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
@@ -29,8 +29,7 @@ ms.locfileid: "63126003"
   
  Avant de commencer le processus d'attribution d'un nouveau nom, examinez les éléments ci-dessous.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne prend pas en charge le renommage des serveurs impliqués dans la réplication, sauf en cas d’utilisation de la copie des journaux de transaction avec la réplication. Le serveur secondaire dans l'envoi de journaux peut être renommé si le serveur principal est perdu de manière permanente. Pour plus d’informations, consultez [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne prend pas en charge le renommage des serveurs impliqués dans la réplication, sauf en cas d’utilisation de la copie des journaux de transaction avec la réplication. Le serveur secondaire dans l'envoi de journaux peut être renommé si le serveur principal est perdu de manière permanente. Pour plus d’informations, consultez [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Lorsqu'un serveur configuré pour utiliser la mise en miroir de base de données doit être renommé, vous devez au préalable désactiver la mise en miroir de la base de données, puis la réactiver avec le nouveau nom du serveur virtuel. Les métadonnées pour la mise en miroir de la base de données ne seront pas mises à jour automatiquement de façon à refléter le nouveau nom du serveur virtuel.  
   

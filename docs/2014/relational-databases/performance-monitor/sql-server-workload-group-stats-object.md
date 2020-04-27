@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151103"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objet Workload Group Stats
@@ -40,8 +40,8 @@ ms.locfileid: "63151103"
 |Threads parallèles actifs|Nombre actuel d'utilisations de threads parallèles.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)   
- [SQLServer, objet Statistiques des pools de ressources](sql-server-resource-pool-stats-object.md)   
+ [Surveiller l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, objet statistiques des pools de ressources](sql-server-resource-pool-stats-object.md)   
  [gouverneur de ressources](../resource-governor/resource-governor.md)  
   
   

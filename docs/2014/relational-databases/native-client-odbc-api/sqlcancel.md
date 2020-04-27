@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067836"
 ---
 # <a name="sqlcancel"></a>SQLCancel
@@ -24,6 +24,6 @@ ms.locfileid: "63067836"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157112"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
@@ -53,7 +53,7 @@ ms.locfileid: "63157112"
  Pour les stratégies qui échouent, l'Explorateur d'objets indique un état critique sous forme d'icône rouge à côté de la cible et des nœuds situés plus hauts dans l'arborescence de l'Explorateur d'objets.  
   
 > [!NOTE]  
->  Lorsque le système calcule le jeu d'objets pour une stratégie, les objets système sont exclus par défaut.  Par exemple, si le jeu d'objets de la stratégie fait référence à toutes les tables, la stratégie ne s'applique pas aux tables système. Si les utilisateurs souhaitent évaluer une stratégie sur les objets système, ils peuvent les ajouter explicitement au jeu d'objets. Toutefois, bien que toutes les stratégies soient prises en charge pour le mode d'évaluation **vérifier la planification** , pour des raisons de performances, toutes les stratégies comportant des jeux d'objets arbitraires ne sont pas prises en charge pour le mode d'évaluation **vérifier la planification** . Pour plus d’informations, consultez [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Lorsque le système calcule le jeu d'objets pour une stratégie, les objets système sont exclus par défaut.  Par exemple, si le jeu d'objets de la stratégie fait référence à toutes les tables, la stratégie ne s'applique pas aux tables système. Si les utilisateurs souhaitent évaluer une stratégie sur les objets système, ils peuvent les ajouter explicitement au jeu d'objets. Toutefois, bien que toutes les stratégies soient prises en charge pour le mode d'évaluation **vérifier la planification** , pour des raisons de performances, toutes les stratégies comportant des jeux d'objets arbitraires ne sont pas prises en charge pour le mode d'évaluation **vérifier la planification** . Pour plus d’informations, consultez.[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Concepts de Gestion basée sur des stratégies  
  La Gestion basée sur des stratégies a trois composants :  
@@ -77,9 +77,9 @@ ms.locfileid: "63157112"
         > [!IMPORTANT]  
         >  Si l’option de configuration serveur relative aux déclencheurs imbriqués (nested triggers) est désactivée, le mode **Sur modification : empêcher** ne fonctionne pas correctement. La Gestion basée sur des stratégies repose sur des déclencheurs DDL pour détecter et restaurer les opérations DDL qui ne sont pas conformes aux stratégies qui utilisent ce mode d'évaluation. Si les déclencheurs DDL de la Gestion basée sur des stratégies est supprimée ou si les déclencheurs imbriqués sont désactivés, ce mode d'évaluation échouera ou se comportera de façon inattendue.  
   
-    -   **En cas de modification : journal uniquement**. Ce mode automatisé utilise la notification d'événements pour évaluer une stratégie lorsqu'une modification pertinente est apportée.  
+    -   **Sur modification : Journal uniquement**. Ce mode automatisé utilise la notification d'événements pour évaluer une stratégie lorsqu'une modification pertinente est apportée.  
   
-    -   **Selon la planification**. Ce mode automatisé utilise un travail de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour évaluer périodiquement une stratégie.  
+    -   **Selon planification**. Ce mode automatisé utilise un travail de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour évaluer périodiquement une stratégie.  
   
      Lorsque les stratégies automatisées ne sont pas activées, la Gestion basée sur des stratégies n'affecte pas les performances système.  
   
@@ -91,8 +91,7 @@ ms.locfileid: "63157112"
  Ensemble de propriétés logiques qui modèlent le comportement ou les caractéristiques de certains types de cibles gérées. Le nombre et les caractéristiques des propriétés sont intégrés à la facette et peuvent être ajoutés ou supprimés uniquement par le créateur de la facette. Un type de cible peut implémenter une ou plusieurs facettes de gestion et une facette de gestion peut être implémentée par un ou plusieurs types de cibles. Certaines propriétés d'une facette peuvent s'appliquer uniquement à une version spécifique.  
   
  Condition de la Gestion basée sur des stratégies  
- Expression booléenne qui spécifie un ensemble d'états autorisés pour une cible gérée par la Gestion basée sur des stratégies en ce qui concerne une facette de gestion. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’observer les classements au moment de l’évaluation d’une condition. Si les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne correspondent pas exactement aux classements Windows, testez votre condition afin de déterminer la façon dont l'algorithme résout les conflits.  
+ Expression booléenne qui spécifie un ensemble d'états autorisés pour une cible gérée par la Gestion basée sur des stratégies en ce qui concerne une facette de gestion. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’observer les classements au moment de l’évaluation d’une condition. Si les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne correspondent pas exactement aux classements Windows, testez votre condition afin de déterminer la façon dont l'algorithme résout les conflits.  
   
  Stratégie de la Gestion basée sur des stratégies  
  Condition de la Gestion basée sur des stratégies et comportement attendu, par exemple mode d'évaluation, filtres de cibles et planification. Une stratégie ne peut contenir qu'une seule condition. Les stratégies peuvent être activées ou désactivées. Les stratégies sont stockées dans la base de données msdb.  
@@ -128,11 +127,11 @@ ms.locfileid: "63157112"
 |Décrit comment créer, afficher, modifier et supprimer une stratégie de Gestion basée sur des stratégies.|[Créer une stratégie de gestion basée sur des stratégies](create-a-policy-based-management-policy.md)<br /><br /> [Supprimer une stratégie de gestion basée sur des stratégies](delete-a-policy-based-management-policy.md)<br /><br /> [Afficher ou modifier les propriétés d'une stratégie de gestion basée sur des stratégies](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
 |Décrit comment exporter et importer une stratégie de Gestion basée sur des stratégies.|[Exporter une stratégie de gestion basée sur des stratégies](export-a-policy-based-management-policy.md)<br /><br /> [Importer une stratégie de gestion basée sur des stratégies](import-a-policy-based-management-policy.md)|  
 |Décrit comment vérifier qu'une instance de serveur, une base de données, un objet serveur ou un objet de base de données est conforme à une stratégie.|[Évaluer une stratégie de gestion basée sur des stratégies à partir d'un objet](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Évaluer une stratégie de gestion basée sur des stratégies pour cette stratégie](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Évaluer une stratégie de gestion basée sur des stratégies sur une planification](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
-|Décrit comment afficher et copier un état de facette de la Gestion basée sur des stratégies vers un fichier.|[Utilisation des facettes de la gestion basée sur des stratégies](working-with-policy-based-management-facets.md)|  
-|Propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques et décrit comment évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données.|[Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|Fournit les rubriques d’aide, accessibles via la touche F1, relatives au nœud **Gestion de la stratégie** de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nœud gestion des stratégies &#40;l’Explorateur d’objets&#41;](../../ssms/object/object-explorer.md)|  
+|Décrit comment afficher et copier un état de facette de la Gestion basée sur des stratégies vers un fichier.|[Utiliser les facettes de la gestion basée sur des stratégies](working-with-policy-based-management-facets.md)|  
+|Propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques et décrit comment évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données.|[Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
+|Fournit les rubriques d’aide, accessibles via la touche F1, relatives au nœud **Gestion de la stratégie** de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nœud Gestion de la stratégie &#40;Explorateur d’objets&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de la gestion basée sur des stratégies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
+ [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

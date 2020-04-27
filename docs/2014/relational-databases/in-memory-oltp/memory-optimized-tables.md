@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158754"
 ---
 # <a name="memory-optimized-tables"></a>Tables optimisées en mémoire
@@ -22,7 +22,7 @@ ms.locfileid: "63158754"
   
  Pour plus d'informations sur les tables optimisées en mémoire, consultez les rubriques suivantes :  
   
--   [Introduction aux tables optimisées en mémoire](memory-optimized-tables.md)  
+-   [Présentation des tables optimisées en mémoire](memory-optimized-tables.md)  
   
      Explique de façon détaillée ce que sont les tables optimisées en mémoire et fournit des informations sur la durabilité des données et l'accès aux données dans des tables optimisées en mémoire, ainsi que sur la performance et l'évolutivité.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63158754"
   
      Cette section contient plusieurs rubriques relatives à la réalisation de transactions sur les tables optimisées en mémoire, y compris les niveaux d'isolement des transactions et les transactions multiconteneurs.  
   
--   [Modèle d’application pour partitionner des tables mémoire optimisées](application-pattern-for-partitioning-memory-optimized-tables.md)  
+-   [Modèle d'application pour partitionner des tables mémoire optimisées](application-pattern-for-partitioning-memory-optimized-tables.md)  
   
      Exemple de code détaillé montrant comment émuler des tables partitionnées lors de l'utilisation de tables optimisées en mémoire.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63158754"
   
      Explique de façon détaillée les restrictions sur les classements et les pages de codes pris en charge pour les tables optimisées en mémoire.  
   
--   [Taille de la table et des lignes dans les tables mémoire optimisées](table-and-row-size-in-memory-optimized-tables.md)  
+-   [Taille de la table et des lignes dans les tables optimisées en mémoire](table-and-row-size-in-memory-optimized-tables.md)  
   
      Explique de façon détaillée la limite de 8 060 octets sur les lignes des tables optimisées en mémoire et donne un exemple de calcul de la taille d'une table et des lignes.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "63158754"
      Fournit une vue d'ensemble du traitement des requêtes pour les tables optimisées en mémoire et les procédures stockées compilées en mode natif.  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

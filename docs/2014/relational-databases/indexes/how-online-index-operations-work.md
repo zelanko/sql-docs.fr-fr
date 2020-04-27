@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162165"
 ---
 # <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
@@ -36,7 +36,7 @@ ms.locfileid: "63162165"
   
      Les index préexistants sont mis à la disposition des utilisateurs simultanés pour les opérations de sélection, d'insertion, de mise à jour et de suppression. Cela comprend des insertions en bloc (prises en charge mais déconseillées), des mises à jour implicites par des déclencheurs ainsi que des contraintes d'intégrité référentielle. Tous les index préexistants sont disponibles pour les requêtes et les recherches. Cela signifie qu'ils peuvent être sélectionnés par l'optimiseur de requête et spécifiés le cas échéant dans des indicateurs d'index.  
   
--   **Indicatif**  
+-   **Cible**  
   
      La ou les cibles est le nouvel index (ou segment de mémoire), ou bien un jeu des nouveaux index en cours de création ou de régénération. Les opérations d'insertion, de mise à jour et de suppression que l'utilisateur effectue sur la source sont appliquées par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] à la cible pendant l'opération d'index. Par exemple, si l'opération d'index en ligne régénère un index cluster, la cible est l'index cluster régénéré ; le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne régénère pas d'index non-cluster lorsqu'un index cluster est régénéré.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63162165"
   
  L'illustration suivante représente le processus de création d'un index cluster initial en ligne. L'objet source (le segment) ne possède aucun autre index. Les activités des structures sources et cibles sont représentées pour chaque phase ; les opérations de sélection, d'insertion, de mise à jour et de suppression des utilisateurs simultanés sont également indiquées. Les phases de préparation, de génération et finale sont affichées avec les modes de verrouillage utilisés dans chacune d'elles.  
   
- ![Activités effectuées au cours d'une opération d'index en ligne](../../database-engine/media/online-index.gif "Activités effectuées au cours d'une opération d'index en ligne")  
+ ![Activités effectuées au cours d’une opération d’index en ligne](../../database-engine/media/online-index.gif "Activités effectuées au cours d’une opération d’index en ligne")  
   
 ## <a name="source-structure-activities"></a>Activités des structures sources  
  Le tableau suivant répertorie les activités impliquant les structures sources lors de chaque phase de l'opération d'index ainsi que la stratégie de verrouillage correspondante.  
@@ -62,8 +62,7 @@ ms.locfileid: "63162165"
 |Build<br /><br /> Phase principale|Les données sont analysées, triées, fusionnées et insérées dans la cible au cours d'opérations de chargement en masse.<br /><br /> Les opérations de sélection, d'insertion, de mise à jour et de suppression effectuées par des utilisateurs simultanés sont appliquées à la fois aux index préexistants et à tout nouvel index en cours de régénération.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Finale<br /><br /> Phase très courte|Pour que cette phase commence, toutes les transactions de mise à jour non validées doivent être terminées. Selon le verrou acquis, toutes les transactions de lecture ou d'écriture de nouveaux utilisateurs sont bloquées pendant une période très courte jusqu'à l'achèvement de cette phase.<br /><br /> Les métadonnées système sont mises à jour pour remplacer la source par la cible.<br /><br /> La source est supprimée le cas échéant. Par exemple, après la régénération ou la suppression d'un index cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S sur la table en cas de création d’un index non cluster.\*<br /><br /> SCH-M (Modification du schéma) en cas de suppression de toute structure source (index ou table).\*|  
   
- 
-  \* L’opération d’index attend l’achèvement de toute transaction de mise à jour non validée avant d’acquérir le verrou S ou SCH-M sur la table.  
+ \* L’opération d’index attend l’achèvement de toute transaction de mise à jour non validée avant d’acquérir le verrou S ou SCH-M sur la table.  
   
  ** Le verrou de ressource INDEX_BUILD_INTERNAL_RESOURCE empêche l'exécution d'opérations de langage de définition de données (DDL) simultanées sur les structures sources et préexistantes alors que l'opération d'index est en cours. Par exemple, ce verrou empêche la régénération simultanée de deux index sur la même table. Même si ce verrou de ressource est associé au verrou Sch-M, il n'empêche pas les instructions de manipulation de données.  
   
@@ -87,6 +86,6 @@ ms.locfileid: "63162165"
 ## <a name="related-content"></a>Contenu associé  
  [Exécuter des opérations en ligne sur les index](perform-index-operations-online.md)  
   
- [Instructions pour les opérations d'index en ligne](guidelines-for-online-index-operations.md)  
+ [Instructions pour les opérations d’index en ligne](guidelines-for-online-index-operations.md)  
   
   

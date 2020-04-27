@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044454"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestionnaire de configuration SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "63044454"
 > 
 >  -   **Windows 10**:  
 >          Pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, dans la **page de démarrage**, tapez SQLServerManager12. msc ( [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]pour). Pour les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , remplacez 12 par un nombre plus petit. Le fait de cliquer sur SQLServerManager12.msc ouvre le Gestionnaire de Configuration. Pour épingler le Configuration Manager à la page de démarrage ou à la barre des tâches, cliquez avec le bouton droit sur SQLServerManager12. msc, puis cliquez sur **ouvrir l’emplacement du fichier**. Dans l’Explorateur de fichiers Windows, cliquez avec le bouton droit sur SQLServerManager12. msc, puis cliquez sur **épingler pour démarrer** ou **Épingler à la barre des tâches**.  
-> -   **Windows 8**:  
+> -   **Windows 8** :  
 >          Pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, dans l’icône **Rechercher** , sous **applications**, tapez **SQLServerManager\<version>. msc** , par `SQLServerManager12.msc`exemple, puis appuyez sur **entrée**.  
   
  Pour démarrer, arrêter, interrompre, reprendre ou configurer les services sur un autre ordinateur à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Se connecter à un autre ordinateur &#40;Gestionnaire de configuration SQL Server&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md).  
@@ -61,8 +61,7 @@ ms.locfileid: "63044454"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le Gestionnaire de configuration vous permet de gérer les protocoles réseau serveur et clients en vous offrant la possibilité d’appliquer le chiffrement de protocole, d’afficher les propriétés d’alias et d’activer ou de désactiver un protocole.  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet de créer ou de supprimer des alias, de modifier l'ordre d'utilisation des protocoles ou d'afficher les propriétés de l'alias d'un serveur, notamment :  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet de créer ou de supprimer des alias, de modifier l'ordre d'utilisation des protocoles ou d'afficher les propriétés de l'alias d'un serveur, notamment :  
   
 -   Alias de serveur - Alias de serveur utilisé pour l’ordinateur auquel le client se connecte.  
   
@@ -73,15 +72,14 @@ ms.locfileid: "63044454"
  Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet également d'afficher des informations sur les instances de cluster de basculement, bien que l'Administrateur de cluster doive être utilisé pour certaines actions comme le démarrage et l'arrêt des services.  
   
 ### <a name="available-network-protocols"></a>Protocoles réseau disponibles  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge les protocoles de mémoire partagée, TCP/IP et des canaux nommés. Pour plus d'informations sur le choix d'un protocole réseau, consultez [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge les protocoles réseau VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ni NWLink IPX/SPX. Les clients qui se connectaient précédemment à l'aide de ces protocoles doivent sélectionner un autre protocole pour se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour configurer le proxy WinSock. Pour configurer le proxy WinSock, reportez-vous à la documentation ISA Server.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge les protocoles de mémoire partagée, TCP/IP et des canaux nommés. Pour plus d'informations sur le choix d'un protocole réseau, consultez [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge les protocoles réseau VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ni NWLink IPX/SPX. Les clients qui se connectaient précédemment à l'aide de ces protocoles doivent sélectionner un autre protocole pour se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour configurer le proxy WinSock. Pour configurer le proxy WinSock, reportez-vous à la documentation ISA Server.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Rubriques de procédures concernant la gestion des services &#40;Gestionnaire de configuration SQL Server&#41;](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
   
  [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Démarrer, arrêter ou suspendre le service SQL Server Agent](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
  [Définir le démarrage automatique d’une instance de SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

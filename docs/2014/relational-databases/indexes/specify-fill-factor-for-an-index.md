@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036214"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Spécifier un facteur de remplissage pour un index
@@ -44,9 +44,9 @@ ms.locfileid: "63036214"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Performance"></a> Considérations relatives aux performances  
+###  <a name="performance-considerations"></a><a name="Performance"></a> Considérations relatives aux performances  
   
 #### <a name="page-splits"></a>Fractionnements de pages  
  Une valeur de facteur de remplissage correctement choisie peut réduire les risques de fractionnements de pages en fournissant suffisamment d'espace pour l'extension des index à mesure que des données sont ajoutées à la table sous-jacente. Lorsqu'une nouvelle ligne est ajoutée à une page d'index complète, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] déplace environ la moitié des lignes vers une nouvelle page afin de faire de la place pour la nouvelle ligne. Ce type de réorganisation est désigné par l'expression « fractionnement de pages ». Un fractionnement de pages fait de la place pour de nouveaux enregistrements, mais cette opération peut prendre du temps et est gourmande en ressources. En outre, il peut causer une fragmentation qui accroît les opérations d'E/S. Lorsque des fractionnements de pages se produisent fréquemment, vous pouvez régénérer l'index à l'aide d'une valeur de facteur de remplissage nouvelle ou existante afin de redistribuer les données. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](reorganize-and-rebuild-indexes.md).  
@@ -56,12 +56,12 @@ ms.locfileid: "63036214"
 #### <a name="adding-data-to-the-end-of-the-table"></a>Ajout de données à la fin de la table  
  Un facteur de remplissage différent de 0 ou 100 peut être bénéfique pour les performances si les nouvelles données sont réparties de manière égale dans l'ensemble de la table. Toutefois, si toutes les données sont ajoutées à la fin de la table, l'espace vide dans les pages d'index n'est pas rempli. Par exemple, si la colonne clé de l'index est une colonne IDENTITY, la clé des nouvelles lignes augmente sans cesse et les lignes d'index sont ajoutées logiquement à la fin de l'index. Si les lignes existantes sont mises à jour avec des données qui font augmenter la taille des lignes, utilisez un facteur de remplissage inférieur à 100. Les octets supplémentaires de chaque page permettent de réduire les fractionnements de pages provoqués par l'augmentation de la taille des lignes.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Pour spécifier un facteur de remplissage à l'aide du Concepteur de tables  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63036214"
   
 8.  Cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Pour spécifier un taux de remplissage dans un index existant  
   

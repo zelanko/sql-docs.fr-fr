@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046021"
 ---
 # <a name="helplink-element"></a>Élément HelpLink
   L’élément **HelpLink** de la propriété **Detail** est une chaîne d’URL générée par le serveur de rapports. L'URL cible une page Web gérée par le centre d'Aide et de support [!INCLUDE[msCoName](../../../includes/msconame-md.md)] et fournit une aide et des articles de base de connaissances supplémentaires sur les erreurs spécifiques qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La syntaxe de l'URL est la suivante :  
   
- **http://** www.Microsoft.com**/** Products**/** EE**/** Transform. aspx **? Valeur EvtSrc**=__ **&valeur EvtID**=__ **&**=__ __ ** **&valeur ProdVer=  
+ **http://** www.Microsoft.com**/** Products**/** EE**/** Transform. aspx **? Valeur EvtSrc**=_value_ **&valeur EvtID**=_value_ **&**=_value_ _value_ ** **&valeur ProdVer=  
   
  Le tableau suivant répertorie les arguments de l’URL **HelpLink**.  
   
-|Argument|Valeur|  
+|Argument|Value|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|Par exemple, rsReservedItem est le code d'erreur du serveur de rapports.|  
@@ -67,7 +67,7 @@ catch (SoapException e)
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [SoapException, classe Reporting Services](reporting-services-soapexception-class.md)   
- [Utilisation de la propriété des détails pour gérer des erreurs spécifiques](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Reporting Services SoapException (classe)](reporting-services-soapexception-class.md)   
+ [Utilisation de la propriété Detail pour gérer des erreurs spécifiques](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

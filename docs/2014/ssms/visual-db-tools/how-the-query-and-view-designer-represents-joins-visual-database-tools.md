@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155258"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools)
@@ -58,7 +58,7 @@ ms.locfileid: "63155258"
   
  Pour spécifier une jointure de tables, vous disposez de plusieurs options de syntaxe :  
   
--   **Qualificateur de jointure pour la clause from**.   Les mots clés INNER et OUTER spécifient le type de jointure. Il s'agit de la syntaxe standard du SQL ANSI 92.  
+-   **Qualificateur JOIN pour la clause FROM**.   Les mots clés INNER et OUTER spécifient le type de jointure. Il s'agit de la syntaxe standard du SQL ANSI 92.  
   
      Par exemple, si vous joignez les tables `publishers` et `pub_info` sur la base de la colonne `pub_id` de chaque table, vous obtenez une instruction SQL similaire à la suivante :  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63155258"
   
      En cas de jointure externe, le mot INNER est remplacé par les mots LEFT OUTER ou RIGHT OUTER.  
   
--   La **clause WHERE compare les colonnes des deux tables**.   Une clause WHERE apparaît si la base de données ne prend pas en charge la syntaxe JOIN (ou si vous l'avez entrée vous-même). Si la jointure est créée dans la clause WHERE, les noms des deux tables apparaissent dans la clause FROM.  
+-   **Clause WHERE comparant des colonnes des deux tables**.   Une clause WHERE apparaît si la base de données ne prend pas en charge la syntaxe JOIN (ou si vous l'avez entrée vous-même). Si la jointure est créée dans la clause WHERE, les noms des deux tables apparaissent dans la clause FROM.  
   
      Par exemple, l'instruction suivante joint les tables `publishers` et `pub_info` .  
   

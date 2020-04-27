@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155717"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
@@ -38,7 +38,7 @@ ms.locfileid: "63155717"
   
  Pour plus d'informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités qui ne sont pas prises en charge dans les procédures stockées compilées en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a>Programmabilité dans les procédures stockées compilées en mode natif  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>Programmabilité dans les procédures stockées compilées en mode natif  
  Les constructions suivantes sont admises :  
   
 -   BEGIN ATOMIC (au niveau externe de la procédure stockée), LANGUAGE, ISOLATION LEVEL, DATEFORMAT et DATEFIRST  
@@ -63,7 +63,7 @@ ms.locfileid: "63155717"
   
      Pour optimiser les performances, utilisez un bloc TRY/CATCH pour une procédure stockée compilée en mode natif entière.  
   
-##  <a name="so"></a>Opérateurs pris en charge  
+##  <a name="supported-operators"></a><a name="so"></a>Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
   
 -   Les [opérateurs de comparaison &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, \<>,, >= et <=) sont pris en charge dans les conditions conditionnelles (if, while).  
@@ -78,7 +78,7 @@ ms.locfileid: "63155717"
   
 -   Opérateurs au niveau du bit ~, &, |, et ^  
   
-##  <a name="bfncsp"></a>Fonctions intégrées dans les procédures stockées compilées en mode natif  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>Fonctions intégrées dans les procédures stockées compilées en mode natif  
  Les fonctions suivantes sont prises en charge dans les contraintes par défaut sur les tables optimisées en mémoire et dans les procédures stockées compilées en mode natif.  
   
 -   Fonctions mathématiques : ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE et TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155717"
   
 -   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
   
-##  <a name="qsancsp"></a>Aire de requête dans les procédures stockées compilées en mode natif  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>Aire de requête dans les procédures stockées compilées en mode natif  
  Les constructions suivantes sont admises :  
   
 -   BETWEEN  
@@ -151,12 +151,12 @@ ms.locfileid: "63155717"
   
  Ces limitations ne s'appliquent pas à l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété sur les tables optimisées en mémoire.  
   
-##  <a name="auditing"></a>Audit  
+##  <a name="auditing"></a><a name="auditing"></a>Audit  
  L'audit au niveau de la procédure est pris en charge dans les procédures stockées compilées en mode natif. L'audit au niveau de l'instruction n'est pas pris en charge.  
   
  Pour plus d'informations sur l'audit, consultez [Créer une spécification de l'audit du serveur et de la base de données](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a>Indicateurs de table, de requête et de jointure  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>Indicateurs de table, de requête et de jointure  
  Les constructions suivantes sont admises :  
   
 -   Indicateurs INDEX, FORCESCAN et FORCESEEK, dans la syntaxe des indicateurs de table ou dans la [Clause OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) de la requête.  
@@ -169,10 +169,10 @@ ms.locfileid: "63155717"
   
  Pour plus d’informations, consultez [indicateurs &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a>Limitations sur le tri  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
   
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>*, Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au maximum 8 192 lignes ; *\<nombre* demandé.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8192 lignes, vous recevez le message d’erreur suivant : **MSG 41398, niveau 16, état 1, NomProcédure de procédure * \<>*, ligne * \<LineNumber>* l’opérateur Top peut retourner au maximum 8192 lignes ; nombre>demandé. * \<* **  
   
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
   
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitations sur les lignes retournées :** Il existe deux cas où cela peut potentiellement réduire le nombre de lignes qui peuvent être retournées par l’opérateur TOP :  
+ **Limitations sur les lignes retournées :** il existe deux cas de figure qui peuvent potentiellement réduire le nombre de lignes retournées par l'opérateur TOP :  
   
 -   L'utilisation de JOINs dans la requête.  L'impact de JOINs sur une limitation dépend du plan de requête.  
   

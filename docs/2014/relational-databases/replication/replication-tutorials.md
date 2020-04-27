@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960763"
 ---
 # <a name="replication-tutorials"></a>Didacticiels sur la réplication
@@ -30,7 +30,7 @@ ms.locfileid: "62960763"
 >  La plupart des tâches expliquées dans ces didacticiels peuvent être effectuées par programme. Pour plus d’informations, consultez [Guide du développeur &#40;&#41;de réplication ](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Didacticiels sur la réplication  
- [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md)  
+ [Préparation du serveur à la réplication](tutorial-preparing-the-server-for-replication.md)  
  Apprenez à préparer les serveurs afin que la réplication puisse s'exécuter avec les privilèges minimaux. Ce didacticiel doit être effectué avant les autres didacticiels sur la réplication.  
   
  [Réplication de données entre serveurs connectés en permanence](tutorial-replicating-data-between-continuously-connected-servers.md)  

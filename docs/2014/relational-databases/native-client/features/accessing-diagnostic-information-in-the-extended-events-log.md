@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046366"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
@@ -30,9 +30,7 @@ ms.locfileid: "63046366"
   
  Si vous utilisez ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et qu’une connexion est établie, vous pouvez obtenir l’ID de connexion client à l' `SQL_COPT_SS_CLIENT_CONNECTION_ID` aide de l’attribut avec [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client envoie également un ID d'activité spécifique à un thread. L'ID d'activité est capturé dans les sessions d'événements étendus si les sessions sont démarrées alors que l'option TRACK_CAUSAILITY est activée. En cas de problèmes de performances avec une connexion active, vous pouvez obtenir l'ID d'activité de la trace d'accès aux données du client (champ `ActivityID`), puis rechercher l'ID d'activité dans la sortie des événements étendus. L'ID d'activité dans les événements étendus est un GUID à 16 octets (différent du GUID de l'ID de connexion client) ajouté avec un numéro de séquence de quatre octets. Le numéro séquentiel représente l'ordre d'une demande dans un thread et indique l'ordre relatif du traitement par lot et des instructions RPC pour le thread. 
-  `ActivityID` est éventuellement envoyé pour les instructions par lots SQL et les demandes RPC lorsque le suivi d'accès aux données est activé et que le 18ème bit dans le mot de configuration de suivi d'accès aux données est activé.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client envoie également un ID d'activité spécifique à un thread. L'ID d'activité est capturé dans les sessions d'événements étendus si les sessions sont démarrées alors que l'option TRACK_CAUSAILITY est activée. En cas de problèmes de performances avec une connexion active, vous pouvez obtenir l'ID d'activité de la trace d'accès aux données du client (champ `ActivityID`), puis rechercher l'ID d'activité dans la sortie des événements étendus. L'ID d'activité dans les événements étendus est un GUID à 16 octets (différent du GUID de l'ID de connexion client) ajouté avec un numéro de séquence de quatre octets. Le numéro séquentiel représente l'ordre d'une demande dans un thread et indique l'ordre relatif du traitement par lot et des instructions RPC pour le thread. `ActivityID` est éventuellement envoyé pour les instructions par lots SQL et les demandes RPC lorsque le suivi d'accès aux données est activé et que le 18ème bit dans le mot de configuration de suivi d'accès aux données est activé.  
   
  Voici un exemple qui utilise [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour démarrer une session d'événements étendus qui sera stockée dans une mémoire tampon en anneau et enregistrera l'ID d'activité envoyé d'un client sur des opérations de traitement par lot et RPC.  
   

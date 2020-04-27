@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144320"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Mode asynchrone et SQLCancel
@@ -48,6 +48,6 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
  Une commande peut parfois rester longtemps en attente. Si l’application doit annuler la commande sans attendre de réponse, elle peut le faire en appelant **SQLCancel** avec le même descripteur d’instruction que la commande en suspens. Il s’agit de la seule fois où **SQLCancel** doit être utilisé. Certains programmeurs utilisent **SQLCancel** lorsqu’ils ont traité des éléments dans un jeu de résultats et veulent annuler le reste du jeu de résultats. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) doit être utilisé pour annuler le reste d’un jeu de résultats en suspens, et non **SQLCancel**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d'une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
+ [Création d’une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
   
   
