@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873553"
 ---
 # <a name="data-compression"></a>Data Compression
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de page et de ligne pour les tables et les index rowstore, et prend en charge la compression columnstore et d'archivage columnstore pour les tables et les index columnstore.  
   
  Pour les tables et les index rowstore, utilisez la fonctionnalité de compression de données afin de réduire la taille de la base de données. Outre les économies d'espace, la compression des données peut améliorer les performances des charges de travail nécessitant de nombreuses E/S, car les données sont stockées dans beaucoup moins de pages et les requêtes doivent lire moins pages sur le disque. Toutefois, des ressources processeur supplémentaires sont nécessaires sur le serveur de base de données pour compresser et décompresser les données, alors que les données sont échangées avec l'application. La compression des lignes et des pages peut être configurée pour les objets de base de données suivants :  
@@ -58,7 +57,7 @@ ms.locfileid: "62873553"
   
 -   Les détails de la compression des données sont susceptibles de changer sans information préalable dans les Service Packs ou les versions ultérieures.  
   
--   La compression est disponible dans chaque édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   La compression est disponible dans chaque édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   La compression n'est pas disponible pour les tables système.  
   
@@ -103,8 +102,7 @@ ms.locfileid: "62873553"
 -   Les tables qui implémentait le format de stockage VarDecimal dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] conservent ce paramètre en cas de mise à niveau. Vous pouvez appliquer la compression de ligne à une table qui a le format de stockage VarDecimal. Toutefois, la compression de ligne étant un sur-ensemble du format de stockage VarDecimal, il n'y a aucune raison de conserver le format de stockage VarDecimal. Les valeurs décimales ne bénéficient d'aucune compression supplémentaire lorsque vous combinez le format de stockage VarDecimal avec la compression de ligne. Vous pouvez appliquer la compression de page à une table qui a le format de stockage VarDecimal ; toutefois, les colonnes au format de stockage VarDecimal ne bénéficieront probablement pas d'une compression supplémentaire.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge le format de stockage VarDecimal ; toutefois, la compression au niveau ligne accomplissant les mêmes objectifs, le format de stockage VarDecimal est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge le format de stockage VarDecimal ; toutefois, la compression au niveau ligne accomplissant les mêmes objectifs, le format de stockage VarDecimal est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>À l'aide de la compression Columnstore et de la compression d'archivage Columnstore  
   
