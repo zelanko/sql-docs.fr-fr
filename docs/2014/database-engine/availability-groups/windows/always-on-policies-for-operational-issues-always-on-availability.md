@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815750"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On (SQL Server)
@@ -25,13 +25,13 @@ ms.locfileid: "62815750"
   
  
   
-##  <a name="TermsAndDefinitions"></a> Termes et définitions  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Termes et définitions  
  Stratégies prédéfinies AlwaysOn  
  Ensemble de stratégies intégrées qui permettent à un administrateur de base de données de vérifier qu'un groupe de disponibilité et ses réplicas de disponibilité et bases de données sont conformes aux états définis par les stratégies AlwaysOn.  
   
  [Groupes de disponibilité AlwaysOn](always-on-availability-groups-sql-server.md) Solution de haute disponibilité et de récupération d’urgence qui fournit une alternative au niveau de l’entreprise à la mise en miroir de bases de données.  
   
- groupe de disponibilité  
+ Groupe de disponibilité  
  Conteneur d’un jeu discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent ensemble.  
   
  réplica de disponibilité  
@@ -43,7 +43,7 @@ ms.locfileid: "62815750"
  Tableau de bord AlwaysOn  
  Tableau de bord [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] qui fournit d'un coup d'œil une vue de l'intégrité d'un groupe de disponibilité. Pour plus d'informations, consultez [Tableau de bord AlwaysOn](#Dashboard)plus loin dans cette rubrique.  
   
-##  <a name="AlwaysOnPBM"></a>Stratégies et problèmes prédéfinis  
+##  <a name="predefined-policies-and-issues"></a><a name="AlwaysOnPBM"></a> Stratégies prédéfinies et problèmes rencontrés  
  Le tableau suivant récapitule les stratégies définies.  
   
 |Nom de stratégie|Problème|Catégorie**<sup>*</sup>**|Facette|  
@@ -66,7 +66,7 @@ ms.locfileid: "62815750"
 > [!IMPORTANT]  
 >  **<sup>*</sup>** Pour les stratégies AlwaysOn, les noms de catégorie sont utilisés comme ID. Modifier le nom d'une catégorie AlwaysOn compromettrait sa fonctionnalité d'évaluation de l'intégrité. Par conséquent, ne modifiez pas les noms des catégories AlwaysOn.  
   
-##  <a name="Dashboard"></a>Tableau de bord AlwaysOn  
+##  <a name="alwayson-dashboard"></a><a name="Dashboard"></a>Tableau de bord AlwaysOn  
  Le tableau de bord AlwaysOn fournit d'un coup d'œil une vue de l'intégrité d'un groupe de disponibilité. Il inclut les fonctionnalités suivantes :  
   
 -   Vous permet de visualiser facilement les détails d'un groupe de disponibilité donné, ses réplicas de disponibilité et de ses bases de données.  
@@ -81,18 +81,18 @@ ms.locfileid: "62815750"
   
 -   Si le basculement sur le groupe de disponibilité est une solution possible à un problème, fournit un point de lancement pour les liens[Assistant Basculer le groupe de disponibilité](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). Cet Assistant guide l'administrateur de base de données dans le processus manuel de basculement.  
   
-##  <a name="ExtendHealthModel"></a>Extension du modèle d’intégrité AlwaysOn  
+##  <a name="extending-the-alwayson-health-model"></a><a name="ExtendHealthModel"></a>Extension du modèle d’intégrité AlwaysOn  
  L'extension du modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consiste à créer vos propres stratégies définies par l'utilisateur et à les placer dans certaines catégories en fonction du type d'objet surveillé.  Après que vous avez modifié quelques paramètres, le tableau de bord AlwaysOn évalue automatiquement vos propres stratégies définies par l'utilisateur, ainsi que les stratégies prédéfinies AlwaysOn.  
   
  Une stratégie définie par l'utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies AlwaysOn (consultez [Stratégies prédéfinies et problèmes rencontrés](#AlwaysOnPBM), précédemment dans cette rubrique). La facette serveur fournit les propriétés suivantes pour la surveillance de l'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] :  (`IsHadrEnabled` et `HadrManagerStatus`). La facette serveur fournit également les propriétés des stratégies suivantes pour la surveillance de la configuration du cluster WSFC : `ClusterQuorumType` et `ClusterQuorumState`.  
   
  Pour plus d'informations, consultez [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog de l'équipe de SQL Server AlwaysOn).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utilisez les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62815750"
   
 -   [Résoudre les problèmes liés à l’échec d’une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Modèle d'intégrité AlwaysOn Partie 1 -- Architecture du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
