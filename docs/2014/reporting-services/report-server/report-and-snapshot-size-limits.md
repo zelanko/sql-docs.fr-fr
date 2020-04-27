@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103539"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
@@ -32,14 +32,12 @@ ms.locfileid: "66103539"
   
  Bien qu'un modèle de rapport puisse être très volumineux, la taille des définitions de rapport excède rarement 4 Mo. Le plus souvent, la taille d'un rapport se mesure en kilo-octets (Ko). Cependant, si vous incluez des images incorporées, l'encodage de ces images peut générer des définitions de rapports volumineuses qui dépassent la taille par défaut de 4 Mo.  
   
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une limite maximale aux fichiers publiés pour minimiser les attaques par déni de service lancées à l’encontre du serveur. L'augmentation de la valeur de la limite supérieure amoindrit une partie de la protection que cette limite fournit. Augmentez cette valeur uniquement si vous êtes certain que l'avantage de cette opération compense tout risque de sécurité éventuel.  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une limite maximale aux fichiers publiés pour minimiser les attaques par déni de service lancées à l’encontre du serveur. L'augmentation de la valeur de la limite supérieure amoindrit une partie de la protection que cette limite fournit. Augmentez cette valeur uniquement si vous êtes certain que l'avantage de cette opération compense tout risque de sécurité éventuel.  
   
  N'oubliez pas que la valeur que vous définissez pour l'élément `maxRequestLength` doit être supérieure à la taille maximale réelle que vous souhaitez appliquer. Vous devez augmenter cette valeur afin de tenir compte de l'augmentation inévitable de la taille des requêtes HTTP qui se produit après que tous les paramètres ont été encapsulés dans une enveloppe SOAP, et l'encodage Base64 a été appliqué à certains paramètres, tels que le paramètre Définition des méthodes <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> et <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. L'encodage Base64 augmente la taille des données d'origine d'environ 33 %. Par conséquent, la valeur spécifiée pour l'élément `maxRequestLength` doit être environ 33 % supérieure à la taille réelle utilisée par l'élément. Par exemple, si vous spécifiez une valeur de 64 Mo pour `maxRequestLength`, la taille maximale des fichiers de rapport publiés sur le serveur de rapports sera d'environ 48 Mo.  
   
 ## <a name="report-size-in-memory"></a>Taille de rapport en mémoire  
- Lorsque vous exécutez un rapport, la taille du rapport est égale à la quantité de données qui est retournée dans le rapport plus la taille du flux de sortie. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'impose pas de limite maximale sur la taille d'un rapport rendu. La mémoire système détermine la limite supérieure en matière de taille (par défaut, un serveur de rapports utilise toute la mémoire configurée disponible lors du rendu d'un rapport), mais vous pouvez spécifier des paramètres de configuration pour définir des seuils de mémoire et des stratégies de gestion de mémoire. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
+ Lorsque vous exécutez un rapport, la taille du rapport est égale à la quantité de données qui est retournée dans le rapport plus la taille du flux de sortie. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'impose pas de limite maximale sur la taille d'un rapport rendu. La mémoire système détermine la limite supérieure en matière de taille (par défaut, un serveur de rapports utilise toute la mémoire configurée disponible lors du rendu d'un rapport), mais vous pouvez spécifier des paramètres de configuration pour définir des seuils de mémoire et des stratégies de gestion de mémoire. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
   
  La taille d'un rapport peut varier considérablement selon la quantité de données retournées et le format de rendu que vous utilisez pour le rapport. Un rapport paramétré peut être plus ou moins volumineux en fonction de l'incidence des valeurs des paramètres sur les résultats des requêtes. Le format de sortie de rapport que vous choisissez affecte la taille des rapports comme suit :  
   
@@ -83,7 +81,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
- [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)   
+ [Base de données du serveur de rapports &#40;le mode natif SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Traiter les rapports volumineux](process-large-reports.md)  
   
   

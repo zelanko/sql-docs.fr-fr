@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104231"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domaines d'application des applications du serveur de rapports
@@ -32,7 +32,7 @@ ms.locfileid: "66104231"
   
 -   Modifications de configuration sur le serveur de rapports.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]modifications de la configuration.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
   
 -   Échecs d'allocation de mémoire.  
   
@@ -40,16 +40,10 @@ ms.locfileid: "66104231"
   
 |Événement|Description de l'événement|S’applique à|Configurable|Description de l'opération de recyclage|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|Opérations de recyclage planifiées qui se produisent à des intervalles prédéfinis|Par défaut, les domaines d'application sont recyclés toutes les 12 heures.<br /><br /> Les opérations de recyclage planifiées sont fréquentes pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] qui favorisent l'intégrité de l'ensemble du processus.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Oui. Le paramètre de configuration `RecycleTime` du fichier RSReportServer.config détermine l'intervalle de recyclage.<br /><br /> 
-  `MaxAppDomainUnloadTime` définit le temps d'attente pendant lequel le traitement en arrière-plan est autorisé à s'effectuer.|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération de recyclage pour le service Web et le Gestionnaire de rapports.<br /><br /> Pour l'application de traitement en arrière-plan, le serveur de rapports crée un domaine d'application des nouveaux travaux ayant démarré à partir de planifications. Les travaux actifs sont autorisés à terminer leur exécution dans le domaine d'application actuel jusqu'à l'expiration du délai.|  
-|Modifications de configuration sur le serveur de rapports|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recycle les domaines d'application en réponse aux modifications du fichier RSReportServer.config.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Vous ne pouvez pas empêcher les opérations de recyclage d'avoir lieu. Toutefois, les opérations de recyclage qui se produisent en réponse à des modifications de configuration sont gérées de la même façon que les opérations de recyclage planifiées. Des domaines d'application sont créés pour les nouvelles requêtes tandis que les requêtes et travaux actifs finissent de s'exécuter dans le domaine d'application actuel.|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]modifications de la configuration|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d’application si des modifications sont apportées aux fichiers qu’il surveille (par exemple les fichiers machine.config et Web.config, ainsi que les fichiers programme [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ).|Service Web Report Server<br /><br /> Gestionnaire de rapports|Non.|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération.<br /><br /> Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] n'affectent pas le domaine d'application de traitement en arrière-plan.|  
-|Sollicitation de la mémoire et échecs d'allocation de mémoire|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recycle immédiatement les domaines d'application en cas d'échec d'allocation de mémoire ou lorsque le serveur est soumis à une forte sollicitation de la mémoire.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Lorsque la sollicitation de la mémoire est élevée, le serveur de rapports n'accepte pas de nouvelles requêtes dans le domaine d'application actuel. Pendant la période où le serveur refuse les nouvelles requêtes, des erreurs HTTP 503 se produisent. Aucun domaine d'application n'est créé tant que l'ancien domaine d'application n'est pas déchargé. Cela signifie que si vous modifiez un fichier de configuration alors que le serveur est soumis à une forte sollicitation de la mémoire, les requêtes et travaux en cours d'exécution risquent de ne pas démarrer ou de ne pas se terminer.<br /><br /> En cas d'échec d'allocation de mémoire, tous les domaines d'application redémarrent immédiatement. Les travaux et requêtes en cours d'exécution sont supprimés. Vous devez les redémarrer manuellement.|  
+|Opérations de recyclage planifiées qui se produisent à des intervalles prédéfinis|Par défaut, les domaines d'application sont recyclés toutes les 12 heures.<br /><br /> Les opérations de recyclage planifiées sont fréquentes pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] qui favorisent l'intégrité de l'ensemble du processus.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Oui. Le paramètre de configuration `RecycleTime` du fichier RSReportServer.config détermine l'intervalle de recyclage.<br /><br /> `MaxAppDomainUnloadTime` définit le temps d'attente pendant lequel le traitement en arrière-plan est autorisé à s'effectuer.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération de recyclage pour le service Web et le Gestionnaire de rapports.<br /><br /> Pour l'application de traitement en arrière-plan, le serveur de rapports crée un domaine d'application des nouveaux travaux ayant démarré à partir de planifications. Les travaux actifs sont autorisés à terminer leur exécution dans le domaine d'application actuel jusqu'à l'expiration du délai.|  
+|Modifications de configuration sur le serveur de rapports|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recycle les domaines d'application en réponse aux modifications du fichier RSReportServer.config.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Vous ne pouvez pas empêcher les opérations de recyclage d'avoir lieu. Toutefois, les opérations de recyclage qui se produisent en réponse à des modifications de configuration sont gérées de la même façon que les opérations de recyclage planifiées. Des domaines d'application sont créés pour les nouvelles requêtes tandis que les requêtes et travaux actifs finissent de s'exécuter dans le domaine d'application actuel.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Modifications de configuration|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d’application si des modifications sont apportées aux fichiers qu’il surveille (par exemple les fichiers machine.config et Web.config, ainsi que les fichiers programme [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ).|Service Web Report Server<br /><br /> Gestionnaire de rapports|Non.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération.<br /><br /> Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] n'affectent pas le domaine d'application de traitement en arrière-plan.|  
+|Sollicitation de la mémoire et échecs d'allocation de mémoire|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recycle immédiatement les domaines d'application en cas d'échec d'allocation de mémoire ou lorsque le serveur est soumis à une forte sollicitation de la mémoire.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Lorsque la sollicitation de la mémoire est élevée, le serveur de rapports n'accepte pas de nouvelles requêtes dans le domaine d'application actuel. Pendant la période où le serveur refuse les nouvelles requêtes, des erreurs HTTP 503 se produisent. Aucun domaine d'application n'est créé tant que l'ancien domaine d'application n'est pas déchargé. Cela signifie que si vous modifiez un fichier de configuration alors que le serveur est soumis à une forte sollicitation de la mémoire, les requêtes et travaux en cours d'exécution risquent de ne pas démarrer ou de ne pas se terminer.<br /><br /> En cas d'échec d'allocation de mémoire, tous les domaines d'application redémarrent immédiatement. Les travaux et requêtes en cours d'exécution sont supprimés. Vous devez les redémarrer manuellement.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>Opérations de recyclage planifiées et non planifiées  
  Les opérations de recyclage sont planifiées ou non planifiées en fonction des conditions qui en sont à l'origine :  
@@ -64,8 +58,7 @@ ms.locfileid: "66104231"
   
  Les domaines d'application du service Web Report Server, du Gestionnaire de rapports et de l'application de traitement en arrière-plan peuvent être recyclés ensemble ou individuellement, selon les circonstances dans lesquelles le recyclage se produit :  
   
--   Les opérations de recyclage lancées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] affectent [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] uniquement les applications : service Web Report Server et gestionnaire de rapports. 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d'application si des modifications sont apportées aux fichiers qu'il surveille. Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sont généralement indépendantes des opérations de recyclage de l'application de traitement en arrière-plan.  
+-   Les opérations de recyclage lancées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] affectent uniquement les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] : Service web Report Server et Gestionnaire de rapports. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d'application si des modifications sont apportées aux fichiers qu'il surveille. Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] sont généralement indépendantes des opérations de recyclage de l'application de traitement en arrière-plan.  
   
 -   En règle générale, les opérations de recyclage débutées par le serveur de rapports affectent le service Web Report Server, le Gestionnaire de rapports et l'application de traitement en arrière-plan. Les opérations de recyclage se produisent en réponse aux modifications des paramètres de configuration et aux redémarrages du service.  
   
@@ -88,7 +81,7 @@ ms.locfileid: "66104231"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer](rsreportserver-config-configuration-file.md)   
- [Modifier un fichier de configuration Reporting Services &#40;RSreportserver. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md)  
   
   

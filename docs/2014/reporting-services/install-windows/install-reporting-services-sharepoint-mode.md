@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef049b4ded6408e651d5ec2c3db99c10bf7c27b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108767"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Installation du mode SharePoint de Reporting Services (SharePoint 2010 et SharePoint 2013)
@@ -48,7 +48,7 @@ ms.locfileid: "66108767"
   
  [Où trouver le complément Reporting Services pour les produits SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Ajouter un serveur de rapports supplémentaire à une batterie de serveurs &#40;la montée en charge SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Ajouter un serveur de rapports supplémentaire à une batterie &#40;montée en puissance SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Ajouter un serveur Web frontal Reporting Services supplémentaire à une batterie](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66108767"
   
 ## <a name="see-also"></a>Voir aussi  
  [Architecture et flux de travail des alertes de données](../reporting-services-data-alerts.md#AlertingWF)   
- [Gestionnaire des alertes de données pour les administrateurs d'alertes](../data-alert-manager-for-alerting-administrators.md)  
+ [Gestionnaire des alertes de données pour les administrateurs d’alertes](../data-alert-manager-for-alerting-administrators.md)  
   
   

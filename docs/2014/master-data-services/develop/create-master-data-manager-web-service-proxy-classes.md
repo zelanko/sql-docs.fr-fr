@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479554"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Créer des classes proxy de service Web Master Data Manager
@@ -36,7 +36,7 @@ ms.locfileid: "65479554"
     « Vous avez créé un service. »  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Création de classes proxy à l'aide de Visual Studio  
- Si vous avez installé Visual Studio 2010, la méthode la plus simple de générer des classes proxy est d’ajouter une **Référence de service** à votre projet. L'adresse de la référence de service est l'URL de l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], suivie de /service/service.svc. Par exemple : http://yourserver/MDS/service/service.svc. Pour plus d’informations, consultez [Guide pratique pour ajouter, mettre à jour ou supprimer une référence de service](https://go.microsoft.com/fwlink/?LinkId=221167).  
+ Si vous avez installé Visual Studio 2010, la méthode la plus simple de générer des classes proxy est d’ajouter une **Référence de service** à votre projet. L'adresse de la référence de service est l'URL de l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], suivie de /service/service.svc. Par exemple : http://yourserver/MDS/service/service.svc. Pour plus d’informations, consultez [Guide pratique pour ajouter, mettre à jour ou supprimer une référence de service](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Création de classes proxy à l'aide de Svcutil.exe  
  Vous devez disposer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] de ou de [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’SDK Windows installé pour pouvoir utiliser Svcutil. exe sur votre ordinateur. Si vous utilisez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vous devez utiliser l'invite de commandes [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour exécuter la commande. Pour plus d’informations, consultez [Outil Service Model Metadata Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) et [Génération d’un client WCF à partir de métadonnées de service](https://go.microsoft.com/fwlink/?LinkId=164821).  
@@ -52,13 +52,13 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  Où :  
   
--   *ServerName*:*port* sont le nom d’ordinateur et le numéro de port de l' [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]ordinateur qui héberge.  
+-   *servername*:*port* désignent le nom d’ordinateur et le numéro de port de l’ordinateur qui héberge [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
   
--   *virtual_path* est le chemin d’accès [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] virtuel de dans Internet Information Services (IIS).  
+-   *virtual_path* désigne le chemin virtuel de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] dans IIS (Internet Information Services).  
   
--   *proxy_name* est le nom du fichier proxy généré.  
+-   *proxy_name* désigne le nom du fichier proxy généré.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérations de service Web catégorisées &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
+ [Opérations de service web par catégorie &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
   
   

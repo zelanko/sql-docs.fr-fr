@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312567"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Sélectionner le schéma de raccourcis clavier
   Au lieu du schéma de clavier [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] standard, vous pouvez configurer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser un schéma de clavier compatible avec [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
   
-## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Adoption du schéma de clavier [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
+## <a name="changing-to-the-vs_dev10_long-keyboard-scheme"></a>Adoption du schéma de clavier [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   
-#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>Pour appliquer le schéma de clavier compatible [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
+#### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>Pour appliquer le schéma de clavier compatible [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   
 1.  Dans le menu **Outils** , cliquez sur **Options**.  
   
@@ -37,6 +37,6 @@ ms.locfileid: "63312567"
   
 ## <a name="see-also"></a>Voir aussi  
  [Raccourcis clavier SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md)   
- [Personnaliser des menus et des touches de raccourci](../customize-menus-and-shortcut-keys.md)  
+ [Personnaliser les menus et les touches de raccourci](../customize-menus-and-shortcut-keys.md)  
   
   

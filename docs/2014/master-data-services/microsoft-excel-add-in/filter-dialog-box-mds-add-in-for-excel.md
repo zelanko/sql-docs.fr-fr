@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482565"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Boîte de dialogue Filtrer (Complément MDS pour Excel)
@@ -30,7 +30,7 @@ ms.locfileid: "65482565"
 |Type d'attribut|Un type d'attribut décrit le type de membre que vous souhaitez utiliser. La plupart de temps, il s’agit d’un membre **feuille**. Pour plus d’informations sur les types de membres, consultez [Membres &#40;Master Data Services&#41;](../members-master-data-services.md).|  
 |Hiérarchie explicite|Si vous avez choisi le type d’attribut **Consolidé** , choisissez la hiérarchie à laquelle appartiennent les membres consolidés. Pour plus d’informations, consultez [Hiérarchies explicites &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
 |Groupes d'attributs|Les groupes d'attributs permettent de regrouper des sous-ensembles d'attributs. Choisissez un groupe d'attributs si vous souhaitez afficher un sous-ensemble d'attributs disponibles. Pour plus d’informations sur les groupes d’attributs, consultez [Groupes d’attributs &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
-|Sélectionner tout|Cliquez pour sélectionner tous les attributs affichés dans la liste.|  
+|Tout sélectionner|Cliquez pour sélectionner tous les attributs affichés dans la liste.|  
 |Effacer tout|Cliquez pour effacer les attributs sélectionnés affichés dans la liste.<br /><br /> Remarque : vous ne pouvez pas effacer **nom** et **code**.|  
 |Flèche haut|Cliquez pour déplacer l'attribut sélectionné vers le haut dans la liste. L'ordre de haut en bas correspond à l'ordre de gauche à droite selon lequel les colonnes sont affichées dans la feuille de calcul.|  
 |Flèche Bas|Cliquez déplacer l'attribut sélectionné vers le bas dans la liste. L'ordre de haut en bas correspond à l'ordre de gauche à droite selon lequel les colonnes sont affichées dans la feuille de calcul.|  
@@ -48,7 +48,7 @@ ms.locfileid: "65482565"
 |Supprimer tout|Supprime tous les filtres de la liste.|  
 |Supprimer|Supprime de la liste le filtre sélectionné.|  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Utilisez la section **Résumé** pour afficher des informations sur la quantité de données qui seront chargées, avant de les charger.  
   
 |Nom du contrôle|Description|  

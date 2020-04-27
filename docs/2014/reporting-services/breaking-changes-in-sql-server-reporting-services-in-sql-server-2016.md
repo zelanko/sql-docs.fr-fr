@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109931"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifications importantes de SQL Server Reporting Services dans SQL Server 2014
@@ -32,10 +32,10 @@ ms.locfileid: "66109931"
   
 -   [Changements essentiels apportés à SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Modifications avec rupture Reporting Services  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Modifications avec rupture Reporting Services  
  Il n'y a pas de modifications avec rupture dans les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Modifications avec rupture Reporting Services  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Modifications avec rupture Reporting Services  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Les références de serveur en mode SharePoint nécessitent un site SharePoint  
  Vous ne pouvez pas parcourir ou référencer directement le serveur de rapports à l'aide du nom direct virtuel dans le chemin d'accès de l'URL. Par exemple :  
@@ -65,11 +65,10 @@ ms.locfileid: "66109931"
 -   SQL Server Management Studio : les clients ne peuvent pas faire référence à un serveur avec une syntaxe similaire à <machine_name <>/instance_name>. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<** sharePoint_site>. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], une URL de site SharePoint est la seule syntaxe prise en charge.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Le générateur de modèles de rapport est disponible dans les outils de données SQL Server  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ne prend plus en charge les projets de modèle de rapport. Le générateur de modèles de rapport n'est pas disponible dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous ne pouvez pas créer de nouveaux projets de modèle de rapport ni ouvrir des projets existants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et vous ne pouvez pas créer ou mettre à jour des modèles de rapport. Pour mettre à jour des modèles de rapport, vous pouvez utiliser [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou des outils précédents. Vous pouvez continuer à utiliser les modèles de rapport comme sources de données dans les rapports créés à l'aide d'outils [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] tels que le Générateur de rapports et le Concepteur de rapports. Le concepteur de requêtes que vous utilisez pour créer des requêtes et extraire des données de rapport à partir de modèles de rapport est toujours disponible dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ne prend plus en charge les projets de modèle de rapport. Le générateur de modèles de rapport n'est pas disponible dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous ne pouvez pas créer de nouveaux projets de modèle de rapport ni ouvrir des projets existants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et vous ne pouvez pas créer ou mettre à jour des modèles de rapport. Pour mettre à jour des modèles de rapport, vous pouvez utiliser [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou des outils précédents. Vous pouvez continuer à utiliser les modèles de rapport comme sources de données dans les rapports créés à l'aide d'outils [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] tels que le Générateur de rapports et le Concepteur de rapports. Le concepteur de requêtes que vous utilisez pour créer des requêtes et extraire des données de rapport à partir de modèles de rapport est toujours disponible dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services modifications avec rupture  
- Cette section décrit les changements essentiels apportés à [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services modifications avec rupture  
+ Cette section décrit les modifications importantes [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]apportées à.  
   
 > [!NOTE]  
 >  SQL Server 2008 R2 étant une mise à niveau de version secondaire de SQL Server 2008, nous vous recommandons d'examiner également le contenu de la section SQL Server 2008.  

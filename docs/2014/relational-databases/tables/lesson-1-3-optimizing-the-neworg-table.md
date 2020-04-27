@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110070"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimisation de la table NewOrg
@@ -95,7 +95,7 @@ ms.locfileid: "66110070"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     Index **EmployeeID**-First : les lignes sont stockées dans la séquence **EmployeeID** .  
+     Index avec**EmployeeID**prioritaire : les lignes sont stockées dans l’ordre des **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -159,6 +159,6 @@ ms.locfileid: "66110070"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Conversion d'une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Résumé : Conversion d’une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

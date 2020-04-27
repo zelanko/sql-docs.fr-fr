@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107037"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
@@ -126,10 +126,10 @@ ms.locfileid: "66107037"
   
  Dans ces conditions, le serveur de rapports se connecte à une source de données distante à l'aide du compte d'exécution sans assistance qui doit être défini à l'avance. Étant donné que le serveur de rapports ne se connecte pas à un serveur distant en utilisant ses informations d'identification de service, vous devez spécifier un compte que le serveur de rapports peut utiliser pour établir la connexion. Pour plus d’informations sur la création de ce compte, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a>Configuration de la source de données et connexions réseau  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configuration d’une source de données et connexions réseau  
  Le tableau suivant montre comment les connexions sont établies pour des combinaisons spécifiques de types d'informations d'identification et d'extensions de traitement de données. Si vous utilisez une extension de traitement de données personnalisée, consultez [Spécifier des connexions pour des extensions de traitement de données personnalisées](specify-connections-for-custom-data-processing-extensions.md).  
   
-|**Type**|**Contexte de connexion réseau**|**Types de sources de données**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
+|**Type**|**Contexte de connexion réseau**|**Types de source de données**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Sécurité intégrée|Emprunter l'identité de l'utilisateur actuel.|Pour tous les types de sources de données, se connecter en utilisant le compte d'utilisateur actuel.|  
 |Informations d'identification Windows|Emprunter l'identité de l'utilisateur spécifié.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB : connectez-vous à l'aide du compte d'utilisateur avec emprunt d'identité.|  
@@ -142,7 +142,7 @@ ms.locfileid: "66107037"
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Gérer des sources de données de rapports](../../integration-services/connection-manager/data-sources.md)   
+ [Gérer les sources de données de rapport](../../integration-services/connection-manager/data-sources.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
  [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)  

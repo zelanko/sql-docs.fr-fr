@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105120"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Fonction Union (Générateur de rapports et SSRS)
@@ -38,8 +38,7 @@ Union(expression, scope, recursive)
  (`String`) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
  *recursive*  
- (**Type énuméré**) Facultatif. 
-  `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ (**Type énuméré**) Facultatif. `Simple` (par défaut) ou `RdlRecursive`. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return"></a>Renvoie  
  Retourne un objet spatial, `SqlGeometry` ou `SqlGeography`, selon le type d'expression. Pour plus d’informations `SqlGeometry` sur `SqlGeography` les types de données spatiales et, consultez [vue d’ensemble des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md).  

@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104375"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Boîte de dialogue Propriétés du rapport, Mise en page
   Sélectionnez **mise en page** dans la boîte de dialogue **Propriétés du rapport**, pour définir les options de page pour l’ensemble du rapport.  
   
 ## <a name="options"></a>Options  
- **Pouces**  
+ **Millimètre**  
  Spécifie que la taille des données est indiquée en pouces. Par défaut, vos paramètres régionaux déterminent l'unité choisie.  
   
  **Centimètres**  
@@ -39,22 +39,22 @@ ms.locfileid: "66104375"
  **Format de papier**  
  Sélectionnez une taille dans la liste, qui entre automatiquement les dimensions dans les contrôles Largeur et Hauteur. Ou bien, sélectionnez **Taille personnalisée** puis changez les contrôles Largeur et Hauteur pour indiquer la taille voulue.  
   
- **Largeur**  
+ **Width**  
  Affiche la largeur du papier sélectionné dans la liste **Type de papier** .  
   
- **Hauteur**  
+ **Height**  
  Affiche la hauteur du papier sélectionné dans la liste **Type de papier** .  
   
- **Retour au début**  
+ **Top**  
  Définit la distance entre le haut du rapport et le haut de sa première ligne.  
   
- **Bas**  
+ **Ballon**  
  Définit la distance entre le bas du rapport et le bas de sa dernière ligne.  
   
- **Gauche**  
+ **Left**  
  Définit la distance entre le bord gauche du rapport et le bord gauche des lignes.  
   
- **Oui**  
+ **Right**  
  Définit la distance entre le bord droit du rapport et le bord droit des lignes.  
   
 ## <a name="see-also"></a>Voir aussi  

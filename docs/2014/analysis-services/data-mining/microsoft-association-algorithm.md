@@ -31,10 +31,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174725"
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
@@ -59,9 +59,9 @@ ms.locfileid: "78174725"
 
  Les spécifications pour un modèle de règles d'association sont les suivantes :
 
--   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
+-   **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.
 
--   **Une seule colonne prévisible** Un modèle d’association ne peut avoir qu’une seule colonne prévisible. Il s'agit en général de la colonne clé de la table imbriquée, par exemple le champ qui répertorie les produits achetés. Les valeurs doivent être discrètes ou discrétisées.
+-   **Une seule colonne prédictible** Un modèle d’association peut avoir une seule colonne prédictible. Il s'agit en général de la colonne clé de la table imbriquée, par exemple le champ qui répertorie les produits achetés. Les valeurs doivent être discrètes ou discrétisées.
 
 -   **Colonnes d’entrée** . Les colonnes d'entrée doivent être discrètes. Les données d'entrée pour un modèle d'association sont souvent contenues dans deux tables. Par exemple, une table peut contenir des informations sur le client et une autre les achats du client. Vous pouvez entrer ces données dans le modèle en utilisant une table imbriquée. Pour plus d’informations sur les tables imbriquées, consultez [Tables imbriquées &#40;Analysis Services - Exploration de données &#41;](nested-tables-analysis-services-data-mining.md).
 

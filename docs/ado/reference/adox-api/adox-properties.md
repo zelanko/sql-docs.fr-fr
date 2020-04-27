@@ -14,10 +14,10 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910613"
 ---
 # <a name="adox-properties"></a>Propriétés ADOX
@@ -28,7 +28,7 @@ ms.locfileid: "67910613"
 |[Attributs](../../../ado/reference/adox-api/attributes-property-adox.md)|Décrit les caractéristiques de colonne.|  
 |[Cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est ordonné en clusters.|  
 |[Commande](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie un objet de **commande** ADO qui peut être utilisé pour créer ou exécuter la procédure.|  
-|[Saut](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indique la date à laquelle l’objet a été créé.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indique la date à laquelle l’objet a été modifié pour la dernière fois.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indique la taille maximale indiquée de la colonne.|  
@@ -37,7 +37,7 @@ ms.locfileid: "67910613"
 |[Item](../../../ado/reference/ado-api/item-property-ado.md)|Indique un membre spécifique d’une collection, par nom ou numéro ordinal.|  
 |[Nom](../../../ado/reference/adox-api/name-property-adox.md)|Indique le nom de l’objet.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indique l’échelle d’une valeur numérique dans la colonne.|  
-|[ParentCatalog,](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Spécifie le catalogue parent d’une table ou d’une colonne pour fournir l’accès aux propriétés spécifiques au fournisseur.|  
+|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Spécifie le catalogue parent d’une table ou d’une colonne pour fournir l’accès aux propriétés spécifiques au fournisseur.|  
 |[Précision](../../../ado/reference/adox-api/precision-property-adox.md)|Indique la précision maximale des valeurs de données dans la colonne.|  
 |[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indique si l’index représente la clé primaire de la table.|  
 |[; RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Indique le nom de la colonne associée dans la table associée (colonnes clés uniquement).|  

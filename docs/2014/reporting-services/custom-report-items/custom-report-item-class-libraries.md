@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264889"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
@@ -46,8 +46,7 @@ ms.locfileid: "63264889"
 |`AltReportItem`|Objet de remplacement d'élément de rapport, à utiliser lorsque le contrôle DTC de l'élément de rapport personnalisé n'est pas pris en charge.|  
 |`Style`|Propriétés de style destinées à l'élément de rapport personnalisé.|  
 |`Adornment`|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  
-|`Site`|
-  `ISite` du composant.|  
+|`Site`|`ISite` du composant.|  
 |`DesignerVerbCollection`|Tableau de verbes personnalisés pour le menu contextuel du contrôle.|  
   
 #### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -134,6 +133,6 @@ ms.locfileid: "63264889"
 ## <a name="see-also"></a>Voir aussi  
  [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Création d’un composant d’exécution d’élément de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
- [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)  
+ [Création d'un composant au moment de la conception d'élément de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)  
   
   

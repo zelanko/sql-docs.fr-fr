@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904897"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Utilisation des exemples de fichiers de script de console (MySQLToSQL)
@@ -54,7 +54,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     Pour plus d’informations sur la génération de rapports, consultez [génération de rapports &#40;&#41;MySQLToSQL ](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **Notes**  
+    **Remarques :**  
   
     -   Assurez-vous que l’argument de ligne de commande du fichier de valeur de variable est passé à l’application console et que VariableValueFileSample. xml est mis à jour avec les valeurs spécifiées par l’utilisateur.  
   

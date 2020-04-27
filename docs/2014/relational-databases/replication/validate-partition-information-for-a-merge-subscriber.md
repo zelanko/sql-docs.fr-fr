@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255308"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Valider des informations de partition pour un Abonné de fusion
@@ -36,7 +36,7 @@ ms.locfileid: "63255308"
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Meilleures pratiques pour l’administration de la réplication](administration/best-practices-for-replication-administration.md)   
- [Réinitialiser des abonnements](reinitialize-subscriptions.md)   
+ [Réinitialiser les abonnements](reinitialize-subscriptions.md)   
  [Valider des données répliquées](validate-data-at-the-subscriber.md)  
   
   

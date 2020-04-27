@@ -17,22 +17,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102189"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentification avec le serveur de rapports
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offre plusieurs options configurables pour authentifier les utilisateurs et les applications clientes sur le serveur de rapports. Par défaut, le serveur de rapports utilise l'authentification intégrée Windows et suppose des relations approuvées dans lesquelles le client et les ressources réseau sont dans le même domaine ou dans un domaine approuvé. Selon la topologie de votre réseau et les besoins de votre organisation, vous pouvez personnaliser le protocole d’authentification utilisé pour l’authentification intégrée de Windows, utiliser l’authentification de base ou une extension personnalisée d’authentification basée sur les formulaires que vous fournissez. Chacun de ces types d'authentification peut être activé ou désactivé individuellement. Vous pouvez activer plusieurs types d’authentification si vous voulez que le serveur de rapports accepte des demandes de plusieurs types.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offre plusieurs options configurables pour authentifier les utilisateurs et les applications clientes sur le serveur de rapports. Par défaut, le serveur de rapports utilise l'authentification intégrée Windows et suppose des relations approuvées dans lesquelles le client et les ressources réseau sont dans le même domaine ou dans un domaine approuvé. Selon la topologie de votre réseau et les besoins de votre organisation, vous pouvez personnaliser le protocole d’authentification utilisé pour l’authentification intégrée de Windows, utiliser l’authentification de base ou une extension personnalisée d’authentification basée sur les formulaires que vous fournissez. Chacun de ces types d'authentification peut être activé ou désactivé individuellement. Vous pouvez activer plusieurs types d’authentification si vous voulez que le serveur de rapports accepte des demandes de plusieurs types.  
   
 > [!NOTE]  
->  Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la prise en charge de l’authentification était entièrement assurée par IIS. Depuis la version [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS n'est plus utilisé. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gère toutes les requêtes d'authentification en interne.  
+>  Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la prise en charge de l’authentification était entièrement assurée par IIS. Depuis la version [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS n'est plus utilisé. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gère toutes les requêtes d'authentification en interne.  
   
  Tous les utilisateurs ou applications qui demandent l'accès au contenu et aux opérations du serveur de rapports doivent être authentifiés avant que l'accès ne soit autorisé.  
   
-## <a name="authentication-types"></a>Types d’authentification  
+## <a name="authentication-types"></a>Types d'authentification  
  Tous les utilisateurs ou applications qui demandent l'accès au contenu et aux opérations du serveur de rapports doivent être authentifiés à l'aide du type d'authentification configuré sur le serveur de rapports avant que l'accès ne soit autorisé. Le tableau suivant décrit les types d'authentification pris en charge par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Nom de type d'authentification|Valeur de la couche d'authentification HTTP|Utilisé par défaut|Description|  
@@ -78,13 +77,13 @@ ms.locfileid: "66102189"
 |Configurez le type d'authentification intégrée de Windows.|[Configurer une authentification Windows sur le serveur de rapports](configure-windows-authentication-on-the-report-server.md)|  
 |Configurez le type d'authentification de base.|[Configurer une authentification de base sur le serveur de rapports](configure-basic-authentication-on-the-report-server.md)|  
 |Configurez soit l'authentification par formulaire, soit un type d'authentification personnalisé.|[Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports](configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Pour gérer le scénario d'authentification personnalisé, activez le gestionnaire de rapports.|[Configurer le Gestionnaire de rapports pour passer des cookies d'authentification personnalisée](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Pour gérer le scénario d'authentification personnalisé, activez le gestionnaire de rapports.|[Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   
  [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  (create-and-manage-role-assignments.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [Implémentation d’une extension de sécurité](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configurer des connexions SSL sur un serveur de rapports en mode natif](configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configurer l’accès Générateur de rapports](../report-server/configure-report-builder-access.md)   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488471"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Leçon 2 : Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs
@@ -43,6 +43,6 @@ ms.locfileid: "65488471"
 6.  Importez les valeurs du projet de nettoyage dans des domaines pour augmenter la connaissance dans la base de connaissances avec de nouvelles règles, valeurs, corrections, etc.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 1 : Création d'un projet de qualité des données](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [Tâche 1 : Création d’un projet de qualité des données](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

@@ -36,10 +36,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104750"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tables, matrices et listes (Générateur de rapports et SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66104750"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Table"></a>Tableau  
+##  <a name="table"></a><a name="Table"></a>Tableau  
  Utilisez une table pour afficher des données de détail, organiser les données dans des groupes de lignes, ou les deux. Le modèle Table comporte trois colonnes avec une ligne d'en-tête de table et une ligne de détails pour les données. L'illustration suivante montre le modèle de table initial sélectionné sur l'aire de conception :  
   
  ![Modèle de table sur l'aire de conception, sélectionné](../media/rs-tabletemplatenewselected.gif "Modèle de table sur l'aire de conception, sélectionné")  
@@ -76,7 +76,7 @@ ms.locfileid: "66104750"
   
 
   
-##  <a name="Matrix"></a>Comparatif  
+##  <a name="matrix"></a><a name="Matrix"></a>Comparatif  
  Utilisez une matrice pour afficher des résumés de données agrégées, regroupés dans des lignes et des colonnes, et qui s'apparentent à un tableau croisé dynamique ou à une analyse croisée. Le nombre de lignes et de colonnes des groupes est déterminé par le nombre de valeurs uniques de chaque groupe de lignes et de colonnes. L'illustration suivante montre le modèle de matrice initial sélectionné sur l'aire de conception :  
   
  ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../media/rs-matrixtemplatenewselected.gif "Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
@@ -91,7 +91,7 @@ ms.locfileid: "66104750"
   
 
   
-##  <a name="List"></a>Tarifs  
+##  <a name="list"></a><a name="List"></a>Tarifs  
  Utilisez une liste pour créer une disposition de forme libre. Comme vous n'êtes pas limité à une disposition sous forme de grille, vous pouvez placer librement des champs à l'intérieur de la liste. Vous pouvez utiliser une liste pour concevoir un formulaire permettant d'afficher de nombreux champs du dataset ou en tant que conteneur permettant d'afficher côte à côte plusieurs régions de données pour les données groupées. Par exemple, vous pouvez définir un groupe pour une liste, ajouter une table, un graphique et une image, et afficher les valeurs sous forme de table et de graphique pour chaque valeur de groupe, comme vous le feriez pour un fichier d'employés ou de patients.  
   
  ![Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée](../media/rs-listtemplatenewselected.gif "Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée")  
@@ -100,7 +100,7 @@ ms.locfileid: "66104750"
   
 
   
-##  <a name="PreparingData"></a>Préparation des données  
+##  <a name="preparing-data"></a><a name="PreparingData"></a>Préparation des données  
  Les régions de données de table, de matrice et de liste affichent les données d'un dataset. Vous pouvez préparer les données dans la requête qui récupère les données pour le dataset ou en définissant des propriétés dans la table, matrice ou liste.  
   
  Les langages de requêtes, tels que [!INCLUDE[tsql](../../includes/tsql-md.md)], que vous utilisez pour récupérer les données pour les datasets de rapport peuvent préparer les données en appliquant des filtres pour inclure uniquement un sous-ensemble des données, en remplaçant les valeurs Null ou les espaces par des constantes qui rendent le rapport plus lisible, puis en triant et regroupant les données.  
@@ -111,14 +111,14 @@ ms.locfileid: "66104750"
   
 
   
-##  <a name="BuildingConfiguringTableMatrixList"></a>Création et configuration d’une table, d’une matrice ou d’une liste  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a>Création et configuration d’une table, d’une matrice ou d’une liste  
  Lorsque vous ajoutez des tables ou des matrices à votre rapport, vous pouvez utiliser l'Assistant Tableau ou Matrice, ou les générer manuellement à partir des modèles fournis par le Générateur de rapports et le Concepteur de rapports. Les listes sont créées manuellement à partir du modèle de liste.  
   
  L'Assistant vous guide pendant la procédure pour générer et configurer rapidement une table ou matrice. Une fois l'Assistant terminé ou si vous créez les régions de données de tableau matriciel de bout en bout, vous pouvez les configurer et les améliorer davantage. Les boîtes de dialogue, disponibles dans les menus contextuels sur les régions de données, facilitent la définition des propriétés utilisées le plus souvent pour les sauts de page, la répétition et la visibilité des en-têtes et pieds de page, les options d'affichage, les filtres et le tri. En outre, la région de données de tableau matriciel fournit une multitude de propriétés supplémentaires, que vous pouvez définir uniquement dans le volet Propriétés du Générateur de rapports. Par exemple, si vous souhaitez afficher un message quand le dataset pour une table, matrice ou liste est vide, vous spécifiez le texte du message dans la propriété de tableau matriciel NoRowsMessage dans le volet Propriétés.  
   
 
   
-##  <a name="ChangingBetweenTablixTemplates"></a>Modification entre les modèles de tableau matriciel  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a>Modification entre les modèles de tableau matriciel  
  Vous n'êtes pas tenu de rester à votre choix de modèle de tableau matriciel initial. À mesure que vous ajoutez des groupes, des totaux et des étiquettes, vous pouvez être amené à apporter des modifications à votre conception de tableau matriciel. Par exemple, vous pouvez commencer avec une table, puis supprimer la ligne de détails et ajouter des groupes de colonnes. Pour plus d’informations, consultez [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS& #41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  Vous pouvez poursuivre le développement d'une table, d'une matrice ou d'une liste en y ajoutant toute fonctionnalité de tableau matriciel. Les fonctionnalités de tableau matriciel assurent l'affichage de données de détail ou d'agrégats de données groupées dans des lignes et des colonnes. Vous pouvez créer des groupes imbriqués, des groupes adjacents indépendants ou des groupes récursifs. Vous pouvez filtrer et trier des données groupées et facilement associer des groupes en incluant plusieurs expressions de groupe dans une définition de groupe.  
@@ -127,7 +127,7 @@ ms.locfileid: "66104750"
   
 
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser les tables, matrices et listes dans vos rapports, afficher des données dans les lignes et les colonnes, ajouter et supprimer des colonnes, fusionner des cellules, et inclure des sous-totaux pour les groupes de lignes et de colonnes.  
   
 -   [Ajouter un groupe de détails &#40;Générateur de rapports et SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
@@ -156,7 +156,7 @@ ms.locfileid: "66104750"
   
 
   
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur l'utilisation de la région de données de tableau matriciel.  
   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
@@ -180,12 +180,12 @@ ms.locfileid: "66104750"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupe &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Liaison de plusieurs régions de données à un même jeu de données &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et de Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1151b2e4cd8c51caca3bae4d97e9d616720fda0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481281"
 ---
 # <a name="install-data-quality-services"></a>Installer Data Quality Services
@@ -22,10 +22,8 @@ ms.locfileid: "65481281"
   
 |Composant DQS|Description|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] est installé sur le moteur de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et inclut trois bases de données : DQS_MAIN, DQS_PROJECTS et DQS_STAGING_DATA. DQS_MAIN contient des procédures stockées DQS, le moteur DQS et des bases de connaissances publiées. DQS_PROJECTS contient les informations du projet Data Quality. DQS_STAGING_DATA est la zone de transit où vous pouvez copier vos données sources pour effectuer des opérations DQS, puis exporter vos données traitées.|  
-|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|
-  [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] est une application autonome qui vous permet de vous connecter à [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]et vous fournit une interface utilisateur graphique hautement intuitive pour effectuer des opérations de contrôle qualité des données et d’autres tâches administratives associées à DQS.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] est installé sur le moteur de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et inclut trois bases de données : DQS_MAIN, DQS_PROJECTS et DQS_STAGING_DATA. DQS_MAIN contient des procédures stockées DQS, le moteur DQS et des bases de connaissances publiées. DQS_PROJECTS contient les informations du projet Data Quality. DQS_STAGING_DATA est la zone de transit où vous pouvez copier vos données sources pour effectuer des opérations DQS, puis exporter vos données traitées.|  
+|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] est une application autonome qui vous permet de vous connecter à [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]et vous fournit une interface utilisateur graphique hautement intuitive pour effectuer des opérations de contrôle qualité des données et d’autres tâches administratives associées à DQS.|  
   
 > [!IMPORTANT]
 >  Indépendamment des deux composants DQS ci-dessus, vous pouvez également :  
@@ -35,40 +33,39 @@ ms.locfileid: "65481281"
   
  L'installation DQS est un processus en trois parties :  
   
--   [Tâches de pré-installation](#PreInstallationTasks): Vérifiez la configuration système requise avant d’installer DQS.  
+-   [Tâches de préinstallation](#PreInstallationTasks): vérifiez la configuration requise avant d’installer DQS.  
   
--   [Tâches d’installation de Data Quality Services](#DQSInstallation): installez DQS à l’aide du programme d’installation de SQL Server.  
+-   [Tâches d'installation de Data Quality Services](#DQSInstallation): installent DQS à l'aide du programme d'installation de SQL Server.  
   
--   [Tâches consécutives](#PostInstallationTasks)à l’installation : effectuez ces tâches après avoir terminé l’installation de SQL Server pour terminer l’installation de DQS.  
+-   [Tâches de post-installation](#PostInstallationTasks): exécutez ces tâches après avoir installé SQL Server pour finir d’installer DQS.  
   
 > [!NOTE]  
 >  Cette rubrique ne contient pas d'instructions relatives à l'exécution du programme d'installation à partir de la ligne de commande. Pour plus d’informations sur les options de ligne [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de commande pour l’installation de et du client, consultez [paramètres de fonctionnalités](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) dans [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-##  <a name="PreInstallationTasks"></a>Tâches de pré-installation  
+##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a>Tâches de pré-installation  
  Avant d'installer DQS, assurez-vous que votre ordinateur a la configuration minimale requise. Le tableau ci-dessous fournit des informations sur la configuration minimum requise pour les composants DQS :  
   
 |Composant DQS|Configuration minimale requise|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Mémoire (RAM) :<br />-Minimum : 2 Go<br />-Recommandé : 4 Go ou plus<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Moteur de base de données. Pour plus d’informations, consultez [à propos de la Moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-overview.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Mémoire (RAM) :<br />-Minimum : 2 Go<br />-Recommandé : 4 Go ou plus<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour plus d’informations, consultez [à propos de la Moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-overview.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installé lors de l'installation du [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , si ce composant n'est pas déjà installé)<br /><br /> Internet Explorer 6.0 SP1 ou version ultérieure.|  
   
 > [!IMPORTANT]
->  -   
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] et [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] peuvent être installés sur le même ordinateur ou sur des ordinateurs distincts. Les deux composants peuvent être installés indépendamment l'un de l'autre, et dans n'importe quel ordre. Toutefois, pour utiliser le [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], vous avez besoin d'un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installé auquel se connecter.  
+>  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] et [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] peuvent être installés sur le même ordinateur ou sur des ordinateurs distincts. Les deux composants peuvent être installés indépendamment l'un de l'autre, et dans n'importe quel ordre. Toutefois, pour utiliser le [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], vous avez besoin d'un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installé auquel se connecter.  
 > -   Connectez-vous à la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en utilisant la version actuelle ou une version antérieure de [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] et la Transformation de nettoyage DQS. Pour plus d’informations sur la mise à niveau de votre version existante de DQS vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Mettre à niveau Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md).  
 > -   Bien que Microsoft Excel ne soit pas un composant requis pour installer un client de qualité des données, Microsoft Excel 2003 ou une version ultérieure doit être installé sur l'ordinateur client de qualité des données pour effectuer diverses opérations dans l'application cliente, comme importer des valeurs de domaine à partir d'un fichier Excel ou mapper des données sources dans un fichier Excel pour les activités de découverte des connaissances, de nettoyage ou de correspondance.  
   
  Pour plus d’informations sur la configuration système minimale requise [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]pour l’installation de, consultez [configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
-##  <a name="DQSInstallation"></a>Tâches d’installation de Data Quality Services  
+##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Tâches d'installation de Data Quality Services  
  Vous devez utiliser le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour installer les composants de DQS. Lorsque vous exécutez le programme d'installation de SQL Server, vous devez parcourir les pages de l'Assistant Installation pour sélectionner les options appropriées selon votre configuration. Le tableau suivant répertorie uniquement les pages de l'Assistant Installation où les options que vous sélectionnez affectent votre installation de DQS :  
   
 |Page|Action|  
 |----------|------------|  
-|Sélection de caractéristiques|Sélectionnez :<br /><br /> **Data Quality Services** sous **moteur de base de données services** pour installer le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Si vous activez la case à cocher **Data Quality Services** , l’installation de SQL Server copie un fichier de programme d’installation, DQSInstaller.exe, sous le répertoire de l’instance SQL Server sur votre ordinateur. Vous devez exécuter ce fichier après avoir complété le programme d'installation de SQL Server pour *terminer* l'installation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . De plus, vous devez procéder à quelques étapes supplémentaires pour configurer votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] avant de pouvoir l'utiliser. Pour plus d’informations, consultez [Tâches de post-installation](#PostInstallationTasks).<br /><br /> **Data Quality client** à installer [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> (Recommandé) **Outils de gestion - Complet** sous **Outils de gestion - De base** pour installer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ils fournissent une interface utilisateur graphique pour gérer votre instance SQL Server et vous aideront à effectuer des tâches supplémentaires après l'installation, comme décrit dans la section suivante.|  
+|Sélection de caractéristiques|Sélectionnez :<br /><br /> **Data Quality Services** sous **Services Moteur de base de données** pour installer le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Si vous activez la case à cocher **Data Quality Services** , l’installation de SQL Server copie un fichier de programme d’installation, DQSInstaller.exe, sous le répertoire de l’instance SQL Server sur votre ordinateur. Vous devez exécuter ce fichier après avoir complété le programme d'installation de SQL Server pour *terminer* l'installation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . De plus, vous devez procéder à quelques étapes supplémentaires pour configurer votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] avant de pouvoir l'utiliser. Pour plus d’informations, consultez [Tâches de post-installation](#PostInstallationTasks).<br /><br /> **Client Data Quality** pour installer le [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> Recommandations **Outils de gestion-complet** sous **outils de gestion-** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]base pour l’installation. Ils fournissent une interface utilisateur graphique pour gérer votre instance SQL Server et vous aideront à effectuer des tâches supplémentaires après l'installation, comme décrit dans la section suivante.|  
 |Configuration du moteur de base de données|Cliquez **Ajouter l'utilisateur actuel** pour ajouter votre compte d'utilisateur Windows au rôle serveur fixe sysadmin. Cela est nécessaire pour être en mesure d'exécuter le fichier DQSInstaller.exe pour terminer l'installation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .|  
   
-##  <a name="PostInstallationTasks"></a>Tâches consécutives à l’installation  
+##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>Tâches consécutives à l’installation  
  Après avoir terminé l'Assistant Installation de SQL Server, vous devez effectuer les étapes supplémentaires indiquées dans cette section pour achever votre installation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , le configurer et l'utiliser.  
   
 |Action|Description|Rubriques connexes|  
@@ -86,6 +83,6 @@ ms.locfileid: "65481281"
  [Installer les fonctionnalités BI de SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Désinstaller SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../data-quality-services.md)   
- [Résoudre les problèmes d’installation et de configuration dans DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Résolution des problèmes d’installation et de configuration dans Data Quality Services (DQS)](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

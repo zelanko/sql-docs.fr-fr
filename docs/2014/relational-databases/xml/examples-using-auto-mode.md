@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287808"
 ---
 # <a name="examples-using-auto-mode"></a>Exemples : utilisation du mode AUTO
@@ -167,8 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>Exemple : renvoi de données binaires  
- Cette requête retourne une photo du produit de la table `ProductPhoto` . 
-  `ThumbNailPhoto` est une colonne `varbinary(max)` dans la table `ProductPhoto`. Par défaut, le mode `AUTO` renvoie vers les données binaires une référence, en l'occurrence une URL relative pointant vers la racine virtuelle de la base de données dans laquelle la requête est exécutée. L'attribut de clé `ProductPhotoID` doit être spécifié pour identifier l'image. Lors de l'extraction d'une référence d'image telle qu'elle apparaît dans cet exemple, la clé primaire de la table doit aussi être spécifiée dans la clause `SELECT` pour identifier une ligne de façon univoque.  
+ Cette requête retourne une photo du produit de la table `ProductPhoto` . `ThumbNailPhoto` est une colonne `varbinary(max)` dans la table `ProductPhoto`. Par défaut, le mode `AUTO` renvoie vers les données binaires une référence, en l'occurrence une URL relative pointant vers la racine virtuelle de la base de données dans laquelle la requête est exécutée. L'attribut de clé `ProductPhotoID` doit être spécifié pour identifier l'image. Lors de l'extraction d'une référence d'image telle qu'elle apparaît dans cet exemple, la clé primaire de la table doit aussi être spécifiée dans la clause `SELECT` pour identifier une ligne de façon univoque.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  

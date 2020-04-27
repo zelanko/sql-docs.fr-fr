@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102540"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>publier une source de données partagée sur une bibliothèque SharePoint
@@ -30,13 +30,13 @@ ms.locfileid: "66102540"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez un projet Report Server nouveau ou existant.  
   
-2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue _Pages de propriétés\< de_ **projet** s’affiche.  
+2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue **pages de propriétés** du _ \<projet>_ s’ouvre.  
   
 3.  Choisissez la **Configuration** que vous utilisez pour publier sur un site SharePoint.  
   
 4.  Si vous voulez publier les sources de données partagées dans votre projet et remplacer celles précédemment publiées, attribuez à **OverwriteDataSources** la valeur **True**.  
   
-5.  (Facultatif) Pour **TargetDataSourceFolder**, tapez l’URL d’une bibliothèque SharePoint ou d’un dossier de bibliothèque. Par exemple, *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Facultatif) Pour **TargetDataSourceFolder**, tapez l’URL d’une bibliothèque SharePoint ou d’un dossier de bibliothèque. Par exemple : *http://TestServer/TestSite/Documents/DataSources* .  
   
      Si vous ne spécifiez pas de valeur, la valeur **TargetReportFolder** est utilisée.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66102540"
     >  Une fois que vous avez publié une source de données partagée sur un site SharePoint, l'extension de nom de fichier devient .rsds. Vous pouvez modifier et gérer directement une source de données partagée sur le site SharePoint. Pour plus d’informations, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [publier un rapport dans une bibliothèque SharePoint](publish-a-report-to-a-sharepoint-library.md)   
+ [Publier un rapport dans une bibliothèque SharePoint](publish-a-report-to-a-sharepoint-library.md)   
  [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Pages de propriétés du projet, boîte de dialogue](../tools/project-property-pages-dialog-box.md)   
- [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [Définir les propriétés de déploiement &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Publication de rapports sur un serveur de rapports](publishing-reports-to-a-report-server.md)   
  [Utiliser une connexion de données Office &#40;.odc&#41; avec les rapports &#40;Reporting Services en mode intégré SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   

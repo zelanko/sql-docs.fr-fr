@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108110"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passer un paramètre de rapport dans une URL
@@ -26,7 +26,7 @@ ms.locfileid: "66108110"
 > [!IMPORTANT]  
 >  Il est important que l'URL inclue la syntaxe de proxy `_vti_bin` pour acheminer la requête via SharePoint et le proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Le proxy ajoute à la requête HTTP le contexte nécessaire pour garantir une exécution correcte du rapport pour les serveurs de rapports en mode SharePoint.  
 >   
->  Si vous n’incluez pas la syntaxe de proxy, vous devez faire précéder le paramètre de *rp:* .  
+>  Si vous n’incluez pas la syntaxe du proxy, vous devez faire précéder le paramètre du paramètre *RP :*.  
   
  Tous les paramètres de requête peuvent avoir des paramètres de rapport correspondants. Vous passez un paramètre de requête à un rapport en transmettant le paramètre de rapport correspondant. Pour plus d’informations, consultez [Générer une requête dans le Concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Si votre rapport contient un paramètre de rapport qui possède une valeur par défaut et que la valeur de la propriété `Prompt` est `false` (autrement dit, la propriété Demander à l'utilisateur n'est pas sélectionnée dans le Gestionnaire de rapports), vous ne pouvez pas passer de valeur pour ce paramètre de rapport dans une URL. Cela permet aux administrateurs d'empêcher les utilisateurs finaux d'ajouter ou de modifier les valeurs de certains paramètres de rapport.  
   
-##  <a name="bkmk_examples"></a> Autres exemples  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Autres exemples  
  L'exemple d'URL suivante comprend des espaces et plusieurs paramètres  
   
 -   Le nom de dossier « SQL Server User Education Team » comprend des espaces ; par conséquent, un « + » remplace chaque espace.  
@@ -99,14 +99,14 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- L’exemple d’URL suivant passe un seul paramètre *SellStartDate* avec la valeur « 7/1/2005 » pour un serveur de rapports en mode natif.  
+ L’exemple d’URL suivant passe un paramètre unique de *SellStartDate* avec la valeur « 7/1/2005 », pour un serveur de rapports en mode natif.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès URL &#40;SSRS&#41;](url-access-ssrs.md)   
- [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
+ [Accès URL &#40;&#41;SSRS](url-access-ssrs.md)   
+ [Référence de paramètre d’accès URL](url-access-parameter-reference.md)  
   
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481205"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Options (Résultats de la requête et Page Services de dépendance)
@@ -28,13 +28,13 @@ ms.locfileid: "65481205"
   
 2.  [Configurer les options](#options)  
   
-##  <a name="open_dialog"></a>Ouvrir la boîte de dialogue Options (résultats de la requête/page services de dépendance)  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Ouvrir la boîte de dialogue Options (résultats de la requête/page services de dépendance)  
   
 1.  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez sur **options** dans le menu **Outils** .  
   
 2.  Développez **Résultats de la requête**, puis cliquez sur **Services de dépendance**.  
   
-##  <a name="options"></a> Configurer les options  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurer les options  
   
 ### <a name="options"></a>Options  
  **Serveur de services de dépendance**  

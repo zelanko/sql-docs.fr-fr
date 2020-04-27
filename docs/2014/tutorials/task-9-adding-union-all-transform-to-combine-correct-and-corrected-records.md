@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489649"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tâche 9 : Ajout d'une transformation d'union totale pour combiner des enregistrements corrects et corrigés
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tâche 9 : Ajout d’une transformation d’union totale pour combiner des enregistrements corrects et corrigés
   Dans cette tâche, vous allez ajouter une transformation d'union totale au flux de données. La transformation d'union totale combine plusieurs entrées en une seule sortie. Dans votre scénario, elle combine les enregistrements corrects et corrigés dans un seul flux.  
   
 1.  Faites glisser la transformation **Union All** de la section **commun** de la **boîte à outils SSIS** vers l’onglet de **Workflow** et placez-la sous **Sélectionner les enregistrements corrects et corrigés**.  
@@ -43,6 +43,6 @@ ms.locfileid: "65489649"
 7.  Ce **connecteur** doit être **corrigé**. Étant donné que deux conditions sont **correctes** et **corrigées**et que l’une d’elles a déjà été utilisée, la boîte de dialogue **sélection de sortie d’entrée** ne s’affiche pas cette fois. Si les connecteurs se chevauchent, déplacez un connecteur à gauche et l'autre à droite en les faisant glisser.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 10 : Ajouter la transformation de regroupement probable pour identifier des doublons](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [Tâche 10 : Ajout d’une transformation de regroupement probable pour identifier des doublons](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

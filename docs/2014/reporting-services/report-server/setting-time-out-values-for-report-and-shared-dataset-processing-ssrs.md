@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103209"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
@@ -55,8 +55,8 @@ ms.locfileid: "66103209"
 >  Vous pouvez définir le paramètre `RunningRequestsDbCycle` du fichier RSReportServer.config pour changer la fréquence d'évaluation des travaux en cours d'exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services serveur de rapports &#40;le mode natif&#41;](reporting-services-report-server-native-mode.md)   
+ [Définissez les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Serveur de rapports Reporting Services &#40;mode natif&#41;](reporting-services-report-server-native-mode.md)   
  [Gérer un processus en cours d’exécution](../subscriptions/manage-a-running-process.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  
   

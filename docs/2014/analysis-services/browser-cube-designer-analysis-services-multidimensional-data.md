@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174283"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Navigateur (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -40,7 +40,7 @@ ms.locfileid: "78174283"
 
  L’illustration suivante montre l’interface du **Navigateur** pour le mode Requête.
 
- ![Concepteur de requêtes MDX Analysis Services, affichage des requêtes](media/rsqd-dsawas-mdx-querymode.gif "Concepteur de requêtes MDX Analysis Services, affichage des requêtes")
+ ![Concepteur de requêtes MDX Analysis Services, mode Requête](media/rsqd-dsawas-mdx-querymode.gif "Concepteur de requêtes MDX Analysis Services, mode Requête")
 
  Vous pouvez commencer à travailler en mode de création graphique, ajouter tous les objets requis, ajouter des filtres pour découper le cube, puis basculer en mode texte pour étendre la requête MDX générée par défaut et pour inclure des propriétés de membre et de cellule supplémentaires.
 

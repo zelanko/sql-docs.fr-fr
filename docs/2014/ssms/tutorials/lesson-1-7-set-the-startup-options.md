@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312619"
 ---
 # <a name="set-the-startup-options"></a>Définir les options de démarrage
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut être configuré de façon à ouvrir la zone de conception avec la configuration de votre choix au démarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Configurer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour qu'il s'ouvre avec votre configuration préférée peut vous faire gagner du temps.  
   
 ## <a name="configuring-startup-options"></a>Configuration des options de démarrage  
@@ -31,13 +30,13 @@ ms.locfileid: "63312619"
   
     -   **Ouvrez l’Explorateur d’objets**. Il s'agit de l'option par défaut.  
   
-    -   **Ouvrez une nouvelle fenêtre de requête**.  
+    -   **Ouvrir la fenêtre de nouvelle requête**.  
   
-    -   **Ouvrez l’Explorateur d’objets et la nouvelle requête**.  
+    -   **Ouvrir l'Explorateur d'objets et la nouvelle requête**.  
   
-    -   **Ouvrez l’Explorateur d’objets et le moniteur d’activité**.  
+    -   **Ouvrir l'Explorateur d'objets et le Moniteur d'activité**.  
   
-    -   **Ouvrez l’environnement vide**.  
+    -   **Ouvrir l'environnement vide**.  
   
 3.  Cliquez sur l'option de votre choix, puis sur **OK**.  
   

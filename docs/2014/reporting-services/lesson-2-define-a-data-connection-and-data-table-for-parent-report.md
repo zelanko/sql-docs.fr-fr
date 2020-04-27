@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108495"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : définir une connexion de données et une table de données pour le rapport parent
@@ -28,11 +28,11 @@ ms.locfileid: "66108495"
   
      Ce faisant, vous ajoutez un nouveau fichier XSD **DataSet1.xsd** au projet et ouvrez le Concepteur de DataSet.  
   
-3.  À partir de la fenêtre Boîte à outils, faites glisser un contrôle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** dans l’aire de conception. Cette opération permet de lancer l’Assistant de configuration de **TableAdapter** .  
+3.  À partir de la fenêtre boîte à outils, faites glisser un contrôle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** vers l’aire de conception. Cette opération permet de lancer l’Assistant de configuration de **TableAdapter** .  
   
 4.  Sur la page **choisir votre connexion de données** , cliquez sur **nouvelle connexion**.  
   
-5.  Si vous avez créé une source de données dans Visual Studio pour la première fois, la page **Choisir une source de données** s’affiche. Dans la zone **Source de données** , sélectionnez **Microsoft SQL Server**.  
+5.  S’il s’agit de la première fois que vous avez créé une source de données dans Visual Studio, la page **choisir la source de données** s’affiche. Dans la zone **Source de données** , sélectionnez **Microsoft SQL Server**.  
   
 6.  Dans la boîte de dialogue **Ajouter une connexion** , effectuez les étapes suivantes :  
   

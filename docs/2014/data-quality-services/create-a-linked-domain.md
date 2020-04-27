@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481012"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
@@ -33,17 +33,17 @@ ms.locfileid: "65481012"
   
  C’est le cas, par exemple, si un enregistrement contient les champs suivants : Prénom du client, Nom de famille du client et Prénom du parent. Supposons que vous mappiez le prénom du client et le prénom du parent à un domaine Prénom, puis que vous définissiez le domaine Prénom et le domaine Nom de famille en tant que partie d’un domaine composite Nom complet. Le problème est que le prénom du parent sera ajouté au domaine composite sans nom de famille. Si, en revanche, vous liez chacun des deux champs de prénom à un domaine, puis que vous liez les deux domaines, vous pouvez alors ajouter le domaine Prénom du client au domaine composite Nom complet, et ne pas ajouter le champ Prénom du parent au domaine composite, ce qui évite que le Prénom du parent soit ajouté au domaine composite.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour créer un domaine lié, vous devez disposer d'une base de connaissances et d'un domaine existant auquel établir un lien.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine lié.  
   
-##  <a name="Create"></a>Créer un domaine lié  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a>Créer un domaine lié  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65481012"
   
 7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="Map"></a>Mapper deux champs à des domaines liés  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>Mapper deux champs à des domaines liés  
   
 1.  Ouvrez une base de connaissances dans l'activité de découverte des connaissances, puis mappez la base de connaissances à la base de données et à la table ou à la vue.  
   
@@ -72,10 +72,10 @@ ms.locfileid: "65481012"
   
 4.  Dans la boîte de dialogue Créer un domaine, entrez un nom de domaine et une description, puis cliquez sur OK.  
   
-##  <a name="FollowUp"></a>Suivi : après avoir créé un domaine lié  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>Suivi : après avoir créé un domaine lié  
  Après avoir créé un domaine lié, vous pouvez effectuer d'autres tâches de gestion de l'arborescence du domaine sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Behavior"></a>Comportement d’un domaine lié  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>Comportement d’un domaine lié  
  Vous pouvez modifier les paramètres d'un domaine lié comme suit :  
   
 -   Vous pouvez modifier le nom et la description d'un domaine lié.  

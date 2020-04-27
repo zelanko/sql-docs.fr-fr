@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482871"
 ---
 # <a name="lock-a-version-master-data-services"></a>Verrouiller une version (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65482871"
 > [!NOTE]  
 >  Lorsqu'une version est verrouillée, les administrateurs de modèle peuvent continuer à ajouter, modifier et supprimer des membres. Les autres utilisateurs qui ont une autorisation sur le modèle peuvent consulter les membres uniquement.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   L’état de la version doit être **Ouvert**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65482871"
   
 -   [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [Valider une version &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [Activer une version &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   

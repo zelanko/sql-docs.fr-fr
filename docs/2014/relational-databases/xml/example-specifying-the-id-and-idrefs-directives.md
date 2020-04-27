@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : spécification des directives ID et IDREFS | Microsoft Docs'
+title: 'Exemple : Spécification des directives ID et IDREFS | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63288879"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemple : spécification des directives ID et IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemple : Spécification des directives ID et IDREF
   Un attribut d'élément peut être spécifié comme attribut de type `ID` et l'attribut `IDREFS` peut ensuite être utilisé pour y faire référence. Cela permet de créer des liens à l'intérieur du document et est assimilable aux relations entre clés primaires et clés étrangères dans les bases de données relationnelles.  
   
  Cet exemple illustre l'utilisation des directives `ID` et `IDREFS` pour créer des attributs de types `ID` et `IDREFS`. Étant donné que les ID ne peuvent pas être des valeurs entières, dans cet exemple, leurs valeurs sont converties. En d'autres termes, ils subissent une conversion de type. Des préfixes sont utilisés pour les valeurs d'ID.  

@@ -16,23 +16,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261977"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Propriétés de l’éditeur de Réplication SQL Server
   Cette section contient des informations sur les propriétés du serveur de publication disponibles sur le serveur de distribution et sur le serveur de publication. 
 
 ## <a name="general"></a>Général  
-  La page **Général** de la boîte de dialogue **Propriétés du serveur de publication** contient des informations en lecture seule sur le serveur de distribution et la base de données de distribution qu'utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
+   La page **Général** de la boîte de dialogue **Propriétés du serveur de publication** contient des informations en lecture seule sur le serveur de distribution et la base de données de distribution qu’utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
   
 1.  Désactivez la publication sur le serveur de publication. Pour plus d’informations, consultez [Désactiver la publication et la distribution](disable-publishing-and-distribution.md).    
 2.  Reconfigurez la publication et la distribution. Pour plus d’informations, consultez [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
 
 ## <a name="distributor"></a>Serveur de distribution
-  La boîte de dialogue **Propriétés du serveur de publication** permet d'afficher et de modifier les propriétés associées à la relation existant entre le serveur de publication et son serveur de distribution.  
+   La boîte de dialogue **Propriétés du serveur de publication** permet d’afficher et de modifier les propriétés associées à la relation existant entre le serveur de publication et son serveur de distribution.  
   
 ### <a name="options"></a>Options  
  **Connexion de l'agent au serveur de publication**  
@@ -61,7 +61,7 @@ ms.locfileid: "63261977"
  **Transactionnelle**  
  Activez cette case à cocher pour permettre aux utilisateurs du rôle de base de données fixe **db_owner** de créer des publications d'instantanés ou des publications transactionnelles dans la base de données. 
   
- **Fusionner**  
+ **Fusion**  
  Activez cette case à cocher pour permettre aux utilisateurs du rôle de base de données fixe **db_owner** de créer des publications de fusion dans la base de données.  
 
 ## <a name="subscribers"></a>Abonnés
@@ -70,13 +70,13 @@ ms.locfileid: "63261977"
   
 ### <a name="options"></a>Options  
  **Abonnés**  
- La grille de propriétés **Abonnés** indique les abonnés qui peuvent recevoir des données de publication du serveur de publication. Cliquez sur le bouton des propriétés ( **...** ) à côté d'un abonné pour afficher et définir des propriétés supplémentaires.  
+ La grille de propriétés **Abonnés** indique les abonnés qui peuvent recevoir des données de publication du serveur de publication. Cliquez sur le bouton des propriétés (**...**) à côté d'un abonné pour afficher et définir des propriétés supplémentaires.  
   
  **Ajouter**  
  Cliquez sur **Ajouter** pour ajouter un abonné, puis cliquez sur **Ajout un Abonné SQL Server** ou **Ajouter un Abonné non-SQL Server**.  
 
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
 
   
   

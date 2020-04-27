@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206730"
 ---
 # <a name="running-stored-procedures"></a>Exécution des procédures stockées
-  Une procédure stockée est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]permet  
+  Une procédure stockée est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge :  
   
 -   Procédures stockées :  
   
@@ -59,9 +59,9 @@ ms.locfileid: "68206730"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Appel d'une procédure stockée](calling-a-stored-procedure.md)  
+-   [Appel d’une procédure stockée](calling-a-stored-procedure.md)  
   
--   [Traitement par lot des appels aux procédures stockées](batching-stored-procedure-calls.md)  
+-   [Traitement par lot des appels de procédures stockées](batching-stored-procedure-calls.md)  
   
 -   [Traitement des résultats des procédures stockées](processing-stored-procedure-results.md)  
   

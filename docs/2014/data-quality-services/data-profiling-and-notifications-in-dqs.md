@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480798"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profilage des données et notifications dans DQS
@@ -30,7 +30,7 @@ ms.locfileid: "65480798"
   
  Le profilage vous permet d'utiliser Data Quality Services non seulement pour la découverte des connaissances, le nettoyage et la correspondance, mais aussi en tant qu'outil d'analyse. Vous pouvez créer une base de connaissances pour l'analyse et exécutez la découverte des connaissances à l'aide de cette base de connaissances pour déterminer à partir des statistiques de profilage si la base de connaissances répond à vos besoins de découverte, nettoyage et correspondance.  
   
-##  <a name="How"></a>Fonctionnement du profilage  
+##  <a name="how-profiling-works"></a><a name="How"></a> Fonctionnement du profilage  
  Le profilage ne mesure pas la qualité de la base de connaissances. Il mesure la qualité des données sources. Le profilage vous fournit des statistiques qui indiquent l'effet de l'opération spécifique que vous effectuez dans la gestion des connaissances ou un projet de qualité des données sur vos données sources. Le profilage est toujours dans le contexte de l'activité spécifique que vous effectuez. Vous pouvez cliquer sur l'onglet de profilage dans un écran pour afficher des données de profilage sans quitter l'étape de l'activité que vous effectuez. La table de profilage est remplie en temps réel lorsque le processus est exécuté, ce qui vous permet d'évaluer les tâches de qualité des données pendant que vous les effectuez. Vous pouvez déterminer si les données sources sont meilleures après le nettoyage ou la déduplication, et dans quelle mesure.  
   
  Tous les numéros de profilage font référence au nombre d'apparitions d'une valeur et, dans de nombreux cas, au pourcentage du total, à l'exception des mesures d'unicité. Les mesures d'unicité font référence au nombre absolu de valeurs, quel que soit le nombre d'apparitions de ces valeurs.  
@@ -47,7 +47,7 @@ ms.locfileid: "65480798"
   
  DQS ne fournit pas de statistiques de profilage pour l'activité de gestion de l'arborescence du domaine.  
   
-##  <a name="Activity"></a>Profilage des données par activité  
+##  <a name="profiling-data-by-activity"></a><a name="Activity"></a> Profilage des données par activité  
  Le profilage DQS utilise des dimensions standard de qualité des données pour représenter la qualité des données : exhaustivité (dans quelle mesure les données sont présentes), précision (dans quelle mesure les données peuvent être utilisées pour l'usage prévu) et unicité (dans quelle mesure différentes valeurs représentent différentes entités). Par défaut, les valeurs Null et vides sont considérées comme manquantes, ou diminuent le pourcentage d'exhaustivité ; toutefois, vous pouvez également définir d'autres valeurs comme équivalentes aux valeurs Null, auquel cas elles sont également considérées comme manquantes.  
   
  Le profilage vous fournit les statistiques nécessaires pour évaluer vos processus, mais vous devez interpréter les statistiques. Saisissez la signification de ce que le profilage indique en examinant les statistiques colonne par colonne.  
@@ -66,16 +66,16 @@ ms.locfileid: "65480798"
   
 -   [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Nettoyer les données à l’aide de DQS &#40;connaissances&#41; internes](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md)  
   
 -   [Exécuter un projet de correspondance](../../2014/data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a>Profilage des données dans l’analyse des activités  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Profilage des données dans l’analyse des activités  
  Les informations de profilage pour les activités de découverte des connaissances, de stratégie de correspondance, de correspondance et de nettoyage sont disponibles non seulement dans les pages des activités dans Data Quality Client, mais également dans l'analyse des activités. L'analyse des activités vous fournit une vue d'ensemble des activités en cours et passées. Outre les propriétés et les processus de calcul connexes des activités, vous pouvez afficher les informations de profilage générées pour chaque activité à un emplacement. Vous sélectionnez une activité dans la table des activités pour afficher les résultats de profilage dans une table ci-dessous. Vous pouvez également exporter les résultats de profilage. Pour plus d’informations, consultez [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
-##  <a name="Notifications"></a>Fonctionnalité  
+##  <a name="notifications"></a><a name="Notifications"></a>Fonctionnalité  
  En plus de collecter et d'afficher des statistiques et des mesures importantes par le profilage, DQS génère des notifications (si l'option est activée) pour indiquer lorsque vous pouvez prendre une mesure en fonction des statistiques de profilage affichées. DQS utilise des notifications pour mettre en évidence des faits importants sur la source de données et afficher l'efficacité de l'activité actuelle par rapport au rôle pour lequel elle a été exécutée. Les notifications fournissent des conseils et des recommandations qui indiquent une condition et comment vous pouvez améliorer une activité de découverte des connaissances, nettoyage des données ou correspondance de données.  
   
  Une notification DQS est utilisée pour soulever une question qui peut vous intéresser, ou pour résoudre un problème potentiel. Vous agissez à la suite de la notification si elle est appropriée à vos besoins. Par exemple, supposons que DQS publie une notification lorsque le nettoyage de données ne produit aucune valeur corrigée ni suggérée alors que l'exhaustivité et la précision sont toutes deux de 100 %. Cette notification indique que l'exécution de l'activité peut ne pas être nécessaire. Toutefois, il vous appartient de choisir d'exécuter l'activité.  
@@ -88,7 +88,7 @@ ms.locfileid: "65480798"
   
 -   [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Nettoyer les données à l’aide de DQS &#40;connaissances&#41; internes](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md)  
   

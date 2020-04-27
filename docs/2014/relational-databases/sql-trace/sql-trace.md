@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63286528"
 ---
 # <a name="sql-trace"></a>Trace SQL
@@ -29,12 +29,12 @@ ms.locfileid: "63286528"
 ## <a name="sql-trace-architecture"></a>Architecture de Trace SQL  
  Les sources d'événement peuvent être n'importe quelle source produisant l'événement de trace, telle que des traitements [!INCLUDE[tsql](../../../includes/tsql-md.md)] , ou bien des événements [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , comme des blocages par exemple. Pour plus d’informations sur les événements, consultez [Référence de classe d’événements SQL Server](../event-classes/sql-server-event-class-reference.md). Dès qu'un événement se produit, si la classe d'événements a été incluse dans une définition de trace, les informations relatives à l'événement sont collectées par la trace. Si des filtres ont été définis pour la classe d'événements dans la définition de la trace, ils sont appliqués et les informations relatives aux événements de la trace sont transmises à une file d'attente. À partir de la file d'attente, les informations de la trace sont écrites dans un fichier ou peuvent être utilisées par un objet SMO dans des applications telles que le [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Le schéma suivant montre comment la trace SQL collecte les événements lors d'un traçage.  
   
- ![Processus de suivi d'événements du moteur de base de données](../../database-engine/media/tracarch.gif "Processus de suivi d'événements du moteur de base de données")  
+ ![Processus de suivi d’événements du moteur de base de données](../../database-engine/media/tracarch.gif "Processus de suivi d’événements du moteur de base de données")  
   
 ## <a name="sql-trace-terminology"></a>Terminologie associée à Trace SQL  
  Les termes suivants décrivent les concepts fondamentaux de Trace SQL.  
   
- **Événement**  
+ **Event**  
  Occurrence d’une action dans une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
  **Colonne de données**  
@@ -46,7 +46,7 @@ ms.locfileid: "63286528"
  **Catégorie d’événement**  
  Groupe de classes d'événements liées.  
   
- **Trace** (substantif)  
+ **Trace** (nom)  
  Collection d'événements et de données retournés par le [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  **Trace** (verbe)  
@@ -75,11 +75,11 @@ ms.locfileid: "63286528"
 |**ApplicationName** <sup>1</sup>|10|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cette colonne est remplie des valeurs transmises par l'application et non pas du nom du programme.|  
 |**BigintData1**|52|Valeur (type de données `bigint`), qui dépend de la classe d'événements spécifiée dans la trace.|  
 |**BigintData2**|53|Valeur (type de données `bigint`), qui dépend de la classe d'événements spécifiée dans la trace.|  
-|**Données binaires**|2|Valeur binaire qui dépend de la classe d'événements capturée dans la trace.|  
+|**Binary Data**|2|Valeur binaire qui dépend de la classe d'événements capturée dans la trace.|  
 |**ClientProcessID** <sup>1</sup>|9|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|  
 |**ColumnPermissions**|44|Indique si une autorisation au niveau de la colonne a été définie. Vous pouvez analyser le texte de l'instruction pour déterminer quelles autorisations ont été appliquées à quelles colonnes.|  
-|**POURCENTAGE**|18|Temps processeur (en millisecondes) utilisé par l'événement.|  
-|**ID de base de données** <sup>1</sup>|3|ID de la base de données spécifiée par l’instruction USE de *nom_base_de_données* ou celui de la base de données par défaut si aucune instruction USE de *nom_base_de_données*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données **ServerName** est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|  
+|**UC**|18|Temps processeur (en millisecondes) utilisé par l'événement.|  
+|**ID de base de données** <sup>1</sup>|3|ID de la base de données spécifiée par l’instruction USE de *nom_base_de_données* ou celui de la base de données par défaut si aucune instruction USE de *nom_base_de_données*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|  
 |**DatabaseName**|35|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|  
 |**DBUserName** <sup>1</sup>|40|Nom d'utilisateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du client.|  
 |**Durée**|13|Durée (en microsecondes) de l'événement.<br /><br /> Le serveur signale la durée d’un événement en microsecondes (un millionième, ou 10<sup>-6</sup>, de seconde) et le temps UC utilisé par l’événement en millisecondes (un millième, ou 10<sup>-3</sup>, de seconde). L'interface utilisateur graphique de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] affiche par défaut la colonne **Durée** en millisecondes. Cependant, quand la trace est enregistrée dans un fichier ou une table de base de données, la valeur de la colonne **Durée** est mentionnée en microsecondes.|  
@@ -87,10 +87,10 @@ ms.locfileid: "63286528"
 |**Error**|31|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans **sysmessages**.|  
 |**EventClass** <sup>1</sup>|27|Type de classe d'événements capturée.|  
 |**EventSequence**|51|Numéro de séquence de cet événement.|  
-|**EventSubClass** <sup>1</sup>|21|Type de sous-classe d'événements, qui fournit des informations complémentaires concernant chaque classe d'événements. Par exemple, les valeurs de sous-classe d’événements pour la classe d’événements **Execution Warning** représentent le type d’avertissement pour l’exécution :<br /><br /> **1** = attente de requête. La requête doit attendre les ressources (telles que la mémoire) pour s'exécuter.<br /><br /> **2** = délai d’expiration de la requête. La requête a expiré pendant l’attente de l’exécution des ressources requises. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
-|**UNIQUES**|54|Valeur de type GUID qui dépend de la classe d'événements spécifiée dans la trace.|  
-|**Extension**|36|Nom logique du fichier modifié.|  
-|**Traitée**|33|Entier utilisé par ODBC, OLE DB ou DB-Library pour coordonner l'exécution du serveur.|  
+|**EventSubClass** <sup>1</sup>|21|Type de sous-classe d'événements, qui fournit des informations complémentaires concernant chaque classe d'événements. Par exemple, les valeurs de sous-classe d’événements pour la classe d’événements **Execution Warning** représentent le type d’avertissement pour l’exécution :<br /><br /> **1** = Attente de requête. La requête doit attendre les ressources (telles que la mémoire) pour s'exécuter.<br /><br /> **2** = délai d’expiration de la requête. La requête a expiré pendant l’attente de l’exécution des ressources requises. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
+|**GUID**|54|Valeur de type GUID qui dépend de la classe d'événements spécifiée dans la trace.|  
+|**FileName**|36|Nom logique du fichier modifié.|  
+|**Handle**|33|Entier utilisé par ODBC, OLE DB ou DB-Library pour coordonner l'exécution du serveur.|  
 |**Nom d’hôte** <sup>1</sup>|8|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|  
 |**IndexID contient**|24|ID d'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
 |**IntegerData**|25|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
@@ -109,30 +109,30 @@ ms.locfileid: "63286528"
 |**ObjectID2**|56|ID de l'objet ou de l'entité associé, s'il est disponible.|  
 |**ObjectName**|34|Nom de l'objet référencé.|  
 |**Typeobjet** <sup>2</sup>|28|Valeur représentant le type de l'objet impliqué dans l'événement. Cette valeur correspond à la colonne de **type** dans **sysobjects**.|  
-|**Décalage**|61|Décalage de départ de l'instruction dans la procédure stockée ou le traitement.|  
+|**Offset**|61|Décalage de départ de l'instruction dans la procédure stockée ou le traitement.|  
 |**OwnerID**|58|Pour les événements de verrou uniquement. Type de l'objet qui possède un verrou.|  
 |**OwnerName**|37|Nom d'utilisateur de base de données du propriétaire de l'objet.|  
 |**ParentName**|59|Nom du schéma qui contient l'objet.|  
-|**autorisations**|19|Valeur entière représentant le type d'autorisations vérifiées. Les valeurs sont les suivantes :<br /><br /> **1** = sélectionner tout<br /><br /> **2** = tout mettre à jour<br /><br /> **4** = références All<br /><br /> **8** = insertion<br /><br /> **16** = suppression<br /><br /> **32** = Execute (procédures uniquement)<br /><br /> **4096** = Select any (au moins une colonne)<br /><br /> **8192** = Update any<br /><br /> **16384** = fait référence à tout|  
+|**autorisations**|19|Valeur entière représentant le type d'autorisations vérifiées. Les valeurs sont les suivantes :<br /><br /> **1** = sélectionner tout<br /><br /> **2** = tout mettre à jour<br /><br /> **4** = références All<br /><br /> **8** = insertion<br /><br /> **16** = suppression<br /><br /> **32** = Execute (procédures uniquement)<br /><br /> **4096** = Select any (au moins une colonne)<br /><br /> **8192** = Update any<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Nom du fournisseur OLE DB.|  
 |**Lectures**|16|Nombre d'opérations de lecture sur le disque logique effectuées par le serveur pour l'événement. Ces opérations de lecture comprennent toutes les lectures des tables et des tampons pendant l'exécution de l'instruction.|  
 |**Identifi**|49|ID de la demande qui contient l'instruction.|  
 |**RoleName**|38|Nom du rôle d'application activé.|  
-|**Nombres**|48|Nombre de lignes du traitement.|  
+|**RowCounts**|48|Nombre de lignes du traitement.|  
 |**Nom_serveur** <sup>1</sup>|26|Nom de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tracée.|  
 |**SessionLoginName**|64|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de **Login1** et que vous exécutez une instruction en tant que **Login2**, **SessionLoginName** affiche **Login1**, tandis que **LoginName** affiche **Login2**. Cette colonne de données affiche les noms de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et Windows.|  
-|**severity**|20|Niveau de gravité de l'événement d'exception.|  
+|**Gravité**|20|Niveau de gravité de l'événement d'exception.|  
 |**SourceDatabaseID**|62|ID de la base de données contenant la source de l'objet.|  
 |**SPID**|12|ID de processus serveur (SPID) affecté par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] au processus associé au client.|  
-|**SqlHandle**|63|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être transmise à **sys.dm_exec_sql_text()** pour récupérer le texte SQL associé.|  
+|**SqlHandle**|63|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à **sys. dm_exec_sql_text ()** pour récupérer le texte SQL associé.|  
 |**StartTime** <sup>1</sup>|14|Heure de début de l'événement, le cas échéant.|  
 |**State**|30|Code d’état d’erreur.|  
-|**Success**|23|Indique si l'événement a réussi. Ces valeurs comprennent :<br /><br /> **1** = réussite.<br /><br /> **0** = échec<br /><br /> Par exemple, **1** signifie la réussite de la vérification d’autorisations et **0** l’échec de cette vérification.|  
+|**Opération réussie**|23|Indique si l'événement a réussi. Ces valeurs comprennent :<br /><br /> **1** = réussite.<br /><br /> **0** = échec<br /><br /> Par exemple, **1** signifie la réussite de la vérification d’autorisations et **0** l’échec de cette vérification.|  
 |**TargetLoginName**|42|Pour les actions qui ciblent une connexion, nom de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetLoginSid**|43|Pour les actions qui ciblent une connexion, SID de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetUserName**|39|Pour les actions qui ciblent un utilisateur de base de données, nom de cet utilisateur, par exemple pour accorder une autorisation à un utilisateur.|  
 |**TextData**|1|Valeur de texte qui dépend de la classe d'événements capturée dans la trace. Néanmoins, si vous tracez une requête paramétrable, les variables ne sont pas affichées avec les valeurs de données dans la colonne **TextData** .|  
-|**ID de la transaction**|4|ID affecté à la transaction par le système.|  
+|**ID de transaction**|4|ID affecté à la transaction par le système.|  
 |**Type**|57|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
 |**Écritures**|17|Nombre d'opérations d'écriture sur le disque physique effectuées par le serveur pour l'événement.|  
 |**XactSequence**|50|Jeton servant à décrire la transaction en cours.|  
@@ -151,17 +151,17 @@ ms.locfileid: "63286528"
 |Explique comment améliorer l’accès aux données de trace à l’aide de l’espace disponible dans le répertoire **temp** .|[Améliorer l'accès aux données de trace](../sql-trace/improve-access-to-trace-data.md)|  
 |Explique comment utiliser des procédures stockées pour créer une trace.|[Créer une trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)|  
 |Explique comment utiliser des procédures stockées pour créer un filtre qui n'extrait que les informations requises lors d'un événement en cours de traçage.|[Définir un filtre de trace &#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)|  
-|Explique comment utiliser des procédures stockées pour modifier une trace existante.|[Modifier une trace existante &#40;&#41;Transact-SQL](../sql-trace/modify-an-existing-trace-transact-sql.md)|  
-|Explique comment utiliser des fonctions intégrées pour afficher une trace enregistrée.|[Afficher une trace enregistrée &#40;&#41;Transact-SQL](../sql-trace/view-a-saved-trace-transact-sql.md)|  
-|Explique comment utiliser les fonctions intégrées pour afficher les informations de filtrage de traces.|[Afficher les informations de filtre &#40;&#41;Transact-SQL](../sql-trace/view-filter-information-transact-sql.md)|  
-|Explique comment utiliser des procédures stockées pour supprimer une trace.|[Supprimer une trace &#40;&#41;Transact-SQL](../sql-trace/delete-a-trace-transact-sql.md)|  
+|Explique comment utiliser des procédures stockées pour modifier une trace existante.|[Modifier une trace existante &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md)|  
+|Explique comment utiliser des fonctions intégrées pour afficher une trace enregistrée.|[Afficher une trace enregistrée &#40;Transact-SQL&#41;](../sql-trace/view-a-saved-trace-transact-sql.md)|  
+|Explique comment utiliser les fonctions intégrées pour afficher les informations de filtrage de traces.|[Afficher des informations de filtrage &#40;Transact-SQL&#41;](../sql-trace/view-filter-information-transact-sql.md)|  
+|Explique comment utiliser des procédures stockées pour supprimer une trace.|[Supprimer une trace &#40;Transact-SQL&#41;](../sql-trace/delete-a-trace-transact-sql.md)|  
 |Explique comment limiter la baisse de performances induite par une trace.|[Optimiser Trace SQL](../sql-trace/sql-trace.md)|  
 |Explique comment filtrer une trace pour réduire la charge qui est générée pendant une trace.|[Filtrer une trace](../sql-trace/filter-a-trace.md)|  
 |Explique comment réduire la quantité de données collectées par la trace.|[Limiter les tailles de fichier et de table de trace](../sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Décrit les deux façons de planifier le traçage dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Planifier les traces](../sql-trace/schedule-traces.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guide de programmation SQL Server Management Objects &#40;SMO&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

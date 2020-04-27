@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68190044"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Nouveautés dans l’installation de SQL Server
@@ -36,6 +36,6 @@ ms.locfileid: "68190044"
  [Nouveautés de SQL Server 2014](../what-s-new-in-sql-server-2016.md)   
  [Spécifications de produit pour SQL Server 2014](../../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Planification d’une installation de SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
- [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
   

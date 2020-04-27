@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108154"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Page Nouvelle attribution de rôle : Modifier l’attribution de rôle (Gestionnaire de rapports)
   Utilisez la page Nouvelle attribution de rôle ou Modifier l'attribution de rôle pour accorder des autorisations à des opérations et éléments de serveur de rapports. Chaque utilisateur qui demande l'accès à un serveur de rapports doit posséder une attribution de rôle qui définit le niveau d'accès. Vous pouvez créer des attributions de rôles au nœud racine ou sur un rapport, modèle, dossier, ressource ou source de données partagée spécifique. La sécurité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est mise en place via les attributions de rôle que vous appliquez aux éléments. Une attribution de rôle fait correspondre un groupe ou un utilisateur à une définition de rôle. Chaque définition de rôle identifie les tâches que les groupes ou les utilisateurs peuvent effectuer sur un élément spécifique.  
   
- Les attributions de rôle au niveau élément peuvent avoir un large impact. Bien qu'elles puissent être associées à un seul rapport ou dossier, elles peuvent être également définies à un haut niveau dans l'arborescence des dossiers et être héritées par des dossiers et des éléments situés à un niveau inférieur dans l'arborescence. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
+ Les attributions de rôle au niveau élément peuvent avoir un large impact. Bien qu'elles puissent être associées à un seul rapport ou dossier, elles peuvent être également définies à un haut niveau dans l'arborescence des dossiers et être héritées par des dossiers et des éléments situés à un niveau inférieur dans l'arborescence. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md).  
   
 ## <a name="navigation"></a>Navigation  
  Utilisez la procédure suivante pour naviguer jusqu'à cet emplacement dans l'interface utilisateur.  
@@ -45,7 +45,7 @@ ms.locfileid: "66108154"
 > [!NOTE]  
 >  Cette case est disponible uniquement dans la page Nouvelle attribution de rôle.  
   
- **Actif**  
+ **Rôle**  
  Affiche tous les rôles définis sur le serveur de rapports qui permettent de définir la sécurité des éléments. Lorsque vous créez ou modifiez une attribution de rôle pour un rapport ou un dossier, sélectionnez un ou plusieurs rôles jusqu'à ce que l'ensemble combiné de tâches décrive les actions que l'utilisateur doit être autorisé à effectuer. Pour afficher l’ensemble des tâches que chaque rôle prend en charge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], utilisez. Vous ne pouvez pas afficher, créer, modifier ni supprimer des rôles dans le Gestionnaire de rapports. Pour obtenir des instructions, consultez [créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  **Description**  

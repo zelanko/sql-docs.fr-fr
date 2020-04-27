@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13a67a94f6478c085995142085a93fa85bb27d89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106707"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106707"
   
  Le tableau suivant présente les icônes de la barre d’outils du volet **Carte** .  
   
-|Symbole|Description|Quand utiliser|  
+|Symbole|Description|Quand l’utiliser|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Assistant Couche|Pour ajouter une couche à l'aide d’un Assistant, cliquez sur **Assistant Nouvelle couche**.|  
 |![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Ajouter une couche|Pour ajouter une couche manuellement, cliquez sur **Ajouter une couche**, puis sur le type de couche à ajouter.|  
@@ -61,26 +61,26 @@ ms.locfileid: "66106707"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a>Pour ajouter une couche à partir de l’Assistant couche  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> Pour ajouter une couche à partir de l’Assistant Couche  
   
 -   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte**, puis sur **Carte Wizard**. L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
   
      Pour plus d’informations, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
 
-##  <a name="ChangeLayer"></a>Pour modifier les options d’une couche à l’aide de l’Assistant couche  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> Pour modifier les options d’une couche à l’aide de l’Assistant Couche  
   
--   Exécutez l'Assistant Couche. Cet Assistant vous permet de modifier des options pour une couche que vous avez créée à l'aide de l'Assistant Couche. Dans le volet carte, cliquez avec le bouton droit sur la couche, puis dans la barre d’outils, cliquez sur le bouton de l’Assistant couche (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Exécutez l'Assistant Couche. Cet Assistant vous permet de modifier des options pour une couche que vous avez créée à l'aide de l'Assistant Couche. Dans le volet Carte, cliquez avec le bouton droit sur la couche, puis dans la barre d’outils, cliquez sur le bouton de l’Assistant Couche (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Pour plus d’informations, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
 
-##  <a name="AddVectorLayer"></a>Pour ajouter une couche de points, de lignes ou de polygones à partir de la barre d’outils du volet carte  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> Pour ajouter une couche de points, de lignes ou de polygones à partir de la barre d'outils du volet Carte  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**ou **Polygone**.  
+2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**, ou **Polygone**.  
   
     > [!NOTE]  
-    >  Bien qu'il soit possible d'ajouter une couche et de la configurer manuellement, nous vous recommandons d'utiliser l'Assistant Couche pour ajouter de nouvelles couches. Pour lancer l’Assistant à partir de la barre d’outils du volet carte, cliquez sur le bouton de l’Assistant couche (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Bien qu'il soit possible d'ajouter une couche et de la configurer manuellement, nous vous recommandons d'utiliser l'Assistant Couche pour ajouter de nouvelles couches. Pour lancer l’Assistant à partir de la barre d’outils du volet Carte, cliquez sur le bouton de l’Assistant Couche (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106707"
   
     2.  Dans **Dataset analytique**, cliquez sur le nom du dataset qui contient les données analytiques et les champs de correspondance pour générer une relation entre des données analytiques et spatiales.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3.  Cliquez sur **Add**.  
   
     4.  Tapez le nom du champ de correspondance du dataset spatial.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66106707"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="FilterAnalyticalData"></a>Pour filtrer des données analytiques pour la couche  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> Pour filtrer des données analytiques pour la couche  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66106707"
   
 4.  Définissez une équation de filtre pour limiter les données analytiques utilisées dans l'affichage de la carte. Pour plus d’informations, consultez [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
 
-##  <a name="PointProperties"></a>Pour contrôler les propriétés de point pour une couche de points ou pour les points centraux de polygones  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> Pour contrôler les propriétés des points d'une couche de points ou pour les points centraux de polygones  
   
 1.  Sélectionnez **Général** dans la boîte de dialogue **Propriétés des points de la carte** pour modifier les options d’étiquette, d’info-bulle et de type de marqueur pour les éléments cartographiques suivants :  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66106707"
   
     -   Le point central de tous les polygones dynamiques ou incorporés sur une couche de polygones. Les règles de couleur, de taille et de type de marqueur relatives aux points centraux remplacent ces options. Pour remplacer les options d’un point central spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](../map-embedded-point-properties-dialog-box-marker.md) .  
 
-##  <a name="Embedded"></a>Pour spécifier des données incorporées comme source de données spatiales  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> Pour spécifier des données incorporées comme source de données spatiales  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66106707"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="ESRI"></a>Pour spécifier un fichier ESRI ESRI comme source de données spatiales  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> Pour spécifier un fichier de forme ESRI comme source de données spatiales  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66106707"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="DatasetField"></a>Pour spécifier un champ de DataSet de rapport comme source de données spatiales  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> Pour spécifier un champ de dataset de rapport comme source de données spatiales  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -166,14 +166,14 @@ ms.locfileid: "66106707"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="TileLayer"></a>Pour ajouter une couche de mosaïques  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> Pour ajouter une couche de mosaïques  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
 2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
     > [!NOTE]  
-    >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+    >   Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
 3.  Cliquez avec le bouton droit sur la couche de mosaïques dans le volet Carte, puis sélectionnez **Propriétés des mosaïques**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "66106707"
     > [!NOTE]  
     >  Une couche de mosaïques peut également être ajoutée lorsque vous ajoutez une couche de polygones, de lignes ou de points dans l'Assistant Carte ou Couche. Dans la page **Choisir des options de vue cartographique et de données spatiales** , sélectionnez l’option **Ajouter un arrière-plan Bing Maps pour cette vue cartographique**.  
 
-##  <a name="DrawingOrder"></a>Pour modifier l’ordre de dessin d’une couche  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> Pour modifier l'ordre de dessin d'une couche  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66106707"
   
 3.  Dans la barre d'outils du volet Carte, cliquez sur la flèche Haut ou Bas pour modifier l'ordre de dessin de chaque couche.  
 
-##  <a name="Transparency"></a>Pour modifier la transparence d’une couche de polygones, de lignes ou de points  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> Pour modifier la transparence d'une couche de polygones, de lignes ou de points  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "66106707"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="TileTransparency"></a>Pour modifier la transparence d’une couche de mosaïques  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> Pour modifier la transparence d'une couche de mosaïques  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "66106707"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="Secure"></a>Pour spécifier une connexion sécurisée pour une couche de mosaïques  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> Pour spécifier une connexion sécurisée pour une couche de mosaïques  
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66106707"
   
  La connexion au service Web Bing Maps utilise le service HTTP SSL (Secure Sockets Layer) pour récupérer des mosaïques Bing pour cette couche.  
 
-##  <a name="Language"></a>Pour spécifier la langue des étiquettes de mosaïque  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> Pour spécifier la langue des étiquettes de mosaïque  
   
 1.  Par défaut, pour les styles de mosaïque qui affichent des étiquettes, la langue est déterminée en fonction des paramètres régionaux par défaut définis pour le Générateur de rapports. Vous pouvez personnaliser le paramètre de langue pour les étiquettes de mosaïque des façons suivantes.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "66106707"
   
      L’ordre de priorité pour la définition de la langue des étiquettes de mosaïque est le suivant : propriété de rapport Language, paramètres régionaux par défaut définis pour le Générateur de rapports et propriété de carte TileLanguage.  
 
-##  <a name="ConditionalHide"></a>Pour masquer de manière conditionnelle une couche en fonction du niveau de zoom de la fenêtre d’affichage  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> Pour masquer de manière conditionnelle une couche en fonction du niveau de zoom de la fenêtre d'affichage  
   
 1.  Définissez `Visibility` les options de contrôle de l’affichage d’une couche.  
   

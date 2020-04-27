@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108565"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -34,7 +34,7 @@ ms.locfileid: "66108565"
   
 -   [Vérifier une installation en mode natif](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a>Vérifier l’installation en mode SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Vérifiez l'installation en mode SharePoint  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Pour vérifier le service Reporting Services  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108565"
   
 2.  Téléchargez l'exemple de base de données AdventureWorks et l'exemple de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] depuis CodePlex. Pour plus d'informations, consultez [Exemples de rapports AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a>Vérifier une installation en mode natif  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a>Vérifier une installation en mode natif  
  Lorsque vous installez un serveur de rapports en mode natif en utilisant la configuration par défaut, le programme d'installation installe et déploie le serveur. Vous pouvez vérifier que le programme d'installation a déployé le serveur de rapports en réalisant quelques tests simples. Pour effectuer ces interventions, vous devez être un administrateur local. Pour permettre à d'autres utilisateurs de réaliser des tests, vous devez configurer leur accès au serveur de rapports.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Pour vérifier que le serveur de rapports est installé et s'exécute correctement  

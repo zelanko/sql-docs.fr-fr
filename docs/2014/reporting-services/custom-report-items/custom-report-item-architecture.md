@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264969"
 ---
 # <a name="custom-report-item-architecture"></a>Architecture des éléments de rapports personnalisés
@@ -35,6 +35,6 @@ ms.locfileid: "63264969"
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un composant d’exécution d’élément de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisés](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

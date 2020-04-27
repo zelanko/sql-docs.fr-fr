@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109229"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Activer et désactiver sandboxing RDL
@@ -65,8 +65,8 @@ ms.locfileid: "66109229"
 |**MaxResourceSize**|Quantité maximale de Ko autorisés pour une ressource externe.<br /><br /> Valeur par défaut : 100|  
 |**MaxStringResultLength**|Quantité maximale de caractères autorisés dans une valeur de retour pour une expression RDL.<br /><br /> Valeur par défaut : 1000|  
 |**MaxArrayResultLength**|Quantité maximale d'éléments autorisés dans un tableau de valeurs retourné pour une expression RDL.<br /><br /> Valeur par défaut : 100|  
-|**Modes**|Liste des membres à autoriser dans les expressions RDL.|  
-|**Activer**|Type ou jeu de types à autoriser dans les expressions RDL.|  
+|**Types**|Liste des membres à autoriser dans les expressions RDL.|  
+|**Autoriser**|Type ou jeu de types à autoriser dans les expressions RDL.|  
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  
 |`AllowNew`|Attribut booléen pour **Allow** qui contrôle si la création de nouvelles instances du type est autorisée dans les expressions RDL ou dans un élément **\<Class>** RDL.<br /><br /> Remarque : lorsque `RDLSandboxing` est activé, les nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, quel que `AllowNew`soit le paramètre de.|  
 |**Valeur**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types de l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  

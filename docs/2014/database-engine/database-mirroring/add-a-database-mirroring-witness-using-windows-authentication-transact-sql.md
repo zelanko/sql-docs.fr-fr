@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792610"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Ajouter un témoin de mise en miroir de bases de données à l'aide de l'authentification Windows (Transact-SQL)
@@ -62,7 +62,7 @@ ms.locfileid: "67792610"
   
      où \<*adresse-système>* est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et \<*port>* est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Ainsi, sur l'instance de serveur principal, l'instruction ALTER DATABASE suivante définit le témoin. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER3 (nom du système témoin) et le port utilisé par le point de terminaison de mise en miroir de bases de données du témoin est `7022` :  
+     Ainsi, sur l'instance de serveur principal, l'instruction ALTER DATABASE suivante définit le témoin. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER3-le nom du système témoin, et le port utilisé par le point de terminaison de mise `7022`en miroir de bases de données du témoin est :  
   
     ```  
     ALTER DATABASE AdventureWorks   

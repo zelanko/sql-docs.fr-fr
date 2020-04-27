@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270230"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
   Les applications qui utilisent le suivi des modifications doivent être en mesure d'obtenir les modifications suivies, d'appliquer ces modifications à une autre banque de données et de mettre à jour la base de données source. Cette rubrique explique comment effectuer ces tâches et le rôle joué par le suivi des modifications lorsqu'un basculement se produit et qu'une base de données doit être restaurée à partir d'une sauvegarde.  
   
-##  <a name="Obtain"></a> Obtenir les modifications à l'aide des fonctions de suivi des modifications  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Obtenir les modifications à l'aide des fonctions de suivi des modifications  
  Explique comment utiliser les fonctions de suivi des modifications pour obtenir des modifications et les informations sur les modifications apportées à une base de données.  
   
 ### <a name="about-the-change-tracking-functions"></a>À propos des fonctions de suivi des modifications  
@@ -285,7 +285,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Le choix de l'approche la mieux adaptée à l'application lorsque vous utilisez le suivi des modifications (ou tout mécanisme de suivi personnalisé) requiert une analyse approfondie. Il est par conséquent beaucoup plus simple d'utiliser le niveau d'isolement d'instantané.  
   
-##  <a name="Handles"></a> Comment le suivi des modifications gère les modifications apportées à une base de données  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>Comment Change Tracking gère les modifications apportées à une base de données  
  Certaines applications qui utilisent le suivi des modifications effectuent une synchronisation bidirectionnelle avec une autre banque de données. Autrement dit, les modifications apportées à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont mises à jour dans l'autre banque de données et les modifications apportées à l'autre banque sont mises à jour dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Lorsqu'une application met à jour la base de données locale avec les modifications d'une autre banque de données, elle doit effectuer les opérations suivantes :  
@@ -404,7 +404,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Il est possible que la ligne mise à jour dans le cadre de la transaction d'instantané ait été mise à jour dans une autre transaction après le démarrage de la transaction d'instantané. Dans ce cas, un conflit de mise à jour du niveau d'isolement d'instantané se produit et provoque la fin de la transaction. Si cela se produit, réessayez d'effectuer la mise à jour. Cette tentative génère alors la détection d'un conflit de suivi des modifications et aucune ligne n'est modifiée.  
   
-##  <a name="DataRestore"></a> Suivi des modifications et restauration de données  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>Change Tracking et restauration des données  
  Les applications qui nécessitent une synchronisation doivent considérer le cas où une base de données pour laquelle le suivi des modifications est activé rétablit une version antérieure des données. Ce cas peut se produire après la restauration d'une base de données à partir d'une sauvegarde, lors d'un basculement vers un miroir de base de données asynchrone ou lors d'un échec pendant l'utilisation de la copie des journaux de transaction. Le scénario suivant illustre ce problème :  
   
 1.  La table T1 fait l'objet d'un suivi des modifications et sa version valide minimale est 50.  
@@ -432,10 +432,10 @@ COMMIT TRAN
 -   Lorsqu'un client interroge les modifications, enregistrez le numéro de version de la dernière synchronisation pour chaque client sur le serveur. En cas de problème avec les données, les derniers numéros de versions synchronisées ne correspondent pas. Ils indiquent qu'une réinitialisation est requise.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Suivi des modifications de données &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [À propos du suivi des modifications &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [Gérer le suivi des modifications &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
- [Activer et désactiver le suivi des modifications &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Suivre les modifications de données &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
+ [À propos de Change Tracking &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [Gérer Change Tracking &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Activer et désactiver les Change Tracking &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   

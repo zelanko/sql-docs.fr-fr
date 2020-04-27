@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : déployer un élément de rapport personnalisé | Microsoft Docs'
+title: 'Procédure : Déployer un élément de rapport personnalisé | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265081"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Procédure : déployer un élément de rapport personnalisé
+# <a name="how-to-deploy-a-custom-report-item"></a>Procédure : Déployer un élément de rapport personnalisé
   Pour déployer un élément de rapport personnalisé dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez d'abord modifier les fichiers de configuration du serveur de rapports, puis copier les assemblys correspondant aux composants de conception et d'exécution dans les dossiers d'application appropriés, et ce à la fois pour le Concepteur de rapports et le serveur de rapports.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Pour déployer un élément de rapport personnalisé  
@@ -67,6 +67,6 @@ ms.locfileid: "63265081"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers de configuration de Reporting Services](../report-server/reporting-services-configuration-files.md)   
- [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)  
+ [Bibliothèques de classes d'éléments de rapport personnalisés](custom-report-item-class-libraries.md)  
   
   

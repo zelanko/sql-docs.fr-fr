@@ -16,10 +16,10 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3df1b991f160aafdfcfd71818c8bd3e7cbd10ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72798391"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109889"
 ---
 # <a name="choose-link-page-report-manager"></a>Page Choisir un lien (Gestionnaire de rapports)
@@ -36,7 +36,7 @@ ms.locfileid: "66109889"
 4.  Dans l'onglet **Général** , dans la page de propriétés, cliquez sur **Changer le lien**.  
   
 ## <a name="options"></a>Options  
- **Location**  
+ **Emplacement**  
  Spécifiez le nom complet du rapport publié, notamment le chemin d'accès au dossier et le nom du rapport. Vous pouvez taper le nom complet du rapport ou utiliser l'arborescence pour naviguer jusqu'au rapport que vous souhaitez utiliser.  
   
  **Arborescence**  

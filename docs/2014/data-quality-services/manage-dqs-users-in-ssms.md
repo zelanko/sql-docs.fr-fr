@@ -11,23 +11,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480348"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gérer des utilisateurs DQS dans SSMS
   Cette rubrique décrit comment créer des utilisateurs supplémentaires dans l'instance SQL Server à l'aide de SQL Server Management Studio et leur accorder des rôles [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) appropriés sur la base de données DQS_MAIN.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Votre compte d'utilisateur Windows doit être un membre du rôle serveur fixe approprié (tel que securityadmin, serveradmin ou sysadmin) pour créer une connexion SQL et lui accorder des rôles DQS appropriés.  
   
-##  <a name="GrantRoles"></a>Créer une connexion SQL et accorder un rôle DQS  
+##  <a name="create-a-sql-login-and-grant-dqs-role"></a><a name="GrantRoles"></a>Créer une connexion SQL et accorder un rôle DQS  
   
 1.  Démarrez Microsoft SQL Server Management Studio.  
   

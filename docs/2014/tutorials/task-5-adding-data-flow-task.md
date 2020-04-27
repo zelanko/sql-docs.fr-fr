@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489145"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Tâche 5 : Ajout d'une tâche de flux de données
+# <a name="task-5-adding-data-flow-task"></a>Tâche 5 : Ajout d’une tâche de flux de données
   Dans cette tâche, vous allez ajouter une tâche de flux de données au flux de contrôle du package SSIS.  
   
 1.  Glissez-déplacez une **tâche de workflow** à partir de la **boîte à outils SSIS** vers l’onglet de **contrôle de workflow** dans le concepteur SSIS. Si vous ne voyez pas la **boîte à outils SSIS**, cliquez n’importe où dans l’onglet **Flow Control** , cliquez sur **SSIS** dans la barre de menus et cliquez sur **boîte à outils SSIS**.  
@@ -31,6 +31,6 @@ ms.locfileid: "65489145"
 4.  Double-cliquez sur la **tâche de workflow** pour basculer vers l’onglet de **Workflow** .  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 6 : Ajout d'une source Excel au flux de données](task-6-adding-excel-source-to-the-data-flow.md)  
+ [Tâche 6 : Ajout d’une source Excel au flux de données](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

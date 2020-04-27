@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316066"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)
   Le Concepteur de requêtes et de vues vous permet de créer et de gérer les éléments d'extraction et de manipulation des données de votre application.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Ouvrez le concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Ouvrir le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Fournit la procédure d'ouverture d'une nouvelle requête, d'une nouvelle vue, d'une requête existante ou d'une vue existante dans le Concepteur de requêtes et de vues.  
   
- [Naviguer dans le concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [Naviguer dans le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  Fournit la liste des combinaisons de touches et opérations de souris que vous pouvez utiliser dans le Concepteur de requêtes et de vues.  
   
  [Outils du concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

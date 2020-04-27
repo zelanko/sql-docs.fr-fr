@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480988"
 ---
 # <a name="create-a-cross-domain-rule"></a>Créer une règle inter-domaines
@@ -31,17 +31,17 @@ ms.locfileid: "65480988"
   
  Les règles inter-domaines sont prises en compte après toutes les règles simples qui affectent seulement un domaine. La règle inter-domaines n'est appliquée que si une valeur franchit les règles de domaine simple (si elles existent). Le domaine composite et les domaines uniques sur lesquels une règle s'exécute doivent tous être définis avant que la règle ne puisse être exécutée.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour créer une règle inter-domaines, vous devez avoir créé et ouvert un domaine composite.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une règle inter-domaines.  
   
-##  <a name="Create"></a>Créer des règles inter-domaines  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a> Créer les règles inter-domaines  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65480988"
   
 9. Poursuivez jusqu'à la procédure de test ci-dessous.  
   
-##  <a name="Test"></a>Tester les règles inter-domaines  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a> Tester les règles inter-domaines  
   
 1.  Testez la règle interdomaines comme suit :  
   
@@ -88,13 +88,13 @@ ms.locfileid: "65480988"
   
     4.  Cliquez à nouveau sur l'icône **Ajoute un nouveau terme de test pour la règle de domaine** pour ajouter un autre ensemble de valeurs de test.  
   
-    5.  Cliquez sur l'icône **Tester la règle de domaine sur tous les termes** . Si un jeu de valeurs de test est valide, DQS écrit un contrôle dans la colonne **Validité** de la ligne. Si l'ensemble de valeurs de test n'est pas valide, DQS écrit un triangle avec un point d'exclamation dans la colonne Validité de la ligne.  
+    5.  Cliquez sur l’icône **tester la règle de domaine sur tous les termes** . Si un jeu de valeurs de test est valide, DQS écrit un contrôle dans la colonne **Validité** de la ligne. Si l'ensemble de valeurs de test n'est pas valide, DQS écrit un triangle avec un point d'exclamation dans la colonne Validité de la ligne.  
   
     6.  Une fois le test terminé, cliquez sur **Fermer** dans la boîte de dialogue **Tester la règle de domaine composite** .  
   
 2.  Lorsque vous avez terminé vos règles inter-domaines, cliquez sur **Terminer** pour terminer l'activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a>Suivi : après avoir créé une règle inter-domaines  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Suivi : Après la création d'une règle interdomaines  
  Après avoir créé une règle inter-domaines, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

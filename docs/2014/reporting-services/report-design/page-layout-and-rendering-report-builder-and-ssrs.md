@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105509"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
@@ -31,21 +31,21 @@ ms.locfileid: "66105509"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a>Mise en page et éléments de rapport  
+##  <a name="page-layout-and-report-items"></a><a name="PageLayout"></a>Mise en page et éléments de rapport  
  Les éléments de rapport sont des éléments de disposition associés à différents types de données de rapport. Les éléments Table, Matrice, Liste, Graphique et Jauge sont des éléments de rapport de région de données, chacun d'eux établissant un lien vers un dataset de rapport. Lorsque le rapport est traité, la région de données s'étend sur la page du rapport (transversalement et vers le bas) pour afficher des données. D'autres éléments de rapport établissent un lien vers un seul élément et l'affichent. Un élément de rapport **Image** établit un lien vers une image. Un élément de rapport **Zone de texte** contient soit du texte simple comme un titre, soit une expression qui peut inclure des références à des champs prédéfinis, des paramètres de rapport ou des champs de dataset. Les éléments de rapport **Ligne** et **Rectangle** fournissent des éléments graphiques simples sur la page de rapport. L'élément **Rectangle** peut aussi être un conteneur pour d'autres éléments de rapport. Un rapport peut contenir des sous-rapports.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de placer les éléments de rapport n'importe où sur l'aire de conception. Vous pouvez positionner, agrandir et réduire de manière interactive la forme initiale de l'élément de rapport à l'aide de lignes d'alignement et de poignées de redimensionnement. Vous pouvez placer les régions de données avec différents jeux de données, ou même des données identiques dans différents formats, côte à côte. Lorsque vous placez un élément de rapport sur l'aire de conception, il a une taille et une forme par défaut, ainsi qu'une relation initiale par rapport à tous les autres éléments de rapport. Vous pouvez placer de nombreux éléments de rapport pour créer des conceptions de rapport plus complexes. Par exemple, des graphiques ou des images dans les cellules de table, les tables dans les cellules de table et plusieurs images dans un rectangle. Outre l'organisation et l'apparence que vous souhaitez obtenir dans le rapport, le placement des éléments de rapport dans des conteneurs tels que des rectangles permet de contrôler la façon dont les éléments de rapport sont affichés dans la page du rapport.  
   
  Un rapport peut s'étendre sur plusieurs pages et comporter un en-tête et un pied de page répétés sur chaque page. Il peut contenir des éléments graphiques comme des images et des lignes et avoir plusieurs polices, couleurs et styles, qui peuvent se baser sur des expressions.  
   
-##  <a name="ReportSections"></a> Sections de rapport  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Sections de rapport  
  Un rapport se compose de trois principales sections : un en-tête de page facultatif, un pied de page facultatif et un corps de rapport. L'en-tête et le pied de page du rapport ne sont pas vraiment des sections à part du rapport ; ils se composent des éléments de rapport placés en haut et en bas du corps du rapport. L'en-tête et le pied de page répètent le même contenu en haut et en bas de chaque page du rapport. Vous pouvez placer des images, des zones de texte et des lignes dans les en-têtes et les pieds de page. Vous pouvez placer tous les types d'élément de rapport dans le corps du rapport.  
   
  Vous pouvez définir des propriétés sur les éléments de rapport pour les masquer ou les afficher initialement sur la page. Vous pouvez définir des propriétés de visibilité sur les lignes, colonnes ou groupes pour les régions de données et fournir des boutons bascule pour permettre à l'utilisateur d'afficher ou de masquer de façon interactive les données de rapport. Vous pouvez définir la visibilité ou la visibilité initiale à l'aide d'expressions, notamment des expressions basées sur les paramètres de rapport.  
   
  Lorsqu'un rapport est traité, ses données sont associées aux éléments de disposition du rapport et les données combinées sont envoyées à un convertisseur de rapport. Le convertisseur respecte des règles prédéfinies pour l'expansion des éléments de rapport et détermine la quantité de données tenant sur chaque page. Pour concevoir un rapport facile à lire et optimisé pour le convertisseur que vous prévoyez d'utiliser, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Convertisseurs  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a>Convertisseurs  
  Reporting Services inclut un jeu de convertisseurs, également connu sous le nom d'extensions de rendu, que vous pouvez utiliser pour exporter des rapports vers des formats différents. Il existe trois types de convertisseurs :  
   
 -   **Convertisseurs de données** Les convertisseurs de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données disponibles sont : CSV et XML.  
@@ -61,7 +61,7 @@ ms.locfileid: "66105509"
   
   
   
-##  <a name="RenderingBehaviors"></a> Comportements de rendu  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a>Comportements de rendu  
  Selon le convertisseur sélectionné, certaines règles sont appliquées lors du rendu du rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
   
 -   les règles de rendu ;  
@@ -80,7 +80,7 @@ ms.locfileid: "66105509"
   
   
   
-##  <a name="Pagination"></a> Pagination  
+##  <a name="pagination"></a><a name="Pagination"></a>La pagination  
  La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport et des options de saut de page et d'ajustement configurées pour le rapport.  
   
  Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les rapports exportés à l'aide des extensions de rendu des données et de saut de page conditionnelle ne sont en général pas affectés par la pagination. Lorsque vous utilisez une extension de rendu des données, le rapport est restitué comme ensemble de lignes disposé en table au format XML ou CSV. Pour assurer que les données du rapport exporté sont utilisables, vous devez comprendre les règles appliquées pour effectuer le rendu d'un ensemble de lignes aplati disposé en table dans un rapport.  
@@ -91,7 +91,7 @@ ms.locfileid: "66105509"
   
   
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser la pagination dans les rapports.  
   
 -   [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
@@ -108,7 +108,7 @@ ms.locfileid: "66105509"
   
   
   
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur la mise en page et le rendu des rapports.  
   
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
@@ -120,7 +120,7 @@ ms.locfileid: "66105509"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives pour différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

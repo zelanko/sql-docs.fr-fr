@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217129"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Services d'exploration de données et sources de données
@@ -61,9 +61,9 @@ ms.locfileid: "79217129"
   
 -   Étant donné que l'exploration de données est un service fourni par un serveur, l'accès à la source de données doit être accordé à l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  Il existe deux aspects à prendre en compte : l'emplacement et l'identité.  
   
-     L' **emplacement** signifie que, si vous générez un modèle à l’aide de données stockées uniquement sur votre ordinateur, puis que vous déployez le modèle sur un serveur, le traitement du modèle échoue car la source de données est introuvable. Pour résoudre ce problème, vous devrez peut-être transférer les données vers la même instance de SQL Server que celle où [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est en cours d'exécution, ou déplacer les fichiers vers un emplacement partagé.  
+     Pour**l’emplacement** , cela signifie que si vous créez un modèle avec des données stockées uniquement sur votre ordinateur, puis que vous déployez ce modèle sur un serveur, le traitement du modèle échouera, car la source de données sera introuvable. Pour résoudre ce problème, vous devrez peut-être transférer les données vers la même instance de SQL Server que celle où [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est en cours d'exécution, ou déplacer les fichiers vers un emplacement partagé.  
   
-     L' **identité** signifie que les services [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur doivent pouvoir ouvrir le fichier de données ou la source de données avec les informations d’identification appropriées. Par exemple, quand vous avez créé le modèle, vous avez peut-être eu des autorisations illimitées pour afficher les données, mais l'utilisateur qui traite et met à jour les modèles sur le serveur peut avoir un accès limité ou aucun accès aux données, ce qui peut entraîner l'échec du traitement ou affecter le contenu d'un modèle. Le compte utilisé pour se connecter à la source de données distante doit au moins disposer d'autorisations en lecture sur les données.  
+     Pour**l’identité** , cela signifie que les services sur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doivent pouvoir ouvrir le fichier de données ou la source de données avec les informations d’identification appropriées. Par exemple, quand vous avez créé le modèle, vous avez peut-être eu des autorisations illimitées pour afficher les données, mais l'utilisateur qui traite et met à jour les modèles sur le serveur peut avoir un accès limité ou aucun accès aux données, ce qui peut entraîner l'échec du traitement ou affecter le contenu d'un modèle. Le compte utilisé pour se connecter à la source de données distante doit au moins disposer d'autorisations en lecture sur les données.  
   
 -   Lorsque vous déplacez un modèle, les mêmes exigences s'appliquent : vous devez configurer l'accès approprié à l'emplacement de l'ancienne source de données, copier les sources de données ou configurer une nouvelle source de données. De plus, vous devez transférer les connexions et les rôles, ou configurer des autorisations pour permettre le traitement et la mise à jour des objets d'exploration de données dans le nouvel emplacement.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "79217129"
   
 -   **AllowedProvidersInOpenRowset** Spécifie le fournisseur, si l’accès ad hoc est activé. Vous pouvez spécifier plusieurs fournisseurs, en entrant une liste séparée par des virgules de ProgID.  
   
--   **MaxConcurrentPredictionQueries** Contrôle la charge sur le serveur causée par des prédictions. La valeur par défaut 0 autorise les requêtes illimitées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise et un maximum de cinq requêtes simultanées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Les requêtes qui dépassent la limite sont sérialisées et peuvent expirer.  
+-   **MaxConcurrentPredictionQueries** Contrôle la charge sur le serveur causée par les prédictions. La valeur par défaut 0 autorise les requêtes illimitées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise et un maximum de cinq requêtes simultanées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Les requêtes qui dépassent la limite sont sérialisées et peuvent expirer.  
   
  Le serveur fournit des propriétés supplémentaires qui contrôlent les algorithmes d'exploration de données disponibles, y compris toutes les restrictions appliquées aux algorithmes, ainsi que les valeurs par défaut de tous les services d'exploration de données. Toutefois, il n'existe pas de paramètre permettant de contrôler spécifiquement l'accès aux procédures stockées de l'exploration de données. Pour plus d’informations, consultez [Propriétés de l’exploration de données](../server-properties/data-mining-properties.md).  
   
@@ -95,13 +95,13 @@ ms.locfileid: "79217129"
   
  **ADO** Utilise OLE DB pour se connecter à un serveur Analysis Services. Lorsque vous utilisez ADO, le client est limité aux requêtes sur un ensemble de lignes de schéma et aux instructions DMX.  
   
- **ADO.net** Interagit avec les fournisseurs de SQL Server mieux que les autres fournisseurs. Utilise des adaptateurs de données pour stocker des ensembles de lignes dynamiques. Utilise l'objet Dataset, qui est un cache des données de serveur stockées sous forme de tables de données et pouvant être mises à jour ou enregistrées au format XML.  
+ **ADO.NET** Interagit avec les fournisseurs SQL Server plus efficacement qu’avec d’autres fournisseurs. Utilise des adaptateurs de données pour stocker des ensembles de lignes dynamiques. Utilise l'objet Dataset, qui est un cache des données de serveur stockées sous forme de tables de données et pouvant être mises à jour ou enregistrées au format XML.  
   
- **ADOMD.net** Fournisseur de données managé qui est optimisé pour l’exploration de données et OLAP. ADOMD.NET est plus rapide et plus économe en mémoire qu'ADO.NET. ADOMD.NET vous permet également d'extraire des métadonnées relatives à des objets serveur. Recommandé pour les applications clientes, sauf lorsque .NET n'est pas disponible.  
+ **ADOMD.NET** Fournisseur de données managées qui est optimisé pour l’exploration de données et OLAP. ADOMD.NET est plus rapide et plus économe en mémoire qu'ADO.NET. ADOMD.NET vous permet également d'extraire des métadonnées relatives à des objets serveur. Recommandé pour les applications clientes, sauf lorsque .NET n'est pas disponible.  
   
  **Serveur ADOMD** Modèle objet permettant d’accéder aux objets Analysis Services directement sur le serveur. Destiné aux procédures stockées Analysis Services ; et non à l'usage des clients  
   
- **AMO** Interface de gestion pour Analysis Services qui remplace DSO (Decision Support Objects). Certaines opérations, telles que l'itération d'objets, requièrent des autorisations plus élevées lorsque AMO est utilisé à la place d'autres interfaces. Cela est dû au fait qu'AMO accède directement aux métadonnées, alors qu'ADOMD.NET et les autres interfaces accèdent uniquement aux schémas de base de données.  
+ **AMO** Interface de gestion d’Analysis Services qui remplace DSO (Decision Support Objects). Certaines opérations, telles que l'itération d'objets, requièrent des autorisations plus élevées lorsque AMO est utilisé à la place d'autres interfaces. Cela est dû au fait qu'AMO accède directement aux métadonnées, alors qu'ADOMD.NET et les autres interfaces accèdent uniquement aux schémas de base de données.  
   
 ### <a name="browse-and-query-access-to-servers"></a>Navigation et accès par requête à des serveurs  
  Vous pouvez effectuer tous les types de prédictions à l'aide d'une instance d'Analysis Services en mode OLAP/Exploration de données, avec les restrictions suivantes :  

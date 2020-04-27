@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 83e65825f098dbcabe9fa6cbb67513e1c9654f9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483620"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Actions de règle d'entreprise (Master Data Services)
@@ -24,16 +24,16 @@ ms.locfileid: "65483620"
 >  Pour les actions Valeur par défaut et Modifier la valeur, si la valeur générée dépasse la longueur maximale de l'attribut, la valeur générée est tronqué.  
   
 ## <a name="default-value-actions"></a>Actions Valeur par défaut  
- Les actions de **valeur par défaut** définissent la valeur par défaut d’un attribut spécifié. Les utilisateurs ayant l'autorisation adéquate peuvent modifier ces valeurs par défaut.  
+ Les actions**Valeur par défaut** définissent la valeur par défaut d'un attribut spécifié. Les utilisateurs ayant l'autorisation adéquate peuvent modifier ces valeurs par défaut.  
   
 |Nom de la valeur|Description|  
 |----------------|-----------------|  
 |**la valeur par défaut est**|L'attribut sélectionné **prend par défaut la valeur** d'un attribut spécifique, a une valeur d'attribut spécifique, ou est vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
-|**la valeur par défaut est une valeur générée**|L'attribut sélectionné **prend par défaut une valeur générée** qui est déterminée par la saisie d'une valeur initiale et incrémentielle.<br /><br /> Cette action est valide pour les valeurs de texte et nombre.|  
-|**a comme valeur par défaut une valeur concaténée**|L'attribut sélectionné **prend par défaut une valeur concaténée** qui est déterminée en spécifiant plusieurs attributs.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
+|**prend par défaut une valeur générée**|L'attribut sélectionné **prend par défaut une valeur générée** qui est déterminée par la saisie d'une valeur initiale et incrémentielle.<br /><br /> Cette action est valide pour les valeurs de texte et nombre.|  
+|**prend par défaut une valeur concaténée**|L'attribut sélectionné **prend par défaut une valeur concaténée** qui est déterminée en spécifiant plusieurs attributs.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
   
 ## <a name="change-value-actions"></a>Actions Modifier la valeur  
- Les actions **modifier la valeur** mettent à jour la valeur d’un attribut ou d’une valeur d’attribut spécifiés. Les utilisateurs peuvent modifier ces valeurs uniquement si la nouvelle valeur a pour effet que l'action est vraie.  
+ Les actions**Modifier la valeur** mettent à jour la valeur d'un attribut spécifié ou d'une valeur d'attribut. Les utilisateurs peuvent modifier ces valeurs uniquement si la nouvelle valeur a pour effet que l'action est vraie.  
   
 |Nom de la valeur|Description|  
 |----------------|-----------------|  
@@ -41,19 +41,19 @@ ms.locfileid: "65483620"
 |**est égal à une valeur concaténée**|L'attribut sélectionné est modifié sur une valeur concaténée, qui est déterminée en spécifiant plusieurs attributs.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
   
 ## <a name="validation-actions"></a>Actions Validation  
- Les actions de **validation** , lorsqu’elles n’ont pas la valeur true, envoient un courrier électronique à un utilisateur ou à un groupe spécifié. Pour valider une version, l'évaluation de toutes les actions de validation doit aboutir à vrai.  
+ Lorsqu'elles ne retournent pas la valeur True, les actions**Validation** envoient un courrier électronique à un utilisateur ou un groupe spécifié. Pour valider une version, l'évaluation de toutes les actions de validation doit aboutir à vrai.  
   
  Les seules exceptions sont les actions **est obligatoire** et **n'est pas valide** . Ces actions doivent être combinées avec une action de valeur de modification, afin que les données puissent être validées et la version activée.  
   
 |Nom de validation|Description|  
 |---------------------|-----------------|  
 |**est obligatoire**|L'attribut sélectionné **est requis**, ce qui signifie qu'il ne peut pas être null ou vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
-|**n’est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**n'est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
-|**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Bonne pratique :** Associez cette action à une condition obligatoire pour garantir la validité des champs d’index dans les systèmes d’abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
-|**doit avoir l’une des valeurs suivantes**|L'attribut sélectionné **doit avoir l'une des valeurs** spécifiées dans une liste.<br /><br /> Cette action est valide pour les valeurs de texte.|  
+|**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Meilleure pratique :** associez cette action à une condition obligatoire pour garantir la validité des champs d'index dans les systèmes d'abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**doit avoir l'une des valeurs suivantes**|L'attribut sélectionné **doit avoir l'une des valeurs** spécifiées dans une liste.<br /><br /> Cette action est valide pour les valeurs de texte.|  
 |**doit être supérieur à**|L'attribut sélectionné **doit être supérieur à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
-|**doit être égal à**|L'attribut sélectionné **doit être égal** à une valeur d'attribut définie, un autre attribut, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**doit être égal**|L'attribut sélectionné **doit être égal** à une valeur d'attribut définie, un autre attribut, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**doit être supérieur ou égal à**|L'attribut sélectionné **doit être supérieur ou égal à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
 |**doit être inférieur à**|L'attribut sélectionné **doit être inférieur à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
 |**doit être inférieur ou égal à**|L'attribut sélectionné **doit être inférieur ou égal à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
@@ -62,7 +62,7 @@ ms.locfileid: "65483620"
 |**doit avoir une longueur maximale de**|L'attribut sélectionné **doit avoir une longueur maximale de** la valeur spécifiée.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
   
 ## <a name="external-action"></a>Action externe  
- Les actions **externes** interagissent avec les [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]applications en dehors de.  
+ Les actions**externes** interagissent avec les applications en dehors de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 |Nom de l'action|Description|  
 |-----------------|-----------------|  

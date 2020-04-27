@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412973"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Afficher un aperçu des rapports dans SQL Server Reporting Services (SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "67412973"
  Si vous utilisez une configuration de projet qui crée le rapport mais ne le déploie pas, le rapport spécifié dans la propriété `StartItem` de la configuration actuelle s'ouvre dans une fenêtre d'aperçu distincte. La fenêtre d'aperçu affiche le rapport de la même manière et avec les mêmes fonctionnalités que le mode Aperçu.  
   
 > [!NOTE]  
-> Avant de déboguer un rapport, vous devez définir un élément de départ. Pour définir un élément de départ, dans Explorateur de solutions, cliquez avec le bouton droit sur le **** projet de rapport, cliquez `StartItem`sur Propriétés, puis dans, sélectionnez le nom du rapport à afficher.  
+> Avant de déboguer un rapport, vous devez définir un élément de départ. Pour définir un élément de départ, dans Explorateur de solutions, cliquez avec le bouton droit sur le **Properties**projet de rapport, cliquez `StartItem`sur Propriétés, puis dans, sélectionnez le nom du rapport à afficher.  
   
  Si vous souhaitez afficher l’aperçu d’un rapport particulier, sans qu’il soit l’élément de départ du projet, sélectionnez une configuration qui crée le rapport mais ne le déploie pas (par exemple, la configuration DebugLocal), cliquez avec le bouton droit sur le rapport, puis sélectionnez **Exécuter**. Vous devez choisir une configuration qui ne déploie pas le rapport, sinon il sera publié sur le serveur de rapports au lieu de s'afficher localement dans une fenêtre d'aperçu.  
   
@@ -60,4 +60,4 @@ ms.locfileid: "67412973"
  - [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
  - [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)
  - [Publier des rapports](../publish-reports.md)
- - [Utilisation d'assemblages personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md)
+ - [Utilisation d'assemblys personnalisés avec des rapports](../custom-assemblies/using-custom-assemblies-with-reports.md)

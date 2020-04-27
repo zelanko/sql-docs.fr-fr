@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107629"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
@@ -28,9 +28,9 @@ ms.locfileid: "66107629"
   
 -   Utilisez l'historique de rapport pour enregistrer des versions de rapports rendus en tant que copies historiques.  
   
- Pour en savoir plus sur l’affichage et la gestion des rapports directement sur le serveur de rapports, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) et [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md) dans la documentation en ligne[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
+ Pour en savoir plus sur l’affichage et la gestion des rapports directement sur le serveur de rapports, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) et [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md) dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a>Enregistrement des définitions de rapport  
+##  <a name="saving-report-definitions"></a><a name="SavingReportDefinitions"></a>Enregistrement des définitions de rapport  
  Bien que vous puissiez enregistrer des rapports sur votre ordinateur, l'enregistrement des rapports sur un serveur de rapports offre de nombreux avantages.  
   
  L'enregistrement d'un rapport sur un serveur de rapports offre les avantages suivants :  
@@ -51,22 +51,22 @@ ms.locfileid: "66107629"
   
 
   
-##  <a name="ExportingAndSavingReports"></a> Exportation et enregistrement des rapports  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> Exportation et enregistrement des rapports  
  Si vous avez un petit nombre de rapports à archiver, optez pour la solution consistant à exporter un rapport puis à l'enregistrer dans un fichier. Une fois que vous avez exporté un rapport vers une application (au format PDF ou Excel par exemple), vous pouvez l'enregistrer en tant que fichier et le placer dans un répertoire partagé protégé sur le réseau. Vous pouvez également télécharger le fichier enregistré au format PDF ou Excel en tant qu'élément de ressource si vous souhaitez conserver toutes les copies d'un rapport, quel que soit leur format, dans la base de données du serveur de rapports. Pour plus d’informations sur l’exportation d’un rapport, consultez [exportation de rapports &#40;générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md) et [téléchargement d’un fichier ou d’un rapport &#40;gestionnaire de rapports ](../reports/upload-a-file-or-report-report-manager.md)&#41;.  
   
 
   
-##  <a name="UsingFileShareDelivery"></a> Utilisation de la remise par partage de fichiers  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> Utilisation de la remise par partage de fichiers  
  Si vous avez un grand nombre de rapports à archiver, créez un abonnement qui remet le rapport directement au système de fichiers. Pour cette approche, vous devez créer un abonnement pour chaque rapport, choisir un dossier partagé où stocker les rapports et définir une planification qui détermine le moment auquel le fichier est créé. Une fois l'abonnement défini, le serveur de rapports peut exécuter le rapport sans surveillance et ajouter des fichiers de rapports à l'archive à l'aide de la planification que vous fournissez. Vous pouvez également créer des planifications à usage unique si vous souhaitez archiver des rapports occasionnellement. Pour plus d'informations sur les abonnements et la remise par partage de fichiers, consultez « Remise de fichiers dans Reporting Services » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
   
 
   
-##  <a name="UsingReportHistory"></a> Utilisation de l'historique de rapport  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> Utilisation de l'historique de rapport  
  Vous pouvez également utiliser la fonctionnalité d'historique de rapport pour créer des copies historiques. Vous pouvez ensuite sauvegarder la base de données du serveur de rapports, puis stocker la sauvegarde à un emplacement sûr en vue d'une utilisation future. L'ensemble de l'historique de rapport (avec les rapports, les éléments de sources de données partagées, les dossiers, les abonnements et les planifications partagées) est stocké dans la base de données du serveur de rapports. Vous pouvez créer une sauvegarde pour conserver une copie permanente de l'historique et des métadonnées d'un rapport, notamment les informations d'abonnement indiquant ses différents destinataires. Pour plus d'informations, consultez « Gestion de l'historique de rapport » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de la documentation en ligne de SQL Server.  
   
 
   
-##  <a name="HowTo"></a> Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures  
   
 -   [Enregistrer des rapports sur un serveur de rapports &#40;Générateur de rapports&#41;](save-reports-to-a-report-server-report-builder.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66107629"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Rapports, parties de rapports et définitions de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Installer, désinstaller et Générateur de rapports la prise en charge](../install-uninstall-and-report-builder-support.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483692"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Création automatique de code (Master Data Services)
@@ -41,14 +41,14 @@ ms.locfileid: "65483692"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Générez automatiquement les valeurs de l'attribut code.|[Générer automatiquement les valeurs d’attribut de code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|Générez automatiquement les valeurs des autres attributs.|[Générez automatiquement des valeurs d’attribut autres que code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Générez automatiquement les valeurs de l'attribut code.|[Générer automatiquement les valeurs de l’attribut Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Générez automatiquement les valeurs des autres attributs.|[Générer automatiquement les valeurs des attributs autres que Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
 -   [Vue d'ensemble de Master Data Services](master-data-services-overview-mds.md)  
   
--   [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [Entités &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

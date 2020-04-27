@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107686"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
@@ -33,7 +33,7 @@ ms.locfileid: "66107686"
   
  ![ReportDesignView](../media/reportdesignview.gif "ReportDesignView")  
   
-##  <a name="Ribbon"></a>Le ruban  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> Ruban  
  Le ruban a été conçu pour vous permettre de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées en groupes logiques, qui sont rassemblées sous des onglets. Chaque onglet concerne un type d'activité, par exemple l'insertion d'éléments de rapport ou la mise en forme de texte.  
   
  En mode création de rapport, le ruban est constitué des onglets suivants : Dossier de base, Insérer et Affichage. Si vous ne parvenez pas à trouver une tâche sur le ruban, certains groupes du ruban sont associés à une boîte de dialogue que vous pouvez ouvrir en cliquant sur la flèche située dans la partie inférieure droite du groupe. Vous ne pouvez pas réduire ou supprimer le ruban, ni le remplacer par des barres d'outils et des menus.  
@@ -61,7 +61,7 @@ ms.locfileid: "66107686"
  Pour revenir au mode création de rapport, sous l’onglet **exécuter** , cliquez sur **conception**.  
   
   
-##  <a name="RptDesignSurface"></a>Le rapport Aire de conception  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> Aire de conception de rapport  
  L'aire de conception de rapport du Générateur de rapports est la principale zone de travail pour concevoir vos rapports. Pour placer des éléments de rapport, tels que des régions de données, des sous-rapports, des zones de texte, des images, des rectangles et des lignes dans votre rapport, vous devez les ajouter en les faisant glisser du ruban ou de la bibliothèque de parties de rapports vers l'aire de conception. À partir de là, vous pouvez ajouter des groupes, des expressions, des paramètres, des filtres, des actions, une visibilité et une mise en forme à vos éléments de rapport.  
   
  Vous pouvez également modifier les éléments suivants :  
@@ -86,7 +86,7 @@ ms.locfileid: "66107686"
 >  Pour afficher la règle, sous l’onglet **Affichage**, cochez la case **Règle**.  
   
   
-##  <a name="ReptDataPane"></a>Volet des données de rapport  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a>Volet des données de rapport  
  Depuis le volet Données du rapport, vous avez la possibilité de définir les données et les ressources de rapport dont vous avez besoin pour un rapport avant de concevoir la disposition de votre rapport. Vous pouvez, par exemple, y ajouter des sources de données, des datasets, des champs calculés, des paramètres de rapport et des images.  
   
  Après avoir ajouté des éléments dans le volet Données du rapport, faites glisser des champs vers des éléments de rapport dans l'aire de conception afin de déterminer où apparaissent les données dans le rapport.  
@@ -113,7 +113,7 @@ ms.locfileid: "66107686"
 -   [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a>La bibliothèque de parties de rapports  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a>La bibliothèque de parties de rapports  
  La façon la plus simple de créer un rapport est de rechercher une partie de rapport existante, par exemple un tableau ou un graphique, sur le serveur de rapports ou un serveur de rapports intégré à un site SharePoint. Vous recherchez des parties de rapports à ajouter à votre rapport dans la bibliothèque de parties de rapports. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d’une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment où elle a été apportée, de leur emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "66107686"
  Vous pouvez afficher les résultats de la recherche sous la forme de miniatures ou d'une liste et les trier par nom, par dates de création et de modification, et par créateur. Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a>Volet Propriétés (Générateur de rapports)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> Le volet Propriétés (Générateur de rapports)  
  Chaque élément d'un rapport, notamment le corps du rapport lui-même, les régions de données, les images et les zones de texte, est associé à des propriétés. Par exemple, la propriété BorderColor d'une zone de texte affiche la valeur de couleur de la bordure de la zone de texte et la propriété PageSize du rapport affiche la taille de page du rapport.  
   
  Ces propriétés sont affichées dans le volet Propriétés. Les propriétés du volet varient en fonction de l'élément de rapport que vous sélectionnez.  
@@ -148,7 +148,7 @@ ms.locfileid: "66107686"
  Trois boutons figurent en haut du volet Propriétés : Catégorie, Alphabétiser et Pages de propriétés. Cliquez sur les boutons Catégorie et Alphabétiser pour basculer entre les affichages du volet Propriétés. Cliquez sur le bouton **Pages de propriétés** pour ouvrir la boîte de dialogue des propriétés pour un élément de rapport sélectionné.  
   
   
-##  <a name="GroupPane"></a>Volet de regroupement (Générateur de rapports)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> Volet de regroupement (Générateur de rapports)  
  Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet de regroupement comprend deux volets : Groupes de lignes et Groupes de colonnes. Lorsque vous sélectionnez une région de données, le volet de regroupement affiche tous les groupes de cette région de données sous forme de liste hiérarchique : les groupes enfants apparaissent en retrait sous leurs groupes parents.  
   
  ![Volet de regroupement pour les groupes de lignes et de colonnes imbriqués](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Volet de regroupement pour les groupes de lignes et de colonnes imbriqués")  
@@ -160,7 +160,7 @@ ms.locfileid: "66107686"
  Pour plus d’informations, consultez [Volet de regroupement &#40;Générateur de rapports&#41;](../report-design/grouping-pane-report-builder.md) et [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a>Affichage de l’aperçu de votre rapport en mode exécution  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> Affichage de l'aperçu de votre rapport en mode exécution  
  En mode création de rapport, vous n'utilisez pas des données réelles, mais une représentation des données indiquées par le nom ou l'expression du champ. Lorsque vous voulez afficher les données réelles dans le contexte du rapport que vous avez conçu, vous pouvez exécuter le rapport afin d'afficher un aperçu des données de la base de données sous-jacente dans la mise en page du rapport. Vous pouvez passer du mode Création au mode Exécution de votre rapport pour ajuster sa conception et voir les résultats immédiatement. Pour afficher un aperçu de votre rapport, cliquez sur **exécuter** dans le groupe **vues** sur le ruban.  
   
  Quand vous cliquez sur **Exécuter**, le Générateur de rapports se connecte aux sources de données du rapport, met en cache les données sur votre ordinateur, combine les données et la disposition, puis effectue le rendu du rapport dans la Visionneuse HTML. Vous pouvez exécuter le rapport aussi souvent que vous le souhaitez au fil de sa conception. Lorsque vous êtes satisfait du rapport, vous pouvez l'enregistrer sur le serveur de rapports, où les autres utilisateurs dotés des autorisations appropriées peuvent le visualiser.  
@@ -173,7 +173,7 @@ ms.locfileid: "66107686"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Générateur de rapports dans SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

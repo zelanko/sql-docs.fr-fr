@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104647"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66104647"
 |![Handle de ligne avec 3 lignes parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "Handle de ligne avec 3 lignes parallèles pour la ligne de détails")|Seulement le groupe de détails dans la hiérarchie des groupes de lignes|  
 |![Handle de ligne avec ligne de détails et un groupe externe](../media/rs-icontablix-groupwithdetails.gif "Handle de ligne avec ligne de détails et un groupe externe")|Un groupe externe et le groupe de détails enfant|  
 |![Deux crochets parallèles signalant des groupes imbriqués](../media/rs-icontablix-nestedgroupnodetails.gif "Deux crochets parallèles signalant des groupes imbriqués")|Un groupe externe, un groupe interne ; aucun groupe de détails|  
-|![2 crochets & 3 lignes empilées pour les détails du & imbriqué](../media/rs-icontablix-nestedgroupwithdetails.gif "2 crochets et 3 lignes empilées pour les détails imbriqués")|Un groupe externe, un groupe interne et le groupe de détails enfant|  
+|![2 crochets et 3 lignes empilées pour les détails imbriqués](../media/rs-icontablix-nestedgroupwithdetails.gif "2 crochets et 3 lignes empilées pour les détails imbriqués")|Un groupe externe, un groupe interne et le groupe de détails enfant|  
 |![Un groupe externe avec ligne de pied de page, un groupe interne](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Un groupe externe avec ligne de pied de page, un groupe interne")|Un groupe externe avec une ligne de pied de page pour les totaux et un groupe interne|  
 |![Crochet de groupe externe, crochet de groupe interne, détails](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "Crochet de groupe externe, crochet de groupe interne, détails")|Un groupe externe avec une ligne de pied de page pour les totaux, un groupe interne avec une ligne de pied de page pour les totaux, et une ligne de détail|  
 |![En-tête et pied de page parents, et groupe enfant également](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "En-tête et pied de page parents, et groupe enfant également")|Un groupe externe avec un en-tête pour les étiquettes et un pied de page pour les totaux, et un groupe interne ; aucun groupe de détails|  

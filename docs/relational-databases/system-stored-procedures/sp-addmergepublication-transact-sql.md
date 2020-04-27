@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278353"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`Mode de la synchronisation initiale des abonnés à la publication. *sync_mode* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**natif** (par défaut)|Produit une copie par bloc en mode natif de toutes les tables.|  
 |**symbole**|Produit une copie par bloc en mode caractère de toutes les tables. Requis pour prendre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] en charge les[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés et non.|  
@@ -162,17 +162,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`Spécifie que les partitions précalculées doivent être utilisées pour optimiser le processus de synchronisation. *use_partition_groups* est de type **nvarchar (5)** et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**:**|La publication utilise des partitions précalculées.|  
-|**fausses**|La publication n'utilise pas de partitions précalculées.|  
+|**true**|La publication utilise des partitions précalculées.|  
+|**false**|La publication n'utilise pas de partitions précalculées.|  
 |NULL (valeur par défaut)|Le système détermine la stratégie de partitionnement.|  
   
  Les partitions précalculées sont utilisées par défaut. Pour éviter d’utiliser des partitions précalculées, *use_partition_groups* doit avoir la valeur **false**. Lorsqu'il a la valeur NULL, le système décide si les partitions précalculées peuvent être utilisées. Si les partitions précalculées ne peuvent pas être utilisées, cette valeur devient alors **false** sans générer d’erreurs. Dans ce cas, *keep_partition_changes* peut avoir la valeur **true** pour offrir une certaine optimisation. Pour plus d’informations, consultez [filtres de lignes paramétrables](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) et [optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 `[ @publication_compatibility_level = ] backward_comp_level`Indique la compatibilité descendante de la publication. *backward_comp_level* est de type **nvarchar (6)** et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Version|  
+|Value|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Spécifie les unités pour la période de rétention définie par *rétention*. *retention_period_unit* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Version|  
+|Value|Version|  
 |-----------|-------------|  
 |**jour** (par défaut)|La période de rétention est spécifiée en jours.|  
 |**week**|La période de rétention est spécifiée en semaines.|  
@@ -216,7 +216,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`Spécifie l’emplacement de stockage des enregistrements en conflit. *conflict_logging* est de type **nvarchar (15)** et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**publication**|Les enregistrements en conflit sont stockés sur le serveur de publication.|  
 |**côté**|Les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit. Non pris en [!INCLUDE[ssEW](../../includes/ssew-md.md)] charge pour les abonnés.|  

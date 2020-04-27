@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211211"
 ---
 # <a name="creating-a-database-tutorial"></a>Création d'une base de données (Didacticiel)
@@ -41,7 +41,7 @@ ms.locfileid: "68211211"
 >  Le mot clé GO sépare les instructions si plus d'une instruction est envoyée dans un même traitement. GO est facultatif lorsque le traitement contient uniquement une seule instruction.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une table &#40;didacticiel&#41;](lesson-1-2-creating-a-table.md)  
+ [Création d’une table &#40;Didacticiel&#41;](lesson-1-2-creating-a-table.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  

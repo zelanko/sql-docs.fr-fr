@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107522"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Ajouter et vérifier une connexion de données ou une source de données (Générateur de rapports et SSRS)
@@ -24,14 +24,14 @@ ms.locfileid: "66107522"
   
  Pour créer une source de données incorporée, vous devez disposer des informations de connexion à la source de données externe et connaître les autorisations dont vous avez besoin pour accéder aux données. Ces informations proviennent généralement du propriétaire de la source de données. Vous pouvez tester la connexion pour vérifier que les informations d'identification spécifiées sont suffisantes.  
   
- Pour plus d’informations, consultez [connexions de données, sources de données et chaînes de connexion dans générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md) et [spécifier des informations d’identification dans générateur de rapports](../specify-credentials-in-report-builder.md).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>Pour créer une référence à une source de données partagée  
   
-1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **nouveau,** puis sur **source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
+1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **Nouveau** , puis sur **Source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
 2.  Dans la zone de texte **Nom** , tapez le nom de la source de données.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66107522"
   
 ### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
   
-1.  Dans la barre d’outils du volet des données de rapport, cliquez sur **nouveau**, puis sur **source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
+1.  Dans la barre d'outils du volet Données du rapport, cliquez sur **Nouveau**, puis sur **Source de données**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
 2.  Dans la zone de texte **Nom** , tapez un nom pour la source de données ou acceptez la valeur par défaut.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66107522"
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

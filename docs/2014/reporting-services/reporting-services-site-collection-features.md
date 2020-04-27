@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9475ee323222b800a9c4b9a86e737fdd161e7a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102761"
 ---
 # <a name="reporting-services-site-collection-features"></a>Fonctionnalités de collection de sites de Reporting Services
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit trois fonctionnalités de collection de sites SharePoint. Les fonctionnalités prennent en charge l’environnement de création de rapports général du mode SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], une fonctionnalité du complément [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition, et les opérations de gestion de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans l’Administration centrale de SharePoint.  
   
 ## <a name="site-collection-features"></a>Fonctionnalités de la collection de sites  
@@ -26,13 +25,13 @@ ms.locfileid: "66102761"
   
 |Fonctionnalité|Description|  
 |-------------|-----------------|  
-|**Fonctionnalité administration centrale du serveur de rapports**|Active les fonctionnalités de gestion de l'intégration avec un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Cette fonctionnalité est uniquement installée et utilisée dans la collection de sites Administration centrale de SharePoint.<br /><br /> La fonctionnalité d’intégration du serveur de rapports est automatiquement activée dans la collection de sites administration centrale [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de SharePoint après l’installation du complément pour les produits SharePoint. Dans certaines circonstances, vous devrez activer la fonctionnalité manuellement. Pour activer la fonctionnalité de serveur de rapports, utilisez les pages [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la page Paramètres du site de l'Administration centrale de SharePoint.<br /><br /> La version [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et les versions ultérieures du complément pour les produits SharePoint activent la fonctionnalité d’intégration du serveur de rapports pour toutes les collections de sites existantes pendant l’installation du complément. En outre, la fonctionnalité sera automatiquement active pour les nouvelles collections de sites.|  
-|**Fonctionnalité d’intégration du serveur de rapports**|Active les rapports enrichis [!INCLUDE[msCoName](../includes/msconame-md.md)] à l’aide de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> Cette fonctionnalité est activée par défaut.|  
-|**Fonctionnalité d’intégration de Power View**|Active l'exploration interactive de données et la présentation visuelle dans les classeurs PowerPivot et les bases de données tabulaires Analysis Services.<br /><br /> Cette fonctionnalité est accessible via les menus contextuels des sources de données suivantes :<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> fichier de connexion .bism<br /><br /> <br /><br /> Si [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] n'apparaît pas dans les menus contextuels, vérifiez que **Fonctionnalité d'intégration de Power View** est activé.<br /><br /> Cette fonctionnalité est désactivée par défaut.|  
+|**Fonctionnalité Administration centrale du serveur de rapports**|Active les fonctionnalités de gestion de l'intégration avec un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Cette fonctionnalité est uniquement installée et utilisée dans la collection de sites Administration centrale de SharePoint.<br /><br /> La fonctionnalité d’intégration du serveur de rapports est automatiquement activée dans la collection de sites administration centrale [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de SharePoint après l’installation du complément pour les produits SharePoint. Dans certaines circonstances, vous devrez activer la fonctionnalité manuellement. Pour activer la fonctionnalité de serveur de rapports, utilisez les pages [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la page Paramètres du site de l'Administration centrale de SharePoint.<br /><br /> La version [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et les versions ultérieures du complément pour les produits SharePoint activent la fonctionnalité d’intégration du serveur de rapports pour toutes les collections de sites existantes pendant l’installation du complément. En outre, la fonctionnalité sera automatiquement active pour les nouvelles collections de sites.|  
+|**Fonctionnalité d'intégration du serveur de rapports**|Active les rapports enrichis [!INCLUDE[msCoName](../includes/msconame-md.md)] à l’aide de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> Cette fonctionnalité est activée par défaut.|  
+|**Fonctionnalité d'intégration de Power View**|Active l'exploration interactive de données et la présentation visuelle dans les classeurs PowerPivot et les bases de données tabulaires Analysis Services.<br /><br /> Cette fonctionnalité est accessible via les menus contextuels des sources de données suivantes :<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> fichier de connexion .bism<br /><br /> <br /><br /> Si [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] n'apparaît pas dans les menus contextuels, vérifiez que **Fonctionnalité d'intégration de Power View** est activé.<br /><br /> Cette fonctionnalité est désactivée par défaut.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
+ [Activer le serveur de rapports et les fonctionnalités d’intégration de Power View dans SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
  [Paramètres et fonctionnalités du site Reporting Services&#40;en mode SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)   
- [Activer la fonctionnalité de File Sync du serveur de rapports dans l’administration centrale de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
+ [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
   

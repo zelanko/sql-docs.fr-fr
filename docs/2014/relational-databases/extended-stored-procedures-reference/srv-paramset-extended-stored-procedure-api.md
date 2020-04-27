@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127158"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Définit la valeur d'un paramètre de retour d'appel de procédure stockée distante. Cette fonction a été remplacée par la fonction **srv_paramsetoutput**.  
   
@@ -61,7 +61,7 @@ len
  *n*  
  Indique le numéro du paramètre à définir. Le premier paramètre est 1.  
   
- *métadonnée*  
+ *data*  
  Pointeur vers la valeur de données à renvoyer au client en tant que paramètre de retour de procédure stockée distante.  
   
  *Len*  
@@ -76,14 +76,14 @@ len
   
 |Nouveaux types de données|Longueur de données de retour|  
 |--------------------|------------------------|  
-|`BITN`|**Null :** *Len* = 0, Data = GI, RET = 0<br /><br /> **Zéro :** NON APPLICABLE<br /><br /> **>= 255 :** NON APPLICABLE<br /><br /> **<255 :** NON APPLICABLE|  
-|`BIGVARCHAR`|**Null :** *Len* = 0, Data = GI, RET = 1<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = max8k, Data = valide, RET = 0<br /><br /> **<255 :** *Len* = <8 Ko, Data = valide, RET = 1|  
-|`BIGCHAR`|**Null :** *Len* = 0, Data = GI, RET = 1<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = max8k, Data = valide, RET = 0<br /><br /> **<255 :** *Len* = <8 Ko, Data = valide, RET = 1|  
-|`BIGBINARY`|**Null :** *Len* = 0, Data = GI, RET = 1<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = max8k, Data = valide, RET = 0<br /><br /> **<255 :** *Len* = <8 Ko, Data = valide, RET = 1|  
-|`BIGVARBINARY`|**Null :** *Len* = 0, Data = GI, RET = 1<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = max8k, Data = valide, RET = 0<br /><br /> **<255 :** *Len* = <8 Ko, Data = valide, RET = 1|  
-|NCHAR|**Null :** *Len* = 0, Data = GI, RET = 1<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = max8k, Data = valide, RET = 0<br /><br /> **<255 :** *Len* = <8 Ko, Data = valide, RET = 1|  
-|NVARCHAR|**Null :** *Len* = 0, Data = GI, RET = 1<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = max8k, Data = valide, RET = 0<br /><br /> **<255 :** *Len* = <8 Ko, Data = valide, RET = 1|  
-|`NTEXT`|**Null :** *Len* = IG, données = IG, RET = 0<br /><br /> **Zero :** *Len* = GI, Data = GI, RET = 0<br /><br /> **>= 255 :** *Len* = IG, données = IG, RET = 0<br /><br /> 255 : *Len* = IG, données = IG, RET = 0 ** \<**|  
+|`BITN`|**NULL :** *len* = 0, data = IG, RET = 0<br /><br /> **ZERO :** N/A<br /><br /> **>= 255 :** NON APPLICABLE<br /><br /> **<255 :** NON APPLICABLE|  
+|`BIGVARCHAR`|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
+|`BIGCHAR`|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
+|`BIGBINARY`|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
+|`BIGVARBINARY`|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
+|NCHAR|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
+|NVARCHAR|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
+|`NTEXT`|**NULL :** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = IG, data = IG, RET = 0<br /><br /> 255 : *Len* = IG, données = IG, RET = 0 ** \<**|  
 |RET = Valeur de retour de srv_paramset.||  
 |IG = La valeur sera ignorée.||  
 |valide = Tout pointeur valide vers des données.||  
@@ -95,7 +95,7 @@ len
   
  Cette fonction définit la valeur de retour pour un paramètre, mais n'envoie pas vraiment la valeur de retour au client. Tous les paramètres de retour, que leurs valeurs de retour aient été définies avec **srv_paramset** ou non, sont automatiquement envoyés au client quand **srv_senddone** est appelé avec l’indicateur d’état défini avec la valeur SRV_DONE_FINAL.  
   
- Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Le gestionnaire de SRV_RPC est toujours appelé, mais il apparaît comme s’il n’y avait aucun paramètre, et **srv_rpcparams** retourne 0.  
+ Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Le gestionnaire SRV_RPC est tout de même appelé, mais il apparaît comme s’il n’y avait aucun paramètre et **srv_rpcparams** retourne 0.  
   
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

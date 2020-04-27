@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107847"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Générer des flux de données à partir d'un rapport (Générateur de rapports et SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66107847"
   
  Le document de service Atom contient un identificateur unique pour chaque flux de données. Par ailleurs, vous utilisez cet identificateur dans une URL afin d'afficher le contenu du flux de données.  
   
- Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [génération de flux de données à partir de rapports &#40;générateur de rapports et SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

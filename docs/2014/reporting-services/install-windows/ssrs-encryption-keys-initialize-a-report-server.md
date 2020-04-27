@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108737"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Initialiser un serveur de rapports (Gestionnaire de configuration de SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66108737"
   
  Les premières étapes assurant l'initialisation d'un serveur de rapports en vue d'un déploiement évolutif sont identiques aux trois premières étapes de l'initialisation d'une combinaison base de données et serveur unique.  
   
- La seule différence réside dans la façon dont le serveur de rapports obtient la clé symétrique au cours du processus d'initialisation pour le déploiement évolutif. Lorsque le premier serveur est initialisé, il obtient la clé symétrique de Windows et Lorsque le deuxième serveur est initialisé durant la configuration du déploiement avec montée en puissance parallèle, il obtient sa clé symétrique du service Report Server déjà initialisé. L'instance du premier serveur de rapports utilise la clé publique de la deuxième instance pour créer un exemplaire chiffré de la clé symétrique pour l'instance du deuxième serveur de rapports. La clé symétrique n'est jamais exposée sous forme de texte brut à un seul stade de ce processus.  
+ La seule différence réside dans la façon dont le serveur de rapports obtient la clé symétrique au cours du processus d'initialisation pour le déploiement scale-out. Lorsque le premier serveur est initialisé, il obtient la clé symétrique de Windows et Lorsque le deuxième serveur est initialisé durant la configuration du déploiement avec montée en puissance parallèle, il obtient sa clé symétrique du service Report Server déjà initialisé. L'instance du premier serveur de rapports utilise la clé publique de la deuxième instance pour créer un exemplaire chiffré de la clé symétrique pour l'instance du deuxième serveur de rapports. La clé symétrique n'est jamais exposée sous forme de texte brut à un seul stade de ce processus.  
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisation d'un serveur de rapports  
   
@@ -71,6 +71,6 @@ ms.locfileid: "66108737"
  Pour confirmer l’initialisation d’un serveur de rapports, exécutez une commande ping pour le service web Report Server en tapant **http://\<nom_serveur>/reportserver** dans la fenêtre de commande. Si l'erreur `RSReportServerNotActivated` se produit, l'initialisation a échoué.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Stocker les données du serveur de rapports chiffrées &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

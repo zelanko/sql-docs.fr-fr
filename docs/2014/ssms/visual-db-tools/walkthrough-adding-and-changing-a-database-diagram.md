@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273734"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
@@ -78,8 +78,8 @@ ms.locfileid: "63273734"
   
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|cochée|  
-    |`T1col2`|`varchar(50)`|cochée|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|cochée|  
   
 4.  Cliquez avec le bouton droit sur `T1col1` , puis sélectionnez **Définir la clé primaire**.  
@@ -111,8 +111,7 @@ ms.locfileid: "63273734"
   
 4.  Tapez `T1col3 > 5` puis cliquez sur **OK**.  
   
-     
-  `Table1` contient à présent une contrainte selon laquelle toutes les valeurs entrées dans `T1col3` doivent être supérieures à 5.  
+     `Table1` contient à présent une contrainte selon laquelle toutes les valeurs entrées dans `T1col3` doivent être supérieures à 5.  
   
 5.  Cliquez sur **Fermer**.  
   
@@ -123,8 +122,8 @@ ms.locfileid: "63273734"
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|non validé|  
-    |`T2col2`|`varchar(50)`|cochée|  
-    |`T2col3`|`xml`|cochée|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  Les colonnes situées du côté clé primaire d'une relation de clé étrangère doivent faire partie d'une clé primaire ou d'une contrainte unique.  
@@ -137,7 +136,7 @@ ms.locfileid: "63273734"
   
 4.  Cliquez à nouveau sur **OK**.  
   
-## <a name="creating-indexes"></a>Création d'index  
+## <a name="creating-indexes"></a>Création des index  
  Vous pouvez créer des index sur la plupart des types de données, y compris les données XML.  
   
 #### <a name="to-create-a-standard-index"></a>Pour créer un index standard  

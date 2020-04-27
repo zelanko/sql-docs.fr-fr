@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103610"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Inscrire un nom de principal du service (SPN) pour un serveur de rapports
@@ -27,7 +27,7 @@ ms.locfileid: "66103610"
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
--   [Noms de principaux du service (SPN), syntaxe SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
+-   [Noms de principal du service (SPN), syntaxe setspn (Setspn. exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Vous devez être administrateur de domaine pour exécuter l'utilitaire sur le contrôleur de domaine.  
   
@@ -40,10 +40,9 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **SetSPN** est disponible dans Windows Server. L'argument `-s` ajoute un SPN après avoir vérifié qu'aucun doublon n'existe. **REMARQUE** -s est disponible dans Windows Server depuis Windows Server 2008.  
   
- 
-  `HTTP` est la classe de service. Le service Web Report Server s'exécute dans HTTP.SYS. L'une des conséquences de la création d'un nom principal de service pour HTTP est que des tickets seront accordés à toutes les applications Web sur le même ordinateur qui s'exécutent dans HTTP.SYS (y compris les applications hébergées dans les services Internet (IIS)) en fonction du compte d'utilisateur de domaine. Si ces services s'exécutent sous un compte différent, les demandes d'authentification échouent. Pour éviter ce problème, assurez-vous de configurer toutes les applications HTTP pour qu'elles s'exécutent sous le même compte ou envisagez la création d'en-têtes d'hôtes pour chaque application puis la création de noms principaux de service distincts pour chaque en-tête d'hôte. Lorsque vous configurez des en-tête de l'hôte, les modifications de DNS sont requises indépendamment de la configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ `HTTP` est la classe de service. Le service Web Report Server s'exécute dans HTTP.SYS. L'une des conséquences de la création d'un nom principal de service pour HTTP est que des tickets seront accordés à toutes les applications Web sur le même ordinateur qui s'exécutent dans HTTP.SYS (y compris les applications hébergées dans les services Internet (IIS)) en fonction du compte d'utilisateur de domaine. Si ces services s'exécutent sous un compte différent, les demandes d'authentification échouent. Pour éviter ce problème, assurez-vous de configurer toutes les applications HTTP pour qu'elles s'exécutent sous le même compte ou envisagez la création d'en-têtes d'hôtes pour chaque application puis la création de noms principaux de service distincts pour chaque en-tête d'hôte. Lorsque vous configurez des en-tête de l'hôte, les modifications de DNS sont requises indépendamment de la configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Les valeurs que vous spécifiez pour \<*nom_ordinateur*>, \<*nom_domaine*> et \<*port*> permettent d’identifier l’adresse réseau unique de l’ordinateur qui héberge le serveur de rapports. Ce peut être un nom d'hôte local ou un nom de domaine complet (FQDN). Si vous n’avez qu’un seul domaine et que vous utilisez le port 80, vous n’avez pas besoin de spécifier les valeurs \<*nom_domaine*> et \<*port*> dans votre ligne de commande. <\<*compte-d’utilisateur-de-domaine*> est le compte d’utilisateur sous lequel le service Report Server s’exécute et pour lequel le SPN doit être inscrit.  
+ Les valeurs que vous spécifiez \< *pour ComputerName*> \<, *DomainName*> et \< *port*> identifier l’adresse réseau unique de l’ordinateur qui héberge le serveur de rapports. Ce peut être un nom d'hôte local ou un nom de domaine complet (FQDN). Si vous n’avez qu’un seul domaine et que vous utilisez le port 80 \<, vous pouvez omettre *nom_domaine*> et \< *port*> à partir de votre ligne de commande. \<*domaine-User-account*> est le compte d’utilisateur sous lequel le service Report Server s’exécute et pour lequel le SPN doit être inscrit.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Inscrire un SPN pour un compte d'utilisateur de domaine  
   
@@ -61,7 +60,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     Par exemple : `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+     Par exemple : `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  Exécutez la commande.  
   
@@ -70,7 +69,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  Ajoutez `<RSWindowsNegotiate/>` comme première entrée de cette section pour activer NTLM.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer un compte de service &#40;Gestionnaire de configuration de SSR&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Configurer un compte de service &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gérer un serveur de rapports Reporting Services en mode natif](manage-a-reporting-services-native-mode-report-server.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 49ba35fb0ecb5ed70fe737a10ce9a700d4e4c816
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106584"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Ajouter, déplacer ou supprimer une zone de texte (Générateur de rapports et SSRS)
@@ -73,7 +73,7 @@ ms.locfileid: "66106584"
     >  Si vous cliquez dans la zone de texte en mode édition, appuyez sur Échap pour sélectionner la zone de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Zones de texte &#40;Générateur de rapport et SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Zones de texte &#40;Générateur de rapports et SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Raccourcis clavier &#40;Générateur de rapports&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298601"
 ---
 # <a name="deploying-a-rendering-extension"></a>Déploiement d'une extension de rendu
@@ -64,7 +64,7 @@ ms.locfileid: "63298601"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     La valeur définie pour **Name** correspond au nom unique de l'extension de rendu. La valeur définie pour **Type** est une liste séparée par des virgules comportant une entrée pour l’espace de noms complet de votre implémentation <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, suivi du nom de votre assembly (l’extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions de rendu sont visibles. Pour masquer une extension à partir des interfaces utilisateur, telles que Gestionnaire de rapports, **** ajoutez un attribut visible `Extension` à l’élément et affectez `false`-lui la valeur.  
+     La valeur définie pour **Name** correspond au nom unique de l'extension de rendu. La valeur définie pour **Type** est une liste séparée par des virgules comportant une entrée pour l’espace de noms complet de votre implémentation <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, suivi du nom de votre assembly (l’extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions de rendu sont visibles. Pour masquer une extension à partir des interfaces utilisateur, telles que Gestionnaire de rapports, **Visible** ajoutez un attribut visible `Extension` à l’élément et affectez `false`-lui la valeur.  
   
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Vous pouvez également ouvrir le Gestionnaire de rapports et vérifier que votre extension est répertoriée dans la liste des types d'exportation pour un rapport.  

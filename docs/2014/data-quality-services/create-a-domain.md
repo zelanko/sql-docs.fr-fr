@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480959"
 ---
 # <a name="create-a-domain"></a>Créer un domaine
@@ -24,17 +24,17 @@ ms.locfileid: "65480959"
   
  Il existe deux méthodes pour créer un domaine : La première se situe pendant l'étape Mapper de l'activité de découverte des connaissances, lorsque vous êtes en cours d'analyse d'un exemple de données pour ajouter des connaissances à une base nouvelle ou existante. La deuxième se situe pendant l'activité de gestion de l'arborescence du domaine quand, au lieu de modifier un domaine existant, vous en créez un nouveau.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour créer un domaine, vous devez avoir créé et ouvert une base de connaissances.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine.  
   
-##  <a name="Discovery"></a>Créer un domaine dans l’activité de découverte des connaissances  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> Créer un domaine dans l'activité de découverte des connaissances  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480959"
   
 5.  Dans la table **Mappages** , sélectionnez une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide. Si aucun domaine correspondant n'existe, cliquez sur l'icône **Créer un domaine** .  
   
-##  <a name="DomainManagement"></a>Créer un domaine dans l’activité de gestion des domaines  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Créer un domaine dans l’activité de gestion des domaines  
   
 1.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir la base de connaissances** , puis sélectionnez une base de connaissances ou cliquez sur **Nouvelle Base de connaissances** et entrez les propriétés de la base de connaissances.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65480959"
   
 3.  Dans la page **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** au-dessus de la liste des domaines.  
   
-##  <a name="Properties"></a>Définir les propriétés du domaine  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>Définir les propriétés du domaine  
   
 1.  Dans la boîte de dialogue **Créer un domaine** , entrez un nom qui est unique dans la base de connaissances et une description limitée à 256 caractères.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65480959"
   
 10. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a>Suivi : après la création d’un domaine  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> Suivi : Après la création d'un domaine  
  Après avoir créé un domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

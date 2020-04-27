@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316009"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : ajout d'une référence Web
+# <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : Ajout d’une référence web
   La découverte de service Web est le processus suivant lequel un client recherche un service Web et obtient sa description. Dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], le processus de la découverte de service Web implique l'interrogation d'un site Web suivant un algorithme prédéterminé. L'objectif de ce processus est de rechercher la description du service, qui correspond à un document XML utilisant le langage WSDL (Web Services Description Language).  
   
  La description du service décrit les services disponibles et la manière d'interagir avec ces derniers. Sans une description de service, il est impossible d'interagir par programme avec un service Web.  
@@ -42,8 +42,7 @@ ms.locfileid: "63316009"
   
 6.  Cliquez sur **Ajouter une référence** pour ajouter une référence Web pour le service Web cible.  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] télécharge la description du service et génère une classe proxy pour jouer le rôle d'interface entre votre application et le service Web Report Server. Vous devrez également ajouter une référence à l'espace de noms <xref:System.Web.Services> pour que votre référence Web fonctionne.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] télécharge la description du service et génère une classe proxy pour jouer le rôle d'interface entre votre application et le service Web Report Server. Vous devrez également ajouter une référence à l'espace de noms <xref:System.Web.Services> pour que votre référence Web fonctionne.  
   
 7.  Dans le menu Projet, cliquez sur **Ajouter une référence**.  
   

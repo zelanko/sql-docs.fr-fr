@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280433"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Exploration du modèle de clustering (Didacticiel sur l'exploration de données de base)
   L' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de clustering regroupe les cas en clusters qui contiennent des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Cluster Viewer fournit les onglets suivants pour explorer les modèles d'exploration de données de clustering :  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Cluster Viewer fournit les onglets suivants pour explorer les modèles d'exploration de données de clustering :  
   
 
   
-##  <a name="ClusterDiagramTab"></a>Onglet diagramme de cluster  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>Onglet diagramme de cluster  
  L'onglet Diagramme de cluster affiche tous les clusters qui sont dans un modèle d'exploration de données. Les lignes entre les clusters représentent le lien logique et sont plus ou moins ombrées selon le degré de similitude entre les clusters. La couleur actuelle de chaque cluster représente la fréquence de la variable et l'état dans le cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>Pour explorer le modèle dans l'onglet Diagramme de cluster  
@@ -58,7 +57,7 @@ ms.locfileid: "63280433"
   
 
   
-##  <a name="ClusterProfilesTab"></a>Onglet Profils du cluster  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>Onglet Profils du cluster  
  L’onglet **profils du cluster** fournit une vue d’ensemble `TM_Clustering` du modèle. L’onglet **profils du cluster** contient une colonne pour chaque cluster du modèle. La première colonne contient la liste des attributs associés à au moins un cluster. Les autres colonnes de la visionneuse contiennent la distribution des états d'un attribut pour chaque cluster. La distribution d’une variable discrète est indiquée sous la forme d’une barre de couleur avec le nombre maximal de barres affichées dans la liste barres de l' **histogramme** . Les attributs continus sont affichés avec un graphique en losange qui représente l'écart moyen et l'écart type dans chaque cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>Pour explorer le modèle dans l'onglet Profils du cluster  
@@ -85,7 +84,7 @@ ms.locfileid: "63280433"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>Onglet caractéristiques du cluster  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>Onglet caractéristiques du cluster  
  Avec l’onglet **caractéristiques du cluster** , vous pouvez examiner plus en détail les caractéristiques qui composent un cluster. Au lieu de comparer les caractéristiques de tous les clusters (comme dans l'onglet Profils du cluster), vous pouvez explorer un cluster à la fois. Par exemple, si vous sélectionnez **Bike** Buyers High dans la liste **cluster** , vous pouvez voir les caractéristiques des clients dans ce cluster. Même si l'affichage est différent de la visionneuse Profils du cluster, les conclusions sont les mêmes.  
   
 > [!NOTE]  
@@ -93,7 +92,7 @@ ms.locfileid: "63280433"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>Onglet discrimination de cluster  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>Onglet discrimination de cluster  
  L’onglet **discrimination de cluster** vous permet d’explorer les caractéristiques qui distinguent un cluster d’un autre. Une fois que vous avez sélectionné deux clusters, l’un dans la liste **cluster 1** et l’autre dans la liste **cluster 2** , la visionneuse calcule les différences entre les clusters et affiche une liste des attributs qui distinguent la plupart des clusters.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>Pour explorer le modèle dans l'onglet Discrimination de cluster  

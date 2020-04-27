@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101865"
 ---
 # <a name="role-assignments"></a>Affectations de rôles
@@ -30,8 +30,7 @@ ms.locfileid: "66101865"
   
 -   Un utilisateur ou un groupe pouvant être authentifié par la sécurité Windows ou un autre mécanisme d'authentification.  
   
--   Des définitions de rôles qui configurent un ensemble de tâches. 
-  **Administrateur système**, **Gestionnaire de contenu**et **Serveur de publication**sont des exemples de définitions de rôle.  
+-   Des définitions de rôles qui configurent un ensemble de tâches. **Administrateur système**, **Gestionnaire de contenu**et **Serveur de publication**sont des exemples de définitions de rôle.  
   
  Les attributions de rôles sont héritées dans la hiérarchie des dossiers. L'attribution de rôle qui est définie pour un dossier est automatiquement héritée par tous les rapports, les sources de données partagées, les ressources et les sous-dossiers contenus dans ce dossier. Vous pouvez passer outre la sécurité héritée en définissant les attributions de rôles des éléments individuels. Toutes les parties de la hiérarchie de dossiers doivent être sécurisées par au moins une attribution de rôle. Vous ne pouvez pas créer d'élément non sécurisé ou manipuler des paramètres d'une manière qui produise un élément non sécurisé.  
   

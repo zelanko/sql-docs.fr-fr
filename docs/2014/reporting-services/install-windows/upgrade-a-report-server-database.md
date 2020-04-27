@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108637"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
@@ -31,8 +31,7 @@ ms.locfileid: "66108637"
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Méthodes de mise à niveau d'une base de données de serveur de rapports en mode natif  
  La liste suivante identifie toutes les conditions selon lesquelles une base de données du serveur de rapports est mise à niveau :  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
   
      Au démarrage du service, le serveur de rapports vérifie la version du schéma de base de données pour s'assurer qu'elle correspond à la version du serveur. Si la version du schéma de base de données est antérieure, elle est automatiquement mise à niveau vers la version du schéma requise par le serveur de rapports. La mise à niveau automatique est particulièrement utile si vous avez restauré ou joint une base de données du serveur de rapports plus ancienne. Un message est entré dans le fichier journal de suivi du serveur de rapports, indiquant que la version du schéma de base de données a été mise à niveau.  
   
@@ -67,9 +66,9 @@ ms.locfileid: "66108637"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Assistant modification de base de données &#40;le mode natif SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Mettre à niveau et migrer Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Migrer une installation Reporting Services &#40;en mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Faire migrer une installation Reporting Services &#40;mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

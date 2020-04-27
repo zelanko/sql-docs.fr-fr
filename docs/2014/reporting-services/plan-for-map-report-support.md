@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108082"
 ---
 # <a name="plan-for-map-report-support"></a>Planifier la prise en charge de rapport cartographique
@@ -26,7 +26,7 @@ ms.locfileid: "66108082"
  Dans chaque rapport, les auteurs peuvent spécifier s'il faut utiliser une connexion SSL (Secure Sockets Layer) pour récupérer des mosaïques auprès du serveur de mosaïques. Pour ce faire, dans le volet Propriétés de la couche de mosaïques, ils doivent définir la propriété booléenne `true`UseSecureConnection sur.  
   
 > [!NOTE]  
->  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+>   Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
 ## <a name="report-design-recommendations"></a>Recommandations relatives à la conception des rapports  
  Une bonne conception pour les rapports cartographiques requiert que l'auteur de rapport évalue les compromis entre les données spatiales dynamiques et statiques et recherche un équilibre qui profite aux utilisateurs de rapport. Les éléments cartographiques incorporés peuvent augmenter considérablement la taille de la définition de rapport, mais ils réduisent le temps nécessaire pour afficher le rapport cartographique. Les éléments cartographiques dynamiques réduisent la taille de la définition de rapport, mais augmentent le temps requis pour traiter et afficher la carte. L'auteur de rapport doit rechercher l'équilibre correct entre ces différents facteurs.  

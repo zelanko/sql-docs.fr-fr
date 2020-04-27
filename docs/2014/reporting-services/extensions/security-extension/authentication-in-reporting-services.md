@@ -16,18 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282150"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentification dans Reporting Services
   L'authentification est le processus d'établissement du droit d'un utilisateur à une identité. De nombreuses techniques vous permettent d'authentifier un utilisateur. La façon la plus courante consiste à utiliser des mots de passe. Par exemple, lorsque vous implémentez l'authentification par formulaire, vous voulez une implémentation qui interroge les utilisateurs au sujet de leurs informations d'identification (généralement par le biais d'une interface qui demande un nom de connexion et un mot de passe), puis valide les utilisateurs par rapport à une banque de données, telle qu'une table de base de données ou un fichier de configuration. Si les informations d'identification ne peuvent pas être validées, le processus d'authentification échoue et l'utilisateur assume une identité anonyme.  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Authentification personnalisée dans Reporting Services  
- Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], le système d'exploitation Windows traite l'authentification des utilisateurs par le biais de la sécurité intégrée ou de la réception explicite et de la validation des informations d'identification des utilisateurs. L'authentification personnalisée peut être développée dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour prendre en charge des schémas d'authentification supplémentaires. Cela est possible grâce à l'interface d'extension de sécurité <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Toutes les extensions héritent de l'interface de base <xref:Microsoft.ReportingServices.Interfaces.IExtension> pour toute extension déployée et utilisée par le serveur de rapports. 
-  <xref:Microsoft.ReportingServices.Interfaces.IExtension>, ainsi que <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>, sont membres de l'espace de noms <xref:Microsoft.ReportingServices.Interfaces>.  
+ Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], le système d'exploitation Windows traite l'authentification des utilisateurs par le biais de la sécurité intégrée ou de la réception explicite et de la validation des informations d'identification des utilisateurs. L'authentification personnalisée peut être développée dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour prendre en charge des schémas d'authentification supplémentaires. Cela est possible grâce à l'interface d'extension de sécurité <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Toutes les extensions héritent de l'interface de base <xref:Microsoft.ReportingServices.Interfaces.IExtension> pour toute extension déployée et utilisée par le serveur de rapports. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, ainsi que <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>, sont membres de l'espace de noms <xref:Microsoft.ReportingServices.Interfaces>.  
   
  Le principal moyen d'authentification auprès d'un serveur de rapports dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est la méthode <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Ce membre du service Web Reporting Services peut être utilisé pour passer les informations d'identification de l'utilisateur à un serveur de rapports pour validation. Votre extension de sécurité sous-jacente implémente **IAuthenticationExtension. LogonUser** qui contient votre code d’authentification personnalisé. Dans l’exemple d’authentification par formulaire, **LogonUser** effectue un contrôle d’authentification par rapport aux informations d’identification fournies et un magasin d’utilisateurs personnalisé dans une base de données. L’exemple suivant illustre une implémentation de **LogonUser** :  
   
@@ -96,7 +95,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 }  
 ```  
   
-## <a name="authentication-flow"></a>Flux d’authentification  
+## <a name="authentication-flow"></a>Flux d'authentification  
  Le service Web Reporting Services fournit des extensions d'authentification personnalisées pour permettre au Gestionnaire de rapports et au serveur de rapports d'effectuer l'authentification par formulaire.  
   
  La méthode <xref:ReportService2010.ReportingService2010.LogonUser%2A> du service Web Reporting Services est utilisée pour envoyer des informations d'identification au serveur de rapports pour authentification. Le service Web utilise des en-têtes HTTP pour passer un ticket d'authentification (appelé « cookie ») du serveur au client pour les demandes d'ouverture de session validées.  
@@ -127,8 +126,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 ## <a name="forms-authentication"></a>Authentification par formulaire  
  L'authentification par formulaire est un type d'authentification [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dans laquelle un utilisateur non authentifié est dirigé vers un formulaire HTML. Lorsque l'utilisateur fournit des informations d'identification, le système émet un cookie qui contient un ticket d'authentification. Lors des demandes ultérieures, le système examine d'abord le cookie pour déterminer si l'utilisateur a déjà été authentifié par le serveur de rapports.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut être étendu pour prendre en charge l'authentification par formulaire à l'aide des interfaces d'extensibilité de la sécurité disponibles par le biais de l'API Reporting Services. Si vous étendez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour utiliser l'authentification par formulaire, utilisez le chiffrement SSL pour toutes les communications avec le serveur de rapports pour empêcher des utilisateurs malveillants d'accéder au cookie d'un autre utilisateur. Le chiffrement SSL permet aux clients et au serveur de rapports de s'authentifier mutuellement et garantit qu'aucun autre ordinateur ne peut lire le contenu des communications entre les deux ordinateurs. Toutes les données envoyées par un client par un client une connexion SSL sont chiffrées pour empêcher des utilisateurs malveillants d'intercepter des mots de passe ou des données envoyés à un serveur de rapports.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut être étendu pour prendre en charge l'authentification par formulaire à l'aide des interfaces d'extensibilité de la sécurité disponibles par le biais de l'API Reporting Services. Si vous étendez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour utiliser l'authentification par formulaire, utilisez le chiffrement SSL pour toutes les communications avec le serveur de rapports pour empêcher des utilisateurs malveillants d'accéder au cookie d'un autre utilisateur. Le chiffrement SSL permet aux clients et au serveur de rapports de s'authentifier mutuellement et garantit qu'aucun autre ordinateur ne peut lire le contenu des communications entre les deux ordinateurs. Toutes les données envoyées par un client par un client une connexion SSL sont chiffrées pour empêcher des utilisateurs malveillants d'intercepter des mots de passe ou des données envoyés à un serveur de rapports.  
   
  L'authentification par formulaire est généralement implémentée pour prendre en charge des comptes et l'authentification pour des plateformes autres que Windows. Une interface graphique est présentée à un utilisateur qui demande l'accès à un serveur de rapports, et les informations d'identification fournies sont envoyées à une autorité de sécurité pour authentification.  
   
@@ -146,9 +144,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   L'authentification [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] doit avoir la valeur « Forms ». Vous configurez l'authentification [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dans le fichier Web.config pour le serveur de rapports.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut authentifier et autoriser des utilisateurs avec l'authentification Windows ou l'authentification personnalisée, mais pas les deux à la fois. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne prend pas en charge l'utilisation simultanée de plusieurs extensions de sécurité.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peut authentifier et autoriser des utilisateurs avec l'authentification Windows ou l'authentification personnalisée, mais pas les deux à la fois. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne prend pas en charge l'utilisation simultanée de plusieurs extensions de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d'une extension de sécurité](../security-extension/implementing-a-security-extension.md)  

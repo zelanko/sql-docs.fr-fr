@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488941"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tâche 7 : Ajout d'une transformation de nettoyage DQS au flux de données
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tâche 7 : Ajout d’une transformation de nettoyage DQS au flux de données
   Dans cette tâche, vous allez ajouter la transformation de nettoyage DQS au flux de données pour nettoyer les données des fournisseurs d'entrée à l'aide de DQS. Pour plus d’informations sur la transformation, consultez **[transformation de nettoyage DQS](https://msdn.microsoft.com/library/ee677619.aspx)** .  
   
 1.  Cliquez avec le bouton droit sur **nettoyage DQS** sous l’onglet **Flow Data** , puis cliquez sur **Renommer**. Tapez **nettoyer les données des fournisseurs**, puis appuyez sur **entrée**.  
@@ -61,6 +61,6 @@ ms.locfileid: "65488941"
 12. Cliquez sur **OK** pour fermer la boîte de dialogue **éditeur de transformation de nettoyage DQS** .  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 8 : Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Tâche 8 : Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

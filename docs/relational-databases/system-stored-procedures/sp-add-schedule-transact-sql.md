@@ -18,10 +18,10 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "70810393"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
@@ -60,12 +60,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`Valeur indiquant quand une tâche doit être exécutée. *freq_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Tous les mois, par rapport à *freq_interval*|  
 |**64**|Exécuter au démarrage du service de l’agent SQL|  
 |**128**|Exécuter lorsque l’ordinateur est inactif (non pris en charge dans [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
@@ -84,10 +84,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`Spécifie les unités pour *freq_subday_interval*. *freq_subday_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**0x1**|À une heure spécifiée|  
-|**0x2**|Secondes|  
+|**0X2**|Secondes|  
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
@@ -95,13 +95,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`L’occurrence d’un travail de *freq_interval* par mois, si *freq_interval* est de 32 (mensuel relatif). *freq_relative_interval* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes. *freq_relative_interval* est ignorée dans les cas où *freq_type* n’est pas égal à 32.  
   
-|Valeur|Description (unité)|  
+|Value|Description (unité)|  
 |-----------|--------------------------|  
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor* est de **type int**, avec **0**comme valeur par défaut.  
   
@@ -132,8 +132,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  None  
   
 ## <a name="remarks"></a>Notes  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -144,7 +143,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
   

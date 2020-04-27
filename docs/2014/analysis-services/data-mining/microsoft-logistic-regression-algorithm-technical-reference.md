@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174509"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)
@@ -44,7 +44,7 @@ ms.locfileid: "78174509"
  La sélection des fonctionnalités est automatiquement utilisée par tous les algorithmes d'exploration de données Analysis Services pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dans un modèle de régression logistique dépend du type de données de l'attribut. La régression logistique étant basée sur l'algorithme MNN (Microsoft Neural Network), elle utilise un sous-ensemble de méthodes de sélection de fonctionnalités qui s'appliquent aux réseaux neuronaux. Pour plus d’informations, consultez [Sélection des fonctionnalités &#40;Exploration de données&#41;](feature-selection-data-mining.md).
 
 ### <a name="scoring-inputs"></a>Calcul de score des entrées
- La *notation* dans le contexte d’un modèle de réseau neuronal ou d’un modèle de régression logistique signifie le processus de conversion des valeurs présentes dans les données en un ensemble de valeurs qui utilisent la même échelle et qui, par conséquent, peuvent être comparées les unes aux autres. Par exemple, supposons que les entrées pour la plage Income sont comprises entre de 0 à 100 000 et que celles pour [Number of Children] sont comprises entre 0 et 5. Ce processus de conversion vous permet de *noter*ou de comparer l’importance de chaque entrée, quelle que soit la différence des valeurs.
+ Dans le contexte d’un modèle de réseau neuronal ou de régression logistique, le*ing* désigne le processus de conversion des valeurs présentes dans les données d’un jeu de valeurs qui utilisent la même échelle et qui, par conséquent, peuvent être comparées les unes aux autres. Par exemple, supposons que les entrées pour la plage Income sont comprises entre de 0 à 100 000 et que celles pour [Number of Children] sont comprises entre 0 et 5. Ce processus de conversion vous permet de *noter*ou de comparer l’importance de chaque entrée, quelle que soit la différence des valeurs.
 
  Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mise à l’échelle à un format numérique à l’aide de la méthode de normalisation z-score, (x-μ)/StdDev.
 
@@ -102,7 +102,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED spécifie un nombre à utiliser pour amorcer le générateur Pseudo-aléatoire lors de la détermination aléatoire des données exclusion. Si HOLDOUT_SEED a la valeur 0, l'algorithme génère la valeur de départ en fonction du nom du modèle d'exploration de données afin de garantir que le contenu du modèle reste inchangé lors du retraitement.
 
- La valeur par défaut est 0.
+ La valeur par défaut est 0.
 
  MAXIMUM_INPUT_ATTRIBUTES définit le nombre d’attributs d’entrée que l’algorithme peut traiter avant d’appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.
 
@@ -114,7 +114,7 @@ WHERE NODE_TYPE = 23
 
  MAXIMUM_STATES spécifie le nombre maximal d’États d’attribut que l’algorithme prend en charge. Si le nombre d'états d'un attribut est supérieur au nombre maximal d'états, l'algorithme sélectionne les états les plus fréquents pour cet attribut et ignore les autres.
 
- La valeur par défaut est 100.
+ La valeur par défaut est 100.
 
  SAMPLE_SIZE spécifie le nombre de cas à utiliser pour l’apprentissage du modèle. Le fournisseur d'algorithme utilise soit ce nombre, soit le pourcentage du nombre total de cas qui ne sont pas inclus dans le pourcentage d'exclusion conformément au paramètre HOLDOUT_PERCENTAGE : c'est la valeur la plus faible qui est retenue.
 
@@ -133,7 +133,7 @@ WHERE NODE_TYPE = 23
 
  S'applique à la colonne de modèle d'exploration de données.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Conditions requises
  Un modèle de régression logistique doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.
 
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles

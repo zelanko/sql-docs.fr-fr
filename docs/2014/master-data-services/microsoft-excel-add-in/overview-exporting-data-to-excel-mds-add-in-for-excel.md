@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482801"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Chargement de données (Complément MDS pour Excel)
@@ -42,16 +42,16 @@ ms.locfileid: "65482801"
 |----------------------|-----------|  
 |Filtrez les données MDS avant de les charger dans Excel.|[Filtrer les données avant de charger &#40;Complément MDS pour Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Chargez des données MDS dans Excel.|[Charger des données MDS dans Excel](export-data-to-excel-from-master-data-services.md)|  
-|Modifiez l'ordre des colonnes avant de télécharger les données.|[Réorganiser les colonnes &#40;Complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|Modifiez l'ordre des colonnes avant de télécharger les données.|[Réorganiser des colonnes &#40;Complément MDS pour Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Connexions &#40;Complément MDS pour Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Connexions &#40;Complément MDS pour Excel#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Fichiers de requête de raccourci &#40;Complément MDS pour Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Complément Master Data Services pour Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [&#40;de sécurité Master Data Services&#41;](../security-master-data-services.md)  
+-   [Sécurité &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

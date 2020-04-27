@@ -1,5 +1,5 @@
 ---
-title: Identifiants et descripteurs de type de données Microsoft Docs
+title: Identificateurs et descripteurs des types de données | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2019
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284482"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificateurs et descripteurs des types de données
-Les types de données énumérés dans les sections [SQL Data Types](../../../odbc/reference/appendixes/sql-data-types.md) et [C Data Types](../../../odbc/reference/appendixes/c-data-types.md) plus tôt dans cette annexe sont des types de données « concis » : chaque identifiant fait référence à un seul type de données. Il existe une correspondance individuelle entre l’identifiant et le type de données. Toutefois, dans tous les cas, les descripteurs n’utilisent pas une seule valeur pour identifier les types de données. Dans certains cas, ils utilisent un type de données "verbose" et un sous-code type. Pour tous les types de données, sauf les types de dates et de données d’intervalle, l’identifiant de type verbeux est le même que l’identifiant de type concis et la valeur dans SQL_DESC_DATETIME_INTERVAL_CODE est égale à 0. Toutefois, pour les types de données de date et d’intervalle, un type verbeux (SQL_DATETIME ou SQL_INTERVAL) est stocké dans SQL_DESC_TYPE, un type concis est stocké dans SQL_DESC_CONCISE_TYPE et un sous-code pour chaque type concis est stocké dans SQL_DESC_DATETIME_INTERVAL_CODE. La mise en place d’un de ces champs affecte les autres. Pour plus d’informations sur ces domaines, consultez la description de la fonction [SQLSetDescField.](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
+Les types de données répertoriés dans les sections types de données [SQL](../../../odbc/reference/appendixes/sql-data-types.md) et [types de données C](../../../odbc/reference/appendixes/c-data-types.md) plus haut dans cette annexe sont des types de données « concis » : chaque identificateur fait référence à un type de données unique. Il existe une correspondance un-à-un entre l’identificateur et le type de données. Toutefois, dans tous les cas, les descripteurs n’utilisent pas une seule valeur pour identifier les types de données. Dans certains cas, ils utilisent un type de données « verbose » et un sous-code de type. Pour tous les types de données à l’exception des types de données DateTime et Interval, l’identificateur de type détaillé est identique à l’identificateur de type concis et la valeur de SQL_DESC_DATETIME_INTERVAL_CODE est égale à 0. Toutefois, pour les types de données DateTime et Interval, un type détaillé (SQL_DATETIME ou SQL_INTERVAL) est stocké dans SQL_DESC_TYPE, un type concis est stocké dans SQL_DESC_CONCISE_TYPE, et un sous-code pour chaque type concis est stocké dans SQL_DESC_DATETIME_INTERVAL_CODE. La définition de l’un de ces champs affecte les autres. Pour plus d’informations sur ces champs, consultez la description de la fonction [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .  
   
- Lorsque le champ SQL_DESC_TYPE ou SQL_DESC_CONCISE_TYPE est défini pour certains types de données, les champs SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION et SQL_DESC_SCALE sont automatiquement définis en valeurs par défaut, le cas échéant pour le type de données. Pour plus d’informations, voir la description du champ SQL_DESC_TYPE dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Si l’un des ensembles de valeurs par défaut n’est pas approprié, l’application doit définir explicitement le champ descripteur par le biais d’un appel à **SQLSetDescField**.  
+ Lorsque le champ SQL_DESC_TYPE ou SQL_DESC_CONCISE_TYPE est défini pour certains types de données, les champs SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION et SQL_DESC_SCALE sont automatiquement définis sur les valeurs par défaut, selon le cas pour le type de données. Pour plus d’informations, consultez la description du champ SQL_DESC_TYPE dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Si l’une des valeurs par défaut n’est pas appropriée, l’application doit définir explicitement le champ descripteur via un appel à **SQLSetDescField**.  
   
- Le tableau suivant affiche l’identifiant de type concis, l’identifiant de type verbeux et le sous-code de type pour chaque date et intervalle SQL et C type identifiant. Comme le montre ce tableau, pour les types de données de date et d’intervalle, les champs de SQL_DESC_TYPE et de SQL_DESC_DATETIME_INTERVAL_CODE ont les mêmes constantes manifestes tant pour les types de données SQL (dans les descripteurs de mise en œuvre) que pour les types de données C (dans les descripteurs d’application).  
+ Le tableau suivant indique l’identificateur de type concis, l’identificateur de type détaillé et le sous-code de type pour chaque identificateur de type DateTime et interval SQL et C. Comme le montre ce tableau, pour les types de données DateTime et Interval, les champs SQL_DESC_TYPE et SQL_DESC_DATETIME_INTERVAL_CODE ont les mêmes constantes de manifeste pour les types de données SQL (dans les descripteurs d’implémentation) et pour les types de données C (dans les descripteurs d’application).  
   
-|Type SQL concise|Type Concise C|Type Verbose|DATETIME_INTERVAL_CODE|  
+|Type SQL concis|Type C concis|Type détaillé|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

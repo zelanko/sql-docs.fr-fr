@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103727"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Déplacer ou supprimer un élément (Gestionnaire de rapports)
@@ -30,11 +30,11 @@ ms.locfileid: "66103727"
   
 |Icône|Élément pouvant être déplacé|  
 |----------|-------------------|  
-|![Icône de rapport](../media/hlp-16doc.gif "Icône de rapport")|Rapport|  
+|![Report icon](../media/hlp-16doc.gif "Icône de rapport")|Rapport|  
 |![Icône Rapport lié](../media/hlp-16linked.gif "Icône Rapport lié")|Rapport lié|  
-|![Icône Dossier](../media/hlp-16folder.gif "Icône Dossier")|Dossier|  
+|![Icône de dossier](../media/hlp-16folder.gif "Icône de dossier")|Dossier|  
 |![icône de ressource générique](../media/hlp-16file.gif "icône de ressource générique")|Ressource générique|  
-|![Icône de source de données partagée](../media/hlp-16datasource.png "Icône de source de données partagée")|Source de données partagée|  
+|![Shared data source icon](../media/hlp-16datasource.png "Icône de source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
  Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  

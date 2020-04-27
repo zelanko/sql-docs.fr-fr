@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108138"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Page Nouvel abonnement ou Modifier l’abonnement (Gestionnaire de rapports)
   La page Nouvel abonnement ou Modifier l'abonnement permet de créer un abonnement ou de modifier un abonnement existant à un rapport. Les options de cette page varient selon votre attribution de rôle. Les utilisateurs qui possèdent des autorisations avancées peuvent utiliser des options supplémentaires.  
   
- Les abonnements sont pris en charge pour les rapports qui peuvent s'exécuter sans assistance. Les rapports doivent utiliser au minimum des informations d'identification stockées ou aucune information d'identification. Si le rapport utilise des paramètres, une valeur par défaut doit être spécifiée. Les abonnements peuvent devenir inactifs si vous modifiez les paramètres d'exécution de rapport ou que vous supprimez les valeurs par défaut utilisées par les propriétés de paramètres. Pour plus d’informations, consultez [créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ Les abonnements sont pris en charge pour les rapports qui peuvent s'exécuter sans assistance. Les rapports doivent utiliser au minimum des informations d'identification stockées ou aucune information d'identification. Si le rapport utilise des paramètres, une valeur par défaut doit être spécifiée. Les abonnements peuvent devenir inactifs si vous modifiez les paramètres d'exécution de rapport ou que vous supprimez les valeurs par défaut utilisées par les propriétés de paramètres. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "66108138"
  **Remis par**  
  Sélectionnez l'extension de remise à utiliser pour distribuer le rapport. Selon l'extension de remise choisie, les paramètres suivants s'affichent :  
   
--   Les abonnements par courrier électronique fournissent des champs qui sont familiers aux utilisateurs de messagerie électronique (par exemple, **aux champs à**, **objet**et **priorité** ). Spécifiez **Inclure un rapport** pour incorporer ou joindre le rapport, ou **Inclure un lien** pour inclure une URL dans le rapport. Sélectionnez **Format du rendu** pour choisir un format de présentation pour le rapport joint ou incorporé.  
+-   Les abonnements par messagerie contiennent des champs qui sont familiers aux utilisateurs de messagerie (les champs **À**, **Objet**et **Priorité** , par exemple). Spécifiez **Inclure un rapport** pour incorporer ou joindre le rapport, ou **Inclure un lien** pour inclure une URL dans le rapport. Sélectionnez **Format du rendu** pour choisir un format de présentation pour le rapport joint ou incorporé.  
   
 -   Les abonnements aux partages de fichiers fournissent des champs qui vous permettent de spécifier un emplacement cible. Vous pouvez remettre n'importe quel rapport dans un partage de fichiers. Toutefois, les rapports qui prennent en charge des fonctionnalités interactives (notamment les rapports de matrice qui prennent en charge l'extraction vers le bas pour les lignes et les colonnes) sont rendus sous forme de fichiers statiques. Vous ne pouvez pas afficher les lignes et les colonnes extraites d'un fichier statique. Le nom du partage de fichiers doit être spécifié au format UNC (Uniform Naming Convention) (par \\exemple, \mycomputer\public\myreportfiles). N'incluez pas de barre oblique inverse à la fin du chemin d'accès. Le fichier de rapport sera remis dans un format de fichier qui est basé sur le format de rendu (si vous choisissez **Excel**, par exemple, le fichier sera remis en tant que fichier .xls).  
   

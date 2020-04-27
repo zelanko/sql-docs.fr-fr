@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284853"
 ---
 # <a name="roles-ssas-tabular"></a>Rôles (SSAS Tabulaire)
@@ -25,8 +25,7 @@ ms.locfileid: "67284853"
   
  Les informations de cette rubrique sont destinées aux auteurs de modèles tabulaires qui définissent des rôles à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les rôles définis lors de la création de modèles s'appliquent à la base de données model de l'espace de travail. Une fois qu’une base de données model a été déployée, les administrateurs de la base de données model peuvent gérer (ajouter, modifier, supprimer) les membres de rôle à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la gestion des membres de rôles dans une base de données déployée, consultez [Rôles de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-model-roles-ssas-tabular.md).  
   
- 
-  [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../tabular-modeling-adventure-works-tutorial.md) inclut des informations supplémentaires et des leçons sur l’utilisation de cette fonctionnalité.  
+ [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../tabular-modeling-adventure-works-tutorial.md) inclut des informations supplémentaires et des leçons sur l’utilisation de cette fonctionnalité.  
   
  Sections de cette rubrique :  
   
@@ -36,11 +35,11 @@ ms.locfileid: "67284853"
   
 -   [Filtres de lignes](#bkmk_rowfliters)  
   
--   [Test des rôles](#bkmk_testroles)  
+-   [Test de rôles](#bkmk_testroles)  
   
 -   [Tâches associées](#bkmk_rt)  
   
-##  <a name="bkmk_underst"></a>Fonctionnement des rôles  
+##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Fonctionnement des rôles  
  Les rôles sont utilisés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans pour gérer la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sécurité des données et. Il existe deux types de rôles dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   le rôle du serveur, un rôle fixe qui fournit un accès administrateur à une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)];  
@@ -51,12 +50,12 @@ ms.locfileid: "67284853"
   
  Les rôles dans les modèles tabulaires peuvent être définis plus précisément avec des filtres de lignes. Les filtres de lignes utilisent des expressions DAX pour définir les lignes d'une table, ainsi que toutes les lignes associées dans la direction « plusieurs », qu'un utilisateur peut interroger. Les filtres de lignes utilisant des expressions DAX ne peuvent être définis que pour les autorisations de lecture et de lecture et de traitement. Pour plus d'informations, consultez la section [Row Filters](#bkmk_rowfliters) plus loin dans cette rubrique.  
   
- Par défaut, lorsque vous créez un nouveau projet de modèle tabulaire, le projet de modèle n’a aucun rôle. Des rôles peuvent être définis à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Lorsque les rôles sont définis lors de la création d'un modèle, ils sont appliqués à la base de données model de l'espace de travail. Lorsque le modèle est déployé, les mêmes rôles sont appliqués au modèle déployé. Une fois qu'un modèle a été déployé, les membres du rôle serveur (administrateur d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) et les administrateurs de base de données peuvent gérer les rôles associés au modèle et les membres associés à chaque rôle à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Par défaut, lorsque vous créez un projet de modèle tabulaire, le projet de modèle n'a aucun rôle. Des rôles peuvent être définis à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Lorsque les rôles sont définis lors de la création d'un modèle, ils sont appliqués à la base de données model de l'espace de travail. Lorsque le modèle est déployé, les mêmes rôles sont appliqués au modèle déployé. Une fois qu'un modèle a été déployé, les membres du rôle serveur (administrateur d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) et les administrateurs de base de données peuvent gérer les rôles associés au modèle et les membres associés à chaque rôle à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
 >  Les rôles définis pour un modèle configuré pour le mode DirectQuery ne peuvent pas utiliser de filtres de lignes ; toutefois, les autorisations définies pour chaque rôle s'appliqueront.  
   
-##  <a name="bkmk_permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Autorisations  
  Chaque rôle a une seule autorisation de base de données définie (sauf l'autorisation combinée de lecture et de traitement). Par défaut, un nouveau rôle aura l'autorisation Aucune. Autrement dit, une fois que les membres sont ajoutés au rôle avec l'autorisation Aucune, ils ne peuvent pas modifier la base de données, exécuter une opération de traitement, interroger des données, ni voir la base de données, sauf si une autre autorisation leur est octroyée.  
   
  Un utilisateur ou un groupe Windows peut être membre de plusieurs rôles, chaque rôle disposant d'une autorisation différente. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations définies pour chaque rôle se cumulent. Par exemple, si un utilisateur est membre d'un rôle bénéficiant d'un accès en lecture, et qu'il est également membre d'un rôle avec une autorisation Aucune, cet utilisateur disposera d'autorisations de lecture.  
@@ -68,17 +67,17 @@ ms.locfileid: "67284853"
 |None|Les membres ne peuvent pas apporter de modifications au schéma de la base de données model et ne peuvent pas interroger les données.|Les filtres de lignes ne s'appliquent pas. Aucune donnée n'est visible par les utilisateurs de ce rôle|  
 |Lire|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne), mais ils ne peuvent pas modifier la base de données model dans SSMS, apporter des modifications au schéma de la base de données model et l'utilisateur ne peut pas traiter le modèle.|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes sont visibles par les utilisateurs.|  
 |Lire et traiter|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne) et à exécuter des opérations de traitement à l'aide d'un script ou d'un package contenant une commande Traiter, mais ne peuvent pas apporter des modifications à la base de données. Impossible d'afficher la base de données model dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes peuvent être interrogées.|  
-|Procédure|Les membres peuvent effectuer des opérations de traitement en exécutant un script ou un package qui contient une commande Traiter. Impossible de modifier le schéma de la base de données model. Ne peuvent pas interroger les données. Impossible d'interroger la base de données model dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Les filtres de lignes ne s'appliquent pas. Aucune donnée ne peut être interrogée dans ce rôle|  
+|Process|Les membres peuvent effectuer des opérations de traitement en exécutant un script ou un package qui contient une commande Traiter. Impossible de modifier le schéma de la base de données model. Ne peuvent pas interroger les données. Impossible d'interroger la base de données model dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Les filtres de lignes ne s'appliquent pas. Aucune donnée ne peut être interrogée dans ce rôle|  
 |Administrateur|Les membres peuvent apporter des modifications au schéma de modèle et interroger toutes les données dans le générateur de modèles, le client de création de rapports et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Les filtres de lignes ne s'appliquent pas. Toutes les données peuvent être interrogées dans ce rôle.|  
   
-##  <a name="bkmk_rowfliters"></a>Filtres de lignes  
- Les filtres de lignes définissent les lignes d’une table qui peuvent être interrogées par les membres d’un rôle donné. Les filtres de lignes sont définis pour chaque table dans un modèle à l’aide de formules DAX.  
+##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>Filtres de lignes  
+ Les filtres de lignes définissent les lignes d’une table qui peuvent être interrogées par les membres d’un rôle donné. Les filtres de lignes sont définis pour chaque table dans un modèle à l'aide de formules DAX.  
   
  Les filtres de lignes peuvent être définis uniquement pour les rôles avec des autorisations de Lecture et de Lecture et processus. Par défaut, si un filtre de lignes n'est pas défini pour une table particulière, les membres d'un rôle disposant de l'autorisation de lecture ou de lecture et traitement peuvent interroger toutes les lignes de la table, sauf si le filtrage croisé s'applique à partir d'une autre table.  
   
  Une fois qu'un filtre de lignes est défini pour une table particulière, une formule DAX, qui doit correspondre à une valeur TRUE/FALSE, définit les lignes qui peuvent être interrogées par les membres de ce rôle particulier. Les lignes non incluses dans la formule DAX ne peuvent pas être interrogées. Par exemple, pour les membres du rôle Sales, la table Customers avec l’expression de filtres de lignes suivante, *= Customers [Country] = "USA"*, les membres du rôle Sales, ne peuvent voir que les clients aux États-Unis.  
   
- Les filtres de lignes s'appliquent aux lignes spécifiées ainsi qu'aux lignes connexes. Lorsqu’une table possède plusieurs relations, les filtres appliquent la sécurité de la relation qui est active. Les filtres de lignes se croisent avec d'autres filtres de ligne définis pour les tables associées, par exemple :  
+ Les filtres de lignes s'appliquent aux lignes spécifiées ainsi qu'aux lignes connexes. Lorsqu'une table contient plusieurs relations, les filtres appliquent la sécurité de la relation qui est active. Les filtres de lignes se croisent avec d'autres filtres de ligne définis pour les tables associées, par exemple :  
   
 |Table de charge de travail|Expression DAX|  
 |-----------|--------------------|  
@@ -129,14 +128,14 @@ ms.locfileid: "67284853"
 |6|Recherche et développement|  
 |7|Vente et marketing|  
   
-##  <a name="bkmk_testroles"></a>Test des rôles  
+##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Test des rôles  
  Lorsque vous créez un projet de modèle, vous pouvez utiliser la fonctionnalité Analyser dans Excel pour tester l'efficacité des rôles que vous avez définis. Dans le menu **Modèle** du générateur de modèles, lorsque vous cliquez sur **Analyser dans Excel**, avant qu'Excel ne s'ouvre, la boîte de dialogue **Choisir les informations d'identification et la perspective** s'affiche. Dans cette boîte de dialogue, vous pouvez spécifier le nom d'utilisateur actuel, un nom d'utilisateur différent, un rôle et une perspective que vous utiliserez pour vous connecter au modèle de l'espace de travail en tant que source de données. Pour plus d'informations, consultez la section [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Tâches associées  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer et gérer des rôles &#40;SSAS tabulaire&#41;](create-and-manage-roles-ssas-tabular.md)|Les tâches de cette rubrique décrivent comment créer et gérer des rôles à l'aide de la boîte de dialogue **Gestionnaire de rôles** .|  
+|[Créer et gérer des rôles &#40;SSAS Tabulaire&#41;](create-and-manage-roles-ssas-tabular.md)|Les tâches de cette rubrique décrivent comment créer et gérer des rôles à l'aide de la boîte de dialogue **Gestionnaire de rôles** .|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Perspectives &#40;&#41;tabulaire SSAS](perspectives-ssas-tabular.md)   

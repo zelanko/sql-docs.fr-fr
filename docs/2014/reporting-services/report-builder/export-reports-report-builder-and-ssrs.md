@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d8b4fe6e791f84f0949b0657b890c79db99dfbf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107944"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportation de rapports (Générateur de rapports et SSRS)
@@ -34,32 +34,30 @@ ms.locfileid: "66107944"
   
  L'option d'exportation est disponible dans la barre d'outils de la visionneuse de rapports du Gestionnaire de rapports, qui s'affiche en haut de chaque rapport lorsque vous consultez un rapport sur le serveur de rapports, et sur le ruban dans le Générateur de rapports lorsque vous affichez l'aperçu d'un rapport. L'option de flux est uniquement disponible dans le Gestionnaire de rapports.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit de nombreuses extensions de rendu et prend en charge les exportations de rapports dans les formats de fichiers usuels. Les extensions de rendu prennent en charge les formats de fichiers comportant des sauts de page conditionnels (Word ou Excel, par exemple), des sauts de page manuels (formats PDF ou TIFF, par exemple) ou des données uniquement (formats CSV ou XML conforme à Atom, par exemple).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit de nombreuses extensions de rendu et prend en charge les exportations de rapports dans les formats de fichiers usuels. Les extensions de rendu prennent en charge les formats de fichiers comportant des sauts de page conditionnels (Word ou Excel, par exemple), des sauts de page manuels (formats PDF ou TIFF, par exemple) ou des données uniquement (formats CSV ou XML conforme à Atom, par exemple).  
   
  Pour vous familiariser rapidement avec l’exportation de rapports et la génération de flux de données conformes à Atom à partir de rapports, consultez [exporter un rapport dans un autre type de fichier &#40;générateur de rapports et ssrs&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md) et [générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RendererTypes"></a>Types d’extensions de rendu  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a>Types d’extensions de rendu  
  Il existe trois types d'extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   **Extensions de convertisseur de données** Les extensions de rendu de données suppriment toutes les informations de mise en forme et de mise en page du rapport et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données ne prennent pas en charge les sauts de page.  
+-   **Extensions de convertisseurs de données** Les extensions de rendu de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données ne prennent pas en charge les sauts de page.  
   
      Les extensions de rendu de données suivantes sont prises en charge : CSV, XML et Atom.  
   
--   **Extensions de convertisseur de saut de page conditionnelle** Les extensions de rendu de saut de page conditionnel maintiennent la mise en page et la mise en forme du rapport. Le fichier résultant est optimisé pour l’affichage à l’écran et la remise, par exemple sur une page web ou dans les contrôles **ReportViewer** .  
+-   **Extensions de convertisseurs de saut de page conditionnelle** Les extensions de rendu de saut de page conditionnelle conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour l’affichage à l’écran et la remise, par exemple sur une page web ou dans les contrôles **ReportViewer** .  
   
      Les extensions de rendu de saut de page conditionnelle suivantes sont prises en charge : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word et archive Web (MHTML).  
   
--   **Extensions de rendu de saut de page** manuel Les extensions de convertisseur de saut de page manuel maintiennent la mise en page et la mise en forme du rapport. Le fichier résultant est optimisé pour une impression cohérente ou pour l'affichage en ligne du rapport dans un format de livre.  
+-   **Extensions de rendu de saut de page manuel** Les extensions de convertisseurs de saut de page manuel conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour une impression cohérente ou pour l'affichage en ligne du rapport dans un format de livre.  
   
      Les extensions de rendu de saut de page manuel suivantes sont prises en charge : TIFF et PDF.  
   
-##  <a name="ExportFormats"></a>Formats d’exportation  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des extensions de rendu qui affichent les rapports dans divers formats. Si vous prévoyez d'utiliser cette fonctionnalité, vous devez optimiser la conception du rapport en fonction du format de fichier choisi. La rubrique relative à chaque extension de rendu fournit des informations détaillées sur le mode de rendu du rapport dans le format correspondant.  
+##  <a name="export-formats"></a><a name="ExportFormats"></a>Formats d’exportation  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des extensions de rendu qui affichent les rapports dans divers formats. Si vous prévoyez d'utiliser cette fonctionnalité, vous devez optimiser la conception du rapport en fonction du format de fichier choisi. La rubrique relative à chaque extension de rendu fournit des informations détaillées sur le mode de rendu du rapport dans le format correspondant.  
   
  Le tableau suivant répertorie les formats disponibles.  
   
@@ -74,19 +72,19 @@ ms.locfileid: "66107944"
 |XML|Données|L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.<br /><br /> Pour plus d’informations, consultez [Exportation vers XML &#40;Générateur de rapports et SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md).|  
 |Atom|Données|L'extension de rendu Atom génère des flux conformes à Atom à partir des rapports. Les flux de données sont lisibles et échangeables avec des applications telles [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que le client qui peut utiliser des flux de données conformes à Atom.<br /><br /> La sortie est un document de service Atom qui répertorie les flux disponibles à partir d'un rapport. Au moins un flux est créé pour chaque région de données dans un rapport. Selon le type de région de données et les données affichées par cette région, plusieurs flux peuvent être générés.<br /><br /> Pour plus d’informations, consultez [génération de flux de données à partir de rapports &#40;générateur de rapports et SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
   
-##  <a name="ExportingReport"></a>Exportation d’un rapport  
+##  <a name="exporting-a-report"></a><a name="ExportingReport"></a>Exportation d’un rapport  
  Pour exporter un rapport, exécutez ce dernier dans le Gestionnaire de rapports ou le Générateur de rapports, puis sélectionnez un format dans la liste déroulante Exporter. Vous êtes invité à enregistrer ou à ouvrir le fichier. Si vous avez choisi **Ouvrir**, le rapport s'ouvre dans l'application associée au format de rendu que vous avez choisi. (Par exemple, lorsque vous sélectionnez **Excel** , le rapport s'ouvre dans Excel). Si vous avez choisi **Enregistrer**, le rapport est enregistré. Par exemple, si vous exportez un rapport vers Excel, il est enregistré en tant que fichier .xls. Les associations de fichiers définies pour l'ordinateur local déterminent l'application utilisée pour un format de rendu particulier. Pour plus d’informations, consultez [exporter un rapport dans un autre type de fichier &#40;générateur de rapports et les&#41;SSRS ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  Le serveur de rapports exporte le rapport tel qu'il existe dans la session utilisateur actuelle. Si quelqu'un publie une mise à jour du rapport alors que celui-ci est déjà ouvert sur votre ordinateur ou que les données affichées dans le rapport sont modifiées, la version exportée du rapport n'est pas mise à jour.  
   
  La pagination du rapport peut être affectée lorsque vous exportez un rapport sous un format différent. Lorsque vous affichez un aperçu du rapport, vous visualisez le rapport tel qu'il est rendu par l'extension de rendu HTML, qui respecte les règles de saut de page conditionnelle. Lorsque vous exportez un rapport vers un format de fichier différent, tel qu'Adobe Acrobat (PDF), la pagination est basée sur la taille de page physique, qui respecte les règles de saut de page manuel. Les pages peuvent également être séparées par des sauts de page logiques que vous ajoutez à un rapport, mais la longueur réelle d'une page varie selon le type de convertisseur que vous utilisez. Pour modifier la pagination de votre rapport, vous devez comprendre le comportement de pagination de l'extension de rendu que vous choisissez. Vous devrez peut-être ajuster la conception de votre disposition de rapport pour cette extension de rendu. Pour plus d’informations, consultez [mise en page et rendu &#40;générateur de rapports et SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md).  
   
-##  <a name="GeneratingDataFeedsFromReport"></a>Génération de flux de données à partir d’un rapport  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a>Génération de flux de données à partir d’un rapport  
  Pour générer des flux à partir d'un rapport, exécutez ce dernier dans le Gestionnaire de rapports, puis cliquez sur l'icône **Générer un flux** dans la barre d'outils du Gestionnaire de rapports. Vous êtes invité à enregistrer ou à ouvrir le fichier. Si vous avez choisi **Ouvrir**, le document de service Atom s'ouvre dans l'application associée à l'extension de fichier .atomsvc. Si vous avez choisi **Enregistrer**, le document est enregistré en tant que fichier .atomsvc. Par défaut, le nom du fichier correspond au nom du rapport. Vous pouvez remplacer ce nom par un autre plus explicite.  
   
  Vous enregistrez le document de service Atom sur votre ordinateur. Ultérieurement, vous pouvez le télécharger vers un serveur de rapports ou tout autre serveur afin de le rendre accessible aux autres utilisateurs. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md) et [Générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a>Dépannage des rapports exportés  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a>Dépannage des rapports exportés  
  Vos rapports peuvent parfois avoir une apparence différente ou ne pas fonctionner comme vous le voulez après les avoir exportés dans un format différent. Cela se produit parce que certaines règles et limitations peuvent s'appliquer au convertisseur. Vous pouvez prendre en compte de nombreuses limitations lors de la création du rapport. Vous devrez peut-être utiliser une mise en page légèrement différente dans votre rapport, aligner soigneusement les éléments du rapport, restreindre les pieds de page du rapport à une seule ligne de texte, etc.  
   
  Si votre rapport contient du texte Unicode avec des chiffres arabes, ou s'il contient des dates en chiffres arabes, les dates et les nombres ne sont pas affichés correctement lorsque vous imprimez le rapport ou que vous l'exportez dans l'un des formats suivants.  
@@ -115,16 +113,15 @@ ms.locfileid: "66107944"
   
 -   [Exportation vers un fichier image &#40;Générateur de rapports et SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)  
   
--   [Exportation au format XML &#40;Générateur de rapports et SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)  
+-   [Exportation vers XML &#40;Générateur de rapports et SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)  
   
 -   [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] propose des fonctionnalités supplémentaires qui vous permettent de créer des rapports qui fonctionnent correctement dans d'autres formats. Les sauts de page sur les régions de données de tableau matriciel (table, matrice et liste), les groupes et les rectangles vous permettent de mieux contrôler la pagination du rapport. Les pages de rapport, délimitées par les sauts de page, peuvent avoir des noms différents et une numérotation redéfinie. À l'aide des expressions, les noms et numéros des pages peuvent être mis à jour dynamiquement lorsque le rapport est exécuté. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] propose des fonctionnalités supplémentaires qui vous permettent de créer des rapports qui fonctionnent correctement dans d'autres formats. Les sauts de page sur les régions de données de tableau matriciel (table, matrice et liste), les groupes et les rectangles vous permettent de mieux contrôler la pagination du rapport. Les pages de rapport, délimitées par les sauts de page, peuvent avoir des noms différents et une numérotation redéfinie. À l'aide des expressions, les noms et numéros des pages peuvent être mis à jour dynamiquement lorsque le rapport est exécuté. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
  Par ailleurs, vous pouvez utiliser la fonction globale intégrée RenderFormat pour appliquer de manière conditionnelle des mises en page de rapport différentes selon le type de convertisseur. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-##  <a name="OtherWaysExportingReports"></a>Autres méthodes d’exportation des rapports  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a>Autres méthodes d’exportation des rapports  
  L'exportation d'un rapport est une tâche à la demande que vous effectuez lorsque le rapport est ouvert dans le Gestionnaire de rapports ou le Générateur de rapports. Pour automatiser une opération d'exportation (par exemple l'exportation d'un rapport vers un dossier partagé en tant que type de fichier spécifique, selon une planification récurrente), créez un abonnement chargé de remettre le rapport dans un dossier partagé. Pour plus d'informations, consultez [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md).  
   
  Les rapports prévisualisés dans les outils de création de rapports ou ouverts dans une application de navigation telle que le Gestionnaire de rapports sont toujours rendus en premier au format HTML. Vous ne pouvez pas spécifier une autre extension de rendu par défaut pour l'affichage. Toutefois, vous pouvez créer un abonnement qui produit un rapport dans le format de rendu de votre choix afin de le remettre ultérieurement dans une boîte de réception de courrier électronique ou un dossier partagé. Pour plus d’informations, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en mode natif&#41;](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) et [créer, modifier et supprimer un abonnement piloté par les données](../subscriptions/data-driven-subscriptions.md).  
@@ -139,7 +136,7 @@ http://<Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:C
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](saving-reports-report-builder.md)  
   

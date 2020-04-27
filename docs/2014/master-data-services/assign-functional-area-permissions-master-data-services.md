@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480100"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Affecter des autorisations de zone fonctionnelle (Master Data Services)
   Affectez des autorisations de zone fonctionnelle pour accorder aux utilisateurs ou groupes l'accès aux zones fonctionnelles de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
@@ -50,6 +50,6 @@ ms.locfileid: "65480100"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un administrateur de modèle &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
- [&#40;de sécurité Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Sécurité &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

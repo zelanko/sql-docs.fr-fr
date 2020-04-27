@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104617"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Modifier l'affichage des polygones, des lignes et des points à l'aide de règles et de données analytiques (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66104617"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> Fonctionnement des règles  
+##  <a name="understanding-rules"></a><a name="Rules"></a> Fonctionnement des règles  
  Vous pouvez définir quatre types de règles permettant au processeur de rapports d'ajuster automatiquement les propriétés d'affichage des éléments cartographiques sur une couche. Les règles varient en fonction du type d'élément cartographique : polygones, lignes ou points.  
   
 -   **Polygones.** Modifiez la couleur des polygones.  
@@ -54,7 +54,7 @@ ms.locfileid: "66104617"
   
 -   **Points.** Pour les marqueurs affichés pour chaque point, modifiez la couleur, la taille et le type de marqueur.  
   
-##  <a name="Color"></a> Fonctionnement des règles de couleur  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> Fonctionnement des règles de couleur  
  Les règles de couleur s'appliquent aux couleurs de remplissage des polygones, des lignes et des marqueurs qui représentent des points ou des points centraux de polygone.  
   
  Les règles de couleur prennent en charge quatre options :  
@@ -76,28 +76,28 @@ ms.locfileid: "66104617"
   
  Pour supprimer des valeurs indésirables de l'échelle de couleurs, effacez l'option d'échelle de couleurs pour chaque règle de couleur sur chaque couche.  
   
-##  <a name="Width"></a> Fonctionnement des règles de largeur de ligne  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> Fonctionnement des règles de largeur de ligne  
  Les règles de largeur s'appliquent aux lignes. Les règles de largeur prennent en charge deux options :  
   
 -   Utiliser une largeur de ligne par défaut. Vous spécifiez la largeur de ligne en points.  
   
 -   Visualiser les données à l'aide de la largeur de ligne. Vous définissez les largeurs minimale et maximale de la ligne, spécifiez le champ de données à utiliser pour faire varier la largeur, puis spécifiez les options de distribution à appliquer à ces données.  
   
-##  <a name="Size"></a> Fonctionnement des règles de taille de marqueur  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> Fonctionnement des règles de taille de marqueur  
  Les règles de taille s'appliquent aux marqueurs qui représentent des points ou des points centraux de polygone. Les règles de taille prennent en charge deux options :  
   
 -   Utiliser une taille de marqueur par défaut. Vous spécifiez la taille en points.  
   
 -   Visualiser les données à l'aide de la taille. Vous définissez les tailles minimale et maximale du marqueur, spécifiez le champ de données à utiliser pour faire varier la taille, puis spécifiez les options de distribution à appliquer à ces données.  
   
-##  <a name="Marker"></a> Fonctionnement des règles de type de marqueur  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> Fonctionnement des règles de type de marqueur  
  Les règles de type de marqueur s'appliquent aux marqueurs qui représentent des points ou des points centraux de polygone. Les règles de type de marqueur prennent en charge deux options :  
   
 -   Utiliser un type de marqueur par défaut. Vous spécifiez l'un des types de marqueur disponibles.  
   
 -   Visualiser les données à l'aide de marqueurs. Vous spécifiez un jeu de marqueurs et l'ordre dans lequel vous souhaitez les utiliser. Les types de marqueur incluent : `Circle`, `Diamond`, `Pentagon`, `PushPin`, `Rectangle`, `Star`, `Triangle`, `Trapezoid` et `Wedge`.  
   
-##  <a name="Distribution"></a> Fonctionnement des options de distribution  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> Fonctionnement des options de distribution  
  Pour créer une distribution de valeurs, vous pouvez diviser vos données en plages. Vous spécifiez le type de distribution, le nombre de sous-plages et les valeurs de plage minimale et maximale.  
   
  Dans la liste suivante, supposez que vous avez trois éléments cartographiques et six valeurs analytiques connexes qui varient de 1 à 9 999 avec les valeurs suivantes : 1, 10, 200, 2 000, 4 777, 8 999.  
@@ -112,7 +112,7 @@ ms.locfileid: "66104617"
   
  Les valeurs de distribution sont utilisées par les règles pour faire varier les valeurs d'affichage des éléments cartographiques.  
   
-##  <a name="Legends"></a> Fonctionnement des légendes et éléments de légende  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> Fonctionnement des légendes et éléments de légende  
  Les éléments de légende sont créés automatiquement à partir des règles que vous spécifiez pour chaque couche. Les options des règles contrôlent le nombre d'éléments créés et la légende dans laquelle ils apparaissent. Par défaut, tous les éléments de toutes les règles sont ajoutés à la première légende. Pour déplacer des éléments en dehors de la première légende, créez autant de légendes supplémentaires que nécessaire et pour chaque règle, spécifiez la légende à utiliser pour afficher les éléments résultant de la règle. Pour masquer des éléments selon une règle, spécifiez un nom de légende vierge.  
   
  Pour contrôler l'emplacement d'affichage d'une légende, utilisez la boîte de dialogue Propriétés de la légende pour spécifier une position par rapport au point de vue de la carte. Pour plus d’informations, consultez [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  

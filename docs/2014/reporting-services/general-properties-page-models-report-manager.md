@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109112"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Page Propriétés générales, Modèles (Gestionnaire de rapports)
@@ -45,7 +45,7 @@ ms.locfileid: "66109112"
  **Masqué dans l'affichage des listes**  
  Activez cette case à cocher pour masquer l'élément lorsque le dossier est défini en mode d'affichage des listes. L'affichage des listes est un mode de consultation du contenu des dossiers qui est pris en charge dans le Gestionnaire de rapports. Vous pouvez définir cette option dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour déterminer le mode d'affichage de cet élément dans le Gestionnaire de rapports. Pour plus d’informations sur les modes d’affichage dans Gestionnaire de rapports, consultez la [page contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
- **Appliquer**  
+ **appliquer**  
  Cliquez pour enregistrer vos modifications.  
   
  **Supprimer**  
@@ -54,7 +54,7 @@ ms.locfileid: "66109112"
  **Déplacer**  
  Cliquez pour déplacer un modèle dans l'arborescence des dossiers du serveur de rapports. Un clic sur ce bouton permet d'ouvrir la page Déplacer les éléments dans laquelle vous pouvez parcourir les dossiers pour sélectionner un nouvel emplacement. Pour plus d’informations, consultez [page déplacer des éléments &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Été**  
+ **Save**  
  Cliquez pour enregistrer une copie en lecture seule de la définition du modèle. Selon les associations de fichiers définies sur votre ordinateur, le fichier s'ouvre dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou une autre application. Dans la plupart des cas, le modèle s'ouvre dans un fichier XML.  
   
  La copie que vous avez ouverte est identique à la définition de modèle d'origine qui a été initialement publiée sur le serveur de rapports. Toutes les propriétés qui ont été définies pour le modèle après sa publication (telles que les propriétés de source de données) ne sont pas reflétées dans le fichier que vous ouvrez.  
@@ -63,7 +63,7 @@ ms.locfileid: "66109112"
   
  Notez que, si vous souhaitez ouvrir le modèle de rapport dans le Générateur de modèles, vous devez l'enregistrer en tant que fichier .smdl, puis ajouter le fichier .smdl à un projet dans le Générateur de modèles.  
   
- **Lieu**  
+ **Replace**  
  Cliquez pour remplacer la définition du modèle par une définition différente d'un fichier .smdl situé dans le système de fichiers. Si vous procédez à la mise à jour d'une définition de modèle, redéfinissez les paramètres de la source de données partagée une fois cette opération terminée.  
   
  **Régénérer le modèle**  
@@ -71,6 +71,6 @@ ms.locfileid: "66109112"
   
 ## <a name="see-also"></a>Voir aussi  
  [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Aide du serveur de rapports dans Management Studio via la touche F1](tools/report-server-in-management-studio-f1-help.md)  
+ [Aide du serveur de rapports dans Management Studio accessible par la touche F1](tools/report-server-in-management-studio-f1-help.md)  
   
   

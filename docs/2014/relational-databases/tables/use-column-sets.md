@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298641"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
@@ -121,8 +121,7 @@ GO
 |`money`, `smallmoney`|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|  
 |`time`|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|Non applicable|7|  
   
- 
-  \*  localeID -1 correspond aux paramètres régionaux par défaut. Les paramètres régionaux pour l'anglais sont 1033.  
+ \*  localeID -1 correspond aux paramètres régionaux par défaut. Les paramètres régionaux pour l'anglais sont 1033.  
   
  ** Non applicable = Aucune valeur n’est sortie pour ces attributs durant une opération de sélection sur le jeu de colonnes. Génère une erreur lorsqu'une valeur est spécifiée pour cet attribut par l'appelant dans la représentation XML fournie pour un jeu de colonnes dans une opération d'insertion ou de mise à jour.  
   
@@ -140,7 +139,7 @@ GO
 ## <a name="examples"></a>Exemples  
  Dans les exemples suivants, une table de documents contient le jeu de colonnes commun `DocID` et `Title`. Le groupe Production souhaite avoir une colonne `ProductionSpecification` et `ProductionLocation` pour tous les documents de production. Le groupe Marketing souhaite avoir une colonne `MarketingSurveyGroup` pour les documents de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>R. Création d'une table qui a un jeu de colonnes  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Création d'une table qui a un jeu de colonnes  
  L'exemple suivant crée la table qui utilise des colonnes éparses et inclut le jeu de colonnes `SpecialPurposeColumns`. L'exemple insère deux lignes dans la table, puis sélectionne des données de la table.  
   
 > [!NOTE]  

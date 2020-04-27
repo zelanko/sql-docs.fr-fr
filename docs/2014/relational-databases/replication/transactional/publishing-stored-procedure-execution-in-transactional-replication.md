@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272810"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
@@ -52,7 +52,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio : [Publier l’exécution d’une procédure stockée dans une publication transactionnelle &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programmation Transact-SQL de la réplication : exécutez [sp_addarticle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) et spécifiez la valeur’serializable proc exec' (recommandé) ou’proc exec’pour **@type**le paramètre. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](../publish/define-an-article.md).  
+-   Programmation Transact-SQL de la réplication : exécutez [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) et spécifiez la valeur 'serializable proc exec' (recommandé) ou 'proc exec' pour le paramètre **@type**. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modification de la procédure sur l'Abonné  
  Par défaut, la définition de la procédure stockée sur le serveur de publication est propagée vers chaque Abonné. Cependant, vous pouvez aussi modifier la procédure stockée sur l'Abonné. Ceci est utile si vous souhaitez que des logiques différentes soient exécutées sur le serveur de publication et sur l'Abonné. Considérons par exemple la procédure stockée sur le serveur de publication **sp_big_delete**, qui a deux fonctions : elle supprime 1 000 000 de lignes de la table répliquée **big_table1** et met à jour la table non répliquée **big_table2**. Pour solliciter moins de ressources réseau, vous pouvez transmettre la suppression de ce million de lignes en tant que procédure stockée en publiant **sp_big_delete**. Sur l'Abonné, vous pouvez modifier **sp_big_delete** afin qu'elle supprime le million de lignes sans effectuer ensuite la mise à jour de **big_table2**.  

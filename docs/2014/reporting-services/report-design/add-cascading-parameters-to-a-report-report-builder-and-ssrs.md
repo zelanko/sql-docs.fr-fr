@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106700"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106700"
   
     2.  Un paramètre de requête par paramètre en cascade. Un paramètre de requête limite les données extraites de la source de données en spécifiant certaines valeurs à inclure dans la requête ou à exclure de la requête. En règle générale, les paramètres de requête se déclenchent dans une clause de restriction dans la requête. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT, les paramètres de requête se déclenchent dans la clause WHERE. Pour plus d'informations, consultez la rubrique « Filtrage des lignes avec les clauses WHERE et HAVING » dans la documentation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la documentation en ligne [SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-6.  Cliquez sur **Exécuter** ( **!** ). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
+6.  Cliquez sur **Exécuter** (**!**). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
   
     > [!NOTE]  
     >  L'ordre des paramètres de requête lors de la première exécution d'une requête détermine leur ordre de création dans le rapport. Pour modifier l’ordre, consultez [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "66106700"
   
      La commande SELECT DISTINCT supprime les valeurs dupliquées du jeu de résultats, de telle sorte que vous puissiez obtenir chaque valeur unique de la colonne spécifiée dans la table spécifiée.  
   
-     Cliquez sur **Exécuter** ( **!** ). Le jeu de résultats indique les valeurs qui sont disponibles pour ce premier paramètre.  
+     Cliquez sur **Exécuter** (**!**). Le jeu de résultats indique les valeurs qui sont disponibles pour ce premier paramètre.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -154,11 +154,11 @@ ms.locfileid: "66106700"
 4.  Cliquez sur **Afficher le rapport**. Le rapport actualise l'affichage en fonction des paramètres que vous avez choisis.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Ajoutez, modifiez ou supprimez un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et de Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Didacticiel : ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md)   
- [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupe &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

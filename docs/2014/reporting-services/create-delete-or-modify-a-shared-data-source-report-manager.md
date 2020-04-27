@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109612"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Créer, supprimer ou modifier une source de données partagée (Gestionnaire de rapports)
@@ -35,7 +35,7 @@ icône de source de données partagée
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
-2.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la page **Contenu** .  
+2.  Dans Gestionnaire de rapports, accédez à la page **contenu** .  
   
 3.  Cliquez sur **Nouvelle source de données**. La page **Nouvelle source de données** s’ouvre.  
   
@@ -63,14 +63,14 @@ icône de source de données partagée
   
     -   Si la source de données n’utilise pas d’informations d’identification (par exemple, si la source de données est un fichier XML accessible à partir du le système de fichiers), cliquez sur **Informations d’identification non requises**. Spécifiez uniquement ce type d'informations d'identification s'il est valide pour la source de données. Si vous sélectionnez cette option pour une source de données qui requiert l'authentification, la connexion échoue. Si vous sélectionnez cette option, veillez à configurer le compte d'exécution sans assistance, qui permet au serveur de rapports de se connecter à d'autres ordinateurs pour récupérer des données ou des fichiers lorsque les informations d'identification de l'utilisateur ne sont pas disponibles.  
   
-     Pour plus d’informations sur la configuration d’informations d’identification, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Pour plus d’informations sur le compte d’exécution sans assistance, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Pour plus d’informations sur la configuration des informations d’identification, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Pour plus d’informations sur le compte d’exécution sans assistance, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Cliquez sur le bouton **Tester la connexion** pour valider la configuration de la source de données.  
   
     > [!NOTE]  
     >  Le bouton Tester la connexion n'est pas pris en charge pour le type de source de données XML.  
   
-10. Cliquez sur **OK** .  
+10. Cliquez sur **OK**  
   
 ### <a name="to-modify-a-shared-data-source"></a>Pour modifier une source de données partagée  
   
@@ -100,7 +100,7 @@ icône de source de données partagée
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Page contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
+ [Gérer les sources de données de rapport](report-data/manage-report-data-sources.md)   
  [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

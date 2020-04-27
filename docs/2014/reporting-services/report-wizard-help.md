@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102988"
 ---
 # <a name="report-wizard-help"></a>Aide de l'Assistant Rapport
-  Cette section décrit l'aide obtenue en appuyant sur F1 dans l'Assistant Rapport. L'Assistant Rapport automatise le processus de création de rapports tabulaires et de matrice. Le tableau suivant décrit les rubriques de cette section.  
+  Cette section décrit l'aide obtenue en appuyant sur F1 dans l'Assistant Rapport. L'Assistant Rapport automatise le processus de création de rapports tabulaires et de matrice. Le tableau suivant décrit les rubriques de cette section.  
   
  Pour ouvrir l’Assistant rapport, dans le menu **projet** , cliquez sur **Ajouter un nouvel élément**.  
   

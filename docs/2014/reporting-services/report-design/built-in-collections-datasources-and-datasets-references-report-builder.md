@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106427"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Références à des collections DataSources et DataSets (Générateur de rapports et SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106427"
 |**Variable**|`Type`|**Description**|  
 |------------------|--------------|---------------------|  
 |`DataSourceReference`|`String`|Chemin d'accès complet de la définition de source de données sur le serveur de rapports. Par exemple, vous pouvez inclure une liste de toutes les sources de données qu'un rapport a utilisées dans le cadre d'un historique de rapport. L'exemple suivant affiche le chemin d'accès complet de la source de données nommée AdventureWorks2012 :<br /><br /> `/DataSources/AdventureWorks2012`.|  
-|`Type`|`String`|Type du fournisseur de données pour la source de données. Par exemple : `SQL`.|  
+|`Type`|`String`|Type du fournisseur de données pour la source de données. Par exemple, `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
  La collection `DataSets` représente les datasets référencés dans une définition de rapport. Vous pouvez choisir d'inclure la requête du rapport dans une zone de texte afin qu'un utilisateur intéressé par le contenu exact du rapport puisse examiner le texte de la commande d'origine. Cette collection n’est pas disponible en mode **Aperçu** . Le tableau ci-dessous décrit les membres de la collection `DataSets`.  

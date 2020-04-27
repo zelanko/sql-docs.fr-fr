@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792916"
 ---
 # <a name="create-the-finance-name-policy"></a>Créer la stratégie Nom financier
-  Dans cette tâche, vous allez créer une base de données nommée finance, puis créer une condition qui exige que toutes les tables commencent par les lettres **fintbl**. Ensuite, vous allez créer une stratégie et une catégorie de stratégies afin d'appliquer une norme d'affectation de noms pour les tables dans la base de données Finance.  
+   Dans cette tâche, vous allez créer une base de données nommée Finance, puis créer une condition qui exige que toutes les tables commencent par les lettres **fintbl**. Ensuite, vous allez créer une stratégie et une catégorie de stratégies afin d'appliquer une norme d'affectation de noms pour les tables dans la base de données Finance.  
   
 ### <a name="to-create-the-finance-database"></a>Pour créer la base de données Finance  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67792916"
   
 1.  Dans l’Explorateur d’objets, développez **Gestion**, cliquez avec le bouton droit sur **Gestion de la stratégie**, puis cliquez sur **Gérer les catégories**.  
   
-2.  Dans la boîte de dialogue **gérer les catégories de stratégie** , sous `Finance` **nom**, tapez dans la zone vide, puis désactivez abonnements à la **base de données**autorisée. Les **abonnements de base de données mandat** forcent chaque base de données de l’instance à s’abonner aux stratégies appartenant à cette catégorie de stratégie. Dans le cadre de cette leçon, seule la base de données Finance doit s'abonner à la stratégie Nom financier.  
+2.  Dans la boîte de dialogue **gérer les catégories de stratégie** , sous `Finance` **nom**, tapez dans la zone vide, puis désactivez abonnements à la **base de données**autorisée. **Abonnements à la base de données autorisée** force chaque base de données de l’instance à s’abonner aux stratégies appartenant à cette catégorie de stratégie. Dans le cadre de cette leçon, seule la base de données Finance doit s'abonner à la stratégie Nom financier.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

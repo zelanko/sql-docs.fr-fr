@@ -18,10 +18,10 @@ ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907368"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "67907368"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|ID de la tâche d'instantané des données filtrées.|  
-|**nomme**|**sysname**|Nom de la tâche d'instantané des données filtrées.|  
+|**id**|**int**|ID de la tâche d'instantané des données filtrées.|  
+|**name**|**sysname**|Nom de la tâche d'instantané des données filtrées.|  
 |**pubid**|**uniqueidentifier**|Numéro d'identification unique de cette publication.|  
 |**job_id**|**uniqueidentifier**|ID de la tâche de l'Agent SQL Server sur le serveur de distribution.|  
 |**agent_id**|**int**|ID de l'Agent SQL Server.|  

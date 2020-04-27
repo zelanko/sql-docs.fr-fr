@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106417"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Collections intégrées dans les expressions (Générateur de rapports et SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106417"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a>Fonctionnement des regroupements intégrés  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Fonctionnement des collections intégrées  
  Le tableau suivant répertorie les collections intégrées disponibles lorsque vous écrivez une expression. Chaque ligne inclut le nom de programmation, sensible à la casse, de la collection, indique si vous pouvez utiliser la boîte de dialogue Expression pour ajouter une référence à la collection de manière interactive, propose un exemple et précise quand les valeurs de la collection sont initialisées et peuvent être utilisées.  
   
 |Collection intégrée|Catégorie dans la boîte de dialogue Expression|Exemple|Description|  
@@ -39,15 +39,15 @@ ms.locfileid: "66106417"
 |`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|Représente la collection des variables de rapport et de groupe. Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |`ReportItems`|Non affichée|`=ReportItems("Textbox1").Value`|Représente la collection des zones de texte d'un élément de rapport. Cette collection peut être utilisée pour proposer un résumé des éléments présents dans la page en vue de leur inclusion dans un en-tête ou un pied de page. Pour plus d’informations, consultez [Références à la collection ReportItems &#40;Générateur de rapports et SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a>Utilisation de la syntaxe de collection dans une expression  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Utilisation de la syntaxe de collection dans une expression  
  Pour faire référence à une collection à partir d’une expression [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , utilisez la syntaxe standard pour un élément dans une collection. Le tableau ci-après propose des exemples de syntaxe de collection.  
   
 |Syntaxe|Exemple|  
 |------------|-------------|  
 |*Collecte! ObjectName. Property*|`=Fields!Sales.Value`|  
 |*Collecte! ObjectName ("propriété")*|`=Fields!Sales("Value")`|  
-|*Collection ("ObjectName"). Propriété*|`=Fields("Sales").Value`|  
-|*Collection (« Member »)*|`=User("Language")`|  
+|*Collection("NomObjet").Propriété*|`=Fields("Sales").Value`|  
+|*Collection("Membre")*|`=User("Language")`|  
 |*Collection. Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>Voir aussi  

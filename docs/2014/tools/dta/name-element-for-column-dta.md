@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63297523"
 ---
 # <a name="name-element-for-column-dta"></a>Name, élément pour les colonnes (Assistant Paramétrage de base de données)
@@ -37,8 +37,7 @@ ms.locfileid: "63297523"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|
-  `string`, longueur illimitée.|  
+|**Type de données et longueur**|`string`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois pour `Column` chaque élément.|  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480831"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
@@ -38,7 +38,7 @@ ms.locfileid: "65480831"
   
  ![Base de connaissances et domaines de DQS](../../2014/data-quality-services/media/dqs-knowledgebasesanddomains.gif "Base de connaissances et domaines de DQS")  
   
-##  <a name="How"></a>Comment créer et générer une base de connaissances DQS  
+##  <a name="how-to-create-and-build-a-dqs-knowledge-base"></a><a name="How"></a> Comment créer et générer une base de connaissances DQS  
  La création d'une base de connaissances DQS requiert les processus et les composants suivants :  
   
  **Découverte des connaissances**  
@@ -53,7 +53,7 @@ ms.locfileid: "65480831"
  **Stratégie de correspondance**  
  Stratégie qui définit la manière dont DQS traite les enregistrements pour identifier les doublons et les non-correspondances potentiels. Elle est intégrée à la base de connaissances dans le cadre d'un processus interactif assisté par ordinateur.  
   
-##  <a name="Discovery"></a>Découverte des connaissances  
+##  <a name="knowledge-discovery"></a><a name="Discovery"></a> Découverte des connaissances  
  À la base, la création d'une base de connaissances est un processus assisté par ordinateur. L'activité de découverte des connaissances génère la base de connaissances en analysant un exemple de données en fonction de critères de qualité des données à la recherche d'incohérences dans les données et d'erreurs de syntaxe et en proposant des modifications à apporter aux données. Cette analyse est basée sur des algorithmes intégrés dans DQS.  
   
  Le gestionnaire de données prépare le processus en liant une base de connaissances à une vue ou une table de base de données SQL Server qui contient des exemples de données semblables aux données que la base de connaissances utilisera pour l'analyse. Le gestionnaire de données mappe ensuite un domaine de base de connaissances à chaque colonne des exemples de données à analyser. Un domaine peut être soit un domaine unique mappé à un champ unique, soit un domaine composite comprenant plusieurs domaines mappés chacun à une partie des données contenues dans un champ unique (voir « Domaines composites » ci-dessous). Lorsque vous exécutez une découverte des connaissances, DQS extrait les informations de qualité des données des exemples de données dans des domaines de la base de connaissances. Après avoir exécuté l'analyse de découverte des connaissances, vous disposez d'une base de connaissances à l'aide de laquelle vous pouvez procéder à la correction des données.  
@@ -67,7 +67,7 @@ ms.locfileid: "65480831"
   
  Toutefois, vous pouvez contrôler la casse des valeurs que vous exportez dans les résultats de nettoyage. Pour cela, vous devez définir la propriété de domaine **Mettre en forme la sortie vers** (consultez [Définir des propriétés de domaine](../../2014/data-quality-services/set-domain-properties.md)) et activer la case à cocher **Normaliser la sortie** quand vous exportez les résultats de nettoyage (consultez [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a>Gestion de domaine  
+##  <a name="domain-management"></a><a name="Domains"></a> Gestion de l'arborescence du domaine  
  La gestion des domaines permet au gestionnaire de données de modifier et d'enrichir de manière interactive les métadonnées générées par l'activité découverte des connaissances assistée par ordinateur. Chaque modification que vous apportez est appliquée à un domaine de la base de connaissances. Dans l'activité de gestion de domaines, vous pouvez effectuer les opérations suivantes :  
   
 -   Créer un domaine. Le nouveau domaine peut être lié à ou copié à partir d'un champ existant.  
@@ -136,7 +136,7 @@ ms.locfileid: "65480831"
   
  La correspondance peut être effectuée sur les domaines uniques qui constituent le champ composite, mais pas sur le champ composite proprement dit.  
   
-##  <a name="Matching"></a>Correspondance de données  
+##  <a name="data-matching"></a><a name="Matching"></a>Correspondance de données  
  En plus d'apporter des modifications manuelles à une base de connaissances par le biais de la gestion de domaines, vous pouvez ajouter des connaissances correspondantes à une base de connaissances. Afin de préparer DQS pour le processus de déduplication de données, vous devez créer une stratégie de correspondance que DQS utilisera pour calculer la probabilité d'une correspondance. La stratégie comprend une ou plusieurs règles de correspondance créées par le gestionnaire de données pour identifier la manière dont DQS doit comparer les lignes de données. Le gestionnaire de données détermine les champs de données de la ligne qui doivent être comparés, ainsi que la pondération de chaque champ dans la comparaison. Le gestionnaire de données détermine également quel doit être le niveau de probabilité pour qu'une valeur soit considérée comme une correspondance. DQS ajoute les règles de correspondance à la base de connaissances pour les utiliser lors de l'activité de correspondance dans le projet de qualité des données.  
   
  Pour plus d'informations sur la base de connaissances et la mise en correspondance des données, consultez [Correspondance de données](../../2014/data-quality-services/data-matching.md).  

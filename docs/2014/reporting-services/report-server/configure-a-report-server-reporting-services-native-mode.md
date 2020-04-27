@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104067"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
@@ -59,8 +59,8 @@ ms.locfileid: "66104067"
  Vérifiez votre installation en créant des dossiers, en téléchargeant des éléments, et en exécutant des rapports. Suivez les instructions de la rubrique [Vérifier une installation de Reporting Services](../install-windows/verify-a-reporting-services-installation.md) pour vérifier votre installation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer un serveur de rapports Reporting Services en mode natif](manage-a-reporting-services-native-mode-report-server.md)   
- [Configurer un pare-feu pour l’accès au serveur de rapports](configure-a-firewall-for-report-server-access.md)   
+ [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](manage-a-reporting-services-native-mode-report-server.md)   
+ [Configurer un pare-feu pour accéder au serveur de rapports](configure-a-firewall-for-report-server-access.md)   
  [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Configurer un serveur de rapports pour l’administration à distance](configure-a-report-server-for-remote-administration.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478805"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Publier des données d'Excel dans MDS (Complément MDS pour Excel)
@@ -24,7 +24,7 @@ ms.locfileid: "65478805"
 >  -   Lorsque vous publiez des modifications, les commentaires sur les cellules managées MDS sont supprimés.  
 > -   Une formule n'est pas prise en charge dans une cellule managée MDS. Une formule dans une cellule managée MDS est traitée comme valeur de texte.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -37,9 +37,9 @@ ms.locfileid: "65478805"
   
 1.  Dans le groupe **Publier et valider** , cliquez sur **Publier**.  
   
-2.  facultatif. Si la boîte de dialogue **Publier et annoter** s’affiche, choisissez de partager la même annotation (commentaire) pour toutes les mises à jour, ou d’annoter chaque modification individuellement.  
+2.  Facultatif. Si la boîte de dialogue **Publier et annoter** s’affiche, choisissez de partager la même annotation (commentaire) pour toutes les mises à jour, ou d’annoter chaque modification individuellement.  
   
-3.  facultatif. Activez la case à cocher **Ne plus afficher cette boîte de dialogue** . Vous pouvez toujours afficher la boîte de dialogue ultérieurement en choisissant **Paramètres** et en sélectionnant la case à cocher **Afficher la boîte de dialogue Publier et annoter lors de la publication** .  
+3.  Facultatif. Activez la case à cocher **Ne plus afficher cette boîte de dialogue** . Vous pouvez toujours afficher la boîte de dialogue ultérieurement en choisissant **Paramètres** et en sélectionnant la case à cocher **Afficher la boîte de dialogue Publier et annoter lors de la publication** .  
   
 4.  Cliquez sur **Publier**.  
   
@@ -51,6 +51,6 @@ ms.locfileid: "65478805"
   
 ## <a name="see-also"></a>Voir aussi  
  [Publication des Complément MDS pour Excel de &#40;de données&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [Validation des Complément MDS pour Excel de données &#40;&#41;](validating-data-mds-add-in-for-excel.md)  
+ [Validation des données &#40;Complément MDS pour Excel&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

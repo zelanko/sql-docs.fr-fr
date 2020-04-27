@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107722"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66107722"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>Rendu dans MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Rendu au format MHTML  
  L'extension de rendu HTML peut également rendre des rapports au format MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML étend HTML pour intégrer des objets encodés, comme les images, dans le document HTML. Avec l'extension de rendu MHTML, vous pouvez incorporer dans un fichier unique des ressources telles que des images, des documents ou d'autres fichiers binaires en tant que structures MIME dans le rapport HTML. L'incorporation de rapports MHTML dans des messages électroniques se révèle également utile, car toutes les ressources sont incluses dans le rapport. Bien que ce soit en fait l'extension de rendu HTML qui assure le rendu MHTML, cette fonctionnalité peut également être appelée extension de rendu MHTML.  
   
-##  <a name="BrowserSupport"></a>Prise en charge des navigateurs  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a>Prise en charge des navigateurs  
  Cette extension de rendu prend en charge les versions de navigateur suivantes :  
   
 -   Internet Explorer 5.5 et versions ultérieures  
@@ -45,7 +45,7 @@ ms.locfileid: "66107722"
   
  En raison des spécificités des navigateurs, le rapport rendu peut varier légèrement d'un navigateur à l'autre. Par exemple, la zone de texte contient une propriété nommée WritingMode. Cette propriété n'est pas prise en charge dans Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a>Règles de rendu spécifiques à HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> Règles de rendu spécifiques à HTML  
  Les règles spécifiques à HTML suivantes s'appliquent lors du rendu :  
   
 -   Le convertisseur génère une structure de table HTML destinée à contenir tous les éléments de chaque collection `ReportItems`, s'il en existe plusieurs.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107722"
   
 -   Toutes les coordonnées et tailles d'élément de rapport sont converties en millimètres. Toutes les autres tailles, notamment les propriétés de style, conservent leurs unités d'origine. Les différences de taille et position inférieures à 0,2 mm sont traitées comme 0 mm.  
   
-##  <a name="Interactivity"></a> Interactivité  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interactivité  
  Certains éléments interactifs sont pris en charge au format HTML. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
@@ -85,12 +85,12 @@ ms.locfileid: "66107722"
   
  Des fonctionnalités supplémentaires de recherche sont fournies par le contrôle Web Forms ReportViewer.  
   
-##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Paramètres d’informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, consultez [Paramètres d’informations de périphérique HTML](../html-device-information-settings.md).  
 
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives pour différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
