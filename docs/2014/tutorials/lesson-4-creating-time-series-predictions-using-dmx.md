@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312092"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Leçon 4 : Création de prédictions de série chronologique à l'aide d'extensions DMX
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Leçon 4 : Création de prédictions de série chronologique à l’aide d’extensions DMX
   Dans cette leçon et dans la leçon suivante, vous allez utiliser les extensions DMX (Data Mining Extensions) pour créer différents types de prédictions en fonction des modèles de série chronologique que vous avez créés au cours de la [leçon 1 : création d’un modèle](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) d’exploration de données de série chronologique et d’une structure d’exploration de données, ainsi que [leçon 2 : ajout de modèles d’exploration de](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)données  
   
  Avec un modèle de série chronologique, de nombreuses options sont à votre disposition pour élaborer des prédictions :  
@@ -144,7 +144,7 @@ WHERE [<criteria>]
  Dans la leçon suivante, vous allez créer une requête qui fournit de nouvelles données au modèle, puis comparer les résultats de cette prédiction avec celle que vous venez de créer.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Leçon 5 : Extension du modèle de série chronologique](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Leçon 5 : Extension du modèle de série chronologique](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [PredictTimeSeries&#41;DMX &#40;](/sql/dmx/predicttimeseries-dmx)   

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : déboguer des assemblys personnalisés | Microsoft Docs'
+title: 'Procédure : Déboguer des assemblys personnalisés | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265062"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Procédure : déboguer des assemblys personnalisés
+# <a name="how-to-debug-custom-assemblies"></a>Procédure : Déboguer des assemblages personnalisés
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit plusieurs outils de débogage qui peuvent vous aider à analyser votre code d’assembly personnalisé et à localiser les erreurs qu’il contient. Vous devez choisir un outil en fonction de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  La méthode recommandée pour concevoir, développer et tester des assemblys personnalisés pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à créer une solution contenant à la fois vos rapports de test et votre assembly personnalisé.  
@@ -86,6 +86,6 @@ ms.locfileid: "63265062"
 9. Exécutez le code pas à pas à l'aide de la touche F11. Pour plus d'informations sur le débogage à l'aide de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consultez la documentation de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d'assemblages personnalisés avec des rapports](using-custom-assemblies-with-reports.md)  
+ [Utilisation d'assemblys personnalisés avec des rapports](using-custom-assemblies-with-reports.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63276959"
 ---
 # <a name="add-objects"></a>Ajouter des objets
@@ -26,7 +26,7 @@ ms.locfileid: "63276959"
  **Objets spécifiques**  
  Ouvre la boîte de dialogue **Sélectionner des objets** pour vous permettre de définir plus précisément votre recherche d’objets.  
   
- **Tous les objets des types**  
+ **Tous les objets correspondant aux types**  
  Ouvre la boîte de dialogue **Sélectionner les types d’objets** pour vous permettre de spécifier le type d’objets à inclure dans la liste sous-jacente.  
   
  **Nom du serveur**  _\<>_  

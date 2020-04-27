@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63253793"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocoles clients - Propriétés TCP/IP (onglet Protocole)
@@ -32,17 +32,17 @@ ms.locfileid: "63253793"
  Lorsqu'un client se connecte à une instance nommée de [!INCLUDE[ssDE](../../includes/ssde-md.md)], il essaie d'obtenir le numéro de port auprès du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser exécuté sur l'ordinateur serveur. Si le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser n'est pas en cours d'exécution, le numéro de port doit être spécifié par le biais de ce paramètre ou dans la chaîne de connexion.  
   
  **Activé**  
- Les valeurs possibles sont **Yes** et **No**.  
+ Les valeurs possibles sont **Yes** et **no**.  
   
- **Keep Alive**  
+ **Conserver actif**  
  Ce paramètre (en millisecondes) contrôle la fréquence à laquelle TCP tente de vérifier qu’une connexion inactive est toujours intacte en envoyant un paquet **KEEPALIVE** . La valeur par défaut est 30  000 millisecondes.  
   
  **Intervalle Keep Alive**  
  Ce paramètre (en millisecondes), détermine l’intervalle qui sépare les retransmissions **KEEPALIVE** jusqu’à ce qu’une réponse soit reçue. La valeur par défaut est 1 000 millisecondes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d'un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Choix d’un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Nouvel alias &#40;onglet alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;&#62; propriétés alias &#40;onglet alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Propriétés d’&#60;alias&#62; &#40;onglet Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

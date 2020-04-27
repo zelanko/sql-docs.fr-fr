@@ -14,20 +14,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250712"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, objet CLR
-  L’objet **SQLServer:CLR** fournit des compteurs qui permettent de surveiller l’exécution de CLR (Common Language Runtime) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  L’objet **SQLServer:CLR** fournit des compteurs qui permettent de surveiller l’exécution du CLR (Common Language Runtime) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** .  
+ Le tableau suivant décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR**de**.  
   
 |Compteurs CLR|Description|  
 |------------------|-----------------|  
-|**Exécution du CLR**|Durée d'exécution totale dans CLR (microsecondes)|  
+|**Exécution CLR**|Durée d'exécution totale dans CLR (microsecondes)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264775"
 ---
 # <a name="custom-report-items"></a>Éléments de rapport personnalisés
@@ -35,19 +35,19 @@ ms.locfileid: "63264775"
  [Architecture des éléments de rapports personnalisés](custom-report-item-architecture.md)  
  Décrit les composants d'un élément de rapport personnalisé.  
   
- [Conditions de mise en œuvre des éléments de rapports personnalisés](custom-report-item-implementation-requirements.md)  
+ [Conditions d'implémentation des éléments de rapports personnalisés](custom-report-item-implementation-requirements.md)  
  Décrit les conditions requises pour créer un élément de rapport personnalisé.  
   
- [Création d'un composant d'exécution d'éléments de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)  
+ [Création d'un composant d'exécution d'élément de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)  
  Décrit comment créer un composant runtime d'élément de rapport personnalisé.  
   
- [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)  
+ [Création d'un composant au moment de la conception d'élément de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)  
  Décrit comment créer un composant design d'élément de rapport personnalisé.  
   
- [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
+ [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
  Décrit comment déployer un élément de rapport personnalisé.  
   
- [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)  
+ [Bibliothèques de classes d'éléments de rapport personnalisés](custom-report-item-class-libraries.md)  
  Décrit les classes d'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées dans l'espace de noms `Microsoft.ReportDesigner`.  
   
 ## <a name="see-also"></a>Voir aussi  

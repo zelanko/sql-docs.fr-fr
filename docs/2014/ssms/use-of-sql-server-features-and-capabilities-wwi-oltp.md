@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280493"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments pour outils externes
@@ -32,8 +32,8 @@ ms.locfileid: "63280493"
 |**Nom de fichier de l'élément**|$(ItemFilename)|Nom de fichier de la source en cours (sous la forme nom de fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Extension de l'élément**|$(ItemExt)|Extension du nom de fichier de la source en cours.|  
 |**Ligne active** <sup>1</sup>|$(CurLine)|Position de ligne active du curseur de l'éditeur.|  
-|**Colonne actuelle**1|$(CurCol)|Position de colonne active du curseur de l'éditeur.|  
-|**Texte actuel**1|$(CurText)|Texte actif (mot se trouvant à la position actuelle du curseur, ou sélection d'une seule ligne, s'il y en a une).|  
+|**Colonne active**1|$(CurCol)|Position de colonne active du curseur de l'éditeur.|  
+|**Texte actif**1|$(CurText)|Texte actif (mot se trouvant à la position actuelle du curseur, ou sélection d'une seule ligne, s'il y en a une).|  
 |**Chemin d'accès de la cible**|$(TargetPath)|Nom de fichier complet de la cible (sous la forme lecteur + chemin d'accès + nom du fichier).|  
 |**Répertoire cible**|$(TargetDir)|Répertoire de la cible.|  
 |**Nom de la cible**|$(TargetName)|Nom de fichier de la cible.|  

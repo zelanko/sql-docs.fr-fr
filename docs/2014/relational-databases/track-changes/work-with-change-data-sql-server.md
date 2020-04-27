@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63269888"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utiliser les données modifiées (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "63269888"
   
  Plusieurs fonctions sont fournies pour aider à déterminer les valeurs LSN appropriées utilisables dans l'interrogation d'une fonction table. La fonction [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) retourne la valeur LSN la plus faible associée à un intervalle de validité d’instance de capture. L'intervalle de validité est l'intervalle de temps pendant lequel des données modifiées sont disponibles pour leurs instances de capture. La fonction [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) retourne la valeur LSN la plus élevée dans l’intervalle de validité. Les fonctions [sys.fn_cdc_map_time_to_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql) et [sys.fn_cdc_map_lsn_to_time](/sql/relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql) aident à placer des valeurs LSN sur une chronologie classique. Étant donné que la capture de données modifiées utilise des intervalles de requête fermés, il est quelquefois nécessaire de générer la valeur LSN suivante dans une séquence afin de s'assurer que les modifications ne sont pas dupliquées dans des fenêtres de requête consécutives. Les fonctions [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) et [sys.fn_cdc_decrement_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql) sont utiles quand un ajustement incrémentiel d’une valeur LSN est nécessaire.  
   
-##  <a name="LSN"></a> Validation de limites LSN  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> Validation de limites LSN  
  Nous vous recommandons de procéder à la validation préalable des limites LSN à utiliser dans une requête de fonction table. Les points de terminaison nuls ou ceux qui se trouvent à l'extérieur de l'intervalle de validité pour une instance de capture forcent le retour d'une erreur par une fonction table de capture de données modifiées.  
   
  Ainsi, l'erreur ci-après est retournée dans le cadre d'une recherche portant sur toutes les modifications lorsqu'un paramètre utilisé pour définir l'intervalle de requête n'est pas valide, est hors limites, ou lorsque l'option de filtre de lignes n'est pas valide.  
@@ -62,7 +62,7 @@ ms.locfileid: "63269888"
 > [!NOTE]  
 >  Pour rechercher des modèles de capture de données modifiées dans SQL Server Management Studio, dans le menu **Affichage** , cliquez sur **Explorateur de modèles**, développez **Modèles SQL Server** , puis développez le dossier **Capture de données modifiées** .  
   
-##  <a name="Functions"></a> Fonctions de requête  
+##  <a name="query-functions"></a><a name="Functions"></a> Fonctions de requête  
  Selon les caractéristiques de la table source faisant l'objet d'un suivi et la configuration de son instance de capture, une ou deux fonctions table sont générées pour la recherche des données modifiées.  
   
 -   La fonction [cdc.fn_cdc_get_all_changes_<instance_de_capture>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) retourne toutes les modifications qui ont été effectuées pendant l’intervalle spécifié. Cette fonction est toujours générée. Les entrées sont toujours retournées triées, tout d'abord par le numéro LSN de validation de transaction de la modification, puis par une valeur qui classe la modification dans sa transaction. Selon l'option de filtre de lignes choisie, la ligne finale est retournée lors de la mise à jour (option de filtre de lignes « all ») ou les valeurs ancienne et nouvelle sont toutes deux retournées lors de la mise à jour (option de filtre de lignes « all update old »).  
@@ -76,7 +76,7 @@ ms.locfileid: "63269888"
   
  Le masque de mise à jour retourné par une fonction d'interrogation est une représentation compacte qui identifie toutes les colonnes ayant changé sur une ligne de données modifiées. En général, ces informations sont nécessaires uniquement pour un petit sous-ensemble des colonnes capturées. Des fonctions permettant d'extraire des informations du masque dans un format directement exploitable par les applications sont disponibles. La fonction [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) retourne la position ordinale d’une colonne nommée pour une instance de capture donnée, alors que la fonction [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) retourne la parité du bit dans le masque fourni, en fonction de la position ordinale transmise dans l’appel de fonction. Ces deux fonctions permettent d'extraire efficacement les informations du masque de mise à jour et de les retourner avec la requête de données modifiées. Consultez le modèle utilisé pour énumérer les modifications nettes à l'aide du modèle « All With Mask » afin de voir comment ces fonctions sont utilisées.  
   
-##  <a name="Scenarios"></a> Scénarios de fonction de requête  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> Scénarios de fonction de requête  
  Les sections ci-après décrivent des scénarios courants permettant de rechercher des données de capture des données modifiées en utilisant les fonctions de requête cdc.fn_cdc_get_all_changes_<instance_capture> et cdc.fn_cdc_get_net_changes_<instance_capture>.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Recherche de toutes les modifications dans l'intervalle de validité d'instance de capture  

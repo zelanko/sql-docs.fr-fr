@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273480"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
@@ -72,7 +72,7 @@ ms.locfileid: "63273480"
     |Tables/Colonnes|Type de contenu|Type de données|  
     |---------------------|------------------|---------------|  
     |IncomeGroup|Discret|Texte|  
-    |OrderNumber|Clé|Texte|  
+    |OrderNumber|Touche|Texte|  
     |Région|Discret|Texte|  
     |vAssocSeqLineItems|||  
     |Numéro de ligne|Séquence clé|Long|  

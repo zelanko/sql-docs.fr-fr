@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267479"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrage d'une table imbriquée dans un modèle d'exploration de données (Didacticiel sur l'exploration de données intermédiaire)
   Après avoir créé et exploré le modèle, vous décidez de vous concentrer sur un sous-ensemble des données des clients. Par exemple, vous pouvez souhaiter analyser uniquement les paniers qui contiennent un article spécifique ou les caractéristiques démographiques des clients qui n'ont rien acheté pendant une certaine période.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de filtrer les données utilisées dans un modèle d'exploration de données. Cette fonctionnalité est utile, car vous n’avez pas besoin de configurer une nouvelle vue de source de données pour utiliser des données différentes. Dans le didacticiel sur l'exploration de données de base, vous avez appris à filtrer des données provenant d'une table plate en appliquant des conditions à la table de cas. Au cours de cette tâche, vous allez créer un filtre qui s'applique à une table imbriquée.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de filtrer les données utilisées dans un modèle d'exploration de données. Cette fonctionnalité est utile, car vous n’avez pas besoin de configurer une nouvelle vue de source de données pour utiliser des données différentes. Dans le didacticiel sur l'exploration de données de base, vous avez appris à filtrer des données provenant d'une table plate en appliquant des conditions à la table de cas. Au cours de cette tâche, vous allez créer un filtre qui s'applique à une table imbriquée.  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>Filtres sur des tables imbriquées ou des tables de cas  
  Si votre vue de source de données contient une table de cas et une table imbriquée, à l'instar de la vue de source de données utilisée dans le modèle Association, vous pouvez effectuer un filtrage sur les valeurs de la table de cas, sur la présence ou l'absence d'une valeur dans la table imbriquée ou sur une combinaison des deux.  
@@ -112,6 +111,6 @@ ms.locfileid: "63267479"
   
 ## <a name="see-also"></a>Voir aussi  
  [Syntaxe de filtre de modèle et exemples &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

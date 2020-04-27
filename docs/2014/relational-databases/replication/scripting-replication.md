@@ -18,22 +18,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250521"
 ---
 # <a name="scripting-replication"></a>Création de scripts de réplication
-  Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système Transact-SQL nécessaires pour mettre en œuvre le ou les composants de réplication définis dans des scripts, tels qu'une publication ou un abonnement. Vous pouvez créer des scripts dans un Assistant (comme l’Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée.  
+  Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système Transact-SQL nécessaires pour mettre en œuvre le ou les composants de réplication définis dans des scripts, tels qu'une publication ou un abonnement. Il est possible de créer des scripts à l’aide d’un Assistant (comme l’Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée.  
   
  Un nouveau script doit être généré pour un composant si des modifications sont apportées à ses propriétés. Si vous utilisez des procédures stockées personnalisées avec la réplication transactionnelle, une copie de chaque procédure doit être stockée avec les scripts ; la copie doit être mise à jour si la procédure change (les procédures sont généralement mises à jour suite à des modifications de schéma ou à des modifications des conditions requises par l'application). Pour plus d’informations sur les procédures personnalisées, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  Pour les publications de fusion qui utilisent des filtres paramétrés, les scripts de publication contiennent l'appel de la procédure stockée pour créer des partitions de données. Le script fournit une référence pour les partitions créées et un moyen permettant de recréer si nécessaire une ou plusieurs partitions.  
   
 ## <a name="example-of-automating-a-task-with-scripts"></a>Exemple d'automatisation d'une tâche avec des scripts  
- Considérons [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], qui met en œuvre la réplication de fusion pour distribuer des données à sa force de vente distante. Un commercial télécharge toutes les données qui se rapportent aux clients de son territoire, à l'aide d'abonnements par extraction de données (pull). En mode déconnecté, les représentants commerciaux mettent à jour des données et entrent de nouveaux clients et de nouvelles commandes. 
-  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] employant plus de 50 représentants commerciaux sur des territoires différents, il serait donc très long de créer les différents abonnements sur chaque Abonné avec l'Assistant Nouvel abonnement. À la place, l'administrateur de réplication peut procéder selon les étapes suivantes :  
+ Considérons [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], qui met en œuvre la réplication de fusion pour distribuer des données à sa force de vente distante. Un commercial télécharge toutes les données qui se rapportent aux clients de son territoire, à l'aide d'abonnements par extraction de données (pull). En mode déconnecté, les représentants commerciaux mettent à jour des données et entrent de nouveaux clients et de nouvelles commandes. [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] employant plus de 50 représentants commerciaux sur des territoires différents, il serait donc très long de créer les différents abonnements sur chaque Abonné avec l'Assistant Nouvel abonnement. À la place, l'administrateur de réplication peut procéder selon les étapes suivantes :  
   
 1.  Configurez les publications de fusion nécessaires avec des partitions basées sur le représentant commercial ou son territoire.  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63250521"
   
 1.  Dans la page **Actions de l'Assistant** d'un Assistant, activez la case à cocher adaptée à l'Assistant :  
   
-    -   **Générer un fichier de script comportant les étapes de création d’une publication**  
+    -   **Générer un fichier de script comportant les étapes de création d'une publication**  
   
-    -   **Générer un fichier de script comportant les étapes de création du ou des abonnements**  
+    -   **Générer un fichier de script comportant les étapes de création d'une ou de plusieurs publications**  
   
     -   **Générer un fichier de script comportant les étapes de configuration de la distribution**  
   
@@ -83,7 +82,7 @@ ms.locfileid: "63250521"
   
 3.  Cliquez avec le bouton droit sur une publication ou un abonnement, puis cliquez sur **Générer des scripts**.  
   
-4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>**.  
+4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>** .  
   
 5.  Cliquez sur **Générer un script sur fichier**.  
   
