@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211336"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Spécifier l’emplacement d’un serveur cible (SQL Server Management Studio)
@@ -31,23 +31,23 @@ ms.locfileid: "68211336"
   
      [Sécurité](#Security)  
   
--   **Pour spécifier l’emplacement d’un serveur cible à l’aide de :**  
+-   **Pour spécifier l'emplacement d'un serveur cible, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Cette action modifie le Registre. La modification manuelle du Registre n'est pas recommandée parce que des modifications inadaptées ou incorrectes peuvent provoquer de graves problèmes de configuration à votre système. Seuls des utilisateurs expérimentés peuvent utiliser regedit.exe pour modifier le Registre. Pour plus d'informations, consultez la documentation de Microsoft Windows.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-specify-a-target-servers-location"></a>Pour spécifier l'emplacement d'un serveur cible  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68211336"
   
 4.  Dans la zone **Emplacement** , entrez l'emplacement du serveur, puis cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-specify-a-target-servers-location"></a>Pour spécifier l'emplacement d'un serveur cible  
   

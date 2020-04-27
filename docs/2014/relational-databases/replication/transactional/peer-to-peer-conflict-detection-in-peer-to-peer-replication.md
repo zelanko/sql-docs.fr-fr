@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198994"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Détection de conflit dans la réplication d'égal à égal
@@ -100,6 +100,6 @@ ms.locfileid: "68198994"
     5.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour @property le paramètre `false` et pour @value le paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
+ [Réplication transactionnelle d’égal à égal](peer-to-peer-transactional-replication.md)  
   
   

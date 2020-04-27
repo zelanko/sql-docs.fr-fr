@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198424"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
@@ -29,12 +29,12 @@ ms.locfileid: "68198424"
   
  Vous pouvez enregistrer des groupes d'actions d'audit du serveur par instance, et des groupes d'actions d'audit de base de données ou des actions d'audit de base de données par base de données. L'événement d'audit se produit chaque fois que l'action pouvant être auditée est rencontrée.  
   
- Toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les audits de niveau serveur. Les audits de niveau base de données sont limités aux éditions Enterprise, Developer et Evaluation. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les audits de niveau serveur. Les audits de niveau base de données sont limités aux éditions Enterprise, Developer et Evaluation. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="sql-server-audit-components"></a>Composants de SQL Server Audit  
  Un *audit* correspond à la combinaison de plusieurs éléments au sein d'un package unique pour un groupe spécifique d'actions de serveur ou d'actions de base de données. Les composants d'audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se combinent de façon à produire une sortie appelée audit, tout comme une définition de rapport combinée à des graphiques et des éléments de données produit un rapport.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]audit utilise des *événements étendus* pour faciliter la création d’un audit. Pour plus d’informations sur les événements étendus, consultez [événements étendus](../../extended-events/extended-events.md).  
+ L’audit de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des *événements étendus* pour aider à créer un audit. Pour plus d’informations sur les événements étendus, consultez [événements étendus](../../extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  L’objet *Audit SQL Server* collecte une seule instance des actions et des groupes d’actions de niveau serveur ou base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "68198424"
 ### <a name="database-audit-specification"></a>Spécification de l'audit de la base de données  
  L'objet *Spécification de l'audit de la base de données* appartient également à un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez créer une spécification de l'audit de la base de données par base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par audit.  
   
- La spécification de l'audit de la base de données recueille des actions d'audit au niveau de la base de données déclenchées par la fonctionnalité Événements étendus. Vous pouvez ajouter des groupes d’actions d’audit ou des événements d’audit à une spécification de l’audit de la base de données. Les *événements d’audit* sont les actions atomiques qui peuvent être auditées par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] moteur. Les groupes d’actions *d’audit* sont des groupes d’actions prédéfinis. Tous deux sont à la portée de la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ces actions sont envoyées à l'audit, qui les enregistre dans la cible. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
+ La spécification de l'audit de la base de données recueille des actions d'audit au niveau de la base de données déclenchées par la fonctionnalité Événements étendus. Vous pouvez ajouter des groupes d’actions d’audit ou des événements d’audit à une spécification de l’audit de la base de données. *Les événements d’audit* sont les opérations atomiques qui peuvent être auditées par le moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les*groupes d'actions d'audit* sont des groupes d'actions prédéfinis. Tous deux sont à la portée de la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ces actions sont envoyées à l'audit, qui les enregistre dans la cible. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
   
  Les actions d’audit et les groupes d’actions d’audit au niveau de la base de données sont décrits dans la rubrique [Actions et groupes d’actions SQL Server Audit](sql-server-audit-action-groups-and-actions.md).  
   
@@ -104,8 +104,8 @@ ms.locfileid: "68198424"
   
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md).  
   
-## <a name="considerations"></a>Considérations  
- En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **-f** sur la ligne de commande.  
+## <a name="considerations"></a>Éléments à prendre en considération  
+ En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, le serveur peut être démarré à l’aide de l’option **-f** sur la ligne de commande.  
   
  Lorsqu'un échec de l'audit provoque l'arrêt ou empêche le démarrage du serveur car l'instruction ON_FAILURE=SHUTDOWN est spécifiée pour l'audit, l'événement MSG_AUDIT_FORCED_SHUTDOWN est écrit dans le journal. Étant donné que l'arrêt se produit lors de la première rencontre de ce paramètre, l'événement est écrit une seule fois. Cet événement est écrit après le message d'échec d'audit qui provoque l'arrêt. Un administrateur peut contourner les arrêts provoqués par l’audit en démarrant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode mono-utilisateur, à l’aide de l’indicateur **-m**. Un démarrage en mode mono-utilisateur rétrograde les audits pour lesquels ON_FAILURE=SHUTDOWN est spécifié pour s'exécuter dans cette session comme ON_FAILURE=CONTINUE. Quand [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarré à l’aide de l’indicateur **-m**, le message MSG_AUDIT_SHUTDOWN_BYPASSED est écrit dans le journal des erreurs.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "68198424"
   
 |||  
 |-|-|  
-|[MODIFIER L’AUTORISATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CRÉER UN AUDIT DU SERVEUR](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[SPÉCIFICATION ALTER DATABASE AUDIT](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CRÉER UNE SPÉCIFICATION D’AUDIT DU SERVEUR](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[SUPPRIMER LA SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[MODIFIER LA SPÉCIFICATION DE L’AUDIT DU SERVEUR](/sql/t-sql/statements/alter-server-audit-transact-sql)|[SUPPRIMER L’AUDIT DU SERVEUR](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[CRÉER UNE SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[SUPPRIMER LA SPÉCIFICATION DE L’AUDIT DU SERVEUR](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CRÉER UNE SPÉCIFICATION D’AUDIT DU SERVEUR](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[CRÉER UNE SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>Fonctions et vues dynamiques  
  Le tableau suivant répertorie les vues et fonctions dynamiques que vous pouvez utiliser pour l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -157,11 +157,11 @@ ms.locfileid: "68198424"
   
 |Affichages catalogue|Description|  
 |-------------------|-----------------|  
-|[sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
+|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Contient des informations sur les spécifications de l’audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur, pour toutes les bases de données.|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Contient une ligne pour chaque audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans une instance de serveur.|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Contient des informations à propos des spécifications de l'audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
-|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contient des informations sur les détails (actions) d’une spécification de l’audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
+|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contient des informations sur les détails (actions) d’une spécification de l’audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contient les informations détaillées des magasins à propos du type d'audit de fichier dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -186,26 +186,25 @@ ms.locfileid: "68198424"
  Pour plus d’informations sur l’octroi de droits et d’autorisations, consultez [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 > [!CAUTION]  
->  Les principaux dans le rôle sysadmin peuvent falsifier tout composant d'audit et ceux dans le rôle db_owner peuvent falsifier les spécifications d'audit dans une base de données. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit s'assure qu'une ouverture de session qui crée ou modifie une spécification d'audit possède au moins l'autorisation ALTER ANY DATABASE AUDIT. Toutefois, aucune validation n'est effectuée lorsque vous attachez une base de données. Vous devez supposer que toutes les spécifications de l'audit de la base de données sont aussi dignes de confiance que les principaux dans le rôle sysadmin ou db_owner.  
+>  Les principaux dans le rôle sysadmin peuvent falsifier tout composant d'audit et ceux dans le rôle db_owner peuvent falsifier les spécifications d'audit dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit s'assure qu'une ouverture de session qui crée ou modifie une spécification d'audit possède au moins l'autorisation ALTER ANY DATABASE AUDIT. Toutefois, aucune validation n'est effectuée lorsque vous attachez une base de données. Vous devez supposer que toutes les spécifications de l'audit de la base de données sont aussi dignes de confiance que les principaux dans le rôle sysadmin ou db_owner.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Créer un audit du serveur et une spécification d’audit du serveur](create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d'audit du serveur](create-a-server-audit-and-server-audit-specification.md)  
   
- [Créer un audit de serveur et une spécification d’audit de base de données](create-a-server-audit-and-database-audit-specification.md)  
+ [Créer une spécification de l'audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md)  
   
  [Afficher un journal d’audit SQL Server](view-a-sql-server-audit-log.md)  
   
- [Écrire des événements d'audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md)  
+ [Écrire des événements d’audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>Rubriques étroitement associées à l'audit  
- [Propriétés du serveur &#40;page sécurité&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ [Propriétés du serveur &#40;page Sécurité&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
  Explique comment activer l'audit de connexion pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les enregistrements d'audit sont stockés dans le journal des applications Windows.  
   
  [C2 audit mode (option de configuration de serveur)](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Explique le mode d'audit de compatibilité de sécurité C2 dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Catégorie d’événement d’audit de sécurité &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [Catégorie d’événements d’audit de sécurité &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Explique les événements d'audit que vous pouvez utiliser dans [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Pour en savoir plus, voir [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [Trace SQL](../../sql-trace/sql-trace.md)  
@@ -214,11 +213,11 @@ ms.locfileid: "68198424"
  [Déclencheurs DDL](../../triggers/ddl-triggers.md)  
  Explique comment utiliser des déclencheurs DDL (Data Definition Language) pour effectuer le suivi des modifications de vos bases de données.  
   
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 sécurité et protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server les groupes d’actions d’audit et les actions](sql-server-audit-action-groups-and-actions.md)   
- [SQL Server les enregistrements d’audit](sql-server-audit-records.md)  
+ [SQL Server Audit Records](sql-server-audit-records.md)  
   
   

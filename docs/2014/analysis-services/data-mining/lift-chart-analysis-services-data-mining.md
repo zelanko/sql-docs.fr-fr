@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174679"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
@@ -31,7 +31,7 @@ ms.locfileid: "78174679"
 
  Un graphique des bénéfices est un type de graphique associé qui contient les mêmes informations qu'un graphique de courbes d'élévation, mais qui affiche également l'augmentation projetée des bénéfices associée à l'utilisation de chaque modèle.
 
-##  <a name="bkmk_Top"></a>Fonctionnement du graphique de courbes d’élévation
+##  <a name="understanding-the-lift-chart"></a><a name="bkmk_Top"></a>Fonctionnement du graphique de courbes d’élévation
  Il peut être difficile de comprendre dans l'abstrait le fonctionnement de graphiques de courbes d'élévation. Par conséquent, pour illustrer l'utilisation des outils de graphique de courbes d'élévation et les informations du graphique, cette section présente un scénario dans lequel un graphique de courbes d'élévation est utilisé pour estimer la réponse à une campagne de publipostage ciblée.
 
  Dans ce scénario, le service marketing sait qu’un taux de réponse de 10 % est plus ou moins classique des campagnes de publipostage. L'entreprise possède une liste de 10 000 clients potentiels stockés dans une table de la base de données. En fonction du taux de réponse habituel, l'entreprise s'attend normalement à ce qu'environ 1 000 clients potentiels seulement répondent. Toutefois, le budget prévu pour le projet n'est pas suffisant pour atteindre les 10 000 clients de la base de données et la société souhaite améliorer son taux de réponse. Supposons pour ce scénario que le budget permette de poster une annonce à 5 000 clients uniquement. Le service marketing a le choix entre deux options :
@@ -117,6 +117,6 @@ ms.locfileid: "78174679"
  [Retour au début](#bkmk_Top)
 
 ## <a name="see-also"></a>Voir aussi
- [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)
 
 

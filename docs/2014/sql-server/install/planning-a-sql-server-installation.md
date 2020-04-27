@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211496"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planification d’une installation de SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "68211496"
  [Nouveautés liées à l'installation de SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  Cette rubrique décrit les détails des fonctionnalités nouvelles ou améliorées de l'installation de cette version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  Cette rubrique répertorie les configurations matérielle et logicielle minimales requises pour installer et exécuter une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Considérations sur la sécurité pour une installation SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "68211496"
  [Désinstaller SQL Server 2014](uninstall-sql-server.md)  
  Reportez-vous à cette section pour désinstaller complètement une instance existante de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et préparer le système afin de pouvoir réinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Installation d'un cluster de basculement SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [Installation d’un cluster de basculement SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décrit comment installer et configurer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

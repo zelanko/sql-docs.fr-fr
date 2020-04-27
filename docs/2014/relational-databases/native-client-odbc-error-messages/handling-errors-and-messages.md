@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207092"
 ---
 # <a name="handling-errors-and-messages"></a>Gestion des erreurs et des messages
@@ -39,7 +39,7 @@ ms.locfileid: "68207092"
   
  L’API [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native d’origine, DB-Library pour C, permet à une application d’installer les fonctions de gestion des erreurs de rappel et de gestion des messages qui retournent des erreurs ou des messages. Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], telles que PRINT, RAISERROR, DBCC et SET, retournent leurs résultats à la fonction gestionnaire des messages de DB-Library et non dans un jeu de résultats. Toutefois, l'API ODBC n'a aucune fonction de rappel similaire. Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client détecte des messages provenant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il définit le code de retour odbc sur SQL_SUCCESS_WITH_INFO ou SQL_ERROR et retourne le message sous la forme d’un ou de plusieurs enregistrements de diagnostic. Par conséquent, une application ODBC doit tester avec soin ces codes de retour et appeler **SQLGetDiagRec** pour extraire les données de message.  
   
- Pour plus d’informations sur le suivi des erreurs, consultez [Suivi de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Pour plus d’informations sur les améliorations apportées [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]au suivi des erreurs ajoutées dans, consultez [accès aux informations de diagnostic dans le journal des événements étendus](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Pour plus d’informations sur le suivi des erreurs, consultez [Suivi de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Pour plus d’informations sur les améliorations du suivi des erreurs ajoutées dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consultez [Accès aux informations de diagnostic dans le journal des événements étendus](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -51,9 +51,9 @@ ms.locfileid: "68207092"
   
 -   [SQLSTATE &#40;codes d’erreur ODBC&#41;](sqlstate-odbc-error-codes.md)  
   
--   [Messages d'erreur](error-messages.md)  
+-   [messages d'erreur](error-messages.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;&#41;ODBC](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

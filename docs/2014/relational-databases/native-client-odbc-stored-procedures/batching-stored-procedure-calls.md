@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b50350006abba5085b11010f26aa88a89b07393f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205493"
 ---
 # <a name="batching-stored-procedure-calls"></a>Traitement par lot des appels aux procédures stockées
@@ -29,6 +29,6 @@ ms.locfileid: "68205493"
  Le pilote traite par lot les appels de procédure sur le serveur lorsque vous exécutez un lot qui contient plusieurs séquences d'échappement ODBC CALL. Il traite également par lot les appels de procédure lorsque vous utilisez des tableaux de paramètres liés dans une séquence d'échappement ODBC CALL. Par exemple, si vous utilisez une liaison de paramètre selon les lignes ou les colonnes pour lier un tableau avec cinq éléments aux paramètres d’une instruction ODBC CALL SQL, lorsque **SQLExecute** ou **SQLExecDirect** est appelé, le pilote envoie un seul lot avec cinq appels de procédure au serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution des procédures stockées](running-stored-procedures.md)  
+ [Exécution de procédures stockées](running-stored-procedures.md)  
   
   

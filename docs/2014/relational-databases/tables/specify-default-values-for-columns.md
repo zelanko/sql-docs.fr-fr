@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196722"
 ---
 # <a name="specify-default-values-for-columns"></a>Spécifier des valeurs par défaut pour les colonnes
@@ -35,15 +35,15 @@ ms.locfileid: "68196722"
   
      [Sécurité](#Security)  
   
--   **Pour spécifier une valeur par défaut à l’aide de :**  
+-   **Pour spécifier une valeur à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Si votre entrée dans le champ **Valeur par défaut** remplace une valeur par défaut liée (qui est affichée sans parenthèses), vous êtes invité à annuler la liaison de la valeur par défaut et à la remplacer par la nouvelle valeur par défaut.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68196722"
   
 -   Pour entrer un objet/une fonction, entrez le nom de l'objet/fonction sans guillemets autour.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Pour spécifier une valeur par défaut pour une colonne  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68196722"
   
 4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Pour spécifier une valeur par défaut pour une colonne  
   

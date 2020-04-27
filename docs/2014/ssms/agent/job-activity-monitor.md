@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211377"
 ---
 # <a name="job-activity-monitor"></a>Moniteur d'activité des travaux
@@ -46,10 +46,10 @@ ms.locfileid: "68211377"
  La catégorie de travaux attribuée au travail.  
   
  **Exécutable**  
- **Oui** si le travail peut être exécuté ; **Non** si le travail ne peut pas être exécuté. Un travail ne peut pas être exécuté s'il ne comporte aucune étape ou s'il n'est associé à aucun serveur cible.  
+ **Oui** si le travail peut être exécuté ; **Non** si le travail ne peut pas être exécuté. Un travail ne peut pas être exécuté s'il ne comporte aucune étape ou s'il n'est associé à aucun serveur cible.  
   
  **Planifié**  
- **Oui** si le travail est assigné à une planification du travail ; **Non** si le travail n’a pas de planification.  
+ **Oui** s’il existe une planification du travail pour ce travail ; **Non** s’il n’y a pas de planification pour ce travail.  
   
  <sup>1</sup> Seuls les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membres du rôle serveur fixe sysadmin et du groupe administrateurs du serveur peuvent voir les valeurs dans cette colonne. Les membres du rôle SQLAgentOperatorRole ne peuvent pas consulter les valeurs de cette colonne.  
   

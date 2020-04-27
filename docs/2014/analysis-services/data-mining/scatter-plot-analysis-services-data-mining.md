@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ea37a9aecda0b3fbb6d61f7ba14a82f368c95aa
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175176"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Nuage de points (Analysis Services - Exploration de données)
@@ -40,19 +40,19 @@ ms.locfileid: "78175176"
 ## <a name="restrictions-on-scatter-plots"></a>Restrictions sur les nuages de points
  Un nuage de points peut être créé uniquement si le modèle que vous choisissez sous l’onglet **Sélection d’entrée** contient un attribut prédictible continu. Vous ne devez effectuer aucune sélection supplémentaire. Le type de graphique de nuage de points est automatiquement affiché sous l’onglet **Graphique de courbes d’élévation** en fonction du modèle et du type d’attribut.
 
- Bien que les modèles de séries chronologiques prédisent des nombres continus, vous ne pouvez pas mesurer la précision d'un modèle de série chronologique en utilisant un nuage de points. Il existe d'autres méthodes que vous pouvez utiliser, comme la réservation d'une partie des données historiques. Pour plus d’informations, consultez [exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md).
+ Bien que les modèles de séries chronologiques prédisent des nombres continus, vous ne pouvez pas mesurer la précision d'un modèle de série chronologique en utilisant un nuage de points. Il existe d'autres méthodes que vous pouvez utiliser, comme la réservation d'une partie des données historiques. Pour plus d’informations, consultez [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md).
 
 ## <a name="related-content"></a>Contenu associé
  Les rubriques suivantes contiennent davantage d'informations sur la façon dont vous pouvez créer et utiliser les nuages de points et graphiques d'analyse de précision associés.
 
 |Rubriques|Liens|
 |------------|-----------|
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de précision avec les graphiques de courbes d’élévation &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|
-|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services d’exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services d’exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)|
-|Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[Validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|
+|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)|
+|Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|
 
 ## <a name="see-also"></a>Voir aussi
- [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)
 
 

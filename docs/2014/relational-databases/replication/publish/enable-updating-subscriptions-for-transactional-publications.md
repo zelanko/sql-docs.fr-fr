@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199422"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Activer les abonnements pouvant être mis à jour pour les publications transactionnelles
@@ -29,12 +29,12 @@ ms.locfileid: "68199422"
   
 
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Activez la mise à jour d'abonnements pour les publications transactionnelles dans la page **Type de publication** de l'Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](create-a-publication.md). Vous ne pouvez pas activer la mise à jour des abonnements une fois qu'une publication est créée.  
   
  Pour utiliser les abonnements mis à jour, vous devez aussi configurer des options dans l'Assistant Nouvel abonnement. Pour plus d'informations, voir [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "68199422"
     > [!NOTE]  
     >  L'Agent de lecture de file d'attente est configuré même si vous n'utilisez que des abonnements mis à jour immédiatement.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Lors de la création d'une publication transactionnelle par programme à l'aide de procédures stockées de réplication, vous pouvez activer les abonnements avec mise à jour immédiate ou avec mise à jour en file d'attente.  
   
 #### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>Pour créer une publication qui prend en charge les abonnements avec mise à jour immédiate  
@@ -99,7 +99,7 @@ ms.locfileid: "68199422"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Affectez la valeur **conflict_policy** à **@property** et spécifiez le mode de stratégie de conflit souhaité en choisissant parmi **pub wins**, **sub reinit**ou **sub wins** à **@value**.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
  Cet exemple crée une publication qui prend en charge les abonnements par extraction avec mise à jour immédiate et mise à jour en file d'attente.  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
@@ -110,7 +110,7 @@ ms.locfileid: "68199422"
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
  [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Abonnements pouvant être mis à jour pour la réplication transactionnelle](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Utiliser sqlcmd avec des variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

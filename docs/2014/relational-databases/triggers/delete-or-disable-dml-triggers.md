@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196529"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Supprimer ou désactiver les déclencheurs DML
@@ -41,9 +41,9 @@ ms.locfileid: "68196529"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   La suppression d'un déclencheur entraîne sa suppression définitive de la base de données actuelle. La table et les données sur lesquelles il est basé ne sont pas affectées. La suppression d'une table supprime automatiquement les déclencheurs qui lui sont associés.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "68196529"
   
 -   La désactivation d'un déclencheur ne le supprime pas. Le déclencheur existe toujours en tant qu'objet dans la base de données actuelle. Il ne s'activera toutefois pas lors de l'exécution d'une instruction INSERT, UPDATE ou DELETE pour laquelle il avait été programmé. Tout déclencheur désactivé peut être à nouveau réactivé. Un déclencheur n'est pas recréé par son activation. Le déclencheur est activé de la même manière que lorsqu'il a été initialement créé.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La suppression d'un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
  Pour désactiver ou activer un déclencheur DML, un utilisateur doit avoir au minimum l'autorisation ALTER pour la table ou la vue sur laquelle le déclencheur a été créé.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>Pour supprimer un déclencheur DML  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68196529"
   
 4.  Pour activer le déclencheur, cliquez sur **Activer**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>Pour supprimer un déclencheur DML  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207069"
 ---
 # <a name="direct-execution"></a>Exécution directe
@@ -27,8 +27,7 @@ ms.locfileid: "68207069"
   
  L'exécution directe est communément utilisée par les applications qui génèrent et exécutent des instructions au moment de l'exécution et s'avère la méthode la plus efficace pour les instructions qui ne sont exécutées qu'une seule fois. Elle présente néanmoins un inconvénient avec de nombreuses bases de données dans le sens où l'instruction SQL doit être analysée et compilée chaque fois qu'elle est exécutée, ce qui représente une surcharge en cas d'exécution répétée de l'instruction.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] améliore considérablement les performances de l'exécution directe d'instructions fréquemment exécutées dans les environnements multi-utilisateurs. En outre, l'utilisation de SQLExecDirect avec des marqueurs de paramètres pour les instructions SQL fréquemment exécutées peut permettre d'approcher l'efficacité d'une exécution préparée.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] améliore considérablement les performances de l'exécution directe d'instructions fréquemment exécutées dans les environnements multi-utilisateurs. En outre, l'utilisation de SQLExecDirect avec des marqueurs de paramètres pour les instructions SQL fréquemment exécutées peut permettre d'approcher l'efficacité d'une exécution préparée.  
   
  En cas de connexion à une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le pilote ODBC Native Client utilise [SP_EXECUTESQL](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) pour transmettre l’instruction SQL ou le lot spécifié sur **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]a une logique pour déterminer rapidement si une instruction SQL ou un lot exécuté avec **sp_executesql** correspond à l’instruction ou au lot qui a généré un plan d’exécution qui existe déjà en mémoire. Si une correspondance est trouvée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] réutilise simplement le plan existant au lieu de compiler un nouveau plan. Cela signifie que les instructions SQL exécutées couramment exécutées avec **SQLExecDirect** dans un système avec de nombreux utilisateurs tireront parti de la plupart des avantages de la réutilisation des plans qui étaient uniquement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]disponibles pour les procédures stockées dans les versions antérieures de.  
   

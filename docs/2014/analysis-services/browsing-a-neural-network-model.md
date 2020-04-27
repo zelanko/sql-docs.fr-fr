@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174209"
 ---
 # <a name="browsing-a-neural-network-model"></a>Exploration d'un modèle MNN (Microsoft Neural Network)
   Quand vous ouvrez un modèle de réseau neuronal ou de régression logistique à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de modèle de réseau neuronal dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les corrélations et d'obtenir des informations sur les schémas du modèle et les données sous-jacentes.
 
-##  <a name="BKMK_Tabs"></a>Explorer le modèle
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorer le modèle
  Les modèles basés sur les algorithmes de réseau neuronal ou de régression logistique de [!INCLUDE[msCoName](../includes/msconame-md.md)] sont similaires dans le sens où ils analysent des données comme un ensemble de connexions parmi les entrées et les sorties connues. La visionneuse **Parcourir** vous aide à explorer ces connexions, avec les contrôles suivants :
 
 -   [Variables](#BKMK_Variables)
 
--   [Entrées](#BKMK_Inputs)
+-   [Port](#BKMK_Inputs)
 
 -   [Sorties](#BKMK_Outputs)
 
  Si vous souhaitez essayer cette visionneuse, vous pouvez créer un modèle à l’aide de [l’Assistant Classification &#40;compléments d’exploration de données pour Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md), puis utiliser l’option **Avancé** pour remplacer l’algorithme par Microsoft Logistic Regression dans la boîte de dialogue **Paramètres d’algorithme**.
 
-###  <a name="BKMK_Variables"></a>Variables
+###  <a name="variables"></a><a name="BKMK_Variables"></a>Variables
  Le volet **Variables** affiche la liste des variables d’entrée par ordre de leur effet sur le modèle. Vous utilisez les contrôles **Entrée** et **Sortie** pour filtrer le modèle, ce qui affecte les variables qui sont affichées, ainsi que leur ordre.
 
  Grâce à cette visionneuse, vous pouvez explorer les facteurs qui sont les plus importants pour déterminer si un client est plus susceptible d'appartenir à la catégorie des acheteurs de vélo ou à la catégorie des non-acheteurs.
@@ -72,17 +72,17 @@ ms.locfileid: "78174209"
 
      Une info-bulle apparaît. Elle comprend un score *d’importance*, une paire de scores de *probabilité* et une paire de valeurs de *finesse*.
 
-    -   L' **importance** est calculée sur l’ensemble du jeu de données et identifie l’attribut qui, étant donné toutes les entrées, est le plus corrélé avec le résultat cible. La visionneuse trie les valeurs dans le graphique par scores d'importance.
+    -   **importance** est calculée dans l’intégralité du dataset et identifie l’attribut qui, compte tenu de toutes les entrées, est le plus corrélé avec le résultat cible. La visionneuse trie les valeurs dans le graphique par scores d'importance.
 
-    -   La **probabilité** est calculée pour chaque ensemble de paires attribut-valeur, pour les résultats cibles, sur l’ensemble du jeu de données.
+    -   La **probabilité** est calculée pour chaque ensemble de paires attribut-valeur, pour les résultats cibles dans le jeu de données entier.
 
-    -   L' **élévation** vous indique l’utilité de cette paire attribut-valeur particulière pour promouvoir un résultat ou un autre.
+    -   La **finesse** vous indique l’utilité de cette paire attribut-valeur particulière pour favoriser un résultat ou un autre.
 
      Remarque : l'info-bulle contient les mêmes informations, quelle que soit la colonne où vous positionnez la souris.
 
  [Retour au début](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>Port
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Port
  Le volet **Entrées** vous permet de choisir un ensemble d’entrées et de l’appliquer en tant que filtre au modèle, ce qui vous permet de voir l’impact de ces choix sur les résultats, en fonction des données d’apprentissage
 
 ##### <a name="explore-inputs"></a>Explorer les entrées
@@ -113,7 +113,7 @@ ms.locfileid: "78174209"
 
  [Retour au début](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>Enverra
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Enverra
  Dans le volet **Outputs**, vous pouvez choisir le résultat qui vous intéresse. Les réseaux neuronaux vous permettent de spécifier autant de colonnes de résultats que vous le souhaitez, bien que l'ajout de sorties supplémentaires ajoute à la complexité du modèle et puisse nécessiter un temps de traitement beaucoup plus long.
 
  Pour comparer deux sorties, elles doivent avoir été désignées comme colonnes **Prédire** ou **Prédire uniquement**.

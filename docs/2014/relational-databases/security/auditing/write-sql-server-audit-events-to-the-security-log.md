@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211977"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité
@@ -47,31 +47,31 @@ ms.locfileid: "68211977"
   
      [Sécurité](#Security)  
   
--   **Pour écrire des événements d’audit SQL Server dans le journal de sécurité :**  
+-   **Pour écrire des événements d'audit SQL Server dans le journal de sécurité :**  
   
-     [Configurer le paramètre Auditer l’accès aux objets dans Windows à l’aide d’Auditpol](#auditpolAccess)  
+     [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol](#auditpolAccess)  
   
-     [Configurer le paramètre Auditer l’accès aux objets dans Windows à l’aide de secpol](#secpolAccess)  
+     [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol](#secpolAccess)  
   
-     [Accorder l’autorisation générer des audits de sécurité à un compte à l’aide de secpol](#secpolPermission)  
+     [Octroyer l'autorisation Générer des audits de sécurité à un compte à l'aide de l'outil secpol](#secpolPermission)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
- Les administrateurs de l'ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent savoir que les paramètres locaux du journal de sécurité peuvent être remplacés par une stratégie de domaine. Dans ce cas, la stratégie de domaine peut remplacer le paramètre de sous-catégorie (**auditpol /get /subcategory:"généré par application"** ). Cela peut affecter la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à consigner des événements sans avoir aucun moyen de détecter que les événements que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] essaie d'auditer ne vont pas être consignés.  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
+ Les administrateurs de l'ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent savoir que les paramètres locaux du journal de sécurité peuvent être remplacés par une stratégie de domaine. Dans ce cas, la stratégie de domaine peut remplacer le paramètre de sous-catégorie (**auditpol /get /subcategory:"généré par application"**). Cela peut affecter la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à consigner des événements sans avoir aucun moyen de détecter que les événements que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] essaie d'auditer ne vont pas être consignés.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez être un administrateur Windows pour configurer ces paramètres.  
   
-##  <a name="auditpolAccess"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a>Pour configurer le paramètre Auditer l’accès aux objets dans Windows à l’aide d’Auditpol  
   
 1.  Ouvrez une invite de commandes avec des autorisations d'administrateur.  
   
     1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur **Accessoires**, cliquez avec le bouton droit sur **Invite de commandes**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
   
-    2.  Si la boîte de dialogue **Contrôle de compte d'utilisateur** s'ouvre, cliquez sur **Continuer**.  
+    2.  Si la boîte de dialogue **Contrôle du compte utilisateur** s'ouvre, cliquez sur **Continuer**.  
   
 2.  Exécutez l'instruction suivante pour activer l'audit à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211977"
   
 3.  Fermez la fenêtre d'invite de commandes.  
   
-##  <a name="secpolAccess"></a> Pour octroyer l'autorisation Générer des audits de sécurité à un compte à l'aide de l'outil secpol  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a>Pour accorder l’autorisation générer des audits de sécurité à un compte à l’aide de secpol  
   
 1.  Sur un système d'exploitation Windows, dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68211977"
   
 9. Redémarrez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour activer ce paramètre.  
   
-##  <a name="secpolPermission"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol  
   
 1.  Si la version du système d'exploitation est antérieure à [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   

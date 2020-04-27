@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198976"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Afficher et modifier les propriétés d'un abonnement par extraction (pull)
@@ -38,7 +38,7 @@ ms.locfileid: "68198976"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Affichez les propriétés de l’abonnement par extraction à partir du serveur de publication ou de l’Abonné dans la boîte de dialogue **Propriétés de l’abonnement - \<serveur_publication> : \<base_de_données_publication>** , disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez modifier des propriétés ou en afficher d'autres sur l'Abonné. Vous pouvez également afficher des propriétés à partir du serveur de publication sous l'onglet **Tous les abonnements** , disponible dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Pour afficher des propriétés d'extraction d'abonnement à partir du serveur de publication dans Management Studio  
@@ -71,7 +71,7 @@ ms.locfileid: "68198976"
   
 4.  Affichez les propriétés, puis cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Il est possible de modifier des abonnements par extraction et d'accéder par programme à leurs propriétés en utilisant des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'abonnement appartient.  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Pour afficher les propriétés d'un abonnement par extraction à une publication transactionnelle ou d'instantané  
@@ -86,7 +86,7 @@ ms.locfileid: "68198976"
   
 3.  Sur le serveur de publication, exécutez [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). **@publication** Spécifiez **@subscriber**et.  
   
-4.  Sur le serveur de publication [](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), exécutez sp_helpsubscriberinfo **@subscriber**, en spécifiant. Des informations relatives à l'Abonné sont alors affichées.  
+4.  Sur le serveur de publication, exécutez [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), en spécifiant **@subscriber**. Des informations relatives à l'Abonné sont alors affichées.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Pour modifier les propriétés d'un abonnement par extraction à une publication transactionnelle ou d'instantané  
   
@@ -113,13 +113,13 @@ ms.locfileid: "68198976"
   
 3.  Sur le serveur de publication, exécutez [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) pour afficher les informations d'abonnement. Pour renvoyer des informations sur un abonnement spécifique, vous devez **@publication**spécifier **@subscriber**, et la valeur **pull** pour **@subscription_type**.  
   
-4.  Sur le serveur de publication [](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), exécutez sp_helpsubscriberinfo **@subscriber**, en spécifiant. Des informations relatives à l'Abonné sont alors affichées.  
+4.  Sur le serveur de publication, exécutez [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), en spécifiant **@subscriber**. Des informations relatives à l'Abonné sont alors affichées.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Pour modifier les propriétés d'un abonnement par extraction à une publication de fusion  
   
 1.  Sur l'Abonné, exécutez [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). **@publication**Spécifiez **@publisher**, **@publisher_db**,, la propriété d’abonnement qui **@property**est modifiée comme, et la **@value**nouvelle valeur comme.  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Les classes RMO à utiliser pour afficher ou modifier les propriétés d'abonnements par extraction dépendent du type de publication auquel l'abonnement par extraction est souscrit.  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Pour afficher ou modifier les propriétés d'un abonnement par extraction à une publication transactionnelle ou d'instantané  

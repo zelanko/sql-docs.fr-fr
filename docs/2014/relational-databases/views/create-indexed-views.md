@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196430"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
@@ -29,7 +29,7 @@ ms.locfileid: "68196430"
   
   
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Les étapes suivantes de création d'une vue indexée sont essentielles à la réussite de l'implémentation de la vue indexée :  
   
 1.  Vérifiez que les options SET sont correctes pour toutes les tables existantes qui seront référencées dans la vue.  
@@ -42,7 +42,7 @@ ms.locfileid: "68196430"
   
 5.  Créez l'index cluster unique sur la vue.  
   
-###  <a name="Restrictions"></a>Options SET requises pour les vues indexées  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>Options SET requises pour les vues indexées  
  L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **«** abc **»** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **«** abc **»**.  
   
  Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET dans le tableau suivant doivent être définies sur les valeurs indiquées dans la colonne **RequiredValue** chaque fois que les conditions suivantes sont remplies :  
@@ -55,7 +55,7 @@ ms.locfileid: "68196430"
   
 -   L'optimiseur de requête utilise la vue indexée pour générer le plan de requête.  
   
-    |Options définies|Valeur requise|Valeur de serveur par défaut|Default<br /><br /> Valeur OLE DB et ODBC|Default<br /><br /> Valeur DB-Library|  
+    |Options définies|Valeur requise|Valeur de serveur par défaut|Par défaut<br /><br /> Valeur OLE DB et ODBC|Par défaut<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
     |ANSI_PADDING|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
@@ -79,7 +79,7 @@ ms.locfileid: "68196430"
   
  Même si une expression est déterministe, si elle contient des expressions flottantes, le résultat exact dépend de l'architecture du processeur ou de la version du microcode. Pour garantir l'intégrité des données, ces expressions peuvent participer seulement sous forme de colonnes non clés de vues indexées. Les expressions déterministes qui ne contiennent pas d'expressions flottantes s'appellent des expressions précises. Seules les expressions déterministes précises peuvent participer à des colonnes clés et dans les clauses WHERE et GROUP BY des vues indexées.  
   
-### <a name="additional-requirements"></a>Conditions supplémentaires  
+### <a name="additional-requirements"></a>Autres conditions requises  
  Outre les options SET et les conditions requises pour les fonctions déterministes, les conditions suivantes doivent être satisfaites :  
   
 -   L'utilisateur qui exécute CREATE INDEX doit être le propriétaire de la vue.  
@@ -130,12 +130,12 @@ ms.locfileid: "68196430"
   
 -   Si la définition de la vue contient une clause GROUP BY, la clé de l'index cluster unique peut référencer seulement les colonnes définies dans la clause GROUP BY.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
  Si vous faites référence aux littéraux de chaîne `datetime` et `smalldatetime` au sein de vues indexées, il est recommandé de convertir explicitement le littéral en type date souhaité à l'aide d'un style de format de date déterministe. Pour obtenir la liste des styles de formats de date qui sont déterministes, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Les expressions qui impliquent une conversion implicite de chaînes de caractères en `datetime` ou en `smalldatetime` sont considérées comme non déterministes. Cela est dû au fait que les résultats dépendent des paramètres LANGUAGE et DATEFORMAT de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`listopad`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète la chaîne `'2000-12-01'` en fonction du paramètre DATEFORMAT.  
   
  La conversion implicite de données caractères non-Unicode entre les classements est également considérée comme non déterministe.  
   
-###  <a name="Considerations"></a>Raisons  
+###  <a name="considerations"></a><a name="Considerations"></a>Raisons  
  La valeur de l’option **large_value_types_out_of_row** des colonnes contenues dans une vue indexée est héritée de la valeur de la colonne correspondante dans la table de base. Cette valeur est définie à l’aide de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). La valeur par défaut des colonnes constituées à partir d'expressions est 0. Cela signifie que les types de valeurs élevées sont stockés dans la ligne.  
   
  Des vues indexées peuvent être créées sur une table partitionnée, et elles peuvent elles-mêmes être partitionnées.  
@@ -146,12 +146,12 @@ ms.locfileid: "68196430"
   
  Les index sur les tables et les vues peuvent être désactivés. Lorsqu'un index cluster sur une table est désactivé, les index sur les vues associées à la table le sont également.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE VIEW dans la base de données et l'autorisation ALTER sur le schéma dans lequel la vue est créée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Pour créer une vue indexée  
   
@@ -212,9 +212,9 @@ ms.locfileid: "68196430"
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [DÉFINIR ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [DÉFINIR ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [DÉFINIR ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET ARITHABORT &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [DÉFINIR CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [DÉFINIR NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205453"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
   Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres table &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
-## <a name="prerequisite"></a>Configuration requise  
+## <a name="prerequisite"></a>Prérequis  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```  
@@ -102,8 +102,7 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Remplissez les mémoires tampons de paramètres. 
-  `cbTVP` est défini avec le nombre de lignes à envoyer au serveur.  
+4.  Remplissez les mémoires tampons de paramètres. `cbTVP` est défini avec le nombre de lignes à envoyer au serveur.  
   
     ```  
     // Populate parameters.  

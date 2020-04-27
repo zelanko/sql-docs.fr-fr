@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205530"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Envoyer et recevoir des données de façon incrémentielle avec FILESTREAM (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "68205530"
  Pour plus d’informations sur la fonctionnalité FILESTREAM, consultez [prise en charge de filestream &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Exemple  
- Avant de compiler et d’exécuter cet exemple, activez la prise en charge FILESTREAM ([activer et configurer FileStream](../blob/enable-and-configure-filestream.md)).  
+ Avant de compiler et d'exécuter cet exemple, activez la prise en charge FILESTREAM ([Activer et configurer FILESTREAM](../blob/enable-and-configure-filestream.md)).  
   
  La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une base de données utilisée par cet exemple. Votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture pour exécuter ce script (par exemple, ouvrez une session en tant que compte système local).  
   

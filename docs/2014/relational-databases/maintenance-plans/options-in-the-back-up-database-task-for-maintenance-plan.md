@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205943"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Tâche Sauvegarder la base de données (Plan de maintenance)
-  Utilisez la boîte **de dialogue tâche sauvegarder la base de données** pour ajouter une tâche de sauvegarde au plan de maintenance. La sauvegarde de la base de données est importante pour pallier son endommagement possible à la suite d'une défaillance matérielle ou logicielle (ou d'erreurs des utilisateurs), en permettant sa restauration à partir d'une copie de sauvegarde. Cette tâche vous permet d'effectuer des sauvegardes des journaux des transactions, des sauvegardes de groupe de fichiers et de fichiers, des sauvegardes différentielles et complètes.  
+  Utilisez la boîte de dialogue **Tâche Sauvegarder la base de données** pour ajouter une tâche de sauvegarde au plan de maintenance. La sauvegarde de la base de données est importante pour pallier son endommagement possible à la suite d'une défaillance matérielle ou logicielle (ou d'erreurs des utilisateurs), en permettant sa restauration à partir d'une copie de sauvegarde. Cette tâche vous permet d'effectuer des sauvegardes des journaux des transactions, des sauvegardes de groupe de fichiers et de fichiers, des sauvegardes différentielles et complètes.  
   
  **Pour créer une tâche de sauvegarde de base de données**  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68205943"
  **Toutes les bases de données**  
  Génère un plan de maintenance qui exécute les tâches de maintenance sur toutes les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Toutes les bases de données système (Master, msdb, Model)**  
+ **Toutes les bases de données système (master, model et msdb)**  
  Génère un plan de maintenance qui exécute les tâches de maintenance sur chacune des bases de données système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Aucune tâche de maintenance n'est exécutée sur les bases de données créées par l'utilisateur.  
   
- **Toutes les bases de données utilisateur (à l’exception de Master, Model, msdb, tempdb)**  
+ **Toutes les bases de données utilisateur (autre que master, model et msdb)**  
  Génère un plan de maintenance qui exécute des tâches de maintenance sur toutes les bases de données créées par l'utilisateur. Aucune tâche de maintenance n'est exécutée sur les bases de données système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Ces bases de données**  
@@ -55,16 +55,16 @@ ms.locfileid: "68205943"
  Affiche le type de sauvegarde à effectuer.  
   
  **Composant de sauvegarde**  
- Sélectionnez **Base de données** pour sauvegarder la totalité de la base de données. Sélectionnez **Fichier et groupes de fichiers** pour sauvegarder seulement une partie de la base de données. Spécifiez ensuite le nom du fichier ou du groupe de fichiers. Si vous avez sélectionné plusieurs bases de données dans la zone **Base de données**, ne spécifiez que **Bases de données** pour **Composant de sauvegarde**. Pour exécuter des sauvegardes de fichiers ou de groupes de fichiers, créez une tâche pour chaque base de données.  
+ Sélectionnez **Base de données** pour sauvegarder la totalité de la base de données. Sélectionnez **Fichier et groupes de fichiers** pour sauvegarder seulement une partie de la base de données. Spécifiez ensuite le nom du fichier ou du groupe de fichiers. Si vous avez sélectionné plusieurs bases de données dans la zone **Base de données** , ne spécifiez que **Bases de données** pour **Composant de sauvegarde**. Pour exécuter des sauvegardes de fichiers ou de groupes de fichiers, créez une tâche pour chaque base de données.  
   
- **Le jeu de sauvegarde va expirer**  
+ **Expiration du jeu de sauvegarde**  
  Indique la date à laquelle le jeu de sauvegarde peut être écrasé par un autre jeu de sauvegarde.  
   
- **Sauvegarder sur**  
+ **Sauvegarde sur**  
  Sauvegarde la base de données dans un fichier ou sur une bande. Seuls les périphériques à bande connectés à l'ordinateur sur lequel figure la base de données sont disponibles.  
   
- **Sauvegarder des bases de données dans un ou plusieurs fichiers**  
- Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner la destination de la sauvegarde**, puis indiquez un ou plusieurs emplacements sur le disque ou sur un périphérique à bandes.  
+ **Sauvegarder les bases de données sur un ou plusieurs fichiers**  
+ Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner la destination de la sauvegarde** , puis indiquez un ou plusieurs emplacements sur le disque ou sur un périphérique à bandes.  
   
  **Si des fichiers de sauvegarde existent**  
  Sélectionnez **Ajouter** pour ajouter cette sauvegarde à la fin du fichier. Sélectionnez **Remplacer**pour supprimer toutes les anciennes sauvegardes du fichier et les remplacer par la nouvelle.  
@@ -84,13 +84,13 @@ ms.locfileid: "68205943"
  **Folder**  
  Spécifiez le dossier dans lequel seront placés les fichiers de base de données créés automatiquement.  
   
- **Extension de fichier de sauvegarde**  
+ **Extension du fichier de sauvegarde**  
  Spécifiez l'extension à utiliser pour les fichiers de sauvegarde. La valeur par défaut est **.bak**.  
   
- **Vérifier l’intégrité de la sauvegarde**  
+ **Vérifier l'intégrité de la sauvegarde**  
  Vérifie si le jeu de sauvegarde est complet et que tous les volumes sont lisibles.  
   
- **Sauvegarder la fin du journal et conserver la base de données dans l’état de restauration**  
+ **Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration**  
  Effectue une sauvegarde de journal comme dernière étape avant la restauration d'une base de données. Pour plus d’informations, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md).  
   
  **Définir la compression de la sauvegarde**  
@@ -98,8 +98,8 @@ ms.locfileid: "68205943"
   
 |||  
 |-|-|  
-|**Utiliser le paramètre de serveur par défaut**|Cliquez sur cette option pour utiliser la valeur par défaut au niveau du serveur.<br /><br /> Cette valeur par défaut est définie par l’option de configuration de serveur **Compression par défaut des sauvegardes** . Pour plus d’informations sur l’affichage du paramétrage actuel de cette option, consultez [afficher ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> ** \* Important \* \* ** Par défaut, la compression augmente considérablement l’utilisation de l’UC, et l’UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Par conséquent, il peut être préférable de créer une sauvegarde compressée de priorité basse dans une session où l’utilisation de l’UC est limitée par [Resource Governor](../resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Utiliser le paramètre du serveur par défaut**|Cliquez sur cette option pour utiliser la valeur par défaut au niveau du serveur.<br /><br /> Cette valeur par défaut est définie par l’option de configuration de serveur **Compression par défaut des sauvegardes** . Pour plus d’informations sur l’affichage du paramétrage actuel de cette option, consultez [Afficher ou configurer l’option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Par conséquent, il peut être préférable de créer une sauvegarde compressée de priorité basse dans une session où l’utilisation de l’UC est limitée par [Resource Governor](../resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
  **Vue T-SQL**  
@@ -122,10 +122,10 @@ ms.locfileid: "68205943"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows.  
+ Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] avec l’authentification Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
+ Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  

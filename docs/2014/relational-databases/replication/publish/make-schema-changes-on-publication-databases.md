@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199459"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
@@ -46,7 +46,7 @@ ms.locfileid: "68199459"
   
  Pour obtenir des informations sur l’ajout et la suppression d’articles dans les publications, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- **Pour répliquer des modifications de schéma**  
+ **Pour répliquer les modifications de schéma**  
   
  Les modifications de schéma répertoriées ci-dessus sont répliquées par défaut. Pour plus d'informations sur la désactivation de la réplication des modifications de schéma, consultez [Replicate Schema Changes](replicate-schema-changes.md).  
   
@@ -81,8 +81,7 @@ ms.locfileid: "68199459"
   
 -   La lecture non validée n'est pas un niveau d'isolement pris en charge lors de l'exécution d'instructions DDL sur une table publiée.  
   
--   
-  `SET CONTEXT_INFO` ne doit pas être utilisée pour modifier le contexte des transactions dans lesquelles des modifications de schéma sont exécutées sur les objets publiés.  
+-   `SET CONTEXT_INFO` ne doit pas être utilisée pour modifier le contexte des transactions dans lesquelles des modifications de schéma sont exécutées sur les objets publiés.  
   
 #### <a name="adding-columns"></a>Ajout de colonnes  
   
@@ -147,8 +146,7 @@ ms.locfileid: "68199459"
         |`hierarchyid`|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
         |`geography` et `geometry`|Autoriser la modification|Autoriser le changement<sup>1</sup>|Bloquer la modification|  
         |`filestream`|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
-        |
-  `date`, `time`, `datetime2` et `datetimeoffset`|Autoriser la modification|Autoriser le changement<sup>1</sup>|Bloquer la modification|  
+        |`date`, `time`, `datetime2` et `datetimeoffset`|Autoriser la modification|Autoriser le changement<sup>1</sup>|Bloquer la modification|  
   
          <sup>1</sup> SQL Server Compact abonnés convertissent ces types de données sur l’abonné.  
   

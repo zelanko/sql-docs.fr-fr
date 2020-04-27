@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211862"
 ---
 # <a name="modify-statistics"></a>Modifier des statistiques
@@ -29,24 +29,24 @@ ms.locfileid: "68211862"
   
      [Sécurité](#Security)  
   
--   **Pour modifier des statistiques, utilisez :**  
+-   **Pour modifier des statistiques, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Exigences :  
   
 -   L'utilisateur doit disposer de l'autorisation ALTER sur la table ou la vue.  
   
 -   L’utilisateur doit être le propriétaire de la table ou de la vue indexée ou être membre d’un des rôles suivants : rôle serveur fixe **sysadmin** , rôle de base de données fixe **db_owner** ou rôle de base de données fixe **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-modify-statistics"></a>Pour modifier des statistiques  
   
@@ -60,11 +60,11 @@ ms.locfileid: "68211862"
   
 5.  Cliquez avec le bouton droit sur l’objet de statistiques à modifier et sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques** *statistics_name* dialog box, on the **General** page, click **Add**, **Remove**, **Move Up**, or **Move Down**, ou toute combinaison, pour modifier les propriétés des statistiques. Gardez à l’esprit que l’emplacement d’une colonne dans la grille **Colonnes de statistiques** peut avoir une incidence notable sur l’utilité des statistiques.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques** *nom_statistiques*, dans la page **Général**, cliquez sur **Ajouter**, **Supprimer**, **Monter**, **Descendre**, ou sur une combinaison de ces commandes, pour modifier les propriétés des statistiques. Gardez à l’esprit que l’emplacement d’une colonne dans la grille **Colonnes de statistiques** peut avoir une incidence notable sur l’utilité des statistiques.  
   
 7.  Cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier des statistiques**  
   
  Cette tâche ne peut pas être effectuée à l'aide d'instructions Transact-SQL. Pour modifier des statistiques à l'aide de Transact-SQL, vous devez d'abord supprimer les statistiques existantes, puis les recréer avec les nouveaux attributs.  

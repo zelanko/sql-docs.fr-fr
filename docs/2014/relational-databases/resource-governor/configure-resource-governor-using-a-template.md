@@ -13,27 +13,27 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198936"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurer Resource Governor à l'aide d'un modèle
   Vous pouvez configurer Resource Governor à l'aide d'un modèle fourni dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Avant de commencer :**  [autorisations](#Permissions)  
+-   **Avant de commencer :**  [Autorisations](#Permissions)  
   
--   **Pour créer un groupe de charge de travail à l’aide de :**  [modèle](#ConfRGTemplate)  
+-   **Pour créer un groupe de charge de travail, avec :** [un modèle](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Utilisez les étapes suivantes pour ouvrir et modifier un modèle qui crée un pool de ressources et un groupe de charge de travail pour le pool. De plus, ce modèle vous permet de créer une fonction classifieur définie par l'utilisateur qui achemine de nouvelles connexions vers le groupe par défaut ou le groupe de charge de travail que vous créez.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de Resource Governor dans le modèle requièrent l'autorisation CONTROL SERVER.  
   
-##  <a name="ConfRGTemplate"></a>Configurer Resource Governor à l’aide d’un modèle  
- **Pour configurer Resource Governor à l’aide d’un modèle dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> Configurer Resource Governor à l'aide d'un modèle  
+ **Pour configurer Resource Governor à l'aide d'un modèle dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans le menu **Affichage** , cliquez sur **Explorateur de modèles**.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "68198936"
  [Activer Resource Governor](enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](resource-governor-resource-pool.md)   
  [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)   
- [Fonction classifieur Resource Governor](resource-governor-classifier-function.md)   
+ [Fonction classifieur de Resource Governor](resource-governor-classifier-function.md)   
  [Afficher les propriétés de Resource Governor](view-resource-governor-properties.md)   
- [CRÉER un POOL de ressources &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CRÉER un groupe de charge de travail &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATe FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210818"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server - Objet Plan Cache
@@ -44,8 +44,8 @@ ms.locfileid: "68210818"
 |**Tables temporaires & Variables de table**|Informations sur le cache concernant les tables temporaires et les variables de table.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [SQL Server, objet Gestionnaire de tampons](sql-server-buffer-manager-object.md)   
+ [Server Memory (options de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [SQL Server, objet gestionnaire de tampons](sql-server-buffer-manager-object.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)  
   
   

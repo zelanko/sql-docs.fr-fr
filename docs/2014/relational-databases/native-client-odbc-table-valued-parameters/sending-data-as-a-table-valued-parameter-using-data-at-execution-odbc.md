@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205463"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "68205463"
   
  Lorsque SQLPutData est appelé pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être égal à 0. Lorsque toutes les lignes de la valeur de table ont été passées, SQLPutData est appelé avec une valeur *DataPtr* de 0.  
   
-## <a name="prerequisite"></a>Configuration requise  
+## <a name="prerequisite"></a>Prérequis  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```  

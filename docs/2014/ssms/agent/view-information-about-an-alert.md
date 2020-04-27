@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211294"
 ---
 # <a name="view-information-about-an-alert"></a>Afficher les informations relatives à une alerte
@@ -32,20 +32,20 @@ ms.locfileid: "68211294"
   
      [Sécurité](#Security)  
   
--   **Pour afficher des informations sur une alerte, utilisez :**  
+-   **Pour afficher des informations relatives à une alerte, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des informations sur une alerte. Les autres utilisateurs doivent disposer du rôle de base de données fixe **SQLAgentOperatorRole** dans la base de données **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Pour afficher des informations relatives à une alerte  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68211294"
   
 4.  Cliquez avec le bouton droit sur l'alerte comportant les informations que vous voulez afficher, puis sélectionnez **Propriétés**.  
   
-     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue Propriétés de l'**alerte** _alert_name_, consultez :  
+     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de l’alerte_**nom_alerte** , consultez :  
   
     -   [Propriétés de l’alerte-nouvelle alerte &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211294"
   
     -   [Propriétés de l’alerte : nouvelle page d’options &#40;d’alerte&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Propriétés de l’alerte &#40;page historique&#41;](alert-properties-history-page.md)  
+    -   [Propriétés de l'alerte &#40;page Historique&#41;](alert-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Pour afficher des informations relatives à une alerte  
   

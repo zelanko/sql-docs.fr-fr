@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197109"
 ---
 # <a name="stored-procedures-database-engine"></a>Procédures stockées (moteur de base de données)
-  Une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans est un groupe d’une ou [!INCLUDE[tsql](../../includes/tsql-md.md)] de plusieurs instructions ou une référence [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à une méthode CLR (Common Runtime language). Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
+  Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
   
 -   accepter des paramètres d'entrée et retourner plusieurs valeurs sous la forme de paramètres de sortie au programme appelant ;  
   
@@ -59,16 +59,15 @@ ms.locfileid: "68197109"
   
 ## <a name="types-of-stored-procedures"></a>Types de procédures stockées  
  Défini par l’utilisateur  
- Une procédure définie par l’utilisateur peut être créée dans une base de données définie par l’utilisateur ou dans toutes les bases de données système à l’exception de la base de données **Resource** . La procédure peut être développée dans [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant que référence à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] méthode CLR (Common Runtime language).  
+ Une procédure définie par l’utilisateur peut être créée dans une base de données définie par l’utilisateur ou dans toutes les bases de données système à l’exception de la base de données **Resource** . La procédure peut être développée dans [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant que référence à une méthode CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Temporaire  
  Les procédures temporaires sont une forme de procédures définies par l'utilisateur. Les procédures temporaires sont semblables à une procédure permanente, sauf qu'elles sont stockées dans **tempdb**. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des procédures temporaires locales est un signe dièse (#) unique. Ces procédures sont visibles uniquement à la connexion actuelle de l'utilisateur et sont supprimées dès que la connexion est fermée. En revanche, le nom des procédures temporaires globales commence par deux signes dièse (##) ; ces procédures sont visibles à tout utilisateur après avoir été créées et sont supprimées à la fin de la dernière session qui utilise la procédure.  
   
  Système  
- Les procédures système sont incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont stockées physiquement dans la base de données **Resource** interne et masquée, mais elles apparaissent logiquement dans le schéma **sys** de chaque base de données définie par le système et définie par l’utilisateur. En outre, la base de données **msdb** contient également les procédures stockées système dans le schéma **dbo** , utilisées pour planifier les alertes et les travaux. Compte tenu du fait que les procédures système commencent par le préfixe **sp_**, nous vous recommandons de ne pas utiliser ce préfixe quand vous nommez des procédures définies par l’utilisateur. Pour obtenir la liste complète des procédures système, consultez [Procédures stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
+ Les procédures système sont incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont stockées physiquement dans la base de données **Resource** interne et masquée, mais elles apparaissent logiquement dans le schéma **sys** de chaque base de données définie par le système et définie par l’utilisateur. En outre, la base de données **msdb** contient également les procédures stockées système dans le schéma **dbo** , utilisées pour planifier les alertes et les travaux. Compte tenu du fait que les procédures système commencent par le préfixe **sp_** , nous vous recommandons de ne pas utiliser ce préfixe quand vous nommez des procédures définies par l’utilisateur. Pour obtenir la liste complète des procédures système, consultez [Procédures stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures système qui assurent l’interface entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les programmes externes pour diverses activités de maintenance. Ces procédures étendues utilisent le préfixe xp_. Pour obtenir la liste complète des procédures étendues, consultez [Procédures stockées étendues générales &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures système qui assurent l’interface entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les programmes externes pour diverses activités de maintenance. Ces procédures étendues utilisent le préfixe xp_. Pour obtenir la liste complète des procédures étendues, consultez [Procédures stockées étendues générales &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   
  Étendue définie par l'utilisateur  
  Les procédures étendues vous permettent de créer des routines externes dans un langage de programmation comme le langage C. Ce sont des DLL qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut charger et exécuter dynamiquement.  
@@ -86,13 +85,13 @@ ms.locfileid: "68197109"
 |Explique comment supprimer une procédure stockée.|[Supprimer une procédure stockée](../stored-procedures/delete-a-stored-procedure.md)|  
 |Explique comment exécuter une procédure stockée.|[Exécuter une procédure stockée](../stored-procedures/execute-a-stored-procedure.md)|  
 |Explique comment accorder des autorisations sur une procédure stockée.|[Accorder des autorisations sur une procédure stockée](../stored-procedures/grant-permissions-on-a-stored-procedure.md)|  
-|Explique comment retourner des données d'une procédure stockée à une application.|[Retour de données à partir d'une procédure stockée](../stored-procedures/return-data-from-a-stored-procedure.md)|  
+|Explique comment retourner des données d'une procédure stockée à une application.|[Retour de données à partir d’une procédure stockée](../stored-procedures/return-data-from-a-stored-procedure.md)|  
 |Explique comment recompiler une procédure stockée.|[Recompiler une procédure stockée](../stored-procedures/recompile-a-stored-procedure.md)|  
 |Explique comment renommer une procédure stockée.|[Renommer une procédure stockée](../stored-procedures/rename-a-stored-procedure.md)|  
-|Explique comment afficher la définition d'une procédure stockée.|[Afficher la définition d'une procédure stockée](view-the-definition-of-a-stored-procedure.md)|  
-|Explique comment consulter les dépendances d'une procédure stockée.|[Afficher les dépendances d'une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)|  
+|Explique comment afficher la définition d'une procédure stockée.|[Afficher la définition d’une procédure stockée](view-the-definition-of-a-stored-procedure.md)|  
+|Explique comment consulter les dépendances d'une procédure stockée.|[Afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
- [Procédures stockées du CLR](../../database-engine/dev-guide/clr-stored-procedures.md)  
+ [Procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md)  
   
   

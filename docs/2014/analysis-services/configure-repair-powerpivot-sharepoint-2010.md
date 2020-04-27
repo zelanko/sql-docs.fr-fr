@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174468"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de configuration de PowerPivot)
@@ -24,7 +24,7 @@ ms.locfileid: "78174468"
 
  
 
-##  <a name="bkmk_before"></a>Avant de commencer
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>Avant de commencer
  L'outil de configuration PowerPivot pour SharePoint 2010 recherche les fichiers programme, les paramètres du Registre et les ports disponibles. Pour optimiser l'utilisation de ces outils, vérifiez les points suivants.
 
 -   Exigences générales pour exécuter l'outil de configuration [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md).
@@ -33,7 +33,7 @@ ms.locfileid: "78174468"
 
 -   Le port 80 doit être disponible afin que l'une des tâches sélectionnées demande à l'outil de configuration de créer et configurer une application Web.
 
-##  <a name="bkmk_using"></a>Utilisation de l’outil de configuration de PowerPivot
+##  <a name="using-the-powerpivot-configuration-tool"></a><a name="bkmk_using"></a>Utilisation de l’outil de configuration de PowerPivot
  La première page de l'outil fournit un résumé des valeurs d'entrée utilisées pour configurer la batterie de serveurs SharePoint. En plus des valeurs d'entrée fournies, des valeurs par défaut sont utilisées pour configurer le système. Des noms par défaut sont utilisés pour les applications de service, les bases de données d'application de service et les propriétés d'application de service.
 
 > [!TIP]
@@ -49,7 +49,7 @@ ms.locfileid: "78174468"
 
  ![Interface utilisateur de l'outil de configuration](media/ssas-pctui.gif "Interface utilisateur de l'outil de configuration")
 
-##  <a name="bkmk_steps"></a>Étapes de configuration
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>Étapes de configuration
  Le lien vers l'outil de configuration est visible uniquement lorsque PowerPivot pour SharePoint 2010 est installé sur le serveur local.
 
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Outil de configuration PowerPivot**.
@@ -58,11 +58,11 @@ ms.locfileid: "78174468"
 
 3.  Affichez la fenêtre en plein écran. Vous devez voir une barre d'icônes en bas de la fenêtre qui comprend les commandes **Valider**, **Exécuter**et **Quitter** .
 
-4.  **Compte par défaut :** Dans l’onglet Paramètres, tapez un compte d’utilisateur de domaine pour le **nom d’utilisateur du compte par défaut**. Ce compte est utilisé pour configurer des services essentiels, notamment le pool d'applications de service PowerPivot. Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.
+4.  **Compte par défaut :** sous l'onglet Paramètres, entrez un compte d'utilisateur de domaine pour **Nom d'utilisateur de compte par défaut**. Ce compte est utilisé pour configurer des services essentiels, notamment le pool d'applications de service PowerPivot. Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.
 
-     **Phrase secrète :** tapez une phrase secrète. Pour une nouvelle batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.
+     **Phrase secrète :** entrez une phrase secrète. Pour une nouvelle batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.
 
-5.  **Port :** Si vous le souhaitez, tapez un numéro de port pour vous connecter à l’application Web de l’administration centrale ou utilisez le nombre généré de manière aléatoire fourni. L'outil de configuration vérifie que le nombre est disponible avant de le proposer comme option.
+5.  **Port :** si vous le souhaitez, entrez un numéro de port pour vous connecter à l'application Web de l'Administration centrale ou utilisez le nombre généré de manière aléatoire fourni. L'outil de configuration vérifie que le nombre est disponible avant de le proposer comme option.
 
 6.  Cliquez sur **inscrire SQL Server Analysis Services (PowerPivot) sur le serveur local**.
 
@@ -81,7 +81,7 @@ ms.locfileid: "78174468"
 
 11. [Vérifiez une Installation PowerPivot pour SharePoint](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).
 
-##  <a name="bkmk_input"></a>Valeurs d’entrée utilisées pour configurer le serveur
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>Valeurs d’entrée utilisées pour configurer le serveur
  L'outil de configuration de PowerPivot utilise une combinaison de valeurs d'entrée que vous tapez et de valeurs par défaut qu'il détecte ou utilise automatiquement.
 
  La liste des actions répertoriées dans l'outil de configuration dépend de la configuration actuelle des batteries de serveurs SharePoint. Par exemple, si la batterie de serveurs SharePoint est déjà configurée, aucune action n'est répertoriée dans l'outil. Vous pouvez exécuter l'outil à tout moment pour configurer, réparer, ou détecter des erreurs de configuration. Si des services requis, tels qu'Excel Services ou le service Banque d'informations sécurisé, ne s'exécutent pas dans la batterie, l'outil détecte les services manquants et fournit des options permettant de les activer. Si aucune action n'est requise, la liste des tâches est vide.
@@ -90,15 +90,15 @@ ms.locfileid: "78174468"
 
 |Page|Valeur d'entrée|Source|Description|
 |----------|-----------------|------------|-----------------|
-|**Configurer ou réparer PowerPivot pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour configurer l'application de service PowerPivot, le service Banque d'informations sécurisé, Excel Services, l'identité du pool d'applications Web, l'administrateur de collection de sites, et le compte d'actualisation sans assistance des données PowerPivot.<br /><br /> Par défaut, l'outil utilise le compte de domaine de l'utilisateur actuel. À moins de configurer un serveur à des fins d'évaluation, vous devez le remplacer par un autre compte d'utilisateur de domaine.<br /><br /> Vous pouvez aussi modifier les identités de service ultérieurement, à l'aide de l'Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de PowerPivot, vous pouvez spécifier des comptes dédiés pour ce qui suit :<br /><br /> Application Web, à l’aide de la page **créer une application Web par défaut** (en supposant que l’outil crée une application Web pour la batterie).<br /><br /> Compte d’actualisation des données PowerPivot sans assistance, à l’aide de la page **créer un compte sans assistance pour l’actualisation des données** de cet outil.|
+|**Configurer ou réparer PowerPivot pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour configurer l'application de service PowerPivot, le service Banque d'informations sécurisé, Excel Services, l'identité du pool d'applications Web, l'administrateur de collection de sites, et le compte d'actualisation sans assistance des données PowerPivot.<br /><br /> Par défaut, l'outil utilise le compte de domaine de l'utilisateur actuel. À moins de configurer un serveur à des fins d'évaluation, vous devez le remplacer par un autre compte d'utilisateur de domaine.<br /><br /> Vous pouvez aussi modifier les identités de service ultérieurement, à l'aide de l'Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de PowerPivot, vous pouvez spécifier des comptes dédiés pour ce qui suit :<br /><br /> Application Web, à l'aide de la page **Créer une application Web par défaut** (en supposant que l'outil crée une application Web pour la batterie).<br /><br /> Compte d’actualisation des données PowerPivot sans assistance, à l’aide de la page **créer un compte sans assistance pour l’actualisation des données** de cet outil.|
 ||Serveur de base de données|Instance nommée PowerPivot locale, si disponible|Si une instance du moteur de base de données est installée en tant qu'instance nommée PowerPivot, l'outil renseignera le champ du serveur de base de données avec cette instance. Si vous n'avez pas installé le moteur de base de données, ce champ est vide. Vous devez fournir une instance. Il peut s'agir de n'importe quelle version ou édition de SQL Server prise en charge pour les batteries de serveurs SharePoint.|
 ||Passphrase|Entrée utilisateur|Si vous créez une nouvelle batterie, la phrase secrète que vous entrez sera la phrase secrète pour la batterie. Si vous ajoutez PowerPivot pour SharePoint à une batterie de serveurs existante, vous devez fournir la phrase secrète qui a été définie pour la batterie lors de sa création.|
 ||Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Si la batterie de serveurs n'est pas configurée, l'outil fournit des options pour la création de la batterie de serveurs, notamment pour la création d'un point de terminaison HTTP dans l'Administration centrale. Il choisit par défaut un numéro de port généré de manière aléatoire qui n'est pas encore utilisé.|
 |**Configurer une nouvelle batterie de serveurs**|Serveur de base de données<br /><br /> Compte de batterie de serveurs<br /><br /> Phrase secrète<br /><br /> Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Valeur par défaut de paramètres que vous avez entrés dans dans la page principale.|
 |**Configurer une instance de service locale**|Mot de passe du compte de service Analysis Services|Entrée utilisateur|Vous devez taper le mot de passe du compte de service Analysis Services dans la page **inscrire SQL Server Analysis Services (PowerPivot) sur le serveur local** .<br /><br /> Le compte de service a été spécifié pendant l'installation. Vous devez maintenant taper le mot de passe comme entrée pour inscrire l'instance de service local avec SharePoint.|
-|**Créer une application de service PowerPivot**|Nom de l'application de service PowerPivot|Default|Le nom par défaut est celui de l'application de service PowerPivot par défaut. Vous pouvez le remplacer par une valeur différente dans l'outil.|
-||Serveur de base de données d'application de service PowerPivot|Default|Serveur de base de données qui héberge la base de données d'application de service PowerPivot. Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez le remplacer par une valeur différente dans l'outil.|
-||Nom de la base de données d'application de service PowerPivot|Default|Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|
+|**Créer une application de service PowerPivot**|Nom de l'application de service PowerPivot|Par défaut|Le nom par défaut est celui de l'application de service PowerPivot par défaut. Vous pouvez le remplacer par une valeur différente dans l'outil.|
+||Serveur de base de données d'application de service PowerPivot|Par défaut|Serveur de base de données qui héberge la base de données d'application de service PowerPivot. Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez le remplacer par une valeur différente dans l'outil.|
+||Nom de la base de données d'application de service PowerPivot|Par défaut|Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|
 ||Mettre les classeurs à niveau pour activer l'actualisation des données|Entrée utilisateur|L'actualisation des données échoue et n'est pas prise en charge pour les classeurs SQL Server 2008 R2 PowerPivot. L’option **mettre à niveau les classeurs pour activer l’actualisation des données** met à niveau les classeurs vers SQL Server version PowerPivot 2012.|
 |**Créer une application Web par défaut**|Nom de l'application Web|Par défaut, si nécessaire|S'il n'existe aucune application Web, l'outil en crée une. L’application Web sera configurée pour l’authentification en mode classique et pour écouter sur le **port 80**. La taille maximale de téléchargement de fichier a la valeur 2047 Mo, qui est la valeur maximale autorisée par SharePoint. La taille maximale de téléchargement de fichiers est adaptée aux fichiers PowerPivot volumineux.|
 ||URL|Par défaut, si nécessaire|L'outil crée une URL basée sur le nom du serveur, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint.|
@@ -106,7 +106,7 @@ ms.locfileid: "78174468"
 ||Compte et mot de passe du pool d'applications Web|Par défaut, si nécessaire|Le compte du pool d'applications est basé sur le compte par défaut, mais vous pouvez le remplacer dans l'outil.|
 ||Serveur de la base de données d'application Web|Par défaut, si nécessaire|L'instance de base de données par défaut est pré-sélectionnée pour stocker la base de données d'application, mais vous pouvez spécifier une autre instance de SQL Server dans l'outil.|
 ||Nom de la base de données d'application Web|Par défaut, si nécessaire|Le nom de la base de données est basé sur les conventions d'affectation de noms de fichier de SharePoint, mais vous pouvez choisir un autre nom.|
-|**Déployer une solution d’application Web**|URL|Par défaut, si nécessaire|L'URL par défaut provient de l'application Web par défaut.|
+|**Déployer une solution d'application Web**|URL|Par défaut, si nécessaire|L'URL par défaut provient de l'application Web par défaut.|
 ||Taille maximale de fichier (en Mo)|Par défaut, si nécessaire|Le paramètre par défaut est 2047. Les bibliothèques de documents SharePoint sont également limitées en taille et le paramètre PowerPivot ne doit pas dépasser le paramètre de la bibliothèque de documents. Pour plus d’informations, consultez [configurer la taille maximale de téléchargement de fichiers &#40;PowerPivot pour SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|
 |**Créer une collection de sites**|Administrateur de site|Par défaut, si nécessaire|L'outil utilise le compte par défaut. Vous pouvez le remplacer dans la page **Créer une collection de sites** .|
 ||Adresse de messagerie du contact|Par défaut, si nécessaire|Si Microsoft Outlook est configuré sur le serveur, l'outil utilisera l'adresse de messagerie de l'utilisateur actuel. Sinon, une valeur d'espace réservé est utilisée.|
@@ -114,11 +114,11 @@ ms.locfileid: "78174468"
 ||Titre du site|Par défaut, si nécessaire|L'outil ajoute **Site PowerPivot** comme titre par défaut.|
 |**Activer une fonctionnalité PowerPivot dans une collection de sites**|URL du site||URL de la collection de sites pour laquelle vous activez les fonctionnalités PowerPivot.|
 ||Activer la fonctionnalité Premium pour ce site||Activez la fonctionnalité de site SharePoint « PremiumSite ».|
-|**Créer Service Banque d’informations sécurisé application**|Nom d'application de service||Tapez le nom de l'application du Service Banque d'informations sécurisé.|
+|**Créer une application du service Banque d'informations sécurisé**|Nom d'application de service||Tapez le nom de l'application du Service Banque d'informations sécurisé.|
 ||Serveur de base de données||Tapez le nom du serveur de base de données à utiliser pour l'application du Service Banque d'informations sécurisé.|
-|**Créer Service Banque d’informations sécurisé proxy d’application**|Nom d'application de service||Tapez le nom de l'application du Service Banque d'informations sécurisé.|
+|**Créer un proxy d'application du service Banque d'informations sécurisé**|Nom d'application de service||Tapez le nom de l'application du Service Banque d'informations sécurisé.|
 ||Proxy d'application de service||Tapez le nom du proxy du Service Banque d'informations sécurisé.  Le nom apparaît dans le groupe de connexions par défaut qui associe les applications aux applications Web de contenu SharePoint.|
-|**Mettre à jour Service Banque d’informations sécurisé clé principale**|Proxy d'application de service||Entrer le nom du proxy du Service Banque d'informations sécurisé|
+|**Mettre à jour la clé principale du service Banque d'informations sécurisé**|Proxy d'application de service||Entrer le nom du proxy du Service Banque d'informations sécurisé|
 ||Passphrase||La clé principale est utilisée pour le chiffrement des données. Par défaut, la phrase secrète utilisée pour générer cette clé est la même que celle utilisée pour configurer de nouveaux serveurs dans la batterie de serveurs. Vous pouvez remplacer la phrase secrète par défaut par une phrase secrète unique.|
 |**Créer un compte sans assistance pour un**|ID de l'application cible||L'ID d'application peut être du texte descriptif.|
 ||Nom convivial pour l'application cible|||
@@ -133,7 +133,7 @@ ms.locfileid: "78174468"
 
  Si l'outil crée une collection de sites, il crée une base de données de contenu sur le serveur de base de données, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint. Vous ne pouvez pas modifier le nom de la base de données de contenu.
 
-##  <a name="bkmk_nextsteps"></a>Étapes suivantes
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a>Étapes suivantes
  Une fois que vous avez terminé l'installation d'un serveur, vous devez effectuer plusieurs tâches de post-installation :
 
 -   Accordez les autorisations SharePoint aux individus et aux groupes. Cette tâche est nécessaire pour permettre l'accès aux sites et au contenu.

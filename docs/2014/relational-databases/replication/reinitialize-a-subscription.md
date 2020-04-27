@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199227"
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
@@ -26,18 +26,18 @@ ms.locfileid: "68199227"
   
  **Dans cette rubrique**  
   
--   **Pour réinitialiser un abonnement à l’aide de :**  
+-   **Pour réinitialiser un abonnement à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Objets RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  La réinitialisation d'un abonnement est un processus en deux parties :  
   
-1.  Un abonnement seul ou tous les abonnements à une publication sont *marqués* pour réinitialisation. Marquez des abonnements pour réinitialisation dans la boîte de dialogue **Réinitialiser les abonnements** , qui est disponible à partir du dossier **Publications locales** et du dossier **Abonnements locaux** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** et du nœud des publications dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md). Quand vous marquez un abonnement pour réinitialisation, vous disposez des options suivantes :  
+1.  Un abonnement seul ou tous les abonnements à une publication sont *marqués* pour réinitialisation. Marquez des abonnements pour réinitialisation dans la boîte de dialogue **Réinitialiser les abonnements**, qui est disponible à partir du dossier **Publications locales** et du dossier **Abonnements locaux** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez aussi marquer des abonnements à partir de l'onglet **Tous les abonnements** et du nœud des publications dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md). Quand vous marquez un abonnement pour réinitialisation, vous disposez des options suivantes :  
   
      **Utiliser l'instantané actuel**  
      Permet d'appliquer l'instantané à l'Abonné lors de l'exécution suivante de l'agent de distribution ou de l'agent de fusion. Si aucun instantané valide n'est disponible, vous ne pouvez pas sélectionner cette option.  
@@ -102,7 +102,7 @@ ms.locfileid: "68199227"
   
 3.  Dans la boîte de dialogue **Réinitialiser les abonnements** , sélectionnez les options, puis cliquez sur **Marquer pour réinitialisation**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les abonnements peuvent être réinitialisés par programme en utilisant des procédures stockées de réplication. La procédure stockée utilisée dépend du type d'abonnement (par extraction ou par émission de données) et du type de publication à laquelle l'abonnement appartient.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par extraction à une publication transactionnelle  
@@ -139,29 +139,29 @@ ms.locfileid: "68199227"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant l'une des valeurs suivantes pour **@automatic_reinitialization_policy**:  
   
-    -   **1** -les modifications sont téléchargées à partir de l’abonné avant qu’un abonnement ne soit automatiquement réinitialisé comme requis par une modification apportée à la publication.  
+    -   **1** - les modifications sont téléchargées depuis l'Abonné avant réinitialisation automatique d'un abonnement suite à la modification de la publication.  
   
-    -   **0** -les modifications au niveau de l’abonné sont ignorées lorsqu’un abonnement est automatiquement réinitialisé comme requis par une modification apportée à la publication.  
+    -   **0** - les modifications au niveau de l'Abonné sont ignorées lorsqu'un abonnement est automatiquement réinitialisé suite à la modification de la publication.  
   
     > [!IMPORTANT]  
     >  Si vous ajoutez, supprimez ou modifiez un filtre paramétré, les modifications en attente chez l'abonné ne peuvent pas être chargées sur le serveur de publication pendant la réinitialisation. Si vous voulez télécharger les modifications en attente, synchronisez tous les abonnements avant de modifier le filtre.  
   
-     Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
+     Pour plus d’informations, consultez [créer une publication](publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Pour modifier la stratégie de réinitialisation pour une publication de fusion existante  
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant **automatic_reinitialization_policy** à **@property** et l'une des valeurs suivantes pour **@value**:  
   
-    -   **1** -les modifications sont téléchargées à partir de l’abonné avant qu’un abonnement ne soit automatiquement réinitialisé comme requis par une modification apportée à la publication.  
+    -   **1** - les modifications sont téléchargées depuis l'Abonné avant réinitialisation automatique d'un abonnement suite à la modification de la publication.  
   
-    -   **0** -les modifications au niveau de l’abonné sont ignorées lorsqu’un abonnement est automatiquement réinitialisé comme requis par une modification apportée à la publication.  
+    -   **0** - les modifications au niveau de l'Abonné sont ignorées lorsqu'un abonnement est automatiquement réinitialisé suite à la modification de la publication.  
   
     > [!IMPORTANT]  
     >  Si vous ajoutez, supprimez ou modifiez un filtre paramétré, les modifications en attente chez l'abonné ne peuvent pas être chargées sur le serveur de publication pendant la réinitialisation. Si vous voulez télécharger les modifications en attente, synchronisez tous les abonnements avant de modifier le filtre.  
   
      Pour plus d'informations, voir [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Des abonnements individuels peuvent être marqués pour réinitialisation afin qu'un nouvel instantané soit appliqué lors de la synchronisation suivante. Les abonnements peuvent être réinitialisés par programme à l'aide de Replication Management Objects. Les classes que vous utilisez dépendent du type de publication à laquelle l'abonnement appartient et du type d'abonnement (par extraction ou par émission de données).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par extraction à une publication transactionnelle  
@@ -230,7 +230,7 @@ ms.locfileid: "68199227"
   
 5.  Synchronisez l'abonnement par émission de données. Pour plus d’informations, consultez [Synchroniser un abonnement par émission (push)](synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple réinitialise un abonnement par extraction à une publication transactionnelle.  
   
  [!code-csharp[HowTo#rmo_ReinitTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_reinittranpullsub)]  
@@ -244,8 +244,8 @@ ms.locfileid: "68199227"
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réinitialiser des abonnements](reinitialize-subscriptions.md)   
- [Concepts liés à RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
- [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
+ [Réinitialiser les abonnements](reinitialize-subscriptions.md)   
+ [Concepts de Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Méthodes préconisées en matière de sécurité de réplication](security/replication-security-best-practices.md)  
   
   
