@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832964"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
@@ -35,12 +35,11 @@ ms.locfileid: "62832964"
   
 -   Les paramètres de lot sont ignorés pour les modèles tabulaires.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une série de tâches qui effectuent des opérations de Business Intelligence, telles que l’exécution d’instructions DDL (Data Definition Language) et de requêtes de prédiction d’exploration de données. Pour plus d'informations sur les tâches Business Intelligence associées, cliquez sur l'une des rubriques suivantes :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une série de tâches qui effectuent des opérations de Business Intelligence, telles que l’exécution d’instructions DDL (Data Definition Language) et de requêtes de prédiction d’exploration de données. Pour plus d'informations sur les tâches Business Intelligence associées, cliquez sur l'une des rubriques suivantes :  
   
--   [Tâche DDL d'exécution de SQL Server Analysis Services](analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution de SQL Server Analysis Services](analysis-services-execute-ddl-task.md)  
   
--   [Data Mining Query Task](data-mining-query-task.md)  
+-   [Tâche de requête d’exploration de données](data-mining-query-task.md)  
   
 ## <a name="object-processing"></a>Traitement des objets  
  Plusieurs objets peuvent être traités simultanément. Pour traiter plusieurs objets, vous définissez des paramètres qui s'appliquent au traitement de tous les objets du traitement.  
@@ -58,7 +57,7 @@ ms.locfileid: "62832964"
   
  Cette tâche est fréquemment utilisée avec une tâche d'insertion en bloc qui charge des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou avec une tâche de flux qui met en œuvre un flux chargeant des données dans une table. Par exemple, la tâche de flux peut avoir un flux qui extrait des données d’une base de données OLTP (Online Transaction Processing) et les charge dans une table de faits d’un entrepôt de données, à la suite de quoi la tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est appelée pour traiter le cube basé sur l’entrepôt de données.  
   
- La [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tâche de traitement utilise [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un gestionnaire de connexions pour se connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]une instance de. Pour plus d'informations, consultez [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d'informations, consultez [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
   
@@ -67,9 +66,9 @@ ms.locfileid: "62832964"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de traitement de Analysis Services &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de traitement d’Analysis Services &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de traitement de Analysis Services &#40;page Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Éditeur de tâche de traitement d’Analysis Services &#40;page Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

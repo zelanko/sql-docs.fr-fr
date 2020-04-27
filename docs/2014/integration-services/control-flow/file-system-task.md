@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831744"
 ---
 # <a name="file-system-task"></a>Tâches du système de fichiers
@@ -62,7 +62,7 @@ ms.locfileid: "62831744"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez les rubriques suivantes :  
   
--   [Éditeur de tâche de système de fichiers &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de système de fichiers &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -75,8 +75,7 @@ ms.locfileid: "62831744"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Tâches associées  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une tâche qui télécharge et charge les fichiers de données et gère les répertoires sur les serveurs. Pour plus d’informations, consultez [Tâche FTP](ftp-task.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une tâche qui télécharge et charge les fichiers de données et gère les répertoires sur les serveurs. Pour plus d’informations, consultez [Tâche FTP](ftp-task.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](integration-services-tasks.md)   

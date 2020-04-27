@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871276"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
@@ -31,26 +31,26 @@ ms.locfileid: "62871276"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Prérequis](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
--   **Opératoire**  
+-   **Procédures :**  
   
      [Reconstruire des bases de données système](#RebuildProcedure)  
   
-     [Reconstruire la base de données Resource](#Resource)  
+     [Reconstruire la base de données resource](#Resource)  
   
      [Créer une nouvelle base de données msdb](#CreateMSDB)  
   
--   **Suivi:**  
+-   **Suivi :**  
   
-     [Résoudre les erreurs de régénération](#Troubleshoot)  
+     [Corriger les erreurs liées à la reconstruction](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Lorsque les bases de données système master, model, msdb et tempdb sont reconstruites, les bases de données sont supprimées et recréées à leur emplacement d'origine. Si un nouveau classement est spécifié dans l'instruction de reconstruction, les bases de données système sont créées à l'aide de ce paramètre de classement. Les modifications apportées par les utilisateurs à ces bases de données sont perdues. Par exemple, les utilisateurs peuvent avoir défini des objets dans la base de données master et planifié des travaux dans msdb ou avoir modifié le paramétrage par défaut dans la base de données model.  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Avant de reconstruire les bases de données système, effectuez les tâches suivantes pour être certain de pouvoir restaurer les bases de données système avec leurs paramètres actuels.  
   
 1.  Enregistrez toutes les valeurs de configuration à l'échelle du serveur.  
@@ -86,7 +86,7 @@ ms.locfileid: "62871276"
   
 7.  Vérifiez que des copies des fichiers modèles de données et de journaux de master, model et msdb existent sur le serveur local. L'emplacement par défaut des fichiers modèles est C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Templates. Ces fichiers sont utilisés pendant le processus de reconstruction et doivent être présents pour que l'installation réussisse. S'il en manque, exécutez la fonctionnalité Réparer du programme d'installation ou copiez manuellement les fichiers à partir du média d'installation. Pour trouver les fichiers sur le média d'installation, accédez au répertoire correspondant à la plateforme appropriée (x86 ou x64), puis accédez à setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
-##  <a name="RebuildProcedure"></a>Reconstruire les bases de données système  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Reconstruire des bases de données système  
  La procédure suivante reconstruit les bases de données système master, model, msdb et tempdb. Vous ne pouvez pas spécifier les bases de données système à reconstruire. Pour les instances cluster, cette procédure doit être effectuée sur le nœud actif et la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le groupe d'applications cluster correspondant doit être en mode hors connexion avant d'effectuer la procédure.  
   
  Cette procédure ne reconstruit pas la base de données resource. Consultez la section « Procédure de reconstruction de la base de données resource », plus loin dans cette rubrique.  
@@ -104,7 +104,7 @@ ms.locfileid: "62871276"
     |/QUIET ou /Q|Spécifie que le programme d'installation doit s'exécuter sans interface utilisateur.|  
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
     |/INSTANCENAME =*nom_instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe `sysadmin`. Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez : `NT AUTHORITY\SYSTEM`.|  
+    |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe `sysadmin`. Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez `NT AUTHORITY\SYSTEM`.|  
     |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` passe du compte. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> Note de ** \* sécurité \* \* ** Le `sa` compte est un compte bien connu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est souvent ciblé par des utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion `sa`.<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
     |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> ** \* Important \* \* ** La modification du classement au niveau du serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../collations/set-or-change-the-server-collation.md).|  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62871276"
   
 -   Vérifier que les valeurs de configuration à l'échelle du serveur correspondent à celles que vous avez enregistrées précédemment.  
   
-##  <a name="Resource"></a>Reconstruire la base de données Resource  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Reconstruire la base de données resource  
  La procédure suivante reconstruit la base de données système resource. La reconstruction de la base de données resource entraîne la perte de tous les Service Packs et correctifs logiciels, qui devront par conséquent être réappliqués.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Pour reconstruire la base de données système resource :  
@@ -146,7 +146,7 @@ ms.locfileid: "62871276"
   
 6.  Dans la page **Prêt à réparer** , cliquez sur **Réparer**. La page Terminé indique que l'opération est terminée.  
   
-##  <a name="CreateMSDB"></a>Créer une nouvelle base de données msdb  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>Créer une nouvelle base de données msdb  
  Si la `msdb` base de données est endommagée et que vous n’avez pas `msdb` de sauvegarde de la base de données `msdb` , vous pouvez créer une nouvelle à l’aide du script **instmsdb** .  
   
 > [!WARNING]  
@@ -156,7 +156,7 @@ ms.locfileid: "62871276"
   
 2.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la ligne de commande à l'aide de la commande : `NET START MSSQLSERVER /T3608`  
   
-     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le Service moteur de base de données, SQL Server agent ou SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Dans une autre fenêtre de ligne de commande `msdb` , détachez la base de données en exécutant la commande suivante, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]remplaçant * \<ServerName>* par l’instance de :`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -174,9 +174,9 @@ ms.locfileid: "62871276"
   
 9. Recréez le contenu de l’utilisateur `msdb` stocké dans la base de données, tel que les travaux, l’alerte, etc.  
   
-10. Sauvegardez la base de données `msdb`.  
+10. Sauvegardez la base de données `msdb` .  
   
-##  <a name="Troubleshoot"></a>Résoudre les erreurs de régénération  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
  Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  

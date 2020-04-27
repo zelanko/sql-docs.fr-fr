@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831257"
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
-  Les conteneurs sont des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] objets de qui fournissent la structure des packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  
+  Les conteneurs sont des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui fournissent une structure aux packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  
   
  Les packages utilisent les conteneurs aux fins suivantes :  
   
@@ -35,15 +35,14 @@ ms.locfileid: "62831257"
 -   Regrouper les tâches et les conteneurs qui doivent réussir ou échouer en tant qu'unité. Par exemple, un package peut regrouper les tâches qui suppriment et ajoutent des lignes dans une table de base de données, puis valider ou annuler toutes les tâches si l'une d'elles échoue.  
   
 ## <a name="container-types"></a>Types de conteneurs  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit quatre types de conteneurs pour la création de packages. Le tableau suivant décrit ces types de conteneurs.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit quatre types de conteneurs pour la création de packages. Le tableau suivant décrit ces types de conteneurs.  
   
 |Conteneur|Description|  
 |---------------|-----------------|  
 |[Conteneur de boucles Foreach](foreach-loop-container.md)|Exécute un flux de contrôle de façon répétitive à l'aide d'un énumérateur.|  
 |[Conteneur de boucles For](for-loop-container.md)|Exécute un flux de contrôle de façon répétitive en testant une condition.|  
-|[conteneur de séquences](sequence-container.md)|Regroupe les tâches et les conteneurs en flux de contrôle représentant des sous-ensembles du flux de contrôle des packages.|  
-|[conteneur d'hôte de tâche](task-host-container.md)|Fournit des services à une seule tâche.|  
+|[Conteneur de séquences](sequence-container.md)|Regroupe les tâches et les conteneurs en flux de contrôle représentant des sous-ensembles du flux de contrôle des packages.|  
+|[Conteneur d’hôte de tâche](task-host-container.md)|Fournit des services à une seule tâche.|  
   
  Les packages et les gestionnaires d'événements sont également des types de conteneurs. Pour plus d’informations, consultez [Packages Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md) et [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   

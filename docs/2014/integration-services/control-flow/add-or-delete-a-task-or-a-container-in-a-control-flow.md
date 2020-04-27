@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833134"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
@@ -63,7 +63,7 @@ ms.locfileid: "62833134"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](integration-services-tasks.md)   
- [Conteneurs Integration Services](integration-services-containers.md)   
+ [Conteneurs de Integration Services](integration-services-containers.md)   
  [Flux de contrôle](control-flow.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830148"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
@@ -71,9 +71,9 @@ ms.locfileid: "62830148"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de transfert de bases de données &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert de bases de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de transfert de bases de données &#40;page bases de données&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Éditeur de tâche de transfert de bases de données &#40;page Bases de données&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62830148"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configuration par programmation de la tâche de transfert de bases de données  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  
   

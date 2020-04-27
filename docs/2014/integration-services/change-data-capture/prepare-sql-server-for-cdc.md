@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835830"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Préparer SQL Server pour la capture de données modifiées
@@ -31,7 +31,7 @@ ms.locfileid: "62835830"
 ### <a name="server-name"></a>Nom du serveur  
  Tapez le nom du serveur où se trouve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Authentication  
+### <a name="authentication"></a>Authentification  
  Sélectionnez l’un des suivants :  
   
 -   **Authentification Windows**  

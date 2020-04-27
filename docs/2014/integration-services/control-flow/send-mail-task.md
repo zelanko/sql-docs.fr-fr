@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830393"
 ---
 # <a name="send-mail-task"></a>tache Envoyer un message
@@ -69,9 +69,9 @@ ms.locfileid: "62830393"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche Envoyer un message &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche Envoyer un message &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche Envoyer un message &#40;page courrier&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Éditeur de tâche Envoyer un message &#40;page Courrier&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

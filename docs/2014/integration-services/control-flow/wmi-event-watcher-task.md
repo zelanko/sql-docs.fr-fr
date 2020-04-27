@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829504"
 ---
 # <a name="wmi-event-watcher-task"></a>Tâche Observateur d'événement WMI
@@ -91,7 +91,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche Observateur d’événement WMI &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche Observateur d’événement WMI &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Éditeur de tâche Observateur d’événement WMI &#40;page Options WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
@@ -102,7 +102,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>Configuration par programmation de la tâche Observateur d'événement WMI  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869594"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -90,8 +90,8 @@ ms.locfileid: "62869594"
   
 |Date|Source|Message|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Connexion|Erreur : 18456, Gravité : 14, État : 8.|  
-|2007-12-05 20:12:56.34|Connexion|Échec de la connexion pour l'utilisateur '<nom_utilisateur>'. [CLIENT : \<> d’adresse IP]|  
+|2007-12-05 20:12:56.34|Ouverture de session|Erreur : 18456, Gravité : 14, État : 8.|  
+|2007-12-05 20:12:56.34|Ouverture de session|Échec de la connexion pour l'utilisateur '<nom_utilisateur>'. [CLIENT : \<> d’adresse IP]|  
   
 > [!NOTE]  
 >  Quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé avec le mode d’authentification Windows et modifié ultérieurement pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le mode d’authentification Windows, la connexion **sa** est initialement désactivée. Cela provoque l’erreur d’État 7 : « échec de la connexion pour l’utilisateur’sa'. » Pour activer la connexion **sa** , consultez [modifier le mode d’authentification du serveur](../../database-engine/configure-windows/change-server-authentication-mode.md).  

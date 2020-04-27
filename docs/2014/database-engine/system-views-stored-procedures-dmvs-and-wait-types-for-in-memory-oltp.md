@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842398"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vues système, procédures stockées, DMV et types d’attente pour l’OLTP en mémoire
@@ -24,14 +24,14 @@ ms.locfileid: "62842398"
   
 |Affichage système|Description|Fonctionnalité OLTP en mémoire|  
 |-----------------|-----------------|-----------------------------|  
-|[sys. data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Vérifiez si un groupe de fichiers contient des données optimisées en mémoire.|Les colonnes suivantes affichent des valeurs supplémentaires : **type** et **type_desc**.|  
+|[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Vérifiez si un groupe de fichiers contient des données optimisées en mémoire.|Les colonnes suivantes affichent des valeurs supplémentaires : **type** et **type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Vérifiez si un index est une table optimisée en mémoire.|Les colonnes suivantes affichent des valeurs supplémentaires : **type** et **type_desc**.|  
-|[sys. Parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Vérifiez si un paramètre n'accepte pas la valeur null (pour une exécution plus efficace des procédures stockées compilées en mode natif).|**IS_NULLABLE** colonne.|  
+|[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Vérifiez si un paramètre n'accepte pas la valeur null (pour une exécution plus efficace des procédures stockées compilées en mode natif).|**IS_NULLABLE** colonne.|  
 |[sys. all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Vérifiez si une procédure stockée est compilée en mode natif.|**uses_native_compilation** colonne.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Vérifiez si une procédure stockée est compilée en mode natif.|**uses_native_compilation** colonne.|  
 |[sys. table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Vérifiez si une table est optimisée en mémoire.|**is_memory_optimized** colonne.|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Vérifiez si une table est optimisée en mémoire et vérifiez le paramètre de durabilité d’une table.|les colonnes **durabilité**, **durability_desc**et **is_memory_optimized** .|  
-|[sys. hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Affichez les index de hachage d'une table optimisée en mémoire.|OLTP en mémoire spécifique.|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Affichez les index de hachage d'une table optimisée en mémoire.|OLTP en mémoire spécifique.|  
   
 ### <a name="metadata-functions"></a>Fonctions de métadonnées  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62842398"
  Pour plus d’informations, consultez les types d’attente qui ont le préfixe **WAIT_XTP**et **XTPPROC** dans la rubrique [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
- [Prise en charge de Transact-SQL pour OLTP en mémoire](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+ [&#40;de l’optimisation en mémoire de l’OLTP en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
+ [Prise en charge d'OLTP en mémoire par Transact-SQL](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869176"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869176"
 |Texte du message|Impossible d'interroger le serveur redirigé '%s' pour le serveur de publication d'origine '%s' et la base de données du serveur de publication '%s' pour déterminer le nom du serveur distant ; erreur %d, message d'erreur '%s'.|  
   
 ## <a name="explanation"></a>Explication  
- 
-  `sp_validate_redirected_publisher` utilise un serveur lié temporaire créé pour se connecter au serveur de publication redirigé afin de découvrir le nom du serveur distant. L'erreur 21879 est retournée lorsque la requête de serveur lié échoue. L'appel pour demander le nom du serveur distant est généralement la première utilisation qui est faite du serveur lié temporaire, donc si des problèmes de connectivité existent, ils sont susceptibles d'apparaître d'abord lors de cet appel. Cet appel exécute simplement `@@servername` sur le serveur distant.  
+ `sp_validate_redirected_publisher` utilise un serveur lié temporaire créé pour se connecter au serveur de publication redirigé afin de découvrir le nom du serveur distant. L'erreur 21879 est retournée lorsque la requête de serveur lié échoue. L'appel pour demander le nom du serveur distant est généralement la première utilisation qui est faite du serveur lié temporaire, donc si des problèmes de connectivité existent, ils sont susceptibles d'apparaître d'abord lors de cet appel. Cet appel exécute simplement `@@servername` sur le serveur distant.  
   
  Le serveur lié utilisé pour interroger le serveur de publication redirigé utilise le mode, la connexion et le mot de passe de sécurité fournis lorsque `sp_adddistpublisher` a été appelé pour le serveur de publication d'origine.  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827563"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
@@ -37,7 +37,7 @@ ms.locfileid: "62827563"
 |`<ir-start>`|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
 |`<ir-end>`|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  
 |`TS`|Cela marque l'horodateur pour la dernière mise à jour de l'état de capture de données modifiées.|  
-|**\<timestamp>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
+|**\<horodateur>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
 |`ER`|Ce message apparaît lorsque la dernière opération a échoué et il inclut une brève description de la cause de l'erreur. Si ce composant est présent, il apparaît toujours en dernier.|  
 |`<short-error-text>`|Il s'agit de la brève description de l'erreur.|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62827563"
  Si vous n'utilisez pas la tâche de contrôle de capture de données modifiées avec Permanence d'état automatique, vous devez charger la valeur de la variable depuis le stockage permanent dans lequel sa valeur a été enregistrée lors la dernière exécution du package, puis la réécrire dans le stockage permanent une fois le traitement de la plage de traitement actuelle terminé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md)   
+ [Tâche de contrôle CDC](../control-flow/cdc-control-task.md)   
  [Éditeur de tâche de contrôle CDC](../cdc-control-task-editor.md)  
   
   

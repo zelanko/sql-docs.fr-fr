@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833741"
 ---
 # <a name="odbc-connection-manager"></a>Gestionnaire de connexions ODBC
@@ -42,7 +42,7 @@ ms.locfileid: "62833741"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur une des rubriques suivantes :  
   
--   [Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../odbc-connection-manager-ui-reference.md)  
+-   [Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../odbc-connection-manager-ui-reference.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   

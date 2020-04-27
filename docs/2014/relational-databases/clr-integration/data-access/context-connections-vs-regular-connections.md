@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f4255e17f7cd76cf402c10d84b015a1324d7d6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874053"
 ---
-# <a name="regular-vs-context-connections"></a>Connexions normales et connexions contextuelles
+# <a name="regular-vs-context-connections"></a>Connexions normales et Connexions contextuelles
   Si vous vous connectez à un serveur distant, utilisez toujours des connexions normales plutôt que des connexions contextuelles. Si vous devez vous connecter au même serveur sur lequel la procédure stockée ou la fonction est en cours d'exécution, utilisez la connexion contextuelle dans la majorité des cas. Ceci présente des avantages, notamment l'exécution dans le même espace de transaction et la non-obligation de s'authentifier à nouveau.  
   
  Qui plus est, le recours aux connexions contextuelles produit généralement de meilleures performances et garantit une utilisation plus réduite des ressources. La connexion de contexte est une connexion en mode in-process uniquement. elle peut donc contacter le serveur « directement » en contournant le protocole réseau et les couches de transport pour envoyer des instructions Transact-SQL et recevoir des résultats. Le processus d'authentification est également ignoré. La figure suivante présente les composants principaux du fournisseur managé `SqlClient` et explique également comment les divers composants interagissent l'un avec l'autre lors de l'utilisation d'une connexion normale et de la connexion contextuelle.  

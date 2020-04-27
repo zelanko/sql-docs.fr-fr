@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842534"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Résoudre les problèmes de performance courants avec les index de hachage mémoire optimisés
@@ -73,6 +73,6 @@ WITH (MEMORY_OPTIMIZED = ON)
  Notez qu'un index de hachage mémoire optimisé ne fonctionne pas de façon optimale s'il existe de nombreuses lignes dupliquées pour une valeur de clé d'index donnée : dans l'exemple, si le nombre de valeurs uniques pour la colonne o_id est beaucoup plus petit que le nombre de lignes dans la table, il n'est pas conseillé d'ajouter un index sur (o_id) ; à la place, changer le type de l'index PK_od en le modifiant d'index de hachage en index non cluster est la meilleure solution. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Index sur des tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Index sur les tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871708"
 ---
 # <a name="msdb-database"></a>Base de données msdb
-  La base de données **msdb** est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par l’agent pour planifier les alertes et les travaux, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ainsi [!INCLUDE[ssSB](../../includes/sssb-md.md)] que par d’autres fonctionnalités telles que, et Database mail.  
+  La base de données **msdb** est utilisée par l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier des alertes et des travaux, ainsi que par d’autres fonctionnalités telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] et la messagerie de base de données.  
   
- Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère automatiquement un historique complet et en ligne des sauvegardes et des restaurations dans les tables de la base de données **msdb**. Ces informations comprennent le nom du tiers qui a réalisé la sauvegarde, la durée de la sauvegarde et les unités ou fichiers dans lesquels la sauvegarde est stockée. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise ces informations pour proposer un plan permettant de restaurer une base de données et d’appliquer les sauvegardes du journal des transactions. Les événements de sauvegarde sont enregistrés pour toutes les bases de données, même s'ils ont été créés par une application personnalisée ou un outil tiers. Par exemple, si vous utilisez une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] qui appelle SMO (SQL Server Management Objects) pour effectuer les opérations de sauvegarde, l’événement est consigné dans les tables système de **msdb** , le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous aider à protéger les informations stockées dans **msdb**, nous vous recommandons de placer le journal des transactions **msdb** sur un stockage à tolérance de panne.  
+ Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère automatiquement un historique complet et en ligne des sauvegardes et des restaurations dans les tables de la base de données **msdb**. Ces informations comprennent le nom du tiers qui a réalisé la sauvegarde, la durée de la sauvegarde et les unités ou fichiers dans lesquels la sauvegarde est stockée. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise ces informations pour proposer un plan permettant de restaurer une base de données et d’appliquer les sauvegardes du journal des transactions. Les événements de sauvegarde sont enregistrés pour toutes les bases de données, même s'ils ont été créés par une application personnalisée ou un outil tiers. Par exemple, si vous utilisez une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] qui appelle des objets SMO (SQL Server Management Objects) pour effectuer les opérations de sauvegarde, l’événement est journalisé dans les tables système de **msdb**, le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous aider à protéger les informations stockées dans **msdb**, nous vous recommandons de placer le journal des transactions **msdb** sur un stockage à tolérance de panne.  
   
  Par défaut, la base de données **msdb** utilise le mode de récupération simple. Si vous utilisez les tables d’ [historique de sauvegarde et de restauration](../backup-restore/backup-history-and-header-information-sql-server.md) , nous vous recommandons d’utiliser le mode de récupération complète pour la base de données **msdb**. Pour plus d’informations, consultez [Modes de récupération &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md). Notez que quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé ou mis à niveau et chaque fois que Setup.exe est utilisé pour reconstruire les bases de données système, le mode de récupération de la base de données **msdb** prend automatiquement la valeur SIMPLE.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "62871708"
   
  [Déplacer des fichiers de bases de données](move-database-files.md)  
   
- [Messagerie de base de données](../database-mail/database-mail.md)  
+ [Database Mail](../database-mail/database-mail.md)  
   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

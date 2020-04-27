@@ -16,25 +16,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856512"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Afficher la définition d'une procédure stockée
     
-##  <a name="Top"></a> Vous pouvez afficher la définition d'une procédure stockée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à l'aide des options de menu de l'Explorateur d'objets ou dans l'éditeur de requête à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cette rubrique décrit comment afficher la définition de la procédure dans l'Explorateur d'objets et en utilisant une procédure stockée système, une fonction système et un affichage catalogue d'objets dans l'éditeur de requête.  
+##  <a name="you-can-view-the-definition-of-a-stored-procedure-in-ssmanstudiofull-using-object-explorer-menu-options-or-in-the-query-editor-using-tsql-this-topic-describes-how-to-view-the-definition-of-procedure-in-object-explorer-and-by-using-a-system-stored-procedure-system-function-and-object-catalog-view-in-the-query-editor"></a><a name="Top"></a> Vous pouvez afficher la définition d'une procédure stockée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à l'aide des options de menu de l'Explorateur d'objets ou dans l'éditeur de requête à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cette rubrique décrit comment afficher la définition de la procédure dans l'Explorateur d'objets et en utilisant une procédure stockée système, une fonction système et un affichage catalogue d'objets dans l'éditeur de requête.  
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
 -   **Pour afficher la définition d'une procédure, à l'aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Procédure stockée système : `sp_helptext`  
  Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "62856512"
  Affichage catalogue d'objets : `sys.sql_modules`  
  La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
-##  <a name="Procedures"></a> Comment afficher la définition d'une procédure stockée  
+##  <a name="how-to-view-the-definition-of-a-stored-procedure"></a><a name="Procedures"></a> Comment afficher la définition d'une procédure stockée  
  Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour afficher la définition d'une procédure dans l'Explorateur d'objets**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
@@ -62,7 +62,7 @@ ms.locfileid: "62856512"
   
 4.  Sélectionnez **Nouvelle fenêtre d’éditeur de requête**. Cette action affiche la définition de la procédure.  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour afficher la définition d'une procédure dans l'éditeur de requête**  
   
  Procédure stockée système : `sp_helptext`  

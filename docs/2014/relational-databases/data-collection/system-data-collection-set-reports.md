@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873407"
 ---
 # <a name="system-data-collection-set-reports"></a>Rapports de jeux d'éléments de collecte de données système
@@ -38,7 +38,7 @@ ms.locfileid: "62873407"
   
  Vous pouvez utiliser ces rapports pour obtenir des informations afin de contrôler la capacité système et de résoudre les problèmes de performances système.  
   
-##  <a name="Disk"></a> Rapport Résumé sur l'utilisation du disque  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> Rapport Résumé sur l'utilisation du disque  
  Le rapport Résumé sur l'utilisation du disque contient des données sur l'utilisation de l'espace disque pour toutes les bases de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les données fournies dans ces rapports sont obtenues à l’aide du jeu d’éléments de collecte Utilisation du disque, qui utilise le type de collecteur Requête T-SQL générique.  
   
  Vous pouvez accéder au rapport Résumé sur l'utilisation du disque à partir de l'Explorateur d'objets. Pour afficher le rapport, développez le dossier **Gestion** , cliquez avec le bouton droit sur **Collecte de données**, pointez sur **Rapports**, sur **Entrepôt de données de gestion**, puis cliquez sur **Résumé sur l’utilisation du disque**. Pour plus d’informations, consultez [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "62873407"
   
  L'espace disque utilisé par chaque fichier de données dans la base de données est signalé. L'espace signalé comme Espace réservé est la quantité d'espace utilisée plus l'espace alloué au fichier mais pas encore utilisé. L'espace signalé comme Espace utilisé est l'espace réel actuellement utilisé par le fichier, à l'exception de l'espace alloué.  
   
-##  <a name="Query"></a> Rapport Historique des statistiques sur les requêtes  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> Rapport Historique des statistiques sur les requêtes  
  Le rapport Historique des statistiques sur les requêtes contient des statistiques sur l'exécution des requêtes. Les données utilisées dans ce rapport sont obtenues à l'aide du jeu d'éléments de collecte Statistiques sur les requêtes, qui utilise le type de collecteur Activité des requêtes.  
   
  Vous pouvez accéder au rapport Historique des statistiques sur les requêtes à partir de l'Explorateur d'objets. Pour afficher le rapport, développez le dossier **Gestion** , cliquez avec le bouton droit sur **Collecte de données**, pointez sur **Rapports**, sur **Entrepôt de données de gestion**, puis cliquez sur **Historique des statistiques sur les requêtes**. Pour plus d’informations, consultez [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "62873407"
   
  Utilisez le bouton Calendrier pour spécifier la date de début, l'heure de début et la durée des données pour lesquelles vous voulez créer un rapport.  
   
-###  <a name="Server"></a> Rapport Historique de l'activité du serveur  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> Rapport Historique de l'activité du serveur  
  Le rapport Historique de l'activité du serveur montre la vue initiale de l'activité du serveur pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le système d'exploitation hôte.  
   
  La table suivante décrit les graphiques qui tracent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'activité du système dans le rapport et dans les sous-rapports détaillés accessibles via les graphiques.  

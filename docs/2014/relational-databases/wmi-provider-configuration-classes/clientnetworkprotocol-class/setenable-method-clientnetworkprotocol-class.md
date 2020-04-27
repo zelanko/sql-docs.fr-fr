@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1aa192f2dc78a424b1d4c8792044caac0934173a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62826719"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Méthode SetEnable (classe ClientNetworkProtocol)
@@ -38,7 +38,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

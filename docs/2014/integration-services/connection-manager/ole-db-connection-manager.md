@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833726"
 ---
 # <a name="ole-db-connection-manager"></a>Gestionnaire de connexions OLE DB
@@ -28,7 +28,7 @@ ms.locfileid: "62833726"
 > [!NOTE]
 >  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez les [notes de publication de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) et le billet de blog [AlwaysOn multi-Subnet Failover and SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/), sur www.mattmasson.com.  
   
- Plusieurs tâches et composants de flux de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent un gestionnaire de connexions OLE DB. Ainsi, la source et la destination OLE DB utilisent ce gestionnaire de connexions pour extraire et charger des données, tandis que la tâche d’exécution SQL utilise ce gestionnaire pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’exécuter des requêtes.  
+ Plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tâches et composants de processus de données utilisent un gestionnaire de connexions OLE DB. Ainsi, la source et la destination OLE DB utilisent ce gestionnaire de connexions pour extraire et charger des données, tandis que la tâche d’exécution SQL utilise ce gestionnaire pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’exécuter des requêtes.  
   
  Le gestionnaire de connexions OLE DB est également utilisé pour accéder à des sources de données OLE DB dans des tâches personnalisées écrites dans du code non géré utilisant un langage comme C++.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "62833726"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670) (SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
+-   Article wiki, [SSIS avec connecteurs Oracle](https://go.microsoft.com/fwlink/?LinkId=220670) sur social.technet.Microsoft.com.  
   
 -   Article technique, [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)(Chaînes de connexion pour les fournisseurs OLE DB), sur carlprothman.net.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source OLE DB](../data-flow/ole-db-source.md)   
- [Destination OLE DB](../data-flow/ole-db-destination.md)   
- [Exécution de requêtes SQL, tâche](../control-flow/execute-sql-task.md)   
+ [Source de OLE DB](../data-flow/ole-db-source.md)   
+ [Destination de la OLE DB](../data-flow/ole-db-destination.md)   
+ [Tâche d’exécution SQL](../control-flow/execute-sql-task.md)   
  [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

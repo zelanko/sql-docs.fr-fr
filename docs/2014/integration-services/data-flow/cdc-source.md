@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828127"
 ---
 # <a name="cdc-source"></a>Source CDC
@@ -75,24 +75,20 @@ use <cdc-enabled-database-name>
   
  où :  
   
--   
-  \<cdc-enabled-database-name> est le nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant les tables de modifications.  
+-   \<cdc-enabled-database-name> est le nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant les tables de modifications.  
   
--   
-  \<value-from-state-cs> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CS/\<value-from-state-cs>/ (CS correspond à Current-processing-range-Start, début de la plage de traitement actuelle).  
+-   \<value-from-state-cs> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CS/\<value-from-state-cs>/ (CS correspond à Current-processing-range-Start, début de la plage de traitement actuelle).  
   
--   
-  \<value-from-state-ce> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CE/\<value-from-state-cs>/ (CE correspond à Current-processing-range-End, fin de la plage de traitement actuelle).  
+-   \<value-from-state-ce> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CE/\<value-from-state-cs>/ (CE correspond à Current-processing-range-End, fin de la plage de traitement actuelle).  
   
--   
-  \<mode> correspond aux modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
+-   \<mode> correspond aux modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
   
  Ce script aide à isoler les problèmes en les reproduisant dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], où il est facile de reproduire et d'identifier des erreurs.  
   
 #### <a name="sql-server-error-message"></a>Message d'erreur SQL Server  
  Le message suivant peut être retourné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Un nombre insuffisant d’arguments a été fourni pour la procédure ou la fonction\<cdc. fn_cdc_get_net_changes_. >.**  
+ **Nombre d’arguments fournis insuffisant pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<..>.**  
   
  Cette erreur n'indique pas qu'un argument est manquant. Elle signifie que les valeurs du NSE de début ou du NSE de fin dans la variable d'état de capture de données modifiées ne sont pas valides.  
   

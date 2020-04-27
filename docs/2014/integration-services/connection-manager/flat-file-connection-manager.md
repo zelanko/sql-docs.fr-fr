@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833810"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
@@ -41,7 +41,7 @@ ms.locfileid: "62833810"
   
  Par défaut, le gestionnaire de connexions de fichiers plats cherche toujours la présence d'un séparateur de lignes dans les données non délimitées par des guillemets, puis démarre une nouvelle ligne lorsqu'un séparateur de lignes est trouvé. Cela permet au gestionnaire de connexions de fichiers plats d'analyser correctement les fichiers comportant des lignes auxquelles il manque des champs de colonnes.  
   
- Dans certains cas, la désactivation de cette fonctionnalité peut améliorer les performances des packages. Vous pouvez désactiver cette fonctionnalité en définissant la propriété du gestionnaire de connexions **** de fichiers plats `False`, alwayscheckforrowdelimiters du, sur.  
+ Dans certains cas, la désactivation de cette fonctionnalité peut améliorer les performances des packages. Vous pouvez désactiver cette fonctionnalité en définissant la propriété du gestionnaire de connexions **AlwaysCheckForRowDelimiters**de fichiers plats `False`, alwayscheckforrowdelimiters du, sur.  
   
  Vous pouvez configurer le gestionnaire de connexions de fichiers plats de plusieurs manières :  
   
@@ -71,13 +71,13 @@ ms.locfileid: "62833810"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page colonnes&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page avancé&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page d’aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   

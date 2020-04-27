@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18916e8287841015727c37ed8833fbc29b1e6ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869146"
 ---
 # <a name="mssqlserver_21892"></a>MSSQLSERVER_21892
@@ -33,11 +33,9 @@ ms.locfileid: "62869146"
 |Texte du message|Impossible d’interroger sys.availability_replicas sur le groupe de disponibilité principal associé au nom de réseau virtuel « %1!s! » pour les noms de serveur des réplicas membres : erreur = « %2!s! », message d’erreur = « %3!s! ».',|  
   
 ## <a name="explanation"></a>Explication  
- 
-  `sp_validate_replica_hosts_as_publishers` interroge le principal actuel du groupe de disponibilité associé au serveur de publication redirigé pour déterminer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui hébergent les réplicas membres.  Lorsque cette requête échoue, l'erreur 21892 est retournée.  
+ `sp_validate_replica_hosts_as_publishers` interroge le principal actuel du groupe de disponibilité associé au serveur de publication redirigé pour déterminer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui hébergent les réplicas membres.  Lorsque cette requête échoue, l'erreur 21892 est retournée.  
   
- 
-  `sp_validate_replica_hosts_as_publishers` est généralement la première utilisation qui est faite du serveur lié temporaire, par conséquent, si des problèmes de connectivité sont présents, ils sont susceptibles d'apparaître d'abord avec `sp_validate_replica_hosts_as_publishers`. Contrairement à `sp_validate_redirected_publisher`, le serveur lié utilisé par `sp_validate_replica_hosts_as_publishers` utilise toujours les informations d'identification de l'appelant lors de la connexion à n'importe quel hôte de réplica de groupe de disponibilité.  
+ `sp_validate_replica_hosts_as_publishers` est généralement la première utilisation qui est faite du serveur lié temporaire, par conséquent, si des problèmes de connectivité sont présents, ils sont susceptibles d'apparaître d'abord avec `sp_validate_replica_hosts_as_publishers`. Contrairement à `sp_validate_redirected_publisher`, le serveur lié utilisé par `sp_validate_replica_hosts_as_publishers` utilise toujours les informations d'identification de l'appelant lors de la connexion à n'importe quel hôte de réplica de groupe de disponibilité.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Lorsque vous exécutez cette procédure stockée, assurez-vous que vous utilisez une connexion valide sur tous les réplicas. La connexion nécessite des autorisations suffisantes pour interroger les tables de métadonnées du groupe de disponibilité ainsi que les tables de métadonnées d'abonnement dans le réplica de base de données du serveur de publication.  

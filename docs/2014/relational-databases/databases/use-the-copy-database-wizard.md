@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871136"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
@@ -55,7 +55,7 @@ ms.locfileid: "62871136"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Prérequis](#Prerequisites)  
+     [Conditions préalables](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
@@ -67,11 +67,11 @@ ms.locfileid: "62871136"
   
 -   **Suivi, après la mise à niveau :**  
   
-     [Après la mise à niveau d’une base de données SQL Server](#FollowUp)  
+     [Après la mise à niveau d'une base de données SQL Server](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L'Assistant Copie de base de données n'est pas disponible dans l'édition Express.  
   
@@ -91,21 +91,21 @@ ms.locfileid: "62871136"
   
 -   La méthode de détachement et d'attachement permet de détacher la base de données, de déplacer ou copier les fichiers .mdf, .ndf et .ldf de la base de données, puis de rattacher la base de données à son nouvel emplacement. En cas d'utilisation de la méthode de détachement et d'attachement, les sessions actives ne peuvent pas être attachées à la base de données en cours de déplacement ou de copie, ceci afin d'éviter une perte ou une incohérence des données. Si une session est active, l'Assistant Copie de base de données n'exécute pas l'opération de déplacement ou de copie. Dans le cas de la méthode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object, les sessions actives sont autorisées car la base de données n'est jamais placée en mode hors connexion.  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vérifiez que SQL Server Agent est démarré sur le serveur de destination.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Pour garantir une performance optimale de la base de données mise à niveau, exécutez sp_updatestats (mise à jour des statistiques) sur la base de données mise à niveau.  
   
--   Lorsque vous copiez une base de données sur une autre instance de serveur et il est possible que vous deviez recréer sur cette autre instance de serveur une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, afin de garantir la cohérence pour les utilisateurs et les applications. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Lorsque vous copiez une base de données sur une autre instance de serveur et il est possible que vous deviez recréer sur cette autre instance de serveur une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, afin de garantir la cohérence pour les utilisateurs et les applications. Pour plus d’informations, consultez [gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez être membre du rôle de serveur fixe **sysadmin** sur le serveur source et sur le serveur de destination.  
   
-##  <a name="Copy_Move"></a>Copier, déplacer ou mettre à niveau des bases de données  
+##  <a name="copy-move-or-upgrade-databases"></a><a name="Copy_Move"></a>Copier, déplacer ou mettre à niveau des bases de données  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l'Explorateur d'objets, développez **Bases de données**, cliquez avec le bouton droit sur une base de données, pointez sur **Tâches**, puis sélectionnez **Copier la base de données**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62871136"
      **Mot de passe**  
      Entrez le mot de passe utilisé avec la connexion. Cette option est uniquement disponible si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Situé**  
+     **Suivant**  
      Connectez-vous au serveur et validez l'utilisateur. Ce processus vérifie si l'utilisateur est membre du rôle de serveur fixe **sysadmin** sur l'ordinateur sélectionné.  
   
 3.  Sur la page **Sélectionnez un serveur de destination** , spécifiez le serveur sur lequel la base de données sera déplacée ou copiée. Si vous spécifiez la même instance de serveur pour le serveur source et le serveur de destination, la base de données sera copiée. Dans ce cas, vous devrez renommer la base de données à une étape ultérieure de l'Assistant. Le nom de la base de données source ne peut être utilisé pour la base de données copiée ou déplacée que s'il n'y a pas de conflits de nom sur le serveur de destination. En cas de conflits de noms, vous devez les résoudre manuellement sur le serveur de destination avant de pouvoir y utiliser le nom de la base de données de source.  
@@ -149,32 +149,32 @@ ms.locfileid: "62871136"
      **Mot de passe**  
      Entrez le mot de passe utilisé avec la connexion. Cette option est disponible uniquement si vous avez sélectionné l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Situé**  
+     **Suivant**  
      Connectez-vous au serveur et validez l'utilisateur. Ce processus vérifie si l'utilisateur dispose des autorisations répertoriées ci-dessus sur les ordinateurs sélectionnés.  
   
 4.  Sur la page **Sélectionner la méthode de transfert** , sélectionnez la méthode de transfert.  
   
-     **Utiliser la méthode de détachement et d’attachement**  
+     **Utiliser la méthode de détachement et d'attachement**  
      Détachez la base de données du serveur source, copiez les fichiers de base de données (.mdf, .ndf et .ldf) sur le serveur de destination, puis attachez la base de données au serveur de destination. Cette méthode est généralement la plus rapide, car le travail principal consiste à lire le disque source et à écrire sur le disque de destination. Aucune logique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est requise pour créer des objets au sein de la base de données ou pour créer des structures de stockage de données. Cependant, cette méthode peut être plus lente si la base de données contient une quantité importante d'espace alloué, mais inutilisé. Par exemple, une nouvelle base de données pratiquement vide qui est créée en allouant 100 Mo copie la totalité des 100 Mo, même si seulement 5 Mo sont utilisés.  
   
     > [!NOTE]  
     >  Cette méthode ne permet pas aux utilisateurs d'avoir accès à la base de données pendant le transfert.  
   
-     **Si une défaillance se produit, rattachez la base de données source**  
+     **En cas d'échec, rattachez la base de données source.**  
      Lorsqu'une base de données est copiée, les fichiers de la base de données d'origine sont toujours rattachés au serveur source. Utilisez cette case pour rattacher les fichiers d'origine à la base de données source si un déplacement de base de données ne peut pas être achevé.  
   
-     **Utiliser la méthode SQL Management Object**  
+     **Utiliser la méthode de transfert SQL Management Object**  
      Cette méthode lit la définition de chaque objet de base de données dans la base de données source et crée chaque objet dans la base de données de destination. Elle transfère ensuite les données des tables sources vers les tables de destination en recréant les index et les métadonnées.  
   
     > [!NOTE]  
     >  Les utilisateurs peuvent continuer à accéder à la base de données pendant le transfert.  
   
-5.  Sur la page **Sélectionner une base de données** , sélectionnez la ou les bases de données à déplacer ou à copier du serveur source vers le serveur de destination. Consultez [Limitations et restrictions](#Restrictions) dans la section « Avant de commencer » de cette rubrique.  
+5.  Sur la page **Sélectionner une base de données** , sélectionnez la ou les bases de données à déplacer ou à copier du serveur source vers le serveur de destination. Consultez [limitations et restrictions](#Restrictions) dans la section « avant de Begin » de cette rubrique.  
   
      **Déplacer**  
      Déplace la base de données vers le serveur de destination.  
   
-     **Copy**  
+     **Copier**  
      Copie la base de données sur le serveur de destination.  
   
      **Source**  
@@ -183,10 +183,10 @@ ms.locfileid: "62871136"
      **État**  
      Affiche **OK** si la base de données peut être déplacée. Sinon, indique la raison pour laquelle la base de données ne peut pas être déplacée.  
   
-     **Actualiser**  
+     **Actualisation**  
      Permet d'actualiser la liste des bases de données.  
   
-     **Situé**  
+     **Suivant**  
      Permet de démarrer la procédure de validation et d'accéder à l'écran suivant.  
   
 6.  Sur la page **Configurer la base de données de destination** , modifiez le nom de la base de données si nécessaire et spécifiez l'emplacement et le nom des fichiers de base de données. Cette page s'affiche une seule fois, chaque fois qu'une base de données est déplacée ou copiée.  
@@ -196,16 +196,16 @@ ms.locfileid: "62871136"
      **Connexions (Tou(te)s les connexions lors de l'exécution)**  
      Inclut les connexions dans l'opération de déplacement ou de copie. Option sélectionnée par défaut.  
   
-     **Procédures stockées de la base de données Master**  
+     **Procédures stockées de la base de données master**  
      Inclut des procédures stockées de la base de données **master** dans l'opération de déplacement ou de copie.  
   
     > [!NOTE]  
     >  Les procédures stockées étendues et leurs DLL associées ne peuvent faire l’objet d’une copie automatique.  
   
-     **Travaux de SQL Server Agent**  
+     **travaux de l'Agent SQL Server**  
      Permet d'inclure des travaux de la base de données **msdb** dans l'opération de déplacement ou de copie.  
   
-     **Messages d’erreur définis par l’utilisateur**  
+     **Messages d'erreur définis par l'utilisateur**  
      Permet d'inclure des messages d'erreur définis par l'utilisateur dans l'opération de déplacement ou de copie.  
   
      **Points de terminaison**  
@@ -230,7 +230,7 @@ ms.locfileid: "62871136"
   
      Exemple : C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
-     **Partage de fichiers sur le serveur source**  
+     **Partage de fichier sur le serveur source**  
      Spécifiez l’emplacement des fichiers de base de données source sous la forme du chemin d'accès à un partage de fichiers.  
   
      Par exemple : «\\\\*SERVER_NAME*\c $ \Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
@@ -243,10 +243,10 @@ ms.locfileid: "62871136"
      **Nom du package**  
      Entrez le nom du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
-     **Options de journalisation**  
+     **Options du journal**  
      Précisez si les informations du journal doivent être stockées dans le journal des événements Windows ou dans un fichier texte.  
   
-     **Chemin d’accès du fichier journal des erreurs**  
+     **Chemin d'accès au fichier journal des erreurs**  
      Fournissez un chemin d'accès pour l'emplacement du fichier journal. Cette option est disponible uniquement si l'option Enregistrement dans un fichier texte est sélectionnée.  
   
 10. Sur la page **Planifier le package** , indiquez à quel moment vous voulez que l'opération de déplacement ou de copie commence. Si vous n'êtes pas administrateur système, vous devez spécifier un compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a accès au sous-système d'exécution du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
@@ -278,8 +278,8 @@ ms.locfileid: "62871136"
      **Message**  
      Affiche les messages retournés par chaque étape.  
   
-##  <a name="FollowUp"></a>Suivi : après la mise à niveau d’une base de données SQL Server  
- Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau du catalogue de texte intégral** . Si l’option de mise à niveau est définie sur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez aussi que lorsque l’option de mise à niveau est définie sur **Importer**, si aucun catalogue de texte intégral n’est disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
+ Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau a la valeur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne sont pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l’option de mise à niveau a la valeur **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   

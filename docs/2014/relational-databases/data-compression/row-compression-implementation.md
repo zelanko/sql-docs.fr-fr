@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873010"
 ---
 # <a name="row-compression-implementation"></a>Implémentation de la compression de ligne
@@ -57,25 +57,25 @@ ms.locfileid: "62873010"
 |`datetime2`|Oui|Utilise la représentation des données de type entier sur 6 à 9 octets. Les 4 premiers octets représentent la date. Les octets occupés par la date dépendent de la précision de l'heure spécifiée.<br /><br /> La valeur entière représente le nombre de jours depuis le 1/1/0001, avec une date limite située au 31/31/9999. La représentation d'une date de l'année 2005 occupe 3 octets.<br /><br /> Aucune économie n'est réalisée sur les heures car 2 à 4 octets sont nécessaires pour différentes précisions d'heure. Par conséquent, pour une précision de l'heure à la seconde, la compression utilise 2 octets pour l'heure et occupe le deuxième octet après 255 secondes.|  
 |`datetimeoffset`|Oui|Similaire à `datetime2`, mais avec 2 octets de fuseau horaire au format (HH:MM).<br /><br /> Comme `datetime2`, la compression peut permettre d'économiser 2 octets.<br /><br /> Pour les valeurs de fuseau horaire, la valeur MM peut être 0 dans la plupart des cas. Par conséquent, la compression peut permettre d'économiser 1 octet.<br /><br /> Il n'y a aucune modification dans le stockage pour la compression de ligne.|  
 |`char`|Oui|Les caractères de remplissage à droite sont supprimés. Notez que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère le même caractère de remplissage quel que soit le classement utilisé.|  
-|`varchar`|Non|Aucun effet|  
-|`text`|Non|Aucun effet|  
+|`varchar`|Non|Aucun effet.|  
+|`text`|Non|Aucun effet.|  
 |`nchar`|Oui|Les caractères de remplissage à droite sont supprimés. Notez que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère le même caractère de remplissage quel que soit le classement utilisé.|  
-|`nvarchar`|Non|Aucun effet|  
-|`ntext`|Non|Aucun effet|  
+|`nvarchar`|Non|Aucun effet.|  
+|`ntext`|Non|Aucun effet.|  
 |`binary`|Oui|Les zéros de droite sont supprimés.|  
-|`varbinary`|Non|Aucun effet|  
-|`image`|Non|Aucun effet|  
+|`varbinary`|Non|Aucun effet.|  
+|`image`|Non|Aucun effet.|  
 |`cursor`|Non|Aucun effet.|  
 |`timestamp` / `rowversion`|Oui|Utilise la représentation des données de type entier sur 8 octets. Un compteur d'horodatage, dont la valeur commence à 0, est maintenu pour chaque base de données. Il peut être compressé comme toute autre valeur entière.|  
-|`sql_variant`|Non|Aucun effet|  
-|`uniqueidentifier`|Non|Aucun effet|  
+|`sql_variant`|Non|Aucun effet.|  
+|`uniqueidentifier`|Non|Aucun effet.|  
 |`table`|Non|Aucun effet.|  
-|`xml`|Non|Aucun effet|  
+|`xml`|Non|Aucun effet.|  
 |Types définis par l'utilisateur|Non|Représentés en interne sous la forme `varbinary`.|  
 |FILESTREAM|Non|Représentés en interne sous la forme `varbinary`.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compression de données](data-compression.md)   
+ [Compression des données](data-compression.md)   
  [Implémentation de la compression de page](page-compression-implementation.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872053"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
@@ -85,8 +85,7 @@ JOIN #T2
   
  Impossible de résoudre le conflit de classement entre « Latin1_General_100_CI_AS_KS_WS_SC » et « Chinese_Simplified_Pinyin_100_CI_AS » dans l'opération égal à.  
   
- Nous pouvons résoudre ce problème en classant la table temporaire de façon explicite. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simplifie quelque peu cette opération en fournissant le mot clé `DATABASE_DEFAULT` pour la clause `COLLATE`.  
+ Nous pouvons résoudre ce problème en classant la table temporaire de façon explicite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simplifie quelque peu cette opération en fournissant le mot clé `DATABASE_DEFAULT` pour la clause `COLLATE`.  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

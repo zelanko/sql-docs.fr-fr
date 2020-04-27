@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62868880"
 ---
 # <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
@@ -48,7 +48,7 @@ ms.locfileid: "62868880"
  Si vous ne pouvez pas sauvegarder la fin du journal, utilisez la clause WITH STOPAT ou WITH REPLACE dans vos instructions RESTORE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Restaurer une base de données SQL Server à un point dans le temps &#40;mode de récupération complète&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Sauvegardez le journal des transactions lorsque la base de données est endommagée &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  

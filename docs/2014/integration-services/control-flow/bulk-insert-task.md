@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832871"
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
@@ -89,9 +89,9 @@ ms.locfileid: "62832871"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche d’insertion en bloc &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche d’insertion en bloc &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche d’insertion en bloc &#40;page connexion&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../bulk-insert-task-editor-connection-page.md)  
   
 -   [Éditeur de tâche d’insertion en bloc &#40;page Options&#41;](../bulk-insert-task-editor-options-page.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62832871"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configuration par programme de la tâche d'insertion en bloc  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62832871"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(Vous pouvez obtenir l’erreur « Impossible de préparer l’insertion en bloc SSIS pour l’insertion de données »sur les systèmes UAC), sur support.microsoft.com.  
+-   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693), sur support.microsoft.com.  
   
 -   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=233700), sur le site msdn.microsoft.com.  
   

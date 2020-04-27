@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843719"
 ---
 # <a name="set-source-control-options"></a>Définir les options du contrôle de code source
@@ -59,22 +59,20 @@ ms.locfileid: "62843719"
      **Effectuer les mises à jour d'état en tâche de fond**  
      Met automatiquement à jour les icônes du signal de contrôle de code source dans l'Explorateur de solutions au fur et à mesure que l'état d'un élément change. Si vous rencontrez des problèmes de retards lors de l'exécution des opérations de serveur, particulièrement lors de l'ouverture d'une solution ou d'un projet à partir du contrôle de code source, le fait de désactiver cette case à cocher peut améliorer les performances.  
   
-     **ID de connexion**  
+     **Nom d'accès**  
      Spécifie le nom d'utilisateur à employer pour se connecter au fournisseur de contrôle de code source. S’il est pris en charge par votre fournisseur de contrôle de code source, ce nom est automatiquement renseigné dans la boîte de dialogue de **connexion** pour accéder à votre serveur de contrôle de code source. Pour activer cette option, désactivez les connexions utilisateur automatiques à l'aide du programme d'administrateur de votre fournisseur de contrôle de code source, puis redémarrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-     **Avancée**  
+     **Avancé**  
      Affiche d'autres options permettant d'ajouter des éléments au contrôle de code source. Ces options varient en fonction de votre fournisseur de contrôle de code source. Vous pouvez obtenir de l'aide sur ces options dans le programme de contrôle de code source.  
   
 4.  Sélectionnez la page **environnement** .  
   
 5.  Dans la zone paramètres de l' **environnement du contrôle de code source** , sélectionnez le rôle sur lequel vous souhaitez définir les options de contrôle de code source.  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sélectionne automatiquement les options par défaut du contrôle de code source correspondant au rôle que vous avez choisi. Si vous désactivez l’une des options par défaut, la zone paramètres de l' **environnement du contrôle de code source** affiche l’option **personnalisé** pour indiquer que vous avez personnalisé le rôle sélectionné à l’origine.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sélectionne automatiquement les options par défaut du contrôle de code source correspondant au rôle que vous avez choisi. Si vous désactivez l’une des options par défaut, la zone paramètres de l' **environnement du contrôle de code source** affiche l’option **personnalisé** pour indiquer que vous avez personnalisé le rôle sélectionné à l’origine.  
   
      **Paramètres de l'environnement du contrôle de code source**  
-     Spécifie le rôle que vous souhaitez utiliser. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] définit les rôles suivants.  
+     Spécifie le rôle que vous souhaitez utiliser. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] définit les rôles suivants.  
   
     |Role|Description|  
     |----------|-----------------|  

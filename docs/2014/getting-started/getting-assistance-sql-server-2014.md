@@ -12,14 +12,13 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62837689"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtenir de l'aide (SQL Server 2014)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   La documentation et les didacticiels installés avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -34,10 +33,10 @@ ms.locfileid: "62837689"
  [Assistance sur SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
  Contient des liens vers les principales sources d'informations sur [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. La rubrique contient également des liens pour prendre en charge des sites.  
   
- [Accessibilité pour personnes handicapées](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ [Accessibilité pour les personnes souffrant d’un handicap](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
  Décrit les produits, les fonctionnalités et les services qui rendent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] plus accessible aux personnes handicapées.  
   
- [Envoi de commentaires sur SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
+ [Envoi de feedback sur SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Explique comment transmettre vos suggestions et rapports de bogues sur les caractéristiques et l'interface utilisateur d'un produit, soumettre des commentaires sur la documentation, ou envoyer automatiquement des rapports d'erreurs et des données d'utilisation à [!INCLUDE[msCoName](../includes/msconame-md.md)] en vue de leur analyse.  
   
 ## <a name="see-also"></a>Voir aussi  

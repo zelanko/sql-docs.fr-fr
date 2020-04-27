@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833752"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajout d'un gestionnaire de connexions Analysis Services
-  Utilisez la boîte de dialogue **Ajout d'un gestionnaire de connexions Analysis Services** pour créer une connexion à un serveur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou pour modifier les propriétés de connexion.  
+  Utilisez la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** pour créer une connexion à un serveur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou pour modifier les propriétés de connexion.  
   
  Pour en savoir plus sur le gestionnaire de connexions Analysis Services, consultez [Analysis Services Connection Manager](analysis-services-connection-manager.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62833752"
  **Modifier**  
  Utilisez la boîte de dialogue **Gestionnaire de connexions** pour créer une connexion à un serveur exécutant une instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et pour modifier les propriétés de connexion.  
   
- **Créer une connexion à un projet de Analysis Services dans cette solution**  
+ **Créer une connexion à un projet Analysis Services dans cette solution**  
  Spécifiez que la connexion utilisera un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la solution ouverte.  
   
 > [!NOTE]  

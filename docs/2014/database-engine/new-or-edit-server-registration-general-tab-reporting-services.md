@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844265"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Nouvelle inscription de serveur ou Modifier l'enregistrement du serveur (onglet Général) (Reporting Services)
@@ -34,7 +34,7 @@ ms.locfileid: "62844265"
  **Authentification**  
  L'authentification sur un serveur de rapports s'effectue par l'intermédiaire d'IIS (Internet Information Services). Sélectionnez l'un des modes d'authentification ci-dessous pour vous connecter à Reporting Services :  
   
- **Mode d’authentification Windows (authentification Windows)**  
+ **Mode d'authentification Windows (authentification Windows)**  
  La connexion à l'instance de serveur de rapports s'effectue à l'aide de l'authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
  **Authentification de base**  
@@ -47,13 +47,13 @@ ms.locfileid: "62844265"
  Entrez le nom d'utilisateur à utiliser pour se connecter. Cette option n'est disponible que si vous avez choisi **Authentification de base** ou **Authentification par formulaire**.  
   
  **Mot de passe**  
- Entrez le mot de passe correspondant au nom d’utilisateur. Cette option n'est modifiable que si vous avez choisi **Authentification de base** ou **Authentification par formulaire**.  
+ Entrez le mot de passe correspondant au nom d'utilisateur indiqué. Cette option n'est modifiable que si vous avez choisi **Authentification de base** ou **Authentification par formulaire**.  
   
  **Se souvenir du mot de passe**  
  Permet d'enregistrer le mot de passe que vous avez entré. Cette option n'est disponible que si vous avez cliqué sur **Authentification de base** ou **Authentification par formulaire**.  
   
 > [!NOTE]  
->  Si vous avez stocké le mot de passe et que vous souhaitez arrêter son stockage, désactivez la case à cocher, puis cliquez sur **Enregistrer**.  
+>   Si vous avez activé la case à cocher d'enregistrement du mot de passe et si vous ne voulez plus continuer à l'enregistrer, désactivez la case à cocher, puis cliquez sur **Enregistrer**.  
   
  **Nom du serveur inscrit**  
  Le nom qui doit apparaître dans Serveurs inscrits. Il n'est pas nécessaire que ce nom corresponde à celui de la zone **Nom du serveur** .  
@@ -64,7 +64,7 @@ ms.locfileid: "62844265"
  **Test**  
  Cliquez sur cette option pour tester la connexion au serveur sélectionné dans la zone **Nom du serveur**.  
   
- **Été**  
+ **Save**  
  Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits.  
   
   

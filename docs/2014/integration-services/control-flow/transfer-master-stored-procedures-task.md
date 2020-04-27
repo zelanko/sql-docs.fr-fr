@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829485"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master
@@ -64,7 +64,7 @@ ms.locfileid: "62829485"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de transfert de procédures stockées de Master &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert de procédures stockées de master &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Éditeur de tâche de transfert de procédures stockées de master &#40;page Procédures stockées&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   

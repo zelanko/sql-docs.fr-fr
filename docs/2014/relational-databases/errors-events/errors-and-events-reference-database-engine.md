@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870901"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Références relatives aux erreurs et aux événements (moteur de base de données)
@@ -38,7 +38,7 @@ Cette section contient des messages d’erreur Moteur de base de données qui n�
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Communauté SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Ce site contient des liens vers des groupes de discussion et des forums contrôlés par la communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . S'y trouvent également des sources d'information de la communauté, telles que les blogs et les sites Web. La communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente une aide précieuse grâce aux réponses qu'elle fournit aux questions posées, mais l'obtention d'une réponse ne peut pas être garantie.|  
-|[Communauté SQL Server Développeur Center](https://go.microsoft.com/fwlink/?LinkId=42456)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Aide et support Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Vous pouvez utiliser ce site Web pour présenter un cas à un professionnel du support [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

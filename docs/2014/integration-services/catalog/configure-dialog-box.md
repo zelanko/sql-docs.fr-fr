@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836108"
 ---
 # <a name="configure-dialog-box"></a>Boîte de dialogue Configurer
@@ -32,7 +32,7 @@ ms.locfileid: "62836108"
   
 -   [Définir les options de la page Références](#references)  
   
-##  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Configurer  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Configurer  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62836108"
   
 5.  Cliquez avec le bouton droit sur le package ou le projet, puis cliquez sur **Configurer**.  
   
-##  <a name="parameter"></a> Définir les options de la page Paramètres  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Définir les options de la page Paramètres  
  Utilisez la page **Paramètres** pour afficher les noms et valeurs des paramètres, ainsi que pour modifier ces valeurs.  
   
  Sélectionnez l’étendue des paramètres affichés sous les onglets **Paramètres** et **Gestionnaires de connexions** , dans la liste déroulante **Étendue** .  
@@ -76,7 +76,7 @@ ms.locfileid: "62836108"
  **Valeur**  
  Indique la valeur affectée à la propriété du gestionnaire de connexions. Cliquez sur le bouton de sélection pour modifier la valeur dans la boîte de dialogue **Définir la valeur du paramètre** . Vous pouvez entrer une valeur littérale, mapper une variable d'environnement qui contient la valeur à utiliser, ou utiliser la valeur par défaut du package.  
   
-##  <a name="references"></a> Définir les options de la page Références  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Définir les options de la page Références  
  Utilisez la page **Références** pour ajouter et supprimer des références aux environnements, ainsi que pour accéder aux propriétés des environnements.  
   
  Un environnement spécifie les valeurs d’exécution des packages contenus dans les projets que vous avez déployés sur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

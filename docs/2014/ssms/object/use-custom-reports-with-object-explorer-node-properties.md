@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823696"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
@@ -37,13 +37,13 @@ ms.locfileid: "62823696"
 ## <a name="object-explorer-node-report-parameters-example"></a>Exemple de paramètre de rapport des nœuds de l'Explorateur d'objets  
  Pour exécuter l'exemple, utilisez la procédure suivante.  
   
- **Pour afficher les valeurs des paramètres de rapport d’un nœud dans l’Explorateur d’objets**  
+ **Pour afficher les valeurs des paramètres de rapport d'un nœud dans l'Explorateur d'objets**  
   
 1.  Copiez l'exemple de code suivant dans un nouveau fichier texte et nommez le fichier en lui attribuant une extension .rdl.  
   
 2.  Copiez le fichier de rapport dans un dossier que vous avez créé sur le serveur de base de données des rapports personnalisés.  
   
-3.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un nœud dans l’Explorateur d’objets, pointez sur **rapports**, puis cliquez sur rapports personnalisés. Dans la boîte de dialogue **Ouvrir un fichier** , recherchez le dossier des rapports personnalisés, sélectionnez le fichier de rapport, puis cliquez sur **Ouvrir**.  
+3.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un nœud dans l’Explorateur d’objets, pointez sur **Rapports**, puis cliquez sur Rapports personnalisés. Dans la boîte de dialogue **Ouvrir un fichier** , recherchez le dossier des rapports personnalisés, sélectionnez le fichier de rapport, puis cliquez sur **Ouvrir**.  
   
      Quand un nouveau rapport personnalisé est ouvert pour la première fois à partir d’un nœud de l’Explorateur d’objets, il vient s’ajouter à la liste des derniers fichiers utilisés sous **Rapports personnalisés** dans le menu contextuel de ce nœud. Un rapport standard s’affiche aussi dans la liste des derniers rapports utilisés sous **Rapports personnalisés**quand vous l’ouvrez pour la première fois. En cas de suppression d'un fichier de rapport personnalisé, lorsque l'élément est à nouveau sélectionné, une invite apparaît et propose de supprimer l'élément de la liste des derniers fichiers utilisés.  
   
@@ -1001,6 +1001,6 @@ ms.locfileid: "62823696"
 ## <a name="see-also"></a>Voir aussi  
  [Rapports personnalisés dans Management Studio](custom-reports-in-management-studio.md)   
  [Ajouter un rapport personnalisé à Management Studio](add-a-custom-report-to-management-studio.md)   
- [Annuler la suppression des avertissements d’exécution de rapports personnalisés](unsuppress-run-custom-report-warnings.md)  
+ [Annuler la suppression des avertissements d'exécution de rapports personnalisés](unsuppress-run-custom-report-warnings.md)  
   
   

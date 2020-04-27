@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874355"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Types et membres interdits dans mscorlib.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmation CLR (Common Language Integration) interdit l’utilisation d’un type ou d’un membre ayant `HostProtectionAttribute` un qui spécifie une `System.Security.Permissions.HostProtectionResource` énumération avec `ExternalProcessMgmt`la `ExternalThreading`valeur `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, ****,, `Synchronization`SharedState, `UI`ou. Le tableau suivant répertorie les membres et les types de l'assembly mscorlib.dll dont les valeurs d'attribut de protection de l'hôte (HPA) sont interdites.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmation CLR (Common Language Integration) interdit l’utilisation d’un type ou d’un membre ayant `HostProtectionAttribute` un qui spécifie une `System.Security.Permissions.HostProtectionResource` énumération avec `ExternalProcessMgmt`la `ExternalThreading`valeur `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**,, `Synchronization`SharedState, `UI`ou. Le tableau suivant répertorie les membres et les types de l'assembly mscorlib.dll dont les valeurs d'attribut de protection de l'hôte (HPA) sont interdites.  
   
 > [!NOTE]  
 >  Cette liste a été générée à partir des assemblys pris en charge. Pour plus d’informations, consultez [.NET Framework les bibliothèques prises en charge](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -35,22 +35,22 @@ ms.locfileid: "62874355"
 |System.Collections.Queue.Synchronized()|Synchronization|  
 |System.Collections.SortedList.Synchronized()|Synchronization|  
 |System.Collections.Stack.Synchronized()|Synchronization|  
-|System.Console.Beep()|Interface utilisateur|  
-|System.Console.get_Error()|Interface utilisateur|  
-|System.Console.get_In()|Interface utilisateur|  
-|System.Console.get_KeyAvailable()|Interface utilisateur|  
-|System.Console.get_Out()|Interface utilisateur|  
-|System.Console.OpenStandardError()|Interface utilisateur|  
-|System.Console.OpenStandardInput()|Interface utilisateur|  
-|System.Console.OpenStandardOutput()|Interface utilisateur|  
-|System.Console.Read()|Interface utilisateur|  
-|System.Console.ReadKey()|Interface utilisateur|  
-|System.Console.ReadLine()|Interface utilisateur|  
-|System.Console.SetError()|Interface utilisateur|  
-|System.Console.SetIn()|Interface utilisateur|  
-|System.Console.SetOut()|Interface utilisateur|  
-|System.Console.Write()|Interface utilisateur|  
-|System.Console.WriteLine()|Interface utilisateur|  
+|System.Console.Beep()|UI|  
+|System.Console.get_Error()|UI|  
+|System.Console.get_In()|UI|  
+|System.Console.get_KeyAvailable()|UI|  
+|System.Console.get_Out()|UI|  
+|System.Console.OpenStandardError()|UI|  
+|System.Console.OpenStandardInput()|UI|  
+|System.Console.OpenStandardOutput()|UI|  
+|System.Console.Read()|UI|  
+|System.Console.ReadKey()|UI|  
+|System.Console.ReadLine()|UI|  
+|System.Console.SetError()|UI|  
+|System.Console.SetIn()|UI|  
+|System.Console.SetOut()|UI|  
+|System.Console.Write()|UI|  
+|System.Console.WriteLine()|UI|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  

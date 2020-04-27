@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827192"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
@@ -33,7 +33,7 @@ ms.locfileid: "62827192"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|Oui|  
 |BinaryData|`image`|NULL|2|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 0 = Nouveau texte SQL de traitement qui n'est pas actuellement présent dans le cache.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> 1 de type 0|21|Oui|  
 |IntegerData2|`int`|NULL|55|Oui|  
@@ -52,10 +52,10 @@ ms.locfileid: "62827192"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Nombre cumulatif de fois où ce plan a été recompilé.|52|Oui|  
 |BinaryData|`image`|Code XML binaire du plan compilé.|2|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1 = Les requêtes d'une procédure stockée ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les procédures stockées.<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> nombre *n* de type 1|21|Oui|  
+|EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1 = Les requêtes d'une procédure stockée ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les procédures stockées.<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 1|21|Oui|  
 |IntegerData2|`int`|Fin de l'instruction dans la procédure stockée.<br /><br /> -1 pour la fin de la procédure stockée.|55|Oui|  
 |ObjectID|`int`|ID affecté à l'objet par le système.|22|Oui|  
 |Offset|`int`|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
@@ -76,12 +76,12 @@ ms.locfileid: "62827192"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Nombre cumulatif de fois où ce plan a été recompilé.|52|Oui|  
 |BinaryData|`image`|Code XML binaire du plan compilé.|2|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> nombre *n* de type 2|21|Oui|  
+|EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 2|21|Oui|  
 |IntegerData2|`int`|Fin de l'instruction dans le traitement.<br /><br /> -1 pour la fin du traitement.|55|Oui|  
-|ObjectID|`int`|N/A|22|Oui|  
+|ObjectID|`int`|NON APPLICABLE|22|Oui|  
 |Offset|`int`|Décalage de départ de l'instruction dans le traitement.<br /><br /> 0 pour le début du traitement.|61|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL. Peut être utilisé pour obtenir le texte SQL du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
@@ -99,7 +99,7 @@ ms.locfileid: "62827192"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Nombre cumulatif de fois où ce plan a été recompilé.|52|Oui|  
 |BinaryData|`image`|NULL|2|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 3 = Une requête mise en cache a été détruite et l'historique des données de performances correspondant au plan est sur le point d'être détruit.<br /><br /> Les types EventSubClass suivants sont générés dans la trace.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> 1 de type 3 lorsque la requête est vidée du cache<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br />1 de type 3 lorsque la requête est vidée du cache.|21|Oui|  

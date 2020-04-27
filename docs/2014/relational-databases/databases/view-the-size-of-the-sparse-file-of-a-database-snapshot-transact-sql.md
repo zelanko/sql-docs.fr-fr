@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870878"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62870878"
 > [!NOTE]  
 >  La taille d’un fichier partiellement alloué augmente par incréments de 64 kilo-octets (Ko). Il s’agit donc toujours d’un multiple de 64 Ko.  
   
- Pour afficher le nombre d’octets utilisés actuellement sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql).  
+ Pour afficher le nombre d’octets actuellement utilisés sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour afficher l’espace disque occupé par un fichier partiellement alloué, cliquez avec le bouton droit sur le fichier dans Microsoft Windows, cliquez sur **Propriétés**et notez la valeur indiquée dans **Taille sur le disque** .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62870878"
 ## <a name="see-also"></a>Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [sys. fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
   

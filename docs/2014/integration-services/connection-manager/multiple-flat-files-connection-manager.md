@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833700"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
@@ -47,7 +47,7 @@ ms.locfileid: "62833700"
   
  Lorsque le gestionnaire de connexions de fichiers plats multiples référence plusieurs fichiers, les chemins d'accès aux fichiers sont séparés par une barre verticale (|). La propriété `ConnectionString` du gestionnaire de connexions utilise le format suivant :  
   
- \<*chemin d'*** accès>|\<>  
+ \<*chemin*>|\<*chemin*>  
   
  Vous pouvez également spécifier plusieurs fichiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte sur le lecteur C, la valeur de `ConnectionString` la propriété peut être définie sur C\\: *. txt.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "62833700"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page colonnes&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page avancé&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
 -   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   

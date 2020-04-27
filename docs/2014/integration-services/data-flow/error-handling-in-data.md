@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827143"
 ---
 # <a name="error-handling-in-data"></a>Gestion des erreurs dans les données
@@ -75,10 +75,10 @@ ms.locfileid: "62827143"
 -   [Configurer une sortie d'erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Flux de données](data-flow.md)   
+ [Transmission de données](data-flow.md)   
  [Transformer des données avec des transformations](transformations/transform-data-with-transformations.md)   
  [Connecter des composants avec des chemins d’accès](../connect-components-with-paths.md)   
- [Tâche de flux de données](../control-flow/data-flow-task.md)   
+ [Tâche de workflow](../control-flow/data-flow-task.md)   
  [Flux de données](data-flow.md)  
   
   

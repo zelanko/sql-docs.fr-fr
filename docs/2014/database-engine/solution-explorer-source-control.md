@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843104"
 ---
 # <a name="solution-explorer-source-control"></a>Contrôle de code source de l'Explorateur de solutions
@@ -33,8 +33,7 @@ ms.locfileid: "62843104"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut être intégré à un service de contrôle de code source. Cela signifie que vous pouvez utiliser cet outil comme client pour votre fournisseur de contrôle de code source. Sans quitter votre environnement, vous êtes ainsi en mesure de gérer en toute facilité vos projets individuels et collaboratifs. Le fournisseur de contrôle du code source n'est pas inclus dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut être intégré à un service de contrôle de code source. Cela signifie que vous pouvez utiliser cet outil comme client pour votre fournisseur de contrôle de code source. Sans quitter votre environnement, vous êtes ainsi en mesure de gérer en toute facilité vos projets individuels et collaboratifs. Le fournisseur de contrôle du code source n'est pas inclus dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-select-a-source-control-provider"></a>Pour sélectionner un fournisseur de contrôle du code source  
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832451"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
@@ -44,9 +44,7 @@ ms.locfileid: "62832451"
  ![Flux de données](../media/mw-dts-09.gif "Flux de données")  
   
 ## <a name="log-entries"></a>Entrées du journal  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -66,7 +64,7 @@ ms.locfileid: "62832451"
   
  Pour plus d'informations sur la façon d'utiliser ces entrées de journal pour analyser et améliorer les performances du flux de données, consultez l'une des rubriques suivantes :  
   
--   [Compteurs de performance](../performance/performance-counters.md)  
+-   [Compteurs de performances](../performance/performance-counters.md)  
   
 -   [Fonctionnalités de performances de flux de données](../data-flow/data-flow-performance-features.md)  
   

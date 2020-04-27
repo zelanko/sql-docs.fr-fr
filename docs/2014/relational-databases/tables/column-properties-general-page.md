@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62854899"
 ---
 # <a name="column-properties-general-page"></a>Propriétés de la colonne (page Général)
@@ -31,7 +31,7 @@ ms.locfileid: "62854899"
  **Type de données**  
  Type de données susceptibles d'être contenues dans la colonne. S'il s'agit d'un type de données défini par l'utilisateur, il est affiché. S'il ne s'agit pas d'un type de données défini par l'utilisateur, le type de données système est affiché. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **Type de système**  
+ **Type du système**  
  Type de données susceptibles d'être contenues dans la colonne. S'il s'agit d'un type de données système, il est affiché. S'il s'agit d'un type de données défini par l'utilisateur, le type de données système qui le constitue est affiché.  
   
  **Clé primaire**  
@@ -46,13 +46,13 @@ ms.locfileid: "62854899"
  **Texte calculé**  
  Indique l'instruction utilisée pour calculer le texte de la colonne. Pour plus d’informations, consultez [Spécifier les colonnes calculées dans une table](specify-computed-columns-in-a-table.md).  
   
- **Personnelles**  
+ **Identité**  
  Indique si la colonne est la colonne identité de la table. Les valeurs possibles sont **True** et **False**.  
   
- **Valeur initiale d’identité**  
+ **Valeur initiale de la propriété Identity**  
  Indique la valeur de ligne initiale d'une colonne d'identité.  
   
- **Incrément d’identité**  
+ **Incrément d'identité**  
  La propriété **Incrément d’identité** spécifie quelle valeur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute à la valeur d’identité de ligne existante la plus élevée pendant la génération de la valeur d’identité d’une ligne à insérer.  
   
  **Liaison par défaut**  
@@ -61,7 +61,7 @@ ms.locfileid: "62854899"
  **Schéma par défaut**  
  Identifie le schéma de base de données qui possède la valeur par défaut liée à la colonne référencée. Cette option est vide si aucune valeur par défaut n'est liée.  
   
- **Elle**  
+ **Règle**  
  Identifie la contrainte d'intégrité des données qui est liée à la colonne. Cette option est vide si aucune règle n'est liée.  
   
  **Schéma de règle**  
@@ -79,15 +79,14 @@ ms.locfileid: "62854899"
  **Échelle numérique**  
  Indique le nombre de chiffres à droite de la virgule décimale dans un type de données numériques à précision fixe.  
   
- **Espace de noms de schéma XML**  
+ **Espace de noms du schéma XML**  
  Définit le type de la colonne XML en terme de validation XSD (XML Schema Definition Language).  
   
- **Schéma d’espace de noms de schéma XML**  
+ **Schéma d'espace de noms de schéma XML**  
  Schéma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui possède l'espace de noms de schéma XML.  
   
 > [!NOTE]  
->  Le mot schéma possède plusieurs significations courantes, mais distinctes. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des schémas pour organiser des objets de base de données. Sa signification est similaire à celle de l'appartenance. XML utilise le schéma pour définir l'organisation des informations XML dans une série d'espaces de noms. Il s'agit d'un mode de regroupement du code XML connexe.  
+>  Le mot schéma possède plusieurs significations courantes, mais distinctes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des schémas pour organiser des objets de base de données. Sa signification est similaire à celle de l'appartenance. XML utilise le schéma pour définir l'organisation des informations XML dans une série d'espaces de noms. Il s'agit d'un mode de regroupement du code XML connexe.  
   
  **Est partiellement alloué**  
  Indique si la colonne est une colonne éparse. Les valeurs possibles sont **True** et **False**. Pour plus d’informations, consultez [Utiliser des colonnes éparses](use-sparse-columns.md).  
@@ -98,7 +97,7 @@ ms.locfileid: "62854899"
  **État de remplissage ANSI**  
  Indique si le remplissage ANSI est activé ou désactivé. Pour plus d’informations, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
- **Texte intégral**  
+ **Texte complet**  
  Indique si la colonne participe aux requêtes de texte intégral.  
   
  **Sémantique statistique**  

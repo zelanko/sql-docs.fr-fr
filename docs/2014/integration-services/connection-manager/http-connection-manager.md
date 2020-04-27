@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833746"
 ---
 # <a name="http-connection-manager"></a>Gestionnaire de connexions HTTP
-  Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers. La tâche de service Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluse dans utilise ce gestionnaire de connexions.  
+  Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers. La tâche de service web incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  
   
  Lorsque vous ajoutez un gestionnaire de connexions HTTP à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion HTTP au moment de l'exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection `Connections` du package.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62833746"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur du gestionnaire de connexions HTTP &#40;page du serveur&#41;](../http-connection-manager-editor-server-page.md)  
+-   [Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../http-connection-manager-editor-server-page.md)  
   
--   [Éditeur du gestionnaire de connexions HTTP &#40;page proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   

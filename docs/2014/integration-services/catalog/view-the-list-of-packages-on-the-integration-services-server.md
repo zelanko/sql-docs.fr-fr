@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d752b84506ea3e9275e5f16903c19288c6ff92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836212"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Afficher la liste des packages sur le serveur Integration Services
@@ -26,7 +26,7 @@ ms.locfileid: "62836212"
  Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  Pour afficher les packages stockés sur le serveur à l’aide de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], procédez comme indiqué ci-dessous.  
   
-### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Pour afficher les packages à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+### <a name="to-view-packages-using-ssmanstudiofull"></a>Pour afficher les packages à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Autrement dit, connectez-vous à l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge la base de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   

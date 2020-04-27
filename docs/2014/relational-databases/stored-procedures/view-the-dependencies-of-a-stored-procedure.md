@@ -15,26 +15,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856499"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Afficher les dépendances d'une procédure stockée
     
-##  
-  <a name="Top"></a> Cette rubrique explique comment consulter les dépendances des procédures stockées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="this-topic-describes-how-to-view-stored-procedure-dependencies-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> Cette rubrique explique comment consulter les dépendances des procédures stockées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Avant de commencer :**  [sécurité](#Security)  
+-   **Avant de commencer :**  [Sécurité](#Security)  
   
 -   **Pour afficher les dépendances d’une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Fonction système : `sys.dm_sql_referencing_entities`  
  Requiert l'autorisation CONTROL sur l'entité référencée et l'autorisation SELECT sur sys.dm_sql_referencing_entities. Lorsque l'entité référencée est une fonction de partition, l'autorisation CONTROL sur la base de données est requise. Par défaut, l'autorisation SELECT est accordée à public.  
   
@@ -44,15 +43,15 @@ ms.locfileid: "62856499"
  Affichage catalogue d'objets : `sys.sql_expression_dependencies`  
  Requiert l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur sys.sql_expression_dependencies pour la base de données. Par défaut, l'autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe db_owner. Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
   
-##  <a name="Procedures"></a>Comment afficher les dépendances d’une procédure stockée  
+##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a>Comment afficher les dépendances d’une procédure stockée  
  Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour afficher les dépendances d’une procédure dans l’Explorateur d’objets**  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ **Pour afficher les dépendances d'une procédure dans l'Explorateur d'objets**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
@@ -66,13 +65,13 @@ ms.locfileid: "62856499"
   
 6.  Cliquez sur **OK**.  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Pour afficher les dépendances d’une procédure dans l’éditeur de requête**  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+ **Pour afficher les dépendances d'une procédure dans l'Éditeur de requête**  
   
  Fonction système : `sys.dm_sql_referencing_entities`  
  Cette fonction est utilisée pour afficher les objets qui dépendent d'une procédure.  
   
-1.  Dans l' **Explorateur d’objets**, connectez-vous [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance de, puis développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62856499"
  Fonction système : `sys.dm_sql_referenced_entities`  
  Cette fonction est utilisée pour afficher les objets dont la procédure dépend.  
   
-1.  Dans l' **Explorateur d’objets**, connectez-vous [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance de, puis développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62856499"
  Cette vue peut être utilisée pour afficher des objets dont une procédure dépend ou qui dépendent d'une procédure.  
   
  Affichage des objets qui dépendent d'une procédure.  
- 1.  Dans l' **Explorateur d’objets**, connectez-vous [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance de, puis développez-la.  
+ 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure.  
   
@@ -153,7 +152,7 @@ ms.locfileid: "62856499"
     ```  
   
  Affichage des objets dont une procédure dépend.  
- 1.  Dans l' **Explorateur d’objets**, connectez-vous [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance de, puis développez-la.  
+ 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure.  
   
@@ -184,8 +183,8 @@ ms.locfileid: "62856499"
   
 ## <a name="see-also"></a>Voir aussi  
  [Renommer une procédure stockée](rename-a-stored-procedure.md)   
- [sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

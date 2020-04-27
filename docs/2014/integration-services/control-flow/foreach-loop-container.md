@@ -18,22 +18,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831576"
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
   Le conteneur de boucles Foreach définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **Foreach** des langages de programmation. Dans un package, le bouclage repose sur l'utilisation d'un énumérateur Foreach.  Le conteneur de boucles Foreach répète le flux de contrôle pour chaque membre d'un énumérateur spécifié.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit les types d’énumérateur suivants :  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit les types d’énumérateur suivants :  
   
 -   Foreach ADO Enumerator, pour l'énumération des lignes des tables. Par exemple, vous pouvez obtenir les lignes d'un ensemble d'enregistrements ADO.  
   
      La destination de l'ensemble d'enregistrements enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package de type `Object`. Vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. La variable spécifiée pour l'énumérateur ADO Foreach doit être de type Object. Pour plus d'informations sur la destination d'un ensemble d'enregistrements, consultez [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
--   Énumérateur de l'ensemble de lignes du schéma Foreach ADO.NET, pour l'énumération des informations de schéma relatives à une source de données. Par exemple, vous pouvez énumérer et obtenir une liste des tables de la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données.  
+-   Énumérateur de l'ensemble de lignes du schéma Foreach ADO.NET, pour l'énumération des informations de schéma relatives à une source de données. Par exemple, vous pouvez énumérer les tables de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et en obtenir la liste.  
   
 -   Énumérateur de fichier Foreach, pour l'énumération des fichiers d'un dossier. L'énumérateur peut parcourir les sous-dossiers. Par exemple, vous pouvez lire tous les fichiers portant l'extension de nom de fichier *.log stockés dans le dossier Windows et ses sous-dossiers.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "62831576"
   
 -   Foreach NodeList Enumerator, pour l'énumération de l'ensemble de résultats d'une expression XPath (XML Path Language). Par exemple, l'expression suivante énumère tous les auteurs de la période classique et en obtient la liste : `/authors/author[@period='classical']`.  
   
--   Foreach SMO Enumerator, pour l'énumération des objets SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object). Par exemple, vous pouvez énumérer les vues d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et en obtenir la liste.  
+-   Foreach SMO Enumerator, pour l'énumération des objets SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object). Par exemple, vous pouvez énumérer les vues d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et en obtenir la liste.  
   
--   Énumérateur ForEach Azure Blob pour énumérer les objets blob dans un conteneur d'objets blob dans un Stockage Azure.  
+-   Énumérateur ForEach Azure Blob pour énumérer les objets blob dans un conteneur d'objets blob dans un stockage Azure.  
   
 -   Énumérateur foreach ADLS file pour énumérer les fichiers dans un répertoire ADLS.
   

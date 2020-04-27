@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832606"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
@@ -45,10 +45,10 @@ ms.locfileid: "62832606"
   
 |Tag|Terme|  
 |---------|----------|  
-|Direction|Est|  
-|Direction|West|  
-|Direction|Nord|  
-|Direction|Sud|  
+|Sens|Est|  
+|Sens|West|  
+|Sens|Nord|  
+|Sens|Sud|  
   
  Vous pouvez éventuellement utiliser une autre balise pour regrouper les différents mots qui expriment la notion de « rue » (Street) dans les adresses postales :  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62832606"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -95,14 +95,14 @@ ms.locfileid: "62832606"
  **Schéma**  
  Spécifie le schéma auquel la table sélectionnée appartient. Cette option est en lecture seule.  
   
- **Table**  
+ **Table de charge de travail**  
  Affiche le nom de la table sélectionnée. Cette option est en lecture seule.  
   
 #### <a name="column-options"></a>Options de colonne  
  **IsWildCard**  
  Spécifie si le caractère générique **(\*)** a été sélectionné. Cette option a la valeur **True** si vous avez sélectionné **(\*)** pour générer le profil de toutes les colonnes. Sa valeur est **False** si vous avez sélectionné une colonne spécifique dont le profil doit être généré. Cette option est en lecture seule.  
   
- **NomColonne**  
+ **ColumnName**  
  Affiche le nom de la colonne sélectionnée. Cette option est vide si vous avez sélectionné **(\*)** pour profiler toutes les colonnes. Cette option est en lecture seule.  
   
  **StringCompareOptions**  
@@ -127,7 +127,7 @@ ms.locfileid: "62832606"
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
   
- **Sigle**  
+ **Symboles**  
  Répertoriez les symboles à conserver dans le cadre des modèles. Les exemples peuvent inclure « / » pour les dates, « : » pour les heures et « @ » pour les adresses de messagerie. Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ =&/@ !? () <> []{}| # * ^%».  
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835632"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Gérer un Service de capture de données modifiées Oracle
@@ -38,7 +38,7 @@ ms.locfileid: "62835632"
   
      Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [Opérations possibles avec un service de capture de données modifiées](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> Que pouvez-vous faire avec un Service de capture de données modifiées  
+##  <a name="what-can-you-do-with-a-cdc-service"></a><a name="BKMK_WhatcandowithCDCService"></a> Que pouvez-vous faire avec un Service de capture de données modifiées  
  Vous pouvez effectuer les actions suivantes lorsque vous utilisez un service de capture de données modifiées.  
   
 ### <a name="delete-the-service"></a>Supprimer le service  
