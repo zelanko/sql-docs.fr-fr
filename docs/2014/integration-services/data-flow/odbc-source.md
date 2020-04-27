@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901104"
 ---
 # <a name="odbc-source"></a>Source ODBC
@@ -92,7 +92,7 @@ ms.locfileid: "62901104"
   
 -   [Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Extraire des données à l’aide de la source ODBC](odbc-source.md)  
+-   [Extraire des données à l'aide de la source ODBC](odbc-source.md)  
   
 -   [Propriétés personnalisées des sources ODBC](odbc-source-custom-properties.md)  
   

@@ -15,14 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913694"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Mettre à niveau un cluster de basculement SQL Server
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge la mise à niveau du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à partir des clusters de basculement [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] séparément sur tous les nœuds de cluster de basculement.  
   
  Voici les détails de prise en charge :  
@@ -33,7 +32,7 @@ ms.locfileid: "62913694"
   
 -   Installation de Service Packs - Vous devez appliquer les Service Packs et correctifs logiciels [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux clusters de basculement [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] séparément sur tous les nœuds.  
   
--   Les scénarios suivants ne sont pas pris en charge :  
+-   Les scénarios suivants ne sont pas pris en charge :  
   
     -   Vous ne pouvez pas effectuer une migration à partir d'une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement.  
   
@@ -43,11 +42,11 @@ ms.locfileid: "62913694"
   
 -   Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
-## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Mise à niveau d'un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="upgrading-a-ssnoversion-multi-subnet-failover-cluster"></a>Mise à niveau d'un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Vous ne pouvez pas mettre directement à niveau un cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sous-réseaux multiples vers un cluster de basculement de sous-réseaux multiples. Pour plus d’informations, consultez [Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mises à niveau de la version et de l'édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de version et d’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mettre à niveau une instance de cluster de basculement SQL Server &#40;de l’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
  [Installer SQL Server 2014 à partir de l'invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   

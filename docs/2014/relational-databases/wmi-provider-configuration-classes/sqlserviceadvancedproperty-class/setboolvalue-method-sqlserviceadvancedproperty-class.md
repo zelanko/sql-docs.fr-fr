@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911401"
 ---
 # <a name="set-breakpoints"></a>Définir des points d’arrêt
@@ -28,20 +28,20 @@ ms.locfileid: "62911401"
  **Activé**  
  Sélectionnez cette option pour activer un point d'arrêt sur un événement.  
   
- **Condition d’arrêt**  
+ **Break Condition**  
  Affichez la liste des événements disponibles sur lesquels définir des points d'arrêt.  
   
  **Type de nombre d’accès**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Toujours**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
 |**Supérieur ou égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est supérieur ou égal au nombre d'accès.|  
 |**Multiple du nombre d'accès**|L'exécution est suspendue lorsqu'un multiple du nombre d'accès est atteint. Par exemple, si vous définissez cette option sur 5, l'exécution est suspendue une fois toutes les cinq fois.|  
   
- **Nombre d’accès**  
+ **Nombre d'accès**  
  Spécifiez le nombre d'accès à partir duquel déclencher un arrêt. Cette option n'est pas disponible si le point d'arrêt est constamment en vigueur.  
   
 ## <a name="see-also"></a>Voir aussi  

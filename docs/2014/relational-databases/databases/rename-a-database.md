@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916769"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
@@ -31,7 +31,7 @@ ms.locfileid: "62916769"
   
      [Sécurité](#Security)  
   
--   **Pour renommer une base de données, utilisez :**  
+-   **Pour renommer une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -39,22 +39,22 @@ ms.locfileid: "62916769"
   
 -   **Suivi :**  [Après le renommage d’une base de données](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les bases de données système ne peuvent pas être renommées.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-rename-a-database"></a>Pour renommer une base de données  
   
-1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
+1.  Dans **Object Explorer**l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Explorateur d’objets, connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Vérifiez que personne n’utilise la base de données, puis [configurez la base de données en mode mono-utilisateur](set-a-database-to-single-user-mode.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62916769"
   
 4.  Entrez le nouveau nom de la base de données, puis cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>Pour renommer une base de données  
   
@@ -81,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a>Suivi : après avoir renommé une base de données  
+##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> Suivi : Après avoir renommé une base de données  
  Après avoir renommé une base de données, sauvegardez la base de données **master** .  
   
 ## <a name="see-also"></a>Voir aussi  

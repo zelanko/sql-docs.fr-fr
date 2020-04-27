@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901483"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
@@ -43,7 +43,7 @@ ms.locfileid: "62901483"
 -   Les résultats d'une instruction SQL.  
   
 > [!NOTE]  
->  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, voir [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
+>  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, consultez [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
  Lorsque la destination OLE DB charge des données qui utilisent un jeu de caractères codés sur deux octets (DBCS), les données risquent d'être endommagées si le mode d'accès aux données n'utilise pas l'option de chargement rapide et si le gestionnaire de connexions OLE DB utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Pour garantir l’intégrité des données DBCS, vous devez configurer le gestionnaire de connexions OLE DB pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l’un des modes d’accès avec chargement rapide : **Table ou vue - chargement rapide** ou **Variable de nom de table ou de vue - chargement rapide**. Ces deux options sont disponibles dans la boîte de dialogue **Éditeur de destination OLE DB** . Quand vous programmez le [!INCLUDE[ssIS](../../includes/ssis-md.md)] modèle objet, vous devez définir la propriété `OpenRowset Using FastLoad`AccessMode sur `OpenRowset Using FastLoad From Variable`, ou.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62901483"
   
  La destination OLE DB comporte une entrée normale et une sortie d'erreur.  
   
- Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](integration-services-data-types.md).  
+ Pour plus d’informations sur les types de données, consultez [Integration Services types de données](integration-services-data-types.md).  
   
 ## <a name="fast-load-options"></a>Options de chargement rapide  
  Si la destination OLE DB utilise un mode d’accès aux données par chargement rapide, vous pouvez spécifier les options de chargement rapide dans l’interface utilisateur, **Éditeur de destination OLE DB**, pour la destination :  
@@ -101,11 +101,11 @@ ms.locfileid: "62901483"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de destination OLE DB** , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de destination de OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de destination de OLE DB &#40;page Mappages&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Éditeur de destination OLE DB &#40;page Mappages&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB éditeur de destination &#40;page sortie d’erreur&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Éditeur de destination OLE DB &#40;page Sortie d’erreur&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

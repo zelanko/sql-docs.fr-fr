@@ -24,14 +24,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890196"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Référence de l'interface utilisateur de l'utilitaire d'exécution de package (DtExecUI)
-  Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages qui sont stockés dans l’un des trois [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplacements suivants : [!INCLUDE[ssIS](../../includes/ssis-md.md)] base de données, magasin de packages et système de fichiers. Cette interface utilisateur, qui peut être ouverte depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant `dtexecui` dans une invite de commandes, est une alternative à l’exécution de packages à l’aide de l’outil d’invite de commandes **dtexec** .  
+  Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant `dtexecui` dans une invite de commandes, est une alternative à l’exécution de packages à l’aide de l’outil d’invite de commandes **dtexec** .  
   
  Les packages sont exécutés dans le même processus que l’utilitaire **dtexecui.exe** . Cet utilitaire étant un outil 32 bits, les packages exécutés à l’aide de **dtexecui.exe** dans un environnement 64 bits s’exécutent dans Windows sur Win32 (WOW). Quand vous développez et testez des commandes à l’aide de l’utilitaire dtexecui.exe sur un ordinateur 64 bits, effectuez les tests en mode 64 bits en utilisant la version 64 bits de **dtexec.exe** avant de déployer ou de planifier les commandes sur un serveur de production.  
   
@@ -67,16 +67,16 @@ ms.locfileid: "62890196"
 |||  
 |-|-|  
 |Valeur|Description|  
-|**SQL Server**|Sélectionnez cette option lorsque le package réside dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifiez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournissez un nom d'utilisateur et un mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque nom d’utilisateur et chaque mot de passe ajoutent les options **/USER** _nom_utilisateur_ et **/PASSWORD** _mot_de_passe_ options to the commet prompt.|  
+|**SQL Server**|Sélectionnez cette option lorsque le package se trouve dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifiez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournissez un nom d'utilisateur et un mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque nom d’utilisateur et chaque mot de passe ajoutent les options **/USER** _nom_utilisateur_ et **/PASSWORD** _mot_de_passe_ à l’invite de commandes.|  
 |**Système de fichiers**|Sélectionnez cette option lorsque le package se trouve dans le système de fichiers.|  
 |**Magasin de packages SSIS**|Sélectionnez cette option lorsque le package se trouve dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Chacune des sélections ci-dessus comporte la série d'options suivante :  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ### <a name="dynamic-options"></a>Options dynamiques  
@@ -88,7 +88,7 @@ ms.locfileid: "62890196"
  **Connexion au serveur**  
  Indiquez si le package doit utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'authentification Windows est recommandée pour renforcer la sécurité. Avec l'authentification Windows, vous n'avez pas à spécifier un nom d'utilisateur et un mot de passe.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l’authentification Windows et connectez-vous à l’aide d’un compte d’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utiliser l’authentification SQL Server**  
@@ -111,7 +111,7 @@ ms.locfileid: "62890196"
  **Connexion au serveur**  
  Indiquez si le package doit utiliser l'authentification Microsoft Windows pour se connecter à la source du package. L'authentification Windows est recommandée pour renforcer la sécurité. Avec l'authentification Windows, vous n'avez pas à spécifier un nom d'utilisateur et un mot de passe.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l'authentification Windows et connectez-vous à l'aide d'un compte d'utilisateur Microsoft Windows.  
   
  **Utiliser l’authentification SQL Server**  
@@ -139,10 +139,10 @@ ms.locfileid: "62890196"
  **Remove**  
  Sélectionnez un fichier de configuration dans la liste, puis cliquez sur **Supprimer**.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="command-files-page"></a>Page Fichiers de commandes  
@@ -161,10 +161,10 @@ ms.locfileid: "62890196"
  **Remove**  
  Permet de sélectionner un fichier de commandes dans la zone de texte, puis de le supprimer par le biais du bouton **Supprimer** .  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="connection-managers-page"></a>Page Gestionnaires de connexions  
@@ -180,26 +180,26 @@ ms.locfileid: "62890196"
  **Chaîne de connexion**  
  Modifie la chaîne de connexion d'un gestionnaire de connexions. Ce champ est modifiable uniquement lorsque la case à cocher **Gestionnaire de connexions** est activée.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="execution-options-page"></a>Page Options d'exécution  
  Utilisez la page **Options d’exécution** de la boîte de dialogue **Utilitaire d’exécution de package** pour spécifier les options d’exécution du package.  
   
 ### <a name="options"></a>Options  
- **Échec du package sur les avertissements de validation**  
+ **Mettre le package en échec en cas d'avertissements de validation**  
  Indique si le package échoue si un avertissement de validation est détecté.  
   
- **Valider le package sans l’exécuter**  
+ **Valider le package sans l'exécuter**  
  Indique si le package est seulement validé.  
   
- **Nombre maximal d’exécutables simultanés**  
+ **Maximum d'exécutables simultanés**  
  Indique si vous souhaitez spécifier le nombre maximal d'exécutables qui peuvent s'exécuter simultanément dans le package. Après avoir activé cette case à cocher, utilisez la zone de sélection numérique pour spécifier le nombre maximal d'exécutables.  
   
- **Activer les points de contrôle du package**  
+ **Activer les points de contrôle de package**  
  Indique s'il faut activer les points de contrôle du package.  
   
  **Fichier de point de contrôle**  
@@ -208,16 +208,16 @@ ms.locfileid: "62890196"
  **Parcourir**  
  Cliquez sur le bouton Parcourir **(...)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir**, si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
   
- **Remplacer les options de redémarrage**  
+ **Substituer les options de redémarrage**  
  Indique s'il faut ignorer les options de redémarrage, si vous activez les points de contrôle du package.  
   
  **Option de redémarrage**  
  Indique comment utiliser les points de contrôle si vous ignorez les options de redémarrage.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="reporting-page"></a>Page Création de rapports  
@@ -242,19 +242,19 @@ ms.locfileid: "62890196"
  **Événements de pipeline**  
  Sélectionnez cette option pour générer un rapport sur les messages d'événements de flux de données.  
   
- **Information**  
+ **Informations**  
  Sélectionnez cette option pour générer un rapport sur les messages d'information.  
   
  **Verbose**  
  Sélectionnez cette option pour utiliser les rapports de commentaire.  
   
- **Journalisation de la console**  
+ **Écriture dans le journal de la console**  
  Spécifiez les informations à écrire dans le journal lorsque l'événement sélectionné se produit.  
   
  **Nom**  
  Sélectionnez cette option pour générer un rapport sur le nom de la personne qui a créé le package.  
   
- **Computer**  
+ **Ordinateur**  
  Sélectionnez cette option pour générer un rapport sur le nom de l'ordinateur sur lequel le package s'exécute.  
   
  **Opérateur**  
@@ -266,7 +266,7 @@ ms.locfileid: "62890196"
  **GUID source**  
  Sélectionnez cette option pour générer un rapport sur le GUID du package.  
   
- **GUID d’exécution**  
+ **GUID d'exécution**  
  Sélectionnez cette option pour générer un rapport sur le GUID de l'instance d'exécution du package.  
   
  **Message**  
@@ -275,10 +275,10 @@ ms.locfileid: "62890196"
  **Heure de début et heure de fin**  
  Sélectionnez cette option pour générer un rapport sur l'heure à laquelle le package a commencé et s'est terminé.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="logging-page"></a>Page Enregistrement  
@@ -294,10 +294,10 @@ ms.locfileid: "62890196"
  **Remove**  
  Permet de sélectionner un module fournisseur d'informations pour le supprimer.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="set-values-page"></a>Page Valeurs définies  
@@ -313,10 +313,10 @@ ms.locfileid: "62890196"
  **Remove**  
  Sélectionnez le chemin d'accès à une propriété et cliquez dessus pour la supprimer.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="verification-page"></a>Page Vérification  
@@ -332,29 +332,29 @@ ms.locfileid: "62890196"
  Build  
  Spécifiez le numéro séquentiel de la build du package.  
   
- **Vérifier l’ID de package**  
+ **Vérifier l'ID de package**  
  Vérifie la version l'ID du package.  
   
  ID du package  
  Spécifiez le numéro d'identification du package.  
   
- **Vérifier l’ID de version**  
+ **Vérifier l'ID de version**  
  Vérifie l'ID de la version du package.  
   
  ID de version  
  Spécifiez le numéro d'identification de la version.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="command-line-page"></a>Page Ligne de commande  
  Le nœud **Ligne de commande** de la boîte de dialogue **Utilitaire d'exécution du package** permet de modifier la ligne de commande ayant été générée par les options créées par les différentes boîtes de dialogue.  
   
 ### <a name="options"></a>Options  
- **Restaurer les options d’origine**  
+ **Restaurer les options d'origine**  
  Permet de ramener la ligne de commande à son état initial. Utilisez cette option si vous avez apporté des modifications par le biais de l’option **Modifier la ligne de commande manuellement** et que vous voulez restaurer les options de ligne de commande initiales.  
   
  **Modifier la ligne de commande manuellement**  
@@ -363,10 +363,10 @@ ms.locfileid: "62890196"
  **Ligne de commande**  
  Affiche la ligne de commande actuelle. Cet élément est modifiable si vous avez activé l'option de modifier la ligne de commande manuellement.  
   
- **Effectue**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
- **Plus**  
+ **Close**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="see-also"></a>Voir aussi  

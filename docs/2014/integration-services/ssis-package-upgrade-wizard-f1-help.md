@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889362"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
   Utilisez l’Assistant Mise à niveau de packages [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] SSIS pour [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] mettre à niveau des packages et des packages vers le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]format de package pour la version actuelle de.  
   
- **Pour exécuter l’Assistant Mise à niveau de packages SSIS**  
+ **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
--   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section contient des rubriques qui décrivent les options affichées sur les pages de l'Assistant Mise à niveau de packages SSIS :  

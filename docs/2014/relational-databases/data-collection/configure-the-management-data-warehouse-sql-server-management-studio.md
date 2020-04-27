@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918818"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "62918818"
 > [!NOTE]  
 >  Si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour s'exécuter à l'aide de l'un des comptes de service système (système local, service réseau ou service local) et que l'entrepôt de données de gestion est créé sur une instance différente du collecteur de données, vous devez configurer les jeux d'éléments de collecte de sorte qu'ils utilisent un proxy pour télécharger les données vers l'entrepôt de données de gestion.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurer l'entrepôt de données de gestion sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurer l'entrepôt de données de gestion sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Vérifiez que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.  
   
@@ -59,15 +59,15 @@ ms.locfileid: "62918818"
   
 6.  Répétez l'étape 5 jusqu'à ce que toutes les instances de base de données qui utilisent le collecteur de données soient configurées pour télécharger les données vers l'entrepôt de données de gestion partagé.  
   
-####  <a name="Wizard"></a>Assistant Configuration de la Data Warehouse de gestion  
- **Page d’accueil**  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Assistant Configuration de l'entrepôt de données de gestion  
+ **Page d'accueil**  
   
  La page d'accueil est la page de démarrage de l'Assistant Configuration de la collecte de données. L'affichage de cette page est facultatif.  
   
  **Ne plus afficher cette page de démarrage.**  
  Sélectionnez cette option pour supprimer cette page la prochaine fois vous lancez l'Assistant Configuration de la collecte de données.  
   
- **Page Configurer le stockage Data Warehouse de gestion**  
+ **Page Configuration du stockage de l'entrepôt de données de gestion**  
   
  Utilisez cette page pour sélectionner un serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un entrepôt de données de gestion. L'entrepôt de données de gestion est une base de données relationnelle qui sert de stockage pour les données collectées.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918818"
   
  L'option **Nouveau** est disponible uniquement lors de la configuration d'un jeu d'éléments de collecte de données.  
   
- **Page mapper les connexions et les utilisateurs**  
+ **Page Mapper les connexions et les utilisateurs**  
   
  Utilisez cette page pour mapper des connexions à des rôles d'utilisateur de base de données pour l'entrepôt de données de gestion.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918818"
   
  Spécifiez une connexion en activant la case à cocher **Mappage** pour la connexion.  
   
- **Appartenance au rôle de base de données :**  *\<nom de l’entrepôt de données>*  
+ **Appartenance au rôle de base de données pour :**  *\<nom_entrepôt_données>*  
  Sélectionnez le rôle d'entrepôt de données de gestion auquel la connexion est mappée en cliquant sur une ou plusieurs cases à cocher en regard des options suivantes :  
   
 -   **mdw_admin**  
@@ -105,11 +105,11 @@ ms.locfileid: "62918818"
  **Nouvelle connexion**  
  Ouvrez la boîte de dialogue **Nouvelle connexion** et créez une connexion pour l’entrepôt de données de gestion.  
   
- **Page terminer l’Assistant**  
+ **Page Fin de l'Assistant**  
   
  Utilisez cette page pour vérifier et terminer la configuration de la collecte de données. L'arborescence contenue dans la fenêtre d'affichage indique les configurations qui s'appliquent ainsi que les actions qui sont entreprises lorsque vous cliquez sur **Terminer**.  
   
- **Page progression de l’Assistant Configuration de la collecte de données**  
+ **Page Progression de l'Assistant Configuration de la collecte de données**  
   
  Utilisez cette page pour consulter les résultats de chaque étape de configuration.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62918818"
   
 -   Envoyer le rapport sous forme de courrier électronique  
   
- **Plus**  
+ **Close**  
  Ferme l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  

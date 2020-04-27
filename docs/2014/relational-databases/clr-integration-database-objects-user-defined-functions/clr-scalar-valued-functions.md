@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919592"
 ---
 # <a name="clr-scalar-valued-functions"></a>Fonctions scalaires CLR
@@ -82,9 +82,7 @@ End Class
   
  La première ligne de code fait référence à `Microsoft.SqlServer.Server` afin d'accéder à des attributs et à `System.Data.SqlClient` afin d'accéder à l'espace de noms ADO.NET. (Cet espace de noms contient `SqlClient`, le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- Ensuite, la fonction reçoit l'attribut personnalisé `SqlFunction`, qui se trouve dans l'espace de noms `Microsoft.SqlServer.Server`. L'attribut personnalisé indique si la fonction définie par l'utilisateur utilise le fournisseur in-process pour lire les données sur le serveur. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas les fonctions définies par l'utilisateur à mettre à jour, insérer ou supprimer des données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut optimiser l'exécution d'une fonction définie par l'utilisateur qui n'utilise pas le fournisseur in-process. Cela est indiqué en affectant la valeur `DataAccessKind` à `DataAccessKind.None`. Sur la ligne suivante, la méthode cible est une méthode statique publique (partagée dans Visual Basic .NET).  
+ Ensuite, la fonction reçoit l'attribut personnalisé `SqlFunction`, qui se trouve dans l'espace de noms `Microsoft.SqlServer.Server`. L'attribut personnalisé indique si la fonction définie par l'utilisateur utilise le fournisseur in-process pour lire les données sur le serveur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas les fonctions définies par l'utilisateur à mettre à jour, insérer ou supprimer des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut optimiser l'exécution d'une fonction définie par l'utilisateur qui n'utilise pas le fournisseur in-process. Cela est indiqué en affectant la valeur `DataAccessKind` à `DataAccessKind.None`. Sur la ligne suivante, la méthode cible est une méthode statique publique (partagée dans Visual Basic .NET).  
   
  La classe `SqlContext`, située dans l'espace de noms `Microsoft.SqlServer.Server`, peut ensuite accéder à un objet `SqlCommand` avec une connexion à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déjà configurée. Bien qu'il ne soit pas utilisé ici, le contexte de transaction actuel est également disponible par le biais de l'API `System.Transactions`.  
   
@@ -130,8 +128,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` indique qu'une bibliothèque, plutôt qu'un fichier exécutable, doit être produite. Les fichiers exécutables ne peuvent pas être inscrits dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  `/t:library` indique qu'une bibliothèque, plutôt qu'un fichier exécutable, doit être produite. Les fichiers exécutables ne peuvent pas être inscrits dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Les objets de base de données Visual C++ compilés avec `/clr:pure` ne sont pas pris en charge pour l'exécution sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il s'agit par exemple d'objets de base de données tels que des fonctions scalaires.  

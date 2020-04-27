@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922228"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
@@ -64,7 +64,7 @@ ms.locfileid: "62922228"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> Tables d'historique de sauvegarde et de restauration  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tables d'historique de sauvegarde et de restauration  
  Cette section présente les tables d'historique qui stockent les métadonnées de restauration et de sauvegarde dans la base de données système **msdb** .  
   
 |Table d’historique|Description|  
@@ -81,7 +81,7 @@ ms.locfileid: "62922228"
 > [!NOTE]  
 >  Lorsqu'une restauration est effectuée, les tables d'historique de sauvegarde et les tables d'historique de restauration sont modifiées.  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> Instructions Transact-SQL permettant d'accéder à l'historique de sauvegarde  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> Instructions Transact-SQL permettant d'accéder à l'historique de sauvegarde  
  Les instructions d'information de restauration correspondent aux informations stockées dans certaines tables d'historique de sauvegarde.  
   
 > [!IMPORTANT]  
@@ -93,7 +93,7 @@ ms.locfileid: "62922228"
 |[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|Récupère toutes les informations d'en-tête de sauvegarde pour tous les jeux de sauvegardes d'une unité de sauvegarde particulière. L'exécution de RESTORE HEADERONLY aboutit à un ensemble de résultats.<br /><br /> Pour plus d'informations, consultez « Affichage des informations de l'en-tête de sauvegarde » plus loin dans cette rubrique.|  
 |[RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)|[backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|Renvoie un ensemble de résultats contenant des informations relatives au support de sauvegarde d'une unité de sauvegarde spécifiée.<br /><br /> Pour plus d'informations, consultez « Affichage des informations de l'en-tête du support » plus loin dans cette rubrique.|  
   
-##  <a name="ListDbTlogFiles"></a> Fichiers journaux de base de données et de transactions  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> Fichiers journaux de base de données et de transactions  
  Les informations affichées dans la liste des fichiers journaux de base de données et de transactions d'une sauvegarde comprennent le nom logique, le nom physique, le type de fichier (base de données ou journal), l'appartenance à un groupe de fichiers, la taille de fichier (en octets), la taille de fichier maximale autorisée et la taille de croissance de fichier prédéfinie (en octets). Ces informations sont utiles, dans les cas suivants, pour déterminer les noms des fichiers dans une sauvegarde de base de données avant de la restaurer lorsque :  
   
 -   vous avez perdu une unité de disque contenant un ou plusieurs fichiers pour une base de données ;  
@@ -104,7 +104,7 @@ ms.locfileid: "62922228"
   
      L'énumération des fichiers dans la sauvegarde vous permet de déterminer les fichiers qui sont affectés. La sauvegarde peut par exemple contenir un fichier à restaurer sur le lecteur E alors que le serveur de destination n'a pas de lecteur E. Le fichier doit être déplacé vers un autre emplacement, tel que le lecteur Z quand le fichier est restauré.  
   
-##  <a name="MediaHeader"></a> Informations d'en-tête de support  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> Informations d'en-tête de support  
  L'affichage de l'en-tête de support présente les informations relatives au support lui-même et non pas aux sauvegardes se trouvant sur le support. Les informations d'en-tête de support affichées comprennent le nom du support, sa description, le nom du logiciel utilisé pour créer l'en-tête de support et la date à laquelle l'en-tête de support a été écrit.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ ms.locfileid: "62922228"
   
  Pour plus d’informations, consultez [Comparaison des informations d’en-tête de support et d’en-tête de sauvegarde](#CompareMediaHeaderBackupHeader), plus loin dans cette rubrique.  
   
-##  <a name="BackupHeader"></a> Informations d'en-tête de sauvegarde  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> Informations d'en-tête de sauvegarde  
  L'affichage de l'en-tête de sauvegarde présente les informations relatives à tous les jeux de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , qui se trouvent sur le support. Les informations qui sont affichées comprennent les types de périphériques de sauvegardes utilisés, les types de sauvegarde (par exemple base de données, transaction, fichier ou base de données différentielle) et les informations de date/heure de début et de fin de sauvegarde. Ces informations sont utiles lorsque vous devez déterminer le jeu de sauvegarde à restaurer sur la bande ou les sauvegardes contenues sur le support.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "62922228"
   
  Pour restaurer un jeu de sauvegarde spécifique, précisez le numéro d'ordre de ce jeu. Par exemple, pour restaurer le deuxième jeu de sauvegarde, spécifiez 2 comme jeu de sauvegarde à restaurer.  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> Comparaison des informations d'en-tête de support et d'en-tête de sauvegarde  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> Comparaison des informations d'en-tête de support et d'en-tête de sauvegarde  
  La tableau suivant donne un exemple des différences entre l’affichage des informations de l’en-tête de sauvegarde et de l’en-tête de support. L'obtention de l'en-tête de support ne nécessite que la récupération des informations au début de la bande. L'obtention de l'en-tête de sauvegarde nécessite d'analyser la bande entière pour examiner l'en-tête de chaque jeu de sauvegarde.  
   
  ![Jeu de supports contenant trois jeux de sauvegarde SQL Server](../../database-engine/media/bnr-media-label.gif "Jeu de supports contenant trois jeux de sauvegarde SQL Server")  
@@ -139,10 +139,10 @@ ms.locfileid: "62922228"
   
  Pour plus d'informations sur l'affichage des informations d'en-tête de sauvegarde pour tous les jeux de sauvegardes d'une unité de sauvegarde, consultez « Informations d'en-tête de sauvegarde » plus haut dans cette rubrique.  
   
-##  <a name="Verification"></a> Vérification de la sauvegarde  
+##  <a name="backup-verification"></a><a name="Verification"></a> Vérification de la sauvegarde  
  Bien qu'elle ne soit pas obligatoire, la vérification d'une sauvegarde est une pratique utile. Cette opération porte sur l'intégrité physique de la sauvegarde ; elle permet de s'assurer que tous les fichiers de la sauvegarde sont lisibles et exploitables et que vous pouvez restaurer la sauvegarde en cas de besoin. Notez que la vérification ne porte pas sur la structure des données de la sauvegarde. Cependant, si la sauvegarde a été créée à l'aide de WITH CHECKSUMS, sa vérification à l'aide de WITH CHECKSUMS peut fournir une bonne indication de la fiabilité des données de la sauvegarde.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour supprimer les anciennes lignes des tables d'historique de sauvegarde et de restauration**  
   
 -   [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql)  

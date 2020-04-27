@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902438"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  
   
- Certains composants de Data Flow convertissent les types [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de données entre les types de données et les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]types de données managées de. Pour plus d’informations sur le mappage entre [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les types de données managées, consultez [Utilisation de types de données dans le flux de données](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Certains composants de flux de données convertissent les types de données entre les types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les types de données managées de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Pour plus d’informations sur le mappage entre [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les types de données managées, consultez [Utilisation de types de données dans le flux de données](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  Le tableau suivant énumère les types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Des informations de précision et d'échelle s'appliquent à certains types de données du tableau. Pour plus d’informations sur la précision et l’échelle, consultez [Précision, échelle et longueur &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
@@ -67,8 +67,7 @@ ms.locfileid: "62902438"
 ## <a name="conversion-of-data-types"></a>Conversion de types de données  
  Si les données d'une colonne n'ont pas besoin de toute la largeur qui leur est allouée par le type de données source, vous voudrez peut-être changer le type de données de la colonne. La réduction de la longueur de chaque ligne de données permet d'optimiser les performances lors du transfert de données car plus la ligne est courte, plus les données sont transférées rapidement de la source vers la destination.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un jeu complet de types de données numeric afin que vous puissiez faire correspondre le type de données et la taille des données. Par exemple, si les valeurs d'une colonne dont le type de données est DT_UI8 sont toujours des entiers compris entre 0 et 3000, vous pouvez opter pour le type de données DT_UI2. De même, si une colonne dont le type de données est DT_CY pourrait se satisfaire d'un type de données integer aux vues des données du package, vous pouvez opter pour le type de données DT_I4.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un jeu complet de types de données numeric afin que vous puissiez faire correspondre le type de données et la taille des données. Par exemple, si les valeurs d'une colonne dont le type de données est DT_UI8 sont toujours des entiers compris entre 0 et 3000, vous pouvez opter pour le type de données DT_UI2. De même, si une colonne dont le type de données est DT_CY pourrait se satisfaire d'un type de données integer aux vues des données du package, vous pouvez opter pour le type de données DT_I4.  
   
  Vous pouvez modifier les types de données d'une colonne de l'une des manières suivantes :  
   
@@ -227,8 +226,8 @@ ms.locfileid: "62902438"
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||Date|Date|Date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[durée &#40;&#41;Transact-SQL ](/sql/t-sql/data-types/time-transact-sql)(p)|[durée &#40;&#41;Transact-SQL](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
@@ -237,7 +236,7 @@ ms.locfileid: "62902438"
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Court||SMALLINT|SMALLINT|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|real|real|Unique||real|real|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  

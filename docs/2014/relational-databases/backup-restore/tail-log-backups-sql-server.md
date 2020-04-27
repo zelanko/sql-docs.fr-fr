@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920671"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62920671"
   
  
   
-##  <a name="TailLogScenarios"></a>Scénarios qui nécessitent une sauvegarde de la fin du journal  
+##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> Scénarios qui nécessitent une sauvegarde de la fin du journal  
  Nous vous recommandons d'effectuer une sauvegarde de la fin du journal dans les scénarios suivants :  
   
 -   Si la base de données est en ligne et que vous envisagez d'effectuer une opération de restauration de la base de données, commencez par sauvegarder la fin du journal. Pour éviter une erreur pour une base de données en ligne, vous devez utiliser... Option WITH NORECOVERY de l’instruction [Backup](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "62920671"
 |NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal.  Le journal est tronqué sauf si l'option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> ** \* Important \* \* ** Nous vous recommandons d’éviter d’utiliser NO_TRUNCATE, sauf lorsque la base de données est endommagée.|  
 |CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Remarque : lorsque vous utilisez la sauvegarde de la fin du journal sur une base de données endommagée, certaines métadonnées habituellement capturées dans les sauvegardes de journaux peuvent ne pas être disponibles. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), plus loin dans cette rubrique.|  
   
-##  <a name="IncompleteMetadata"></a>Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  
  Les sauvegardes de la fin du journal capturent la fin du journal même si la base de données est hors connexion ou endommagée, ou s'il y manque des fichiers de données. Cela peut aboutir à des métadonnées incomplètes à partir des commandes d'informations de restauration et de **msdb**. Mais seules les métadonnées sont incomplètes ; le journal capturé est complet et exploitable.  
   
  Si une sauvegarde de la fin du journal contient des métadonnées incomplètes, dans la table [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) , **has_incomplete_metadata** a la valeur **1**. De plus, dans le résultat de [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql), **HasIncompleteMetadata** a la valeur **1**.  
@@ -63,13 +63,13 @@ ms.locfileid: "62920671"
   
 -   **filegroup_id**  
   
--   **entrer**  
+-   **type**  
   
 -   **type_desc**  
   
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  Pour créer une sauvegarde de la fin du journal, consultez [Sauvegarder le journal des transactions lorsque la base de données est endommagée &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
  Pour restaurer une sauvegarde du journal des transactions, consultez [Restaurer une sauvegarde du journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
@@ -78,8 +78,8 @@ ms.locfileid: "62920671"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Sauvegarder et restaurer des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
- [Sauvegardes de type copie seule &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
- [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
+ [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
+ [Sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922434"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922434"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> Restauration de fichiers et démarrage d'une base de données  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> Restauration de fichiers et démarrage d'une base de données  
  Cette section concerne uniquement les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent plusieurs groupes de fichiers.  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922434"
   
  Si le démarrage aboutit, les groupes de fichiers qui contiennent un fichier hors connexion demeurent hors connexion.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> Restauration en ligne et index désactivés  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> Restauration en ligne et index désactivés  
  Elle concerne seulement les bases de données avec plusieurs groupes de fichiers et, dans le cas du mode de récupération simple, au moins un groupe de fichiers en lecture seule.  
   
  Dans ces cas de figure, lorsqu'une base de données est en ligne, l'index peut être créé, supprimé, activé ou désactivé uniquement si les groupes de fichiers qui contiennent une partie de l'index sont en ligne.  
   
  Pour plus d’informations sur la restauration des groupes de fichiers hors connexion, consultez [Restauration en ligne &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DbMandBnR"></a> Sauvegarde et restauration et mise en miroir d'une base de données  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> Sauvegarde et restauration et mise en miroir d'une base de données  
  Cette section ne concerne que les bases de données en mode de restauration complète et composées de plusieurs groupes de fichiers.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922434"
   
 -   La restauration de la base de données principale n'est pas autorisée.  
   
-##  <a name="PiecemealAndFTIndexes"></a> Restauration fragmentaire et index de recherche en texte intégral  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> Restauration fragmentaire et index de recherche en texte intégral  
  Cette section ne concerne que les bases de données contenant plusieurs groupes de fichiers et, pour les bases de données en mode simple, que les groupes de fichiers en lecture seule.  
   
  Les index de recherche en texte intégral sont stockés dans des groupes de fichiers de base de données et peuvent être affectés par une restauration fragmentaire. Si l'index de recherche en texte intégral réside dans le même groupe de fichiers que des données de table associées, la restauration fragmentaire fonctionne comme prévu.  
@@ -111,7 +111,7 @@ ms.locfileid: "62922434"
   
  Dès que le groupe de fichiers des tables et celui de l'index de recherche en texte intégral sont en ligne, tout remplissage de texte intégral suspendu reprend.  
   
-##  <a name="FileBnRandCompression"></a> Sauvegarde et restauration de fichiers et compression  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> Sauvegarde et restauration de fichiers et compression  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la compression des données du système de fichiers NTFS pour les groupes de fichiers et les bases de données en lecture seule.  
   
  La restauration des fichiers dans un groupe de fichiers en lecture seule est prise en charge sur les fichiers compressés NTFS. La sauvegarde et la restauration de ces groupes de fichiers fonctionne pour l'essentiel de la même manière que pour n'importe quel groupe de fichiers en lecture seule, à quelques exceptions près :  
@@ -123,7 +123,7 @@ ms.locfileid: "62922434"
 > [!NOTE]  
 >  Les fichiers journaux des bases de données en lecture-écriture ne doivent jamais être placés sur des systèmes de fichiers compressés.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

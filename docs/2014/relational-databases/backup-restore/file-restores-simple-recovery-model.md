@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921817"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauration de fichiers (mode de récupération simple)
@@ -50,7 +50,7 @@ ms.locfileid: "62921817"
   
 
   
-##  <a name="Overview"></a>Vue d’ensemble de la restauration des fichiers et des groupes de fichiers en mode de récupération simple  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Vue d’ensemble de la restauration des fichiers et des groupes de fichiers en mode de récupération simple  
  Un scénario de restauration de fichiers consiste en une séquence de restauration unique qui copie, restaure par progression et récupère les données appropriées comme suit :  
   
 1.  Restauration de chaque fichier endommagé à partir de sa toute dernière sauvegarde.  
@@ -62,13 +62,13 @@ ms.locfileid: "62921817"
   
  La séquence de restauration contient uniquement deux instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La première instruction restaure un fichier secondaire, le fichier `A`, qui est restauré avec WITH NORECOVERY. La seconde opération restaure deux autres fichiers, `B` et `C` , qui sont restaurés avec WITH RECOVERY depuis une unité de sauvegarde différente :  
   
-1.  RESTORE DATABASE *base_de_données* FILE **=**_nom_fichier_A_  
+1.  Restaurer le fichier **=** *de base* de données de base de données _name_of_file_A_  
   
      FROM *sauvegarde_de_fichier_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *base_de_données* FILE **=**_nom_fichier_B_**,**_nom_fichier_C_  
+2.  Restaurer le **=** fichier *de base* de données de base de données _name_of_file_B_**,**_name_of_file_C_  
   
      FROM *sauvegarde_des_fichiers_B_et_C*  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62921817"
   
  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour restaurer des fichiers et des groupes de fichiers**  
   
 -   [Restaurer des fichiers et groupes de fichiers en remplaçant des fichiers existants &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
@@ -96,13 +96,13 @@ ms.locfileid: "62921817"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md)   
+ [Restaurations de bases de données complètes &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

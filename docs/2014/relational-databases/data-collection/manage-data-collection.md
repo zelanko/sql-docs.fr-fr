@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918571"
 ---
 # <a name="manage-data-collection"></a>Gérer la collecte de données
@@ -35,18 +35,18 @@ ms.locfileid: "62918571"
   
 -   [Démarrer ou arrêter un jeu d’éléments de collecte](start-or-stop-a-collection-set.md)  
   
--   [Utilisez SQL Server Profiler pour créer un jeu d’collections trace SQL &#40;SQL Server Management Studio&#41;](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
+-   [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL &#40;SQL Server Management Studio&#41;](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
--   [Afficher les journaux des jeux d' &#40;SQL Server Management Studio&#41;](view-collection-set-logs-sql-server-management-studio.md)  
+-   [Afficher les journaux de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](view-collection-set-logs-sql-server-management-studio.md)  
   
--   [Affichez ou modifiez les planifications de jeu d' &#40;SQL Server Management Studio&#41;](view-or-change-collection-set-schedules-sql-server-management-studio.md)  
+-   [Afficher ou modifier des planifications de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](view-or-change-collection-set-schedules-sql-server-management-studio.md)  
   
 -   [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
 ## <a name="manage-data-collection-by-using-transact-sql"></a>Gérer la collecte de données à l'aide de Transact-SQL  
  Le collecteur de données fournit une collection complète de procédures stockées qui vous permettent d'effectuer n'importe quelle tâche du collecteur de données. Par exemple, vous pouvez effectuer les tâches suivantes à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
--   [Configurer les paramètres de collecte de données &#40;Transact-SQL&#41;](configure-data-collection-parameters-transact-sql.md)  
+-   [Configurer des paramètres de collecte de données &#40;Transact-SQL&#41;](configure-data-collection-parameters-transact-sql.md)  
   
 -   [Activer ou désactiver la collecte de données](data-collection.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62918571"
   
 -   [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
--   [Ajouter un élément de collecte à un jeu d’éléments de collecte &#40;&#41;Transact-SQL](add-a-collection-item-to-a-collection-set-transact-sql.md)  
+-   [Ajouter un élément de collecte à un jeu d’éléments de collecte &#40;Transact-SQL&#41;](add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
  De plus, vous disposez de fonctions et de vues qui vous permettent d'obtenir des données de configuration pour les bases de données msdb et l'entrepôt de données de gestion, des données du journal des exécutions et des données stockées dans l'entrepôt de données de gestion.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62918571"
 > [!IMPORTANT]  
 >  Contrairement aux procédures stockées standard, les procédures stockées du collecteur de données utilisent des paramètres de type strict et elles ne prennent pas en charge la conversion automatique de type de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter les exemples de code qui sont fournis. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md). Vous pouvez également créer la requête dans n'importe quel éditeur et l'enregistrer dans un fichier texte avec une extension de nom de fichier .sql. Vous pouvez exécuter la requête à partir de l'invite de commandes Windows, à l'aide de l'utilitaire `sqlcmd`. Pour plus d’informations, consultez [utiliser l’utilitaire sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter les exemples de code qui sont fournis. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md). Vous pouvez également créer la requête dans n'importe quel éditeur et l'enregistrer dans un fichier texte avec une extension de nom de fichier .sql. Vous pouvez exécuter la requête à partir de l'invite de commandes Windows, à l'aide de l'utilitaire `sqlcmd`. Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Procédures stockées et vues  
  **Utilisation du collecteur de données**  
@@ -75,7 +75,7 @@ ms.locfileid: "62918571"
 |[sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)|Active le collecteur de données.|  
 |[sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)|Désactive le collecteur de données.|  
   
- **Utilisation des jeux d’collections**  
+ **Utilisation de jeux d'éléments de collecte**  
   
  Le tableau suivant décrit les procédures stockées que vous pouvez utiliser avec les jeux d'éléments de collecte.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62918571"
 |[sp_syscollector_update_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-set-transact-sql)|Modifie la configuration d'un jeu de collections.|  
 |[sp_syscollector_upload_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql)|Télécharger les données d'un jeu d'éléments de collecte dans l'entrepôt de données de gestion. Il s'agit effectivement d'un téléchargement à la demande.|  
   
- **Utilisation d’éléments de collecte**  
+ **Utilisation d'éléments de collecte**  
   
  Le tableau suivant décrit les procédures stockées que vous pouvez utiliser avec les éléments de collecte.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62918571"
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql)|Supprimer un élément de collecte.|  
 |[sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql)|Mettre à jour un élément de collecte.|  
   
- **Utilisation des types de collecteurs**  
+ **Utilisation de types de collecteurs**  
   
  Le tableau suivant décrit les procédures stockées que vous pouvez utiliser avec les types de collecteurs.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "62918571"
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql)|Mettre à jour un type de collecteur.|  
 |[sp_syscollector_delete_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collector-type-transact-sql)|Supprimer un type de collecteur.|  
   
- **Obtention d’informations de configuration**  
+ **Obtention d'informations de configuration**  
   
  Le tableau suivant décrit les vues que vous pouvez utiliser pour obtenir des informations de configuration et des données du journal des exécutions.  
   
-|Nom de la vue|Description|  
+|Nom de l’affichage|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-config-store-transact-sql)|Obtenir la configuration du collecteur de données.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collection-items-transact-sql)|Obtenir des informations sur des éléments de collecte.|  
@@ -123,7 +123,7 @@ ms.locfileid: "62918571"
 |[syscollector_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql)|Obtenir des informations sur l'exécution des tâches.|  
 |[syscollector_execution_log_full &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-log-full-transact-sql)|Obtenir des informations lorsque le journal des exécutions est plein.|  
   
- **Configuration de l’accès à l’entrepôt de données de gestion**  
+ **Configuration de l'accès à l'entrepôt de données de gestion**  
   
  Le tableau suivant décrit les procédures stockées que vous pouvez utiliser pour configurer l'accès à l'entrepôt de données de gestion.  
   
@@ -132,17 +132,17 @@ ms.locfileid: "62918571"
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql)|Spécifier le nom de base de données défini dans la chaîne de connexion pour l'entrepôt de données de gestion.|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql)|Spécifier l'instance définie dans la chaîne de connexion pour l'entrepôt de données de gestion.|  
   
- **Configuration de l’entrepôt de données de gestion**  
+ **Configuration de l'entrepôt de données de gestion**  
   
  Le tableau suivant décrit les procédures stockées que vous pouvez utiliser avec la configuration de l'entrepôt de données de gestion.  
   
 |Nom de la procédure|Description|  
 |--------------------|-----------------|  
-|[Core. sp_create_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql)|Créer un instantané de collection dans l'entrepôt de données de gestion.|  
-|[Core. sp_update_data_source &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql)|Mettre à jour la source de données pour la collecte de données.|  
-|[Core. sp_add_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql)|Ajouter un type de collecteur à l'entrepôt de données de gestion.|  
-|[Core. sp_remove_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql)|Supprimer un type de collecteur de l'entrepôt de données de gestion.|  
-|[Core. sp_purge_data &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql)|Supprimer des données de l'entrepôt de données de gestion.|  
+|[core.sp_create_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql)|Créer un instantané de collection dans l'entrepôt de données de gestion.|  
+|[core.sp_update_data_source &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql)|Mettre à jour la source de données pour la collecte de données.|  
+|[core.sp_add_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql)|Ajouter un type de collecteur à l'entrepôt de données de gestion.|  
+|[core.sp_remove_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql)|Supprimer un type de collecteur de l'entrepôt de données de gestion.|  
+|[core.sp_purge_data &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql)|Supprimer des données de l'entrepôt de données de gestion.|  
   
  **Utilisation de packages de téléchargement**  
   
@@ -168,7 +168,7 @@ ms.locfileid: "62918571"
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql)|Obtenir les données du journal des exécutions [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour un package spécifique.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|Obtenir les statistiques d'exécution d'un jeu d'éléments de collecte ou d'un package. Ces informations incluent les erreurs enregistrées.|  
-|[captures instantanées. fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Obtenir les événements enregistrés lorsque le type de collecteur Trace SQL générique est utilisé pour collecter des données.|  
+|[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Obtenir les événements enregistrés lorsque le type de collecteur Trace SQL générique est utilisé pour collecter des données.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécuter une procédure stockée](../stored-procedures/execute-a-stored-procedure.md)   

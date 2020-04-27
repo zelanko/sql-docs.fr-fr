@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922553"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Concepts de programmation pour l'intégration du CLR
@@ -36,7 +36,7 @@ ms.locfileid: "62922553"
  [Vue d’ensemble de l’intégration du Common Language Runtime &#40;CLR&#41;](common-language-runtime-integration-overview.md)  
  Fournit une brève vue d'ensemble du CLR et explique comment et pourquoi cette technologie a été utilisée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Décrit les avantages liés à l'utilisation du CLR pour créer des objets de base de données.  
   
- [Assemblys &#40;Moteur de base de données&#41;](assemblies-database-engine.md)  
+ [Assemblys &#40;moteur de base de données&#41;](assemblies-database-engine.md)  
  Décrit l'utilisation d'assemblys dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] afin de déployer des fonctions, des procédures stockées, des déclencheurs, des agrégats définis par l'utilisateur et des types définis par l'utilisateur écrits dans l'un des langages de code managé hébergés par le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, et non écrits en [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  [Génération d’objets de base de données avec Common Language Runtime &#40;l’intégration du CLR&#41;](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
@@ -60,7 +60,7 @@ ms.locfileid: "62922553"
  [Surveillance et dépannage des objets de base de données managés](monitoring-and-troubleshooting-managed-database-objects.md)  
  Fournit des informations sur les outils à l'aide desquels vous pouvez surveiller et dépanner les objets de base de données et les assemblys managés s'exécutant dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
  Décrit des scénarios d'usage et des exemples de code à l'aide d'objets CLR.  
   
 ## <a name="see-also"></a>Voir aussi  

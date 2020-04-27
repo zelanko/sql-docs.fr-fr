@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893030"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
@@ -33,13 +33,13 @@ ms.locfileid: "62893030"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des délimiteurs de lignes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**CR CHARIOT**|La ligne est délimitée par une combinaison retour chariot/saut de ligne.|  
+|**{CR}{LF}**|La ligne est délimitée par une combinaison retour chariot/saut de ligne.|  
 |**CR**|La ligne est délimitée par un retour chariot.|  
-|**CHARIOT**|La ligne est délimitée par un saut de ligne.|  
+|**{LF}**|La ligne est délimitée par un saut de ligne.|  
 |**Point-virgule {;}**|La ligne est délimitée par un point-virgule.|  
-|**Deux-points { :}**|La ligne est délimitée par un deux-points.|  
+|**Deux-points {:}**|La ligne est délimitée par un deux-points.|  
 |**Point{,}**|La ligne est délimitée par une virgule.|  
 |**Tabulation {t}**|La ligne est délimitée par une tabulation.|  
 |**Barre verticale {&#124;}**|La ligne est délimitée par une barre verticale.|  
@@ -47,18 +47,18 @@ ms.locfileid: "62893030"
  **Délimiteur de colonne**  
  Effectuez une sélection dans la liste des délimiteurs de colonnes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**CR CHARIOT**|Les colonnes sont délimitées par une combinaison retour chariot/saut de ligne.|  
+|**{CR}{LF}**|Les colonnes sont délimitées par une combinaison retour chariot/saut de ligne.|  
 |**CR**|Les colonnes sont délimitées par un retour chariot.|  
-|**CHARIOT**|Les colonnes sont délimitées par un saut de ligne.|  
+|**{LF}**|Les colonnes sont délimitées par un saut de ligne.|  
 |**Point-virgule {;}**|Les colonnes sont délimitées par un point-virgule.|  
-|**Deux-points { :}**|Les colonnes sont délimitées par un deux-points.|  
+|**Deux-points {:}**|Les colonnes sont délimitées par un deux-points.|  
 |**Point{,}**|Les colonnes sont délimitées par une virgule.|  
 |**Tabulation {t}**|Les colonnes sont délimitées par une tabulation.|  
 |**Barre verticale {&#124;}**|Les colonnes sont délimitées par une barre verticale.|  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affichez dans la boîte de dialogue **aperçu des données** les résultats des options de mise en forme sélectionnées pour le fichier plat de destination.  
   
  **Modifier la transformation**  

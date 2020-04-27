@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899932"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
@@ -173,9 +173,9 @@ ms.locfileid: "62899932"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation d’extraction de terme** , cliquez sur une des rubriques suivantes :  
   
--   [Éditeur de transformation d’extraction de terme &#40;onglet extraction de terme&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet Extraction de terme&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Éditeur de transformation d’extraction de terme &#40;onglet exclusion&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet Exclusion&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
 -   [Éditeur de transformation d’extraction de terme &#40;onglet Avancé&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   

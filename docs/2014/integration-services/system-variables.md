@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927224"
 ---
 # <a name="system-variables"></a>Variables système
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d’exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
   
  Toutes les variables (système et définies par l’utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d’exécution SQL utilise pour mapper des variables à des paramètres.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62927224"
   
 |Variable système|Type de données|Description|  
 |---------------------|---------------|-----------------|  
-|**AnnulerEvénement**|Int32|Gestionnaire d'un objet d'événement Windows que la tâche peut signaler pour indiquer que la tâche doit interrompre son exécution.|  
+|**CancelEvent**|Int32|Gestionnaire d'un objet d'événement Windows que la tâche peut signaler pour indiquer que la tâche doit interrompre son exécution.|  
 |`ContainerStartTime`|DateTime|Heure de démarrage du conteneur.|  
 |**CreationDate**|DateTime|Date de création du package.|  
 |`CreatorComputerName`|String|Ordinateur sur lequel le package a été créé.|  
@@ -41,7 +41,7 @@ ms.locfileid: "62927224"
 |`ExecutionInstanceGUID`|String|Identificateur unique de l'instance exécutée d'un package.|  
 |`FailedConfigurations`|String|Noms des configurations de package ayant échoué.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
-|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package s’exécute à l' **** aide de l’utilitaire d' `False`invite de commandes dtexec, la propriété a la valeur.|  
+|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package s’exécute à l' **DTExec** aide de l’utilitaire d' `False`invite de commandes dtexec, la propriété a la valeur.|  
 |`LocaleId`|Int32|Paramètre régional utilisé par le package.|  
 |**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
 |**OfflineMode**|Boolean|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
@@ -85,7 +85,7 @@ ms.locfileid: "62927224"
 |**ExecutionStatus**|Boolean|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
 |`ExecutionValue`|DBNull|Valeur de l'exécution.|Gestionnaire d'événements OnTaskFailed|  
 |`LocaleId`|Int32|Paramètre régional utilisé par le gestionnaire d'événements.|Tous les gestionnaires d'événements|  
-|**PercentComplete**|Int32|Pourcentage de travail terminé.|Gestionnaire d'événements OnProgress|  
+|**PourcentageAchevé**|Int32|Pourcentage de travail terminé.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |`ProgressCountLow`|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
@@ -104,6 +104,6 @@ ms.locfileid: "62927224"
  Cette règle s'applique également aux variables définies par l'utilisateur. Cependant, lorsque les types de données de variables système ne peuvent pas être modifiés et si vous devez personnaliser l'utilisation de ces variables en fonction des types de données, les variables définies par l'utilisateur offrent plus de souplesse. Les variables définies par l'utilisateur qui sont utilisées dans des liaisons de paramètres sont généralement définies avec des types de données compatibles avec les types de données des paramètres auxquels elles sont mappées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL](control-flow/execute-sql-task.md)  
+ [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
   

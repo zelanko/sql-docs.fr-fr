@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890544"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Leçon 6 : Utilisation des paramètres dans le modèle de déploiement de projet
@@ -32,15 +32,15 @@ ms.locfileid: "62890544"
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
  Cette leçon contient les tâches suivantes :  
   
-1.  [Étape 1 : copie du package de la leçon 5](lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [Étape 1 : Copie du package de la leçon 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Étape 2 : Conversion du projet en modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Étape 2 : Conversion du projet en modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Étape 3 : Test du package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [Étape 3 : Test du package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Étape 4 : Déploiement du package de la Leçon 6](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [Étape 4 : Déploiement du package de la leçon 6](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
- [Étape 1 : copie du package de la leçon 5](lesson-6-1-copying-the-lesson-5-package.md)  
+ [Étape 1 : Copie du package de la leçon 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
   

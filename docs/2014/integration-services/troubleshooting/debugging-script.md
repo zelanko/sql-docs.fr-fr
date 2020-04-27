@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62926330"
 ---
 # <a name="debugging-script"></a>Script de débogage
-  Vous écrivez les scripts utilisés par la tâche de script et le composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] script dans Tools for Applications (VSTA).  
+  Vous écrivez les scripts utilisés par la tâche de script et le composant de script dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
  Vous définissez et écrivez les points d'arrêt dans VSTA. Vous pouvez gérer les points d’arrêt dans VSTA, mais également avec la boîte de dialogue **Définir des points d’arrêt** fournie par le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Pour plus d’informations, consultez [Débogage du flux de contrôle](debugging-control-flow.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62926330"
   
 ### <a name="to-set-a-breakpoint-in-visual-studio-for-applications"></a>Pour définir un point d'arrêt dans Visual Studio for Applications  
   
--   [Déboguer un script en définissant des points d'arrêt dans une tâche de script et un composant de script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
+-   [Déboguer un script en définissant des points d’arrêt dans une tâche de script et un composant de script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](troubleshooting-tools-for-package-development.md)  

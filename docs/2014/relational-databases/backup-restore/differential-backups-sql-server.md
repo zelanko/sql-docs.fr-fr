@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876187"
 ---
 # <a name="differential-backups-sql-server"></a>Sauvegardes différentielles (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "62876187"
  une sauvegarde différentielle est basée sur la sauvegarde de données complète précédente la plus récente. Une sauvegarde différentielle enregistre uniquement les modifications effectuées depuis la toute dernière sauvegarde complète. La sauvegarde complète sur laquelle une sauvegarde différentielle est basée s'appelle la *base* de la différentielle. Les sauvegardes complètes, à l'exception des sauvegardes de copie uniquement, peuvent servir de base à une série de sauvegardes différentielles, y compris les sauvegardes de base de données, partielles et de fichiers. La sauvegarde de base d'une sauvegarde différentielle de fichiers peut faire partie d'une sauvegarde complète, d'une sauvegarde de fichiers ou d'une sauvegarde partielle.  
   
   
-##  <a name="Benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
   
 -   La création d'une sauvegarde différentielle peut être très rapide par rapport à la création d'une sauvegarde complète. Une sauvegarde différentielle enregistre uniquement les modifications effectuées depuis la toute dernière sauvegarde complète sur laquelle la sauvegarde différentielle est basée. Cela facilite la réalisation de sauvegardes des données fréquentes et réduit ainsi le risque de perte de données. Toutefois, avant de restaurer une sauvegarde différentielle, vous devez restaurer la base associée. Par conséquent, la restauration à partir d'une sauvegarde différentielle nécessitera plus de mesures et de temps que la restauration à partir d'une sauvegarde complète, car deux fichiers de sauvegarde sont requis.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62876187"
   
 -   En mode de récupération complète, l'utilisation des sauvegardes différentielles peut réduire le nombre de sauvegardes de journaux à restaurer.  
   
-##  <a name="Overview"></a>Vue d’ensemble des sauvegardes différentielles  
+##  <a name="overview-of-differential-backups"></a><a name="Overview"></a> Vue d'ensemble des sauvegardes différentielles  
  Une sauvegarde différentielle capture l’état de toutes les *extensions* (collections de huit pages physiquement contiguës) qui ont changé entre la création de la base différentielle et celle de la sauvegarde différentielle. Cela signifie que la taille d'une sauvegarde différentielle donnée dépend de la quantité de données qui a changé depuis la base. De manière générale, plus une base est ancienne, plus une nouvelle sauvegarde différentielle est volumineuse. Dans une série de sauvegardes différentielles, une extension fréquemment mise à jour contiendra probablement des données différentes dans chaque sauvegarde différentielle.  
   
  La figure ci-dessous illustre le fonctionnement d'une sauvegarde différentielle. La figure montre 24 extensions de données, dont six ont changé. La sauvegarde différentielle contient seulement ces six extensions de données. L'opération de sauvegarde différentielle s'appuie sur une page bitmap qui contient un bit pour chaque extension. Pour chaque extension mise à jour depuis la base, le bit a la valeur 1 dans le bitmap.  
@@ -53,7 +53,7 @@ ms.locfileid: "62876187"
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Sauvegardes différentielles de bases de données avec des tables mémoire optimisées  
  Pour plus d’informations sur les sauvegardes différentielles et les bases de données avec les tables optimisées en mémoire, consultez [Sauvegarde d’une base de données avec des tables optimisées en mémoire](../in-memory-oltp/memory-optimized-tables.md).  
   
-##  <a name="ReadOnlyDbs"></a>Sauvegardes différentielles de bases de données en lecture seule  
+##  <a name="differential-backups-of-read-only-databases"></a><a name="ReadOnlyDbs"></a> Sauvegardes différentielles des bases de données en lecture seule  
  Pour les bases de données en lecture seule, les sauvegardes complètes utilisées seules sont plus aisées à gérer que lorsqu'elles sont utilisées avec des sauvegardes différentielles. Lorsqu'une base de données est en lecture seule, les opérations de sauvegarde et les autres opérations ne peuvent pas modifier les métadonnées contenues dans le fichier. Ainsi, les métadonnées nécessaires à une sauvegarde différentielle, telles que le numéro séquentiel dans le journal de début de la sauvegarde différentielle (LSN de base différentiel), sont stockées dans la base de données **master** . Si la base différentielle s'effectue lorsque la base de données est en lecture seule, la bitmap différentielle indique un nombre de modifications qui est supérieur au nombre réel depuis la sauvegarde de base. Les données supplémentaires sont lues par la sauvegarde mais ne sont pas écrites dans celle-ci, car **differential_base_lsn** stocké dans la table système [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) sert à déterminer si les données ont changé depuis la base.  
   
  Lorsqu'une base de données en lecture seule est reconstruite, restaurée ou détachée et rattachée, les informations de base différentielle sont perdues. Cela tient au fait que la base de données **master** n'est pas synchronisée avec la base de données utilisateur. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne peut pas détecter, ni éviter ce problème. Les sauvegardes différentielles suivantes ne reposent pas sur la dernière sauvegarde complète et peuvent fournir des résultats inattendus. Pour créer une base différentielle, nous vous recommandons de créer une sauvegarde complète de la base de données.  
@@ -65,7 +65,7 @@ ms.locfileid: "62876187"
   
  Si vous détachez et attachez une base de données en lecture seule pour laquelle vous envisagez ensuite d’utiliser des sauvegardes différentielles, créez dès que possible une sauvegarde complète de la base de données en lecture seule et de la base de données **master** .  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   

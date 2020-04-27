@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891286"
 ---
-# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Étape 5 : Test de la leçon 4 du Package du didacticiel
+# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Étape 5 : Test du package du tutoriel de la leçon 4
   Au moment de l'exécution, le fichier corrompu, Currency_BAD.txt, ne parvient pas à générer une correspondance avec la transformation de recherche Currency Key. Du fait que la sortie d'erreur de la transformation de recherche Currency Key a été configurée en vue de réacheminer les lignes qui ont échoué vers une nouvelle destination de lignes échouées, le composant n'échoue pas et le package s'exécute correctement. Toutes les lignes qui ont échoué sont enregistrées dans le fichier ErrorOutput.txt.  
   
  Au cours de cette tâche, vous allez tester la configuration de sortie d'erreur révisée en exécutant le package. Une fois le package exécuté, vous visualiserez le contenu du fichier ErrorOutput.txt.  
@@ -34,7 +34,7 @@ ms.locfileid: "62891286"
   
  **Flux de données**  
   
- ![Transmission de données dans le package](../../2014/tutorials/media/task5lesson5data.gif "Transmission de données dans le package")  
+ ![Flux de données dans le package](../../2014/tutorials/media/task5lesson5data.gif "Flux de données dans le package")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Pour exécuter le package du didacticiel Lesson 4  
   

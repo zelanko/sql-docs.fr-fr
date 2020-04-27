@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899447"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guide de référence des erreurs et des événements (Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899447"
 |DTS_E_CONNECTIONNOTFOUND|Indique que le package ne peut pas s'exécuter parce que le gestionnaire de connexions spécifié est introuvable.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indique que le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] doit se connecter à une source de données pour récupérer de nouvelles métadonnées ou des métadonnées mises à jour pour une source ou une destination, et qu’il n’est pas en mesure de se connecter à la source de données.|  
 |DTS_E_MULTIPLECACHEWRITES|Indique que le package ne peut pas s'exécuter en raison de la tentative d'écriture d'une transformation du cache dans le cache en mémoire. Toutefois, une autre transformation du cache a déjà écrit dans le cache en mémoire.|  
-|DTS_E_PRODUCTLEVELTOLOW|Indique que le package ne peut pas s’exécuter car la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] version appropriée de n’est pas installée.|  
+|DTS_E_PRODUCTLEVELTOLOW|Indique que le package ne peut pas s’exécuter car la version appropriée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n’est pas installée.|  
 |DTS_E_READNOTFILLEDCACHE|Indique qu'une transformation de recherche tente de lire des données dans le cache en mémoire en même temps que la transformation du cache écrit les données dans le cache.|  
 |DTS_E_UNPROTECTXMLFAILED|Indique que le système n'a pas déchiffré un nœud XML protégé.|  
 |DTS_E_WRITEWHILECACHEINUSE|Indique qu'une transformation de cache tente d'écrire des données dans le cache en mémoire en même temps qu'une transformation de recherche lit les données dans le cache en mémoire.|  

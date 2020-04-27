@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891055"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : activation et configuration des configurations de package
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : Activation et configuration des configurations de package
   Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété `Directory` du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Pour créer une nouvelle variable de niveau package mappée à la propriété Directory  
@@ -26,7 +26,7 @@ ms.locfileid: "62891055"
   
 2.  Dans le menu [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur **Variables**.  
   
-3.  Dans la fenêtre **Variables** , cliquez sur l’icône Ajouter une variable .  
+3.  Dans la fenêtre **Variables** , cliquez sur l’icône Ajouter une variable.  
   
 4.  Dans la zone **Nom** , tapez **varFolderName**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62891055"
   
 8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(...)**.  
   
-9. Dans l' **éditeur d’expressions**de la propriété, **** cliquez dans la liste propriété `Directory`, puis sélectionnez.  
+9. Dans l' **éditeur d’expressions**de la propriété, **Property** cliquez dans la liste propriété `Directory`, puis sélectionnez.  
   
 10. Dans la zone **expression** , cliquez sur le bouton de sélection **(...)**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62891055"
   
 ### <a name="to-enable-package-configurations"></a>Pour activer les configurations de package  
   
-1.  Dans le **menu Projet**, cliquez sur **convertir en modèle de déploiement de package**.  
+1.  Dans le menu **Projet**, cliquez sur **Convertir en modèle de déploiement de package**.  
   
 2.  Cliquez sur **OK** dans la boîte de dialogue d’avertissement et, une fois la conversion terminée, cliquez sur **OK** dans la boîte de dialogue **Convertir en modèle de déploiement de package** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62891055"
   
 5.  Dans la boîte de dialogue **Bibliothèque des configurations du package** , sélectionnez **Activer les configurations du package**et cliquez sur **Ajouter**.  
   
-6.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
+6.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant**.  
   
 7.  Dans la page **Sélectionner le type de configuration** , vérifiez que **Type de configuration** a la valeur **Fichier de configuration XML**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62891055"
   
 10. Dans la boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** , tapez **SSISTutorial** dans la zone **Nom de fichier**, puis cliquez sur **Enregistrer**.  
   
-11. Dans la page **Sélectionner le type de configuration** , cliquez sur **suivant.**  
+11. Dans la page **Sélectionner le type de configuration** , cliquez sur **Suivant**.  
   
 12. Dans la **page Sélectionner les propriétés à exporter** , dans le volet **objets** , développez **variables**, **varFolderName**, **Propriétés**, puis sélectionnez **valeur**.  
   
@@ -105,6 +105,6 @@ ms.locfileid: "62891055"
 3.  Dans le `New Sample Data` dossier, collez les fichiers copiés.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : modification de la valeur de configuration de la propriété Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Étape 3 : Modification de la valeur de configuration de la propriété Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

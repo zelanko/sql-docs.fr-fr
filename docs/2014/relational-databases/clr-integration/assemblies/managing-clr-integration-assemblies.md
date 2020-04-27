@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919693"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestion des assemblys d'intégration du CLR
@@ -33,7 +33,7 @@ ms.locfileid: "62919693"
 |assembly_id|Identificateur défini pour l'assembly. Ce numéro est affecté à tous les objets se rapportant au même assembly.|  
 |name|Nom de l'objet.|  
 |file_id|Numéro identifiant chaque objet (le premier objet associé à un `assembly_id` possède la valeur 1). Si plusieurs objets sont associés au même `assembly_id`, chaque valeur `file_id` suivante est alors incrémentée de 1.|  
-|Contenu|Représentation hexadécimale de l'assembly ou du fichier.|  
+|contenu|Représentation hexadécimale de l'assembly ou du fichier.|  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Création d'un assembly](creating-an-assembly.md)  

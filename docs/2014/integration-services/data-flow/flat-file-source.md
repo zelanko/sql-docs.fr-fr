@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902437"
 ---
 # <a name="flat-file-source"></a>Source de fichier plat
@@ -57,9 +57,9 @@ ms.locfileid: "62902437"
   
 -   [Éditeur de source de fichier plat &#40;page Gestionnaire de connexions&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source de fichier plat &#40;page colonnes&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Éditeur de source de fichier plat &#40;page Colonnes&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Éditeur de source de fichier plat &#40;page sortie d’erreur&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Éditeur de source de fichier plat &#40;page Sortie d’erreur&#41;](../flat-file-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

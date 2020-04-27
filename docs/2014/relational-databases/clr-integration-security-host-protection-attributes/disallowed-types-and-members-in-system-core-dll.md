@@ -11,14 +11,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919562"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Types et membres interdits dans System.Core.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmation CLR (Common Language Integration) interdit l’utilisation d’un type ou d’un membre ayant `HostProtectionAttribute` un qui spécifie une `System.Security.Permissions.HostProtectionResource` énumération avec `ExternalProcessMgmt`la `ExternalThreading`valeur `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, ****,, `Synchronization`SharedState, `UI`ou. Le tableau suivant répertorie les membres et les types des assemblys System.Core.dll dont les valeurs d'attribut de protection de l'hôte (HPA) sont interdites.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmation CLR (Common Language Integration) interdit l’utilisation d’un type ou d’un membre ayant `HostProtectionAttribute` un qui spécifie une `System.Security.Permissions.HostProtectionResource` énumération avec `ExternalProcessMgmt`la `ExternalThreading`valeur `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**,, `Synchronization`SharedState, `UI`ou. Le tableau suivant répertorie les membres et les types des assemblys System.Core.dll dont les valeurs d'attribut de protection de l'hôte (HPA) sont interdites.  
   
 > [!NOTE]  
 >  Cette liste a été générée à partir des assemblys pris en charge. Pour plus d’informations, consultez [.NET Framework les bibliothèques prises en charge](../clr-integration/database-objects/supported-net-framework-libraries.md).  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919304"
 ---
 # <a name="getting-information-about-assemblies"></a>Obtention d'informations sur les assemblys
@@ -34,7 +34,7 @@ ms.locfileid: "62919304"
   
  **Pour obtenir des informations sur les fichiers d'assembly, notamment sur les fichiers de débogage, les fichiers sources et les binaires d'assembly**  
   
--   [sys. assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
+-   [sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
   
  **Pour obtenir des informations sur les références croisées d'assembly**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62919304"
   
  **Pour obtenir des informations d'assembly sur les types définis par l'utilisateur**  
   
--   [sys. assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
+-   [sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
   
 -   [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   

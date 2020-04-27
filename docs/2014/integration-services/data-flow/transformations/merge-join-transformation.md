@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900165"
 ---
 # <a name="merge-join-transformation"></a>transformation de jointure de fusion
@@ -64,7 +64,7 @@ ms.locfileid: "62900165"
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de transformation de jointure de fusion](../../merge-join-transformation-editor.md)   
  [Transformation de fusion](merge-transformation.md)   
- [Transformation d'union totale](union-all-transformation.md)   
+ [Transformation d’Union totale](union-all-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   
   

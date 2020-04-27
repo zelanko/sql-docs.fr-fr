@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916945"
 ---
 # <a name="model-database"></a>model, base de données
@@ -89,7 +89,7 @@ ms.locfileid: "62916945"
   
 -   Modification du classement. Le classement par défaut est le classement du serveur.  
   
--   Modification du propriétaire de la base de données. le **modèle** appartient à **sa**.  
+-   Modification du propriétaire de la base de données. La base de données**model** appartient à **sa**.  
   
 -   Suppression de la base de données  
   

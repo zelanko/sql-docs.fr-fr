@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901186"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modifier la requête de la source OData à l'exécution
-  Vous pouvez modifier la requête de source OData au moment de l’exécution en ajoutant une expression à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
+  Vous pouvez modifier la requête de la source OData à l’exécution en ajoutant une expression à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
   
  Notez que les colonnes doivent être identiques à celles utilisées au moment de la conception ; sinon vous obtiendrez une erreur lors de l'exécution du package. Veillez à spécifier les mêmes colonnes (dans le même ordre) lorsque vous utilisez l'option de requête $select. Une alternative plus sûre à l’utilisation de l’option $select est de désélectionner les colonnes que vous ne souhaitez pas utiliser directement de l’interface utilisateur du composant source.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62901186"
   
 5.  Cliquez sur... bouton (points de suspension) pour l' **expression**.  
   
-6.  Entrez l’ **expression**.  
+6.  Entrez l' **expression**.  
   
 7.  Cliquez sur **OK**.  
   

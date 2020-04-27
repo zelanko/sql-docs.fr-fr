@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877122"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération simple)
@@ -36,10 +36,10 @@ ms.locfileid: "62877122"
 > [!NOTE]  
 >  Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="Overview"></a>Vue d’ensemble de la restauration de base de données en mode de récupération simple  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Vue d'ensemble de la restauration de la base de données en mode de récupération simple  
  Une restauration de base de données complète en mode de récupération simple s'effectue à l'aide d'une ou de deux instructions [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , selon qu'il faille ou non restaurer une sauvegarde de base de données différentielle. Si vous utilisez uniquement une sauvegarde complète de base de données, restaurez simplement la sauvegarde la plus récente, tel qu'indiqué dans l'illustration suivante.  
   
- ![Restauration d'une sauvegarde complète de base de données uniquement](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restauration d'une sauvegarde complète de base de données uniquement")  
+ ![Restauration d’une sauvegarde de base de données complète uniquement](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restauration d’une sauvegarde de base de données complète uniquement")  
   
  Si vous utilisez également une sauvegarde de base de données différentielle, restaurez la sauvegarde complète de base de données la plus récente sans récupérer la base de données, puis restaurez la sauvegarde de base de données différentielle la plus récente et récupérez la base de données. L'illustration ci-dessous montre ce processus.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62877122"
 > [!NOTE]  
 >  Si vous envisagez de restaurer une sauvegarde de base de données sur une instance de serveur différente, consultez [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Syntaxe de base de l'instruction Transact-SQL RESTORE  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Syntaxe de base de l'instruction Transact-SQL RESTORE  
  La syntaxe [!INCLUDE[tsql](../../../includes/tsql-md.md)][RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) de base pour la restauration d’une sauvegarde complète de base de données est :  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
@@ -60,7 +60,7 @@ ms.locfileid: "62877122"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a>Exemple (Transact-SQL)  
  L'exemple ci-dessous illustre d'abord l'utilisation de l'instruction [BACKUP](/sql/t-sql/statements/backup-transact-sql) pour créer une sauvegarde complète et une sauvegarde différentielle de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . L'exemple restaure ensuite ces sauvegardes dans l'ordre. La base de données est restaurée dans l'état qui était le sien à la fin de la sauvegarde différentielle de base de données.  
   
  L'exemple illustre les options importantes d'une séquence de restauration dans le cadre d'un scénario de restauration complète de base de données. Une *séquence de restauration* consiste en une ou plusieurs opérations de restauration déplaçant des données entre une ou plusieurs phases de restauration. La syntaxe et les détails qui ne sont pas pertinents sont omis. Si vous récupérez une base de données, nous vous recommandons de spécifier explicitement l'option RECOVERY par souci de clarté, bien qu'il s'agisse de l'option par défaut.  
@@ -94,7 +94,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour restaurer une sauvegarde complète de base de données**  
   
 -   [Restaurer une sauvegarde de base de données en mode de récupération simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
@@ -117,7 +117,7 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [Sauvegardes complètes de base de données &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

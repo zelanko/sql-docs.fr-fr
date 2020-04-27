@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889302"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) dans un cluster
@@ -29,7 +29,7 @@ ms.locfileid: "62889302"
 ## <a name="understanding-the-disadvantages-of-configuring-integration-services-as-a-cluster-resource"></a>Inconvénients de la configuration d'Integration Services en tant que ressource de cluster  
  La configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en tant que ressource de cluster présente certains inconvénients potentiels, indiqués ci-dessous :  
   
--   Lorsqu'un basculement a lieu, l'exécution des packages ne redémarre pas. Vous pouvez récupérer des échecs de package en redémarrant les packages à partir des points de contrôle. Vous pouvez effectuer le redémarrage à partir des points de contrôle sans configurer le service en tant que ressource de cluster. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../packages/restart-packages-by-using-checkpoints.md).  
+-   Lorsqu'un basculement a lieu, l'exécution des packages ne redémarre pas. Vous pouvez récupérer des échecs de package en redémarrant les packages à partir des points de contrôle. Vous pouvez effectuer le redémarrage à partir des points de contrôle sans configurer le service en tant que ressource de cluster. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 -   Lorsque vous configurez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans un groupe de ressources différent de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous ne pouvez pas utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] à partir d’ordinateurs clients pour gérer les packages stockés dans la base de données msdb. Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut pas déléguer d’informations d’identification dans ce scénario à deux tronçons.  
   

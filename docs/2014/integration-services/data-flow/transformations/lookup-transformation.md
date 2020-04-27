@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900223"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
@@ -53,7 +53,7 @@ ms.locfileid: "62900223"
   
 -   DB2  
   
- La transformation de recherche essaie de réaliser une équijointure entre les valeurs de l'entrée de transformation et celles du dataset de référence. (Une équijointure signifie que chaque ligne de l'entrée de transformation doit correspondre à au moins une ligne du dataset de référence.) Si une équijointure n'est pas possible, la transformation de recherche effectue l'une des actions suivantes :  
+ La transformation de recherche essaie de réaliser une équijointure entre les valeurs de l'entrée de transformation et celles du dataset de référence. (Une équijointure signifie que chaque ligne de l'entrée de transformation doit correspondre à au moins une ligne du dataset de référence.) Si une équijointure n'est pas possible, la transformation de recherche effectue l'une des actions suivantes :  
   
 -   En l'absence d'entrée correspondante dans le dataset de référence, aucune jointure n'est réalisée. Par défaut, la transformation de recherche traite les lignes sans entrées correspondantes comme des erreurs. Toutefois, vous pouvez configurer la transformation de recherche pour rediriger ces lignes vers une sortie sans correspondance. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Général&#41;](../../lookup-transformation-editor-general-page.md) et [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../lookup-transformation-editor-error-output-page.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62900223"
   
 -   ***Partager le fichier cache entre plusieurs packages. Pour plus d’informations, consultez***  [implémenter une transformation de recherche en mode cache complet à l’aide du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
--   Déployez le fichier cache avec un package. ***Vous pouvez ensuite utiliser les données sur plusieurs ordinateurs.*** Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Déployez le fichier cache avec un package. ***Vous pouvez alors utiliser les données sur plusieurs ordinateurs.*** Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Utilisez la source de fichier brut pour lire les données du fichier cache. Vous pouvez alors utiliser d'autres composants de flux de données pour transformer ou déplacer les données. Pour plus d’informations, consultez [Source de fichier brut](../raw-file-source.md).  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62900223"
   
      Cette option de mise en cache est compatible avec l’option sans mise en cache qui est disponible pour la transformation de recherche dans [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diffèrent par leur manière de comparer les chaînes. Si la transformation de recherche est configurée pour charger le dataset de référence dans le cache avant l’exécution de la transformation de recherche, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] effectue la comparaison de recherche dans le cache. Autrement, l’opération de recherche utilise une instruction SQL paramétrable et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue la comparaison de recherche. Cela signifie que la transformation de recherche peut retourner un nombre différent de correspondances à partir de la même table de recherche, selon le type de cache.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diffèrent par leur manière de comparer les chaînes. Si la transformation de recherche est configurée pour charger le dataset de référence dans le cache avant l’exécution de la transformation de recherche, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] effectue la comparaison de recherche dans le cache. Autrement, l’opération de recherche utilise une instruction SQL paramétrable et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue la comparaison de recherche. Cela signifie que la transformation de recherche peut retourner un nombre différent de correspondances à partir de la même table de recherche, selon le type de cache.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations, consultez les rubriques suivantes.  
@@ -143,7 +142,7 @@ ms.locfileid: "62900223"
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche floue](fuzzy-lookup-transformation.md)   
  [Transformation de recherche de terme](term-lookup-transformation.md)   
- [Flux de données](../data-flow.md)   
+ [Transmission de données](../data-flow.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   
   

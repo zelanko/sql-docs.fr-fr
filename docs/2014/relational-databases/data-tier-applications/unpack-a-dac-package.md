@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917989"
 ---
 # <a name="unpack-a-dac-package"></a>Décompresser un package DAC
@@ -29,10 +29,10 @@ ms.locfileid: "62917989"
   
 2.  **Pour décompresser une DAC, à l’aide de la**  [boîte de dialogue Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d’un package DAC](#ExamDACPack)  
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser une DAC provenant d'une source inconnue ou non approuvée, déployez-la sur une instance de test isolée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], décompressez la DAC et examinez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  
   
-##  <a name="UnpackDACDial"></a> Boîte de dialogue Décompresser une application de la couche Données  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> Boîte de dialogue Décompresser une application de la couche Données  
  **Pour décompresser un fichier de package DAC**  
   
 -   Dans l’ **Explorateur Windows**, accédez à l’emplacement d’un fichier de package DAC (.dacpac).  
@@ -49,7 +49,7 @@ ms.locfileid: "62917989"
   
     -   [Rechercher un dossier](#Browse)  
   
-###  <a name="Unpack"></a> Décompresser un fichier de package DAC Microsoft SQL Server  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> Décompresser un fichier de package DAC Microsoft SQL Server  
  Utilisez cette page pour spécifier le dossier de destination dans lequel placer les fichiers non compressés, puis exécuter l'opération de décompression.  
   
  **Les fichiers seront décompressés dans ce dossier :** - Spécifiez le chemin complet du dossier pour les fichiers non compressés. Si le dossier existe et que vous connaissez le chemin d'accès complet, tapez le chemin d'accès dans la zone. Autrement, cliquez sur le bouton **Parcourir** pour accéder à un dossier ou créer un dossier.  
@@ -60,7 +60,7 @@ ms.locfileid: "62917989"
   
  **Annuler** - Ferme la boîte de dialogue sans décompresser le package DAC.  
   
-###  <a name="Browse"></a> Rechercher un dossier  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> Rechercher un dossier  
  Utilisez cette page pour choisir le dossier de destination pour l'opération de décompression. Vous pouvez également créer un dossier.  
   
  **Liste de dossiers** - Affiche la hiérarchie des fichiers de votre ordinateur. Développez les nœuds pour accéder au dossier dans lequel décompresser le package DAC. Cliquez sur le dossier, puis cliquez sur **OK**.  
@@ -71,7 +71,7 @@ ms.locfileid: "62917989"
   
  **Annuler** - Ferme la boîte de dialogue sans sélectionner de dossier.  
   
-##  <a name="ExamDACPack"></a> Examen du contenu d'un package DAC  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> Examen du contenu d'un package DAC  
  Après avoir décompressé le package, vous pouvez examiner les fichiers produits par la boîte de dialogue **Décompresser une application de la couche Données** . La boîte de dialogue génère les fichiers suivants dans le dossier de destination sélectionné :  
   
 1.  un script Transact-SQL qui contient les instructions pour la création des objets définis dans la DAC ; Le nom de fichier est *DACName*.sql, où *DACName* correspond au nom de la DAC.  

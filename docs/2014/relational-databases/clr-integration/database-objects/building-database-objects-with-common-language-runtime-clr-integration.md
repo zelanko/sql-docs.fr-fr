@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919252"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Génération d'objets de base de données à l'aide de l'intégration du CLR (Common Language Runtime)
@@ -65,7 +65,7 @@ ms.locfileid: "62919252"
  [Types CLR définis par l'utilisateur](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Explique comment implémenter et utiliser les types CLR définis par l'utilisateur.  
   
- [Procédures stockées du CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)  
+ [Procédures stockées CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)  
  Explique comment implémenter et utiliser les procédures stockées CLR.  
   
  [Déclencheurs CLR](../../../database-engine/dev-guide/clr-triggers.md)  

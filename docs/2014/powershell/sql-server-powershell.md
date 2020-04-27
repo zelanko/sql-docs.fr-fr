@@ -11,19 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922583"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prend en charge Windows PowerShell, un environnement de script puissant qui permet aux administrateurs et aux développeurs d'automatiser l'administration de serveurs et le déploiement d'applications. Le langage Windows PowerShell prend en charge une logique plus complexe que les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , ce qui permet aux administrateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de générer des scripts d'administration fiables. Les scripts Windows PowerShell peuvent également être utilisés pour administrer d'autres produits serveur [!INCLUDE[msCoName](../includes/msconame-md.md)] . Cela fournit aux administrateurs un langage de script commun entre les serveurs.  
   
 ## <a name="sql-server-powershell-components"></a>Composants de SQL Server PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un module Windows PowerShell nommé `sqlps` utilisé pour importer les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans un environnement ou un script Windows PowerShell 2.0. Le module `sqlps` charge deux composants logiciels enfichables Windows PowerShell qui implémentent les éléments suivants :  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un module Windows PowerShell nommé `sqlps` utilisé pour importer les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans un environnement ou un script Windows PowerShell 2.0. Le module `sqlps` charge deux composants logiciels enfichables Windows PowerShell qui implémentent les éléments suivants :  
   
 -   Un fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , qui active un mécanisme de navigation simple semblable aux chemins d'accès de système de fichiers. Vous pouvez générer des chemins d'accès semblables aux chemins d'accès de système de fichiers, où le lecteur est associé à un modèle SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) et les nœuds sont basés sur les classes du modèle objet. Vous pouvez ensuite utiliser des commandes familières telles que **cd** et **dir** pour naviguer parmi les chemins d’accès de la même façon que vous naviguez parmi des dossiers dans une fenêtre d’invite de commandes. Vous pouvez utiliser d’autres commandes, telles que **ren** ou **del**, pour exécuter des actions sur les nœuds du chemin d’accès.  
   
@@ -45,8 +43,8 @@ ms.locfileid: "62922583"
 |Explique comment utiliser le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans une hiérarchie d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Fournisseur SQL Server PowerShell](sql-server-powershell-provider.md)|  
 |Explique comment utiliser les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui spécifient des actions du [!INCLUDE[ssDE](../includes/ssde-md.md)] , telles que l'exécution d'un script [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Utiliser les applets de commande du Moteur de base de données](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Explique comment spécifier des identificateurs délimités [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui contiennent des caractères non pris en charge par Windows PowerShell.|[Identificateurs SQL Server dans PowerShell](sql-server-identifiers-in-powershell.md)|  
-|Explique comment établir des connexions d'authentification SQL Server. Par défaut, les composants SQL Server PowerShell utilisent des connexions d'authentification Windows à l'aide des informations d'identification Windows du processus exécutant Windows PowerShell.|[Gérer l’authentification dans le moteur de base de données PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Explique comment établir des connexions d'authentification SQL Server. Par défaut, les composants SQL Server PowerShell utilisent des connexions d'authentification Windows à l'aide des informations d'identification Windows du processus exécutant Windows PowerShell.|[Gérer l'authentification dans le moteur de base de données PowerShell](manage-authentication-in-database-engine-powershell.md)|  
 |Explique comment utiliser des variables implémentées par le fournisseur SQL Server PowerShell pour contrôler le nombre d'objets répertoriés lors de l'utilisation de la saisie semi-automatique par tabulation Windows PowerShell. Cela est particulièrement utile lorsque vous travaillez sur des bases de données qui contiennent un grand nombre d'objets.|[Gérer la saisie semi-automatique par tabulation &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
-|Explique comment utiliser Get-Help pour obtenir des informations sur les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans l'environnement Windows PowerShell.|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
+|Explique comment utiliser Get-Help pour obtenir des informations sur les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans l'environnement Windows PowerShell.|[Obtenir de l'aide sur SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
   
   

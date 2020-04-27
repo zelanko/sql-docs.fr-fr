@@ -11,14 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890592"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW consiste en un jeu de trois composants qui vous permettent d'extraire ou de charger des données dans un système SAP Netweaver BW version 7.  
   
 > [!IMPORTANT]  
@@ -28,8 +27,7 @@ ms.locfileid: "62890592"
 >  Vous devez disposer d'une licence SAP supplémentaire pour extraire des données à partir de SAP Netweaver BW. Vérifiez auprès de SAP.  
   
 ## <a name="components"></a>Components  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW comprend les composants suivants :  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW comprend les composants suivants :  
   
 -   **Source SAP BW** : la source SAP BW est un composant source de flux de données qui vous permet d’extraire des données d’un système SAP Netweaver BW version 7.  
   

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919168"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrictions applicables aux connexions normales et contextuelles
@@ -34,8 +34,7 @@ ms.locfileid: "62919168"
   
 -   Le traitement par lot des mises à jour dans une connexion contextuelle n'est pas pris en charge  
   
--   
-  `SqlNotificationRequest` ne peut pas être utilisé avec les commandes qui s'exécutent contre une connexion contextuelle.  
+-   `SqlNotificationRequest` ne peut pas être utilisé avec les commandes qui s'exécutent contre une connexion contextuelle.  
   
 -   L'annulation des commandes qui s'exécutent contre la connexion contextuelle n'est pas prise en charge. La méthode `SqlCommand.Cancel` ignore la demande silencieusement.  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892435"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Étape 2 : Ajout et configuration de la journalisation
+# <a name="step-2-adding-and-configuring-logging"></a>Étape 2 : Activation et configuration du mode d’écriture dans un journal
   Dans cette tâche, vous allez activer la journalisation pour le flux de données dans le package Lesson 3.dtsx. Vous allez ensuite configurer un module fournisseur d'informations pour les fichiers texte, pour enregistrer les événements PipelineExecutionPlan et PipelineExecuteTrees. Le module fournisseur d'informations pour les fichiers texte crée des journaux faciles à créer et à déplacer. La simplicité de ces fichiers journaux les rend particulièrement utiles pendant la phase de test de base d'un package. Vous pouvez également consulter les entrées du journal dans la fenêtre Journaux d'événements du Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Pour activer le mode d'écriture dans un journal pour le package  
@@ -28,7 +28,7 @@ ms.locfileid: "62892435"
   
 3.  Sous l’onglet **Fournisseurs et journaux** , dans la zone **Type de fournisseur** , sélectionnez **Module fournisseur d’informations SSIS pour les fichiers texte**, puis cliquez sur **Ajouter**.  
   
-     Integration Services ajoute un nouveau module fournisseur d’informations de journalisation de fichier texte au package avec le nom par défaut module **fournisseur d’informations SSIS pour les fichiers texte**. Vous pouvez maintenant configurer le nouveau module fournisseur d'informations.  
+     Integration Services ajoute un nouveau module fournisseur d’informations pour les fichiers texte au package avec le nom par défaut : **Module fournisseur d’informations SSIS pour les fichiers texte**. Vous pouvez maintenant configurer le nouveau module fournisseur d'informations.  
   
 4.  Dans la colonne **nom** , tapez `Lesson 3 Log File`.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "62892435"
 14. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 3 : Test de la leçon 3 du package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Étape 3 : Test du package du tutoriel de la leçon 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

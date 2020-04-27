@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917200"
 ---
 # <a name="database-properties-query-store-page"></a>Propriétés de la base de données (page Magasin de requêtes)
@@ -24,7 +24,7 @@ ms.locfileid: "62917200"
   
 ||  
 |-|  
-|**S’applique à**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**S'applique à**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## <a name="options"></a>Options  
  Activer  
@@ -63,7 +63,7 @@ ms.locfileid: "62917200"
  La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes peut être configuré à l'aide de la page de propriétés de la base de données du magasin de requêtes ou de l’option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) . Le magasin de requêtes présente les informations via la boîte de dialogue [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Pour plus d'informations sur le magasin de requêtes, consultez [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
+ [Magasin des requêtes des procédures stockées &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
  [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

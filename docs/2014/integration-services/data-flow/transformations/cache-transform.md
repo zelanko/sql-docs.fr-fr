@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900794"
 ---
 # <a name="cache-transform"></a>Transformation du cache
@@ -56,7 +56,7 @@ ms.locfileid: "62900794"
  Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformations Integration Services](integration-services-transformations.md)   
+ [Transformations de Integration Services](integration-services-transformations.md)   
  [Flux de données](../data-flow.md)  
   
   

@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894763"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Enregistrer et exécuter le package (Assistant Importation et Exportation SQL Server)
   Utilisez la boîte de dialogue **enregistrer et exécuter le package** pour exécuter le package immédiatement, l’enregistrer pour l’exécuter ultérieurement, ou les deux.  
   
 > [!NOTE]  
->  Si vous arrêtez un package avant la fin de son exécution, le package n’est pas enregistré, même si vous avez activé la case à cocher **Enregistrer** .  
+>   Si vous arrêtez un package avant la fin de son exécution, il n'est alors pas enregistré même si vous avez coché la case **Enregistrer** .  
   
  Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   

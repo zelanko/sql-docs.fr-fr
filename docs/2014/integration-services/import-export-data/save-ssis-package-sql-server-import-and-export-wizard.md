@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892751"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62892751"
  **Description**  
  Permet de décrire le package. En règle générale, décrivez le package par rapport à sa fonction pour le rendre descriptif et faciliter sa gestion.  
   
- **Indicatif**  
+ **Cible**  
  Permet d'afficher la cible ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou fichier) définie préalablement pour le fichier de destination.  
   
 ## <a name="target-dynamic-options"></a>Options dynamiques de la cible  

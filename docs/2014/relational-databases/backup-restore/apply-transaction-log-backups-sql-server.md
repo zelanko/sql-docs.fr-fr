@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922931"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Appliquer les sauvegardes du journal de transactions (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62922931"
   
  Cette rubrique décrit l'application de sauvegardes du journal des transaction dans le cadre de la restauration d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Conditions requises pour la restauration des sauvegardes du journal des transactions](#Requirements)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922931"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Requirements"></a>Conditions requises pour la restauration des sauvegardes du journal des transactions  
+##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a>Conditions requises pour la restauration des sauvegardes du journal des transactions  
  Pour appliquer une sauvegarde du journal des transactions, les conditions suivantes doivent être remplies :  
   
 -   **Sauvegardes de journal en nombre suffisant pour une séquence de restauration** Vous devez disposer de suffisamment d'enregistrements de journal sauvegardés pour exécuter une séquence de restauration. Les sauvegardes de journal nécessaires, notamment la [sauvegarde de la fin du journal](tail-log-backups-sql-server.md) le cas échéant, doivent être disponibles avant le début de la séquence de restauration.  
@@ -50,7 +50,7 @@ ms.locfileid: "62922931"
     > [!TIP]  
     >  Il est recommandé de restaurer toutes les sauvegardes des journaux (RESTORE LOG *nom_base_de_données* WITH NORECOVERY). Ensuite, après la restauration de la dernière sauvegarde du journal, récupérez la base de données dans une opération séparée (RESTORE DATABASE *nom_base_de_données* WITH RECOVERY).  
   
-##  <a name="RecoveryAndTlogs"></a>Récupération et journaux des transactions  
+##  <a name="recovery-and-transaction-logs"></a><a name="RecoveryAndTlogs"></a>Récupération et journaux des transactions  
  Lorsque vous terminez l'opération de restauration et récupérez la base de données, la récupération annule toutes les transactions incomplètes. Cette phase se nomme *phase de restauration*. Cette opération est nécessaire pour restaurer l'intégrité de la base de données. Après la restauration, la base de données passe en ligne, et aucune autre sauvegarde du journal des transactions ne peut être appliquée à la base de données.  
   
  Par exemple, une série de sauvegardes du journal des transactions contient une transaction longue. Le démarrage de la transaction est enregistré dans la première sauvegarde du journal des transactions, mais la fin de la transaction est enregistrée dans la seconde sauvegarde du journal des transactions. Il n’y a pas d'enregistrement d’une opération de validation ou de restauration dans la première sauvegarde du journal des transactions. Si une opération de récupération est exécutée lors de l'application de la première sauvegarde du journal des transactions, la longue transaction est traitée comme incomplète, et les modifications de données enregistrées dans la première sauvegarde du journal des transactions pour la transaction sont restaurées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas l'application de la deuxième sauvegarde du journal des transactions après ce stade.  
@@ -58,10 +58,10 @@ ms.locfileid: "62922931"
 > [!NOTE]  
 >  Dans certains cas, vous pouvez ajouter un fichier de façon explicite pendant la restauration du journal.  
   
-##  <a name="PITrestore"></a>Utilisation des sauvegardes de journaux pour restaurer jusqu’au point de défaillance  
+##  <a name="using-log-backups-to-restore-to-the-point-of-failure"></a><a name="PITrestore"></a>Utilisation des sauvegardes de journaux pour restaurer jusqu’au point de défaillance  
  Supposons la séquence d'événements suivante.  
   
-|Temps|Événement|  
+|Heure|Événement|  
 |----------|-----------|  
 |8h00|Sauvegardez la base de données pour créer une sauvegarde complète de base de données.|  
 |Midi|Sauvegarde du journal des transactions.|  
@@ -95,7 +95,7 @@ ms.locfileid: "62922931"
 > [!NOTE]  
 >  Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour appliquer une sauvegarde du journal des transactions**  
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  

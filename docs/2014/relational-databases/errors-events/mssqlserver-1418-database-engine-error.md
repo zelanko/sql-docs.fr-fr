@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7abc0b4dea4df1637b4ba9456dee6a897184f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915765"
 ---
 # <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
@@ -94,7 +94,7 @@ ms.locfileid: "62915765"
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [Le point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [&#40;&#41;Transact-SQL de SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)   
  [Spécifiez une adresse réseau de serveur &#40;&#41;de mise en miroir de bases de données](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876109"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876109"
   
   
   
-##  <a name="BckChecksums"></a> Sommes de contrôle de sauvegarde  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Sommes de contrôle de sauvegarde  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge trois types de sommes de contrôle : une somme de contrôle sur les pages, une somme de contrôle dans les blocs de journal et une somme de contrôle de sauvegarde. Lorsqu'elle génère une somme de contrôle de sauvegarde, l'instruction BACKUP vérifie que les données lues depuis la base de données sont cohérentes avec toute indication de somme de contrôle ou de page endommagée présente dans la base de données.  
   
  L'instruction BACKUP peut aussi calculer une somme de contrôle de sauvegarde sur le flux de sauvegarde ; si des informations de page endommagée ou de somme de contrôle de page sont présentes dans une page donnée, lors de la sauvegarde de la page, l'instruction BACKUP vérifie également l'état de somme de contrôle et de page endommagée, ainsi que l'ID de la page. Lorsqu'elle crée une somme de contrôle de sauvegarde, une opération de sauvegarde n'ajoute aucune somme de contrôle aux pages. Les pages sont sauvegardées telles qu'elles existent dans la base de données et ne sont pas modifiées par la sauvegarde.  
@@ -75,7 +75,7 @@ ms.locfileid: "62876109"
   
 4.  Émet un message indiquant que la sauvegarde a été correctement générée, mais qu'elle contient des erreurs de page.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour activer ou désactiver les sommes de contrôle de sauvegarde**  
   
 -   [Activer ou désactiver des sommes de contrôle de sauvegarde au cours d’opérations de sauvegarde ou de restauration &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

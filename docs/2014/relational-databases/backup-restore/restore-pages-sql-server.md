@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921039"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
@@ -47,14 +47,14 @@ ms.locfileid: "62921039"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="WhenUseful"></a> Quand une restauration de pages est-elle utile ?  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> Quand une restauration de pages est-elle utile ?  
  La restauration de pages permet de réparer des pages endommagées. La restauration et la récupération de quelques pages individuelles peuvent être plus rapides qu'une restauration de fichiers, ce qui réduit le nombre de données qui restent hors ligne pendant l'opération. Toutefois, si vous avez besoin de restaurer un plus grand nombre de pages d'un fichier, il est généralement plus efficace de restaurer l'ensemble du fichier. Par exemple, si de nombreuses pages sur une unité indiquent une défaillance possible de l'unité, envisagez de restaurer le fichier éventuellement dans un emplacement différent et de réparer l'unité.  
   
  En outre, toutes les erreurs de page n'exigent pas une restauration. Il peut arriver qu'un problème survenant dans les données en cache, dans un index secondaire par exemple, ne puisse pas être résolu en recalculant les données. Par exemple, si l’administrateur de la base de données supprime un index secondaire et le reconstruit, les données endommagées, bien qu’ayant été corrigées, ne sont pas indiquées comme telles dans la table [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) .  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   La restauration de pages s'applique aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent les modes de récupération complète ou de récupération utilisant les journaux de transactions. La restauration de pages n'est prise en charge que pour les groupes de fichiers en lecture-écriture.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62921039"
   
          La méthode recommandée pour effectuer une restauration de pages consiste à affecter à la base de données le mode de restauration complète et à tenter une sauvegarde du journal. Si la sauvegarde du journal fonctionne, vous pouvez poursuivre la restauration de la page. Si elle échoue, soit vous perdez effectivement le travail effectué depuis la dernière sauvegarde du journal, soit vous tentez d'exécuter DBCC avec l'option REPAIR_ALLOW_DATA_LOSS.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Scénarios de restauration de pages :  
   
@@ -97,14 +97,14 @@ ms.locfileid: "62921039"
   
      Lorsque vous restaurez les sauvegardes de journaux suivantes, elles s'appliquent uniquement aux fichiers de base de données qui contiennent au moins une page récupérée. Si une chaîne ininterrompue de sauvegardes de journaux doit être appliquée à la dernière restauration complète ou différentielle pour restaurer par progression la page jusqu'au fichier journal actuel. Comme dans le cas d'une restauration de fichiers, le jeu de restauration par progression est une opération avancée qui s'effectue en une seule passe. Pour qu'une restauration de pages aboutisse, les pages restaurées doivent être récupérées dans un état cohérent avec la base de données.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  À compter de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge les restaurations de pages.  
   
 #### <a name="to-restore-pages"></a>Pour restaurer des pages  
@@ -163,7 +163,7 @@ ms.locfileid: "62921039"
   
 7.  Restaurer les pages répertoriées dans la grille de pages, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Pour spécifier une page dans une instruction RESTORE DATABASE, vous avez besoin de l'ID du fichier qui contient la page et l'ID de la page. La syntaxe requise est la suivante :  
   
  `RESTORE DATABASE <database_name>`  
@@ -201,7 +201,7 @@ ms.locfileid: "62921039"
     > [!NOTE]  
     >  Cette séquence est analogue à une séquence de restauration de fichier. En fait, la restauration de pages et les restaurations de fichiers peuvent être effectuées dans le cadre de la même séquence.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple restaure quatre pages endommagées du fichier `B` à l'aide de `NORECOVERY`. Ensuite, deux sauvegardes de journal sont appliquées à l'aide de `NORECOVERY`, suivies de la sauvegarde de la fin du journal, qui est restaurée à l'aide de `RECOVERY`. Cet exemple effectue une restauration en ligne. Dans l'exemple, l'ID de fichier `B` est `1`, et les ID des pages endommagées sont `57`, `202`, `916`, et `1016`.  
   
 ```sql  

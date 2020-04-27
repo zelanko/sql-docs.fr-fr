@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917963"
 ---
 # <a name="database-mail"></a>Messagerie de base de données
@@ -26,15 +26,14 @@ ms.locfileid: "62917963"
   
  
   
-##  <a name="Benefits"></a>Avantages de l’utilisation de Database Mail  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a>Avantages de l’utilisation de Database Mail  
  La messagerie de base de données est fiable, évolutive, sûre et facilement prise en charge.  
   
 ### <a name="reliability"></a>Fiabilité  
   
 -   Elle utilise le protocole SMTP (Simple Mail Transfer Protocol) standard pour l'envoi de messages. Vous pouvez l'utiliser sans installer le client MAPI étendu sur l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Isolement du processus. Pour minimiser l'impact sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le composant qui envoie les messages s'exécute en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans un processus séparé. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continuera à mettre ses messages électroniques en file d’attente même en cas d’arrêt ou d’échec de ce processus externe. Ces messages seront envoyés une fois que le processus extérieur est rétabli ou que le serveur SMTP est en ligne.  
+-   Isolement du processus. Pour minimiser l'impact sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le composant qui envoie les messages s'exécute en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans un processus séparé. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continuera à mettre ses messages électroniques en file d’attente même en cas d’arrêt ou d’échec de ce processus externe. Ces messages seront envoyés une fois que le processus extérieur est rétabli ou que le serveur SMTP est en ligne.  
   
 -   Comptes de basculement. Un profil de messagerie de base de données vous permet de spécifier plusieurs serveurs SMTP. Si l'un deux est indisponible, le courrier est envoyé vers un autre serveur.  
   
@@ -76,14 +75,14 @@ ms.locfileid: "62917963"
   
 
   
-##  <a name="VisualElement"></a>Architecture Database Mail  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a>Architecture Database Mail  
  La messagerie de base de données est conçue selon une architecture de file d'attente qui fait appel aux technologies Service Broker. Lorsque les utilisateurs exécutent **sp_send_dbmail**, cette procédure stockée insère un élément dans la file d’attente de messagerie et crée un enregistrement contenant le message électronique. L'insertion de la nouvelle entrée dans la file d'attente de messagerie active le processus de messagerie de base de données externe (DatabaseMail.exe). Le processus externe lit les informations du message et envoie celui-ci aux serveurs de messagerie appropriés. Le processus externe insère un élément dans la file d'attente État pour obtenir le résultat de l'opération d'envoi. L'insertion de cette nouvelle entrée dans la file d'attente d'état active une procédure stockée interne qui met à jour l'état du message électronique. Outre qu'elle stocke le message électronique envoyé (ou non envoyé), la messagerie de base de données enregistre également toutes les pièces jointes dans des tables système. Les vues de la messagerie de base de données fournissent l'état des messages pour la résolution de problèmes, et les procédures stockées permettent d'administrer la file d'attente de la messagerie de base de données.  
   
  ![msdb envoie des messages à un serveur de messagerie SMTP](../../database-engine/media/databasemail.gif "msdb envoie des messages à un serveur de messagerie SMTP")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>Présentation des composants de Database Mail  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a>Présentation des composants de Database Mail  
  La messagerie de base de données est composée des composants principaux suivants :  
   
 -   Composants de configuration et de sécurité  
@@ -102,7 +101,7 @@ ms.locfileid: "62917963"
   
      La messagerie de base de données enregistre les informations de journalisation dans la base de données **msdb** et dans le journal des événements des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Configuration de l’agent pour qu’il utilise Database Mail :**  
+ **Configuration de l'Agent pour utiliser la messagerie de base de données :**  
   
  Vous pouvez configurer l'Agent SQL Server de manière à ce qu'il utilise la messagerie de base de données. Cette opération est requise pour les notifications d'alertes et la notification automatique à l'achèvement d'un travail.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62917963"
   
  
   
-##  <a name="RelatedContent"></a>Rubriques relatives aux composants Database Mail  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a>Rubriques relatives aux composants Database Mail  
   
 -   [Objets de configuration de la messagerie de base de données](database-mail-configuration-objects.md)  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62917963"
   
 -   [Journal et audits de la messagerie de base de données](database-mail-log-and-audits.md)  
   
--   [Configurer la messagerie SQL Server Agent en vue d’utiliser la messagerie de base de données](configure-sql-server-agent-mail-to-use-database-mail.md)  
+-   [Configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données](configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 
   

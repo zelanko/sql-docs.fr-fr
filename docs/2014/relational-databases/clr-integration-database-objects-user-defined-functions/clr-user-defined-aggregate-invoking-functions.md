@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919605"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Appel de fonctions d'agrégation CLR définies par l'utilisateur
@@ -36,7 +36,7 @@ ms.locfileid: "62919605"
   
 -   Le type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible en *INPUT_TYPE* de l’agrégat, comme défini dans `CREATE AGGREGATE` l’instruction.  
   
--   Le type de retour de l’agrégat défini par l’utilisateur doit ** correspondre à la `CREATE AGGREGATE` return_type dans l’instruction.  
+-   Le type de retour de l’agrégat défini par l’utilisateur doit *return_type* correspondre à la `CREATE AGGREGATE` return_type dans l’instruction.  
   
 ## <a name="example-1"></a>Exemple 1  
  Voici un exemple de fonction d'agrégation définie par l'utilisateur qui concatène un jeu de valeurs de chaîne extraites d'une colonne de table :  

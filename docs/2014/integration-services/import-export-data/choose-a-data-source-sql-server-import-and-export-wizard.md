@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893594"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "62893594"
  **Sauvegarde de la base de données**  
  Sélectionnez dans la liste la base de données pour l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée.  
   
- **Actualiser**  
+ **Actualisation**  
  Cliquez sur **Actualiser** pour restaurer la liste des bases de données disponibles.  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>Source de données = fournisseur de données .NET Framework pour SQL Server  
@@ -88,7 +88,7 @@ ms.locfileid: "62893594"
  **Parcourir**  
  Permet de rechercher la feuille de calcul à l’aide de la boîte de dialogue **Ouvrir**.  
   
- **Version Excel**  
+ **Version d’Excel**  
  Sélectionnez la version d'Excel dans laquelle les données source sont enregistrées.  
   
 > [!NOTE]  
@@ -111,18 +111,18 @@ ms.locfileid: "62893594"
  **Mot de passe**  
  Fournissez le mot de passe utilisateur pour la connexion à la base de données lorsqu'un fichier d'informations d'un groupe de travail est associé à la base de données. Cependant, si la base de données est protégée par un seul mot de passe pour tous les utilisateurs, vous devez fournir cette valeur dans la boîte de dialogue **Propriétés des liaisons de données** accessible en cliquant sur **Avancé**.  
   
- **Avancée**  
+ **Avancé**  
  Vous pouvez spécifier des options avancées, telles que le mot de passe de la base de données ou un fichier d’informations de groupe de travail autre que celui par défaut, à l’aide de la boîte de dialogue **Propriétés des liaisons de données** . Pour plus d’informations sur les propriétés du fournisseur OLE DB, recherchez dans la section accès aux données de [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Source de données = Source de fichier plat  
  Consultez les rubriques suivantes pour obtenir des informations sur les options d'une source de données dans un fichier plat.  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page colonnes&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page avancé&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page d’aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

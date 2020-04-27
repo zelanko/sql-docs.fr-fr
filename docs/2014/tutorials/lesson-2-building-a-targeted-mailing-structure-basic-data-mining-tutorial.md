@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931509"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Leçon 2 : création d'une structure de publipostage ciblé (Didacticiel sur l'exploration de données de base)
@@ -35,7 +35,7 @@ ms.locfileid: "62931509"
  [Leçon 1 : préparation de la base de données Analysis Services &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
   
 ## <a name="next--lesson"></a>Leçon suivante  
- [Leçon 3 : ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer la structure d’exploration de données &#40;l’Assistant Exploration de données&#41;](../../2014/analysis-services/create-the-data-mining-structure-data-mining-wizard.md)   

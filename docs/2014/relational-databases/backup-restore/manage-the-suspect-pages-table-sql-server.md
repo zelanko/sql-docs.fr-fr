@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921954"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
@@ -58,9 +58,9 @@ ms.locfileid: "62921954"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   **Erreurs enregistrées dans la table suspect_pages**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921954"
   
      Un administrateur de base de données peut également insérer ou mettre à jour des enregistrements. Par exemple, la mise à jour d'une ligne peut être utile si un administrateur de base de données sait qu'une page suspecte particulière est intacte en réalité, mais souhaite malgré tout conserver l'enregistrement correspondant pendant un certain temps.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages** . Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Pour gérer la table suspect_pages  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921954"
   
 4.  Dans la fenêtre de requête, modifiez, mettez à jour ou supprimez les lignes de votre choix.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Pour gérer la table suspect_pages  
   

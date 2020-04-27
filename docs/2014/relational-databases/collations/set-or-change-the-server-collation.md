@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918575"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
@@ -51,7 +51,7 @@ ms.locfileid: "62918575"
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'Unicode et du classement](collation-and-unicode-support.md)   
- [Définir ou modifier le classement de la base de données](set-or-change-the-database-collation.md)   
+ [Définir ou modifier le classement de base de données](set-or-change-the-database-collation.md)   
  [Définir ou modifier le classement des colonnes](set-or-change-the-column-collation.md)   
  [Reconstruire des bases de données système](../databases/system-databases.md)  
   

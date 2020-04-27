@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892657"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
@@ -43,7 +43,7 @@ ms.locfileid: "62892657"
   
 -   [Messages d'erreur des composants de flux de données (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> Messages d'erreur  
+##  <a name="error-messages"></a><a name="msgError"></a> Messages d'erreur  
  Les noms symboliques des messages d'erreur de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par `DTS_E_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
@@ -789,7 +789,7 @@ ms.locfileid: "62892657"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|Au moins un fichier source doit être indiqué.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Impossible de trouver le fichier « %1 » dans la base de données source « %2 ».|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|L'opération demandée n'est pas autorisée sur les systèmes conformes à la norme U.S. FIPS 140-2.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|L'exécution de la requête « %1 » a échoué avec l'erreur suivante : « %2 ». Causes possibles de l’échec : problèmes liés à la requête, propriété « ResultSet » mal définie, paramètres mal définis ou connexion mal établie.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|L'exécution de la requête « %1 » a échoué avec l'erreur suivante : « %2 ». Causes possibles de cet échec : problèmes liés à la requête, propriété « ResultSet » non définie correctement, paramètres non définis correctement ou connexion non établie correctement.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Erreur lors de la lecture des noms des procédures stockées dans le fichier XML.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nœud de données non valide pour la tâche de transfert de procédures stockées.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|La connexion « %1 » n'est pas de type « SMOServer ».|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "62892657"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|La valeur %1!d! spécifiée pour le paramètre d'échelle de la fonction NULL avec le type de données %2 est hors limites. L'échelle doit être comprise entre %3!d! et %4!d!. L'échelle ne doit pas dépasser la précision et ne doit pas être négative.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|La valeur %1!d! spécifiée pour le paramètre de longueur de la fonction « NULL » avec le type de données %2 est négative et n'est pas valide. La longueur doit être positive.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Impossible d'affecter une valeur négative à %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossible d'affecter la valeur TRUE à la propriété personnalisée « %1 » de « %2 ».  Le type de données de la colonne doit être l'un des suivants :  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossible d'affecter la valeur TRUE à la propriété personnalisée « %1 » de « %2 ».  Le type de données de la colonne doit être l'un des suivants : DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Impossible de rattacher « %1 ». Supprimez le chemin d'accès, ajoutez-en un nouveau, puis attachez-le.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|La fonction « %1!s! » nécessite %2!d! paramètres et non pas %3!d! paramètre. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|La fonction « %1!s! » nécessite %2!d! paramètre, et non pas %3!d! paramètres. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
@@ -1236,7 +1236,7 @@ ms.locfileid: "62892657"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|La transformation de recherche a reçu une demande d'annulation de l'utilisateur.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|Le traitement de données de type caractère ou de données d'objets BLOB (Binary Large Object) a été interrompu parce que la limite de 4 Go a été atteinte.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|Impossible de charger le composant de pipeline managé « %1 ».  L'exception était : %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Code d'erreur SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED : le Gestionnaire de connexions Excel n'est pas pris en charge dans la version 64 bits de SSIS, car aucun fournisseur OLE DB n'est disponible.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Code d'erreur SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED : le Gestionnaire de connexions Excel n'est pas pris en charge dans la version 64 bits de SSIS, car aucun fournisseur OLE DB n'est disponible.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|Le fichier cache est endommagé ou n'a pas été créé à l'aide du gestionnaire de connexions du cache.  Fournissez un fichier cache valide.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|La commande SQL n'a pas été définie correctement. Vérifiez la propriété SQLCommand.|  
 |0xC0202002|-1071636478|DTS_E_COMERROR|Des informations sur l'objet de l'erreur sont disponibles.  Source : « %1 » code d'erreur : 0x%2!8.8X!  Description : « %3 ».|  
@@ -1992,7 +1992,7 @@ ms.locfileid: "62892657"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La propriété personnalisée « %1 » de %2 ne peut être utilisée qu'avec des fichiers ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La propriété personnalisée « %1 » de %2 ne peut être utilisée qu'avec DT_BYTES.|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit. Code d’erreur : 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit ; il est possible qu'aucun fournisseur 64 bits ne soit disponible.  Code d’erreur : 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit ; il est possible qu'aucun fournisseur 64 bits ne soit disponible.  Code d'erreur : 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|La colonne de cache, « %1 », est mappée à plusieurs colonnes. Supprimez les mappages de colonne dupliqués.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|Le %1 n'est pas mappé à une colonne de cache valide.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Impossible de mapper la colonne d'entrée « %1 » et la colonne de cache « %2 », car les types de données ne correspondent pas.|  
@@ -2017,7 +2017,7 @@ ms.locfileid: "62892657"
 |||DTS_E_GETCATMANAGERFAILED|Impossible de créer un gestionnaire de catégories de composants COM en raison de l’erreur 0x%1!8.8X! « %2!s! ».|  
 |||DTS_E_COMPONENTINITFAILED|Échec de l'initialisation du composant %1!s! en raison de l’erreur 0x%2!8.8X! « %3!s! ».|  
   
-##  <a name="msgWarning"></a> Messages d'avertissement  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> Messages d'avertissement  
  Les noms symboliques des messages d'avertissement d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par `DTS_W_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
@@ -2124,7 +2124,7 @@ ms.locfileid: "62892657"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|La valeur « %1 » du composant %2 est introuvable. Impossible de trouver la valeur CurrentVersion du composant. Cette erreur se produit si le composant n'a pas défini ses informations de Registre pour contenir une valeur CurrentVersion dans la section DTSInfo. Ce message apparaît au cours du développement du composant ou lorsque le composant est utilisé dans un package, si le composant n'est pas correctement enregistré.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|Le gestionnaire de tampons n'a pas pu obtenir un nom de fichier temporaire.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|Le gestionnaire de tampons n'a pas pu créer un fichier temporaire dans le chemin d'accès « %1 ». Ce chemin ne sera plus utilisé pour le stockage temporaire.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Avertissement : impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles.  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Avertissement : impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Une ligne partielle a été trouvée à la fin du fichier.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|La fin du fichier de données a été atteinte au cours de la lecture des lignes d'en-tête. Assurez-vous que le séparateur de lignes d'en-tête et que le nombre de lignes d'en-tête à ignorer sont corrects.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Impossible de récupérer les infos de la page de codes de la colonne à partir du fournisseur OLE DB.  Si le composant prend en charge la propriété « %1 », la page de codes de cette propriété sera utilisée.  Modifiez la valeur de la propriété si les valeurs de la page de codes de la chaîne actuelle sont incorrectes.  Si le composant ne prend pas en charge la propriété, la page de codes provenant de l'ID des paramètres régionaux du composant sera utilisée.|  
@@ -2163,7 +2163,7 @@ ms.locfileid: "62892657"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|%1 ne possède pas de colonne mappée.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La table « %1 » a été modifiée. Il se peut que de nouvelles colonnes y aient été ajoutées.|  
   
-##  <a name="msgInfo"></a> Messages d'information  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> Messages d'information  
  Les noms symboliques des messages d'information de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par `DTS_I_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
@@ -2262,7 +2262,7 @@ ms.locfileid: "62892657"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 a écrit le cache dans le fichier « %2 ».|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propriété Taille de validation d'insertion maximale de la destination OLE DB « %1 » est définie sur 0. Ce paramètre de propriété peut provoquer le blocage du package en cours d'exécution. Pour plus d'informations consultez la rubrique relative à l'aide sur l'Éditeur de destination OLE DB (Page Gestionnaire de connexions) via la touche F1.|  
   
-##  <a name="msgGeneral"></a> Messages généraux et d'événement  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> Messages généraux et d'événement  
  Les noms symboliques des messages d'erreur de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par `DTS_MSG_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
@@ -2301,7 +2301,7 @@ ms.locfileid: "62892657"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nom d'événement : %1<br /><br /> Message : %9<br /><br /> Opérateur : %2<br /><br /> Nom de la source : %3<br /><br /> ID de la source : %4<br /><br /> ID d'exécution : %5<br /><br /> Heure de début : %6<br /><br /> Heure de fin : %7<br /><br /> Code de données : %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nom d'événement : %1<br /><br /> Message : %9<br /><br /> Opérateur : %2<br /><br /> Nom de la source : %3<br /><br /> ID de la source : %4<br /><br /> ID d'exécution : %5<br /><br /> Heure de début : %6<br /><br /> Heure de fin : %7<br /><br /> Code de données : %8|  
   
-##  <a name="msgSuccess"></a> Messages de réussite  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Messages de réussite  
  Les noms symboliques des messages de réussite de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par `DTS_S_`.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
@@ -2310,7 +2310,7 @@ ms.locfileid: "62892657"
 |0x40005|262149|DTS_S_TRUNCATED|La valeur de la chaîne était tronquée. Le tampon a reçu une chaîne qui était trop longue pour la colonne, et la chaîne a été tronquée par le tampon.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Une troncation s'est produite au cours de l'évaluation de l'expression, La troncation risque d'inclure n'importe quel point à une étape intermédiaire.|  
   
-##  <a name="msgPipeline"></a> Messages d'erreur des composants de flux de données  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> Messages d'erreur des composants de flux de données  
  Les noms symboliques des messages d'erreur de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par `DTSBC_E_`, où « BC » fait référence à la classe de base native à partir de laquelle la plupart des composants de flux Microsoft sont dérivés.  
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  

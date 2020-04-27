@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900314"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
@@ -74,9 +74,9 @@ ms.locfileid: "62900314"
   
  Les colonnes de sortie de transformation comprennent les colonnes d'entrée marquées comme colonnes SQL directes, les colonnes sélectionnées dans la table de recherche et les colonnes supplémentaires suivantes :  
   
--   **_Similarity**, colonne qui décrit la similarité entre les valeurs des colonnes d’entrée et de référence.  
+-   **_Similarity**, une colonne décrivant la similarité entre des valeurs des colonnes d’entrée et de référence.  
   
--   **_Confidence**, une colonne qui décrit la qualité de la correspondance.  
+-   **_Confidence**, une colonne décrivant la qualité de la correspondance.  
   
  La transformation utilise la connexion à la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour créer les tables temporaires utilisées par l'algorithme de correspondance approximative.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62900314"
   
 |Option|Description|  
 |------------|-----------------|  
-|**Valeur GenerateAndMaintainNewIndex)**|Créer un nouvel index, l'enregistrer et le gérer. La transformation installe des déclencheurs dans la table de référence pour garder la table de référence et la table d'index synchronisées.|  
+|**GenerateAndMaintainNewIndex**|Créer un nouvel index, l'enregistrer et le gérer. La transformation installe des déclencheurs dans la table de référence pour garder la table de référence et la table d'index synchronisées.|  
 |**GenerateAndPersistNewIndex**|Créer un nouvel index et l'enregistrer, sans le gérer.|  
 |**GenerateNewIndex**|Créer un nouvel index, sans l'enregistrer.|  
 |**ReuseExistingIndex**|Réutiliser un index existant.|  
@@ -104,7 +104,7 @@ ms.locfileid: "62900314"
  La commande SQL TRUNCATE TABLE n'appelle pas de déclencheurs DELETE. Si la commande TRUNCATE TABLE est utilisée sur la table de référence, celle-ci ne sera plus synchronisée avec l'index de correspondances et la transformation de recherche floue échouera. Lorsque les déclencheurs qui gèrent la table d'index de correspondances sont installés sur la table de référence, vous devez utiliser la commande SQL DELETE au lieu de TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62900314"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche floue** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de transformation de recherche floue &#40;onglet de la table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de transformation de recherche floue &#40;onglet Table de référence&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Éditeur de transformation de recherche floue &#40;onglet Colonnes&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "62900314"
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche](lookup-transformation.md)   
- [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
+ [Transformation de regroupement approximatif](fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   
   

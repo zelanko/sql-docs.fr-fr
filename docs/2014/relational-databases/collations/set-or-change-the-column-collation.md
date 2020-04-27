@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918970"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
@@ -55,8 +55,7 @@ ms.locfileid: "62918970"
  Quand vous utilisez **tempdb**, la clause [COLLATE](/sql/t-sql/statements/collations) contient une option *database_default* pour spécifier qu’une colonne de table temporaire utilise, pour la connexion, le classement par défaut de la base de données utilisateur active à la place du classement de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Classements et colonnes text  
- Vous pouvez insérer ou mettre à jour les valeurs d'une colonne `text` dont le classement est différent de la page de codes du classement par défaut de la base de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
+ Vous pouvez insérer ou mettre à jour les valeurs d'une colonne `text` dont le classement est différent de la page de codes du classement par défaut de la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
   
 ## <a name="collations-and-tempdb"></a>Classements et tempdb  
  La base de données **tempdb** est créée à chaque démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a le même classement par défaut que la base de données **model** . Il est en général identique au classement par défaut de l'instance. Si vous créez une base de données utilisateur et spécifiez un classement par défaut différent de **model**, la base de données utilisateur a un classement par défaut différent de **tempdb**. Toutes les procédures stockées ou tables temporaires sont créées et stockées dans **tempdb**. En d'autres termes, toutes les colonnes implicites des tables temporaires et toutes les constantes, variables et paramètres modifiables par défaut des procédures stockées temporaires ont d'autres classements que les objets comparables créés dans les tables et procédures stockées permanentes.  
@@ -112,7 +111,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir ou modifier le classement du serveur](set-or-change-the-server-collation.md)   
- [Définir ou modifier le classement de la base de données](set-or-change-the-database-collation.md)   
+ [Définir ou modifier le classement de base de données](set-or-change-the-database-collation.md)   
  [Prise en charge d'Unicode et du classement](collation-and-unicode-support.md)  
   
   

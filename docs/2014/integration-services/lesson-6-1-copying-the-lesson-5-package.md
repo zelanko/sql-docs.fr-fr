@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890755"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Étape 1 : copie du package de la leçon 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Étape 1 : Copie du package de la leçon 5
   Dans cette tâche, vous allez créer une copie du package Lesson 5.dtsx que vous avez créé à la leçon 5. Vous pouvez également ajouter au projet le package final de la leçon 5 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Pour copier le package de la leçon 5  
@@ -48,13 +48,13 @@ ms.locfileid: "62890755"
   
 3.  Dans la boîte de dialogue Ajouter une copie des packages existants, sous Emplacement du package, sélectionnez Système de fichiers.  
   
-4.  Cliquez sur le bouton de navigation (...), accédez à Lesson 5.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
+4.  Cliquez sur le bouton Parcourir (...), leçon 5. dtsx sur votre ordinateur, puis cliquez sur **ouvrir**.  
   
      Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   
-    1.  Accéder aux [exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
+    2.  Cliquez sur l’onglet **téléchargements** .  
   
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890755"
      Après la copie du package de la leçon 5, si vous avez des packages des leçons précédentes dans votre solution, cliquez avec le bouton droit sur chaque package des leçons 1 à 5 et cliquez sur Exclure du projet. Lorsque vous avez terminé, vous devez avoir uniquement la leçon 6.dtsx dans votre solution.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Conversion du projet en modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Étape 2 : Conversion du projet en modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

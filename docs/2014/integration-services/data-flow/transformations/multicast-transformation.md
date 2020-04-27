@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900186"
 ---
 # <a name="multicast-transformation"></a>transformation de multidiffusion
@@ -44,7 +44,7 @@ ms.locfileid: "62900186"
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Flux de données](../data-flow.md)   
+ [Transmission de données](../data-flow.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   
   

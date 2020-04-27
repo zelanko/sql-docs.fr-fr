@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916743"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
@@ -40,7 +40,7 @@ ms.locfileid: "62916743"
   
      ***Num_Variable_Cols***  = nombre de colonnes de longueur variable  
   
-     ***Max_Var_Size*** = taille maximale en octets de toutes les colonnes de longueur variable  
+     ***Max_Var_Size***  = taille maximale en octets de toutes les colonnes de longueur variable  
   
 3.  Une partie de la ligne, connue sous le nom de bitmap NULL, est réservée pour gérer la possibilité de valeur NULL de la colonne. Calculez sa taille :  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62916743"
   
 5.  Calculez la taille totale de la ligne :  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      La valeur 4 dans la formule correspond à l'espace réservé à l'en-tête de la ligne de données.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916743"
   
 7.  Calculez ensuite le nombre de pages de données requises pour le stockage de toutes les lignes :  
   
-     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
   
      Le nombre de pages de données estimé doit être arrondi à la page entière la plus proche.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916743"
   
 -   Valeurs LOB  
   
-     L’algorithme permettant de déterminer avec précision la quantité d’espace qui sera utilisée pour stocker `varchar(max)`les `varbinary(max)`types `nvarchar(max)`de `text`données **** LOB,, `image` ,, ntextxml et les valeurs est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
+     L’algorithme permettant de déterminer avec précision la quantité d’espace qui sera utilisée pour stocker `varchar(max)`les `varbinary(max)`types `nvarchar(max)`de `text`données **ntextxml**LOB,, `image` ,, ntextxml et les valeurs est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
   
 -   Compression  
   

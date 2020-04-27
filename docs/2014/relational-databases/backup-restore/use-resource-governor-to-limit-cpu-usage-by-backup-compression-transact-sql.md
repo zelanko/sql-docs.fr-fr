@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920790"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62920790"
 > [!IMPORTANT]  
 >  Dans un scénario donné de Resource Governor, la classification des sessions peut être basée sur un nom d'utilisateur, un nom d'application ou tout autre élément permettant d'identifier une connexion. Pour plus d'informations, consultez [Fonction classifieur de Resource Governor](../resource-governor/resource-governor-classifier-function.md) et [Groupe de charge de travail de Resource Governor](../resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> Cette rubrique propose les scénarios suivants, présentés dans l'ordre :  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> Cette rubrique propose les scénarios suivants, présentés dans l'ordre :  
   
 1.  [Configuration d'une connexion et d'un utilisateur pour les opérations de priorité basse](#setup_login_and_user)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62920790"
   
 4.  [Compression de sauvegardes dans une session à utilisation maximale de l'UC limitée](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> Configuration d'une connexion et d'un utilisateur pour les opérations de priorité basse  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> Configuration d'une connexion et d'un utilisateur pour les opérations de priorité basse  
  Le scénario de cette rubrique requiert une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de priorité basse et un utilisateur. Le nom d'utilisateur sera utilisé pour classifier des sessions exécutées dans la connexion et pour les router vers un groupe de charge de travail de Resource Governor qui limite l'utilisation de l'UC.  
   
  La procédure ci-dessous décrit les étapes nécessaires à la configuration d’une connexion et d’un utilisateur à cette fin. Elle est suivie d’un exemple [!INCLUDE[tsql](../../includes/tsql-md.md)], « Exemple A : configuration d’une connexion et d’un utilisateur (Transact-SQL) ».  
@@ -100,7 +100,7 @@ GO
   
  [&#91;Haut&#93;](#Top)  
   
-##  <a name="configure_RG"></a> Configuration de Resource Governor pour limiter l'utilisation de l'UC  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> Configuration de Resource Governor pour limiter l'utilisation de l'UC  
   
 > [!NOTE]  
 >  Vérifiez que Resource Governor est activé. Pour plus d’informations, consultez [Activer Resource Governor](../resource-governor/enable-resource-governor.md).  
@@ -238,7 +238,7 @@ GO
   
  [&#91;Haut&#93;](#Top)  
   
-##  <a name="verifying"></a> Vérification de la classification de la session active (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> Vérification de la classification de la session active (Transact-SQL)  
  Éventuellement, connectez-vous en tant que l’utilisateur spécifié dans votre fonction classifieur et vérifiez la classification des sessions au moyen de l’instruction [SELECT](/sql/t-sql/queries/select-transact-sql) suivante dans l’Explorateur d’objets :  
   
 ```sql  
@@ -258,7 +258,7 @@ GO
   
  [&#91;Haut&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> Compression de sauvegardes dans une session à utilisation maximale de l'UC limitée  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Compression de sauvegardes dans une session à utilisation maximale de l'UC limitée  
  Pour créer une sauvegarde compressée dans une session à utilisation maximale de l'UC limitée, connectez-vous en tant que l'utilisateur spécifié dans votre fonction classifieur. Dans votre commande de sauvegarde, spécifiez WITH COMPRESSION[!INCLUDE[tsql](../../includes/tsql-md.md)]() ou sélectionnez **compresser la sauvegarde** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Pour créer une sauvegarde de base de données compressée, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemple C : création d’une sauvegarde compressée (Transact-SQL)  

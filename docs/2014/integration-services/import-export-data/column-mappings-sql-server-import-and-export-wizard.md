@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893040"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mappage de colonnes (Assistant Importation et exportation SQL Server)
@@ -39,10 +39,10 @@ ms.locfileid: "62893040"
  **Créer la table/le fichier de destination**  
  Indiquez si la table de destination doit être créée si elle n'existe pas.  
   
- **Supprimer les lignes dans la table/le fichier de destination**  
+ **Supprimer des lignes dans la table/le fichier de destination**  
  Indiquez si les données d'une table existante doivent être effacées avant d'en charger de nouvelles.  
   
- **Ajouter des lignes à la table/le fichier de destination**  
+ **Ajouter des lignes à la table/au fichier de destination**  
  Indiquez si les nouvelles données doivent être ajoutées à la suite des données déjà présentes dans une table existante.  
   
  **Modifier SQL**  
@@ -77,7 +77,7 @@ ms.locfileid: "62893040"
  **Précision**  
  Spécifiez la précision des données affichées en indiquant le nombre de chiffres.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Spécifiez l'échelle des données affichées en indiquant le nombre de décimales.  
   
   

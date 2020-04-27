@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920686"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Sauvegardes du journal des transactions (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62920686"
   
  Vous devez au moins avoir créé une sauvegarde complète pour pouvoir créer des sauvegardes de journaux. Après cela, le journal des transactions peut être sauvegardé à tout moment, à moins qu'il ne soit déjà en cours de sauvegarde. Nous vous recommandons d'effectuer des sauvegardes de journaux fréquemment, à la fois pour réduire les risques de perte de travail et pour tronquer le journal des transactions. En règle générale, un administrateur de base de données crée une sauvegarde complète de base de données de temps en temps, par exemple chaque semaine et, éventuellement, crée une série de sauvegardes de base de données différentielles à un intervalle plus court, par exemple tous les jours. Indépendamment des sauvegardes de base de données, l'administrateur de base de données sauvegarde le journal des transactions à intervalles fréquents, par exemple toutes les 10 minutes. Pour un type donné de sauvegarde, l'intervalle optimal varie en fonction de divers facteurs tels que l'importance des données, la taille de la base de données et la charge de travail du serveur.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Fonctionnement d’une séquence de sauvegardes de journaux](#LogBackupSequence)  
   
@@ -35,12 +35,12 @@ ms.locfileid: "62920686"
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu associé](#RelatedContent)  
+-   [Contenu connexe](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a>Fonctionnement d’une séquence de sauvegardes de journaux  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>Fonctionnement d’une séquence de sauvegardes de journaux  
  La séquence de sauvegarde des journaux des transactions ( *séquence de journaux* ) ne dépend pas des sauvegardes de données. Supposons, par exemple, que la séquence des événements est la suivante.  
   
-|Temps|Événement|  
+|Heure|Événement|  
 |----------|-----------|  
 |8h00|Sauvegarde de la base de données.|  
 |Midi|Sauvegarde du journal des transactions.|  
@@ -50,7 +50,7 @@ ms.locfileid: "62920686"
   
  La sauvegarde du journal des transactions créée à 20h00 contient les enregistrements du journal des transactions effectués de 16H00 à 20h00, ce qui couvre le moment de la création de la sauvegarde complète intervenant à 18H00. La séquence des sauvegardes du journal des transactions est continue depuis la sauvegarde complète de la base de données initiale créée à 08H00 jusqu'à la dernière sauvegarde du journal des transactions effectuée à 20H00. Pour plus d’informations sur l’application de ces sauvegardes du journal, reportez-vous à l’exemple cité dans [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Si un journal des transactions est endommagé, vous perdez alors les travaux réalisés depuis la sauvegarde valide la plus récente. Par conséquent, nous vous recommandons vivement de placer vos fichiers journaux sur une unité de stockage à tolérance de pannes.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62920686"
   
 -   Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour créer une sauvegarde du journal des transactions**  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "62920686"
   
  Pour planifier des travaux de sauvegarde, consultez [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

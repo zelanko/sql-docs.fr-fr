@@ -21,26 +21,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927074"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
-  La sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans est constituée de plusieurs couches qui fournissent un environnement de sécurité riche et flexible. Ces couches de sécurité incluent l’utilisation de signatures numériques, de propriétés de package, de rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’autorisations de système d’exploitation. La plupart de ces fonctionnalités de sécurité se répartissent dans les catégories suivantes : identité et contrôle d'accès.  
+  La sécurité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est constituée de plusieurs couches qui fournissent un environnement de sécurité complet et souple. Ces couches de sécurité incluent l’utilisation de signatures numériques, de propriétés de package, de rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’autorisations de système d’exploitation. La plupart de ces fonctionnalités de sécurité se répartissent dans les catégories suivantes : identité et contrôle d'accès.  
   
 ## <a name="identity-features"></a>Fonctionnalités d'identité  
  En implémentant des fonctionnalités d'identité dans vos packages, vous pouvez atteindre l'objectif suivant :  
   
- **Assurez-vous que vous ouvrez et exécutez uniquement des packages provenant de sources approuvées**.  
+ **S'assurer d'ouvrir et d'exécuter uniquement des packages provenant de sources approuvées**.  
   
  Pour vous assurer d'ouvrir et d'exécuter uniquement des packages provenant de sources approuvées, vous devez tout d'abord identifier leur source. Pour ce faire, signez les packages avec des certificats. Puis, lorsque vous ouvrez ou exécutez le package, vous pouvez vérifier la présence et la validité des signatures numériques à l'aide d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Identifier la source de packages à l’aide de signatures numériques](identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="access-control-features"></a>Fonctionnalités de contrôle d'accès  
  En implémentant des fonctionnalités d'identité dans vos packages, vous pouvez atteindre l'objectif suivant :  
   
- **Assurez-vous que seuls les utilisateurs autorisés ouvrent et exécutent des packages**.  
+ **S'assurer que seuls les utilisateurs autorisés ouvrent et exécutent des packages**.  
   
  Pour vous assurer que seuls les utilisateurs autorisés ouvrent et exécutent des packages, vous devez contrôler l'accès aux informations suivantes.  
   
@@ -67,9 +67,7 @@ ms.locfileid: "62927074"
 #### <a name="saving-packages-to-the-msdb-database"></a>Enregistrement de packages dans la base de données msdb  
  L'enregistrement des packages dans la base de données msdb permet d'assurer la sécurité au niveau du serveur, de la base de données et de la table. Dans la base de données msdb, les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont stockés dans la table sysssispackages. Les packages étant enregistrés dans les tables sysssispackages et sysdtspackages de la base de données msdb, ils sont automatiquement sauvegardés lors de la sauvegarde de la base de données msdb.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vous pouvez également protéger les packages stockés dans la base de données msdb en appliquant des rôles au niveau de la base de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut trois rôles fixes au niveau de la base de données : db_ssisadmin, db_ssisltduser et db_ssisoperator pour le contrôle de l’accès aux packages. Un rôle de lecture et d'écriture peut être associé à chaque package. Vous pouvez également définir des rôles personnalisés au niveau de la base de données pour les utiliser dans les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les rôles ne peuvent être implémentés que sur les packages enregistrés dans la base de données msdb d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](integration-services-roles-ssis-service.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vous pouvez également protéger les packages stockés dans la base de données msdb en appliquant des rôles au niveau de la base de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut trois rôles fixes au niveau de la base de données : db_ssisadmin, db_ssisltduser et db_ssisoperator pour le contrôle de l’accès aux packages. Un rôle de lecture et d'écriture peut être associé à chaque package. Vous pouvez également définir des rôles personnalisés au niveau de la base de données pour les utiliser dans les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les rôles ne peuvent être implémentés que sur les packages enregistrés dans la base de données msdb d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](integration-services-roles-ssis-service.md).  
   
 #### <a name="saving-packages-to-the-file-system"></a>Enregistrement de packages dans le système de fichiers  
  Si vous stockez des packages dans le système de fichiers plutôt que dans la base de données msdb, veillez à sécuriser les fichiers de package et les dossiers qui les contiennent.  
@@ -77,7 +75,7 @@ ms.locfileid: "62927074"
 ### <a name="controlling-access-to-files-used-by-packages"></a>Contrôle de l'accès aux fichiers utilisés par des packages  
  Les packages configurés pour utiliser des configurations, des points de contrôle et une journalisation génèrent des informations stockées en dehors du package. Ces informations peuvent être sensibles et doivent être protégées. Les fichiers de point de contrôle ne peuvent être enregistrés que dans le système de fichiers, mais les configurations et les journaux peuvent l'être dans le système de fichiers ou dans les tables d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les configurations et les journaux enregistrés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficient de la sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais les informations écrites dans le système de fichiers requièrent une sécurité supplémentaire.  
   
- Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../access-to-files-used-by-packages.md).  
+ Pour plus d’informations, consultez [accès aux fichiers utilisés par les packages](../access-to-files-used-by-packages.md).  
   
 #### <a name="storing-package-configurations-securely"></a>Stockage sécurisé des configurations de package  
  Les configurations de package peuvent être enregistrées dans une table d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans le système de fichiers.  
@@ -89,8 +87,7 @@ ms.locfileid: "62927074"
  Pour plus d'informations sur les configurations, consultez [Package Configurations](../package-configurations.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Contrôle de l'accès au service Integration Services  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la liste des packages stockés. Pour empêcher tout utilisateur non autorisé de consulter des informations sur les packages stockées sur des ordinateurs locaux et distants, et par conséquent d'accéder à des informations privées, restreignez l'accès aux ordinateurs qui exécutent le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la liste des packages stockés. Pour empêcher tout utilisateur non autorisé de consulter des informations sur les packages stockées sur des ordinateurs locaux et distants, et par conséquent d'accéder à des informations privées, restreignez l'accès aux ordinateurs qui exécutent le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour plus d’informations, consultez [Accéder au service Integration Services](../access-to-the-integration-services-service.md).  
   

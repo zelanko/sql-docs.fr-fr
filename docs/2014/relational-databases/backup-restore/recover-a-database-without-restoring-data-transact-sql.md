@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921794"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921794"
  RESTORE DATABASE *nom_base_de_données* WITH RECOVERY  
   
 > [!NOTE]  
->  La clause FROM **=** \<*unité_de_sauvegarde>* n’est pas destinée aux restaurations avec récupération uniquement, car aucune sauvegarde n’est nécessaire.  
+>  La clause **=** \<from *backup_device>* n’est pas utilisée pour les restaurations avec récupération uniquement, car aucune sauvegarde n’est nécessaire.  
   
  **Exemple**  
   
@@ -89,7 +89,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restauration en ligne &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [&#40;de restauration en ligne SQL Server&#41;](online-restore-sql-server.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Restaurations de fichiers &#40;mode de récupération simple&#41;](file-restores-simple-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](file-restores-full-recovery-model.md)   

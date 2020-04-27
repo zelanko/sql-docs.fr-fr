@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875672"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "62875672"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Ces sauvegardes doivent être restaurées dans l'ordre de leur création. Avant de pouvoir restaurer une sauvegarde donnée du journal des transactions, vous devez restaurer les sauvegardes antérieures suivantes sans annuler les transactions non validées, autrement dit avec l'option WITH NORECOVERY.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "62875672"
   
          Pour plus d’informations sur les sauvegardes du journal des transactions, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md) et [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 > [!WARNING]  
 >  La procédure de restauration normale consiste à sélectionner les sauvegardes des journaux dans la boîte de dialogue **Restaurer la base de données** en même temps que les sauvegardes de données et les sauvegardes différentielles.  
@@ -189,7 +189,7 @@ ms.locfileid: "62875672"
   
 11. Éventuellement, spécifiez un nom de fichier d'annulation dans la zone de texte **Fichiers d'annulation** . Cette option est indispensable si vous laissez la base de données en lecture seule. Vous pouvez rechercher le fichier d'annulation ou taper son chemin d'accès dans la zone de texte.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons de toujours préciser de façon claire WITH NORECOVERY ou WITH RECOVERY dans chaque instruction RESTORE pour éliminer toute ambiguïté. Cela est particulièrement important lors de l'écriture de scripts.  
@@ -234,7 +234,7 @@ ms.locfileid: "62875672"
     > [!IMPORTANT]  
     >  Si vous créez une base de données miroir, omettez l'étape de récupération. Une base de données miroir doit rester dans l'état RESTORING.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Par défaut, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilise le mode de récupération simple. Les exemples suivants nécessitent la modification de la base de données pour utiliser le mode de restauration complète, comme suit :  
   
 ```sql  
@@ -287,7 +287,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

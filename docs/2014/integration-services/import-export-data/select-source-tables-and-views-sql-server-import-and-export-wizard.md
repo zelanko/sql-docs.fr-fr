@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892667"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Sélectionner les tables et les vues sources (Assistant Importation et Exportation SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62892667"
  **Modifier les mappages**  
  Utilisez la boîte de dialogue **mappage de colonnes** pour spécifier les colonnes de destination qui recevront les données sources. Vous pouvez copier uniquement un sous-ensemble de colonnes \<en sélectionnant ignorer> dans la colonne **destination** de la boîte de dialogue **mappage de colonnes** pour les colonnes que vous souhaitez ignorer.  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affichez un aperçu des données sources dans la boîte de dialogue **aperçu des données** pour les vérifier avant d’effectuer l’importation ou l’exportation. La boîte de dialogue **aperçu des données** affiche jusqu’à 200 lignes de données.  
   
  Après l'aperçu des données, vous pouvez à votre guise modifier les options que vous avez sélectionnées pour la source et la destination des données. Pour effectuer ces modifications, dans la page **Sélectionner les tables et les vues sources**, cliquez sur **Précédent** pour retourner aux pages précédentes où vous pouvez modifier vos sélections.  

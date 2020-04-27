@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920053"
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
@@ -48,12 +48,10 @@ ms.locfileid: "62920053"
 ## <a name="returning-custom-result-sets"></a>Retour de jeux de résultats personnalisés  
  Les procédures stockées managées peuvent envoyer des jeux de résultats qui ne proviennent pas d'un `SqlDataReader`. La méthode `SendResultsStart`, ainsi que `SendResultsRow` et `SendResultsEnd`, permettent aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
- 
-  `SendResultsStart` accepte un `SqlDataRecord` en tant qu'entrée. Elle  marque le début d'un jeu de résultats et utilise les métadonnées d'enregistrement pour construire les métadonnées qui décrivent le jeu de résultats. Elle n'envoie pas la valeur de l'enregistrement avec `SendResultsStart`. Toutes les lignes suivantes, envoyées à l'aide de `SendResultsRow`, doivent correspondre à cette définition des métadonnées.  
+ `SendResultsStart` accepte un `SqlDataRecord` en tant qu'entrée. Elle  marque le début d'un jeu de résultats et utilise les métadonnées d'enregistrement pour construire les métadonnées qui décrivent le jeu de résultats. Elle n'envoie pas la valeur de l'enregistrement avec `SendResultsStart`. Toutes les lignes suivantes, envoyées à l'aide de `SendResultsRow`, doivent correspondre à cette définition des métadonnées.  
   
 > [!NOTE]  
->  Après l'appel de la méthode `SendResultsStart`, seules `SendResultsRow` et `SendResultsEnd` peuvent être appelées. L'appel de toute autre méthode dans la même instance de `SqlPipe` entraîne `InvalidOperationException`. 
-  `SendResultsEnd` rétablit `SqlPipe` à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
+>  Après l'appel de la méthode `SendResultsStart`, seules `SendResultsRow` et `SendResultsEnd` peuvent être appelées. L'appel de toute autre méthode dans la même instance de `SqlPipe` entraîne `InvalidOperationException`. `SendResultsEnd` rétablit `SqlPipe` à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
   
 ### <a name="example"></a>Exemple  
  La procédure stockée `uspGetProductLine` retourne les nom, numéro de produit, couleur et tarif de tous les produits dans une ligne de produit spécifiée. Cette procédure stockée accepte des correspondances exactes pour *prodLine*.  

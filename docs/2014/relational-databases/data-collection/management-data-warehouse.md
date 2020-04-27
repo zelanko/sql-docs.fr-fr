@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918337"
 ---
 # <a name="management-data-warehouse"></a>entrepôt de données de gestion
@@ -109,7 +109,7 @@ ms.locfileid: "62918337"
   
  Vous pouvez obtenir des informations détaillées sur le type et le contenu des données pour les colonnes de table de base de données en lisant la documentation de la procédure stockée du collecteur de données approprié pour chacune des tables.  
   
-### <a name="best-practices"></a>Bonnes pratiques  
+### <a name="best-practices"></a>Meilleures pratiques  
  Lors de l'utilisation de l'entrepôt de données de gestion, nous vous recommandons d'appliquer les méthodes conseillées suivantes :  
   
 -   Ne modifiez pas les métadonnées des tables de l'entrepôt de données de gestion sauf si vous ajoutez un nouveau type de collecteur.  
@@ -126,7 +126,7 @@ ms.locfileid: "62918337"
 |Mise à jour de la liste de tables dans la section « Schéma des instantanés ». Ajout de snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory et snapshots.io_virtual_file_stats. Suppression de snapshots.os_process_memory et snapshots.distinct_query_stats.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de l’entrepôt de données de gestion &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Gestion Data Warehouse procédures stockées &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Collecte de données](data-collection.md)   
  [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
