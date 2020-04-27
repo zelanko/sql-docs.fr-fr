@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049437"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administration et maintenance de l'instance de cluster de basculement
@@ -37,11 +37,10 @@ ms.locfileid: "63049437"
  Après avoir installé une FCI, vous pouvez la changer ou la réparer au moyen du programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez ajouter des nœuds supplémentaires à une FCI, exécuter une FCI comme une instance indépendante, ou supprimer un nœud d'une configuration de FCI.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Ajout d'un nœud à une instance cluster de basculement existante  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet de maintenir une FCI existante. Si vous choisissez cette option, vous pouvez ajouter d’autres nœuds à votre FCI en exécutant le programme d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l’ordinateur que vous souhaitez ajouter à la FCI. Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) et [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet de maintenir une FCI existante. Si vous choisissez cette option, vous pouvez ajouter d’autres nœuds à votre FCI en exécutant le programme d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l’ordinateur que vous souhaitez ajouter à la FCI. Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) et [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Suppression d'un nœud dans une instance cluster de basculement existante  
- Vous pouvez supprimer un nœud d'une FCI en exécutant le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l'ordinateur que vous souhaitez supprimer de la FCI. Chaque nœud dans une FCI est considéré comme un homologue sans dépendances sur d'autres nœuds de la FCI, et vous pouvez supprimer n'importe quel nœud. Il n'est pas nécessaire qu'un nœud endommagé soit disponible pour le supprimer : la suppression ne désinstalle aucun binaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du nœud indisponible. Un nœud supprimé peut être ajouté à nouveau à une FCI à tout moment. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ Vous pouvez supprimer un nœud d'une FCI en exécutant le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l'ordinateur que vous souhaitez supprimer de la FCI. Chaque nœud dans une FCI est considéré comme un homologue sans dépendances sur d'autres nœuds de la FCI, et vous pouvez supprimer n'importe quel nœud. Il n'est pas nécessaire qu'un nœud endommagé soit disponible pour le supprimer : la suppression ne désinstalle aucun binaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du nœud indisponible. Un nœud supprimé peut être ajouté à nouveau à une FCI à tout moment. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="changing-service-accounts"></a>Modification des comptes de service  
  Vous ne devez pas modifier les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsqu'un nœud de FCI est arrêté ou hors ligne. Si vous êtes amené à le faire, vous devrez redéfinir le mot de passe à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque tous les nœuds seront de nouveau en ligne.  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070260"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Restaurer la base de données (Analysis Services - Données multidimensionnelles)
@@ -35,7 +35,7 @@ ms.locfileid: "66070260"
  La boîte de dialogue **Restaurer la base de données** contient les pages suivantes.  
   
 ## <a name="pages"></a>Pages  
- **Général**  
+ **Généralités**  
  Cette page permet de sélectionner la base de données à restaurer, le fichier de sauvegarde, ainsi que les options générales et le mot de passe permettant cette restauration. Pour plus d’informations sur cette page, consultez [Général &#40;boîte de dialogue Restaurer la base de données&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Partitions**  

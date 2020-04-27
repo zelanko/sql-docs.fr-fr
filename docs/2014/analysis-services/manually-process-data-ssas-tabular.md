@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077971"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Traiter manuellement les données (SSAS Tabulaire)
@@ -30,7 +30,7 @@ ms.locfileid: "66077971"
   
 -   [Progression du traitement des données](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a>Traiter manuellement les données  
+##  <a name="manually-process-data"></a><a name="bkmk_mahually_process"></a>Traiter manuellement les données  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>Pour traiter des données pour une seule table ou toutes les tables d'un modèle  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66077971"
     |----------|-----------------|  
     |**Traiter par défaut**|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites.|  
     |**Traiter entièrement**|Traite un objet de partition et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est exécutée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est obligatoire lorsqu'une modification structurelle a été apportée à un objet.|  
-    |**Traiter les données**|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
-    |**Processus clair**|Supprime toutes les données d'une partition.|  
-    |**Traiter l’ajout**|Mise à jour incrémentielle de la partition avec de nouvelles données.|  
+    |**Traiter des données**|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
+    |**Traiter l'effacement**|Supprime toutes les données d'une partition.|  
+    |**Traiter l'ajout**|Mise à jour incrémentielle de la partition avec de nouvelles données.|  
   
 3.  Dans la liste des partitions, sélectionnez les partitions à traiter, puis cliquez sur **OK**.  
   
-##  <a name="bkmk_data_process_progress"></a>Progression du traitement des données  
+##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>Progression du traitement des données  
  La boîte de dialogue **Progression du traitement des données** vous permet de surveiller le traitement des données que vous avez importées dans le modèle à partir d'une source externe. Pour accéder à cette boîte de dialogue, cliquez sur le menu **Modèle** , puis sur **Traiter les partitions**, **Traiter la table** ou **Traiter tout**.  
   
  **État**  
@@ -69,11 +69,11 @@ ms.locfileid: "66077971"
  **Détails**  
  Répertorie les tables et les vues importées, le nombre des lignes importées, et fournit un lien vers un rapport concernant les éventuels problèmes.  
   
- **Arrêter l’actualisation**  
+ **Arrêter l'actualisation**  
  Cliquez pour arrêter l'opération de traitement. Cette option est utile si l'opération prend trop de temps ou génère trop d'erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traiter des données &#40;tabulaires SSAS&#41;](process-data-ssas-tabular.md)   
- [Résoudre les problèmes liés aux données de processus &#40;&#41;SSAS tabulaire](troubleshoot-process-data-ssas-tabular.md)  
+ [Dépanner le traitement des données &#40;SSAS Tabulaire&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

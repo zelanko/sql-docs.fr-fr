@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075611"
 ---
 # <a name="define-database-dimensions"></a>Définir des dimensions de base de données
@@ -42,7 +42,7 @@ ms.locfileid: "66075611"
   
 |Onglet|Description|  
 |---------|-----------------|  
-|**Structure de dimension**|Utilisez cet onglet pour travailler avec la structure d’une dimension, pour examiner ou créer le schéma de vue de source de données d’une dimension, pour utiliser des attributs et pour organiser les attributs dans des hiérarchies définies par l’utilisateur.|  
+|**Structure de la dimension**|Utilisez cet onglet pour travailler avec la structure d’une dimension, pour examiner ou créer le schéma de vue de source de données d’une dimension, pour utiliser des attributs et pour organiser les attributs dans des hiérarchies définies par l’utilisateur.|  
 |**Relations d’attributs**|Cet onglet permet de créer, de modifier ou de supprimer les relations d'attributs d'une dimension.|  
 |**Translations**|Cet onglet vous permet d'ajouter et de modifier des traductions de métadonnées de dimensions dans différentes langues.|  
 |**Browser**|Cet onglet vous permet d'examiner les membres d'une dimension traitée et les traductions des métadonnées de dimensions.|  
@@ -52,13 +52,13 @@ ms.locfileid: "66075611"
  [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
  Décrit comment définir et configurer un attribut de dimension.  
   
- [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
+ [Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)  
  Décrit comment définir et configurer une hiérarchie définie par l'utilisateur.  
   
  [Définir des relations d'attributs](attribute-relationships-define.md)  
  Décrit comment définir et configurer une relation d'attribut.  
   
- [Utiliser l'Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Utiliser l’Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Décrit comment utiliser l'Assistant Business Intelligence pour améliorer une dimension.  
   
   

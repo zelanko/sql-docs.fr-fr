@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144305"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
@@ -34,7 +34,7 @@ ms.locfileid: "63144305"
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les jeux de résultats :  
   
-|Type de données SQL Server|Type de données SQL|Valeur|  
+|Type de données SQL Server|Type de données SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63144305"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Prise en charge|  
+|SQL_C_BINARY|Pris en charge|  
 |SQL_C_CHAR|Géré|  
   
  \*Les données binaires sont converties en une chaîne hexadécimale.  
@@ -140,7 +140,7 @@ ms.locfileid: "63144305"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Prise en charge|  
+|SQL_C_BINARY|Pris en charge|  
 |SQL_C_CHAR|Géré|  
   
  \*La conversion de chaînes hexadécimales en données binaires se produit.  
@@ -157,7 +157,7 @@ ms.locfileid: "63144305"
 |Version du serveur|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |SQL Server 2005|`UDT`|`varbinary(max)`|  
-|SQL Server 2008 et versions ultérieures|`UDT`|`UDT`|  
+|SQL Server 2008 et ultérieur|`UDT`|`UDT`|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Fonctions ODBC prenant en charge les types CLR volumineux définis par l'utilisateur  
  Cette section indique les modifications apportées aux fonctions ODBC SQL Server Native Client au niveau des types CLR volumineux définis par l'utilisateur.  

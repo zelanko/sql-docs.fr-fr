@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065999"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Traductions, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -24,7 +24,7 @@ ms.locfileid: "66065999"
  **Ajouter Business Intelligence**  
  Affiche l’ **Assistant Business Intelligence** pour ajouter des fonctionnalités Business Intelligence.  
   
- **Procédure**  
+ **Processus**  
  Affiche la boîte de dialogue **Traiter** pour le traitement de l’objet.  
   
  **Nouvelle traduction**  
@@ -34,25 +34,25 @@ ms.locfileid: "66065999"
  Cliquez sur ce bouton pour supprimer la traduction sélectionnée.  
   
 > [!NOTE]  
->  Pour que cette option soit activée, une cellule de la traduction à supprimer doit être sélectionnée dans la grille des **détails des traductions** .  
+>   Pour que cette option soit activée, une cellule de la traduction à supprimer doit être sélectionnée dans la grille des **détails des traductions** .  
   
  **Nouvelle colonne de légende**  
  Affiche la boîte de dialogue **Traduction de données d’attribut** et permet de définir une nouvelle colonne de légende pendant la modification d’un attribut dans la grille des **détails des traductions** . Pour activer cette option, une cellule d'une colonne de traduction doit être sélectionnée dans la grille des **détails des traductions** .  
   
 > [!NOTE]  
->  Pour que cette option soit activée, une cellule de la colonne de traduction d’un attribut doit être sélectionnée dans la grille des **détails des traductions** .  
+>   Pour que cette option soit activée, une cellule de la colonne de traduction d'un attribut doit être sélectionnée dans la grille des **détails des traductions** .  
   
  **Modifier la colonne de légende**  
  Affiche la boîte de dialogue **Traduction de données d’attribut** et permet de modifier une colonne de légende existante pendant la modification d’un attribut dans la grille des **détails des traductions** .  
   
 > [!NOTE]  
->  Pour que cette option soit activée, une cellule d’une colonne de traduction qui contient une colonne de légende doit être sélectionnée dans la grille des **détails des traductions** .  
+>   Pour que cette option soit activée, une cellule d'une colonne de traduction qui contient une colonne de légende doit être sélectionnée dans la grille des **détails des traductions** .  
   
  **Supprimer la colonne de légende**  
  Supprime la colonne de légende de l’attribut sélectionné dans la grille des **détails des traductions** .  
   
 > [!NOTE]  
->  Pour que cette option soit activée, une cellule d’une colonne de traduction qui contient une colonne de légende doit être sélectionnée dans la grille des **détails des traductions** .  
+>   Pour que cette option soit activée, une cellule d'une colonne de traduction qui contient une colonne de légende doit être sélectionnée dans la grille des **détails des traductions** .  
   
  **Afficher tous les attributs**  
  Cliquez sur cette option pour afficher ou masquer tous les attributs de la dimension sélectionnée, y compris les attributs pour lesquels les hiérarchies sont désactivées.  

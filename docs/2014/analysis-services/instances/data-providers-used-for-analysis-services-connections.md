@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080097"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Fournisseurs de données utilisés pour les connexions Analysis Services
-  Analysis Services fournit trois fournisseurs de données pour l'accès au serveur et aux données. Toutes les applications qui se connectent à Analysis Services le font à l'aide de l'un de ces fournisseurs. Deux des fournisseurs ADOMD.NET et Analysis Services Management Objects (AMO) sont des fournisseurs de données managés. Le fournisseur OLE DB Analysis Services (MSOLAP DLL) est un fournisseur de données en mode natif.  
+  Analysis Services fournit trois fournisseurs de données pour l'accès au serveur et aux données. Toutes les applications qui se connectent à Analysis Services le font à l'aide de l'un de ces fournisseurs. Deux des fournisseurs ADOMD.NET et Analysis Services Management Objects (AMO) sont des fournisseurs de données managés. Le fournisseur OLE DB Analysis Services (DLL MSOLAP) est un fournisseur de données natif.  
   
  Dans les organisations qui exécutent plusieurs versions d'Analysis Services, vous devrez peut-être installer les versions les plus récentes des fournisseurs de données sur les stations de travail des utilisateurs se connectant aux données Analysis Services. Les connexions aux versions les plus récentes d'Analysis Services nécessitent les fournisseurs de données de la même version principale. Par exemple, pour une connexion à [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], chaque station de travail doit disposer d'un fournisseur de données de la version 2014. Bien que l'application Excel installe les fournisseurs de données auxquels elle doit se connecter, le fournisseur peut être obsolète par rapport aux instances Analysis Services que vous utilisez.  
   
  Cette rubrique contient la section suivante :  
   
- [Comment déterminer la version du serveur](#bkmk_ServVers)  
+ [Procédure pour déterminer la version du serveur](#bkmk_ServVers)  
   
- [Comment déterminer la version des fournisseurs de données Analysis Services](#bkmk_LibUpdate)  
+ [Procédure : déterminer la version des fournisseurs de données Analysis Services](#bkmk_LibUpdate)  
   
- [Où se procurer des fournisseurs de données de version plus récente](#bkmk_downloadsite)  
+ [Où obtenir une version plus récente des fournisseurs de données](#bkmk_downloadsite)  
   
  [Fournisseur OLE DB Analysis Services](#bkmk_OLE)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66080097"
   
  [AMO](#blkmk_AMO)  
   
-##  <a name="bkmk_ServVers"></a>Comment déterminer la version du serveur  
+##  <a name="how-to-determine-server-version"></a><a name="bkmk_ServVers"></a>Comment déterminer la version du serveur  
  Connaître la version de l'instance d'Analysis Services vous aidera à déterminer si vous devez installer les versions les plus récentes des fournisseurs de données sur les stations de travail de votre organisation.  
   
 -   Dans SQL Server Management Studio, connectez-vous à l'instance d'Analysis Services. Cliquez avec le bouton droit sur l’instance que vous souhaitez vérifier, pointez sur **rapports**, puis cliquez sur **général**. Les informations de version et d'édition s'affichent dans le rapport.  
@@ -45,7 +45,7 @@ ms.locfileid: "66080097"
   
  Pour plus d’informations sur l’obtention des informations de version et de build, consultez [Comment déterminer la version et l’édition de SQL Server et de ses composants](https://support.microsoft.com/kb/321185).  
   
-##  <a name="bkmk_LibUpdate"></a>Comment déterminer la version des fournisseurs de données Analysis Services  
+##  <a name="how-to-determine-the-version-of-the-analysis-services-data-providers"></a><a name="bkmk_LibUpdate"></a>Comment déterminer la version des fournisseurs de données Analysis Services  
  Les fournisseurs de données sont installés avec Analysis Services, ainsi que par les applications clientes qui se connectent régulièrement à des bases de données Analysis Services, comme Excel.  
   
  Office 2007 installe les fournisseurs de données SQL Server 2005. Office 2010 installe les fournisseurs de données SQL Server 2008. Office 2013 installe les fournisseurs de données SQL Server 2012. Si vous utilisez plusieurs versions d'Office ou de SQL Server, et que les connexions ou la disponibilité des fonctionnalités ne correspondent pas à vos attentes, vous devrez peut-être installer une version plus récente des fournisseurs de données. Vous pouvez exécuter plusieurs versions principales de chaque fournisseur de données côte à côte sur le même ordinateur.  
@@ -68,7 +68,7 @@ ms.locfileid: "66080097"
   
  Pour plus d’informations sur les numéros de version et de build par version, consultez [SQL Server builds sur blogspot](http://sqlserverbuilds.blogspot.com).  
   
-##  <a name="bkmk_downloadsite"></a>Où se procurer des fournisseurs de données de version plus récente  
+##  <a name="where-to-get-newer-version-data-providers"></a><a name="bkmk_downloadsite"></a>Où se procurer des fournisseurs de données de version plus récente  
  La version installée sur l'ordinateur client doit correspondre à la version principale du serveur qui fournit les données. Si l'installation du serveur est plus récente que les fournisseurs de données installés sur les stations de travail de votre réseau, vous devrez peut-être installer les dernières bibliothèques disponibles.  
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Recherche les fournisseurs de données sur le site de téléchargement  
@@ -79,7 +79,7 @@ ms.locfileid: "66080097"
   
 3.  Faites défiler vers le bas jusqu'à la section contenant les composants Analysis Services. ADOMD.NET, le fournisseur OLE DB et AMO sont respectivement les deuxième, troisième et quatrième éléments de la liste. Chaque bibliothèque est disponible dans les versions 32 bits ou 64 bits. Les serveurs et les stations de travail les plus récentes exécutant un système d'exploitation à 64 bits nécessiteront la version 64 bits.  
   
-##  <a name="bkmk_OLE"></a>Fournisseur Analysis Services OLE DB  
+##  <a name="analysis-services-ole-db-provider"></a><a name="bkmk_OLE"></a>Fournisseur Analysis Services OLE DB  
  Le fournisseur OLE DB pour Analysis Services est le fournisseur natif de connexions de la base de données Analysis Services. MSOLAP est utilisé indirectement par ADOMD.NET et AMO, par délégation des demandes de connexion au fournisseur de données. Vous pouvez également appeler le fournisseur OLE DB directement à partir du code de l'application, notamment si les spécifications relatives à la solution excluent l'utilisation d'une API managée.  
   
  Le fournisseur OLE DB pour Analysis Services est installé automatiquement par le programme d'installation de SQL Server, Excel et d'autres applications fréquemment utilisées pour accéder aux bases de données Analysis Services. Vous pouvez également l'installer manuellement en le téléchargeant depuis le Centre de téléchargement. Par défaut, le fournisseur est disponible dans le dossier \Program Files\Microsoft Analysis Services. Le fournisseur doit être installé sur toutes les stations de travail utilisées pour accéder aux données Analysis Services.  
@@ -90,7 +90,7 @@ ms.locfileid: "66080097"
   
  MSOLAP.5.dll correspond au fournisseur OLE DB Analysis Services installé avec Excel 2013. Les versions précédentes, telles que MSOLAP.4.dll ou MSOLAP.3.dll, sont souvent disponibles sur des stations de travail qui exécutent des versions antérieures d'Excel. Certaines fonctionnalités Analysis Services, telles que le complément PowerPivot, requièrent des versions spécifiques du fournisseur OLE DB. Pour plus d’informations, consultez [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
-##  <a name="bkmk_ADOMD"></a>ADOMD.NET  
+##  <a name="adomdnet"></a><a name="bkmk_ADOMD"></a>ADOMD.NET  
  ADOMD.NET est un fournisseur de données managé utilisé pour interroger des données Analysis Services. Excel utilise ADOMD.NET lors de la connexion à un cube Analysis Services spécifique. La chaîne de connexion que vous voyez dans Excel convient pour une connexion ADOMD.NET.  
   
  ADOMD.NET est installé par le programme d'installation de SQL Server et est utilisé par les applications clientes SQL Server pour la connexion à Analysis Services. Office installe cette bibliothèque pour prendre en charge les connexions de données à partir d'Excel. Comme avec les autres fournisseurs de données inclus dans SQL Server, vous pouvez redistribuer ADOMD.NET si vous utilisez la bibliothèque dans du code personnalisé. Vous pouvez également le télécharger et l’installer manuellement pour obtenir la nouvelle version (consultez [Procédure : déterminer la version des fournisseurs de données Analysis Services](#bkmk_LibUpdate) , dans cette rubrique).  
@@ -101,7 +101,7 @@ ms.locfileid: "66080097"
   
  Pour plus d’informations sur la connexion par programmation, consultez [Établissement de connexions dans ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
-##  <a name="blkmk_AMO"></a>AMO  
+##  <a name="amo"></a><a name="blkmk_AMO"></a>AMO  
  AMO est un fournisseur de données managé utilisé pour l'administration du serveur et la définition de données. Par exemple, SQL Server Management Studio utilise AMO pour la connexion à Analysis Services.  
   
  AMO est installé par le programme d'installation de SQL Server et est utilisé par les applications clientes SQL Server pour la connexion à Analysis Services. Vous pouvez également le télécharger et l’installer manuellement quand vous utilisez AMO dans du code personnalisé (consultez [Procédure : déterminer la version des fournisseurs de données Analysis Services](#bkmk_LibUpdate) , dans cette rubrique). AMO est disponible dans le Global Assembly Cache (GAC) en tant que `Microsoft.AnalysisServices`.  

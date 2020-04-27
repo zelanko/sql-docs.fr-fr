@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081455"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action d'extraction (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
-  Utilisez le volet **Éditeur de formulaire d’action d’extraction** sous l’onglet **Actions** du Concepteur de cube pour modifier l’action d’extraction sélectionnée dans le volet **Organisateur d’action**. Pour plus d’informations sur les actions d’extraction, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
+  Utilisez le volet **Éditeur de formulaire d’action d’extraction** sous l’onglet **Actions** du Concepteur de cube pour modifier l’action d’extraction sélectionnée dans le volet **Organisateur d’action** . Pour plus d’informations sur les actions d’extraction, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
 >  Les actions d'extraction ne descendent plus vers la banque de données sous-jacente. Les informations auxquelles accèdent les actions d'extraction doivent être façonnées dans le cube à l'aide de membres de la dimension ou la hiérarchie.  
   
 ## <a name="options"></a>Options  
- **nomme**  
+ **name**  
  Tapez le nom de l'action.  
   
- **Cible d’action**  
+ **Cible d'action**  
  Développez pour afficher l’option **Membres de groupe de mesures** .  
   
  **Membres de groupe de mesures**  
@@ -40,7 +40,7 @@ ms.locfileid: "66081455"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- **Colonnes d’extraction**  
+ **Colonnes d'extraction**  
  Développez afin d'afficher une grille qui mentionne les attributs renvoyés lorsque l'utilisateur exécute cette action.  
   
 > [!NOTE]  
@@ -56,7 +56,7 @@ ms.locfileid: "66081455"
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Par défaut**, **Lignes au maximum**, **Invocation**, **Application**, **Description**, **Légende**et **La légende est MDX** .  
   
- **Valeurs**  
+ **Par défaut**  
  Sélectionnez **True** pour définir cette action d’extraction comme valeur par défaut. Sinon, sélectionnez **False**.  
   
  Si la `RETURN` clause est omise dans une instruction `DRILLTHROUGH` MDX exécutée par une application cliente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’instance évalue toutes les actions d’extraction par défaut et exécute la première action d’extraction par défaut qui retourne un jeu non vide. Pour plus d’informations sur l' `DRILLTHROUGH` instruction MDX, consultez [instruction d’extraction &#40;&#41;MDX ](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -64,10 +64,10 @@ ms.locfileid: "66081455"
 > [!NOTE]  
 >  Cette option est utilisée à des fins de compatibilité ascendante.  
   
- **Nombre maximal de lignes**  
+ **Lignes au maximum**  
  Tapez le nombre maximum de lignes à retourner par l'action d'extraction. Si vous attribuez la valeur zéro à cette option ou que vous la laissez vide, l'action d'extraction retourne toutes les lignes à l'application cliente.  
   
- **Appel**  
+ **Invocation**  
  Sélectionnez le paramètre qui indique le moment où l'action doit être effectuée.  
   
 > [!NOTE]  
@@ -75,10 +75,10 @@ ms.locfileid: "66081455"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Batch|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive|L'action s'exécute lorsque l'utilisateur l'invoque.|  
+|Interactive (Interactif)|L'action s'exécute lorsque l'utilisateur l'invoque.|  
 |À l’ouverture|L'action s'exécute à la première ouverture du cube.|  
   
  **Application**  
@@ -92,7 +92,7 @@ ms.locfileid: "66081455"
  **Description**  
  Tapez une description facultative de l'action.  
   
- **Caption**  
+ **-**  
  Entrez la légende à afficher pour l’action dans l’application cliente si l’option **La légende est MDX** a la valeur **False**.  
   
  Entrez l’expression MDX (Multidimensional Expressions) qui retourne une chaîne pour la légende si l’option **La légende est MDX** a la valeur **True**.  

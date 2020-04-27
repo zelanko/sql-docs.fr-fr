@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075559"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Définir des requêtes nommées dans une vue de source de données (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075559"
   
  Les tables et les colonnes référencées dans la requête SQL ne doivent pas être qualifiées ou doivent être qualifiées par le nom de table uniquement. Par exemple, pour faire référence à la colonne SaleAmount dans une table, `SaleAmount` ou `Sales.SaleAmount` est valide, mais `dbo.Sales.SaleAmount` génère une erreur.  
   
- **Remarque** Lorsque vous définissez une requête nommée qui interroge [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données ou 7,0, une requête nommée qui contient une sous-requête corrélée et une clause Group by échouera. Pour plus d’informations, consultez [Erreur interne avec l’instruction SELECT contenant une sous-requête corrélée et GROUP BY](https://support.microsoft.com/kb/274729) dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ **Remarque** : quand vous définissez une requête nommée qui interroge une source de données [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, cela a pour effet de faire échouer une requête nommée qui contient une sous-requête corrélée et une clause GROUP BY. Pour plus d’informations, consultez [Erreur interne avec l’instruction SELECT contenant une sous-requête corrélée et GROUP BY](https://support.microsoft.com/kb/274729) dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="add-or-edit-a-named-query"></a>Ajouter ou modifier une requête nommée  
   

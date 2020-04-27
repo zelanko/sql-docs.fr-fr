@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081558"
 ---
 # <a name="dmx-templates"></a>Modèles DMX
@@ -72,7 +72,7 @@ ms.locfileid: "66081558"
   
 -   Requête de prédiction TOP sur la table imbriquée  
   
- **Créés**  
+ **Créer**  
   
  Utilisez ces modèles pour créer des modèles ou des structures de données personnalisés. Vous n’êtes pas limité aux modèles pris en charge par les assistants : vous pouvez utiliser n’importe quel algorithme d’exploration [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de données pris en charge par l’instance de à laquelle vous êtes connecté, y compris les algorithmes de plug-in.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66081558"
   
 -   Effectuer l'apprentissage d'une structure d'exploration de données  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  En fonction du modèle vous utilisez, vous pouvez avoir besoin d'autorisations administratives pour accéder au serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et exécuter la requête.  
   
 ## <a name="see-also"></a>Voir aussi  

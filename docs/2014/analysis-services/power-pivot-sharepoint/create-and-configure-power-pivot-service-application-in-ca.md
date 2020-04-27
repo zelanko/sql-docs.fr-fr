@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071581"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Créer et configurer une application de service PowerPivot dans l'Administration centrale
@@ -30,9 +30,9 @@ ms.locfileid: "66071581"
   
  [Affecter une application de service PowerPivot à une application Web](#AssignGSA)  
   
- [Modifier les propriétés d’une application de service](#EditGSA)  
+ [Modifier les propriétés d'une application de service](#EditGSA)  
   
-##  <a name="determine"></a>Déterminer si une nouvelle application de service PowerPivot doit être créée  
+##  <a name="determine-whether-to-create-a-new-powerpivot-service-application"></a><a name="determine"></a>Déterminer si une nouvelle application de service PowerPivot doit être créée  
  Dans une installation PowerPivot pour SharePoint, la batterie de serveurs doit inclure au moins une application de service PowerPivot. Une application de service est automatiquement créée si vous avez utilisé l'outil de configuration de PowerPivot pour configurer le serveur. Sinon, vous devez créer une application de service PowerPivot manuellement dans l'Administration centrale.  
   
  Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. En fonction des options que vous sélectionnez lors de la création de l'application de service, une connexion au service PowerPivot est ajoutée au groupe de connexions de service par défaut. Toutes les applications Web SharePoint qui s'abonnent au groupe de connexions de service par défaut bénéficient automatiquement d'un accès immédiat à l'application de service PowerPivot.  
@@ -49,7 +49,7 @@ ms.locfileid: "66071581"
   
  Si vous n'avez pas de raison particulière de créer une application de service PowerPivot supplémentaire, vous devez utiliser une seule application de service pour toutes les applications Web dans la batterie de serveurs.  
   
-##  <a name="CreateApp"></a>Créer une application de service PowerPivot  
+##  <a name="create-a-powerpivot-service-application"></a><a name="CreateApp"></a>Créer une application de service PowerPivot  
   
 1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66071581"
   
 10. Cliquez sur **OK**. Le service s'affiche avec les autres services gérés dans la liste des applications de service de la batterie de serveurs.  
   
-##  <a name="ConfigApp"></a>Configurer l’application de service PowerPivot  
+##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>Configurer l’application de service PowerPivot  
  Une application de service PowerPivot est créée à l'aide d'une configuration par défaut. Les paramètres par défaut sont recommandés dans la plupart des scénarios. Modifiez-les uniquement si vous constatez des temps de réponse longs ou des suppressions de connexions, ou si vous changez la configuration de service PowerPivot pour des applications Web SharePoint spécifiques.  
   
 1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
@@ -122,7 +122,7 @@ ms.locfileid: "66071581"
   
      Les modifications apportées au délai de chargement ou à la méthode d'allocation sont appliquées uniquement aux nouvelles requêtes entrantes. Les requêtes qui sont déjà en cours de traitement sont soumises aux valeurs qui étaient appliquées lors de la réception de la requête.  
   
-##  <a name="AssignGSA"></a>Affecter une application de service PowerPivot à une application Web  
+##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>Affecter une application de service PowerPivot à une application Web  
  Une fois que vous avez configuré une application de service PowerPivot, vous pouvez l'affecter à une application Web. Pour ce faire, vous devez l'ajouter à la liste des connexions d'application de service de cette application Web. Il existe deux façons d'effectuer cette opération :  
   
 -   Ajoutez-la au groupe de connexions **par défaut** . Le *groupe de connexions par défaut* est une collection de connexions d'application de service qui sont disponibles pour toute application Web y faisant référence. Vous devez ajouter une application de service PowerPivot à cette liste.  
@@ -131,19 +131,19 @@ ms.locfileid: "66071581"
   
  Le groupe de connexions par défaut accepte plusieurs applications de service du même type. Cependant, sachez qu'ajouter plusieurs applications de service PowerPivot à cette liste n'est pas une configuration prise en charge.  
   
-1.  Dans administration centrale, dans **gestion des applications**, cliquez sur **gérer les applications Web**.  
+1.  Dans Administration Centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications Web**.  
   
 2.  Sélectionnez l'application pour laquelle vous voulez affecter une connexion (par exemple, SharePoint -80).  
   
 3.  Cliquez sur **Connexions de service**.  
   
-4.  Dans **Modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]**.  
+4.  Dans **modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]**.  
   
-5.  Pour **[personnalisé]**, cochez la case à côté de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service PowerPivot (indiquées par type défini `PowerPivot Service Application Proxy`sur), veillez à en choisir une seule.  
+5.  Pour **[personnalisé]**, activez la case à cocher en regard de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service PowerPivot (indiquées par type défini `PowerPivot Service Application Proxy`sur), veillez à en choisir une seule.  
   
 6.  Cliquez sur **OK**.  
   
-##  <a name="EditGSA"></a>Modifier les propriétés d’une application de service  
+##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>Modifier les propriétés d’une application de service  
  Suivez les instructions ci-dessous pour rouvrir la page de propriétés qui spécifie le nom de l'application de service, le pool d'applications, les paramètres de base de données et les associations de service.  
   
 1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
@@ -153,6 +153,6 @@ ms.locfileid: "66071581"
 3.  Cliquez sur **Propriétés** dans le ruban.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

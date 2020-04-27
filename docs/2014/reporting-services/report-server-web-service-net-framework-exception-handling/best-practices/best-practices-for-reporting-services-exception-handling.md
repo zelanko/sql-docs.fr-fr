@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd38e382cc0b34de0498dd5ed9ce0237a5a1e07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046131"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Meilleures pratiques pour la gestion des exceptions Reporting Services
@@ -34,14 +34,14 @@ ms.locfileid: "63046131"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Éviter les requêtes non valides](preventing-invalid-requests.md)|Décrit des techniques pour empêcher l'envoi au serveur de rapports de demandes qui ne sont pas valides.|  
-|[Utilisation des blocs Try/Catch](using-try-and-catch-blocks.md)|Décrit comment améliorer la fiabilité de votre application à l'aide des blocs try et catch.|  
+|[Éviter les demandes non valides](preventing-invalid-requests.md)|Décrit des techniques pour empêcher l'envoi au serveur de rapports de demandes qui ne sont pas valides.|  
+|[Utilisation des blocs Try et Catch](using-try-and-catch-blocks.md)|Décrit comment améliorer la fiabilité de votre application à l'aide des blocs try et catch.|  
 |[Gestion des avertissements et des erreurs qui ne lèvent pas d'exceptions](handling-warnings-and-cases-that-do-not-cause-exceptions.md)|Explique comment gérer des erreurs qui ne provoquent pas la levée d'une exception par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Utilisation de la propriété des détails pour gérer des erreurs spécifiques](using-the-detail-property-to-handle-specific-errors.md)|Explique comment gérer par programmation des erreurs spécifiques en utilisant la propriété **Detail** de l’objet **SoapException**.|  
+|[Utilisation de la propriété Detail pour gérer des erreurs spécifiques](using-the-detail-property-to-handle-specific-errors.md)|Explique comment gérer par programmation des erreurs spécifiques en utilisant la propriété **Detail** de l’objet **SoapException**.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Detail, propriété](../soapexception-class/detail-property.md)   
  [Présentation de la gestion des exceptions dans Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Classe SoapException Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)  
+ [Classe SoapException Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)  
   
   

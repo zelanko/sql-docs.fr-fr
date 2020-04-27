@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068172"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Spécifier des informations sur la source (Assistant Partition)
   La page **Spécifier des informations sur la source** permet de sélectionner le groupe de mesures dans lequel doit être créée la partition ainsi que la vue de source de données et les tables filtrées se rapportant à cette dernière.  
   
 > [!CAUTION]  
->  Si vous spécifiez une table dans **Tables disponibles** qui est déjà utilisée par une autre partition, vous devez définir une requête dans la page **Restreindre les lignes** . Sinon, vous risquez d’obtenir des données en double dans le cube.  
+>   Si vous indiquez une table dans **Tables disponibles** mais que cette table est déjà utilisée par une autre partition, vous devez dans ce cas établir une requête dans la page **Restreindre les lignes** ou risquer d'obtenir des données en double dans le cube.  
   
 ## <a name="options"></a>Options  
  **Groupe de mesures**  
  Permet de sélectionner un groupe de mesures destiné à cette partition.  
   
- **Look in**  
+ **Chercher dans**  
  Permet d'indiquer la source de données ou la vue de source de données contenant les tables source destinées à cette partition. La vue de source de données utilisée par le groupe de mesures est l'élément sélectionné par défaut.  
   
  **Filtrer les tables**  
@@ -49,6 +49,6 @@ ms.locfileid: "66068172"
 >  Si plusieurs tables sont sélectionnées, la page **Restreindre les lignes** ne peut alors pas s'afficher et les lignes ne peuvent pas être restreintes pour les partitions créées à partir des tables sélectionnées. Dans ce cas, pour restreindre les lignes relatives à chaque partition, lancez l'Assistant Partition une fois pour chaque table à partir de laquelle une partition doit être créée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

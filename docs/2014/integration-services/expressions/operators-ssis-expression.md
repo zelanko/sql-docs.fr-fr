@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897358"
 ---
 # <a name="operators-ssis-expression"></a>Opérateurs (expression SSIS)
@@ -36,8 +36,8 @@ ms.locfileid: "62897358"
 |[- &#40;Soustraire&#41; &#40;expression SSIS&#41;](subtract-ssis-expression.md)|Soustrait la deuxième expression numérique de la première.|  
 |[- &#40;Inverser&#41; &#40;expression SSIS&#41;](negate-ssis-expression.md)|Inverse une expression numérique.|  
 |[&#42; &#40;Multiplier&#41; &#40;expression SSIS&#41;](multiply-ssis-expression.md)|Multiplie deux expressions numériques.|  
-|[Diviser l’expression &#40;SSIS&#41;](divide-ssis-expression.md)|Divise la première expression numérique par la deuxième.|  
-|[&#40;modulo&#41; &#40;Expression SSIS&#41;](modulo-ssis-expression.md)|Fournit le reste entier de la division de la première expression numérique par la deuxième.|  
+|[Diviser &#40;expression SSIS&#41;](divide-ssis-expression.md)|Divise la première expression numérique par la deuxième.|  
+|[&#40;modulo&#41; &#40;expression SSIS&#41;](modulo-ssis-expression.md)|Fournit le reste entier de la division de la première expression numérique par la deuxième.|  
 |[&#124;&#124; &#40;OR logique&#41; &#40;expression SSIS&#41;](logical-or-ssis-expression.md)|Effectue une opération OR logique.|  
 |[&& &#40;AND logique&#41; &#40;expression SSIS&#41;](logical-and-ssis-expression.md)|Effectue une opération AND logique.|  
 |[\! &#40;NOT logique&#41; &#40;expression SSIS&#41;](logical-not-ssis-expression.md)|Inverse un opérande booléen.|  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899409"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
@@ -26,12 +26,12 @@ ms.locfileid: "67899409"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|ID de la requête actuelle ou de la dernière exécution de la requête (si la session est ARRÊTée et que la requête a été exécutée au moment de l’arrêt). Clé pour cette vue.|Unique pour toutes les sessions dans le système.|  
+|session_id|**nvarchar(32)**|ID de la requête actuelle ou de la dernière exécution de la requête (si la session est ARRÊTée et que la requête a été exécutée au moment de l’arrêt). Clé pour cette vue.|Unique pour toutes les sessions dans le système.|  
 |status|**nvarchar(10**|Pour les sessions actives, indique si la session est actuellement active ou inactive. Pour les sessions passées, l’état de la session peut indiquer fermé ou arrêté (si la session a été fermée de force).|« ACTIVE », « CLOSED », « IDLE », « TERMINATEED »|  
-|request_id|**nvarchar (32)**|ID de la requête actuelle ou de la dernière exécution de la requête.|Unique pour toutes les demandes dans le système. NULL si aucun n’a été exécuté.|  
-|security_id|**varbinary(85)**|ID de sécurité du principal qui exécute la session.||  
+|request_id|**nvarchar(32)**|ID de la requête actuelle ou de la dernière exécution de la requête.|Unique pour toutes les demandes dans le système. NULL si aucun n’a été exécuté.|  
+|security_id|**varbinary (85)**|ID de sécurité du principal qui exécute la session.||  
 |login_name|**nvarchar(128)**|Nom de connexion du principal qui exécute la session.|Toute chaîne conforme aux conventions d’affectation de noms d’utilisateurs.|  
-|login_time|**DATETIME**|Date et heure de la connexion de l’utilisateur et de la création de cette session.|**DateTime** valide avant l’heure actuelle.|  
+|login_time|**datetime**|Date et heure de la connexion de l’utilisateur et de la création de cette session.|**DateTime** valide avant l’heure actuelle.|  
 |query_count|**int**|Capture le nombre de requêtes/la session requeststhis a été exécuté depuis sa création.|Supérieur ou égal à 0.|  
 |is_transactional|**bit**|Capture si une session est actuellement dans une transaction ou non.|0 pour la validation automatique, 1 pour transaction.|  
 |client_id|**nvarchar(255)**|Capture les informations client pour la session.|Toute chaîne valide.|  

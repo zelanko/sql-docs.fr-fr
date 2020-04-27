@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917083"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
@@ -45,10 +45,10 @@ ms.locfileid: "62917083"
  Création automatique des statistiques incrémentielles  
  Spécifiez si utiliser l'option incrémentielle lorsque les statistiques par partition sont créées. Pour plus d’informations sur les statistiques incrémentielles, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
- **Créer automatiquement les statistiques**  
+ **Création automatique des statistiques**  
  Spécifiez si la base de données doit automatiquement créer les statistiques d'optimisation manquantes. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, les statistiques manquantes, requises par une requête pour l'optimisation, sont créées automatiquement durant l'optimisation. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
- **réduction automatique**  
+ **Réduction automatique**  
  Spécifiez si les fichiers de base de données peuvent faire l'objet d'une réduction de taille périodique. Les valeurs possibles sont `True` et `False`. Pour plus d’informations, voir [Shrink a Database](shrink-a-database.md).  
   
  **Mise à jour automatique des statistiques**  
@@ -61,10 +61,10 @@ ms.locfileid: "62917083"
   
  L’affectation de `True` la valeur à cette option n’a aucun effet, sauf si la **mise à jour automatique des statistiques** est également définie sur. `True`  
   
-## <a name="containment"></a>Relation contenant-contenu  
+## <a name="containment"></a>Containment  
  Dans les bases de données autonomes, certains paramètres généralement configurés au niveau serveur peuvent l'être au niveau de la base de données.  
   
- **LCID de langue de texte intégral par défaut**  
+ **LCID de la langue de texte intégral par défaut**  
  Spécifie une langue par défaut pour les colonnes de texte intégral indexées. L'analyse linguistique des données de texte intégral indexées dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour connaître le langue correspondant au paramètre affiché, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
  **Langue par défaut**  
@@ -82,7 +82,7 @@ ms.locfileid: "62917083"
  Par exemple, le paramètre par défaut 2049 indique qu'une date entrée sous la forme "14/3/49" sera interprétée comme le 14 mars 2049, tandis qu'une date entrée sous la forme "14/3/50" sera interprétée comme le 14 mars 1950. Pour plus d’informations, voir [Configurer l'option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Curseur  
- **Fermer le curseur lors de la validation activée**  
+ **Fermer le curseur lors de l'activation de la validation**  
  Spécifiez si les curseurs doivent être fermés une fois que la transaction qui a ouvert le curseur est validée. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, tout curseur ouvert au moment où une transaction est validée ou restaurée est fermé. Si la valeur est `False`, ces curseurs restent ouverts lorsqu'une transaction est validée, Lorsque `False`, la restauration d’une transaction ferme tous les curseurs, à l’exception de ceux définis comme étant non sensibles ou statiques. Pour plus d’informations, consultez [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Curseur par défaut**  
@@ -92,7 +92,7 @@ ms.locfileid: "62917083"
  **Nom du répertoire FILESTREAM**  
  Spécifiez le nom de répertoire pour les données FILESTREAM associées à la base de données sélectionnée.  
   
- **Accès non transactionnel FILESTREAM**  
+ **Accès FILESTREAM non transactionnel**  
  Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY**ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Divers  
@@ -111,18 +111,18 @@ ms.locfileid: "62917083"
  **Annulation arithmétique activée**  
  Spécifiez si l'option d'annulation arithmétique est activée ou non pour la base de données. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, un dépassement de capacité ou une division par zéro provoquent l'arrêt du traitement de la requête ou du lot d'instructions. Si l'erreur se produit dans une transaction, cette dernière est restaurée. Si la valeur de cette option est `False`, un message d'avertissement s'affiche, mais le traitement de la requête, du lot d'instructions ou de la transaction se poursuit, comme s'il n'y avait pas d'erreur. Pour plus d’informations, consultez [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
- **La concaténation de la valeur null donne NULL**  
+ **La concaténation de la valeur NULL donne NULL**  
  Spécifiez le comportement lorsque les valeurs NULL sont concaténées. Lorsque la valeur de la `True`propriété `string` est, + null retourne null. Lorsque `False`la valeur est, `string`le résultat est. Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Chaînage des propriétés des bases de données croisées activé**  
  Cette valeur en lecture seule indique si le chaînage des propriétés des bases de données croisées a été activé. Lorsque `True`la propriété est, la base de données peut être la source ou la cible d’une chaîne de propriétés de bases de données croisées. Utilisez l'instruction ALTER DATABASE pour définir cette propriété.  
   
- **Optimisation de la corrélation des dates activée**  
+ **Optimisation des corrélations de dates activée**  
  Lorsque `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques de corrélation entre deux tables quelconques de la base de données qui sont liées par une `datetime` contrainte de clé étrangère et qui ont des colonnes.  
   
  Lorsque `False`, les statistiques de corrélation ne sont pas conservées.  
   
- **Abandon d’arrondi numérique**  
+ **Abandon en cas d'arrondi numérique**  
  Spécifiez comment la base de données gère les erreurs d'arrondi. Les valeurs possibles sont `True` et `False`. Si la valeur de cette option est `True`, une erreur est générée lorsqu'une perte de précision survient dans une expression. Lorsque `False`la valeur est, les pertes de précision ne génèrent pas de messages d’erreur et le résultat est arrondi à la précision de la colonne ou de la variable stockant le résultat. Pour plus d’informations, consultez [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Paramétrage**  
@@ -149,14 +149,14 @@ ms.locfileid: "62917083"
   
  Pour définir cette propriété, utilisez l'instruction ALTER DATABASE.  
   
- **Format de stockage VarDecimal activé**  
+ **Format de stockage vardecimal activé**  
  Cette option est en lecture seule à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] partir de et versions ultérieures, toutes les bases de données sont activées pour le format de stockage vardecimal. Cette option utilise [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Récupération  
  **Vérification de page**  
  Spécifiez l'option utilisée pour détecter et signaler les transactions d'E/S incomplètes à cause d'erreurs d'E/S de disque. Les valeurs possibles sont **None**, **TornPageDetection**et **Checksum**. Pour plus d’informations, consultez [Gérer la table suspect_pages &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
- **Temps de récupération cible (secondes)**  
+ **Temps de récupération cible (en secondes)**  
  Spécifie la durée maximale (en secondes) de la récupération de la base de données spécifiée en cas d'incident. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../logs/database-checkpoints-sql-server.md).  
   
 ## <a name="state"></a>State  
@@ -167,7 +167,7 @@ ms.locfileid: "62917083"
  Affiche l'état actuel de la base de données. Elle n’est pas modifiable. Pour plus d'informations sur l'option **État de la base de données**, consultez [Database States](database-states.md).  
   
  **Restreindre l’accès**  
- Spécifiez les utilisateurs autorisés à accéder à la base de données. Les valeurs possibles sont :  
+ Spécifiez les utilisateurs autorisés à accéder à la base de données. Les valeurs possibles sont les suivantes :  
   
 -   **Multiple**  
   
@@ -177,7 +177,7 @@ ms.locfileid: "62917083"
   
      État utilisé pour les actions de maintenance qui permet à un seul utilisateur à la fois d'accéder à la base de données.  
   
--   **Restricted (Restreint)**  
+-   **Restreint**  
   
      Seuls les membres des rôles db_owner, dbcreator ou sysadmin peuvent utiliser la base de données.  
   

@@ -17,14 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126147"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Intégration de Reporting Services dans les applications
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est une plate-forme de création de rapports ouverte et extensible conçue pour fournir aux développeurs un jeu complet d'API  pour développer des solutions.  
   
  Il existe trois options pour l' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégration dans des applications personnalisées : le service Web Report Server, également [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] appelé API SOAP, les contrôles ReportViewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]pour et l’accès URL. Chaque option représente une approche différente de l'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans vos applications.  
@@ -51,7 +50,7 @@ ms.locfileid: "63126147"
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Choix entre l’accès URL et SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [Informations techniques de référence &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
+ [Référence technique &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Service Web des serveurs de rapports](../report-server-web-service/report-server-web-service.md)  
   
   

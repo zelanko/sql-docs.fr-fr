@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d887853b475f7b4d673d7b04343ae9bc71644d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046041"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Gestion des exceptions dans Reporting Services
@@ -31,6 +31,6 @@ ms.locfileid: "63046041"
 ## <a name="see-also"></a>Voir aussi  
  [Detail, propriété](soapexception-class/detail-property.md)   
  [Présentation de la gestion des exceptions dans Reporting Services](introducing-exception-handling-in-reporting-services.md)   
- [Classe SoapException Reporting Services](soapexception-class/reporting-services-soapexception-class.md)  
+ [Classe SoapException Reporting Services](soapexception-class/reporting-services-soapexception-class.md)  
   
   

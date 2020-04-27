@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489106"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Créer un attribut basé sur un domaine à partir d'Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel
   Dans cette tâche, vous convertissez l’attribut **State** de l’entité **Supplier** en tant qu' **attribut basé sur un domaine**. Une fois que vous avez configuré l’attribut d’État comme étant basé sur un domaine et que vous l’avez publié sur MDS, une nouvelle entité nommée **État** est créée sur le serveur MDS avec toutes les valeurs de la colonne et l’attribut **État** de l’entité **fournisseur** est rempli avec les valeurs de l’entité **État** . À présent, le modèle **fournisseurs** doit avoir deux entités : **fournisseur** et **État** où l’attribut **État** de l’entité **fournisseur** est un attribut basé sur un domaine qui dépend de l’entité **État** .  
   
 1.  Basculez vers la fenêtre **Excel** avec **les fournisseurs. xlsx nettoyés et correspondants** .  
@@ -41,6 +41,6 @@ ms.locfileid: "65489106"
      ![Excel - Liste déroulante des États](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - Liste déroulante des États")  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 6 : Vérifier que l'attribut basé sur un domaine est créé à l'aide de Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Tâche 6 : Tâche 6 : Vérification que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

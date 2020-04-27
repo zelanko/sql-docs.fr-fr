@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080486"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Mise à jour incrémentielle (Analysis Services - Données multidimensionnelles)
@@ -28,7 +28,7 @@ ms.locfileid: "66080486"
 |----------|----------------|  
 |**Groupe de mesures**|Sélectionnez le groupe de mesures soumis à la mise à jour incrémentielle.<br /><br /> Remarque : cette option est activée uniquement lorsque vous effectuez la mise à jour incrémentielle d’un cube. Si vous appliquez la mise à jour incrémentielle à un groupe de mesures ou à une partition, elle est désactivée.|  
 |**Non**|Sélectionnez la partition à mettre à jour.<br /><br /> Remarque : cette option est activée uniquement lorsque vous effectuez la mise à jour incrémentielle d’un cube. Si vous appliquez la mise à jour incrémentielle à un groupe de mesures ou à une partition, elle est désactivée.|  
-|**Table**|Met à jour l'objet d'une table.|  
+|**Table de charge de travail**|Met à jour l'objet d'une table.|  
 |**Source de données ou vue**|Sélectionnez la source ou la vue des données dans laquelle se trouve la table source.<br /><br /> Remarque : Cette option est active uniquement si **Table** est sélectionné.|  
 |**Schéma et nom de la table**|Sélectionnez la table source utilisée pour extraire les données pour la mise à jour incrémentielle du cube, du groupe de mesures ou de la partition.<br /><br /> Remarque : Cette option est active uniquement si **Table** est sélectionné.|  
 |**Requête**|Met à jour l'objet d'une requête.|  

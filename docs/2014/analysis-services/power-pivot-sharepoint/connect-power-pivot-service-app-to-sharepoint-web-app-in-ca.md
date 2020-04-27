@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071677"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Connecter une application de service PowerPivot à une application Web SharePoint dans l'Administration centrale
@@ -29,7 +29,7 @@ ms.locfileid: "66071677"
   
  [Ajouter une application de service PowerPivot à une liste d'association de services personnalisée](#custom)  
   
-##  <a name="default"></a>Ajouter une application de services PowerPivot au groupe par défaut  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>Ajouter une application de services PowerPivot au groupe par défaut  
  Une liste d'association de services est une liste de services partagés qui fournissent des ressources à d'autres applications Web SharePoint de la batterie de serveurs. Il existe un groupe par défaut d'association de services pour la batterie de serveurs.  
   
  Pour faire figurer une application de service PowerPivot dans la liste, vous pouvez l'ajouter, soit lorsque vous créez l'application, soit ultérieurement en effectuant la procédure suivante.  
@@ -42,10 +42,10 @@ ms.locfileid: "66071677"
   
 4.  Cliquez sur **OK**.  
   
-##  <a name="custom"></a>Ajouter une application de services PowerPivot à une liste d’association de services personnalisée  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Ajouter une application de services PowerPivot à une liste d’association de services personnalisée  
  Le groupe par défaut peut être remplacé par une liste personnalisée. Une liste personnalisée est créée spécifiquement pour une application Web SharePoint précise. Elle remplace le groupe par défaut par les associations de services spécifiées par un administrateur de batterie de serveurs ou de service. Si vous avez créé plusieurs applications de service PowerPivot, vous devez utiliser une liste personnalisée pour spécifier l'application à utiliser. Une liste personnalisée ne peut pas être réutilisée par d'autres applications Web. Elle s'applique uniquement à l'application Web pour laquelle elle a été créée.  
   
-1.  Dans administration centrale, dans **gestion des applications**, cliquez sur **gérer les applications Web**.  
+1.  Dans Administration Centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications Web**.  
   
 2.  Sélectionnez l'application (par exemple, SharePoint -80).  
   

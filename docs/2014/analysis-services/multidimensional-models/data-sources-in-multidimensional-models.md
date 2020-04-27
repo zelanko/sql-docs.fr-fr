@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076034"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Sources de données dans des modèles multidimensionnels
@@ -55,15 +55,15 @@ ms.locfileid: "66076034"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)|Décrit les types de sources de données qui peuvent être utilisés dans un modèle multidimensionnel.|  
-|[Créer une source de données &#40;SSAS multidimensionnel&#41;](create-a-data-source-ssas-multidimensional.md)|Explique comment ajouter un objet de source de données à un modèle multidimensionnel.|  
-|[Supprimer une source de données dans Explorateur de solutions &#40;&#41;multidimensionnels SSAS](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilisez cette procédure pour supprimer un objet de source de données d'un modèle multidimensionnel.|  
-|[Définir les propriétés de la source de données &#40;&#41;multidimensionnel SSAS](set-data-source-properties-ssas-multidimensional.md)|Décrit chaque propriété et explique comment la définir.|  
-|[Définir les options d’emprunt d’identité &#40;SSAS-multidimensionnel&#41;](set-impersonation-options-ssas-multidimensional.md)|Explique comment configurer les options dans la boîte de dialogue Informations d'emprunt d'identité.|  
+|[Créer une source de données &#40;SSAS Multidimensionnel&#41;](create-a-data-source-ssas-multidimensional.md)|Explique comment ajouter un objet de source de données à un modèle multidimensionnel.|  
+|[Supprimer une source de données dans l’Explorateur de solutions &#40;SSAS Multidimensionnel&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilisez cette procédure pour supprimer un objet de source de données d'un modèle multidimensionnel.|  
+|[Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md)|Décrit chaque propriété et explique comment la définir.|  
+|[Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](set-impersonation-options-ssas-multidimensional.md)|Explique comment configurer les options dans la boîte de dialogue Informations d'emprunt d'identité.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets de base de données &#40;Analysis Services-données multidimensionnelles&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Architecture logique &#40;Analysis Services-données multidimensionnelles&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Sources de données et liaisons &#40;&#41;multidimensionnelles SSAS](data-sources-and-bindings-ssas-multidimensional.md)  
+ [Sources de données et liaisons &#40;SSAS Multidimensionnel&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

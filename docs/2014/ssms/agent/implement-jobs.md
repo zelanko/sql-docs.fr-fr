@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074014"
 ---
 # <a name="implement-jobs"></a>Implémenter des travaux
@@ -41,7 +41,7 @@ ms.locfileid: "63074014"
 |Contient des informations relatives à l'exécution manuelle des travaux (sans planification).|[Exécuter des travaux](run-jobs.md)|  
 |Contient des informations relatives à la configuration du comportement de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par rapport aux travaux. Par exemple, vous pouvez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent de manière à notifier aux administrateurs l'achèvement des travaux.|[Spécifier des réponses à un travail](specify-job-responses.md)|  
 |Contient des informations relatives à la visualisation des travaux existants, à leur historique une fois exécutés et à leur modification.|[Afficher ou modifier les travaux](view-or-modify-jobs.md)|  
-|Contient des informations sur la suppression de travaux.|[travaux, supprimer](delete-jobs.md)|  
+|Contient des informations sur la suppression de travaux.|[Supprimer des travaux](delete-jobs.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémenter la sécurité de l'Agent SQL Server](implement-sql-server-agent-security.md)  

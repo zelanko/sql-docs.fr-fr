@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922895"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Utiliser Windows PowerShell dans les étapes de travail de l'Agent SQL Server
   Utilisez SQL Server Agent pour exécuter des scripts PowerShell SQL Server à des horaires planifiés.  
   
-1.  **Avant de commencer :**  [limitations et restrictions](#LimitationsRestrictions)  
+1.  **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions)  
   
-2.  **Pour exécuter PowerShell à partir de SQL Server Agent, à l’aide de :**  [étape](#PShellJob)de travail PowerShell, [étape de travail d’invite de commandes](#CmdExecJob)  
+2.  **Pour exécuter PowerShell à partir de SQL Server Agent avec :**  [Étape de travail PowerShell](#PShellJob), [Etape de travail invite de commandes](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Il y a plusieurs types d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Chaque type est associé à un sous-système qui implémente un environnement spécifique, tel qu'un agent de réplication ou un environnement d'invite de commandes. Vous pouvez coder les scripts Windows PowerShell, puis utiliser l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour les inclure dans les travaux qui s'exécutent à des heures planifiées ou en réponse à des événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les scripts Windows PowerShell peuvent être exécutés à l'aide d'une étape de travail d'invite de commandes ou d'une étape de travail PowerShell.  
@@ -31,12 +31,12 @@ ms.locfileid: "62922895"
   
 2.  Utilisez une étape du travail d'invite de commandes pour exécuter PowerShell.exe et spécifiez un script qui importe le module `sqlps`.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
   
 > [!CAUTION]  
 >  Chaque étape de travail de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui exécute PowerShell avec le module `sqlps` lance un processus qui consomme environ 20 Mo de mémoire. L'exécution simultanée d'un grand nombre d'étapes de travail Windows PowerShell peut nuire aux performances.  
   
-##  <a name="PShellJob"></a>Créer une étape de travail PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a>Créer une étape de travail PowerShell  
  **Pour créer une étape de travail PowerShell**  
   
 1.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](../ssms/agent/create-jobs.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "62922895"
   
 7.  Cliquez sur la page **Avancé** pour paramétrer les options suivantes pour l'étape de travail : l'action à exécuter si l'étape de travail échoue ou réussit, le nombre de tentatives d'exécution de l'étape de travail que doit effectuer l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la fréquence de ces tentatives.  
   
-##  <a name="CmdExecJob"></a>Créer une étape de travail d’invite de commandes  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a>Créer une étape de travail d’invite de commandes  
  **Pour créer une étape de travail CmdExec**  
   
 1.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](../ssms/agent/create-jobs.md).  

@@ -18,29 +18,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077408"
 ---
 # <a name="configure-attribute-types"></a>Configurer des types d'attributs
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les types d’attributs permettent de classer un attribut en termes de fonctionnalités d’entreprise. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
   
-##  <a name="setting_attibute_types"></a>Définition des types d’attributs  
+##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> Définition des types d'attributs  
  La valeur de la propriété `Type` d'un attribut détermine le type de l'attribut de cet attribut. Différents assistants d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définissent les types d’attributs lors de la définition des dimensions ou des attributs. Ces Assistants d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définissent également les types d’attributs quand ils ajoutent des fonctionnalités à des dimensions. Par exemple, l'Assistant Business Intelligence applique des types d'attributs aux attributs d'une dimension lorsqu'il ajoute l'intelligence comptable pour identifier les attributs qui contiennent les noms, les codes, les numéros et la structure des comptes de la dimension. L'Assistant Business Intelligence utilise également les types d'attributs, par exemple pour la conversion de devises. Pour plus d’informations, consultez [Créer une dimension de type devise](database-dimensions-create-a-currency-type-dimension.md).  
   
  Les tableaux suivants répertorient les types d’attributs disponibles dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les types d'attributs sont classés dans les catégories suivantes dans les tableaux :  
   
 |Terme|Définition|  
 |----------|----------------|  
-|[Types d’attributs généraux](#general_attribute_types)|Ces valeurs sont disponibles pour tous les attributs et existent uniquement pour classer les attributs pour les applications clientes.|  
+|[Types d'attributs généraux](#general_attribute_types)|Ces valeurs sont disponibles pour tous les attributs et existent uniquement pour classer les attributs pour les applications clientes.|  
 |[Types d’attributs de dimension de compte](#account_dimension_attribute_types)|Ces valeurs identifient un attribut qui appartient à une dimension de comptes. Pour plus d’informations sur les dimensions de compte, consultez [Créer un compte Finance de la dimension de type parent-enfant](database-dimensions-finance-account-of-parent-child-type.md).|  
-|[Type d’attribut de dimension monétaire](#currency_dimension_attribute_types)|Ces valeurs identifient un attribut qui appartient à une dimension monétaire. Pour plus d’informations sur les dimensions de devise, consultez [Créer une dimension de type devise](database-dimensions-create-a-currency-type-dimension.md).|  
+|[Type d'attribut de dimension monétaire](#currency_dimension_attribute_types)|Ces valeurs identifient un attribut qui appartient à une dimension monétaire. Pour plus d’informations sur les dimensions de devise, consultez [Créer une dimension de type devise](database-dimensions-create-a-currency-type-dimension.md).|  
 |[Attributs de dimension à variation lente](#slowly_changing_dimension_attribute_types)|Ces valeurs identifient un attribut qui appartient à une dimension à variation lente.|  
 |[Attributs de dimension de temps](#time_dimension_attribute_types)|Ces valeurs identifient un attribut qui appartient à une dimension de temps. Pour plus d’informations sur les dimensions de temps, consultez [Créer une dimension de type date](database-dimensions-create-a-date-type-dimension.md).|  
   
-###  <a name="general_attribute_types"></a>Types d’attributs généraux  
+###  <a name="general-attribute-types"></a><a name="general_attribute_types"></a>Types d’attributs généraux  
   
 |Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
@@ -75,8 +75,7 @@ ms.locfileid: "66077408"
 |`DateEnded`|Représente une date de fin.|  
 |`DateModified`|Représente une date de modification.|  
 |`DateStart`|Représente une date de début.|  
-|**DeletedFlag**|Indique si un membre est ou doit être supprimé (en terme de fonctionnalité commerciale).<br /><br /> 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’utilise pas ce type d’attribut pour déterminer si un membre doit être supprimé. Ce type d'attribut doit être utilisé par les applications clientes à des fins d'affichage uniquement.|  
+|**DeletedFlag**|Indique si un membre est ou doit être supprimé (en terme de fonctionnalité commerciale).<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’utilise pas ce type d’attribut pour déterminer si un membre doit être supprimé. Ce type d'attribut doit être utilisé par les applications clientes à des fins d'affichage uniquement.|  
 |`FormattingColor`|Représente la couleur utilisée pour la mise en forme.|  
 |`FormattingFont`|Représente la police utilisée pour la mise en forme.|  
 |`FormattingFontEffects`|Représente les effets de police utilisés pour la mise en forme.|  
@@ -153,7 +152,7 @@ ms.locfileid: "66077408"
 |`WebUrl`|Représente une adresse URL.|  
 |`WebXmlOrXsl`|Représente un contenu XML ou XSL.|  
   
-###  <a name="account_dimension_attribute_types"></a>Types d’attributs de dimension de compte  
+###  <a name="account-dimension-attribute-types"></a><a name="account_dimension_attribute_types"></a>Types d’attributs de dimension de compte  
   
 |Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
@@ -162,7 +161,7 @@ ms.locfileid: "66077408"
 |`AccountNumber`|Représente le numéro d'un compte.|  
 |`AccountType`|Représente le type d'un compte. Ce type d'attribut identifie la fonction d'agrégation d'un membre de compte dans une dimension de type de compte dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-###  <a name="currency_dimension_attribute_types"></a>Types d’attributs de dimension monétaire  
+###  <a name="currency-dimension-attribute-types"></a><a name="currency_dimension_attribute_types"></a>Types d’attributs de dimension monétaire  
   
 |Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
@@ -171,7 +170,7 @@ ms.locfileid: "66077408"
 |`CurrencyName`|Représente le nom d'une devise. Pour plus d’informations sur la conversion monétaire, consultez [Conversions monétaires &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencySource`|Représente la devise source d'une opération de change. Ce type d'attribut est généralement appliqué à l'attribut clé d'une dimension monétaire pour utilisation dans une conversion monétaire. Pour plus d’informations sur la conversion monétaire, consultez [Conversions monétaires &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
   
-###  <a name="slowly_changing_dimension_attribute_types"></a>Types d’attributs de dimension à variation lente  
+###  <a name="slowly-changing-dimension-attribute-types"></a><a name="slowly_changing_dimension_attribute_types"></a>Types d’attributs de dimension à variation lente  
   
 |Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
@@ -180,7 +179,7 @@ ms.locfileid: "66077408"
 |**ScdStartDate**|Représente la date de début effective d'un membre dans une dimension à variation lente.|  
 |`ScdStatus`|Représente l'état effectif d'un membre dans une dimension à variation lente.|  
   
-###  <a name="time_dimension_attribute_types"></a>Types d’attributs de dimension de temps  
+###  <a name="time-dimension-attribute-types"></a><a name="time_dimension_attribute_types"></a>Types d’attributs de dimension de temps  
   
 |Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  

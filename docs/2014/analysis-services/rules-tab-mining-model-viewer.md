@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070099"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Onglet Règles (Visionneuse de modèle d'exploration de données)
@@ -27,13 +27,13 @@ ms.locfileid: "66070099"
 > [!WARNING]  
 >  Par défaut, seules les règles qui se trouvent au-dessus du seuil de probabilité défini dans **Probabilité minimale** sont affichées dans la visionneuse. Vous ne pouvez pas réduire cette valeur à l'aide de la visionneuse, car le seuil de probabilité pour la sortie de règle est déterminé lors de la création du modèle. Pour plus d’informations, consultez [Références techniques relatives à l’algorithme Microsoft Association](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Pour plus d’informations :** [algorithme Microsoft Association](data-mining/microsoft-association-algorithm.md), [Parcourir un modèle à l’aide de la visionneuse des règles d’association Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Pour plus d’informations :** [Algorithme Microsoft Association](data-mining/microsoft-association-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MAR (Microsoft Association Rules)](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -68,7 +68,7 @@ ms.locfileid: "66070099"
  **Afficher le nom long**  
  Affichez le nom complet de la règle tel qu'il apparaît dans le contenu du modèle d'exploration de données.  
   
- **Nombre maximal de lignes**  
+ **Lignes au maximum**  
  Limitez le nombre de règles affichées dans la visionneuse.  
   
  **Risque**  
@@ -81,7 +81,7 @@ ms.locfileid: "66070099"
   
  Vous pouvez cliquer sur l'en-tête de colonne pour effectuer le tri d'après l'importance.  
   
- **Elle**  
+ **Règle**  
  Cette colonne du graphique affiche la description textuelle de chaque règle, selon le format spécifié à l’aide des options **Afficher** et **Afficher le nom long**.  
   
  Vous pouvez cliquer sur l'en-tête de colonne pour effectuer le tri d'après le texte de la règle.  

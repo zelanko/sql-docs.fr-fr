@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075399"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
@@ -39,13 +39,13 @@ ms.locfileid: "66075399"
   
  [Composition de la vue de source de données](#bkmk_dsvdef)  
   
- [Créer une vue DSV à l’aide de l’Assistant vue de source de données](#bkmk_startWiz)  
+ [Créer une vue DSV à l'aide de l'Assistant Vue de source de données](#bkmk_startWiz)  
   
- [Spécifier les critères de correspondance de nom pour les relations](#bkmk_NameMatch)  
+ [Spécifier des critères de correspondance de nom pour les relations](#bkmk_NameMatch)  
   
  [Ajouter une source de données secondaire](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a>Composition de la vue de source de données  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>Composition de la vue de source de données  
  Une vue de source de données contient les éléments suivants :  
   
 -   un nom et une description ;  
@@ -56,7 +56,7 @@ ms.locfileid: "66075399"
   
     -   les noms de colonnes ;  
   
-    -   Types de données.  
+    -   les types de données ;  
   
     -   la possibilité de valeurs nulles ;  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66075399"
   
     -   les relations clé primaire logique/clé étrangère entre les tables, les vues et les requêtes nommées.  
   
-##  <a name="bkmk_startWiz"></a>Créer une vue DSV à l’aide de l’Assistant vue de source de données  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>Créer une vue DSV à l’aide de l’Assistant vue de source de données  
  Pour créer une vue de source de données, exécutez l'Assistant Vue de source de données à partir de l'Explorateur de solutions dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "66075399"
   
 3.  Sur la même page, cliquez sur **Avancé** pour sélectionner des schémas spécifiques, appliquer un filtre ou exclure des informations de relation entre tables.  
   
-     **Choisir des schémas**  
+     **Sélectionner les schémas**  
   
      Pour les sources de données volumineuses contenant plusieurs schémas, vous pouvez sélectionner les schémas à utiliser dans une liste séparée par des virgules, sans espaces.  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66075399"
   
 5.  Pour les sources de données relationnelles qui n’ont aucune relation entre tables définie, une page **Correspondance de noms** apparaît afin que vous puissiez sélectionner la méthode de correspondance de noms appropriée. Pour plus d’informations, consultez la section [Spécifier des critères de correspondance de nom pour les relations](#bkmk_NameMatch) dans cette rubrique.  
   
-##  <a name="bkmk_secondaryDS"></a>Ajouter une source de données secondaire  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>Ajouter une source de données secondaire  
  Lorsque vous définissez une vue de source de données qui contient des tables, des vues ou des colonnes de plusieurs sources de données, la première source de données à partir de laquelle vous ajoutez des objets à la vue de source de données est désignée comme étant la source de données primaire (vous ne pourrez pas la changer une fois qu'elle sera définie). Après avoir défini une vue de source de données reposant sur des objets d'une seule source de données, vous pouvez ajouter des objets d'autres sources de données.  
   
  Si une requête de traitement analytique en ligne (OLAP) ou une requête d'exploration de données nécessite des données de plusieurs sources de données dans une seule requête, la source de données primaire doit prendre en charge les requêtes distantes à l'aide d'une requête `OpenRowset`. Il s’agit généralement d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si vous créez une dimension OLAP qui contient des attributs liés aux colonnes de plusieurs sources de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construit une requête `OpenRowset` pour peupler cette dimension lors du traitement. Cependant, si un objet OLAP peut être peuplé ou si une requête d'exploration de données peut être résolue depuis une seule source de données, aucune requête `OpenRowset` ne sera construite. Dans certaines situations, vous pourrez définir des relations d'attribut pour éviter la création d'une requête `OpenRowset`. Pour plus d’informations sur les relations d’attributs, consultez [Relations d’attributs](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) et [Définir des relations d’attributs](attribute-relationships-define.md).  
   
  Pour ajouter des tables et des colonnes d'une deuxième source de données, double-cliquez sur la vue DSV dans l'Explorateur de solutions afin de l'ouvrir dans le concepteur de vue de source de données, puis utilisez la boîte de dialogue Ajouter/supprimer des tables pour inclure des objets d'autres sources de données définies dans votre projet. Pour plus d’informations, consultez [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_NameMatch"></a>Spécifier les critères de correspondance de nom pour les relations  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>Spécifier les critères de correspondance de nom pour les relations  
  Lorsque vous créez une vue DSV, des relations sont créées entre les tables en fonction de contraintes de clé étrangère dans la source de données. Ces relations sont nécessaires au moteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour construire les requêtes d'exploration de données et de traitement analytique en ligne (OLAP) appropriées. Toutefois, il arrive parfois qu'une source de données contenant plusieurs tables ne comporte aucune contrainte de clé étrangère. Le cas échéant, l'Assistant Vue de source de données vous invite à définir le mode de mise en correspondance des noms de colonnes de différentes tables.  
   
 > [!NOTE]  

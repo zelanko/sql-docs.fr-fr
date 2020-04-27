@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078561"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Leçon 6 : Créer des colonnes calculées
   Dans cette leçon, vous allez créer des données dans votre modèle en ajoutant des colonnes calculées. Une colonne calculée est basée sur les données qui existent déjà dans votre modèle. Pour en savoir plus, consultez [Colonnes calculées &#40;SSAS Tabulaire&#41;](tabular-models/ssas-calculated-columns.md).  
   
- Vous allez créer cinq colonnes calculées dans trois tables différentes. Les étapes sont légèrement différentes pour chaque tâche. Il s’agit ici de montrer qu’il existe plusieurs façons de créer des colonnes, de les renommer, puis de les placer à différents emplacements dans une table.  
+ Vous allez créer cinq colonnes calculées dans trois tables différentes. Les étapes sont légèrement différentes pour chaque tâche. Il s'agit de montrer qu'il existe plusieurs façons de créer de nouvelles colonnes, de les renommer, puis de les placer à différents emplacements dans une table.  
   
  Durée estimée pour suivre cette leçon : **15 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 5 : Créer des relations](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Créer des colonnes calculées  
@@ -33,7 +33,7 @@ ms.locfileid: "66078561"
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis pointez sur **Vue du modèle**et sur **Vue de données**.  
   
-     Les colonnes calculées peuvent uniquement être créées à l’aide du Concepteur de modèles dans la vue de données.  
+     Les colonnes calculées ne peuvent être créées qu'à l'aide du concepteur de modèles dans la vue de données.  
   
 2.  Dans le concepteur de modèles, cliquez sur la table **Date** (onglet).  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068220"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Spécifier les critères de requêtes (Assistant Optimisation de l'utilisation)
@@ -40,13 +40,13 @@ ms.locfileid: "66068220"
  Filtre les requêtes du journal en fonction de la date et de l'heure de début. Choisissez ou tapez une date dans la liste déroulante.  
   
 > [!NOTE]  
->  Si vous ne sélectionnez pas **Date de fin** , toutes les requêtes du journal portant une date et une heure égales ou ultérieures à celles spécifiées sont prises en compte.  
+>   Si vous ne sélectionnez pas **Date de fin** , toutes les requêtes du journal portant une date et une heure égales ou ultérieures à celles spécifiées seront prises en compte.  
   
  **Date de fin**  
  Filtre les requêtes du journal en fonction de la date et de l'heure de fin. Choisissez ou tapez une date dans la liste déroulante.  
   
 > [!NOTE]  
->  Si vous ne sélectionnez pas **Date de début** , toutes les requêtes du journal portant une date et une heure égales ou antérieures à celles spécifiées sont prises en compte.  
+>   Si vous ne sélectionnez pas **Date de début** , toutes les requêtes du journal portant une date et une heure égales ou antérieures à celles spécifiées seront prises en compte.  
   
  **Utilisateurs**  
  Filtre les requêtes du journal en fonction d'un jeu d'utilisateurs. Cliquez sur le bouton (**...**) pour afficher la boîte de dialogue **Sélection de l’utilisateur** et choisir des utilisateurs sur la base desquels les requêtes doivent être filtrées. Pour plus d’informations sur la boîte de dialogue **Sélection de l’utilisateur**, consultez [Boîte de dialogue Sélection de l’utilisateur &#40;Analysis Services – Données multidimensionnelles&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  

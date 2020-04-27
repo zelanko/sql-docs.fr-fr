@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128654"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   Le tableau indique les valeurs retournées par **SQLGetInfo**. Ces valeurs peuvent varier en fonction du numéro de version du serveur connecté.  
   
- **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC (sqlsrv32. DLL) quand **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, en cas d’appel avec une longueur de tampon différente de zéro inférieure à la chaîne de **** mot clé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sortie, SQLGetInfo dans Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLSTATE de 01004.  
+ **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC (sqlsrv32. DLL) quand **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, en cas d’appel avec une longueur de tampon différente de zéro inférieure à la chaîne de **SQLGetInfo** mot clé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sortie, SQLGetInfo dans Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -209,6 +209,6 @@ ms.locfileid: "63128654"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetInfo, fonction](https://go.microsoft.com/fwlink/?LinkId=59354)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

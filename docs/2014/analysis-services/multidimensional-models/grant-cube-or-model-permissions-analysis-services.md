@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075028"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Octroyer des autorisations de cube ou de modèle (Analysis Services)
@@ -60,7 +60,7 @@ ms.locfileid: "66075028"
   
 1.  Dans le volet **cubes** , sélectionnez un cube, puis cliquez sur `Read` ou sur accès **en lecture/écriture** .  
   
-     `Read`l’accès suffit pour la plupart des opérations. La **lecture/écriture** est utilisée uniquement pour l’écriture différée, et non pour le traitement. Pour plus d’informations sur cette fonctionnalité, consultez [Définir l’écriture différée de partition](set-partition-writeback.md) .  
+     `Read`l’accès suffit pour la plupart des opérations. **Lecture/Écriture** sert uniquement à l’écriture différée, et non au traitement. Pour plus d’informations sur cette fonctionnalité, consultez [Définir l’écriture différée de partition](set-partition-writeback.md) .  
   
      Notez que vous pouvez sélectionner plusieurs cubes, ainsi que d'autres objets disponibles dans la boîte de dialogue Créer un rôle. L'accord d'autorisations d'accès à un cube permet également d'accéder aux dimensions et aux perspectives associées au cube. Il n'est pas nécessaire d'ajouter manuellement des objets déjà représentés dans le cube.  
   
@@ -103,6 +103,6 @@ ms.locfileid: "66075028"
 ## <a name="see-also"></a>Voir aussi  
  [Méthodologies d’authentification prises en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Accordez des autorisations sur les modèles et les structures d’exploration de données &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Accorder des autorisations sur un objet source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

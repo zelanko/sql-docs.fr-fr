@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069332"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>Sélectionner les partitions à modifier (Assistant Optimisation de l'utilisation)
@@ -34,7 +34,7 @@ ms.locfileid: "66069332"
  **Source**  
  Affiche la table ou requête utilisée pour fournir les données sources de la partition.  
   
- **Conceptions d'agrégation**  
+ **Conceptions d’agrégation**  
  Affiche une chaîne qui décrit la conception d’agrégation utilisée par la partition.  
   
 ## <a name="see-also"></a>Voir aussi  

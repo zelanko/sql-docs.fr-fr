@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081920"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Fonctionnalités Analysis Services déconseillées dans SQL Server 2014
@@ -30,8 +30,8 @@ ms.locfileid: "66081920"
   
 |Category|Fonctionnalité déconseillée|Remplacement|  
 |--------------|------------------------|-----------------|  
-|Fonction MDX|Fonction CalculationPassValue|Aucun. Le moteur OLAP gère le test de calcul. Cette fonction MDX n'est plus requise.|  
-|Fonction MDX|fonction CalculationCurrentPass|Aucun. Le moteur OLAP gère le test de calcul. Cette fonction MDX n'est plus requise.|  
+|Fonction MDX|Fonction CalculationPassValue|Aucune. Le moteur OLAP gère le test de calcul. Cette fonction MDX n'est plus requise.|  
+|Fonction MDX|fonction CalculationCurrentPass|Aucune. Le moteur OLAP gère le test de calcul. Cette fonction MDX n'est plus requise.|  
 |MDX (Multidimensional Expressions)|L'indicateur d'optimiseur de requête NON_EMPTY_BEHAVIOR a été activé par défaut.|L'indicateur d'optimiseur de requête NON_EMPTY_BEHAVIOR sera désactivé par défaut dans une version ultérieure. Il s'agit d'un indicateur d'optimisation MDX qui peut générer des résultats incorrects lorsqu'il n'est pas utilisé correctement.|  
 |Autres|Propriété intrinsèque de cellule CELL_EVALUATION_LIST|Fournissait à l'origine une liste de formules évaluées qui s'appliquent à une cellule. Elle est vide dans cette version d'Analysis Services.  L'ordre de résolution est maintenant spécifié dans le script MDX. Pour plus d’informations, consultez [comprendre l’ordre de passage et l’ordre de résolution &#40;MDX&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
 |Objets|Assemblys COM|Les assemblys COM peuvent présenter un risque pour la sécurité. La prise en charge des assemblys COM sera supprimée dans une version ultérieure.|  
@@ -41,11 +41,11 @@ ms.locfileid: "66081920"
   
 |Category|Fonctionnalité déconseillée|Remplacement|  
 |--------------|------------------------|-----------------|  
-|Modèles multidimensionnels|Partitions distantes|Aucun. Utilisez des partitions locales à la place. Pour plus d’informations, consultez [créer et gérer une partition locale &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) .|  
+|Modèles multidimensionnels|Partitions distantes|Aucune. Utilisez des partitions locales à la place. Pour plus d’informations, consultez [créer et gérer une partition locale &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) .|  
 |Modèles multidimensionnels|Groupes de mesures liés distants|Un groupe de mesures lié distant est un groupe de mesures lié avec une source de données sur un serveur distant. La possibilité d'utiliser une source de données distante pour un groupe de mesures lié va être abandonnée.<br /><br /> Aucun remplacement n'est prévu pour cette fonctionnalité. Nous recommandons d'utiliser des groupes de mesures liés locaux à la place. Consultez la rubrique [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) (éventuellement en anglais) pour plus d'informations.|  
-|Modèles multidimensionnels|Écriture différée dimensionnelle|Aucun. Utilisez l'écriture différée de partition si vous avez besoin de la fonction d'écriture différée. Pour plus d’informations, consultez [définir l’écriture différée de partition](multidimensional-models/set-partition-writeback.md) .|  
-|Modèles multidimensionnels|Dimensions liées|Aucun. Envisagez de copier les dimensions dans des modèles supplémentaires plutôt que les lier à une dimension dans un autre modèle.|  
-|MDX|Propriété Non_Empty_Behavior|Aucun. Si vous ne définissez pas correctement cette propriété lorsque vous créez un membre calculé, cela augmente la probabilité de retour de résultats non valides. Les optimisations qui ont récemment été apportées au moteur OLAP ont amélioré les opérations sur les jeux de données éparses, rendant cette propriété moins pertinente.|  
+|Modèles multidimensionnels|Écriture différée dimensionnelle|Aucune. Utilisez l'écriture différée de partition si vous avez besoin de la fonction d'écriture différée. Pour plus d’informations, consultez [définir l’écriture différée de partition](multidimensional-models/set-partition-writeback.md) .|  
+|Modèles multidimensionnels|Dimensions liées|Aucune. Envisagez de copier les dimensions dans des modèles supplémentaires plutôt que les lier à une dimension dans un autre modèle.|  
+|MDX|Propriété Non_Empty_Behavior|Aucune. Si vous ne définissez pas correctement cette propriété lorsque vous créez un membre calculé, cela augmente la probabilité de retour de résultats non valides. Les optimisations qui ont récemment été apportées au moteur OLAP ont amélioré les opérations sur les jeux de données éparses, rendant cette propriété moins pertinente.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante Analysis Services](analysis-services-backward-compatibility.md)   

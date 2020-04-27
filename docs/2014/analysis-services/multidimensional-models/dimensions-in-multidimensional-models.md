@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075181"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensions dans les modèles multidimensionnels
@@ -49,10 +49,10 @@ ms.locfileid: "66075181"
  [Définir des relations d'attributs](attribute-relationships-define.md)  
  Explique comment définir, modifier et configurer une relation d'attribut à l'aide du Concepteur de dimensions.  
   
- [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
+ [Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)  
  Explique comment définir, modifier et configurer une hiérarchie d'attributs de dimension définie par l'utilisateur à l'aide du Concepteur de dimensions.  
   
- [Utiliser l'Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Utiliser l’Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Explique comment améliorer une dimension de base de données à l'aide de l'Assistant Business Intelligence.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076687"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Définir le niveau de compatibilité d'une base de données multidimensionnelle (Analysis Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66076687"
 > [!NOTE]  
 >  Les modèles tabulaires possèdent des niveaux de compatibilité de base de données qui ne s'appliquent pas aux modèles multidimensionnels. Le niveau de compatibilité `1103` n'existe pas pour les modèles multidimensionnels. Pour plus d’informations sur `1103` les solutions tabulaires, consultez [Nouveautés du modèle tabulaire dans SQL Server 2012 SP1 et niveau de compatibilité](https://go.microsoft.com/fwlink/?LinkId=301727) .  
   
- **Niveaux de compatibilité pour les bases de données multidimensionnelles**  
+ **Niveaux de compatibilité des bases de données multidimensionnelles**  
   
  Actuellement, le seul comportement de base de données multidimensionnelle qui varie selon le niveau de compatibilité est l'architecture de stockage de chaînes. En augmentant le niveau de compatibilité d'une base de données, vous pouvez dépasser la limite de 4 Go pour le stockage de chaînes de mesures et de dimensions.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66076687"
 > [!WARNING]  
 >  La définition de la compatibilité de la base de données sur un niveau supérieur est irrévocable. Après avoir augmenté le niveau de compatibilité `1100`à, vous devez continuer à exécuter la base de données sur des serveurs plus récents. Vous ne pouvez pas `1050`revenir à. Vous ne pouvez pas attacher ou `1100` restaurer une base de données sur une version de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]antérieure à ou.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Les niveaux de compatibilité de la base de données ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Vous devez disposer de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou ultérieur pour visualiser ou définir le niveau de compatibilité de la base de données.  
   
  La base de données ne peut pas être un cube local. Les cubes locaux ne prennent pas en charge la propriété `CompatibilityLevel`.  
@@ -92,6 +92,6 @@ ms.locfileid: "66076687"
  Après avoir augmenté le niveau de compatibilité de la base de données, vous pouvez définir la propriété `StringStoresCompatibilityLevel` dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Cela augmente le stockage des chaînes de mesures et de dimensions. Pour plus d’informations sur cette fonctionnalité, consultez [Configurer le stockage de chaînes pour des dimensions et des partitions](configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde, restauration et synchronisation des bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

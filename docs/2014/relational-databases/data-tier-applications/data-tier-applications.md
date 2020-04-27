@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873100"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
@@ -118,18 +118,18 @@ ms.locfileid: "62873100"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Explique comment utiliser un fichier de package DAC pour créer une nouvelle instance de la DAC.|[Déployer une application de la couche Données](deploy-a-data-tier-application.md)|  
-|Explique comment utiliser un nouveau fichier de package DAC pour mettre à niveau une instance vers une nouvelle version de la DAC.|[Mettre à niveau une application de la couche Données](upgrade-a-data-tier-application.md)|  
+|Explique comment utiliser un nouveau fichier de package DAC pour mettre à niveau une instance vers une nouvelle version de la DAC.|[Mettre à niveau une application de la couche données](upgrade-a-data-tier-application.md)|  
 |Explique comment supprimer une instance DAC. Vous pouvez également choisir de détacher ou de supprimer la base de données associée, ou de laisser la base de données intacte.|[Supprimer une application de la couche Données](delete-a-data-tier-application.md)|  
 |Explique comment afficher l'état des DAC actuellement déployées à l'aide de l'utilitaire SQL Server.|[Analyser les applications de la couche Données](data-tier-applications.md)|  
 |Explique comment créer un fichier .bacpac contenant une archive des données et des métadonnées dans une DAC.|[Exporter une application de la couche Données](export-a-data-tier-application.md)|  
 |Explique comment utiliser un fichier d'archive DAC (.bacpac) pour effectuer une restauration logique d'une DAC ou pour migrer la DAC vers une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](import-a-bacpac-file-to-create-a-new-user-database.md)|  
-|Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d'une base de données](extract-a-dac-from-a-database.md)|  
+|Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d’une base de données](extract-a-dac-from-a-database.md)|  
 |Explique comment promouvoir une base de données existante en tant qu'instance DAC. Une définition de DAC est créée et stockée dans les bases de données système.|[Inscrire une base de données en tant que DAC](register-a-database-as-a-dac.md)|  
 |Explique comment vérifier le contenu d'un package DAC et les actions associées à la mise à niveau d'une DAC avant d'utiliser le package dans un système de production.|[Valider un package DAC](validate-a-dac-package.md)|  
 |Explique comment placer le contenu d'un package DAC dans un dossier où un administrateur de base de données peut vérifier ce que fait la DAC avant de la déployer dans un serveur de production.|[Décompresser un package DAC](unpack-a-dac-package.md)|  
 |Explique comment utiliser un Assistant pour déployer une base de données existante. L'Assistant utilise les DAC pour exécuter le déploiement.|[Déployer une base de données à l’aide d’une DAC](deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge DAC pour les objets et versions SQL Server](dac-support-for-sql-server-objects-and-versions.md)  
+ [Prise en charge DAC pour les objets et versions SQL Server](dac-support-for-sql-server-objects-and-versions.md)  
   
   

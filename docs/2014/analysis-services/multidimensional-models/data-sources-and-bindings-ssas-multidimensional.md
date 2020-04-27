@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076082"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
@@ -49,8 +49,7 @@ ms.locfileid: "66076082"
   
  Le moyen d'exprimer la source de données varie en fonction du type de source de données. Par exemple, une source de données relationnelle se distingue par la chaîne de connexion. Pour plus d'informations sur les sources de données, consultez [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md).  
   
- Indépendamment de la source de données utilisée, la vue de source de données (DSV, Data Source View) contient les métadonnées pour la source de données. Donc, les liaisons pour un cube ou d'autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont exprimées en tant que liaisons à DSV. Ces liaisons peuvent inclure des liaisons à des objets logiques, tels que des vues, des colonnes calculées et des relations qui n’existent pas physiquement dans la source de données. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute une colonne calculée qui encapsule l'expression dans l'élément DSV, puis lie la mesure OLAP correspondante à cette colonne dans la vue de source de données. Pour plus d'informations sur les vues de source de données (DSV), consultez [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
+ Indépendamment de la source de données utilisée, la vue de source de données (DSV, Data Source View) contient les métadonnées pour la source de données. Donc, les liaisons pour un cube ou d'autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont exprimées en tant que liaisons à DSV. Ces liaisons peuvent inclure des liaisons à des objets logiques, tels que des vues, des colonnes calculées et des relations qui n’existent pas physiquement dans la source de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute une colonne calculée qui encapsule l'expression dans l'élément DSV, puis lie la mesure OLAP correspondante à cette colonne dans la vue de source de données. Pour plus d'informations sur les vues de source de données (DSV), consultez [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
   
  Chaque objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se lie à la source de données d'une façon qui lui est propre. De plus, les liaisons de données pour ces objets et la définition de la source de données peuvent être insérées à la définition de l'objet lié aux données (par exemple, la dimension), ou fournies hors ligne, sous la forme d'un jeu séparé de définitions.  
   
@@ -73,8 +72,7 @@ ms.locfileid: "66076082"
 |UnsignedSmallInt|Entier non signé 16 bits. Ce type de données est mappé au type de données UInt16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_UI2 dans OLE DB.|  
 |WChar|Flux de caractères Unicode terminé par le caractère NULL. Ce type de données est mappé au type de données String dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_WSTR dans OLE DB.|  
   
- Toutes les données reçues de la source de données sont converties selon le type [!INCLUDE[ssAS](../../includes/ssas-md.md)] spécifié dans la liaison (habituellement pendant le traitement). Une erreur est déclenchée si la conversion ne peut pas être effectuée (par exemple, de String en Int). 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] définit habituellement le type de données dans la liaison selon celui qui correspond le mieux au type de la source dans la source de données. Par exemple, les types SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset sont mappés sur le type Date [!INCLUDE[ssAS](../../includes/ssas-md.md)] , et le type SQL Time est mappé sur String.  
+ Toutes les données reçues de la source de données sont converties selon le type [!INCLUDE[ssAS](../../includes/ssas-md.md)] spécifié dans la liaison (habituellement pendant le traitement). Une erreur est déclenchée si la conversion ne peut pas être effectuée (par exemple, de String en Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] définit habituellement le type de données dans la liaison selon celui qui correspond le mieux au type de la source dans la source de données. Par exemple, les types SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset sont mappés sur le type Date [!INCLUDE[ssAS](../../includes/ssas-md.md)] , et le type SQL Time est mappé sur String.  
   
 ## <a name="bindings-for-dimensions"></a>Liaisons pour les dimensions  
  Chaque attribut d'une dimension est lié à une colonne dans un élément DSV. Tous les attributs d'une dimension doivent venir d'une source de données unique. Toutefois, les attributs peuvent être liés aux colonnes dans des tables différentes. Les relations entre les tables sont définies dans l'élément DSV. Dans le cas où plusieurs jeux de relations existent pour la même table, il peut être nécessaire d’introduire une requête nommée dans la vue DSV afin qu’elle agisse comme une table « alias ». Les expressions et les filtres sont définis dans l'élément DSV en utilisant des calculs nommés et des requêtes nommées.  

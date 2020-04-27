@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874496"
 ---
 # <a name="performance-of-clr-integration"></a>Performances de l'intégration du CLR
@@ -46,8 +46,7 @@ ms.locfileid: "62874496"
 ### <a name="streaming-table-valued-functions"></a>Fonctions table en continu  
  Les applications doivent souvent retourner une table comme résultat de l'appel d'une fonction. Les exemples incluent la lecture de données tabulaires à partir d'un fichier dans le cadre d'une opération d'importation et la conversion de valeurs séparées par des virgules dans le cas d'une représentation relationnelle. En général, vous pouvez accomplir ces actions en matérialisant la table de résultats et en la remplissant avant qu'elle ne puisse être consommée par l'appelant. L'intégration du CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] introduit un nouveau mécanisme d'extensibilité appelé fonction table en continu. Les fonctions table en continu offrent de meilleures performances que les implémentations de procédure stockée étendue comparables.  
   
- Les fonctions table en continu sont des fonctions managées qui retournent une interface `IEnumerable`. 
-  `IEnumerable` possède des méthodes pour se déplacer à travers le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelée, l'interface `IEnumerable` retournée est directement connectée au plan de requête. Le plan de requête appelle les méthodes `IEnumerable` lorsqu'il doit extraire des lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
+ Les fonctions table en continu sont des fonctions managées qui retournent une interface `IEnumerable`. `IEnumerable` possède des méthodes pour se déplacer à travers le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelée, l'interface `IEnumerable` retournée est directement connectée au plan de requête. Le plan de requête appelle les méthodes `IEnumerable` lorsqu'il doit extraire des lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
   
 ### <a name="arrays-vs-cursors"></a>Différences entre les tableaux et les curseurs  
  Lorsque les curseurs [!INCLUDE[tsql](../../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
@@ -66,8 +65,7 @@ ms.locfileid: "62874496"
 >  Il est recommandé de ne pas développer de nouvelles procédures stockées étendues, parce que cette fonctionnalité a été déconseillée.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Sérialisation native pour les types définis par l'utilisateur  
- Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implémente un format de sérialisation pour les UDT appelé `Format.Native`. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
+ Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implémente un format de sérialisation pour les UDT appelé `Format.Native`. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
   
  La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. La sérialisation `Format.Native` doit être utilisée si possible pour de meilleures performances.  
   

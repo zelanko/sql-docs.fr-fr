@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068138"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Spécifier les types des tables (Assistant Exploration de données)
@@ -25,7 +25,7 @@ ms.locfileid: "66068138"
 > [!NOTE]  
 >  Vous pouvez ajouter des tables ultérieurement dans l’onglet **Structure d’exploration de données** du **Concepteur d’exploration de données**.  
   
- **Pour plus d’informations :** [Tables imbriquées &#40;Analysis Services-exploration de données&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [assistant exploration de données &#40;Analysis Services-exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md)&#41;, [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Tables imbriquées &#40;Analysis Services - Exploration de données&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Tables**  

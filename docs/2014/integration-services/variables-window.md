@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877874"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
@@ -66,7 +66,7 @@ ms.locfileid: "62877874"
  `Namespace`  
  Affichez le nom de l'espace de noms. Les variables définies par l’utilisateur sont initialement créées dans l’espace de noms **User** , mais vous pouvez modifier le `Namespace` nom de l’espace de noms dans le champ. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
   
- **Déclencher un événement de modification**  
+ **Déclencher l'événement lorsque la valeur de la variable change**  
  Indiquez si l'événement `OnVariableValueChanged` est déclenché lors de la modification d'une valeur. Vous pouvez mettre à jour la valeur des variables système définies par l'utilisateur. Par défaut, la fenêtre **Variables** ne répertorie pas cette colonne. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
   
  **Description**  
@@ -78,9 +78,9 @@ ms.locfileid: "62877874"
  Si vous affectez une expression à une variable, un marqueur spécial sous la forme d'une icône s'affiche en regard de la variable. Ce marqueur d'icône spécial s'affiche également en regard des gestionnaires de connexions et des tâches contenant des expressions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)   
- [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Générer de fichiers de vidage pour l’exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Integration Services &#40;des expressions de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Générer de fichiers de vidage pour l'exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

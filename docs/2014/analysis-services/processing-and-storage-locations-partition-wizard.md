@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070652"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Emplacements pour le traitement et le stockage (Assistant Partition)
@@ -34,7 +34,7 @@ ms.locfileid: "66070652"
 > [!NOTE]  
 >  Une erreur se produit si vous sélectionnez une source de données dans laquelle la propriété de la chaîne de connexion `Initial Catalog` ne définit pas une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valide ou si la base de données spécifiée dans la chaîne de connexion `Initial Catalog` ne prend pas en charge les partitions distantes (autrement dit, si la propriété `MasterDatasourceID` de la base de données n'est pas configurée avec une valeur valide).  
   
- **Nouveau**  
+ **Nouvelle**  
  Crée une nouvelle source de données qui représente l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante responsable du traitement de la partition.  
   
 ## <a name="storage-location-options"></a>Options de l'emplacement de stockage  

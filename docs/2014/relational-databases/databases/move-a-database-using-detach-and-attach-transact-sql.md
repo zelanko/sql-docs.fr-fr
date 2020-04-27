@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917085"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Déplacer une base de données à l'aide de la méthode de détachement et d'attachement (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917085"
     > [!NOTE]  
     >  Si vous tentez d'attacher la base de données sans spécifier le fichier journal, l'opération attach recherche le fichier journal à son emplacement d'origine. Si une copie du journal existe toujours à l'emplacement d'origine, elle est attachée. Pour éviter d'utiliser le fichier journal d'origine, spécifiez le chemin d'accès au nouveau fichier journal ou supprimez la copie d'origine du fichier journal (après l'avoir copiée au nouvel emplacement).  
   
-3.  Attachez les fichiers copiés. Pour plus d’informations, consultez la rubrique [Attacher une base de données](attach-a-database.md).  
+3.  Attachez les fichiers copiés. Pour plus d’informations, consultez [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant crée une copie des [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instructions qui sont exécutées dans une fenêtre de l’éditeur de requête connectée à l’instance de serveur à laquelle est attaché.  

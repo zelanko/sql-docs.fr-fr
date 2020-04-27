@@ -1,5 +1,5 @@
 ---
-title: Création d’un ensemble de lignes de paramètre table | Microsoft Docs
+title: Création d'un ensemble de lignes de paramètre table | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046499"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Création d'un ensemble de lignes de paramètre table
@@ -25,11 +25,11 @@ ms.locfileid: "63046499"
  Les objets d'ensemble de lignes de paramètre table sont créés explicitement par le consommateur pour les paramètres d'entrée via plusieurs interfaces de niveau session. Il existe une instance d'un objet d'ensemble de lignes de paramètre table par paramètre table. Le consommateur peut créer les objets d'ensemble de lignes de paramètre table soit en fournissant des informations de métadonnées qui sont déjà connues (scénario statique), soit en révélant ces informations par le biais des interfaces du fournisseur (scénario dynamique). Les sections qui suivent décrivent ces deux scénarios :  
   
 ## <a name="static-scenario"></a>Scénario statique  
- Lorsque les informations de type sont connues, le consommateur utilise ITableDefinitionWithConstraints :: CreateTableWithConstraints pour instancier un objet d’ensemble de lignes de paramètre table qui correspond à un paramètre table.  
+ Lorsque les informations de type sont connues, le consommateur utilise ITableDefinitionWithConstraints::CreateTableWithConstraints pour instancier un objet d'ensemble de lignes de paramètre table qui correspond à un paramètre table.  
   
- Le champ *GUID* (paramètre*pTableID* ) contient le GUID spécial (CLSID_ROWSET_TVP). Le membre *pwszName* contient le nom du type de paramètre table que le consommateur souhaite instancier. Le champ *eKind* sera défini sur DBKIND_GUID_NAME. Ce nom est requis lorsque l'instruction est une instruction SQL ad hoc ; le nom est facultatif s'il s'agit d'un appel de procédure.  
+ Le champ *guid* (paramètre *pTableID*) contient le GUID spécial (CLSID_ROWSET_TVP). Le membre *pwszName* contient le nom du type de paramètre table que le consommateur souhaite instancier. Le champ *eKind* sera défini sur DBKIND_GUID_NAME. Ce nom est requis lorsque l'instruction est une instruction SQL ad hoc ; le nom est facultatif s'il s'agit d'un appel de procédure.  
   
- Pour l’agrégation, le consommateur passe le paramètre *pUnkOuter* avec le contrôle IUnknown.  
+ Pour l'agrégation, le consommateur passe le paramètre *pUnkOuter* avec l'IUnknown de contrôle.  
   
  Les propriétés d’objet d’ensemble de lignes de paramètre table étant en lecture seule, le consommateur n’est pas censé définir des propriétés dans *rgPropertySets*.  
   

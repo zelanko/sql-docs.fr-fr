@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081438"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Modifier les propriétés de la table, boîte de dialogue (SSAS)
@@ -26,7 +26,7 @@ ms.locfileid: "66081438"
  Les options proposées dans cette boîte de dialogue diffèrent selon que vous avez initialement importé les données en sélectionnant des tables dans une liste ou en utilisant une requête SQL.  
   
 ## <a name="table-preview-mode"></a>Mode Aperçu de la table  
- **Nom de la table**  
+ **Nom du tableau**  
  Affiche le nom de la table de données dans le modèle.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66081438"
  Cliquez pour appliquer toutes les modifications que vous avez apportées, notamment le remplacement des colonnes.  
   
 ## <a name="query-design-mode"></a>Mode Conception de requête  
- **Nom de la table**  
+ **Nom du tableau**  
  Affiche le nom de la table de données dans le modèle.  
   
 > [!NOTE]  
@@ -89,7 +89,7 @@ ms.locfileid: "66081438"
  **Instruction SQL**  
  Affiche l'instruction SQL émise sur la source de données actuelle afin de récupérer des lignes. Par défaut, toutes les lignes sont récupérées, mais vous pouvez récupérer un sous-ensemble de lignes, soit en concevant un filtre, soit en modifiant manuellement l'instruction SQL.  
   
- **Valider**  
+ **Vérification**  
  Cliquez pour vérifier que l'instruction est syntaxiquement correcte pour le fournisseur et la source de données sélectionnés.  
   
  **Conception**  
@@ -99,6 +99,6 @@ ms.locfileid: "66081438"
  Cliquez pour appliquer toutes les modifications que vous avez apportées, notamment le remplacement des colonnes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS tabulaire&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tables et colonnes &#40;SSAS Tabulaire&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

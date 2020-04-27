@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077164"
 ---
 # <a name="set-usage-property"></a>Définir une propriété d'utilisation
@@ -33,7 +33,7 @@ ms.locfileid: "66077164"
   
 2.  Dans **Attributs**, cliquez avec le bouton droit sur l’attribut dont vous voulez définir l’utilisation, pointez sur **Définir l’utilisation d’attribut**, puis cliquez sur l’une des options suivantes :  
   
-    -   **Réguliers**  
+    -   **Normal**  
   
     -   **Clé**  
   

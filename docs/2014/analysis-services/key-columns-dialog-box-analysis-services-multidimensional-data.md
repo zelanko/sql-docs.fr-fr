@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079464"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Colonnes clés (Analysis Services - Données multidimensionnelles)
@@ -48,7 +48,7 @@ ms.locfileid: "66079464"
 > [!NOTE]  
 >  Cette option est activée uniquement si la liste contient plusieurs colonnes et si une colonne est sélectionnée.  
   
- **Baisse**  
+ **Bas**  
  Cliquez pour déplacer la colonne sélectionnée dans **Colonnes clés** d’une position vers le bas.  
   
 > [!NOTE]  

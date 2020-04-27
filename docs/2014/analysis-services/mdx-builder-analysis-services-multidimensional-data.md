@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078020"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Générateur MDX (Analysis Services - Données multidimensionnelles)
@@ -29,7 +29,7 @@ ms.locfileid: "66078020"
 |Terme|Définition|  
 |----------|----------------|  
 |**Expression**|Tapez l'expression MDX à utiliser.|  
-|**Chèque**|Teste **** l'expression MDX définie dans **Expression**.|  
+|**Vérification**|Teste **** l'expression MDX définie dans **Expression**.|  
 |**Métadonnées**|Affiche les métadonnées de l'objet actif [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qu'il est possible d'inclure dans l'expression MDX définie dans **Expression**.<br /><br /> Pour copier la syntaxe MDX de l’élément sélectionné, cliquez sur l’élément avec le bouton droit et sélectionnez **Copier** dans le menu contextuel ou faites glisser l’élément sélectionné dans **Expression**.|  
 |**Fonctions**|Affiche les fonctions MDX disponibles dans l'instance active [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . La liste des éléments est extraite de l'ensemble de lignes du schéma MDSCHEMA_FUNCTIONS.<br /><br /> Pour copier la syntaxe MDX de l’élément sélectionné, cliquez sur l’élément avec le bouton droit et sélectionnez **Copier** dans le menu contextuel ou faites glisser l’élément sélectionné dans **Expression**.|  
   

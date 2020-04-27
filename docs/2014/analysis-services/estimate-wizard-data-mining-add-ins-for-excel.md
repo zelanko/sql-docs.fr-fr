@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081244"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistant Estimation (Compléments d'exploration de données pour Excel)
@@ -25,7 +25,7 @@ ms.locfileid: "66081244"
   
  L’Assistant **estimation** vous aide à créer un modèle d’estimation. Un modèle d'estimation extrait les séquences remarquables des données et utilise ces séquences pour prédire les facteurs qui affectent les résultats.  
   
- L'estimation est utilisée pour prévoir les résultats numériques. Par exemple, si votre colonne cible contient des taux de diplômes pour les écoles, avec des taux de diplôme exprimés en pourcentage, vous pouvez analyser des facteurs qui augmentent ou diminuent les taux de diplômes, tels que le nombre d’étudiants par école, le ratio étudiant-enseignant et nombre d’enseignants.  
+ L'estimation est utilisée pour prévoir les résultats numériques. Par exemple, si votre colonne cible contient des taux de diplômes pour les écoles, avec des taux de diplôme exprimés en pourcentage, vous pouvez analyser des facteurs qui augmentent ou diminuent les taux de diplômes, tels que le nombre d’étudiants par école, le ratio étudiant-enseignant et le nombre d’enseignants.  
   
 ## <a name="using-the-estimate-data-wizard"></a>Utilisation de l'Assistant Estimation des données  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66081244"
   
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour utiliser l'Assistant Estimation des données, vous devez être connecté à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Pour plus d’informations sur la création d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

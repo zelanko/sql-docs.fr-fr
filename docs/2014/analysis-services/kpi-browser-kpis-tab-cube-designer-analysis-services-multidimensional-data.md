@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079498"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navigateur d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -38,13 +38,13 @@ ms.locfileid: "66079498"
  **Opérateur**  
  Sélectionnez l’opérateur qui définit comment l’expression dans **Expression de filtre** est appliquée à la hiérarchie sélectionnée. Le tableau suivant décrit les opérateurs disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Valeur**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
-|**Différent de**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
+|**Égal**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
+|**Non égal à**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
 |**Dans**|Les résultats se limitent à l'ensemble nommé choisi dans **Expression de filtre**.|  
 |**Pas dans**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble nommé choisi dans **Expression de filtre**.|  
-|**Comprend**|Les résultats se limitent aux membres dont le nom contient la chaîne de caractères figurant dans **Expression de filtre**.|  
+|**Contains**|Les résultats se limitent aux membres dont le nom contient la chaîne de caractères figurant dans **Expression de filtre**.|  
 |**Commence par**|Les résultats se limitent aux membres dont le nom commence par la chaîne de caractères figurant dans **Expression de filtre**.|  
 |**Plage (limites incluses)**|Les résultats se limitent à la plage choisie dans **Expression de filtre**.|  
 |**Plage (limites exclues)**|Les résultats se limitent aux membres n'appartenant pas à la plage choisie dans **Expression de filtre**.|  
@@ -71,7 +71,7 @@ ms.locfileid: "66079498"
  **État**  
  Affiche le graphique d'état de l'indicateur de performance clé.  
   
- **Tendance**  
+ **Phénomène**  
  Affiche le graphique de tendance de l'indicateur de performance clé.  
   
  **Poids**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079708"
 ---
 # <a name="performance-counters-ssas"></a>Compteurs de performance (SSAS)
@@ -30,23 +30,23 @@ ms.locfileid: "66079708"
   
 ## <a name="counters-by-groups"></a>Compteurs par groupes  
   
-|Group|Description|  
+|Groupe|Description|  
 |-----------|-----------------|  
-|[En](#bkmk_Cache)|Statistiques relatives au cache d'agrégation Analysis Services.|  
+|[Cache](#bkmk_Cache)|Statistiques relatives au cache d'agrégation Analysis Services.|  
 |[Connection](#bkmk_Connection)|Statistiques relatives aux connexions Microsoft Analysis Services.|  
-|[Prédiction de l’exploration de données](#bkmk_DataMiningPrediction)|Statistiques relatives au traitement de modèles d'exploration de données.|  
-|[Traitement des modèles d’exploration de données](#bkmk_DataMiningModelProcessing)|Statistiques relatives à la création de prédictions à partir de modèles d'exploration de données.|  
+|[Prédiction de l'exploration de données](#bkmk_DataMiningPrediction)|Statistiques relatives au traitement de modèles d'exploration de données.|  
+|[Traitement du modèle d'exploration de données](#bkmk_DataMiningModelProcessing)|Statistiques relatives à la création de prédictions à partir de modèles d'exploration de données.|  
 |[Verrous](#bkmk_Locks)|Statistiques relatives aux verrous internes du serveur Microsoft Analysis Services.|  
 |[MDX](#bkmk_MDX)|Statistiques relatives aux calculs MDX Microsoft Analysis Services.|  
 |[Mémoire](#bkmk_Memory)|Statistiques relatives à la mémoire interne du serveur Microsoft Analysis Services.|  
 |[Mise en cache proactive](#bkmk_ProactiveCaching)|Statistiques relatives à la mise en cache proactive Microsoft Analysis Services.|  
 |[Traitement des agrégations](#bkmk_ProcAggregations)|Statistiques relatives au traitement des agrégations dans des fichiers de données MOLAP.|  
 |[Traitement des index](#bkmk_ProcIndexes)|Statistiques relatives au traitement des index pour les fichiers de données MOLAP.|  
-|[Traitée](#bkmk_Processing)|Statistiques relatives au traitement des données.|  
+|[Traitement en cours](#bkmk_Processing)|Statistiques relatives au traitement des données.|  
 |[Requête du moteur de stockage](#bkmk_StorageEngineQuery)|Statistiques relatives aux requêtes du moteur de stockage Microsoft Analysis Services.|  
-|[Thèmes](#bkmk_Threads)|Statistiques relatives aux threads Microsoft Analysis Services.|  
+|[Threads](#bkmk_Threads)|Statistiques relatives aux threads Microsoft Analysis Services.|  
   
-###  <a name="bkmk_Cache"></a>En  
+###  <a name="cache"></a><a name="bkmk_Cache"></a>En  
  Statistiques relatives au cache d'agrégation Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -68,21 +68,21 @@ ms.locfileid: "66079708"
 |Nombre total d'accès au cache de l'itérateur filtré|Nombre total d'accès au cache qui ont retourné un itérateur indexé sur les résultats filtrés.|  
 |Nombre total de pertes dans le cache de l'itérateur filtré|Nombre total d'accès au cache qui n'ont pas été en mesure de générer un itérateur indexé sur les résultats filtrés et ont dû construire un nouveau cache avec les résultats filtrés.|  
   
-###  <a name="bkmk_Connection"></a>Égard  
+###  <a name="connection"></a><a name="bkmk_Connection"></a>Égard  
  Statistiques relatives aux connexions Microsoft Analysis Services.  
   
 |Compteur|Description|  
 |-------------|-----------------|  
 |Connexions en cours|Nombre actuel de connexions client établies.|  
 |Requêtes/s|Taux de demandes de connexion.  Il s’agit des arrivées.|  
-|Total demandes|Nombre total de demandes de connexion.  Il s’agit des arrivées.|  
+|Nombre total de requêtes|Nombre total de demandes de connexion.  Il s’agit des arrivées.|  
 |Réussites/s|Taux de connexions terminées réussies.|  
 |Total réussites|Nombre total de connexions réussies.|  
 |Échecs/s|Taux d'échecs de connexion.|  
 |Total échecs|Total des échecs de tentatives de connexion.|  
 |Sessions utilisateur actives|Nombre actuel de sessions utilisateur établies.|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a>Traitement des modèles d’exploration de données  
+###  <a name="data-mining-model-processing"></a><a name="bkmk_DataMiningModelProcessing"></a>Traitement des modèles d’exploration de données  
  Statistiques relatives au traitement du modèle d'exploration de données Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -90,7 +90,7 @@ ms.locfileid: "66079708"
 |Cas/s|Fréquence à laquelle les cas sont traités.|  
 |Modèles actuels en traitement|Nombre actuel de modèles en cours de traitement.|  
   
-###  <a name="bkmk_DataMiningPrediction"></a>Prédiction de l’exploration de données  
+###  <a name="data-mining-prediction"></a><a name="bkmk_DataMiningPrediction"></a>Prédiction de l’exploration de données  
  Statistiques relatives à la prédiction de l'exploration de données Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -103,7 +103,7 @@ ms.locfileid: "66079708"
 |Lignes de totaux|Nombre total de lignes retournées par les requêtes d'exploration de données.|  
 |Total prédictions|Nombre total de requêtes de prédiction d'exploration de données reçues par le serveur.|  
   
-###  <a name="bkmk_Locks"></a>Verrous  
+###  <a name="locks"></a><a name="bkmk_Locks"></a>Verrous  
  Statistiques relatives aux verrous internes du serveur Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -119,7 +119,7 @@ ms.locfileid: "66079708"
 |Requêtes de déverrouillage/s|Nombre de requêtes de déverouillage par seconde.|  
 |Blocages totaux détectés|Nombre total de blocages détectés.|  
   
-###  <a name="bkmk_MDX"></a>MDX  
+###  <a name="mdx"></a><a name="bkmk_MDX"></a>MDX  
  Statistiques relatives aux calculs MDX Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -152,7 +152,7 @@ ms.locfileid: "66079708"
 |Total Autoexist|Nombre total d'exécutions d'Autoexist.|  
 |Total EXISTING|Nombre total d'exécutions de l'opérateur défini EXISTING.|  
   
-###  <a name="bkmk_Memory"></a>Capacité  
+###  <a name="memory"></a><a name="bkmk_Memory"></a>Capacité  
  Statistiques relatives à la mémoire interne du serveur Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -229,7 +229,7 @@ ms.locfileid: "66079708"
 |Limite inconditionnelle de la mémoire en Ko|Limite de mémoire physique, du fichier de configuration.|  
 |Limite de la mémoire VertiPaq en Ko|Limite en mémoire, du fichier de configuration.|  
   
-###  <a name="bkmk_ProactiveCaching"></a>Mise en cache proactive  
+###  <a name="proactive-caching"></a><a name="bkmk_ProactiveCaching"></a>Mise en cache proactive  
  Statistiques relatives à la mise en cache proactive Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -239,7 +239,7 @@ ms.locfileid: "66079708"
 |Début de la mise en cache proactive/s|Vitesse de début de la mise en cache proactive.|  
 |Fin de la mise en cache proactive/s|Vitesse d'achèvement de la mise en cache proactive.|  
   
-###  <a name="bkmk_ProcAggregations"></a>Traitement des agrégations  
+###  <a name="processing-aggregations"></a><a name="bkmk_ProcAggregations"></a>Traitement des agrégations  
  Statistiques relatives au traitement Microsoft Analysis Services des agrégations dans les fichiers de données MOLAP.  
   
 |Compteur|Description|  
@@ -253,7 +253,7 @@ ms.locfileid: "66079708"
 |Lignes de fichiers temporaires écrites/s|Taux d'écritures de lignes dans un fichier temporaire.  L'écriture dans des fichiers temporaires a lieu lorsque les agrégations dépassent les limites de la mémoire.|  
 |Octets écrits dans fichier temporaire/s|Taux d'écritures d'octets dans un fichier temporaire.  L'écriture dans des fichiers temporaires a lieu lorsque les agrégations dépassent les limites de la mémoire.|  
   
-###  <a name="bkmk_ProcIndexes"></a>Traitement des index  
+###  <a name="processing-indexes"></a><a name="bkmk_ProcIndexes"></a>Traitement des index  
  Statistiques relatives au traitement Microsoft Analysis Services des index dans les fichiers de données MOLAP.  
   
 |Compteur|Description|  
@@ -263,7 +263,7 @@ ms.locfileid: "66079708"
 |Lignes/s|Taux de lignes issues de fichiers MOLAP utilisées pour la création d'index.|  
 |Lignes de totaux|Nombre total de lignes issues de fichiers MOLAP utilisées pour la création d'index.|  
   
-###  <a name="bkmk_Processing"></a>Traitée  
+###  <a name="processing"></a><a name="bkmk_Processing"></a>Traitée  
  Statistiques relatives au traitement des données par Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -275,7 +275,7 @@ ms.locfileid: "66079708"
 |Lignes écrites/s|Taux de lignes écrites lors du traitement.|  
 |Total lignes écrites|Nombre de lignes écrites lors du traitement.|  
   
-###  <a name="bkmk_StorageEngineQuery"></a>Requête du moteur de stockage  
+###  <a name="storage-engine-query"></a><a name="bkmk_StorageEngineQuery"></a>Requête du moteur de stockage  
  Statistiques relatives aux requêtes du moteur de stockage Microsoft Analysis Services.  
   
 |Compteur|Description|  
@@ -318,7 +318,7 @@ ms.locfileid: "66079708"
 |Recherches d'agrégation/s|Taux de recherches d'agrégation.|  
 |Présences d'agrégation/s|Taux de présences d'agrégation.|  
   
-###  <a name="bkmk_Threads"></a>Thèmes  
+###  <a name="threads"></a><a name="bkmk_Threads"></a>Thèmes  
  Statistiques relatives aux threads Microsoft Analysis Services.  
   
 |Compteur|Description|  

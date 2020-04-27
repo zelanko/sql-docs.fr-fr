@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062157"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Propriétés de l’alerte-nouvelle alerte (page réponse)
@@ -26,7 +26,7 @@ ms.locfileid: "63062157"
  **Exécuter le travail**  
  Active les options **Liste des travaux**, **Nouveau travail** et **Afficher le travail** .  
   
- **Nouvelle tâche**  
+ **Nouveau travail**  
  Ouvre la boîte de dialogue **Nouveau travail** . Ce bouton n'est pas disponible lorsque **Exécuter le travail** n'est pas sélectionné.  
   
  **Afficher le travail**  
@@ -35,7 +35,7 @@ ms.locfileid: "63062157"
  **Notifier les opérateurs**  
  Active les contrôles qui vous permettent d'ajouter, de supprimer ou de modifier des opérateurs.  
   
- **Liste d’opérateurs**  
+ **Liste d'opérateurs**  
  Répertorie les opérateurs à notifier lorsqu'une alerte se produit. Pour spécifier une méthode de notification, cochez la case **Messagerie électronique**, **Radiomessagerie**ou **Envoi réseau** affichée après le nom de l’opérateur. Cette option n’est pas disponible quand **Notifier les opérateurs** n’est pas sélectionné.  
   
  **Courriel**  
@@ -50,14 +50,14 @@ ms.locfileid: "63062157"
  **Nouvel opérateur**  
  Affiche la boîte de dialogue **Nouvel opérateur** , que vous pouvez utiliser pour créer un opérateur.  
   
- **View (opérateur)**  
+ **Afficher l'opérateur**  
  Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés d’opérateur dans la boîte de dialogue **Propriétés Opérateur**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Alerts](alerts.md)   
+ [Aucune](alerts.md)   
  [Créer une alerte à l’aide d’un niveau de gravité](create-an-alert-using-severity-level.md)   
- [Alerts](alerts.md)   
+ [Aucune](alerts.md)   
  [Modifier une alerte](edit-an-alert.md)   
- [Supprimer une alerte](delete-an-alert.md)  
+ [Delete an Alert](delete-an-alert.md)  
   
   

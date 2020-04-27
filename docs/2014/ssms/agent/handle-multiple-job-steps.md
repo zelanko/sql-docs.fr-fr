@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074049"
 ---
 # <a name="handle-multiple-job-steps"></a>Gérer plusieurs étapes de travail
@@ -40,8 +40,7 @@ ms.locfileid: "63074049"
 > [!NOTE]  
 >  Si vous créez des étapes de travail en boucle, (l'étape de travail 1 est suivie par l'étape de travail 2, puis l'étape de travail 2 revient à l'étape de travail 1), un message d'avertissement apparaît lors de la création du travail avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent enregistre dans l’historique des travaux les informations relatives aux travaux et aux étapes de travail.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent enregistre dans l’historique des travaux les informations relatives aux travaux et aux étapes de travail.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   

@@ -11,32 +11,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079270"
 ---
 # <a name="lesson-12-create-roles"></a>Leçon 12 : Créer des rôles
   Dans cette leçon, vous allez créer des rôles. Les rôles fournissent la sécurité des objets et des données d'une base de données de modèles, en limitant l'accès aux utilisateurs Windows qui y sont membres. Chaque rôle est défini avec une autorisation unique : aucune autorisation, autorisation de lecture, autorisation de lecture et de traitement, autorisation de traitement ou autorisation d’administrateur. Les rôles peuvent être définis lors de la création du modèle à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Une fois le modèle déployé, vous pouvez gérer les rôles à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
->  Il n’est pas nécessaire de créer des rôles pour suivre ce didacticiel. Par défaut, le compte avec lequel vous êtes actuellement connecté disposera de privilèges Administrateur sur le modèle. Toutefois, pour permettre à d'autres utilisateurs de votre organisation de parcourir le modèle à l'aide d'une application cliente de création de rapports, vous devez créer au moins un rôle avec des autorisations de lecture et ajouter ces utilisateurs en tant que membres.  
+>  La création de rôles n'est pas nécessaire pour effectuer ce didacticiel. Par défaut, le compte avec lequel vous êtes actuellement connecté disposera de privilèges Administrateur sur le modèle. Toutefois, pour permettre à d'autres utilisateurs de votre organisation de parcourir le modèle à l'aide d'une application cliente de création de rapports, vous devez créer au moins un rôle avec des autorisations de lecture et ajouter ces utilisateurs en tant que membres.  
   
  Vous allez créer trois rôles :  
   
 -   Responsable des ventes : ce rôle peut inclure les utilisateurs de votre organisation pour lesquels vous souhaitez disposer d’une autorisation de lecture sur tous les objets de modèle et données.  
   
--   Analyste des ventes-États-Unis : ce rôle peut inclure les utilisateurs de votre organisation pour lesquels vous souhaitez uniquement pouvoir parcourir les données relatives aux ventes aux États-Unis (États-Unis). Pour ce rôle, vous allez utiliser une formule DAX de façon à définir un *filtre de lignes*, qui limite les membres à parcourir uniquement les données concernant les États-Unis.  
+-   Analyste des ventes-États-Unis : ce rôle peut inclure les utilisateurs de votre organisation pour lesquels vous souhaitez uniquement pouvoir parcourir les données relatives aux ventes aux États-Unis (États-Unis). Pour ce rôle, vous utilisez une formule DAX pour définir un *filtre de lignes*, qui limite l’accès des membres aux seules données concernant les États-Unis.  
   
 -   Administrateur : ce rôle peut inclure des utilisateurs pour lesquels vous souhaitez disposer d’une autorisation d’administrateur, qui permet un accès et des autorisations illimités pour effectuer des tâches d’administration sur la base de données model.  
   
- Étant donné que les comptes d’utilisateurs et de groupes Windows de votre organisation sont uniques, vous pouvez ajouter des comptes de votre organisation spécifique aux membres. Toutefois, pour ce didacticiel, vous pouvez également laisser les membres vides. Vous pourrez toujours tester l’effet de chaque rôle ultérieurement dans la leçon 12 : Analyser dans Excel.  
+ Étant donné que les comptes d'utilisateurs et de groupes Windows dans votre organisation sont uniques, vous pouvez ajouter des comptes de votre organisation aux membres. Toutefois, pour ce didacticiel, vous pouvez également laissez les membres vides. Vous pourrez toujours tester l'effet de chaque rôle plus loin dans la leçon 12 : analyser dans Excel.  
   
  Durée estimée pour suivre cette leçon : **15 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
- Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 11 : Créer des partitions](lesson-10-create-partitions.md).  
+## <a name="prerequisites"></a>Prérequis  
+ Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 11 : Créer des partitions](lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Créer les rôles  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66079270"
   
 7.  Vérifiez vos sélections, puis cliquez sur **OK** .  
   
-#### <a name="to-create-a-sales-analyst-us-user-role"></a>Pour créer un rôle d’utilisateur Sales Analyst US (Analyste en ventes aux États-Unis)  
+#### <a name="to-create-a-sales-analyst-us-user-role"></a>Pour créer un rôle d'utilisateur Sales Analyst US  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis sur **Rôles**.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074399"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
@@ -145,6 +145,6 @@ ms.locfileid: "66074399"
  [Contenu de FORMAT_STRING &#40;&#41;MDX](mdx-cell-properties-format-string-contents.md)   
  [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [Création et utilisation de valeurs de propriété &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

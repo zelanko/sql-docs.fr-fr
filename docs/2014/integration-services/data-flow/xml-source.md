@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899942"
 ---
 # <a name="xml-source"></a>Source XML
@@ -69,7 +69,7 @@ ms.locfileid: "62899942"
   
  La source XML prend en charge plusieurs sorties standard et plusieurs sorties d'erreur.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend la boîte de dialogue **éditeur de source XML**pour la configuration de la source XML. Cette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut la boîte de dialogue **Éditeur de source XML**pour configurer la source XML. Cette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "62899942"
   
 -   [Éditeur de source XML &#40;page Gestionnaire de connexions&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source XML &#40;page colonnes&#41;](../xml-source-editor-columns-page.md)  
+-   [Éditeur de source XML &#40;page Colonnes&#41;](../xml-source-editor-columns-page.md)  
   
--   [Éditeur de source XML &#40;page sortie d’erreur&#41;](../xml-source-editor-error-output-page.md)  
+-   [Éditeur de source XML &#40;page Sortie d’erreur&#41;](../xml-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

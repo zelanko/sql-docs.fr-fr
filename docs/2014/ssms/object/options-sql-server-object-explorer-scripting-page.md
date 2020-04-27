@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031933"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Options (Explorateur d’objets SQL Server-page script)
@@ -44,7 +44,7 @@ ms.locfileid: "63031933"
  **Inclure des en-têtes descriptifs**  
  Ajoute des commentaires descriptifs au script en séparant le script en sections pour chaque objet. La valeur par défaut est True. Pour plus d’informations, consultez [Comment &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/comment-transact-sql).  
   
- **Inclure les options vardecimal**  
+ **Inclure des options VarDecimal**  
  Inclut les options de stockage VarDecimal. La valeur par défaut est FALSE. Pour plus d’informations, consultez et [sp_db_vardecimal_storage_format &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
  **Générer le script de suivi des modifications**  
@@ -63,7 +63,7 @@ ms.locfileid: "63031933"
  **Générer un script pour les objets dépendants**  
  Génère un script pour les objets supplémentaires qui sont requis lorsque le script de l'objet sélectionné est exécuté. La valeur par défaut est FALSE.  
   
- **Inclure la clause IF NOT EXISTs**  
+ **Inclure la clause If NOT EXISTS**  
  Inclut une instruction permettant de vérifier qu'un objet n'existe pas dans la base de données avant de créer l'objet. La valeur par défaut est FALSE. Pour plus d’informations, consultez [If... SINON &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/if-else-transact-sql) et [existe &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Noms d'objet de qualification de schéma**  

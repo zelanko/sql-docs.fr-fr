@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065457"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -80,7 +80,7 @@ idxServerCol
   
 -   Si la colonne source n’est pas **décimale** ou **numérique**, la précision et l’échelle par défaut sont utilisées.  
   
--   Si la colonne source est **décimale** ou **numérique**, sa précision et son échelle propres sont utilisées.  
+-   Si la colonne source est **décimale** ou **numérique**, la précision et l’échelle de la colonne source sont utilisées.  
   
  *cbIndicator*  
  Longueur, en octets, d'une longueur/indicateur null au sein des données de la colonne. Les valeurs de longueur d'indicateur valides sont 0 (quand aucun indicateur n'est utilisé), 1, 2, 4 ou 8.  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a050c8eecadec138341ffe2f64a791eb198beebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066742"
 ---
 # <a name="project-properties-ssas-tabular"></a>Propriétés de projet (SSAS Tabulaire)
@@ -29,13 +29,13 @@ ms.locfileid: "66066742"
   
 -   [Pour configurer les paramètres de propriété Options de déploiement et Serveur de déploiement](#bkmk_conf_proj_settings)  
   
-##  <a name="bkmk_proj_properties"></a>Propriétés du projet  
+##  <a name="project-properties"></a><a name="bkmk_proj_properties"></a>Propriétés du projet  
  **Options de déploiement**  
   
 |Propriété|Paramètre par défaut|Description|  
 |--------------|---------------------|-----------------|  
-|**Option de traitement**|**Valeurs**|Par défaut, Analysis Services détermine le type de traitement nécessaire lorsque des changements d'objet sont déployés. Cette approche résulte en un temps de déploiement réduit. Cependant, vous pouvez également choisir d'effectuer un traitement complet ou aucun traitement à chaque déploiement.|  
-|**Déploiement transactionnel**|**False**|Spécifie si le déploiement du modèle est transactionnel ou non. Par défaut, le déploiement de tous les objets ou des objets modifiés n'est pas transactionnel avec le traitement de ces objets déployés. Le déploiement peut réussir et être conservé même si le traitement échoue. Vous pouvez modifier cette valeur pour incorporer le déploiement et le traitement dans une seule transaction.|  
+|**Option de traitement**|**Par défaut**|Par défaut, Analysis Services détermine le type de traitement nécessaire lorsque des changements d'objet sont déployés. Cette approche résulte en un temps de déploiement réduit. Cependant, vous pouvez également choisir d'effectuer un traitement complet ou aucun traitement à chaque déploiement.|  
+|**Déploiement transactionnel**|**Fausses**|Spécifie si le déploiement du modèle est transactionnel ou non. Par défaut, le déploiement de tous les objets ou des objets modifiés n'est pas transactionnel avec le traitement de ces objets déployés. Le déploiement peut réussir et être conservé même si le traitement échoue. Vous pouvez modifier cette valeur pour incorporer le déploiement et le traitement dans une seule transaction.|  
 |**Mode de requête**|**En mémoire**|Spécifie la source depuis laquelle les résultats de la requête sont renvoyés. Pour plus d’informations, consultez [Mode DirectQuery &#40;SSAS Tabulaire&#41;](directquery-mode-ssas-tabular.md).|  
   
  **Serveur de déploiement**  
@@ -46,15 +46,15 @@ ms.locfileid: "66066742"
 |**Édition**|**Développeur**|Spécifie l'édition du serveur Analysis Services sur lequel le modèle sera déployé. L'édition du serveur définit différentes fonctionnalités qui peuvent être incorporées dans le projet.|  
 |**Sauvegarde de la base de données**|**Modélisation**|Spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés lors du déploiement. Ce nom sera spécifié dans une connexion de données ou un fichier de connexion de données .rsds. Il est recommandé que le nom reflète le type d'analyse qui sera effectuée à l'aide du modèle, par exemple AdventureWorksSalesModel.<br /><br /> ** \* Important \* \* ** Pour empêcher les noms en double pour les modèles déployés, vous devez modifier le paramètre **de nom de propriété de base de données** pour refléter l’objectif du modèle. Il s'agit du nom que les utilisateurs verront lorsqu'ils se connecteront au modèle en tant que source de données.|  
 |**Nom du cube**|**Modélisation**|Spécifie le nom du cube de base de données comme indiqué dans une connexion de données au client de création de rapports.|  
-|**Version**|**11.0**|Version de l'instance d'Analysis Services où le projet sera déployé.|  
+|**Version**|**11,0**|Version de l'instance d'Analysis Services où le projet sera déployé.|  
   
- **Options de DirectQuery**  
+ **Options DirectQuery**  
   
 |Propriété|Paramètre par défaut|Description|  
 |--------------|---------------------|-----------------|  
-|**Paramètres d’emprunt d’identité**|**Valeurs**|Spécifie les informations d'identification utilisées pour se connecter aux sources de données pour un modèle s'exécutant en mode DirectQuery. Ces informations d'identification sont différentes des informations d'identification d'emprunt d'identité utilisées en mode In-Memory par défaut. Pour plus d’informations, consultez [Emprunt d’identité &#40;SSAS Tabulaire&#41;](impersonation-ssas-tabular.md).|  
+|**Paramètres d'emprunt d'identité**|**Par défaut**|Spécifie les informations d'identification utilisées pour se connecter aux sources de données pour un modèle s'exécutant en mode DirectQuery. Ces informations d'identification sont différentes des informations d'identification d'emprunt d'identité utilisées en mode In-Memory par défaut. Pour plus d’informations, consultez [Emprunt d’identité &#40;SSAS Tabulaire&#41;](impersonation-ssas-tabular.md).|  
   
-###  <a name="bkmk_conf_proj_settings"></a>Pour configurer les paramètres de propriété Options de déploiement et serveur de déploiement  
+###  <a name="to-configure-deployment-options-and-deployment-server-property-settings"></a><a name="bkmk_conf_proj_settings"></a>Pour configurer les paramètres de propriété Options de déploiement et serveur de déploiement  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Propriétés**.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66066742"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés de déploiement et de modélisation des données par défaut &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)   
  [Propriétés de modèle &#40;&#41;tabulaire SSAS](model-properties-ssas-tabular.md)   
- [Déploiement de solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

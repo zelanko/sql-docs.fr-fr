@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250773"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de données
@@ -40,9 +40,9 @@ ms.locfileid: "63250773"
 |**Délai de transaction**|Délai d'attente d'accusé de réception non terminé, en millisecondes.|Réplica principal|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)   
+ [Surveiller l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de disponibilité](sql-server-availability-replica.md)   
- [SQL Server, objet Databases](sql-server-databases-object.md)   
+ [SQL Server, objet databases](sql-server-databases-object.md)   
  [Groupes de disponibilité AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

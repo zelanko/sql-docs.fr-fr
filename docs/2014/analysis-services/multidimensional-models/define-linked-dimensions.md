@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075575"
 ---
 # <a name="define-linked-dimensions"></a>Définir des dimensions liées
@@ -30,7 +30,7 @@ ms.locfileid: "66075575"
 > [!NOTE]  
 >  Puisque l'actualisation n'est pas disponible, la plupart des développeurs Analysis Services copient les dimensions au lieu de les lier. Vous pouvez copier des dimensions entre les projets dans la même solution. Pour plus d’informations, consultez [Actualisation d’une dimension liée dans SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  La base de données source qui fournit la dimension et la base de données active qui les utilise doivent être de la même version et avoir le même niveau de compatibilité. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  La base de données source doit être déployée et en ligne. Les serveurs qui publient ou consomment des objets liés doivent être configurés pour autoriser l'opération (voir ci-dessous).  
@@ -55,7 +55,7 @@ ms.locfileid: "66075575"
   
 4.  Dans la page **Fin de l’Assistant** , vous pouvez afficher un aperçu des objets liés. Si vous liez une dimension qui a le même nom qu'une dimension existante, un nombre ordinal (« 1 » pour le premier nom dupliqué, et ainsi de suite) est ajouté au nom. À la fin de l’Assistant, la dimension est ajoutée au dossier **Dimensions** .  
   
-##  <a name="bkmk_CreateNew"></a>Créer une connexion de source de données à une base de données Analysis Services  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a> Créer une connexion de source de données à une base de données Analysis Services  
  Utilisez l'Assistant Nouvelle source de données pour ajouter à votre projet des informations de connexion relatives à la base de données Analysis Services qui fournit la dimension. Vous pouvez démarrer l’Assistant en cliquant sur **Nouvelle source de données** dans la page Sélectionner une source de données de l’Assistant Objets liés.  
   
 1.  Dans l’Assistant Source de données, dans la page Sélectionner la méthode de définition de la connexion, cliquez sur **Nouvelle**.  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068550"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Spécifier une chaîne de connexion (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "66068550"
  **Chaîne de connexion**  
  Tapez une chaîne de connexion à utiliser pour vous connecter à une source de données OLE DB ou ODBC.  
   
- **Build**  
+ **Créer**  
  Spécifiez les propriétés pour une chaîne de connexion dans la boîte de dialogue **Propriétés des liaisons de données** . Pour plus d'informations, consultez l'aide de Microsoft Data Link, qui est disponible via cette boîte de dialogue.  
   
  **Tester la connexion**  

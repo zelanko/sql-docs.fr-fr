@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068543"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Spécifier l'ordre des attributs (Assistant Business Intelligence)
@@ -34,7 +34,7 @@ ms.locfileid: "66068543"
  **Critères**  
  Dans **Classement des attributs** , spécifiez dans les critères de tri des membres dans **l’Attribut**correspondant. Le tableau suivant répertorie les critères disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Nom**|Trie **l’Attribut** selon les noms des membres de l’attribut dans **Classement des attributs**.|  
 |**Clé**|Trie **l’Attribut** selon les clés des membres de l’attribut dans **Classement des attributs**.|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066470"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propriétés de table (SSAS Tabular)
@@ -28,19 +28,19 @@ ms.locfileid: "66066470"
   
 -   [Pour configurer les paramètres de propriété de table](#bkmk_config_prop)  
   
-##  <a name="bkmk_properties"></a>Propriétés de la table  
+##  <a name="table-properties"></a><a name="bkmk_properties"></a>Propriétés de la table  
  **De base**  
   
 |Propriété|Paramètre par défaut|Description|  
 |--------------|---------------------|-----------------|  
-|**Nom de la connexion**|\<nom de la connexion>|Nom de la connexion à la source de données de la table.<br /><br /> Pour modifier la connexion, cliquez sur le bouton.|  
-|**Hidden**|False|Spécifie si la table est masquée dans les listes de champs de client de création de rapports.|  
+|**Nom de connexion**|\<nom de la connexion>|Nom de la connexion à la source de données de la table.<br /><br /> Pour modifier la connexion, cliquez sur le bouton.|  
+|**Masquer**|False|Spécifie si la table est masquée dans les listes de champs de client de création de rapports.|  
 |**Partitions**||Les partitions de la table ne peuvent pas être affichées dans la fenêtre **Propriétés** . Pour afficher, créer ou modifier des partitions, cliquez sur le bouton pour ouvrir le Gestionnaire de partition.|  
 |**Données sources**||Les données sources de la table ne peuvent pas être affichées dans la fenêtre **Propriétés** . Pour afficher ou modifier les données sources, cliquez sur le bouton pour ouvrir la boîte de dialogue Modifier les propriétés de la table.|  
 |**Description de la table**||Description textuelle de la table.<br /><br /> Dans [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], si un utilisateur positionne le curseur sur cette table dans la liste des champs, la description apparaît sous la forme d'une info-bulle.|  
 |**Nom de la table**|\<nom convivial>|Spécifie le nom convivial de la table. Le nom de la table peut être spécifié lorsqu'une table est importée à l'aide de l'Assistant Importation de table ou à tout moment après l'importation. Le nom de la table dans le modèle peut être différent de la table associée à la source. Le nom convivial de la table s'affiche dans la liste de champs de l'application cliente de création de rapports ainsi que dans la base de données model dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
- **Propriétés de création de rapports**  
+ **Propriétés de la création de rapports**  
   
  Pour obtenir des descriptions détaillées et des informations de configuration concernant les propriétés de génération de rapport, consultez [Propriétés de la génération de rapports Power View &#40;SSAS Tabulaire&#41;](properties-ssas-tabular.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66066470"
 |**Ensemble de champs par défaut**|||  
 |Comportement de la table|||  
   
-###  <a name="bkmk_config_prop"></a>Pour configurer les paramètres de propriété de table  
+###  <a name="to-configure-table-property-settings"></a><a name="bkmk_config_prop"></a>Pour configurer les paramètres de propriété de table  
   
 1.  Dans le concepteur de modèles, dans la vue de données, cliquez sur une table (onglet) ou, dans la vue du diagramme, cliquez sur un en-tête de table.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066520"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Créer une colonne calculée (SSAS Tabulaire)
@@ -26,7 +26,7 @@ ms.locfileid: "66066520"
   
 1.  Dans le générateur de modèles, dans la vue de données, sélectionnez la table à laquelle vous souhaitez ajouter une colonne calculée, cliquez sur le menu **Colonne** , puis sur **Ajouter une colonne**.  
   
-     **Ajouter une colonne** est mis en surbrillance dans la colonne la plus à droite vide, et le curseur se déplace vers la barre de formule.  
+     **Ajouter une colonne** est mis en surbrillance dans la colonne la plus à droite vide, et le curseur se place dans la barre de formule.  
   
      Pour intercaler une colonne entre deux colonnes existantes, cliquez avec le bouton droit sur une colonne existante, puis sélectionnez **Insérer une colonne**.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66066520"
   
 ## <a name="see-also"></a>Voir aussi  
  [Colonnes calculées &#40;&#41;tabulaires SSAS](ssas-calculated-columns.md)   
- [Mesures &#40;&#41;tabulaire SSAS](measures-ssas-tabular.md)  
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)  
   
   

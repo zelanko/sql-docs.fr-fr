@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070294"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action de rapport (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,13 +26,13 @@ ms.locfileid: "66070294"
  **Nom**  
  Tapez le nom de l'action.  
   
- **Cible d’action**  
+ **Cible d'action**  
  Développez pour afficher les options **Type de cible** et **Objet cible** .  
   
  **Type de cible**  
  Sélectionnez le type d'objet auquel l'action doit être associée. Le serveur retourne au client uniquement les actions qui s'appliquent à l'objet du type spécifié. L’action est disponible pour le client si la **Condition** est remplie et si les objets spécifiés dans le tableau suivant sont sélectionnés.  
   
-|Valeur|Objet sélectionné|  
+|Value|Objet sélectionné|  
 |-----------|---------------------|  
 |Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.<br /><br /> Remarque : les autres hiérarchies des utilisateurs qui utilisent l’attribut sélectionné héritent de l’action de rapport.|  
 |Cellules|L’ensemble nommé dans **Objet cible** est sélectionné. Sélectionnez **Toutes les cellules** pour sélectionner toutes les cellules du cube.|  
@@ -57,13 +57,13 @@ ms.locfileid: "66070294"
  **Nom du serveur**  
  Tapez le nom de l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instance sur laquelle l’action exécute le rapport.  
   
- **Chemin du serveur**  
+ **Chemin d'accès au serveur**  
  Tapez le chemin complet d'accès au rapport sur l'instance [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Par exemple, tapez **Sales/YearlySalesByCategory**.  
   
  **Format de rapport**  
  Sélectionnez le format dans lequel le rapport est retourné. Le tableau suivant décrit les formats disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |HTML5|Le rapport est retourné dans format compatible HTML 5.0.|  
 |HTML3|Le rapport est retourné dans format compatible HTML 3,2.|  
@@ -81,7 +81,7 @@ ms.locfileid: "66070294"
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Invocation**, **Application**, **Description**, **Légende**et **La légende est MDX** .  
   
- **Appel**  
+ **Invocation**  
  Sélectionnez le paramètre qui indique le moment où l'action doit être effectuée.  
   
 > [!NOTE]  
@@ -89,10 +89,10 @@ ms.locfileid: "66070294"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Batch|L’action doit s’exécuter dans le cadre d’une opération de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] traitement par lot ou d’une tâche.|  
-|Interactive|L'action s'exécute lorsque l'utilisateur l'invoque.|  
+|Interactive (Interactif)|L'action s'exécute lorsque l'utilisateur l'invoque.|  
 |À l’ouverture|L'action s'exécute à la première ouverture du cube.|  
   
  **Application**  
@@ -106,7 +106,7 @@ ms.locfileid: "66070294"
  **Description**  
  Tapez une description facultative de l'action.  
   
- **Caption**  
+ **-**  
  Entrez la légende à afficher pour l’action dans l’application cliente si l’option **La légende est MDX** a la valeur **False**.  
   
  Tapez l’expression MDX qui retourne une chaîne de caractères pour la légende si l’option **La légende est MDX** a la valeur **True**.  

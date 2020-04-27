@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067045"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Importer à partir d'Analysis Services (SSAS Tabulaire)
@@ -36,6 +36,6 @@ ms.locfileid: "66067045"
 5.  Dans **Nom de la base de données**, sélectionnez la base de données du modèle tabulaire qui contient les métadonnées du modèle que vous souhaitez importer, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés du projet &#40;SSAS tabulaire&#41;](properties-ssas-tabular.md)  
+ [Propriétés de projet &#40;SSAS Tabulaire&#41;](properties-ssas-tabular.md)  
   
   

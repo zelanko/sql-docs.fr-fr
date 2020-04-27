@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081848"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Volet Conception (vue Prévision de modèle d'exploration de données)
@@ -29,11 +29,11 @@ ms.locfileid: "66081848"
 > [!NOTE]  
 >  Si vous apportez des modifications manuelles à la requête, vous perdez les modifications lorsque vous repassez en mode Conception. Pour enregistrer la requête DMX, vous pouvez copier celle-ci vers le Presse-papiers Windows puis la coller dans un fichier texte.  
   
- **Pour plus d’informations : requêtes d'** [exploration de données](data-mining/data-mining-queries.md)  
+ **Pour plus d’informations :** [Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Options  
  **Basculer vers l'affichage du résultat de la requête**  
- Cliquez pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
+ Sélectionnez cette option pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
   
  **Enregistrer le résultat de la requête**  
  Ouvre la boîte de dialogue **Enregistrer le résultat de la requête d’exploration de données** .  
@@ -44,7 +44,7 @@ ms.locfileid: "66081848"
  **Actualiser les résultats de la requête**  
  Traite une nouvelle fois la requête de prévision. Cette option est activée uniquement dans le volet **Résultat** .  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez le modèle d'exploration de données sur lequel vous souhaitez baser vos prévisions.  
   
  **Sélectionner un modèle**  
@@ -68,7 +68,7 @@ ms.locfileid: "66081848"
  **Entrée de requête singleton**  
  Cette option est activée quand vous sélectionnez le bouton **Requête singleton** . Elle contient les colonnes suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Colonne du modèle d'exploration de données**|Affiche la liste des colonnes du modèle d’exploration de données sélectionné dans la table **Modèle d’exploration de données** .|  
 |**Valeur**|Sélectionnez une valeur dans la liste qui contient tous les états possibles de la colonne du modèle d'exploration de données sélectionné.<br /><br /> Si la colonne est une colonne de table imbriquée, la boîte de dialogue **Entrée de la table imbriquée** s’ouvre quand vous cliquez dans la cellule de la valeur.|  
@@ -82,17 +82,17 @@ ms.locfileid: "66081848"
  Sélectionnez une colonne dans la liste des colonnes dérivées de la table source. Si vous avez sélectionné **Fonction de prédiction** dans **Source**, elle contient la fonction de prédiction disponible pour le modèle d’exploration de données sélectionné.  
   
  **Groupe**  
- Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple : `(expr1 Or expr2) And expr3`.  
+ Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple, `(expr1 Or expr2) And expr3`.  
   
  **Et/ou**  
- Utilisez cette option pour créer une requête logique. Par exemple : `(expr1 Or expr2) And expr3`.  
+ Utilisez cette option pour créer une requête logique. Par exemple, `(expr1 Or expr2) And expr3`.  
   
- **Critères/argument**  
+ **Critères/Argument**  
  Spécifiez une condition ou une expression utilisateur qui s'applique à la colonne. Les colonnes des tables contenant le modèle d'exploration de données et des tables d'entrée peuvent être glissées et déplacées sur la cellule.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
- [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

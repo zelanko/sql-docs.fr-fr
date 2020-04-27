@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071030"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Échec de l'actualisation des connexions suivantes : Données PowerPivot
@@ -26,7 +26,7 @@ ms.locfileid: "66071030"
 |-|-|  
 |S’applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause :|Échec de connexion lors d'une tentative d'utilisation d'un fournisseur de données PowerPivot.|  
+|Cause|Échec de connexion lors d'une tentative d'utilisation d'un fournisseur de données PowerPivot.|  
 |Texte du message|La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Échec de l'actualisation des connexions suivantes : Données PowerPivot|  
   
 ## <a name="explanation"></a>Explication  
@@ -49,7 +49,7 @@ ms.locfileid: "66071030"
   
 #### <a name="enable-claims-to-windows-token-service"></a>Activer le service d'émission de jetons Revendications vers Windows  
   
-1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les services sur le serveur**.  
+1.  Dans l’administration centrale, sous paramètres système, cliquez sur **gérer les services sur le serveur**.  
   
 2.  Sélectionnez **Service d'émission de jetons Revendications vers Windows**, puis cliquez sur **Démarrer**.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66071030"
     2.  Démarrez le service d'émission de jetons Revendications vers Windows s'il n'est pas en cours d'exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des comptes de service PowerPivot](configure-power-pivot-service-accounts.md)  
+ [Configurer des comptes de service PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

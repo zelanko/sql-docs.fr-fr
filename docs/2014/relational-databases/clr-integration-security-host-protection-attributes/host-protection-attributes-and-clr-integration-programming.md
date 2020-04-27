@@ -18,28 +18,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874343"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributs de protection de l'hôte et programmation de l'intégration CLR
   Le Common Language Runtime (CLR) fournit un mécanisme pour annoter des interfaces de programmation d'applications (API) managées qui font partie du .NET Framework avec certains attributs qui peuvent intéresser un hôte du CLR, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Voici quelques exemples d'attributs de protection de l'hôte (HPA, Host Protection Attribute) :  
   
--   
-  `SharedState`, qui indique si l'API expose la capacité à créer ou gérer l'état partagé (par exemple, champs de classe statique).  
+-   `SharedState`, qui indique si l'API expose la capacité à créer ou gérer l'état partagé (par exemple, champs de classe statique).  
   
--   
-  `Synchronization`, qui indique si l'API expose la capacité à effectuer la synchronisation entre des threads.  
+-   `Synchronization`, qui indique si l'API expose la capacité à effectuer la synchronisation entre des threads.  
   
--   
-  `ExternalProcessMgmt`, qui indique si l'API expose une méthode pour contrôler le processus hôte.  
+-   `ExternalProcessMgmt`, qui indique si l'API expose une méthode pour contrôler le processus hôte.  
   
  Étant donné ces attributs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifie une liste de HPA rejetés dans l'environnement hébergé par le biais de la sécurité d'accès du code. Les spécifications de sécurité d'accès du code sont indiquées par l'un des trois jeux d'autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : `SAFE`, `EXTERNAL_ACCESS` ou `UNSAFE`. L'un de ces trois niveaux de sécurité est spécifié lorsque l'assembly est inscrit sur le serveur, à l'aide de l'instruction `CREATE ASSEMBLY`. Le code exécuté dans les jeux d'autorisations `SAFE` ou `EXTERNAL_ACCESS` doit éviter certains types ou membres dont l'attribut `System.Security.Permissions.HostProtectionAttribute` est appliqué. Pour plus d’informations, consultez [création d’un assembly](../clr-integration/assemblies/creating-an-assembly.md) et [restrictions du modèle de programmation](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)de l’intégration du CLR.  
   
- 
-  `HostProtectionAttribute` n'est pas tant une autorisation de sécurité qu'une façon d'améliorer la fiabilité, dans le sens où il identifie des constructions de code spécifiques, à savoir des types ou des méthodes, que l'hôte peut rejeter. L'utilisation de `HostProtectionAttribute` applique un modèle de programmation qui contribue à protéger la stabilité de l'hôte.  
+ `HostProtectionAttribute` n'est pas tant une autorisation de sécurité qu'une façon d'améliorer la fiabilité, dans le sens où il identifie des constructions de code spécifiques, à savoir des types ou des méthodes, que l'hôte peut rejeter. L'utilisation de `HostProtectionAttribute` applique un modèle de programmation qui contribue à protéger la stabilité de l'hôte.  
   
 ## <a name="host-protection-attributes"></a>Attributs de protection de l'hôte  
  Les attributs de protection de l'hôte identifient des types ou des membres qui ne sont pas adaptés au modèle de programmation hôte et représentent les niveaux croissants suivants de menace en termes de fiabilité :  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081032"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Assistant Prévisions (Compléments d'exploration de données pour Excel)
@@ -65,7 +65,7 @@ ms.locfileid: "66081032"
   
     -   **Utilisez le modèle temporaire**. Si cette option est sélectionnée, le modèle ne sera pas enregistré sur le serveur. Lorsque vous fermez Excel, les modèles temporaires sont supprimés.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Vos données doivent inclure au moins une colonne pouvant être utilisée en tant que série chronologique. Les valeurs de cette colonne doivent être uniques et continues, autrement dit, il ne doit pas y avoir d’écarts. Avant d'exécuter l'assistant, triez les données de la colonne de série chronologique par ordre croissant.  
   
  Si vos données ne contiennent pas de colonne de date ou d'heure, vous pouvez utiliser une série numérique arbitraire ou laisser l'assistant s'en charger. Si vous laissez l'assistant créer la colonne d'ordre de la série, assurez-vous que les autres colonnes sont triées dans l'ordre souhaité avant de démarrer l'assistant.  

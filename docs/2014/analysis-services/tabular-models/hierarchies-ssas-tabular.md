@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067078"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hiérarchies (SSAS Tabulaire)
@@ -28,7 +28,7 @@ ms.locfileid: "66067078"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
  Les tables peuvent inclure des dizaines, voire des centaines de colonnes avec des noms de colonne inhabituels sans ordre apparent. Cela peut entraîner une apparence non ordonnée dans les listes de champs de clients de création de rapports, ce qui complique la tâche des utilisateurs qui recherchent et souhaitent inclure des données dans un rapport. Les hiérarchies peuvent fournir une vue simple et intuitive d'une structure de données autrement plus complexe.  
   
  Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
@@ -39,7 +39,7 @@ ms.locfileid: "66067078"
   
  Les hiérarchies ne sont pas censées être utilisées comme mécanisme de sécurité, mais en tant qu'outil pour améliorer le confort de l'utilisateur. Toute la sécurité d'une hiérarchie donnée est héritée du modèle sous-jacent. Les hiérarchies ne peuvent pas autoriser l'accès aux objets de modèle auxquels un utilisateur n'a pas accès. La sécurité de la base de données model doit d'abord être résolue, avant que l'utilisateur puisse accéder aux objets du modèle par le biais d'une hiérarchie. Les rôles de sécurité peuvent permettre de sécuriser les métadonnées et les données de modèle. Pour plus d’informations, consultez [Rôles &#40;SSAS tabulaire&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_define"></a>Définition de hiérarchies  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>Définition de hiérarchies  
  Vous créez et gérez des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme. La création et la gestion des hiérarchies n'est pas prise en charge dans le générateur de modèles dans la vue de données. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans le menu **Modèle** , pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
   
  Pour créer une hiérarchie, cliquez avec le bouton droit sur une colonne que vous souhaitez désigner comme niveau parent, puis sélectionnez **Créer une hiérarchie**. Vous pouvez sélectionner plusieurs colonnes (dans une table unique) à inclure, ou vous pouvez ajouter des colonnes ultérieurement comme niveaux enfants en cliquant et en faisant glisser des colonnes vers le niveau parent. Lorsque plusieurs colonnes sont sélectionnées, elles sont automatiquement placées dans un ordre selon la cardinalité. Vous pouvez modifier cet ordre en cliquant et en faisant glisser une colonne (niveau) vers un ordre différent ou en utilisant les contrôles de navigation Haut et Bas dans le menu contextuel. Lors de l'ajout d'une colonne comme niveau enfant, vous pouvez utiliser la détection automatique en faisant glisser, puis en déplaçant la colonne sur le niveau parent.  
@@ -50,15 +50,15 @@ ms.locfileid: "66067078"
   
  Après avoir créé des hiérarchies, vous pouvez tester leur efficacité dans votre modèle à l'aide de la fonctionnalité Analyser dans Excel. Pour plus d'informations, consultez la section [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tâches associées  
   
 |Tâche|Description|  
 |----------|-----------------|  
-|[Créer et gérer des hiérarchies &#40;SSAS tabulaire&#41;](hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
+|[Créer et gérer des hiérarchies &#40;SSAS Tabulaire&#41;](hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-designer-ssas-tabular.md)   
  [Perspectives &#40;&#41;tabulaire SSAS](perspectives-ssas-tabular.md)   
- [Rôles &#40;&#41;tabulaire SSAS](roles-ssas-tabular.md)  
+ [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
   
   

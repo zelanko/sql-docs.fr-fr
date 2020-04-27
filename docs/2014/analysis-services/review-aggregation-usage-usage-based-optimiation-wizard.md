@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070168"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Passer en revue l'utilisation d'agrégation (Assistant Optimisation de l'utilisation)
   Utilisez la page **Passer en revue l'utilisation d'agrégation** pour configurer des paramètres d'utilisation d'agrégation.  
   
 ## <a name="options"></a>Options  
- **Valeurs**  
+ **Par défaut**  
  Sélectionnez pour que le paramètre d'utilisation d'agrégation de l'attribut possède la valeur Par défaut. En utilisant ce paramètre, le concepteur applique une règle par défaut selon le type d'attribut et de dimension.  
   
  **Complète**  
@@ -32,7 +32,7 @@ ms.locfileid: "66070168"
  **Aucun**  
  Sélectionnez pour que le paramètre d'utilisation d'agrégation de l'attribut soit Aucun. En utilisant ce paramètre, aucune agrégation pour le cube ne peut inclure cet attribut.  
   
- **Unrestricted**  
+ **Illimité**  
  Sélectionnez pour que le paramètre d'utilisation d'agrégation de l'attribut soit Unrestricted. En utilisant ce paramètre, aucune restriction n'est placée sur le concepteur d'agrégation. Toutefois, l'attribut doit encore être évalué pour déterminer s'il s'agit d'un candidat d'agrégation important.  
   
  **Définir tout à la valeur par défaut**  

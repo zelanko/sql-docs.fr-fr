@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080569"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importer à partir d'un flux de données (SSAS Tabulaire)
@@ -22,23 +22,23 @@ ms.locfileid: "66080569"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Fonctionnement de l’importation à partir d’un flux de données](#prereq)  
+-   [Fonctionnement de l'importation à partir d'un flux de données](#prereq)  
   
--   [Importer des données à partir d’un jeu de données Azure DataMarket](#azure)  
+-   [Importer des données à partir d'un dataset Azure DataMarket](#azure)  
   
--   [Importer des flux de données à partir de sources de données publiques ou d’entreprise](#importdata)  
+-   [Importer des flux de données à partir de sources de données publiques ou d'entreprise](#importdata)  
   
 -   [Importer des flux de données à partir de listes SharePoint](#importlist)  
   
--   [Importer des flux de données à partir de rapports de Reporting Services](#importreport)  
+-   [Importer des flux de données à partir de rapports Reporting Services](#importreport)  
   
-##  <a name="prereq"></a>Fonctionnement de l’importation à partir d’un flux de données  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>Fonctionnement de l’importation à partir d’un flux de données  
  Vous pouvez importer des données dans un modèle tabulaire à partir des types suivants de flux de données :  
   
- **Rapport de Reporting Services**  
+ **Rapport Reporting Services**  
  Vous pouvez utiliser un rapport Reporting Services qui a été publié sur un site SharePoint ou sur un serveur de rapports comme source de données dans un modèle. Lors de l'importation de données à partir d'un rapport Reporting Services, vous devez spécifier un fichier de définition de rapport (.rdl) en tant que source de données.  
   
- **Jeu de données Azure DataMarket**  
+ **Dataset Azure DataMarket**  
  Azure DataMarket est un service qui fournit un canal de remise et de marché unique pour obtenir des informations en tant que services en nuage. Les datasets Azure DataMarket requièrent une clé de compte au lieu d'un compte d'utilisateur Windows.  
   
  **Flux Atom**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080569"
   
  Les données d'un flux de données sont ajoutées dans un modèle une fois au cours de l'importation. Pour obtenir des données à jour à partir du flux, vous pouvez soit actualiser les données du générateur de modèles, soit configurer une planification d'actualisation des données pour le modèle après qu'il a été déployé sur une instance de production d'Analysis Services. Pour plus d’informations, consultez [Traiter les données &#40;SSAS Tabulaire&#41;](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a>Importer des données à partir d’un jeu de données Azure DataMarket  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>Importer des données à partir d’un jeu de données Azure DataMarket  
  Vous pouvez importer des données à partir d'un dataset Azure DataMarket comme table dans votre modèle.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Pour importer des données à partir d'un dataset Azure DataMarket  
@@ -73,7 +73,7 @@ ms.locfileid: "66080569"
   
 11. Dans la page **Sélectionner des tables et des vues** , cliquez sur **Terminer**.  
   
-##  <a name="importdata"></a>Importer des flux de données à partir de sources de données publiques ou d’entreprise  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>Importer des flux de données à partir de sources de données publiques ou d’entreprise  
  Vous pouvez accéder à des flux publics ou concevoir des services de données personnalisés qui génèrent des flux Atom à partir de systèmes de base de données privés ou d'ancienne génération.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>Pour importer des données à partir de flux de données publiques ou d'entreprise  
@@ -111,7 +111,7 @@ ms.locfileid: "66080569"
   
 10. Dans la page **Sélectionner des tables et des vues** , cliquez sur **Terminer**.  
   
-##  <a name="importlist"></a>Importer des flux de données à partir de listes SharePoint  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>Importer des flux de données à partir de listes SharePoint  
  Vous pouvez importer n’importe quelle liste SharePoint comportant un bouton **Exporter en tant que flux de données** sur le ruban (SharePoint). Vous pouvez cliquer sur ce bouton pour exporter la liste en tant que flux.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>Pour importer des flux de données à partir d'une liste SharePoint  
@@ -143,7 +143,7 @@ ms.locfileid: "66080569"
   
 10. Dans la page **Sélectionner des tables et des vues** , cliquez sur **Terminer**.  
   
-##  <a name="importreport"></a>Importer des flux de données à partir de rapports de Reporting Services  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>Importer des flux de données à partir de rapports de Reporting Services  
  Si vous avez un déploiement de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services, vous pouvez utiliser l’extension de rendu Atom pour générer un flux de données à partir d’un rapport existant.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>Pour importer des données de rapport à partir d'un rapport Reporting Services publié  
@@ -194,6 +194,6 @@ ms.locfileid: "66080569"
  [Types de données pris en charge &#40;&#41;tabulaire SSAS](tabular-models/data-types-supported-ssas-tabular.md)   
  [Emprunt d’identité &#40;&#41;tabulaire SSAS](tabular-models/impersonation-ssas-tabular.md)   
  [Traiter des données &#40;tabulaires SSAS&#41;](process-data-ssas-tabular.md)   
- [Importer des données &#40;&#41;tabulaire SSAS](import-data-ssas-tabular.md)  
+ [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)  
   
   

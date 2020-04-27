@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079207"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Leçon 1 : Définition d'une vue de source de données dans un projet Analysis Services
@@ -25,7 +25,7 @@ ms.locfileid: "66079207"
  [Création d'un projet Analysis Services](lesson-1-1-creating-an-analysis-services-project.md)  
  Au cours de cette tâche, vous allez créer le projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , basé sur un modèle multidimensionnel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- [Définition d'une source de données](lesson-1-2-defining-a-data-source.md)  
+ [Définition d’une source de données](lesson-1-2-defining-a-data-source.md)  
  Au cours de cette tâche, vous allez spécifier la base de données **AdventureWorksDW2012** comme source de données pour les dimensions et les cubes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous définirez dans les leçons suivantes.  
   
  [Définition d'une vue de source de données](lesson-1-3-defining-a-data-source-view.md)  
@@ -44,6 +44,6 @@ ms.locfileid: "66079207"
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
- [La modélisation multidimensionnelle &#40;le didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072058"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Détails des perspectives (onglet Perspectives, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66072058"
  **Objets de cube**  
  Permet d'afficher la liste hiérarchique des objets et des propriétés contenus dans le cube pouvant être inclus dans la perspective.  
   
- **Type d’objet**  
+ **Type d'objet**  
  Affiche le type de l'objet ou le nom de la propriété à partir du cube et pouvant être inclus dans la perspective.  
   
  **Nom de perspective**  
@@ -44,6 +44,6 @@ ms.locfileid: "66072058"
 |Option|Description|  
 |------------|-----------------|  
 |**Nouvelle perspective**|Permet de créer une perspective dans le cube sélectionné.|  
-|**Supprimer la perspective**|Permet d’afficher la boîte de dialogue **Supprimer les objets** pour supprimer la perspective sélectionnée|  
+|**Supprimer la perspective**|Cliquez pour afficher la boîte de dialogue **Supprimer les objets** et supprimer la perspective sélectionnée.|  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078928"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modification de la dimension Customer
@@ -57,7 +57,7 @@ ms.locfileid: "66078928"
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="adding-a-named-calculation"></a>Ajout d'un calcul nommé  
- Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source de données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source de données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Pour ajouter un calcul nommé  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078928"
   
 2.  Dans le volet **Attributs** , sélectionnez les attributs suivants en maintenant la touche Ctrl enfoncée pendant que vous cliquez sur chacun d’eux :  
   
-    -   **City**  
+    -   **Ville**  
   
     -   `Country-Region`  
   
@@ -142,19 +142,19 @@ ms.locfileid: "66078928"
   
     -   **Sexe**  
   
-    -   **Indicateur de propriétaire de la maison**  
+    -   **House Owner Flag**  
   
     -   **Marital Status**  
   
-    -   **Nombre de voitures appartenant**  
+    -   **Number Cars Owned**  
   
-    -   **Nombre d’enfants à la résidence**  
+    -   **Number Children At Home**  
   
     -   `Occupation`  
   
-    -   **Nombre total d’enfants**  
+    -   **Total Children**  
   
-    -   **Revenu annuel**  
+    -   **Yearly Income**  
   
 6.  Dans la Fenêtre Propriétés, cliquez sur le champ de propriété **AttributeHierarchyDisplayFolder** en haut, puis tapez `Demographic`.  
   
@@ -162,14 +162,14 @@ ms.locfileid: "66078928"
   
     -   **Adresse de messagerie**  
   
-    -   **Numéros**  
+    -   **Téléphone**  
   
-8.  Dans l’Fenêtre Propriétés, cliquez sur **** le champ de propriété AttributeHierarchyDisplayFolder `Contacts`et tapez.  
+8.  Dans l’Fenêtre Propriétés, cliquez sur **AttributeHierarchyDisplayFolder** le champ de propriété AttributeHierarchyDisplayFolder `Contacts`et tapez.  
   
 9. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="defining-composite-keycolumns"></a>Définition de KeyColumns composite  
- La propriété **KeyColumns** contient la colonne ou les colonnes qui représentent la clé pour l’attribut. Dans cette leçon, vous allez créer une clé composite **** pour la `State-Province` ville et les attributs. Les clés composites peuvent être utiles lorsque vous devez identifier un attribut de façon unique. Par exemple, lorsque vous définissez des relations d’attributs plus loin dans ce didacticiel, un attribut **City** doit identifier `State-Province` un attribut de façon unique. Toutefois, il peut y avoir plusieurs villes avec le même nom dans différents états. Pour cette raison, vous allez créer une clé composite composée des colonnes **StateProvinceName** et **City** pour l’attribut **City** . Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La propriété **KeyColumns** contient la colonne ou les colonnes qui représentent la clé pour l’attribut. Dans cette leçon, vous allez créer une clé composite **City** pour la `State-Province` ville et les attributs. Les clés composites peuvent être utiles lorsque vous devez identifier un attribut de façon unique. Par exemple, lorsque vous définissez des relations d’attributs plus loin dans ce didacticiel, un attribut **City** doit identifier `State-Province` un attribut de façon unique. Toutefois, il peut y avoir plusieurs villes avec le même nom dans différents états. Pour cette raison, vous allez créer une clé composite composée des colonnes **StateProvinceName** et **City** pour l’attribut **City** . Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Pour définir KeyColumns composite pour l'attribut Ville  
   

@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261069"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est implémenté en tant que service unique qui contient un service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan utilisée pour le traitement des rapports planifié et la remise d'abonnement. Cette rubrique explique comment le compte de service est configuré initialement et comment modifier le compte ou le mot de passe à l'aide de l'outil de configuration de Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configuration initiale
@@ -34,7 +33,7 @@ ms.locfileid: "63261069"
   
 - Il ajoute automatiquement le nouveau compte au groupe de serveurs de rapports créés sur l'ordinateur local. Ce groupe est spécifié dans les listes de contrôle d'accès qui assurent la sécurité des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Met à jour automatiquement les autorisations de connexion sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’instance utilisée pour héberger la base de données du serveur de rapports. Le nouveau compte est ajouté au rôle **RSExecRole**.  
+- Il met à jour automatiquement les autorisations de connexion sur l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisée pour héberger la base de données du serveur de rapports. Le nouveau compte est ajouté au rôle **RSExecRole**.  
   
      La connexion de base de données pour l'ancien compte n'est pas supprimée automatiquement. Assurez-vous de supprimer les comptes qui ne sont plus utilisés. Pour plus d’informations, consultez [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-database-ssrs-native-mode.md) dans la documentation en ligne de SQL Server.  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63261069"
   
 - [Compte de Service &#40;&#41;en mode natif SSRS ](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Configurez les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) dans documentation en ligne de SQL Server.  
+- [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) dans la documentation en ligne de SQL Server.  
   
-- [Guide de planification de la sécurité des services et comptes de service](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Guide de planification de la sécurité des services et des comptes de service](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Mise à jour d'un mot de passe  expiré
 
@@ -113,7 +112,7 @@ ms.locfileid: "63261069"
   
 9. Attendez que le service s'arrête.  
   
-10. Cliquez sur **Démarrer**.  
+10. Cliquez sur **Start**.  
   
 > [!NOTE]  
 > Les produits et technologies SharePoint 2010 requièrent des comptes de domaine pour la configuration du service comme l'intégration du mode Reporting Services SharePoint.  

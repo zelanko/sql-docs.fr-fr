@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073877"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Requête MDX de base (MDX)
@@ -110,6 +110,6 @@ WHERE ( [Sales Territory].[Southwest] )
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts clés dans MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Instruction SELECT &#40;&#41;MDX](/sql/mdx/mdx-data-manipulation-select)  
+ [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

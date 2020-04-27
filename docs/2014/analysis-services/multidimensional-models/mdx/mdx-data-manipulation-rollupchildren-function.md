@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074264"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Utilisation de la fonction RollupChildren (MDX)
@@ -64,7 +64,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  Lorsque la fonction est appelée, la valeur de chaque enfant s'applique à un total à l'aide de l'opérateur stocké dans la propriété de membre. Les membres correspondant aux invendus réalisés sur le marché national et à l'étranger sont ignorés, et le total du cumul renvoyé par la fonction `RollupChildren` est multiplié par 1,1.  
   
 ### <a name="using-the-iif-function"></a>Utilisation de la fonction IIf  
- Si l’opération d’exemple n’est pas courante ou si l’opération ne s’applique qu’à une [](/sql/mdx/iif-mdx) seule requête MDX, la fonction IIF `RollupChildren` peut être utilisée avec la fonction pour fournir le même résultat. La requête MDX suivante fournit le même résultat que l'instruction MDX précédente, mais sans avoir recours à une propriété de membre personnalisée :  
+ Si l’opération d’exemple n’est pas courante ou si l’opération ne s’applique qu’à une [IIf](/sql/mdx/iif-mdx) seule requête MDX, la fonction IIF `RollupChildren` peut être utilisée avec la fonction pour fournir le même résultat. La requête MDX suivante fournit le même résultat que l'instruction MDX précédente, mais sans avoir recours à une propriété de membre personnalisée :  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  
@@ -73,6 +73,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  L'instruction MDX examine l'opérateur unaire du membre enfant. S'il est utilisé pour une soustraction (comme dans le cas des membres correspondant aux invendus réalisés sur le marché national et à l'étranger), l'opérateur unaire tilde (~) est remplacé par la fonction `IIf`. Sinon, la fonction `IIf` utilise l'opérateur unaire du membre enfant. Enfin, le total du cumul renvoyé est multiplié par 1,1 afin de fournir la valeur estimée des ventes brutes sur le marché national et à l'étranger.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Manipulation de données &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
+ [Manipulation de données &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

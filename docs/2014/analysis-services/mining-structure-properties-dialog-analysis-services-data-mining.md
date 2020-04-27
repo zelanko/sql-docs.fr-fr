@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077661"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Boîte de dialogue Propriétés de structure d'exploration de données (Analysis Services – Exploration de données)
@@ -30,10 +30,10 @@ ms.locfileid: "66077661"
   
 |Page|Description|  
 |----------|-----------------|  
-|**Général**|Utilisez la page **Général** pour afficher et modifier les propriétés générales de la structure d'exploration de données. Pour plus d’informations sur cette page, consultez [Général &#40;Boîte de dialogue Structure d’exploration de données&#41; &#40;Analysis Services - Exploration de données&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
-|**Configuration d'erreur**|Utilisez la page **Configuration d'erreur** pour afficher et modifier les paramètres de configuration d'erreur de la structure d'exploration de données. Pour plus d’informations sur cette page, consultez [Configuration d’erreur &#40;boîte de dialogue Structure d’exploration de données&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
+|**Généralités**|Utilisez la page **Général** pour afficher et modifier les propriétés générales de la structure d'exploration de données. Pour plus d’informations sur cette page, consultez [Général &#40;Boîte de dialogue Structure d’exploration de données&#41; &#40;Analysis Services - Exploration de données&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
+|**Configuration d’erreur**|Utilisez la page **Configuration d'erreur** pour afficher et modifier les paramètres de configuration d'erreur de la structure d'exploration de données. Pour plus d’informations sur cette page, consultez [Configuration d’erreur &#40;boîte de dialogue Structure d’exploration de données&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

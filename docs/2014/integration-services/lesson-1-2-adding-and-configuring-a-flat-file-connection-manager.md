@@ -11,22 +11,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891788"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : ajout et configuration d'un gestionnaire de connexions de fichiers plats
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : Ajout et configuration d’un Gestionnaire de connexions de fichiers plats
   Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Vous devez créer un nouveau gestionnaire de connexions de fichiers plats pour chaque format de fichier utilisé. Étant donné que ce didacticiel extrait des données à partir de plusieurs fichiers plats qui ont exactement le même format de données, il vous faudra ajouter et configurer un seul gestionnaire de connexions de fichiers plats uniquement pour votre package.  
   
  Pour les besoins de ce didacticiel, vous allez configurer les propriétés suivantes dans votre gestionnaire de connexions de fichiers plats :  
   
--   **Noms des colonnes :** Étant donné que le fichier plat ne contient pas de noms de colonnes, le gestionnaire de connexions de fichiers plats crée des noms de colonnes par défaut. Ces noms par défaut ne servent pas à identifier ce que représente chaque colonne. Pour que ces noms par défaut soient plus significatifs, vous devez les remplacer par ceux qui correspondent à la table de faits dans laquelle les données du fichier plat doivent être chargées.  
+-   **Noms des colonnes :** étant donné que le fichier plat ne contient pas de noms de colonnes, le gestionnaire de connexions de fichiers plats crée des noms de colonnes par défaut. Ces noms par défaut ne servent pas à identifier ce que représente chaque colonne. Pour que ces noms par défaut soient plus significatifs, vous devez les remplacer par ceux qui correspondent à la table de faits dans laquelle les données du fichier plat doivent être chargées.  
   
--   **Mappages de données :** Les mappages de types de données que vous spécifiez pour le gestionnaire de connexions de fichiers plats seront utilisés par tous les composants de source de données de fichier plat qui font référence au gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans ce didacticiel, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes** , puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
+-   **Mappages des données :** les mappages des types de données que vous spécifiez pour le gestionnaire de connexions de fichiers plats sont utilisés par tous les composants des sources de données de fichiers plats qui font référence au Gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans ce didacticiel, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes** , puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
  Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour utiliser l’option régional anglais (États-Unis), vous devez définir des propriétés supplémentaires dans la boîte de dialogue **éditeur du gestionnaire de connexions de fichiers plats** .  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62891788"
   
      Ces données exemple sont incluses dans les packages de leçons [!INCLUDE[ssIS](../includes/ssis-md.md)] . Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
   
-    1.  Accéder aux [exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
+    2.  Cliquez sur l’onglet **téléchargements** .  
   
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -77,8 +77,7 @@ ms.locfileid: "62891788"
   
 1.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , cliquez sur **Suggérer les types**.  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggère automatiquement les types de données les plus appropriés en se basant sur les 200 premières lignes de données. Vous pouvez aussi modifier les options de suggestion et augmenter ou réduire l'échantillon de données, spécifier le type de données par défaut pour les entiers ou les données booléennes ou bien ajouter des espaces pour séparer les colonnes de type chaîne.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggère automatiquement les types de données les plus appropriés en se basant sur les 200 premières lignes de données. Vous pouvez aussi modifier les options de suggestion et augmenter ou réduire l'échantillon de données, spécifier le type de données par défaut pour les entiers ou les données booléennes ou bien ajouter des espaces pour séparer les colonnes de type chaîne.  
   
      Pour l’instant, n’apportez aucune modification aux options de la boîte de dialogue **Suggérer les types de colonnes** et cliquez sur **OK** pour que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suggère des types de données pour les colonnes. Ceci vous ramène au volet **Avancé** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** où vous pouvez afficher les types de données pour les colonnes suggérés par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. (Si vous cliquez sur **Annuler**, aucune suggestion n’est faite pour les métadonnées des colonnes, et le type de données chaîne par défaut (DT_STR) est utilisé.)  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62891788"
 4.  Cliquez sur **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : ajout et configuration d'un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Étape 3 : Ajout et configuration d’un Gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de connexions de fichiers plats](connection-manager/file-connection-manager.md)   

@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070515"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Volet Requête (vue Prévision de modèle d'exploration de données)
   Le volet **Requête** affiche les instructions DMX (Data Mining Extensions) créées par le Générateur de requêtes de prévisions. Vous pouvez modifier les instructions, puis cliquer sur le bouton **Basculer vers l'affichage du résultat de la requête** pour retourner les résultats. Si vous basculez de nouveau vers la vue **Conception**, les modifications éventuelles apportées à l'instruction seront perdues.  
   
- **Pour plus d’informations :** [extensions d’exploration de données &#40;les instructions de manipulation de données DMX&#41;](/sql/dmx/dmx-statements-data-manipulation), [créer une requête DMX dans SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Pour plus d’informations :** [Instructions de manipulations de données DMX &#40;Data Mining Extensions&#41;](/sql/dmx/dmx-statements-data-manipulation), [Créer une requête DMX dans SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Options  
  **Basculer vers l'affichage du résultat de la requête**  
- Cliquez pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
+ Sélectionnez cette option pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
   
  **Enregistrer le résultat de la requête**  
  Ouvre la boîte de dialogue **Enregistrer le résultat de la requête d’exploration de données** .  
@@ -40,6 +40,6 @@ ms.locfileid: "66070515"
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   
