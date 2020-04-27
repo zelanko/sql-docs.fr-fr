@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062654"
 ---
 # <a name="aggregations-cube-design"></a>Agrégations (Conception de cube)
@@ -23,7 +23,7 @@ ms.locfileid: "66062654"
  L'onglet **Agrégations** contient les volets suivants :  
   
 ## <a name="panes"></a>Volets  
- **Barre d'outils**  
+ **Barre**  
  Permet d'utiliser les boutons de la barre d'outils pour effectuer les actions courantes relatives à l'onglet.  
   
  **Affichage standard**  

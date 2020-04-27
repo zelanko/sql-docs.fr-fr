@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064678"
 ---
 # <a name="browsing-a-clustering-model"></a>Exploration d'un modèle de clustering
   Lorsque vous ouvrez un modèle de clustering à l’aide de l’outil **Parcourir**, le modèle est affiché dans une visionneuse interactive, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]similaire à la visionneuse de clustering dans. Cette visionneuse vous aide à explorer les clusters qui ont été créés et à comprendre les caractéristiques de cluster. Vous pouvez également comparer des segments individuels avec d'autres segments ou avec la population, et mettre en évidence les différences.  
   
-##  <a name="BKMK_Tabs"></a>Explorer le modèle  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorer le modèle  
  La fenêtre **Parcourir** comprend les outils suivants pour vous aider à comprendre votre modèle de clustering et à explorer les attributs des groupes de données sous-jacents :  
   
 -   [Diagramme de cluster](#BKMK_ClusterDiagram)  
   
--   [Profils de cluster](#BKMK_ClusterProfiles)  
+-   [Profils du cluster](#BKMK_ClusterProfiles)  
   
 -   [Caractéristiques du cluster](#BKMK_ClusterCharacteristics)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66064678"
   
  Pour expérimenter un modèle de clustering, vous pouvez utiliser les exemples de données de l’onglet formation du classeur d’exemples de données et créer un modèle de clustering à l’aide de l' [Assistant cluster &#40;compléments d’exploration de données pour Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) et toutes les valeurs par défaut.  
   
-###  <a name="BKMK_ClusterDiagram"></a>Diagramme de cluster  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>Diagramme de cluster  
  L’onglet **diagramme de cluster** affiche tous les clusters qui se trouvent dans un modèle d’exploration de données. Vous pouvez voir ici le nombre important de regroupements différents qui ont été détectés dans votre jeu de données, ainsi que leur proximité les uns par rapport aux autres.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Explorer le diagramme de cluster  
@@ -85,7 +85,7 @@ ms.locfileid: "66064678"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>Profils de cluster  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>Profils de cluster  
  L’onglet **profils du cluster** vous permet de comparer la composition de tous les clusters en un clin d’œil. C'est le point de départ idéal pour vous familiariser avec le modèle. Cette vue sera également utile ultérieurement, si vous avez exploré un cluster particulier et que vous devez déterminer ceux qui y sont associés.  
   
  Les **profils de cluster** vous donnent également une bonne vue d’ensemble de la façon dont les clusters sont différents. Par conséquent, vous apprécierez peut-être le côté pratique de cette vue pour donner à chaque cluster un nom descriptif.  
@@ -132,7 +132,7 @@ ms.locfileid: "66064678"
   
      ![Renommer les clusters pour faciliter l'utilisation d'un graphique](media/dm13-cluster-rename.gif "Renommer les clusters pour faciliter l'utilisation d'un graphique")  
   
- **Conseil**  
+ **Conseils**  
   
 -   Cliquez sur un en-tête de colonne pour trier les attributs par ordre d'importance pour ce cluster.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66064678"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>Caractéristiques du cluster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a>Caractéristiques du cluster  
  La vue Caractéristiques du cluster vous permet de vraiment explorer un cluster unique, afin de rechercher les attributs qui caractérisent le plus fortement ce groupe de données.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Explorer les caractéristiques du cluster  
@@ -177,7 +177,7 @@ ms.locfileid: "66064678"
   
      Notez que le nouveau graphique des caractéristiques du cluster est ajouté sur sa propre feuille de calcul. Vous pouvez le déplacer sur la même feuille de calcul que l’autre profil pour faciliter sa comparaison, ce que vous ferez à l’étape suivante.  
   
- **Conseil**  
+ **Conseils**  
   
 -   Notez que la caractéristique principale du client dans le cluster plus de 65 est qu’il n’achète pas votre produit. Si vous souhaitez en connaître la raison, vous pouvez parcourir les clusters et comparer les groupes, ou vous pouvez créer un modèle associé à l'aide d'un algorithme qui se prête à l'exploration des causes et des résultats, par exemple un modèle d'arbre de décision ou un modèle Naïve Bayes.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66064678"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>Discrimination de cluster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>Discrimination de cluster  
  Vous utilisez l’onglet **discrimination de cluster** pour comparer les attributs entre deux clusters, ou entre un cluster et tous les autres cas du jeu de données.  
   
  Pour mettre en évidence les fonctionnalités de cette visionneuse, nous allons la comparer aux tables côte à côte dans Excel que vous avez créées en fonction de la vue des **caractéristiques du cluster** .  
@@ -216,7 +216,7 @@ ms.locfileid: "66064678"
   
      En plus d'utiliser Excel, nous vous recommandons d'essayer la visionneuse de cluster pour Visio, qui vous permet également non seulement d'afficher des points de données, mais aussi de modifier en profondeur et d'améliorer le graphique. Pour plus d’informations, consultez la [procédure pas à pas relative au diagramme de Cluster &#40;compléments d’exploration de données&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
- **Conseil**  
+ **Conseils**  
   
  Après avoir obtenu des informations sur les groupes de clients, essayez d’utiliser le [scénario de simulation &#40;les outils d’analyse de table pour excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) ou le scénario de recherche de l' [objectif &#40;les outils d’analyse de table pour Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) Tools, afin d’explorer les facteurs du modèle qui peuvent être modifiés pour affecter le résultat.  
   

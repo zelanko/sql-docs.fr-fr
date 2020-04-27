@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065859"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Détails des traductions (onglet Traductions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,12 +26,12 @@ ms.locfileid: "66065859"
  **Langue par défaut**  
  Permet de définir le nom des objets du cube dans la langue par défaut.  
   
- **Type d’objet**  
+ **Type d'objet**  
  Permet d'afficher la propriété à traduire. Les propriétés pouvant être traduites sont les suivantes :  
   
 -   Groupe de mesures  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
 -   Measure  
   
@@ -39,11 +39,11 @@ ms.locfileid: "66065859"
   
 -   Dimension  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
 -   Perspective  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
 -   Indicateur de performance clé (KPI)  
   
@@ -51,15 +51,15 @@ ms.locfileid: "66065859"
   
 -   Action  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
 -   Jeu nommé  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
 -   membre calculé  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
  **\<>de langue**  
  Permet de saisir la valeur de la propriété de l'objet du cube dans la langue choisie.  

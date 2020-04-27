@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061074"
 ---
 # <a name="cache-connection-manager-editor"></a>Éditeur du gestionnaire de connexions du cache
@@ -35,7 +35,7 @@ ms.locfileid: "66061074"
   
  Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a>Onglet général  
+##  <a name="general-tab"></a><a name="generaltab"></a>Onglet général  
  Utilisez l’onglet **Général** de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** pour indiquer s’il faut lire le cache depuis un fichier ou l’enregistrer dans un fichier.  
   
 ### <a name="options"></a>Options  
@@ -45,11 +45,11 @@ ms.locfileid: "66061074"
  **Description**  
  Décrit la connexion. Il est recommandé de décrire la connexion selon son objectif, de sorte que les packages soient correctement documentés et plus faciles à gérer.  
   
- **Utiliser le cache de fichiers**  
+ **Utiliser un cache de fichier**  
  Indiquez s'il faut utiliser ou non un fichier cache.  
   
 > [!NOTE]  
->  Le niveau de protection du package ne s'applique pas au fichier cache. Si le fichier cache contient des informations sensibles, utilisez une liste de contrôle d'accès (ACL) pour restreindre l'accès à l'emplacement ou au dossier dans lequel vous stockez le fichier. Vous devez autoriser l'accès à certains comptes uniquement. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../2014/integration-services/access-to-files-used-by-packages.md).  
+>  Le niveau de protection du package ne s'applique pas au fichier cache. Si le fichier cache contient des informations sensibles, utilisez une liste de contrôle d'accès (ACL) pour restreindre l'accès à l'emplacement ou au dossier dans lequel vous stockez le fichier. Vous devez autoriser l'accès à certains comptes uniquement. Pour plus d’informations, consultez [accès aux fichiers utilisés par les packages](../../2014/integration-services/access-to-files-used-by-packages.md).  
   
  Si vous configurez le gestionnaire de connexions du cache pour utiliser un fichier cache, il effectuera l'une des actions suivantes :  
   
@@ -66,14 +66,14 @@ ms.locfileid: "66061074"
  **Actualiser les métadonnées**  
  Supprimez les métadonnées de colonne dans le gestionnaire de connexions du cache et remplissez à nouveau celui-ci avec les métadonnées de colonne d'un fichier cache sélectionné.  
   
-##  <a name="columnstab"></a>Onglet colonnes  
+##  <a name="columns-tab"></a><a name="columnstab"></a>Onglet colonnes  
  Utilisez l'onglet **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** pour configurer les propriétés de chaque colonne dans le cache.  
   
 ### <a name="options"></a>Options  
  **Colonne**  
  Spécifiez le nom de la colonne.  
   
- **Position d’index**  
+ **Position d'index**  
  Spécifiez quelles colonnes sont des colonnes d'index en indiquant la position d'index de chaque colonne. L'index est une collection composée d'une ou de plusieurs colonnes.  
   
  Pour les colonnes qui ne sont pas des index, la position d'index est 0.  

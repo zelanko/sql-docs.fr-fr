@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062084"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Ajouter une visionneuse de données à un flux de données
@@ -49,14 +49,14 @@ ms.locfileid: "66062084"
 9. Dans la zone Colonnes à afficher, sélectionnez les colonnes à afficher dans la vue de source de données. Par défaut, toutes les colonnes disponibles sont sélectionnées et figurent dans la liste **Colonnes affichées** . Déplacez les colonnes que vous ne voulez pas utiliser dans la liste **Colonnes inutilisées** en les sélectionnant et en cliquant sur la flèche gauche.  
   
     > [!NOTE]  
-    >  Dans la grille, les valeurs qui représentent les types de données DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET apparaissent sous forme de chaînes au format ISO 8601 et un espace de séparation remplace le séparateur `T`. Les valeurs qui représentent les types de données DT_DATE et DT_FILETIME incluent sept chiffres pour les fractions de seconde. Étant donné que le type de données DT_FILETIME stocke uniquement trois chiffres pour les fractions de seconde, la grille affiche des zéros pour les quatre chiffres restants. Les valeurs qui représentent le type de données DT_DBTIMESTAMP incluent trois chiffres pour les fractions de seconde. Pour les valeurs qui représentent les types de données DT_DBTIME2, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET, le nombre de chiffres pour les fractions de seconde correspond à l'échelle spécifiée pour le type de données de la colonne. Pour plus d'informations sur les formats ISO 8601, consultez [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+    >  Dans la grille, les valeurs qui représentent les types de données DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET apparaissent sous forme de chaînes au format ISO 8601 et un espace de séparation remplace le séparateur `T`. Les valeurs qui représentent les types de données DT_DATE et DT_FILETIME incluent sept chiffres pour les fractions de seconde. Étant donné que le type de données DT_FILETIME stocke uniquement trois chiffres pour les fractions de seconde, la grille affiche des zéros pour les quatre chiffres restants. Les valeurs qui représentent le type de données DT_DBTIMESTAMP incluent trois chiffres pour les fractions de seconde. Pour les valeurs qui représentent les types de données DT_DBTIME2, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET, le nombre de chiffres pour les fractions de seconde correspond à l'échelle spécifiée pour le type de données de la colonne. Pour plus d'informations sur les formats ISO 8601, consultez [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). Pour plus d’informations sur les types de données, consultez [Integration Services types de données](data-flow/integration-services-data-types.md).  
   
 10. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformations Integration Services](data-flow/transformations/integration-services-transformations.md)   
- [Chemins Integration Services](data-flow/integration-services-paths.md)   
- [Flux de données](data-flow/data-flow.md)   
+ [Transformations de Integration Services](data-flow/transformations/integration-services-transformations.md)   
+ [Chemins d’accès Integration Services](data-flow/integration-services-paths.md)   
+ [Transmission de données](data-flow/data-flow.md)   
  [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058823"
 ---
 # <a name="file-system-task-editor-general-page"></a>Éditeur de tâche de système de fichiers (page Général)
@@ -26,7 +26,7 @@ ms.locfileid: "66058823"
   
  Pour en savoir plus sur cette tâche, consultez [File System Task](control-flow/file-system-task.md).  
   
- Vous devez spécifier un gestionnaire de connexions source et de destination en définissant les propriétés SourceConnection et DestinationConnection. Vous pouvez fournir les noms de gestionnaires de connexions de fichiers qui pointent sur les fichiers utilisés par la tâche comme source ou destination. Si les chemins de fichiers sont stockés dans des variables, vous pouvez également fournir le nom des variables. Pour utiliser des variables afin de stocker les chemins des fichiers, vous devez d’abord définir l’option IsSourcePathVariable de la connexion source et l’option IsDestinationPatheVariable de la connexion de destination sur **True**. Ensuite, vous pouvez créer de nouvelles variables ou choisir les variables existantes, système ou définies par l'utilisateur, à utiliser. Dans la boîte de dialogue **Ajouter une variable** , vous pouvez configurer et spécifier l'étendue des variables. L'étendue doit être la tâche de système de fichiers ou un conteneur parent. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
+ Vous devez spécifier un gestionnaire de connexions source et de destination en définissant les propriétés SourceConnection et DestinationConnection. Vous pouvez fournir les noms de gestionnaires de connexions de fichiers qui pointent sur les fichiers utilisés par la tâche comme source ou destination. Si les chemins de fichiers sont stockés dans des variables, vous pouvez également fournir le nom des variables. Pour utiliser des variables afin de stocker les chemins des fichiers, vous devez d’abord définir l’option IsSourcePathVariable de la connexion source et l’option IsDestinationPatheVariable de la connexion de destination sur **True**. Ensuite, vous pouvez créer de nouvelles variables ou choisir les variables existantes, système ou définies par l'utilisateur, à utiliser. Dans la boîte de dialogue **Ajouter une variable** , vous pouvez configurer et spécifier l'étendue des variables. L'étendue doit être la tâche de système de fichiers ou un conteneur parent. Pour plus d’informations, consultez [Integration Services &#40;des variables de&#41; SSIS](integration-services-ssis-variables.md) et [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
   
 > [!NOTE]  
 >  Pour remplacer `SourceConnection` les variables sélectionnées pour les propriétés et `DestinationConnection` , entrez une expression pour les propriétés **source** et **destination** . Vous entrez les expressions sur la page **Expressions** de l' **Éditeur de tâche de système de fichiers**. Par exemple, pour définir le chemin d'accès des fichiers utilisés comme destination par la tâche, vous pouvez utiliser la variable A dans certaines conditions et la variables B dans d'autres conditions.  
@@ -40,10 +40,10 @@ ms.locfileid: "66058823"
  **IsDestinationPathVariable**  
  Indique si le chemin d'accès de destination est stocké dans une variable. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Le chemin d'accès de destination est stocké dans une variable. Cette valeur affiche l'option dynamique **DestinationVariable**.|  
-|**False**|Le chemin d'accès de destination est défini dans un gestionnaire de connexions de fichiers. La sélection de cette valeur affiche l’option `DestinationConnection`dynamique,.|  
+|**:**|Le chemin d'accès de destination est stocké dans une variable. Cette valeur affiche l'option dynamique **DestinationVariable**.|  
+|**Fausses**|Le chemin d'accès de destination est défini dans un gestionnaire de connexions de fichiers. La sélection de cette valeur affiche l’option `DestinationConnection`dynamique,.|  
   
  **OverwriteDestination**  
  Indiquez si l'opération peut remplacer les fichiers dans le répertoire de destination.  
@@ -60,26 +60,26 @@ ms.locfileid: "66058823"
  **opération**  
  Sélectionnez l'opération de système de fichiers à exécuter. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Copier le répertoire**|Copier un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
-|**Copier le fichier**|Copier un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
+|**Copier un fichier**|Copier un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
 |**Créer un répertoire**|Créer un répertoire Cette valeur affiche les options dynamiques d'un répertoire source et de destination.|  
 |**Supprimer le répertoire**|Supprimer un répertoire. Cette valeur affiche les options dynamiques d'une source.|  
 |**Supprimer le contenu du répertoire**|Supprimer le contenu d'un répertoire. Cette valeur affiche les options dynamiques d'une source.|  
-|**Supprimer le fichier**|Supprimer un fichier. Cette valeur affiche les options dynamiques d'une source.|  
+|**Supprimer un fichier**|Supprimer un fichier. Cette valeur affiche les options dynamiques d'une source.|  
 |**Déplacer le répertoire**|Déplacer un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
 |**Déplacer le fichier**|Déplacer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : lorsque vous déplacez un fichier, n’incluez pas de nom de fichier dans le chemin d’accès au répertoire que vous fournissez comme destination.|  
 |**Renommer le fichier**|Renommer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : quand vous renommez un fichier, incluez le nouveau nom de fichier dans le chemin d’accès au répertoire que vous fournissez pour la destination.|  
-|**Définir des attributs**|Définir les attributs d'un fichier ou d'un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une opération.|  
+|**Définir les attributs**|Définir les attributs d'un fichier ou d'un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une opération.|  
   
  `IsSourcePathVariable`  
  Indique si le chemin d'accès de destination est stocké dans une variable. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur||  
+|Value||  
 |-----------|-|  
-|**True**|Le chemin d'accès de destination est stocké dans une variable. Sélectionnez cette valeur pour afficher l'option dynamique **SourceVariable**.|  
-|**False**|Le chemin d'accès de destination est défini dans un gestionnaire de connexions de fichiers. Cette valeur affiche l'option dynamique **DestinationVariable**.|  
+|**:**|Le chemin d'accès de destination est stocké dans une variable. Sélectionnez cette valeur pour afficher l'option dynamique **SourceVariable**.|  
+|**Fausses**|Le chemin d'accès de destination est défini dans un gestionnaire de connexions de fichiers. Cette valeur affiche l'option dynamique **DestinationVariable**.|  
   
 ## <a name="isdestinationpathvariable-dynamic-options"></a>Options dynamiques IsDestinationPathVariable  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66058823"
  `DestinationConnection`  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou \<cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>Options dynamiques IsSourcePathVariable  
   
@@ -107,15 +107,15 @@ ms.locfileid: "66058823"
  `SourceConnection`  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou \<cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Options dynamiques d'opération  
   
 ### <a name="operation--set-attributes"></a>Opération = Définir les attributs  
- **Hidden**  
+ **Masquer**  
  Indique si le fichier ou le répertoire est visible.  
   
- **Lecture seule**  
+ **ReadOnly**  
  Indique si le fichier est en lecture seule.  
   
  **Archivage**  
@@ -129,7 +129,7 @@ ms.locfileid: "66058823"
  Indique si l’option **Créer un répertoire** utilise un répertoire existant portant le nom spécifié au lieu de créer un nouveau répertoire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

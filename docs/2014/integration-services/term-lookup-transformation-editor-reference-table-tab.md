@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055161"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche de terme (onglet Table de référence)
@@ -30,7 +30,7 @@ ms.locfileid: "66055161"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
  **Nom de la table de référence**  
@@ -40,7 +40,7 @@ ms.locfileid: "66055161"
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de transformation de recherche de terme &#40;onglet recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Éditeur de transformation de recherche de terme &#40;onglet Avancé&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformation d'extraction de terme](data-flow/transformations/term-extraction-transformation.md)  

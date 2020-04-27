@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062844"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Boîte de dialogue Options avancées des vues de source de données (Assistant Vue de source de données) (Analysis Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66062844"
  Pour ouvrir la boîte de dialogue **Options avancées des vues de source de données** , dans l'Assistant Vue de source de données, dans la page **Sélectionnez une source de données** , cliquez sur **Avancé**.  
   
 ## <a name="options"></a>Options  
- **Récupérer les relations**  
+ **Extraire les relations**  
  Indique si les détails sur les relations doivent être récupérés à partir de la source de données et appliqués à la vue de source de données. Si vous modifiez cette option après avoir créé les relations, aucune relation existante n'est supprimée de la vue de source de données.  
   
  **Se restreindre aux schémas**  

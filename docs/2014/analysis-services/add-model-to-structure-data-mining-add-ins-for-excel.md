@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062877"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Ajouter le modèle à la structure (Compléments d'exploration de données pour Excel)
@@ -89,12 +89,11 @@ ms.locfileid: "66062877"
 |Option|Commentaires|  
 |------------|--------------|  
 |Boîte **de dialogue Sélectionner une structure ou un modèle**|Choisissez la structure d'exploration de données existante à utiliser en tant que base pour générer un nouveau modèle.  La structure que vous choisissez doit se trouver sur la connexion actuelle. Si ce n’est pas le cas, modifiez les connexions à l’aide de l’outil [se connecter à la source de données &#40;Data Mining client pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md) .|  
-|Boîte de dialogue **Sélectionner l’algorithme d’exploration de données**|La liste des algorithmes d'exploration de données varie selon le serveur auquel vous êtes connecté. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents algorithmes dans les éditions Standard et Enterprise. L'administrateur peut également avoir ajouté des algorithmes personnalisés.<br /><br /> Si vous ne voyez aucun algorithme, vérifiez que vous êtes connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|Boîte de dialogue **Sélectionner l’algorithme d’exploration de données**|La liste des algorithmes d'exploration de données varie selon le serveur auquel vous êtes connecté. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents algorithmes dans les éditions Standard et Enterprise. L'administrateur peut également avoir ajouté des algorithmes personnalisés.<br /><br /> Si vous ne voyez aucun algorithme, vérifiez que vous êtes connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Paramètres d’algorithme** Boîte de dialogue|Dans ces paramètres, vous pouvez personnaliser chaque algorithme en utilisant des paramètres spécifiques à la méthode analytique. Vous pouvez également définir une valeur initiale afin de garantir que les résultats du modèle peuvent être reproduits sur plusieurs passes d'apprentissage.<br /><br /> Pour plus d’informations, consultez [paramètres d’algorithme &#40;SQL Server compléments d’exploration de données&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Définir les indicateurs de modèle de colonne** Boîte de dialogue|Les indicateurs de modélisation permettent d'améliorer le modèle en spécifiant la façon dont les données manquantes doivent être gérées. Pour plus d’informations, consultez [Indicateurs de modélisation &#40;Exploration de données&#41;](data-mining/modeling-flags-data-mining.md).|  
   
-###  <a name="Bkmk_mdlcolumn"></a>Définition de l’utilisation des colonnes  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>Définition de l’utilisation des colonnes  
  Lorsque vous ajoutez un nouveau modèle à une structure d'exploration de données existante, vous devez spécifier la façon dont le modèle utilisera chaque colonne de données dans la structure d'exploration de données. Vous observerez probablement que les options de cet Assistant sont beaucoup plus détaillées que les options de la structure d’exploration de données. Pourquoi ?  
   
  En effet, lorsque vous créez un modèle et une structure en utilisant un Assistant, la plupart des options qui contrôlent la manière dont les données sont exploitées par l'algorithme sont définies automatiquement. Toutefois, lorsque vous ajoutez un modèle à une structure existante, vous devez consulter ces options manuellement, puis spécifier si les données doivent être utilisées pour l'analyse, si le type de données est correct, et ainsi de suite.  
@@ -113,7 +112,7 @@ ms.locfileid: "66062877"
   
      Certains types d'analyses requièrent des données structurées avec soin d'après des règles uniques. Par exemple, les modèles de prévision et les modèles d'association. Vous pouvez ajouter facilement des modèles du même type, éventuellement avec des personnalisations, mais les données ne fonctionnent pas avec d'autres algorithmes.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour créer des modèles d'exploration de données, vous devez disposer d'une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la création ou la modification d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Si la structure d'exploration de données que vous voulez utiliser n'est pas visible, il se peut qu'elle ait été enregistrée dans une autre instance ou une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] différente. Pour plus d’informations sur la façon de passer à une autre connexion d’exploration de données, consultez [se connecter à un serveur d’exploration de données](connect-to-a-data-mining-server.md).  

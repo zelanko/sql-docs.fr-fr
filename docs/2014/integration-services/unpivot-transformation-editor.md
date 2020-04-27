@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054840"
 ---
 # <a name="unpivot-transformation-editor"></a>Éditeur de transformation UnPivot
   Utilisez la boîte de dialogue **Éditeur de transformation UnPivot** pour sélectionner les colonnes à convertir en ligne, et définir la colonne de données et la nouvelle colonne de sortie de valeur croisée.  
   
 > [!NOTE]  
->  Cette rubrique s’appuie sur le scénario Unpivot décrit dans [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) pour illustrer l’utilisation des options.  
+>   Cette rubrique porte sur le scénario Unpivot décrit dans [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) pour illustrer l'utilisation des options.  
   
  Pour en savoir plus sur la transformation Unpivot, consultez [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Définissez les colonnes à convertir en lignes en utilisant les cases à cocher.  
   
  **Nom**  
@@ -62,7 +62,7 @@ ms.locfileid: "66054840"
  Dans le scénario Unpivot décrit dans [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), le nom de la colonne de la valeur de clé de tableau croisé dynamique est **Product** et définit la nouvelle colonne **Product** dans laquelle les colonnes **Ham**, **Soda**, **Milk**, **Beer**et **Chips** ne sont pas croisées dynamiquement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [transformation de tableau croisé dynamique](data-flow/transformations/pivot-transformation.md)  
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformation de tableau croisé dynamique](data-flow/transformations/pivot-transformation.md)  
   
   

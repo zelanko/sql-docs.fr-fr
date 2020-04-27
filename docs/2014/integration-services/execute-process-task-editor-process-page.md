@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059028"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
@@ -37,18 +37,18 @@ ms.locfileid: "66059028"
  Fournissez les arguments de l'invite de commandes.  
   
  **WorkingDirectory**  
- Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)**, puis recherchez le dossier.  
+ Tapez le chemin d’accès du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)** et recherchez le dossier.  
   
  **StandardInputVariable**  
- Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une :  
+ Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \< **nouvelle variable...**> pour créer une variable :  
   
- **Rubriques connexes :**  [Ajouter une variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :**  [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
   
  **StandardErrorVariable**  
- Sélectionnez une variable pour capturer la sortie d’erreur du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable pour capturer la sortie d’erreur du processeur, ou cliquez \<sur **nouvelle variable...**> pour créer une variable.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indiquez si la tâche échoue quand le code de sortie du processus est différent de la valeur spécifiée dans **SuccessValue**.  
@@ -66,7 +66,7 @@ ms.locfileid: "66059028"
  Spécifiez le style de la fenêtre dans lequel le processus est exécuté.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

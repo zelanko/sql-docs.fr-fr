@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054891"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Éditeur de tâche de transfert d'objets SQL (page Général)
@@ -38,9 +38,9 @@ ms.locfileid: "66054891"
  Entrez une description de la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert d’objets SQL Server &#40;page Objets&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   
+ [Éditeur de tâche de transfert d’objets SQL Server &#40;page objets&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

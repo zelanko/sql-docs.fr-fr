@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054818"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utiliser une expression dans un composant de flux de données
@@ -65,10 +65,10 @@ ms.locfileid: "66054818"
     >  Si l'expression n'est pas valide, une alerte apparaît et décrit les erreurs de syntaxe de l'expression.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
- [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
- [Tâche de flux de données](control-flow/data-flow-task.md)   
+ [Integration Services &#40;des expressions de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Transformation de fractionnement conditionnel](data-flow/transformations/conditional-split-transformation.md)   
+ [Transformation de colonne dérivée](data-flow/transformations/derived-column-transformation.md)   
+ [Tâche de workflow](control-flow/data-flow-task.md)   
  [Flux de données](data-flow/data-flow.md)  
   
   

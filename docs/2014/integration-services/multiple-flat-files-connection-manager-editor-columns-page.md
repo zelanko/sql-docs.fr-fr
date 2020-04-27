@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057497"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Éditeur du gestionnaire de connexions de fichiers plats multiples (page Colonnes)
@@ -39,13 +39,13 @@ ms.locfileid: "66057497"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**CR CHARIOT**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
+|**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**CR**|Les lignes sont séparées par un retour chariot.|  
-|**CHARIOT**|Les lignes sont séparées par un saut de ligne.|  
+|**{LF}**|Les lignes sont séparées par un saut de ligne.|  
 |**Point-virgule {;}**|Les lignes sont séparées par un point-virgule.|  
-|**Deux-points { :}**|Les lignes sont séparées par un deux-points.|  
+|**Deux-points {:}**|Les lignes sont séparées par un deux-points.|  
 |**Point{,}**|Les lignes sont séparées par une virgule.|  
 |**Tabulation {t}**|Les lignes sont séparées par une tabulation.|  
 |**Barre verticale {&#124;}**|Les lignes sont séparées par une barre verticale.|  
@@ -53,13 +53,13 @@ ms.locfileid: "66057497"
  **Délimiteur de colonne**  
  Effectuez une sélection dans la liste des séparateurs de colonnes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**CR CHARIOT**|Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.|  
+|**{CR}{LF}**|Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.|  
 |**CR**|Les colonnes sont séparées par un retour chariot.|  
-|**CHARIOT**|Les colonnes sont séparées par un saut de ligne.|  
+|**{LF}**|Les colonnes sont séparées par un saut de ligne.|  
 |**Point-virgule {;}**|Les colonnes sont séparées par un point-virgule.|  
-|**Deux-points { :}**|Les colonnes sont séparées par un deux-points.|  
+|**Deux-points {:}**|Les colonnes sont séparées par un deux-points.|  
 |**Point{,}**|Les colonnes sont séparées par une virgule.|  
 |**Tabulation {t}**|Les colonnes sont séparées par une tabulation.|  
 |**Barre verticale {&#124;}**|Les colonnes sont séparées par une barre verticale.|  
@@ -68,7 +68,7 @@ ms.locfileid: "66057497"
  Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
   
 ### <a name="format--fixed-width"></a>Format = Largeur fixe  
- **Son**  
+ **Police**  
  Sélectionnez la police d'affichage de l'aperçu des données.  
   
  **Colonnes de données sources**  
@@ -85,7 +85,7 @@ ms.locfileid: "66057497"
 > [!NOTE]  
 >  Les fichiers en drapeau à droite sont ceux dans lesquels chaque colonne possède une largeur fixe, à l'exception de la dernière. Un séparateur de lignes s'applique.  
   
- **Son**  
+ **Police**  
  Sélectionnez la police d'affichage de l'aperçu des données.  
   
  **Colonnes de données sources**  
@@ -94,13 +94,13 @@ ms.locfileid: "66057497"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**CR CHARIOT**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
+|**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**CR**|Les lignes sont séparées par un retour chariot.|  
-|**CHARIOT**|Les lignes sont séparées par un saut de ligne.|  
+|**{LF}**|Les lignes sont séparées par un saut de ligne.|  
 |**Point-virgule {;}**|Les lignes sont séparées par un point-virgule.|  
-|**Deux-points { :}**|Les lignes sont séparées par un deux-points.|  
+|**Deux-points {:}**|Les lignes sont séparées par un deux-points.|  
 |**Point{,}**|Les lignes sont séparées par une virgule.|  
 |**Tabulation {t}**|Les lignes sont séparées par une tabulation.|  
 |**Barre verticale {&#124;}**|Les lignes sont séparées par une barre verticale.|  
@@ -109,7 +109,7 @@ ms.locfileid: "66057497"
  Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  

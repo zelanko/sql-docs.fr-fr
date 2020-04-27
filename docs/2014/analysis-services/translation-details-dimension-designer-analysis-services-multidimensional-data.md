@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065853"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Détails des traductions (onglet Traductions, Concepteur de dimensions) (Analysis Services - données multidimensionnelles)
@@ -32,7 +32,7 @@ ms.locfileid: "66065853"
  **Langue par défaut**  
  Définit les noms des objets de dimension dans la langue par défaut.  
   
- **Type d’objet**  
+ **Type d'objet**  
  Permet d'afficher la propriété à traduire. Seuls les objets et les propriétés, pour lesquels vous précisez des valeurs, peuvent être traduits. Les propriétés pouvant être traduites sont les suivantes :  
   
 -   Dimension  
@@ -52,12 +52,12 @@ ms.locfileid: "66065853"
   
 -   Level  
   
-     `Caption`propriété  
+     Propriété `Caption`  
   
  **\<>de langue**  
  Tapez ou sélectionnez la valeur de propriété de l'objet de dimension dans la langue sélectionnée. Des boîtes de dialogue supplémentaires s’ouvrent quand vous cliquez sur le bouton de sélection (**...**), en fonction de la propriété en cours de modification :  
   
--   `NamingTemplate`propriété  
+-   Propriété `NamingTemplate`  
   
      Affiche la [Boîte de dialogue Modèle de nom de niveau &#40;Analysis Services - Données multidimensionnelles&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66065853"
  Sélectionnez cette option pour afficher la boîte de dialogue **Traduction de données d’attribut** et modifier une colonne de légende existante quand vous modifiez un attribut dans la grille **Détails des traductions** .  
   
 > [!NOTE]  
->  Pour que cette option soit activée, une cellule d’une colonne de traduction qui contient une colonne de légende doit être sélectionnée dans la grille des **détails des traductions** .  
+>   Pour que cette option soit activée, une cellule d'une colonne de traduction qui contient une colonne de légende doit être sélectionnée dans la grille des **détails des traductions** .  
   
  **Supprimer la colonne de légende**  
  Sélectionnez cette option pour supprimer la colonne de légende pour l’attribut sélectionné dans la grille **Détails des traductions** .  

@@ -11,19 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059907"
 ---
 # <a name="data-flow-taps"></a>Drainage des flux de données
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d'ajouter un drainage des données au niveau du chemin d'accès d'un flux de données d'un package au moment de l'exécution et diriger la sortie à partir du drainage des données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  
   
 1.  Créez une instance d’exécution d’un package à l’aide de la procédure stockée [catalog.create_execution &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
-2.  Ajoutez un drainage de données à l’aide d’une procédure stockée [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) ou [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid).  
+2.  Ajoutez un drainage de données à l’aide d’une procédure stockée [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) ou [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid) .  
   
 3.  Démarrez l’instance d’exécution du package à l’aide de [catalog.start_execution &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).  
   
@@ -83,6 +82,6 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ## <a name="related-tasks"></a>Tâches associées  
  [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
   
- [Outils de dépannage pour l’exécution des packages](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour l'exécution des packages](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

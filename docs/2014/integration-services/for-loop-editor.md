@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058567"
 ---
 # <a name="for-loop-editor"></a>Éditeur de boucle For
@@ -44,8 +44,8 @@ ms.locfileid: "66058567"
  Indiquez une description unique pour le conteneur de la boucle For.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)   
  [Configurer un conteneur de boucles For](../../2014/integration-services/configure-a-for-loop-container.md)  
   

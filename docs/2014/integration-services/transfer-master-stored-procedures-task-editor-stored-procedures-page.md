@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054858"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Éditeur de tâche de transfert de procédures stockées de master (page Procédures stockées)
@@ -39,28 +39,28 @@ ms.locfileid: "66054858"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des procédures stockées du même nom existent déjà dans la base de données **MASTER** du serveur de destination.|  
 |**Remplacer**|La tâche remplace les procédures stockées du même nom dans la base de données **MASTER** du serveur de destination.|  
-|**Ignorer**|La tâche ignore les procédures stockées qui existent sous le même nom dans la base de données **MASTER** du serveur de destination.|  
+|**Saut**|La tâche ignore les procédures stockées qui existent sous le même nom dans la base de données **MASTER** du serveur de destination.|  
   
  **TransferAllStoredProcedures**  
  Indiquez si toutes les procédures stockées définies par l’utilisateur dans la base de données **MASTER** sur le serveur source doivent être copiées sur le serveur de destination.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Copie toutes les procédures stockées définies par l’utilisateur dans la base de données **MASTER** .|  
-|**False**|Copie uniquement les procédures stockées spécifiées.|  
+|**:**|Copie toutes les procédures stockées définies par l’utilisateur dans la base de données **MASTER** .|  
+|**Fausses**|Copie uniquement les procédures stockées spécifiées.|  
   
  **StoredProceduresList**  
  Sélectionnez les procédures stockées définies par l’utilisateur dans la base de données **MASTER** du serveur source qui doivent être copiées dans la base de données **MASTER** de destination. Cette option est disponible uniquement lorsque **TransferAllStoredProcedures** a la valeur **False**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert de procédures stockées de Master &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)  
   
   

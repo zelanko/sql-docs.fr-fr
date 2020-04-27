@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064698"
 ---
 # <a name="histogram-target"></a>Cible d'histogramme
@@ -53,7 +53,7 @@ ms.locfileid: "66064698"
   
  Les valeurs de type d'attente doivent être catégorisées dans trois emplacements, avec les valeurs et nombres d'emplacements suivants :  
   
-|Valeur|Nombre d'emplacements|  
+|Value|Nombre d'emplacements|  
 |-----------|----------------|  
 |file_io|2|  
 |réseau|2|  
@@ -102,9 +102,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cibles des Événements étendus SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server les cibles d’événements étendus](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CRÉER une SESSION d’événements &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059570"
 ---
 # <a name="derived-column-transformation-editor"></a>Éditeur de transformation de colonne dérivée
@@ -44,7 +44,7 @@ ms.locfileid: "66059570"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes**: [Integration Services &#40;expressions de&#41; ssis](expressions/integration-services-ssis-expressions.md), [opérateurs &#40;&#41;d’expression SSIS ](expressions/operators-ssis-expression.md)et [fonctions &#40;Expression SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Rubriques connexes :**[Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Type de données**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** évalue automatiquement l’expression et définit correctement le type de données. La valeur de cette colonne est en lecture seule. Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).  
@@ -55,17 +55,17 @@ ms.locfileid: "66059570"
  **Précision**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement la précision des données numériques en fonction du type de données. La valeur de cette colonne est en lecture seule.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement l’échelle des données numériques en fonction du type de données. La valeur de cette colonne est en lecture seule.  
   
  **Page de codes**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement la page de codes pour le type de données DT_STR. Vous pouvez mettre à jour **Page de codes**.  
   
- **Configurer la sortie d’erreur**  
+ **Configurer l'affichage des erreurs**  
  Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

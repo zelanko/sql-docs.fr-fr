@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060596"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurer les journaux SSIS (boîte de dialogue)
@@ -30,22 +30,22 @@ ms.locfileid: "66060596"
   
 1.  [Ouvrir la boîte de dialogue Configurer les journaux SSIS](#open_dialog)  
   
-2.  [Configurer les options dans le volet conteneurs](#container)  
+2.  [Configurer les options du volet Conteneurs](#container)  
   
-3.  [Configurer les options sous l’onglet fournisseurs et journaux](#provider)  
+3.  [Configurer les options sous l'onglet Fournisseurs et journaux](#provider)  
   
-4.  [Configurer les options sous l’onglet Détails](#detail)  
+4.  [Configurer les options sous l'onglet Détails](#detail)  
   
-##  <a name="open_dialog"></a>Ouvrir la boîte de dialogue Configurer les journaux SSIS  
+##  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a>Ouvrir la boîte de dialogue Configurer les journaux SSIS  
  **Pour ouvrir la boîte de dialogue Configurer les journaux SSIS**  
   
 -   Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , dans le menu **SSIS** , cliquez sur **Enregistrement** .  
   
-##  <a name="container"></a>Configurer les options dans le volet conteneurs  
+##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>Configurer les options dans le volet conteneurs  
  Utilisez le volet **Conteneurs** de la boîte de dialogue **Configurer les journaux SSIS** pour activer l’enregistrement du fichier journal du package et de ses conteneurs.  
   
 ### <a name="options"></a>Options  
- **Containers**  
+ **Conteneurs**  
  Activez les cases à cocher dans la vue hiérarchique pour activer l'enregistrement du fichier journal du package et de ses conteneurs :  
   
 -   Si la case à cocher est désactivée, l'enregistrement du container dans le fichier journal n'est pas activé. Activez-la pour permettre l'enregistrement.  
@@ -56,7 +56,7 @@ ms.locfileid: "66060596"
   
  Si un conteneur est grisé alors que vous voulez définir ses options d'enregistrement dans le journal, cliquez sur sa case à cocher deux fois. Le premier clic désactive la case à cocher et le deuxième l'active, vous permettant ainsi de choisir le module fournisseur d'informations à utiliser et de sélectionner les informations à enregistrer.  
   
-##  <a name="provider"></a>Configurer les options sous l’onglet fournisseurs et journaux  
+##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>Configurer les options sous l’onglet fournisseurs et journaux  
  Utilisez l’onglet **Fournisseurs et journaux** de la boîte de dialogue **Configurer les journaux SSIS** pour créer et configurer des journaux permettant de capturer des événements à l’exécution.  
   
 ### <a name="options"></a>Options  
@@ -73,14 +73,14 @@ ms.locfileid: "66060596"
  Le champ de description est modifiable. Cliquez sur cette option, puis modifiez la description par défaut du journal.  
   
  **Configuration**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur \<**Nouvelle connexion**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez \<sur **nouvelle connexion...**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
   
  Rubriques connexes : [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md) , [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)  
   
  **Supprimer**  
  Sélectionnez un module fournisseur d’informations, puis cliquez sur **Supprimer**.  
   
-##  <a name="detail"></a>Configurer les options sous l’onglet Détails  
+##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a>Configurer les options sous l’onglet Détails  
  Utilisez l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS** pour spécifier les événements à enregistrer dans le journal et les détails des informations à consigner. Les informations sélectionnées s'appliquent à tous les modules fournisseurs d'informations du package. Par exemple, vous ne pouvez pas écrire d’informations dans l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et écrire des informations différentes dans un fichier texte.  
   
 ### <a name="options"></a>Options  
@@ -90,10 +90,10 @@ ms.locfileid: "66060596"
  **Description**  
  Affichez la description de l'événement.  
   
- **Avancée**  
+ **Avancé**  
  Sélectionnez ou désélectionnez les événements à enregistrer dans le journal et les informations à enregistrer pour chaque événement. Cliquez sur **Simple** pour masquer tous les détails de l’enregistrement dans le journal à l’exception de la liste des événements. Les informations suivantes peuvent être enregistrées dans le journal :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Computer**|Nom de l'ordinateur sur lequel s'est produit l'événement enregistré.|  
 |**Opérateur**|Nom de l'utilisateur qui a démarré le package.|  
@@ -101,15 +101,15 @@ ms.locfileid: "66060596"
 |**SourceID**|GUID (Global Unique IDentifier) du package, du conteneur ou de la tâche dans lequel s'est produit l'événement enregistré.|  
 |**ExecutionID**|GUID de l'instance d'exécution du package.|  
 |**MessageText**|Un message associé à l'entrée de journal.|  
-|**DataBytes**|réservé à une utilisation future.|  
+|**DataBytes**|Réservé pour un usage futur.|  
   
  **De base**  
  Sélectionnez ou désélectionnez les événements à enregistrer dans le journal. Cette option masque les détails d'enregistrement à l'exception de la liste des événements. Si vous sélectionnez un événement, tous les détails d'enregistrement dans le journal sont sélectionnés pour l'événement par défaut. Cliquez sur **Avancé** pour afficher tous les détails d’enregistrement.  
   
- **Load**  
+ **Chargement**  
  Spécifiez un fichier XML existant à utiliser comme modèle de configuration des options d'enregistrement dans le journal.  
   
- **Été**  
+ **Save**  
  Enregistrez les détails de la configuration en tant que modèle dans un fichier XML.  
   
   

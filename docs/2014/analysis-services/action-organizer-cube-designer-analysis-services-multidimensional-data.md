@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062931"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur d'action (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Dans le Concepteur de cube, utilisez le volet **Organisateur d'action** sous l'onglet **Actions** pour avoir accès aux actions contenues dans le cube spécifié.  
   
 ## <a name="options"></a>Options  
- **List**  
+ **Liste**  
  Affiche le nom de l'action.  
   
  Sélectionnez une action pour afficher l' **Éditeur de formulaire d'action**, une action d'extraction pour afficher l' **Éditeur de formulaire d'action d'extraction**ou une action de rapport pour afficher l' **Éditeur de formulaire d'action de rapport**.  
@@ -44,6 +44,6 @@ ms.locfileid: "66062931"
  Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.  
   
 > [!NOTE]  
->  Cette option est activée uniquement si le volet **Organisateur d’action** est sélectionné.  
+>   Cette option est activée uniquement si le volet **Organisateur d'action** est sélectionné.  
   
   

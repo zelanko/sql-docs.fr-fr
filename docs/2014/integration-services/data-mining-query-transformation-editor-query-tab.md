@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059749"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Éditeur de transformation de requête d'exploration de données (onglet Requête)
@@ -34,7 +34,7 @@ ms.locfileid: "66059749"
  Cliquez sur **Générer une nouvelle requête** pour créer une requête DMX (Data Mining Extensions) à l’aide du générateur graphique de requêtes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de requête d’exploration de données &#40;onglet modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

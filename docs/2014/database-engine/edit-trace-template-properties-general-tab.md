@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064899"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Modifier les propriétés du modèle de trace (onglet Général)
   Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  
   
 ## <a name="options"></a>Options  
- **Sélectionner un type de serveur**  
+ **Sélectionnez le type de serveur**  
  Indiquez le type de serveur sur lequel ce modèle va être utilisé.  
   
  **Sélectionner un nom de modèle**  
@@ -36,7 +36,7 @@ ms.locfileid: "66064899"
   
 ## <a name="see-also"></a>Voir aussi  
  [Modifier un modèle de trace &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

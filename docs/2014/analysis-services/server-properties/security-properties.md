@@ -20,17 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068910"
 ---
 # <a name="security-properties"></a>Propriétés de sécurité
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de sécurité du serveur répertoriées dans le tableau ci-dessous. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **S’applique à :** Mode serveur multidimensionnel et tabulaire  
+ **S'applique à :** mode serveur multidimensionnel et tabulaire  
   
 ## <a name="properties"></a>Propriétés  
  `RequireClientAuthentication`  
@@ -60,7 +59,7 @@ ms.locfileid: "66068910"
  `DataProtection\ RequiredProtectionLevel`  
  Propriété entière de 32 bits signée qui définit le niveau de protection nécessaire pour toutes les demandes des clients. Cette propriété peut prendre l'une des valeurs répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*0*|Aucun, texte clair autorisé.|  
 |*1*|(Valeur par défaut) Chiffrement requis, pas de journalisation en texte clair.|  
@@ -71,6 +70,6 @@ ms.locfileid: "66068910"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

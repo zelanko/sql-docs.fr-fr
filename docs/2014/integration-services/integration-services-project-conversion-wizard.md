@@ -13,60 +13,59 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057977"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistant Conversion de projet Integration Services
-  
   **L’Assistant Conversion de projet Integration Services** convertit un projet en modèle de déploiement de projet.  
   
 > [!NOTE]  
->  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées à l’issue de la conversion du projet. Pour créer une connexion à une source de données pouvant être partagée par les packages du projet, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+>  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées quand la conversion du projet est terminée. Pour créer une connexion à une source de données pouvant être partagée par les packages du projet, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
  **Que voulez-vous faire ?**  
   
--   [Ouvrir l’Assistant Conversion de projet Integration Services](#open_dialog)  
+-   [Ouvrir l'Assistant Conversion de projet Integration Services](#open_dialog)  
   
--   [Définir les options sur la page localiser les packages](#locate)  
+-   [Définir les options sur la page Localiser les packages](#locate)  
   
--   [Définir les options sur la page Sélectionner les packages](#selectPackages)  
+-   [Définir les options sur la page Sélectionner les package](#selectPackages)  
   
 -   [Définir les options sur la page Sélectionner la destination](#destination)  
   
--   [Définir les options sur la page spécifier les propriétés du projet](#projectProperties)  
+-   [Définir les options sur la page Spécifier les propriétés du projet](#projectProperties)  
   
--   [Définir les options sur la page mettre à jour la tâche d’exécution de package](#executePackage)  
+-   [Définir les options sur la page Mettre à jour la tâche d'exécution de package](#executePackage)  
   
 -   [Définir les options sur la page Sélectionner les configurations](#configurations)  
   
--   [Définir les options sur la page créer des paramètres](#createParameters)  
+-   [Définir les options sur la page Créer des paramètres](#createParameters)  
   
 -   [Définir les options sur la page Configurer les paramètres](#configureParameters)  
   
--   [Définir les options de la page vérifier](#review)  
+-   [Définir les options de la page Vérifier](#review)  
   
--   [Définir les options de l’option effectuer la conversion](#conversion)  
+-   [Définir les options de la page Effectuer la conversion](#conversion)  
   
-##  <a name="open_dialog"></a>Ouvrir l’Assistant Conversion de projet Integration Services  
+##  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a>Ouvrir l’Assistant Conversion de projet Integration Services  
  Pour ouvrir l’Assistant **Conversion de projet Integration Services** , effectuez l’une des opérations suivantes.  
   
 -   Ouvrez le projet dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
   
 -   Depuis l’Explorateur d’objets dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur le nœud **Projets** et sélectionnez **Importer les packages**.  
   
- Selon que vous exécutez **l’Assistant Conversion de projet Integration Services** à partir de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], l’Assistant effectue différentes tâches de conversion. Pour plus d’informations, consultez [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
+ Selon que vous exécutez **l’Assistant Conversion de projet Integration Services** à partir de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], l’Assistant effectue différentes tâches de conversion. Pour plus d’informations, consultez [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
-##  <a name="locate"></a>Définir les options sur la page localiser les packages  
+##  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a>Définir les options sur la page localiser les packages  
   
 > [!NOTE]  
 >  La page **Localiser les packages** est disponible uniquement quand vous exécutez l’Assistant à partir de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  L’option suivante s’affiche dans la page quand vous sélectionnez **Système de fichiers** dans la liste déroulante **Source** . Sélectionnez cette option quand le package se trouve dans le système de fichiers.  
   
- **Folder**  
+ **Répertoire**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
  Les options suivantes s’affichent dans la page quand vous sélectionnez **Magasin de packages SSIS** dans la liste déroulante **Source**. Pour plus d’informations sur le magasin de packages, consultez [Gestion de packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md).  
@@ -74,7 +73,7 @@ ms.locfileid: "66057977"
  **Serveur**  
  Tapez le nom du serveur ou sélectionnez ce dernier.  
   
- **Folder**  
+ **Répertoire**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
  Les options suivantes s’affichent dans la page quand vous sélectionnez **Microsoft SQL Server** dans la liste déroulante **Source** . Sélectionnez cette option quand le package se trouve dans Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -85,7 +84,7 @@ ms.locfileid: "66057977"
  **Utiliser l’authentification Windows**  
  Le mode d'authentification Microsoft Windows permet à l'utilisateur de se connecter au moyen d'un compte d'utilisateur Windows. Si vous utilisez l'authentification Windows, vous n'avez pas besoin de fournir un nom d'utilisateur ou un mot de passe.  
   
- **Utiliser l’authentification SQL Server**  
+ **Utiliser l'authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentifie la connexion en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré. Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
   
  **Nom d'utilisateur**  
@@ -94,10 +93,10 @@ ms.locfileid: "66057977"
  **Mot de passe**  
  Tapez le mot de passe lorsque vous utilisez l'authentification SQL Server.  
   
- **Folder**  
+ **Répertoire**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
-##  <a name="selectPackages"></a>Définir les options sur la page Sélectionner les packages  
+##  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a>Définir les options sur la page Sélectionner les packages  
  **Nom du package**  
  Indique le fichier de package.  
   
@@ -113,10 +112,10 @@ ms.locfileid: "66057977"
  **Appliquer à la sélection**  
  Cliquez pour appliquer le mot de passe de la zone de texte **Mot de passe** au(x) package(s) sélectionné(s).  
   
- **Actualiser**  
+ **Actualisation**  
  Actualise la liste des packages.  
   
-##  <a name="destination"></a>Définir les options sur la page Sélectionner la destination  
+##  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a>Définir les options sur la page Sélectionner la destination  
  Dans cette page, spécifiez le nom et le chemin d'accès d'un nouveau fichier de déploiement de projet (.ispac) ou sélectionnez un fichier existant.  
   
 > [!NOTE]  
@@ -134,7 +133,7 @@ ms.locfileid: "66057977"
  **Description du projet**  
  Tapez une description facultative du projet.  
   
-##  <a name="projectProperties"></a>Définir les options sur la page spécifier les propriétés du projet  
+##  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a>Définir les options sur la page spécifier les propriétés du projet  
   
 > [!NOTE]  
 >  La page **Spécifier les propriétés du projet** est disponible uniquement quand vous exécutez l’Assistant à partir de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
@@ -148,7 +147,7 @@ ms.locfileid: "66057977"
  **Description du projet**  
  Si vous le souhaitez, tapez une description du projet.  
   
-##  <a name="executePackage"></a>Définir les options sur la page mettre à jour la tâche d’exécution de package  
+##  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a>Définir les options sur la page mettre à jour la tâche d’exécution de package  
  Mettez à jour les tâches d'exécution de package contenues dans les packages pour utiliser une référence basée sur un projet. Pour plus d'informations, consultez [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md).  
   
  **Package parent**  
@@ -157,13 +156,13 @@ ms.locfileid: "66057977"
  **Nom de la tâche**  
  Indique le nom de la tâche d'exécution de package.  
   
- **Référence d’origine**  
+ **Référence d'origine**  
  Indique le chemin d'accès actuel du package enfant.  
   
  **Affecter une référence**  
  Sélectionnez un package enfant stocké dans le projet.  
   
-##  <a name="configurations"></a>Définir les options sur la page Sélectionner les configurations  
+##  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a>Définir les options sur la page Sélectionner les configurations  
  Sélectionnez les configurations de package que vous souhaitez remplacer par des paramètres.  
   
  **Package**  
@@ -181,7 +180,7 @@ ms.locfileid: "66057977"
  **Ajouter des configurations**  
  Ajoutez les configurations de package contenues dans d'autres projets à la liste des configurations disponibles que vous souhaitez remplacer à l'aide de paramètres. Vous pouvez sélectionner des configurations stockées dans un système de fichiers ou dans SQL Server.  
   
- **Actualiser**  
+ **Actualisation**  
  Cliquez pour actualiser la liste des configurations.  
   
  **Supprimer les configurations de tous les packages après la conversion**  
@@ -189,7 +188,7 @@ ms.locfileid: "66057977"
   
  Si vous ne sélectionnez pas cette option, seules les configurations que vous avez sélectionnées pour remplacement à l’aide de paramètres sont supprimées.  
   
-##  <a name="createParameters"></a>Définir les options sur la page créer des paramètres  
+##  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a>Définir les options sur la page créer des paramètres  
  Sélectionnez le nom et l'étendue du paramètre pour chaque propriété de configuration.  
   
  **Package**  
@@ -201,7 +200,7 @@ ms.locfileid: "66057977"
  **Étendue**  
  Sélectionnez l'étendue du paramètre, package ou projet.  
   
-##  <a name="configureParameters"></a>Définir les options sur la page Configurer les paramètres  
+##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>Définir les options sur la page Configurer les paramètres  
  **Nom**  
  Indique le nom du paramètre.  
   
@@ -219,16 +218,16 @@ ms.locfileid: "66057977"
   
  La boîte de dialogue **Définir les détails du paramètre** indique également le type de données de la valeur de paramètre et l’origine du paramètre.  
   
-##  <a name="review"></a>Définir les options de la page vérifier  
- Utilisez la page **Vérifier** pour confirmer l’exactitude des options sélectionnées pour la conversion du projet.  
+##  <a name="set-the-options-on-the-review-page"></a><a name="review"></a>Définir les options de la page vérifier  
+ Utilisez la page **vérifier** pour confirmer les options que vous avez sélectionnées pour la conversion du projet.  
   
- **Premier**  
+ **Précédent**  
  Cliquez pour modifier une option.  
   
  **Passer**  
  Cliquez pour convertir le projet en modèle de déploiement de projet.  
   
-##  <a name="conversion"></a>Définir les options de l’option effectuer la conversion  
+##  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a>Définir les options de l’option effectuer la conversion  
  La page Effectuer la conversion indique l'état de la conversion du projet.  
   
  **Action**  

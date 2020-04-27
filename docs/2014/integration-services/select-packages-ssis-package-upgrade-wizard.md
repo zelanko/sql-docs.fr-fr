@@ -13,21 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056019"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Sélectionner les packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionnez les packages** pour sélectionner les packages à mettre à niveau. Cette page répertorie les packages qui sont stockés dans l'emplacement spécifié sur la page **Sélectionner l'emplacement source** de l'Assistant.  
   
- **Pour exécuter l’Assistant Mise à niveau de packages SSIS**  
+ **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
 -   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>Options  
- **Nom du package existant**  
+ **Nom de package existant**  
  Sélectionnez un ou plusieurs packages à mettre à niveau.  
   
  **Nom du package de mise à niveau**  

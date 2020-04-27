@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066012"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -24,10 +24,10 @@ ms.locfileid: "66066012"
  **Ajouter Business Intelligence**  
  Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision.  
   
- **Procédure**  
+ **Processus**  
  Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le cube.  
   
- **Reconnexion**  
+ **Reconnect**  
  Reconnecte l’onglet **Indicateurs de performance clés** à l’instance et à la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient le cube si la session de l’onglet **Indicateurs de performance clés** est déconnectée à cause d’une perte de connexion ou d’une expiration de délai.  
   
  **Nouvel indicateur de performance clé (KPI)**  
@@ -57,7 +57,7 @@ ms.locfileid: "66066012"
  **Mode formulaire**  
  Sélectionnez cette option pour utiliser l’onglet **Indicateurs de performance clés** en mode Formulaire.  
   
- **Mode Navigateur**  
+ **Mode navigateur**  
  Sélectionnez cette option pour utiliser l’onglet **Indicateurs de performance clés** en mode Navigateur.  
   
  **Vérifier la syntaxe**  

@@ -96,14 +96,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068868"
 ---
 # <a name="olap-properties"></a>Propriétés OLAP
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel uniquement  
@@ -197,7 +196,7 @@ ms.locfileid: "66068868"
  `PartitionLatencyAccuracy`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Procédure  
+## <a name="process"></a>Process  
  `AggregationMemoryLimitMax`  
  Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique.  
   
@@ -328,7 +327,7 @@ ms.locfileid: "66068868"
   
      Notez que la mémoire utilisée par ces caches est considérée comme non réductible et est incluse dans la propriété **TotalMemoryLimit**.  
   
--   Affecte toutes les bases de données sur le serveur. **DimensionPropertyCachesize** est une propriété à l’ensemble du serveur. La modification de cette propriété affecte toutes les bases de données exécutées sur l'instance actuelle.  
+-   Affecte toutes les bases de données sur le serveur. **DimensionPropertyCachesize** est une propriété à l’échelle du serveur. La modification de cette propriété affecte toutes les bases de données exécutées sur l'instance actuelle.  
   
  Approche pour estimer la configuration requise du cache de dimension :  
   
@@ -480,6 +479,6 @@ ms.locfileid: "66068868"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

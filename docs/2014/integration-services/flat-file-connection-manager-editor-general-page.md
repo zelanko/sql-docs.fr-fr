@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058751"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Général)
@@ -51,7 +51,7 @@ ms.locfileid: "66058751"
  **Format**  
  Indique si le fichier utilise une mise en forme délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Delimited|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
@@ -63,30 +63,30 @@ ms.locfileid: "66058751"
 > [!NOTE]  
 >  Après avoir sélectionné un identificateur de texte, vous ne pouvez pas sélectionner de nouveau l’option **Aucun** . Tapez **Aucun** pour désélectionner l’identificateur de texte.  
   
- **Délimiteur de ligne d’en-tête**  
+ **Séparateur de lignes d'en-tête**  
  Choisissez dans la liste des séparateurs de lignes d'en-tête ou entrez le texte de séparation.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**CR CHARIOT**|La ligne d'en-tête est séparée par une combinaison retour chariot-saut de ligne.|  
+|**{CR}{LF}**|La ligne d'en-tête est séparée par une combinaison retour chariot-saut de ligne.|  
 |**CR**|La ligne d'en-tête est séparée par des retours chariot.|  
-|**CHARIOT**|La ligne d'en-tête est séparée par des sauts de lignes.|  
+|**{LF}**|La ligne d'en-tête est séparée par des sauts de lignes.|  
 |**Point-virgule {;}**|La ligne d'en-tête est séparée par des points-virgules.|  
-|**Deux-points { :}**|La ligne d'en-tête est séparée par des deux-points.|  
+|**Deux-points {:}**|La ligne d'en-tête est séparée par des deux-points.|  
 |**Point{,}**|La ligne d'en-tête est séparée par des virgules.|  
 |**Tabulation {t}**|La ligne d'en-tête est séparée par des tabulations.|  
 |**Barre verticale {&#124;}**|La ligne d'en-tête est séparée par des barres verticales.|  
   
- **Lignes d’en-tête à ignorer**  
+ **Lignes d'en-tête à ignorer**  
  Spécifiez le nombre de lignes d'en-tête ou de lignes de données initiales à ignorer, le cas échéant.  
   
  **Noms de colonnes dans la première ligne de données**  
  Indique si des noms de colonne doivent être attendus ou fournis dans la première ligne de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats &#40;page colonnes&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats &#40;page avancé&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page d’aperçu&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

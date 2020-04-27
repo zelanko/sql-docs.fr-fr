@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069071"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitaire de configuration du serveur (Compléments d'exploration de données pour Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "66069071"
   
 
   
-##  <a name="bkmk_step1"></a>Étape 1 : se connecter à Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>Étape 1 : se connecter à Analysis Services  
  Choisissez le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui fournit les algorithmes d'exploration de données et stocke vos modèles d'exploration de données.  
   
  Lorsque vous créez une connexion pour l'exploration de données, vous devez choisir un serveur sur lequel travailler avec les modèles d'exploration de données. Nous vous recommandons de créer une nouvelle base de données sur le serveur et de la dédier à l'exploration de données, ou de demander à votre administrateur de préparer un serveur d'exploration de données à votre place. Ainsi, vous pourrez créer des modèles sans affecter l'exécution d'autres services.  
@@ -35,7 +35,7 @@ ms.locfileid: "66069071"
  **Authentification**  
  Spécifiez les méthodes d'authentification. L'Authentification Windows est requise pour les connexions à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], sauf si votre administrateur a configuré l'accès au serveur via HTTPPump.  
   
-##  <a name="bkmk_step2"></a>Étape 2 : autoriser les modèles temporaires  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>Étape 2 : autoriser les modèles temporaires  
  Avant de pouvoir utiliser les compléments, une propriété du serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit être modifiée pour permettre la création de modèles d'exploration de données temporaires.  
   
  Les modèles d’exploration de données temporaires sont également appelés *modèles de session*. C'est parce que les modèles sont stockés uniquement tant que votre session actuelle est ouverte. Lorsque vous fermez votre connexion au serveur, la session est terminée et tous les modèles utilisés pendant la session sont supprimés.  
@@ -44,7 +44,7 @@ ms.locfileid: "66069071"
   
  L'Assistant commence par détecter les paramètres du serveur spécifié. Si le serveur autorise déjà les modèles d’exploration de données temporaires, vous pouvez cliquer sur **suivant** pour continuer. L'Assistant fournit également des instructions pour activer les modèles d'exploration de données temporaires sur le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] spécifié, ou pour en faire la demande à votre administrateur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a>Étape 3 : créer une base de données pour les utilisateurs des compléments  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>Étape 3 : créer une base de données pour les utilisateurs des compléments  
  Dans cette page de l'Assistant Installation et configuration, vous créez une nouvelle base de données qui est dédiée à l'exploration de données, ou vous sélectionnez une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existante.  
   
 > [!WARNING]  
@@ -66,7 +66,7 @@ ms.locfileid: "66069071"
  **Sauvegarde de la base de données**  
  Si vous choisissez d'utiliser une base de données existante, vous devez sélectionner son nom dans la liste.  
   
-##  <a name="bkmk_step4"></a>Étape 4 : attribuer les autorisations appropriées aux utilisateurs des compléments  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>Étape 4 : attribuer les autorisations appropriées aux utilisateurs des compléments  
  Assurez-vous que vous-même (et les autres utilisateurs des compléments) bénéficiez des autorisations nécessaires pour parcourir, modifier, traiter ou créer des structures et des modèles d'exploration de données.  
   
  Par défaut, l'Authentification Windows intégrée est un préalable de l'utilisation des compléments.  

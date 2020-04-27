@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069248"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Sélectionner des tables et des vues (Assistant Vue de source de données) (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66069248"
   
  Vous pouvez inclure n'importe où dans la chaîne de caractères les caractères génériques indiqués dans la liste ci-dessous.  
   
-|Caractère générique|Valeur|  
+|Caractère générique|Value|  
 |------------------------|-----------|  
 |**\***|N'importe quelle chaîne de caractères|  
 |**%**|N'importe quelle chaîne de caractères|  

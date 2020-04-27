@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069029"
 ---
 # <a name="general-properties"></a>Propriétés générales
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **S’applique à :** Mode serveur multidimensionnel et tabulaire, sauf indication contraire  
+ **S’applique à :** mode serveur multidimensionnel et tabulaire, sauf indication contraire  
   
 ## <a name="non-specific-category"></a>Catégorie non spécifique  
  `AdminTimeout`  
@@ -77,14 +76,12 @@ ms.locfileid: "66069029"
  `CoordinatorCancelCount`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie la fréquence selon laquelle le serveur doit vérifier si un événement d'annulation s'est produit (en fonction d'un nombre d'itérations interne). Diminuez ce nombre si vous souhaitez augmenter la fréquence de ces vérifications au détriment des performances générales.  
   
- 
-  `CoordinatorCancelCount` est ignoré en mode serveur tabulaire.  
+ `CoordinatorCancelCount` est ignoré en mode serveur tabulaire.  
   
  `CoordinatorExecutionMode`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal d'opérations parallèles que le serveur essaiera d'effectuer, notamment les opérations de traitement et d'interrogation. Zéro (0) indique que le serveur décidera lui-même, en fonction d'un algorithme interne. Un nombre positif indique le nombre maximal d'opérations au total. Un nombre négatif (précédé du signe moins) indique le nombre maximal d'opérations par processeur.  
   
- 
-  `CoordinatorExecutionMode` est ignoré en mode serveur tabulaire.  
+ `CoordinatorExecutionMode` est ignoré en mode serveur tabulaire.  
   
  La valeur par défaut de cette propriété, -4, indique que le serveur est limité à quatre opérations parallèles par processeur. Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -102,9 +99,9 @@ ms.locfileid: "66069029"
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|0|Il s’agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
+|0|Il s'agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
 |1|Spécifie des instances d'Analysis Services installées dans le cadre d'un déploiement PowerPivot pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l'instance Analysis Services qui fait partie d'une installation PowerPivot pour SharePoint. Les données PowerPivot ne s'exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   
@@ -134,8 +131,7 @@ ms.locfileid: "66069029"
  Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` s'applique aux commandes de traitement de cube et aux opérations d'écriture différée.  
+>  `ForceCommitTimeout` s'applique aux commandes de traitement de cube et aux opérations d'écriture différée.  
   
  `IdleConnectionTimeout`  
  Propriété dont la valeur est un entier qui spécifie le délai, en secondes, pour les connexions qui sont inactives.  
@@ -182,6 +178,6 @@ ms.locfileid: "66069029"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

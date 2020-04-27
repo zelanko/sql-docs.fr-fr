@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059890"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Colonnes)
@@ -27,7 +27,7 @@ ms.locfileid: "66059890"
  Pour en savoir plus sur la destination d'apprentissage du modèle d'exploration de données, consultez [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Faites glisser les colonnes d'entrée pour les mapper sur les colonnes de la structure d'exploration de données.  
   
  **Colonnes de structure d'exploration de données**  
@@ -40,7 +40,7 @@ ms.locfileid: "66059890"
  Affiche chaque colonne de destination disponible, qu’elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Connexion&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056059"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Éditeur de transformation de script (page Entrées et sorties)
@@ -30,7 +30,7 @@ ms.locfileid: "66056059"
  Pour en savoir plus sur le composant de script, consultez [Script Component](data-flow/transformations/script-component.md) et [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extension du flux de données avec le composant Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Options  
- **Entrées et sorties**  
+ **Inputs and outputs**  
  Permet de sélectionner une entrée ou une sortie à gauche pour en voir les propriétés dans le tableau de droite. Les propriétés pouvant être modifiées varient en fonction de la sélection faite. La plupart des propriétés affichées sont en lecture seule. Pour plus d'informations sur chacune de ces propriétés, consultez les rubriques suivantes.  
   
  [Propriétés communes](../../2014/integration-services/common-properties.md)  
@@ -40,17 +40,17 @@ ms.locfileid: "66056059"
  **Ajouter une sortie**  
  Ajoute une sortie à la liste.  
   
- **Add Column**  
+ **Ajouter une colonne**  
  Sélectionnez un dossier dans lequel placer la nouvelle colonne de sortie, puis ajoutez la colonne en cliquant sur **Ajouter une colonne**.  
   
- **Supprimer la sortie**  
+ **Supprimer une sortie**  
  Sélectionnez une sortie, puis supprimez-la en cliquant sur **Supprimer une sortie**.  
   
  **Supprimer une colonne**  
  Sélectionnez une colonne, puis cliquez sur le bouton **Supprimer une colonne**pour la supprimer.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sélectionner un type de composant de script](../../2014/integration-services/select-script-component-type.md)   
  [Éditeur de transformation de script &#40;page colonnes d’entrée&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Éditeur de transformation de script &#40;page de script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

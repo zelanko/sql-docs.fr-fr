@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060497"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configuration du service Integration Services (Service SSIS)
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dépend d'un fichier de configuration pour ses paramètres. Par défaut, le nom de ce fichier de configuration est MsDtsSrvr. ini. xml, et le fichier se trouve dans le dossier%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
@@ -122,8 +122,7 @@ La clé de Registre **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Serve
   
   
 > [!CAUTION]  
->  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](https://support.microsoft.com/kb/256986).  
+>  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. [!INCLUDE[msCoName](../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](https://support.microsoft.com/kb/256986).  
   
  Lorsqu'il démarre, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] charge le fichier de configuration. Toute modification de l'entrée de Registre nécessite le redémarrage du service.  
   

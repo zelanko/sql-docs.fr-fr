@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062391"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Assistants Analysis Services (données multidimensionnelles)
@@ -26,9 +26,9 @@ ms.locfileid: "66062391"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Aide (F1) de l'Assistant Conception d'agrégation](aggregation-design-wizard-f1-help.md)|Utilisez l'Assistant Conception d'agrégation pour définir les agrégations d'une conception d'agrégation, utilisée pour créer des instances d'agrégation pour les partitions d'un groupe de mesures.|  
+|[Aide (F1) de l’Assistant Conception d’agrégation](aggregation-design-wizard-f1-help.md)|Utilisez l'Assistant Conception d'agrégation pour définir les agrégations d'une conception d'agrégation, utilisée pour créer des instances d'agrégation pour les partitions d'un groupe de mesures.|  
 |[Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)|Utilisez l'Assistant Business Intelligence pour ajouter des fonctions Business Intelligence, telles que l'intelligence comptable et la conversion de devise, dans un cube ou une dimension.|  
-|[Fichiers d'aide (F1) de l'Assistant Cube](cube-wizard-f1-help.md)|Utilisez l'Assistant Cube pour créer un nouveau cube.|  
+|[Aide (F1) de l’Assistant Cube](cube-wizard-f1-help.md)|Utilisez l'Assistant Cube pour créer un nouveau cube.|  
 |[Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Utilisez l'Assistant Exploration de données pour définir une nouvelle structure d'exploration de données et les modèles d'exploration de données associés.|  
 |[Aide (F1) de l’Assistant source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Utilisez l'Assistant Source de données pour définir une nouvelle source de données.|  
 |[Aide (F1) de l’Assistant vue de source de données &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Utilisez l'Assistant Vue de source de données pour définir une nouvelle vue de source de données.|  

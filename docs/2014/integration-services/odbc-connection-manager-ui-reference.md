@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057274"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Référence de l'interface utilisateur du gestionnaire de connexions ODBC
@@ -33,7 +33,7 @@ ms.locfileid: "66057274"
  **Propriétés des connexions de données**  
  Affichez les propriétés et les valeurs du gestionnaire de connexions ODBC sélectionné.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un gestionnaire de connexions ODBC à l’aide de la boîte de dialogue **Gestionnaire de connexions** . Cette boîte de dialogue vous permet également de créer une nouvelle source de données ODBC si nécessaire.  
   
  **Supprimer**  

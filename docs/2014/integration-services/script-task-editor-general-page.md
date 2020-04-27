@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056178"
 ---
 # <a name="script-task-editor-general-page"></a>Éditeur de tâche de script (page Général)
@@ -37,9 +37,9 @@ ms.locfileid: "66056178"
  Tapez la description de la tâche de script.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de script &#40;page de script&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Exemples de tâche de script](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058049"
 ---
 # <a name="import-project-wizard"></a>Assistant Importation de projet
@@ -24,7 +24,7 @@ ms.locfileid: "66058049"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Pour créer un projet basé sur un projet dans un fichier .ispac ou dans le catalogue  
   
-1.  Cliquez sur **fichier**, pointez sur **nouveau**, puis cliquez sur projet.  
+1.  Cliquez sur **Fichier**, pointez sur **Nouveau**, puis cliquez sur Projet.  
   
 2.  Développez **Business Intelligence**, puis cliquez sur **Integration Services**.  
   

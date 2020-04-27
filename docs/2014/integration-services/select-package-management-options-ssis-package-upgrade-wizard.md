@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056031"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Sélectionner les options de gestion des packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionner les options de gestion des packages** pour spécifier des options permettant de mettre à niveau des packages.  
   
- **Pour exécuter l’Assistant Mise à niveau de packages SSIS**  
+ **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
 -   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66056031"
   
  L'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] met à jour uniquement les chaînes de connexion qui sont stockées dans des gestionnaires de connexions. Il ne met pas à jour les chaînes de connexion qui sont construites dynamiquement à l'aide du langage d'expression [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou en utilisant du code dans une tâche de script.  
   
- **Valider les packages de mise à niveau**  
+ **Valider les packages mis à niveau**  
  Validez les packages de mise à niveau et enregistrez uniquement ceux dont la validation a réussi.  
   
  Si vous ne sélectionnez pas cette option, l'Assistant ne validera pas les packages de mise à niveau. Par conséquent, il les enregistrera tous, qu'ils soient valides ou non. L’Assistant enregistre les packages de mise à niveau dans la destination spécifiée dans la page **Sélectionner l’emplacement de destination** de l’Assistant.  
@@ -46,13 +46,13 @@ ms.locfileid: "66056031"
  **Créer des ID de package**  
  Créez de nouveaux ID de package pour les packages de mise à niveau.  
   
- **Continuer la mise à niveau en cas d’échec de la mise à niveau d’un package**  
+ **Continuer le processus de mise à niveau lorsque la mise à niveau d’un package échoue**  
  Spécifiez que, quand un package ne peut pas être mis à niveau, l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] continue à mettre à niveau les packages restants.  
   
  **Conflits de noms de packages**  
  Spécifiez la façon dont l'Assistant doit gérer les packages qui portent le même nom. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
- **Remplacer les fichiers de package existants**  
+ **Remplacer les fichiers de packages existants**  
  Remplace le package existant par le package de mise à niveau du même nom.  
   
  **Ajouter des suffixes numériques pour mettre à niveau les noms de packages**  

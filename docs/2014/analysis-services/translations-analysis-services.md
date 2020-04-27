@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065880"
 ---
 # <a name="translations-analysis-services"></a>Traductions (Analysis Services)
@@ -34,7 +34,7 @@ ms.locfileid: "66065880"
  Une traduction est composée d'un identificateur de paramètres régionaux (LCID), d'une légende traduite pour l'objet (par exemple le nom de la dimension ou de l'attribut) et éventuellement d'une liaison à une colonne qui fournit des valeurs de données dans la langue cible. Vous pouvez avoir plusieurs traductions, mais vous ne pouvez en utiliser qu'une seule pour une connexion donnée. Il n'existe aucune limite théorique quant au nombre de traductions que vous pouvez incorporer dans le modèle, mais chaque traduction ajoute une complexité au test et toutes les traductions doivent partager le même classement. Vous devez donc garder ces contraintes naturelles à l'esprit lors de la conception de votre solution.  
   
 > [!TIP]  
->  Vous pouvez utiliser des applications clientes telles qu'Excel, Management Studio et [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour retourner des chaînes traduites. Pour plus d'informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+>  Vous pouvez utiliser des applications clientes telles qu'Excel, Management Studio et [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour retourner des chaînes traduites. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>Définition d'un modèle pour prendre en charge des membres traduits  
  Un modèle de données utilisé dans une solution multilingue nécessite davantage que des légendes traduites (noms de champs et descriptions). Il doit également fournir des valeurs de données exprimées dans différents scripts de langue. L'obtention d'une solution multilingue nécessite d'avoir des attributs individuels liés à des colonnes dans une base de données externe qui retournent les données.  
@@ -53,7 +53,7 @@ ms.locfileid: "66065880"
   
  Les formats de date, d'heure et de devise ne sont pas implémentés dans les traductions. Pour fournir de manière dynamique des formats spécifiques à une culture en fonction des paramètres régionaux du client, utilisez l'Assistant Conversion monétaire et la propriété `FormatString`. Pour plus d’informations, consultez [Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) et [Élément FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- La [leçon 9 : définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md) dans le didacticiel Analysis Services vous guide tout au long des étapes de création et de test des traductions.  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) d ans le didacticiel Analysis Services décrit les étapes de création et de test des traductions.  
   
 ## <a name="defining-translations"></a>Définition des traductions  
  La définition d'une traduction crée un objet `Translation` comme enfant de l'objet de base de données, de dimension ou de cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Utilisez [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour ouvrir la solution et définir des traductions.  
@@ -71,7 +71,7 @@ ms.locfileid: "66065880"
   
 4.  Générez et déployez le projet.  
   
-5.  Connectez-vous à la base de données à l'aide d'une application cliente, comme Excel, en modifiant la chaîne de connexion pour utiliser l'identificateur de paramètres régionaux. Pour plus d'informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+5.  Connectez-vous à la base de données à l'aide d'une application cliente, comme Excel, en modifiant la chaîne de connexion pour utiliser l'identificateur de paramètres régionaux. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Ajouter des traductions à une dimension et à des attributs  
  Vous pouvez ajouter des traductions à des dimensions de base de données, à des attributs, à des hiérarchies et à des niveaux au sein d'une hiérarchie.  
@@ -100,7 +100,7 @@ ms.locfileid: "66065880"
   
 4.  Générez et déployez le projet.  
   
-5.  Connectez-vous à la base de données à l'aide d'une application cliente, comme Excel, en modifiant la chaîne de connexion pour utiliser l'identificateur de paramètres régionaux. Pour plus d'informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+5.  Connectez-vous à la base de données à l'aide d'une application cliente, comme Excel, en modifiant la chaîne de connexion pour utiliser l'identificateur de paramètres régionaux. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-a-translation-of-the-database-name"></a>Ajouter une traduction du nom de base de données  
  Au niveau de la base de données, vous pouvez ajouter des traductions pour le nom et la description de la base de données. Le nom traduit de la base de données peut être visible sur les connexions clientes qui spécifient le LCID de la langue, mais cela dépend de l'outil. Par exemple, l'affichage de la base de données dans Management Studio ne montre pas le nom traduit, même si vous spécifiez l'identificateur de paramètres régionaux sur la connexion. L'API utilisée par Management Studio pour se connecter à Analysis Services ne lit pas la propriété `Language`.  
@@ -120,6 +120,6 @@ ms.locfileid: "66065880"
  [Scénarios de globalisation pour Analysis Services données multidimensionnelles](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Définir ou modifier le classement des colonnes](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Conseils de globalisation et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065767"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Dépanner le traitement des données (SSAS Tabulaire)
@@ -26,22 +26,22 @@ ms.locfileid: "66065767"
   
 -   [Impact du traitement des données](#bkmk_impact_of_df)  
   
--   [Détermination de la source de données](#bkmk_det_source)  
+-   [Détermination de la source des données](#bkmk_det_source)  
   
--   [Détermination du moment où les données ont été actualisées pour la dernière fois](#bkmk_det_last_ref)  
+-   [Détermination de la date de la dernière actualisation des données](#bkmk_det_last_ref)  
   
 -   [Restrictions sur les sources de données actualisables](#bkmk_restrictions)  
   
 -   [Restrictions sur les modifications possibles d'une source de données](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a>Fonctionnement du traitement des données  
+##  <a name="how-data-processing-works"></a><a name="bkmk_how_df_works"></a>Fonctionnement du traitement des données  
  Lorsque vous traitez des données, les données contenues dans le générateur de modèles sont remplacées par de nouvelles données. Vous ne pouvez pas simplement importer de nouvelles lignes de données ou uniquement les données modifiées. Le générateur de modèles n'effectue pas de suivi des lignes qui ont été ajoutées précédemment.  
   
  Le traitement des données a lieu comme une transaction. Cela signifie qu'une fois que vous avez commencé la mise à jour des données, la mise à jour complète peut échouer ou réussir ; vous n'obtiendrez jamais des données partiellement correctes.  
   
  Le traitement manuel des données, que vous initiez à partir de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], est géré par l'instance locale en mémoire d'Analysis Services. L’opération de traitement des données peut donc affecter les performances d’autres tâches sur votre ordinateur. Toutefois, si vous planifiez le processus automatique des données dans un modèle déployé à l’aide d’un script, l’instance d’Analysis Services gère l’importation et son minutage.  
   
-##  <a name="bkmk_impact_of_df"></a>Impact du traitement des données  
+##  <a name="impact-of-data-processing"></a><a name="bkmk_impact_of_df"></a>Impact du traitement des données  
  Un traitement des données déclenche généralement un recalcul des données.  Le traitement des données implique l'obtention des données les plus récentes à partir des sources externes ; un recalcul correspond à la mise à jour des résultats de toutes les formules qui utilisent des données modifiées. Une opération de traitement déclenche généralement un recalcul.  
   
  Par conséquent, vous devez toujours penser à l'impact potentiel d'une modification des sources de données ou d'un traitement des données obtenues de la source de données et prendre en compte les conséquences éventuelles avant d'agir :  
@@ -56,7 +56,7 @@ ms.locfileid: "66065767"
   
 -   Lorsque vous modifiez un filtre, le modèle entier doit être recalculé.  
   
-##  <a name="bkmk_det_source"></a>Détermination de la source de données  
+##  <a name="determining-the-source-of-data"></a><a name="bkmk_det_source"></a>Détermination de la source de données  
  Si vous n'êtes pas sûr de la provenance des données dans votre modèle, vous pouvez utiliser les outils de la fenêtre [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour obtenir ces informations, notamment le nom du fichier source et son chemin d'accès.  
   
 #### <a name="to-find-the-source-of-existing-data"></a>Pour rechercher la source de données existantes  
@@ -73,7 +73,7 @@ ms.locfileid: "66065767"
   
 6.  Dans la boîte de dialogue **Modifier les connexions** , consultez les informations de connexion, telles que le nom de la base de données, le chemin d'accès au fichier ou le chemin d'accès au rapport.  
   
-##  <a name="bkmk_det_last_ref"></a>Détermination du moment où les données ont été actualisées pour la dernière fois  
+##  <a name="determining-when-data-was-last-refreshed"></a><a name="bkmk_det_last_ref"></a>Détermination du moment où les données ont été actualisées pour la dernière fois  
  Vous pouvez utiliser les propriétés de table pour déterminer quand les données ont été actualisées pour la dernière fois.  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>Pour rechercher la date et l'heure du dernier traitement d'une table  
@@ -84,7 +84,7 @@ ms.locfileid: "66065767"
   
 3.  Dans la boîte de dialogue **Modifier les propriétés de la table** , la zone **Dernière actualisation** indique la dernière date à laquelle la table a été actualisée.  
   
-##  <a name="bkmk_restrictions"></a>Restrictions sur les sources de données actualisables  
+##  <a name="restrictions-on-refreshable-data-sources"></a><a name="bkmk_restrictions"></a>Restrictions sur les sources de données actualisables  
  Certaines restrictions s'appliquent aux sources de données qui peuvent être automatiquement traitées à partir d'un modèle déployé sur une instance Analysis Services. Veillez à ne sélectionner que des sources de données qui répondent aux critères suivants :  
   
 -   La source de données doit être disponible au moment où s'effectue le traitement des données et disponible à l'emplacement indiqué. Si la source de données d'origine se trouve sur un lecteur de disque local de l'utilisateur qui a créé le modèle, vous devez soit exclure cette source de données de l'opération de traitement, soit trouver un moyen de publier cette source de données à un emplacement accessible via une connexion réseau. Si vous déplacez une source de données vers un emplacement réseau, veillez à ouvrir le modèle dans le générateur de modèles et répétez les étapes de récupération des données. Ces opérations sont nécessaires pour rétablir les informations de connexion stockées dans les propriétés de connexion de la source de données.  
@@ -97,7 +97,7 @@ ms.locfileid: "66065767"
   
      L'accès à une source de données externe s'effectue au moyen d'une chaîne de connexion incorporée, d'une URL ou d'un chemin d'accès UNC que vous avez spécifié lorsque vous avez importé les données d'origine dans le modèle à l'aide de l'Assistant Importation de table. Les informations de connexion d'origine stockées dans la connexion de la source de données sont réutilisées pour les opérations d'actualisation des données suivantes. Il n'existe pas d'autres informations de connexion qui puissent être créées et gérées à des fins de traitement des données ; seules les informations de connexion existantes sont utilisées.  
   
-##  <a name="bkmk_rest_changes"></a>Restrictions relatives aux modifications apportées à une source de données  
+##  <a name="restrictions-on-changes-to-a-data-source"></a><a name="bkmk_rest_changes"></a>Restrictions relatives aux modifications apportées à une source de données  
  Il existe des restrictions sur les modifications que vous pouvez apporter à une source de données :  
   
 -   Les types de données d'une colonne peuvent être uniquement modifiés par un type de données compatible. Par exemple, si les données de la colonne incluent des nombres décimaux, vous ne pouvez pas modifier le type de données par un entier. Toutefois, vous pouvez changer les données numériques en texte. Pour plus d’informations sur les types de données, consultez [Types de données pris en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-types-supported-ssas-tabular.md).  
@@ -106,6 +106,6 @@ ms.locfileid: "66065767"
   
 ## <a name="see-also"></a>Voir aussi  
  [Traiter manuellement les données &#40;tabulaires SSAS&#41;](manually-process-data-ssas-tabular.md)   
- [Modifier une connexion de source de données existante &#40;&#41;tabulaire SSAS](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Modifier une connexion à une source de données existante &#40;SSAS Tabulaire&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062903"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Actions (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l'onglet **Actions** du Concepteur de cube pour afficher et modifier les actions, y compris les actions d'extraction et les actions de rapport, du cube sélectionné.  
   
 ## <a name="panes"></a>Volets  
- **Barre d'outils**  
+ **Barre**  
  Utilisez la barre d’outils pour effectuer des actions courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet actions, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organisateur d'action**  

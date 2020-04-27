@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057011"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Éditeur de source OLE DB (page Sortie d'erreur)
@@ -36,7 +36,7 @@ ms.locfileid: "66057011"
  **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
@@ -47,11 +47,11 @@ ms.locfileid: "66057011"
  **Définir cette valeur sur les cellules sélectionnées**  
  Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Appliquer**  
+ **appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de source de OLE DB &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [Éditeur de source de OLE DB &#40;page colonnes&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Extraire des données à l’aide de la source de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   

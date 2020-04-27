@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057756"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL
@@ -60,7 +60,7 @@ ms.locfileid: "66057756"
 11. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
+ [Tâche d’exécution SQL](control-flow/execute-sql-task.md)   
  [Jeux de résultats dans la tâche d’exécution SQL](result-sets-in-the-execute-sql-task.md)   
  [Tâche d’exécution de package](control-flow/execute-package-task.md)   
  [Configurations du package](../../2014/integration-services/package-configurations.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057619"
 ---
 # <a name="multicast-transformation-editor"></a>Éditeur de transformation de multidiffusion
@@ -34,7 +34,7 @@ ms.locfileid: "66057619"
  Toutes les propriétés de sortie répertoriées sont en lecture seule à l’exception des propriétés **Nom** et **Description**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [transformation de fractionnement conditionnel](data-flow/transformations/conditional-split-transformation.md)  
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformation de fractionnement conditionnel](data-flow/transformations/conditional-split-transformation.md)  
   
   

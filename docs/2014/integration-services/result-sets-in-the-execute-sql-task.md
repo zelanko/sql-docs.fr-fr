@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056428"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Ensembles de résultats dans la tâche d’exécution SQL
@@ -27,13 +27,13 @@ ms.locfileid: "66056428"
   
  L'utilisation d'ensembles de résultats dans une tâche d'exécution SQL ne permet pas uniquement de savoir si la commande SQL retourne un ensemble de résultats et ce que celui-ci contient. D'autres indications et spécifications d'utilisation permettent d'utiliser avec succès des jeux de résultats dans la tâche d'exécution SQL. Le reste de cette rubrique traite de ces indications et spécifications d'utilisation.  
   
--   [Spécification d’un type de jeu de résultats](#Result_set_type)  
+-   [Spécification d'un type d'ensemble de résultats](#Result_set_type)  
   
 -   [Remplissage d’une variable à l’aide d’un jeu de résultats](#Populate_variable_with_result_set)  
   
 -   [Configuration des jeux de résultats dans l'éditeur de tâche d'exécution SQL](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a>Spécification d’un type de jeu de résultats  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>Spécification d’un type de jeu de résultats  
  La tâche d'exécution SQL prend en charge les types de jeux de résultats suivants :  
   
 -   L'ensemble de résultats **Aucun** est utilisé lorsque la requête ne retourne aucun résultat. Par exemple, cet ensemble de résultats est utilisé pour les requêtes qui ajoutent, modifient et suppriment des enregistrements dans une table.  
@@ -46,7 +46,7 @@ ms.locfileid: "66056428"
   
  Si la tâche d'exécution SQL utilise l'ensemble de résultats **Ensemble de résultats complet** et que la requête retourne plusieurs ensemble de lignes, la tâche ne retourne que le premier. Si cet ensemble de lignes génère une erreur, la tâche la signale. En revanche, si d'autres ensembles de lignes génèrent des erreurs, la tâche ne les signale pas.  
   
-##  <a name="Populate_variable_with_result_set"></a>Remplissage d’une variable à l’aide d’un jeu de résultats  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>Remplissage d’une variable à l’aide d’un jeu de résultats  
  Vous pouvez lier le jeu de résultats retourné par une requête à une variable définie par l'utilisateur si le type du jeu de résultats est une ligne unique, un ensemble de lignes ou des données XML.  
   
  Si le type de l'ensemble de résultats est **Ligne unique**, vous pouvez lier une colonne du résultat obtenu à une variable en utilisant le nom de colonne comme nom d'ensemble de résultats. Vous pouvez également utiliser comme nom la position ordinale de la colonne dans la liste des colonnes. Par exemple, le nom de l'ensemble de résultats de la requête `SELECT Color FROM Production.Product WHERE ProductID = ?` pourrait être **Color** ou **0**. Si la requête retourne plusieurs colonnes et que vous souhaitez accéder aux valeurs de toutes les colonnes, vous devez lier chaque colonne à une variable différente. Si vous mappez des colonnes à des variables en utilisant des numéros comme noms de jeux de résultats, ces numéros reflètent l'ordre d'apparition des colonnes dans la liste des colonnes de la requête. Par exemple, dans la requête `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, vous utilisez 0 pour la colonne **Color** et 1 pour la colonne **ListPrice** . La possibilité d'utiliser un nom de colonne comme nom d'ensemble de résultats dépend du fournisseur que la tâche a été configurée pour utiliser. Tous les fournisseurs ne rendent pas les noms de colonnes disponibles.  
@@ -55,7 +55,7 @@ ms.locfileid: "66056428"
   
  Si le type de l'ensemble de résultats est **Ensemble de résultats complet** ou **XML**, vous devez utiliser 0 comme nom de jeu de résultats.  
   
- Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous affectez **** à `Allowed`la propriété TypeConversionMode la valeur, la tâche d’exécution SQL tente de convertir le paramètre de sortie et les résultats de la requête en type de données de la variable à laquelle les résultats sont affectés.  
+ Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous affectez **TypeConversionMode** à `Allowed`la propriété TypeConversionMode la valeur, la tâche d’exécution SQL tente de convertir le paramètre de sortie et les résultats de la requête en type de données de la variable à laquelle les résultats sont affectés.  
   
  Un ensemble de résultats XML ne peut être associé qu'à une variable de type de données `String` ou `Object`. Si la variable est de type de données `String`, la tâche d'exécution SQL retourne une chaîne et la source XML peut exploiter les données XML. Si la variable est de type de données `Object`, la tâche d'exécution SQL retourne un objet DOM (Document Object Model).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66056428"
   
  Vous pouvez définir la variable dans l'étendue de la tâche d'exécution SQL ou dans celle du package. Si la variable a l'étendue d'un package, le jeu de résultats est disponible pour les autres tâches et conteneurs figurant dans le package, ainsi que pour les packages exécutés par les tâches d'exécution de package ou d'exécution de package DTS 2000.  
   
- Quand vous mappez une variable à un jeu de résultats **Ligne unique**, les valeurs qui ne sont pas des chaînes et qui sont retournées par l’instruction SQL sont converties en chaînes quand les conditions suivantes sont réunies :  
+ Quand vous mappez une variable à un jeu de résultats **Ligne unique** , les valeurs qui ne sont pas des chaînes et qui sont retournées par l’instruction SQL sont converties en chaînes quand les conditions suivantes sont réunies :  
   
 -   La propriété **TypeConversionMode** a la valeur true. Définissez la valeur de propriété dans la fenêtre Propriétés ou à l'aide de l' **éditeur de tâche d'exécution de requêtes SQL**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66056428"
   
  Pour plus d’informations sur le chargement d’un jeu de résultats dans une variable, consultez [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a>Configuration des jeux de résultats dans la tâche d’exécution SQL  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>Configuration des jeux de résultats dans la tâche d’exécution SQL  
  Pour plus d'informations sur les propriétés de jeux de résultats que vous pouvez définir dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Éditeur de tâche d’exécution de SQL &#40;page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

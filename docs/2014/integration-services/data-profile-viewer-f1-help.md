@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059718"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Aide F1 de la Visionneuse du profil des données
@@ -31,13 +31,13 @@ ms.locfileid: "66059718"
  **Ouvrir**  
  Cliquez pour accéder au fichier enregistré qui contient la sortie de la tâche de profilage des données.  
   
- Volet **profils**  
+ Volet**Profils**  
  Développez l’arborescence du volet **Profils** pour consulter les profils inclus dans la sortie. Sélectionnez un profil afin d'afficher les résultats de ce profil.  
   
- Volet de **message**  
+ Volet**Message**  
  Affiche des messages d'état.  
   
- Volet d' **exploration**  
+ Volet**Exploration vers le bas**  
  Affiche les lignes de données qui correspondent à une valeur dans la sortie, si la source de données utilisée par la tâche de profilage des données est disponible.  
   
  Par exemple, si vous affichez la sortie d’un profil de distribution de valeurs de colonne pour une colonne des états américains, le volet **Distribution de valeurs** peut contenir une ligne pour « WA ». Double-cliquez sur la ligne dans le volet **Distribution de valeurs** pour consulter les lignes de données pour lesquelles la valeur de la colonne d’état est « WA » dans le volet d’exploration.  
@@ -56,7 +56,7 @@ ms.locfileid: "66059718"
  **Ignorer les espaces de début**  
  Indique si ce profil a été calculé avec une valeur `IgnoreLeadingSpaces` True ou False. Cette propriété a été définie dans la page **Demandes de profil** de l’éditeur de tâche de profilage de données.  
   
- **Ignorer les espaces de fin**  
+ **Ignorez les espaces de fin**  
  Indique si ce profil a été calculé avec une valeur `IgnoreTrailingSpaces` True ou False. Cette propriété a été définie dans la page **Demandes de profil** de l’éditeur de tâche de profilage de données.  
   
  **Nombre de lignes**  
@@ -66,16 +66,16 @@ ms.locfileid: "66059718"
  **Longueur**  
  Affiche les longueurs de colonne trouvées dans la colonne profilée.  
   
- **Saut**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la valeur de la colonne profilée a la longueur affichée dans la colonne **Longueur** .  
   
- **Cent**  
+ **Pourcentage**  
  Affiche le pourcentage de lignes dans lesquelles la valeur de la colonne profilée a la longueur affichée dans la colonne **Longueur** .  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Type de profil = Profil de ratio de colonne Null  
   
 #### <a name="column-null-ratio-profile---column-pane"></a>Profil de ratio de colonne Null - volet \<colonne>  
- **Nombre de valeurs null**  
+ **Nombre null**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée possède une valeur NULL.  
   
  **Pourcentage null**  
@@ -91,10 +91,10 @@ ms.locfileid: "66059718"
  Affiche le nombre de lignes présentes dans la table ou la vue.  
   
 #### <a name="pattern-distribution-pane"></a>Volet Distribution de modèles  
- **Répétition**  
+ **Modèle**  
  Affiche les modèles calculés pour la colonne profilée.  
   
- **Cent**  
+ **Pourcentage**  
  Affiche le pourcentage de lignes dont les valeurs correspondent au modèle affiché dans la colonne **Modèle** .  
   
 ### <a name="profile-type--column-statistics-profile"></a>Type de profil = Profil de statistiques de colonnes  
@@ -103,10 +103,10 @@ ms.locfileid: "66059718"
  **Minimale**  
  Affiche la valeur minimale trouvée dans la colonne profilée.  
   
- **Valeurs**  
+ **Maximale**  
  Affiche la valeur maximale trouvée dans la colonne profilée.  
   
- **Interprété**  
+ **Moyenne**  
  Affiche la moyenne des valeurs trouvées dans la colonne profilée.  
   
  **Écart type**  
@@ -125,10 +125,10 @@ ms.locfileid: "66059718"
  **Valeur**  
  Affiche les valeurs distinctes trouvées dans la colonne profilée.  
   
- **Saut**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
- **Cent**  
+ **Pourcentage**  
  Affiche le pourcentage de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
 ### <a name="profile-type--candidate-key-profile"></a>Type de profil = Profil de clé candidate  
@@ -144,19 +144,19 @@ ms.locfileid: "66059718"
  **\<Colonne1>, \<Colonne2>, etc.**  
  Affiche les valeurs dupliquées qui ont été détectées dans la colonne profilée.  
   
- **Saut**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Type de profil = Profil de dépendance fonctionnelle  
   
 #### <a name="functional-dependency-profile-pane"></a>Volet Profil de dépendance fonctionnelle  
- **Colonnes déterministes**  
+ **Colonnes déterminantes**  
  Affiche les colonnes sélectionnées comme colonnes déterminantes. Dans l'exemple où le même code postal américain doit systématiquement posséder le même état, le code postal est la colonne déterminante.  
   
  **Colonnes dépendantes**  
  Affiche les colonnes sélectionnées comme colonnes dépendantes. Dans l'exemple où le même code postal d'état américain doit systématiquement posséder le même état, l'état est la colonne déterminante.  
   
- **Force de dépendance fonctionnelle**  
+ **Puissance de la dépendance fonctionnelle**  
  Affiche la puissance (sous forme de pourcentage) de la dépendance fonctionnelle entre les colonnes. Une puissance de clé inférieure à 100% indique qu'il existe des situations où la valeur déterminante ne détermine pas la valeur dépendante. Dans l'exemple où le même code postal d'état américain doit systématiquement posséder le même état, cela indique probablement que certaines valeurs d'état ne sont pas valides.  
   
 #### <a name="functional-dependency-violations-pane"></a>Volet Violations de la dépendance fonctionnelle  
@@ -170,13 +170,13 @@ ms.locfileid: "66059718"
  **\<nom de la colonne dépendante>**  
  Affiche la valeur de la colonne dépendante dans cette instance d'une violation de dépendance fonctionnelle.  
   
- **nombre de supports**  
+ **Nombre de supports**  
  Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante détermine la colonne dépendante.  
   
  **Nombre de violations**  
  Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante ne détermine pas la colonne dépendante. (Il s’agit des lignes dans lesquelles la valeur dépendante est la valeur affichée dans la colonne nom de la ** \<colonne dépendante>** .)  
   
- **pourcentage de supports**  
+ **Pourcentage de supports**  
  Affiche le pourcentage de lignes dans lesquelles la colonne déterminante détermine la colonne dépendante.  
   
 ### <a name="profile-type--value-inclusion-profile"></a>Type de profil = Profil d'inclusion de valeur  
@@ -188,14 +188,14 @@ ms.locfileid: "66059718"
  **Colonnes côté sur-ensemble**  
  Affiche la colonne ou la combinaison de colonnes qui ont été profilées pour déterminer si elles incluent les valeurs dans les colonnes du sous-ensemble.  
   
- **Puissance d’inclusion**  
+ **Puissance d'inclusion**  
  Affiche la puissance (sous forme de pourcentage) du chevauchement entre les colonnes. Une puissance de clé inférieure à 100 % indique que dans certains cas, la valeur du sous-ensemble est introuvable parmi les valeurs du sur-ensemble.  
   
 #### <a name="inclusion-violations-pane"></a>Volet des violations d'inclusion  
  **\<Colonne1>, \<Colonne2>, etc.**  
  Affiche les valeurs de la colonne ou des colonnes du sous-ensemble qui étaient introuvables dans la colonne ou les colonnes du sur-ensemble.  
   
- **Saut**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 ## <a name="see-also"></a>Voir aussi  

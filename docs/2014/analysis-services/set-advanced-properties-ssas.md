@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068824"
 ---
 # <a name="set-advanced-properties-ssas"></a>Définir les propriétés avancées (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de spécifier des paramètres de propriété supplémentaires pour une connexion à la source de données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Fournisseurs**  
+ **Éditeurs**  
  Sélectionnez le fournisseur à utiliser pour la connexion à la source de données. Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur.  
   
  **Chaîne de connexion**  

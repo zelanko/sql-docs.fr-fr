@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068417"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Boîte de dialogue Spécifier le mappage des colonnes (Graphique d'analyse de précision de l'exploration de données)
   Utilisez l’onglet **Spécifier le mappage des colonnes** pour sélectionner des tables d’une source de données externe et mapper les colonnes à un modèle d’exploration de données. Vous pouvez ensuite utiliser les données externes pour tester la précision d'un modèle d'exploration de données et afficher les résultats dans le graphique d'analyse de précision.  
   
- **Pour plus d’informations :** [test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Pour plus d’informations :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Options  
- **Structure d’exploration de données**  
+ **Structure d'exploration de données**  
  Affiche la structure d'exploration de données sélectionnée qui contient le modèle à tester.  
   
  **Sélectionner une structure**  

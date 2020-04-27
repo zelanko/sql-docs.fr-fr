@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066027"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -25,7 +25,7 @@ ms.locfileid: "66066027"
 |Terme|Définition|  
 |----------|----------------|  
 |**Ajouter Business Intelligence**|Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision.|  
-|**Procédure**|Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le cube.|  
+|**Processus**|Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le cube.|  
 |**Nouvelle mesure**|Cliquez pour afficher la boîte de dialogue **Nouvelle mesure** et ajouter une nouvelle mesure au groupe de mesures sélectionné dans le volet **Mesures** .|  
 |**Nouveau groupe de mesures**|Cliquez pour afficher la boîte de dialogue **Nouveau groupe de mesures** et ajouter un nouveau groupe de mesures dans le volet **Mesures** .|  
 |**Afficher les mesures**|Cliquez pour faire défiler les options suivantes ou sélectionnez l'une des options suivantes pour changer la vue du volet **Mesures** :<br /><br /> **Arborescence**: affiche les groupes de mesures et les mesures dans une arborescence.<br /><br /> **Grid**: afficher les groupes de mesures et les mesures dans une grille.|  

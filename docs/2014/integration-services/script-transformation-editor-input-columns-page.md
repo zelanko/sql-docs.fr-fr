@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056092"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Éditeur de transformation de script (page Colonnes d'entrée)
@@ -33,7 +33,7 @@ ms.locfileid: "66056092"
  **Nom d’entrée**  
  Sélectionnez le nom d'une entrée dans la liste.  
   
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Utilisez les cases à cocher pour spécifier les colonnes que la transformation de script utilisera.  
   
  **Colonne d'entrée**  
@@ -46,7 +46,7 @@ ms.locfileid: "66056092"
  Spécifiez si la transformation de script traite chaque colonne en `ReadOnly` ou en `ReadWrite`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sélectionner un type de composant de script](../../2014/integration-services/select-script-component-type.md)   
  [Éditeur de transformation de script &#40;page entrées et sorties&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Éditeur de transformation de script &#40;page de script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

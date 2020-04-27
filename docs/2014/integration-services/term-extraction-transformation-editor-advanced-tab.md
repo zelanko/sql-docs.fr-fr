@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055270"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Éditeur de transformation d'extraction de terme (onglet Avancé)
@@ -36,7 +36,7 @@ ms.locfileid: "66055270"
  **Nom et expression nominale**  
  Indique que la transformation extrait des noms et des expressions nominales.  
   
- **Argument**  
+ **Fréquence**  
  Indique que le score correspond à la fréquence du terme.  
   
  **TFIDF**  
@@ -48,14 +48,14 @@ ms.locfileid: "66055270"
  **Longueur maximale du terme**  
  Définissez la longueur maximale d'une expression en nombre de mots. Cette option affecte uniquement les expressions nominales. La valeur par défaut est 12.  
   
- **Utiliser l’extraction de terme respectant la casse**  
+ **Utiliser l'extraction de terme respectant la casse**  
  Indiquez si l'extraction doit respecter la casse. Par défaut, il s’agit de `False`.  
   
  **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de transformation d’extraction de terme &#40;onglet extraction de terme&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Éditeur de transformation d’extraction de terme &#40;onglet exclusion&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  

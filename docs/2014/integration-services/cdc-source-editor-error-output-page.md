@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061039"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Éditeur de source CDC (page Sortie d'erreur)
@@ -25,7 +25,7 @@ ms.locfileid: "66061039"
  Pour en savoir plus sur la source CDC, consultez [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour ouvrir l’éditeur de source CDC, page sortie d’erreur**  
+ **Pour ouvrir l'Éditeur de source CDC (page Sortie d'erreur)**  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] qui possède la source CDC.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66061039"
  **Définir cette valeur sur les cellules sélectionnées**  
  Sélectionnez la façon dont la source CDC gère l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Appliquer**  
+ **appliquer**  
  Appliquez les options de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="error-handling-options"></a>Options de gestion des erreurs  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061063"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Éditeur de source CDC (page Gestionnaire de connexions)
@@ -25,7 +25,7 @@ ms.locfileid: "66061063"
  Pour plus d'informations sur la source CDC, consultez [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour ouvrir l’éditeur de source CDC (page Gestionnaire de connexions)**  
+ **Pour ouvrir l'Éditeur de source CDC (page Gestionnaire de connexions)**  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] qui possède la source CDC.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66061063"
  **Gestionnaire de connexions ADO.NET**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur **Nouveau** pour créer une connexion. La connexion doit être établie avec une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] activée pour la capture de données modifiées et dans laquelle la table de modifications sélectionnée est localisée.  
   
- **Nouveau**  
+ **Nouvelle**  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l’Éditeur du gestionnaire de connexions ADO.NET** s’ouvre et vous permet de créer un gestionnaire de connexions.  
   
  **Table CDC**  
@@ -46,7 +46,7 @@ ms.locfileid: "66061063"
  **Instance de capture**  
  Sélectionnez ou tapez le nom de l'instance de capture CDC avec la table CDC à lire.  
   
- Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom par défaut de l’instance de capture pour une table [schema].[table] est \<schéma>_\<table>, mais le nom réel utilisé pour cette instance de capture peut être différent. La table réelle dans laquelle les données sont lues est la table CDC **cdc .\<instance-capture>_CT**.  
+ Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom par défaut de l’instance de capture pour une table [schema].[table] est \<schéma>_\<table>, mais le nom réel utilisé pour cette instance de capture peut être différent. La table réelle lue est la table CDC **CDC.\<>_CT de capture-instance**.  
   
  **Mode de traitement CDC**  
  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
@@ -57,7 +57,7 @@ ms.locfileid: "66061063"
   
 -   **Net**: retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
--   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Modifié** qui indique les colonnes modifiées dans la ligne de modification active.  
+-   **Net avec masque de mise à jour**: ce mode est similaire au mode NET standard, mais il ajoute également des colonnes booléennes avec le modèle de nom **_ _ $\<Column-Name>\__Changed** qui indiquent les colonnes modifiées dans la ligne de modification actuelle.  
   
 -   **Net avec fusion**: ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66061063"
  **Variable contenant l'état CDC**  
  Sélectionnez la variable de package de chaîne SSIS qui gère l'état de capture de données modifiées pour le contexte de capture de données modifiées actuel. Pour plus d’informations sur la variable d’état CDC, consultez [Définir une variable d’état](data-flow/define-a-state-variable.md).  
   
- **Inclure la colonne de l’indicateur de retraitement**  
+ **Inclure la colonne de l'indicateur de retraitement**  
  Cochez cette case pour créer une colonne spéciale de sortie nommée **__$reprocessing**.  
   
  Cette colonne a la valeur **true** quand la plage de traitement CDC chevauche la plage de traitement initiale (la plage de NSE correspondant à la période de charge initiale) ou lorsqu’une plage de traitement CDC est retraitée suite à une erreur lors d’une exécution précédente. Cette colonne d'indicateur permet au développeur SSIS de gérer les erreurs différemment lors du retraitement des modifications (par exemple, les actions telles que la suppression d'une ligne inexistante et une insertion ayant échoué sur une clé dupliquée peuvent être ignorées).  
@@ -75,7 +75,7 @@ ms.locfileid: "66061063"
  Pour plus d’informations, consultez [Propriétés personnalisées des sources CDC](data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de source CDC &#40;page Colonnes&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [Éditeur de source CDC &#40;page colonnes&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

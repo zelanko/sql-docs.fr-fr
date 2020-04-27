@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068055"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Vue standard (onglet Agrégations, Concepteur de cube)
@@ -27,7 +27,7 @@ ms.locfileid: "66068055"
 |Option|Description|  
 |------------|-----------------|  
 |**Créer des agrégations**|Cliquez pour afficher l' **Assistant Conception d'agrégation**.|  
-|**Optimisation basée sur l'utilisation**|Cliquez pour afficher l’Assistant Optimisation de l' **utilisation** .|  
+|**Optimisation basée sur l'utilisation**|Cliquez pour afficher l'Assistant **Optimisation basée sur l'utilisation** .|  
 |**Affecter une conception d'agrégation**|Cliquez pour afficher la boîte de dialogue **Affecter une conception d'agrégation** .|  
 |**Supprimer**|Cliquez pour supprimer la conception d'agrégation sélectionnée.|  
 |**Propriétés**|Cliquez pour afficher les propriétés de l'agrégation.|  

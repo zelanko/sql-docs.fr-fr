@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060051"
 ---
 # <a name="data-conversion-transformation-editor"></a>Éditeur de transformation de conversion de données
@@ -30,7 +30,7 @@ ms.locfileid: "66060051"
  Pour en savoir plus sur la transformation de conversion de données, consultez [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Sélectionnez les colonnes à convertir en activant les cases à cocher. Les sélections ajoutent des colonnes d'entrée à la table ci-dessous.  
   
  **Colonne d'entrée**  
@@ -48,17 +48,17 @@ ms.locfileid: "66060051"
  **Précision**  
  Définissez la précision des données numériques.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Définissez l'échelle des données numériques.  
   
  **Page de codes**  
  Sélectionnez la page de codes appropriée pour les colonnes de type DT_STR.  
   
- **Configurer la sortie d’erreur**  
+ **Configurer l'affichage des erreurs**  
  Indiquez la façon dont les erreurs au niveau des lignes sont gérées via la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Convertir des données en un type différent à l'aide de la transformation de conversion de données](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

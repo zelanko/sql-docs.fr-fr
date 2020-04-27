@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068699"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Définir ou modifier la méthode de connexion par défaut pour DirectQuery
@@ -38,11 +38,11 @@ ms.locfileid: "66068699"
   
 3.  Dans le volet **Propriétés** , modifiez la propriété, **DirectQueryMode**, en l'une des valeurs qui prennent en charge l'utilisation de DirectQuery :  
   
-    -   **InMemory avec DirectQuery**: Si vous utilisez cette option, le modèle est déployé, mais vous devez traiter le cache avant de pouvoir exécuter des requêtes sur le modèle.  
+    -   **InMemory avec DirectQuery**: si vous utilisez cette option, le modèle est déployé, mais vous devez traiter le cache avant de pouvoir exécuter des requêtes sur le modèle.  
   
-    -   **DirectQuery avec InMemory**: Si vous utilisez cette option, le cache sera disponible pour être utilisé par les clients s’il a déjà été traité. Si vous déployez le modèle avec ce paramètre et ne traitez pas le cache, certains clients doivent obtenir une erreur lors de la tentative de connexion au modèle.  
+    -   **DirectQuery avec InMemory**: si vous utilisez cette option, le cache est disponible pour une utilisation par les clients s'il a déjà été traité. Si vous déployez le modèle avec ce paramètre et ne traitez pas le cache, certains clients doivent obtenir une erreur lors de la tentative de connexion au modèle.  
   
-    -   **DirectQuery uniquement**: Si vous utilisez cette option, les métadonnées sont déployées mais le modèle ne contient pas de données. Les clients qui tentent de se connecter à l'aide du mode en mémoire obtiennent une erreur, indiquant que le modèle n'existe pas ou n'a pas été traité.  
+    -   **DirectQuery uniquement**: si vous utilisez cette option, les métadonnées sont déployées mais le modèle ne contient pas de données. Les clients qui tentent de se connecter à l'aide du mode en mémoire obtiennent une erreur, indiquant que le modèle n'existe pas ou n'a pas été traité.  
   
 4.  En cas de erreurs, dans Visual Studio, ouvrez la **Liste d'erreurs** et résolvez tous les problèmes qui empêcheraient le modèle d'être déployé en mode DirectQuery.  
   

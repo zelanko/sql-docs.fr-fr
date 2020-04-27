@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059067"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Éditeur de tâche d'exécution de processus (page Général)
@@ -37,7 +37,7 @@ ms.locfileid: "66059067"
  Entrez une description de la tâche d'exécution de processus.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche d’exécution de processus &#40;page traiter&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   

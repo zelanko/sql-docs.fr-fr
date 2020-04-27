@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061417"
 ---
 # <a name="audit-transformation-editor"></a>Éditeur de transformation d'audit
-  La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]comprend des variables système qui fournissent ces informations.  
+  La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  
   
  Pour en savoir plus sur la transformation d'audit, consultez [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
@@ -33,13 +33,13 @@ ms.locfileid: "66061417"
  **Type d’audit**  
  Sélectionne une variable système disponible pour fournir les informations d'audit.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**GUID de l’instance d’exécution**|Insérez le GUID qui identifie de manière unique l'instance d'exécution du package.|  
+|**GUID d'instance d'exécution**|Insérez le GUID qui identifie de manière unique l'instance d'exécution du package.|  
 |**ID du package**|Insérez le GUID qui identifie de manière unique le package.|  
 |**Nom du package**|Insérez le nom du package.|  
 |**ID de version**|Insérez le GUID qui identifie de manière unique la version du package.|  
-|**Heure de début de l’exécution**|Insérez l'heure à laquelle l'exécution du package a commencé.|  
+|**Heure de début de l'exécution**|Insérez l'heure à laquelle l'exécution du package a commencé.|  
 |**Nom de l'ordinateur**|Insérez le nom de l'ordinateur sur lequel le package a été lancé.|  
 |**Nom d'utilisateur**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
 |**Nom de la tâche**|Insérez le nom de la tâche de flux de données à laquelle la transformation d'audit est associée.|  

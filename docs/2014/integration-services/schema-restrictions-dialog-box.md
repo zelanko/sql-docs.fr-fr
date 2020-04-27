@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056150"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Restrictions de schéma, boîte de dialogue
@@ -31,7 +31,7 @@ ms.locfileid: "66056150"
  **Variable**  
  Utilisez une variable pour définir les restrictions. Sélectionnez une variable dans la liste ou cliquez sur **nouvelle variable...** pour créer une variable.  
   
- **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md) , [Ajouter une variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
  **Text**  
  Entrez le texte qui définit les restrictions.  

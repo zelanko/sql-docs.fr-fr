@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060960"
 ---
 # <a name="common-properties"></a>Propriétés communes
@@ -31,9 +31,9 @@ ms.locfileid: "66060960"
   
  Cette rubrique répertorie et décrit les propriétés communes des objets de flux de données.  
   
--   [Components](#components)  
+-   [Composants](#components)  
   
--   [Entrées](#inputs)  
+-   [Port](#inputs)  
   
 -   [Colonnes d’entrée](#inputcolumns)  
   
@@ -63,13 +63,13 @@ ms.locfileid: "66060960"
   
 -   [Propriétés personnalisées des sources ODBC](data-flow/odbc-source-custom-properties.md)  
   
--   [OLE DB les propriétés personnalisées](data-flow/ole-db-custom-properties.md) OLE DB les propriétés personnalisées  
+-   [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)Propriétés personnalisées OLE DB  
   
 -   [Propriétés personnalisées de la destination de traitement de partition](data-flow/partition-processing-destination-custom-properties.md)  
   
 -   [Propriétés personnalisées des fichiers bruts](data-flow/raw-file-custom-properties.md)  
   
--   [Propriétés personnalisées de la destination du jeu d’enregistrements](data-flow/recordset-destination-custom-properties.md)  
+-   [Propriétés personnalisées de la destination du jeu d'enregistrements](data-flow/recordset-destination-custom-properties.md)  
   
 -   [Propriétés personnalisées de la destination SQL Server Compact Edition](data-flow/sql-server-compact-edition-destination-custom-properties.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66060960"
   
 -   [Propriétés personnalisées des sources XML](data-flow/xml-source-custom-properties.md)  
   
-##  <a name="components"></a>Propriétés du composant  
+##  <a name="component-properties"></a><a name="components"></a>Propriétés du composant  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  Le tableau suivant décrit les propriétés des composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -89,17 +89,17 @@ ms.locfileid: "66060960"
 |ComponentClassID|String|CLSID du composant.|  
 |ContactInfo|String|Informations de contact pour le développeur d'un composant.|  
 |Description|String|Description du composant de flux de données. La valeur par défaut de cette propriété est le nom du composant de flux de données.|  
-|id|Integer|Valeur qui identifie de manière unique cette instance du composant.|  
+|ID|Integer|Valeur qui identifie de manière unique cette instance du composant.|  
 |IdentificationString|String|Identifie le composant.|  
 |IsDefaultLocale|Boolean|Indique si le composant utilise les paramètres régionaux de la tâche de flux de données à laquelle il appartient.|  
 |LocaleID|Integer|Paramètres régionaux utilisés par le composant de flux de données lors de l'exécution du package. Tous les paramètres régionaux Windows sont disponibles dans les composants de flux de données.|  
-|Name|String|Nom du composant de flux de données.|  
+|Nom|String|Nom du composant de flux de données.|  
 |PipelineVersion|Integer|Version de la tâche de flux de données dans laquelle un composant est destiné à être exécuté.|  
 |UsesDispositions|Boolean|Indique si un composant a une sortie d'erreur.|  
 |ValidateExternalMetadata|Boolean|Indique si les métadonnées des colonnes externes sont validées. La valeur par défaut de cette propriété est `True`.|  
 |Version|Integer|Version d'un composant.|  
   
-##  <a name="inputs"></a>Propriétés d’entrée  
+##  <a name="input-properties"></a><a name="inputs"></a>Propriétés d’entrée  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , les transformations et destinations ont des sorties. Une entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Le tableau suivant décrit les propriétés des entrées de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -110,16 +110,16 @@ ms.locfileid: "66060960"
 |ErrorOrTruncationOperation|String|Chaîne facultative qui spécifie les types d'erreurs ou troncations qui peuvent se produire lors du traitement d'une ligne.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
 |HasSideEffects|Boolean|Indique si un composant peut être supprimé du plan d’exécution du workflow lorsqu’il n’est pas attaché à un composant en aval et lorsque `RunInOptimizedMode` a `true`la valeur.|  
-|id|Integer|Valeur qui identifie l'entrée de façon unique.|  
+|ID|Integer|Valeur qui identifie l'entrée de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie l'entrée.|  
 |IsSorted|Boolean|Indique si les données dans l'entrée sont triées.|  
-|Name|String|Nom de l'entrée.|  
+|Nom|String|Nom de l'entrée.|  
 |SourceLocale|Integer|ID de paramètres régionaux (LCID) des données d'entrée.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. . Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
   
  Les destinations et certaines transformations ne prennent pas en charge les sorties d’erreur, et les propriétés ErrorRowDisposition et TruncationRowDisposition de ces composants sont en lecture seule.  
   
-###  <a name="inputcolumns"></a>Propriétés de la colonne d’entrée  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a>Propriétés de la colonne d’entrée  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , une entrée contient une collection de colonnes d'entrée. Une colonne d'entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes d'entrée de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -131,10 +131,10 @@ ms.locfileid: "66060960"
 |ErrorOrTruncationOperation|String|Chaîne facultative qui spécifie les types d'erreurs ou troncations qui peuvent se produire lors du traitement d'une ligne.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID de la colonne de métadonnées externe assigné à une colonne d'entrée.|  
-|id|Integer|Valeur qui identifie la colonne d'entrée de façon unique.|  
+|ID|Integer|Valeur qui identifie la colonne d'entrée de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne d'entrée.|  
 |LineageID|Integer|ID de la colonne en amont.|  
-|Name|String|Nom de la colonne d'entrée.|  
+|Nom|String|Nom de la colonne d'entrée.|  
 |SortKeyPosition|Integer|Valeur qui indique si une colonne est triée, son ordre de tri et l'ordre dans lequel plusieurs colonnes sont triées. La valeur **0** indique que la colonne n'est pas triée.  Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
 |UpstreamComponentName|String|Nom du composant en amont.|  
@@ -142,7 +142,7 @@ ms.locfileid: "66060960"
   
  Les propriétés de type de données des colonnes d'entrée sont également décrites sous « Propriétés du type de données ».  
   
-##  <a name="outputs"></a>Propriétés de sortie  
+##  <a name="output-properties"></a><a name="outputs"></a>Propriétés de sortie  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , les sources et les transformations ont des sorties. Une sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Le tableau suivant décrit les propriétés des sorties de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -155,15 +155,15 @@ ms.locfileid: "66060960"
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
 |ExclusionGroup|Integer|Valeur qui identifie un groupe de sorties s'excluant mutuellement.|  
 |HasSideEffects|Boolean|Valeur qui indique si un composant peut être supprimé du plan d'exécution du flux de données lorsqu'il n'est pas attaché à un composant en amont et lorsque la propriété `RunInOptimizedMode` a la valeur `true`.|  
-|id|Integer|Valeur qui identifie la sortie de façon unique.|  
+|ID|Integer|Valeur qui identifie la sortie de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la sortie.|  
 |IsErrorOut|Boolean|Indique si la sortie est une sortie d'erreur.|  
 |IsSorted|Boolean|Indique si la sortie est triée. La valeur par défaut est `False`.<br /><br /> ** \* Important \* \* ** La définition de la valeur `IsSorted` de la `True` propriété sur ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Name|String|Nom de la sortie.|  
+|Nom|String|Nom de la sortie.|  
 |SynchronousInputID|Integer|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
   
-###  <a name="outputcolumns"></a>Propriétés de la colonne de sortie  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a>Propriétés de la colonne de sortie  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , une sortie contient une collection de colonnes de sortie. Une colonne de sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes de sortie de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -175,10 +175,10 @@ ms.locfileid: "66060960"
 |ErrorOrTruncationOperation|String|Chaîne facultative qui spécifie les types d'erreurs ou troncations qui peuvent se produire lors du traitement d'une ligne.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`. La valeur par défaut est `Fail component`.|  
 |ExternalMetadataColumnID|Integer|ID de la colonne de métadonnées externe assigné à une colonne d'entrée.|  
-|id|Integer|Valeur qui identifie la colonne de sortie de façon unique.|  
+|ID|Integer|Valeur qui identifie la colonne de sortie de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne de sortie.|  
 |LineageID|Integer|ID de la colonne de sortie. Les composants en aval font référence à la colonne à l'aide de cette valeur.|  
-|Name|String|Nom de la colonne de sortie.|  
+|Nom|String|Nom de la colonne de sortie.|  
 |SortKeyPosition|Integer|Valeur qui indique si une colonne est triée, son ordre de tri et l'ordre dans lequel plusieurs colonnes sont triées. La valeur **0** indique que la colonne n'est pas triée. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Integer|Valeur qui contient les indicateurs spéciaux de la colonne de sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`. La valeur par défaut est `Fail component`.|  
@@ -193,9 +193,9 @@ ms.locfileid: "66060960"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |Description|String|Décrit la colonne externe.|  
-|id|Integer|Valeur qui identifie la colonne de façon unique.|  
+|ID|Integer|Valeur qui identifie la colonne de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne.|  
-|Name|String|Nom de la colonne externe.|  
+|Nom|String|Nom de la colonne externe.|  
   
  Les colonnes de métadonnées externes incluent également un jeu de propriétés de type de données.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66060960"
 |Scale|Integer|Échelle d'une colonne numérique.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Flux de données](data-flow/data-flow.md)   
+ [Transmission de données](data-flow/data-flow.md)   
  [Transformation, propriétés personnalisées](data-flow/transformations/transformation-custom-properties.md)   
  [Propriétés du chemin](../../2014/integration-services/path-properties.md)   
  [Propriétés du flux de données pouvant être définies à l’aide d’expressions](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  

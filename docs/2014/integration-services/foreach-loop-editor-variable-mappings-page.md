@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058527"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Éditeur de boucle Foreach (page Mappage de variables)
@@ -35,22 +35,22 @@ ms.locfileid: "66058527"
   
  **Rubriques connexes**: [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
- **Évaluer**  
+ **Index**  
  Si vous utilisez l'énumérateur Foreach Item, indiquez l'index de la colonne de la valeur de la collection à mapper à la variable. Pour les autres types d'énumérateur, l'index est en lecture seule.  
   
 > [!NOTE]  
 >  L'index commence à 0.  
   
- **Rubriques connexes**: parcourir [les fichiers et les tables Excel en utilisant un conteneur de boucles Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Rubrique connexe**: [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Supprimer**  
  Sélectionnez une variable, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de boucle foreach &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur de boucle foreach &#40;page de collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Conteneur de boucles For](control-flow/for-loop-container.md)  
   
   

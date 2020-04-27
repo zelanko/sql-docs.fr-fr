@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055082"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Éditeur de tâche de transfert de messages d'erreur (page Général)
@@ -35,7 +35,7 @@ ms.locfileid: "66055082"
  Entrez une description de la tâche de transfert de messages d'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert de messages d’erreur &#40;page messages&#41;](../../2014/integration-services/transfer-error-messages-task-editor-messages-page.md)   
  [Page Expressions](expressions/expressions-page.md)  

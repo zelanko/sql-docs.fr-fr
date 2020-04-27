@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057135"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Éditeur de destination OLE DB (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination OLE DB** pour sélectionner la connexion OLE DB de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
   
 > [!NOTE]  
->  La `CommandTimeout` propriété de la destination de la OLE DB n’est pas disponible dans l' **éditeur de destination OLE DB**, mais elle peut être définie à l’aide de l' **éditeur avancé**. De plus, certaines options de chargement rapide sont uniquement disponibles dans **l’Éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section sur la destination OLE DB dans [Propriétés personnalisées OLE DB](data-flow/ole-db-custom-properties.md).  
+>  La `CommandTimeout` propriété de la destination de la OLE DB n’est pas disponible dans l' **éditeur de destination OLE DB**, mais elle peut être définie à l’aide de l' **éditeur avancé**. De plus, certaines options de chargement rapide sont uniquement disponibles dans la **éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section sur la destination OLE DB dans [Propriétés personnalisées OLE DB](data-flow/ole-db-custom-properties.md).  
   
  Pour en savoir plus sur la destination OLE DB, consultez [OLE DB Destination](data-flow/ole-db-destination.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66057135"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
  **Mode d'accès aux données**  
@@ -43,11 +43,11 @@ ms.locfileid: "66057135"
 |------------|-----------------|  
 |Table ou vue|Chargez les données dans une table ou une vue de la destination OLE DB.|  
 |Table ou vue - chargement rapide|Chargez les données dans une table ou une vue de la destination OLE DB et utilisez l'option de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](data-flow/ole-db-destination.md).|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes**: [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
 |Variable de nom de table ou de vue - chargement rapide|Spécifiez le nom de la table ou de la vue dans une variable et chargez les données à l'aide de l'option de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](data-flow/ole-db-destination.md).|  
 |Commande SQL|Chargez les données dans la destination OLE DB à l'aide d'une requête SQL.|  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
@@ -57,26 +57,26 @@ ms.locfileid: "66057135"
  **Nom de la table ou de la vue**  
  Sélectionnez le nom de la table ou de la vue dans la liste de celles qui sont disponibles dans la source de données.  
   
- **Nouveau**  
+ **Nouvelle**  
  Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
   
 > [!NOTE]  
->  Lorsque vous cliquez **** sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Lorsque vous cliquez **New**sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>Mode d’accès aux données = Table ou vue - chargement rapide  
  **Nom de la table ou de la vue**  
  Sélectionnez une table ou une vue dans la base de données à l’aide de cette liste, ou créez une table en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
   
 > [!NOTE]  
->  Lorsque vous cliquez **** sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Lorsque vous cliquez **New**sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- **Conserver l’identité**  
+ **Conserver l'identité**  
  Spécifiez si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est `false`.  
   
- **Conserver les valeurs null**  
+ **Conserver les valeurs NULL**  
  Spécifiez si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est `false`.  
   
  **Verrou de table**  
@@ -91,7 +91,7 @@ ms.locfileid: "66057135"
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
   
- **Taille de validation d’insertion maximale**  
+ **Taille de validation d'insertion maximale**  
  Spécifiez la taille du lot que la destination OLE DB tente de valider pendant les opérations de chargement rapide. La valeur **0** indique que toutes les données sont validées dans un seul lot après traitement de toutes les lignes.  
   
 > [!NOTE]  
@@ -110,16 +110,16 @@ ms.locfileid: "66057135"
  **Nom de la variable**  
  Sélectionnez la variable qui contient le nom de la table ou de la vue.  
   
- **Nouveau**  
+ **Nouvelle**  
  Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
   
 > [!NOTE]  
->  Lorsque vous cliquez **** sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Lorsque vous cliquez **New**sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- **Conserver l’identité**  
+ **Conserver l'identité**  
  Spécifiez si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est `false`.  
   
- **Conserver les valeurs null**  
+ **Conserver les valeurs NULL**  
  Spécifiez si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est `false`.  
   
  **Verrou de table**  
@@ -134,7 +134,7 @@ ms.locfileid: "66057135"
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
   
- **Taille de validation d’insertion maximale**  
+ **Taille de validation d'insertion maximale**  
  Spécifiez la taille du lot que la destination OLE DB tente de valider pendant les opérations de chargement rapide. La valeur par défaut, **2147483647** , indique que toutes les données sont validées dans un seul lot après traitement de toutes les lignes.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ ms.locfileid: "66057135"
  Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
 > [!NOTE]  
->  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, voir [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md).  
+>  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, consultez [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md).  
   
  **Générer la requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
@@ -157,7 +157,7 @@ ms.locfileid: "66057135"
  Vérifiez la syntaxe du texte de la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination de OLE DB &#40;page Mappages&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB éditeur de destination &#40;page sortie d’erreur&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Charger des données à l'aide de la destination OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  

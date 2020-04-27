@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059987"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Éditeur du chemin d'accès au flux de données (Page Métadonnées)
   Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour afficher les métadonnées des colonnes du chemin d'accès.  
   
 ## <a name="options"></a>Options  
- **Métadonnées du chemin**  
+ **Path metadata**  
  Affiche la liste des métadonnées des colonnes. Cliquez sur les en-têtes de colonne pour trier les données des colonnes.  
   
  **Nom**  
@@ -37,7 +37,7 @@ ms.locfileid: "66059987"
  **Précision**  
  Affiche le nombre de chiffres d'une valeur numérique.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Affiche le nombre de chiffres à droite du séparateur décimal d'une valeur numérique.  
   
  **Longueur**  
@@ -64,7 +64,7 @@ ms.locfileid: "66059987"
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur du chemin d’accès au Data Flow &#40;&#41;de page général](general-page-of-integration-services-designers-options.md)   
  [Éditeur du chemin d’accès au workflow &#40;page des visionneuses de données&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [Flux de données](data-flow/data-flow.md)   
+ [Transmission de données](data-flow/data-flow.md)   
  [Utiliser des annotations dans les packages](use-annotations-in-packages.md)  
   
   

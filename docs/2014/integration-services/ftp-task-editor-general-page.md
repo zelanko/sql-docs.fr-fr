@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058430"
 ---
 # <a name="ftp-task-editor-general-page"></a>Éditeur de tâche FTP (page Général)
@@ -33,9 +33,9 @@ ms.locfileid: "66058430"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions FTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes**: [Gestionnaire de connexions FTP](connection-manager/ftp-connection-manager.md), [éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Rubriques connexes :**[Gestionnaires de connexion FTP](connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
- **StopOnFailure**  
+ **Arrêt en cas d'échec de l'opération**  
  Indique si la tâche FTP se termine en cas d'échec de l'opération.  
   
  **Nom**  
@@ -48,7 +48,7 @@ ms.locfileid: "66058430"
  Tapez une description de la tâche FTP.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche FTP &#40;page transfert de fichiers&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   

@@ -14,17 +14,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055280"
 ---
 # <a name="technical-reference-integration-services"></a>Références techniques (Integration Services)
   Recherchez les outils, les langages et la documentation de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] référence [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]de programmation pour dans.  
   
  ![Petite icône de dossier de fichiers](media/filefolder-small.gif "Petite icône de dossier de fichiers") **changement de service de capture de données et concepteur**  
- [Service CDC pour Oracle par Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
+ [Service de capture de données modifiées pour Oracle par Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
  [Concepteur de capture de données modifiées pour Oracle par Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   

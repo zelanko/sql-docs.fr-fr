@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055597"
 ---
 # <a name="smo-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SMO
@@ -30,7 +30,7 @@ ms.locfileid: "66055597"
  **Nom du serveur**  
  Tapez le nom de l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou sélectionnez le nom du serveur dans la liste.  
   
- **Actualiser**  
+ **Actualisation**  
  Actualisez la liste des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles qui peuvent être détectées sur le réseau.  
   
  **Utiliser l’authentification Windows**  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058218"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implémenter une stratégie de signature en définissant une valeur du Registre
@@ -34,7 +34,7 @@ ms.locfileid: "66058218"
   
  Le tableau suivant répertorie les valeurs valides des données DWORD et leur stratégie associée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Pas de restriction administrative.|  
 |1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
@@ -46,7 +46,7 @@ ms.locfileid: "66058218"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Pour implémenter une stratégie de signature pour des packages  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
+1.  Dans le menu **Démarrer**, cliquez sur **Exécuter**.  
   
 2.  Dans la boîte de dialogue Exécuter, `Regedit`tapez, puis cliquez sur **OK**.  
   

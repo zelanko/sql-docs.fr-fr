@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065030"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Créer une session d'événements étendus à l'aide de l'éditeur de requête
@@ -35,7 +35,7 @@ ms.locfileid: "66065030"
   
  Pour plus d’informations sur la création d’une session Événements étendus à l’aide de l’Assistant Nouvelle session, consultez [Créer une session d’événements étendus à l’aide de l’Assistant &#40;Explorateur d’objets&#41;](../ssms/object/object-explorer.md). Pour plus d’informations sur la création d’une session d’événements étendus en utilisant l’interface utilisateur de nouvelle session, consultez [Créer une session Événements étendus à l’aide de la boîte de dialogue Nouvelle session](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Autorisations  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Autorisations  
  Pour créer une session d'événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Création d'une session d'événements étendus à l'aide de l'éditeur de requête  
@@ -219,8 +219,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [Cibles des Événements étendus SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [CRÉER une SESSION d’événements &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server les cibles d’événements étendus](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Packages d’événements étendus SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

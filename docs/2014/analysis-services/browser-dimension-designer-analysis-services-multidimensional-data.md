@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064629"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Navigateur (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -27,7 +27,7 @@ ms.locfileid: "66064629"
 ## <a name="panes"></a>Volets  
  L'onglet **Navigateur** contient les volets suivants :  
   
- [Barre d'outils](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barre](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilisez la barre d’outils pour effectuer les opérations courantes sous l’onglet **Navigateur** du Concepteur de dimensions.  
   
  [Niveau et membres](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

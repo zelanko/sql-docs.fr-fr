@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066287"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>Modélisation tabulaire (SSAS Tabulaire)
@@ -25,9 +25,9 @@ ms.locfileid: "66066287"
  Les modèles tabulaires sont créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide de nouveaux modèles de projet de modèles tabulaires. Vous pouvez importer des données depuis plusieurs sources, puis enrichir le modèle en ajoutant des relations, des colonnes calculées, des mesures, des indicateurs de performance clés et des hiérarchies. Des modèles peuvent ensuite être déployés sur une instance d'Analysis Services à laquelle les applications clientes de création de rapports peuvent se connecter. Les modèles déployés peuvent être gérés dans SQL Server Management Studio comme tous les modèles multidimensionnels. Ils peuvent également être partitionnés pour un traitement optimisé et être sécurisés au niveau de la ligne à l'aide de la sécurité basée sur le rôle.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-solutions-ssas-tabular.md)  
+ [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
- [Bases de données model tabulaires &#40;&#41;SSAS tabulaire](tabular-model-databases-ssas-tabular.md)  
+ [Bases de données model tabulaires #40;SSAS Tabulaire#41;](tabular-model-databases-ssas-tabular.md)  
   
  [Accès aux données de modèle tabulaire](tabular-model-data-access.md)  
   

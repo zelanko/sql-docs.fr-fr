@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069111"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Onglet Diagramme de cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
@@ -24,13 +24,13 @@ ms.locfileid: "66069111"
   
  Utilisez cette vue d'un modèle Sequence Clustering pour procéder à une extraction depuis chaque cluster dans les cas de prise en charge, si l'extraction a été activée. Vous pouvez également affecter des noms descriptifs aux clusters et remplacer la variable d'ombrage afin d'évaluer la distribution des valeurs en un coup d'œil  
   
- **Pour plus d’informations :** [algorithme de clustering de séquences Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  

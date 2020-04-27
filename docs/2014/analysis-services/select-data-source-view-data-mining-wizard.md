@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069680"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Sélectionner une vue de source de données (Assistant Exploration de données)
   La page **Sélectionner une vue de source de données** permet d’identifier la vue de source de données pour la structure d’exploration de données.  
   
 > [!NOTE]  
->  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’une base de données relationnelles ou d’un entrepôt de données qui existent déjà** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
+>  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’une base de données relationnelle ou d’un entrepôt de données qui existent déjà** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md), [assistant exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Vues de sources de données disponibles**  

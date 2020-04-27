@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062438"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scénario du didacticiel Analysis Services
-  Ce didacticiel est basé sur [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], une société fictive. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une grande entreprise multinationale spécialisée dans la fabrication et la distribution de métaux et de pièces détachées de vélos pour les marchés d'Amérique du Nord, d'Europe et d'Asie. Le siège de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est situé dans la ville de Bothell, à Washington, où 500 personnes sont employées. Par ailleurs, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
+  Ce didacticiel est basé sur [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], une société fictive. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une grande entreprise multinationale spécialisée dans la fabrication et la distribution de métaux et de pièces détachées de vélos pour les marchés d'Amérique du Nord, d'Europe et d'Asie. Le siège de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est situé dans la ville de Bothell, à Washington, où 500 personnes sont employées. Par ailleurs, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
   
  Il y a quelques années, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a acheté une petite usine de fabrication, Importadores Neptuno, située au Mexique. Importadores Neptuno fabrique des sous-composants importants qui entrent dans la fabrication de la ligne de produits [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Ces sous-composants sont livrés à Bothell pour l'assemblage du produit final. En 2005, Importadores Neptuno est devenu le seul fabricant et distributeur de bicyclettes de tourisme du groupe de produits.  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66062438"
  Les leçons du didacticiel Analysis Services fournissent de l'aide en générant une base de données de cube qui répond à tous ces critères. Pour commencer, passez à la première leçon : [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La modélisation multidimensionnelle &#40;le didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

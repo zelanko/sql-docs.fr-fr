@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059268"
 ---
 # <a name="excel-connection-manager-editor"></a>Éditeur du gestionnaire de connexions Excel
@@ -39,7 +39,7 @@ ms.locfileid: "66059268"
  **Parcourir**  
  Utilisez la boîte de dialogue **ouvrir** pour accéder au dossier dans lequel se trouve le fichier Excel ou à l’emplacement où vous souhaitez créer le fichier.  
   
- **Version Excel**  
+ **Version d’Excel**  
  Spécifiez la version de Microsoft Excel qui a été utilisée pour créer le fichier.  
   
 |Option|Description|  
@@ -53,7 +53,7 @@ ms.locfileid: "66059268"
  Permet de spécifier si la première ligne de données dans la feuille de calcul sélectionnée contient les noms des colonnes. La valeur par défaut de cette option est **True**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

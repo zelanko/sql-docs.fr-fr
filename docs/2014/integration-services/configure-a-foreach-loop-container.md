@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060877"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurer un conteneur de boucles Foreach
@@ -65,14 +65,14 @@ ms.locfileid: "66060877"
   
     -   Pour utiliser l’énumérateur SMO Foreach, sélectionnez une connexion ADO.NET existante ou cliquez sur **Nouvelle connexion** dans la liste **Connexion** , puis tapez la chaîne à utiliser ou cliquez sur **Parcourir**. Si vous cliquez sur **Parcourir**, dans la boîte de dialogue **Sélectionner l’énumération SMO** , sélectionnez le type d’objet à énumérer et le type d’énumération, puis cliquez sur **OK**.  
   
-6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(...)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(...)** dans la zone de texte **expressions** de la page **collection** pour créer des expressions qui mettent à jour des valeurs de propriété. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Les propriétés énumérées dans la liste **Propriété** varient en fonction de l’énumérateur.  
   
 7.  Si vous le souhaitez, cliquez sur **Mappage de variables** pour mapper des propriétés d’objets à la valeur de la collection, puis procédez comme suit :  
   
-    1.  Sélectionnez une variable dans la liste **Variables** ou cliquez sur **\<Nouvelle variable>** pour en créer une.  
+    1.  Dans la liste **variables** , sélectionnez une variable ou cliquez sur ** \<nouvelle variable>** pour créer une variable.  
   
     2.  Si vous ajoutez une nouvelle variable, définissez ses propriétés dans la boîte de dialogue **Ajouter une variable** et cliquez sur **OK**.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067012"
 ---
 # <a name="measures-ssas-tabular"></a>Mesures (SSAS Tabulaire)
@@ -24,15 +24,15 @@ ms.locfileid: "66067012"
   
 -   [Avantages](#bkmk_understanding)  
   
--   [Définition de mesures à l’aide de la grille de mesures](#bkmk_def_mg)  
+-   [Définition de mesures à l'aide de la grille de mesures](#bkmk_def_mg)  
   
--   [Propriétés de mesure](#bkmk_properties)  
+-   [Propriétés des mesures](#bkmk_properties)  
   
 -   [Utilisation d’une mesure dans un indicateur de performance clé](#bkmk_KPI)  
   
 -   [Tâches associées](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>Avantageuse  
  Les mesures peuvent reposer sur des fonctions d'agrégation standard, comme AVERAGE, COUNT, ou SUM, ou vous pouvez définir votre propre formule à l'aide de DAX. Outre la formule, chaque mesure a des propriétés, définies par le type de données de mesure, tel que le nom, le détail de table, le format et les décimales.  
   
  Lorsque les mesures ont été définies dans un modèle, les utilisateurs peuvent ensuite les ajouter à un rapport ou un tableau croisé dynamique. En fonction des perspectives et des rôles, les mesures s'affichent dans la liste de champs avec la table associée, et elles sont disponibles pour tous les utilisateurs du modèle. Les mesures sont généralement créées dans des tables de faits ; toutefois, elles peuvent être indépendantes de la table à laquelle elles sont associées.  
@@ -59,9 +59,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Appareils photos et caméscopes|$620,623,675.75|  
 |Ordinateurs|$392,999,044.59|  
 |TV et vidéo|$946,989,702.51|  
-|**Total général**|**$4 691 673 731,53**|  
+|**Total général**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a>Définition de mesures à l’aide de la grille de mesures  
+##  <a name="defining-measures-by-using-the-measure-grid"></a><a name="bkmk_def_mg"></a>Définition de mesures à l’aide de la grille de mesures  
  Les mesures sont créées au moment de la conception à l'aide de la grille de mesures dans le concepteur de modèles. Chaque table a une grille de mesures. Par défaut, la grille de mesures s'affiche sous chaque table dans le concepteur de modèles. Vous pouvez également choisir de ne pas afficher la grille de mesures pour une table particulière. Pour activer/désactiver l’affichage de la grille de mesures d’une table, cliquez sur le menu **table** , puis sur **afficher la grille de mesures**.  
   
  Dans la grille de mesures, vous pouvez créer des mesures des manières suivantes :  
@@ -79,7 +79,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Si des perspectives ont été définies pour le modèle, les mesures ne sont pas ajoutées automatiquement à chacune d'entre elles. Vous devez ajouter manuellement les mesures à une perspective à l'aide de la boîte de dialogue Perspectives. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_properties"></a>Propriétés de mesure  
+##  <a name="measure-properties"></a><a name="bkmk_properties"></a>Propriétés de mesure  
  Chaque mesure a des propriétés qui la caractérisent. Les propriétés de mesures, ainsi que les propriétés des colonnes associées, peuvent être modifiées dans la fenêtre Propriétés. Les mesures ont les propriétés suivantes :  
   
 |Propriété|Paramètre par défaut|Description|  
@@ -89,20 +89,20 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Formule**|La formule est entrée dans la barre de formule lors de la création de la mesure.|Formule de la mesure.|  
 |**Nom de la mesure**|Si Somme automatique est utilisé, le nom de la mesure précédera le nom de colonne suivi de deux-points. Si une formule personnalisée est entrée, tapez un nom suivi de deux-points, puis tapez la formule.|Nom de la mesure tel qu'il s'affiche dans une liste de champs de client de création de rapports.|  
   
-##  <a name="bkmk_KPI"></a>Utilisation d’une mesure dans un indicateur de performance clé  
+##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>Utilisation d’une mesure dans un indicateur de performance clé  
  Un indicateur de performance clé (KPI) est défini par une valeur de *base* , explicitée par une mesure, par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Un indicateur de performance clé inclut également *l’état*, un calcul où la valeur de base correspond à la valeur cible entre les seuils, comme indiqué dans le format graphique. Les indicateurs sont souvent utilisés par les professionnels pour identifier les tendances des métriques commerciales critiques.  
   
  Toute mesure peut servir de mesure de base d'un indicateur de performance clé. Pour créer un KPI, dans la grille de mesures, cliquez avec le bouton droit sur une mesure, puis sélectionnez **Créer un KPI**. La boîte de dialogue Indicateur de performance clé apparaît. Vous pouvez y spécifier une valeur cible (définie par une mesure ou une valeur absolue) et définir des seuils d'état et un type graphique. Pour plus d’informations, consultez [Indicateurs de performance clés &#40;SSAS Tabulaire&#41;](kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> Tâches associées  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer et gérer des mesures &#40;&#41;SSAS tabulaire](measures-ssas-tabular.md)|Décrit comment créer et gérer des mesures à l'aide de la grille de mesures dans le générateur de modèles.|  
+|[Créer et gérer des mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)|Décrit comment créer et gérer des mesures à l'aide de la grille de mesures dans le générateur de modèles.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [KPI &#40;&#41;tabulaires SSAS](kpis-ssas-tabular.md)   
  [Créer et gérer des indicateurs de performance clés &#40;SSAS tabulaire&#41;](create-and-manage-kpis-ssas-tabular.md)   
- [Colonnes calculées &#40;&#41;tabulaires SSAS](ssas-calculated-columns.md)  
+ [Colonnes calculées &#40;SSAS tabulaire&#41;](ssas-calculated-columns.md)  
   
   

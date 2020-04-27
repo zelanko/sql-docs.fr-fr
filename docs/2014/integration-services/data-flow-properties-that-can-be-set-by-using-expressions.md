@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059942"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriétés du flux de données pouvant être définies à l’aide d’expressions
@@ -70,8 +70,8 @@ ms.locfileid: "66059942"
 |----------------------|--------------|  
 |Destination ADO NET|Propriété TableOrViewName<br /><br /> Propriété BatchSize<br /><br /> Propriété CommandTimeout|  
 |Destination de fichier plat|Propriété Header|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Destination compact|Propriété TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]destination|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
+|Destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propriété TableName|  
+|Destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66059942"
  Article technique, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), sur pragmaticworks.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)   
+ [Utiliser des expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)   
  [Propriétés communes](../../2014/integration-services/common-properties.md)   
  [Transformation, propriétés personnalisées](data-flow/transformations/transformation-custom-properties.md)   
  [Propriétés du chemin](../../2014/integration-services/path-properties.md)  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065052"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Corréler une trace aux données du journal de performances Windows (SQL Server Profiler)
@@ -29,7 +29,7 @@ ms.locfileid: "66065052"
   
 1.  Dans [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], ouvrez un fichier de trace ou une table de trace enregistrée. Il est impossible de corréler une trace d'exécution qui regroupe encore des données d'événement. Pour garantir la précision de la corrélation aux données du Moniteur système, la trace doit contenir les colonnes de données **StartTime** et **EndTime** .  
   
-2.  Dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, click **Import Performance Data**.  
+2.  Dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File**, cliquez sur **Importer les données de performance**.  
   
 3.  Dans la boîte de dialogue **Ouvrir** , sélectionnez un fichier qui contient un journal de performances. Les données du journal de performances doivent être capturées pendant la même période que celle de la capture des données de trace.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66065052"
 11. Cliquez sur **OK** pour créer le journal de performances.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Démarrer SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

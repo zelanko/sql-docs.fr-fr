@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060423"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Se connecter à un serveur Integration Services distant (Service SSIS)
     
 > [!IMPORTANT] 
-> Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+> Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Pour se connecter à une instance de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un serveur distant, que ce soit à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou d’une autre application de gestion, les utilisateurs de l’application ont besoin d’un ensemble de droits sur le serveur.  
   
 > [!IMPORTANT] 
-> Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
+> Pour gérer les packages stockés sur un serveur distant, vous n’avez pas besoin de vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>Connexion à Integration Services sur un serveur distant  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060423"
   
 3.  Sélectionnez **Integration Services** dans la liste **Type de serveur** .  
   
-4.  Tapez le nom d’un serveur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans la zone de texte **Nom du serveur** .  
+4.  Tapez le nom d’un serveur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans la zone de texte **Nom du serveur**.  
   
     > [!NOTE]  
     >  Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'est pas spécifique à l'instance. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel le service Integration Services s'exécute.  

@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056420"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Exécuter un package dans les outils de données SQL Server
-  Les packages sont exécutés le plus souvent dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pendant le développement, le débogage et le test des packages. Quand vous exécutez un package à partir du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], il est exécuté immédiatement.  
+  Les packages sont exécutés le plus souvent dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pendant le développement, le débogage et le test des packages. Quand vous exécutez un package à partir du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , il est exécuté immédiatement.  
   
  Pendant l’exécution d’un package [!INCLUDE[ssIS](../includes/ssis-md.md)] , le concepteur affiche la progression de l’exécution du package sous l’onglet **progression** . Vous pouvez afficher l’heure de début et de fin du package et de ses tâches et conteneurs, en plus des informations sur les tâches ou les conteneurs du package qui ont échoué. Une fois l’exécution du package terminée, les informations d’exécution restent disponibles sous l’onglet **résultats d’exécution** . Pour plus d’informations, consultez la section « rapport de progression » dans la rubrique [débogage du workflow de contrôle](control-flow/control-flow.md).  
   

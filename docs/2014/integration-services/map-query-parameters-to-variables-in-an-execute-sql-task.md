@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057795"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL
@@ -104,7 +104,7 @@ ms.locfileid: "66057795"
 14. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
+ [Tâche d’exécution SQL](control-flow/execute-sql-task.md)   
  [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   

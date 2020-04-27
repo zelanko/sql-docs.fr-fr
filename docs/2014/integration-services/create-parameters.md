@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060143"
 ---
 # <a name="create-parameters"></a>Créer des paramètres
@@ -29,17 +29,17 @@ ms.locfileid: "66060143"
   
 1.  Ouvrez le package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], puis cliquez sur l'onglet **Paramètres** dans le Concepteur SSIS.  
   
-     ![Onglet des paramètres de package](media/denali-package-parameters.gif "Onglet des paramètres de package")  
+     ![Onglet Paramètres de package](media/denali-package-parameters.gif "Onglet Paramètres de package")  
   
 2.  Cliquez sur le bouton **Ajouter un paramètre** de la barre d'outils.  
   
-     ![Bouton Ajouter une barre d’outils](media/denali-parameter-add.gif "Ajouter un bouton à la barre d'outils")  
+     ![Bouton de barre d’outils Ajouter](media/denali-parameter-add.gif "Bouton de barre d’outils Ajouter")  
   
 3.  Entrez les valeurs des propriétés **Nom**, **Type de données**, **Valeur**, **Sensible**et **Requis** dans la liste elle-même ou dans la fenêtre **Propriétés** . Le tableau suivant décrit ces propriétés.  
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Name|Le nom du paramètre.|  
+    |Nom|Le nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
@@ -63,17 +63,17 @@ ms.locfileid: "66060143"
   
 2.  Cliquez avec le bouton droit sur **Project.params** dans l'Explorateur de solutions, puis cliquez sur **Ouvrir** ou double-cliquez sur **Project.params** pour l'ouvrir.  
   
-     ![Fenêtre des paramètres du projet](media/denali-project-parameters.gif "Fenêtre des paramètres du projet")  
+     ![Fenêtre Paramètres du projet](media/denali-project-parameters.gif "Fenêtre Paramètres du projet")  
   
 3.  Cliquez sur le bouton **Ajouter un paramètre** de la barre d'outils.  
   
-     ![Bouton Ajouter une barre d’outils](media/denali-parameter-add.gif "Ajouter un bouton à la barre d'outils")  
+     ![Bouton de barre d’outils Ajouter](media/denali-parameter-add.gif "Bouton de barre d’outils Ajouter")  
   
 4.  Entrez les valeurs des propriétés **Nom**, **Type de données**, **Valeur**, **Sensible**et **Requis** .  
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Name|Le nom du paramètre.|  
+    |Nom|Le nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059419"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Éditeur de transformation de nettoyage DQS (boîte de dialogue)
@@ -27,36 +27,36 @@ ms.locfileid: "66059419"
   
  **Que voulez-vous faire ?**  
   
--   [Ouvrir l’éditeur de transformation de nettoyage DQS](#open)  
+-   [Ouvrir l'Éditeur de transformation de nettoyage DQS](#open)  
   
--   [Définir les options de l'onglet Gestionnaires de connexions](#connection)  
+-   [Définir les options de l’onglet Gestionnaire de connexions](#connection)  
   
--   [Définir les options sur l’onglet Mappage](#mapping)  
+-   [Définir les options sur l'onglet mappage](#mapping)  
   
--   [Définir les options de l’onglet avancé](#advanced)  
+-   [Définir les options de l'onglet Avancé](#advanced)  
   
--   [Définir les options de la boîte de dialogue Gestionnaire de connexions de nettoyage DQS](#manager)  
+-   [Définir les options dans la boîte de dialogue Gestionnaire de connexions du nettoyage DQS](#manager)  
   
-##  <a name="open"></a>Ouvrir l’éditeur de transformation de nettoyage DQS  
+##  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a>Ouvrir l’éditeur de transformation de nettoyage DQS  
   
 1.  Ajoutez la transformation de nettoyage DQS au package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
-##  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
- **Gestionnaire de connexions de qualité des données**  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+ **Gestionnaire de connexions Data Quality Services**  
  Sélectionnez un gestionnaire de connexions DQS existant dans la liste, ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions du nettoyage DQS** . Consultez [Définir les options dans la boîte de dialogue Gestionnaire de connexions du nettoyage DQS](#manager)  
   
- **Base de connaissances de qualité des données**  
+ **Base de connaissances Data Quality Services**  
  Sélectionnez une base de connaissances DQS existante pour la source de données connectée. Pour plus d’informations sur la base de connaissances DQS, consultez [Bases de connaissances et domaines DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Chiffrer la connexion**  
  spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert de données entre [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]le serveur DQS et.  
   
- **Domaines disponibles**  
+ **Champs disponibles**  
  Répertorie les champs disponibles pour la base de connaissances sélectionnée. Il existe deux types de champs : domaines uniques, et domaines composés qui contiennent au moins deux domaines uniques.  
   
  Pour plus d’informations sur la façon de mapper des colonnes à des domaines composites, consultez [Mapper des colonnes à des domaines composites](data-flow/transformations/map-columns-to-composite-domains.md).  
@@ -68,14 +68,14 @@ ms.locfileid: "66059419"
   
  Les valeurs suivantes sont valides :  
   
--   **Composant Fail**, qui indique que la transformation échoue et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Il s’agit de la valeur par défaut.  
+-   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Il s'agit de la valeur par défaut.  
   
--   **Rediriger la ligne**, qui indique que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services et qu’elles sont redirigées vers la sortie d’erreur.  
+-   **Réacheminer la ligne**, qui indique que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services et qu’elles sont redirigées vers la sortie d’erreur.  
   
-##  <a name="mapping"></a>Définir les options sur l’onglet Mappage  
+##  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a>Définir les options sur l’onglet Mappage  
  Pour plus d’informations sur la façon de mapper des colonnes à des domaines composites, consultez [Mapper des colonnes à des domaines composites](data-flow/transformations/map-columns-to-composite-domains.md).  
   
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Répertorie les colonnes à partir de la source de données connectée. Sélectionnez une ou plusieurs colonnes qui contiennent les données que vous souhaitez corriger.  
   
  **Colonne d'entrée**  
@@ -94,26 +94,26 @@ ms.locfileid: "66059419"
   
  Cliquez dans le champ pour modifier le nom de colonne.  
   
- **Alias d’État**  
+ **Alias d'état**  
  Répertorie la colonne qui contient les informations d'état des données corrigées. Cliquez dans le champ pour modifier le nom de colonne.  
   
-##  <a name="advanced"></a>Définir les options de l’onglet avancé  
+##  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a>Définir les options de l’onglet avancé  
  **Normaliser la sortie**  
  Indique s'il faut retourner les données dans un format standardisé en fonction du format de sortie défini pour les domaines. Pour plus d’informations sur le format standardisé, consultez [Nettoyage de données](../../2014/data-quality-services/data-cleansing.md).  
   
- **Garantir**  
+ **Confiance**  
  Indique s'il faut inclure le niveau de confiance pour les données corrigées. Le niveau de confiance indique le degré de certitude de DQS pour la correction ou la suggestion. Pour plus d’informations sur les niveaux de confiance, consultez [Nettoyage de données](../../2014/data-quality-services/data-cleansing.md).  
   
- **Donc**  
+ **Raison**  
  Indique s'il faut inclure la raison de la correction des données.  
   
  **Données ajoutées**  
  Indique s'il faut retourner des informations supplémentaires reçues d'un fournisseur de données de référence existant. Pour plus d’informations, consultez [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- **Schéma de données ajouté**  
+ **Schéma de données ajoutées**  
  Indique s'il faut retourner le schéma de données. Pour plus d’informations, consultez [attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="manager"></a>Définir les options de la boîte de dialogue Gestionnaire de connexions de nettoyage DQS  
+##  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a>Définir les options de la boîte de dialogue Gestionnaire de connexions de nettoyage DQS  
  **Nom du serveur**  
  Sélectionnez ou entrez le nom du serveur DQS auquel vous souhaitez vous connecter. Pour plus d’informations sur le serveur, consultez [Administration de DQS](../../2014/data-quality-services/dqs-administration.md).  
   

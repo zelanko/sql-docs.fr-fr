@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067130"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrer des données dans une table (SSAS Tabulaire)
@@ -33,7 +33,7 @@ ms.locfileid: "66067130"
   
 2.  Dans le menu Filtre automatique, effectuez l'une des opérations suivantes :  
   
-    -   Dans la liste des valeurs de colonne, sélectionnez ou désélectionnez une ou plusieurs valeurs à filtrer, puis cliquez sur **OK**.  
+    -   Dans la liste de valeurs de colonne, sélectionnez ou désélectionnez une ou plusieurs valeurs sur lesquelles filtrer les données, puis cliquez sur **OK**.  
   
          Si le nombre de valeurs est très important, les éléments individuels peuvent ne pas être affichés dans la liste. Le message « Trop d'éléments à afficher » sera alors affiché.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66067130"
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer et trier des données &#40;la&#41;tabulaire SSAS](../filter-and-sort-data-ssas-tabular.md)   
  [Perspectives &#40;&#41;tabulaire SSAS](perspectives-ssas-tabular.md)   
- [Rôles &#40;&#41;tabulaire SSAS](roles-ssas-tabular.md)  
+ [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
   
   

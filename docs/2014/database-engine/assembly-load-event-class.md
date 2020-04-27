@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065259"
 ---
 # <a name="assembly-load-event-class"></a>Classe d'événements Assembly Load
@@ -32,27 +32,27 @@ ms.locfileid: "66065259"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application qui a demandé le chargement.|10|Oui|  
 |**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|**DatabaseID**|**int**|ID de la base de données spécifiée par l'instruction de base de données USE ou celui de la base de données par défaut si aucune instruction de base de données USE n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données **ServerName** est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**DatabaseID**|**int**|ID de la base de données spécifiée par l'instruction de base de données USE ou celui de la base de données par défaut si aucune instruction de base de données USE n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |**EventSequence**|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**GroupID**|**int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
-|**Nom d’hôte**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
+|**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
-|**LoginSID**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l’affichage catalogue **sys. server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
+|**LoginSID**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l’affichage catalogue **sys.server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**Arguments**|**int**|ID d'assembly.|22|Oui|  
 |**ObjectName**|**nvarchar**|Nom complet de l'assembly.|34|Oui|  
 |**Identifi**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
-|**Nom du serveur**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tracée.|26|Non|  
-|**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tracée.|26|Non|  
+|**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant Login1 et que vous exécutez une instruction sous le nom de Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
-|**StartTime**|**DATETIME**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|**Success**|**int**|Indique si le chargement de l'assembly a réussi (1) ou échoué (0).|23|Oui|  
+|**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
+|**Opération réussie**|**int**|Indique si le chargement de l'assembly a réussi (1) ou échoué (0).|23|Oui|  
 |**TextData**|**ntext**|« Chargement d'assembly réussi » si le chargement a réussi ; sinon  « Échec du chargement d'assembly ».|1|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../relational-databases/extended-events/extended-events.md)   
- [Assemblys &#40;Moteur de base de données&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
+ [Assemblys &#40;moteur de base de données&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   
   

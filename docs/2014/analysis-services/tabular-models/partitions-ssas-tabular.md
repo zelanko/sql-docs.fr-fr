@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066902"
 ---
 # <a name="partitions-ssas-tabular"></a>Partitions (SSAS Tabulaire)
@@ -26,7 +26,7 @@ ms.locfileid: "66066902"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
  Les partitions, dans les modèles tabulaires, divisent une table en objets partition logiques. Chaque partition peut ensuite être traitée indépendamment d'autres partitions. Par exemple, une table peut comprendre certains ensembles de lignes qui contiennent des données qui changent rarement, alors que d'autres ensembles de lignes comportent des données qui changent souvent. Dans ces cas, il est inutile de traiter toutes les données lorsque vous pouvez vous contenter de traiter uniquement une partie des données. Les partitions permettent de diviser des parties de données devant être traitées fréquemment afin de les séparer des données qui peuvent être traitées moins souvent.  
   
  La création de modèles efficaces fait appel à des partitions permettant d'éliminer tout traitement inutile et la charge qui en résulte au niveau du processeur sur les serveurs Analysis Services, tout en veillant en même temps à ce que les données soient traitées et actualisées suffisamment souvent pour refléter les données les plus récentes des sources de données. La manière d'implémenter et d'utiliser des partitions lors de la création de modèles peut être très différente de la façon dont les partitions sont implémentées et utilisées pour les modèles déployés. Gardez à l'esprit que, pendant la phase de création de modèles, vous pouvez utiliser uniquement un sous-ensemble des données qui figureront au final dans votre modèle déployé.  
@@ -44,15 +44,15 @@ ms.locfileid: "66066902"
 ### <a name="partitions-in-a-deployed-model-database"></a>Partitions dans une base de données model déployée  
  Lorsque vous déployez un modèle, les partitions pour la base de données model déployée apparaissent en tant qu'objets de base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez créer, modifier, fusionner et supprimer des partitions pour un modèle déployé à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La gestion des partitions pour un modèle déployé dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas traitée dans cette rubrique. Pour en savoir plus sur la gestion des partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tâches associées  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer et gérer des partitions dans la base de données de l’espace de travail &#40;&#41;SSAS tabulaire](workspace-database-ssas-tabular.md)|Décrit comment créer et gérer des partitions dans la base de données model de l'espace de travail à l'aide du gestionnaire de partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|[Créer et gérer des partitions dans la base de données de l’espace de travail &#40;SSAS Tabulaire&#41;](workspace-database-ssas-tabular.md)|Décrit comment créer et gérer des partitions dans la base de données model de l'espace de travail à l'aide du gestionnaire de partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |[Traiter les partitions dans la base de données de l’espace de travail &#40;SSAS tabulaire&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Explique comment traiter (actualiser) des partitions dans la base de données model de l'espace de travail.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;&#41;tabulaire SSAS](directquery-mode-ssas-tabular.md)   
- [Traiter des données &#40;tabulaires SSAS&#41;](../process-data-ssas-tabular.md)  
+ [Traiter les données &#40;SSAS Tabulaire&#41;](../process-data-ssas-tabular.md)  
   
   

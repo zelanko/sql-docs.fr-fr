@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061819"
 ---
 # <a name="add-ssis-connection-manager"></a>Ajout d'un gestionnaire de connexions SSIS
@@ -27,14 +27,14 @@ ms.locfileid: "66061819"
  Pour en savoir plus sur les gestionnaires de connexions, consultez [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="options"></a>Options  
- **Type de gestionnaire de connexions**  
+ **Type du gestionnaire de connexions**  
  Sélectionnez un type de connexion et cliquez sur **Ajouter**ou double-cliquez sur un type de connexion, pour spécifier les propriétés de connexion à l’aide de l’éditeur pour chaque type de connexion.  
   
  **Ajouter**  
  Spécifiez les propriétés de connexion à l'aide de l'éditeur pour chaque type de connexion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
   

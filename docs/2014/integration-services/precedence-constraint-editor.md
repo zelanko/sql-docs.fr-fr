@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056687"
 ---
 # <a name="precedence-constraint-editor"></a>Éditeur de contrainte de précédence
@@ -32,7 +32,7 @@ ms.locfileid: "66056687"
  Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**.  
   
 > [!NOTE]  
->  La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l’achèvement**.  
+>   La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l'achèvement**.  
   
  **Expression**  
  Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression ou lancez le Générateur d’expressions pour créer l’expression. L'expression doit prendre une valeur de type Boolean.  
@@ -55,7 +55,7 @@ ms.locfileid: "66056687"
 ## <a name="see-also"></a>Voir aussi  
  [Contraintes de précédence](control-flow/precedence-constraints.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Conteneurs Integration Services](control-flow/integration-services-containers.md)   
+ [Conteneurs de Integration Services](control-flow/integration-services-containers.md)   
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)  
   
   

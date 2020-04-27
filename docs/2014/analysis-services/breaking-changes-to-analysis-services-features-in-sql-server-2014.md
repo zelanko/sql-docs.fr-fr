@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064418"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2014
@@ -33,10 +33,10 @@ ms.locfileid: "66064418"
   
 -   [Dernières modifications dans SQL Server 2008/SQL Server 2008 R2](#bkmk_sql10)  
   
-##  <a name="bkmk_sql2014"></a>Modifications avec rupture dans[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="breaking-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>Modifications avec rupture dans[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Les fonctionnalités des modes Tabulaire, Multidimensionnel, Exploration de données ou [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] de cette version ne font l’objet d’aucune nouvelle modification avec rupture.  Toutefois, compte tenu de la forte similitude entre  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] et les versions [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] , les modifications avec rupture des deux versions précédentes sont fournies ici à titre informatif au cas où votre mise à niveau porterait sur [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-##  <a name="bkmk_2012Sp1"></a>Dernières modifications dans SQL Server 2012 SP1  
+##  <a name="breaking-changes-in-sql-server-2012-sp1"></a><a name="bkmk_2012Sp1"></a>Dernières modifications dans SQL Server 2012 SP1  
  Des modifications du code liées à la globalisation provoquent l'arrêt de certaines applications. Problèmes connus :  
   
  **Respect de la casse des identificateurs d'objets**  
@@ -46,14 +46,14 @@ ms.locfileid: "66064418"
   
  Pour le cyrillique et d'autres scripts de langues bicamérales qui utilisent la casse (grec, arménien et copte) les identificateurs d'objets respectent désormais la casse. Des modifications avec rupture sont susceptibles de se produire en cas de différence de casse entre un identificateur d'objet et la façon dont il est référencé (par exemple, un script de traitement qui fait référence à l'identificateur d'objet tout en minuscules). Ce comportement est susceptible de changer à l'avenir, mais comme solution de contournement temporaire, nous vous suggérons de modifier les scripts pour qu'ils utilisent la même casse que l'identificateur d'objet.  
   
-##  <a name="bkmk_sql11"></a>Modifications avec rupture dans[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="breaking-changes-in-sssql11"></a><a name="bkmk_sql11"></a>Modifications avec rupture dans[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  Cette section documente les modifications avec rupture signalées pour les fonctionnalités d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Problème|Description|  
 |-----------|-----------------|  
 |Commandes du programme d'installation supprimées pour une installation de [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] .|Le programme d'installation installe mais ne configure plus [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]. Les commandes du programme d'installation qui collectaient des valeurs utilisées pour les actions de configuration sont maintenant supprimées. Celles-ci comprennent notamment /FARMACCOUNT, /FARMPASSWORD, /PASSPHRASE et /FARMADMINPORT.<br /><br /> Si vous avez créé des scripts d'installation pour une installation sans assistance, vous devez modifier ces scripts pour une installation de [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . L'autre méthode consiste à utiliser des applets de commande PowerShell pour configurer le serveur en mode sans assistance. Pour plus d’informations, consultez [installer PowerPivot à partir de l’invite de commandes](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md) et [configuration PowerPivot à l’aide de Windows PowerShell](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).|  
   
-##  <a name="bkmk_sql10"></a>Modifications avec rupture dans[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+##  <a name="breaking-changes-in-sskatmaisskilimanjaro"></a><a name="bkmk_sql10"></a>Modifications avec rupture dans[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  Cette section contient les modifications avec rupture des versions précédentes. Si vous effectuez une mise à niveau de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], vous devez consulter les modifications avec rupture ajoutées dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
 |Problème|Description|  

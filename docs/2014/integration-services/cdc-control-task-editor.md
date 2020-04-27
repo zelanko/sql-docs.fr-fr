@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061114"
 ---
 # <a name="cdc-control-task-editor"></a>Éditeur de tâche de contrôle CDC
@@ -80,13 +80,13 @@ ms.locfileid: "66061114"
  Ces informations sont disponibles uniquement si vous avez sélectionné **Persistance d'état automatique** et il s'agit d'un paramètre obligatoire.  
   
  **Table à utiliser pour stocker l'état**  
- Tapez le nom de la table d'état à utiliser pour stocker l'état CDC. La table spécifiée doit être composée de deux colonnes appelées **name** et **state** avec le type de données **varchar (256)** .  
+ Tapez le nom de la table d'état à utiliser pour stocker l'état CDC. La table spécifiée doit être composée de deux colonnes appelées **name** et **state** avec le type de données **varchar (256)**.  
   
  Vous pouvez éventuellement sélectionner **Nouveau** pour obtenir un script SQL qui génère une nouvelle table d'état avec les colonnes requises. Lorsque **Persistance d'état automatique** est sélectionné, le développeur doit créer une table d'état en fonction des spécifications ci-dessus.  
   
  Ces informations sont disponibles uniquement si vous avez sélectionné **Persistance d'état automatique** et il s'agit d'un paramètre obligatoire.  
   
- **Nom d'état**  
+ **Nom de l’état**  
  Entrez le nom à associer à l'état CDC persistant. La charge complète et les packages CDC qui fonctionnent avec le même contexte CDC auront un nom d'état commun. Ce nom est utilisé pour surveiller la ligne d'état dans la table d'état.  
   
 ## <a name="see-also"></a>Voir aussi  

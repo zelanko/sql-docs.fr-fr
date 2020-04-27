@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056788"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Paramètres et codes de retour dans la tâche d'exécution SQL
@@ -32,19 +32,19 @@ ms.locfileid: "66056788"
   
  Toutefois, l'utilisation de paramètres et de codes de retour dans une tâche d'exécution SQL ne permet pas uniquement de savoir quels types de paramètres sont pris en charge par la tâche et de quelle manière ces paramètres seront mappés. D'autres indications et spécifications d'utilisation permettent d'utiliser avec succès des paramètres et des codes de retour dans la tâche d'exécution SQL. Le reste de cette rubrique traite de ces indications et spécifications d'utilisation.  
   
--   [Utilisation des marqueurs et des noms de paramètres](#Parameter_names_and_markers)  
+-   [Utiliser des marqueurs et des noms de paramètres](#Parameter_names_and_markers)  
   
--   [Utilisation de paramètres avec des types de données de date et d’heure](#Date_and_time_data_types)  
+-   [Utiliser des paramètres avec les types de données de date et d’heure](#Date_and_time_data_types)  
   
--   [Utilisation de paramètres dans les clauses WHERE](#WHERE_clauses)  
+-   [Utiliser des paramètres dans les clauses WHERE](#WHERE_clauses)  
   
--   [Utilisation de paramètres avec des procédures stockées](#Stored_procedures)  
+-   [Utiliser des paramètres avec les procédures stockées](#Stored_procedures)  
   
 -   [Obtention de valeurs de codes de retour](#Return_codes)  
   
 -   [Configuration de paramètres et de codes de retour dans l'éditeur de tâche d'exécution SQL](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a>Utilisation des marqueurs et des noms de paramètres  
+##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>Utilisation des marqueurs et des noms de paramètres  
  Selon le type de connexion que la tâche d'exécution SQL utilise, la syntaxe de la commande SQL utilise différents marqueurs de paramètres. Par exemple, le [!INCLUDE[vstecado](../includes/vstecado-md.md)] type de gestionnaire de connexions requiert que la commande SQL utilise un marqueur de paramètre au format ** \@varParameter**, tandis que OLE DB type de connexion nécessite le marqueur de paramètre point d’interrogation ( ?).  
   
  Les noms que vous pouvez utiliser comme noms de paramètres dans les mappages entre variables et paramètres varient également selon le type de gestionnaire de connexions. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] utilise un nom défini par l'utilisateur avec le préfixe \@, tandis que le type de gestionnaire de connexions OLE DB impose l'utilisation de la valeur numérique d'un ordinal de base 0 comme nom de paramètre.  
@@ -79,7 +79,7 @@ ms.locfileid: "66056788"
   
  Lorsque vous utilisez un gestionnaire de connexions OLE DB, vous ne pouvez pas utiliser de sous-requêtes paramétrables, car la tâche d'exécution SQL ne peut pas dériver d'informations de paramètre par le biais du fournisseur OLE DB. Toutefois, vous pouvez utiliser une expression pour concaténer les valeurs des paramètres dans la chaîne de requête et définir la propriété SqlStatementSource de la tâche.  
   
-##  <a name="Date_and_time_data_types"></a>Utilisation de paramètres avec des types de données de date et d’heure  
+##  <a name="using-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a>Utilisation de paramètres avec des types de données de date et d’heure  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Utilisation de paramètres de date et d'heure avec les gestionnaires de connexions ADO.NET et ADO  
  Lors de la lecture des données des types [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], `time` et `datetimeoffset`, une tâche d'exécution SQL qui utilise un gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] ou ADO a les spécifications supplémentaires suivantes :  
@@ -103,7 +103,7 @@ ms.locfileid: "66056788"
   
 -   Un paramètre de sortie doté du type de données approprié, tel que répertorié dans le tableau suivant.  
   
-    |`Output`type de paramètre|Type de données Date|  
+    |Type de paramètre `Output`|Type de données Date|  
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
@@ -119,7 +119,7 @@ ms.locfileid: "66056788"
   
 -   Un paramètre de type `output` doté du type de données approprié, tel que répertorié dans le tableau suivant.  
   
-    |`Output`type de paramètre|Type de données Date|  
+    |Type de paramètre `Output`|Type de données Date|  
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
@@ -128,7 +128,7 @@ ms.locfileid: "66056788"
   
  Si les données ne sont pas stockées dans le paramètre d'entrée ou de sortie approprié, le package échoue.  
   
-##  <a name="WHERE_clauses"></a>Utilisation de paramètres dans les clauses WHERE  
+##  <a name="using-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a>Utilisation de paramètres dans les clauses WHERE  
  Les commandes SELECT, INSERT, UPDATE et DELETE incluent fréquemment des clauses WHERE pour spécifier des filtres qui définissent les conditions auxquelles chaque ligne des tables sources doit satisfaire pour se qualifier pour une commande SQL. Les paramètres fournissent les valeurs de filtre dans les clauses WHERE.  
   
  Vous pouvez utiliser des marqueurs de paramètres pour fournir dynamiquement des valeurs de paramètres. Les règles pour lesquelles des marqueurs de paramètres et des noms de paramètres peuvent être utilisés dans l'instruction SQL varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise.  
@@ -149,7 +149,7 @@ ms.locfileid: "66056788"
   
 -   Le type de connexion [!INCLUDE[vstecado](../includes/vstecado-md.md)] utilise les noms de paramètres \@parmMinProductID et \@parmMaxProductID.  
   
-##  <a name="Stored_procedures"></a>Utilisation de paramètres avec des procédures stockées  
+##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>Utilisation de paramètres avec des procédures stockées  
  Les commandes SQL qui exécutent des procédures stockées peuvent également utiliser le mappage de paramètres. Les règles d'utilisation des marqueurs de paramètres et des noms de paramètres varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, tout comme les règles des requêtes paramétrables.  
   
  Le tableau suivant présente des exemples de la commande EXEC par type de gestionnaire de connexions. Les exemples exécutent la procédure stockée **uspGetBillOfMaterials** dans [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. La procédure stockée utilise `@StartProductID` les `@CheckDate` `input` paramètres et.  
@@ -157,15 +157,15 @@ ms.locfileid: "66056788"
 |Type de connexion|Syntaxe EXEC|  
 |---------------------|-----------------|  
 |EXCEL et OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462) dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
 |ADO|Si IsQueryStoredProcedure a la valeur `False`,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure a la valeur `True`,`uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Si IsQueryStoredProcedure a la valeur `False`,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure a la valeur `True`,`uspGetBillOfMaterials`|  
   
- Pour utiliser des paramètres de sortie, la syntaxe impose que le mot clé OUTPUT suive chaque marqueur de paramètre. Par exemple, la syntaxe de paramètre de sortie suivante est correcte : `EXEC myStoredProcedure ? OUTPUT`.  
+ Pour utiliser des paramètres de sortie, la syntaxe impose que le mot clé OUTPUT suive chaque marqueur de paramètre. Par exemple, la syntaxe de paramètre de sortie suivante est correcte : `EXEC myStoredProcedure ? OUTPUT`.  
   
  Pour plus d’informations sur l’utilisation de paramètres d’entrée et de sortie avec des procédures stockées Transact-SQL, consultez [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="Return_codes"></a>Obtention de valeurs de codes de retour  
+##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>Obtention de valeurs de codes de retour  
  Une procédure stockée peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Pour implémenter des codes de retour dans la tâche d'exécution SQL, vous utilisez des paramètres du type `ReturnValue`.  
   
  Le tableau suivant présente par type de connexion des exemples de commandes EXEC qui implémentent des codes de retour. Tous les exemples utilisent un paramètre de type `input`. Les règles d’utilisation des marqueurs de paramètres et des noms de paramètres sont les mêmes pour tous`Input`les `Output`types de `ReturnValue`paramètres :, et.  
@@ -175,7 +175,7 @@ ms.locfileid: "66056788"
 |Type de connexion|Syntaxe EXEC|  
 |---------------------|-----------------|  
 |EXCEL et OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462) dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
 |ADO|Si IsQueryStoreProcedure a la valeur `False`,`EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure a la valeur `True`,`myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure a la valeur `True`.<br /><br /> `myStoredProcedure`|  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66056788"
   
  Pour plus d’informations sur l’utilisation de codes de retour avec des procédures stockées Transact-SQL, consultez [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   
-##  <a name="Configure_parameters_and_return_codes"></a>Configuration des paramètres et des codes de retour dans la tâche d’exécution SQL  
+##  <a name="configuring-parameters-and-return-codes-in-the-execute-sql-task"></a><a name="Configure_parameters_and_return_codes"></a>Configuration des paramètres et des codes de retour dans la tâche d’exécution SQL  
  Pour plus d’informations sur les propriétés de paramètres et de codes de retour que vous pouvez définir dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Éditeur de tâche d’exécution de SQL &#40;page mappage de paramètre&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
@@ -202,7 +202,7 @@ ms.locfileid: "66056788"
 -   Exemple CodePlex, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
+ [Tâche d’exécution SQL](control-flow/execute-sql-task.md)   
  [Ensembles de résultats dans la tâche d’exécution SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
   

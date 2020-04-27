@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059284"
 ---
 # <a name="event-handlers-tab"></a>Onglet Gestionnaires d'événements
@@ -40,7 +40,7 @@ ms.locfileid: "66059284"
  Par ailleurs, pour ajouter des annotations, cliquez avec le bouton droit dans l’aire de conception puis, dans le menu qui s’affiche, cliquez sur **Ajouter une annotation**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaires d’événements Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;gestionnaires d’événements&#41; SSIS](integration-services-ssis-event-handlers.md)   
  [Flux de contrôle](control-flow/control-flow.md)   
  [Concepteur SSIS](ssis-designer.md)   
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)  

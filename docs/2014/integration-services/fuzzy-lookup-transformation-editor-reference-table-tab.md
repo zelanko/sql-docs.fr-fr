@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058305"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche floue (onglet Table de référence)
@@ -36,10 +36,10 @@ ms.locfileid: "66058305"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions OLE DB existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
- **Générer un nouvel index**  
+ **Créer un nouvel index**  
  Indiquez que la transformation doit créer un nouvel index à utiliser pour la recherche.  
   
  **Nom de la table de référence**  
@@ -48,26 +48,26 @@ ms.locfileid: "66058305"
  **Stocker un nouvel index**  
  Sélectionnez cette option pour enregistrer le nouvel index de recherche.  
   
- **Nouveau nom d’index**  
+ **Nom du nouvel index**  
  Si vous avez décidé d'enregistrer le nouvel index de recherche, tapez un nom descriptif.  
   
  **Conserver l’index stocké**  
  Si vous avez décidé d'enregistrer le nouvel index de recherche, indiquez si vous voulez également que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conserve l'index.  
   
 > [!NOTE]  
->  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
- **Utiliser un index existant**  
+ **Utiliser l'index existant**  
  Indiquez que la transformation doit utiliser un index de recherche existant.  
   
- **Nom d’un index existant**  
+ **Nom d'un index existant**  
  Dans la liste, sélectionnez un index de recherche existant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de recherche floue &#40;onglet Colonnes&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation de recherche floue &#40;onglet colonnes&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Éditeur de transformation de recherche floue &#40;onglet Avancé&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

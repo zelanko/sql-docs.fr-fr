@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060635"
 ---
 # <a name="configure-error-output"></a>Configurer la sortie d'erreur
@@ -34,12 +34,12 @@ ms.locfileid: "66060635"
  **Error**  
  Le cas échéant, indiquez ce qui doit se passer en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Le cas échéant, indiquez ce qui doit se passer en cas de troncation : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Description**  
  Affichez la description de l'opération.  
@@ -47,7 +47,7 @@ ms.locfileid: "66060635"
  **Définir cette valeur sur les cellules sélectionnées**  
  Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Appliquer**  
+ **appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  

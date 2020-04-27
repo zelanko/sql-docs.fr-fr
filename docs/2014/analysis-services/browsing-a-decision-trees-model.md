@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064670"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Exploration d'un modèle Arbre de décision
   Lorsque vous ouvrez un modèle de classification à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse de l' [!INCLUDE[msCoName](../includes/msconame-md.md)] arbre de décision interactif [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], similaire à la visionneuse des arbres de décision dans. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
   
-##  <a name="bkmk_Top"></a>Explorer le modèle  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorer le modèle  
  Les modèles fondés sur l'algorithme MDT comportent un certain nombre d'informations intéressantes à explorer. La fenêtre **Parcourir** comprend les onglets et les volets suivants pour vous aider à apprendre les modèles et à prédire les résultats à l’aide du graphique :  
   
 -   [Arbre de décision](#BKMK_DecisionTree)  
@@ -36,7 +36,7 @@ ms.locfileid: "66064670"
   
  Pour expérimenter avec un modèle d'arbre de décision, vous pouvez utiliser les exemples de données sous l'onglet Données d'apprentissage (ou Données source) du classeur Exemples de données, puis créer un modèle d'arbre de décision en utilisant Bike Buyer comme attribut prédictible.  
   
-###  <a name="BKMK_DecisionTree"></a>Arbre de décision  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>Arbre de décision  
  Cette vue est conçue pour vous aider à comprendre et à explorer les facteurs qui mènent à un résultat.  
   
  Le graphique d'arbre de décision peut être lu de gauche à droite, comme suit :  
@@ -103,7 +103,7 @@ ms.locfileid: "66064670"
   
      ![Diagramme de réseau de dépendances pour un modèle d'association](media/dm13-dec-tree-background-no.gif "Diagramme de réseau de dépendances pour un modèle d'association")  
   
- **Conseil**  
+ **Conseils**  
   
 -   Si vos données peuvent être divisées en plusieurs séries, un modèle différent est créé pour chaque jeu de données à modéliser.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66064670"
   
  [Retour au début](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a>Réseau de dépendances  
+###  <a name="dependency-network"></a><a name="BKMK_DNetwork"></a>Réseau de dépendances  
  La vue **réseau de dépendances** affiche les connexions entre les attributs d’entrée et les attributs prévisibles du modèle.  
   
 1.  Cliquez et faites glisser le curseur à gauche de la visionneuse  

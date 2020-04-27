@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054865"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Éditeur de tâche de transfert d'objets SQL (page Objets)
@@ -52,10 +52,10 @@ ms.locfileid: "66054865"
  **ExistingData**  
  Spécifiez comment les données seront copiées sur le serveur de destination. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Lieu**|Les données du serveur de destination seront remplacées.|  
-|**Ajouter**|Les données copiées à partir du serveur source seront ajoutées aux données existantes sur le serveur de destination.|  
+|**Replace**|Les données du serveur de destination seront remplacées.|  
+|**Append**|Les données copiées à partir du serveur source seront ajoutées aux données existantes sur le serveur de destination.|  
   
 > [!NOTE]  
 >  L’option **ExistingData** est disponible uniquement quand **CopyData** a la valeur **True**.  
@@ -79,7 +79,7 @@ ms.locfileid: "66054865"
  Développez **ObjectsToCopy** pour spécifier les objets qui doivent être copiés de la base de données source dans la base de données de destination.  
   
 > [!NOTE]  
->  **ObjectsToCopy** est disponible uniquement lorsque **CopyAllObjects** a la valeur **false**.  
+>  **ObjectsToCopy** est disponible uniquement quand **CopyAllObjects** a la valeur **False**.  
   
  Les options de copie des types d’objets suivants sont prises en charge uniquement sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -209,11 +209,11 @@ ms.locfileid: "66054865"
  Cliquez pour ouvrir la boîte de dialogue **Sélectionner les collections du schéma XML** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert d’objets SQL Server &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page Expressions](expressions/expressions-page.md)   
- [Formats de données pour l’importation en bloc ou l’exportation en bloc &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Page expressions](expressions/expressions-page.md)   
+ [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considérations sur la sécurité pour une installation SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

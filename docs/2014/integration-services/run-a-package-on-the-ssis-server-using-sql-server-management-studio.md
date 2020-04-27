@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056379"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Exécuter un package sur le serveur SSIS à l’aide de SQL Server Management Studio
-  Après avoir déployé votre projet sur le serveur[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous pouvez exécuter le package sur le serveur.  
+  Après avoir déployé votre projet sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous pouvez exécuter le package sur le serveur.  
   
  Vous pouvez utiliser des rapports d'opérations pour afficher des informations sur les packages qui ont été exécutés, ou qui sont actuellement exécutés, sur le serveur. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   

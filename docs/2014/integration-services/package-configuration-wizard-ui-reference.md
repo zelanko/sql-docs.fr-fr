@@ -16,15 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056934"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Configuration de package
-  
-  **L’Assistant Configuration de package** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ainsi que les objets qui s’y rattachent au moment de l’exécution. Cet Assistant s’exécute quand vous ajoutez une nouvelle configuration ou modifiez une configuration existante dans la boîte de dialogue **Bibliothèque des configurations du package**. Pour ouvrir la boîte de dialogue **Bibliothèque des configurations du package**, sélectionnez **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md).  
+  **L’Assistant Configuration de package** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ainsi que les objets qui s’y rattachent au moment de l’exécution. Cet Assistant s’exécute quand vous ajoutez une nouvelle configuration ou modifiez une configuration existante dans la boîte de dialogue **Bibliothèque des configurations du package** . Pour ouvrir la boîte de dialogue **Bibliothèque des configurations du package** , sélectionnez **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md).  
   
 > [!NOTE]  
 >  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -32,14 +31,13 @@ ms.locfileid: "66056934"
  Les sections suivantes décrivent les pages de l'Assistant.  
   
 ## <a name="welcome-to-the-package-configuration-wizard-page"></a>Page Assistant Configuration de package  
- 
-  **L’Assistant de configuration de SSIS** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package ainsi que les objets qui s’y rattachent au moment de l’exécution du programme.  
+ **L’Assistant de configuration de SSIS** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package ainsi que les objets qui s’y rattachent au moment de l’exécution du programme.  
   
 ### <a name="options"></a>Options  
  **Ne plus afficher cette page**  
  Option permettant d'ignorer cette page d'accueil la prochaine fois que vous ouvrez l'Assistant.  
   
- **Situé**  
+ **Suivant**  
  Permet de passer à la page suivante de l’Assistant.  
   
 ## <a name="select-configuration-type-page"></a>Page Sélectionner le type de configuration  
@@ -49,9 +47,9 @@ ms.locfileid: "66056934"
   
 ### <a name="static-options"></a>Options statiques  
  **Type de configuration**  
- Sélectionnez le type de source dans lequel stocker la configuration, à l'aide des options suivantes :  
+ Sélectionnez le type de source dans lequel stocker la configuration, à l'aide des options suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Fichier de configuration XML**|Stocke la configuration sous forme de fichier XML. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
 |**Variable d’environnement**|Stocke la configuration dans une des variables d'environnement. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
@@ -59,7 +57,7 @@ ms.locfileid: "66056934"
 |**Variable de package parent**|Stocke la configuration en tant que variable dans le package qui contient la tâche.  Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
 |**SQL Server**|Stocke la configuration dans une table de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
   
- **Situé**  
+ **Suivant**  
  Affiche la page suivante de l'Assistant.  
   
 ### <a name="dynamic-options"></a>Options dynamiques  
@@ -68,7 +66,7 @@ ms.locfileid: "66056934"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Nom du fichier de configuration**|Tapez le chemin d'accès du fichier de configuration généré par l'Assistant.|  
 |**Parcourir**|La boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** permet de spécifier le chemin d’accès au fichier de configuration généré par l’Assistant. Si le fichier n'existe pas, l'Assistant le crée.|  
@@ -76,7 +74,7 @@ ms.locfileid: "66056934"
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d’environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -88,14 +86,14 @@ ms.locfileid: "66056934"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée de Registre**|Tapez la clé de Registre qui contient les informations de configuration. Le format est \<clé de Registre>.<br /><br /> La clé de Registre doit déjà exister dans HKEY_CURRENT_USER et porter une valeur nommée Value. Cette valeur peut être de type DWORD ou une chaîne.<br /><br /> Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Clé de Registre\clé de Registre\\...> pour identifier la clé.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d’environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -103,14 +101,14 @@ ms.locfileid: "66056934"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable parent**|Permet de spécifier la variable dans le package parent qui contient les informations de configuration.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d’environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -118,16 +116,16 @@ ms.locfileid: "66056934"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connection**|Permet de sélectionner une connexion dans la liste ou de cliquer sur **Nouvelle** pour créer une connexion.|  
-|**Table de configuration**|Permet de sélectionner une table existante ou de cliquer sur **Nouvelle** pour écrire une instruction SQL qui crée une table.|  
+|**Table de configuration**|Permet de sélectionner une table existante ou de cliquer sur **Nouvelle** pour écrire une instruction SQL qui crée une table.|  
 |**Filtre de la configuration**|Permet de sélectionner le nom d'une configuration existante ou de taper un nouveau nom.<br /><br /> Un grand nombre de configurations SQL Server peuvent être stockées dans la même table et chacune d'entre elles peut inclure plusieurs éléments de configuration.<br /><br /> La valeur définie par l'utilisateur est stockée dans la table pour identifier les éléments de configuration qui appartiennent à une configuration particulière.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d'environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d’environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -141,7 +139,7 @@ ms.locfileid: "66056934"
  **Attributs de la propriété**  
  Affiche les attributs d'une propriété.  
   
- **Situé**  
+ **Suivant**  
  Permet de passer à la page suivante de l'Assistant.  
   
 ## <a name="completing-the-wizard-page"></a>Page Fin de l’Assistant  
@@ -151,7 +149,7 @@ ms.locfileid: "66056934"
  **Nom de la configuration**  
  Tapez le nom de la configuration.  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affiche les paramètres utilisés par l'Assistant pour créer la configuration.  
   
  **Terminer**  

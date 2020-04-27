@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059898"
 ---
 # <a name="data-flow-tab"></a>Onglet Flux de données
@@ -35,8 +35,8 @@ ms.locfileid: "66059898"
  Pour ajouter ces fonctions dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez avec le bouton droit sur la surface de dessin, puis sélectionnez l'option choisie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chemins Integration Services](data-flow/integration-services-paths.md)   
- [Tâche de flux de données](control-flow/data-flow-task.md)   
+ [Chemins d’accès Integration Services](data-flow/integration-services-paths.md)   
+ [Tâche de workflow](control-flow/data-flow-task.md)   
  [Concepteur SSIS](ssis-designer.md)   
  [Flux de données](data-flow/data-flow.md)  
   

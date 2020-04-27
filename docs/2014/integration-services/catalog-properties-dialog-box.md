@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061110"
 ---
 # <a name="catalog-properties-dialog-box"></a>Boîte de dialogue Propriétés du catalogue
@@ -29,11 +29,11 @@ ms.locfileid: "66061110"
   
  **Que voulez-vous faire ?**  
   
--   [Ouvrir la boîte de dialogue Propriétés du catalogue](#open_dialog)  
+-   [Ouvrez la boîte de dialogue Propriétés du catalogue.](#open_dialog)  
   
 -   [Configurer les options](#options)  
   
-##  <a name="open_dialog"></a>Ouvrir la boîte de dialogue Propriétés du catalogue  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>Ouvrir la boîte de dialogue Propriétés du catalogue  
   
 1.  Ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66061110"
   
 3.  Dans l’Explorateur d’objets, développez le nœud **Integration Services** , cliquez avec le bouton droit sur **SSISDB**, puis cliquez sur **Propriétés**.  
   
-##  <a name="options"></a> Configurer les options  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurer les options  
   
 ### <a name="options"></a>Options  
  Le tableau décrit certaines propriétés de la boîte de dialogue et les propriétés correspondantes dans la vue catalog.catalog_property.  

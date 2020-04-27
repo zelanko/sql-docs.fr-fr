@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065491"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sélection de l'utilisateur (Analysis Services - Données multidimensionnelles)

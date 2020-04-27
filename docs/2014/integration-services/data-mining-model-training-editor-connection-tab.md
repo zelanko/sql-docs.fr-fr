@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059877"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Connexion)
@@ -27,23 +27,23 @@ ms.locfileid: "66059877"
  Pour en savoir plus sur la destination d'apprentissage du modèle d'exploration de données, consultez [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Options  
- **Connection manager**  
+ **Gestionnaire de connexions**  
  Sélectionnez une connexion dans la liste des connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existantes ou créez une nouvelle connexion [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à l’aide du bouton **Nouveau** décrit ci-après.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
  **Structure d’exploration de données**  
  Sélectionnez une structure dans la liste de structures d’exploration de données disponibles ou créez une nouvelle structure en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez une structure d’exploration de données et un modèle d’exploration de données à l’aide de **l’Assistant Exploration de données**.  
   
  **Modèles d’exploration de données**  
  Affiche la liste des modèles d'exploration de données associés à la structure d'exploration de données sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet colonnes&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Colonnes&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

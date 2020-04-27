@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065187"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Cause et résolution des erreurs du moteur de base de données
@@ -23,7 +23,7 @@ ms.locfileid: "66065187"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de message d'erreur dans cette section fournissent une explication du message d'erreur, des causes possibles et des actions que vous pouvez entreprendre pour corriger le problème.  
   
-## <a name="reference"></a>Informations de référence  
+## <a name="reference"></a>Référence  
  [Présentation des erreurs du moteur de base de données](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054990"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Éditeur de tâche de transfert de travaux (page Travaux)
@@ -34,17 +34,17 @@ ms.locfileid: "66054990"
  **DestinationConnection**  
  Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
   
- **TransferAllJobs a**  
+ **TransferAllJobs**  
  Déterminez si la tâche doit copier du serveur source au serveur de destination tous les travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou seulement ceux spécifiés.  
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Copie tous les travaux.|  
-|**False**|Copie uniquement les travaux spécifiés.|  
+|**:**|Copie tous les travaux.|  
+|**Fausses**|Copie uniquement les travaux spécifiés.|  
   
- **JobsList n'**  
+ **JobsList**  
  Cliquez sur le bouton Parcourir **(...)** pour sélectionner les travaux à copier. Un travail au moins doit être sélectionné.  
   
 > [!NOTE]  
@@ -57,27 +57,27 @@ ms.locfileid: "66054990"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des travaux de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les travaux de même nom sur le serveur de destination.|  
-|**Ignorer**|La tâche ignore les travaux de même nom qui existent sur le serveur de destination.|  
+|**Saut**|La tâche ignore les travaux de même nom qui existent sur le serveur de destination.|  
   
  **EnableJobsAtDestination**  
  Déterminez si les travaux copiés sur le serveur de destination doivent être activés.  
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Active les travaux sur le serveur de destination.|  
-|**False**|Désactive les travaux sur le serveur de destination.|  
+|**:**|Active les travaux sur le serveur de destination.|  
+|**Fausses**|Désactive les travaux sur le serveur de destination.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert de travaux &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Éditeur de tâche de transfert de travaux &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054732"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utiliser les valeurs des variables et des paramètres dans un package enfant
@@ -78,7 +78,7 @@ ms.locfileid: "66054732"
   
 4.  Dans la boîte de dialogue **Bibliothèque des configurations du package** , sélectionnez **Activer les configurations du package**et cliquez sur **Ajouter**.  
   
-5.  Sur la page d’accueil de l’Assistant Configuration de package, cliquez sur **suivant.**  
+5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
   
 6.  Dans la page Sélectionner le type de configuration, dans la liste **Type de configuration** , sélectionnez **Variable de package parent** et effectuez l’une des interventions suivantes :  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66054732"
 ## <a name="see-also"></a>Voir aussi  
  [Configurations du package](../../2014/integration-services/package-configurations.md)   
  [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)   
- [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)  
   
   

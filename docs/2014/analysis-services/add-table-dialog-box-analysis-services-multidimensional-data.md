@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062811"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter une table (Analysis Services - Données multidimensionnelles)
@@ -32,7 +32,7 @@ ms.locfileid: "66062811"
 |**Views**|L’onglet **Vue** s permet d’afficher et de sélectionner une vue à ajouter.|  
 |**Fonctions**|L’onglet **Fonctions** permet d’afficher et de sélectionner une fonction ou une procédure stockée à ajouter.|  
 |**Synonymes**|L’onglet **Synonymes** sert à afficher et à sélectionner un synonyme à ajouter.|  
-|**Actualiser**|Permet de recharger tous les onglets de la boîte de dialogue.|  
+|**Actualisation**|Permet de recharger tous les onglets de la boîte de dialogue.|  
 |**Ajouter**|Permet d'ajouter l'élément actuellement sélectionné. **Remarque :**  Cette option est activée uniquement si un élément est sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  

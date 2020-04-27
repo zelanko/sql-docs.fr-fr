@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065517"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Affichage de modèles d'exploration de données dans Visio (Compléments d'exploration de données)
@@ -67,7 +67,7 @@ ms.locfileid: "66065517"
   
      Effectuer un zoom avant sur des sections spécifiques, rechercher les nœuds qui contiennent un attribut, ou filtrer un graphique de dépendances par ses bords (probabilité).  
   
-## <a name="walkthroughs"></a>Procédures pas à pas  
+## <a name="walkthroughs"></a>Procédures pas à pas  
  Pour obtenir des exemples d'utilisation et d'interprétation d'un diagramme fini, consultez les rubriques suivantes :  
   
  [Procédure pas à pas Diagramme de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  

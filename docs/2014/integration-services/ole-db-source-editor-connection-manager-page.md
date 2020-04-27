@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057049"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Éditeur de source OLE DB (page Gestionnaire de connexions)
@@ -46,7 +46,7 @@ ms.locfileid: "66057049"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
  **Mode d'accès aux données**  
@@ -55,12 +55,12 @@ ms.locfileid: "66057049"
 |Option|Description|  
 |------------|-----------------|  
 |Table ou vue|Permet de récupérer les données d'une table ou d'une vue dans la source de données OLE DB.|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
 |Commande SQL|Récupérez les données de la source de données OLE DB à l'aide d'une requête SQL.|  
 |Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
   
- **Préversion**  
- Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . L' **Aperçu** peut afficher jusqu’à 200 lignes.  
+ **PRÉVERSION**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
   
 > [!NOTE]  
 >  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. Les valeurs \<valeur trop grande pour être affichée> ou System.Byte[] s’affichent à la place. La première s’affiche lorsque le fournisseur SQL OLE DB accède à la source de données, la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
@@ -79,7 +79,7 @@ ms.locfileid: "66057049"
  **Texte de la commande SQL**  
  Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
- **Paramètres**  
+ **Parameters**  
  Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
   
  **Générer la requête**  
@@ -96,7 +96,7 @@ ms.locfileid: "66057049"
  Sélectionnez la variable qui contient le texte de la requête SQL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de source de OLE DB &#40;page colonnes&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Éditeur de source de OLE DB &#40;page sortie d’erreur&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extraire des données à l’aide de la source de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   

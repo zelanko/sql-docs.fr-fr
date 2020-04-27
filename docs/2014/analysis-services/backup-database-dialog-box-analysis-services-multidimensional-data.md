@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064378"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sauvegarder la base de données (Analysis Services - Données multidimensionnelles)
@@ -30,7 +30,7 @@ ms.locfileid: "66064378"
 -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** d’une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou sur une base de données dans **l’Explorateur d’objets**, puis cliquez sur **Sauvegarder**.  
   
 ## <a name="options"></a>Options  
- **Conseils**  
+ **Script**  
  Crée un script de sauvegarde basé sur les options sélectionnées dans la boîte de dialogue. Le script de restauration est écrit en langage de script [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ASSL).  
   
  Par défaut, lorsque vous cliquez sur l'icône **Script** , le script de sauvegarde est envoyé dans une nouvelle fenêtre de requête.  
@@ -70,13 +70,13 @@ ms.locfileid: "66064378"
  Tapez le mot de passe à utiliser lors du chiffrement du fichier de sauvegarde, et si définis, des fichiers de sauvegarde distants.  
   
 > [!NOTE]  
->  Cette option est activée uniquement si **Chiffrer le fichier de sauvegarde** est sélectionné.  
+>   Cette option est activée uniquement si **Chiffrer le fichier de sauvegarde** est sélectionné.  
   
  **Confirmer le mot de passe**  
  Tapez le mot de passe entré dans **Mot de passe** pour confirmer le mot de passe du fichier de sauvegarde et, s’ils sont spécifiés, des fichiers de sauvegarde distants.  
   
 > [!NOTE]  
->  Cette option est activée uniquement si **Chiffrer le fichier de sauvegarde** est sélectionné.  
+>   Cette option est activée uniquement si **Chiffrer le fichier de sauvegarde** est sélectionné.  
   
  **Partitions distantes de la sauvegarde**  
  Sélectionnez cette option pour inclure les informations d'emplacement et les données des partitions distantes dans le fichier de sauvegarde.  

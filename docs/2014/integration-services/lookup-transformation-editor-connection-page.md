@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057953"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Éditeur de transformation de recherche (page Connexion)
@@ -32,27 +32,27 @@ ms.locfileid: "66057953"
  **Gestionnaire de connexions du cache**  
  Sélectionnez un gestionnaire de connexions du cache existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
- Créez une nouvelle connexion à l’aide de la boîte de dialogue **éditeur du gestionnaire de connexions du cache** .  
+ **Nouvelle**  
+ Créez une connexion à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** .  
   
  Les options suivantes sont disponibles quand vous sélectionnez **Cache complet**, **Cache partiel**ou **Aucun cache**et **Gestionnaire de connexions OLE DB**dans la page Général de la boîte de dialogue **Éditeur de transformation de recherche** .  
   
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions OLE DB existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
  **Utiliser une table ou une vue**  
- Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouveau**.  
+ Sélectionnez une table ou une vue existante dans la liste, ou créez une nouvelle table en cliquant sur **nouveau**.  
   
 > [!NOTE]  
 >  Si vous spécifiez une instruction SQL dans la page **Avancé** de l’ **Éditeur de transformation de recherche**, cette instruction SQL substitue et remplace le nom de table a sélectionné ici. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Avancé&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
   
- **Nouveau**  
+ **Nouvelle**  
  Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
   
- **Utiliser les résultats d’une requête SQL**  
+ **Utiliser les résultats d'une requête SQL**  
  Choisissez cette option pour rechercher une requête existante, générer une requête, vérifier la syntaxe d'une requête et afficher un aperçu des résultats d'une requête.  
   
  **Générer la requête**  
@@ -64,7 +64,7 @@ ms.locfileid: "66057953"
  **Analyser la requête**  
  Contrôle la syntaxe d'une requête.  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
   
 ## <a name="external-resources"></a>Ressources externes  
@@ -72,7 +72,7 @@ ms.locfileid: "66057953"
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de transformation de recherche &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de transformation de recherche &#40;page Colonnes&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Éditeur de transformation de recherche &#40;page colonnes&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Éditeur de transformation de recherche &#40;&#41;de page avancé](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [Éditeur de transformation de recherche &#40;page sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [transformation de recherche floue](data-flow/transformations/fuzzy-lookup-transformation.md)  

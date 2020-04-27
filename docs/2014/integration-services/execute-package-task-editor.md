@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059060"
 ---
 # <a name="execute-package-task-editor"></a>Éditeur de tâche d'exécution de package
@@ -26,21 +26,21 @@ ms.locfileid: "66059060"
   
  **Que voulez-vous faire ?**  
   
--   [Ouvrir l’éditeur de tâche d’exécution de package](#open)  
+-   [Ouvrir l'Éditeur de tâche d'exécution de package](#open)  
   
--   [Définir les options sur la page général](#general)  
+-   [Définir les options sur la page Général](#general)  
   
--   [Définir les options sur la page package](#package)  
+-   [Définir les options sur la page Package](#package)  
   
--   [Définir les options sur la page liaisons de paramètres](#parameter)  
+-   [Définir les options sur la page Liaisons de paramètre](#parameter)  
   
-##  <a name="open"></a>Ouvrir l’éditeur de tâche d’exécution de package  
+##  <a name="open-the-execute-package-task-editor"></a><a name="open"></a>Ouvrir l’éditeur de tâche d’exécution de package  
   
 1.  Ouvrez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] qui contient une tâche d'exécution de package.  
   
 2.  Cliquez avec le bouton droit sur la tâche dans le Concepteur SSIS, puis cliquez sur **Modifier**.  
   
-##  <a name="general"></a>Définir les options sur la page général  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a>Définir les options sur la page général  
  **Nom**  
  Fournissez un nom unique pour la tâche d'exécution de package. Ce nom sert d'étiquette à l'icône de la tâche.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66059060"
  **Description**  
  Entrez une description de la tâche d'exécution de package.  
   
-##  <a name="package"></a>Définir les options sur la page package  
+##  <a name="set-the-options-on-the-package-page"></a><a name="package"></a>Définir les options sur la page package  
  **ReferenceType**  
  Sélectionnez **Référence du projet** pour les packages enfants qui sont dans le projet. Sélectionnez **Référence externe** pour les packages enfants situés en dehors du package.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66059060"
 ### <a name="referencetype-dynamic-options"></a>Options dynamiques de ReferenceType  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = Référence externe  
- **Location**  
+ **Emplacement**  
  Sélectionnez l'emplacement du package enfant. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**SQL Server**|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Système de fichiers**|Permet de définir l'emplacement du système de fichiers.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66059060"
  **Connection**  
  Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [OLE DB gestionnaire de connexions](connection-manager/ole-db-connection-manager.md), [configurer le gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Configurer le gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Permet d’entrer le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (...) pour atteindre le package.  
@@ -99,12 +99,12 @@ ms.locfileid: "66059060"
  **Connection**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou \<cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Permet d'afficher le nom du package.  
   
-##  <a name="parameter"></a>Définir les options sur la page liaisons de paramètres  
+##  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a>Définir les options sur la page liaisons de paramètres  
  Vous pouvez passer des valeurs du package parent ou du projet au package enfant. Le projet doit utiliser le modèle de déploiement de projet et le package enfant doit être contenu dans le même projet qui contient le package parent.  
   
  Pour plus d’informations sur la conversion de projets en modèle de déploiement de projet, consultez [Déployer des projets sur le serveur Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  

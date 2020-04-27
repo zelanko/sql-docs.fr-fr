@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069134"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Onglet Discrimination de cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
@@ -24,13 +24,13 @@ ms.locfileid: "66069134"
   
  Utilisez cette vue d'un modèle Sequence Clustering pour comparer deux clusters et déterminer les états et les transitions qui sont différents.  
   
- **Pour plus d’informations :** [algorithme de clustering de séquences Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -49,7 +49,7 @@ ms.locfileid: "66069134"
   
  De façon générale, un cluster particulier peut contenir plusieurs états : par exemple, un état courant peut être l'achat d'une bouteille d'eau et d'un porte-bidon, dans l'ordre. Toutefois, la séquence peut être présente dans d'autres clusters qui ont des caractéristiques de définition plus importantes. Par exemple, un autre cluster peut être caractérisé de manière plus importante par des temps de transaction très courts, et une analyse indiquerait que les éléments « bouteille d'eau » et « porte-bidon » sont positionnés de manière à pouvoir généralement, mais pas systématiquement, être regroupés dans ce cluster.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variables**|Attribut du modèle d'exploration de données.|  
 |**Valeurs**|État de l’attribut répertorié dans **Variables**.|  

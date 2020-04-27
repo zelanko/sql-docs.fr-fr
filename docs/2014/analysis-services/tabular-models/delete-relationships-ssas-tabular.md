@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067324"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Supprimer des relations (SSAS Tabulaire)
@@ -53,6 +53,6 @@ ms.locfileid: "66067324"
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations &#40;&#41;tabulaires SSAS](relationships-ssas-tabular.md)   
- [Créer une relation entre deux tables &#40;SSAS tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Créer une relation entre deux tables &#40;SSAS Tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

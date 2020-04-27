@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060981"
 ---
 # <a name="character-map-transformation-editor"></a>Éditeur de transformation de la table des caractères
@@ -27,7 +27,7 @@ ms.locfileid: "66060981"
  Pour en savoir plus sur la transformation de la table des caractères, consultez [Character Map Transformation](data-flow/transformations/character-map-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Activez les cases à cocher pour sélectionner les colonnes à transformer en utilisant des fonctions de chaîne. Vos sélections figurent dans le tableau ci-dessous.  
   
  **Colonne d'entrée**  
@@ -36,7 +36,7 @@ ms.locfileid: "66060981"
  **Destination**  
  Indiquez si vous voulez enregistrer le résultat des opérations de chaîne sur place en utilisant la colonne existante, ou enregistrer les données modifiées sous la forme d'une nouvelle colonne.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Nouvelle colonne|Enregistre les données dans une nouvelle colonne. Définissez le nom de la colonne sous **Alias de sortie**.|  
 |Modification sur place|Enregistre les données modifiées dans la colonne existante.|  
@@ -44,7 +44,7 @@ ms.locfileid: "66060981"
  **opération**  
  Dans la liste, sélectionnez les fonctions de chaîne à appliquer aux données de la colonne.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Minuscules|Convertit les caractères en minuscules.|  
 |Majuscules|Convertit les caractères en majuscules|  

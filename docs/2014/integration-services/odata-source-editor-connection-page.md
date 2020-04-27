@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057317"
 ---
 # <a name="odata-source-editor-connection-page"></a>Éditeur de source OData (page Connexion)
@@ -26,10 +26,10 @@ ms.locfileid: "66057317"
  **Gestionnaire de connexions OData**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions OData** .  
   
- **Utiliser le chemin d’accès de la collection ou de la ressource**  
+ **Utilisez une collection ou un chemin d'accès de ressource.**  
  Spécifiez la méthode de sélection des données dans la source.  
   
 |Option|Description|  
@@ -40,20 +40,20 @@ ms.locfileid: "66057317"
  **Options de requête**  
  Permet d'indiquer les options de la requête.  Par exemple : $top=5  
   
- **Feed url**  
+ **URL du flux**  
  Affiche l'URL du flux en lecture seule en fonction des options sélectionnées dans la boîte de dialogue.  
   
- **Préversion**  
- Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L' **Aperçu** peut afficher jusqu’à 20 lignes.  
+ **PRÉVERSION**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L’**Aperçu** peut afficher jusqu’à 20 lignes.  
   
 ## <a name="dynamic-options"></a>Options dynamiques  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Utilisez une collection ou un chemin d'accès de ressource = Collection.  
- **Collecte**  
+ **Collection**  
  Sélectionnez une collection dans la liste déroulante.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
- **Chemin de la ressource**  
+ **Resource path**  
  Type de chemin d'accès de ressource. Par exemple : Employees  
   
 ## <a name="see-also"></a>Voir aussi  

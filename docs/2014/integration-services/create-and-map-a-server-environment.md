@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060150"
 ---
 # <a name="create-and-map-a-server-environment"></a>Créer et mapper un environnement serveur
@@ -28,13 +28,13 @@ ms.locfileid: "66060150"
 > [!IMPORTANT]  
 >  Pour une exécution données, un package peut s'exécuter uniquement avec les valeurs contenues dans un seul environnement.  
   
- Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d’informations, consultez la section **environnements serveur, variables de serveur et références d’environnement serveur** dans le [catalogue SSIS](catalog/ssis-catalog.md).  
+ Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Pour créer et utiliser un environnement serveur  
   
 1.  Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], développez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le nœud catalogues> **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier **environnements** du projet pour lequel vous souhaitez créer un environnement.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Environnements**, puis cliquez sur **Créer l’environnement**.  
+2.  Cliquez avec le bouton droit sur le dossier **Environnements** , puis cliquez sur **Créer l’environnement**.  
   
 3.  Tapez un nom pour l'environnement, et éventuellement une description, puis cliquez sur **OK**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060150"
   
 5.  Dans la page **Variables** , procédez comme suit pour ajouter une variable.  
   
-    1.  Sélectionnez le **Type** de la variable. Le nom de la variable **ne doit pas** nécessairement correspondre au nom du paramètre de projet que vous mappez à la variable.  
+    1.  Sélectionnez le **Type** de la variable. Le nom de la variable ne doit **pas** nécessairement correspondre au nom du paramètre du projet que vous mappez à la variable.  
   
     2.  Entrez une **Description** facultative pour la variable.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060150"
   
 13. Pour mapper la variable d'environnement à une propriété du gestionnaire de connexions, procédez comme suit. Les paramètres sont automatiquement générés sur le serveur SSIS pour les propriétés du gestionnaire de connexions.  
   
-    1.  Sous l’onglet **Gestionnaires de connexions** dans la page **Paramètres**, cliquez sur le bouton Parcourir en regard du champ **Valeur**.  
+    1.  Dans l'onglet **Gestionnaires de connexions** dans la page **Paramètres** , cliquez sur le bouton Parcourir en regard du champ **Valeur** .  
   
     2.  Cliquez sur **Utiliser la variable d'environnement**, puis sélectionnez la variable d'environnement que vous avez créée.  
   

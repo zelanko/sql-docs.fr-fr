@@ -15,17 +15,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062611"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Boîte de dialogue Paramètres d'algorithme (Vue Modèles d'exploration de données)
   Utilisez la boîte de dialogue **Paramètres d’algorithme** pour ajuster les paramètres d’algorithme spécifiques du modèle sélectionné. Lorsque vous modifiez un paramètre d'algorithme, vous modifiez habituellement les résultats du modèle d'exploration de données. L'influence de chaque paramètre sur les résultats dépend de l'algorithme que vous utilisez et de vos données. Pour plus d’informations, consultez [Personnaliser les modèles et les structures d’exploration de données](data-mining/customize-mining-models-and-structure.md).  
   
 ## <a name="options"></a>Options  
- **Paramètres**  
+ **Parameters**  
  Affiche la liste des paramètres disponibles pour le modèle d'exploration de données sélectionné.  
   
  La liste suivante décrit les colonnes disponibles.  
@@ -34,14 +34,14 @@ ms.locfileid: "66062611"
 |------------|-----------------|  
 |**Paramètre**|Liste le nom du paramètre.|  
 |**Valeur**|Vous ne devez entrer une valeur que si vous souhaitez remplacer la valeur par défaut du paramètre.|  
-|**Valeurs**|Donne la valeur par défaut du paramètre, qui sera utilisée par l’algorithme si vous n’entrez pas de valeur dans la colonne **Valeur**.|  
-|**Plage**|Répertorie l’intervalle des valeurs possibles que vous pouvez entrer dans la colonne **Valeur**. Les plages peuvent être l’une des suivantes :<br /><br /> Liste discrète, telle que 1, 2, 3<br /><br /> Une plage inclusive, telle que [0, 100]<br /><br /> Plage exclusive, telle que (0,...)<br /><br /> Une combinaison, telle que [0,...)|  
+|**Par défaut**|Donne la valeur par défaut du paramètre, qui sera utilisée par l’algorithme si vous n’entrez pas de valeur dans la colonne **Valeur** .|  
+|**Plage**|Répertorie l’intervalle des valeurs possibles que vous pouvez entrer dans la colonne **Valeur** . Les plages peuvent être l’une des suivantes :<br /><br /> Liste discrète, telle que 1, 2, 3<br /><br /> Une plage inclusive, telle que [0, 100]<br /><br /> Plage exclusive, telle que (0,...)<br /><br /> Une combinaison, telle que [0,...)|  
   
  **Description**  
- Décrit le paramètre sélectionné dans la liste **Paramètres**.  
+ Décrit le paramètre sélectionné dans la liste **Paramètres** .  
   
  **Ajouter**  
- Cliquez sur cet élément pour ajouter à la liste des paramètres supplémentaires spécifiques de l'algorithme. Après avoir ajouté le paramètre, vous pouvez entrer le nom correct dans la colonne **Paramètre** et donner une valeur dans la colonne **Valeur**.  
+ Cliquez sur cet élément pour ajouter à la liste des paramètres supplémentaires spécifiques de l'algorithme. Après avoir ajouté le paramètre, vous pouvez entrer le nom correct dans la colonne **Paramètre** et donner une valeur dans la colonne **Valeur** .  
   
  **Remove**  
  Cliquez sur cet élément pour supprimer un paramètre personnalisé de la liste.  

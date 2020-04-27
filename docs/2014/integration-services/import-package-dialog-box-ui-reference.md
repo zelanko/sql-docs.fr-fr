@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058082"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Importer un package
-  Utilisez la boîte de dialogue **Importer un package**, disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour importer un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et pour définir ou modifier son niveau de protection.  
+  Utilisez la boîte de dialogue **Importer un package** , disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour importer un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et pour définir ou modifier son niveau de protection.  
   
 ## <a name="options"></a>Options  
  **Emplacement du package**  
@@ -52,19 +52,19 @@ ms.locfileid: "66058082"
  **Mot de passe**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , entrez un mot de passe.  
   
- **Chemin d'accès au package**  
- Tapez le chemin du package ou cliquez sur le bouton Parcourir **(...)** pour rechercher le package.  
+ **Chemin du package**  
+ Tapez le chemin d’accès au package ou cliquez sur le bouton Parcourir **(...)** et recherchez le package.  
   
  **Nom du package**  
  Éventuellement, renommez le package. Par défaut, son nom est celui du package à importer.  
   
  **Niveau de protection**  
- Cliquez sur le bouton Parcourir **(...)** et, dans la boîte de dialogue **Niveau de protection du package**, mettez à jour le niveau de protection. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Cliquez sur le bouton Parcourir **(...)** et, dans la boîte de dialogue **niveau de protection du package** , mettez à jour le niveau de protection. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrer une copie du package](../../2014/integration-services/save-copy-of-package.md)   
  [Référence de l’interface utilisateur de la boîte de dialogue Exporter le package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Enregistrer des packages](save-packages.md)   
+ [Enregistrer les packages](save-packages.md)   
  [Importer et exporter des packages &#40;service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

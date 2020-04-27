@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057788"
 ---
 # <a name="manage-the-integration-services-service"></a>Gérer le service Integration Services
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Lorsque vous installez le composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est également installé. Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est défini comme étant automatique. Toutefois, vous devez également installer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour utiliser le service afin de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stockés et en cours d'exécution.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66057788"
   
  Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour arrêter l'exécution des packages à l'arrêt du service. Toutefois, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'attend pas l'arrêt des packages et certains packages peuvent continuer à être exécutés après l'arrêt du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Si le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est arrêté, vous pouvez continuer à exécuter des packages par le biais de l’Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], de l’utilitaire d’exécution de package et de l’utilitaire d’invite de commandes **dtexec** (dtexec.exe). Vous ne pouvez cependant pas surveiller les packages en cours d'exécution.  
+ Si le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est arrêté, vous pouvez continuer à exécuter des packages par le biais de l’Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , de l’utilitaire d’exécution de package et de l’utilitaire d’invite de commandes **dtexec** (dtexec.exe). Vous ne pouvez cependant pas surveiller les packages en cours d'exécution.  
   
  Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécute dans le contexte du compte SERVICE RESEAU.  
   

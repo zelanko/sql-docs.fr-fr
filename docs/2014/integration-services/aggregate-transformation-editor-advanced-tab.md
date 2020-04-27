@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061591"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Éditeur de transformation d'agrégation (onglet Avancé)
@@ -27,42 +27,42 @@ ms.locfileid: "66061591"
 > [!NOTE]  
 >  Les options concernant le nombre et l’échelle de clés d’une part, et le nombre et l’échelle de clés distinctes d’autre part, s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé** , au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** , ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations** .  
 >   
->  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Regrouper par** . **Count distinct Keys** et **Count distinct Scale** font référence au nombre de valeurs distinctes qui sont supposées résulter d’une opération de **comptage** de valeurs.  
+>  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Regrouper par** . **Nombre de clés distinctes** et **Échelle de nombre des valeurs distinctes** font référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .  
   
  Pour en savoir plus sur la transformation d’agrégation, consultez [Transformation d’agrégation](data-flow/transformations/aggregate-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Échelle de clés**  
+ **Échelle de clé**  
  Permet de spécifier le nombre approximatif de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété **KeyScale** n’est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
-|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
+|Moyen|L'agrégation peut écrire environ 5 000 000 clés.|  
 |Élevé|L'agrégation peut écrire plus de 25 000 000 clés.|  
   
  **Nombre de clés**  
  Permet de spécifier le nombre exact de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
   
- **Échelle Count distinct**  
+ **Échelle de nombre des valeurs distinctes**  
  Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété CountDistinctScale n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
-|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
+|Moyen|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
 |Élevé|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
   
  **Nombre de clés distinctes**  
  Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
   
- **Facteur d’extension automatique**  
+ **Facteur d'extension automatique**  
  Utilisez une valeur comprise entre 1 et 100 afin de spécifier le pourcentage selon lequel la mémoire peut être étendue pendant l'agrégation. Par défaut, la valeur de cette option est **25 %**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de transformation d’agrégation &#40;onglet Agrégations&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   

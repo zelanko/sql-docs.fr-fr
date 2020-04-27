@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060657"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configurer la Visionneuse de données (onglet Grille)
@@ -36,7 +36,7 @@ ms.locfileid: "66060657"
  [Configurer la visionneuse de données &#40;onglet graphique en colonnes&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurer la visionneuse de données &#40;onglet histogramme&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Configurer la visionneuse de données &#40;onglet nuage de points&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
- [Flux de données](data-flow/data-flow.md)   
+ [Transmission de données](data-flow/data-flow.md)   
  [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
   
   

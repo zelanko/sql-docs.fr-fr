@@ -14,14 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064829"
 ---
 # <a name="feature-reference-database-engine"></a>Références relatives aux fonctionnalités (moteur de base de données)
-  
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des données et des objets de base de données. En outre, vous pouvez utiliser certains outils pour surveiller et résoudre les problèmes relatifs aux performances du serveur et de la base de données, activer et désactiver des fonctionnalités, des services et des protocoles réseaux. Les rubriques de cette section décrivent les boîtes de dialogue de ces outils et applications.  
   
  Pour accéder à une rubrique de l'interface utilisateur pendant l'exécution de l'outil ou de l'application, appuyez sur F1 ou cliquez sur Aide lorsque la boîte de dialogue, la page Web ou l'Assistant est ouvert.  

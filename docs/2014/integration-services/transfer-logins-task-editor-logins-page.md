@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054927"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Éditeur de tâche de transfert de connexions (page Connexions)
@@ -37,7 +37,7 @@ ms.locfileid: "66054927"
  **LoginsToTransfer**  
  Sélectionnez les connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à copier du serveur source au serveur de destination. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**AllLogins**|Toutes les connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le serveur source seront copiées sur le serveur de destination.|  
 |**SelectedLogins**|Seules les connexions spécifiées dans **LoginsList** seront copiées sur le serveur de destination.|  
@@ -54,20 +54,20 @@ ms.locfileid: "66054927"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des connexions de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les connexions de même nom sur le serveur de destination.|  
-|**Ignorer**|La tâche ignore les connexions de même nom qui existent sur le serveur de destination.|  
+|**Saut**|La tâche ignore les connexions de même nom qui existent sur le serveur de destination.|  
   
  **CopySids**  
- Déterminez si les identificateurs de sécurité associés aux connexions doivent être copiés sur le serveur de destination. **CopySids** doit avoir la valeur **true** si la tâche de transfert de connexions est utilisée en même temps que la tâche de transfert de base de données. Dans le cas contraire, les connexions copiées ne seront pas reconnues par la base de données transférée.  
+ Déterminez si les identificateurs de sécurité associés aux connexions doivent être copiés sur le serveur de destination. **CopySids** doit prendre la valeur **True** si la tâche de transfert de connexions est utilisée en parallèle à la tâche de transfert de bases de données. Dans le cas contraire, les connexions copiées ne seront pas reconnues par la base de données transférée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert de connexions &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)   
  [Mots de passe forts](../relational-databases/security/strong-passwords.md)   
  [Considérations sur la sécurité pour une installation SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

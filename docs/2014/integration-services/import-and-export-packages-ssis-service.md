@@ -16,20 +16,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058148"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importer et exporter des packages (Service SSIS)
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Les packages peuvent être enregistrés dans la table sysssispackages de la base de données msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans le système de fichiers.  
   
- Le magasin de packages, qui est le stockage logique que le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contrôle et gère, peut inclure la base de données msdb et les dossiers du système de fichiers spécifiés dans le fichier de configuration pour le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Le magasin de packages, qui est le stockage logique que le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contrôle et gère, peut inclure la base de données msdb et les dossiers du système de fichiers spécifiés dans le fichier de configuration pour le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Vous pouvez importer et exporter des packages entre les types de stockage suivants :  
   
@@ -39,16 +39,14 @@ ms.locfileid: "66058148"
   
 -   La base de données msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous donne la possibilité d'importer et d'exporter des packages, et ce faisant, de modifier le format et l'emplacement de stockage des packages. Les fonctionnalités d’importation et d’exportation vous permettent d’ajouter des packages au système de fichiers, au magasin de packages ou à la base de données msdb, et de copier des packages d’un format de stockage vers un autre. Par exemple, les packages enregistrés dans msdb peuvent être copiés dans le système de fichiers et vice versa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous donne la possibilité d'importer et d'exporter des packages, et ce faisant, de modifier le format et l'emplacement de stockage des packages. Les fonctionnalités d’importation et d’exportation vous permettent d’ajouter des packages au système de fichiers, au magasin de packages ou à la base de données msdb, et de copier des packages d’un format de stockage vers un autre. Par exemple, les packages enregistrés dans msdb peuvent être copiés dans le système de fichiers et vice versa.  
   
  Vous pouvez aussi copier un package dans un format différent à l’aide de l’utilitaire d’invite de commandes **dtutil** (dtutil.exe). Pour plus d’informations, consultez [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>Pour exporter ou importer un package  
   
 > [!IMPORTANT]  
->  Cette rubrique décrit le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , qui fait partie de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour la compatibilité descendante avec [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Pour plus d’informations sur la gestion des packages dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consultez [Serveur Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
+>  Cette rubrique décrit le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , qui fait partie de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour la compatibilité descendante avec [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Pour plus d’informations sur la gestion des packages dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consultez [Serveur Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Vous pouvez importer ou exporter un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] depuis ou vers les emplacements suivants :  
   
@@ -68,15 +66,15 @@ ms.locfileid: "66058148"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis cliquez sur **SQL Server Management Studio**.  
   
-2.  Dans la boîte de dialogue **se connecter au serveur** , définissez les options suivantes :  
+2.  Dans la boîte de dialogue **Se connecter au serveur** , définissez les options suivantes :  
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **nom du serveur** , indiquez le nom du serveur ou cliquez sur ** \<parcourir pour en savoir plus... >** et recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
-4.  Dans l’Explorateur d’objets, développez le dossier **packages stockés** .  
+4.  Dans l'Explorateur d'objets, développez le dossier **Packages stockés** .  
   
 5.  Développez les sous-dossiers afin de rechercher celui dans lequel vous souhaitez importer un package.  
   
@@ -84,15 +82,15 @@ ms.locfileid: "66058148"
   
     -   Pour importer à partir d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis spécifiez le serveur et le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK.**  
   
     -   Pour importer à partir d'un système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **Ouvrir**.  
+         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **Ouvrir.**  
   
     -   Pour importer à partir du magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** et spécifiez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK.**  
   
 7.  Si vous le souhaitez, mettez à jour le nom du package.  
   
@@ -104,11 +102,11 @@ ms.locfileid: "66058148"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis cliquez sur **SQL Server Management Studio**.  
   
-2.  Dans la boîte de dialogue **Se connecter au serveur** , définissez les options suivantes :  
+2.  Dans la boîte de dialogue **se connecter au serveur** , définissez les options suivantes :  
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **nom du serveur** , indiquez le nom du serveur ou cliquez sur ** \<parcourir pour en savoir plus... >** et recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058007"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistant Déploiement d’Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "66058007"
 ## <a name="deployresults"></a>Déployer/Résultats  
  Lorsque vous cliquez sur **déployer** à partir de la page **vérifier** , le projet est déployé et la page **résultats** affiche la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **enregistrer le rapport...** pour enregistrer les résultats dans un fichier XML.  
   
- Cliquez sur **Fermer** pour quitter l’Assistant.  
+ Cliquez sur **Fermer** pour quitter l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déployer des projets sur Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   

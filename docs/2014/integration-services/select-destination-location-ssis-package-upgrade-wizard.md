@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056008"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Sélectionner l'emplacement de destination (Assistant Mise à niveau de packages SSIS)
@@ -25,29 +25,29 @@ ms.locfileid: "66056008"
 > [!NOTE]  
 >  Cette page est disponible uniquement quand vous exécutez l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou de l’invite de commandes.  
   
- **Pour exécuter l’Assistant Mise à niveau de packages SSIS**  
+ **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
 -   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="static-options"></a>Options statiques  
- **Enregistrer à l’emplacement source**  
+ **Enregistrer à l'emplacement source**  
  Enregistrez les packages mis à niveau dans le même emplacement que celui spécifié dans la page **Sélectionner l’emplacement source** de l’Assistant.  
   
  Si vous voulez que l’Assistant sauvegarde les packages d’origine quand ils sont stockés dans le système de fichiers, sélectionnez l’option **Enregistrer à l’emplacement source** . Pour plus d’informations, consultez [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
- **Sélectionner un nouvel emplacement de destination**  
+ **Sélectionner le nouvel emplacement de destination**  
  Enregistrez les packages mis à niveau dans l'emplacement de destination qui est spécifié sur cette page.  
   
  **Source du package**  
  Spécifiez l'emplacement où les packages de mise à niveau doivent être stockés. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Système de fichiers**|Indique que les packages mis à niveau doivent être enregistrés dans un dossier sur l'ordinateur local.|  
 |**Magasin de packages SSIS**|Indique que les packages mis à niveau doivent être enregistrés dans le magasin de packages Integration Services. Le magasin de packages se compose de l'ensemble des dossiers du système de fichiers gérés par Integration Services. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
 |**Microsoft SQL Server**|Indique que les packages mis à niveau doivent enregistrés dans une instance existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> La sélection de cette valeur affiche les options **Source du package** dynamiques correspondantes.|  
   
- **Folder**  
+ **Répertoire**  
  Tapez le nom d’un dossier dans lequel enregistrer les packages mis à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
  **Parcourir**  
@@ -66,7 +66,7 @@ ms.locfileid: "66056008"
  **Utiliser l’authentification Windows**  
  Permet d'utiliser l'authentification Windows pour se connecter au serveur.  
   
- **Utiliser l’authentification SQL Server**  
+ **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
  **Nom d'utilisateur**  

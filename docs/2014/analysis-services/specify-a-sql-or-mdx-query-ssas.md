@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: baf3349bc72a6d6baff4defd9a9cd4799397b716
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068509"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>Spécifier une requête SQL ou MDX (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "66068509"
 |Terme|Définition|  
 |**Nom convivial de la requête**|Tapez un nom unique pour la requête. Ce champ est obligatoire.|  
 |**Instruction SQL**|Tapez ou collez une instruction SQL.|  
-|**Valider**|Déterminez si l'instruction SQL est valide.|  
+|**Vérification**|Déterminez si l'instruction SQL est valide.|  
 |**Conception**|Concevez une instruction SQL à l'aide de la boîte de dialogue du concepteur de requêtes. Pour plus d’informations, consultez [Concepteur de requêtes relationnelles &#40;SSAS&#41;](relational-query-designer-ssas.md).|  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056870"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,10 +29,10 @@ ms.locfileid: "66056870"
  **Utiliser un paramètre existant**  
  Sélectionnez cette option pour associer la propriété de la tâche à un paramètre existant, puis sélectionnez le paramètre dans la liste déroulante.  
   
- **Ne pas utiliser le paramètre**  
+ **Ne pas utiliser de paramètre**  
  Sélectionnez cette option pour supprimer une référence à un paramètre. Le paramètre n'est pas supprimé.  
   
- **Créer un paramètre**  
+ **Créer un nouveau paramètre**  
  Sélectionnez cette option pour créer un nouveau paramètre que vous souhaitez associer à la propriété de la tâche.  
   
  **Nom**  

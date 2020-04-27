@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055477"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Éditeur de destination SQL (page Mappages)
@@ -27,7 +27,7 @@ ms.locfileid: "66055477"
  Pour en savoir plus sur la destination pour SQL Server, consultez [SQL Server Destination](data-flow/sql-server-destination.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
   
  **Colonnes de destination disponibles**  
@@ -40,7 +40,7 @@ ms.locfileid: "66055477"
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination SQL &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Éditeur de destination SQL &#40;page avancé&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [Charger des données en masse à l'aide de la destination SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  

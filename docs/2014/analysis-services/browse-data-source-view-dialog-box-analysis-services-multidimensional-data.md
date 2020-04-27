@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064459"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Parcourir la vue des sources de données (Analysis Services - Données multidimensionnelles)
@@ -31,7 +31,7 @@ ms.locfileid: "66064459"
  **Zoom**  
  Sélectionnez le pourcentage de zoom à utiliser pour redimensionner les objets à la surface du diagramme.  
   
- **Plus**  
+ **Fermer**  
  Permet de fermer la boîte de dialogue.  
   
   

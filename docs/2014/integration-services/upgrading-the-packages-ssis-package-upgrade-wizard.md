@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054735"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Mise à niveau des packages (Assistant Mise à niveau de packages SSIS)
@@ -46,7 +46,7 @@ ms.locfileid: "66054735"
  **Stop**  
  Permet d'arrêter la mise à niveau de packages.  
   
- **Report**  
+ **Rapport**  
  Sélectionnez ce que vous voulez faire avec le rapport qui contient les résultats de la mise à niveau de packages :  
   
 -   Afficher le rapport en ligne.  

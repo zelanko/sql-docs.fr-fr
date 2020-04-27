@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069168"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
@@ -24,13 +24,13 @@ ms.locfileid: "66069168"
   
  Utilisez cette vue d'un modèle Sequence Clustering pour explorer le contenu du cluster et consulter les séquences représentatives d'un cluster.  
   
- **Pour plus d’informations :** [algorithme de clustering de séquences Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -44,7 +44,7 @@ ms.locfileid: "66069168"
   
  Par exemple, dans un modèle Sequence Clustering basé sur l'analyse du panier d'achat, un cluster peut avoir comme principale caractéristique un client choisissant l'article de vente puis mettant fin à la transaction sans effectuer d'autres achats. Dans un modèle Sequence Clustering qui cherche à analyser les erreurs d'un serveur, les caractéristiques principales d'un cluster peuvent être une série d'événements d'erreurs de fréquence élevée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable**|Cette colonne indique si la caractéristique est une valeur ou une transition.<br /><br /> Si la caractéristique est une valeur, la colonne **variable** contient le nom de l’attribut.<br /><br /> Si la caractéristique représente une transition d’État, la colonne **variable** contient le texte « transitions ».|  
 |**Valeurs**|La valeur de cette colonne dépend du fait que la caractéristique est une paire attribut-valeur simple, ou une transition d'état représentant une séquence commune d'éléments ou d'événements.<br /><br /> Si la caractéristique est une valeur, la colonne **valeur** contient l’État.<br /><br /> Si la caractéristique représente une transition d’État, la colonne **valeur** contient la description de la transition d’État.|  

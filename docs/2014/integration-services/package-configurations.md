@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056893"
 ---
 # <a name="package-configurations"></a>Configurations du package
@@ -44,8 +44,7 @@ ms.locfileid: "66056893"
   
 -   Les configurations rendent ces packages plus souples. Par exemple, une configuration peut mettre à jour la valeur d'une variable utilisée dans une expression de propriété.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge différentes méthodes de stockage des configurations de package, telles que les fichiers XML, les tables d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les variables d'environnement et de package.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge différentes méthodes de stockage des configurations de package, telles que les fichiers XML, les tables d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les variables d'environnement et de package.  
   
  Chaque configuration est une paire propriété/valeur. Le fichier de configuration XML et les types de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure plusieurs configurations.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66056893"
 |Variable d’environnement|Une variable d'environnement contient la configuration.|  
 |Entrée de Registre|Une entrée de Registre contient la configuration.|  
 |Variable de package parent|Une variable dans le package contient la configuration. Ce type de configuration est généralement utilisé pour mettre à jour les propriétés dans les packages enfants.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Tableau|Une table d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient la configuration. La table peut inclure plusieurs configurations.|  
+|Table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Une table d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient la configuration. La table peut inclure plusieurs configurations.|  
   
 ### <a name="xml-configuration-files"></a>Fichiers de configuration XML  
  Si vous sélectionnez le type de configuration **Fichier de configuration XML** , vous pouvez créer un nouveau fichier de configuration, réutiliser un fichier existant et ajouter de nouvelles configurations, ou réutiliser un fichier existant en remplaçant son contenu.  
@@ -145,8 +144,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Le nom que vous donnez à la configuration est la valeur stockée dans la colonne **ConfigurationFilter** .  
   
 ## <a name="direct-and-indirect-configurations"></a>Configurations directes et indirectes  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit des configurations directes et indirectes. Si vous spécifiez directement les configurations, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crée un lien direct entre l'élément de configuration et la propriété de l'objet package. Les configurations directes sont un meilleur choix lorsque l'emplacement de la source ne change pas. Par exemple, si vous êtes sûr que tous les déploiements dans le package utilisent le même chemin d'accès de fichier, vous pouvez spécifier un fichier de configuration XML.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit des configurations directes et indirectes. Si vous spécifiez directement les configurations, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crée un lien direct entre l'élément de configuration et la propriété de l'objet package. Les configurations directes sont un meilleur choix lorsque l'emplacement de la source ne change pas. Par exemple, si vous êtes sûr que tous les déploiements dans le package utilisent le même chemin d'accès de fichier, vous pouvez spécifier un fichier de configuration XML.  
   
  Les configurations indirectes utilisent des variables d'environnement. Au lieu de spécifier directement le paramètre de configuration, la configuration pointe vers une variable d'environnement, qui contient à son tour la valeur de configuration. L'utilisation de configurations indirectes est un meilleur choix lorsque l'emplacement de la configuration peut changer pour chaque déploiement d'un package.  
   

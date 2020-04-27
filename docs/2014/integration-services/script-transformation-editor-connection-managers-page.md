@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056200"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Éditeur de transformation de script (Page Gestionnaire de connexions)
@@ -46,7 +46,7 @@ ms.locfileid: "66056200"
  Supprime la connexion sélectionnée de la liste **Gestionnaires de connexions** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sélectionner un type de composant de script](../../2014/integration-services/select-script-component-type.md)   
  [Éditeur de transformation de script &#40;page colonnes d’entrée&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Éditeur de transformation de script &#40;page entrées et sorties&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   

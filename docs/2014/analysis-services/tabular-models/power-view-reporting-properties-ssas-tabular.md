@@ -11,16 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066817"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propriétés de la génération de rapports Power View (SSAS Tabulaire)
-  
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permet la création intuitive de rapports ad hoc pour les utilisateurs professionnels comme les analystes de données, les décideurs d’entreprise et les travailleurs de l’information. Ils peuvent facilement créer et interagir avec les vues de données des modèles tabulaires basés sur des classeurs PowerPivot publiés dans une Galerie PowerPivot, ou des modèles tabulaires créés à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] puis déployés sur des instances Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application de navigateur Silverlight lancée depuis SharePoint Server 2010 ou une version ultérieure.  
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permet la création intuitive de rapports ad hoc pour les utilisateurs professionnels comme les analystes de données, les décideurs d’entreprise et les travailleurs de l’information. Ils peuvent facilement créer et interagir avec les vues de données des modèles tabulaires basés sur des classeurs PowerPivot publiés dans une Galerie PowerPivot, ou des modèles tabulaires créés à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] puis déployés sur des instances Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application de navigateur Silverlight lancée depuis SharePoint Server 2010 ou une version ultérieure.  
   
  Quand vous créez des projets de modèle tabulaire dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez configurer certaines propriétés de création de rapports propres aux rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Les rubriques de cette section expliquent comment optimiser un modèle pour améliorer l'expérience de création de rapports dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
@@ -28,7 +26,7 @@ ms.locfileid: "66066817"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Configurer l’ensemble de champs par défaut pour les rapports de Power View &#40;SSAS tabulaire&#41;](power-view-configure-default-field-set-for-reports.md)|Décrit la configuration d'un ensemble de champs par défaut, à savoir une liste prédéfinie de colonnes et de mesures qui sont automatiquement ajoutées à une zone de dessin de rapport [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] lorsque vous sélectionnez la table dans la liste des champs du rapport.|  
-|[Configurer les propriétés de comportement de table pour les rapports de Power View &#40;SSAS tabulaire&#41;](power-view-configure-table-behavior-properties-for-reports.md)|Explique comment configurer les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détails et produit un meilleur placement par défaut des informations d'identification dans les mises en page de mosaïque, de carte et de graphique.|  
+|[Configurer un ensemble de champs par défaut pour les rapports Power View &#40;SSAS Tabulaire&#41;](power-view-configure-default-field-set-for-reports.md)|Décrit la configuration d'un ensemble de champs par défaut, à savoir une liste prédéfinie de colonnes et de mesures qui sont automatiquement ajoutées à une zone de dessin de rapport [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] lorsque vous sélectionnez la table dans la liste des champs du rapport.|  
+|[Configurer les propriétés de comportement de table pour les rapports Power View &#40;SSAS Tabulaire&#41;](power-view-configure-table-behavior-properties-for-reports.md)|Explique comment configurer les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détails et produit un meilleur placement par défaut des informations d'identification dans les mises en page de mosaïque, de carte et de graphique.|  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061191"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
@@ -46,10 +46,10 @@ ms.locfileid: "66061191"
  |Terme|Définition|  
 |----------|----------------|  
 |**Contraintes de validation**|Permet de vérifier les contraintes s'appliquant à la table et aux colonnes.|  
-|**Conserver les valeurs null**|Permet de conserver les valeurs Null pendant l'opération d'insertion en bloc au lieu d'insérer des valeurs par défaut dans les colonnes vides.|  
+|**Conserver les valeurs NULL**|Permet de conserver les valeurs Null pendant l'opération d'insertion en bloc au lieu d'insérer des valeurs par défaut dans les colonnes vides.|  
 |**Activer l’insertion d’identité**|Permet d'insérer des valeurs existantes dans une colonne d'identité.|  
 |**Verrou de table**|Permet de verrouiller la table lors de l'opération d'insertion en bloc.|  
-|**Déclencher les déclencheurs**|Lance tout déclencheur d'insertion, de mise à jour ou de suppression sur la table.|  
+|**Exécuter les déclencheurs**|Lance tout déclencheur d'insertion, de mise à jour ou de suppression sur la table.|  
   
  **SortedData**  
  Implique l'ajout de la clause ORDER BY dans l'instruction d'insertion en bloc. Le nom de colonne que vous fournissez doit être celui d'une colonne valide pour la table de destination. Par défaut, il s’agit de `false`. En d'autres termes, les données ne sont pas triées par une clause ORDER BY.  
@@ -61,10 +61,10 @@ ms.locfileid: "66061191"
 >  Chaque ligne ne pouvant pas être importée par l'opération de chargement en masse est comptée comme une erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche d’insertion en bloc &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur de tâche d’insertion en bloc &#40;page connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Flux de contrôle](control-flow/control-flow.md)  
   
   

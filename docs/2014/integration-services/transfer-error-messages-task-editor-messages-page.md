@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055037"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Éditeur de tâche de transfert de messages d'erreur (page Messages)
@@ -39,10 +39,10 @@ ms.locfileid: "66055037"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Copie tous les messages définis par l'utilisateur.|  
-|**False**|Copie uniquement les messages définis par l'utilisateur spécifiés.|  
+|**:**|Copie tous les messages définis par l'utilisateur.|  
+|**Fausses**|Copie uniquement les messages définis par l'utilisateur spécifiés.|  
   
  **ErrorMessagesList**  
  Cliquez sur le bouton Parcourir **(...)** pour sélectionner les messages d’erreur à copier.  
@@ -57,7 +57,7 @@ ms.locfileid: "66055037"
 >  Vous devez spécifier **SourceConnection** avant de pouvoir sélectionner les messages d’erreur à copier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert de messages d’erreur &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)   

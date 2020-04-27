@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066154"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d’outils** pour effectuer les opérations courantes sous l’onglet **Navigateur** du **Concepteur de dimensions**.  
   
 ## <a name="options"></a>Options  
- **Procédure**  
+ **Processus**  
  Cliquez pour ouvrir la boîte de dialogue **Traiter** et traiter la dimension sélectionnée.  
   
- **Reconnexion**  
+ **Reconnect**  
  Cliquez pour reconnecter l’onglet **Navigateur** à l’instance et à la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient la dimension si la session de l’onglet **Navigateur** est déconnectée en raison d’une perte de connexion ou de l’expiration du délai d’attente.  
   
- **Actualiser**  
+ **Actualisation**  
  Cliquez pour recharger les données et les métadonnées de la dimension dans l’onglet **Navigateur** .  
   
  **Propriétés de membre**  
@@ -38,7 +38,7 @@ ms.locfileid: "66066154"
  **Filtrer les membres**  
  Cliquez pour afficher la boîte de dialogue **Filtrer les membres** et pour filtrer les membres affichés dans **Niveau et membres** pour la hiérarchie sélectionnée.  
   
- **Transcription**  
+ **Écriture différée**  
  Configure le volet **Niveau et membres** en mode d’écriture différée de la dimension.  
   
  **Réduire le retrait**  

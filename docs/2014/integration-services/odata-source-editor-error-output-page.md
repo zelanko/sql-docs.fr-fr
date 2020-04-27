@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057292"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Éditeur de source OData (page Sortie d'erreur)
@@ -32,7 +32,7 @@ ms.locfileid: "66057292"
  **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
@@ -43,7 +43,7 @@ ms.locfileid: "66057292"
  **Définir cette valeur sur les cellules sélectionnées**  
  Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Appliquer**  
+ **appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  

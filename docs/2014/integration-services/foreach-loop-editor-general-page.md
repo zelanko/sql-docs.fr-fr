@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058520"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Éditeur de boucle Foreach (page Général)
@@ -35,10 +35,10 @@ ms.locfileid: "66058520"
  Tapez la description du conteneur de boucle Foreach.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de boucle foreach &#40;page de collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Éditeur de boucle foreach &#40;page Mappages de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)   
  [Conteneur de boucles For](control-flow/for-loop-container.md)  
   

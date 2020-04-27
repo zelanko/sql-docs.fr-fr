@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062364"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analyser dans Excel (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
-  **Analyser dans Excel** offre au développeur de cube un moyen d’examiner rapidement l’aspect d’un projet à l’utilisateur final. La fonctionnalité **Analyser dans Excel** ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Cette fonction remplace le composant Office Web Control qui fournissait un tableau croisé dynamique incorporé dans l'onglet Navigateur dans les versions précédentes.  
+  La fonctionnalité**Analyser dans Excel** permet au développeur du cube de vérifier rapidement la façon dont un projet est présenté à l'utilisateur final. La fonctionnalité **Analyser dans Excel** ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Cette fonction remplace le composant Office Web Control qui fournissait un tableau croisé dynamique incorporé dans l'onglet Navigateur dans les versions précédentes.  
   
  **Pour afficher les données du cube :**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66062364"
   
  Pour plus d'informations sur la fonctionnalité **Analyser dans Excel** , consultez ces ressources.  
   
- [Analyser dans Excel &#40;la&#41;tabulaire SSAS](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analyser dans Excel &#40;SSAS Tabulaire&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Analyser un modèle tabulaire dans Excel &#40;la&#41;tabulaire SSAS](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Analyser un modèle tabulaire dans Excel &#40;SSAS Tabulaire&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Parcourir les données et métadonnées de cube](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

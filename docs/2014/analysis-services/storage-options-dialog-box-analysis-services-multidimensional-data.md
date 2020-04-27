@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7541ba23401bf964f0aa5c8a0425719b89d96b43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067990"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Options de stockage (Analysis Services - Données multidimensionnelles)
@@ -28,7 +28,7 @@ ms.locfileid: "66067990"
   
 |Page|Définition|  
 |----------|----------------|  
-|**Général**|Utilisez l'onglet **Général** pour définir les paramètres de stockage et de mise en cache proactive. Pour plus d’informations sur cet onglet, consultez [Général &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Généralités**|Utilisez l'onglet **Général** pour définir les paramètres de stockage et de mise en cache proactive. Pour plus d’informations sur cet onglet, consultez [Général &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Notifications**|Utilisez l'onglet **Notifications** pour définir la méthode de notification et les paramètres associés. Pour plus d’informations sur cet onglet, consultez [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  

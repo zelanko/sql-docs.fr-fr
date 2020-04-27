@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058354"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Éditeur de transformation de regroupement approximatif (onglet Colonnes)
@@ -27,7 +27,7 @@ ms.locfileid: "66058354"
  Pour en savoir plus sur la transformation de regroupement approximatif, consultez [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Sélectionnez dans cette liste les colonnes d'entrée utilisées pour regrouper les lignes comportant des doublons.  
   
  **Nom**  
@@ -42,7 +42,7 @@ ms.locfileid: "66058354"
  **Alias de sortie**  
  Entrez un nom descriptif pour la colonne de sortie correspondante. Par défaut, cette colonne porte le même nom que la colonne d'entrée.  
   
- **Alias de sortie de groupe**  
+ **Grouper les alias de sortie**  
  Entrez un nom descriptif pour la colonne qui va contenir la valeur canonique des doublons groupés. Par défaut, cette colonne de sortie porte le nom de la colonne d'entrée suivi de la mention « _clean ».  
   
  **Type de correspondance**  
@@ -57,18 +57,18 @@ ms.locfileid: "66058354"
  **Chiffres**  
  Spécifiez l'importance des premiers et derniers chiffres en comparant les données de la colonne. Par exemple, si les premiers chiffres sont significatifs, « 123 Main Street » ne sera pas groupé avec « 456 Main Street ».  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**SP5**|Les premiers et derniers chiffres ne sont pas significatifs.|  
-|**Débouch**|Seuls les premiers chiffres sont significatifs.|  
-|**Fin**|Seuls les derniers chiffres sont significatifs.|  
+|**Aucun**|Les premiers et derniers chiffres ne sont pas significatifs.|  
+|**Premiers**|Seuls les premiers chiffres sont significatifs.|  
+|**Derniers**|Seuls les derniers chiffres sont significatifs.|  
 |**LeadingAndTrailing**|Les premiers et derniers chiffres sont significatifs.|  
   
  **Indicateurs de comparaison**  
  Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](data-flow/comparing-string-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identifier des lignes de données semblables à l'aide de la transformation de regroupement probable](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

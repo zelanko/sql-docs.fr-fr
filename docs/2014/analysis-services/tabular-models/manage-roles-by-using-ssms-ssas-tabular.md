@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067034"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gérer les rôles à l'aide de SSMS (SSAS Tabulaire)
   Vous pouvez créer, modifier et gérer les rôles pour un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Tâches abordées dans cette rubrique :  
+ Tâches de cette rubrique :  
   
 -   [Pour créer un nouveau rôle](#bkmk_new_role)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66067034"
 > [!CAUTION]  
 >  L'utilisation de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer une base de données d'espace de travail model tabulaire alors que le projet de modèle est ouvert dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut entraîner l'altération du fichier Model.bim. Lors de la création et de la gestion des rôles pour une base de données d'espace de travail model tabulaire, utilisez le Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-###  <a name="bkmk_new_role"></a>Pour créer un nouveau rôle  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a> Pour créer un rôle  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire pour laquelle vous voulez créer un rôle, cliquez avec le bouton droit sur **Rôles**, puis cliquez sur **Nouveau rôle**.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66067034"
   
     |Autorisation|Description|  
     |----------------|-----------------|  
-    |**Contrôle total (administrateur)**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent afficher toutes les données.|  
+    |**Contrôle total (Administrateur)**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent afficher toutes les données.|  
     |**Traiter la base de données**|Les membres peuvent exécuter des processus et traiter toutes les opérations. Impossible de modifier le schéma de modèle et d'afficher les données.|  
-    |**Lire**|Les membres sont autorisés à afficher des données (selon les filtres de lignes) mais ne peuvent pas apporter de modifications au schéma de modèle.|  
+    |**En lecture**|Les membres sont autorisés à afficher des données (selon les filtres de lignes) mais ne peuvent pas apporter de modifications au schéma de modèle.|  
   
 5.  Dans la boîte de dialogue **Créer un rôle** , dans la fenêtre Sélectionner une page, cliquez sur **Appartenance**.  
   
@@ -67,21 +67,21 @@ ms.locfileid: "66067034"
   
 9. Cliquez sur **OK** pour enregistrer le rôle.  
   
-###  <a name="bkmk_copy_role"></a>Pour copier un rôle  
+###  <a name="to-copy-a-role"></a><a name="bkmk_copy_role"></a> Pour copier un rôle  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez copier, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Dupliquer**.  
   
-###  <a name="bkmk_edit_role"></a>Pour modifier un rôle  
+###  <a name="to-edit-a-role"></a><a name="bkmk_edit_role"></a>Pour modifier un rôle  
   
 -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez modifier, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Propriétés**.  
   
      Dans la boîte de dialogue **Propriétés** \<du rôle>, vous pouvez modifier les autorisations, ajouter ou supprimer des membres, et ajouter/modifier des filtres de lignes.  
   
-###  <a name="bkmk_deletet_role"></a>Pour supprimer un rôle  
+###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>Pour supprimer un rôle  
   
 -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez supprimer, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rôles &#40;&#41;tabulaire SSAS](roles-ssas-tabular.md)  
+ [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
   
   

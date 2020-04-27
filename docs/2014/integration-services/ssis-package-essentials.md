@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055415"
 ---
 # <a name="ssis-package-essentials"></a>Notions fondamentales sur le package SSIS
@@ -51,7 +51,7 @@ ms.locfileid: "66055415"
 1.  Vidéo, [Création d’un package de base (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023)sur MSDN.Microsoft.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Packages Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;des packages de&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Contraintes de précédence](control-flow/precedence-constraints.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057123"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Éditeur de destination OLE DB (page Sortie d'erreur)
@@ -36,7 +36,7 @@ ms.locfileid: "66057123"
  **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Non utilisé.  
@@ -47,11 +47,11 @@ ms.locfileid: "66057123"
  **Définir cette valeur sur les cellules sélectionnées**  
  Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Appliquer**  
+ **appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination de OLE DB &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [Éditeur de destination de OLE DB &#40;page Mappages&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Charger des données à l'aide de la destination OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066189"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Barre d'outils (onglet Agrégations, Concepteur de cube)
@@ -25,10 +25,10 @@ ms.locfileid: "66066189"
 |Option|Description|  
 |------------|-----------------|  
 |**Créer des agrégations**|Cliquez pour afficher l' **Assistant Conception d'agrégation**.<br /><br /> Remarque : cette option est affichée uniquement dans la vue standard du concepteur d’agrégation.|  
-|**Optimisation basée sur l'utilisation**|Cliquez pour afficher l’Assistant **Optimisation basée sur l’utilisation**.<br /><br /> Remarque : cette option est affichée uniquement dans la vue standard du concepteur d’agrégation.|  
+|**Optimisation basée sur l'utilisation**|Cliquez pour afficher l' **Assistant Optimisation**de l’utilisation.<br /><br /> Remarque : cette option est affichée uniquement dans la vue standard du concepteur d’agrégation.|  
 |**Affecter une conception d'agrégation**|Cliquez pour afficher la boîte de dialogue **Affecter une conception d'agrégation** .|  
 |**Affichage standard**|Cliquez pour afficher la **vue standard** du concepteur d’agrégation qui vous permet de créer et modifier des conceptions d’agrégation à l’aide de **l’Assistant Conception d’agrégation** ou de **l’Assistant Optimisation basée sur l’utilisation**.|  
-|**Vue avancée**|Cliquez pour afficher la **vue avancée** du concepteur d’agrégation qui vous permet de créer et modifier manuellement des conceptions d’agrégation et des agrégations individuelles. Cette vue ne doit être utilisée par des utilisateurs expérimentés.<br /><br /> Remarque : **L’Assistant Conception d’agrégation** et **l’Assistant Optimisation basée sur l’utilisation** ne sont pas disponibles dans cette vue.|  
+|**Vue avancée**|Cliquez pour afficher la **vue avancée** du concepteur d’agrégation qui vous permet de créer et modifier manuellement des conceptions d’agrégation et des agrégations individuelles. Cette vue ne doit être utilisée par des utilisateurs expérimentés.<br /><br /> Remarque : l' **Assistant conception d’agrégation** et l' **Assistant optimisation basée sur l’utilisation** ne sont pas disponibles dans cette vue.|  
 |**Nouvelle conception d'agrégation**|Cliquez pour afficher la boîte de dialogue **Nouvelle conception d’agrégation** . Vous pouvez créer une conception d'agrégation vide ou une copie d'une conception d'agrégation existante.<br /><br /> Remarque : cette option est affichée uniquement dans la vue avancée du concepteur d’agrégation.|  
 |**Supprimer**|Cliquez pour supprimer une conception d’agrégation sélectionnée.  Dans la vue avancée du concepteur d'agrégation, elle peut également être utilisée pour supprimer une agrégation d'une conception d'agrégation.|  
   

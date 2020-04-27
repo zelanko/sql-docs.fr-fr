@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068162"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Spécifier le contenu et le type de données de la colonne&#39;s (Assistant Exploration de données)
   La page **Spécifier le type de contenu et de données des colonnes** permet de modifier les types de colonne et de contenu qui ont déjà été définis par l’Assistant. L'Assistant utilise les types de données des colonnes sources et les capacités de l'algorithme sélectionné pour déterminer les types de données et de contenu par défaut de chaque colonne.  
   
- **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services des&#41;d’exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Colonnes**  

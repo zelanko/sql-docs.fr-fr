@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065503"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Validation des modèles et utilisation des modèles pour la prédiction (compléments d'exploration de données pour Excel)
@@ -58,7 +58,7 @@ ms.locfileid: "66065503"
   
  [&#40;de requêtes SQL Server des compléments d’exploration de données&#41;](query-sql-server-data-mining-add-ins.md)  
   
-## <a name="advanced-query-editor"></a>Éditeur de requêtes avancé  
+## <a name="advanced-query-editor"></a>Éditeur de requête avancé  
  L' **éditeur de requêtes avancé** est un ensemble interactif de boîtes de dialogue qui vous aide à créer tous les types d’instructions DMX, de l’exécution de requêtes personnalisées à la création et à l’apprentissage de nouveaux modèles, à la suppression de modèles ou à la création de nouveaux jeux de données.  
   
  [Éditeur de requêtes d’exploration de données avancée](advanced-data-mining-query-editor.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058154"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implémentation du package parent
@@ -27,7 +27,7 @@ ms.locfileid: "66058154"
 ## <a name="listing-child-packages"></a>Liste des packages enfants  
  Si vous déployez votre projet qui contient un package parent et des packages enfants sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous pouvez afficher une liste des packages enfants qui sont exécutés par le package parent. Lorsque vous exécutez le package parent, un rapport **Vue d'ensemble** sur ce package est généré automatiquement dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce rapport répertorie les packages enfants qui ont été exécutés par la tâche Exécuter le package contenue dans le package parent, comme illustré par l'image ci-dessous.  
   
- ![Rapport Vue d'ensemble avec liste des packages enfants](media/overviewreport-childpackagelisting.png "Rapport Vue d'ensemble avec liste des packages enfants")  
+ ![Rapport Vue d’ensemble avec liste des packages enfants](media/overviewreport-childpackagelisting.png "Rapport Vue d’ensemble avec liste des packages enfants")  
   
  Pour plus d'informations sur l'accès au rapport **Vue d'ensemble** , consultez [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
@@ -42,6 +42,6 @@ ms.locfileid: "66058154"
 >  Vous pouvez utiliser une tâche d’exécution SQL qui contient une instruction Transact-SQL **sp_start_job N'nom_package'**. Pour plus d’informations, consultez [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
 ## <a name="debugging-environment"></a>Environnement de débogage  
- Lors du test du package parent, utilisez l'environnement de débogage du concepteur en l'exécutant à l'aide des commandes Déboguer / Démarrer le débogage (F5). Vous pouvez également utiliser l'utilitaire d'invite de commandes, **dtexec**. Pour plus d’informations, consultez l' [utilitaire dtexec](packages/dtexec-utility.md).  
+ Lors du test du package parent, utilisez l'environnement de débogage du concepteur en l'exécutant à l'aide des commandes Déboguer / Démarrer le débogage (F5). Vous pouvez également utiliser l'utilitaire d'invite de commandes, **dtexec**. Pour plus d'informations, consultez [Utilitaire dtexec](packages/dtexec-utility.md).  
   
   

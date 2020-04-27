@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062957"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,13 +26,13 @@ ms.locfileid: "66062957"
  **Nom**  
  Tapez le nom de l'action.  
   
- **Cible d’action**  
+ **Cible d'action**  
  Développez pour afficher les options **Type de cible** et **Objet cible** .  
   
  **Type de cible**  
  Sélectionnez le type d'objet auquel l'action doit être associée. Le serveur retourne au client uniquement les actions qui s'appliquent à l'objet du type spécifié. L’action est disponible pour le client si la **Condition** est remplie et si les objets spécifiés dans le tableau suivant sont sélectionnés.  
   
-|Valeur|Objet sélectionné|  
+|Value|Objet sélectionné|  
 |-----------|---------------------|  
 |Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.|  
 |Cellules|L’ensemble nommé dans **Objet cible** est sélectionné. Sélectionnez **Toutes les cellules** pour sélectionner toutes les cellules du cube.|  
@@ -51,13 +51,13 @@ ms.locfileid: "66062957"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- **Contenu de l’action**  
+ **Contenu d'action**  
  Développez pour afficher les options **Type** et **Expression d’action** .  
   
  **Type**  
  Sélectionnez le type d'action à effectuer lorsque l'action est exécutée. Les types d'actions suivants sont disponibles :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Dataset|Retourne une instruction MDX (Multidimensional Expressions) qui représente un jeu de données multidimensionnel que l'application cliente doit exécuter et afficher.|  
 |Propriétaire|Retourne une chaîne propriétaire que peuvent interpréter les applications clientes associées au paramètre **Application** de cette action.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66062957"
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Invocation**, **Application**, **Description**, **Légende**et **La légende est MDX** .  
   
- **Appel**  
+ **Invocation**  
  Sélectionnez le paramètre qui indique le moment où l'action doit être effectuée.  
   
 > [!NOTE]  
@@ -81,10 +81,10 @@ ms.locfileid: "66062957"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Batch|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive|L'action s'exécute lorsque l'utilisateur l'invoque.|  
+|Interactive (Interactif)|L'action s'exécute lorsque l'utilisateur l'invoque.|  
 |À l’ouverture|L'action s'exécute à la première ouverture du cube.|  
   
  **Application**  
@@ -98,7 +98,7 @@ ms.locfileid: "66062957"
  **Description**  
  Tapez une description facultative de l'action.  
   
- **Caption**  
+ **-**  
  Entrez la légende à afficher pour l’action dans l’application cliente si l’option **La légende est MDX** a la valeur **False**.  
   
  Entrez l’expression MDX (Multidimensional Expressions) qui retourne une chaîne pour la légende si l’option **La légende est MDX** a la valeur **True**.  

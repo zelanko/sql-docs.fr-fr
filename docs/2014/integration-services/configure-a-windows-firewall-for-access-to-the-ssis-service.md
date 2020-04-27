@@ -19,21 +19,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060853"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurer un Pare-feu Windows pour l'accès au service SSIS
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Le système de pare-feu Windows (windowsfirewall) permet d'empêcher l'accès non autorisé à des ressources informatiques sur une connexion réseau. Pour accéder à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à travers ce pare-feu, vous devez configurer le pare-feu de façon à autoriser l’accès.  
   
 > [!IMPORTANT]  
->  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md).  
+>  Pour gérer les packages stockés sur un serveur distant, vous n’avez pas besoin de vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
  Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM via des pare-feu, consultez l’article «[utilisation de com distribués avec des pare-feu](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)».  
   
@@ -74,8 +74,7 @@ ms.locfileid: "66060853"
 5.  Dans la boîte de dialogue **Ajouter un port** , tapez **RPC(TCP/135)** ou un autre nom descriptif dans la zone **Nom**, tapez **135** dans la zone **Numéro de port** , puis sélectionnez **TCP**.  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Le service utilise toujours le port 135. Vous ne pouvez pas spécifier un autre port.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Le service utilise toujours le port 135. Vous ne pouvez pas spécifier un autre port.  
   
 6.  Dans la boîte de dialogue **Ajouter un port** , vous pouvez éventuellement cliquer sur **Modifier l’étendue** pour modifier l’étendue par défaut.  
   

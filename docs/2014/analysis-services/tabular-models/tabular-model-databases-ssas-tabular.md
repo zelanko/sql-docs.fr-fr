@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066421"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de données model tabulaires (SSAS Tabulaire)
@@ -24,20 +24,20 @@ ms.locfileid: "66066421"
  Il est plus facile de générer des bases de données model tabulaires que des bases de données multidimensionnelles, en particulier si vous avez un arrière-plan de bases de données relationnelles. Par ailleurs, les tâches d'administration sont similaires voire identiques à l'administration d'une base de données multidimensionnelle. Les mêmes outils et approches s'appliquent.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-solutions-ssas-tabular.md)  
+ [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Accès aux données de modèle tabulaire](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Traiter une base de données, une table ou une partition](process-database-table-or-partition-analysis-services.md)  
   
- [Rôles de modèles tabulaires &#40;&#41;SSAS tabulaire](tabular-model-roles-ssas-tabular.md)  
+ [Rôles de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Partitions de modèles tabulaires &#40;&#41;SSAS tabulaire](tabular-model-partitions-ssas-tabular.md)  
+ [Partitions de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configurer l'accès In-Memory ou DirectQuery pour une base de données model tabulaire](enable-directquery-mode-in-ssms.md)  
   
- [Se connecter à une base de données model tabulaire &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Se connecter à une base de données de modèle tabulaire &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Restaurer à partir de PowerPivot](restore-from-power-pivot.md)  
   

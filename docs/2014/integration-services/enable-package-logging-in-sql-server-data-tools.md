@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059283"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Activer la journalisation des packages dans les outils de données SQL Server
@@ -35,15 +35,15 @@ ms.locfileid: "66059283"
   
 3.  Sélectionnez un module fournisseur d'informations dans la liste **Type de fournisseur** , puis cliquez sur **Ajouter**.  
   
-4.  Dans la colonne **Configuration**, sélectionnez un gestionnaire de connexions ou cliquez sur **\<Nouvelle connexion>** afin de créer un gestionnaire de connexions du type approprié pour le module fournisseur d’informations. En fonction du module fournisseur sélectionné, utilisez l'un des gestionnaires de connexions suivants :  
+4.  Dans la colonne **configuration** , sélectionnez un gestionnaire de connexions ou cliquez sur ** \<nouvelle connexion>** pour créer un gestionnaire de connexions du type approprié pour le module fournisseur d’informations. En fonction du module fournisseur sélectionné, utilisez l'un des gestionnaires de connexions suivants :  
   
-    -   Pour les fichiers texte, utilisez un gestionnaire de connexions de fichiers. Pour plus d'informations, consultez [File Connection Manager](connection-manager/file-connection-manager.md)  
+    -   Pour les fichiers texte, utilisez un gestionnaire de connexions de fichiers. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md) .  
   
     -   Pour [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], utilisez un gestionnaire de connexions de fichiers.  
   
     -   Pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez un gestionnaire de connexions OLE DB. Pour plus d’informations, consultez [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-    -   Pour le journal des événements Windows, ne faites rien : [!INCLUDE[ssIS](../includes/ssis-md.md)]crée automatiquement le journal.  
+    -   Pour le journal des événements Windows, ne faites rien : [!INCLUDE[ssIS](../includes/ssis-md.md)] crée automatiquement le journal.  
   
     -   Pour les fichiers XML, utilisez un gestionnaire de connexions de fichiers.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66059283"
     > [!NOTE]  
     >  Par défaut, toutes les informations sont journalisées.  
   
-9. Sous l’onglet **Détails** , cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous** s’affiche. Recherchez l'emplacement où enregistrer la configuration de journalisation, tapez un nom de fichier pour la nouvelle configuration de journal, puis cliquez sur **Enregistrer**.  
+9. Sous l’onglet **Détails** , cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous** s'ouvre. Recherchez l'emplacement où enregistrer la configuration de journalisation, tapez un nom de fichier pour la nouvelle configuration de journal, puis cliquez sur **Enregistrer**.  
   
 10. Cliquez sur **OK**.  
   

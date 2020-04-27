@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068467"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Spécifier type de contenu et de données des colonnes (Assistant Exploration de données)
@@ -24,7 +24,7 @@ ms.locfileid: "66068467"
   
  Le type de données spécifie des détails supplémentaires sur le type des données contenues dans la colonne, ainsi que la manière dont les données seront utilisées pendant l'apprentissage. Certains types de contenu requièrent un type de données spécifique, et vice versa. Vous pouvez également avoir besoin de spécifier un type de données particulier selon l'algorithme que vous utilisez lorsque vous créez un modèle d'exploration de données. Pour plus d’informations sur les types de contenu et les types de données dans les modèles et structures d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](data-mining/content-types-data-mining.md).  
   
- **Pour plus d’informations : structures d'** [exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [colonnes de modèle d’exploration](data-mining/mining-model-columns.md)de données, [Assistant Exploration de données &#40;Analysis Services-exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md)&#41;, [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Colonnes d’un modèle d’exploration de données](data-mining/mining-model-columns.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Structure du modèle d'exploration de données**  
@@ -38,7 +38,7 @@ ms.locfileid: "66068467"
   
 |Option|Description|  
 |------------|-----------------|  
-|Clé|Spécifiez que la colonne contient un identificateur unique pour la série de cas.|  
+|Touche|Spécifiez que la colonne contient un identificateur unique pour la série de cas.|  
 |Séquence clé|Spécifiez que la colonne contient un identificateur de séquence.|  
 |Temps clé|Spécifiez que la colonne contient une date ou un autre nombre continu unique utilisé pour identifier une date ou une série chronologique.|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66068467"
  **Type de données**  
  Spécifiez le type de données de la colonne.  
   
- Les valeurs suivantes sont disponibles :  
+ Les valeurs suivantes sont disponibles :  
   
 -   `Boolean`  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059767"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Éditeur de transformation de requête d'exploration de données (onglet Modèle d'exploration de données)
@@ -30,7 +30,7 @@ ms.locfileid: "66059767"
  **Connection**  
  Sélectionnez une connexion Analysis Services en utilisant la zone de liste, ou créez une connexion en utilisant le bouton **Nouvelle** comme indiqué ci-dessous.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
  **Structure d’exploration de données**  
@@ -40,7 +40,7 @@ ms.locfileid: "66059767"
  Affiche la liste des modèles d’exploration de données associés à la structure d’exploration de données sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de requête d’exploration de données &#40;onglet requête&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation de requête d’exploration de données &#40;onglet Requête&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

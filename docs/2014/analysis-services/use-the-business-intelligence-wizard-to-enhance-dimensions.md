@@ -13,26 +13,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065509"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Utiliser l'Assistant Business Intelligence pour améliorer des dimensions
   Outre la modification directe d'une dimension et des propriétés des objets de dimension, l'Assistant Business Intelligence permet également de configurer et d'améliorer les dimensions.  
   
--   [Ajouter de l'intelligence comptable à une dimension](multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)  
+-   [Ajouter de l’intelligence comptable à une dimension](multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)  
   
--   [Ajouter de l'intelligence de dimensions à une dimension](multidimensional-models/bi-wizard-add-dimension-intelligence-to-a-dimension.md)  
+-   [Ajouter de l’intelligence des dimensions à une dimension](multidimensional-models/bi-wizard-add-dimension-intelligence-to-a-dimension.md)  
   
 -   [Ajouter une agrégation personnalisée à une dimension](multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)  
   
 -   [Définir des formules de membre personnalisées pour les attributs d’une dimension](multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
--   [Définir le classement d'une dimension](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
+-   [Définir le classement d’une dimension](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [Activer l'écriture différée de la dimension](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [Activer l’écriture différée de la dimension](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des dimensions de base de données](multidimensional-models/define-database-dimensions.md)   

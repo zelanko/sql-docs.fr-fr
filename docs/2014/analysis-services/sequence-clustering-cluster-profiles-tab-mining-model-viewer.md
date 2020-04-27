@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069094"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
@@ -24,13 +24,13 @@ ms.locfileid: "66069094"
   
  Utilisez cette vue d'un modèle Sequence Clustering pour obtenir une vue rapide de la façon dont les séquences trouvées par le modèle sont regroupées. Vous pouvez voir d'un coup d'œil le nombre de séquences qui sont longues et celles qui sont courtes. Vous pouvez également cliquer sur un cluster et afficher la **Légende d’exploration de données** pour voir exactement les états représentés par les couleurs dans chaque séquence.  
   
- **Pour plus d’informations :**  [algorithme de clustering de séquences Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :**  [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -39,10 +39,10 @@ ms.locfileid: "66069094"
  **Afficher la légende**  
  Sélectionnez cette option pour afficher une légende qui montre la corrélation entre les couleurs affichées dans les profils du cluster et les valeurs textuelles des états.  
   
- **Barres de l'histogramme**  
+ **Barres de l’histogramme**  
  Utilisez cette option pour modifier le nombre de barres de couleur incluses dans l'histogramme. S’il existe davantage de barres que le nombre que vous choisissez d’afficher, les barres de la plus grande importance sont conservées et les barres restantes sont regroupées dans **Autre**.  
   
- **Attributs** et **profils de cluster**  
+ **Attributs** et **Profils du cluster**  
  Cette section du graphique répertorie les clusters des séquences trouvées dans le modèle.  
   
  Chaque cluster de séquence s’affiche avec le nombre d’états que vous avez sélectionné dans l’option **Barres de l’histogramme**.  

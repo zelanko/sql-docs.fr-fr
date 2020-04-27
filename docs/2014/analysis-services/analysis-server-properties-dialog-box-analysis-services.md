@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062623"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Boîte de dialogue Propriétés de Analysis Server (Analysis Services)
@@ -30,9 +30,9 @@ ms.locfileid: "66062623"
   
  Le **niveau de compatibilité pris en charge** est équivalent à la `DefaultCompatibilityLevel` propriété dans AMO. En lecture seule, en fonction du mode de déploiement du serveur spécifié au cours de l'installation. Le serveur vérifie cette propriété lors de la réalisation d'opérations qui varient en fonction de la version ou du mode serveur, telles que la restauration d'une sauvegarde de base de données tabulaire sur une instance de serveur tabulaire. Ne confondez pas cette propriété avec le mode de compatibilité de base de données des modèles tabulaires ou multidimensionnels, qui présentent des noms et des valeurs similaires. Les valeurs valides pour cette propriété de serveur sont les suivantes :  
   
--   **1100** est le niveau de compatibilité par défaut pour un mode de déploiement de 0, pour le mode multidimensionnel et l’exploration de données.  
+-   **1100** est le niveau de compatibilité par défaut pour un mode de déploiement de 0, pour le mode multidimensionnel ou d'exploration de données.  
   
--   **1103** est le niveau de compatibilité par défaut pour les modes de déploiement 1 ou 2, pour les [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]installations prenant en charge le mode tabulaire ou.  
+-   **1103** est le niveau de compatibilité par défaut pour les modes de déploiement 1 ou 2, pour les installations prenant en charge le mode tabulaire ou [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
  Le serveur retourne cette valeur lorsqu'un client prenant en charge l'espace de noms demande DISCOVER_XML_METADATA. Pour plus d’informations, consultez [Ensemble de lignes DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset) .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66062623"
   
 -   [Propriétés de fonctionnalité](server-properties/feature-properties.md)  
   
--   [FileStore, propriété](server-properties/filestore-properties.md)  
+-   [Propriétés du cache de la](server-properties/filestore-properties.md)  
   
 -   [Propriétés du gestionnaire de verrous](server-properties/lock-manager-properties.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66062623"
   
 -   [Propriétés de mémoire](server-properties/memory-properties.md)  
   
--   [Propriétés réseau](server-properties/network-properties.md)  
+-   [Propriétés du réseau](server-properties/network-properties.md)  
   
 -   [Propriétés OLAP](server-properties/olap-properties.md)  
   
@@ -66,28 +66,28 @@ ms.locfileid: "66062623"
 ## <a name="language-collation-properties"></a>Propriétés de langue/classement  
  Cette page sert à définir les options de langue et de classement par défaut pour une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La liste suivante contient une brève description de chaque option. Pour plus d’informations, consultez [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
   
--   Le **format binaire** permet de trier et de comparer les données en fonction des modèles de bits définis pour chaque caractère. L'ordre de tri binaire respecte la casse, c'est-à-dire que les minuscules précèdent les majuscules ; il respecte également les accents. Il s'agit de l'ordre de tri le plus rapide.  
+-   **Binaire** permet de trier et de comparer les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse, c'est-à-dire que les minuscules précèdent les majuscules ; il respecte également les accents. Il s'agit de l'ordre de tri le plus rapide.  
   
      Si cette option n'est pas activée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecte les règles de tri et de comparaison définies dans les dictionnaires pour la langue ou l'alphabet associé.  
   
     > [!NOTE]  
     >  Si elle est activée, les options **Respecter la casse**, **Respecter les accents**, **Respecter le jeu de caractères Kana**et **Respecter la largeur** ne sont alors pas disponibles.  
   
--   **Binaire 2** permet de trier et de comparer les données Unicode en fonction des modèles de bits définis pour chaque caractère. L'ordre de tri binaire respecte la casse, c'est-à-dire que les minuscules précèdent les majuscules ; il respecte également les accents. Il s'agit de l'ordre de tri le plus rapide.  
+-   **Binaire 2** permet de trier et de comparer les données Unicode en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse, c'est-à-dire que les minuscules précèdent les majuscules ; il respecte également les accents. Il s'agit de l'ordre de tri le plus rapide.  
   
--   **Respect** de la casse permet de trier et de comparer les données en fonction des règles du dictionnaire fournies pour la langue ou l’alphabet associé et de faire la distinction entre les majuscules et les minuscules.  
+-   **Respecter la casse** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre les majuscules et les minuscules.  
   
      Si cette option n'est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les lettres majuscules et minuscules. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ne définit pas si les lettres minuscules sont triées en minuscules ou supérieures par rapport aux majuscules lorsque la **casse** n’est pas sélectionnée.  
   
--   **Respect des accents** permet de trier et de comparer les données en fonction des règles du dictionnaire fournies pour la langue ou l’alphabet associé et de faire la distinction entre les caractères accentués et non accentués. Par exemple, « a » n'est pas équivalent à « á ».  
+-   **Respecter les accents** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre les lettres accentuées ou non. Par exemple, « a » n'est pas équivalent à « á ».  
   
      Si l'option n'est pas cochée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les lettres accentuées et non accentuées.  
   
--   Le **respect des caractères Kana** est utilisé pour comparer les données en fonction des règles du dictionnaire fournies pour la langue ou l’alphabet associé et pour faire la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana.  
+-   **Respecter le jeu de caractères Kana** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana.  
   
      Si l'option n'est pas choisie, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les caractères Hiragana et Katakana.  
   
--   **Respect** de la largeur permet de trier et de comparer les données en fonction des règles du dictionnaire fournies pour la langue ou l’alphabet associé, et de faire la distinction entre un caractère codé sur un octet (demi-chasse) et le même caractère représenté en tant que caractère codé sur deux octets (pleine chasse).  
+-   **Respecter la largeur** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre un caractère sur un octet (demi-chasse) et le même caractère représenté sur deux octets (pleine chasse).  
   
      Si cette option n’est pas sélectionnée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que les représentations d’un même caractère sur un octet et sur deux octets sont égales.  
   

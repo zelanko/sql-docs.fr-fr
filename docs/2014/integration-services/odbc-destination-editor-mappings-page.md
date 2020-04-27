@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057227"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Éditeur de destination ODBC (page Mappages)
@@ -33,7 +33,7 @@ ms.locfileid: "66057227"
  Liste des colonnes de destination disponibles. Par glisser-déplacer, mappez une colonne de destination à une colonne d'entrée disponible.  
   
 ### <a name="input-column"></a>Colonne d'entrée  
- Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant **\<ignorer>** de manière à exclure des colonnes de la sortie.  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant ** \<ignorer les>** pour exclure des colonnes de la sortie.  
   
 ### <a name="destination-column"></a>Colonne de destination  
  Affiche toutes les colonnes de destination disponibles, mappées et non mappées.  

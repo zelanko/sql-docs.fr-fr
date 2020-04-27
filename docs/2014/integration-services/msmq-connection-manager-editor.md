@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057642"
 ---
 # <a name="msmq-connection-manager-editor"></a>Éditeur du gestionnaire de connexions MSMQ
@@ -41,10 +41,8 @@ ms.locfileid: "66057642"
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|
-  \<nom_ordinateur >\\<nom_file_attente\>|  
-|Private|
-  \<nom_ordinateur >\Private$\\<nom_file_attente\>|  
+|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
+|Private|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
   
  Vous pouvez utiliser "." pour représenter l'ordinateur local.  
   

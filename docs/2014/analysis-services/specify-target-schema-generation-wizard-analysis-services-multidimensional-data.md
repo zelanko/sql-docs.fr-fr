@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068252"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Spécifier la cible (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
@@ -32,13 +32,13 @@ ms.locfileid: "66068252"
 > [!NOTE]  
 >  Cette option est active uniquement si **Créer une nouvelle vue de source de données** est sélectionné.  
   
- **Source de données**  
+ **Sources de données**  
  Sélectionnez la source de données à associer à la nouvelle vue de source de données.  
   
 > [!NOTE]  
 >  Cette option est active uniquement si **Créer une nouvelle vue de source de données** est sélectionné.  
   
- **Nouveau**  
+ **Nouvelle**  
  Permet d'afficher l'Assistant Source de données et de définir une nouvelle source de données à associer à la nouvelle vue.  
   
  Pour plus d’informations, consultez [Aide (F1) de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md).  

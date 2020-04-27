@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061175"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Éditeur de transformation du cache (page Mappages)
@@ -30,7 +30,7 @@ ms.locfileid: "66061175"
  Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes d'entrée disponibles aux colonnes de destination.  
   
  Vous pouvez également mapper des colonnes d'entrée aux colonnes de destination à l'aide du clavier. Pour ce faire, mettez en surbrillance une colonne dans la table **Colonnes d'entrée disponibles** , appuyez sur la touche de menu, puis sélectionnez **Mapper les éléments par noms correspondants**.  
@@ -47,6 +47,6 @@ ms.locfileid: "66061175"
  Affichez les colonnes de destination disponibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Éditeur de transformation du cache &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

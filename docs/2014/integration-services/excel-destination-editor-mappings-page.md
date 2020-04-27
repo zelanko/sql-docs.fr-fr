@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059181"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Éditeur de destination Excel (page Mappages)
@@ -27,7 +27,7 @@ ms.locfileid: "66059181"
  Pour en savoir plus sur la destination Excel, consultez [Excel Destination](data-flow/excel-destination.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
   
  **Colonnes de destination disponibles**  
@@ -40,7 +40,7 @@ ms.locfileid: "66059181"
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination Excel &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Éditeur de destination Excel &#40;page sortie d’erreur&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  

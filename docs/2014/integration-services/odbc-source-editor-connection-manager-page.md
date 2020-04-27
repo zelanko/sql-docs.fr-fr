@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057219"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Éditeur de source ODBC (page Gestionnaire de connexions)
@@ -34,7 +34,7 @@ ms.locfileid: "66057219"
 ## <a name="options"></a>Options  
   
 ### <a name="connection-manager"></a>Gestionnaire de connexions  
- Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur **Nouveau** pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
+ Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur **nouveau** pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
   
 ### <a name="new"></a>Nouveau  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions ODBC.  
@@ -57,7 +57,7 @@ ms.locfileid: "66057219"
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés personnalisées des sources ODBC](data-flow/odbc-source-custom-properties.md)   
- [Éditeur de source ODBC &#40;page Colonnes&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
+ [Éditeur de source ODBC &#40;page colonnes&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Éditeur de source ODBC &#40;page Sortie d’erreur&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066698"
 ---
 # <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
@@ -43,10 +43,10 @@ ms.locfileid: "66066698"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="what"></a>Avantageuse  
+##  <a name="benefits"></a><a name="what"></a>Avantageuse  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
-|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
+|CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -56,7 +56,7 @@ ms.locfileid: "66066698"
   
 ### <a name="customers"></a>Clients  
   
-|[CustomerID]|Name|Email|  
+|[CustomerID]|Nom|Courrier électronique|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -68,7 +68,7 @@ ms.locfileid: "66066698"
 |1|.05|  
 |2|.10|  
   
-### <a name="orders"></a>Commandes  
+### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Produit|Quantité|  
 |--------------------|-------------|---------------|-------------|--------------|  
@@ -85,9 +85,9 @@ ms.locfileid: "66066698"
   
 -   *Clé primaire*: identifie de façon unique une ligne dans une table, telle que CustomerID dans la table Customers.  
   
--   *Clé secondaire* (ou *clé candidate*) : une colonne autre que la clé primaire qui est unique. Par exemple, une table Employees peut stocker un ID d'employé et un numéro de sécurité sociale, qui sont tous les deux uniques.  
+-   *Clé secondaire* (ou *clé candidate*) : une colonne autre que la clé primaire qui est unique. Par exemple, une table Employees peut stocker un ID d'employé et un numéro de sécurité sociale, qui sont tous les deux uniques.  
   
--   *Clé étrangère*: une colonne qui fait référence à une colonne unique dans une autre table, telle que CustomerID dans la table Orders, qui fait référence à CustomerID dans la table Customers.  
+-   *Clé étrangère*: une colonne qui fait référence à une colonne unique dans une autre table, telle que CustomerID dans la table Orders, laquelle fait référence à CustomerID dans la table Customers.  
   
 -   *Clé composite*: une clé composée de plusieurs colonnes. Les clés composites ne sont pas prises en charge dans les modèles tabulaires. Pour plus d'informations, consultez « Clés composites et colonnes de recherche » dans cette rubrique.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66066698"
 ### <a name="relationships-and-performance"></a>Relations et performances  
  Après la création de toute relation, le générateur de modèles doit normalement recalculer toutes les formules qui utilisent des colonnes des tables de la relation nouvellement créée. Le traitement peut prendre du temps, selon la quantité de données et la complexité des relations.  
   
-##  <a name="requirements"></a>Conditions requises pour les relations  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a>Conditions requises pour les relations  
  Le générateur de modèles présente plusieurs conditions qui doivent être remplies lors de la création de relations :  
   
 ### <a name="single-active-relationship-between-tables"></a>Relation active unique entre des tables  
@@ -137,7 +137,7 @@ ms.locfileid: "66066698"
   
  Si vous souhaitez créer une relation entre deux tables dans le générateur de modèles et que plusieurs colonnes définissent les clés étrangère et primaire, vous devez associer les valeurs pour créer une colonne clé unique avant de créer la relation. Vous pouvez le faire avant d'importer les données, ou dans le générateur de modèles en créant une colonne calculée.  
   
-###  <a name="bkmk_many_to_many"></a>Relations plusieurs-à-plusieurs  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>Relations plusieurs-à-plusieurs  
  Les modèles tabulaires ne prennent pas en charge les relations plusieurs à plusieurs, et vous ne pouvez pas ajouter de *tables de jointure* dans le générateur de modèles. Toutefois, vous pouvez utiliser les fonctions DAX pour modéliser des relations plusieurs à plusieurs.  
   
 ### <a name="self-joins-and-loops"></a>Jointures réflexives et boucles  
@@ -153,7 +153,7 @@ ms.locfileid: "66066698"
   
  Si vous essayez de créer une relation qui entraînerait la création d'une boucle, une erreur est générée.  
   
-##  <a name="detection"></a>Inférence des relations  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>Inférence des relations  
  Dans certains cas, les relations entre les tables sont automatiquement chaînées. Par exemple, si vous créez une relation entre les deux premiers ensembles de tables ci-dessous, il est déduit qu'une relation existe entre les deux autres tables et une relation est établie automatiquement.  
   
  Products et Category -- relation créée manuellement  
@@ -164,17 +164,17 @@ ms.locfileid: "66066698"
   
  Pour que des relations soient chaînées automatiquement, elles doivent avoir une même direction, comme dans l'exemple ci-dessus. Si les relations initiales sont, par exemple, entre les ventes et les produits et entre les ventes et les clients, aucune relation n'est inférée. En effet, la relation entre les produits et les clients est une relation plusieurs à plusieurs.  
   
-##  <a name="bkmk_detection"></a>Détection des relations lors de l’importation de données  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a>Détection des relations lors de l’importation de données  
  Lorsque vous importez des données depuis une table de source de données relationnelle, l'Assistant Importation de table détecte les relations existantes dans ces tables source en fonction des données de schéma source. Si des tables associées sont importées, ces relations seront dupliquées dans le modèle.  
   
-##  <a name="bkmk_manually_create"></a>Créer manuellement des relations  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a>Créer manuellement des relations  
  Alors que la plupart des relations entre les tables d'une source de données relationnelle sont détectées automatiquement et créées dans le modèle tabulaire, il existe également de nombreux cas où vous devez créer manuellement les relations entre les tables de modèle.  
   
  Si votre modèle contient des données de plusieurs sources, vous devrez probablement créer les relations manuellement. Par exemple, vous pouvez importer les tables Customers, CustomerDiscounts et Orders d'une source de données relationnelle. Les relations existantes entre ces tables à la source sont automatiquement créées dans le modèle. Vous pouvez ensuite ajouter une autre table d'une autre source, par exemple, vous importez des données de région d'une table Geography dans un classeur Microsoft Excel. Vous pouvez ensuite créer manuellement une relation entre une colonne de la table Customers et une colonne de la table Geography.  
   
  Pour créer manuellement des relations dans un modèle tabulaire, vous pouvez utiliser le générateur de modèles dans la vue de diagramme ou la boîte de dialogue Gérer les relations. La vue de diagramme affiche les tables, avec les relations entre celles-ci, dans un format graphique. Vous pouvez cliquer sur une colonne dans une table et faire glisser le curseur vers une autre table pour créer facilement une relation, dans l'ordre correct, entre les tables. La boîte de dialogue Gérer les relations affiche les relations entre les tables dans un format de table simple. Pour savoir comment créer manuellement des relations, consultez [Créer une relation entre deux tables &#40;SSAS Tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
-##  <a name="bkmk_dupl_errors"></a>Valeurs dupliquées et autres erreurs  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>Valeurs dupliquées et autres erreurs  
  Si vous choisissez une colonne qui ne peut pas être utilisée dans la relation, un X rouge s'affiche en regard de la colonne. Vous pouvez placer le curseur sur l'icône d'erreur pour afficher un message qui fournit des informations supplémentaires sur le problème. Voici quelques-uns des problèmes qui peuvent rendre impossible la création d'une relation entre les colonnes sélectionnées :  
   
 |Problème ou message|Solution|  
@@ -182,15 +182,15 @@ ms.locfileid: "66066698"
 |La relation ne peut pas être créée car les deux colonnes sélectionnées contiennent des valeurs dupliquées.|Au moins, une colonne de la paire que vous sélectionnez doit contenir uniquement des valeurs uniques pour créer une relation valide.<br /><br /> Vous pouvez modifier les colonnes pour supprimer les doublons ou inverser l'ordre des colonnes afin que la colonne qui contient les valeurs uniques soit utilisée comme **colonne de recherche associée**.|  
 |La colonne contient une valeur Null ou vide.|Les colonnes de données ne peuvent pas être jointes entre elles sur une valeur Null. Pour chaque ligne, une valeur doit figurer dans chacune des deux colonnes utilisées dans une relation.|  
   
-##  <a name="bkmk_related_tasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tâches associées  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer une relation entre deux tables &#40;SSAS tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
-|[Supprimer des relations &#40;&#41;tabulaire SSAS](relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  
+|[Créer une relation entre deux tables &#40;SSAS Tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
+|[Supprimer des relations &#40;SSAS Tabulaire&#41;](relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables et colonnes &#40;SSAS tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
- [Importer des données &#40;&#41;tabulaire SSAS](../import-data-ssas-tabular.md)  
+ [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)  
   
   

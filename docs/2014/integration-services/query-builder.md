@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056643"
 ---
 # <a name="query-builder"></a>Générateur de requêtes
@@ -26,13 +26,13 @@ ms.locfileid: "66056643"
   
  Vous pouvez utiliser le générateur de requêtes pour réaliser les tâches suivantes :  
   
--   **Utilisation d’une représentation graphique d’une requête ou de commandes SQL** Générateur de requêtes comprend un volet qui affiche votre requête graphiquement et un volet qui affiche le texte SQL de votre requête. Vous pouvez travailler dans le volet graphique ou dans le volet texte. Le générateur de requêtes synchronise les vues de manière à ce qu'elles soient toujours actualisées.  
+-   **Utilisation d'une représentation graphique d'une requête ou des commandes SQL** Le générateur de requêtes inclut un volet qui affiche votre requête graphiquement et un volet qui affiche le texte SQL de votre requête. Vous pouvez travailler dans le volet graphique ou dans le volet texte. Le générateur de requêtes synchronise les vues de manière à ce qu'elles soient toujours actualisées.  
   
--   **Jointure de tables associées** Si vous ajoutez plusieurs tables à votre requête, Générateur de requêtes détermine automatiquement la manière dont les tables sont associées et construit la commande de jointure appropriée.  
+-   **Jointure de tables associées** Si vous ajoutez plusieurs tables à votre requête, le générateur de requêtes détermine automatiquement la manière dont les tables sont associées et construit la commande de jointure appropriée.  
   
--   **Interrogation ou mise à jour des bases de données** Vous pouvez utiliser Générateur de requêtes pour retourner des données à l’aide d’instructions Transact-SQL SELECT et pour créer des requêtes qui mettent à jour, ajoutent ou suppriment des enregistrements dans une base de données.  
+-   **Requête ou mise à jour de bases de données** Vous pouvez utiliser le générateur de requêtes pour renvoyer des données à l’aide d’instructions Transact-SQL SELECT et pour créer des requêtes qui mettent à jour, ajoutent ou suppriment des enregistrements dans une base de données.  
   
--   **Affichage et modification immédiate des résultats** Vous pouvez exécuter votre requête et travailler avec un jeu d’enregistrements dans une grille qui vous permet de faire défiler et de modifier les enregistrements de la base de données.  
+-   **Affichage et modification immédiate des résultats** Vous pouvez exécuter votre requête et travailler avec un jeu d'enregistrements dans une grille qui vous permet de faire défiler et de modifier les enregistrements de la base de données.  
   
  Les outils graphiques de la boîte de dialogue **Générateur de requêtes** permettent de créer des requêtes par glisser-déplacer. Par défaut, la boîte de dialogue Générateur de requêtes crée des requêtes SELECT, mais vous pouvez également générer des requêtes INSERT, UPDATE ou DELETE. Tous les types d'instructions SQL peuvent être analysés et exécutés dans la boîte de dialogue **Générateur de requêtes** . Pour plus d’informations sur les instructions SQL dans les packages, consultez [Requêtes Integration Services &#40;SSIS&#41;](integration-services-ssis-queries.md).  
   
@@ -43,21 +43,21 @@ ms.locfileid: "66056643"
  Les transformations de recherche et de recherche floue peuvent aussi utiliser des variables avec des paramètres et des codes de retour. Les informations relatives à la source OLE DB s'appliquent également à ces deux transformations.  
   
 ## <a name="options"></a>Options  
- **Barre d'outils**  
+ **Barre**  
  Utilisez la barre d'outils pour gérer les datasets, sélectionner les volets à afficher et contrôler les fonctions de requête.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Afficher/masquer le volet Diagramme**|Affiche ou masque le volet **Diagramme** .|  
-|**Afficher/masquer le volet Grille**|Affiche ou masque le volet **Grille** .|  
-|**Afficher/masquer le volet SQL**|Affiche ou masque le volet **SQL** .|  
-|**Afficher/masquer le volet résultats**|Affiche ou masque le volet **Résultats** .|  
+|**Afficher/Masquer le volet Diagramme**|Affiche ou masque le volet **Diagramme** .|  
+|**Afficher/Masquer le volet Grille**|Affiche ou masque le volet **Grille** .|  
+|**Afficher/Masquer le volet SQL**|Affiche ou masque le volet **SQL** .|  
+|**Afficher/Masquer le volet Résultats**|Affiche ou masque le volet **Résultats** .|  
 |**Exécuter**|Exécute la requête. Les résultats s'affichent dans le volet Résultats.|  
 |**Vérifier SQL**|Vérifie que l'instruction SQL est valide.|  
 |**Tri croissant**|Trie dans l'ordre croissant les lignes de sortie sur la colonne sélectionnée du volet de la grille.|  
 |**Tri décroissant**|Trie dans l'ordre décroissant les lignes de sortie sur la colonne sélectionnée du volet de la grille.|  
 |**Supprimer le filtre**|Sélectionnez le nom d'une colonne dans le volet de la grille, puis choisissez **Supprimer le filtre** pour supprimer les critères de tri de la colonne.|  
-|**Utiliser regrouper par**|Ajoute la fonctionnalité GROUP BY à la requête.|  
+|**Utiliser GROUP BY**|Ajoute la fonctionnalité GROUP BY à la requête.|  
 |**Ajouter une table**|Ajoute une table à la requête.|  
   
  **Définition de la requête**  
@@ -65,17 +65,17 @@ ms.locfileid: "66056643"
   
 |Volet|Description|  
 |----------|-----------------|  
-|Volet **schéma**|Affiche la requête dans un diagramme. Le diagramme illustre les tables contenues dans la requête et leur mode de jointure. Activez ou désactivez la case à cocher correspondant à une colonne de la table pour l'ajouter ou la supprimer du résultat de la requête.<br /><br /> Lorsque vous ajoutez des tables à la requête, le Générateur de requêtes crée des jointures entre les tables basées sur les tables, en fonction des clés de la table. Pour ajouter une jointure, faites glisser le champ d'une table vers un champ situé dans une autre table. Pour gérer une jointure, cliquez dessus avec le bouton droit, puis sélectionnez une option du menu.<br /><br /> Cliquez avec le bouton droit sur le volet **Diagramme** pour ajouter ou supprimer des tables, sélectionner toutes les tables et afficher ou masquer des volets.|  
+|Volet **schéma**|Affiche la requête dans un diagramme. Le diagramme illustre les tables contenues dans la requête et leur mode de jointure. Activez ou désactivez la case à cocher correspondant à une colonne de la table pour l'ajouter ou la supprimer du résultat de la requête.<br /><br /> Lorsque vous ajoutez des tables à la requête, le Générateur de requêtes crée des jointures entre les tables basées sur les tables, en fonction des clés de la table. Pour ajouter une jointure, faites glisser le champ d'une table vers un champ situé dans une autre table. Pour gérer une jointure, cliquez dessus avec le bouton droit, puis sélectionnez une option du menu.<br /><br /> Cliquez avec le bouton droit sur le volet **diagramme** pour ajouter ou supprimer des tables, sélectionner toutes les tables et afficher ou masquer des volets.|  
 |Volet **grille**|Affiche la requête dans une grille. Vous pouvez utiliser ce volet pour ajouter et supprimer des colonnes dans la requête et modifier les paramètres de chaque colonne.|  
 |Volet **SQL**|Affiche la requête sous forme de texte SQL. Les modifications effectuées dans le volet **Diagramme** et le volet **Grille** sont affichées ici et les modifications apportées ici sont affichées dans les volets **Diagramme** et **Grille** .|  
 |Volet **résultats**|Affiche les résultats de la requête lorsque vous cliquez sur **Exécuter** dans la barre d'outils.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
- [Source OLE DB](data-flow/ole-db-source.md)   
- [Destination OLE DB](data-flow/ole-db-destination.md)   
+ [Tâche d’exécution SQL](control-flow/execute-sql-task.md)   
+ [Source de OLE DB](data-flow/ole-db-source.md)   
+ [Destination de la OLE DB](data-flow/ole-db-destination.md)   
  [Transformation de recherche](data-flow/transformations/lookup-transformation.md)   
  [Integration Services &#40;requêtes de&#41; SSIS](integration-services-ssis-queries.md)   
- [MERGE dans les packages Integration Services](control-flow/merge-in-integration-services-packages.md)  
+ [MERGE in Integration Services Packages](control-flow/merge-in-integration-services-packages.md)  
   
   

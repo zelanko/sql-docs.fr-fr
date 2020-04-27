@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056317"
 ---
 # <a name="save-copy-of-package"></a>Enregistrer une copie du package
@@ -52,7 +52,7 @@ ms.locfileid: "66056317"
  **Mot de passe**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , entrez un mot de passe.  
   
- **Chemin d'accès au package**  
+ **Chemin du package**  
  Tapez le chemin d’accès au package ou cliquez sur le bouton Parcourir **(...)** et recherchez le dossier dans lequel stocker le package.  
   
  **Niveau de protection**  
@@ -61,7 +61,7 @@ ms.locfileid: "66056317"
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’interface utilisateur de la boîte de dialogue Importer un package](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Référence de l’interface utilisateur de la boîte de dialogue Exporter le package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Enregistrer des packages](save-packages.md)   
+ [Enregistrer les packages](save-packages.md)   
  [Importer et exporter des packages &#40;service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

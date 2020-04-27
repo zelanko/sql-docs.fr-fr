@@ -14,20 +14,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055637"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>définir les propriétés du service Integration Services
     
 > [!IMPORTANT]  
->  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]prend en charge le service pour la compatibilité descendante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]avec les versions antérieures de. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
+>  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
  Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gère et surveille les packages dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Lorsque vous installez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]pour la première [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fois, le service est démarré et le type de démarrage du service est défini sur automatique.  
   
- Après avoir installé le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous pouvez définir les propriétés du service en utilisant le composant logiciel enfichable Gestionnaire de configuration SQL Server ou Services MMC.  
+ Après avoir installé le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous pouvez définir les propriétés du service en utilisant le composant logiciel enfichable Gestionnaire de configuration SQL Server ou Services MMC.  
   
  Pour configurer d'autres fonctionnalités importantes du service, y compris les emplacements auxquels il stocke et gère les packages, vous devez modifier le fichier de configuration du service. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66055637"
   
 2.  Dans le composant logiciel enfichable **Gestionnaire de configuration SQL Server** , recherchez **SQL Server Integration Services** dans la liste des services, cliquez avec le bouton droit sur **SQL Server Integration Services**, puis cliquez sur **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Integration Services** , vous pouvez effectuer les actions suivantes :  
+3.  Dans la boîte de dialogue **Propriétés du SQL Server Integration Services** , vous pouvez effectuer les opérations suivantes :  
   
     -   Cliquez sur l’onglet **Ouvrir une session** pour afficher les informations d’ouverture de session, comme le nom du compte.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66055637"
   
 3.  Dans le composant logiciel enfichable **Services** , recherchez **SQL Server Integration Services** dans la liste des services, cliquez avec le bouton droit sur **SQL Server Integration Services**, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés du SQL Server Integration Services** , vous pouvez effectuer les opérations suivantes :  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server Integration Services** , vous pouvez effectuer les actions suivantes :  
   
     -   Cliquez sur l’onglet **général** . Pour activer le service, sélectionnez le type de démarrage manuel ou automatique. Pour désactiver le service, sélectionnez Désactiver dans la zone **Type de démarrage** . Le fait de sélectionner Désactiver n'arrête pas le service s'il est en cours d'exécution.  
   

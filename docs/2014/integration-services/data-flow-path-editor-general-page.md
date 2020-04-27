@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059954"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Éditeur du chemin d'accès au flux de données (Page Général)
@@ -30,7 +30,7 @@ ms.locfileid: "66059954"
  **Nom**  
  Donnez un nom unique au chemin d'accès.  
   
- **IDENTIFI**  
+ **Identifiant**  
  Identificateur de lignage du chemin d'accès. Cette propriété est en lecture seule.  
   
  **IdentificationString**  
@@ -51,7 +51,7 @@ ms.locfileid: "66059954"
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur du chemin d’accès de données &#40;page de métadonnées&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Éditeur du chemin d’accès au workflow &#40;page des visionneuses de données&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [Flux de données](data-flow/data-flow.md)   
+ [Transmission de données](data-flow/data-flow.md)   
  [Utiliser des annotations dans les packages](use-annotations-in-packages.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055730"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Définir les propriétés d'un chemin d'accès à l'aide de l'Éditeur du chemin d'accès au flux de données
@@ -37,7 +37,7 @@ ms.locfileid: "66055730"
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chemins Integration Services](data-flow/integration-services-paths.md)   
+ [Chemins d’accès Integration Services](data-flow/integration-services-paths.md)   
  [Flux de données](data-flow/data-flow.md)  
   
   

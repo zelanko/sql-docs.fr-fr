@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069223"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Sélection (Boîte de dialogue Propriétés de partition) (SSMS)
   La page **Sélection** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio permet de sélectionner une partition à partir d'un groupe de mesures afin d'en afficher ou modifier les propriétés dans le volet **Général**, **Mise en cache proactive**ou **Configuration d'erreur** .  
   
 ## <a name="options"></a>Options  
- **Boutons**  
+ **Grille**  
  Affiche les partitions du groupe de mesures qui contient la partition sélectionnée.  
   
  Sélectionnez la partition dont vous souhaitez afficher les propriétés dans la page **Général**, **Mise en cache proactive**ou **Configuration d'erreur** .  

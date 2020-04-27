@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055490"
 ---
 # <a name="sort-transformation-editor"></a>Éditeur de transformation de tri
@@ -27,7 +27,7 @@ ms.locfileid: "66055490"
  Pour en savoir plus sur la transformation de tri, consultez [Sort Transformation](data-flow/transformations/sort-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Définissez les colonnes à trier en utilisant les cases à cocher.  
   
  **Nom**  

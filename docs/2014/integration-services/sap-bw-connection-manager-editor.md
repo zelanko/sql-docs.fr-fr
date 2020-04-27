@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056280"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SAP BW
@@ -63,36 +63,36 @@ ms.locfileid: "66056280"
  Si vous vous connectez à un serveur d'applications unique, spécifiez le nom d'hôte.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser le serveur d’applications unique** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser le serveur d'applications unique** .  
   
  **Numéro système**  
  Si vous vous connectez à un serveur d'applications unique, spécifiez le numéro du système.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser le serveur d’applications unique** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser le serveur d'applications unique** .  
   
  **Utiliser l’équilibrage de charge**  
  Connectez-vous à un groupe de serveurs à charge équilibrée.  
   
  Pour vous connecter à un serveur d'applications unique, utilisez plutôt l'option **Utiliser le serveur d'applications unique** .  
   
- **Serveur de messages**  
+ **Serveur de messagerie**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez le nom du serveur de messages.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
  **Groupe**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez le nom du groupe de serveurs.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
  **SID**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez l'ID système pour la connexion.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
  **Répertoire du journal**  
  Activez la journalisation des composants de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW.  

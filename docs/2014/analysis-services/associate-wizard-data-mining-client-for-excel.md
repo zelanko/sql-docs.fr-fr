@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062307"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Assistant Association (Client d'exploration de données pour Excel)
@@ -88,7 +88,7 @@ ms.locfileid: "66062307"
   
  L'algorithme utilise ces informations sur les jeux d'éléments pour générer des règles qui peuvent être utilisées pour prédire des associations ou faire des recommandations. Par exemple, une règle peut énoncer « si l'utilisateur a acheté un livre de l'auteur 1 et un livre de l'auteur 2, il est probable qu'il achètera aussi un livre de l'auteur 3 ». Une probabilité est attribuée à chaque recommandation, en fonction de la force des associations.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour pouvoir utiliser l'Assistant Association, vous devez être connecté à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Vos données sources doivent être organisées sous forme de table des transactions. Les données sources doivent contenir une colonne incluant l'identificateur de transaction. Cette colonne identifie chaque groupe d'éléments. Cette colonne Transaction doit être dans une relation un-à-plusieurs avec une seconde colonne, la colonne Identificateur d'élément, qui stocke les noms ou les numéros d'ID des différents éléments du groupe.  

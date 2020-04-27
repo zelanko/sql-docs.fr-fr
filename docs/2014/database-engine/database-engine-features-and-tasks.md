@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064977"
 ---
 # <a name="database-engine-features-and-tasks"></a>Fonctionnalités et tâches du moteur de base de données
@@ -30,7 +30,7 @@ ms.locfileid: "66064977"
   
  [Fonctionnalités entre les instances du moteur de base de données](../../2014/database-engine/database-engine-cross-instance-features.md)  
   
- [Solutions de haute disponibilité &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+ [Solutions haute disponibilité &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
  [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

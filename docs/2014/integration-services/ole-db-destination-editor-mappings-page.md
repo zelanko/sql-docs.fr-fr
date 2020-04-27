@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057092"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Éditeur de destination OLE DB (page Mappages)
@@ -27,20 +27,20 @@ ms.locfileid: "66057092"
  Pour en savoir plus sur la destination OLE DB, consultez [OLE DB Destination](data-flow/ole-db-destination.md).  
   
 ## <a name="options"></a>Options  
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
   
  **Colonnes de destination disponibles**  
  Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
   
  **Colonne d'entrée**  
- Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant **\<ignorer>** de manière à exclure des colonnes de la sortie.  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant ** \<ignorer les>** pour exclure des colonnes de la sortie.  
   
  **Colonne de destination**  
  Indique chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination de OLE DB &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [OLE DB éditeur de destination &#40;page sortie d’erreur&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Charger des données à l'aide de la destination OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059484"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Éditeur de destination de traitement de dimension (page Avancé)
@@ -27,13 +27,13 @@ ms.locfileid: "66059484"
  Pour en savoir plus sur la destination de traitement de dimension, consultez [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## <a name="options"></a>Options  
- **Utilisez la configuration d’erreur par défaut.**  
+ **Utiliser la configuration d'erreur par défaut**  
  Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est définie sur `True`.  
   
  **Action de l’erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convertir la valeur de clé non acceptable en valeur `UnknownMember`.|  
 |**DiscardRecord**|Ignorer l'enregistrement.|  
@@ -47,10 +47,10 @@ ms.locfileid: "66059484"
  **Nombre d’erreurs**  
  Spécifiez le seuil d’erreurs au-delà duquel le traitement doit s’arrêter, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
- **Action en cas d’erreur**  
+ **Action pour l'erreur**  
  Indiquez l’action à appliquer quand le seuil d’erreurs est atteint, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Arrêter le traitement.|  
 |**StopLogging**|Arrêter d'enregistrer les erreurs.|  
@@ -58,7 +58,7 @@ ms.locfileid: "66059484"
  **Clé introuvable**  
  Indiquez l'action à appliquer en cas d'erreur de clé introuvable. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -67,38 +67,38 @@ ms.locfileid: "66059484"
  **Clé dupliquée**  
  Indiquez l'action à appliquer en cas d'erreur de clé dupliquée. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
 |**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
   
- **Clé null convertie en clé inconnue**  
+ **Clé NULL convertie en clé inconnue**  
  Indiquez l'action à appliquer lorsqu'une clé NULL a été convertie en clé `UnknownMember`. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
 |**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
   
- **Clé null non autorisée**  
+ **Clé NULL non autorisée**  
  Indiquez l'action à appliquer si une clé NULL est trouvée alors que les clés NULL ne sont pas autorisées. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
 |**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
   
- **Chemin du journal des erreurs**  
+ **Chemin d'accès du journal des erreurs**  
  Tapez le chemin du journal des erreurs ou cliquez sur le bouton **Parcourir (...)** pour sélectionner une destination.  
   
  **Parcourir (...)**  
  Sélectionnez le chemin d'accès du journal des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination de traitement de dimension &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [Éditeur de destination de traitement de dimension &#40;page Mappages&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   

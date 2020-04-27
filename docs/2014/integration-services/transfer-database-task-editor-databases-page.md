@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055109"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Éditeur de tâche de transfert de bases de données (page Bases de données)
@@ -53,10 +53,10 @@ ms.locfileid: "66055109"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Remplace la base de données du serveur de destination.|  
-|**False**|Ne remplace pas la base de données du serveur de destination.|  
+|**:**|Remplace la base de données du serveur de destination.|  
+|**Fausses**|Ne remplace pas la base de données du serveur de destination.|  
   
 > [!CAUTION]  
 >  Les données de la base de données du serveur de destination seront remplacées si vous spécifiez **True** pour **DestinationOverwrite**, ce qui peut provoquer la perte de données. Pour l'éviter, sauvegardez la base de données du serveur de destination dans un autre emplacement avant d'exécuter la tâche de transfert de bases de données.  
@@ -82,16 +82,16 @@ ms.locfileid: "66055109"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**True**|Rattache la base de données source.|  
-|**False**|Ne rattache pas la base de données source.|  
+|**:**|Rattache la base de données source.|  
+|**Fausses**|Ne rattache pas la base de données source.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert de bases de données &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Page Expressions](expressions/expressions-page.md)   
+ [Page expressions](expressions/expressions-page.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)  
   
   

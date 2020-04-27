@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058487"
 ---
 # <a name="ftp-connection-manager-editor"></a>Éditeur du gestionnaire de connexions FTP
@@ -42,13 +42,13 @@ ms.locfileid: "66058487"
  **Mot de passe**  
  Indiquez le mot de passe permettant d'accéder au serveur FTP.  
   
- **Délai d’attente (en secondes)**  
+ **Délai d'expiration (en secondes)**  
  Spécifiez le nombre de secondes que prend la tâche avant l’expiration du délai d’attente. La valeur **0** indique une durée infinie. La valeur par défaut de cette propriété est **60**.  
   
  **Utiliser le mode passif**  
  Permet de spécifier si le serveur ou le client initie la connexion. Le serveur initie la connexion en mode actif, alors que le client l'initie en mode passif. La valeur par défaut de cette propriété est **mode actif**.  
   
- **Nouvelles tentatives**  
+ **Nouvelle tentatives**  
  Spécifiez le nombre de fois que la tâche doit tenter d'établir une connexion. Une valeur égale à **0** indique un nombre illimité de tentatives.  
   
  **Taille de segment (en Ko)**  
