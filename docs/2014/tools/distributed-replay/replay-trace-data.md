@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149891"
 ---
 # <a name="replay-trace-data"></a>Relire les données de trace
-  Vous pouvez démarrer une relecture distribuée avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la fonctionnalité Distributed Replay une fois que vous avez préparé les données de trace d’entrée. Pour plus d’informations, consultez [préparer les données de Trace d’entrée](prepare-the-input-trace-data.md).  
+  Vous pouvez démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay après avoir préparé les données de trace d’entrée. Pour plus d’informations, consultez [préparer les données de Trace d’entrée](prepare-the-input-trace-data.md).  
   
  Utilisez l’option de **relecture** de l’outil d’administration pour initialiser l’étape de relecture d’événements de la relecture distribuée. Cette étape consiste en deux parties : la répartition des données de trace et le démarrage et la synchronisation de la relecture distribuée.  
   
- ![Client Distributed Replay](../../database-engine/media/eventreplay.gif "Client Distributed Replay")  
+ ![Distributed Event Replay](../../database-engine/media/eventreplay.gif "Distributed Event Replay")  
   
  Vous pouvez relire les données de trace dans l'un de ces deux modes de mise en séquence : mode simultané (stress) ou mode de synchronisation. Le comportement par défaut consiste à relire les données de trace en mode simultané (stress). Pour plus d'informations sur l'étape de relecture d'événements et les modes de mise en séquence, consultez [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
