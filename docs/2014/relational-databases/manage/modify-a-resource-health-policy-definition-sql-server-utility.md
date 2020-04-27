@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188877"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modifier une définition de la stratégie de contrôle d'intégrité des ressources (utilitaire SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "63188877"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les stratégies d’utilisation des ressources de l’utilitaire peuvent être configurées pour des applications de la couche Données et des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les stratégies d’utilisation des ressources peuvent être définies globalement pour toutes les applications de la couche Données et toutes les instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elles peuvent également être définies individuellement pour chaque application de la couche Données et chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également implémenter des stratégies globales et configurer des applications de la couche Données ou des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuelles avec leurs propres définitions de stratégie.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="modify-global-resource-utilization-policies-in-a-sql-server-utility"></a>Modifier des stratégies globales d'utilisation des ressources dans un utilitaire SQL Server.  
   

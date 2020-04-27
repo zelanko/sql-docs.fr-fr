@@ -14,40 +14,40 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250638"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objet General Statistics
   L’objet **SQLServer:General Statistics** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour surveiller l’activité générale du serveur, comme le nombre de connexions actives et le nombre d’utilisateurs se connectant et se déconnectant à la seconde d’ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela s'avère utile lorsque vous travaillez sur des systèmes OLTP importants sur lesquels de nombreux clients se connectent et se déconnectent d'ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Statistiques générales** .  
+ Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Statistiques générales**de**.  
   
 |Compteurs statistiques générales de SQL Server|Description|  
 |--------------------------------------------|-----------------|  
 |**Tables temporaires actives**|Nombre de tables temporaires/variables de table en cours d'utilisation.|  
-|**Réinitialisations de connexion/s**|Nombre total de connexions établies à partir du groupement de connexions.|  
-|**Suppression différée des notifications d’événements**|Nombre de notifications d'événements en attente de suppression par un thread système|  
+|**Réinitialisation de la connexion/s**|Nombre total de connexions établies à partir du groupement de connexions.|  
+|**Suppression différée des notifications d'événements**|Nombre de notifications d'événements en attente de suppression par un thread système|  
 |**Requêtes HTTP authentifiées**|Nombre de requêtes HTTP authentifiées démarrées par seconde.|  
 |**Connexions logiques**|Nombre de connexions logiques au système.<br /><br /> La finalité principale des connexions logiques est de traiter les requêtes MARS (multiple active result sets). Dans le cas des requêtes MARS, chaque fois qu'une application se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il peut y avoir plusieurs connexions logiques associées à une connexion physique.<br /><br /> Lorsque vous n'utilisez pas MARS, le ratio entre les connexions physiques et logiques et de 1:1. Chaque fois qu'une application se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les connexions logiques augmentent donc de 1.|  
-|**Connexions par seconde**|Nombre total de connexions démarrées par seconde. N'inclut pas les connexions regroupées.|  
+|**Connexions/s**|Nombre total de connexions démarrées par seconde. N'inclut pas les connexions regroupées.|  
 |**Déconnexions/s**|Nombre total de déconnexions effectuées par seconde.|  
-|**Blocages mars**|Nombre de blocages MARS détectés.|  
+|**Blocages MARS**|Nombre de blocages MARS détectés.|  
 |**Taux de rendement non atomique**|Nombre de rendements non atomiques par seconde.|  
 |**Processus bloqués**|Nombre de processus actuellement bloqués.|  
-|**Demandes SOAP vides**|Nombre de requêtes SOAP vides démarrées par seconde.|  
+|**Requêtes SOAP vides**|Nombre de requêtes SOAP vides démarrées par seconde.|  
 |**Appels de méthode SOAP**|Nombre d'appels de méthode SOAP démarrés par seconde.|  
-|**Demandes d’initiation de session SOAP**|Nombre de requêtes d'ouverture de session SOAP démarrées par seconde.|  
-|**Demandes de fermeture de session SOAP**|Nombre de requêtes de fermeture de session SOAP démarrées par seconde.|  
+|**Requêtes d'ouverture de session SOAP**|Nombre de requêtes d'ouverture de session SOAP démarrées par seconde.|  
+|**Requêtes de fermeture de session SOAP**|Nombre de requêtes de fermeture de session SOAP démarrées par seconde.|  
 |**Requêtes SQL SOAP**|Nombre de requêtes SQL SOAP démarrées par seconde.|  
-|**Demandes SOAP WSDL**|Nombre de requêtes WSDL SOAP démarrées par seconde.|  
+|**Requêtes WSDL SOAP**|Nombre de requêtes WSDL SOAP démarrées par seconde.|  
 |**Taux de création de tables temporaires**|Nombre de tables temporaires/variables de table créées par seconde.|  
-|**Tables temporaires pour la destruction**|Nombre de tables temporaires/variables de table qui attendent d'être détruites par le thread système de nettoyage|  
-|**File d’attente des notifications d’événements de trace**|Nombre d'instances de notifications d'événements de trace qui attendent dans la file d'attente interne d'être envoyées via Service Broker|  
+|**Tables temporaires en attente de destruction**|Nombre de tables temporaires/variables de table qui attendent d'être détruites par le thread système de nettoyage|  
+|**File d'attente des notifications d'événements de trace**|Nombre d'instances de notifications d'événements de trace qui attendent dans la file d'attente interne d'être envoyées via Service Broker|  
 |**Transactions**|Nombre d'inscriptions de transactions (locales, du DTC et lie´es).|  
-|**Connexions utilisateur**|Compte le nombre d'utilisateurs actuellement connectés à SQL Server.|  
+|**Connexions utilisateur**|Compte le nombre d'utilisateurs actuellement connectés à SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)  

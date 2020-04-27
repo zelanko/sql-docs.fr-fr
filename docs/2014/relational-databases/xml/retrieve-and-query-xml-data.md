@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241209"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Récupérer et interroger des données XML
   Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
   
-##  <a name="features"></a> Fonctionnalités d'une instance XML qui ne sont pas conservées  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Fonctionnalités d'une instance XML qui ne sont pas conservées  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le contenu de l’instance XML, mais ne conserve pas les aspects de l’instance XML qui ne sont pas considérés significatifs dans le modèle de données XML. Cela signifie qu'une instance XML extraite peut ne pas être identique à l'instance stockée sur le serveur, mais contiendra les mêmes informations.  
   
 ### <a name="xml-declaration"></a>Déclaration XML  
@@ -86,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Définition des options requises de requête  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Définition des options requises de requête  
  Lors de l' `xml` interrogation de colonnes de `xml` type ou de variables à l’aide de méthodes de type de données, les options suivantes doivent être définies comme indiqué.  
   
 |Options SET|Valeurs requises|  

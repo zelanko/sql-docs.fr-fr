@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245740"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
-  Utilisez cette boîte de dialogue pour afficher ou spécifier les options [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]de connexion à. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
+  Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
   
  De nombreux facteurs affectent votre capacité à vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,9 +42,8 @@ ms.locfileid: "63245740"
  **Authentification**  
  Deux modes d’authentification sont disponibles lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]connexion à une instance du.  
   
- **Mode d’authentification Windows (authentification Windows)**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
+ **Mode d'authentification Windows (authentification Windows)**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
   
  **Authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  

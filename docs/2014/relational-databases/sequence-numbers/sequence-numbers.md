@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184405"
 ---
 # <a name="sequence-numbers"></a>Numéros séquentiels
@@ -81,7 +81,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>Exemples  
  D’autres exemples sont fournis dans les rubriques [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql), [NEXT VALUE FOR &#40;Transact-SQL&#41;](/sql/t-sql/functions/next-value-for-transact-sql) et [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql).  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>R. Utilisation d'un numéro séquentiel dans une table individuelle  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Utilisation d'un numéro séquentiel dans une table individuelle  
  L’exemple suivant crée un schéma nommé Test, une table nommée Orders et une séquence nommée CountBy1, puis insère des lignes dans la table à l’aide de la fonction NEXT VALUE FOR.  
   
 ```  
@@ -396,6 +396,6 @@ GO
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [IDENTITY, propriété &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

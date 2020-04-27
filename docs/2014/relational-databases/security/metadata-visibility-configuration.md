@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187928"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuration de la visibilité des métadonnées
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Affichages catalogue|[!INCLUDE[ssDE](../../includes/ssde-md.md)]procédures stockées **sp_help**|  
+|Affichages catalogue|Procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**du**|  
 |Métadonnées exposant des fonctions intégrées|Affichages des schémas d'information|  
 |vues de compatibilité ;|Propriétés étendues|  
   
@@ -51,8 +51,7 @@ GO
   
 |||  
 |-|-|  
-|Tables système de copie des journaux de transaction|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tables système de l’Agent|  
+|Tables système de copie des journaux de transaction|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tables système de l’Agent|  
 |Tables système des plans de maintenance de base de données|Tables système de sauvegardes|  
 |Tables système de réplication|Procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **de la réplication et de l’Agent**|  
   
@@ -64,7 +63,7 @@ GO
   
 -   Les fonctions intégrées émettant des métadonnées telles que OBJECTPROPERTYEX peuvent renvoyer une valeur NULL.  
   
--   Les procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   Les procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**du**peuvent uniquement retourner un sous-ensemble de lignes ou la valeur NULL.  
   
  Les modules SQL, tels que les procédures stockées et les déclencheurs, fonctionnent dans le contexte de sécurité de l'appelant et, par conséquent, auront un accès limité aux métadonnées. Dans le code suivant par exemple, lorsque la procédure stockée tente d'accéder aux métadonnées de la table `myTable` pour laquelle l'appelant n'a aucune autorisation, un jeu de résultats vide est renvoyé. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une ligne est renvoyée.  
   
@@ -183,17 +182,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys. messages**|  
-|**sys. schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys.messages**|  
+|**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## <a name="see-also"></a>Voir aussi  
- [GRANT &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-transact-sql)   
- [DENY &#40;&#41;Transact-SQL](/sql/t-sql/statements/deny-transact-sql)   
- [REVOKE &#40;&#41;Transact-SQL](/sql/t-sql/statements/revoke-transact-sql)   
- [Clause EXECUTe AS &#40;&#41;Transact-SQL](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [Clause EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Affichages catalogue &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

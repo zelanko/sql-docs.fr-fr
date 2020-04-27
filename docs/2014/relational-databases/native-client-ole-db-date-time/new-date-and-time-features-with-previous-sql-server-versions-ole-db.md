@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233075"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nouvelles fonctionnalités de date et d’heure avec les versions précédentes de SQL Server (OLE DB)
@@ -55,7 +55,7 @@ ms.locfileid: "63233075"
   
 -   Passage à `datetime2`, car il représente le type de données par défaut pour la date et l'heure.  
   
- Les applications qui utilisent les métadonnées de serveur obtenues via ICommandWithParameters :: GetParameterInfo ou les ensembles de lignes de schéma pour définir les informations de type de paramètre par le biais de ICommandWithParameters :: SetParameterInfo échouent lors des conversions clientes où la chaîne la représentation d’un type de source est supérieure à la représentation sous forme de chaîne du type de destination. Par exemple, si une liaison cliente utilise DBTYPE_DBTIMESTAMP et que la colonne de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est date, Native Client convertit la valeur en « yyyy-jj-mm hh : mm : SS. fff », mais les métadonnées de serveur sont retournées en tant que `nvarchar(10)`. Le dépassement de capacité résultant provoque DBSTATUS_E_CATCONVERTVALUE. Des problèmes similaires se produisent avec les conversions de données par IRowsetChange, car les métadonnées de l’ensemble de lignes sont définies à partir des métadonnées du jeu de résultats.  
+ Les applications qui utilisent les métadonnées de serveur obtenues via ICommandWithParameters :: GetParameterInfo ou les ensembles de lignes de schéma pour définir les informations de type de paramètre par le biais de ICommandWithParameters :: SetParameterInfo échouent lors des conversions de client où la représentation sous forme de chaîne d’un type source est supérieure à la représentation sous forme de chaîne du type de destination. Par exemple, si une liaison cliente utilise DBTYPE_DBTIMESTAMP et que la colonne de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est date, Native Client convertit la valeur en « yyyy-jj-mm hh : mm : SS. fff », mais les métadonnées de serveur sont retournées en tant que `nvarchar(10)`. Le dépassement de capacité résultant provoque DBSTATUS_E_CATCONVERTVALUE. Des problèmes similaires se produisent avec les conversions de données par IRowsetChange, car les métadonnées de l’ensemble de lignes sont définies à partir des métadonnées du jeu de résultats.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Métadonnées de paramètre et d'ensemble de lignes  
  Cette section décrit les métadonnées des paramètres, des colonnes de résultats et des ensembles de lignes de schéma pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients qui sont compilés avec une version de Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -166,6 +166,6 @@ ms.locfileid: "63233075"
  Tous les opérateurs de comparaison sont autorisés pour les nouveaux types date/heure, car ils apparaissent sous forme de types chaîne et non sous forme de types date/heure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations de la date et de l’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

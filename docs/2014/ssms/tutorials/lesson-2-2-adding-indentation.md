@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63222951"
 ---
 # <a name="adding-indentation"></a>Ajout d'une mise en retrait
@@ -24,7 +24,7 @@ ms.locfileid: "63222951"
   
 #### <a name="to-indent-multiple-lines-of-code"></a>Pour mettre en retrait plusieurs lignes de code  
   
-1.  Dans la barre d’outils, cliquez sur **Nouvelle requête**.  
+1.  Dans la barre d'outils, cliquez sur **Nouvelle requête**.  
   
 2.  Créez une deuxième requête qui sélectionne les colonnes **BusinessEntityID**, FirstName, **MiddleName**, et **LastName** dans la table **Person** du schéma **Person** . Placez chaque colonne sur une ligne distincte afin que le code ressemble à ce qui suit :  
   

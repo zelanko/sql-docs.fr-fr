@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193039"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "63193039"
   
  Vous pouvez aussi utiliser la collection de schémas XML pour typer les variables, les paramètres et les colonnes XML.  
   
-##  <a name="ddl"></a> DDL pour la gestion des collections de schémas  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> DDL pour la gestion des collections de schémas  
  Vous pouvez créer des collections de schémas XML dans la base de données et les associer à des variables et des colonnes de type `xml`. Pour gérer des collections de schémas dans la base de données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les instructions DDL suivantes :  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) Importe les composants de schéma dans une base de données.  
@@ -60,7 +60,7 @@ ms.locfileid: "63193039"
   
  Pour supprimer la collection de schémas, utilisez l'instruction DROP XML SCHEMA COLLECTION. Cela supprime tous les schémas contenus dans la collection et supprime l'objet collection. Notez qu’avant de pouvoir supprimer une collection de schémas, les conditions décrites dans [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) doivent être remplies.  
   
-##  <a name="components"></a> Description des composants de schémas  
+##  <a name="understanding-schema-components"></a><a name="components"></a> Description des composants de schémas  
  Lorsque vous utilisez l'instruction CREATE XML SCHEMA COLLECTION, différents composants de schémas sont importés dans la base de données. Les composants de schémas incluent des éléments de schémas, des attributs et des définitions de types. Lorsque vous utilisez l'instruction DROP XML SCHEMA COLLECTION, vous supprimez l'intégralité de la collection.  
   
  CREATE XML SCHEMA COLLECTION enregistre les composants de schémas dans différentes tables système.  
@@ -129,7 +129,7 @@ ms.locfileid: "63193039"
 |**finalDefault**|L'attribut **final** est appliqué à toutes les déclarations d'éléments et définitions de types où il n'est pas déjà présent et la valeur est définie à la valeur de l'attribut **finalDefault** .|  
 |**targetNamespace**|Les informations relatives aux composants qui appartiennent à l'espace de noms cible sont stockées dans les métadonnées.|  
   
-##  <a name="perms"></a> Autorisations sur une collection de schémas XML  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> Autorisations sur une collection de schémas XML  
  Vous devez disposer des autorisations nécessaires pour effectuer les opérations suivantes :  
   
 -   créer/charger la collection de schémas XML ;  
@@ -158,7 +158,7 @@ ms.locfileid: "63193039"
   
      Cette rubrique explique comment refuser des autorisations permettant de créer une collection de schémas XML et comment refuser l'autorisation sur un objet de collection de schémas XML.  
   
-##  <a name="info"></a> Obtention d'informations sur les schémas XML et les collections de schémas  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Obtention d'informations sur les schémas XML et les collections de schémas  
  Les collections de schémas XML sont répertoriées dans l'affichage catalogue sys.xml_schema_collections. La collection de schémas XML « sys » est définie par le système. Elle contient les espaces de noms prédéfinis qu'il est possible d'utiliser dans toutes les collections de schémas XML définies par l'utilisateur sans avoir à les charger explicitement. Cette liste contient les espaces de noms pour xml, xs, xsi, fn et xdt. Il existe deux autres affichages catalogue : sys.xml_schema_namespaces, qui répertorie tous les espaces de noms de chaque collection de schémas XML, et sys.xml_components, qui répertorie tous les composants de schéma XML de chaque schéma XML.  
   
  La fonction intégrée **XML_SCHEMA_NAMESPACE**, *SchemaName, XmlSchemaCollectionName, namespace-URI*, produit une `xml` instance de type de données. Cette instance contient des fragments de schéma XML pour les schémas qui sont contenus dans une collection de schémas XML, à l'exception des schémas XML prédéfinis.  

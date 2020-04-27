@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205266"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Création d'une application de pilote ODBC SQL Server Native Client
@@ -116,6 +116,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [Applications multithread](creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;&#41;ODBC](sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

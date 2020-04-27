@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190424"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "63190424"
 ## <a name="benefits-of-the-sql-server-utility"></a>Avantages de l'utilitaire SQL Server  
  L’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modélise les entités d’une organisation associées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans une vue unifiée. L'Explorateur d'utilitaire et les points de vue de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) fournissent aux administrateurs une vue holistique de l'intégrité des ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sert de point de contrôle de l'utilitaire (UCP). La combinaison du résumé et des données détaillées présentée dans l'UCP, à la fois pour les stratégies de sous-exploitation et de surexploitation et pour divers paramètres clés, permet d'identifier facilement les possibilités de consolidation de ressources et la surexploitation des ressources. Les stratégies de contrôle d'intégrité sont configurables et peuvent être ajustées pour modifier des seuils d'exploitation des ressources supérieurs ou inférieurs. Vous pouvez modifier des stratégies de surveillance globales ou configurer des stratégies de surveillance individuelles pour chaque entité gérée dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="typical_scenarios"></a> Mise en route avec l'utilitaire SQL Server  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Mise en route avec l'utilitaire SQL Server  
  Le scénario d'utilisateur classique commence par la création d'un point de contrôle d'utilitaire (UCP) qui établit le point de raisonnement central de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'UCP fournit une vue consolidée de l'intégrité des ressources recueillie à partir des instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Après avoir créé l'UCP, vous inscrivez des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin qu'elles puissent être gérées par l'UCP.  
   
  Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d'application de la couche Données gérée par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être surveillée en fonction des définitions de stratégie globales ou des définitions de stratégie individuelles.  

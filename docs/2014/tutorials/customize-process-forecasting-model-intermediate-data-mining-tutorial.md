@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249401"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personnalisation et traitement du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
@@ -35,7 +35,7 @@ ms.locfileid: "63249401"
   
  Le paramètre *PERIODICITY_HINT* fournit à l’algorithme des informations sur les périodes supplémentaires que vous vous attendez à voir dans les données. Par défaut, les modèles de série chronologique essayeront de détecter automatiquement un modèle dans les données. Toutefois, si vous connaissez déjà le cycle de temps estimé, fournir un indicateur de périodicité peut potentiellement améliorer la précision du modèle. Toutefois, si vous fournissez le mauvais indicateur de périodicité, celui-ci peut diminuer la précision ; par conséquent, si vous ne savez pas précisément quelle valeur doit être utilisée, il est préférable d'utiliser la valeur par défaut.  
   
- Par exemple, la vue utilisée pour ce modèle regroupe les données de ventes [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] mensuellement. Par conséquent, chaque tranche de temps utilisée par le modèle représente un mois et toutes les prédictions se feront également en termes de mois. Étant donné qu’il y a 12 mois dans une année et que vous vous attendez à ce que les modèles de vente se répètent plus ** ou moins sur `12`une base annuelle, vous définissez le paramètre PERIODICITY_HINT sur, pour indiquer que 12 tranches de temps (mois) constituent un cycle de vente complet.  
+ Par exemple, la vue utilisée pour ce modèle regroupe les données de ventes [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] mensuellement. Par conséquent, chaque tranche de temps utilisée par le modèle représente un mois et toutes les prédictions se feront également en termes de mois. Étant donné qu’il y a 12 mois dans une année et que vous vous attendez à ce que les modèles de vente se répètent plus *PERIODICITY_HINT* ou moins sur `12`une base annuelle, vous définissez le paramètre PERIODICITY_HINT sur, pour indiquer que 12 tranches de temps (mois) constituent un cycle de vente complet.  
   
  **Méthode de prévisions**  
   
@@ -106,6 +106,6 @@ ms.locfileid: "63249401"
 ## <a name="see-also"></a>Voir aussi  
  [Référence technique de l’algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

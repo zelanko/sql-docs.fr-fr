@@ -22,17 +22,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238133"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
   La fonctionnalité Audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d’effectuer l’audit d’événements et de groupes d’événements au niveau du serveur et au niveau de la base de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](sql-server-audit-database-engine.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont constitués de zéro ou plusieurs éléments d'action d'audit. Ces éléments d'action d'audit peuvent être un groupe d'actions, tel que Server_Object_Change_Group, ou des actions individuelles telles que des opérations SELECT sur une table.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont constitués de zéro ou plusieurs éléments d'action d'audit. Ces éléments d'action d'audit peuvent être un groupe d'actions, tel que Server_Object_Change_Group, ou des actions individuelles telles que des opérations SELECT sur une table.  
   
 > [!NOTE]  
 >  Server_Object_Change_Group inclut CREATE, ALTER et DROP pour tout objet de serveur (Base de données ou Point de terminaison).  
@@ -116,7 +115,7 @@ ms.locfileid: "63238133"
 |USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données autonome est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-audit-write-transact-sql). En règle générale, les déclencheurs ou procédures stockées incluent des appels à `sp_audit_write` pour activer l'audit d'événements importants.|  
   
-### <a name="considerations"></a>Considérations  
+### <a name="considerations"></a>Éléments à prendre en considération  
  Les groupes d'actions de niveau serveur couvrent les actions sur toute une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, toute vérification d'accès à un objet de schéma dans une base de données est enregistrée si le groupe d'actions approprié est ajouté à une spécification de l'audit du serveur. Dans une spécification d'audit de la base de données, seuls les accès aux objets de schéma dans cette base de données sont enregistrés.  
   
  Les actions de niveau serveur ne permettent pas un filtrage détaillé des actions au niveau de la base de données. Un audit de niveau base de données, tel que l'audit d'actions SELECT sur la table Customers pour les connexions dans le groupe Employee est requis pour implémenter le filtrage d'action détaillé. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
@@ -166,7 +165,7 @@ ms.locfileid: "63238133"
 |RECEIVE|Cet événement est déclenché chaque fois qu'une instruction RECEIVE est exécutée.|  
 |REFERENCES|Cet événement est déclenché chaque fois qu'une autorisation REFERENCES est vérifiée.|  
   
-### <a name="considerations"></a>Considérations  
+### <a name="considerations"></a>Éléments à prendre en considération  
 *  Les actions d'audit de niveau base de données ne s'appliquent pas aux colonnes.  
   
 *  Lorsque le processeur de requêtes paramètre la requête, le paramètre peut apparaître dans le journal des événements d'audit au lieu des valeurs de colonnes de la requête. 
@@ -181,9 +180,9 @@ ms.locfileid: "63238133"
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois que l'une des commandes suivantes est exécutée :<br /><br /> -CRÉER UN AUDIT DE SERVEUR<br />-ALTER SERVER AUDIT<br />-SUPPRIMER L’AUDIT DU SERVEUR<br />-CRÉER UNE SPÉCIFICATION D’AUDIT DU SERVEUR<br />-MODIFIER LA SPÉCIFICATION DE L’AUDIT DU SERVEUR<br />-SUPPRIMER LA SPÉCIFICATION DE L’AUDIT DU SERVEUR<br />-CRÉER UNE SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES<br />-SPÉCIFICATION DE L’AUDIT DE LA BASE DE DONNÉES<br />-SUPPRIMER LA SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES|  
   
 ## <a name="related-content"></a>Contenu associé  
- [Créer un audit du serveur et une spécification d’audit du serveur](create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d'audit du serveur](create-a-server-audit-and-server-audit-specification.md)  
   
- [Créer un audit de serveur et une spécification d’audit de base de données](create-a-server-audit-and-database-audit-specification.md)  
+ [Créer une spécification de l'audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   

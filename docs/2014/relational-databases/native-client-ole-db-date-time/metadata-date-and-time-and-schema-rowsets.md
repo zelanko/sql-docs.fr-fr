@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes de date et d’heure et de schéma | Microsoft Docs
+title: Date et heure et ensembles de lignes de schéma | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238012"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Ensembles de lignes de date et d’heure et de schéma
@@ -27,10 +27,10 @@ ms.locfileid: "63238012"
   
 |Type de colonne|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Date|DBTYPE_DBDATE|Clear|0|  
+|Date|DBTYPE_DBDATE|Désactiver|0|  
 |time|DBTYPE_DBTIME2|Définissez|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Désactiver|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Désactiver|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Définissez|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Définissez|0..7|  
   

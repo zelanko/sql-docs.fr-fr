@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185573"
 ---
 # <a name="basic-data-mining-tutorial"></a>Didacticiel d’exploration de données de base
@@ -34,11 +34,11 @@ ms.locfileid: "63185573"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] L’exploration de données comprend les fonctionnalités suivantes qui vous aident à développer et à comparer facilement plusieurs modèles prédictifs, puis à prendre des mesures sur les résultats :  
   
--   *Jeux de test exclusion-* Lorsque vous créez une structure d’exploration de données, vous pouvez désormais diviser les données de la structure d’exploration de données en jeux d’apprentissage et jeux de test. Cela vous permet de tester les modèles sur des jeux de données semblables, puis de comparer la précision des modèles associés.  
+-   *Jeux de tests de données d'exclusion*: lorsque vous créez une structure d'exploration de données, vous pouvez à présent diviser les données de la structure d'exploration de données en jeux d'apprentissage et de test. Cela vous permet de tester les modèles sur des jeux de données semblables, puis de comparer la précision des modèles associés.  
   
--   *Filtres de modèle d’exploration de données-* Vous pouvez maintenant joindre des filtres à un modèle d’exploration de données et appliquer le filtre pendant l’apprentissage et le test. Cela vous permet de générer facilement des modèles associés sur des sous-ensembles de données.  
+-   *Filtres de modèles d'exploration de données*: vous pouvez à présent joindre des filtres à un modèle d'exploration de données et appliquer le filtre pendant l'apprentissage et le test. Cela vous permet de générer facilement des modèles associés sur des sous-ensembles de données.  
   
--   *Extraction des cas de structure et des colonnes de structure-* Vous pouvez désormais facilement passer des modèles généraux dans le modèle d’exploration de données à des détails exploitables dans la source de données.  
+-   *Extraction dans des cas de structure et des colonnes de structure* : vous pouvez maintenant déplacer facilement des modèles généraux dans le modèle d'exploration de données vers des détails utilisables dans la source de données.  
   
  Ce didacticiel contient les leçons suivantes :  
   
@@ -48,14 +48,14 @@ ms.locfileid: "63185573"
  [Leçon 2 : création d’une structure de publipostage ciblée &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  Au cours de cette leçon, vous allez apprendre à créer une structure de modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario de publipostage ciblé.  
   
- [Leçon 3 : ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  Dans cette leçon, vous apprendrez à ajouter des modèles à une structure. Les modèles que vous créez sont générés à l'aide des algorithmes suivants :  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Arbres de décision  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [Leçon 4 : exploration des modèles de publipostage ciblés &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  Dans cette leçon, vous apprendrez à explorer et interpréter les conclusions de chaque modèle à l'aide des visionneuses.  
@@ -63,10 +63,10 @@ ms.locfileid: "63185573"
  [Leçon 5 : tester les modèles &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  Dans cette leçon, vous faites une copie de l'un des modèles de publipostage ciblé, vous ajoutez un filtre de modèle d'exploration de données afin de restreindre les données d'apprentissage à un jeu particulier de clients, puis vous évaluez la viabilité du modèle.  
   
- [Leçon 6 : création et utilisation de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Leçon 6 : création et utilisation de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  Dans cette dernière leçon du didacticiel sur l'exploration de données de base, vous utilisez le modèle pour prédire quels clients sont les plus susceptibles d'acheter un vélo. Vous allez ensuite effectuer une extraction dans les cas sous-jacents pour obtenir des informations de contact.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Assurez-vous que les éléments suivants sont installés sur votre système :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -78,11 +78,11 @@ ms.locfileid: "63185573"
  Pour des raisons de sécurité, les bases de données exemples ne sont pas installées avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour installer les bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez la page [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) (en anglais) et sélectionnez [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Lorsque vous suivez un didacticiel, vous pouvez trouver la navigation entre les étapes plus aisée en ajoutant les boutons **Rubrique suivante** et **Rubrique précédente** à la barre d'outils de la visionneuse de document.  
+>   Lorsque vous suivez un didacticiel, vous pouvez trouver la navigation entre les étapes plus aisée en ajoutant les boutons **Rubrique suivante** et **Rubrique précédente** à la barre d'outils de la visionneuse de document.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Tâches du modèle d’exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Création et interrogation de modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services-exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63216022"
 ---
 # <a name="enable-resource-governor"></a>Activer Resource Governor
@@ -26,7 +26,7 @@ ms.locfileid: "63216022"
   
 -   **Pour activer Resource Governor avec :**  [Explorateur d’objets](#RGOnObjEx), [Propriétés de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  L'activation de Resource Governor entraîne les résultats suivants :  
   
 -   La fonction classifieur est exécutée pour les nouvelles connexions afin que leurs charges de travail puissent être assignées aux groupes de charge de travail.  
@@ -35,20 +35,20 @@ ms.locfileid: "63216022"
   
 -   Les demandes qui ont existé avant d'activer Resource Governor sont affectées par les éventuelles modifications de configuration qui ont été effectuées lorsque Resource Governor était désactivé.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Vous ne pouvez pas utiliser l'instruction `ALTER RESOURCE GOVERNOR` pour activer le gouverneur de ressources dans une transaction utilisateur.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'activation de Resource Governor requiert l'autorisation CONTROL SERVER.  
   
-##  <a name="RGOnObjEx"></a> Activer Resource Governor à l'aide de l'Explorateur d'objets  
+##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> Activer Resource Governor à l'aide de l'Explorateur d'objets  
  **Pour activer Resource Governor à l'aide de l'Explorateur d'objets**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
   
 2.  Cliquez avec le bouton droit sur **Resource Governor**, puis sélectionnez **Activer**.  
   
-##  <a name="RGOnProp"></a> Activer Resource Governor à l'aide des propriétés de Resource Governor  
+##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> Activer Resource Governor à l'aide des propriétés de Resource Governor  
  **Pour activer Resource Governor à l'aide de la page Propriétés de Resource Governor**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
@@ -57,7 +57,7 @@ ms.locfileid: "63216022"
   
 3.  Activez la case à cocher **Activer Resource Governor** , puis cliquez **OK**.  
   
-##  <a name="RGOnTSQL"></a> Activer Resource Governor à l'aide de Transact-SQL  
+##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> Activer Resource Governor à l'aide de Transact-SQL  
  **Pour activer Resource Governor à l'aide de Transact-SQL**  
   
 1.  Exécutez l'instruction **ALTER RESOURCE GOVERNOR RECONFIGURE** .  

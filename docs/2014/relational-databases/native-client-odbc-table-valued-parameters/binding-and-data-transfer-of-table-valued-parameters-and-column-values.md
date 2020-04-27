@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199951"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Liaison et transfert de données de paramètres table et de valeurs de colonnes
@@ -36,7 +36,7 @@ ms.locfileid: "63199951"
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE dans APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE dans APD.<br /><br /> Ce doit être SQL_C_DEFAULT ou SQL_C_BINARY.|  
 |*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE dans IPD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE dans IPD.<br /><br /> Ce doit être SQL_SS_TABLE.|  
 |*ColumnSize*|SQL_DESC_LENGTH ou SQL_DESC_PRECISION dans IPD.<br /><br /> Cela dépend de la valeur de *ParameterType*.|SQL_DESC_ARRAY_SIZE<br /><br /> Peut également être défini à l'aide de SQL_ATTR_PARAM_SET_SIZE lorsque le focus de paramètre est défini sur le paramètre table.<br /><br /> Pour un paramètre table, il s'agit du nombre de lignes dans les mémoires tampons de colonnes de paramètres table.|  
-|*DecimalDigits*|SQL_DESC_PRECISION or SQL_DESC_SCALE dans IPD.|Non utilisé. Doit être 0.<br /><br /> Si ce paramètre n’est pas égal à 0, SQLBindParameter retourne SQL_ERROR et un enregistrement de diagnostic est généré avec SQLSTATE = HY104 et le message « précision ou échelle non valide ».|  
+|*DecimalDigits*|SQL_DESC_PRECISION or SQL_DESC_SCALE dans IPD.|Inutilisé. Doit être 0.<br /><br /> Si ce paramètre n’est pas égal à 0, SQLBindParameter retourne SQL_ERROR et un enregistrement de diagnostic est généré avec SQLSTATE = HY104 et le message « précision ou échelle non valide ».|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR dans APD.|SQL_CA_SS_TYPE_NAME.<br /><br /> Ceci est facultatif pour les appels de procédure stockée et NULL peut être spécifié si ce n'est pas requis. Doit être spécifié pour les instructions SQL qui ne sont pas des appels de procédure.<br /><br /> Ce paramètre sert également de valeur unique que l'application peut utiliser pour identifier ce paramètre table lorsque la liaison de ligne variable est utilisée. Pour plus d'informations, consultez la section « Liaison de ligne de paramètre table variable » plus loin dans cette rubrique.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit être spécifié en tant que valeur Unicode, même dans les applications générées en tant qu’applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).|  
 |*BufferLength*|SQL_DESC_OCTET_LENGTH dans APD.|Longueur du nom de type de paramètre table en octets.<br /><br /> Cela peut être SQL_NTS si le nom de type se termine par une valeur Null ou 0 si le nom de type de paramètre table n'est pas requis.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR dans APD.|SQL_DESC_OCTET_LENGTH_PTR dans APD.<br /><br /> Pour les paramètres table, il s'agit d'un nombre de lignes plutôt qu'une longueur de données.|  

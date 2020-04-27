@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245933"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -31,25 +31,25 @@ ms.locfileid: "63245933"
   
      [Sécurité](#Security)  
   
--   **Pour afficher des informations sur les étapes de travail, utilisez :**  
+-   **Pour afficher des informations sur une étape de travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Si l'étape du travail a été configurée pour écrire sa sortie dans une table ou un fichier et si le travail a été exécuté au moins une fois, vous pouvez afficher sa sortie dans la page **Avancé** de la boîte de dialogue **Propriétés de l'étape du travail** . Lorsqu'un travail ou une étape de travail est supprimé, le journal de sortie est automatiquement supprimé.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous ne soyez membre du rôle de serveur fixe **sysadmin** . Les membres de ce rôle peuvent afficher tous les travaux et tous les détails d'une étape de travail.  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>Pour afficher des informations sur une étape de travail  
   
-1.  Dans l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **Agent SQL Server**et **Travaux**, cliquez avec le bouton droit sur le travail contenant l’étape à modifier, puis cliquez sur **Propriétés**.  
   

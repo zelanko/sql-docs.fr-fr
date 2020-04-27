@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245751"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriétés de SQL Server Agent (page Système d'alerte)
@@ -41,13 +41,13 @@ ms.locfileid: "63245751"
  **Messages de radiomessagerie**  
  Les options de cette section vous permettent de configurer les messages électroniques envoyés à des adresses de radiomessagerie pour qu'ils fonctionnent avec votre système de radiomessagerie.  
   
- **Format d’adresse pour les messages de radiomessagerie**  
+ **Format d'adresse pour les messages de radiomessagerie**  
  Cette section vous permet de spécifier le format des adresses et la ligne Objet incluse dans les messages de radiomessagerie.  
   
- **À la ligne**  
+ **Ligne À**  
  Spécifie les options relatives à la ligne **À** du message.  
   
- **Préfixe**  
+ **Céder**  
  Tapez le texte prédéfini, requis par votre système au début de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Destinés**  
@@ -56,10 +56,10 @@ ms.locfileid: "63245751"
  **Suffixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Ligne CC**  
+ **Ligne Cc**  
  Spécifie les options relatives à la ligne **Cc** du message.  
   
- **Préfixe**  
+ **Céder**  
  Tapez le texte prédéfini, requis par votre système au début de la ligne **Cc** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Destinés**  
@@ -68,22 +68,22 @@ ms.locfileid: "63245751"
  **Suffixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **Cc** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Objet**  
+ **Subject**  
  Spécifie les options relatives à l'objet du message  
   
- **Préfixe**  
+ **Céder**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie au début de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Suffixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
- **Inclure le corps du message électronique dans le message de notification**  
+ **Inclure le corps du message dans le message de notification**  
  Inclut le corps du message électronique dans le message envoyé au récepteur de radiomessagerie.  
   
  **Opérateur de prévention de défaillance**  
  Cette section vous permet de spécifier les options relatives à l'opérateur de prévention de défaillance.  
   
- **Activer l’opérateur de prévention de défaillance**  
+ **Activer l'opérateur de prévention de défaillance**  
  Spécifie un opérateur de prévention de défaillance.  
   
  **Opérateur**  
@@ -92,7 +92,7 @@ ms.locfileid: "63245751"
  **Notifier en utilisant**  
  Définit la méthode à utiliser pour notifier l'opérateur de prévention de défaillance.  
   
- **Remplacement de jeton**  
+ **Remplacement des jetons**  
  Cette section vous permet d'activer des jetons d'étapes de travail utilisables dans les travaux exécutés par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les jetons d’étapes de travail, consultez [Utiliser des jetons dans les étapes d’un travail](use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
@@ -106,6 +106,6 @@ ms.locfileid: "63245751"
 ## <a name="see-also"></a>Voir aussi  
  [Operator](operators.md)   
  [Configurez SQL Server Agent mail pour utiliser Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
- [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

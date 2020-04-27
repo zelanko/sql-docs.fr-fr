@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63215799"
 ---
 # <a name="delete-a-workload-group"></a>Supprimer un groupe de charge de travail
@@ -27,10 +27,10 @@ ms.locfileid: "63215799"
   
 -   **Pour supprimer un groupe de charge de travail avec :**  [Explorateur d’objets](#DelWGObjEx), [Propriétés de Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Vous ne pouvez pas supprimer un groupe de charge de travail s'il contient des sessions actives.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Si un groupe de charge de travail contient des sessions actives, sa suppression ou son déplacement vers un pool de ressources différent échoue lorsque l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE est appelée pour appliquer la modification. Pour éviter ce problème, vous pouvez suivre l'une des actions suivantes :  
   
 -   Attendez la déconnexion de toutes les sessions du groupe affecté, puis réexécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.  
@@ -39,10 +39,10 @@ ms.locfileid: "63215799"
   
 -   Redémarrez le serveur. Au terme du processus de redémarrage, le groupe supprimé ne sera pas créé, et un groupe déplacé utilisera la nouvelle affectation de pool de ressources.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La suppression d'un groupe de charge de travail nécessite l'autorisation CONTROL SERVER.  
   
-##  <a name="DelWGObjEx"></a> Supprimer un groupe de charge de travail à l'aide de l'Explorateur d'objets  
+##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Supprimer un groupe de charge de travail à l'aide de l'Explorateur d'objets  
  **Pour supprimer un groupe de charge de travail à l'aide de l'Explorateur d'objets**  
   
 1.  Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets, développez de manière récursive le nœud **Gestion** jusqu'à **Pools de ressources**.  
@@ -53,7 +53,7 @@ ms.locfileid: "63215799"
   
 4.  Dans la fenêtre **Supprimer un objet** , le groupe de charge de travail est répertorié dans la liste **Objet à supprimer** . Pour supprimer le groupe de charge de travail, cliquez sur **OK**.  
   
-##  <a name="DelWGRGProp"></a> Supprimer un groupe de charge de travail à l'aide des propriétés de Resource Governor  
+##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Supprimer un groupe de charge de travail à l'aide des propriétés de Resource Governor  
  **Pour supprimer un groupe de charge de travail à l'aide de la page Propriétés de Resource Governor**  
   
 1.  Dans l'Explorateur d'objets, développez de manière récursive le nœud **Gestion** jusqu'à **Pools de ressources**inclus.  
@@ -64,7 +64,7 @@ ms.locfileid: "63215799"
   
 4.  Pour supprimer le groupe de charge de travail, cliquez sur **OK**.  
   
-##  <a name="DelWGTSQL"></a> Supprimer un groupe de charge de travail à l'aide de Transact-SQL  
+##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> Supprimer un groupe de charge de travail à l'aide de Transact-SQL  
  **Pour supprimer un groupe de charge de travail à l'aide de Transact-SQL**  
   
 1.  Exécutez l'instruction `DROP WORKLOAD GROUP` en spécifiant le nom du groupe de charge de travail à supprimer.  

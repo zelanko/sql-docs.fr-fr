@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245342"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Serveurs cibles (onglet Instructions de téléchargement)
@@ -50,7 +50,7 @@ ms.locfileid: "63245342"
  **Supprimer**  
  Supprime l'instruction de téléchargement sélectionnée.  
   
- **Clear**  
+ **Effacé**  
  Désactive l'état de l'instruction de téléchargement sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  

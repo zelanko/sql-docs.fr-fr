@@ -15,20 +15,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209681"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-1.  **Avant de commencer :**  [autorisations](#Permissions)  
+1.  **Avant de commencer :**  [Autorisations](#Permissions)  
   
-2.  **Pour afficher les propriétés de Resource Governor, utilisez :**  [Resource Governor page Propriétés](#ViewRGProp)  
+2.  **Pour afficher les propriétés du gouverneur de ressources, avec :**  [Page Propriétés du gouverneur de ressources](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Outre la consultation des propriétés des entités de Resource Governor, vous pouvez effectuer plusieurs tâches de configuration à l'aide de la page **ropriétés de Resource Governor** . Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Activer Resource Governor](enable-resource-governor.md)  
@@ -51,11 +51,11 @@ ms.locfileid: "63209681"
   
  Vous pouvez déterminer s’il existe une configuration en attente en interrogeant la vue de gestion dynamique [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) pour obtenir l’état en cours d’is_configuration_pending.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L'affichage des propriétés de Resource Governor nécessite l'autorisation VIEW SERVER STATER. Les tâches de configuration de Resource Governor nécessitent l'autorisation CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a>Afficher la page de propriétés Resource Governor  
- **Pour afficher les propriétés de Resource Governor à l’aide de la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="view-the-resource-governor-properties-page"></a><a name="ViewRGProp"></a>Afficher la page de propriétés Resource Governor  
+ **Pour afficher les propriétés du gouverneur de ressources à l’aide de la page Propriétés de Resource Governor dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63209681"
   
 4.  Cliquez sur **OK**pour enregistrer les éventuelles modifications.  
   
-##  <a name="RGProp"></a>Propriétés de la Resource Governor  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a>Propriétés de la Resource Governor  
  **Nom de la fonction classifieur**  
  Spécifiez la fonction classifieur en la sélectionnant dans la liste.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63209681"
  **% mémoire minimal**  
  Spécifiez la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. La plage est comprise entre 0 et 100.  
   
- **% mémoire maximal**  
+ **% maximal de la mémoire**  
  Spécifiez la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
   
  Pour plus d’informations, consultez [Create RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
@@ -128,8 +128,8 @@ ms.locfileid: "63209681"
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](resource-governor.md)   
  [Activer Resource Governor](enable-resource-governor.md)   
- [Pool de ressources de Resource Governor](resource-governor-resource-pool.md)   
- [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)   
- [Fonction classifieur de Resource Governor](resource-governor-classifier-function.md)  
+ [Liste de ressources partagées Resource Governor](resource-governor-resource-pool.md)   
+ [Groupe de charge de travail Resource Governor](resource-governor-workload-group.md)   
+ [Fonction classifieur du gouverneur de ressources](resource-governor-classifier-function.md)  
   
   

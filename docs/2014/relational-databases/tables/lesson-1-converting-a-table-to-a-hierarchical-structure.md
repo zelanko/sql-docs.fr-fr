@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205651"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Leçon 1 : Conversion d'une table en structure hiérarchique
@@ -30,15 +30,15 @@ ms.locfileid: "63205651"
   
 -   [Optimisation de la table NewOrg](lesson-1-3-optimizing-the-neworg-table.md)  
   
--   [Résumé : Conversion d'une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+-   [Résumé : Conversion d’une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette leçon requiert l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Étude de la structure actuelle de la table Employee](lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : création et gestion de données dans une table hiérarchique](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Leçon 2 : Création et gestion de données dans une table hiérarchique](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228964"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Champs de descripteur de paramètre table
@@ -24,7 +24,7 @@ ms.locfileid: "63228964"
   
 ## <a name="remarks"></a>Notes  
   
-|Name|Location|Type|Description|  
+|Nom|Emplacement|Type|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nom du type de serveur du paramètre table.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit toujours être spécifié en tant que valeur Unicode, même dans les applications générées en tant qu’applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié via SQLSetDescField, il peut être spécifié à l’aide d’un littéral qui est conforme à la façon dont l’application est générée. Le Gestionnaire de pilotes ODBC effectuera toute conversion Unicode requise.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (lecture seule)|IPD|SQLTCHAR*|Catalogue où le type est défini.|  
@@ -34,7 +34,7 @@ ms.locfileid: "63228964"
   
  Les attributs d'instruction et les champs d'en-tête de descripteur suivants s'appliquent aux paramètres table lorsque le focus de paramètre est défini sur un paramètre table :  
   
-|Name|Location|Type|Description|  
+|Nom|Emplacement|Type|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (Équivaut à SQL_DESC_ARRAY_SIZE dans le descripteur APD.)|APD|SQLUINTEGER|Taille du tableau de mémoires tampon pour un paramètre table. Il s'agit du nombre maximal de lignes que les mémoires tampon peuvent prendre en charge ou de la taille des mémoires tampon dans les lignes ; la valeur du paramètre table peut elle-même avoir un nombre de lignes supérieur ou inférieur à la capacité des mémoires tampon. 1 constitue la valeur par défaut. **Remarque :**  Si SQL_SOPT_SS_PARAM_FOCUS a la valeur par défaut 0, SQL_ATTR_PARAMSET_SIZE fait référence à l’instruction et spécifie le nombre de jeux de paramètres. Si SQL_SOPT_SS_PARAM_FOCUS est pour valeur l'ordinal d'un paramètre table, il fait référence au paramètre table et spécifie le nombre de lignes par jeu de paramètres pour le paramètre table.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|La valeur par défaut est SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Pour sélectionner la liaison selon les lignes, ce champ a pour valeur la longueur de la structure ou une instance d'une mémoire tampon qui sera liée à un jeu de lignes de paramètre table. Cette durée doit inclure l'espace pour toutes les colonnes dépendantes et tout remplissage de la structure ou de la mémoire tampon. Cela garantit que lorsque l'adresse d'une colonne dépendante est incrémentée de la longueur spécifiée, le résultat pointera vers le début de la même colonne dans la ligne suivante. Lorsque vous utilisez l'opérateur `sizeof` dans ANSI C, ce comportement est garanti.|  

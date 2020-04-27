@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209875"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
@@ -63,9 +63,9 @@ ms.locfileid: "63209875"
   
 -   % partagé = % MAX effectif - % MIN.  
   
-|Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
+|Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|Interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
+|internal|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
 |default|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
 |Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
 |Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
@@ -104,7 +104,7 @@ ms.locfileid: "63209875"
 > [!NOTE]  
 >  Le groupe par défaut est modifiable, mais il ne peut pas être déplacé hors du pool par défaut.  
   
- **Pools de ressources définis par l’utilisateur**  
+ **Pools de ressources définis par l'utilisateur**  
   
  Les pools de ressources définis par l'utilisateur sont ceux que vous créez pour les charges de travail spécifiques dans votre environnement. Le gouverneur de ressources fournit des instructions DDL pour créer, modifier et supprimer des pools de ressources.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63209875"
   
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](resource-governor.md)   
- [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)   
+ [Groupe de charge de travail Resource Governor](resource-governor-workload-group.md)   
  [Fonction classifieur Resource Governor](resource-governor-classifier-function.md)   
  [Configurer Resource Governor à l’aide d’un modèle](configure-resource-governor-using-a-template.md)   
  [Afficher les propriétés du gouverneur de ressources](view-resource-governor-properties.md)  

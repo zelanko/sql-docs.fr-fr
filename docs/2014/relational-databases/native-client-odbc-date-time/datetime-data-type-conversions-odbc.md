@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63206987"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversions du type de données datetime (ODBC)
@@ -51,7 +51,7 @@ ms.locfileid: "63206987"
 -   Si la troncation de secondes ou de fractions de seconde se produit lors de la conversion de SQL en C, un enregistrement de diagnostic est généré avec la valeur SQLSTATE 01S07 et le message « Troncation fractionnelle ».  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Conversions de C en SQL](datetime-data-type-conversions-from-c-to-sql.md)  
+ [Conversions de C à SQL](datetime-data-type-conversions-from-c-to-sql.md)  
  Répertorie les problèmes à prendre en compte lorsque vous effectuez une conversion de types C en types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time.  
   
  [Conversions de SQL à C](datetime-data-type-conversions-from-sql-to-c.md)  

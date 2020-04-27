@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f54f9c61bb78a3c0e52adc491b95e03ad85ecd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207279"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>Création de signets pour des lignes dans ODBC
@@ -31,6 +31,6 @@ ms.locfileid: "63207279"
  Les signets peuvent également être utilisés avec la fonction **SQLBulkOperations** pour effectuer des opérations sur un ensemble de lignes en commençant par le signet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Défilement et extraction de lignes](../native-client-ole-db-rowsets/fetching-rows.md)  
+ [Défilement et récupération (fetch) de lignes](../native-client-ole-db-rowsets/fetching-rows.md)  
   
   

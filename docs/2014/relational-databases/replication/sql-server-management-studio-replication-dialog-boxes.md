@@ -11,28 +11,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199128"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Boîtes de dialogue de réplication SQL Server Management Studio
-  Cette section contient des informations sur les différentes boîtes de dialogue de réplication disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
+  Cette section contient des informations sur un certain nombre de boîtes de dialogue de réplication disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
--   [Sécurité de l’Agent d’instantané](snapshot-agent-security.md)  
+-   [Sécurité de l'Agent d'instantané](snapshot-agent-security.md)  
   
--   [Sécurité de l’Agent de lecture du journal](log-reader-agent-security.md)  
+-   [Sécurité de l'Agent de lecture du journal](log-reader-agent-security.md)  
   
--   [Sécurité de l’Agent de distribution](distribution-agent-security.md)  
+-   [Sécurité de l'Agent de distribution](distribution-agent-security.md)  
   
--   [Sécurité de l’Agent de fusion](merge-agent-security.md)  
+-   [Sécurité de l'agent de fusion](merge-agent-security.md)  
   
--   [Sécurité de l’Agent de lecture de la file d’attente](queue-reader-agent-security.md)  
+-   [Sécurité de l'Agent de lecture de la file d'attente](queue-reader-agent-security.md)  
   
 -   [Profils de l’Agent &#40;agent unique&#41;](agent-profiles-single-agent.md)  
   
--   [Profils de l’Agent](agent-profiles.md)  
+-   [Profils de l'Agent](agent-profiles.md)  
   
 -   [Propriétés de & #60;Nom_profil_agent& #62;](agentprofilename-properties.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63199128"
   
 -   [Valider les abonnements](validate-subscriptions.md)  
   
--   [Valider l’abonnement](validate-subscription.md)  
+-   [Valider l'abonnement](validate-subscription.md)  
   
 -   [Options de validation d’abonnement &#40;abonnements transactionnels&#41;](subscription-validation-options-transactional-subscriptions.md)  
   

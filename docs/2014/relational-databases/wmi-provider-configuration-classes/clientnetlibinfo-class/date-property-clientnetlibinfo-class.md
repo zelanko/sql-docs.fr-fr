@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191163"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Propriété Date (classe ClientNetLibInfo)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  Objet de [classe ClientNetLibInfo](clientnetlibinfo-class.md) qui représente des informations sur la bibliothèque réseau cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -46,6 +46,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

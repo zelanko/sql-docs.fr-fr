@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184438"
 ---
 # <a name="sequence-properties-general-page"></a>Propriétés de séquence (page Général)
@@ -45,15 +45,14 @@ ms.locfileid: "63184438"
 |`int`|-2 147 483 648 à 2 147 483 647|  
 |`bigint`|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
   
--   
-  `decimal` ou `numeric` avec une échelle de 0.  
+-   `decimal` ou `numeric` avec une échelle de 0.  
   
 -   Tout type de données défini par l'utilisateur (type d'alias) basé sur l'un de ces types.  
   
  **Précision**  
  Pour les types de données `decimal` ou `numeric`, spécifiez la précision. (L'échelle est toujours 0.)  
   
- **Commencer par la valeur**  
+ **Démarrer avec la valeur**  
  Première valeur qui sera retournée par l'objet séquence. La valeur **START** doit être une valeur inférieure ou égale à la valeur maximale, et supérieure ou égale à la valeur minimale de l’objet séquence. La valeur de début par défaut d'un nouvel objet séquence correspond à la valeur minimale pour un objet séquence croissant et à la valeur maximale pour un objet séquence décroissant.  
   
  **Incrémenter de**  
@@ -65,21 +64,20 @@ ms.locfileid: "63184438"
  **Valeur maximale**  
  Spécifie les limites de l'objet séquence. La valeur maximale par défaut d'un nouvel objet séquence correspond à la valeur maximale du type de données de l'objet séquence.  
   
- **Cycle-la séquence redémarre en cas de limite atteinte**  
+ **La séquence de répétition du cycle redémarrera une fois la limite atteinte**  
  Sélectionnez cette option pour autoriser l'objet séquence à redémarrer à partir de la valeur minimale (ou maximale pour les objets séquences décroissants) lorsque sa valeur minimale ou maximale est atteinte.  
   
 > [!NOTE]  
 >  La répétition du cycle ne redémarre pas à partir de la valeur de début, mais plutôt à partir de la valeur minimale/maximale.  
   
- **Options du cache**  
+ **Options de cache**  
  La création d'un cache de valeurs de séquence peut augmenter les performances des applications qui utilisent des objets séquences en réduisant le nombre d'entrées/sorties sur le disque requises pour créer des numéros séquentiels.  
   
 -   Taille du cache par défaut : le [!INCLUDE[ssDE](../../includes/ssde-md.md)] sélectionne une taille. Toutefois, les utilisateurs ne doivent pas s’attendre à une sélection cohérente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut modifier la méthode de calcul de la taille du cache sans préavis.  
   
 -   Pas de cache : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne met pas en cache les numéros séquentiels.  
   
--   Cache avec taille - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mettra en cache les valeurs de séquence. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue le suivi de la valeur actuelle et du nombre de valeurs restées dans le cache. Par conséquent, la quantité de mémoire requise pour stocker le cache correspond toujours à deux instances du type de données de l'objet séquence  
+-   Cache avec taille - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mettra en cache les valeurs de séquence. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue le suivi de la valeur actuelle et du nombre de valeurs restées dans le cache. Par conséquent, la quantité de mémoire requise pour stocker le cache correspond toujours à deux instances du type de données de l'objet séquence  
   
  En cas de création avec l'option CACHE, un arrêt inattendu, tel qu'une panne de courant, peut conduire à la perte des numéros séquentiels dans le cache.  
   
@@ -89,6 +87,6 @@ ms.locfileid: "63184438"
  Nécessite l’autorisation **CREATE SEQUENCE**, **ALTER**ou **CONTROL** sur le SCHEMA.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+ [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

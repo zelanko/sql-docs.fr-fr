@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204691"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63204691"
 > [!CAUTION]  
 >  En effet, s’il existe des requêtes, des vues, des fonctions définies par l’utilisateur, des procédures stockées ou des programmes qui font référence à la table, le changement de nom rend tous ces objets non valides.  
   
- **Nom de la base de données**  
+ **Database Name**  
  Affiche le nom de la source de données de la table sélectionnée.  
   
  **Description**  
@@ -49,7 +49,7 @@ ms.locfileid: "63204691"
  **Schéma**  
  Affiche le nom du schéma auquel cette table appartient. (S'applique uniquement à Microsoft SQL Server.)  
   
- **Nom du serveur**  
+ **Nom de serveur**  
  Affiche le nom du serveur de la source de données.  
   
  **Catégorie Concepteur de tables**  
@@ -58,14 +58,14 @@ ms.locfileid: "63204691"
  **Colonne d’identité**  
  Affiche la colonne utilisée comme colonne d'identité de la table. Pour modifier l'identité d'une colonne, choisissez-la dans la liste déroulante. Seules les colonnes d'un type de données numérique s'affichent dans la liste.  
   
- **Est indexable**  
+ **Indexable**  
  Indique si la table peut être indexée. Si la table n'est pas indexable, cela peut être dû au fait que vous n'êtes pas le propriétaire de la table ou que la table contient des colonnes possédant des types de données texte, ntext ou image.  
   
- **Est répliquée**  
+ **Répliquée**  
  Indique si la table est répliquée à un autre emplacement.  
   
- **Catégorie de spécification d’espace de données régulière**  
- Se développe pour afficher des propriétés pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+ **Catégorie Spécification d'espace de données régulière**  
+ Se développe pour afficher des propriétés pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
  **(Type d’espace de données)**  
  Indique si cette table est stockée à l'aide d'un groupe de fichiers ou d'un schéma de partition.  
@@ -76,10 +76,10 @@ ms.locfileid: "63204691"
  **Liste des colonnes de partition**  
  Donne accès à la boîte de dialogue **Liste des colonnes de partition** .  
   
- **Colonne GUID de ligne**  
+ **Colonne RowGuid**  
  Affiche la colonne utilisée par Microsoft SQL Server comme colonne ROWGUID de la table. Pour changer de colonne ROWGUID, choisissez-la dans la liste déroulante. (S'applique uniquement à SQL Server 7.0 ou version ultérieure.)  
   
- **Groupe de fichiers Text/image**  
+ **Groupe de fichiers Text/Image**  
  Fournit une liste déroulante dans laquelle vous pouvez choisir le groupe de fichiers des colonnes possédant des types de données texte ou image. Si la table est stockée à l'aide d'un schéma de partition, laissez ce champ vierge.  
   
 ## <a name="see-also"></a>Voir aussi  

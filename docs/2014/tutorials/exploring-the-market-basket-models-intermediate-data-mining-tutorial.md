@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224607"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Exploration des modèles d'analyse de panier (Didacticiel intermédiaire sur l'exploration de données)
@@ -32,7 +32,7 @@ ms.locfileid: "63224607"
   
  Pour ce didacticiel, vous allez démarrer sous l’onglet **réseau de dépendances** , puis utiliser l’onglet **règles** et l’onglet **jeux d’éléments** pour approfondir votre compréhension des relations révélées dans la visionneuse. Vous allez également utiliser la **visionneuse de l’arborescence de contenu générique Microsoft** pour récupérer des statistiques détaillées pour des règles individuelles ou des jeux d’éléments.  
   
-##  <a name="bkmk_DepNet"></a>Onglet réseau de dépendances  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>Onglet réseau de dépendances  
  Avec l’onglet **réseau de dépendances** , vous pouvez examiner l’interaction des différents éléments dans le modèle. Chaque nœud dans la visionneuse représente un élément et les lignes entre les éléments représentent des règles. En sélectionnant un nœud, vous pouvez voir les autres nœuds qui prédisent l'élément sélectionné, ou les éléments prédits par ce dernier. Parfois, il existe une association bidirectionnelle entre des éléments, ce qui signifie qu'ils apparaissent souvent dans la même transaction. Vous pouvez vous reporter à la légende de couleur en bas d'onglet pour déterminer la direction de l'association.  
   
  Une ligne qui connecte deux éléments indique qu'il est probable que ces éléments apparaissent ensemble dans une transaction. En d'autres termes, il est probable que les clients achètent ces éléments ensemble. Le curseur est associé à la probabilité de la règle. Déplacez le curseur vers le haut ou le bas pour éliminer les associations faibles, c'est à dire les règles avec une faible probabilité.  
@@ -77,7 +77,7 @@ ms.locfileid: "63224607"
   
  [Retour au début](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>Onglet Jeux d’éléments  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>Onglet Jeux d’éléments  
  Ensuite, vous approfondirez vos connaissances des règles et des jeux d'éléments générés par le modèle pour les produits Touring Tire et Touring Tire Tube. L’onglet **jeux d’éléments** affiche trois informations importantes relatives au jeux d’éléments que l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme d’association Découvre :  
   
 -   **Prise en charge :** Nombre de transactions dans lesquelles le jeu d’éléments se produit.  
@@ -134,7 +134,7 @@ ms.locfileid: "63224607"
   
  [Retour au début](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>Onglet Règles  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>Onglet Règles  
  L’onglet **règles** affiche les informations suivantes relatives aux règles trouvées par l’algorithme.  
   
 -   **Probabilité :** *Probabilité* d’une règle, définie comme la probabilité de l’élément de droite en fonction de l’élément de la partie gauche.  
@@ -171,7 +171,7 @@ ms.locfileid: "63224607"
   
  [Retour au début](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>Visionneuse de l’arborescence de contenu générique  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>Visionneuse de l’arborescence de contenu générique  
  Cette visionneuse peut être utilisée pour tous les modèles, quels que soient l'algorithme ou le type de modèle. La **visionneuse de l’arborescence de contenu générique Microsoft** est disponible dans la liste déroulante **visionneuse** .  
   
  Une arborescence de contenu est une représentation d'un modèle d'exploration de données sous forme de série de nœuds, où chaque nœud représente ce qui a été appris sur certains sous-ensembles des données. Le nœud peut contenir un modèle, un ensemble de règles, un cluster ou la définition d'une plage de dates qui partagent certaines caractéristiques. Le contenu exact du nœud diffère selon l'algorithme et le type de l'attribut prédictible, mais la représentation générale du contenu reste la même. Vous pouvez développer chaque nœud pour voir des informations de plus en plus détaillées et copier le contenu de n'importe quel nœud vers le Presse-papiers.  

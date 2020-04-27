@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199916"
 ---
 # <a name="change-workload-group-settings"></a>Modifier les paramètres de groupe de charge de travail
@@ -29,7 +29,7 @@ ms.locfileid: "63199916"
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Vous pouvez modifier les paramètres du groupe de charge de travail par défaut et des groupes de charge de travail définis par l'utilisateur.  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +38,10 @@ ms.locfileid: "63199916"
   
  La création d'index est autorisée à utiliser un espace de travail de mémoire supérieur à celui qui lui a été initialement alloué, pour des raisons de performances. Cette gestion spéciale est prise en charge par Resource Governor. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La modification des paramètres de groupe de charge de travail nécessite l'autorisation CONTROL SERVER.  
   
-##  <a name="ChgWGProp"></a> Modifier les paramètres de groupe de charge de travail à l'aide de SQL Server Management Studio  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> Modifier les paramètres de groupe de charge de travail à l'aide de SQL Server Management Studio  
  **Pour modifier les paramètres de groupe de charge de travail à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Dans l'Explorateur d'objets, développez de manière récursive le nœud **Gestion** vers le bas et en incluant le dossier **Groupes de charge de travail** qui contient le groupe de charge de travail à modifier.  
@@ -54,7 +54,7 @@ ms.locfileid: "63199916"
   
 5.  Cliquez sur **OK**pour enregistrer les modifications.  
   
-##  <a name="ChgWGTSQL"></a> Modifier les paramètres de groupe de charge de travail à l'aide de Transact-SQL  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Modifier les paramètres de groupe de charge de travail à l'aide de Transact-SQL  
  **Pour modifier les paramètres de groupe de charge de travail à l'aide de Transact-SQL**  
   
 1.  Exécutez l'instruction ALTER WORKLOAD GROUP en spécifiant les valeurs de propriété à modifier.  

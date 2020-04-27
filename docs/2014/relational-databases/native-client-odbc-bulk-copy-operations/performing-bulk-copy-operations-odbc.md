@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200813"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Exécution d'opérations de copie en bloc (ODBC)
@@ -57,7 +57,7 @@ ms.locfileid: "63200813"
   
 -   [Gestion des tailles de lot de copie en bloc](managing-bulk-copy-batch-sizes.md)  
   
--   [Copie en bloc de données Text et Image](bulk-copying-text-and-image-data.md)  
+-   [Copier en bloc des données texte et image](bulk-copying-text-and-image-data.md)  
   
 -   [Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC](converting-from-db-library-to-odbc-bulk-copy.md)  
   

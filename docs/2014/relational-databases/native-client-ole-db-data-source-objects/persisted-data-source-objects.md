@@ -1,5 +1,5 @@
 ---
-title: Objets de source de données persistants | Microsoft Docs
+title: Objets source de données persistants | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231454"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
@@ -228,6 +228,6 @@ HRESULT InitFromPersistedDS
  La méthode **IPersistFile::Save** peut être appelée avant ou après l’appel de **IDBInitialize::Initialize**. Le fait d’appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit qu’une spécification de source de données valide est rendue persistante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [Objets source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

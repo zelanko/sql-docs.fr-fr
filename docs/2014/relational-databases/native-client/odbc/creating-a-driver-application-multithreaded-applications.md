@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e388d90b67fbd2e253edb6458a74de6204afb4b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63229044"
 ---
 # <a name="multithreaded-applications"></a>Applications multithread
@@ -29,6 +29,6 @@ ms.locfileid: "63229044"
  Le mode asynchrone est encore une méthode de traitement efficace. Les améliorations des performances d'un modèle multithread ne sont pas suffisantes pour justifier la réécriture d'applications asynchrones. Si les utilisateurs convertissent des applications DB-Library qui utilisent le modèle asynchrone DB-Library, il est plus facile de les convertir au modèle asynchrone ODBC.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d'une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
+ [Création d’une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
   
   

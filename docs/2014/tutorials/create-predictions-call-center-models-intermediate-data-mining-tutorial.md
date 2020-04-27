@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217884"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Création de prédictions pour les modèles de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
@@ -181,7 +181,7 @@ ms.locfileid: "63217884"
  Vous pouvez créer diverses autres requêtes de prédiction sur ce modèle. Par exemple, vous pouvez prédire le nombre d’opérateurs requis pour répondre à un certain niveau de service ou pour répondre à un certain nombre d’appels entrants. Étant donné que vous pouvez inclure plusieurs sorties dans un modèle de régression logistique, il est facile de faire des essais avec différentes variables indépendantes et sorties sans qu'il soit nécessaire de créer de nombreux modèles distincts.  
   
 ## <a name="remarks"></a>Notes  
- Les compléments d’exploration de données pour Excel 2007 fournissent des assistants de régression logistique qui permettent de répondre facilement à des questions complexes, telles que le nombre d’opérateurs de niveau 2 requis pour améliorer le niveau de service vers un niveau cible pour une équipe de travail spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d’informations, consultez les liens suivants :  
+ Les compléments d’exploration de données pour Excel 2007 fournissent des assistants de régression logistique qui permettent de répondre facilement à des questions complexes, telles que le nombre d’opérateurs de niveau 2 requis pour améliorer le niveau de service vers un niveau cible pour une équipe de travail spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d'informations, consultez les liens suivants :  
   
 -   [Compléments d’exploration de données SQL Server 2005 pour Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): analyse de la recherche de l’objectif et What If du scénario  
   

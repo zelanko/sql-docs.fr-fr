@@ -16,14 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329ffa78471ead02b1431a41d898cfc43ca65684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213512"
 ---
 # <a name="components-of-sql-server-native-client"></a>Composants de SQL Server Native Client
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contient les composants suivants :  
   
 |Composant|Description|  
@@ -35,6 +34,6 @@ ms.locfileid: "63213512"
 |sqlncli11.lib|Fichier de bibliothèque nécessaire pour appeler directement les fonctions de l’utilitaire **BCP** qui font partie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du pilote ODBC Native Client. **Remarque :**  Si vous référencez le fichier SQLNCLI11. lib dans votre code de programmation, vous devez vous assurer que le fichier SQLNCLI11. dll se trouve dans votre chemin d’accès système et dans le chemin d’accès système des utilisateurs qui utilisent votre application.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+ [Génération d'applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   

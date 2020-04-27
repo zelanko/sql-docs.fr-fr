@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195314"
 ---
 # <a name="managing-text-and-image-columns"></a>Gestion des colonnes text et image
@@ -38,9 +38,9 @@ ms.locfileid: "63195314"
   
 -   [Modifications enregistrées ou non enregistrées](logged-vs-unlogged-modifications.md)  
   
--   [Données en cours d'exécution et colonnes text, ntext ou image](data-at-execution-and-text-ntext-or-image-columns.md)  
+-   [Colonnes text, ntext ou image de données en cours d’exécution](data-at-execution-and-text-ntext-or-image-columns.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;&#41;ODBC](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

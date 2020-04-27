@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249380"
 ---
 # <a name="subscription-type"></a>Type d'abonnement
-  La réplication de fusion propose deux types d’abonnement : serveur et client (référencés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les versions précédentes de, respectivement, global et local). Les abonnés disposant d'un abonnement serveur peuvent :  
+  La réplication de fusion propose deux types d’abonnements : l’abonnement serveur et l’abonnement client (connus dans les versions précédentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous les noms respectifs d’abonnement global et d’abonnement local). Les abonnés disposant d'un abonnement serveur peuvent :  
   
 -   republier des données à d'autres Abonnés ;  
   

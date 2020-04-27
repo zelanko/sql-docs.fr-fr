@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6c33eca0bf3281243aeee42ed89001cf9108d5d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245089"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Méthode SetFlag (classe ClientNetworkProtocolProperty)
@@ -39,7 +39,7 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  A [classe ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Paramètres  
@@ -54,6 +54,6 @@ BoolValue
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

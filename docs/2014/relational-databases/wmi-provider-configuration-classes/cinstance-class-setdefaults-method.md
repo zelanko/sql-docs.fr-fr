@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192444"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Méthode SetDefaults (classe CInstance)
@@ -40,7 +40,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  Objet de [classe CInstance](cinstance-class.md) qui représente une instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Paramètres  
@@ -55,6 +55,6 @@ OverwriteAll
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

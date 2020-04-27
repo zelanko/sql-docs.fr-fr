@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188576"
 ---
-# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Leçon 2 : utilisation de l'Assistant Paramétrage du moteur de base de données
+# <a name="lesson-2-using-database-engine-tuning-advisor"></a>Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données
   L'Assistant Paramétrage du moteur de base de données permet de paramétrer les bases de données, de gérer les sessions de paramétrage et d'afficher les recommandations de paramétrage. Les utilisateurs possédant des connaissances avancées sur les structures de création physiques peuvent utiliser cet outil pour réaliser des analyses exploratoires de paramétrage des bases de données. Les utilisateurs novices dans le paramétrage des bases de données peuvent également l'utiliser pour rechercher les configurations les plus adaptées aux structures de création physiques des charges de travail qu'ils doivent paramétrer. Cette leçon propose des exercices pratiques de base aux administrateurs de base de données qui sont novices dans l'utilisation de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données et aux administrateurs système qui n'ont pas de connaissances étendues sur les structures de création physiques.  
   
  Elle contient les rubriques suivantes :  

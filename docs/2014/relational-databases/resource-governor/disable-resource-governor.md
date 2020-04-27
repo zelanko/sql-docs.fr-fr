@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209714"
 ---
 # <a name="disable-resource-governor"></a>Désactiver Resource Governor
@@ -26,7 +26,7 @@ ms.locfileid: "63209714"
   
 -   **Pour désactiver Resource Governor avec :**  [Explorateur d’objets](#RGOffObjEx), [Propriétés de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  La désactivation de Resource Governor entraîne les résultats suivants :  
   
 -   La fonction classifieur n'est pas exécutée.  
@@ -43,20 +43,20 @@ ms.locfileid: "63209714"
   
 -   Lors du redémarrage de SQL Server, Resource Governor ne chargera pas sa configuration, mais à la place aura uniquement des pools de ressources et les groupes de charge de travail par défaut et internes.  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Vous ne pouvez pas utiliser l'instruction `ALTER RESOURCE GOVERNOR` pour désactiver le gouverneur de ressources pendant une transaction utilisateur.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La désactivation de Resource Governor requiert l'autorisation CONTROL SERVER.  
   
-##  <a name="RGOffObjEx"></a> Désactiver Resource Governor à l'aide de l'Explorateur d'objets  
+##  <a name="disable-resource-governor-using-object-explorer"></a><a name="RGOffObjEx"></a> Désactiver Resource Governor à l'aide de l'Explorateur d'objets  
  **Pour désactiver Resource Governor à l'aide de l'Explorateur d'objets**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
   
 2.  Cliquez avec le bouton droit sur **Resource Governor**, puis sélectionnez **Désactiver**.  
   
-##  <a name="RGOffProp"></a> Désactiver Resource Governor à l'aide des propriétés de Resource Governor  
+##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> Désactiver Resource Governor à l'aide des propriétés de Resource Governor  
  **Pour désactiver Resource Governor à l'aide de la page Propriétés de Resource Governor**  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
@@ -65,7 +65,7 @@ ms.locfileid: "63209714"
   
 3.  Activez la case à cocher **Activer Resource Governor** , vérifiez que la case à cocher n'est pas sélectionnée, puis cliquez sur **OK**.  
   
-##  <a name="RGOffTSQL"></a> Désactiver Resource Governor à l'aide de Transact-SQL  
+##  <a name="disable-resource-governor-using-transact-sql"></a><a name="RGOffTSQL"></a> Désactiver Resource Governor à l'aide de Transact-SQL  
  **Pour désactiver Resource Governor à l'aide de Transact-SQL**  
   
 1.  Exécutez l'instruction **ALTER RESOURCE GOVERNOR DISABLE** .  

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187824"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propriété StartMode (classe SqlService)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -54,7 +54,7 @@ object
  Automatique  
  Valeur = 2 Le service doit être démarré automatiquement par le Gestionnaire de contrôle des services lors du démarrage du système.  
   
- Manuel  
+ Manuelle  
  Valeur = 3. Le service doit être démarré par Computer Manager lorsqu'un processus appelle la méthode `StartService`.  
   
  Désactivé  

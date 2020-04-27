@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225562"
 ---
 # <a name="sql-server-native-client-features"></a>Fonctionnalités de SQL Server Native Client
@@ -87,7 +87,7 @@ ms.locfileid: "63225562"
  Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d'un résultat de colonne ou d'un paramètre de sortie et que le caractère `wchar` écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitut étendu d'une paire de substitution, et si le caractère `wchar` suivant est un point de code de substitut faible, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client n'ajoutera pas le point de code de substitut étendu à la mémoire tampon.  
   
  [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de reprise d’activité haute disponibilité ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Accès aux informations de diagnostic dans le journal des événements étendus](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Présente les améliorations apportées à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et au suivi de données qui vous donne accès aux informations de diagnostic dans la mémoire tampon en anneau et le journal XEvents.  

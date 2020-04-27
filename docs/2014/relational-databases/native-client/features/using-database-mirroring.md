@@ -1,5 +1,5 @@
 ---
-title: Utilisation de la mise en miroir de bases de données | Microsoft Docs
+title: Utilisation de la mise en miroir de bases de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225328"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
@@ -36,14 +36,14 @@ ms.locfileid: "63225328"
   
  La base de données de production est appelée *base de données principale* et la copie de secours est appelée *base de données miroir*. La base de données principale et la base de données miroir doivent résider sur des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instances de serveur) et, si possible, sur des ordinateurs différents.  
   
- L’instance de serveur de production, appelée *serveur principal*, communique avec l’instance de serveur de secours, appelée *serveur miroir*. Le serveur principal et le serveur miroir se comportent comme des partenaires au sein de la *session* de mise en miroir de bases de données. En cas d’échec du serveur principal, le serveur miroir peut créer sa base de données dans la base de données principale grâce à un processus appelé *basculement*. Par exemple, Partner_A et Partner_B sont deux serveurs partenaires, avec initialement la base de données principale sur Partner_A comme serveur principal et la base de données miroir sur Partner_B comme serveur miroir. Si Partner_A se retrouve hors connexion, la base de données sur Partner_B peut basculer pour devenir la base de données principale en cours. Lorsque Partner_A rejoint la session de mise en miroir, il devient le serveur miroir et sa base de données devient la base de données miroir.  
+ L’instance de serveur de production, appelée *serveur principal*, communique avec l’instance de serveur de secours, appelée *serveur miroir*. Les serveurs principal et miroir jouent le rôle de partenaires dans une *session*de mise en miroir de bases de données. En cas d’échec du serveur principal, le serveur miroir peut créer sa base de données dans la base de données principale grâce à un processus appelé *basculement*. Par exemple, Partner_A et Partner_B sont deux serveurs partenaires, avec initialement la base de données principale sur Partner_A comme serveur principal et la base de données miroir sur Partner_B comme serveur miroir. Si Partner_A se retrouve hors connexion, la base de données sur Partner_B peut basculer pour devenir la base de données principale en cours. Lorsque Partner_A rejoint la session de mise en miroir, il devient le serveur miroir et sa base de données devient la base de données miroir.  
   
  D'autres configurations de mise en miroir de bases de données offrent des niveaux différents de performances et de sécurité des données, et prennent en charge diverses formes de basculement. Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  Il est possible d'utiliser un alias lors de la spécification du nom d'une base de données miroir.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les tentatives de connexion initiale et les tentatives de reconnexion à une base de données mise en miroir, consultez [connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Pour plus d'informations sur les tentatives de connexion initiale et de reconnexion à une base de données mise en miroir, consultez [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Éléments de programmation à prendre en considération  
  Lorsque le serveur de la base de données principale échoue, l'application cliente reçoit des erreurs en réponse aux appels d'API, erreurs qui signifient que la connexion à la base de données a été perdue. Lorsque cela se produit, toutes les modifications apportées à la base de données qui n'ont pas été validées sont perdues et la transaction en cours est annulée. Si cela se produit, l'application doit fermer la connexion (ou libérer l'objet source de données) et la rouvrir. La connexion est redirigée de façon transparente vers la base de données miroir, qui fait désormais office de serveur principal.  

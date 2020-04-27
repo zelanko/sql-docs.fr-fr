@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204723"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Market Basket
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Market Basket
   Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Market panier que vous avez créée au cours de [la leçon 1 : création de la structure d’exploration de données Market panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Ces modèles d'exploration de données vous permettent de créer des prédictions.  
   
  Pour prédire les types de produits que les clients ont tendance à acheter en même temps, vous allez créer deux modèles d’exploration de données à l’aide de l' [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) et deux valeurs différentes pour le paramètre *MINIMUM_PROBABILTY* .  
@@ -285,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  Dans la leçon suivante, vous allez traiter la structure d'exploration de données Market Basket et ses modèles d'exploration de données associés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : traitement de la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Leçon 3 : Traitement de la structure d'exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

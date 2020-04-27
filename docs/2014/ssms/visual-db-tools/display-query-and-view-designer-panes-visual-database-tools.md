@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204976"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools)
@@ -35,6 +35,6 @@ ms.locfileid: "63204976"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer des requêtes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Ouvrez le concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
+ [Ouvrir le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

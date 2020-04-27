@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245632"
 ---
 # <a name="external-tools-dialog-box"></a>Boîte de dialogue Outils externes
-  Utilisez la boîte de dialogue **outils externes** pour ajouter des outils externes tels que sqlcmd ou le bloc-notes au menu **Outils** . L’ajout d’outils externes vous permet de lancer facilement d’autres applications tout [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en travaillant dans l’environnement. Vous pouvez spécifier des arguments et un répertoire de travail lors du lancement de l'outil. En outre, la sortie de certains outils peut être affichée dans la fenêtre **Sortie** . La boîte de dialogue **Outils externes** est accessible via le menu **Outils** .  
+  Utilisez la boîte de dialogue **Outils externes** pour ajouter des outils externes tels que SQLCMD ou le Bloc-notes au menu **Outils**. L'ajout d'outils externes vous permet de lancer facilement d'autres applications tout en travaillant dans l'environnement [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Vous pouvez spécifier des arguments et un répertoire de travail lors du lancement de l'outil. En outre, la sortie de certains outils peut être affichée dans la fenêtre **Sortie** . La boîte de dialogue **Outils externes** est accessible via le menu **Outils** .  
   
 ## <a name="options"></a>Options  
- **Contenu du menu**  
+ **Sommaire du menu**  
  Répertorie les titres des éléments ajoutés au menu **Outils** . Utilisez les flèches **Monter** et **Descendre** pour modifier l'ordre d'apparition des éléments dans le menu. Utilisez le bouton **Supprimer** pour supprimer un élément du menu.  
   
  **Monter**  
@@ -49,10 +49,10 @@ ms.locfileid: "63245632"
  **Arguments**  
  Spécifiez les variables qui sont passées à l'outil lorsque celui-ci est sélectionné dans le menu. Les arguments peuvent spécifier des valeurs qui sont passées à l'outil ou à la commande au moment de son lancement. Par exemple, une valeur peut spécifier un nom de fichier ou un répertoire. Utilisez le bouton fléché pour faire votre sélection dans une liste d'arguments prédéfinis. Vous pouvez en ajouter plusieurs. Pour obtenir la liste complète des arguments prédéfinis et leur définition, consultez [Arguments for External Tools](menu-help/external-tools.md). Vous pouvez entrer également des arguments personnalisés, par exemple, des commutateurs de ligne de commande, selon la commande ou l'outil utilisé.  
   
- **Utiliser la fenêtre sortie**  
+ **Utiliser la fenêtre de sortie**  
  Ouvre la fenêtre de sortie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour afficher la sortie de la commande en cours d'exécution. Tous les outils ne présentent pas de sortie dans un format affichable dans la fenêtre Sortie. Pour plus d’informations, consultez [Fenêtre Sortie](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
- **Traiter la sortie en Unicode**  
+ **Considérer la sortie en Unicode**  
  Interprète la sortie comme Unicode.  
   
  **Répertoire initial**  
@@ -70,8 +70,7 @@ ms.locfileid: "63245632"
 |Box|Valeur|  
 |---------|-----------|  
 |**Titre**|DAC|  
-|**Commande**|
-  [!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**Commande**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
 ## <a name="see-also"></a>Voir aussi  

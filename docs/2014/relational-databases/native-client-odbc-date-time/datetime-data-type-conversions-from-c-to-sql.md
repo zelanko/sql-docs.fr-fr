@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207014"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversions de C en SQL
@@ -30,17 +30,17 @@ ms.locfileid: "63207014"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|NON APPLICABLE|NON APPLICABLE|1,10,11|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/A|N/A|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|1,10,11|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
   
 ## <a name="key-to-symbols"></a>Liste des symboles  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63207014"
 |11|Si la longueur d'octet n'est pas égale à la taille de la structure requise par le type SQL, un enregistrement de diagnostic est généré avec SQLSTATE 22003 et le message « Valeur numérique hors limites ».|  
 |12|Si la longueur d'octet est égale à 4 ou à 8, les données sont envoyées au serveur au format brut datetime ou smalldatetime TDS. Si la longueur d'octet des données correspond exactement à la taille de SQL_TIMESTAMP_STRUCT, les données sont converties au format TDS pour datetime2.|  
 |13|S'il se produit une troncation avec perte de données, un enregistrement de diagnostic est généré avec SQLSTATE 22001 et le message « Troncation à droite de la chaîne de données ».<br /><br /> Le nombre de chiffres de fractions de seconde (l’échelle) est déterminé à partir de la taille de la colonne de destination en fonction des éléments suivants :<br /><br /> **Tapez :** SQL_C_TYPE_TIMESTAMP<br /><br /> Échelle impliquée<br /><br /> 0<br /><br /> 19<br /><br /> Échelle impliquée<br /><br /> 1.. 9<br /><br /> 21..29<br /><br /> Toutefois, pour SQL_C_TYPE_TIMESTAMP, si les fractions de seconde peuvent être représentées avec trois chiffres sans perte de données et que la taille de colonne est égale ou supérieure à 23, trois chiffres de fractions de seconde sont générés. Ce comportement garantit la compatibilité descendante pour les applications développées à l'aide de pilotes ODBC plus anciens.<br /><br /> Pour les tailles de colonne supérieures à la plage du tableau, une échelle de 9 est nécessaire. Cette conversion accepte jusqu'à neuf chiffres de fractions de seconde, valeur maximale autorisée par ODBC.<br /><br /> Une taille de colonne égale à zéro implique une taille illimitée pour les types de caractères de longueur variable en ODBC (9 chiffres, à moins que la règle des 3 chiffres pour SQL_C_TYPE_TIMESTAMP ne s'applique). La spécification d'une taille de colonne égale à zéro avec un type de caractère de longueur fixe constitue une erreur.|  
-|N/A|Le comportement existant et antérieur de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est conservé.|  
+|NON APPLICABLE|Le comportement existant et antérieur de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est conservé.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Améliorations de la date et de l’heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  

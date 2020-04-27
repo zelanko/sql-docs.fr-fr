@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187968"
 ---
 # <a name="password-policy"></a>Stratégie de mot de passe
@@ -75,7 +75,7 @@ ms.locfileid: "63187968"
   
     -   L'historique du mot de passe est initialisé avec la valeur du hachage de mot de passe actuel.  
   
-    -   La **durée de verrouillage**de compte, le seuil de **verrouillage**de compte et le compteur de **verrouillage de compte réinitialisé après** sont également activés.  
+    -   Les options**Durée de verrouillage de compte**, **Seuil de verrouillage de compte**et **Réinitialiser le compteur de verrouillages du compte après** sont également activées.  
   
 -   Lorsque CHECK_POLICY prend la valeur OFF, les actions suivantes se produisent :  
   
@@ -110,7 +110,7 @@ ms.locfileid: "63187968"
   
  [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
- [Créer un compte de connexion](authentication-access/create-a-login.md)  
+ [Créer une connexion](authentication-access/create-a-login.md)  
   
  [Créer un utilisateur de base de données](authentication-access/create-a-database-user.md)  
   

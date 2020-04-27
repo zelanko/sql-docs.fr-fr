@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192964"
 ---
 # <a name="create-a-multiserver-environment"></a>Créer un environnement multiserveur
@@ -35,7 +35,7 @@ ms.locfileid: "63192964"
 ## <a name="considerations-for-multiserver-environments"></a>Considérations relatives aux environnements multiserveurs  
  Consultez la table ci-dessous pour les configurations de MSX/TSX prises en charge.  
   
-||**TSX = 7.0**|**TSX = 8,0 < SP3**|**TSX = 8.0 SP3 ou version ultérieure**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8,0 < SP3**|**TSX = 8.0 SP3 ou version ultérieure**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|Oui|Oui|Non|Non|Non|Non|Non|  
 |**MSX = 8,0 < SP3**|Oui|Oui|Non|Non|Non|Non|Non|  
@@ -63,7 +63,7 @@ ms.locfileid: "63192964"
 |Décrit comment créer un serveur maître.|[Créer un serveur maître](make-a-master-server.md)|  
 |Décrit comment créer un serveur cible.|[Créer un serveur cible](make-a-target-server.md)|  
 |Décrit comment inscrire un serveur cible sur un serveur maître.|[Inscrire un serveur cible dans un serveur maître](enlist-a-target-server-to-a-master-server.md)|  
-|Décrit comment désinscrire un serveur cible d'un serveur maître.|[Annuler l'inscription d'un serveur cible dans un serveur maître](defect-a-target-server-from-a-master-server.md)|  
+|Décrit comment désinscrire un serveur cible d'un serveur maître.|[Annuler l’inscription d’un serveur cible dans un serveur maître](defect-a-target-server-from-a-master-server.md)|  
 |Décrit comment annuler l'inscription de plusieurs serveurs cibles d'un serveur maître.|[Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](defect-multiple-target-servers-from-a-master-server.md)|  
 |Décrit comment vérifier l'état d'un serveur cible.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   

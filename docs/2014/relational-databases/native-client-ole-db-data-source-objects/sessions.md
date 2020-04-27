@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228977"
 ---
 # <a name="sessions"></a>Sessions
@@ -186,6 +186,6 @@ EXIT:
 >  Dans l’exemple précédent, l’interface **IDBCreateCommand** est utilisée, car l’interface **ICommand** implémente la méthode **GetDBSession**, la seule méthode dans l’étendue de la commande ou de l’ensemble de lignes qui permet à un objet de déterminer la session au cours de laquelle il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [Objets source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9aa8cb118a84bca1d37bdd409055b21d1d11552
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233028"
 ---
 # <a name="comparability-for-irowsetfind"></a>Comparabilité pour IRowsetFind
@@ -39,6 +39,6 @@ ms.locfileid: "63233028"
  Si une autre comparaison est tentée, DB_E_BADCOMPAREOP est retourné. Ce comportement est conforme à la spécification OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations de la date et de l’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

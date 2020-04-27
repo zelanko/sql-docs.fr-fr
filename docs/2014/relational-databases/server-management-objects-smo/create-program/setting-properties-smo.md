@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192156"
 ---
 # <a name="setting-properties"></a>Définition de propriétés
@@ -150,16 +150,14 @@ sp.QuotedIdentifierStatus = false;
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Définition des champs d'initialisation par défaut en Visual Basic  
  Cet exemple de code montre comment réduire le nombre de propriétés d'objet initialisées dans un programme SMO. Vous devez inclure l'instruction `using System.Collections.Specialized` pour utiliser l'objet <xref:System.Collections.Specialized.StringCollection>.  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBDefaultInitFields1](SMO How to#SMO_VBDefaultInitFields1)]  -->  
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Définition des champs d'initialisation par défaut en Visual C#  
  Cet exemple de code montre comment réduire le nombre de propriétés d'objet initialisées dans un programme SMO. Vous devez inclure l'instruction `using System.Collections.Specialized` pour utiliser l'objet <xref:System.Collections.Specialized.StringCollection>.  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
   
 ```  
 {   

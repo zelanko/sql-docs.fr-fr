@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245521"
 ---
 # <a name="view-or-modify-jobs"></a>Afficher ou modifier les travaux
@@ -61,7 +61,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |-|-|  
 |**Description**|**Rubrique**|  
 |Explique comment afficher des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[View a Job](view-a-job.md)|  
-|Explique comment afficher le journal d’historique des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Afficher l'historique des travaux](view-the-job-history.md)|  
+|Explique comment afficher le journal d’historique des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Afficher l’historique des travaux](view-the-job-history.md)|  
 |Explique comment supprimer le contenu du journal d’historique des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Effacer le journal d'historique des travaux](clear-the-job-history-log.md)|  
 |Explique comment définir des limites de taille dans les journaux d’historique des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Resize the Job History Log](resize-the-job-history-log.md)|  
 |Explique comment modifier les propriétés des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Modifier un travail](modify-a-job.md)|  

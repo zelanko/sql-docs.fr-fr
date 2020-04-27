@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241259"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Spécifications et limitations relatives aux collections de schémas XML sur le serveur
@@ -41,10 +41,8 @@ ms.locfileid: "63241259"
 |**\<xsd:include>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend actuellement pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.<br /><br /> En guise de solution, les schémas XML qui comportent la directive **\<xsd:include>** peuvent être prétraités de façon à copier et fusionner le contenu de tous les schémas inclus dans un seul et unique schéma à charger vers le serveur. Pour plus d’informations, consultez [Prétraiter un schéma pour fusionner des schémas inclus](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>** , **\<xsd:keyref>** et **\<xsd:unique>**|Actuellement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge ces contraintes basées sur XSD pour appliquer l'unicité ou établir des clés ou des références de clés. Les schémas XML contenant ces éléments ne peuvent pas être inscrits.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend actuellement pas en charge cet élément. Pour obtenir des informations sur une autre façon de mettre à jour des schémas, consultez [Élément &#60;xsd:redefine&#62;](the-xsd-redefine-element.md)y sont abordées.|  
-|**Valeurs \<xsd:simpleType>**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la précision à la milliseconde pour les types simples comportant un composant seconde autre que `xs:time` et `xs:dateTime`, et une précision de 100 nanosecondes pour `xs:time` et `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose des limites à toutes les énumérations de types simples XSD reconnus.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’utilisation de la valeur « NaN » dans les déclarations **\<xsd:simpleType>** .<br /><br /> Pour plus d’informations, consultez[Valeurs pour les déclarations &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)y sont abordées.|  
-|**xsi:schemaLocation** et **xsi:noNamespaceSchemaLocation**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore ces attributs s'ils sont présents dans les données d'instance XML insérées dans une colonne ou une variable de type de données `xml`.|  
+|**Valeurs \<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la précision à la milliseconde pour les types simples comportant un composant seconde autre que `xs:time` et `xs:dateTime`, et une précision de 100 nanosecondes pour `xs:time` et `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose des limites à toutes les énumérations de types simples XSD reconnus.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’utilisation de la valeur « NaN » dans les déclarations **\<xsd:simpleType>** .<br /><br /> Pour plus d’informations, consultez[Valeurs pour les déclarations &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)y sont abordées.|  
+|**xsi:schemaLocation** et **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore ces attributs s'ils sont présents dans les données d'instance XML insérées dans une colonne ou une variable de type de données `xml`.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les types dérivés de **xs:QName** utilisant un élément de restriction de schéma XML.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les types union avec **xs:QName** en tant qu'élément de membre.<br /><br /> Pour plus d’informations, consultez [The xs:QName Type](the-xs-qname-type.md).|  
 |Ajout de membres à un groupe de substitution existant|Vous ne pouvez pas ajouter des membres à un groupe de substitution existant dans une collection de schémas XML. Un groupe de substitution dans un schéma XML est restreint en cela que l’élément de tête et tous les éléments membres doivent être définis dans la même instruction {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Formes canoniques et restrictions de modèle|La représentation canonique d'une valeur ne peut enfreindre la restriction de modèle pour son type. Pour plus d’informations, consultez [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md).|  

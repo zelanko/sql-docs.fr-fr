@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63240265"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -68,7 +68,7 @@ DBORDINALidxServerCol);
   
  Vous n'êtes pas obligé de copier toutes les données dans un fichier utilisateur vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour ignorer une colonne, spécifiez le format des données pour la colonne en attribuant la valeur 0 au paramètre idxServerCol. Pour ignorer un champ, vous avez encore besoin de toutes les informations pour que la méthode fonctionne correctement.  
   
- **Remarque** La fonction [IBCPSession :: BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) peut être utilisée pour rendre persistante la spécification de format fournie par le biais de **BCPColFmt**.  
+ **Remarque** La fonction [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) peut être utilisée pour assurer la persistance de la spécification de format fournie par le biais de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Arguments  
  *idxUserDataCol*[in]  
@@ -95,7 +95,7 @@ DBORDINALidxServerCol);
   
  La `cbUserData` valeur représente le nombre d’octets de données. Si les données caractères sont représentées par des caractères larges Unicode `cbUserData` , une valeur de paramètre positive représente le nombre de caractères multiplié par la taille, en octets, de chaque caractère.  
   
- *pbUserDataTerm*[size_is] [in]  
+ *pbUserDataTerm*[size_is][in]  
  Séquence de marque de fin à utiliser pour le champ. Ce paramètre est utile surtout pour les types de données de caractères puisque tous les autres types sont de longueur fixe ou, dans le cas des données binaires, nécessitent un indicateur de longueur pour enregistrer avec précision le nombre d'octets présents.  
   
  Pour éviter de terminer des données extraites ou pour indiquer que les données dans un fichier utilisateur ne sont pas terminées, attribuez la valeur NULL à ce paramètre.  
@@ -104,7 +104,7 @@ DBORDINALidxServerCol);
   
  L'interface de programmation d'applications (API) de la copie en bloc procède à la conversion des caractères Unicode vers MBCS en fonction des besoins. Prenez soin de définir comme il se doit la chaîne d'octets de terminaison et la longueur de cette même chaîne.  
   
- *cbUserDataTerm avec*[in]  
+ *cbUserDataTerm*[in]  
  Longueur, en octets, de la séquence de marque de fin à utiliser pour la colonne. Si aucune marque de fin n'est présente ou désirée dans les données, attribuez 0 à cette valeur.  
   
  *idxServerCol*[in]  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d7631df4a1e4c6ec37effbc06b6a141b0d41ebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249297"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Options de validation d'abonnement (Abonnements de fusion)
@@ -29,10 +29,10 @@ ms.locfileid: "63249297"
  Sélectionnez cette option pour indiquer si la table au niveau de l'Abonné a le même nombre de lignes que la table sur le serveur de publication. Cette méthode ne valide pas le contenu des correspondances de lignes. La validation du nombre de lignes fournit une approche allégée de la validation qui vous permet de savoir qu'il existe des problèmes au niveau des données.  
   
  **Vérifier le nombre de lignes et comparer les totaux de contrôle pour vérifier les données de ligne**  
- Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle binaire. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée. Cette option n'est pas valide pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
+ Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle binaire. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée. Cette option n’est pas valide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]pour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Valider des données sur l’abonné](validate-data-at-the-subscriber.md)   
+ [Valider les données sur l’abonné](validate-data-at-the-subscriber.md)   
  [Valider des données répliquées](validate-data-at-the-subscriber.md)  
   
   

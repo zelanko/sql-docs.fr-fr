@@ -13,16 +13,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250126"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Insertion et mise à jour des données dans une table (Didacticiel)
-  Une fois que vous avez créé la table **Products** , vous pouvez insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
+   Une fois que vous avez créé la table **Products**, vous pouvez insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
   
-|IDProduit|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|Price|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
@@ -84,7 +84,7 @@ ms.locfileid: "63250126"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Lecture des données dans une table &#40;didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Lecture des données dans une table &#40;Didacticiel&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   

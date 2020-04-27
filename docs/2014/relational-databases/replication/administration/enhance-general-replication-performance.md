@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187076"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
@@ -116,7 +116,7 @@ ms.locfileid: "63187076"
   
      Lorsque des quantités importantes de modifications doivent être envoyées aux abonnés, la réinitialisation de ces derniers à partir d'un nouvel instantané peut s'avérer plus rapide que l'utilisation de la réplication pour déplacer chaque modification. Pour plus d’informations, consultez [Réinitialiser des abonnements](../reinitialize-subscriptions.md).  
   
-     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considérations sur les instantanés  
   

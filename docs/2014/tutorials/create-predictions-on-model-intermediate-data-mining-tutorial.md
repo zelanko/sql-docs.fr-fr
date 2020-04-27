@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217741"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Création de prédictions sur un modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
@@ -201,6 +201,6 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de requêtes de modèle Sequence Clustering](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7108760ebdb5e7e3e6367b801b07d4f8140a62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238733"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
@@ -38,7 +38,7 @@ DBCOUNTITEMnColumns);
  En interne, il appelle [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) afin de définir les valeurs par défaut pour les données du champ. Ces valeurs par défaut sont obtenues à partir des informations de colonne SQL Server que le fournisseur récupère en interne lorsque le nom de la table est spécifié par le biais de [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
->  Cette méthode peut être appelée uniquement après que **BCPInit** a été appelé avec un nom de fichier valide.  
+>   Cette méthode peut être appelée uniquement après que **BCPInit** a été appelé avec un nom de fichier valide.  
   
  Vous devez appeler cette méthode uniquement si vous envisagez d'utiliser un format de fichier utilisateur qui diffère du format par défaut. Pour plus d'informations sur une description du format de fichier utilisateur par défaut, consultez la méthode **BCPInit** .  
   

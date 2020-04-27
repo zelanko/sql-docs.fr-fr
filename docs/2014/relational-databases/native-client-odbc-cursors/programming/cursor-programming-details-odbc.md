@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207270"
 ---
 # <a name="cursor-programming-details-odbc"></a>Détails de programmation de curseurs (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "63207270"
   
 -   [Conversions de curseurs implicites &#40;ODBC&#41;](implicit-cursor-conversions-odbc.md)  
   
--   [Utilisation de l'auto-extraction avec les curseurs ODBC](using-autofetch-with-odbc-cursors.md)  
+-   [Utilisation de l’auto-extraction avec les curseurs ODBC](using-autofetch-with-odbc-cursors.md)  
   
 -   [Curseurs avant uniquement rapides &#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
   

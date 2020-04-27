@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245440"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
@@ -36,17 +36,17 @@ ms.locfileid: "63245440"
   
 -   [Pour écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent à l'aide de SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 -   Étant donné que cette option peut entraîner une augmentation importante de la taille du journal des erreurs, n'incluez que les messages de trace d'exécution dans les journaux des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lors de l'investigation d'un problème spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour exécuter ses fonctions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour utiliser les informations d'identification d'un compte qui est membre du rôle serveur fixe **sysadmin** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le compte doit avoir les autorisations Windows suivantes :  
   
 -   Ouvrir une session en tant que service (SeServiceLogonRight)  

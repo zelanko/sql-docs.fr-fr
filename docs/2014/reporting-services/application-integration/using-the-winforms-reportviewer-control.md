@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63239016"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilisation du contrôle Windows Forms ReportViewer
@@ -26,7 +26,7 @@ ms.locfileid: "63239016"
   
 1.  Créez une application Windows à l’aide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ou de.  
   
-     \-Ni  
+     \- Ou -  
   
      Ouvrez un projet d'application Windows existant et ajoutez un nouveau formulaire.  
   
@@ -40,8 +40,7 @@ ms.locfileid: "63239016"
   
  Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport.  
   
- Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez ** \<** l’option>de rapport du serveur dans la liste déroulante choisir un **rapport** . Une fois l’option de ** \<>de rapport du serveur** sélectionnée, deux propriétés supplémentaires s’affichent : URL du serveur de **rapports** et **chemin d’accès au rapport**. 
-  **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
+ Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez ** \<** l’option>de rapport du serveur dans la liste déroulante choisir un **rapport** . Une fois l’option de ** \<>de rapport du serveur** sélectionnée, deux propriétés supplémentaires s’affichent : URL du serveur de **rapports** et **chemin d’accès au rapport**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
   
  ![Sélectionner le rapport du serveur](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Sélectionner le rapport du serveur")  
   
@@ -170,7 +169,7 @@ End Class
   
 6.  Après avoir renommé le rapport, sélectionnez le fichier et localisez la fenêtre Propriétés. Affectez à la propriété **Copier dans le répertoire de sortie** la valeur **Copier si plus récent**.  
   
-     ![Paramètre de configuration de la copie vers la sortie](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Paramètre de configuration de la copie vers la sortie")  
+     ![Configuration du paramètre Copier dans la sortie](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configuration du paramètre Copier dans la sortie")  
   
      Si la fenêtre **Propriétés** n’est pas visible, vous pouvez l’ouvrir à partir du menu **Affichage** en sélectionnant **Fenêtre Propriétés**.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238218"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilisation du contrôle WebForms ReportViewer
@@ -26,7 +26,7 @@ ms.locfileid: "63238218"
   
 1.  Créez un nouveau [!INCLUDE[msCoName](../../includes/msconame-md.md)] site Web ASP.net à l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] aide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]de ou de.  
   
-     \-Ni  
+     \- Ou -  
   
      Ouvrez un site Web ASP.NET existant et ajoutez un nouveau Web Form.  
   
@@ -38,8 +38,7 @@ ms.locfileid: "63238218"
   
      Le contrôle **ReportViewer** nommé reportViewer1 est ajouté au formulaire.  
   
- Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport. Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, ** \<** sélectionnez l’option>de rapport du serveur dans la liste déroulante **choisir un rapport** . Une fois l’option de ** \<>de rapport du serveur** sélectionnée, deux propriétés supplémentaires s’affichent : URL du serveur de **rapports** et **chemin d’accès au rapport**. 
-  **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet du rapport à afficher.  
+ Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport. Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, ** \<** sélectionnez l’option>de rapport du serveur dans la liste déroulante **choisir un rapport** . Une fois l’option de ** \<>de rapport du serveur** sélectionnée, deux propriétés supplémentaires s’affichent : URL du serveur de **rapports** et **chemin d’accès au rapport**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet du rapport à afficher.  
   
  Si vous souhaitez afficher un rapport en mode local, sélectionnez l’option **Concevoir un nouveau rapport** afin de lancer le Concepteur de rapports, ou sélectionnez un rapport déjà inclus dans le projet existant. Après avoir sélectionné un rapport, veillez à entrer le nom du fichier de définition de rapport RDLC dans la propriété **ReportPath** du contrôle ReportViewer. Cette propriété apparaît sous le nœud **LocalReport** dans le volet **Propriétés**.  
   

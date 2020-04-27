@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187260"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>configurer des alertes de réplication prédéfinies (SQL Server Management Studio)
@@ -27,9 +27,9 @@ ms.locfileid: "63187260"
 -   **Réplication : échec de l'agent**    
 -   **Réplication : nouvelle tentative de l'agent**    
 -   **Réplication : suppression de l'abonnement expiré**    
--   **Réplication : abonnement réinitialisé après l’échec de validation**    
--   **Réplication : l’abonné n'a pas réussi la validation des données**    
--   **Réplication : l’abonné a passé la validation des données**    
+-   **Réplication : abonnement réinitialisé après l'échec de validation**    
+-   **Réplication : l'Abonné n'a pas réussi la validation des données**    
+-   **Réplication : l'Abonné a passé la validation des données**    
 -   **Réplication : arrêt personnalisé de l'Agent**  
   
  Configurez ces alertes à partir du dossier **Alertes** dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de l’onglet **Avertissements** dans le moniteur de réplication. Pour plus d’informations sur l’accès à cet onglet, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  

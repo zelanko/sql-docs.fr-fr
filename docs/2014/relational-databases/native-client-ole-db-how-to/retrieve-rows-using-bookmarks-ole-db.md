@@ -14,15 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0bfc6d28eb318bf36217a53873a48ab854d5f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63218217"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Récupérer des lignes à l'aide de signets (OLE DB)
-  Le consommateur attribue au champ `dwFlag` de la structure de liaison la valeur DBCOLUMNSINFO_ISBOOKMARK pour indiquer que la colonne est utilisée comme signet. Le consommateur définit également la propriété d'ensemble de lignes DBPROP_BOOKMARKS avec la valeur VARIANT_TRUE. Cela permet à la colonne 0 d'être présente dans l'ensemble de lignes. 
-  `IRowsetLocate::GetRowsAt` est ensuite utilisé pour extraire les lignes, en commençant par la ligne spécifiée par un offset à partir d'un signet.  
+  Le consommateur attribue au champ `dwFlag` de la structure de liaison la valeur DBCOLUMNSINFO_ISBOOKMARK pour indiquer que la colonne est utilisée comme signet. Le consommateur définit également la propriété d'ensemble de lignes DBPROP_BOOKMARKS avec la valeur VARIANT_TRUE. Cela permet à la colonne 0 d'être présente dans l'ensemble de lignes. `IRowsetLocate::GetRowsAt` est ensuite utilisé pour extraire les lignes, en commençant par la ligne spécifiée par un offset à partir d'un signet.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

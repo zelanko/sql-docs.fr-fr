@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195065"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versions linguistiques locales dans SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "63195065"
   
 -   Les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent également être installées côte à côte avec des instances en langue anglaise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
+##  <a name="configure-operating-system-to-support-localized-versions"></a><a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  Les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont prises en charge dans les versions anglaises des systèmes d'exploitation pris en charge via l'utilisation des paramètres du Pack d'interface utilisateur multilingue de Windows (MUI, Multilingual User Interface).  
   
  Vous devez toutefois vérifier certains paramètres de système d'exploitation avant d'installer une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur qui exécute un système d'exploitation en langue anglaise avec un paramétrage MUI non anglais. Vous devez vérifier que les paramètres de système d'exploitation suivants correspondent à la langue de la version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui va être installée.  

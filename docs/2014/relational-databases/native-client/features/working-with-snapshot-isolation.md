@@ -1,5 +1,5 @@
 ---
-title: Utilisation de l’isolation d’instantané | Microsoft Docs
+title: Utilisation de l’isolement de capture instantanée | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcf2003873de6f6ca15fed4d0818337ce4920906
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205856"
 ---
 # <a name="working-with-snapshot-isolation"></a>Utilisation de l’isolement de capture instantanée
@@ -55,7 +55,7 @@ ms.locfileid: "63205856"
 > [!NOTE]  
 >  Les erreurs DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED se produisent si DBPROPVAL_TI_SNAPSHOT est défini dans le cadre de l'utilisation de versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Pour plus d’informations sur la prise en charge de l’isolement d’instantané dans les transactions, consultez prise en charge des [transactions locales](../../native-client-ole-db-transactions/transactions.md).  
+ Pour plus d'informations sur la prise en charge du niveau d'isolement d'instantané dans les transactions, consultez [Prise en charge des transactions locales](../../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’isolement d’instantané grâce aux améliorations apportées aux fonctions [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) .  

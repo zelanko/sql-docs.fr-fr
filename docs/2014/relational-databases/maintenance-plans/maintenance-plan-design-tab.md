@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184556"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
   Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
- **Ajouter un sous-plan**  
+ **Ajouter le sous-plan**  
  Ajoutez un sous-plan que vous pouvez configurer.  
   
  **Propriétés du sous-plan**  
@@ -43,7 +43,7 @@ ms.locfileid: "63184556"
  **Gérer les connexions**  
  Affichez la boîte de dialogue **Gérer les connexions** . Permet d'ajouter des connexions d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplémentaires au plan de maintenance. Chaque tâche de maintenance dans l'éditeur de sous-plan peut utiliser ces connexions. Lors de son exécution, le plan de maintenance établit une connexion entre le serveur du plan de maintenance et les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiés, à l'aide des informations d'identification de connexion.  
   
- **Création de rapports et enregistrement**  
+ **Création de rapport et enregistrement**  
  Affichez la boîte de dialogue **Création de rapport et enregistrement** qui permet de gérer les rapports relatifs à l’activité du plan de maintenance et de configurer l’enregistrement sur le serveur local ou distant.  
   
  **Serveurs**  
@@ -68,7 +68,7 @@ ms.locfileid: "63184556"
   
  Une fois qu'une tâche de maintenance est placée sur la surface de dessin, ses propriétés peuvent être modifiées de manière appropriée. Par exemple, la base de données spécifique à sauvegarder dans une Tâche Sauvegarder la base de données est spécifiée après que la tâche a été ajoutée au plan. Les tâches sur la surface de dessin qui ne sont pas configurées correctement contiennent une icône rouge avec un x blanc.  
   
- Pour ajouter une tâche de maintenance dans un plan, faites glisser l’icône de la tâche à partir de la boîte à outils **Tâches du plan de maintenance** vers la surface de dessin, ou double-cliquez sur la tâche dans la boîte à outils qui ajoute cette tâche à l’aire du concepteur actif. Si la boîte à outils **Tâches du plan de maintenance** n’est pas affichée, cliquez sur **Boîte à outils** dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **View** menu. Développez le nœud **Tâches du plan de maintenance** dans le volet **Boîte à outils** .  
+ Pour ajouter une tâche de maintenance dans un plan, faites glisser l’icône de la tâche à partir de la boîte à outils **Tâches du plan de maintenance** vers la surface de dessin, ou double-cliquez sur la tâche dans la boîte à outils qui ajoute cette tâche à l’aire du concepteur actif. Si la boîte à outils **Tâches du plan de maintenance** n’est pas affichée, choisissez **Boîte à outils** dans le menu **Affichage** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez le nœud **Tâches du plan de maintenance** dans le volet **Boîte à outils** .  
   
  Pour supprimer une tâche d’un plan, sélectionnez la tâche dans l’aire du concepteur et appuyez sur la touche **Suppr** ou cliquez avec le bouton droit sur la tâche et cliquez sur **Supprimer**.  
   
@@ -101,13 +101,13 @@ ms.locfileid: "63184556"
  **Dissocier**  
  Supprime les tâches d'un groupe.  
   
- **AutoSize**  
+ **Redimensionnement automatique**  
  Dimensionne chaque tâche en utilisant la taille optimale pour cette tâche.  
   
- **Réduire**  
+ **Collapse**  
  Masque les tâches au sein d’un groupe.  
   
- **S'**  
+ **Développer**  
  Montre les tâches d’un groupe auparavant masquées à l’aide de l’option **Réduire**.  
   
  **Zoom**  

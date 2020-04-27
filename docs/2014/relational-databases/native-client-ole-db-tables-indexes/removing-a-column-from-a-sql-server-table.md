@@ -1,5 +1,5 @@
 ---
-title: Suppression d’une colonne d’une table SQL Server | Microsoft Docs
+title: Suppression d'une colonne d'une table SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213905"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Suppression d'une colonne d'une table SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "63213905"
   
  Les consommateurs spécifient le nom de table en tant que chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pTableID*. Le membre *eKind* de *pTableID* doit être DBKIND_NAME.  
   
- Le consommateur indique un nom de colonne dans le membre *pwszName*de l’Union *uname* dans le paramètre *pColumnID* . Le nom de colonne est une chaîne de caractères Unicode. Le membre *eKind* de *pColumnID* doit être DBKIND_NAME.  
+ Le consommateur indique un nom de colonne dans le membre *pwszName* de l'union *uName* dans le paramètre *pColumnID*. Le nom de colonne est une chaîne de caractères Unicode. Le membre *eKind* de *pColumnID* doit être DBKIND_NAME.  
   
 ## <a name="example"></a>Exemple  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204612"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Synthétiser ou regrouper des valeurs de toutes les lignes d'une table (Visual Database Tools)
@@ -51,7 +51,7 @@ FROM titles
   
 1.  Assurez-vous que la table à agréger figure déjà dans le volet Schéma.  
   
-2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Grouper par** dans le menu contextuel. Le [Concepteur de requêtes et de vues](query-and-view-designer-tools-visual-database-tools.md) ajoute une colonne **Group By** à la grille dans le volet Critères.  
+2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Grouper par** dans le menu contextuel. Le [Concepteur de requêtes et de vues](query-and-view-designer-tools-visual-database-tools.md) ajoute une colonne **Group by** à la grille dans le volet critères.  
   
 3.  Ajoutez la colonne à agréger dans le volet Critères. Assurez-vous que la colonne est marquée pour la sortie.  
   

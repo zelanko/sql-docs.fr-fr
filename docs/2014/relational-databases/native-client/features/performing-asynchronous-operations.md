@@ -1,5 +1,5 @@
 ---
-title: Exécution d’opérations asynchrones | Microsoft Docs
+title: Exécution d’opérations asynchrones Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246151"
 ---
 # <a name="performing-asynchronous-operations"></a>Exécution d'opérations asynchrones
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux applications d'effectuer des opérations de base de données asynchrones. Le traitement asynchrone permet aux méthodes d'être retournées immédiatement sans blocage du thread appelant. Cela rend le multithreading plus puissant et plus souple, sans obliger le développeur à créer explicitement des threads ou à gérer la synchronisation. Les applications requièrent un traitement asynchrone lors de l'initialisation d'une connexion de base de données, ou lors de l'initialisation du résultat de l'exécution d'une commande.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Ouverture et fermeture d'une connexion de base de données  
@@ -35,14 +34,14 @@ ms.locfileid: "63246151"
   
  De plus, la propriété SSPROP_ISSAsynchStatus a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERROWSET. Les fournisseurs qui prennent en charge l’interface **ISSAsynchStatus** doivent implémenter cette propriété avec la valeur VARIANT_TRUE.  
   
- **IDBAsynchStatus :: Abort** ou [ISSAsynchStatus :: Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) peut être appelé pour annuler l’appel **Initialize** asynchrone. Le consommateur doit demander explicitement l'initialisation de la source de données asynchrone. Sinon, **IDBInitialize::Initialize** n’est pas retournée tant que l’objet source de données n’est pas complètement initialisé.  
+ **IDBAsynchStatus::Abort** ou [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) peut être appelée pour annuler l’appel asynchrone à **Initialize**. Le consommateur doit demander explicitement l'initialisation de la source de données asynchrone. Sinon, **IDBInitialize::Initialize** n’est pas retournée tant que l’objet source de données n’est pas complètement initialisé.  
   
 > [!NOTE]  
->  Les objets de source de données utilisés pour le regroupement de **** connexions ne peuvent pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appeler l’interface ISSAsynchStatus dans le fournisseur de OLE DB Native Client. L’interface **ISSAsynchStatus** n’est pas exposée pour les objets sources de données regroupés.  
+>  Les objets de source de données utilisés pour le regroupement de **ISSAsynchStatus** connexions ne peuvent pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appeler l’interface ISSAsynchStatus dans le fournisseur de OLE DB Native Client. L’interface **ISSAsynchStatus** n’est pas exposée pour les objets sources de données regroupés.  
 >   
 >  Si une application force explicitement l’utilisation du moteur de curseur, **IOpenRowset::OpenRowset** et **IMultipleResults::GetResult** ne prennent pas en charge le traitement asynchrone.  
 >   
->  En outre, la dll proxy de communication à distance/stub (dans MDAC 2,8) ne **** peut pas appeler [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’interface ISSAsynchStatus dans Native Client. L’interface **ISSAsynchStatus** n’est pas exposée via la communication à distance.  
+>  En outre, la dll proxy de communication à distance/stub (dans MDAC 2,8) ne **ISSAsynchStatus** peut pas appeler [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’interface ISSAsynchStatus dans Native Client. L’interface **ISSAsynchStatus** n’est pas exposée via la communication à distance.  
 >   
 >  Les composants du service ne prennent pas en charge **ISSAsynchStatus**.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63246151"
  Quand l’exécution de la commande est terminée, **IMultipleResults** peut être utilisé normalement à une exception près par rapport au traitement synchrone : DB_S_ASYNCHRONOUS peut être retourné, auquel cas **IDBAsynchStatus** ou **ISSAsynchStatus** peut être utilisée pour déterminer le moment où l’opération est achevée.  
   
 ## <a name="examples"></a>Exemples  
- Dans l'exemple suivant, l'application appelle une méthode non bloquante, effectue d'autres traitements, puis retourne au traitement des résultats. **ISSAsynchStatus :: WaitForAsynchCompletion** attend sur l’objet d’événement interne jusqu’à ce que l’opération d’exécution asynchrone soit effectuée ou que la durée spécifiée par *dwMilisecTimeOut* soit passée.  
+ Dans l'exemple suivant, l'application appelle une méthode non bloquante, effectue d'autres traitements, puis retourne au traitement des résultats. **ISSAsynchStatus::WaitForAsynchCompletion** attend l’objet d’événement interne jusqu’à ce que l’opération s’exécutant de manière asynchrone soit terminée ou que le délai spécifié par *dwMilisecTimeOut* soit passé.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -105,7 +104,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus :: WaitForAsynchCompletion** attend sur l’objet d’événement interne jusqu’à ce que l’opération d’exécution asynchrone soit effectuée ou que la valeur *dwMilisecTimeOut* soit passée.  
+ **ISSAsynchStatus::WaitForAsynchCompletion** attend l’objet d’événement interne jusqu’à ce que l’opération s’exécutant de manière asynchrone soit terminée ou que la valeur *dwMilisecTimeOut* soit passée.  
   
  L'exemple suivant illustre le traitement asynchrone avec plusieurs jeux de résultats :  
   

@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 443c6e0c556a7e69510796b1d58ab0f7b2567e6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225495"
 ---
 # <a name="using-encryption-without-validation"></a>Utilisation du chiffrement sans validation
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffre toujours les paquets réseau associés à l’ouverture de session. Si aucun certificat n'a été fourni sur le serveur à son démarrage, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère un certificat auto-signé qui est utilisé pour chiffrer les paquets d’ouverture de session.  
   
  Les applications peuvent également demander le chiffrement de tout le trafic réseau en utilisant des mots clés de chaîne de connexion ou des propriétés de connexion. Les mots clés sont « Encrypt » pour ODBC et OLE DB lors de l’utilisation d’une chaîne de fournisseur avec **IDBInitialize :: Initialize**, ou « utiliser le chiffrement pour les données » pour ADO et OLE DB lors de l’utilisation d’une chaîne d’initialisation avec **IDataInitialize**. Cela peut également être configuré par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager à l’aide de l’option **forcer le chiffrement du protocole** . Par défaut, le chiffrement de tout le trafic réseau pour une connexion requiert la fourniture d'un certificat sur le serveur.  
@@ -48,7 +47,7 @@ ms.locfileid: "63225495"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge le chiffrement sans validation par le biais de l’ajout de la propriété d’initialisation de la source de données SSPROP_INIT_TRUST_SERVER_CERTIFICATE, qui est implémentée dans le jeu de propriétés DBPROPSET_SQLSERVERDBINIT. De plus, un nouveau mot clé de chaîne de connexion, « TrustServerCertificate» , a été ajouté. Il accepte les valeurs « oui » ou « non », « non » étant la valeur par défaut. Lors de l'utilisation de composants du service, il accepte les valeurs true ou false ; false étant la valeur par défaut.  
   
- Pour plus d’informations sur les améliorations apportées au jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [propriétés d’initialisation et d’autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d'informations sur les améliorations apportées au jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [Propriétés d'initialisation et d'autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le chiffrement sans validation par le biais d’ajouts aux fonctions [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_TRUST_SERVER_CERTIFICATE a été ajouté pour accepter SQL_TRUST_SERVER_CERTIFICATE_YES ou SQL_TRUST_SERVER_CERTIFICATE_NO ; SQL_TRUST_SERVER_CERTIFICATE_NO étant la valeur par défaut. De plus, un nouveau mot clé de chaîne de connexion, « TrustServerCertificate », a été ajouté. Il accepte les valeurs « yes » ou « no » ; «no » étant la valeur par défaut.  

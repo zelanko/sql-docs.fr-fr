@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231270"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
@@ -124,13 +124,13 @@ ElementName!TagNumber!AttributeName!Directive
  Si vous spécifiez l’option *Directive*, l’option *AttributeName* peut être vide. Par exemple, ElementName!TagNumber!!Directive. Dans ce cas, la valeur de la colonne est directement contenue dans l’option *ElementName*.  
   
  *Directive*  
- *La directive* est facultative et vous pouvez l’utiliser pour fournir des informations supplémentaires pour la construction du code XML. *La directive* a deux objectifs.  
+ L’option*Directive* est facultative et permet de fournir des informations supplémentaires pour la construction du document XML. La finalité de*Directive* est double.  
   
  D'une part, elle permet d'encoder les valeurs sous la forme de mots clés ID, IDREF et IDREFS. Vous pouvez spécifier les mots clés **ID**, **IDREF**et **IDREFS** en tant que *Directives*. Ces directives remplacent les types d'attributs. Cela vous permet de créer des liens à l'intérieur du document.  
   
  D’autre part, l’option *Directive* vous permet d’indiquer comment vous souhaitez mapper les données de chaîne au document XML. Les mots clés **hide**, **element, elementxsinil**, **xml**, **xmltext**et **cdata** peuvent être utilisés comme *Directive*. La directive **hide** masque le nœud. Cela peut s'avérer utile pour extraire des valeurs à des fins de tri sans qu'elles apparaissent dans le document XML obtenu.  
   
- La directive **element** génère un élément contenu au lieu d’un attribut. Les données contenues sont encodées comme une entité. Par exemple, le **<** caractère devient &lt;. Dans le cas des valeurs de colonne NULL, aucun élément n'est généré. Si vous souhaitez qu’un élément soit généré pour les valeurs de colonne NULL, vous pouvez spécifier la directive **elementxsinil** . Cette opération génère un élément ayant l'attribut xsi:nil=TRUE.  
+ La directive **element** génère un élément contenu au lieu d’un attribut. Les données contenues sont encodées comme une entité. Par exemple, le caractère **<** devient &lt;. Dans le cas des valeurs de colonne NULL, aucun élément n'est généré. Si vous souhaitez qu’un élément soit généré pour les valeurs de colonne NULL, vous pouvez spécifier la directive **elementxsinil** . Cette opération génère un élément ayant l'attribut xsi:nil=TRUE.  
   
  La directive **xml** est identique à une directive **element** , sauf qu’aucun encodage d’entité ne se produit. Notez que la directive **element** peut être combinée avec le mot clé **ID**, **IDREF**ou **IDREFS**, tandis que la directive **xml** n’est autorisée avec aucune autre directive, sauf **hide**.  
   
@@ -147,7 +147,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Dans cette section  
  Les exemples suivants illustrent l'utilisation du mode EXPLICIT.  
   
--   [Exemple : extraction d'informations sur les employés](../xml/example-retrieving-employee-information.md)  
+-   [Exemple : extraction d’informations sur les employés](../xml/example-retrieving-employee-information.md)  
   
 -   [Exemple : spécification de la directive ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
@@ -165,11 +165,11 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemple : spécification de la directive CDATA](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Exemple : spécification de la directive XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Exemple : spécification de la directive XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../xml/use-raw-mode-with-for-xml.md)   
- [Utiliser le mode AUTO avec FOR XML](../xml/use-auto-mode-with-for-xml.md)   
+ [UTiliser le mode AUTO avec FOR XML](../xml/use-auto-mode-with-for-xml.md)   
  [Utiliser le mode PATH avec FOR XML](../xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  

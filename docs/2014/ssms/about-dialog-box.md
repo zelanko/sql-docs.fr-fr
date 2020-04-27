@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226223"
 ---
 # <a name="about-dialog-box"></a>À propos de (boîte de dialogue)
-  La boîte de dialogue **à propos** de fournit des informations sur les produits et vous permet d’accéder aux informations sur l’ordinateur sur lequel le produit s’exécute. Pour les copies d’évaluation [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , l’entrée répertorie le nombre de jours restants jusqu’à l’expiration de l’installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).   
+  La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d'accéder à d'autres informations relatives à l'ordinateur où s'exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  
   
 ## <a name="options"></a>Options  
  **Nom du composant**  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207062"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
@@ -42,7 +42,7 @@ ms.locfileid: "63207062"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quand un abonnement est-il disponible, quand la base de données d'abonnement peut-elle être utilisée ?  
  Un abonnement est disponible après que l'instantané ait été appliqué à la base de données d'abonnement. Bien que la base de données d'abonnement soit accessible avant, il est conseillé de ne pas l'utiliser tant que l'instantané n'a pas été appliqué. Utilisez le Moniteur de réplication pour vérifier l'état de génération et d'application d'instantané :  
   
--   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63207062"
   
 -   L'option de synchronisation Web pour la réplication de fusion. Pour plus d’informations, voir [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Même si tous les types de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent répliquer des données via un réseau privé virtuel (VPN), utilisez plutôt la synchronisation Web avec la réplication de fusion.  
+ Tous les types [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de réplication peuvent répliquer des données sur un réseau privé virtuel, mais vous devez envisager la synchronisation Web si vous utilisez la réplication de fusion.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>La réplication reprend-elle si une connexion est supprimée ?  
  Oui. Le traitement de la réplication reprend là où il s'est interrompu si une connexion est supprimée. Si vous utilisez une réplication de fusion sur un réseau non fiable, envisagez d'utiliser des enregistrements logiques qui garantissent que les modifications liées sont traitées en tant qu'unité. Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "63207062"
  Non. Vous pourriez créer un package DTS pour transférer les noms d'accès et mots de passe d'un serveur de publication sur un ou plusieurs abonnés.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Que sont les schémas et comment sont-ils répliqués ?  
- À commencer par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schéma* a deux significations :  
+ À compter de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schéma* a deux significations :  
   
 -   La définition d'un objet, par exemple une instruction CREATE TABLE. Par défaut, la réplication copie les définitions de tous les objets répliqués sur l'Abonné.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63207062"
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../publish/view-and-modify-publication-properties.md), [Définir un article](../publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../publish/view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../publish/view-and-modify-publication-properties.md), [Définir un article](../publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Comment configurer les demandes sur la base de données d'abonnement afin qu'elles correspondent aux demandes sur la base de données de publication ?  
  Par défaut, la réplication n'exécute pas d'instructions GRANT sur la base de données d'abonnement. Si vous voulez que les autorisations sur la base de données d'abonnement correspondent à celles de la base de données de publication, utilisez une des méthodes suivantes :  
@@ -184,8 +184,7 @@ ms.locfileid: "63207062"
  Commencez par supprimer l’article de la publication en utilisant [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, puis supprimez-le de la base de données à l’aide de `DROP <Object>`. Vous ne pouvez pas supprimer d'articles d'un instantané ou de publications transactionnelles après avoir ajouté les abonnements, vous devez d'abord supprimer les abonnements. Pour plus d’informations, consultez [Ajouter et supprimer des articles de publications existantes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Comment puis-je ajouter ou supprimer des colonnes sur une table publiée ?  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, Execute ALTER TABLE... SUPPRIMEz la colonne sur le serveur de publication, et l’instruction est répliquée sur les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) et [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une large variété de modifications de schéma sur les objets publiés, y compris l'ajout et la suppression de colonnes. Par exemple, Execute ALTER TABLE... SUPPRIMEz la colonne sur le serveur de publication, et l’instruction est répliquée sur les abonnés, puis exécutée pour supprimer la colonne. Les abonnés qui exécutent des versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] prennent en charge l'ajout et la suppression de colonnes à travers les procédures stockées [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) et [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Maintenance de réplication  
   
@@ -231,6 +230,6 @@ ms.locfileid: "63207062"
   
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [Meilleures pratiques pour l’administration de la réplication](best-practices-for-replication-administration.md)  
   
   

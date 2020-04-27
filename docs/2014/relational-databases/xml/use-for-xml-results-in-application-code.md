@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193333"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
@@ -201,11 +201,9 @@ ms.locfileid: "63193333"
   
  Dans cet exemple, les API gérées Microsoft .NET Framework sont chargées de renvoyer et de rendre les résultats de la requête FOR XML :  
   
-1.  
-  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server en fonction du contenu d'une variable de chaîne de connexion spécifiée strConn.  
+1.  `SqlConnection` est utilisé pour ouvrir une connexion à SQL Server en fonction du contenu d'une variable de chaîne de connexion spécifiée strConn.  
   
-2.  
-  `SqlDataAdapter` est ensuite utilisé en tant qu'adaptateur de données et utilise la connexion SQL et une chaîne de requête SQL spécifiée pour exécuter la requête FOR XML.  
+2.  `SqlDataAdapter` est ensuite utilisé en tant qu'adaptateur de données et utilise la connexion SQL et une chaîne de requête SQL spécifiée pour exécuter la requête FOR XML.  
   
 3.  Une fois la requête exécutée, la méthode `SqlDataAdapter.Fill` est appelée et reçoit une instance d'un `DataSet,` MyDataSet, afin de remplir le dataset avec le résultat de la requête FOR XML.  
   

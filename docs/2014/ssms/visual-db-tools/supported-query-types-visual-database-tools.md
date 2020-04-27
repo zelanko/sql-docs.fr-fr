@@ -23,29 +23,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204647"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Types de requêtes pris en charge (Visual Database Tools)
-  Vous pouvez créer les types de requêtes suivants dans les volets Schéma et critères (volets graphiques) du concepteur de [requêtes et de vues](visual-database-tools.md):  
+  Voici les types de requêtes pouvant être créés dans les volets Schéma et Critères (volets graphiques) du [Concepteur de requêtes et de vues](visual-database-tools.md):  
   
--   **Sélectionner une requête** Récupère des données d’une ou plusieurs tables ou vues. Ce type de requête crée une instruction SQL SELECT.  
+-   **Requête Select** Extrait des données d’une ou de plusieurs tables ou vues. Ce type de requête crée une instruction SQL SELECT.  
   
--   **Insérer les résultats** Crée de nouvelles lignes en copiant les lignes existantes d’une table dans une autre, ou dans la même table en tant que nouvelles lignes. Ce type de requête crée une instruction SQL INSERT INTO...SELECT.  
+-   **Insert Results** Créé des lignes d’une table dans une autre, ou dans la même table en tant que nouvelles lignes. Ce type de requête crée une instruction SQL INSERT INTO...SELECT.  
   
--   **Insérer des valeurs** Crée une ligne et insère des valeurs dans les colonnes spécifiées. Ce type de requête crée une instruction SQL INSERT INTO...VALUES.  
+-   **Insert Values** Crée une ligne et insère des valeurs dans des colonnes spécifiées. Ce type de requête crée une instruction SQL INSERT INTO...VALUES.  
   
--   **Mettre à jour la requête** Modifie les valeurs de colonnes individuelles dans une ou plusieurs lignes existantes dans une table. Ce type de requête crée une instruction SQL UPDATE...SET.  
+-   **Requête Update** Modifie les valeurs de colonnes individuelles dans une ou plusieurs lignes existant dans une table. Ce type de requête crée une instruction SQL UPDATE...SET.  
   
--   **Supprimer la requête** Supprime une ou plusieurs lignes d’une table. Ce type de requête crée une instruction SQL DELETE.  
+-   **Requête Delete** Supprime une ou plusieurs lignes d’une table. Ce type de requête crée une instruction SQL DELETE.  
   
     > [!NOTE]  
     >  Une requête Delete supprime de la table des lignes entières. Pour supprimer des valeurs dans des colonnes de données individuelles, utilisez une requête Update.  
   
--   **Requête Make Table** Crée une nouvelle table et y crée des lignes en y copiant les résultats d’une requête. Ce type de requête crée une instruction SQL DELETE...INTO.  
+-   **Requête Make Table** Copie les résultats d’une requête dans une nouvelle table. Ce type de requête crée une instruction SQL DELETE...INTO.  
   
  Pour créer des requêtes, vous pouvez utiliser les volets graphiques, mais aussi entrer n'importe quelle instruction SQL dans le volet SQL, par exemple pour créer une requête Union.  
   

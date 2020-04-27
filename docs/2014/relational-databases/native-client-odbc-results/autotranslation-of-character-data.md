@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200214"
 ---
 # <a name="autotranslation-of-character-data"></a>Traduction automatique de données caractères
@@ -38,7 +38,7 @@ ms.locfileid: "63200214"
   
  La fonctionnalité de traduction automatique du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client tente de réduire les problèmes de déplacement de données de caractères entre un client et un serveur qui ont des pages de codes différentes. La conversion automatique peut être définie dans la chaîne de connexion de [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md), dans la chaîne de configuration de [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)ou lors de la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sources de données pour le pilote ODBC Native Client à l’aide de l’administrateur ODBC.  
   
- Lorsque la conversion automatique est définie sur « non », aucune conversion n’est effectuée sur les données déplacées entre les variables de SQL_C_CHAR sur le client et **** les colonnes de **type char**, **varchar**ou Text [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les variables ou les paramètres d’une base de données. Les modèles binaires peuvent être interprétés différemment sur les ordinateurs client et serveur si les données contiennent des caractères étendus et que les deux ordinateurs ont des pages de codes différentes. Les données seront interprétées de la même façon si les deux ordinateurs ont la même page de codes.  
+ Lorsque la conversion automatique est définie sur « non », aucune conversion n’est effectuée sur les données déplacées entre les variables de SQL_C_CHAR sur le client et **text** les colonnes de **type char**, **varchar**ou Text [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les variables ou les paramètres d’une base de données. Les modèles binaires peuvent être interprétés différemment sur les ordinateurs client et serveur si les données contiennent des caractères étendus et que les deux ordinateurs ont des pages de codes différentes. Les données seront interprétées de la même façon si les deux ordinateurs ont la même page de codes.  
   
  Lorsque la conversion automatique est définie sur « Oui », [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pilote ODBC Native Client utilise Unicode pour convertir les données déplacées entre les variables de SQL_C_CHAR sur le client et les colonnes de **type char**, **varchar**ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text** , les variables ou les paramètres d’une base de données :  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63200214"
   
  Le paramètre AutoTranslate n'a aucun effet sur ces conversions :  
   
--   Déplacement de données entre des variables de type caractère **** SQL_C_CHAR client et des colonnes, des variables ou des paramètres Unicode NCHAR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **nvarchar**ou **ntext** dans des bases de données.  
+-   Déplacement de données entre des variables de type caractère **nchar**SQL_C_CHAR client et des colonnes, des variables ou des paramètres Unicode NCHAR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **nvarchar**ou **ntext** dans des bases de données.  
   
 -   Déplacement de données entre les variables Unicode SQL_C_WCHAR client et les colonnes de **type**Character, **varchar**ou **Text** , les variables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les paramètres dans les bases de données.  
   

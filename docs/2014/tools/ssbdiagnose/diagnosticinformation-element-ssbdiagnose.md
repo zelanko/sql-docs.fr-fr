@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186901"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Élément DiagnosticInformation (ssbdiagnose)
@@ -37,21 +37,21 @@ ms.locfileid: "63186901"
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`None`|N/A|  
+|`None`|NON APPLICABLE|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Aucun.|  
-|**Valeur par défaut**|Aucun.|  
+|**Type de données et longueur**|Aucune.|  
+|**Valeur par défaut**|Aucune.|  
 |**Occurrence**|Une fois par fichier de sortie XML **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|Aucun.|  
+|**Élément parent**|Aucune.|  
 |**Éléments enfants**|[Élément Banner &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Élément Issue &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>Notes  

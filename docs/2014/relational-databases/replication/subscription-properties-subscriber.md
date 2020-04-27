@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250272"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Propriétés de l’abonnement Réplication SQL Server 
@@ -44,27 +44,27 @@ Cette section fournit des informations sur la boîte de dialogue Propriétés de
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ### <a name="publisher-options-for-transactional-subscriptions"></a>Options du serveur de publication pour les abonnements transactionnels  
- **Empêcher la boucle de transaction**  
+ **Empêcher le bouclage de la transaction**  
  Détermine si l'Agent de distribution retourne à l'Abonné les transactions créées sur ce dernier. Cette option est utilisée pour la réplication transactionnelle bidirectionnelle. Pour plus d’informations, consultez [réplication transactionnelle bidirectionnelle](transactional/bidirectional-transactional-replication.md).  
   
  **Abonnement pouvant être mis à jour**  
  Détermine si les modifications de l'Abonné sont répliquées dans le serveur de publication. Vous pouvez répliquer les modifications en utilisant la mise à jour immédiate ou en file d'attente. L'option **Méthode de mise à jour de l'Abonné** détermine la méthode à utiliser. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ### <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
- **Définition de partition (HOST_NAME)**  
+ **Définition de la partition (HOST_NAME)**  
  Pour une publication qui utilise des filtres paramétrables, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Type d’abonnement** et **priorité**  
+ **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
   
  Si vous avez sélectionné un abonnement de type serveur dans l'Assistant Nouvel abonnement, l'abonné a la priorité utilisée lors de la résolution des conflits.  
   
- **Résoudre les conflits de manière interactive**  
+ **Résoudre les conflits interactivement**  
  Détermine s'il faut utiliser l'interface utilisateur du Résolveur interactif pour résoudre les conflits pendant la synchronisation de fusion. Pour cela, l'option **Utiliser le Gestionnaire de synchronisation Windows** doit être active ( **Activer**). Pour plus d’informations, consultez [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
 
 
 ## <a name="subscriber-properties"></a>Propriétés de l'abonné
-  La boîte de dialogue Propriétés de l' **abonnement** de l’abonné vous permet d’afficher et de définir les propriétés des abonnements par extraction.  
+  La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'afficher et de configurer les propriétés des abonnements par extraction.  
   
  Chaque propriété de **cette boîte de dialogue** comporte une description. Cliquez sur une propriété pour afficher sa description au bas de la boîte de dialogue. Cette rubrique fournit des informations sur diverses propriétés, Les propriétés sont regroupées selon les catégories suivantes :  
   
@@ -78,21 +78,21 @@ Cette section fournit des informations sur la boîte de dialogue Propriétés de
 >  Si un Agent de distribution ou un Agent de fusion n'est pas encore créé pour l'abonnement, de nombreuses propriétés ne sont pas affichées. Pour créer un travail d’agent pour un abonnement par extraction, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) (pour un abonnement destiné à une publication transactionnelle ou d’instantané) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (pour un abonnement destiné à une publication de fusion).  
   
 ### <a name="options-for-all-subscriptions"></a>Options pour tous les abonnements  
- **Initialiser les données publiées à partir d’un instantané**  
+ **Initialise les données publiées à partir d'un instantané**  
  Détermine si les options sont initialisées avec un instantané (par défaut) ou une autre méthode. Pour plus d’informations sur l’initialisation des abonnements, consultez [Initialiser un abonnement](initialize-a-subscription.md).  
   
- **Emplacement de l’instantané**  
+ **Emplacement de l'instantané**  
  Détermine l'emplacement à partir duquel les fichiers d'instantanés sont accessibles lors de l'initialisation ou de la réinitialisation de l'abonnement. Les valeurs suivantes peuvent déterminer l'emplacement :  
   
--   **Emplacement par défaut**: l’emplacement par défaut, qui est défini lors de la configuration d’un serveur de distribution. Pour plus d’informations, consultez [spécifier l’emplacement par défaut des instantanés](snapshot-options.md#snapshot-folder-locations).    
--   **Autre dossier**: un autre emplacement, qui peut être spécifié dans la boîte de dialogue Propriétés de la **publication** . Pour plus d’informations, consultez [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
--   **Dossier d’instantanés dynamiques**: emplacement d’instantané pour les publications de fusion qui utilisent des filtres de lignes paramétrables. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
--   **Dossier FTP**: dossier accessible à un serveur protocole FTP (FTP). Pour plus d’informations, consultez [Transférer des instantanés via FTP](transfer-snapshots-through-ftp.md).  
+-   **Emplacement par défaut**: emplacement par défaut défini lors de la configuration d'un serveur de distribution. Pour plus d’informations, consultez [spécifier l’emplacement par défaut des instantanés](snapshot-options.md#snapshot-folder-locations).    
+-   **Autre dossier**: autre emplacement que vous pouvez spécifier dans la boîte de dialogue **Propriétés de la publication** . Pour plus d’informations, consultez [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
+-   **Dossier d'instantanés dynamiques**: emplacement d'instantané pour les publications de fusion à filtres de lignes paramétrables. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Dossier FTP**: dossier accessible sur un serveur FTP (File Transfer Protocol). Pour plus d’informations, consultez [Transférer des instantanés via FTP](transfer-snapshots-through-ftp.md).  
   
  **Dossier d'instantanés**  
  Si vous sélectionnez une valeur différente de l' **Emplacement par défaut** de l'option **Emplacement de l'instantané** , vous devez spécifier un chemin d'accès au dossier d'instantanés.  
   
- **Utiliser le gestionnaire de synchronisation Windows**  
+ **Utiliser le Gestionnaire de synchronisation Windows**  
  Détermine s'il est possible de synchroniser l'abonnement à l'aide du Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Sécurité**  
@@ -109,19 +109,19 @@ Cette section fournit des informations sur la boîte de dialogue Propriétés de
  Détermine si les modifications de l'Abonné sont répliquées dans le serveur de publication. Vous pouvez répliquer les modifications en utilisant la mise à jour immédiate ou en file d'attente. L'option **Méthode de mise à jour de l'Abonné** détermine la méthode à utiliser. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ### <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
- **Définition de partition (HOST_NAME)**  
+ **Définition de la partition (HOST_NAME)**  
  Pour une publication qui utilise des filtres paramétrables, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Type d’abonnement** et **priorité**  
+ **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
   
  Si vous avez sélectionné un abonnement de type serveur dans l'Assistant Nouvel abonnement, l'abonné a la priorité utilisée lors de la résolution des conflits.  
   
- **Résoudre les conflits de manière interactive**  
+ **Résoudre les conflits interactivement**  
  Détermine s'il faut utiliser l'interface utilisateur du Résolveur interactif pour résoudre les conflits pendant la synchronisation de fusion. Pour cela, l'option **Utiliser le Gestionnaire de synchronisation Windows** doit être active ( **Activer**). Pour plus d’informations, consultez [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Synchronisation Web**  
- **Utiliser la synchronisation Web** détermine s’il faut se [!INCLUDE[msCoName](../../includes/msconame-md.md)] connecter à un serveur Internet Information Services (IIS) pour synchroniser l’abonnement. Cette option est disponible uniquement si la publication est activée pour la synchronisation. Pour plus d’informations, voir [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+ L'option**Utiliser la synchronisation Web** détermine s'il est nécessaire de connecter un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) pour synchroniser l'abonnement. Cette option est disponible uniquement si la publication est activée pour la synchronisation. Pour plus d’informations, voir [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  Si vous sélectionnez la valeur **True** pour l'option **Utiliser la synchronisation Web**:  
   
@@ -133,7 +133,7 @@ Cette section fournit des informations sur la boîte de dialogue Propriétés de
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md)   
- [Afficher et modifier les propriétés d’un abonnement par émission de données](view-and-modify-push-subscription-properties.md)   
- [S'abonner à des publications](subscribe-to-publications.md)  
+ [Afficher et modifier les propriétés d’un abonnement par émission de type push](view-and-modify-push-subscription-properties.md)   
+ [S’abonner aux Publications](subscribe-to-publications.md)  
   
   

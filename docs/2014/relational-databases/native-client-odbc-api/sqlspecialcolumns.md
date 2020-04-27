@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188743"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   Lors de la demande d’identificateurs de ligne (*IdentifierType* SQL_BEST_ROWID), **SQLSpecialColumns** retourne un jeu de résultats vide (aucune ligne de données) pour toute étendue demandée autre que SQL_SCOPE_CURROW. Le jeu de résultats généré indique que les colonnes ne sont valides que dans cette étendue.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les pseudo-colonnes pour les identificateurs. Le jeu de résultats **SQLSpecialColumns** identifie toutes les colonnes comme SQL_PC_NOT_PSEUDO.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les pseudo-colonnes pour les identificateurs. Le jeu de résultats **SQLSpecialColumns** identifie toutes les colonnes comme SQL_PC_NOT_PSEUDO.  
   
  **SQLSpecialColumns** peut être exécuté sur un curseur statique. Une tentative d’exécution de **SQLSpecialColumns** sur un qui peut être mis à jour (KEYSET ou Dynamic) retourne SQL_SUCCESS_WITH_INFO indiquant que le type de curseur a été modifié.  
   
@@ -39,6 +38,6 @@ ms.locfileid: "63188743"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLSpecialColumns fonction)](https://go.microsoft.com/fwlink/?LinkId=59371)   
- [ODBC API Implementation Details](odbc-api-implementation-details.md)  
+ [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

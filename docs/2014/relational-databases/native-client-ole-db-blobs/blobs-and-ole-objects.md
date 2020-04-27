@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195214"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose l’interface **ISequentialStream** pour prendre en charge l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accès des consommateurs aux types de données **ntext**, **Text**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** et XML en tant qu’objets BLOB (Binary Large Object). La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
   
- Pour obtenir un exemple illustrant cette fonctionnalité, consultez [Set large Data &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
+ Pour obtenir un exemple illustrant cette fonctionnalité, consultez [Définir des données volumineuses &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client peut utiliser une interface **IStorage** implémentée par le consommateur lorsque le consommateur fournit le pointeur d’interface dans un accesseur lié pour la modification des données.  
   
