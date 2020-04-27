@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109619"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Page Créer un abonnement piloté par les données (Gestionnaire de rapports)
@@ -75,7 +75,7 @@ ms.locfileid: "66109619"
   
  Si la source de données utilise l'authentification Windows, sélectionnez **Utiliser comme informations d'identification Windows** lorsque vous spécifiez la connexion.  
   
- Si vous utilisez une source de données qui n'authentifie pas les connexions utilisateur (par exemple, si la source de données est un fichier XML), sélectionnez Informations d'identification non requises. Cette option requiert que vous ayez précédemment configuré le compte d'exécution sans assistance. Pour plus d’informations, consultez [configurer le compte d’exécution sans assistance &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Si vous utilisez une source de données qui n'authentifie pas les connexions utilisateur (par exemple, si la source de données est un fichier XML), sélectionnez Informations d'identification non requises. Cette option requiert que vous ayez précédemment configuré le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="specify-a-query-page-3"></a>Spécification d'une requête (page 3)  
  Utilisez cette page pour entrer la requête qui récupère les données d'abonné. Pour un résultat optimal, exécutez d'abord la requête dans SQL Server Management Studio avant de l'utiliser dans l'abonnement piloté par les données. Vous pouvez ensuite examiner les résultats pour vérifier qu'ils contiennent les informations requises. Les points importants à noter sur les résultats de la requête sont les suivants :  
@@ -90,7 +90,7 @@ ms.locfileid: "66109619"
  **Délai d'expiration**  
  Spécifiez une valeur de délai d'expiration de requête. Cette valeur doit être suffisamment importante pour terminer le traitement de la requête.  
   
- **Valider**  
+ **Vérification**  
  Cliquez sur **Valider** pour vérifier la requête. La requête doit générer des résultats valides pour que vous puissiez continuer. Si vous ne cliquez pas sur **Valider**, la requête est validée lorsque vous cliquez sur **Suivant**.  
   
 ## <a name="set-delivery-options-page-4"></a>Définition d'options de remise (page 4)  
@@ -147,19 +147,19 @@ ms.locfileid: "66109619"
 ## <a name="schedule-a-subscription-page-7"></a>Planification d'un abonnement (page 7)  
  Si vous planifiez l'abonnement, vous devez spécifier la fréquence de remise du rapport. Le premier ensemble d'options spécifie une catégorie de fréquences (toutes les heures, tous les jours, toutes les semaines, etc.) Le second ensemble d'options qui apparaît dépend de votre sélection initiale.  
   
- **Horaire**  
+ **Toutes les heures**  
  Définit une planification qui s'exécute toutes les heures.  
   
- **Quotidienne**  
+ **Quotidien**  
  Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours des façons suivantes : chaque * \<jour>*, tous les jours ouvrables et tous * \<les nombres>* jour. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
  **Hebdomadaire**  
  Définit une planification qui s'exécute de façon hebdomadaire à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   
- **Chaque**  
+ **Mensuelle**  
  Définit une planification qui s'exécute tous les mois. Dans un mois, vous pouvez choisir un jour basé sur un modèle (le dernier dimanche de chaque mois, par exemple) ou des dates spécifiques (tels que 1 et 15 pour indiquer le 1er et le 15e jour de chaque mois). À l'aide de virgules et de tirets, vous pouvez spécifier plusieurs jours et plages (1, 5, 7-12, 21, par exemple).  
   
- **Une fois**  
+ **Toutes**  
  Définit une planification qui s'exécute une seule fois. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification. La planification expire dès qu'elle a été traitée.  
   
  **Dates de début et de fin**  
@@ -172,7 +172,7 @@ ms.locfileid: "66109619"
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Spécifier les informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   

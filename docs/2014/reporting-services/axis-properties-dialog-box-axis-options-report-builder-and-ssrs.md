@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109959"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'axe, Options de l'axe (Générateur de rapports et SSRS)
   Sélectionnez **options** de l’axe dans la boîte de dialogue Propriétés **horizontales** ou **l’axe vertical** pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
- **Activer les séparations d’échelle**  
+ **Activer les séparateurs d'échelle**  
  Sélectionnez cette option pour permettre au graphique de dessiner un séparateur d'échelle lorsque cela est nécessaire. Lorsque cette option est activée, le graphique calculera automatiquement si la différence est suffisante entre les points hauts et bas du dataset pour dessiner un séparateur d'échelle.  
   
  **Inverser la direction**  
@@ -47,10 +47,10 @@ ms.locfileid: "66109959"
  **Minimale**  
  Tapez une expression ou une valeur pour la valeur minimale de l'axe des x. En l'absence d'indication, la valeur minimale est déterminée par les données retournées par le dataset.  
   
- **Valeurs**  
+ **Maximale**  
  Tapez une expression ou une valeur pour la valeur maximale de l'axe des x. En l'absence d'indication, la valeur maximale est déterminée par les données retournées par le dataset.  
   
- **Défini**  
+ **Intervalle**  
  Tapez une expression ou une valeur pour l'intervalle entre les étiquettes d'axe. Par exemple, tapez 1 pour afficher chaque étiquette de catégorie sur l'axe. Tapez 2 pour afficher toutes les autres étiquettes de catégorie. Si ce paramètre n'est pas spécifié, les étiquettes sont calculées automatiquement à partir des valeurs du dataset.  
   
  **Type d'intervalle**  
@@ -60,7 +60,7 @@ ms.locfileid: "66109959"
  Tapez une expression ou sélectionnez une valeur pour ajouter ou supprimer une marge entre les éléments de graphique et les côtés du graphique. Si cette option est définie sur **Auto**, des marges latérales sont ajoutées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des étiquettes d’axe sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   

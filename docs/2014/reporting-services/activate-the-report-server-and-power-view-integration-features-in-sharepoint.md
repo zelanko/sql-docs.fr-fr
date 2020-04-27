@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110028"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66110028"
   
  Dans cette rubrique :  
   
--   [Pour activer les fonctionnalités du serveur de rapports et de la collection de sites d’intégration Power View :](#bkmk_features)  
+-   [Pour activer les fonctionnalités d'intégration de collections de sites Report Server et Power View :](#bkmk_features)  
   
--   [Pour activer ou désactiver Reporting Services fonctionnalité de collection de sites d’administration centrale :](#bkmk_centraladmin)  
+-   [Pour activer ou désactiver la fonctionnalité de collection de sites dans l'Administration centrale de Reporting Services :](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>Pour activer les fonctionnalités du serveur de rapports et de la collection de sites d’intégration Power View :  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>Pour activer les fonctionnalités du serveur de rapports et de la collection de sites d’intégration Power View :  
   
 1.  Ouvrez votre navigateur sur le site où vous souhaitez activer les fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66110028"
   
  Pour désactiver les fonctionnalités, vous pouvez utiliser la même procédure en cliquant sur **Désactiver** au lieu d' **Activer**.  
   
-##  <a name="bkmk_centraladmin"></a>Pour activer ou désactiver Reporting Services fonctionnalité de collection de sites d’administration centrale :  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Pour activer ou désactiver Reporting Services fonctionnalité de collection de sites d’administration centrale :  
   
 1.  Ouvrez votre navigateur dans l'Administration centrale de SharePoint.  
   

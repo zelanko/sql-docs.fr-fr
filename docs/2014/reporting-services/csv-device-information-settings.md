@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109587"
 ---
 # <a name="csv-device-information-settings"></a>Paramètres d'informations de périphérique CSV
@@ -31,7 +31,7 @@ ms.locfileid: "66109587"
 |`ExcelMode`|Indique que la sortie cible est destinée à Excel. La valeur par défaut est `true`.|  
 |`FieldDelimiter`|Chaîne de séparateur à placer dans le résultat. La valeur par défaut est une virgule (,). Vous devez encoder la valeur de cette information de périphérique pour la transmettre à une URL. Par exemple, un caractère de tabulation utilisé en tant que séparateur doit être codé par « %09 ».<br /><br /> Vous pouvez changer de séparateur de champs par défaut et utiliser le caractère de votre choix, y compris TAB, en modifiant les paramètres d'informations de périphérique dans le fichier de configuration. Par exemple, pour utiliser TAB, remplacez le paramètre FieldDelimiter par \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> Dans l'exemple, [TAB] est une vraie tabulation, ce qui signifie que l'espace blanc apparaît dans le fichier de configuration. L'attribut « xml:space » indique aux analyseurs de conserver l'espace blanc.|  
 |`FileExtension`|Extension de fichier à placer dans le résultat. La valeur par défaut est `.CSV`. Si les paramètres `FileExtension` et `Extension` sont spécifiés, alors le paramètre `FileExtension` est prioritaire.|  
-|**Noen-tête**|Indique si la ligne d'en-tête est exclue de la sortie. La valeur par défaut est `false`.|  
+|**NoHeader**|Indique si la ligne d'en-tête est exclue de la sortie. La valeur par défaut est `false`.|  
 |`Qualifier`|Chaîne de qualificateur à placer dans les résultats qui contiennent le séparateur de champs ou le séparateur d'enregistrements. Si les résultats contiennent le qualificateur, celui-ci est répété. Le paramètre `Qualifier` doit être différent des paramètres `FieldDelimiter` et `RecordDelimiter`. La valeur par défaut est un guillemet (").|  
 |`RecordDelimiter`|Séparateur d'enregistrements à placer à la fin de chaque d'enregistrement. La valeur par défaut est \<cr>\<lf>.|  
 |**SuppressLineBreaks**|Indique si les sauts de ligne sont supprimés des données incluses dans la sortie. La valeur par défaut est `false`. Si la valeur est `true`, les paramètres `FieldDelimiter`, `RecordDelimiter` et `Qualifier` ne peuvent pas être un espace.|  
@@ -39,8 +39,8 @@ ms.locfileid: "66109587"
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Transmission de paramètres d'informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passage de paramètres d’informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personnaliser les paramètres d’extension de rendu dans RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

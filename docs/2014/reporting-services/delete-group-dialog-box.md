@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109316"
 ---
 # <a name="delete-group-dialog-box"></a>Boîte de dialogue Supprimer le groupe
@@ -34,7 +34,7 @@ ms.locfileid: "66109316"
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide (F1) Concepteur de rapports](tools/report-designer-f1-help.md)   
- [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [Comprendre les groupes &#40;Générateur de rapports et SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

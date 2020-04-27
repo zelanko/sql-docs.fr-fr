@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5dd4d113c92e0a2d094aa02d49010a5dd477c6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109460"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Informations d'identification (Générateur de rapports)
@@ -35,7 +35,7 @@ ms.locfileid: "66109460"
  **Mot de passe**  
  Tapez un mot de passe pour la connexion à la source de données.  
   
- **Demander les informations d’identification**  
+ **Demande d’informations d’identification**  
  Sélectionnez cette option pour demander des informations d'identification lors de l'exécution du rapport.  
   
  **Entrez une chaîne d'invite**  

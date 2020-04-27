@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109633"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Créer et gérer des sources de données partagées (Reporting Services en mode intégré SharePoint)
@@ -86,6 +86,6 @@ ms.locfileid: "66109633"
  Soyez vigilant lorsque vous supprimez un modèle de rapport. Si vous supprimez un modèle, vous ne pouvez plus ouvrir et modifier les rapports qui en dépendent dans le Générateur de rapports. Si vous supprimez par inadvertance un modèle utilisé par des rapports existants, vous devez générer de nouveau le modèle, recréer et enregistrer tous les rapports qui utilisent ce modèle, puis spécifier de nouveau la sécurité des éléments de modèle à utiliser. Vous ne pouvez pas simplement générer de nouveau le modèle, puis l'associer à un rapport existant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

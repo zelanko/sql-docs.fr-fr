@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110080"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés relatives aux actions (Générateur de rapports et SSRS)
@@ -81,21 +81,21 @@ ms.locfileid: "66110080"
  Tapez le texte qui correspond au nom d'un paramètre défini dans le rapport d'extraction.  
   
  **Valeur**  
- Tapez ou sélectionnez une valeur à transmettre pour le paramètre nommé dans le rapport d'extraction. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression.  
+ Tapez ou sélectionnez une valeur à transmettre pour le paramètre nommé dans le rapport d'extraction. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
  **Omettre**  
- Sélectionnez pour empêcher le paramètre de s'exécuter. Par défaut, cette case à cocher est désactivée et n'est pas active. Pour activer la case à cocher, cliquez sur le bouton **expression** (*FX*) et tapez **true** ou créez une expression. La case à cocher est activée lorsque vous cliquez sur **OK** dans la boîte de dialogue **expression** .  
+ Sélectionnez pour empêcher le paramètre de s'exécuter. Par défaut, cette case à cocher est désactivée et n'est pas active. Pour cocher la case, cliquez sur le bouton **Expression** (*fx*) et tapez **True** ou créez une expression. La case à cocher est activée lorsque vous cliquez sur **OK** dans la boîte de dialogue **expression** .  
   
  **Atteindre le signet**  
  Choisissez cette option pour définir un lien vers un signet dans le rapport actuel. L’option supplémentaire suivante s’affiche quand vous sélectionnez **Atteindre le signet**.  
   
  **Sélectionner un signet**  
- Tapez ou sélectionnez l'identificateur de signet du rapport à atteindre lorsque l'utilisateur clique sur le lien. Cliquez sur le bouton Expression (**FX**) pour modifier l’expression. L'identificateur du signet peut correspondre à un ID statique ou une expression ayant pour résultat un identificateur du signet. L'expression peut inclure un champ qui contient un identificateur de signet.  
+ Tapez ou sélectionnez l'identificateur de signet du rapport à atteindre lorsque l'utilisateur clique sur le lien. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression. L'identificateur du signet peut correspondre à un ID statique ou une expression ayant pour résultat un identificateur du signet. L'expression peut inclure un champ qui contient un identificateur de signet.  
   
  Pour définir un lien vers un signet, vous devez d'abord définir la propriété de signet d'un élément de rapport. Pour définir la propriété de signet, sélectionnez un élément de rapport et, dans le volet Propriétés, tapez une valeur ou expression pour l'identificateur du signet, par exemple, SalesChart ou 5TopSales.  
   
  **Atteindre l'URL**  
- Choisissez cette option pour définir un lien vers une page Web. Tapez ou sélectionnez l'URL d'une page Web, ou une expression qui prend la valeur de l'URL d'une page Web. Cliquez sur le bouton **expression** (*FX*) pour modifier l’expression. Cette expression peut inclure un champ qui contient une URL. L’option supplémentaire suivante s’affiche quand vous sélectionnez **Atteindre l’URL**.  
+ Choisissez cette option pour définir un lien vers une page Web. Tapez ou sélectionnez l'URL d'une page Web, ou une expression qui prend la valeur de l'URL d'une page Web. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression. Cette expression peut inclure un champ qui contient une URL. L’option supplémentaire suivante s’affiche quand vous sélectionnez **Atteindre l’URL**.  
   
  **Sélectionner une URL**  
  Tapez ou entrez l'URL de l'élément. Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, http://*\<ServerName>*/images/image1.jpg. Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète (par exemple, http://*\<SharePointservername>/\<site>*/documents/images/image1.jpg).  
@@ -103,8 +103,8 @@ ms.locfileid: "66110080"
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et de Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Ajoutez un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

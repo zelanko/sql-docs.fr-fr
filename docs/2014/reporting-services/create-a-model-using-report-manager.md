@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109671"
 ---
 # <a name="create-a-model-using-report-manager"></a>Créer un modèle à l'aide du Gestionnaire de rapports
@@ -82,6 +82,6 @@ ms.locfileid: "66109671"
 ## <a name="see-also"></a>Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Page nouvelle source de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [Page Nouvelle source de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

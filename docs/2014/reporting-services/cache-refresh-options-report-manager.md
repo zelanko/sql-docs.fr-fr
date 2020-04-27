@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109919"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Options d’actualisation du cache (Gestionnaire de rapports)
@@ -80,7 +80,7 @@ ms.locfileid: "66109919"
  **Utiliser la valeur par défaut**  
  Sélectionnez cette option afin d'utiliser la valeur par défaut prédéfinie pour ce paramètre.  
   
-##  <a name="Parameters"></a>Spécification des paramètres  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>Spécification des paramètres  
  Pour que vous puissiez créer un plan d'actualisation du cache, chaque paramètre de dataset partagé ou de rapport doit comporter une valeur. Si aucune valeur par défaut n'est spécifiée dans la définition de l'élément de rapport ou de dataset partagé, vous devez indiquer une valeur. S'il existe une valeur par défaut, il est inutile d'en fournir une ici. Si vous spécifiez une valeur, elle remplace la valeur par défaut.  
   
  Pour spécifier plusieurs combinaisons de valeurs de paramètre, vous devez créer un plan d'actualisation du cache distinct pour chaque combinaison.  
@@ -94,11 +94,11 @@ ms.locfileid: "66109919"
   
 -   **Type** Spécifie le type de données du paramètre de requête. Étant donné que ce type de données est inconnu tant que le fournisseur de données n'a pas traité la requête de dataset, la validation du type de données ne peut pas avoir lieu avant le traitement du dataset partagé.  
   
--   Valeur **null** Spécifie si NULL est une valeur valide.  
+-   **Nullable** Spécifie si NULL est une valeur valide.  
   
 -   **Lecture seule** Spécifie si ce paramètre est marqué en lecture seule dans la définition du dataset partagé. Les paramètres en lecture seule n'apparaissent pas dans la liste des paramètres des options d'actualisation du cache et doivent être dotés d'une valeur par défaut spécifiée dans la définition du dataset partagé.  
   
--   **DefaultValues** Valeurs par défaut qui ont été spécifiées dans la définition du dataset partagé. Les paramètres de requête peuvent être à valeurs multiples. Pour remplacer les valeurs par défaut, tapez de nouvelles valeurs dans les zones de message des champs de texte.  
+-   **Valeurs par défaut** Il s'agit des valeurs par défaut qui ont été spécifiées dans la définition du dataset partagé. Les paramètres de requête peuvent être à valeurs multiples. Pour remplacer les valeurs par défaut, tapez de nouvelles valeurs dans les zones de message des champs de texte.  
   
  Si la définition du dataset partagé spécifie l'option **Omettre de la requête** pour un paramètre, il est inutile de fournir une valeur par défaut. Cet indicateur signale que le paramètre de dataset n'est pas utilisé dans la requête. Par exemple, le paramètre apparaît dans la définition du dataset partagé, car il s'agit d'un paramètre de rapport employé uniquement dans le filtre de dataset.  
   

@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109716"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Connecter un composant WebPart de filtre ou de documents (Reporting Services en mode intégré SharePoint)
-  Si vous utilisez un produit SharePoint, vous pouvez créer un tableau de bord ou une page WebPart qui inclut un composant WebPart de filtre ou un composant WebPart de documents et un composant WebPart Visionneuse de rapports. Les versions prises en charge sont [!INCLUDE[SPF2010](../includes/spf2010-md.md)] et [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. 
-  [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] et [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 sont également pris en charge. En connectant un composant WebPart de filtre, les utilisateurs qui sélectionnent des valeurs de filtre dans un composant WebPart de filtre peuvent envoyer la valeur à un rapport paramétrable sur la même page. En connectant un composant WebPart de documents, les utilisateurs qui cliquent sur des rapports dans la bibliothèque de documents peuvent afficher les rapports dans un composant WebPart de visionneuse de rapports adjacent.  
+  Si vous utilisez un produit SharePoint, vous pouvez créer un tableau de bord ou une page WebPart qui inclut un composant WebPart de filtre ou un composant WebPart de documents et un composant WebPart Visionneuse de rapports. Les versions prises en charge sont [!INCLUDE[SPF2010](../includes/spf2010-md.md)] et [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] et [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 sont également pris en charge. En connectant un composant WebPart de filtre, les utilisateurs qui sélectionnent des valeurs de filtre dans un composant WebPart de filtre peuvent envoyer la valeur à un rapport paramétrable sur la même page. En connectant un composant WebPart de documents, les utilisateurs qui cliquent sur des rapports dans la bibliothèque de documents peuvent afficher les rapports dans un composant WebPart de visionneuse de rapports adjacent.  
   
  Le composant WebPart de filtre sert à envoyer des valeurs à un ou plusieurs paramètres d'un rapport. Pour utiliser un composant WebPart de filtre, le rapport doit disposer de paramètres concernant ce composant qui sont compatibles avec les valeurs, le type de données et le format envoyés par le composant WebPart.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66109716"
   
 8.  Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
   
-9. Dans la zone qui contient le composant WebPart, cliquez sur le menu **modifier** du composant WebPart, pointez sur **connexions**, sur **Envoyer les valeurs de filtre à**, puis sélectionnez **visionneuse** - de rapports*nom du rapport*.  
+9. Dans la zone qui contient le composant WebPart, cliquez sur le menu **modifier** du composant WebPart, pointez sur **Connexions**, sur **Envoyer les valeurs de filtre à**, puis sélectionnez **Visionneuse de rapports** - *nom de rapport*.  
   
 10. Vérifiez vos modifications et enregistrez la page.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66109716"
   
 3.  Cliquez sur **Ajouter un composant WebPart**.  
   
-4.  Dans **tous les composants WebPart**, dans la section **listes et bibliothèque** , sélectionnez **documents.**  
+4.  Dans **Tous les composants WebPart**, dans la section **Listes et bibliothèque** , sélectionnez **Documents**.  
   
 5.  Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
   
@@ -68,11 +67,11 @@ ms.locfileid: "66109716"
   
 7.  Dans une autre zone de la même page ou du même tableau de bord de composant WebPart, cliquez sur **Ajouter un composant WebPart**.  
   
-8.  Dans **tous les composants WebPart**, dans la catégorie **divers** , sélectionnez **SQL Server Reporting Services visionneuse de rapports.**  
+8.  Dans **Tous les composants WebPart**, dans la catégorie **Divers** , sélectionnez **Visionneuse de rapports SQL Server Reporting Services.**  
   
 9. Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
   
-10. Dans la zone qui contient le composant WebPart, cliquez sur le menu **modifier** du composant WebPart, pointez sur **connexions**, pointez sur **afficher les définitions de rapport à partir de**, puis sélectionnez **documents**.  
+10. Dans la zone qui contient le composant WebPart, cliquez sur le menu **modifier** du composant WebPart, pointez sur **Connexions**, sur **Source des définitions de rapport**, puis sélectionnez **Documents**.  
   
 11. Vérifiez vos modifications et enregistrez la page.  
   

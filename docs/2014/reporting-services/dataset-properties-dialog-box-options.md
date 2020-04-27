@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109408"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Boîte de dialogue Propriétés du dataset, Options
@@ -25,7 +25,7 @@ ms.locfileid: "66109408"
   
 ## <a name="options"></a>Options  
  **Classement**  
- Sélectionnez des paramètres régionaux qui déterminent la séquence de classement du tri des données. La valeur **par défaut** indique que le serveur de rapports doit tenter de dériver la valeur du fournisseur de données lors de l’exécution du rapport. Si cette valeur ne peut pas être dérivée, la valeur par défaut est dérivée à partir des paramètres régionaux en vigueur sur l'ordinateur.  
+ Sélectionnez des paramètres régionaux qui déterminent la séquence de classement du tri des données. **Par défaut** indique que le serveur de rapports doit tenter de dériver la valeur à partir du fournisseur de données, lors de l’exécution du rapport. Si cette valeur ne peut pas être dérivée, la valeur par défaut est dérivée à partir des paramètres régionaux en vigueur sur l'ordinateur.  
   
  **Respect de la casse**  
  Sélectionnez une valeur qui détermine le respect de la casse. Cette option indique si les données respectent la casse. Vous pouvez définir le **respect** de la casse sur **true**, **false**ou **auto**. La valeur par défaut, **auto**, indique que le serveur de rapports doit tenter de dériver la valeur du fournisseur de données lors de l’exécution du rapport. Si le fournisseur de données ne prend pas en charge le type de respect de la casse, le rapport s’exécute comme si la valeur était **False**. Si vous connaissez la valeur et savez qu’elle est prise en charge, choisissez **True**.  
@@ -33,7 +33,7 @@ ms.locfileid: "66109408"
  **Respect des accents**  
  Sélectionnez une valeur qui détermine le respect des accents. **Respect des accents** indique si les données respectent les accents et peut avoir la valeur **true**, **false**ou **auto**. La valeur par défaut, **auto**, indique que le serveur de rapports doit tenter de dériver la valeur du fournisseur de données lors de l’exécution du rapport. Si le fournisseur de données ne prend pas en charge le type de respect des accents, le rapport s’exécute comme si la valeur était **False**. Si vous connaissez la valeur et savez qu’elle est prise en charge, choisissez **True**.  
   
- **Sensibilité de non**  
+ **Respect du jeu de caractères kana**  
  Sélectionnez une valeur qui détermine le respect du jeu de caractères kana. Cette option indique si les données sont sensibles à la non ; elle peut avoir la valeur **true**, **false**ou **auto**. La valeur par défaut, **auto**, indique que le serveur de rapports doit tenter de dériver la valeur du fournisseur de données lors de l’exécution du rapport. Si le fournisseur de données ne prend pas en charge le type de respect du jeu de caractères kana, le rapport s’exécute comme si la valeur était **False**. Si vous connaissez la valeur et savez qu’elle est prise en charge, choisissez **True**.  
   
  **Respect de la largeur**  
@@ -45,7 +45,7 @@ ms.locfileid: "66109408"
 ## <a name="see-also"></a>Voir aussi  
  [Définissez les paramètres régionaux d’un rapport ou d’une zone de texte &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Nom de classement Windows &#40;&#41;Transact-SQL](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [Nom de classement Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
  [Nom du classement SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
  [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   

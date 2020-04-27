@@ -15,19 +15,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109680"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Créer un rapport de tableau de base (didacticiel SSRS)
-  Ce didacticiel est conçu pour vous aider à créer un rapport de table de base à l’aide du Concepteur de rapports, à partir de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Pour créer des rapports, vous pouvez également utiliser le Générateur de rapports et l'Assistant Rapport. Dans ce didacticiel, vous allez créer un projet de rapport, configurer des informations de connexion, définir une requête, ajouter une région de données de table, regrouper certains champs et calculer leurs totaux et afficher un aperçu du rapport.  
+  Ce didacticiel est conçu pour vous aider à créer un rapport de table de base à l’aide du Concepteur de rapports, à partir de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Pour créer des rapports, vous pouvez également utiliser le Générateur de rapports et l'Assistant Rapport. Dans ce didacticiel, vous allez créer un projet de rapport, configurer des informations de connexion, définir une requête, ajouter une région de données de table, regrouper certains champs et calculer leurs totaux et afficher un aperçu du rapport.  
   
 > [!NOTE]  
 >  Pour suivre ce didacticiel, vous devez exécuter [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif. Si vous exécutez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode intégré SharePoint, les étapes faisant appel aux URL de serveur de rapports ne fonctionnent pas. Pour plus d’informations [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur les modes, consultez [Reporting Services serveur de rapports](reporting-services-report-server.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Les éléments suivants doivent cependant être installés sur votre système :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] moteur de base de données.  
@@ -57,7 +57,7 @@ ms.locfileid: "66109680"
  [Leçon 6 : Ajout d’un regroupement et de totaux &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Lorsque vous examinez des didacticiels, nous vous recommandons d’ajouter les boutons **suivant** et **précédent** dans la barre d’outils de la visionneuse de documents. Pour plus d’informations, consultez.  
+>  Lorsque vous examinez des didacticiels, nous vous recommandons d’ajouter les boutons **suivant** et **précédent** dans la barre d’outils de la visionneuse de documents. Pour plus d'informations, consultez  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

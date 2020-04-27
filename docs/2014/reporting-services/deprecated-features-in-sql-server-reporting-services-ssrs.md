@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109353"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Fonctions déconseillées dans SQL Server Reporting Services dans SQL Server 2014
@@ -27,18 +27,18 @@ ms.locfileid: "66109353"
   
  Dans cette rubrique :  
   
--   [SQL Server 2014 Reporting Services fonctionnalités déconseillées](#bkmk_2014)  
+-   [Fonctions dépréciées dans SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Fonctions déconseillées dans SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services fonctionnalités déconseillées](#bkmk_2012)  
+-   [Fonctions déconseillées dans SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Fonctions déconseillées dans SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services fonctionnalités déconseillées  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services fonctionnalités déconseillées  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Fonctionnalités non prises en charge dans la prochaine version de SQL Server  
- Les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suivantes ne seront pas prises en charge dans la **prochaine** version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
+ Les fonctionnalités suivantes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne seront pas prises en charge dans la **prochaine** version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Paramètres d'informations de périphérique d'extension de rendu HTML  
  Les paramètres d'informations de périphérique suivants pour l'extension de rendu HTML sont déconseillés.  
@@ -99,7 +99,7 @@ ms.locfileid: "66109353"
   
  Aucune fonctionnalité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a été déconseillée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services fonctionnalités déconseillées  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services fonctionnalités déconseillées  
  Cette section décrit les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] déconseillées dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Les fonctions suivantes du [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a pas été déterminée.  
   
 ### <a name="sharepoint-web-parts"></a>Composants WebPart de SharePoint  
@@ -107,7 +107,7 @@ ms.locfileid: "66109353"
   
  Pour plus d'informations sur les composants WebPart déconseillés, consultez [Afficher et explorer des rapports en mode natif à l'aide de composants WebPart SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx).  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services fonctionnalités déconseillées  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services fonctionnalités déconseillées  
  Cette section décrit les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] déconseillées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Paramètres d'informations de périphérique d'extension de rendu HTML  
@@ -159,7 +159,7 @@ ms.locfileid: "66109353"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services fonctionnalités déconseillées  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services fonctionnalités déconseillées  
   
 > [!NOTE]  
 >  SQL Server 2008 R2 étant une mise à niveau de version secondaire de SQL Server 2008, nous vous recommandons d'examiner également le contenu de la section SQL Server 2008.  

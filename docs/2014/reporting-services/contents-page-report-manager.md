@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109724"
 ---
 # <a name="contents-page-report-manager"></a>Page Contenu (Gestionnaire de rapports)
@@ -35,7 +35,7 @@ ms.locfileid: "66109724"
  **Paramètres du dossier**  
  Cliquez pour ouvrir et gérer les propriétés du dossier actif.  
   
- **Télécharger un fichier**  
+ **Charger un fichier**  
  Cliquez pour ouvrir la page Télécharger un fichier, qui permet de copier un fichier du système de fichiers sur un serveur de rapports. Vous pouvez télécharger des fichiers pour ajouter des rapports et des ressources (telles que des graphiques, des documents ou tout autre type de contenu secondaire que vous souhaitez conserver avec un rapport). Les fichiers téléchargés sont stockés dans une base de données du serveur de rapports qui les gère. Pour télécharger un rapport, sélectionnez un fichier doté de l'extension .rdl.  
   
  **Mode Détails**  

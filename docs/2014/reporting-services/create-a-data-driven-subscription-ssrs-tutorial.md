@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109690"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des abonnements pilotés par les données qui permettent de personnaliser la distribution d'un rapport basé sur des données d'abonnés dynamiques. Les abonnements pilotés par les données s'utilisent dans les types de scénarios suivants :  
   
 -   Distribution de rapports à un large ensemble de destinataires dont les membres peuvent changer d'une distribution à l'autre. Par exemple, distribution d'un rapport mensuel à l'ensemble des clients actuels.  
@@ -34,16 +33,16 @@ ms.locfileid: "66109690"
   
  Ce didacticiel est divisé en trois leçons :  
   
- [Leçon 1 : Création d'un exemple de base de données de l'abonné](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Leçon 1 : Création d’un exemple de base de données d’abonnés](lesson-1-creating-a-sample-subscriber-database.md)  
  Au cours de cette leçon, vous allez apprendre à créer une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale qui contient des informations sur les abonnés.  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Leçon 2 : Modification des propriétés d’une source de données de rapport](lesson-2-modifying-the-report-data-source-properties.md)  
  Dans cette leçon, vous allez apprendre à modifier les propriétés d'une source de données afin que le rapport puisse s'exécuter sans assistance. Les informations d'identification stockées sont nécessaires pour le traitement autonome. Vous allez également modifier le dataset du rapport afin d'inclure un paramètre fourni par les données d'abonné.  
   
- [Leçon 3 : Définition d'un abonnement piloté par les données](lesson-3-defining-a-data-driven-subscription.md)  
+ [Leçon 3 : Définition d’un abonnement piloté par les données](lesson-3-defining-a-data-driven-subscription.md)  
  Dans cette leçon, vous allez apprendre à définir un abonnement piloté par les données. Cette leçon vous guide à travers chaque page de l'Assistant Abonnement piloté par les données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Les abonnements pilotés par les données sont généralement créés par un administrateur de serveur de rapports, qui en assure également la mise à jour. Pour créer des abonnements pilotés par les données, il est nécessaire de savoir créer des requêtes, de connaître les sources de données qui contiennent les données d'abonnés et de disposer d'autorisations élevées sur le serveur de rapports.  
   
  Le didacticiel utilise le rapport créé dans le didacticiel [créer un rapport de tableau de base &#40;didacticiel SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md) et les données de[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109418"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Page des propriétés des sources de données (Gestionnaire de rapports)
@@ -90,12 +90,12 @@ ms.locfileid: "66109418"
   
  Pour utiliser cette option, vous devez avoir configuré précédemment le compte d'exécution sans assistance pour le déploiement du serveur de rapports. Le compte d'exécution sans assistance est utilisé pour se connecter aux sources de données externes lorsque les autres sources d'informations d'identification ne sont pas disponibles. Si vous spécifiez cette option et que le compte n'est pas configuré, la connexion à la source de données de rapports échouera et le traitement de rapports ne se produira pas.  Pour plus d’informations sur ce compte, consultez [configurer le compte d’exécution sans assistance &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- **Appliquer**  
+ **appliquer**  
  Cliquez pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
- [Spécifier les informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Gérer les sources de données de rapport](report-data/manage-report-data-sources.md)   
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Aide F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   
