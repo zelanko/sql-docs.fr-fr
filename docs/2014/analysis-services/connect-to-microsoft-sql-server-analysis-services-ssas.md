@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087024"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connexion à Microsoft SQL Server Analysis Services (SSAS)
@@ -61,12 +61,12 @@ ms.locfileid: "66087024"
  Spécifiez un mot de passe pour la connexion de base de données. Cette option peut être modifiée uniquement si vous avez choisi de vous connecter via l'authentification SQL Server.  
   
  **Enregistrer mon mot de passe**  
- Spécifiez si le mot de passe que vous avez entré dans la zone **Mot de passe** est stocké. Cette option est disponible uniquement si vous avez choisi de vous connecter via l'authentification SQL Server.  
+ Précisez si le mot de passe que vous avez entré dans la zone **Mot de passe** est mémorisé. Cette option est disponible uniquement si vous avez choisi de vous connecter via l'authentification SQL Server.  
   
  **Nom de la base de données**  
  Sélectionnez une base de données dans la liste.  
   
- **Avancée**  
+ **Avancé**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **Définir les propriétés avancées** . Pour plus d’informations, consultez [Définir les propriétés avancées &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Tester la connexion**  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085789"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice de classification (Analysis Services - Exploration de données)
@@ -78,12 +78,12 @@ ms.locfileid: "66085789"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de précision avec les graphiques de courbes d’élévation &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services d’exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services d’exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[Validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Décrit les utilisations de la validation croisée pour les modèles et les structures d'exploration de données.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088982"
 ---
 # <a name="query-options-results-text-page"></a>Options de requête — Résultats de requête (page Texte)
@@ -25,25 +25,25 @@ ms.locfileid: "66088982"
  **Format de sortie**  
  Par défaut, la sortie est affichée sous la forme de colonnes créées par le remplissage des résultats à l'aide d'espaces. Il est également possible de séparer les colonnes à l'aide de virgules, de tabulations ou d'espaces. Activez la case à cocher **Séparateur personnalisé** pour définir un autre **caractère de délimitation** dans la zone de même nom.  
   
- **Délimiteur personnalisé**  
+ **Séparateur personnalisé**  
  Indiquez le caractère à utiliser pour séparer les colonnes. Cette option n'est disponible que lorsque la case à cocher **Séparateur personnalisé** est activée dans la zone **Format de sortie** .  
   
- **Inclure les en-têtes de colonnes dans le jeu de résultats**  
+ **Inclure des en-têtes de colonne dans l'ensemble de résultats**  
  Désactivez cette case à cocher si vous ne voulez pas que chaque colonne soit étiquetée au moyen d'un titre de colonne.  
   
- **Défilement au fur et à mesure de la réception des résultats**  
+ **Défilement pendant réception des résultats**  
  Activez cette case à cocher pour cibler l'affichage sur les derniers enregistrements retournés au bas de la fenêtre. Désactivez-la pour cibler l'affichage sur les premières lignes retournées.  
   
  **Aligner les valeurs numériques à droite**  
  Activez cette case à cocher pour aligner les valeurs numériques à droite de la colonne. Cela peut faciliter l'analyse de nombres comportant un nombre de décimales invariable.  
   
- **Ignorer le résultat après l’exécution de la requête**  
+ **Ignorer les résultats après l'exécution de la requête**  
  Libère de la mémoire en ignorant les résultats de la requête une fois ceux-ci affichés à l'écran.  
   
  **Afficher les résultats dans un onglet séparé**  
  Activez cette case à cocher pour afficher l'ensemble de résultats dans une nouvelle fenêtre de document, et non au bas de la fenêtre de document de la requête.  
   
- **Basculer vers l’onglet résultats après l’exécution de la requête**  
+ **Basculer vers l'onglet des résultats après l'exécution de la requête**  
  Cliquez sur cette option pour que l'affichage soit automatiquement ciblé sur l'ensemble de résultats.  
   
  **Nombre maximal de caractères affichés dans chaque colonne**  

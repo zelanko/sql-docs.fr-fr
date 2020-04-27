@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086600"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Boîte de dialogue de propriétés du cube ou du modèle (SSAS)
@@ -35,7 +35,7 @@ ms.locfileid: "66086600"
 |Terme|Définition|  
 |----------|----------------|  
 |**Nom**|Affiche le nom du cube ou du modèle.|  
-|**IDENTIFI**|Affiche le nom de l'identificateur du cube ou du modèle.|  
+|**Identifiant**|Affiche le nom de l'identificateur du cube ou du modèle.|  
 |**Description**|Affiche la description du cube ou du modèle.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création du cube ou du modèle.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées du cube ou du modèle.|  

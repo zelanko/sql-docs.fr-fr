@@ -17,25 +17,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088492"
 ---
 # <a name="browsing-a-forecasting-model"></a>Exploration d'un modèle de prévision
   Lorsque vous ouvrez un modèle de prévision à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive, similaire à la visionneuse de modèle de série chronologique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les tendances, de comparer les séries, de créer des prédictions et d'obtenir des informations sur le modèle et les données sous-jacentes.  
   
-##  <a name="bkmk_Top"></a>Explorer le modèle  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorer le modèle  
  La visionneuse de **recherche** pour les modèles de prévision fournit une vue graphique, qui montre les tendances au fil du temps et vous permet de créer des prédictions, ainsi qu’une vue de modèle, qui représente la série chronologique sous la forme d’un arbre de décision ou d’un arbre de régression.  
   
--   [Vue graphique](#bkmk_charts)  
+-   [Vue de graphique](#bkmk_charts)  
   
 -   [Vue du modèle](#bkmk_Model)  
   
  Pour expérimenter un modèle de prévision, vous pouvez utiliser les exemples de données de l’onglet Prévision du classeur d’exemples de données, puis générer un modèle de série chronologique à l’aide de l' [Assistant prévision &#40;les compléments d’exploration de données pour excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) dans le ruban **exploration de données** , ou [prévoir &#40;outils d’analyse de table pour Excel&#41;](forecast-table-analysis-tools-for-excel.md) dans le ruban **analyser** .  
   
-###  <a name="bkmk_charts"></a>Nuages  
+###  <a name="chart"></a><a name="bkmk_charts"></a>Nuages  
  L’onglet **graphique** affiche la tendance dans vos séries de données au fil du temps, ainsi que les valeurs prédites. L'axe vertical du graphique représente les valeurs de la série et l'axe horizontal le temps.  
   
 ##### <a name="explore-the-forecasting-chart"></a>Explorer le graphique de prévision  
@@ -66,7 +66,7 @@ ms.locfileid: "66088492"
   
      Les barres d'erreur vous permettent d'évaluer visuellement la variabilité des prédictions. La qualité des prédictions varie en fonction de vos données sources, mais en augmentant le nombre d'étapes de prédiction, vous devez constater une augmentation stable des déviations.  
   
- **Conseil**  
+ **Conseils**  
   
 -   Pour activer/désactiver l’affichage de la **légende d’exploration de données**, cliquez avec le bouton droit sur n’importe quel point du graphique.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66088492"
   
  [Explorer le modèle](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>Modélisation  
+###  <a name="model"></a><a name="bkmk_Model"></a>Modélisation  
  Un modèle de prévision peut également être représenté sous la forme d'un arbre de décision, ou bien, si la série est principalement linéaire, sous la forme d'un modèle de régression.  
   
  Par exemple, dans ce modèle il y a une différence dans la formule de régression en fonction d'une certaine condition, par conséquent, l'arbre se ramifie en trois branches, chacune avec une formule de régression différente.  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088868"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
@@ -31,7 +31,7 @@ ms.locfileid: "66088868"
   
      Permet de comptabiliser tous les événements qui surviennent au cours d'une session Événements étendus. Permet d'obtenir des informations sur les caractéristiques de charge de travail sans ajouter la surcharge de la collecte d'événements complète. Il s'agit d'une cible synchrone.  
   
--   [Fichier d’événements](../../2014/database-engine/event-file-target.md)  
+-   [Fichier d'événements](../../2014/database-engine/event-file-target.md)  
   
      Permet d'enregistrer sur le disque les résultats d'une session d'événements stockés en mémoire tampon. Il s'agit d'une cible asynchrone.  
   

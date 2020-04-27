@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089999"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modifier un modèle de trace (SQL Server Profiler)
@@ -42,9 +42,9 @@ ms.locfileid: "66089999"
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifiez les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [Dériver un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
- [Dériver un modèle à partir d’un fichier de trace ou d’une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Dérivez un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
+ [Dérivez un modèle à partir d’un fichier de trace ou d’une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

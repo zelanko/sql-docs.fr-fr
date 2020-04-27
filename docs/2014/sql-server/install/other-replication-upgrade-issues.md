@@ -18,18 +18,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093634"
 ---
 # <a name="other-replication-upgrade-issues"></a>Autres problèmes de mise à niveau de la réplication
   Cette rubrique traite de plusieurs problèmes de mise à niveau qui ne sont pas signalés par le Conseiller de mise à niveau.  
   
 ## <a name="versions-supported"></a>Versions prises en charge  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas nécessaire d'arrêter l'activité sur les autres nœuds pendant qu'un nœud est mis à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas nécessaire d'arrêter l'activité sur les autres nœuds pendant qu'un nœud est mis à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie.  
   
  Lorsque vous effectuez une réplication entre ou entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]différentes versions de, vous êtes généralement limité aux fonctionnalités de la version la plus ancienne qui est utilisée.  
   

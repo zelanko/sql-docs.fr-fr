@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083150"
 ---
 # <a name="processing-data-mining-objects"></a>Traitement des objets d'exploration de données
-  Un objet d'exploration de données n'est rien de plus qu'un conteneur vide tant qu'il n'est pas traité. Le *traitement* d’un modèle d’exploration de données est également appelé *apprentissage*.  
+  Un objet d'exploration de données n'est rien de plus qu'un conteneur vide tant qu'il n'est pas traité. Le*traitement* d’un modèle d’exploration de données est également appelé *apprentissage*.  
   
- **Traitement des structures d’exploration de données :** Une structure d’exploration de données obtient des données d’une source de données externe, comme défini par les liaisons de colonne et les métadonnées d’utilisation, puis lit les données. Ces données sont lues entièrement, puis analysées pour extraire différentes statistiques. Analysis Services contient une représentation compacte des données, appropriée pour l'analyse par les algorithmes d'exploration de données, dans un cache local. Vous pouvez conserver ce cache ou le supprimer lorsque les modèles ont été traités. Par défaut, le cache est stocké. Pour plus d’informations, consultez [Traiter une structure d’exploration de données](process-a-mining-structure.md).  
+ **Traitement des structures d’exploration de données :** une structure d’exploration de données reçoit les données d’une source de données externe, comme défini par les liaisons de colonne et les métadonnées d’utilisation, puis elle les lit. Ces données sont lues entièrement, puis analysées pour extraire différentes statistiques. Analysis Services contient une représentation compacte des données, appropriée pour l'analyse par les algorithmes d'exploration de données, dans un cache local. Vous pouvez conserver ce cache ou le supprimer lorsque les modèles ont été traités. Par défaut, le cache est stocké. Pour plus d’informations, consultez [Traiter une structure d’exploration de données](process-a-mining-structure.md).  
   
- **Traitement des modèles d’exploration de données :** Un modèle d’exploration de données est vide, contenant uniquement les définitions, jusqu’à ce qu’il soit traité. Pour traiter un modèle d'exploration de données, la structure d'exploration de données doit avoir fait l'objet d'un traitement. Le modèle d'exploration de données reçoit les données du cache de la structure d'exploration de données, il applique tous les filtres qui ont pu être créés sur le modèle, puis transmet le jeu de données via l'algorithme pour détecter des motifs. Une fois le modèle traité, il stocke uniquement les résultats du traitement, et non les données. Pour plus d’informations, consultez [Traiter un modèle d’exploration de données](process-a-mining-model.md).  
+ **Traitement des modèles d’exploration de données :** un modèle d’exploration de données est vide (contenant uniquement des définitions) jusqu’à ce qu’il soit traité. Pour traiter un modèle d'exploration de données, la structure d'exploration de données doit avoir fait l'objet d'un traitement. Le modèle d'exploration de données reçoit les données du cache de la structure d'exploration de données, il applique tous les filtres qui ont pu être créés sur le modèle, puis transmet le jeu de données via l'algorithme pour détecter des motifs. Une fois le modèle traité, il stocke uniquement les résultats du traitement, et non les données. Pour plus d’informations, consultez [Traiter un modèle d’exploration de données](process-a-mining-model.md).  
   
  Le diagramme suivant illustre le flux de données lors du traitement d'une structure d'exploration de données et d'un modèle d'exploration de données.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66083150"
  [Requêtes d’extraction &#40;l’exploration de données&#41;](drillthrough-queries-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
  [Modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Architecture logique &#40;Analysis Services d’exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Architecture logique &#40;Analysis Services - Exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

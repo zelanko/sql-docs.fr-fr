@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086816"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Créer une structure d'exploration de données (Compléments d'exploration de données SQL Server)
@@ -89,12 +89,12 @@ ms.locfileid: "66086816"
 |**Fractionner les données en jeux d'apprentissage et jeux de test**|La valeur recommandée pour l’apprentissage et les jeux de test est de 70% pour la formation et de 30% pour les tests. Toutefois, si vous avez beaucoup de données, vous pouvez spécifier un nombre maximal de lignes à tester.|  
 |Boîte de dialogue Terminer|Les options d'extraction sont disponibles sur certains types de modèle et sont très utiles si vous avez inclus les colonnes de détail dans la structure d'exploration de données. Par exemple, si vous créez un modèle de clustering, vous pouvez inclure des informations telles que le nom ou l'adresse de messagerie pour l'extraction mais pas pour l'analyse, afin de simplifier le contact avec les clients dans un cluster particulier.|  
   
-###  <a name="Bkmk_strctcolumn"></a>Définition de l’utilisation des colonnes dans l’Assistant Création d’une structure d’exploration de données  
+###  <a name="setting-column-usage-in-the-create-mining-structure-wizard"></a><a name="Bkmk_strctcolumn"></a>Définition de l’utilisation des colonnes dans l’Assistant Création d’une structure d’exploration de données  
  Lorsque vous créez une nouvelle structure d'exploration de données, vous pouvez spécifier les colonnes de la source de données à y inclure, ainsi que le mode d'utilisation de ces colonnes. N'oubliez pas qu'une structure d'exploration de données peut prendre en charge plusieurs modèles d'exploration de données.  
   
 |Valeurs|Description|  
 |------------|-----------------|  
-|**Inclusion**|Spécifie que la colonne contient des données qui peuvent être utilisées pour l'analyse ou la prédiction.|  
+|**Inclure**|Spécifie que la colonne contient des données qui peuvent être utilisées pour l'analyse ou la prédiction.|  
 |**Clé**|Spécifie que la colonne contient un ID de transaction, un ID de série ou une autre clé nécessaire au traitement.<br /><br /> Tous les algorithmes nécessitent une colonne Clé. Certains algorithmes n'autorisent toutefois qu'une seule clé, tandis que d'autres en autorisent plusieurs.<br /><br /> Si la colonne contient une clé mais n’est pas requise pour le traitement, sélectionnez **ne pas utiliser**.|  
 |**Temps clé**|Spécifie que la colonne contient une date ou une autre valeur numérique qui peut être utilisée pour identifier de façon unique les éléments d'une série chronologique.|  
 |**Ne pas utiliser**|Spécifie que la colonne doit être ignorée. Les données de la colonne ne seront pas traitées.|  
@@ -111,7 +111,7 @@ ms.locfileid: "66086816"
   
 -   Tous les algorithmes nécessitent une colonne **clé** . Les valeurs de la colonne Clé doivent être uniques. Une colonne **Key Time** n’est requise que pour les modèles de prévision ou de série chronologique. .  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour créer une structure d'exploration de données, vous devez disposer d'une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion est requise même si vous utilisez des structures temporaires. Pour plus d’informations sur la création ou la modification d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  

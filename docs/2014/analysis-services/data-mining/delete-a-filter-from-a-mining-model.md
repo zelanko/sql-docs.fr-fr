@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084732"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Supprimer un filtre d'un modèle d'exploration de données
@@ -38,7 +38,7 @@ ms.locfileid: "66084732"
   
 4.  Dans la boîte de dialogue **Filtre de modèle** , cliquez avec le bouton droit sur la ligne dans la grille qui contient la condition que vous souhaitez supprimer.  
   
-5.  Sélectionnez **supprimer**.  
+5.  Sélectionnez **Supprimer**.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>Pour effacer le filtre sur un modèle d'exploration de données dans la boîte de dialogue Éditeur de filtre  
   
@@ -61,6 +61,6 @@ ms.locfileid: "66084732"
 ## <a name="see-also"></a>Voir aussi  
  [Extraction des données de cas à partir d’un modèle d’exploration de données](drill-through-to-case-data-from-a-mining-model.md)   
  [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
   

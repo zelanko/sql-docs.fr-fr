@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088174"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Onglet Graphique (Visionneuses de modèle d'exploration de données)
   Utilisez le volet **Graphique** pour afficher les données d’historique utilisées dans l’apprentissage d’un modèle de série chronologique, avec les valeurs prédites. L'axe vertical du graphique représente la valeur de la série et l'axe horizontal le temps. Les prévisions sont représentées par une ligne en pointillé.  
   
- **Pour plus d’informations :** [algorithme MTS (Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)), [Parcourir un modèle à l’aide de la visionneuse MTS (Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md) )  
+ **Pour plus d’informations :** [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données, parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  

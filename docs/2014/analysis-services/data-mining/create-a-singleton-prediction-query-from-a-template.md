@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085489"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Créer une requête singleton de prédiction à partir d'un modèle
@@ -65,7 +65,7 @@ AS [t]
   
      Si vous tapez *, la colonne prédictible est retournée, ainsi que toutes les colonnes auxquelles vous fournissez de nouvelles valeurs à l'étape 6.  
   
-     Dans l’exemple de code présenté au début de cette rubrique, la ligne **liste de sélection** a la valeur *.  
+     Pour l’exemple de code présenté au début de cette rubrique, la ligne de **liste de sélection** a la valeur *.  
   
 5.  Dans la ligne **modèle d'exploration de données** , tapez le nom du modèle d'exploration de données extrait de la liste des modèles d'exploration de données qui apparaissent dans l' **Explorateur d'objets**.  
   
@@ -77,7 +77,7 @@ AS [t]
   
 7.  Dans la ligne **colonne** , tapez le nom de la colonne du modèle d'exploration de données à laquelle les nouvelles données doivent être mappées.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, la **** ligne de `Number Children at Home`la colonne a la valeur.  
+     Pour l’exemple de code présenté au début de cette rubrique, la **column** ligne de `Number Children at Home`la colonne a la valeur.  
   
     > [!NOTE]  
     >  Lorsque vous utilisez la boîte de dialogue **Spécifier les valeurs des paramètres du modèle** , vous n'avez pas besoin de mettre le nom de colonne entre crochets. Les crochets seront ajoutés automatiquement.  
@@ -93,6 +93,6 @@ AS [t]
 11. Cliquez sur **Exécuter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Création de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

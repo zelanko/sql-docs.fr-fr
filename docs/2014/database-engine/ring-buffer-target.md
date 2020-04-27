@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088956"
 ---
 # <a name="ring-buffer-target"></a>Cible de mémoire tampon en anneau
@@ -33,7 +33,7 @@ ms.locfileid: "66088956"
 |------------|--------------------|-----------------|  
 |max_memory|Tout entier 32 bits. Cette valeur est facultative.|Quantité de mémoire maximale, en kilo-octet (Ko), à utiliser. Des événements existants sont supprimés en fonction de la limite qui est atteinte en premier : max_event_limit ou max_memory. La valeur maximale est de 4194303 Ko. Avant de définir la taille de la mémoire tampon en anneau sur les limites de la plage Go, il convient de tenir compte de la taille de la mémoire tampon en mémoire, car cela peut avoir un impact sur les autres SQL Server consommateurs|  
 |max_event_limit|Tout entier 32 bits. Cette valeur est facultative.|Nombre maximal d'événements conservés dans le tampon ring_buffer. Des événements existants sont supprimés en fonction de la limite qui est atteinte en premier : max_event_limit ou max_memory. Par défaut = 1000.|  
-|occurrence_number|L’une des valeurs suivantes :<br /><br /> 0 (par défaut) = l'événement le plus ancien est supprimé lorsque toute la mémoire allouée à la cible est utilisée.<br /><br /> Tout entier 32 bits = le nombre d’événements de chaque type à conserver avant d’être éliminés par événement FIFO.<br /><br /> <br /><br /> Cette valeur est facultative.|Le mode FIFO à utiliser et, s'il est supérieur à 0, le nombre d'événements préférés de chaque type à conserver dans la mémoire tampon.|
+|occurrence_number|Une des valeurs suivantes :<br /><br /> 0 (par défaut) = l'événement le plus ancien est supprimé lorsque toute la mémoire allouée à la cible est utilisée.<br /><br /> Tout entier 32 bits = le nombre d’événements de chaque type à conserver avant d’être éliminés par événement FIFO.<br /><br /> <br /><br /> Cette valeur est facultative.|Le mode FIFO à utiliser et, s'il est supérieur à 0, le nombre d'événements préférés de chaque type à conserver dans la mémoire tampon.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  

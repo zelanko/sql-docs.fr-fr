@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087527"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Fin de l'Assistant (Assistant Partition)
@@ -41,6 +41,6 @@ ms.locfileid: "66087527"
  Déploie et traite la partition dans l'instance [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] définie dans la page **Emplacements pour le traitement et le stockage**. L'Assistant déploie et traite la partition après que vous ayez cliqué sur **Terminer** dans cette page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

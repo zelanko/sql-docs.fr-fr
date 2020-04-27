@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083836"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
@@ -101,7 +101,7 @@ ms.locfileid: "66083836"
  MAXIMUM_STATES  
  Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’États pour un attribut non-séquence est supérieur au nombre maximal d’États, l’algorithme utilise les États les plus populaires de l’attribut et traite les autres `Missing`États comme.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  Les indicateurs de modélisation suivants sont pris en charge pour une utilisation avec l'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering.  
@@ -118,7 +118,7 @@ ms.locfileid: "66083836"
   
  Pour plus d’informations sur l’utilisation de valeurs manquantes dans les modèles d’exploration de données et pour savoir comment les valeurs manquantes affectent les scores de probabilité, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  La table de cas doit avoir une colonne d'ID de cas. La table de cas peut éventuellement contenir d'autres colonnes qui stockent des attributs  propos du cas.  
   
  L'algorithme MSC (Microsoft Sequence Clustering) requiert des informations de séquence, stockées en tant que table imbriquée. La table imbriquée doit avoir une seule colonne Key Sequence. Une colonne `Key Sequence` peut contenir tout type de données pouvant être triées, y compris les types de données de chaîne, mais la colonne doit contenir des valeurs uniques pour chaque cas. De plus, avant de traiter le modèle, vous devez vérifier que la table de cas et la table imbriquée sont toutes les deux triées par ordre croissant sur la clé qui associe les tables.  
@@ -145,6 +145,6 @@ ms.locfileid: "66083836"
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
  [Exemples de requêtes de modèle Sequence Clustering](clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

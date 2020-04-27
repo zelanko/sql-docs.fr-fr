@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084737"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistant Exploration de données (Analysis Services - Exploration de données)
@@ -40,7 +40,7 @@ ms.locfileid: "66084737"
   
 -   Devez-vous être en mesure de tester vos modèles sur un ensemble de données unifiées ? Si tel est le cas, envisagez d'utiliser l'option pour définir des données à réserver pour le test. Vous pouvez choisir un pourcentage, et imposer un nombre spécifié de lignes, si vous le souhaitez.  
   
-##  <a name="BKMK_Using_DM_Wizard"></a>Démarrage de l’Assistant Exploration de données  
+##  <a name="starting-the-data-mining-wizard"></a><a name="BKMK_Using_DM_Wizard"></a> Démarrage de l'Assistant Exploration de données  
  Pour utiliser l’Assistant Exploration de données, vous devez avoir ouvert une solution dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] qui contient au moins un exploration de données ou un projet OLAP.  
   
 -   Si votre solution est prête pour l’exploration de données, vous pouvez simplement cliquer avec le bouton droit sur le nœud **Structures d’exploration de données** dans l’Explorateur du solutions, puis sélectionner **Nouvelle structure d’exploration de données** pour démarrer l’Assistant.  
@@ -51,7 +51,7 @@ ms.locfileid: "66084737"
   
  Vous allez ensuite créer la structure d'exploration de données et un modèle d'exploration de données associé. Vous pouvez également créer uniquement la structure d'exploration de données et ajouter des modèles ultérieurement, mais le plus simple est généralement de créer un modèle de test en premier.  
   
-###  <a name="BKMK_Relational"></a>Modèles d’exploration de données relationnels et OLAP  
+###  <a name="relational-vs-olap-mining-models"></a><a name="BKMK_Relational"></a> Modèles d'exploration de données relationnels et modèles d'exploration de données OLAP  
  L'option importante suivante que vous avez est d'utiliser une source de données relationnelles ou de baser votre modèle sur des données multidimensionnelles (OLAP).  
   
  À ce stade, l'Assistant Exploration de données se divise en deux branches, selon que votre source de données est relationnelle ou dans un cube. Tout le reste, à l’exception du processus de sélection des données, est le même : le choix de l’algorithme, la possibilité d’ajouter un jeu de données exclusion, etc., mais la sélection de données de cube est un peu plus complexe que l’utilisation de données relationnelles. (Vous obtenez également des options supplémentaires à la fin si vous créez un modèle basé sur un cube.)  
@@ -70,7 +70,7 @@ ms.locfileid: "66084737"
 ### <a name="choosing-an-algorithm"></a>Choix d'un algorithme  
  Vous devez ensuite décider de l'algorithme à utiliser lors du traitement de vos données. Cette décision peut être difficile à prendre. Chaque algorithme fourni dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a des fonctionnalités différentes et produit des résultats différents. Vous pouvez donc faire des essais et tenter différents modèles avant de déterminer celui qui est le plus approprié pour vos données et votre problème d'entreprise. Pour obtenir une explication des tâches pour lesquelles chaque algorithme est le plus approprié, consultez la rubrique suivante :  
   
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  Là encore, vous pouvez créer plusieurs modèles en utilisant différents algorithmes, ou bien modifier les paramètres des algorithmes pour créer différents modèles. Vous n'êtes pas bloqué dans votre choix de l'algorithme, et il est conseillé de créer différents modèles sur les mêmes données.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "66084737"
 ### <a name="additional-features"></a>Fonctionnalités supplémentaires  
  Pour vous aider à choisir les bonnes données, et à configurer correctement les sources de données, l'Assistant Exploration de données fournit les fonctionnalités supplémentaires suivantes :  
   
--   **Détection automatique des types de données**: l’Assistant examine l’unicité et la distribution des valeurs de colonne, puis recommande le type de données le plus approprié et suggère un type d’utilisation pour les données. Vous pouvez remplacer ces suggestions en sélectionnant des valeurs dans une liste.  
+-   **Détection automatique des types de données**: l’Assistant examine l’unicité et la distribution de valeurs de colonnes, puis recommande le meilleur type de données, et propose un type d’utilisation pour les données. Vous pouvez remplacer ces suggestions en sélectionnant des valeurs dans une liste.  
   
--   **Suggestions pour les variables**: vous pouvez cliquer sur une boîte de dialogue et démarrer un analyseur qui calcule les corrélations entre les colonnes incluses dans le modèle et détermine si des colonnes sont des prédictions probables de l’attribut de résultat, en fonction de la configuration du modèle jusqu’à présent. Vous pouvez remplacer ces suggestions en tapant des valeurs différentes.  
+-   **Suggestions pour les variables**: vous pouvez cliquer sur une boîte de dialogue et démarrer un analyseur qui calcule les corrélations entre les colonnes incluses dans le modèle, et qui détermine si des colonnes sont des prédicteurs probables de l’attribut de résultats, étant donné la configuration du modèle jusqu’à présent. Vous pouvez remplacer ces suggestions en tapant des valeurs différentes.  
   
--   **Sélection des fonctionnalités**: la plupart des algorithmes détectent automatiquement les colonnes qui sont de bons prédictions et les utilisent de manière préférentielle. Dans les colonnes qui contiennent trop de valeurs, la *sélection des fonctionnalités* est appliquée pour réduire la cardinalité des données et d’améliorer des chances de trouver un modèle explicite. Vous pouvez affecter le comportement de sélection des fonctionnalités à l'aide de paramètres de modèle.  
+-   **Sélection des fonctionnalités**: la plupart des algorithmes détectent automatiquement les colonnes qui sont de bons prédicteurs et les utilisent de préférence. Dans les colonnes qui contiennent trop de valeurs, la *sélection des fonctionnalités* est appliquée pour réduire la cardinalité des données et d’améliorer des chances de trouver un modèle explicite. Vous pouvez affecter le comportement de sélection des fonctionnalités à l'aide de paramètres de modèle.  
   
--   **Découpage automatique de cube**: Si votre modèle d’exploration de données est basé sur une source de données OLAP, la possibilité de découper le modèle à l’aide d’attributs de cube est automatiquement fournie. Cela est pratique pour créer des modèles basés sur des sous-ensembles de données de cube.  
+-   **Découpage automatique de cube en tranches**: si votre modèle d’exploration de données repose sur une source de données OLAP, la possibilité de découper le modèle en tranches à l’aide d’attributs de cube est automatiquement fournie. Cela est pratique pour créer des modèles basés sur des sous-ensembles de données de cube.  
   
 ### <a name="completing-the-wizard"></a>Fin de l'Assistant  
  La dernière étape de l'Assistant consiste à nommer la structure d'exploration de données et le modèle d'exploration de données associé. Selon le type de modèle que vous avez créés, vous pouvez également disposer des options importantes suivantes :  
@@ -104,15 +104,15 @@ ms.locfileid: "66084737"
 ## <a name="related-content"></a>Contenu associé  
  Pour en savoir plus sur les décisions à prendre lors de la création d'un modèle d'exploration de données, consultez les liens suivants :  
   
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Types de contenu &#40;l’exploration de données&#41;](content-types-data-mining.md)  
+ [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)  
   
- [Types de données &#40;&#41;d’exploration de données](data-types-data-mining.md)  
+ [Types de données &#40;Exploration de données&#41;](data-types-data-mining.md)  
   
  [Sélection des fonctionnalités &#40;l’exploration de données&#41;](feature-selection-data-mining.md)  
   
- [Valeurs manquantes &#40;Analysis Services d’exploration de données&#41;](missing-values-analysis-services-data-mining.md)  
+ [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Extraction sur des modèles d'exploration de données](drillthrough-on-mining-models.md)  
   

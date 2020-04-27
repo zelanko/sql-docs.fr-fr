@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092038"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>La catégorie affectée à l'opération de copie des journaux de transaction de l'Agent SQL Server provoque l'échec de la mise à niveau
   Le processus de mise à niveau échouera si une catégorie de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nommée Copie des journaux de transactions existe.  
   
 ## <a name="component"></a>Composant  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Description  
  Il y a une catégorie de travail système nommée Copie des journaux de transactions. Si une installation en cours de mise à niveau contient déjà une catégorie de travail créée par l'utilisateur, nommée Copie des journaux de transaction, vous devez la renommer avant de procéder à la mise à niveau ; sinon, le processus de mise à niveau échouera.  

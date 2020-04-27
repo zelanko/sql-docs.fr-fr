@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086031"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNB (Microsoft Naive Bayes)
@@ -37,18 +37,18 @@ ms.locfileid: "66086031"
 > [!NOTE]  
 >  Si vous voulez afficher des informations détaillées sur les équations utilisées dans le modèle et les motifs détectés, vous pouvez basculer vers la visionneuse de l’arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) fournit les onglets suivants pour explorer les données :  
   
 -   [Réseau de dépendances](#BKMK_Dependency)  
   
--   [Profils d’attribut](#BKMK_Profiles)  
+-   [Profils d'attribut](#BKMK_Profiles)  
   
 -   [Caractéristiques d’attribut](#BKMK_Characteristics)  
   
 -   [Discrimination d’attribut](#BKMK_Discrimination)  
   
-##  <a name="BKMK_Dependency"></a>Réseau de dépendances  
+##  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Réseau de dépendances  
  L’onglet **Réseau de dépendances** affiche les dépendances entre les attributs d’entrée et les attributs prédictibles d’un modèle. Le curseur situé à gauche de la visionneuse agit comme un filtre lié à la force des dépendances. Si vous déplacez le curseur vers le bas, seuls les liens les plus forts sont affichés.  
   
  Lorsque vous sélectionnez un nœud, la visionneuse met en surbrillance les dépendances propres à ce nœud. Par exemple, si vous choisissez un nœud prévisible, la visionneuse met également en surbrillance chacun des nœuds permettant de prédire le nœud prévisible.  
@@ -57,7 +57,7 @@ ms.locfileid: "66086031"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Profiles"></a>Profils d’attribut  
+##  <a name="attribute-profiles"></a><a name="BKMK_Profiles"></a>Profils d’attribut  
  L’onglet **Profils d’attribut** affiche des histogrammes dans une grille. Vous pouvez utiliser cette grille pour comparer l’attribut prédictible que vous sélectionnez dans la zone **Prédictible** à tous les autres attributs figurant dans le modèle. Chaque colonne de l'onglet représente un état de l'attribut prévisible. Si l’attribut prédictible possède un grand nombre d’états, vous pouvez modifier le nombre d’états affichés dans l’histogramme à l’aide de l’option **Barres de l’histogramme**. Si le nombre que vous définissez est inférieur au nombre total d'états de l'attribut, les états sont répertoriés par ordre de prise en charge et le reste des états est regroupé dans un compartiment gris unique.  
   
  Pour afficher une légende d’exploration de données qui associe les couleurs de l’histogramme aux états d’un attribut, cochez la case **Afficher la légende** . La légende d'exploration de données affiche également la distribution des cas pour chaque paire attribut/valeur que vous sélectionnez.  
@@ -66,12 +66,12 @@ ms.locfileid: "66086031"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Characteristics"></a>Caractéristiques d’attribut  
+##  <a name="attribute-characteristics"></a><a name="BKMK_Characteristics"></a> Caractéristiques d'attribut  
  Pour utiliser l’onglet **Caractéristiques d’attribut** , sélectionnez un attribut prédictible dans la liste **Attribut** , puis sélectionnez un état de l’attribut sélectionné dans la liste **Valeur** . Quand vous définissez ces variables, l’onglet **Caractéristiques d’attribut** affiche les états des attributs qui sont associés au cas sélectionné de l’attribut sélectionné. Les attributs sont triés par ordre d'importance.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Discrimination"></a>Discrimination d’attribut  
+##  <a name="attribute-discrimination"></a><a name="BKMK_Discrimination"></a> Discrimination d'attribut  
  Pour utiliser l’onglet **Discrimination d’attribut** , sélectionnez un attribut prédictible et deux de ses états dans les listes **Attribut**, **Valeur 1**et **Valeur 2** . La grille de l’onglet **Discrimination d’attribut** affiche alors les informations suivantes dans des colonnes :  
   
  **Attribut**  

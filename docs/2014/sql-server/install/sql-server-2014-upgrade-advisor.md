@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092049"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Conseiller de mise à niveau SQL Server 2014

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085684"
 ---
 # <a name="classified-columns-data-mining"></a>Colonnes classifiées (exploration de données)
@@ -40,7 +40,7 @@ ms.locfileid: "66085684"
   
  La liste suivante décrit les types de contenu pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les colonnes classifiées.  
   
- **RISQUE**  
+ **PROBABILITY**  
  La valeur de la colonne représente la probabilité de la valeur associée et est comprise entre 0 et 1.  
   
  **TABLEAUX**  
@@ -61,6 +61,6 @@ ms.locfileid: "66085684"
 ## <a name="see-also"></a>Voir aussi  
  [Types de contenu &#40;l’exploration de données&#41;](content-types-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Types de données &#40;&#41;d’exploration de données](data-types-data-mining.md)  
+ [Types de données &#40;Exploration de données&#41;](data-types-data-mining.md)  
   
   

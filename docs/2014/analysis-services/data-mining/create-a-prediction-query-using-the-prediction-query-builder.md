@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085348"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction
@@ -31,7 +31,7 @@ ms.locfileid: "66085348"
   
 -   **Résultat**  
   
- Le mode **création** vous permet de générer une requête de prédiction en choisissant données d’entrée, en mappant les données au modèle, puis en ajoutant des fonctions de prédiction dans les instructions que vous créez à l’aide de la grille. La grille de création contient ces blocs de construction :  
+ Le mode**Création** vous permet de générer une requête de prédiction en choisissant des données d’entrée, en mappant les données au modèle, puis en ajoutant des fonctions de prédiction dans les instructions que vous créez à l’aide de la grille. La grille de création contient ces blocs de construction :  
   
  **Source**  
  Choisissez la source de la nouvelle colonne. Vous pouvez utiliser des colonnes du modèle d'exploration de données, les tables d'entrée incluses dans la vue de source de données, une fonction de prédiction ou une expression personnalisée.  
@@ -51,12 +51,12 @@ ms.locfileid: "66085348"
  **Et/ou**  
  Crée une logique dans la requête. Par exemple, (expr1 ou expr2) et expr3.  
   
- **Critères/argument**  
+ **Critères/Argument**  
  Spécifie une condition ou une expression utilisateur qui s'applique à la colonne. Vous pouvez faire glisser des colonnes à partir des tables dans la cellule.  
   
- Le mode **requête** fournit un éditeur de texte qui vous donne un accès direct au langage DMX (Data Mining Extensions), ainsi qu’une vue des données d’entrée et des colonnes du modèle. Quand vous sélectionnez le mode **Requête** , la grille que vous avez utilisée pour définir la requête est remplacée par un éditeur de texte de base. Vous pouvez utiliser cet éditeur pour copier et enregistrer les requêtes que vous avez composées, ou pour coller les requêtes DMX existantes et du Presse-papiers, puis pour les exécuter.  
+ Le mode de**Requête** fournit un éditeur de texte qui vous donne un accès direct au langage DMX (Data Mining Extensions), ainsi qu’une vue des données d’entrée et des colonnes du modèle. Quand vous sélectionnez le mode **Requête** , la grille que vous avez utilisée pour définir la requête est remplacée par un éditeur de texte de base. Vous pouvez utiliser cet éditeur pour copier et enregistrer les requêtes que vous avez composées, ou pour coller les requêtes DMX existantes et du Presse-papiers, puis pour les exécuter.  
   
- La vue **résultat** exécute la requête actuelle et affiche les résultats dans une grille. Si les données sous-jacentes ont changé et que vous souhaitez réexécuter la requête, cliquez sur le bouton Lecture dans la barre d'état.  
+ La vue**Résultat** exécute la requête actuelle et affiche les résultats dans une grille. Si les données sous-jacentes ont changé et que vous souhaitez réexécuter la requête, cliquez sur le bouton Lecture dans la barre d'état.  
   
  Vous pouvez concevoir une requête d'exploration de données à l'aide d'une combinaison d'outils visuels et de l'éditeur de texte. Si vous apportez des modifications à la requête dans l’éditeur de texte et que vous revenez en mode **Création** , toutes les modifications sont perdues et la requête initiale créée par le Générateur de requêtes de prédiction est restaurée. Cette rubrique vous décrit pas à pas comment utiliser le Générateur de requêtes graphiques.  
   

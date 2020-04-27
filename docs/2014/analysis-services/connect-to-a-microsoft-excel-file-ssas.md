@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087318"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Connexion à un fichier Microsoft Excel (SSAS)
@@ -37,7 +37,7 @@ ms.locfileid: "66087318"
  **Parcourir**  
  Accédez à un emplacement dans lequel un fichier Excel est disponible.  
   
- **Avancée**  
+ **Avancé**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Utiliser la première ligne comme en-têtes de colonnes**  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082000"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Définir le comportement semi-additif (Assistant Business Intelligence)
@@ -43,7 +43,7 @@ ms.locfileid: "66082000"
  **Fonction semi-additive**  
  Sélectionnez le type d'agrégation de la mesure sélectionnée. Le tableau suivant répertorie les fonctions d'agrégation disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Agrégation réalisée en retournant la moyenne des enfants de la mesure.|  
 |`ByAccount`|Agrégation réalisée par la fonction d'agrégation associée au type de compte spécifié d'un attribut dans une dimension de compte.|  

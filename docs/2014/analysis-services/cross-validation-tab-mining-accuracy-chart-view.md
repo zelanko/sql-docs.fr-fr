@@ -13,15 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086617"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Onglet Validation croisée (vue Graphique d'analyse de précision de l'exploration de données)
-  La validation croisée vous permet de partitionner une structure d'exploration de données en sections croisées et d'effectuer l'apprentissage et le test des modèles de manière itérative sur chaque section croisée. Vous spécifiez un nombre de replis pour la division des données. Chaque repli est utilisé à son tour comme données de test, tandis que les autres données sont utilisées pour l'apprentissage d'un nouveau modèle. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère ensuite un jeu de mesures de précision standard pour chaque modèle. En comparant les mesures des modèles générés pour chaque section croisée, vous pouvez vous faire une bonne idée de la fiabilité du modèle d'exploration de données pour le jeu de données complet.  
+  La validation croisée vous permet de partitionner une structure d'exploration de données en sections croisées et d'effectuer l'apprentissage et le test des modèles de manière itérative sur chaque section croisée. Vous spécifiez un nombre de replis pour la division des données. Chaque repli est utilisé à son tour comme données de test, tandis que les autres données sont utilisées pour l'apprentissage d'un nouveau modèle. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère ensuite un jeu de mesures de précision standard pour chaque modèle. En comparant les mesures des modèles générés pour chaque section croisée, vous pouvez vous faire une bonne idée de la fiabilité du modèle d'exploration de données pour le jeu de données complet.  
   
  Pour plus d’informations, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
@@ -53,12 +52,12 @@ ms.locfileid: "66086617"
 > [!NOTE]  
 >  Lorsque vous augmentez le nombre de replis, le temps nécessaire pour effectuer la validation croisée augmente de façon similaire à n. Vous pouvez rencontrer des problèmes de performances si le nombre de cas est élevé et la valeur **Nombre de replis** est également importante.  
   
- **Nbre max. de cas**  
+ **Nombre maximal de cas**  
  Spécifiez le nombre maximal de cas à utiliser pour la validation croisée. Le nombre de cas dans un repli donné est égal à la valeur **Nombre maximal de cas** divisée par la valeur **Nombre de replis** .  
   
  Si vous utilisez **0**, tous les cas des données sources sont utilisés pour la validation croisée.  
   
- Il n'existe aucune valeur par défaut.  
+ Aucune valeur par défaut.  
   
 > [!NOTE]  
 >  Le temps de traitement augmente également avec l'augmentation du nombre de cas.  
@@ -75,7 +74,7 @@ ms.locfileid: "66086617"
   
  Ce paramètre est désactivé pour les modèles de clustering.  
   
- ******Seuil** cible    
+ **Target****Seuil** cible    
  Spécifiez une valeur comprise entre 0 et 1 qui indique la probabilité de prédiction au-dessus de laquelle un état prédit est considéré comme correct. La valeur peut être définie par incréments de 0,1.  
   
  La valeur par défaut est `null`, ce qui indique que la prédiction la plus probable est comptabilisée comme correcte.  
@@ -97,12 +96,12 @@ ms.locfileid: "66086617"
   
  Par exemple, supposons que trois prédictions soient effectuées pour un état cible donné et que les probabilités de chaque prédiction soient égales à 0,05, 0,15 et 0,8. Si vous définissez la valeur 0,5 pour le seuil, une seule prédiction est comptabilisée comme correcte. Si vous affectez à **Seuil** **cible** la valeur 0,10, deux prédictions sont comptabilisées comme correctes.  
   
- Lorsque **** le **seuil** cible est défini `null`sur, qui est la valeur par défaut, la prédiction la plus probable pour chaque cas est comptabilisée comme correcte. Dans l'exemple que nous venons de citer, 0,05, 0,15 et 0,8 sont les probabilités des prédictions de trois cas différents. Bien que les probabilités soient très différentes, chaque prédiction est comptabilisée comme correcte, car chaque cas génère une seule prédiction et il s'agit des meilleures prédictions pour ces cas.  
+ Lorsque **Target** le **seuil** cible est défini `null`sur, qui est la valeur par défaut, la prédiction la plus probable pour chaque cas est comptabilisée comme correcte. Dans l'exemple que nous venons de citer, 0,05, 0,15 et 0,8 sont les probabilités des prédictions de trois cas différents. Bien que les probabilités soient très différentes, chaque prédiction est comptabilisée comme correcte, car chaque cas génère une seule prédiction et il s'agit des meilleures prédictions pour ces cas.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)   
  [Validation croisée &#40;Analysis Services d’exploration de données&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Mesures dans le rapport de validation croisée](data-mining/measures-in-the-cross-validation-report.md)   
- [Procédures stockées d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088881"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-table source-sélectionner une table de charge de travail Assistant Paramétrage du moteur de base de données
@@ -39,12 +39,12 @@ ms.locfileid: "66088881"
  **Propriétaire**  
  Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
   
- **Table**  
+ **Table de charge de travail**  
  Spécifie le nom de la table de trace à partir de laquelle la trace doit être lue.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrer les résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086150"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Appliquer des filtres aux données de test du modèle
@@ -77,7 +77,7 @@ ms.locfileid: "66086150"
   
 8.  Utilisez les colonnes **Opérateur**et **Valeur** pour définir comment la colonne est filtrée.  
   
-     **Remarque** Tapez des valeurs sans utiliser de guillemets.  
+     **Remarque** Tapez les valeurs sans utiliser de guillemets.  
   
 9. Cliquez sur la zone de texte **et/ou** et sélectionnez un opérateur logique pour définir la manière dont les conditions multiples sont combinées.  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084059"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)
@@ -34,9 +34,9 @@ ms.locfileid: "66084059"
 ### <a name="scoring-methods-and-feature-selection"></a>Résultat des méthodes et sélection des fonctionnalités  
  Tous les algorithmes d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilisent automatiquement la sélection des fonctionnalités pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dans la régression linéaire est le score d'intérêt et de pertinence, car le modèle prend uniquement en charge les colonnes continues. À titre de référence, la table suivante affiche la différence dans la sélection de fonctionnalités entre l'algorithme MLR (Microsoft Linear Regression) et l'algorithme MDT (Microsoft Decision Trees).  
   
-|Algorithme|Méthode d'analyse|Commentaires|  
+|Algorithm|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
-|régression linéaire|Score d'intérêt et de pertinence|valeur par défaut.<br /><br /> Les autres méthodes de sélection de fonctionnalités qui sont disponibles avec l'algorithme MDT s'appliquent uniquement aux variables discrètes. Par conséquent, elles ne peuvent s'appliquer aux modèles de régression linéaire.|  
+|Régression linéaire|Score d'intérêt et de pertinence|Par défaut.<br /><br /> Les autres méthodes de sélection de fonctionnalités qui sont disponibles avec l'algorithme MDT s'appliquent uniquement aux variables discrètes. Par conséquent, elles ne peuvent s'appliquer aux modèles de régression linéaire.|  
 |Arbres de décision|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode par défaut ou spécifiée est utilisée.|  
   
  Les paramètres d'algorithme qui contrôlent la sélection des fonctionnalités pour un modèle d'arbre de décision sont MAXIMUM_INPUT_ATTRIBUTES et MAXIMUM_OUTPUT.  
@@ -70,7 +70,7 @@ ms.locfileid: "66084059"
   
  Vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé avec les algorithmes MDT et MLR.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Un modèle de régression linéaire doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -87,6 +87,6 @@ ms.locfileid: "66084059"
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)   
  [Exemples de requêtes de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

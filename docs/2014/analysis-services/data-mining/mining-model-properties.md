@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083511"
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
@@ -41,7 +41,7 @@ ms.locfileid: "66083511"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Utilisé**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
+|**Algorithme**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
 |**AlgorithmParameters**|Définit les valeurs pour les paramètres d'algorithme disponibles pour chaque type d'algorithme.|  
 |**Filter**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
 |**Nom**|Définit le nom du modèle d'exploration de données.|  

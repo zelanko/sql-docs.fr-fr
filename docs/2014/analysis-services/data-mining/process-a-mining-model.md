@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083095"
 ---
 # <a name="process-a-mining-model"></a>Traiter un modèle d'exploration de données
@@ -28,7 +28,7 @@ ms.locfileid: "66083095"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- Vous pouvez également utiliser une commande de traitement XMLA. Pour plus d’informations, consultez [Outils et approches de traitement &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
+ Vous pouvez également utiliser une commande de traitement XMLA. Pour plus d’informations, consultez [Outils et approches pour le traitement des &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>Traiter un seul modèle d'exploration de données à l'aide des outils de données SQL Server  
   

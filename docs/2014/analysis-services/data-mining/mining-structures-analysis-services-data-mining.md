@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083379"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Structures d'exploration de données (Analysis Services – exploration de données)
@@ -37,9 +37,9 @@ ms.locfileid: "66083379"
   
  **Modèle 1** Utilise CustomerID, Income, Age, Region, et filtre les données sur Region.  
   
- **Modèle 2** Utilise CustomerID, Income, Age, Region et filtre les données sur Age.  
+ **Modèle 2** Utilise CustomerID, Income, Age, Region, et filtre les données sur Age.  
   
- **Modèle 3** Utilise CustomerID, Age, sexe et la table imbriquée, sans filtre.  
+ **Modèle 3** Utilise CustomerID, Age, Gender et la table imbriquée, sans filtre.  
   
  Comme les modèles utilisent des colonnes différentes pour l'entrée et comme deux des modèles limitent également les données utilisées dans le modèle en appliquant un filtre, les modèles peuvent avoir des résultats très différents bien qu'ils soient basés sur les mêmes données. Notez que la colonne CustomerID est requise dans tous les modèles parce que c'est la seule colonne disponible qui peut être utilisée comme clé de cas.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083379"
   
 -   Traitez la structure.  
   
- Ces étapes sont décrites de façon plus détaillée dans les sections suivantes.  
+ Ces étapes sont décrites de manière plus détaillée dans les sections suivantes.  
   
 ### <a name="data-sources-for-mining-structures"></a>Sources de données des structures d'exploration de données  
  Lorsque vous définissez une structure d'exploration de données, vous utilisez des colonnes qui sont disponibles dans une vue de source de données existante. Une vue de source de données est un objet partagé qui vous permet de combiner plusieurs sources de données et de les utiliser comme source unique. Les sources de données d'origine ne sont pas visibles par les applications clientes, et vous pouvez utiliser les propriétés de la vue de source de données pour modifier les types de données, créer des agrégations ou définir des alias de colonne.  
@@ -122,6 +122,6 @@ ms.locfileid: "66083379"
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets de base de données &#40;Analysis Services-données multidimensionnelles&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
   

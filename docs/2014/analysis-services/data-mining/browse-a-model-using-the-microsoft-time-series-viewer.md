@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085980"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)
@@ -39,18 +39,17 @@ ms.locfileid: "66085980"
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclut les onglets suivants :  
   
 -   [Modélisation](#BKMK_Tree)  
   
 -   [Graphiques](#BKMK_Charts)  
   
- **Remarque** Les informations affichées pour le contenu du modèle et dans la légende d’exploration de données dépendent de l’algorithme utilisé par le modèle. Toutefois, les onglets **Modèle** et **Graphiques** sont les mêmes indépendamment de la combinaison d’algorithmes.  
+ **Remarque** Les informations affichées pour le contenu du modèle et dans la Légende d’exploration de données dépendent de l’algorithme que le modèle utilise. Toutefois, les onglets **Modèle** et **Graphiques** sont les mêmes indépendamment de la combinaison d’algorithmes.  
   
-###  <a name="BKMK_Tree"></a>Modélisation  
- Quand vous générez un modèle de série chronologique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] présente le modèle terminé sous forme d’arborescence. Si vos données contiennent plusieurs séries de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence séparée pour chaque série. Supposons, par exemple, que vous prévoyiez des ventes pour la zone Pacifique, l'Amérique du Nord et des régions d'Europe. Les prédictions pour chacune de ces régions sont des séries de cas. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence distincte pour chacune de ces séries. Pour afficher une série particulière, sélectionnez-la série dans la liste **Arborescence** .  
+###  <a name="model"></a><a name="BKMK_Tree"></a>Modélisation  
+ Quand vous générez un modèle de série chronologique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] présente le modèle terminé sous forme d’arborescence. Si vos données contiennent plusieurs séries de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence séparée pour chaque série. Supposons, par exemple, que vous prévoyiez des ventes pour la zone Pacifique, l'Amérique du Nord et des régions d'Europe. Les prédictions pour chacune de ces régions sont des séries de cas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère une arborescence distincte pour chacune de ces séries. Pour afficher une série particulière, sélectionnez-la série dans la liste **Arborescence** .  
   
  Pour chaque arborescence, le modèle de série chronologique contient un nœud **Tous** , puis il le fractionne en une série des nœuds qui représentent des structures périodiques découvertes par l’algorithme. Vous pouvez cliquer sur chaque nœud pour afficher des statistiques, telles que le nombre de cas et l'équation.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66085980"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a>Anneaux  
+###  <a name="charts"></a><a name="BKMK_Charts"></a>Anneaux  
  L’onglet **Graphiques** affiche un graphique qui représente le comportement de l’attribut prévu sur le temps, avec cinq valeurs futures prévues. L'axe vertical du graphique représente la valeur de la série et l'axe horizontal le temps.  
   
 > [!NOTE]  

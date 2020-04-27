@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084798"
 ---
 # <a name="data-types-data-mining"></a>Types de données (Exploration de données)
@@ -28,8 +28,7 @@ ms.locfileid: "66084798"
   
  Par exemple, si une colonne contient des données numériques, vous pouvez choisir de les gérer en tant que type de données numérique ou en tant que type de données texte. Si vous choisissez le type de données numérique, vous pouvez définir plusieurs types de contenu différents : vous pouvez discrétiser les nombres ou les gérer en tant que valeurs continues. Pour obtenir la liste de tous les types de contenu, consultez [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md).  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de données suivants pour les colonnes de structure d’exploration de données :  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de données suivants pour les colonnes de structure d’exploration de données :  
   
 |Type de données|Types de contenu pris en charge|  
 |---------------|-----------------------------|  

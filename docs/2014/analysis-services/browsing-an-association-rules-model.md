@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088470"
 ---
 # <a name="browsing-an-association-rules-model"></a>Exploration d'un modèle d'exploration de données Règles d'association
   Lorsque vous ouvrez un modèle d’association à l’aide de l’outil **Parcourir**, le modèle est affiché dans une visionneuse interactive, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]similaire à la visionneuse des règles d’association dans.  La visionneuse vous permet de voir d'un seul coup d'œil les éléments corrélés les uns aux autres, et d'afficher les règles que vous pouvez utiliser pour la prédiction ou pour formuler des recommandations.  
   
-##  <a name="BKMK_ViewerTabs"></a>Explorer le modèle  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Explorer le modèle  
  Lorsque vous ouvrez un modèle d’exploration de données qui a [!INCLUDE[msCoName](../includes/msconame-md.md)] été créé à l’aide de l’algorithme de règles d’association, la fenêtre **Parcourir** comprend les vues suivantes, chacune conçue pour vous permettre d’explorer un aspect différent du modèle :  
   
--   [Jeux d’éléments](#BKMK_Itemsets)  
+-   [Jeux d'éléments](#BKMK_Itemsets)  
   
--   [Matière](#BKMK_Rules)  
+-   [Règles](#BKMK_Rules)  
   
 -   [Réseau de dépendances](#BKMK_Dependency)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088470"
   
  Pour tester avec un modèle d'association, utilisez l'exemple de données de l'onglet Association du classeur d'exemple, et créez un modèle d'association à l'aide de toutes les valeurs par défaut. Vous pouvez également créer un modèle d’analyse de panier d’achat et l’ouvrir à l’aide de **Parcourir**.  
   
-###  <a name="BKMK_Itemsets"></a>Jeux d’éléments  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Jeux d’éléments  
  L’onglet **jeux d’éléments** est un bon point de départ pour explorer un modèle d’association. Il affiche la liste des éléments que le modèle a identifiés comme apparaissant fréquemment ensemble.  
   
  ![Liste des éléments dans un modèle d'association](media/dm13-association-itemsets.gif "Liste des éléments dans un modèle d'association")  
@@ -69,11 +69,11 @@ ms.locfileid: "66088470"
   
 4.  Cliquez sur la liste déroulante de l’option **Afficher**pour contrôler la façon dont les attributs sont affichés :  
   
-    -   **Afficher le nom et la valeur de l’attribut**  
+    -   **Afficher le nom et la valeur de l'attribut**  
   
-    -   **Afficher la valeur de l’attribut uniquement**  
+    -   **Afficher la valeur de l'attribut uniquement**  
   
-    -   **Afficher le nom de l’attribut uniquement**  
+    -   **Afficher le nom de l'attribut uniquement**  
   
      Notez comment les noms changent. Dans le cas d'un modèle de panier d'achat, créé à partir de tables imbriquées de produits achetés par plusieurs clients, le nom de l'attribut est généralement le nom du produit, et la présence du produit dans la liste est signalée comme `Existing`, indiquant que le client les a achetés.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66088470"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Matière  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Matière  
  L’onglet **règles** combine des informations sur les jeux d’éléments et leur valeur relative.  
   
  ![Liste des règles créées par un modèle d'association](media/dm13-association-rules.gif "Liste des règles créées par un modèle d'association")  
@@ -114,7 +114,7 @@ ms.locfileid: "66088470"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Réseau de dépendances  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Réseau de dépendances  
  L’onglet **réseau de dépendances** est une carte visuelle des corrélations entre les éléments. Chaque ovale dans le graphique (désigné sous le terme de *nœud*) représente une paire attribut-valeur, telle que « veste = existing » ou « Age = 1-30 ».  Chaque ligne reliant les ovales (appelée *arête*) représente un type de corrélation.  
   
  ![Diagramme de réseau de dépendances pour un modèle d'association](media/dm13-association-dependencynetwork.gif "Diagramme de réseau de dépendances pour un modèle d'association")  

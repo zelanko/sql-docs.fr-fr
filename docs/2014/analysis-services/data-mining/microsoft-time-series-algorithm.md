@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083767"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
@@ -80,11 +80,11 @@ ms.locfileid: "66083767"
   
  Les spécifications pour un modèle de série chronologique se présentent comme suit :  
   
--   **Une seule colonne Key Time** Chaque modèle doit contenir une colonne numérique ou de date utilisée comme série de cas, qui définit les tranches de temps que le modèle utilisera. Le type de données pour la colonne Key Time peut être un type de données datetime ou un type de données numérique. Toutefois, la colonne doit contenir des valeurs continues, et les valeurs doivent être uniques pour chaque série. La série de cas pour un modèle de série chronologique ne peut pas être stockée dans deux colonnes, telles qu'une colonne d'année et une colonne de mois.  
+-   **Colonne Key Time unique** Chaque modèle doit contenir une colonne numérique ou de date utilisée comme série de cas, qui définit les tranches de temps que le modèle utilisera. Le type de données pour la colonne Key Time peut être un type de données datetime ou un type de données numérique. Toutefois, la colonne doit contenir des valeurs continues, et les valeurs doivent être uniques pour chaque série. La série de cas pour un modèle de série chronologique ne peut pas être stockée dans deux colonnes, telles qu'une colonne d'année et une colonne de mois.  
   
--   **Colonne prévisible** Chaque modèle doit contenir au moins une colonne prévisible autour de laquelle l’algorithme générera le modèle de série chronologique. Le type de données de la colonne prédictible doit avoir des valeurs continues. Par exemple, vous pouvez prédire la façon dont les attributs numériques, tels que le revenu, les ventes ou la température, changent avec le temps. Toutefois, vous ne pouvez pas utiliser une colonne qui contient des valeurs discrètes, telles que l'état des achats ou le niveau d'éducation, comme colonne prédictible.  
+-   **Colonne prédictible** Chaque modèle doit contenir au moins une colonne prédictible autour de laquelle l’algorithme générera le modèle de série chronologique. Le type de données de la colonne prédictible doit avoir des valeurs continues. Par exemple, vous pouvez prédire la façon dont les attributs numériques, tels que le revenu, les ventes ou la température, changent avec le temps. Toutefois, vous ne pouvez pas utiliser une colonne qui contient des valeurs discrètes, telles que l'état des achats ou le niveau d'éducation, comme colonne prédictible.  
   
--   **Une colonne clé de série facultative** Chaque modèle peut avoir une colonne clé supplémentaire qui contient des valeurs uniques qui identifient une série. La colonne clé de série facultative doit contenir des valeurs uniques. Par exemple, un modèle unique peut contenir des ventes pour de nombreux modèles de produits, tant qu'il n'existe qu'un seul enregistrement pour chaque nom de produit pour chaque tranche horaire.  
+-   **Colonne clé de série facultative** Chaque modèle peut avoir une colonne clé supplémentaire qui contient des valeurs uniques qui identifient une série. La colonne clé de série facultative doit contenir des valeurs uniques. Par exemple, un modèle unique peut contenir des ventes pour de nombreux modèles de produits, tant qu'il n'existe qu'un seul enregistrement pour chaque nom de produit pour chaque tranche horaire.  
   
  Vous pouvez définir les données d’entrée du modèle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series de plusieurs façons différentes. Toutefois, dans la mesure où le format des cas d'entrée affecte la définition du modèle d'exploration de données, vous devez considérer vos exigences opérationnelles et préparer vos données en conséquence. Les deux exemples suivants illustrent la façon dont les données d'entrée affectent le modèle. Dans les deux exemples, le modèle d'exploration de données complété contient des modèles pour quatre séries distinctes :  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66083767"
  [Parcourir un modèle à l’aide de la visionneuse MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Référence technique de l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

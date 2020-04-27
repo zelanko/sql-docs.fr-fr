@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094991"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>Les filtres et les analyseurs lexicaux pour la recherche en texte intégral ont été considérablement améliorés dans SQL Server 2005 et SQL Server 2008

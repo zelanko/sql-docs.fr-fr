@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083296"
 ---
 # <a name="moving-data-mining-objects"></a>Déplacement d'objets d'exploration de données
@@ -47,10 +47,9 @@ ms.locfileid: "66083296"
  Pour plus d’informations sur le déploiement de solutions Analysis Services, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
 ### <a name="scripting"></a>Création de scripts  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs langages dont vous pouvez vous servir pour créer des scripts d’objets.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs langages dont vous pouvez vous servir pour créer des scripts d’objets.  
   
--   **XMLA**: vous pouvez générer des scripts d’objets à l’aide de XMLA [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en cliquant avec le bouton droit sur des objets dans. Pour exécuter le script, ouvrez-le dans une fenêtre **Requête XMLA** sur le serveur cible.  
+-   **XMLA**: vous pouvez créer des scripts d’objets à l’aide de XMLA en cliquant avec le bouton droit sur des objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour exécuter le script, ouvrez-le dans une fenêtre **Requête XMLA** sur le serveur cible.  
   
 -   **DMX**: vous pouvez créer des scripts à l’aide de modèles ou de l’un des générateurs de requêtes fournis dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -67,17 +66,16 @@ ms.locfileid: "66083296"
  Pour plus d'informations, consultez [Développement avec le langage de script Analysis Services &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Sauvegarde et restauration  
- La sauvegarde et la restauration d'une base de données Analysis Services complète est la méthode idéale si votre solution d'exploration de données repose sur des objets OLAP. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des fonctionnalités de sauvegarde et de restauration qui accélèrent et facilitent la sauvegarde des bases de données.  
+ La sauvegarde et la restauration d'une base de données Analysis Services complète est la méthode idéale si votre solution d'exploration de données repose sur des objets OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des fonctionnalités de sauvegarde et de restauration qui accélèrent et facilitent la sauvegarde des bases de données.  
   
  Pour plus d’informations sur la sauvegarde, consultez [Sauvegarde et restauration de bases de données Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Exportation et importation  
  L'exportation puis la réimportation des modèles et des structures d'exploration de données à l'aide d'instructions DMX est la méthode la plus facile pour déplacer ou sauvegarder des objets d'exploration de données relationnelles individuels. Pour plus d'informations sur la syntaxe DMX de ces opérations, consultez les rubriques suivantes :  
   
--   [EXPORTER &#40;&#41;DMX](/sql/dmx/export-dmx)  
+-   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [IMPORTER &#40;&#41;DMX](/sql/dmx/import-dmx)  
+-   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  Si vous spécifiez l’option INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exporte également la définition des vues de source de données requises, et quand vous importez le modèle ou la structure, il recrée la vue de source de données sur le serveur cible. Lorsque vous avez terminé d'importer le modèle, n'oubliez pas de définir les autorisations d'exploration de données sur l'objet.  
   

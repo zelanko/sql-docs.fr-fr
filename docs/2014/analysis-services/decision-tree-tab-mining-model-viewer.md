@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082301"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Onglet Arbre de décision (Visionneuse de modèle d'exploration de données)
   Le volet **Arbre de décision** affiche une représentation visuelle des règles de décision créées dans un modèle d’arbre de décision. Les règles de décision décrivent les chemins d'accès vers certains résultats.  
   
- **Pour plus d’informations :** [algorithme MDT (Microsoft Decision Trees](data-mining/microsoft-decision-trees-algorithm.md)), [Parcourir un modèle à l’aide de la visionneuse d’arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Pour plus d’informations :** [Algorithme MDT (Microsoft Decision Trees)](data-mining/microsoft-decision-trees-algorithm.md), [Explorer un modèle à l’aide de la Visionneuse d’arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  

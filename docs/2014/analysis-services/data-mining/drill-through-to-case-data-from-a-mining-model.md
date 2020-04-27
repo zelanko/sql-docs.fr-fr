@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084609"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Extraire des données de cas à partir d'un modèle d'exploration de données
@@ -31,13 +31,13 @@ ms.locfileid: "66084609"
   
 |Nom de la visionneuse|Nom du volet ou de l'onglet|Sélection du nœud|  
 |-----------------|----------------------|-----------------|  
-|**Visionneuse d’arborescences Microsoft**|Onglet **arbre de décision**|Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** Évitez d’utiliser l’extraction `All` sur le nœud, car le renvoi des résultats peut prendre beaucoup de temps.|  
-|**Visionneuse de clusters Microsoft**|**Diagramme de cluster**|Cliquez sur un nœud de cluster.|  
-|**Visionneuse de clusters Microsoft**|**Profils de cluster**|Cliquez n'importe où dans la colonne de cluster.|  
-|**Visionneuse d’associations Microsoft**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
-|**Visionneuse d’associations Microsoft**|Onglet **jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
-|**Visionneuse Microsoft Sequence Clustering**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
-|**Visionneuse Microsoft Sequence Clustering**|Onglet **jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
+|**visionneuse d'arbres Microsoft**|Onglet **arbre de décision**|Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** Évitez d’utiliser l’extraction `All` sur le nœud, car le renvoi des résultats peut prendre beaucoup de temps.|  
+|**Microsoft Cluster Viewer**|**Diagramme de cluster**|Cliquez sur un nœud de cluster.|  
+|**Microsoft Cluster Viewer**|**Profils du cluster**|Cliquez n'importe où dans la colonne de cluster.|  
+|**Visionneuse d'associations Microsoft**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
+|**Visionneuse d'associations Microsoft**|Onglet **jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
+|**Visionneuse de l'algorithme MSC (Microsoft Sequence Clustering)**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  
+|**Visionneuse de l'algorithme MSC (Microsoft Sequence Clustering)**|Onglet **jeux d’éléments**|Cliquez sur une ligne qui contient un jeu d'éléments.|  
   
 > [!NOTE]  
 >  Certains modèles ne peuvent pas utiliser la fonctionnalité d'extraction. La capacité à utiliser la fonctionnalité d'extraction dépend de l'algorithme qui a été utilisé pour créer le modèle. Pour obtenir une liste des types de modèles d’exploration de données qui prennent en charge l’extraction, consultez [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md).  
@@ -57,6 +57,6 @@ ms.locfileid: "66084609"
 6.  Pour copier les données vers le Presse-papiers, cliquez avec le bouton droit sur une ligne dans la table et sélectionnez **Copier tout**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;l’exploration de données&#41;](drillthrough-queries-data-mining.md)  
+ [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
   

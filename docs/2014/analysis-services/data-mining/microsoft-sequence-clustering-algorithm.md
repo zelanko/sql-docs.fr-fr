@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083833"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algorithme MSC (Microsoft Sequence Clustering)
@@ -52,7 +52,7 @@ ms.locfileid: "66083833"
   
 -   **Une colonne de séquence** Pour les données de séquence, le modèle doit avoir une table imbriquée qui contient une colonne d’ID de séquence. L'ID de séquence peut être tout type de données pouvant être trié. Par exemple, vous pouvez utiliser un identificateur de page Web, un entier ou une chaîne de texte, tant que la colonne identifie les événements dans une séquence. Un seul identificateur de séquence est autorisé pour chaque séquence, et un seul type de séquence est autorisé dans chaque modèle.  
   
--   **Attributs non-séquence facultatifs** L’algorithme prend en charge l’ajout d’autres attributs qui ne sont pas liés au séquencement. Ces attributs peuvent inclure des colonnes imbriquées.  
+-   **Des attributs non-séquence facultatifs** L’algorithme prend en charge l’ajout d’autres attributs non liés à un séquencement. Ces attributs peuvent inclure des colonnes imbriquées.  
   
  Prenons l'exemple cité précédemment concernant le site Web [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] , un modèle Sequence Clustering peut inclure des informations sur les commandes sous forme de table de cas, des statistiques démographiques sur un client spécifique pour chaque commande sous forme d'attributs non-séquence et une table imbriquée contenant l'ordre dans lequel le client a parcouru le site ou a placé des articles dans son panier sous forme d'informations de séquence.  
   

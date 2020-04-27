@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086789"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
@@ -34,7 +34,7 @@ ms.locfileid: "66086789"
   
 -   Vous ne pouvez pas partitionner des données si vous essayez de prédire une valeur qui est stockée dans une table imbriquée.  
   
- **Pour plus d’informations :** [test et validation &#40;&#41;d’exploration de données ](data-mining/testing-and-validation-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md), didacticiel sur l' [exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Pour plus d’informations, consultez ** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md) et [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Options  
  **Pourcentage des données de test**  

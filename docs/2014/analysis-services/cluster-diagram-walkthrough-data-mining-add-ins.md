@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087913"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme de cluster (Compléments d'exploration de données)
@@ -107,7 +107,7 @@ ms.locfileid: "66087913"
   
 4.  Cliquez sur le ruban **compléments** , puis affichez l’une des barres d’outils personnalisées utilisées pour travailler avec les diagrammes d’exploration de données :  
   
-     **Disposition**  
+     **Mise en page**  
      Optimise la disposition des clusters pour qu'ils tiennent sur la page active.  
   
      **Redimensionner la page**  

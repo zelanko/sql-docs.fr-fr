@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088372"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire de membre calculé (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** dans le Concepteur de cube pour créer et modifier un membre calculé.  
   
- **Remarque** Ce volet s’affiche uniquement en mode formulaire.  
+ **Remarque** Ce volet s'affiche uniquement en mode Formulaire.  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -37,7 +37,7 @@ ms.locfileid: "66088372"
  **Membre parent**  
  Sélectionnez le membre parent sous lequel le membre calculé doit apparaître.  
   
- **Remarque** Cette option est disponible si la **Hiérarchie parente** spécifie une hiérarchie autre que mesures.  
+ **Remarque** Cette option est disponible si **Hiérarchie parente** spécifie une hiérarchie différente de MESURES.  
   
  **Modifiés**  
  Affiche la boîte de dialogue **Sélectionnez le membre parent** pour choisir un **Membre parent**. Pour plus d’informations sur la boîte de dialogue **Sélectionnez le membre parent**, consultez [Boîte de dialogue Sélectionnez le membre parent &#40;Analysis Services - Données multidimensionnelles&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "66088372"
   
  Pour plus d’informations sur les chaînes de format MDX, consultez [Contenu de FORMAT_STRING &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).  
   
- **Visible**  
+ **Parent**  
  Sélectionnez **True** pour que le membre calculé soit visible dans les applications clientes.  
   
  **Comportement non vide**  
@@ -87,7 +87,7 @@ ms.locfileid: "66088372"
  **Expressions de police**  
  Développez cette branche pour afficher les options **Nom de police**, **Taille de police**et **Indicateurs de police** .  
   
- **Nom de la police**  
+ **Nom de police**  
  Tapez l'expression MDX qui fournit le nom de la police utilisée pour le membre calculé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  

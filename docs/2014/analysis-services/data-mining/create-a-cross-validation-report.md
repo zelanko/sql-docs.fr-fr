@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085525"
 ---
 # <a name="create-a-cross-validation-report"></a>Créer un rapport de validation croisée
@@ -66,7 +66,7 @@ ms.locfileid: "66085525"
 4.  Éventuellement, pour **État cible**, tapez la valeur de l'attribut prédictible que vous souhaitez modéliser. Par exemple, si la colonne (Bike Buyer) a deux valeurs possibles, 1 (Oui) et 2 (Non), vous pouvez entrer la valeur 1 pour évaluer la précision du modèle uniquement pour le résultat souhaité.  
   
     > [!NOTE]  
-    >  Si vous n’entrez pas de valeur, l’option **Seuil cible** n’est pas disponible et le modèle est évalué pour toutes les valeurs possibles de l’attribut prédictible.  
+    >   Si vous n'entrez pas de valeur, l'option **Seuil cible** n'est pas disponible, et le modèle est évalué pour toutes les valeurs possibles de l'attribut prédictible.  
   
 5.  Éventuellement, pour **Seuil cible**, tapez un nombre décimal entre 0 et 1 pour spécifier la probabilité minimale nécessaire à une prédiction pour être comptabilisée comme exacte.  
   

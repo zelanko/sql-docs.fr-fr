@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084203"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des outils clients que vous pouvez utiliser pour gérer les structures et modèles d'exploration de données existants. Cette section décrit les opérations de gestion que vous pouvez effectuer avec chaque environnement.  
   
  Outre ces outils, vous pouvez gérer les objets d'exploration de données par programmation à l'aide d'AMO ou utiliser d'autres clients qui se connectent à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , comme les Compléments d'exploration de données pour [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
@@ -29,9 +28,9 @@ ms.locfileid: "66084203"
 ## <a name="in-this-section"></a>Dans cette section  
  [Déplacement d'objets d'exploration de données](moving-data-mining-objects.md)  
   
- [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Utilisation de SQL Server Profiler pour surveiller l’exploration de données &#40;Analysis Services d’exploration de données&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Utilisation de SQL Server Profiler pour contrôler l’exploration de données &#40;Analysis Services - Exploration de données&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Emplacement des objets d'exploration de données  
  Les structures et modèles d'exploration de données qui ont été traités sont stockés dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -42,8 +41,7 @@ ms.locfileid: "66084203"
 >  Certains clients, par exemple les compléments d’exploration de données pour [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, vous permettent également de créer des modèles et des structures d’exploration de données de la session qui utilisent une connexion à une instance, mais stockent la structure et les modèles d’exploration de données sur le serveur uniquement pendant la durée de la session. Vous pouvez toujours gérer ces modèles via le client, de la même façon que vous le feriez avec des structures et modèles stockés dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais les objets ne persistent pas une fois que vous êtes déconnecté de l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>Gestion des objets d'exploration de données dans les outils de données SQL Server  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] propose de nombreuses fonctionnalités facilitant la création, l'exploration et la modification des objets d'exploration de données.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] propose de nombreuses fonctionnalités facilitant la création, l'exploration et la modification des objets d'exploration de données.  
   
  Les liens suivants permettent d'accéder à des informations sur la modification des objets d'exploration de données à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
@@ -53,7 +51,7 @@ ms.locfileid: "66084203"
   
 -   [Modifier les propriétés d'un modèle d'exploration de données](change-the-properties-of-a-mining-model.md)  
   
--   [Afficher ou modifier les indicateurs de modélisation &#40;l’exploration de données&#41;](modeling-flags-data-mining.md)  
+-   [Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md)  
   
 -   [Afficher ou modifier les paramètres d'algorithme](view-or-change-algorithm-parameters.md)  
   
@@ -81,19 +79,19 @@ ms.locfileid: "66084203"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrictions :** None.  
+ **Restrictions :** Aucun.  
   
 ### <a name="data-mining-extensions-dmx"></a>DMX (Data Mining Extensions)  
  Data Mining Extensions (DMX) peut être utilisé avec d'autres interfaces de commandes telles que [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADOMD.NET pour créer, supprimer et interroger les structures et modèles d'exploration de données.  
   
--   [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](/sql/dmx/dmx-statements-data-definition)  
+-   [Instructions de définition de données DMX &#40;Data Mining Extensions&#41;](/sql/dmx/dmx-statements-data-definition)  
   
- **Restrictions :** Certaines propriétés ne peuvent pas être modifiées à l’aide de DMX.  
+ **Restrictions :** Certaines propriétés ne peuvent pas être modifiées avec DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) est le langage de définition de données utilisé pour l'ensemble d'Analysis Services. XMLA vous permet de contrôler la plupart des objets d'exploration de données et opérations de serveur. Toutes les opérations de gestion entre le client et le serveur peuvent être effectuées avec XMLA. Pour plus de commodité, vous pouvez utiliser le langage de script [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) pour inclure le code XML dans un wrapper.  
   
- **Restrictions :** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère des instructions XMLA qui ne sont prises en charge qu’à des fins d’utilisation interne et ne peuvent pas être utilisées dans des scripts DDL XML.  
+ **Restrictions :** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère des instructions XMLA qui ne sont prises en charge qu'en utilisation interne. Elles ne peuvent pas être utilisées dans des scripts DDL XML.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide du développeur &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  

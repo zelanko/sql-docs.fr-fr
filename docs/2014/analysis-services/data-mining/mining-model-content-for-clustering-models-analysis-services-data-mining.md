@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083680"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de clustering (Analysis Services - Exploration de données)
@@ -89,23 +89,23 @@ ms.locfileid: "66083680"
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
- **Nœud parent** Indique le nombre de clusters dans le modèle.  
+ **Nœud parent** : indique le nombre de clusters dans le modèle.  
   
- **Nœuds de cluster** Toujours 0.  
+ **Nœuds terminaux** : toujours 0.  
   
  PARENT_UNIQUE_NAME  
  Nom unique du parent du nœud.  
   
- **Nœud parent** Toujours NULL  
+ **Nœud parent** : toujours NULL.  
   
- **Nœuds de cluster** Généralement 000.  
+ **Nœuds du cluster** : généralement 000.  
   
  NODE_DESCRIPTION  
  Description du nœud.  
   
- **Nœud parent** Toujours **(tout)**.  
+ **Nœud parent** : toujours **Tout**.  
   
- **Nœuds de cluster** Liste séparée par des virgules des attributs principaux qui distinguent le cluster des autres clusters.  
+ **Nœuds du cluster** : liste séparée par des virgules des attributs principaux qui distinguent le cluster des autres clusters.  
   
  NODE_RULE  
  Non utilisé pour les modèles de clustering.  
@@ -114,9 +114,9 @@ ms.locfileid: "66083680"
  Non utilisé pour les modèles de clustering.  
   
  NODE_PROBABILITY  
- Probabilité associée à ce nœud. **Nœud parent** Toujours 1.  
+ Probabilité associée à ce nœud. **Nœud parent** : toujours 1.  
   
- **Nœuds de cluster** La probabilité représente la probabilité composée des attributs, avec des ajustements en fonction de l’algorithme utilisé pour créer le modèle de clustering.  
+ **Nœuds du cluster** : la probabilité représente la probabilité composée des attributs, avec certains ajustements selon l’algorithme utilisé pour créer le modèle de clustering.  
   
  MARGINAL_PROBABILITY  
  Probabilité d'accès au nœud à partir du nœud parent. Dans un modèle de clustering, la probabilité marginale est toujours la même que la probabilité du nœud.  
@@ -124,16 +124,16 @@ ms.locfileid: "66083680"
  NODE_DISTRIBUTION  
  Table qui contient l'histogramme de probabilité du nœud.  
   
- **Nœud parent** Consultez la présentation de cette rubrique.  
+ **Nœud parent** : consultez l’introduction de cette rubrique.  
   
- **Nœuds de cluster** Représente la distribution d’attributs et de valeurs pour les cas inclus dans ce cluster.  
+ **Nœuds du cluster** : représente la distribution des attributs et des valeurs pour les cas inclus dans ce cluster.  
   
  NODE_SUPPORT  
- Nombre de cas qui prennent en charge ce nœud. **Nœud parent** Indique le nombre de cas d’apprentissage pour le modèle entier.  
+ Nombre de cas qui prennent en charge ce nœud. **Nœud parent** : indique le nombre de cas d’apprentissage pour tout le modèle.  
   
- **Nœuds de cluster** Indique la taille du cluster sous la forme d’un certain nombre de cas.  
+ **Nœuds du cluster** : indique la taille du cluster sous la forme d’un nombre de cas.  
   
- **Remarque** Si le modèle utilise le clustering K-signifiant, chaque cas ne peut appartenir qu’à un seul cluster. Toutefois, si le modèle utilise le clustering EM, chaque cas peut appartenir à un cluster différent, et une distance pondérée est attribuée au cas pour chaque cluster auquel il appartient. Par conséquent, pour les modèles EM, la somme de la prise en charge pour un cluster individuel est supérieure à la prise en charge pour le modèle global.  
+ **Remarque** : Si le modèle utilise le clustering K-Means, chaque cas ne peut appartenir qu’à un seul cluster. Toutefois, si le modèle utilise le clustering EM, chaque cas peut appartenir à un cluster différent, et une distance pondérée est attribuée au cas pour chaque cluster auquel il appartient. Par conséquent, pour les modèles EM, la somme de la prise en charge pour un cluster individuel est supérieure à la prise en charge pour le modèle global.  
   
  MSOLAP_MODEL_COLUMN  
  Non utilisé pour les modèles de clustering.  
@@ -141,20 +141,19 @@ ms.locfileid: "66083680"
  MSOLAP_NODE_SCORE  
  Affiche un score associé au nœud.  
   
- **Nœud parent** Score du critère d’information Bayésien (BIC) pour le modèle de clustering.  
+ **Nœud parent** : score BIC (Bayesian Information Criterion) du modèle de clustering.  
   
- **Nœuds de cluster** Toujours 0.  
+ **Nœuds terminaux** : toujours 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Étiquette utilisée à des fins d'affichage. Vous ne pouvez pas modifier cette légende.  
   
- **Nœud parent** Type de modèle : modèle de cluster  
+ **Nœud parent** : type de modèle : modèle de cluster.  
   
- **Nœuds de cluster** Nom du cluster. Par exemple : Cluster 1.  
+ **Nœuds du cluster** : nom du cluster. Par exemple : Cluster 1.  
   
 ## <a name="remarks"></a>Notes  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour créer un modèle de clustering. Si vous ne savez pas quelle méthode a été utilisée pour créer le modèle avec lequel vous travaillez, vous pouvez récupérer les métadonnées du modèle par programmation en utilisant un client ADOMD ou un objet AMO, ou encore en interrogeant l'ensemble de lignes de schéma d'exploration de données. Pour plus d’informations, consultez [Interroger les paramètres utilisés pour créer un modèle d’exploration de données](query-the-parameters-used-to-create-a-mining-model.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour créer un modèle de clustering. Si vous ne savez pas quelle méthode a été utilisée pour créer le modèle avec lequel vous travaillez, vous pouvez récupérer les métadonnées du modèle par programmation en utilisant un client ADOMD ou un objet AMO, ou encore en interrogeant l'ensemble de lignes de schéma d'exploration de données. Pour plus d’informations, consultez [Interroger les paramètres utilisés pour créer un modèle d’exploration de données](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La structure et le contenu du modèle restent les même, indépendamment de la méthode de clustering ou des paramètres que vous utilisez.  

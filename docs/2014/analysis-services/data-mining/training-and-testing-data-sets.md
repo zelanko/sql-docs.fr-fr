@@ -16,15 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082735"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
-  La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
+  La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
   
  Après le traitement d'un modèle à l'aide du jeu d'apprentissage, vous testez le modèle en effectuant des prédictions sur le jeu de test. Comme les données dans le jeu de test contiennent déjà des valeurs connues pour l'attribut que vous souhaitez prédire, il est facile de déterminer si les prédictions du modèle sont correctes.  
   
@@ -63,11 +62,11 @@ ms.locfileid: "66082735"
 ### <a name="specifying-holdout-programmatically"></a>Spécification de l'exclusion par programmation  
  Vous pouvez définir des jeux de données d'apprentissage et de test sur une structure d'exploration de données à l'aide des instructions DMX, AMO ou DDL XML. L'instruction ALTER MINING STRUCTURE ne prend pas en charge l'utilisation de paramètres d'exclusion.  
   
--   **DMX** dans le langage DMX (Data Mining Extensions), l’instruction CREATE Mining structure a été étendue pour inclure une clause with exclusion.  
+-   **DMX** Dans le langage DMX (Data Mining Extensions), l’instruction CREATE MINING STRUCTURE a été étendue pour inclure une clause WITH HOLDOUT.  
   
--   **ASSL** Vous pouvez soit créer une nouvelle structure d’exploration de données, soit ajouter un jeu de données de test à une structure d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exploration de données existante, à l’aide du langage de script (ASSL).  
+-   **ASSL** Vous pouvez soit créer une nouvelle structure d’exploration de données, soit ajouter un jeu de données de test à une structure d’exploration de données existante à l’aide du langage de script [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL).  
   
--   **AMO** Vous pouvez également afficher et modifier les jeux de données de exclusion à l’aide d’AMO.  
+-   **AMO** Vous pouvez également afficher et modifier les jeux de données d'exclusion à l'aide d'AMO.  
   
  Vous pouvez afficher les informations relatives au jeu de données d'exclusion dans une structure d'exploration de données existante en interrogeant l'ensemble de lignes de schéma d'exploration de données. Vous pouvez pour cela effectuer un appel DISCOVER ROWSET ou utiliser une requête DMX.  
   
@@ -92,8 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Vous ne pouvez pas supprimer les données d'un modèle de série chronologique ; par conséquent, vous ne pouvez pas séparer les données sources en jeux d'apprentissage et de test. Si vous commencez par créer une structure d'exploration de données et un modèle, puis choisissez l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series), l'option pour créer un jeu de données d'exclusion est désactivée. L'utilisation des données d'exclusion est également désactivée si la structure d'exploration de données contient une colonne KEY TIME au niveau du cas ou de la table imbriquée.  
   
--   Il est possible de configurer accidentellement le jeu de données d'exclusion de sorte que le jeu de données complet soit utilisé pour le test et qu'il ne reste pas de données pour l'apprentissage. Cependant, dans cette éventualité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] générera une erreur afin que vous puissiez résoudre le problème. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous prévient également lorsque la structure est traitée, si plus de 50 % des données ont été exclues pour les tests.  
+-   Il est possible de configurer accidentellement le jeu de données d'exclusion de sorte que le jeu de données complet soit utilisé pour le test et qu'il ne reste pas de données pour l'apprentissage. Cependant, dans cette éventualité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] générera une erreur afin que vous puissiez résoudre le problème. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous prévient également lorsque la structure est traitée, si plus de 50 % des données ont été exclues pour les tests.  
   
 -   Dans la plupart des cas, la valeur d'exclusion par défaut 30 fournit un bon équilibre entre les données d'apprentissage et de test. Il n'existe pas de méthode simple pour déterminer le volume minimal du jeu de données permettant de fournir un apprentissage suffisant ou le volume maximal du jeu d'apprentissage permettant d'éviter un surajustement. Toutefois, après avoir construit un modèle, vous pouvez utiliser la validation croisée pour évaluer le jeu de données par rapport à un modèle particulier.  
   
@@ -103,16 +101,16 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Décrit comment les filtres sur un modèle interagissent avec les jeux de données d'apprentissage et de test.|[Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)|  
-|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[Validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Décrit comment les filtres sur un modèle interagissent avec les jeux de données d'apprentissage et de test.|[Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)|  
+|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
-|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des ensembles de lignes de schéma d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des ensembles de lignes de schéma d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’exploration de données](data-mining-tools.md)   
  [Concepts d’exploration de données](data-mining-concepts.md)   
  [Solutions d’exploration de données](data-mining-solutions.md)   
- [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

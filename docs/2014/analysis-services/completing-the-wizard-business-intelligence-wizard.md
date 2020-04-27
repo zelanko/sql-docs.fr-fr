@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbfbcdae5d16ac631dddda9aa79c85a359afefb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087745"
 ---
 # <a name="completing-the-wizard-business-intelligence-wizard"></a>Fin de l'Assistant (Assistant Business Intelligence)
   Utilisez la page **Fin de l'Assistant** pour examiner les modifications apportées après l'exécution de l'Assistant Business Intelligence.  
   
 ## <a name="options"></a>Options  
- **Relatives**  
+ **Modifications**  
  Affiche les modifications apportées aux objets dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet.  
   
 ## <a name="see-also"></a>Voir aussi  

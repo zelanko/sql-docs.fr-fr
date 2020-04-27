@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084416"
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
@@ -44,8 +44,7 @@ ms.locfileid: "66084416"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Sélection des fonctionnalités pour l'exploration de données Analysis Services  
  Habituellement, la sélection des fonctionnalités est effectuée automatiquement dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], et chaque algorithme comporte un ensemble de techniques par défaut permettant d'appliquer intelligemment la réduction des fonctionnalités. La sélection des fonctionnalités est toujours effectuée avant l'apprentissage du modèle, afin de choisir automatiquement les attributs d'un dataset qui sont le plus susceptibles d'être utilisés dans le modèle. Toutefois, vous pouvez également définir manuellement des paramètres pour influencer le comportement de la sélection des fonctionnalités.  
   
- En général, la sélection des fonctionnalités calcule un score pour chaque attribut, puis retient uniquement les attributs qui ont les meilleurs scores. Vous pouvez également ajuster le seuil pour les scores les plus élevés. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour calculer les scores ; la méthode exacte appliquée dans un modèle dépend de ces facteurs :  
+ En général, la sélection des fonctionnalités calcule un score pour chaque attribut, puis retient uniquement les attributs qui ont les meilleurs scores. Vous pouvez également ajuster le seuil pour les scores les plus élevés. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour calculer les scores ; la méthode exacte appliquée dans un modèle dépend de ces facteurs :  
   
 -   Algorithme utilisé dans votre modèle  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66084416"
   
  Le score *d’intérêt et de pertinence* est utilisé pour classer par ordre de priorité et trier les attributs dans des colonnes qui contiennent des données numériques continues non binaires.  
   
- *L’entropie de Shannon* et deux scores *bayésiens* sont disponibles pour les colonnes qui contiennent des données discrètes et discrétisation. Toutefois, si le modèle contient des colonnes continues, le score d'intérêt et de pertinence est utilisé pour évaluer toutes les colonnes d'entrée, afin de garantir la cohérence.  
+ *L’entropie de Shannon* et deux scores *bayésiens* sont disponibles pour les colonnes qui contiennent des données discrètes et discrétisées. Toutefois, si le modèle contient des colonnes continues, le score d'intérêt et de pertinence est utilisé pour évaluer toutes les colonnes d'entrée, afin de garantir la cohérence.  
   
  La section suivante décrit chaque méthode de sélection des fonctionnalités.  
   
@@ -104,12 +103,12 @@ ms.locfileid: "66084416"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Méthodes de sélection des fonctionnalités utilisées par les algorithmes Analysis Services  
  Le tableau suivant répertorie les algorithmes qui prennent en charge la sélection des fonctionnalités, les méthodes de sélection des fonctionnalités utilisées par l'algorithme et les paramètres à définir pour contrôler le comportement de la sélection des fonctionnalités :  
   
-|Algorithme|Méthode d'analyse|Commentaires|  
+|Algorithm|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme Microsoft Naïve Bayes accepte uniquement les attributs discrets ou discrétisés ; par conséquent, il ne peut pas utiliser le score d'intérêt et de pertinence.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |Arbres de décision|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode de sélection des fonctionnalités par défaut ou la méthode que vous avez spécifiée lors de la création du modèle est utilisée.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Réseau neuronal|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme MNN (Microsoft Neural Network, réseau neuronal de Microsoft) peut utiliser les deux méthodes de type bayésien et entropie tant que les données contiennent des colonnes continues.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-neural-network-algorithm-technical-reference.md).|  
-|Régression logique|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Bien que l'algorithme MLR (Microsoft Logistic Regression) soit basé sur l'algorithme MNN (Microsoft Neural Network), vous ne pouvez pas personnaliser les modèles de régression logistique de façon à contrôler le comportement de la sélection des fonctionnalités ; par conséquent, la valeur par défaut de la sélection des fonctionnalités est toujours la méthode la plus appropriée pour l'attribut.<br /><br /> Si tous les attributs sont discrets ou discrétisés, la valeur par défaut est BDEU.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md).|  
+|MLR (Microsoft Logistic Regression)|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Bien que l'algorithme MLR (Microsoft Logistic Regression) soit basé sur l'algorithme MNN (Microsoft Neural Network), vous ne pouvez pas personnaliser les modèles de régression logistique de façon à contrôler le comportement de la sélection des fonctionnalités ; par conséquent, la valeur par défaut de la sélection des fonctionnalités est toujours la méthode la plus appropriée pour l'attribut.<br /><br /> Si tous les attributs sont discrets ou discrétisés, la valeur par défaut est BDEU.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Clustering|Score d'intérêt et de pertinence|L'algorithme de gestion de clusters Microsoft peut utiliser des données discrètes ou discrétisées. Toutefois, le score de chaque attribut étant calculé en tant que distance et étant représenté sous la forme d'un nombre continu, le score d'intérêt et de pertinence doit être utilisé.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md).|  
 |Régression linéaire|Score d'intérêt et de pertinence|L'algorithme MLR (Microsoft Linear Regression) Microsoft peut utiliser uniquement le score d'intérêt et de pertinence, car il prend en charge uniquement les colonnes continues.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md).|  
 |Règles d’association<br /><br /> Sequence clustering|Non utilisé|La sélection des fonctionnalités n'est pas appelée avec ces algorithmes.<br /><br /> Toutefois, vous pouvez contrôler le comportement de l'algorithme et, si nécessaire, réduire la taille des données d'entrée en définissant la valeur des paramètres MINIMUM_SUPPORT et MINIMUM_PROBABILITY.<br /><br /> Pour plus d’informations, consultez [Informations techniques de référence relatives à l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md) et [Informations techniques de référence relatives à l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md).|  

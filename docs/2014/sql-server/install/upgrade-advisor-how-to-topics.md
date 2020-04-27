@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe326421861cfd3c38dbf0fb0a6042d05945d022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091607"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Rubriques de procédures relatives au Conseiller de mise à niveau
@@ -28,13 +28,13 @@ ms.locfileid: "66091607"
   
  [Procédure : lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
   
- [Procédure : exécuter l'Assistant Analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
+ [Procédure : exécuter l’Assistant Analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
   
  [Procédure : afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
  [Procédure : filtrer des rapports](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
- [Procédure : exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)  
+ [Procédure : Export Reports](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

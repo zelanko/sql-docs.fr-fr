@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083037"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Interroger les paramètres utilisés pour créer un modèle d'exploration de données
@@ -31,7 +31,7 @@ ms.locfileid: "66083037"
 2.  Cliquez avec le bouton droit sur le nom de l’instance, sélectionnez **Nouvelle requête**, puis sélectionnez **DMX**.  
   
     > [!NOTE]  
-    >  Vous pouvez également créer une requête sur un modèle d’exploration de données en utilisant le modèle **MDX** .  
+    >   Vous pouvez également créer une requête sur un modèle d'exploration de données à l'aide du modèle **MDX** .  
   
 3.  Si l'instance contient plusieurs bases de données, sélectionnez la base de données contenant le modèle à interroger dans la liste **Bases de données disponibles** dans la barre d'outils.  
   

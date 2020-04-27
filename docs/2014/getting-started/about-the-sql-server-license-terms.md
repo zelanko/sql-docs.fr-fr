@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088631"
 ---
 # <a name="about-the-sql-server-license-terms"></a>À propos des termes du contrat de licence SQL Server
@@ -63,7 +63,7 @@ ms.locfileid: "66088631"
 |Portugais (Brésil)|PTB|1046|  
 |Russe|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Options de licence  
+## <a name="ssnoversion-licensing-options"></a>Options de licences de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Pour plus d’informations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur les tarifs et les options de licence,https://www.microsoft.com/sqlserver/sql-server-2014.aspx) consultez le [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (site Web).  
   
 ## <a name="see-also"></a>Voir aussi  

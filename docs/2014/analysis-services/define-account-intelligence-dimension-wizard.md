@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082159"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Définir l'intelligence comptable (Assistant Dimension)
   Utilisez la page **Définir l'intelligence comptable** pour faire correspondre les types de comptes définis dans l'instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avec ceux définis dans l'attribut de dimension associé à l'attribut **Type de compte** de la dimension.  
   
 > [!NOTE]  
->  Cette page s’affiche uniquement si vous avez sélectionné **Dimension standard** dans la page **Sélectionner le type de la dimension** et si vous avez mappé un attribut de dimension au type d’attribut **Type de compte** dans la page **Spécifier le type de la dimension** .  
+>   Cette page s'affiche uniquement si vous avez sélectionné **Dimension standard** dans la page **Sélectionner le type de la dimension** et si vous avez mappé un attribut de dimension au type d'attribut **Type de compte** dans la page **Spécifier le type de la dimension** .  
   
 ## <a name="options"></a>Options  
  **Types de comptes de la table source**  
@@ -34,14 +34,14 @@ ms.locfileid: "66082159"
   
  Le tableau ci-dessous répertorie les types de comptes définis dans une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Asset**|Valeur des biens possédés à un moment donné.|  
 |**Balance**|Comptage d'une grandeur à un moment donné.|  
-|**Dépensé**|Valeur des dépenses engagées.|  
-|**Organigramme**|Comptage incrémental de biens.|  
-|**Produits**|Valeur des biens reçus.|  
-|**Pourra**|Valeur des biens dus à un moment donné.|  
+|**Dépenses**|Valeur des dépenses engagées.|  
+|**Flux**|Comptage incrémental de biens.|  
+|**Revenu**|Valeur des biens reçus.|  
+|**Dettes**|Valeur des biens dus à un moment donné.|  
 |**Statistique**|Rapport calculé d'une grandeur, ou comptage d'une grandeur qu'il n'est pas possible d'agréger.|  
   
 ## <a name="see-also"></a>Voir aussi  

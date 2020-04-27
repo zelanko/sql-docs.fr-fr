@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083482"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tâches de la visionneuse de modèle d'exploration de données et procédures
@@ -41,12 +41,12 @@ ms.locfileid: "66083482"
   
 -   [Extraire des données de cas à partir d'un modèle d'exploration de données](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Afficher la formule d’un modèle de série chronologique &#40;l’exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Afficher la formule d’un modèle de série chronologique &#40;exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Modifier les couleurs utilisées dans la visionneuse d'exploration de données](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)   
- [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085651"
 ---
 # <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
@@ -26,17 +26,17 @@ ms.locfileid: "66085651"
   
 -   [Requêtes sur les données de structure et de cas](#bkmk_Structure)  
   
--   [Requêtes sur les modèles de modèle](#bkmk_Patterns)  
+-   [Requêtes sur les schémas de modèle](#bkmk_Patterns)  
   
  [Exemples](#bkmk_Examples)  
   
--   [Requête de contenu sur un modèle d’association](#bkmk_Assoc)  
+-   [Requête de contenu sur un modèle d'association](#bkmk_Assoc)  
   
--   [Requête de contenu sur un modèle d’arbre de décision](#bkmk_DecTree)  
+-   [Requête de contenu sur un modèle d'arbre de décision](#bkmk_DecTree)  
   
- [Utilisation des résultats de la requête](#bkmk_Results)  
+ [Utilisation des résultats de requête](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a>Requêtes de contenu de base  
+##  <a name="basic-content-queries"></a><a name="bkmk_ContentQuery"></a>Requêtes de contenu de base  
  Vous pouvez créer des requêtes de contenu à l'aide du générateur de requêtes de prédiction, utiliser les modèles de requête de contenu DMX fournis dans SQL Server Management Studio ou écrire des requêtes directement dans DMX. Contrairement aux requêtes de prédiction, vous n'avez pas besoin de joindre des données externes ; il est donc facile d'écrire des requêtes de contenu.  
   
  Cette section fournit une vue d'ensemble des types de requêtes de contenu que vous pouvez créer.  
@@ -45,7 +45,7 @@ ms.locfileid: "66085651"
   
 -   Les requêtes sur le modèle peuvent retourner des schémas, des listes d'attributs, des formules, etc.  
   
-###  <a name="bkmk_Structure"></a>Requêtes sur les données de structure et de cas  
+###  <a name="queries-on-structure-and-case-data"></a><a name="bkmk_Structure"></a> Requêtes sur les données de cas et de structure  
  DMX prend en charge des requêtes sur les données mises en cache utilisées pour créer des structures et des modèles d'exploration de données. Par défaut, ce cache est créé lorsque vous définissez la structure d'exploration de données et est rempli lorsque vous traitez la structure ou le modèle.  
   
 > [!WARNING]  
@@ -53,7 +53,7 @@ ms.locfileid: "66085651"
   
  Les exemples suivants illustrent les schémas courants pour créer des requêtes sur les données de cas ou des requêtes sur les données de la structure d'exploration de données :  
   
- **Obtenir tous les cas pour un modèle**  
+ **Obtenir toutes les cas d'un modèle**  
  `SELECT FROM <model>.CASES`  
   
  Utilisez cette instruction pour récupérer les colonnes spécifiées des données de cas utilisées pour générer un modèle. Vous devez disposer d'autorisations d'extraction sur le modèle pour exécuter cette requête.  
@@ -63,17 +63,17 @@ ms.locfileid: "66085651"
   
  Utiliser cette instruction pour afficher toutes les données incluses dans la structure, y compris les colonnes qui ne sont pas incluses dans un modèle d'exploration de données particulier. Vous devez disposer d'autorisations d'extraction sur le modèle, ainsi que sur la structure, afin de récupérer des données de la structure d'exploration de données.  
   
- **Obtient la plage de valeurs**  
+ **Obtenir une plage de valeurs**  
  `SELECT DISTINCT RangeMin(<column>), RangeMax(<column>) FROM <model>`  
   
  Utilisez cette instruction pour rechercher la valeur minimale, la valeur maximale et la moyenne d'une colonne continue, ou des compartiments d'une colonne discrétisée.  
   
- **Obtient des valeurs distinctes**  
+ **Obtenir des valeurs distinctes**  
  `SELECT DISTINCT <column>FROM <model>`  
   
  Utilisez cette instruction pour récupérer toutes les valeurs d'une colonne DISCRÈTE.  N'utilisez pas cette instruction pour les colonnes discrétisées ; utilisez à la place les fonctions `RangeMin` et `RangeMax`.  
   
- **Rechercher les cas utilisés pour l’apprentissage d’un modèle ou d’une structure**  
+ **Rechercher les cas utilisés pour l'apprentissage d'un modèle ou d'une structure**  
  `SELECT  FROM <mining structure.CASES WHERE IsTrainingCase()`  
   
  Utilisez cette instruction pour obtenir le jeu complet de données qui ont été utilisées dans l'apprentissage d'un modèle.  
@@ -83,12 +83,12 @@ ms.locfileid: "66085651"
   
  Utilisez cette instruction pour obtenir les données qui ont été mises de côté pour tester des modèles d'exploration de données associés à une structure spécifique.  
   
- **Extraction d’un modèle de modèle spécifique vers des données de cas sous-jacentes**  
+ **Extraction d'un schéma de modèle spécifique vers des données de cas sous-jacentes**  
  `SELECT FROM <model>.CASESWHERE IsTrainingCase() AND IsInNode(<node>)`  
   
  Utilisez cette instruction pour récupérer des données de cas détaillées d'un modèle ayant fait l'objet d'un apprentissage. Vous devez spécifier un nœud spécifique : par exemple, vous devez connaître l'ID de nœud du cluster, la branche spécifique de l'arbre de décision, etc. De plus, vous devez disposer d'autorisations d'extraction sur le modèle pour exécuter cette requête.  
   
-###  <a name="bkmk_Patterns"></a>Requêtes sur les modèles de modèle, les statistiques et les attributs  
+###  <a name="queries-on-model-patterns-statistics-and-attributes"></a><a name="bkmk_Patterns"></a>Requêtes sur les modèles de modèle, les statistiques et les attributs  
  Le contenu d'un modèle d'exploration de données est utile à de nombreuses fins. Avec une requête de contenu de modèle, vous pouvez effectuer les opérations suivantes :  
   
 -   Extraire les formules ou les probabilités permettant d'effectuer vos propres calculs.  
@@ -105,17 +105,17 @@ ms.locfileid: "66085651"
   
  Les exemples suivants montrent certains schémas courants pour créer des requêtes sur le contenu du modèle :  
   
- **Récupérer des modèles à partir du modèle**  
+ **Obtenir des schémas du modèle**  
  `SELECT FROM <model>.CONTENT`  
   
  Utilisez cette instruction pour récupérer des informations détaillées sur les nœuds spécifiques dans le modèle. Selon le type d'algorithme, le nœud peut contenir des règles et des formules, des statistiques de variance et de prise en charge, etc.  
   
- **Récupérer les attributs utilisés dans un modèle formé**  
+ **Récupérer des attributs utilisés dans un modèle ayant fait l'objet d'un apprentissage**  
  `CALL System.GetModelAttributes(<model>)`  
   
  Utilisez cette procédure stockée pour récupérer la liste des attributs utilisés par un modèle. Ces informations sont utiles pour déterminer les attributs qui ont été éliminés en raison de la sélection des fonctionnalités, par exemple.  
   
- **Récupérer le contenu stocké dans une dimension d’exploration de données**  
+ **Récupérer le contenu stocké dans une dimension d'exploration de données**  
  `SELECT FROM <model>.DIMENSIONCONTENT`  
   
  Utilisez cette instruction pour récupérer les données d'une dimension d'exploration de données.  
@@ -124,17 +124,17 @@ ms.locfileid: "66085651"
   
  Si vous développez votre propre algorithme de plug-in, vous pouvez utiliser cette instruction pour vérifier le contenu de votre modèle pour le test.  
   
- **Obtenir la représentation PMML d’un modèle**  
+ **Obtenir la représentation PMML d'un modèle**  
  `SELECT * FROM <model>.PMML`  
   
  Obtient un document XML qui représente le modèle au format PMML. Tous les types de modèle ne sont pas pris en charge.  
   
-##  <a name="bkmk_Examples"></a> Exemples  
+##  <a name="examples"></a><a name="bkmk_Examples"></a> Exemples  
  Bien que certains contenus de modèle soient standard dans les algorithmes, certaines parties du contenu varient considérablement, selon l'algorithme que vous avez utilisé pour générer le modèle. Par conséquent, lorsque vous créez une requête de contenu, vous devez identifier les types d'informations qui sont les plus utiles dans votre modèle spécifique.  
   
  Certains exemples sont fournis dans cette section pour montrer comment le choix de l'algorithme affecte le type d'informations stockées dans le modèle. Pour plus d’informations sur le contenu du modèle d’exploration de données et sur le contenu spécifique à chaque type de modèle, consultez [Contenu du modèle d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a>Exemple 1 : requête de contenu sur un modèle d’association  
+###  <a name="example-1-content-query-on-an-association-model"></a><a name="bkmk_Assoc"></a> Exemple 1 : requête de contenu sur un modèle d'association  
  L'instruction, `SELECT FROM <model>.CONTENT`, retourne différents types d'informations, selon le type de modèle que vous interrogez. Pour un modèle d'association, le *type de nœud*constitue une information clé. Les nœuds sont comme des conteneurs pour les informations dans le contenu du modèle. Dans un modèle d'association, les nœuds qui représentent des règles ont une valeur NODE_TYPE de 8, tandis que les nœuds qui représentent des jeux d'éléments ont une valeur NODE_TYPE de 7.  
   
  Ainsi, la requête suivante retourne les 10 premiers jeux d’éléments, classés par prise en charge (classement par défaut).  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Pour obtenir plus d’exemples, consultez [Exemples de requête de modèle d’association](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a>Exemple 2 : requête de contenu sur un modèle d’arbre de décision  
+###  <a name="example-2-content-query-on-a-decision-trees-model"></a><a name="bkmk_DecTree"></a> Exemple 2 : requête de contenu sur un modèle d'arbre de décision  
  Un modèle d'arbre de décision peut être utilisé pour la prédiction ainsi que pour la classification.  Dans cet exemple, on suppose que vous utilisez le modèle pour prédire un résultat, mais vous souhaitez également découvrir quels facteurs ou règles peuvent être utilisés pour classer les résultats.  
   
  Dans un modèle d'arbre de décision, les nœuds sont utilisés pour représenter des arbres et des nœuds terminaux. La légende de chaque nœud contient la description du chemin d'accès au résultat. Par conséquent, pour tracer le chemin d'accès d'un résultat particulier, vous devez identifier le nœud qui le contient, et obtenir des détails relatifs à ce nœud.  
@@ -190,7 +190,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Pour obtenir plus d’exemples, consultez [Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md).  
   
-##  <a name="bkmk_Results"></a>Utilisation des résultats de la requête  
+##  <a name="working-with-the-query-results"></a><a name="bkmk_Results"></a>Utilisation des résultats de la requête  
  Comme le montrent les exemples, les requêtes de contenu retournent principalement des ensembles de lignes tabulaires, mais ils peuvent également inclure des informations des colonnes imbriquées. Vous pouvez aplatir l'ensemble de lignes retourné, mais cela peut rendre l'utilisation des résultats plus complexe. Le contenu du nœud NODE_DISTRIBUTION en particulier est imbriqué, mais il contient des informations intéressantes sur le modèle.  
   
  Pour plus d'informations sur l'utilisation des ensembles de lignes hiérarchiques, consultez la spécification OLEDB sur MSDN.  

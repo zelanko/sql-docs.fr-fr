@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084821"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une plateforme intégrée pour les solutions qui intègrent l'exploration de données. Vous pouvez utiliser des données de cube ou relationnelles pour créer des solutions décisionnelles avec des analyses prévisionnelles.  
   
 ## <a name="benefits-of-data-mining"></a>Avantages de l’exploration de données  
@@ -52,13 +51,13 @@ ms.locfileid: "66084821"
   
 -   [Concepts d'exploration de données](data-mining-concepts.md)  
   
--   [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
+-   [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
 -   [Requêtes d’exploration de données](data-mining-queries.md)  
   
@@ -68,6 +67,6 @@ ms.locfileid: "66084821"
   
 -   [Architecture d'exploration de données](data-mining-architecture.md)  
   
--   [Vue d’ensemble de la sécurité &#40;l’exploration de données&#41;](security-overview-data-mining.md)  
+-   [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](security-overview-data-mining.md)  
   
   

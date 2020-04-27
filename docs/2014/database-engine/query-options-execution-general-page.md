@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089041"
 ---
 # <a name="query-options-execution-general-page"></a>Options de requête – Exécution (page Général)
-  Utilisez cette page pour spécifier les options d’exécution [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] des requêtes. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur le corps d’une fenêtre de l’éditeur de requête, puis cliquez sur **Options de requête**.  
+  Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur le corps d’une fenêtre de l’éditeur de requête, puis cliquez sur **Options de requête**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **DÉFINIR LE ROWCOUNT**  
+ **SET ROWCOUNT**  
  La valeur par défaut 0 indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] attend les résultats, tant que tous les résultats ne sont pas reçus. Spécifiez une valeur supérieure à 0 pour que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arrête la requête après avoir obtenu le nombre de lignes spécifié. Pour désactiver cette option, de manière à renvoyer toutes les lignes, spécifiez SET ROWCOUNT 0.  
   
- **DÉFINIR TEXTSIZE**  
+ **SET TEXTSIZE**  
  La valeur par défaut de 2 147 483 647 octets indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournira un champ de données complet jusqu'à la limite des champs de données `text`, `ntext`, `nvarchar(max)` et `varchar(max)`. Cela n'affecte pas le type de données XML. Spécifiez un nombre inférieur pour limiter les résultats en cas de valeurs importantes. Les colonnes d'une taille supérieure au nombre spécifié sont tronquées.  
   
  **Délai d’exécution**  
@@ -36,7 +36,7 @@ ms.locfileid: "66089041"
  Tapez un mot à utiliser pour séparer les instructions Transact-SQL en traitements. La valeur par défaut est GO.  
   
  **Par défaut, ouvrir les nouvelles requêtes en mode SQLCMD**  
- Activez cette case à cocher pour ouvrir les nouvelles requêtes en mode SQLCMD. Cette case à cocher est visible seulement lorsque la boîte de dialogue est ouverte via le menu **Outils** .  
+ Activez cette case à cocher pour ouvrir les nouvelles requêtes en mode SQLCMD. Cette case à cocher est visible uniquement lorsque la boîte de dialogue est ouverte via le menu **Outils** .  
   
  Lorsque vous sélectionnez cette option, prenez en compte les limitations suivantes :  
   

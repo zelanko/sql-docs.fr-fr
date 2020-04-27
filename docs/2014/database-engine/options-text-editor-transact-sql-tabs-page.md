@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089134"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Options (page éditeur de texte-Transact-SQL-onglets)
   Utilisez cette boîte de dialogue pour modifier le comportement de tabulation de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)], qui permet de programmer des scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils**, développez le dossier **Éditeur de texte**, puis le sous-dossier **Transact-SQL**, et cliquez ensuite sur **Tabulations**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
- Vous pouvez aussi définir les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] dans la boîte de dialogue **Tous les langages Tabulations**. Si vous utilisez les boîtes de dialogue **tous les langages** pour définir des options [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] différentes pour les autres éditeurs, comme les éditeurs DMX ou MDX, vous [!INCLUDE[ssDE](../includes/ssde-md.md)] devez réinitialiser les options de l’éditeur de requête à l’aide de cette boîte de dialogue.  
+ Vous pouvez aussi définir les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] dans la boîte de dialogue **Tous les langages Tabulations**. Si vous utilisez les boîtes de dialogue **Tous les langages** pour définir des options différentes pour les autres éditeurs [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], comme les éditeurs DMX ou MDX, vous devez réinitialiser les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] dans cette boîte de dialogue.  
   
 ## <a name="indenting"></a>Mise en retrait  
  **Aucun**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082910"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Spécifier une colonne à utiliser comme régresseur dans un modèle
@@ -26,7 +26,7 @@ ms.locfileid: "66082910"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>Procédure de création d'un modèle de régression linéaire simple  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans **Explorateur de solutions**, développez **structures d’exploration de données**.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans l’ **Explorateur de solutions**, développez **Structures d’exploration de données**.  
   
 2.  Double-cliquez sur Call Center.dmm pour l'ouvrir dans le concepteur.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66082910"
  [Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)   
  [Requêtes d’exploration de données](data-mining-queries.md)   
  [Référence technique de l’algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

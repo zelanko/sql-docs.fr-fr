@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093261"
 ---
 # <a name="ready-to-install"></a>Prêt pour l'installation
-  La page Prêt pour l'installation fournit un résumé des fonctionnalités qui doivent être installées ou modifiées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  La page Prêt pour l'installation fournit un résumé des fonctionnalités qui doivent être installées ou modifiées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  La page affiche les options suivantes :  
@@ -32,9 +32,9 @@ ms.locfileid: "66093261"
   
 -   Pour modifier vos paramètres d'installation, cliquez sur **Précédent**.  
   
--   Pour quitter le programme d’installation, cliquez sur **Annuler**.  
+-   Pour quitter le programme d'installation, cliquez sur **Annuler**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

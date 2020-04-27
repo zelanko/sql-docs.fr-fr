@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091217"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Vérifier que la croissance automatique est activée pour tous les fichiers de données et fichiers journaux pendant le processus de mise à niveau
@@ -89,7 +89,7 @@ MODIFY FILE
   
 |Taille du fichier|Incrément FILEGROWTH|  
 |---------------|--------------------------|  
-|De 0 à 50 Mo|10 Mo|  
+|De 0 à 50 Mo|10 Mo|  
 |De 100 à 200 Mo|20 Mo|  
 |500 Mo ou plus|10 %|  
   

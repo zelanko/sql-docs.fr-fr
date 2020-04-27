@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087810"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>Assistant Cluster (Compléments d'exploration de données pour Excel)
@@ -65,7 +65,7 @@ ms.locfileid: "66087810"
   
  Vous pouvez également utiliser le paramètre CLUSTER_SEED pour contrôler la valeur de départ et vous assurer que les modèles répétés utilisant le même jeu de données ont les mêmes résultats.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour utiliser l'Assistant Cluster, vous devez être connecté à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  

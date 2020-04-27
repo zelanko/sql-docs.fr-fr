@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094288"
 ---
 # <a name="installation-type"></a>Type d’installation
@@ -31,6 +31,6 @@ ms.locfileid: "66094288"
   
  Vous pouvez uniquement ajouter les fonctionnalités prises en charge[!INCLUDE[ssDE](../../includes/ssde-md.md)] par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sysprep, et-à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]image préparée de. Les autres fonctionnalités qui ne sont pas prises en charge par SysPrep peuvent être ajoutées après que l'instance préparée a été finalisée.  
   
- **Remarque** Vous ne pouvez pas ajouter de fonctionnalités à une instance de cluster de basculement après son installation. Pour ajouter des fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un cluster de basculement existant, vous devez effectuer une nouvelle installation pour installer une instance séparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Remarque** Vous ne pouvez pas ajouter des fonctionnalités à une instance de cluster de basculement après son installation. Pour ajouter des fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un cluster de basculement existant, vous devez effectuer une nouvelle installation pour installer une instance séparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

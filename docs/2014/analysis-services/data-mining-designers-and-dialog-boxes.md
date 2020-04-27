@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086473"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Concepteurs et boîtes de dialogue d'exploration de données
@@ -28,11 +28,11 @@ ms.locfileid: "66086473"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Concepteur de modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-model-designer-analysis-services-data-mining.md)|Utilisez les outils dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir une structure d'exploration de données et les modèles d'exploration de données associés.|  
-|[Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)|Utilisez les visionneuses personnalisées fournies à la fois dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour parcourir le modèle terminé et pour mieux comprendre les modèles dans les données.|  
+|[Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)|Utilisez les visionneuses personnalisées fournies à la fois dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour parcourir le modèle terminé et pour mieux comprendre les modèles dans les données.|  
 |[Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)|Utilisez les outils de graphique d'analyse de précision, tels que les graphiques de courbes d'élévation, la matrice de classification et la validation croisée, pour évaluer les modèles d'exploration de données et les jeux de données utilisés pour l'apprentissage. Tous les outils de précision sont disponibles à la fois dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
-|[Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)|Utilisez le générateur de requêtes de prédiction fourni à la fois dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
+|[Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)|Utilisez le générateur de requêtes de prédiction fourni à la fois dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
 |[Boîte de dialogue Propriétés de la structure d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [Boîte de dialogue Propriétés du modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|Modifiez les propriétés de la structure ou du modèle d'exploration de données pour affecter la façon dont les données sont traitées, ajouter des indicateurs de modélisation ou modifier les métadonnées.|  
-|[Éditeur de requête DMX &#40;Analysis Services d’exploration de données&#41;](dmx-query-editor-analysis-services-data-mining.md)|Utilisez l'Éditeur de requête DMX pour créer et exécuter des instructions écrites en langage DMX (Data Mining Extensions).|  
+|[Éditeur de requête DMX &#40;Analysis Services – Exploration de données&#41;](dmx-query-editor-analysis-services-data-mining.md)|Utilisez l'Éditeur de requête DMX pour créer et exécuter des instructions écrites en langage DMX (Data Mining Extensions).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’exploration de données](data-mining/data-mining-tools.md)   

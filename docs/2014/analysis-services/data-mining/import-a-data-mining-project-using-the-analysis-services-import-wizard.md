@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084370"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importer un projet d'exploration de données à l'aide de l'Assistant Importation d'Analysis Services
@@ -59,6 +59,6 @@ ms.locfileid: "66084370"
      Le nouveau projet est automatiquement ouvert à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés du projet &#40;SSAS tabulaire&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [Propriétés de projet &#40;SSAS Tabulaire&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

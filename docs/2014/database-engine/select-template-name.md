@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089803"
 ---
 # <a name="select-template-name"></a>Sélectionnez le nom du modèle
-  Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélectionner un modèle de trace [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existant à exporter vers un fichier du système d'exploitation. Vous pouvez également utiliser cette boîte de dialogue pour sélectionner ou entrer un autre nom afin d'enregistrer un modèle de trace lorsqu'un modèle de trace existant est modifié. Pour accéder à cette boîte de dialogue lorsque vous exportez un modèle, dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Exporter le modèle**. Pour accéder à cette boîte de dialogue lorsque vous changez le nom d'un modèle, dans le menu **Fichier** , pointez sur **Modèles**, sur **Modifier le modèle**, puis cliquez sur **Enregistrer sous**.  
+  Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélectionner un modèle de trace [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existant à exporter vers un fichier du système d'exploitation. Vous pouvez également utiliser cette boîte de dialogue pour sélectionner ou entrer un autre nom afin d'enregistrer un modèle de trace lorsqu'un modèle de trace existant est modifié. Pour accéder à cette boîte de dialogue lorsque vous exportez un modèle, dans le menu  **Fichier** de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Exporter le modèle**. Pour accéder à cette boîte de dialogue lorsque vous changez le nom d'un modèle, dans le menu **Fichier** , pointez sur **Modèles**, sur **Modifier le modèle**, puis cliquez sur **Enregistrer sous**.  
   
 ## <a name="options"></a>Options  
  **Type de serveur**  

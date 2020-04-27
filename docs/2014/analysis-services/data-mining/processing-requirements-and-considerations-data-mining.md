@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083130"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Exigences et considérations concernant le traitement (exploration de données)
@@ -30,7 +30,7 @@ ms.locfileid: "66083130"
   
  [Traitement des modèles d’exploration de données](#bkmk_ProcessModels)  
   
-##  <a name="bkmk_QueryReqs"></a>Requêtes sur le magasin relationnel au cours du traitement  
+##  <a name="queries-on-the-relational-store-during-processing"></a><a name="bkmk_QueryReqs"></a> Requêtes sur le magasin relationnel au cours du traitement  
  Pour l'exploration de données, le traitement s'effectue en trois phases : l'interrogation des données sources, la détermination des statistiques brutes et l'utilisation de la définition et de l'algorithme du modèle pour l'apprentissage du modèle d'exploration de données.  
   
  Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] émet des requêtes vers la base de données qui fournit les données brutes. Cette base de données peut être une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou d’une version antérieure du moteur de base de données SQL Server. Pendant le traitement d’une structure d’exploration de données, les données de la source sont transférées à cette structure et conservées sur le disque dans un nouveau format compressé. Seules certaines colonnes de la source de données sont traitées : il s’agit des colonnes incluses dans la structure d’exploration de données, comme défini par les liaisons.  
@@ -41,7 +41,7 @@ ms.locfileid: "66083130"
   
  Pour plus d’informations sur les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui prennent en charge le traitement de modèles parallèles, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
-##  <a name="bkmk_ProcessStructures"></a>Traitement des structures d’exploration de données  
+##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> Traitement des structures d'exploration de données  
  Une structure d'exploration de données peut être traitée avec tous les modèles dépendants, ou séparément. Le traitement d'une structure d'exploration de données séparément des modèles peut être utile lorsqu'il est envisagé que le traitement de certains modèles prenne beaucoup de temps et que vous souhaitez différer cette opération.  
   
  Pour plus d’informations, consultez [Traiter une structure d’exploration de données](process-a-mining-structure.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "66083130"
   
  Par ailleurs, si vous effacez le cache, vous ne pourrez pas utiliser le jeu de test d'exclusion (si vous en avez défini un) et la définition de la partition du jeu de test sera perdue. Pour plus d’informations sur les ensembles de tests d’exclusion, consultez [Jeux de données d’apprentissage et de test](training-and-testing-data-sets.md).  
   
-##  <a name="bkmk_ProcessModels"></a>Traitement des modèles d’exploration de données  
+##  <a name="processing-mining-models"></a><a name="bkmk_ProcessModels"></a> Traitement des modèles d'exploration de données  
  Vous pouvez traiter un modèle d'exploration de données séparément de la structure d'exploration de données associée, ou vous pouvez traiter tous les modèles basés sur la structure avec cette dernière.  
   
  Pour plus d’informations, consultez [Traiter un modèle d’exploration de données](process-a-mining-model.md).  
@@ -62,13 +62,13 @@ ms.locfileid: "66083130"
   
  Les modèles d'exploration de données sont également traités dans les scénarios suivants :  
   
- **Déploiement d’un projet**: en fonction des paramètres du projet et de l’état actuel du projet, les modèles d’exploration de données du projet sont généralement traités dans leur intégralité lorsque le projet est déployé.  
+ **Déploiement d’un projet**: en fonction des paramètres et de l’état actuel du projet, les modèles d’exploration de données du projet sont généralement traités intégralement quand le projet est déployé.  
   
  Lorsque vous commencez le déploiement, le traitement démarre automatiquement, à moins qu'il n'existe une version préalablement traitée sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et qu'aucune modification sur la structure n'ait eu lieu. Vous pouvez déployer un projet en sélectionnant **Déployer la solution** dans la liste déroulante ou en appuyant sur la touche F5. Vous pouvez :  
   
  Pour plus d’informations sur la définition des propriétés de déploiement d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contrôlent la manière dont les modèles d’exploration de données sont déployés, consultez [Déploiement de solutions d’exploration de données](deployment-of-data-mining-solutions.md).  
   
- **Déplacement d’un modèle d’exploration**de données : lorsque vous déplacez un modèle d’exploration de données à l’aide de la commande exporter, seule la définition du modèle est exportée, ce qui comprend le nom de la structure d’exploration de données attendue pour fournir des données au modèle.  
+ **Déplacement d’un modèle d’exploration de données**: quand vous déplacez un modèle d’exploration de données à l’aide de la commande EXPORT, seule la définition du modèle est exportée, laquelle comprend le nom de la structure d’exploration de données qui doit fournir des données au modèle.  
   
  Exigences de retraitement pour les scénarios suivants utilisant les commandes EXPORT et IMPORT :  
   

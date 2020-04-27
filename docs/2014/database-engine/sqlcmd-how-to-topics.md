@@ -11,19 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089602"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Rubriques de procédures liées à sqlcmd
-  L’ [utilitaire sqlcmd](../tools/sqlcmd-utility.md) vous permet d’entrer des procédures système, des fichiers de script et des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à l’invite de commandes dans l’Éditeur de requête en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un travail de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
+  [L’utilitaire sqlcmd](../tools/sqlcmd-utility.md) vous permet d’entrer des procédures système, des fichiers de script et des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à l’invite de commandes dans l’Éditeur de requête en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un travail de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Les rubriques suivantes traitent de l'utilisation de l' [sqlcmd Utility](../tools/sqlcmd-utility.md):  
   
--   [Démarrer l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
+-   [Démarrer l'utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
   
 -   [Utiliser l'utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   

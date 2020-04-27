@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094627"
 ---
 # <a name="install-distributed-replay-setup"></a>Installer Distributed Replay (programme d'installation)
@@ -44,7 +44,7 @@ ms.locfileid: "66094627"
     > [!NOTE]  
     >  Vous pouvez utiliser des comptes d'utilisateur locaux si vous exécutez l'outil d'administration, le service du contrôleur et le service du client sur le même ordinateur.  
   
- **Emplacements d’installation :**  
+ **Emplacements d'installation**  
   
  En supposant que vous utilisez les emplacements de fichiers et l'installation par défaut, le répertoire de base se trouve dans C:\Program Files\Microsoft SQL Server. Dans ce répertoire, les emplacements d'installation des binaires et des assemblys sont les suivants :  
   
@@ -52,19 +52,17 @@ ms.locfileid: "66094627"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Outils  
   
-     \-Ni  
+     \- OR -  
   
-     
-  \<Répertoire des fonctionnalités partagées\Tools\\(répertoire alternatif des fonctionnalités partagées, fourni par l’utilisateur)  
+     \<Répertoire des fonctionnalités partagées\Tools\\(répertoire alternatif des fonctionnalités partagées, fourni par l’utilisateur)  
   
 -   Sur un système 64 bits :  
   
      C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
   
-     \-Ni  
+     \- OR -  
   
-     
-  \<Répertoire des fonctionnalités partagées (x86)>\Tools\\(répertoire alternatif des fonctionnalités partagées (x86), fourni par l’utilisateur)  
+     \<Répertoire des fonctionnalités partagées (x86)>\Tools\\(répertoire alternatif des fonctionnalités partagées (x86), fourni par l’utilisateur)  
   
 ### <a name="to-install-distributed-replay-features"></a>Pour installer les fonctionnalités Distributed Replay  
   
@@ -74,7 +72,7 @@ ms.locfileid: "66094627"
   
 3.  Dans la page **Clé du produit** , sélectionnez une case d'option pour indiquer si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou une version de production du produit qui a une clé PID. Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
-4.  Sur la page **termes** du contrat de licence, lisez le contrat de licence, puis activez la case à cocher pour accepter les termes et conditions du contrat de licence. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Dans la page **Termes du contrat de licence** , prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 5.  Dans la page **Fichiers de support du programme d'installation** , cliquez sur **Installer** pour installer ou mettre à jour les fichiers de support du programme d'installation pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -88,7 +86,7 @@ ms.locfileid: "66094627"
   
     -   Pour installer le service client, sélectionnez **Distributed Replay Client**.  
   
-     **Important**: lorsque vous configurez Distributed Replay contrôleur, vous pouvez spécifier un ou plusieurs comptes d’utilisateur qui seront utilisés pour exécuter les services client Distributed Replay. Vous trouverez ci-dessous la liste des comptes pris en charge :  
+     **Important**: lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
     -   Compte d’utilisateur de domaine  
   
@@ -112,7 +110,7 @@ ms.locfileid: "66094627"
   
 10. Dans la page **Règles d'installation** , le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide la configuration de votre ordinateur. Une fois que le processus de validation est terminé, cliquez sur **Suivant**.  
   
-11. La page **espace disque** nécessaire calcule l’espace disque requis pour les fonctionnalités que vous spécifiez. Elle compare ensuite cet espace à l'espace disque disponible.  
+11. La page **Espace disque nécessaire** calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez. Elle compare ensuite cet espace à l'espace disque disponible.  
   
 12. Dans la page **Création de rapports d'erreurs** , spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../includes/msconame-md.md)] afin d'aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'option de création de rapports d'erreurs est activée par défaut.  
   
@@ -135,8 +133,8 @@ ms.locfileid: "66094627"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
- [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configuration requise pour la Distributed Replay](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay utilitaire&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

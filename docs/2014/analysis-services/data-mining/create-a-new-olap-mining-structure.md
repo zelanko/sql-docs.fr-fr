@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085457"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Créer une structure d’exploration de données OLAP
@@ -97,11 +97,11 @@ ms.locfileid: "66085457"
   
     -   **Dimension**: choisissez une dimension associée dans la liste déroulante.  
   
-    -   **Hiérarchie**: sélectionnez le niveau de la hiérarchie de dimension auquel vous souhaitez appliquer le filtre. Par exemple, si vous découpez la dimension [Geography], vous devez choisir un niveau de hiérarchie tel que [Region Country Name].  
+    -   **Hiérarchie**: sélectionnez le niveau de la hiérarchie de dimension auquel vous voulez appliquer le filtre. Par exemple, si vous découpez la dimension [Geography], vous devez choisir un niveau de hiérarchie tel que [Region Country Name].  
   
-    -   **Opérateur**: choisissez un opérateur dans la liste.  
+    -   **Opérateur**: sélectionnez un opérateur dans la liste.  
   
-    -   **Expression de filtre**: tapez une valeur ou une expression à utiliser comme condition de filtre, ou utilisez la liste déroulante pour sélectionner une valeur dans la liste des membres au niveau spécifié de la hiérarchie.  
+    -   **Expression de filtre**: tapez une valeur ou une expression pour servir de conditions de filtre, ou utilisez la liste déroulante pour sélectionner une valeur dans la liste des membres au niveau spécifié de la hiérarchie.  
   
          Par exemple, si vous avez sélectionné [Geography] comme dimension et [Region Country Name] comme niveau de la hiérarchie, la liste déroulante contient tous les pays valides que vous pouvez utiliser comme condition de filtre. Vous pouvez effectuer plusieurs sélections. Par conséquent, les données de la structure d'exploration de données seront limitées aux données du cube de ces régions géographiques.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "66085457"
   
     -   Algorithme MAR (Microsoft Association Rules)  
   
-     **Créer une dimension de modèle d’exploration de données**: activez cette case à cocher et fournissez un nom de type pour la dimension du modèle d’exploration de données. Lorsque vous utilisez cette option, une nouvelle dimension est créée dans le cube d'origine utilisé pour créer la structure d'exploration de données. Vous pouvez utiliser cette dimension pour extraire et réaliser une analyse ultérieure. Étant donné que la dimension se trouve dans le cube, la dimension est automatiquement mappée à la dimension de données de cas.  
+     **Créer une dimension du modèle d’exploration de données**: cochez cette case et fournissez un nom de type pour la dimension du modèle d’exploration de données. Lorsque vous utilisez cette option, une nouvelle dimension est créée dans le cube d'origine utilisé pour créer la structure d'exploration de données. Vous pouvez utiliser cette dimension pour extraire et réaliser une analyse ultérieure. Étant donné que la dimension se trouve dans le cube, la dimension est automatiquement mappée à la dimension de données de cas.  
   
-     **Créer un cube à l’aide**de la dimension du modèle d’exploration de données : activez cette case à cocher et fournissez un nom pour le nouveau cube. Lorsque vous utilisez cette option, un cube est créé. Il contient les dimensions existantes qui ont été utilisées pour générer la structure, et la nouvelle dimension d'exploration de données qui contient les résultats du modèle.  
+     **Créer le cube au moyen d’une dim. du mod. d’explor. de données**: cochez cette case et fournissez un nom pour le nouveau cube. Lorsque vous utilisez cette option, un cube est créé. Il contient les dimensions existantes qui ont été utilisées pour générer la structure, et la nouvelle dimension d'exploration de données qui contient les résultats du modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  

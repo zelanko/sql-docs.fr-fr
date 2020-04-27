@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084719"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Déploiement de solutions d’exploration de données
@@ -34,11 +34,11 @@ ms.locfileid: "66084719"
   
  Cette section fournit des informations détaillées sur les options de déploiement.  
   
- [Conditions requises pour le déploiement de solutions d’exploration de données](#bkmk_Reqs)  
+ [Conditions requises pour le déploiement de solutions d'exploration de données](#bkmk_Reqs)  
   
- [Déploiement d’une solution relationnelle](#bkmk_RelationalSltn)  
+ [Déploiement d'une solution relationnelle](#bkmk_RelationalSltn)  
   
- [Déploiement d’une solution multidimensionnelle](#bkmk_MDSltn)  
+ [Déploiement d'une solution multidimensionnelle](#bkmk_MDSltn)  
   
  [Ressources associées](#bkmk_Resources)  
   
@@ -47,28 +47,28 @@ ms.locfileid: "66084719"
   
  [Exporter et importer des objets d'exploration de données](export-and-import-data-mining-objects.md)  
   
-##  <a name="bkmk_Reqs"></a>Conditions requises pour le déploiement de solutions d’exploration de données  
+##  <a name="requirements-for-deployment-of-data-mining-solutions"></a><a name="bkmk_Reqs"></a>Conditions requises pour le déploiement de solutions d’exploration de données  
  L'instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle vous déployez la solution doit être en cours d'exécution dans un mode qui prend en charge les objets multidimensionnels et les objets d'exploration de données ; autrement dit, vous ne pouvez pas déployer des objets d'exploration de données dans une instance qui héberge des modèles tabulaires ou des données PowerPivot.  
   
  Par conséquent, lorsque vous créez une solution d'exploration de données dans Visual Studio, veillez à utiliser le modèle **Projet multidimensionnel et d'exploration de données Analysis Services**.  
   
  Lorsque vous déployez la solution, les objets utilisés pour l'exploration de données sont créés dans l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spécifiée, dans une base de données portant le même nom que le fichier solution.  
   
-###  <a name="bkmk_RelationalSltn"></a>Déploiement d’une solution relationnelle  
+###  <a name="deploying-a-relational-solution"></a><a name="bkmk_RelationalSltn"></a>Déploiement d’une solution relationnelle  
  Lorsque vous déployez une solution d'exploration de données relationnelle, les objets d'exploration de données requis sont créés dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , et les objets sont traités par défaut. Vous pouvez modifier les options de traitement à l'aide de la propriété de configuration **Option de traitement**. Pour plus d’informations, consultez [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
  Par défaut, seules les modifications incrémentielles sont déployées à chaque fois. En d'autres termes, vous pouvez modifier un modèle d'exploration de données, et lorsque vous redéployez le projet, seul ce modèle d'exploration de données est mis à jour. Toutefois, si vous avez plusieurs clients qui modifient la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , cela peut générer des erreurs. Pour modifier le mode de déploiement par défaut afin que la totalité de la base de données soit actualisée lorsque vous déployez la solution, modifiez la propriété **Mode de déploiement** .  
   
  Dans une solution d'exploration de données relationnelles, les seuls objets qui doivent être déployés sont la définition des sources de données, toute vue de sources de données, les structures d'exploration de données et tous les modèles d'exploration de données dépendants.  
   
-###  <a name="bkmk_MDSltn"></a>Déploiement d’une solution multidimensionnelle  
+###  <a name="deploying-a-multidimensional-solution"></a><a name="bkmk_MDSltn"></a>Déploiement d’une solution multidimensionnelle  
  Lorsque vous déployez une solution d'exploration de données multidimensionnelle, cette solution crée vos objets d'exploration de données dans la même base de données que le cube source.  
   
  Lorsque vous traitez la structure d'exploration de données ou le modèle d'exploration de données, vous devez également traiter le cube source. Par conséquent, le déploiement d'une solution qui utilise des modèles d'exploration de données OLAP peut prendre plus de temps que les solutions d'exploration de données relationnelles.  
   
  En général, les objets d'exploration de données utilisent également les mêmes sources de données et vues de sources de données que celles utilisées pour le cube. Toutefois, vous pouvez ajouter des sources de données et des vues de sources de données qui sont spécifiquement destinées à l'exploration de données. Par exemple, un cube ne contient généralement pas de données sur les clients potentiels, ou sur les données externes non utilisées dans les objets multidimensionnels.  
   
-##  <a name="bkmk_Resources"></a>Ressources associées  
+##  <a name="related-resources"></a><a name="bkmk_Resources"></a>Ressources associées  
  [Déplacement d'objets d'exploration de données](moving-data-mining-objects.md)  
   
  Si votre modèle est basé uniquement sur des données relationnelles, l'exportation et l'importation d'objets à l'aide de DMX est la façon la plus simple de déplacer des modèles.  
@@ -84,6 +84,6 @@ ms.locfileid: "66084719"
 ## <a name="see-also"></a>Voir aussi  
  [Traitement d’objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Interfaces de requête d’exploration de données](data-mining-query-tools.md)   
- [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

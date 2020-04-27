@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086143"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
@@ -68,7 +68,7 @@ ms.locfileid: "66086143"
     |||  
     |-|-|  
     |**\<nom du modèle>**|Sélectionnez cette option pour inclure des valeurs du modèle d'exploration de données dans la sortie. Vous pouvez uniquement ajouter des colonnes prédictibles.<br /><br /> Lorsque vous ajoutez une colonne du modèle, le résultat retourné est la liste non distinctive des valeurs se trouvant dans cette colonne.<br /><br /> Les colonnes que vous ajoutez à cette option sont incluses dans la partie SELECT de l'instruction DMX obtenue.|  
-    |**Fonction de prédiction**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Les éléments de la liste qui sont précédés d'un symbole $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est produite en sortie lorsque vous utilisez la fonction `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
+    |**Prediction Function**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Les éléments de la liste qui sont précédés d'un symbole $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est produite en sortie lorsque vous utilisez la fonction `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
     |**Expression personnalisée**|Sélectionnez cette option pour taper une expression personnalisée puis affecter un alias à la sortie.<br /><br /> L'expression personnalisée est ajoutée à la partie SELECT de la requête de prédiction DMX obtenue.<br /><br /> Cette option est utile si vous voulez ajouter du texte pour une sortie avec chaque ligne, pour appeler des fonctions VB ou pour appeler des procédures stockées personnalisées.<br /><br /> Pour plus d’informations sur l’utilisation de fonctions VBA et Excel à partir de DMX, consultez [Fonctions VBA dans MDX et DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Après avoir ajouté une fonction ou expression, basculez vers la vue DMX pour voir comment la fonction est ajoutée dans l'instruction DMX.  

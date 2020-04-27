@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086429"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Client d'exploration de données pour Excel (Compléments d'exploration de données SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "66086429"
   
      Le client d'exploration de données pour Excel gère une connexion active au serveur, ce qui vous permet d'enregistrer votre modèle d'exploration de données sur le serveur afin de l'utiliser pour d'autres tests ou pour le déploiement sur un serveur de production pour une meilleure extensibilité.  
   
-##  <a name="bkmk_Data"></a>Utiliser des données  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>Utiliser des données  
  Le groupe **préparation des données** contient les assistants suivants qui vous permettent d’examiner et de nettoyer les données en préparation des tâches d’exploration de données. La plupart des Assistants vous permettent de fractionner les données dans des jeux d'apprentissage et de test.  
   
  [Explorez les &#40;de données SQL Server les compléments d’exploration de données&#41;](explore-data-sql-server-data-mining-add-ins.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "66086429"
  [Calcul de prédiction &#40;les outils d’analyse de table pour Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  L’Assistant **réétiqueter** vous permet de créer de nouvelles étiquettes pour les données afin de faciliter la compréhension des résultats de l’analyse. Par exemple, vous pouvez renommer une plage de données avec un nom plus descriptif ou vous pouvez choisir une valeur représentative dans la liste.  
   
-##  <a name="bkmk_Model"></a>Créer des modèles et analyser  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>Créer des modèles et analyser  
  Les options de la section **modélisation des données** de la barre d’outils vous permettent de dériver des modèles à partir de données. Regroupez les lignes de données en fonction des attributs ou explorez les associations. Les Assistants de ce ruban reposent sur les algorithmes d'exploration de données performants qui sont disponibles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Contrairement aux outils similaires proposés par les Outils d'analyse de table pour Excel, ces Assistants vous permettent de personnaliser le comportement de l'algorithme et d'utiliser diverses sources de données.  
   
  [Assistant classification &#40;compléments d’exploration de données pour Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -101,7 +101,7 @@ ms.locfileid: "66086429"
  [Modèles avancés &#40;des compléments d’exploration de données pour Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  Vous êtes déjà familiarisé avec l'exploration de données ? Vous pouvez utiliser les options de modélisation **avancée** des données pour créer des structures de données personnalisées et générer des modèles à l’aide de personnalisations qui ne sont pas incluses dans les autres outils et assistants.  
   
-##  <a name="bkmk_Validate"></a>Tester, interroger et valider des modèles  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>Tester, interroger et valider des modèles  
  Utilisez les assistants de la barre d’outils **précision et validation** pour utiliser des tests standard pour valider la précision de vos modèles, et pour évaluer la viabilité du jeu de données pour la création de modèles.  
   
  [Analyser les influenceurs clés &#40;les outils d’analyse de table pour Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "66086429"
  [Éditeur de requêtes d’exploration de données avancée](advanced-data-mining-query-editor.md)  
  Pour les utilisateurs expérimentés, cet outil fournit une interface de type glisser-déplacer dans DMX. Créez facilement des requêtes de prédiction ou de nouveaux modèles sans vous préoccuper de la syntaxe.  
   
-##  <a name="bkmk_ViewModels"></a>Afficher les modèles  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>Afficher les modèles  
  Les modèles créés automatiquement sont ouverts pour l'exploration. Toutefois, vous pouvez également parcourir les modèles sur le serveur et générer de nouvelles visualisations. Utilisez les [formes Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md) pour exporter des diagrammes de modèle vers une zone de dessin personnalisable.  
   
  [Exploration des modèles dans Excel &#40;SQL Server les compléments d’exploration de données&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "66086429"
  [Documentation des modèles d’exploration de données &#40;les compléments d’exploration de données pour Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  Cet Assistant crée des rapports qui fournissent un résumé statistique du jeu de données et des métadonnées relatives au modèle, pour vous aider à effectuer les tâches d'analyse et d'interprétation.  
   
-##  <a name="bkmk_UsageMgmt"></a>Gérer, documenter et déployer  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>Gérer, documenter et déployer  
  Ces outils vous aident à établir la connexion à un serveur d'exploration de données, ainsi qu'à gérer et exporter des modèles, et surveiller l'activité d'exploration de données.  
   
  [Gérer les modèles &#40;SQL Server des compléments d’exploration de données&#41;](manage-models-sql-server-data-mining-add-ins.md)  

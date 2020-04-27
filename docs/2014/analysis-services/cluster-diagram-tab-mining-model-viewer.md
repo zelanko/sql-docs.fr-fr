@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088007"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Onglet Diagramme de cluster (Visionneuse de modèle d'exploration de données)
   L’onglet **Diagramme de cluster** affiche sous forme graphique tous les clusters contenus dans le modèle de clustering.  
   
- **Pour plus d’informations :** [algorithme de clustering Microsoft](data-mining/microsoft-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Sequence Cluster](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données, parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  

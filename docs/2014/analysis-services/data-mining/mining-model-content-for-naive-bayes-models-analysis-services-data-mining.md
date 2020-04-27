@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083647"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Naive Bayes (Analysis Services - Exploration de données)
@@ -49,15 +49,15 @@ ms.locfileid: "66083647"
  ATTRIBUTE_NAME  
  Noms des attributs qui correspondent à ce nœud.  
   
- **Racine du modèle** Nom de l’attribut prévisible.  
+ **Racine du modèle** Nom de l'attribut prédictible.  
   
  **Statistiques marginales** Non applicable  
   
- **Attribut prévisible** Nom de l’attribut prévisible.  
+ **Attribut prédictible** Nom de l'attribut prédictible.  
   
  **Attribut d’entrée** Nom de l’attribut d’entrée.  
   
- **État d’attribut d’entrée** Nom de l’attribut d’entrée uniquement. Pour obtenir l'état, utilisez MSOLAP_NODE_SHORT_CAPTION.  
+ **État d’attribut d’entrée** Nom de l’attribut d'entrée uniquement. Pour obtenir l'état, utilisez MSOLAP_NODE_SHORT_CAPTION.  
   
  NODE_NAME  
  Nom du nœud.  
@@ -86,28 +86,28 @@ ms.locfileid: "66083647"
   
  **Statistiques marginales** vide  
   
- **Attribut prévisible** Nom de l’attribut prévisible.  
+ **Attribut prédictible** Nom de l'attribut prédictible.  
   
- **Attribut d’entrée** Nom de l’attribut prévisible et de l’attribut d’entrée actuel. Exemple :  
+ **Attribut d'entrée** Nom de l'attribut prédictible et de l'attribut d'entrée actuel. Exemple :  
   
  Bike Buyer -> Age  
   
- **État d’attribut d’entrée** Nom de l’attribut prévisible et de l’attribut d’entrée actuel, plus la valeur de l’entrée. Exemple :  
+ **État de l'attribut d'entrée** Nom de l'attribut prédictible et de l'attribut d'entrée actuel, ainsi que la valeur de l'entrée. Exemple :  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  Nombre d'enfants de ce nœud.  
   
- **Racine du modèle** Nombre d’attributs prévisibles dans le modèle plus 1 pour le nœud de statistiques marginales.  
+ **Racine du modèle** Nombre d'attributs prédictibles du modèle plus 1 pour le nœud de statistiques marginales.  
   
- **Statistiques marginales** Par définition n’a pas d’enfants.  
+ **Statistiques marginales** Par définition n’ont pas d’enfants.  
   
- **Attribut prévisible**  Nombre d’attributs d’entrée liés à l’attribut prévisible actuel.  
+ **Attribut prédictible**  Nombre d'attributs d'entrée liés à l'attribut prédictible actuel.  
   
- **Attribut d’entrée** Nombre de valeurs discrètes ou discrètes pour l’attribut d’entrée actuel.  
+ **Attribut d’entrée** Nombre de valeurs discrètes ou discrétisées pour l’attribut d’entrée actuel.  
   
- **État d’attribut d’entrée** Toujours 0.  
+ **État d’attribut d'entrée** Toujours 0.  
   
  PARENT_UNIQUE_NAME  
  Nom unique du nœud parent. Pour plus d'informations sur la liaison entres nœuds parents et nœuds enfants, consultez [Utilisation de noms de nœud et ID](#bkmk_nodenames).  
@@ -128,11 +128,11 @@ ms.locfileid: "66083647"
   
  **Statistiques marginales** Toujours 0.  
   
- **Attribut prévisible**  Toujours 1.  
+ **Attribut prédictible**  Toujours 1.  
   
- **Attribut d’entrée** Toujours 1.  
+ **Attribut d'entrée** Toujours 1.  
   
- **État d’attribut d’entrée** Nombre décimal qui représente la probabilité de la valeur actuelle. Valeurs pour tous les états d'attribut d'entrée sous le nœud d'attribut d'entrée parent s’élevant à 1.  
+ **État d'attribut d'entrée** Nombre décimal qui représente la probabilité de la valeur actuelle. Valeurs pour tous les états d'attribut d'entrée sous le nœud d'attribut d'entrée parent s’élevant à 1.  
   
  MARGINAL_PROBABILITY  
  Identique à la probabilité du nœud.  
@@ -143,15 +143,15 @@ ms.locfileid: "66083647"
  NODE_SUPPORT  
  Nombre de cas qui prennent en charge ce nœud.  
   
- **Racine du modèle** Nombre de cas dans les données d’apprentissage.  
+ **Racine du modèle** Nombre de tous les cas figurant dans les données d'apprentissage.  
   
  **Statistiques marginales** Toujours 0.  
   
- **Attribut prévisible** Nombre de cas dans les données d’apprentissage.  
+ **attribut prédictible** Nombre de tous les cas figurant dans les données d’apprentissage.  
   
- **Attribut d’entrée** Nombre de cas dans les données d’apprentissage.  
+ **Attribut d'entrée** Nombre de tous les cas figurant dans les données d’apprentissage.  
   
- **État d’attribut d’entrée** Nombre de cas dans les données d’apprentissage qui contiennent uniquement cette valeur particulière.  
+ **État d’attribut d’entrée** Nombre de cas figurant dans les données d’apprentissage qui contiennent uniquement la valeur en question.  
   
  MSOLAP_MODEL_COLUMN  
  Étiquette utilisée à des fins d'affichage. Généralement identique à ATTRIBUTE_NAME.  
@@ -163,26 +163,26 @@ ms.locfileid: "66083647"
   
  **Statistiques marginales** Toujours 0.  
   
- **Attribut prévisible**  Toujours 0.  
+ **attribut prédictible**  Toujours 0.  
   
- **Attribut d’entrée** Score d’intérêt pour l’attribut d’entrée actuel par rapport à l’attribut prévisible actuel.  
+ **Attribut d'entrée** Score d'intérêt et de pertinence pour l'attribut d'entrée actuel par rapport à l'attribut prédictible actuel.  
   
- **État d’attribut d’entrée** Toujours 0.  
+ **État d’attribut d'entrée** Toujours 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Chaîne de texte qui représente le nom ou la valeur d’une colonne.  
   
  **Racine du modèle** Occult  
   
- **Statistiques marginales** Occult  
+ **Statistiques marginales** Vide  
   
  **Attribut prévisible**  Nom de l’attribut prévisible.  
   
  **Attribut d’entrée** Nom de l’attribut d’entrée.  
   
- **État d’attribut d’entrée** Valeur ou valeur de discrétisation de l’attribut d’entrée.  
+ **État d'attribut d'entrée** Valeur ou valeur discrétisée de l'attribut d'entrée.  
   
-##  <a name="bkmk_nodenames"></a>Utilisation des noms de nœuds et des ID  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>Utilisation des noms de nœuds et des ID  
  La dénomination des nœuds d’un modèle Naive Bayes fournit des informations supplémentaires sur le type de nœud afin de pouvoir appréhender plus facilement les relations entre les informations du modèle. La table suivante présente la convention relative aux ID assignés aux différents types de nœuds.  
   
 |Type de nœud|Convention pour l'ID du nœud|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>Table NODE_DISTRIBUTION  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>Table NODE_DISTRIBUTION  
  La colonne de table imbriquée NODE_DISTRIBUTION contient généralement des statistiques relatives à la distribution des valeurs dans le nœud. Dans un modèle Naive Bayes, cette table est remplie uniquement pour les nœuds suivants :  
   
 |Type de nœud|Contenu de table imbriquée|  
@@ -257,7 +257,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Résultats attendus :  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Manquant|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
@@ -265,7 +265,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Dans ces résultats, la valeur de la colonne SUPPORT indique le nombre de clients ayant la situation de famille spécifiée qui ont acheté un vélo. La colonne PROBABILITY contient la probabilité de chaque valeur d'attribut, telle que calculée pour ce nœud uniquement. Pour obtenir des définitions générales des termes utilisés dans la table NODE_DISTRIBUTION, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_margstats"></a>Informations dans le nœud de statistiques marginales  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a>Informations dans le nœud de statistiques marginales  
  Dans un modèle Naive Bayes, la table imbriquée du nœud de statistiques marginales contient la distribution des valeurs pour le jeu complet de données d'apprentissage. Par exemple, la table suivante contient une liste partielle des statistiques figurant dans la table NODE_DISTRIBUTION imbriquée pour le modèle, `TM_NaiveBayes`:  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  

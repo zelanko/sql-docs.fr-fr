@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084213"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modifier manuellement une requête de prédiction
@@ -45,6 +45,6 @@ ms.locfileid: "66084213"
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
  [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](../prediction-query-builder-data-mining.md)   
- [Leçon 6 : création et utilisation de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Leçon 6 : création et utilisation de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

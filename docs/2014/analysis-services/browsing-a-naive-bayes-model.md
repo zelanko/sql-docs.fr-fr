@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088479"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Navigation dans un modèle Naive Bayes
@@ -22,20 +22,20 @@ ms.locfileid: "66088479"
   
 -   [Réseau de dépendances](#bkmk_DepNet)  
   
--   [Profils d’attribut](#bkmk_AttProf)  
+-   [Profils d'attribut](#bkmk_AttProf)  
   
 -   [Caractéristiques d’attribut](#bkmk_AttChar)  
   
 -   [Discrimination d’attribut](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>Explorer le modèle  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorer le modèle  
  Le but de la visionneuse est de vous aider à explorer les interactions entre les attributs d'entrée et de sortie (entrées et variables dépendantes) qui ont été découvertes par le modèle [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes.  
   
  Si vous souhaitez faire des essais avec la visionneuse Naïve Bayes, utilisez l' [Assistant de classification &#40;les compléments d’exploration de données pour Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) Assistant dans le ruban exploration de données, cliquez sur l’option **avancé** et modifiez l’algorithme pour utiliser l’algorithme Naïve Bayes  
   
  Pour ces exemples, nous avons utilisé les données sources dans l’exemple de classeur et regroupé la colonne **Yearly Income**en cinq groupes de revenus, de **très bas** à **très élevé**. Le modèle Naïve Bayes a ensuite analysé les facteurs corrélés à chaque catégorie de revenu.  
   
-###  <a name="bkmk_DepNet"></a>Réseau de dépendances  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>Réseau de dépendances  
  La première fenêtre que vous allez utiliser est le **réseau de dépendances**. Elle vous présente d'un coup d'œil les entrées qui sont étroitement corrélées avec le résultat sélectionné.  
   
  ![réseau de dépendances dans la visionneuse Naive Bayes](media/dm13-nb.gif "réseau de dépendances dans la visionneuse Naive Bayes")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088479"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>Profils d’attribut  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a>Profils d’attribut  
  Les fenêtres **profils d’attribut** vous donnent une indication visuelle sur la façon dont toutes les autres variables sont liées aux résultats individuels.  
   
 ##### <a name="explore-the-profiles"></a>Explorer les profils  
@@ -73,7 +73,7 @@ ms.locfileid: "66088479"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>Caractéristiques d’attribut  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a> Caractéristiques d'attribut  
  La vue **caractéristiques d’attribut** est utile pour l’examen approfondi d’une variable de résultat particulière et les facteurs de contribution.  
   
  ![caractéristiques d'attribut dans la visionneuse Naive Bayes](media/dm13-nb-viewer.gif "caractéristiques d'attribut dans la visionneuse Naive Bayes")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088479"
   
  [Retour au début](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>Discrimination d’attribut  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a> Discrimination d'attribut  
  La vue **discrimination d’attribut** permet de comparer deux résultats, ou un résultat et tous les autres résultats.  
   
  ![discrimination d'attribut dans la visionneuse Naive Bayes](media/dm13-nb-attdisc.gif "discrimination d'attribut dans la visionneuse Naive Bayes")  

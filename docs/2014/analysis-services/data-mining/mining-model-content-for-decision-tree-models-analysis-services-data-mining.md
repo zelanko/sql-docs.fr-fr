@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083670"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
   
-##  <a name="bkmk_Top"></a>Fonctionnement de la structure d’un modèle d’arbre de décision  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>Fonctionnement de la structure d’un modèle d’arbre de décision  
  Un modèle d’arbre de décision comprend un nœud parent unique qui représente le modèle et ses métadonnées. Sous le nœud parent se trouvent des arbres indépendants qui représentent les attributs prédictibles sélectionnés. Par exemple, si vous installez votre modèle d'arbre de décision pour prédire si les clients achèteront un produit et pour fournir des entrées correspondant au genre et au revenu, le modèle créera une arborescence unique pour l'attribut d'achat, avec de nombreuses branches en fonction des conditions liées au genre et au revenu.  
   
  Toutefois, si vous ajoutez par la suite un attribut prédictible distinct pour la participation dans un programme de récompense de la clientèle, l'algorithme créera deux arborescences séparées sous le nœud parent. Une arborescence contient l'analyse d’achat, et l’autre l'analyse du programme de récompense de la clientèle.  Si vous utilisez l'algorithme MDT pour créer un modèle d'association, cet algorithme crée une arborescence distincte pour chaque produit prédit, et l'arborescence contient toutes les autres combinaisons de produit qui permettent la sélection de l'attribut cible.  
@@ -45,10 +45,9 @@ ms.locfileid: "66083670"
  L'algorithme MDT (Microsoft Decision Trees) ne permet pas d’avoir des types de données continues en tant qu’entrées ; par conséquent, si les colonnes ont un type de données numériques continues, les valeurs sont discrétisées. L'algorithme effectue sa propre discrétisation à l’endroit du fractionnement pour tous les attributs continus.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] choisit automatiquement une méthode pour placer les attributs continus dans un compartiment ; toutefois, vous pouvez déterminer comment les valeurs continues dans les entrées sont discrétisées en définissant le type de contenu de la colonne de structure d'exploration de données sur `Discretized`, puis la propriété <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] choisit automatiquement une méthode pour placer les attributs continus dans un compartiment ; toutefois, vous pouvez déterminer comment les valeurs continues dans les entrées sont discrétisées en définissant le type de contenu de la colonne de structure d'exploration de données sur `Discretized`, puis la propriété <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
   
-##  <a name="bkmk_ModelContent"></a>Contenu du modèle pour un modèle d’arbre de décision  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> Contenu d’un modèle d'arbre de décision  
  Cette section fournit des informations et des exemples liés uniquement aux colonnes du contenu du modèle d'exploration de données se rapportant aux modèles d’arbre de décision. Pour plus d’informations sur les colonnes à caractère général de l’ensemble de lignes de schéma et pour obtenir des explications sur la terminologie relative aux modèles d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -91,9 +90,9 @@ ms.locfileid: "66083670"
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
- **Nœud parent** Indique le nombre d’attributs prévisibles qui ont été modélisés. Une arborescence est créée pour chaque attribut prédictible.  
+ **Nœud parent** Indique le nombre d’attributs prédictibles qui ont été modélisés. Une arborescence est créée pour chaque attribut prédictible.  
   
- **Nœud d’arborescence** Le nœud **tous** pour chaque arborescence indique le nombre de valeurs qui ont été utilisées pour l’attribut cible.  
+ **Nœud d'arbre** Le nœud **Tout** de chaque arborescence indique le nombre de valeurs utilisées pour l'attribut cible.  
   
 -   Si l'attribut cible est discret, la valeur est égale au nombre de valeurs distinctes plus 1 pour l'état `Missing`.  
   
@@ -136,13 +135,13 @@ ms.locfileid: "66083670"
   
  **Nœud racine du modèle** Cette table est vide.  
   
- **(Tout) (nœud)** Contient un résumé du modèle dans son ensemble.  
+ **Nœud (Tout)** Contient un résumé de l’ensemble du modèle.  
   
- **Nœud intérieur** Contient des statistiques agrégées pour ses nœuds terminaux.  
+ **Nœud intérieur** Contient des statistiques de synthèse pour ses nœuds terminaux.  
   
- **Nœud terminal** Contient la prise en charge et la probabilité des résultats prédits en fonction de toutes les conditions dans le chemin menant au nœud terminal actuel.  
+ **Nœud terminal** Contient la prise en charge et la probabilité pour les résultats prédits au vu de toutes les conditions figurant dans le chemin d'accès qui mène au nœud terminal actuel.  
   
- **Nœud de régression** Contient une formule de régression qui représente la relation entre les entrées et l’attribut prévisible.  
+ **Nœud de régression** Contient la formule de régression qui représente la relation entre les entrées et l'attribut prédictible.  
   
  Pour plus d'informations, consultez [Distribution du nœud pour les attributs discrets](#bkmk_NodeDist_Discrete) et [Distribution du nœud pour les attributs continus](#bkmk_RegressionNodes).  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66083670"
   
  Si l'attribut prédictible est un nombre continu, l'algorithme essaie de créer une formule de régression qui modélise la relation entre l'attribut prédictible et les entrées.  
   
-###  <a name="NodeCaption"></a>Légende et description du nœud  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>Légende et description du nœud  
  Dans un modèle d'arbre de décision, la légende et la description du nœud contiennent des informations similaires. Toutefois, la description du nœud est plus complète et contient plus d'informations à mesure que vous vous rapprochez des nœuds terminaux. La légende et la description du nœud sont des chaînes localisées.  
   
 |||  
@@ -193,7 +192,7 @@ ms.locfileid: "66083670"
 |**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Par exemple, si le fractionnement était sur [Age] et s’il s’agissait d’un fractionnement triple, les légendes de nœud pour les trois nœuds enfants peuvent être « [Age] < 40 », « 40 <\< = [Age] 50 », « [age] >= 50 ».|  
 |**NODE_DESCRIPTION**|Contient la liste complète des attributs qui distinguent ce nœud des autres, en commençant par le nœud parent du modèle. Par exemple, Nom de produit = Pomme et Couleur = Rouge.|  
   
-###  <a name="NodeRule"></a>Règle de nœud et règle marginale  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> Règle du nœud et règle marginale  
  Les colonnes NODE_RULE et MARGINAL_RULE contiennent les mêmes informations que les colonnes NODE_CAPTION et NODE_DESCRIPTION, mais représentent les informations sous forme de fragments XML. La règle du nœud est une version XML du chemin d'accès complet, alors que la règle marginale indique le fractionnement le plus récent.  
   
  L'attribut représenté par le fragment XML peut être simple ou complexe. Un attribut simple contient le nom de la colonne du modèle, ainsi que la valeur de l’attribut. Si la colonne du modèle contient une table imbriquée, l'attribut de table imbriquée est représenté sous la forme d’une concaténation du nom de la table, de la valeur de clé et de l'attribut.  
@@ -201,7 +200,7 @@ ms.locfileid: "66083670"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2,0 de PMML standard, avec des extensions pour prendre en charge l’utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
   
-###  <a name="bkmk_NodeDist_Discrete"></a>Distribution de nœuds pour les attributs discrets  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Distribution de nœuds pour les attributs discrets  
  Dans un modèle d'arbre de décision, la table NODE_DISTRIBUTION contient des statistiques utiles. Toutefois, le type de statistiques varie selon que l'arborescence prédit un attribut discret ou continu. Cette section explique la signification des statistiques de distribution du nœud pour les attributs discrets.  
   
 #### <a name="attribute-name-and-attribute-value"></a>Nom et valeur de l’attribut  
@@ -232,8 +231,7 @@ ms.locfileid: "66083670"
   
  Probabilité = (prise en charge pour l'état + prise en charge pour l’état antérieur) / (prise en charge du nœud plus prise en charge du nœud antérieur)  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les probabilités de chaque nœud pour comparer la probabilité stockée avec la probabilité antérieure afin de déterminer si le chemin d'accès du nœud parent au nœud enfant indique une inférence forte.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les probabilités de chaque nœud pour comparer la probabilité stockée avec la probabilité antérieure afin de déterminer si le chemin d'accès du nœud parent au nœud enfant indique une inférence forte.  
   
  Lors de l’élaboration de prédictions, la probabilité de la distribution doit être équilibrée avec la probabilité du nœud pour lisser les probabilités. Par exemple, si un fractionnement dans l'arborescence sépare des cas par un quotient de 9000/1000, l'arborescence est très déséquilibrée. Par conséquent, une prédiction issue de la petite branche ne doit pas avoir le même poids qu'une prédiction provenant d'une branche comportant de nombreux cas.  
   
@@ -254,7 +252,7 @@ ms.locfileid: "66083670"
   
  Si le modèle inclut un attribut prédictible continu, l'arborescence peut également contenir des types de valeur uniques pour les formules de régression. Pour obtenir la liste des types de valeur utilisés dans les arbres de régression, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-###  <a name="NodeScore"></a>Score du nœud  
+###  <a name="node-score"></a><a name="NodeScore"></a> Score du nœud  
  Le score du nœud représente des informations légèrement différentes à chaque niveau de l'arbre. En règle générale, le score est une valeur numérique qui indique la qualité du fractionnement résultant de la division de la condition. La valeur est représentée comme un double, où plus la valeur est élevée, meilleur est le résultat.  
   
  Par définition, le nœud du modèle et tous les nœuds terminaux ont un score de nœud de 0.  
@@ -268,7 +266,7 @@ ms.locfileid: "66083670"
 > [!NOTE]  
 >  Si vous créez un modèle d'arbre de décision ayant des attributs prédictibles continus et discrets, vous verrez des scores complètement différents dans les nœuds (Tout) qui représentent chaque type d'arborescence. Chaque modèle doit être considéré indépendamment, et les méthodes utilisées pour calculer le score de la régression sont complètement différentes de celles utilisées pour calculer le score de la classification. Les valeurs de score de nœud ne peuvent pas être comparées.  
   
-##  <a name="bkmk_RegressionNodes"></a>Nœuds de régression dans un modèle d’arbre de décision  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>Nœuds de régression dans un modèle d’arbre de décision  
  Si un modèle d'arbre de décision contient un attribut prédictible avec des données numériques continues, l'algorithme MDT (Microsoft Decision Trees) s'efforce de trouver des zones dans les données où la relation entre l'état prédit et les variables d'entrée est linéaire. Si l'algorithme parvient à trouver une relation linéaire, il crée une arborescence spéciale (NODE_TYPE = 25) qui représente une régression linéaire. Ces nœuds d’arbre de régression sont plus complexes que les nœuds qui représentent des valeurs discrètes.  
   
  En règle générale, une régression mappe les modifications dans la variable prévisible dépendante continue comme fonction des modifications dans les entrées. Si la variable dépendante possède des entrées continues et si la relation entre l'entrée et la valeur prédite est suffisamment stable pour être calculée sous forme de graphique, le nœud de la régression contient une formule.  

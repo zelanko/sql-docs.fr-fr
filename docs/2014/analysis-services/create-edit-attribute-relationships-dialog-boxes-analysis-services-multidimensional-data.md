@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086940"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Boîtes de dialogue Créer une relation d'attribut et Modifier la relation d'attribut (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)

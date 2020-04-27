@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085850"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Choisir et mapper les données d'entrée pour une requête de prédiction
@@ -28,7 +28,7 @@ ms.locfileid: "66085850"
 > [!WARNING]  
 >  Vous ne pouvez pas ajouter de nouvelles colonnes ou mapper des colonnes qui se trouvent dans une vue de source de données différente. La vue de source de données que vous sélectionnez doit contenir toutes les colonnes dont vous avez besoin pour la requête de prédiction.  
   
- Après avoir identifié les tables qui contiennent les données que vous allez utiliser pour les prédictions, vous devez mapper les colonnes des données externes aux colonnes du modèle d'exploration de données. Par exemple, si votre modèle prédit le comportement d'achat de clients en fonction des statistiques démographiques et des réponses aux enquêtes, vos données d'entrée contiennent des informations qui correspondent généralement à ce qui est dans le modèle. Vous n'avez pas besoin d'avoir des données correspondantes pour chaque colonne, mais plus le nombre de colonnes correspondant est élevé, meilleurs sont les résultats. Si vous essayez de mapper des colonnes qui ont des types de données différents, vous pouvez obtenir une erreur. Dans ce cas, vous pouvez définir un calcul nommé dans la vue de source de données pour convertir les nouvelles données de la colonne en type de données requis par le modèle. Pour plus d’informations, consultez [définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Après avoir identifié les tables qui contiennent les données que vous allez utiliser pour les prédictions, vous devez mapper les colonnes des données externes aux colonnes du modèle d'exploration de données. Par exemple, si votre modèle prédit le comportement d'achat de clients en fonction des statistiques démographiques et des réponses aux enquêtes, vos données d'entrée contiennent des informations qui correspondent généralement à ce qui est dans le modèle. Vous n'avez pas besoin d'avoir des données correspondantes pour chaque colonne, mais plus le nombre de colonnes correspondant est élevé, meilleurs sont les résultats. Si vous essayez de mapper des colonnes qui ont des types de données différents, vous pouvez obtenir une erreur. Dans ce cas, vous pouvez définir un calcul nommé dans la vue de source de données pour convertir les nouvelles données de la colonne en type de données requis par le modèle. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Lorsque vous choisissez les données à utiliser pour la prédiction, certaines colonnes de la source de données sélectionnée peuvent être mappées automatiquement aux colonnes du modèle d’exploration de données, selon la similitude des noms et le type de données correspondant. Vous pouvez utiliser la boîte de dialogue **Modifier le mappage** dans **Prédiction de modèle d’exploration de données** pour modifier les colonnes qui sont mappées, supprimer les mappages inappropriés, ou créer des mappages pour les colonnes existantes. L’aire de conception **Prédiction de modèle d’exploration de données** prend également en charge la modification par glisser-déplacer des connexions.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "66085850"
      Si une relation existe, les colonnes du modèle d'exploration de données sont mappées automatiquement aux colonnes portant le même nom dans la table d'entrée. Vous pouvez modifier la relation entre la table imbriquée et la table de cas en cliquant sur **Modifier la jointure**qui ouvre la boîte de dialogue **Créer une relation** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de prédiction &#40;&#41;d’exploration de données](prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40;Exploration de données&#41;](prediction-queries-data-mining.md)  
   
   

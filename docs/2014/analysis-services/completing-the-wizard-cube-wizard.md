@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087717"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>Fin de l'Assistant (Assistant Cube)
@@ -26,7 +26,7 @@ ms.locfileid: "66087717"
  **Nom du cube**  
  Tapez le nom du cube.  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affiche la structure du cube qui doit être créé à la fin de l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  

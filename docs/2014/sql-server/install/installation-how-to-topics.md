@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094360"
 ---
 # <a name="installation-how-to-topics"></a>Rubriques de procédures relatives à l'installation
@@ -34,7 +34,7 @@ ms.locfileid: "66094360"
 |[Ajouter des fonctionnalités à une instance de SQL Server 2014 &#40;de l’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|Rubrique de procédure pour mettre à jour les composants d'une instance existante de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Ignorer une installation de SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Rubrique de procédure pour réparer une installation endommagée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |[Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Rubrique de procédure pour mettre à jour les métadonnées système stockées dans sys.servers.|  
-|[Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Rubrique de procédure pour rechercher des erreurs dans les fichiers journaux d'installation.|  
+|[Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Rubrique de procédure pour rechercher des erreurs dans les fichiers journaux d'installation.|  
 |[Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Rubrique de procédure pour désinstaller manuellement une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Rubriques de procédures relatives à la mise en niveau](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Rubriques de procédures pour mettre à niveau une instance de cluster ou autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   

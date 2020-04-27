@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088027"
 ---
 # <a name="choosing-data-for-data-mining"></a>Choisir les données pour l'exploration de données
@@ -38,7 +38,7 @@ ms.locfileid: "66088027"
   
  [Autres spécifications de données](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>Choix des données  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>Choix des données  
  Le choix des données utilisées pour l'analyse est peut-être l'étape la plus importante du processus d'exploration de données, plus encore que le choix d'un algorithme. En effet, l'exploration des données ne repose généralement pas sur des hypothèses, mais est pilotée par les données. Plutôt que choisir et tester les variables à l'avance, comme vous le feriez dans le cadre d'une modélisation statistique traditionnelle, l'exploration des données peut extraire des données et découvrir de nouvelles corrélations (ou ne trouver aucun modèle). La qualité et la quantité des données peuvent avoir un impact significatif sur les résultats.  
   
  En général, suivez les règles suivantes :  
@@ -81,11 +81,11 @@ ms.locfileid: "66088027"
   
  Vous pouvez également décider de considérer les nombres comme des valeurs discrètes lorsque les valeurs sont clairement séparées, sans possibilité de valeurs fractionnaires, ou lorsque les valeurs fractionnaires ne sont pas utiles.  
   
- Les données numériques *continues* peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de revenus est un exemple de colonne d'attributs continue. Si vous spécifiez qu'une colonne est numérique, chaque valeur dans cette colonne doit être un nombre, à l'exception des valeurs NULL. Notez que dans Excel, les horodateurs et les autres représentations de date-heure qui peuvent être converties en type de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent être pris en compte.  
+ Les données numériques*continues* peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de revenus est un exemple de colonne d'attributs continue. Si vous spécifiez qu'une colonne est numérique, chaque valeur dans cette colonne doit être un nombre, à l'exception des valeurs NULL. Notez que dans Excel, les horodateurs et les autres représentations de date-heure qui peuvent être converties en type de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent être pris en compte.  
   
  **Conversion de nombres en variables catégorielles**  
   
- Le fait qu'une colonne contienne des nombres ne signifie pas que vous devez les traiter comme des nombres continus. La *discrétisation* offre de nombreux avantages pour l’analyse. Le problème d'espace est réduit. Par ailleurs, les nombres ne sont parfois pas la meilleure façon d'exprimer un résultat.  
+ Le fait qu'une colonne contienne des nombres ne signifie pas que vous devez les traiter comme des nombres continus. La*discrétisation* fournit de nombreux avantages pour l'analyse. Le problème d'espace est réduit. Par ailleurs, les nombres ne sont parfois pas la meilleure façon d'exprimer un résultat.  
   
  Par exemple, le nombre d'enfants par famille peut être traité comme une valeur discrète ou continue. Étant donné qu'il est impossible d'avoir 2,5 enfants dans la famille, les familles avec 3 enfants ou plus peuvent se comporter très différemment des familles avec 2 enfants. Par conséquent, vous obtiendrez de meilleurs résultats en traitant ce nombre comme une catégorie. Cependant, si vous créez un modèle de régression ou si avez besoin d'une valeur moyenne (par exemple, 1,357 enfants par famille), vous devriez utiliser un type de données numériques continues.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66088027"
   
 -   En les approchant d'une moyenne ou d'une valeur représentative.  
   
-##  <a name="bkmk_CommonDataProblems"></a>Problèmes de données courants  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>Problèmes de données courants  
   
 ### <a name="excel-number-formats"></a>Formats de nombres Excel  
  Excel est un outil simple à utiliser, car il est indulgent avec. vous pouvez tout mettre en place tout en n’importe quel type de données. Toutefois, avant de commencer à rechercher des modèles et à analyser les corrélations, vous devez appliquer une structure ou des contraintes à vos données.  
@@ -145,7 +145,7 @@ ms.locfileid: "66088027"
   
  Si vous rencontrez des difficultés pour utiliser des dates et que vous souhaitez analyser celles-ci en utilisant des regroupements classiques tels que le mois ou le jour, faites appel aux fonctions DATE dans Excel pour extraire l'année, le mois ou le jour dans une colonne séparée, puis utilisez à la place cette colonne pour la classification.  
   
-##  <a name="bkmk_OtherRequirements"></a>Autres exigences relatives aux données  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>Autres exigences relatives aux données  
   
 ### <a name="requirements-by-algorithm-type"></a>Spécifications par type d'algorithme  
  Certains algorithmes utilisés dans les compléments requièrent des types de données ou des types de contenu spécifiques pour créer un modèle.  
@@ -205,7 +205,7 @@ ms.locfileid: "66088027"
   
  En général la colonne clé est un identificateur numérique ou texte qui ne doit pas être utilisé pour l'analyse, uniquement pour le suivi des enregistrements. Les exceptions sont les clés de série chronologique et les clés de séquence.  
   
- Les **clés de table imbriquée** sont utilisées uniquement lorsque vous récupérez des données à partir d’une source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe qui a été définie comme une vue de source de données. Pour plus d’informations sur les tables imbriquées [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consultez :  
+ Les**clés de tables imbriquées** s'utilisent uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les tables imbriquées [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consultez :  
   
  Ce type de contenu peut être utilisé avec les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "66088027"
   
  Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long` et `Date`.  
   
- **Table**  
+ **Table de charge de travail**  
  Ce type de contenu s'utilise uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Cela signifie que chaque ligne de données contient réellement une table de données imbriquée, avec une ou plusieurs colonnes et une ou plusieurs lignes.  

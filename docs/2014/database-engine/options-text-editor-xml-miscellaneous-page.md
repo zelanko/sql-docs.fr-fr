@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089207"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Options (Éditeur de texte - XML - Page Divers)
@@ -28,7 +28,7 @@ La boîte de dialogue **Options** vous permet de modifier les paramètres de sai
  **Guillemets d'attribut**  
  Lors de la création d’attributs XML, l’Éditeur insère les caractères `="``"` et place le signe insertion (**^)** à l’intérieur des guillemets. Cette case à cocher est activée par défaut.  
   
- **Déclarations d’espaces de noms**  
+ **Déclarations d'espace de noms**  
  L'Éditeur insère automatiquement les déclarations d'espace de noms là où elles sont requises. Cette case à cocher est activée par défaut.  
   
  **Autre balisage (Commentaires, CDATA)**  
@@ -38,7 +38,7 @@ La boîte de dialogue **Options** vous permet de modifier les paramètres de sai
  **Télécharger automatiquement les DTD et les schémas**  
  Les schémas et les définitions de type de document (DTD) sont automatiquement téléchargés à partir d'emplacements HTTP. Cette fonctionnalité utilise System.Net avec détection de serveur de proxy automatique. Cette case à cocher est activée par défaut.  
   
-## <a name="outlining"></a>Mode Plan  
+## <a name="outlining"></a>mode Plan  
  **Passer en mode Plan à l'ouverture des fichiers**  
  Active la fonctionnalité mode Plan lorsqu'un fichier est ouvert. Cette case à cocher est activée par défaut.  
   

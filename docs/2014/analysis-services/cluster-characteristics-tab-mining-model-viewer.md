@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087989"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques du cluster (Visionneuse de modèle d'exploration de données)
   L’onglet **Caractéristiques du cluster** vous permet d’explorer les caractéristiques d’un cluster dans un modèle de clustering, ou l’ensemble de tous les cas du modèle. Le graphique affiche l'importance de chaque paire attribut-valeur comme caractéristique qui définit le cluster, en comparaison avec d'autres clusters.  
   
- **Pour plus d’informations :** [algorithme de clustering Microsoft](data-mining/microsoft-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Sequence Cluster](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans la visionneuse personnalisée.  
   
  **Visionneuse**  
@@ -40,7 +40,7 @@ ms.locfileid: "66087989"
  **Caractéristiques du \<cluster>**  
  Le graphique contient les colonnes suivantes, qui décrivent les caractéristiques du cluster sélectionné.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable**|Répertorie les attributs du modèle d'exploration de données qui se trouvent dans le cluster sélectionné.|  
 |**Valeurs**|Répertorie les valeurs des attributs actuels qui se trouvent dans le cluster sélectionné.|  

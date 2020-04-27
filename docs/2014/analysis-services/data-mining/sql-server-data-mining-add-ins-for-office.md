@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082888"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Compléments d'exploration de données SQL Server pour Office
-  
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Compléments d'exploration de données est un ensemble d'outils légers pour l'analyse prédictive qui vous permet d'utiliser les données dans Excel pour générer des modèles d'analyse pour la prédiction, les recommandations ou l'exploration.  
   
  Les Assistants et les outils de gestion de données des compléments fournissent des instructions pas à pas pour les tâches d'exploration de données communes suivantes :  
@@ -35,7 +34,7 @@ ms.locfileid: "66082888"
   
     -   Réétiqueter les données pour améliorer la qualité d'analyse.  
   
--   **Analysez les modèles à l’aide d’un apprentissage supervisé ou non.** Cliquez dans les Assistants conviviaux pour effectuer certaines tâches les plus fréquentes d'exploration de données, y compris l'analyse de clustering, l'analyse du panier d'achat et des prédictions.  
+-   **Analyser des modèles au moyen d'un apprentissage supervisé ou non.** Cliquez dans les Assistants conviviaux pour effectuer certaines tâches les plus fréquentes d'exploration de données, y compris l'analyse de clustering, l'analyse du panier d'achat et des prédictions.  
   
      Parmi les algorithmes d'apprentissage automatique connus inclus dans les compléments figurent Naïve Bayes, régression logistique, clustering, série chronologique et réseaux neuronaux.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66082888"
   
 -   **Documenter et gérer.** Une fois que vous avez créé un jeu de données et créé des modèles, documentez votre travail et vos Insights en générant un résumé statistique des paramètres de données et de modèle.  
   
--   **Explorez et visualisez.** L’exploration de données n’est pas une activité qui peut être entièrement automatisée. vous devez explorer et comprendre les résultats pour prendre des mesures explicites. Les compléments facilitent l'exploration en fournissant des visionneuses interactives dans Excel, des modèles Visio qui vous laissent personnaliser les diagrammes de modèle, et la possibilité d'exporter des graphiques et des tables pour Excel à des fins de filtrage ou de modification supplémentaire.  
+-   **Explorer et visualiser.** L’exploration de données n’est pas une activité qui peut être entièrement automatisée. vous devez explorer et comprendre les résultats pour prendre des mesures explicites. Les compléments facilitent l'exploration en fournissant des visionneuses interactives dans Excel, des modèles Visio qui vous laissent personnaliser les diagrammes de modèle, et la possibilité d'exporter des graphiques et des tables pour Excel à des fins de filtrage ou de modification supplémentaire.  
   
 -   **Déployer et intégrer.** Lorsque vous avez créé un modèle utile, mettez votre modèle en production, en utilisant les outils de gestion pour exporter le modèle de votre serveur expérimental vers une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]autre instance de.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66082888"
   
 -   Business Intelligence  
   
--   standard  
+-   Standard  
   
  Selon l'édition de SQL Server Analysis Services à laquelle vous vous connectez, certains algorithmes avancés peuvent ne pas être disponibles. Pour plus d'informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   

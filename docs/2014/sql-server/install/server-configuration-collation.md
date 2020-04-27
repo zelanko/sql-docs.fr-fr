@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092290"
 ---
 # <a name="server-configuration---collation"></a>Configuration du serveur - Classement
@@ -26,8 +26,7 @@ ms.locfileid: "66092290"
   
 ## <a name="options"></a>Options  
  Personnaliser pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux groupes de classements : les classements Windows et les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez spécifier des paramètres de classement distincts pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ou spécifier le même classement pour les deux.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux groupes de classements : les classements Windows et les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez spécifier des paramètres de classement distincts pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ou spécifier le même classement pour les deux.  
   
  Par défaut, un classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est sélectionné pour les paramètres régionaux système de langue anglaise (US). Le classement par défaut pour les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminé par la valeur des paramètres régionaux système Windows pour votre ordinateur.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66092290"
   
  Pour plus d'informations, consultez [Paramètres de classement du programme d'installation](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Pour plus d’informations sur une table de paramètres régionaux système Windows et les classements par défaut correspondants utilisés par le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Paramètres de classement du programme d’installation](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Dans la mesure du possible, choisissez un classement unique pour votre organisation. De cette manière, vous n'avez pas à spécifier explicitement le classement pour chaque base de données, colonne, expression ou identificateur. Si vous devez utiliser plusieurs classements et paramètres de page de codes, codez vos requêtes conformément aux règles de priorité des classements. Pour plus d’informations, consultez la rubrique [Priorité de classement &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql) dans la documentation en ligne.  

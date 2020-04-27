@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083356"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valeurs manquantes (Analysis Services - Exploration de données)
@@ -48,7 +48,7 @@ ms.locfileid: "66083356"
   
  Par exemple, le tableau suivant indique la distribution des valeurs pour le nœud (All) dans le modèle d'arbre de décision créé pour le didacticiel Bike Buyer. Dans le scénario de l'exemple, la colonne [Bike Buyer] est l'attribut prédictible, où 1 indique « Oui » et 0 « Non ».  
   
-|Valeur|Cas|  
+|Value|Cas|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -64,7 +64,7 @@ ms.locfileid: "66083356"
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustement de la probabilité pour les états manquants  
  Outre le dénombrement des valeurs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcule la probabilité d'une valeur quelconque dans le jeu de données. Il en va de même pour la valeur `Missing`. Par exemple, le tableau suivant montre les probabilités pour les cas dans l’exemple précédent :  
   
-|Valeur|Cas|Probabilité|  
+|Value|Cas|Probabilité|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -108,13 +108,13 @@ ms.locfileid: "66083356"
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Ajouter des indicateurs à différentes colonnes du modèle pour contrôler la gestion des valeurs manquantes|[Afficher ou modifier les indicateurs de modélisation &#40;l’exploration de données&#41;](modeling-flags-data-mining.md)|  
+|Ajouter des indicateurs à différentes colonnes du modèle pour contrôler la gestion des valeurs manquantes|[Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md)|  
 |Définir des propriétés sur un modèle d'exploration de données pour contrôler la gestion des valeurs manquantes|[Modifier les propriétés d'un modèle d'exploration de données](change-the-properties-of-a-mining-model.md)|  
-|Découvrir comment spécifier des indicateurs de modélisation dans DMX|[Indicateurs de modélisation &#40;&#41;DMX](/sql/dmx/modeling-flags-dmx)|  
+|Découvrir comment spécifier des indicateurs de modélisation dans DMX|[Indicateurs de modélisation &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modifier la façon dont la structure d'exploration de données gère les valeurs manquantes|[Modifier les propriétés d'une structure d'exploration de données](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Indicateurs de modélisation &#40;&#41;d’exploration de données](modeling-flags-data-mining.md)  
+ [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
   

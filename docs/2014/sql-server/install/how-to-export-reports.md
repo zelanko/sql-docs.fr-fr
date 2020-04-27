@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094898"
 ---
-# <a name="how-to-export-reports"></a>Procédure : exporter des rapports
+# <a name="how-to-export-reports"></a>Procédure : Export Reports
   La visionneuse de rapports du Conseiller de mise à niveau vous permet d'exporter une version du rapport sous forme de fichier plat. Vous pouvez ainsi exploiter les informations dans une feuille de calcul ou un document de traitement de texte, ou les transmettre à d'autres personnes par courrier électronique.  
   
 ### <a name="to-export-a-report"></a>Pour exporter un rapport  

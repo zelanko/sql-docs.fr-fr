@@ -19,17 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086551"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversions monétaires (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Multidimensionnel uniquement  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise une combinaison de fonctionnalités, guidées par des scripts MDX (Multidimensional Expressions), pour assurer la prise en charge des conversions monétaires dans les cubes qui prennent en charge plusieurs devises.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise une combinaison de fonctionnalités, guidées par des scripts MDX (Multidimensional Expressions), pour assurer la prise en charge des conversions monétaires dans les cubes qui prennent en charge plusieurs devises.  
   
 ## <a name="currency-conversion-terminology"></a>Terminologie propre aux conversions monétaires  
  La terminologie répertoriée ci-dessous est utilisée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour décrire la fonctionnalité de conversion monétaire :  
@@ -85,7 +84,7 @@ ms.locfileid: "66086551"
 ## <a name="defining-currency-conversions"></a>Définition des conversions monétaires  
  Vous pouvez utiliser l'Assistant Business Intelligence pour définir la fonctionnalité de conversion monétaire pour un cube ou vous pouvez définir manuellement les conversions monétaires à l'aide de scripts MDX.  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
  Avant de pouvoir définir une conversion monétaire dans un cube à l'aide de l'Assistant Business Intelligence, vous devez définir au préalable au moins une dimension monétaire, au moins une dimension de temps et au moins un groupe de mesures de taux. À partir de ces objets, l'Assistant Business Intelligence peut récupérer les données et métadonnées utilisées pour générer la dimension monétaire de rapport et le script MDX nécessaires pour assurer la fonctionnalité de conversion monétaire.  
   
 ### <a name="decisions"></a>Décisions  
@@ -106,9 +105,9 @@ ms.locfileid: "66086551"
   
 |||||  
 |-|-|-|-|  
-|Sens du taux de change|**Plusieurs-à-un**|**Un-à-plusieurs**|**Plusieurs à plusieurs**|  
-|**n devises pivot avec 1 exemple de devise**|Multipliez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot.|Divisez la mesure à convertir par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|Multipliez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot, puis divisez la mesure convertie par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|  
-|**devise d’exemple n vers 1 devise pivot**|Divisez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot.|Multipliez la mesure à convertir par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|Divisez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot, puis multipliez la mesure convertie par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|  
+|Sens du taux de change|**Plusieurs-à-un**|**Un-à-plusieurs**|**Plusieurs-à-plusieurs**|  
+|**Devise pivot n vers 1 devise d'exemple**|Multipliez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot.|Divisez la mesure à convertir par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|Multipliez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot, puis divisez la mesure convertie par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|  
+|**Devise d'exemple n vers 1 devise pivot**|Divisez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot.|Multipliez la mesure à convertir par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|Divisez la mesure à convertir par la mesure du taux de change pour la devise locale afin de convertir la mesure dans la devise pivot, puis multipliez la mesure convertie par la mesure du taux de change pour la devise pour les rapports afin de convertir la mesure dans la devise pour les rapports.|  
   
  Vous pouvez choisir le sens du taux de change à la page **Définir les options de conversion monétaire** de l'Assistant Business Intelligence. Pour plus d’informations sur la spécification du sens de conversion, consultez [Définir les options de conversion monétaire &#40;Assistant Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md).  
   
@@ -138,7 +137,7 @@ ms.locfileid: "66086551"
   
      Par exemple, la devise pivot peut correspondre à des dollars américains (USD) et la table de faits peut stocker les transactions en euros (EUR), en dollars australiens (AUD) et en pesos mexicains (MXN). Ce type de conversion convertit ces transactions à partir de leurs devises locales spécifiées dans la devise pivot. Il en résulte que les transactions peuvent être stockées dans les devises locales spécifiées et affichées dans la devise pivot spécifiée dans la dimension monétaire de rapport définie pour la conversion monétaire.  
   
--   **Plusieurs à plusieurs**  
+-   **Plusieurs-à-plusieurs**  
   
      Les transactions sont stockées dans la table de faits dans des devises locales. La fonctionnalité de conversion monétaire convertit ces transactions dans la devise pivot, puis dans une ou plusieurs autres devises pour les rapports.  
   

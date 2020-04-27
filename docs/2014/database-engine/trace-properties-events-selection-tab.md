@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089578"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Propriétés de la trace (onglet Sélection des événements)
   Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Propriétés de la trace** pour afficher ou spécifier les événements à tracer et les colonnes de données.  
   
 ## <a name="options"></a>Options  
- Colonne **événements**  
- Spécifiez les événements à tracer en activant ou en désactivant les cases à cocher dans la colonne des événements. Les **événements** sont organisés par catégorie d’événement. Les classes d'événements spécifiées dans le modèle sont automatiquement sélectionnées. Pour plus d'informations, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Colonne**Events**  
+ Spécifiez les événements à tracer en activant ou en désactivant les cases à cocher dans la colonne des événements. Les**événements** sont organisés par catégorie. Les classes d'événements spécifiées dans le modèle sont automatiquement sélectionnées. Pour plus d'informations, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonnes de données  
  Précisez les colonnes de données à tracer en activant la case à cocher correspondant à l'événement et à la colonne de données requis. Toutes les colonnes d'événements pertinentes sont cochées par défaut pour chaque événement inclus dans la trace.  
@@ -51,7 +51,7 @@ ms.locfileid: "66089578"
  [Filtrer les événements dans une trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Afficher les informations de filtre &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Modifier un filtre &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

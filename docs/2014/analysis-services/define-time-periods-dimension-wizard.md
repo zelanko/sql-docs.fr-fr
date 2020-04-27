@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081981"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Définir des périodes (Assistant Dimension)
   Utilisez la page **Définir des périodes** pour définir les informations d'année civile et les fréquences de temps à inclure dans la dimension de temps ou la dimension de temps du serveur.  
   
 > [!NOTE]  
->  Cette page s’affiche uniquement si vous avez sélectionné **Dimension de temps du serveur** dans la page **Sélectionner le type de la dimension** , ou **Construire la dimension sans utiliser de source de données** dans la page **Sélectionner la méthode de construction** et **Dimension de temps** dans la page **Sélectionner le type de la dimension** .  
+>   Cette page s'affiche uniquement si vous avez sélectionné **Dimension de temps du serveur** dans la page **Sélectionner le type de la dimension** , ou **Construire la dimension sans utiliser de source de données** dans la page **Sélectionner la méthode de construction** et sélectionné **Dimension de temps** dans la page **Sélectionner le type de la dimension** .  
   
 > [!IMPORTANT]  
 >  Cette page permet de définir l'année civile d'une dimension de temps. Pour définir l’année fiscale, de fabrication, de rapports ou ISO (International Standards Organization) 8601 de la dimension de temps, utilisez la page **Sélectionner des calendriers** .  

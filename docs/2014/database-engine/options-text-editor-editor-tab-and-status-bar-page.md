@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089243"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte/onglet Éditeur et page Barre d’état)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte : onglet Éditeur et page Barre d’état)
   L' **onglet Éditeur et la page Barre d'état** vous permettent de personnaliser les informations affichées par les éditeurs de requête [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Vous pouvez spécifier le niveau d'informations affiché dans l'onglet et la barre d'état de la fenêtre Éditeur de requête, et indiquer si la barre d'état doit apparaître en haut ou en bas de la fenêtre de l'éditeur.  
   
 ## <a name="option-settings-by-editor"></a>Paramètres d'option par éditeur  
@@ -37,7 +37,7 @@ ms.locfileid: "66089243"
  **Aucun**  
  La barre d'état n'affiche pas d'informations horaires.  
   
- **Fin**  
+ **Effet**  
  La barre d'état affiche l'heure réelle du jour pendant l'exécution du script. À l'achèvement du script, l'affichage indique l'heure du jour à laquelle le script s'est terminé.  
   
  **Temps écoulé**  
@@ -67,10 +67,10 @@ ms.locfileid: "66089243"
  **Emplacement de la barre d'état**  
  Spécifie l'emplacement de la barre d'état. Les paramètres sont les suivants :  
   
- **Retour au début**  
+ **Top**  
  La barre d'état apparaît en haut de la fenêtre de l'éditeur de requête.  
   
- **Bas**  
+ **Ballon**  
  La barre d'état apparaît au bas de la fenêtre de l'éditeur de requête.  
   
 ## <a name="tab-text"></a>Texte de l'onglet  

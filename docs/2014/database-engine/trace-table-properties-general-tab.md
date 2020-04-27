@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088738"
 ---
 # <a name="trace-table-properties-general-tab"></a>Propriétés de la table de trace (onglet Général)
@@ -27,7 +27,7 @@ ms.locfileid: "66088738"
  Pour afficher cette fenêtre, utilisez le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour ouvrir une table de trace, puis dans le menu **Fichier** , cliquez sur **Propriétés**.  
   
 ## <a name="options"></a>Options  
- **Nom de la table**  
+ **Nom du tableau**  
  Affiche le serveur, la base de données, le schéma et le nom de la table de trace ouverte.  
   
  **Nom du fournisseur de trace**  
@@ -36,7 +36,7 @@ ms.locfileid: "66088738"
  **Type de fournisseur de trace**  
  Affiche le type de serveur qui a fourni la trace.  
   
- **Version**  
+ **version**  
  Affiche la version du serveur qui a fourni la trace.  
   
  **Lignes**  
@@ -46,7 +46,7 @@ ms.locfileid: "66088738"
  Affiche le nombre de pages de données présentes dans la table de trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [Ouvrez une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

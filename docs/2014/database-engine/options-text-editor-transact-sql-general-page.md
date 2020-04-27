@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089169"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Options (éditeur de texte-Transact-SQL-page général)
   Utilisez la boîte de dialogue d’options **Général** pour modifier le comportement d’édition général de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)], qui permet de modifier des scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils**, développez le sous-dossier **Transact-SQL**, puis cliquez sur **Général**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
- Les options de [!INCLUDE[ssDE](../includes/ssde-md.md)] l’éditeur de requête peuvent également être définies dans la boîte de dialogue **tous les langages général** . Si vous utilisez les boîtes de dialogue **tous les langages** pour définir des options [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] différentes pour les autres éditeurs, comme les éditeurs DMX ou MDX, vous [!INCLUDE[ssDE](../includes/ssde-md.md)] devez réinitialiser les options de l’éditeur de requête à l’aide de cette boîte de dialogue.  
+ Les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] peuvent également être définies dans la boîte de dialogue **Tous les langages Général**. Si vous utilisez les boîtes de dialogue **Tous les langages** pour définir des options différentes pour les autres éditeurs [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], comme les éditeurs DMX ou MDX, vous devez réinitialiser les options de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)] dans cette boîte de dialogue.  
   
 ## <a name="statement-completion"></a>Compléter automatiquement les instructions  
  **Répertorier automatiquement les membres**  

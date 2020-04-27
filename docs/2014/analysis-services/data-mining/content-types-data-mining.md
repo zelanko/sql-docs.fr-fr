@@ -27,10 +27,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085659"
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
@@ -45,21 +45,21 @@ ms.locfileid: "66085659"
  La liste suivante décrit les types de contenu utilisés dans le cadre de l'exploration de données et identifie les types de données qui prennent en charge chacun de ces types.  
   
 ## <a name="discrete"></a>Discret  
- *Discret* signifie que la colonne contient un nombre fini de valeurs sans continuum entre les valeurs. Une colonne Sexe (homme/femme) est un exemple classique de colonne d'attributs discrète, en ce sens que les données représentent un nombre spécifique de catégories.  
+ Le terme*Discret* signifie que la colonne contient un nombre fini de valeurs sans spectre entre les valeurs. Une colonne Sexe (homme/femme) est un exemple classique de colonne d'attributs discrète, en ce sens que les données représentent un nombre spécifique de catégories.  
   
  Les valeurs dans une colonne d'attributs discrète ne peuvent pas impliquer un classement, même si les valeurs sont numériques. De plus, même si les valeurs utilisées pour la colonne discrète sont numériques, le calcul de valeurs fractionnaires est impossible. Les indicatifs téléphoniques sont un bon exemple de données discrètes numériques.  
   
  Le type de contenu `Discrete` est pris en charge par tous les types de données d'exploration de données.  
   
 ## <a name="continuous"></a>Continue  
- *Continuous* signifie que la colonne contient des valeurs qui représentent des données numériques sur une échelle qui autorise des valeurs intermédiaires. À la différence d'une colonne discrète, qui représente des données finies et dénombrables, une colonne continue représente des mesures évolutives et les données peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de températures est un exemple de colonne d'attributs continue.  
+ Le terme*continu* signifie que la colonne contient des valeurs qui représentent des données numériques sur une échelle qui autorise des valeurs temporaires. À la différence d'une colonne discrète, qui représente des données finies et dénombrables, une colonne continue représente des mesures évolutives et les données peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de températures est un exemple de colonne d'attributs continue.  
   
  Lorsqu'une colonne contient les données numériques continues, et que vous savez comment les données doivent être distribuées, vous pouvez potentiellement améliorer l'exactitude de l'analyse en spécifiant la distribution attendue des valeurs. Vous spécifiez la distribution des colonnes au niveau de la structure d'exploration de données. Ainsi, le paramètre s’applique à tous les modèles basés sur la structure. Pour plus d’informations, consultez [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md).  
   
  Le type de contenu `Continuous` est pris en charge par les types de données suivants : `Date`, `Double` et `Long`.  
   
 ## <a name="discretized"></a>Discrétisé  
- La *discrétisation* est le processus consistant à placer des valeurs d’un jeu continu de données dans des compartiments afin qu’il y ait un nombre limité de valeurs possibles. Seules des données numériques peuvent être discrétisées.  
+ La*discrétisation* est le processus consistant à mettre les valeurs d’un jeu continu de données dans des compartiments pour obtenir un nombre limité de valeurs possibles. Seules des données numériques peuvent être discrétisées.  
   
  Ainsi, le type de données *discrétisé* (Discretized) indique que la colonne contient des valeurs qui représentent des groupes, ou compartiments, de valeurs dérivés d’une colonne continue. Les compartiments sont traités comme des valeurs discrètes et ordonnées.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085659"
   
  Le type de contenu `Discretized` est pris en charge par les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
-## <a name="key"></a>Clé  
+## <a name="key"></a>Touche  
  Le type de contenu *clé* (Key) signifie que la colonne identifie de façon unique une ligne. Dans une table de cas, la colonne clé est généralement un identificateur numérique ou texte. Vous attribuez la valeur `key` au type de contenu pour indiquer que la colonne doit uniquement servir au suivi des enregistrements, et non à des fins d'analyse.  
   
  Les tables imbriquées ont également des clés, mais l'utilisation de la clé de table imbriquée diffère quelque peu. Vous attribuez la valeur `key` au type de contenu dans une table imbriquée si la colonne est l'attribut à analyser. Les valeurs dans la clé de table imbriquée doivent être uniques pour chaque cas, mais il peut y avoir des doublons sur tout le jeu de cas.  

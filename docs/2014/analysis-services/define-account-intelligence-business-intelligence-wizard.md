@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082197"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Définir l'intelligence comptable (Assistant Business Intelligence)
@@ -34,14 +34,14 @@ ms.locfileid: "66082197"
   
  Le tableau ci-dessous répertorie les types de comptes définis dans une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Asset**|Valeur des biens possédés à un moment donné.|  
 |**Balance**|Comptage d'une grandeur à un moment donné.|  
-|**Dépensé**|Valeur des dépenses engagées.|  
-|**Organigramme**|Comptage incrémental de biens.|  
-|**Produits**|Valeur des biens reçus.|  
-|**Pourra**|Valeur des biens dus à un moment donné.|  
+|**Dépenses**|Valeur des dépenses engagées.|  
+|**Flux**|Comptage incrémental de biens.|  
+|**Revenu**|Valeur des biens reçus.|  
+|**Dettes**|Valeur des biens dus à un moment donné.|  
 |**Statistique**|Rapport calculé d'une grandeur, ou comptage d'une grandeur qu'il n'est pas possible d'agréger.|  
   
 ## <a name="see-also"></a>Voir aussi  

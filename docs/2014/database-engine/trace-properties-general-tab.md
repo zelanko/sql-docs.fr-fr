@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089531"
 ---
 # <a name="trace-properties-general-tab"></a>Propriétés de la trace (onglet Général)
@@ -34,7 +34,7 @@ ms.locfileid: "66089531"
  **Type de fournisseur de trace**  
  Affiche le type de serveur qui fournit la trace. Le champ **Type de fournisseur de trace** est rempli automatiquement par le fichier de définition de trace. Vous ne pouvez pas modifier ce champ.  
   
- **Version**  
+ **version**  
  Affiche la version du serveur qui fournit la trace. Le champ **Version** est rempli automatiquement par le fichier de définition de trace. Vous ne pouvez pas modifier ce champ.  
   
  **Utiliser le modèle**  
@@ -61,10 +61,10 @@ ms.locfileid: "66089531"
  \<Graphique> la **table de destination**  
  Une fois que vous avez choisi d'enregistrer les données de trace dans une table de base de données, vous pouvez sélectionner cette icône pour modifier le nom de la table.  
   
- **Définir le nombre maximal de lignes (en milliers)**  
+ **Définir le nombre de lignes maximal (en milliers)**  
  Spécifiez le nombre maximal de lignes pour l'enregistrement des données. La valeur par défaut est 1000 lignes.  
   
- **Activer l’heure d’arrêt de la trace**  
+ **Activer l'heure d'arrêt de la trace**  
  Définissez la date et l'heure auxquelles la trace doit s'arrêter et se fermer.  
   
 ## <a name="see-also"></a>Voir aussi  

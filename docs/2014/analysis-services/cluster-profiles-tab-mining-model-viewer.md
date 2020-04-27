@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087869"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Profils du cluster** pour obtenir une vue globale des clusters détectés par l’algorithme au sein d’un modèle de clustering. L'onglet affiche chaque attribut, accompagné de sa répartition dans chaque cluster.  
   
- **Pour plus d’informations :** [algorithme de clustering Microsoft](data-mining/microsoft-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Sequence Cluster](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -37,7 +37,7 @@ ms.locfileid: "66087869"
  **Afficher la légende**  
  Sélectionnez cette option pour afficher une clé qui indique le mappage de couleurs dans la visionneuse aux valeurs de la colonne **États** .  
   
- **Barres de l'histogramme**  
+ **Barres de l’histogramme**  
  Modifiez cette valeur pour contrôler le nombre d'états inclus dans chaque histogramme. S’il existe davantage d’états que le nombre que vous choisissez d’afficher, les états avec la plus grande probabilité sont affichés dans l’histogramme et les états restants sont regroupés dans **Autre**.  
   
  **Attributs**  
@@ -46,7 +46,7 @@ ms.locfileid: "66087869"
  **États**  
  Fournit une clé qui indique quelle couleur représente chaque état dans la ligne correspondante de clusters, ou un curseur avec un losange qui indique la distribution des valeurs numériques continues. Vous pouvez afficher ou masquer cette colonne en utilisant la case à cocher **Afficher la légende** .  
   
- **Profils de cluster**  
+ **Profils du cluster**  
  Cette section contient une colonne pour chaque cluster du modèle. Pour chaque attribut, l'histogramme affiche la distribution des valeurs de l'attribut uniquement pour ce cluster. Le graphique contient également une colonne pour **Remplissage**, qui utilise également les histogrammes pour afficher la distribution des valeurs pour chaque attribut, mais pour tous les cas du modèle.  
   
 ## <a name="see-also"></a>Voir aussi  

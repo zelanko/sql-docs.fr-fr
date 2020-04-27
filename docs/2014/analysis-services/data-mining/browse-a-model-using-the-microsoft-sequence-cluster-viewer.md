@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086131"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)
@@ -36,20 +36,20 @@ ms.locfileid: "66086131"
 > [!NOTE]  
 >  La visionneuse de l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) fournit des fonctionnalités et des options similaires à celles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer. Pour plus d’informations, consultez [Explorer un modèle à l’aide de Microsoft Cluster Viewer](browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) fournit les onglets suivants pour explorer les modèles d’exploration de données MSC :  
   
 -   [Diagramme de cluster](#BKMK_Diagram)  
   
--   [Profils de cluster](#BKMK_Profile)  
+-   [Profils du cluster](#BKMK_Profile)  
   
 -   [Caractéristiques du cluster](#BKMK_Characteristics)  
   
 -   [Discrimination de cluster](#BKMK_Discrimination)  
   
--   [Transitions de cluster](#BKMK_Transitions)  
+-   [Transitions d'état](#BKMK_Transitions)  
   
-###  <a name="BKMK_Diagram"></a>Diagramme de cluster  
+###  <a name="cluster-diagram"></a><a name="BKMK_Diagram"></a>Diagramme de cluster  
  L’onglet **Diagramme de cluster** de la Visionneuse de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) affiche tous les clusters se trouvant dans un modèle d’exploration de données. L'ombrage de la ligne reliant un cluster à un autre représente le niveau de similarité des clusters. Si l'ombrage est clair ou inexistant, les clusters ne sont pas très similaires. Plus la ligne est sombre, plus la similarité des liens est grande. Vous pouvez modifier le nombre de lignes affichées par la visionneuse à l'aide du curseur situé à droite des clusters. Si vous déplacez le curseur vers le bas, seuls les liens les plus forts sont affichés.  
   
  Par défaut, l'ombre représente le remplissage du cluster. À l’aide des options **ombrage** et **State** , vous pouvez sélectionner la paire attribut/État que l’ombrage représente. Plus l'ombrage est sombre, plus la distribution d'attribut est grande pour un état spécifique. Inversement, plus l'ombrage est clair, plus la distribution diminue.  
@@ -60,7 +60,7 @@ ms.locfileid: "66086131"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Profile"></a>Profils de cluster  
+###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Profils de cluster  
  L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. La \<ligne d’attributs>. samples représente les différentes séquences de données qui existent dans le cluster \<, et l’attribut> ligne décrit tous les éléments contenus dans le cluster et leur distribution globale.  
   
  L’option **Barres de l’histogramme** contrôle le nombre de barres qui sont visibles dans l’histogramme. Si le nombre réel de barres est supérieur au nombre de barres à afficher, les barres les plus importantes sont conservées et le reste des barres est regroupé dans un compartiment gris.  
@@ -71,17 +71,17 @@ ms.locfileid: "66086131"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Caractéristiques du cluster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_Characteristics"></a>Caractéristiques du cluster  
  Pour utiliser l’onglet **Caractéristiques du cluster** , sélectionnez un cluster dans la liste **Cluster** . Après avoir sélectionné un cluster, vous pouvez examiner les caractéristiques qui composent ce cluster spécifique. Les attributs contenus dans le cluster sont répertoriés dans les colonnes **Variables** et l'état de l'attribut répertorié est répertorié dans la colonne **Valeurs** . Les états d'attribut apparaissent par ordre d'importance, en fonction de leur probabilité d'apparition dans le cluster. La probabilité est indiquée dans la colonne **Probabilité** .  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Discrimination"></a>Discrimination de cluster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_Discrimination"></a>Discrimination de cluster  
  Vous pouvez utiliser l’onglet **Discrimination de cluster** pour comparer les attributs entre deux clusters afin de déterminer comment les éléments d’une séquence privilégient un cluster par rapport à l’autre. Utilisez les listes **Cluster 1** et **Cluster 2** pour sélectionner les clusters à comparer. La visionneuse détermine les différences les plus importantes entre les clusters et affiche, par ordre d'importance, les états d'attribut associés à ces différences. Une barre à droite de l'attribut indique quel cluster est privilégié par l'état et la taille de la barre indique à quel point l'état privilégie le cluster.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Transitions"></a>Transitions de cluster  
+###  <a name="cluster-transitions"></a><a name="BKMK_Transitions"></a>Transitions de cluster  
  En sélectionnant un cluster sous l’onglet **Transitions d’état** , vous pouvez parcourir les transitions entre les états de séquence dans le cluster sélectionné. Chaque nœud figurant dans la visionneuse représente un état de la colonne de séquence. Une flèche représente une transition entre deux états et la probabilité associée à la transition. Si une transition revient au nœud d'origine, une flèche peut repointer vers le nœud d'origine.  
   
  Une flèche provenant d'un point représente la probabilité que le nœud est le début d'une séquence. Une extrémité de fin menant à une valeur NULL représente la probabilité que le nœud est la fin de la séquence.  

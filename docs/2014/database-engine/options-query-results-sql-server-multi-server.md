@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089965"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Options (Résultats de la requête/SQL Server/Multiserveur)
@@ -37,6 +37,6 @@ ms.locfileid: "66089965"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un serveur de gestion centralisée et un groupe de serveurs &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
- [Exécuter des instructions sur plusieurs serveurs simultanément &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
+ [Exécuter des instructions simultanément sur plusieurs serveurs &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

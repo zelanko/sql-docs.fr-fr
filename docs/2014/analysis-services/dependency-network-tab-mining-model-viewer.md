@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081939"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Onglet Réseau de dépendances (Visionneuse de modèle d'exploration de données)
@@ -34,7 +34,7 @@ ms.locfileid: "66081939"
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Choisissez un modèle d'exploration de données à afficher, parmi ceux de la structure d'exploration de données active. Le modèle d'exploration de données s'ouvre dans une visionneuse personnalisée. Le type de visionneuse personnalisée qui est utilisée pour chaque modèle est déterminé par l'algorithme que vous avez utilisé pour créer le modèle.  
   
  **Visionneuse**  

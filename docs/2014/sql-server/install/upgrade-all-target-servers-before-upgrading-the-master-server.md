@@ -16,17 +16,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b6e08a384e20d64a7002171059db0d35dfd94a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091466"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>Mettre à niveau tous les serveurs cibles avant de mettre à niveau le serveur maître
   Avant de mettre à niveau le serveur maître, mettez à niveau tous les ordinateurs exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et configurés comme serveurs cibles.  
   
 ## <a name="component"></a>Composant  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Description  
  Pour automatiser l'administration dans des environnements multiserveurs, vous devez disposer, au minimum, d'un serveur maître et d'un serveur cible. Un serveur maître distribue les travaux aux serveurs cibles et reçoit les événements de ces derniers. Un serveur maître stocke également la copie centrale des définitions de travaux pour les travaux exécutés sur des serveurs cibles.  

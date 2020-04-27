@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083623"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression logistique (Analysis Services - Exploration de données)
@@ -51,7 +51,7 @@ ms.locfileid: "66083623"
  ATTRIBUTE_NAME  
  Noms de l’attribut correspondant à ce nœud.  
   
-|Nœud|Content|  
+|Nœud|Contenu|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -89,7 +89,7 @@ ms.locfileid: "66083623"
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
-|Nœud|Content|  
+|Nœud|Contenu|  
 |----------|-------------|  
 |Racine du modèle|Indique le nombre de nœuds enfants, qui inclut au moins un réseau, un nœud marginal requis et une couche d'entrée requise. Par exemple, si la valeur est égale à 5, il y a trois sous-réseaux.|  
 |Statistiques marginales|Toujours 0.|  
@@ -107,7 +107,7 @@ ms.locfileid: "66083623"
  NODE_DESCRIPTION  
  Description conviviale du nœud.  
   
-|Nœud|Content|  
+|Nœud|Contenu|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -120,7 +120,7 @@ ms.locfileid: "66083623"
  NODE_RULE  
  Description XML de la règle incorporée dans le nœud.  
   
-|Nœud|Content|  
+|Nœud|Contenu|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -151,7 +151,7 @@ ms.locfileid: "66083623"
  Pour recevoir des informations sur la prise en charge dans les cas d'apprentissage pour des valeurs spécifiques, consultez le nœud des statistiques marginales.  
   
  MSOLAP_MODEL_COLUMN  
- |Nœud|Content|  
+ |Nœud|Contenu|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083623"
  MSOLAP_NODE_SHORT_CAPTION  
  Dans les modèles de régression logistique, toujours vide.  
   
-##  <a name="bkmk_NodeIDs"></a>Utilisation des noms de nœuds et des ID  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Utilisation des noms de nœuds et des ID  
  La désignation des nœuds dans un modèle de régression logistique fournit des informations supplémentaires à propos des relations entre les nœuds du modèle. La table suivante présente les conventions pour les ID attribués aux nœuds dans chaque couche.  
   
 |Type de nœud|Convention pour l'ID du nœud|  

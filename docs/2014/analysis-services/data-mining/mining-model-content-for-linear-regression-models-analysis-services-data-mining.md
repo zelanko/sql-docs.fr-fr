@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083642"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression linéaire (Analysis Services - Exploration de données)
@@ -45,9 +45,9 @@ ms.locfileid: "66083642"
  Nom du modèle.  
   
  ATTRIBUTE_NAME  
- **Nœud racine :** Occult  
+ **Nœud racine :** Vide  
   
- **Nœud de régression :** Nom de l’attribut prévisible.  
+ **Nœud de régression :** Nom de l’attribut prédictible.  
   
  NODE_NAME  
  Toujours identique à NODE_UNIQUE_NAME.  
@@ -65,16 +65,16 @@ ms.locfileid: "66083642"
  NODE_CAPTION  
  Étiquette ou légende associée au nœud. Cette propriété est principalement utilisée à des fins d'affichage.  
   
- **Nœud racine :** Occult  
+ **Nœud racine :** Vide  
   
- **Nœud de régression :** Tous les.  
+ **Nœud de régression :** Tout.  
   
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
- **Nœud racine :** Indique le nombre de nœuds de régression. Un nœud de régression est créé pour chaque attribut prédictible du modèle.  
+ **Nœud racine :** Indique le nombre de nœuds de régression. Un nœud de régression est créé pour chaque attribut prédictible du modèle.  
   
- **Nœud de régression :** Toujours 0.  
+ **Nœud de régression :** Toujours 0.  
   
  PARENT_UNIQUE_NAME  
  Nom unique du parent du nœud. La valeur NULL est retournée pour tous les nœuds situés au niveau de la racine.  
@@ -82,9 +82,9 @@ ms.locfileid: "66083642"
  NODE_DESCRIPTION  
  Description du nœud.  
   
- **Nœud racine :** Occult  
+ **Nœud racine :** Vide  
   
- **Nœud de régression :** Tous les.  
+ **Nœud de régression :** Tout.  
   
  NODE_RULE  
  Non utilisé pour les modèles de régression linéaire.  
@@ -95,23 +95,23 @@ ms.locfileid: "66083642"
  NODE_PROBABILITY  
  Probabilité associée à ce nœud.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** 1  
+ **Nœud de régression :** 1  
   
  MARGINAL_PROBABILITY  
  Probabilité d'accès au nœud à partir du nœud parent.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** 1  
+ **Nœud de régression :** 1  
   
  NODE_DISTRIBUTION  
  Table imbriquée fournissant des statistiques sur les valeurs du nœud.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** Table qui contient les éléments utilisés pour générer la formule de régression. Un nœud de régression contient les types de valeur suivants :  
+ **Nœud de régression :** Table contenant les éléments utilisés pour générer la formule de régression. Un nœud de régression contient les types de valeur suivants :  
   
 |VALUETYPE|  
 |---------------|  
@@ -125,9 +125,9 @@ ms.locfileid: "66083642"
  NODE_SUPPORT  
  Nombre de cas qui prennent en charge ce nœud.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** Nombre de cas d’apprentissage.  
+ **Nœud de régression :** Nombre de cas d’apprentissage.  
   
  MSOLAP_MODEL_COLUMN  
  Nom de l'attribut prédictible.  
@@ -145,7 +145,7 @@ ms.locfileid: "66083642"
   
  Ainsi, lorsque vous créez un modèle d'arbre de décision qui inclut un attribut prédictible continu, il arrive que l'arborescence possède des nœuds de régression qui partagent les propriétés des nœuds d'arbres de régression.  
   
-##  <a name="NodeDist_Regression"></a>Distribution de nœuds pour les attributs continus  
+##  <a name="node-distribution-for-continuous-attributes"></a><a name="NodeDist_Regression"></a> Distribution du nœud pour les attributs continus  
  La plupart des informations importantes d’un nœud de régression sont contenues dans la table NODE_DISTRIBUTION. L'exemple suivant illustre la structure de la table NODE_DISTRIBUTION. Dans cet exemple, la structure d'exploration de données de publipostage ciblé a été utilisée pour créer un modèle de régression linéaire qui prédit le revenu du client selon son âge. Ce modèle sert uniquement à l’illustration, car il peut être créé facilement à l’aide des exemples de données et de la structure d’exploration de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] existants.  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
@@ -162,8 +162,7 @@ ms.locfileid: "66083642"
 ### <a name="elements-of-the-regression-formula"></a>Éléments de la formule de régression  
  La table imbriquée NODE_DISTRIBUTION contient chaque élément de la formule de régression dans une ligne distincte. Les deux premières lignes de données dans les résultats d’exemple contiennent des informations sur l’attribut prédictible, **Revenu annuel**, qui modélise la variable dépendante. La colonne SUPPORT affiche le nombre de cas prenant en charge les deux états de cet attribut : soit une valeur **Revenu annuel** était disponible, soit la valeur **Revenu annuel** était manquante.  
   
- La colonne VARIANCE indique l'écart calculé de l'attribut prédictible. La *variance* est une mesure de la dispersion des valeurs dans un exemple, en fonction d’une distribution attendue. L’écart est calculé en prenant le carré de la déviation standard par rapport à la moyenne. La racine carrée de l’écart est également appelée écart type. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fournit pas l’écart type, mais il peut être calculé facilement.  
+ La colonne VARIANCE indique l'écart calculé de l'attribut prédictible. *L’écart* est une mesure du mode de dispersion des valeurs dans un exemple au vu d’une distribution attendue. L’écart est calculé en prenant le carré de la déviation standard par rapport à la moyenne. La racine carrée de l’écart est également appelée écart type. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fournit pas l’écart type, mais il peut être calculé facilement.  
   
  Pour chaque régresseur, trois lignes sont générées. Elles contiennent le coefficient, le gain du score et les statistiques de régresseur.  
   

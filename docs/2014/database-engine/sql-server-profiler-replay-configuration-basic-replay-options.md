@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089717"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Générateur de profils SQL Server – Configuration de la relecture (Options de relecture de base)
@@ -34,12 +34,10 @@ ms.locfileid: "66089717"
  Affiche la boîte de dialogue **Se connecter au serveur** pour se connecter à un autre serveur.  
   
  **Enregistrer dans le fichier**  
- Permet d'enregistrer les résultats de relecture dans un fichier. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de fichier standard, qui vous permet de spécifier l’emplacement où enregistrer le fichier.  
+ Permet d'enregistrer les résultats de relecture dans un fichier. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de fichier standard, qui vous permet de spécifier l’emplacement où enregistrer le fichier.  
   
  **Enregistrer dans la table**  
- Permet d'enregistrer les résultats de relecture dans une table. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l’emplacement où enregistrer la table.  
+ Permet d'enregistrer les résultats de relecture dans une table. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l’emplacement où enregistrer la table.  
   
  **Nombre de threads de relecture**  
  Spécifiez le nombre de threads de relecture à utiliser simultanément. Plus ce nombre est important, plus la relecture consomme de ressources, mais plus elle est rapide.  

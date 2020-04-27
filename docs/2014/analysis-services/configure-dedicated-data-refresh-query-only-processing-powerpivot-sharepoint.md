@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087508"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurer un traitement d'actualisation des données uniquement ou de requêtes uniquement (PowerPivot pour SharePoint)
@@ -31,9 +31,9 @@ ms.locfileid: "66087508"
   
  [Modifier le nombre de travaux d'actualisation des données pouvant s'exécuter en parallèle](#change)  
   
-##  <a name="config"></a>Configurer un mode de traitement  
+##  <a name="configure-a-processing-mode"></a><a name="config"></a>Configurer un mode de traitement  
   
-1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les services sur le serveur**.  
+1.  Dans l’administration centrale, sous paramètres système, cliquez sur **gérer les services sur le serveur**.  
   
 2.  En haut de la page, sous Serveur, cliquez sur la flèche orientée vers le bas, puis sur **Changer de serveur**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66087508"
   
 7.  Enregistrez vos modifications. Le serveur ne validera vos entrées que lorsqu'un événement de traitement se produira. Si vous entrez un nombre non valide pour les travaux simultanés, l'erreur sera détectée et journalisée lors du traitement de la requête suivante.  
   
-##  <a name="change"></a>Modifier le nombre de travaux d’actualisation des données qui peuvent s’exécuter en parallèle  
+##  <a name="change-the-number-of-data-refresh-jobs-that-can-run-in-parallel"></a><a name="change"></a>Modifier le nombre de travaux d’actualisation des données qui peuvent s’exécuter en parallèle  
  Un travail d'actualisation des données est une tâche planifiée ajoutée à une file d'attente de traitement gérée et surveillée par une application de service PowerPivot. Un travail est constitué d'informations de planification pour une ou plusieurs sources de données dans un classeur PowerPivot. Un travail distinct est créé pour chaque planification définie. Si un propriétaire de classeur définit une planification pour toutes les sources de données, un seul travail est créé pour toute l'opération d'actualisation des données. Si un propriétaire de classeur crée des planifications individuelles pour des sources de données externes, plusieurs travaux sont créés et exécutés pour effectuer une actualisation des données complète pour ce classeur.  
   
  Vous pouvez augmenter le nombre de travaux d'actualisation des données pouvant s'exécuter simultanément si votre système est capable de traiter la charge supplémentaire.  
@@ -83,6 +83,6 @@ ms.locfileid: "66087508"
  Chaque travail d'actualisation des données présente des caractéristiques de charge différentes qui varient en fonction du nombre et de la taille des sources de données actualisées. La charge de traitement de plusieurs classeurs ayant une seule source de données avec un petit nombre de lignes est bien plus légère que celle d'un classeur ayant de nombreuses sources de données et de très grands ensembles de lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Actualisation des données PowerPivot avec SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
+ [Actualisation des données PowerPivot avec SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

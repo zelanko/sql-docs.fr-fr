@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089080"
 ---
 # <a name="query-options-execution-ansi-page"></a>Options de requête (page ANSI)
   Utilisez cette page pour spécifier que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes à l’aide de l’ensemble ou d’une partie des paramètres spécifiés dans la norme ISO (ANSI).  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **DÉFINIR ANSI_DEFAULTS**  
+ **SET ANSI_DEFAULTS**  
  Sélectionne tous les paramètres ISO par défaut. Par défaut, cette zone n'est pas disponible car seuls certains des paramètres ISO sont configurés.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -39,14 +39,14 @@ ms.locfileid: "66089080"
  Ferme automatiquement tous les curseurs ouverts (conformément à la norme ISO) lors de la validation d'une transaction. Lorsque cette option est désactivée (OFF), les curseurs restent ouverts d'une transaction à l'autre, ne se fermant que lors de la fermeture de la connexion ou sur demande explicite. Cette option est désactivée par défaut.  
   
  **SET ANSI_PADDING**  
- Contrôle le mode de stockage dans la colonne des valeurs dont la longueur est inférieure à la taille définie pour la colonne et de celles contenant des espaces à droite pour les données de type **char**, **varchar**, **binary**et **varbinary** . Cette valeur affecte uniquement la définition de nouvelles colonnes. Une fois la colonne créée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stocke les valeurs en fonction du paramètre en vigueur lors de la création de la colonne. Les colonnes existantes ne sont pas affectées par toute modification ultérieure du paramètre. Cette case à cocher est activée par défaut.  
+ Contrôle la façon dont la colonne stocke les valeurs plus courtes que la taille définie de la colonne, ainsi que la façon dont la colonne stocke les valeurs qui ont des espaces à droite dans les données **char**, **varchar**, **Binary**et **varbinary** . Cette valeur affecte uniquement la définition de nouvelles colonnes. Une fois la colonne créée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stocke les valeurs en fonction du paramètre en vigueur lors de la création de la colonne. Les colonnes existantes ne sont pas affectées par toute modification ultérieure du paramètre. Cette case à cocher est activée par défaut.  
   
  **SET ANSI_WARNINGS**  
  Spécifie le comportement conforme à la norme ISO pour plusieurs conditions d'erreur :  
   
 -   Lorsque cette case à cocher est activée, si des valeurs de type NULL apparaissent dans des fonctions d'agrégation (telles que SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT), le système génère un message d'avertissement. Lorsque la valeur est **OFF**, aucun avertissement n'est émis.  
   
--   Lorsque cette case à cocher est désactivée, les erreurs de division par zéro et de dépassement arithmétique provoquent l'annulation de l'instruction et l'émission d'un message d'erreur. Lorsque la valeur est OFF, les erreurs de division par zéro et de dépassement arithmétique entraînent le renvoi de valeurs NULL. Une erreur de division par zéro ou de dépassement arithmétique provoque le renvoi de valeurs NULL si une instruction INSERT ou UPDATE est tentée sur une colonne de type character, Unicode ou binary contenant une nouvelle valeur dont la longueur est supérieure à la taille maximale de la colonne. Conformément à la norme ISO, si l’option **SET ANSI_WARNINGS** est activée (valeur ON), l’opération INSERT ou UPDATE est annulée. Les espaces de fin sont ignorés dans des colonnes character et les zéros à droite sont ignorés dans les colonnes binary. Lorsque la valeur est définie à OFF, les données sont tronquées de façon à correspondre à la taille de la colonne, et l'instruction s'exécute correctement.  
+-   Lorsque cette case à cocher est désactivée, les erreurs de division par zéro et de dépassement arithmétique provoquent l'annulation de l'instruction et l'émission d'un message d'erreur. Lorsque la valeur est OFF, les erreurs de division par zéro et de dépassement arithmétique entraînent le renvoi de valeurs NULL. Une erreur de division par zéro ou de dépassement arithmétique provoque le renvoi de valeurs NULL si une instruction INSERT ou UPDATE est tentée sur une colonne de type character, Unicode ou binary contenant une nouvelle valeur dont la longueur est supérieure à la taille maximale de la colonne. Si **SET ANSI_WARNINGS** a la valeur on, l’opération d’insertion ou de mise à jour est annulée comme spécifié par la norme ISO. Les espaces de fin sont ignorés dans des colonnes character et les zéros à droite sont ignorés dans les colonnes binary. Lorsque la valeur est définie à OFF, les données sont tronquées de façon à correspondre à la taille de la colonne, et l'instruction s'exécute correctement.  
   
  Cette option est activée par défaut.  
   

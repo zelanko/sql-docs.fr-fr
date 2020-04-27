@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086651"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validation croisée (Compléments d'exploration de données SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "66086651"
     > [!NOTE]  
     >  Microsoft Excel peut rester temporairement sans réponse pendant que le modèle est partitionné en replis et que chaque repli est testé.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour créer un rapport de validation croisée, vous devez avoir déjà créé une structure d'exploration de données et des modèles connexes. L'Assistant fournit une boîte de dialogue pour vous aider à faire un choix parmi les structures et les modèles existants.  
   
  Si vous choisissez une structure d'exploration de données qui prend en charge plusieurs modèles d'exploration de données, et les modèles utilisent des attributs prévisibles différents, l'Assistant Validation croisée testera uniquement les modèles qui partagent le même attribut prévisible.  

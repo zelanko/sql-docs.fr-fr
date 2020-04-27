@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086774"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer/Modifier une relation (Analysis Services - Données multidimensionnelles)
@@ -31,7 +31,7 @@ ms.locfileid: "66086774"
 -   cliquer avec le bouton droit sur une relation dans le volet **Diagramme** du **Concepteur de vues de source de données** et sélectionner **Modifier la relation**.  
   
 > [!NOTE]  
->  Vous pouvez créer des relations dans le **Concepteur de vue de source de données** qui n’existent pas dans la source de données sous-jacente, et supprimer des relations créées par le concepteur de vue de source de **données** à partir de relations de clé étrangère existantes dans la source de données sous-jacente.  
+>  Vous pouvez créer des relations dans le **Concepteur de vues de source de données** , qui n’existent pas dans la source de données sous-jacente, et supprimer des relations créées par le **Concepteur de vues de source de données** à partir de relations de clé étrangère existantes dans la source de données sous-jacente.  
   
 ## <a name="options"></a>Options  
  **Table source (clé étrangère)**  
@@ -54,6 +54,6 @@ ms.locfileid: "66086774"
   
 ## <a name="see-also"></a>Voir aussi  
  [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de source de données &#40;Analysis Services-données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

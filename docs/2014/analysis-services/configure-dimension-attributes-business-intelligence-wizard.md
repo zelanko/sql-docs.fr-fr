@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087447"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurer les attributs de la dimension (Assistant Business Intelligence)
@@ -32,7 +32,7 @@ ms.locfileid: "66087447"
  **Attributs de dimensions**  
  Affiche les types d'attributs valides qui peuvent être associés aux attributs de dimension existants dans la dimension.  
   
- **Inclusion**  
+ **Inclure**  
  Activez une case à cocher pour inclure le type d'attribut correspondant dans la dimension.  
   
  **Type d’attribut**  

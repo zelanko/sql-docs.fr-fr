@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089538"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Propriétés de la table de trace (onglet Sélection des événements)
@@ -27,7 +27,7 @@ ms.locfileid: "66089538"
  Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace. Ensuite, dans le menu **fichier** , cliquez sur **Propriétés**, puis sur l’onglet **sélection des événements** .  
   
 ## <a name="options"></a>Options  
- Colonne **événements**  
+ Colonne**Events**  
  Affiche les événements tracés organisés par catégorie. Sélectionnez les événements requis en activant ou en désactivant les cases à cocher correspondant à une colonne de données d'un événement. Si une case d'événement est cochée, toutes les colonnes de données de cet événement sont sélectionnées. Si la colonne de données d'un événement est cochée, l'événement l'est aussi, de même que toutes les autres colonnes requises. Lors de l'affichage d'une table ou d'un fichier de trace, la désactivation des cases à cocher de certains événements ou de colonnes de données réduit la quantité de données visibles dans la fenêtre de trace, ce qui facilite les analyses. Pour réduire la quantité d'informations visibles, vous pouvez également modifier les filtres de colonne. Pour plus d'informations sur les classes d'événements, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Autres colonnes de données  
@@ -48,8 +48,8 @@ ms.locfileid: "66089538"
  Après avoir sélectionné les colonnes **Événements** et de données à inclure dans la trace, cliquez sur **Organiser les colonnes** pour forcer la réorganisation dans la grille des colonnes de la fenêtre des résultats de la trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Ouvrez une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

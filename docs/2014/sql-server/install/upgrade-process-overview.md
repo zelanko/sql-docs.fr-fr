@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091519"
 ---
 # <a name="upgrade-process-overview"></a>Vue d'ensemble du processus de mise à niveau
@@ -36,7 +36,7 @@ ms.locfileid: "66091519"
   
 2.  Sauvegardez les données et les paramètres système.  
   
-3.  Exécutez le Conseiller de mise à niveau  
+3.  Exécutez le Conseiller de mise à niveau.  
   
      Le Conseiller de mise à niveau ne modifie pas vos données ni vos paramètres sur votre ordinateur.  
   

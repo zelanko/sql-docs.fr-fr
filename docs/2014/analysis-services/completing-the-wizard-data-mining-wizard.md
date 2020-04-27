@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087710"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Fin de l'Assistant (Assistant Exploration de données)
@@ -27,7 +27,7 @@ ms.locfileid: "66087710"
 > [!NOTE]  
 >  Cette page varie selon que vous avez choisi **À partir d’une base de données relationnelles ou d’un entrepôt de données qui existent déjà** ou **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Concepteur d’exploration de données](data-mining/data-mining-designer.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Concepteur d’exploration de données](data-mining/data-mining-designer.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Nom de la structure d'exploration de données**  
@@ -44,7 +44,7 @@ ms.locfileid: "66087710"
   
  Pour plus d’informations sur les options d’extraction, consultez [Requêtes d’extraction &#40;exploration de données&#41;](data-mining/drillthrough-queries-data-mining.md).  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affiche la structure d'exploration de données à créer.  
   
  **Créer une dimension de modèle d’exploration de données**  
@@ -53,7 +53,7 @@ ms.locfileid: "66087710"
 > [!NOTE]  
 >  Cette option est disponible si vous avez sélectionné **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Créer un cube à l’aide de la dimension modèle d’exploration de données**  
+ **Créer le cube en utilisant une dimension du modèle d'exploration de données**  
  Sélectionnez cette option pour créer un cube basé sur le modèle d'exploration de données à créer. Après avoir sélectionné cette option, entrez le nom du cube à créer.  
   
 > [!NOTE]  

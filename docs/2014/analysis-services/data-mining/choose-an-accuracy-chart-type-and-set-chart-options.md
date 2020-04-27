@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085816"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Choisir un type de graphique d'analyse de précision et définir des options de graphique
@@ -38,7 +38,7 @@ ms.locfileid: "66085816"
 ## <a name="accuracy-chart-types"></a>Types de graphiques d'analyse de précision  
  En fonction du type de graphique que vous choisissez, vous avez la possibilité de configurer d'autres options, de parcourir le graphique ou de copier le graphique dans le Presse-papiers et de travailler avec les données dans Excel.  
   
-#### <a name="lift-chart"></a>Graphique de courbes d'élévation  
+#### <a name="lift-chart"></a>Graphique de courbes d’élévation  
  Une fois que vous avez configuré les options des modèles et les données de test, cliquez sur l’onglet **Graphique de courbes d’élévation** pour afficher les résultats. Vous pouvez également copier le graphique dans le Presse-papiers, ou afficher les détails de courbes de tendance ou de points de données individuels dans la légende d'exploration de données.  
   
 #### <a name="profit-chart"></a>Graphique des bénéfices  

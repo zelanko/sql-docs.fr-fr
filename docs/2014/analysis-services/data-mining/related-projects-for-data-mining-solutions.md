@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082987"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d’exploration de données
@@ -30,19 +30,18 @@ ms.locfileid: "66082987"
   
  Cette rubrique décrit les autres fonctionnalités d' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui font souvent partie d'une solution d'analyse prédictive, soit pour prendre en charge les processus de préparation et d'exploration des données, soit pour prendre en charge les utilisateurs en fournissant les outils pour l'analyse et l'action.  
   
- [Integration Services](#bkmk_SSIS)  
+ [Services d’intégration](#bkmk_SSIS)  
   
- [Reporting Services](#bkmk_SSRS)  
+ [Reporting Services](#bkmk_SSRS)  
   
- [Service de qualité des données](#bkmk_DQSetc)  
+ [Data Quality Service](#bkmk_DQSetc)  
   
  [Recherche en texte intégral](#bkmk_FTSetc)  
   
  [Indexation sémantique](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit des composants et fonctionnalités requis pour les phases de préparation et d'apprentissage des données d'un projet d'exploration de données. Bien que vous puissiez effectuer de nombreuses tâches de nettoyage et de préparation des données à l'aide d'autres outils, tels que les scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente beaucoup d'avantages pour l'exploration de données :  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a>SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit des composants et fonctionnalités requis pour les phases de préparation et d'apprentissage des données d'un projet d'exploration de données. Bien que vous puissiez effectuer de nombreuses tâches de nettoyage et de préparation des données à l'aide d'autres outils, tels que les scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente beaucoup d'avantages pour l'exploration de données :  
   
 -   Représente des tâches dans le cadre d'un flux de travail, qui peuvent être répétées, automatisées, ramifiées et étendues.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66082987"
   
  Les listes suivantes fournissent des liens vers les composants d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont les plus largement utilisés pour prendre en charge l'exploration de données.  
   
- **Composants de Flow Control**  
+ **Composants de flux de contrôle**  
   
 -   [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66082987"
   
 -   [Composants de flux CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
--   [transformation de fractionnement conditionnel](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
+-   [Transformation de fractionnement conditionnel](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
 -   [transformation de conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66082987"
   
 -   [transformation de recherche de terme](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Bien que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne soit généralement pas perçu comme un composant incontournable des solutions d'exploration de données, il fournit les fonctionnalités suivantes qui sont utiles pour la présentation des solutions d'exploration de données.  
   
 -   Intégration des données de plusieurs sources dans des rapports complexes. Créez des requêtes sur le contenu du modèle pour les analystes et créez des rapports qui présentent des prédictions et des tendances pour les utilisateurs finaux.  
@@ -103,7 +102,7 @@ ms.locfileid: "66082987"
   
  Pour plus d'informations sur l'utilisation de Reporting Services avec les requêtes DMX comme source de données, consultez les liens suivants :  
   
- [Récupérer des données à partir d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Récupérer des données d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66082987"
   
  Pour plus d'informations sur l'utilisation de Reporting Services comme couche de présentation pour les sources de données, consultez [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) est une nouveauté de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L’exploration des données est parfois impossible à cause de problèmes liés aux données. Pour les utilisateurs des fonctionnalités d’exploration de données qui effectuent des analyses régulières ou qui travaillent dans de grandes entreprises avec des sources de données complexes, un projet de données bien planifié à l’aide de DQS sera une solution plus fiable pour la prise en charge de l’exploration de données que le nettoyage ad hoc des données à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d’autres scripts.  
   
  Les fonctionnalités suivantes de DQS doivent être prises en compte pour la préparation et l'intégrité des données dans une solution d'exploration de données.  
@@ -127,7 +126,7 @@ ms.locfileid: "66082987"
   
  Pour plus d'informations, voir [Data Cleansing](../../data-quality-services/data-cleansing.md).  
   
- **Un processus de correspondance assisté par ordinateur qui analyse les données sources et suggère des modifications.**  
+ **Un processus de correspondance de données assisté par ordinateur qui analyse les données sources et suggère des modifications.**  
  Pour éviter la duplication de données, vous pouvez effectuer d'autres nettoyages de la source de données afin d'identifier les correspondances exactes et approximatives. Ces composants vous permettent de spécifier des règles de correspondance, ainsi que les seuils auxquels les appliquer.  
   
  Une fois que vous avez trouvé des correspondances de données, vous pouvez supprimer les doublons car ils peuvent représenter un problème pour l'exploration de données. La déduplication de données n'est pas automatique. En effet, le gestionnaire de données ou le professionnel de l'informatique doit vérifier la connaissance dans la base de connaissances et les modifications à apporter aux données.  
@@ -138,7 +137,7 @@ ms.locfileid: "66082987"
   
  Tout en procédant aux activités de nettoyage et de mise en correspondance dans un projet de qualité de données, vous pouvez obtenir des statistiques et des informations en temps réel sur les données que DQS est entrain de traiter. Le profilage des données vous permet d'évaluer dans quelle mesure le nettoyage et la mise en correspondance des données vous ont aidé à améliorer la qualité des données, et aussi de comprendre les modifications qui ont été effectuées. Pour plus d'informations sur le profilage des données et les notifications, consultez [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- **Une base de connaissances qui représente trois types de connaissances : connaissance prête à l’emploi, connaissance générée par le serveur DQS et connaissance générée par l’utilisateur.**  
+ **Une base de connaissances qui représente trois types de connaissances : connaissance prête à l'emploi, connaissance générée par le serveur DQS et connaissance générée par l'utilisateur.**  
  Une fois que vous avez créé une base de connaissances, vous pouvez l'utiliser de manière itérative pour nettoyer et vérifier d'autres données.  
   
  Vous pouvez importer de nouvelles données dans les données de la base de connaissances, qui peuvent provenir de plusieurs sources. Il peut s'agir de données propres connues des fournisseurs de référence ou de données brutes qui sont mises en correspondance avec les données existantes de la base de connaissances.  
@@ -149,7 +148,7 @@ ms.locfileid: "66082987"
   
  Pour plus d’informations, consultez [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="bkmk_FTSetc"></a>Recherche en texte intégral  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>Recherche en texte intégral  
  La recherche en texte intégral dans SQL Server permet aux applications et aux utilisateurs d'exécuter des requêtes de texte intégral sur des données caractères dans des tables SQL Server. Lorsque la recherche en texte intégral est activée, vous pouvez effectuer des recherches sur les données texte qui sont améliorées grâce à des règles spécifiques à la langue sur les différentes formes d'un mot ou d'une expression. Vous pouvez également configurer des conditions de recherche, telles que la distance entre plusieurs termes, et utiliser des fonctions pour limiter les résultats retournés selon leur vraisemblance.  
   
  Étant donné que les requêtes de texte intégral sont une fonctionnalité fournie par le moteur SQL Server, vous pouvez créer des requêtes paramétrables et générer des jeux de données personnalisés ou des vecteurs de termes à l'aide des fonctionnalités de recherche en texte intégral sur une source de données de texte, puis utiliser ces sources dans l'exploration de données.  
@@ -176,7 +175,7 @@ ms.locfileid: "66082987"
   
 -   L'indexation de recherche en texte intégral n'est pris en charge que pour les colonnes avec les types de données suivants : char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary et varbinary(max). Si la colonne est varbinary, varbinary (max), image ou xml, vous devez spécifier l'extension de fichier du document indexable (.doc, .pdf, .xls, etc.) dans une colonne de type distincte.  
   
-##  <a name="bkmk_SemSearch"></a>Indexation sémantique  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>Indexation sémantique  
  La recherche sémantique s'appuie sur les fonctionnalités de recherche en texte intégral existantes de SQL Server, mais utilise d'autres fonctions et statistiques pour permettre des scénarios tels que l'extraction automatique de mots clés et la détection de documents connexes. Par exemple, vous pouvez utiliser la recherche sémantique afin de générer une taxonomie simple pour une organisation ou classer un ensemble de documents. Vous pouvez également utiliser la combinaison des termes extraits et des scores de similarité des documents dans des modèles de clustering ou d'arbre de décision.  
   
  Après avoir activé la recherche sémantique et indexé vos colonnes de données, vous pouvez utiliser les fonctions fournies en mode natif avec l'indexation sémantique pour effectuer les opérations suivantes :  
@@ -203,6 +202,6 @@ ms.locfileid: "66082987"
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Solutions de modèles tabulaires &#40;&#41;SSAS tabulaire](../tabular-model-solutions-ssas-tabular.md)  
+ [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

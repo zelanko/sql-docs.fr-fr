@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086398"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formes d'exploration de données pour Visio
@@ -59,7 +59,7 @@ ms.locfileid: "66086398"
   
  Pour plus d’informations sur l’utilisation et l’amélioration des diagrammes de modèle Visio, consultez [affichage des modèles d’exploration de données dans Visio &#40;compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
   
 -   Pour utiliser les modèles, vous devez d'abord créer une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   

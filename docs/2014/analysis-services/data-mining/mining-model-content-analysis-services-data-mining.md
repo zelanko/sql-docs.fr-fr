@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083774"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
@@ -36,24 +36,24 @@ ms.locfileid: "66083774"
   
  Cette section décrit la structure de base du contenu fournie pour tous les types de modèles d'exploration de données. Elle décrit les types de nœuds qui sont communs à tous les modèles d'exploration de données et explique comment interpréter les informations.  
   
- [Structure du contenu du modèle d’exploration de données](#bkmk_Structure)  
+ [Structure du contenu du modèle d'exploration de données](#bkmk_Structure)  
   
  [Nœuds dans le contenu du modèle](#bkmk_Nodes)  
   
- [Contenu du modèle d’exploration de données par type d’algorithme](#bkmk_AlgoType)  
+ [Contenu du modèle d'exploration de données par type d'algorithme](#bkmk_AlgoType)  
   
- [Outils pour afficher le contenu du modèle d’exploration de données](#bkmk_Viewing)  
+ [Outils pour afficher le contenu du modèle d'exploration de données](#bkmk_Viewing)  
   
- [Outils pour interroger le contenu du modèle d’exploration de données](#bkmk_Querying)  
+ [Outils pour interroger le contenu du modèle d'exploration de données](#bkmk_Querying)  
   
-##  <a name="bkmk_Structure"></a>Structure du contenu du modèle d’exploration de données  
+##  <a name="structure-of-mining-model-content"></a><a name="bkmk_Structure"></a>Structure du contenu du modèle d’exploration de données  
  Le contenu de chaque modèle est présenté sous la forme d'une série de *nœuds*. Un nœud est un objet dans un modèle d'exploration de données qui contient des métadonnées et des informations sur une partie du modèle. Les nœuds sont organisés dans une hiérarchie. La disposition exacte des nœuds dans la hiérarchie, et la signification de celle-ci, dépend de l'algorithme que vous avez utilisé. Par exemple, si vous créez un modèle d'arbres de décision, le modèle peut contenir plusieurs arborescences, toutes connectées à la racine modèle ; si vous créez un modèle de réseau neuronal, le modèle peut contenir un ou plusieurs réseaux, plus un nœud de statistiques.  
   
  Le premier nœud dans chaque modèle est appelé le *nœud racine*, ou le nœud *parent du modèle* . Chaque modèle a un nœud racine (NODE_TYPE = 1). Le nœud racine contient généralement certaines métadonnées sur le modèle, et le nombre de nœuds enfants, mais il dispose de peu d'informations supplémentaires sur les modèles découverts par le modèle.  
   
  Selon l'algorithme utilisé pour créer le modèle, le nœud racine a un nombre variable de nœuds enfants. Les nœuds enfants ont des significations différentes et possèdent un contenu différent en fonction de l'algorithme, de la profondeur et de la complexité des données.  
   
-##  <a name="bkmk_Nodes"></a>Nœuds dans le contenu du modèle d’exploration de données  
+##  <a name="nodes-in-mining-model-content"></a><a name="bkmk_Nodes"></a> Nœuds dans le contenu du modèle d'exploration de données  
  Dans un modèle d'exploration de données, un nœud est un conteneur à usage général qui stocke une information sur l'ensemble ou une portion du modèle. La structure de chaque nœud est toujours la même et contient les colonnes définies par l'ensemble des lignes du schéma d'exploration de données. Pour plus d’informations, consultez [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Chaque nœud inclut des métadonnées relatives au nœud, notamment un identificateur unique dans chaque modèle, l'ID du nœud parent et le nombre de nœuds enfants que possède le nœud. Les métadonnées identifient le modèle d'appartenance du nœud, et le catalogue de la base de données où ce modèle particulier est stocké. Le contenu supplémentaire fourni dans le nœud diffère selon le type d'algorithme utilisé pour créer le modèle, il peut contenir les éléments suivants :  
@@ -131,7 +131,7 @@ ms.locfileid: "66083774"
   
 -   Vous pouvez utiliser des fonctions dans une requête DMX (Data Mining Extensions) pour rechercher les descendants ou les parents d'un nœud particulier. Pour plus d’informations sur l’utilisation de fonctions dans des requêtes, consultez [Requêtes d’exploration de données](data-mining-queries.md).  
   
- La *cardinalité* fait référence au nombre d’éléments d’un jeu. Dans le contexte d'un modèle d'exploration de données traité, la cardinalité indique le nombre d'enfants dans un nœud particulier. Par exemple, si un modèle d'arbre de décision a un nœud pour [Yearly Income], et ce nœud a deux nœuds enfants, un pour la condition [Yearly Income] = Élevé et un pour la condition, [Yearly Income] = Bas, la valeur de CHILDREN_CARDINALITY pour le nœud [Yearly Income] serait 2.  
+ La*cardinalité* fait référence au nombre d'éléments dans un ensemble. Dans le contexte d'un modèle d'exploration de données traité, la cardinalité indique le nombre d'enfants dans un nœud particulier. Par exemple, si un modèle d'arbre de décision a un nœud pour [Yearly Income], et ce nœud a deux nœuds enfants, un pour la condition [Yearly Income] = Élevé et un pour la condition, [Yearly Income] = Bas, la valeur de CHILDREN_CARDINALITY pour le nœud [Yearly Income] serait 2.  
   
 > [!NOTE]  
 >  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], seuls les nœuds enfants immédiats sont comptés lors du calcul de la cardinalité d'un nœud. Toutefois, si vous créez un algorithme de plug-in personnalisé, vous pouvez surcharger CHILDREN_CARDINALITY pour compter la cardinalité différemment. Cela peut s'avérer utile, par exemple, si vous souhaitez compter le nombre total de descendants, pas juste les enfants immédiats.  
@@ -174,7 +174,7 @@ ms.locfileid: "66083774"
   
 |ID de nœud et attributs de nœud|Nombre de supports|  
 |---------------------------------|-------------------|  
-|(1) Racine du modèle|1 200|  
+|(1) Racine du modèle|1200|  
 |(2) Sexe = Homme<br /><br /> (3) Sexe = Femme|600<br /><br /> 600|  
 |(4) Sexe = Home et Revenu = Élevé<br /><br /> (5) Sexe = Homme et Revenu = Moyen<br /><br /> (6) Sexe = Homme et Revenu = Bas|200<br /><br /> 200<br /><br /> 200|  
 |(7) Sexe = Femme et Revenu = Élevé<br /><br /> (8) Sexe = Femme et Revenu = Moyen<br /><br /> (9) Sexe = Femme et Revenu = Bas|200<br /><br /> 200<br /><br /> 200|  
@@ -216,7 +216,7 @@ ms.locfileid: "66083774"
 |1|Manquant|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L'état `Missing` est calculé séparément des attributs qui ont des valeurs.|  
 |2|Existing|Indique que les données de cas contiennent une valeur pour cet attribut.|  
 |3|Continue|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
-|4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Des valeurs discrètes peuvent également être manquantes ; Toutefois, ils sont gérés différemment lors de l’exécution de calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).|  
+|4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discrétisé|Indique que l'attribut contient des valeurs numériques qui ont été discrétisées. La valeur sera une chaîne mise en forme qui décrit les compartiments de discrétisation.|  
 |6|Existing|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
 |7|Coefficient|Indique une valeur numérique qui représente un coefficient.<br /><br /> Un coefficient est une valeur appliquée lors du calcul de la valeur de la variable dépendante. Par exemple, si votre modèle crée une formule de régression qui prédit le revenu selon l’âge, le coefficient est utilisé dans la formule qui relie l'âge au revenu.|  
@@ -242,18 +242,18 @@ ms.locfileid: "66083774"
   
  Dans les nœuds qui fournissent des scores de probabilité, la probabilité du nœud et les probabilités marginales représentent des calculs différents.  
   
--   La **probabilité marginale** est la probabilité d’atteindre le nœud à partir de son parent.  
+-   La**probabilité marginale** est la probabilité d'atteindre le nœud à partir de son parent.  
   
--   La **probabilité du nœud** est la probabilité d’atteindre le nœud à partir de la racine.  
+-   La**probabilité du nœud** est la probabilité d'atteindre le nœud à partir de la racine.  
   
--   La **probabilité du nœud** est toujours inférieure ou égale à la **probabilité marginale**.  
+-   La**probabilité du nœud** est toujours inférieure ou égale à la **probabilité marginale**.  
   
  Par exemple, si l'alimentation de tous les clients dans un arbre de décision est répartie de manière égale par sexe (et aucune valeur ne manque), la probabilité des nœuds enfants doit être .5. Toutefois, supposons que chacun des nœuds de sexe soit divisé de manière égale par niveaux de revenu : élevé, moyen et faible. Dans ce cas, le score MARGINAL_PROBABILITY pour chaque nœud enfant doit toujours être .33 mais la valeur NODE_PROBABILTY sera le produit de toutes les probabilités qui mènent à ce nœud et donc toujours inférieure à la valeur MARGINAL_PROBABILITY.  
   
 |Niveau de nœud/attribut et valeur|probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
 |Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
-|Clients cibles répartis par sexe|0,5|0,5|  
+|Clients cibles répartis par sexe|.5|.5|  
 |Clients cibles répartis par sexe, et répartis de nouveau en trois directions selon le revenu|.33|.5 * .33 = .165|  
   
 ### <a name="node-rule-and-marginal-rule"></a>Règle du nœud et règle marginale  
@@ -261,33 +261,33 @@ ms.locfileid: "66083774"
   
  Deux types de règles XML sont fournis, semblables aux deux types de valeurs de probabilité. Le fragment XML dans MARGINAL_RULE définit l'attribut et la valeur du nœud actuel, alors que le fragment XML dans NODE_RULE décrit le chemin d'accès au nœud actuel de la racine modèle.  
   
-##  <a name="bkmk_AlgoType"></a>Contenu du modèle d’exploration de données par type d’algorithme  
+##  <a name="mining-model-content-by-algorithm-type"></a><a name="bkmk_AlgoType"></a>Contenu du modèle d’exploration de données par type d’algorithme  
  Chaque algorithme stocke des types différents d'informations dans le cadre de son schéma de contenu. Par exemple, l'algorithme de gestion des clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] génère de nombreux nœuds enfants qui représentent chacun un cluster possible. Chaque nœud de cluster contient des règles qui décrivent des caractéristiques que partagent les éléments dans le cluster. Par opposition, l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) ne contient pas de nœuds enfants ; à la place, le nœud parent pour le modèle contient l'équation qui décrit la relation linéaire découverte par analyse.  
   
  La table suivante propose des liens vers des rubriques pour chaque type d'algorithme.  
   
--   **Rubriques sur le contenu du modèle :** Expliquez la signification de chaque type de nœud pour chaque type d’algorithme, et fournissez des conseils sur les nœuds les plus intéressants dans un type de modèle particulier.  
+-   **Rubriques de contenu de modèle :** Expliquent la signification de chaque type de nœud pour chaque type d'algorithme et fournissent des recommandations sur les nœuds les plus pertinents dans un type de modèle particulier.  
   
--   **Interrogation des rubriques :** Fournissez des exemples de requêtes sur un type de modèle particulier et des conseils sur la façon d’interpréter les résultats.  
+-   **Rubriques de requêtes :** Fournissent des exemples de requêtes par rapport à un type de modèle particulier et des recommandation sur la manière d'interpréter les résultats.  
   
 |Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  
-|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'association](association-model-query-examples.md)|  
-|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)|  
-|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)|  
-|Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
-|Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
-|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)|  
-|Modèles de réseau neuronal|[Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
-|Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
-|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](time-series-model-query-examples.md)|  
+|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'association](association-model-query-examples.md)|  
+|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)|  
+|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)|  
+|Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
+|Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
+|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)|  
+|Modèles de réseau neuronal|[Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
+|Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
+|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](time-series-model-query-examples.md)|  
   
-##  <a name="bkmk_Viewing"></a>Outils pour afficher le contenu du modèle d’exploration de données  
+##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>Outils pour afficher le contenu du modèle d’exploration de données  
  Lorsque vous parcourez ou explorez un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez consulter les informations dans la **Visionneuse de l'arborescence de contenu générique**qui est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  La Visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] affiche les colonnes, les règles, les propriétés, les attributs, les nœuds et autre contenu du modèle en utilisant les mêmes informations disponibles dans l'ensemble de lignes du schéma du contenu du modèle d'exploration de données. L'ensemble de lignes de schéma du contenu est une infrastructure générique permettant de présenter des informations détaillées sur le contenu d'un modèle d'exploration de données. Vous pouvez consulter le contenu du modèle dans tout client qui prend en charge des ensembles de lignes hiérarchiques. La visionneuse dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] présente ces informations dans une visionneuse de table HTML qui présente tous les modèles dans un format cohérent, en facilitant la compréhension de la structure des modèles que vous créez. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
-##  <a name="bkmk_Querying"></a>Outils pour interroger le contenu du modèle d’exploration de données  
+##  <a name="tools-for-querying-mining-model-content"></a><a name="bkmk_Querying"></a>Outils pour interroger le contenu du modèle d’exploration de données  
  Pour extraire un contenu de modèle d'exploration de données, vous devez créer une requête en fonction du modèle d'exploration de données.  
   
  La méthode la plus simple pour créer une requête de contenu est d'exécuter l'instruction DMX suivante dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -304,6 +304,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>Voir aussi  
  [Visionneuse de l’arborescence de contenu générique Microsoft &#40;l’exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087099"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connexion à une source de données (Client d'exploration de données pour Excel)
@@ -28,12 +28,12 @@ ms.locfileid: "66087099"
   
  **Connexions à des sources de données externes.** Vous pouvez également créer des connexions à des données externes lorsque vous créez des modèles ou enregistrez les résultats. Par exemple, vous pouvez créer un modèle d'exploration de données sur un serveur, puis exécuter une requête de prédiction par rapport au modèle d'exploration de données à l'aide de données stockées dans une autre instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], dans un tableau de données Excel, ou dans une source de données externes telle que [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. À chaque fois que vous accédez à une nouvelle source de données, le système vous demande de créer une connexion à l'aide d'une boîte de dialogue.  
   
-##  <a name="bkmk_prereq2"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> Conditions préalables  
  Cette version des compléments nécessite que votre instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] soit SQL Server 2012. Une version séparée des compléments est disponible si vous souhaitez vous connecter à une version antérieure d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il existe des versions des compléments qui prennent en charge SQL Server 2005, SQL Server 2008 et SQL Server 2008 R2.  
   
  Pour vous connecter à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez disposer des autorisations d'accès au serveur de base de données. De plus, les sessions d'exploration de données doivent être activées, et vous devez disposer des autorisations de lecture ou de lecture/écriture sur des objets de base de données stockés sur le serveur.  
   
-##  <a name="bkmk_connect"></a>Création de connexions au serveur d’exploration de données  
+##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Création de connexions au serveur d’exploration de données  
  Le groupe **connexions** dans le client d’exploration de données pour Excel et les outils d’analyse de table pour Excel fournit des outils pour gérer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]les connexions à une instance de.  
   
 -   Vous pouvez créer la connexion lorsque vous installez le complément, ou vous pouvez ajouter une connexion par la suite.  
@@ -96,7 +96,7 @@ ms.locfileid: "66087099"
   
 4.  Si vous sélectionnez **nouveau**, suivez la procédure décrite précédemment pour spécifier un nom de serveur et de catalogue, ou pour vous connecter par le biais d’un service Web.  
   
-##  <a name="bkmk_change"></a>Modification des connexions  
+##  <a name="changing-connections"></a><a name="bkmk_change"></a>Modification des connexions  
  Vous pouvez créer plusieurs connexions dans la même feuille de calcul mais une seule connexion peut être active à la fois. Le nom de la connexion actuelle est affiché dans le bouton de **connexion** .  
   
  Dans le client d’exploration de données pour Excel, vous pouvez également vérifier la chaîne de connexion et l’état de la connexion actuelle en cliquant sur **trace** , puis sur **connexion actuelle**.  
@@ -119,7 +119,7 @@ ms.locfileid: "66087099"
   
      \<lecteur : > \Utilisateurs\\<le\>complément d’exploration de données myusername \AppData\Local\Microsoft\Data  
   
-##  <a name="bkmk_extconnections"></a>Connexion à des sources de données externes  
+##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Connexion à des sources de données externes  
  Tandis que les outils du ruban **analyser** fonctionnent exclusivement avec les données dans Excel, les outils du ruban **exploration de données** vous permettent de vous connecter directement à des sources de données externes à utiliser comme entrées pour votre modèle ou pour l’échantillonnage.  
   
  Les outils suivants de ces compléments prennent en charge l'utilisation de données externes pour l'exploration de données :  

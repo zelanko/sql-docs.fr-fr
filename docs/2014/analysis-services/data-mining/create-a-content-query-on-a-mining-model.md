@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085580"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Créer une requête de contenu sur un modèle d'exploration de données
@@ -79,6 +79,6 @@ ms.locfileid: "66085580"
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
+ [Ensembles de lignes de schéma d’exploration de données](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

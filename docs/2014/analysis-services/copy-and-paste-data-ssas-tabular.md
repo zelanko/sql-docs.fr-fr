@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086970"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copier et coller des données (SSAS Tabulaire)
@@ -28,13 +28,13 @@ ms.locfileid: "66086970"
   
  Sections de cette rubrique :  
   
--   [Prérequis](#bkmk_prerequisites)  
+-   [Conditions préalables](#bkmk_prerequisites)  
   
 -   [Coller des données](#bkmk_paste_data)  
   
 -   [Boîte de dialogue Aperçu avant collage](#bkmk_paste_preview)  
   
-##  <a name="bkmk_prerequisites"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Conditions préalables  
  Certaines restrictions s'appliquent lorsque vous collez des données :  
   
 -   Les tables collées ne peuvent pas compter plus de 10 000 lignes.  
@@ -47,7 +47,7 @@ ms.locfileid: "66086970"
   
 -   Lorsque vous utilisez **Coller par ajout** ou **Coller par remplacement**, les nouvelles données doivent contenir exactement le même nombre de colonnes que les données originales. De préférence, les colonnes de données que vous collez ou ajoutez doivent également être du même type ou d'un type de données compatible avec celui figurant dans la table de destination. Dans certains cas, vous pouvez utiliser un type de données différent, mais une erreur **Incompatibilité de type** peut s’afficher.  
   
-##  <a name="bkmk_paste_data"></a>Coller des données  
+##  <a name="paste-data"></a><a name="bkmk_paste_data"></a>Coller des données  
   
 #### <a name="to-paste-data-into-the-designer"></a>Pour coller des données dans le générateur  
   
@@ -59,13 +59,13 @@ ms.locfileid: "66086970"
   
     -   Cliquez sur **Coller par remplacement** pour remplacer la table sélectionnée par le contenu du Presse-papiers. Tous les noms d'en-têtes de colonnes existants restent dans la table, et les relations sont conservées.  
   
-##  <a name="bkmk_paste_preview"></a>Boîte de dialogue Aperçu avant collage  
+##  <a name="paste-preview-dialog-box"></a><a name="bkmk_paste_preview"></a>Boîte de dialogue Aperçu avant collage  
  La boîte de dialogue **Aperçu avant collage** vous permet d'afficher un aperçu des données copiées dans la fenêtre du concepteur et de vérifier qu'elles sont correctement copiées. Pour accéder à cette boîte de dialogue, copiez les données basées sur une table au format HTML dans le Presse-papiers puis, dans le générateur, dans le menu **Modifier** , cliquez sur **Coller**, **Coller par ajout**ou **Coller par remplacement**. Les options **Coller par ajout** et **Coller par remplacement** sont disponibles uniquement lorsque vous ajoutez ou remplacez des données dans une table qui a été créée par copier-coller depuis le Presse-papiers. Vous ne pouvez pas utiliser **Coller par ajout** ou **Coller par remplacement** pour ajouter des données dans une table de données importées.  
   
  Les options proposées dans cette boîte de dialogue diffèrent selon que vous collez des données dans une table complètement nouvelle, collez des données dans une table existante et remplacez les données existantes par les nouvelles, ou ajoutez des données à une table existante.  
   
 ### <a name="paste-to-new-table"></a>Coller dans une nouvelle table  
- **Nom de la table**  
+ **Nom du tableau**  
  Spécifiez le nom de la table qui sera créée dans le concepteur.  
   
  **Données à coller**  
@@ -88,6 +88,6 @@ ms.locfileid: "66086970"
 ## <a name="see-also"></a>Voir aussi  
  [Importer des données &#40;&#41;tabulaire SSAS](import-data-ssas-tabular.md)   
  [Sources de données prises en charge &#40;&#41;tabulaire SSAS](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Définir le type de données d’une colonne &#40;SSAS tabulaire&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Définir le type de données d’une colonne &#40;SSAS Tabulaire&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

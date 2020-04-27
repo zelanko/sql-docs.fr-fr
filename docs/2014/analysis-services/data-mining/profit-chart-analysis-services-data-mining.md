@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083090"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Graphique des bénéfices (Analysis Services - Exploration de données)
@@ -59,7 +59,7 @@ ms.locfileid: "66083090"
   
      Cette boîte de dialogue vous permet de spécifier les coûts et les bénéfices associés à une campagne de publipostage ciblée. Pour le graphique affiché dans ces exemples, nous avons utilisé les valeurs suivantes :  
   
-    |Paramètre|Valeur|Commentaires|  
+    |Paramètre|Value|Commentaires|  
     |-------------|-----------|--------------|  
     |**Habitants**|20 000|Définir la valeur de la population cible totale<br /><br /> Votre base de données peut contenir de nombreux clients, mais pour économiser sur les dépenses de publipostage, vous ne ciblez que les 20 000 clients les plus susceptibles de répondre. Vous pouvez obtenir cette liste lors de l'exécution d'une requête de prédiction et du tri sur la probabilité générée par le modèle prédictif.|  
     |**Coût fixe**|500|Entrez le coût fixe de la configuration d'une campagne de publipostage ciblée pour 20 000 personnes. Cela peut inclure l'impression, ou le coût de configuration d'une campagne de publipostage.|  
@@ -91,13 +91,13 @@ ms.locfileid: "66083090"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de précision avec les graphiques de courbes d’élévation &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services d’exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services d’exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[Validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)   
- [Test de précision avec les graphiques de courbes d’élévation &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

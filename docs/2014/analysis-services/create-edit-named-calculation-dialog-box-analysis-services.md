@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086851"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Boîte de dialogue créer-modifier le calcul nommé (Analysis Services)
-  Utilisez la boîte de dialogue **Créer un calcul nommé/Modifier le calcul nommé** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir ou modifier un calcul nommé d’une table dans une vue de source de données. Vous pouvez afficher la boîte de dialogue **Créer un calcul nommé/Modifier le calcul nommé** en :  
+  Utilisez la boîte de dialogue **créer/modifier le calcul nommé** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir ou modifier un calcul nommé pour une table dans une vue de source de données. Vous pouvez afficher la boîte de dialogue **Créer un calcul nommé/Modifier le calcul nommé** en :  
   
 -   cliquant sur **Nouveau calculé nommé** dans le volet **Barre d’outils** du **Concepteur de vue de source de données** ;  
   
@@ -48,6 +48,6 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
 ## <a name="see-also"></a>Voir aussi  
  [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de source de données &#40;Analysis Services-données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

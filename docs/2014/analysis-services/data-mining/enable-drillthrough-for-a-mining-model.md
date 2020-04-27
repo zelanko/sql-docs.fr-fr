@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084541"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Activer l'extraction pour un modèle d'exploration de données
   Si vous avez activé l'extraction pour un modèle d'exploration de données, lorsque vous parcourez le modèle, vous pouvez extraire des informations détaillées sur les cas utilisés pour créer le modèle. Pour consulter cette information, vous devez disposer des autorisations nécessaires et la structure doit déjà avoir été traitée.  
   
- **Autorisations** Pour qu’un utilisateur effectue une extraction vers des données de modèle ou des données de structure, l’utilisateur doit être membre d’un rôle qui dispose d’autorisations [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) sur le modèle d’exploration de données ou la structure d’exploration de données. Les autorisations d'extraction sont définies séparément sur la structure et le modèle.  
+ **Autorisations** Pour qu’un utilisateur extraie les données d’un modèle ou d’une structure, il doit être membre d’un rôle qui a les autorisations [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) pour le modèle ou la structure d’exploration de données. Les autorisations d'extraction sont définies séparément sur la structure et le modèle.  
   
 -   Les autorisations d'extraction sur le modèle vous permettent d'extraire à partir du modèle, même si vous n'avez pas d'autorisations sur la structure.  
   
 -   Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). Vous pouvez également interroger les cas de test et d’apprentissage dans la structure à l’aide de l’option SELECT... À \<partir de la structure>. Syntaxe des cas.  
   
- **Mise en cache des cas d’apprentissage** L’extraction fonctionne en récupérant des informations sur les cas d’apprentissage dans la structure d’exploration de données. Ces informations sont mises en cache lorsque la structure est traitée. Par conséquent, si vous choisissez d'effacer toutes les données en cache en modifiant la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en `ClearAfterProcessing`, l'extraction ne fonctionnera pas.  
+ **Mise en cache de cas d’apprentissage** L’extraction consiste à récupérer des informations sur les cas d’apprentissage dans la structure d’exploration de données. Ces informations sont mises en cache lorsque la structure est traitée. Par conséquent, si vous choisissez d'effacer toutes les données en cache en modifiant la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en `ClearAfterProcessing`, l'extraction ne fonctionnera pas.  
   
 > [!NOTE]  
 >  Si les cas d’apprentissage n’ont pas été mis en cache, vous devez remplacer la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> par **KeepTrainingCases** , puis retraiter le modèle avant de pouvoir consulter les données de cas.  
@@ -40,9 +40,9 @@ ms.locfileid: "66084541"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], sous l’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données, cliquez avec le bouton droit sur le nom du modèle d’exploration de données pour lequel vous voulez activer l’extraction, puis sélectionnez **Propriétés**.  
   
-2.  Dans les fenêtres **Propriétés** , cliquez sur **AllowDrillthrough**et sélectionnez **True**.  
+2.  Dans les fenêtres **Propriétés** , cliquez sur **AllowDrillThrough**, puis sélectionnez **true**.  
   
-3.  Sous l’onglet **Modèles d’exploration de données** , cliquez avec le bouton droit sur le modèle et sélectionnez **Traiter le modèle**.  
+3.  Dans l’onglet **modèles d’exploration de données** , cliquez avec le bouton droit sur le modèle, puis sélectionnez traiter le **modèle**.  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>Pour activer la mise en cache pour une structure d'exploration de données  
   
@@ -55,6 +55,6 @@ ms.locfileid: "66084541"
 4.  Dans le menu **Base de données** , sélectionnez **Traiter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction &#40;l’exploration de données&#41;](drillthrough-queries-data-mining.md)  
+ [Requêtes d’extraction &#40;exploration de données&#41;](drillthrough-queries-data-mining.md)  
   
   

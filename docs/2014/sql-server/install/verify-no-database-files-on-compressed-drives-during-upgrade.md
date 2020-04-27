@@ -13,15 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41c183c72188cccb21838e1e574992bfb723c022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091160"
 ---
 # <a name="verify-that-no-database-files-are-on-compressed-drives-during-the-upgrade-process"></a>Vérifier qu'aucun fichier de base de données ne se trouve sur des lecteurs compressés pendant le processus de mise à niveau
-  Le Conseiller de mise à niveau a détecté des fichiers de base de données sur un lecteur compressé. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer ni mettre à niveau des bases de données sur des lecteurs compressés.  
+  Le Conseiller de mise à niveau a détecté des fichiers de base de données sur un lecteur compressé. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer ni mettre à niveau des bases de données sur des lecteurs compressés.  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

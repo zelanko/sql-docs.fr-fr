@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084032"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme de gestion de clusters Microsoft
@@ -35,7 +35,7 @@ ms.locfileid: "66084032"
   
  Pour plus d'informations sur l'utilisation des modèles de clustering, consultez les rubriques suivantes :  
   
--   [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66084032"
  CLUSTERING_METHOD  
  Spécifie la méthode de clustering que doit utiliser l'algorithme. Les méthodes de clustering disponibles sont les suivantes :  
   
-|id|Méthode|  
+|ID|Méthode|  
 |--------|------------|  
 |1|EM évolutif|  
 |2|EM non évolutif|  
@@ -113,7 +113,7 @@ ms.locfileid: "66084032"
   
  En modifiant ce nombre, vous pouvez modifier la façon dont les clusters initiaux sont créés, puis comparer des modèles qui ont été générés avec des valeurs de départ différentes. Si la valeur de départ est modifiée mais que les clusters trouvés ne changent guère, le modèle peut être considéré comme relativement stable.  
   
- La valeur par défaut est 0.  
+ La valeur par défaut est 0.  
   
  MINIMUM_SUPPORT  
  Spécifie le nombre minimal de cas requis pour générer un cluster. Si le nombre de cas dans le cluster est inférieur à ce nombre, le cluster est considéré comme vide et est ignoré.  
@@ -154,7 +154,7 @@ ms.locfileid: "66084032"
   
  Le fait d'augmenter le nombre d'états peut nuire considérablement aux performances.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  L'algorithme prend en charge les indicateurs de modélisation suivants. Vous définissez des indicateurs de modélisation lorsque vous créez la structure d'exploration de données ou le modèle d'exploration de données. Les indicateurs de modélisation spécifient le mode de traitement des valeurs dans chaque colonne pendant l'analyse.  
@@ -164,7 +164,7 @@ ms.locfileid: "66084032"
 |MODEL_EXISTENCE_ONLY|La colonne sera considérée comme ayant deux états possibles : manquante et existante. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|La colonne ne peut pas contenir de valeur NULL. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Les colonnes ayant la valeur `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -181,6 +181,6 @@ ms.locfileid: "66084032"
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme de clustering Microsoft](microsoft-clustering-algorithm.md)   
  [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

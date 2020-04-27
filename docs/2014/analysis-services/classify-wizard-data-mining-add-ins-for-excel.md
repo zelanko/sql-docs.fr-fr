@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087931"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistant Classification (Compléments d'exploration de données pour Excel)
@@ -78,7 +78,7 @@ ms.locfileid: "66087931"
   
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour utiliser l’Assistant **classification** , vous devez être connecté à une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Pour plus d’informations sur la création d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  

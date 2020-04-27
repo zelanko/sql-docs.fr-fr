@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088116"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Choisir des améliorations (Assistant Business Intelligence)
@@ -34,7 +34,7 @@ ms.locfileid: "66088116"
 |**Spécifier un opérateur unaire**|Définissez un opérateur unaire pour remplacer l'agrégation par défaut qui est associée aux membres d'une hiérarchie parent-enfant d'un cube.<br /><br /> Remarque : cette option est disponible uniquement pour les cubes.|  
 |**Créer une formule de membre personnalisée**|Créez une formule de membre personnalisée pour remplacer l'agrégation par défaut associée à un membre de dimension par un opérateur différent.|  
 |**Spécifier l'ordre des attributs**|Définissez l'ordre des membres d'un attribut sélectionné. Les membres peuvent être triés en fonction du nom ou de la clé d'un attribut sélectionné, ou en fonction du nom ou de la clé d'un attribut associé à l'attribut sélectionné. Par défaut, les membres sont triés en fonction du nom de l'attribut sélectionné.|  
-|**Activer l’écriture différée de la dimension**|Active l'écriture différée de la structure de dimension. Les mises à jour dans une dimension activée en écriture sont enregistrées directement dans la table de la dimension.|  
+|**Activer l'écriture différée de la dimension**|Active l'écriture différée de la structure de dimension. Les mises à jour dans une dimension activée en écriture sont enregistrées directement dans la table de la dimension.|  
 |**Définir le comportement semi-additif**|Définissez manuellement la méthode d'agrégation des mesures ou des membres individuels d'un attribut de type de compte. Si le cube contient une dimension de compte, vous pouvez utiliser l’option **Définir l’intelligence comptable** pour définir automatiquement le comportement semi-additif en fonction du type de compte.<br /><br /> Remarque : cette option est disponible uniquement pour les cubes.|  
 |**Définir la conversion monétaire**|Définissez les règles de conversion et d'analyse des données multinationales du cube. Les règles de conversion sont appliquées dans le cube à l'aide d'un script MDX (Multidimensional Expressions) généré par l'Assistant Business Intelligence.<br /><br /> Remarque : cette option est disponible uniquement pour les cubes.|  
   

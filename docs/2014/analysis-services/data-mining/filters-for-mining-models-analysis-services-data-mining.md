@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084429"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
@@ -122,6 +122,6 @@ ms.locfileid: "66084429"
   
 ## <a name="see-also"></a>Voir aussi  
  [Syntaxe de filtre de modèle et exemples &#40;Analysis Services d’exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

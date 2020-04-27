@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084596"
 ---
 # <a name="drillthrough-on-mining-models"></a>Extraction sur des modèles d'exploration de données
-  L' *extraction* correspond à la capacité d’interroger un modèle d’exploration de données ou une structure d’exploration de données et d’obtenir des données détaillées qui ne sont pas exposées dans le modèle.  
+  *L'extraction* désigne la capacité d'interroger un modèle d'exploration de données ou une structure d'exploration de données pour obtenir des informations détaillées qui ne sont pas exposées dans le modèle.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux options différentes pour l'extraction des données de cas. Vous pouvez extraire les cas utilisés pour générer les données ou les cas de la structure d'exploration de données.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux options différentes pour l'extraction des données de cas. Vous pouvez extraire les cas utilisés pour générer les données ou les cas de la structure d'exploration de données.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Extraction dans des cas de modèle et dans la structure  
  L'extraction dans des **cas de modèle** est utile pour rechercher des informations supplémentaires sur les règles, les modèles ou les clusters dans un modèle. Par exemple, vous n’utiliseriez pas les informations de contact client pour l’analyse dans un modèle de clustering, même si les données étaient disponibles, en utilisant l’extraction, vous pouvez accéder à ces informations à partir du modèle.  
@@ -49,8 +48,8 @@ ms.locfileid: "66084596"
 |Algorithme MNB (Microsoft Naive Bayes)|Non pris en charge.<br /><br /> Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
 |Algorithme MNN (Microsoft Neural Network)|Non pris en charge.<br /><br /> Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
 |Algorithme MLR (Microsoft Logistic Regression)|Non pris en charge.<br /><br /> Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
-|Algorithme MLR (Microsoft Linear Regression)| Pris en charge.<br /><br /> Toutefois, étant donné que le modèle crée un nœud `All`unique,, l’extraction retourne tous les cas d’apprentissage pour le modèle. Si le jeu d'apprentissage est volumineux, le chargement des résultats peut durer plusieurs minutes.|  
-|Algorithme MTS (Microsoft Time Series)| Pris en charge.<br /><br /> Toutefois, vous ne pouvez pas extraire les données de structure ou de cas en utilisant la **Visionneuse de modèle d'exploration de données** dans le Concepteur de modèle d'exploration de données. Vous devez créer à la place une requête DMX.<br /><br /> De même, vous ne pouvez pas extraire des nœuds spécifiques ni écrire une requête DMX pour récupérer les cas de nœuds spécifiques d'un modèle de série chronologique. Vous pouvez récupérer les données de cas depuis le modèle ou la structure en utilisant d'autres critères, comme les valeurs de date ou d'attribut.<br /><br /> Si vous voulez consulter les détails des nœuds ARTXP et ARIMA créés par l’algorithme MTS (Microsoft Time Series), il vous sera peut-être plus simple d’utiliser la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
+|Algorithme MLR (Microsoft Linear Regression)|Pris en charge.<br /><br /> Toutefois, étant donné que le modèle crée un nœud `All`unique,, l’extraction retourne tous les cas d’apprentissage pour le modèle. Si le jeu d'apprentissage est volumineux, le chargement des résultats peut durer plusieurs minutes.|  
+|Algorithme MTS (Microsoft Time Series)|Pris en charge.<br /><br /> Toutefois, vous ne pouvez pas extraire les données de structure ou de cas en utilisant la **Visionneuse de modèle d'exploration de données** dans le Concepteur de modèle d'exploration de données. Vous devez créer à la place une requête DMX.<br /><br /> De même, vous ne pouvez pas extraire des nœuds spécifiques ni écrire une requête DMX pour récupérer les cas de nœuds spécifiques d'un modèle de série chronologique. Vous pouvez récupérer les données de cas depuis le modèle ou la structure en utilisant d'autres critères, comme les valeurs de date ou d'attribut.<br /><br /> Si vous voulez consulter les détails des nœuds ARTXP et ARIMA créés par l’algorithme MTS (Microsoft Time Series), il vous sera peut-être plus simple d’utiliser la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Consultez les rubriques suivantes pour plus d'informations sur l'utilisation de l'extraction avec des modèles d'exploration de données.  
@@ -61,7 +60,7 @@ ms.locfileid: "66084596"
 |Récupérer les données de cas pour un modèle à l'aide de l'extraction|[Extraire des données de cas à partir d'un modèle d'exploration de données](drill-through-to-case-data-from-a-mining-model.md)|  
 |Activer l'extraction sur un modèle d'exploration de données existant|[Activer l'extraction pour un modèle d'exploration de données](enable-drillthrough-for-a-mining-model.md)|  
 |Consulter les exemples de requêtes d'extraction pour les types de modèles spécifiques.|[Requêtes d’exploration de données](data-mining-queries.md)|  
-|Activer l'extraction dans l'Assistant Modèle d'exploration de données|[Fin de l’assistant &#40;&#41;de l’Assistant Exploration de données ](../completing-the-wizard-data-mining-wizard.md).|  
+|Activer l'extraction dans l'Assistant Modèle d'exploration de données|[Fin de l’Assistant &#40;Assistant Exploration de données&#41;](../completing-the-wizard-data-mining-wizard.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extraction sur des structures d'exploration de données](drillthrough-on-mining-structures.md)  

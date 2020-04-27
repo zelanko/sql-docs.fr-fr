@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089371"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Options (Exécution de la requête : SQL Server : Page Avancé)
@@ -29,22 +29,22 @@ ms.locfileid: "66089371"
  **SET NOEXEC**  
  N'exécute pas la requête. Cette case à cocher est désactivée par défaut.  
   
- **DÉFINIR PARSEONLY**  
+ **SET PARSEONLY**  
  Vérifie la syntaxe de chaque requête, mais n'exécute pas les requêtes. Cette case à cocher est désactivée par défaut.  
   
- **DÉFINIR CONCAT_NULL_YIELDS_NULL**  
+ **SET CONCAT_NULL_YIELDS_NULL**  
  Lorsque cette case à cocher est activée, les requêtes qui concatènent une valeur existante avec une valeur NULL, retournent toujours une valeur NULL comme résultat. Lorsque cette case à cocher est désactivée, une valeur existante concaténée avec une valeur NULL, retourne la valeur existante. Cette case à cocher est activée par défaut.  
   
  **SET ARITHABORT**  
  Si cette case à cocher est activée, lorsqu'une instruction INSERT, DELETE ou UPDATE rencontre une erreur arithmétique (dépassement de capacité, division par zéro ou erreur de domaine) au cours de l'évaluation de l'expression, le programme met fin à la requête ou au traitement. Lorsque cette case à cocher est désactivée, une valeur NULL est fournie pour cette valeur, si possible, la requête se poursuit et un message est inclus avec le résultat. Pour plus d’informations, consultez [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). Cette case à cocher est activée par défaut.  
   
- **DÉFINIR SHOWPLAN_TEXT**  
+ **SET SHOWPLAN_TEXT**  
  Lorsque cette case à cocher est activée, le plan de requête est retourné au format texte avec chaque requête. Cette case à cocher est désactivée par défaut.  
   
- **DÉFINIR L’HEURE DES STATISTIQUES**  
+ **SET STATISTICS TIME**  
  Lorsque cette case à cocher est activée, les statistiques de temps sont retournées avec chaque requête. Cette case à cocher est désactivée par défaut.  
   
- **DÉFINIR LES STATISTIQUES D’E/S**  
+ **SET STATISTICS IO**  
  Lorsque cette case à cocher est activée, les statistiques d'entrée/sortie sont retournées avec chaque requête. Cette case à cocher est désactivée par défaut.  
   
  **SET TRANSACTION ISOLATION LEVEL**  

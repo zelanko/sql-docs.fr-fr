@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087667"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Fin de l'Assistant (Assistant Source de données) (Analysis Services)
   Utilisez la page **Fin de l'Assistant** pour afficher la chaîne de connexion et spécifier le nom de la nouvelle source de données.  
   
 ## <a name="options"></a>Options  
- **Nom de la source des données**  
+ **Nom de la source de données**  
  Tapez un nom ou utilisez le nom par défaut de la source de données.  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affiche la chaîne de connexion pour la source des données. Cliquez sur **Précédent** pour modifier ces paramètres.  
   
 ## <a name="see-also"></a>Voir aussi  

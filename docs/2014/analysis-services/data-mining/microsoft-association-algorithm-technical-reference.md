@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084128"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
@@ -42,11 +42,11 @@ ms.locfileid: "66084128"
  Des modèles d'association peuvent également être créés pour des attributs numériques. Si les attributs sont continus, les nombres peuvent être *discrétisés* , ou regroupés dans des compartiments. Les valeurs discrétisées peuvent ensuite être traitées comme des valeurs booléennes ou comme des paires attribut-valeur.  
   
 ### <a name="support-probability-and-importance"></a>Prise en charge, probabilité et importance  
- La *prise en charge*, qui parfois appelée *fréquence*, désigne le nombre de cas qui contiennent l’élément ciblé ou une combinaison d’éléments. Seuls les éléments ayant au moins le niveau de prise en charge spécifié peuvent être inclus dans le modèle.  
+ La*prise en charge*, parfois appelée *fréquence*, représente le nombre de cas contenant l’élément ciblé ou une combinaison d’éléments ciblés. Seuls les éléments ayant au moins le niveau de prise en charge spécifié peuvent être inclus dans le modèle.  
   
  Un *jeu d’éléments fréquent* fait référence à une collection d’éléments dans laquelle la prise en charge de la combinaison d’éléments est aussi supérieure au seuil défini par le paramètre MINIMUM_SUPPORT. Par exemple, si le jeu d'éléments est {A,B,C} et que MINIMUM_SUPPORT a la valeur 10, chaque élément individuel A, B et C doit être présent dans au moins 10 cas pour être inclus dans le modèle et la combinaison d'éléments {A,B,C} doit également être présente dans au moins 10 cas.  
   
- **Remarque** Vous pouvez également contrôler le nombre de jeux d’éléments dans un modèle d’exploration de données en spécifiant la longueur maximale d’un jeu d’éléments, où la longueur correspond au nombre d’éléments.  
+ **Remarque** Vous pouvez également contrôler le nombre de jeux d'éléments dans un modèle d'exploration de données en spécifiant la longueur maximale d'un jeu d'éléments, la longueur représentant le nombre d'éléments.  
   
  Par défaut, la prise en charge pour un élément ou un jeu d'éléments particulier représente le nombre de cas contenant cet élément ou ces éléments. Toutefois, vous pouvez également exprimer MINIMUM_SUPPORT sous la forme d'un pourcentage du nombre total de cas dans le jeu de données en tapant une valeur décimale inférieure à 1. Par exemple, si vous spécifiez une valeur MINIMUM_SUPPORT de 0,03, cela signifie qu'au moins 3 % du nombre total de cas dans le jeu de données doivent contenir cet élément ou ce jeu d'éléments pour l'inclusion dans le modèle. Faites des essais avec votre modèle pour déterminer s'il vaut mieux utiliser un nombre ou un pourcentage.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66084128"
   
  S'applique à la colonne du modèle d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Un modèle d'association doit contenir une colonne clé, des colonnes d'entrée et une colonne prédictible unique.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -164,6 +164,6 @@ ms.locfileid: "66084128"
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme d’association Microsoft](microsoft-association-algorithm.md)   
  [Exemples de requêtes de modèle d’association](association-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

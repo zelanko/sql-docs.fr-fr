@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083898"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)
@@ -38,7 +38,7 @@ ms.locfileid: "66083898"
 ### <a name="feature-selection"></a>Sélection de caractéristiques  
  L’algorithme MNB [!INCLUDE[msCoName](../../includes/msconame-md.md)] effectue une sélection des fonctionnalités automatique pour limiter le nombre de valeurs prises en considération pendant la génération du modèle. Pour plus d’informations, consultez [Sélection des fonctionnalités &#40;Exploration de données&#41;](feature-selection-data-mining.md).  
   
-|Algorithme|Méthode d'analyse|Commentaires|  
+|Algorithm|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme Naive Bayes accepte uniquement les attributs discrets ou discrétisés ; par conséquent, il ne peut pas utiliser le score d'intérêt et de pertinence.|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66083898"
  *MAXIMUM_STATES*  
  Spécifie le nombre maximal d'états d'attribut que l'algorithme prend en charge. Si le nombre d’États d’un attribut est supérieur au nombre maximal d’États, l’algorithme utilise les États les plus populaires de l’attribut et traite les autres États comme étant manquants.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge les indicateurs de modélisation suivants. Lorsque vous créez la structure d'exploration de données ou le modèle d'exploration de données, vous définissez des indicateurs de modélisation pour spécifier la façon dont les valeurs de chaque colonne sont gérées pendant l'analyse. Pour plus d’informations, consultez [Indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "66083898"
 |MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Un modèle d'arbre Naive Bayes doit contenir une colonne clé, au moins un attribut prédictible et au moins un attribut d'entrée. Aucun attribut ne peut être continu ; si vos données contiennent des données numériques continues, elles seront ignorées ou discrétisées.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -101,6 +101,6 @@ ms.locfileid: "66083898"
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
  [Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

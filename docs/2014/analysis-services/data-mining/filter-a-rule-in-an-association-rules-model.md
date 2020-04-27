@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084412"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrer une règle dans un modèle de règles d'association
@@ -61,6 +61,6 @@ ms.locfileid: "66084412"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
  [Parcourir un modèle à l’aide de la visionneuse des règles d’association Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Leçon 3 : création d’un scénario de panier de marché &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086990"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Boîte de dialogue Propriétés de connexion (SSAS - Tabulaire)
@@ -29,15 +29,15 @@ ms.locfileid: "66086990"
 |Terme|Définition|  
 |----------|----------------|  
 |**Nom**|Spécifie le nom de la source de données.|  
-|**IDENTIFI**|Affiche l'identificateur de l'objet de source de données.|  
+|**Identifiant**|Affiche l'identificateur de l'objet de source de données.|  
 |**Description**|Affiche la description de l'objet de source de données.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création de la base de données.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la base de données.|  
 |**Chaîne de connexion**|Affiche la chaîne de connexion utilisée pour se connecter à la source de données qui fournit des données au modèle.|  
 |**Nombre maximal de connexions**|Spécifie le nombre maximal de connexions clientes à cette base de données.|  
-|**Identification**|Les valeurs valides sont ReadCommitted ou Snapshot. Pour plus d’informations, consultez [Isolation, élément &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
+|**Isolation**|Les valeurs valides sont ReadCommitted ou Snapshot. Pour plus d’informations, consultez [Isolation, élément &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
 |**Délai de requête**|Spécifie le temps (en secondes) après lequel une tentative de récupération des données expire.|  
 |**Fournisseur managé**|Spécifie le nom du fournisseur managé. Si la connexion à la source de données utilise un fournisseur OLE DB natif, cette valeur est vide.|  
-|**Informations d’emprunt d’identité**|Spécifie le compte d'emprunt d'identité utilisé pour les connexions de base de données lors du traitement ou de l'actualisation des données, les requêtes qui s'exécutent sur une banque de données relationnelle (via DirectQuery), les liaisons hors ligne, les partitions distantes et la synchronisation de la cible vers la source.<br /><br /> Les valeurs valides incluent le compte de service Analysis Services ou un jeu d'informations d'identification Windows spécifique. Ne spécifiez pas **Utiliser les infos d'identification de l'utilisateur actuel** ou **Hériter**. Ces options d'identification ne sont pas prises en charge pour une base de données model tabulaire.|  
+|**Informations d'emprunt d'identité**|Spécifie le compte d'emprunt d'identité utilisé pour les connexions de base de données lors du traitement ou de l'actualisation des données, les requêtes qui s'exécutent sur une banque de données relationnelle (via DirectQuery), les liaisons hors ligne, les partitions distantes et la synchronisation de la cible vers la source.<br /><br /> Les valeurs valides incluent le compte de service Analysis Services ou un jeu d'informations d'identification Windows spécifique. Ne spécifiez pas **Utiliser les infos d'identification de l'utilisateur actuel** ou **Hériter**. Ces options d'identification ne sont pas prises en charge pour une base de données model tabulaire.|  
   
   

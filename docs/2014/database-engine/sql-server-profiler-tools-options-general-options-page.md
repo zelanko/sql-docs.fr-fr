@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089619"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-Tools-Options (page Options générales)
@@ -27,7 +27,7 @@ ms.locfileid: "66089619"
 ## <a name="options"></a>Options  
   
 ### <a name="display-options"></a>Options d'affichage  
- **Nom de la police**  
+ **Nom de police**  
  Affiche le nom de la police utilisée dans la grille des résultats de trace pendant les traces.  
   
  **Taille de police**  
@@ -36,20 +36,20 @@ ms.locfileid: "66089619"
  **Choisir la police**  
  Ouvre une boîte de dialogue permettant de modifier les paramètres de police.  
   
- **Utiliser des paramètres régionaux pour afficher les valeurs de date et d’heure**  
+ **Utiliser des paramètres régionaux pour afficher les valeurs de date et d'heure**  
  Affiche les valeurs de date et d'heure selon les paramètres régionaux configurés sur votre ordinateur. Si vous ne sélectionnez pas cette option, les valeurs de date et d'heure sont affichées dans le format fixe de Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], qui comprend les millisecondes.  
   
 > [!NOTE]  
 >  En cochant et en décochant cette case, vous modifiez le format d’affichage des colonnes de temps comme **StartTime** et **EndTime**. Toutefois, vous ne modifiez pas les paramètres de valeur **DateTime** dans les événements de langage ou les appels de procédure distante (RPC).  
   
- **Afficher les valeurs dans la colonne durée en microsecondes**  
+ **Afficher les valeurs dans la colonne Durée en microsecondes**  
  Affiche les valeurs en microsecondes dans la colonne de données **Durée** des traces. Par défaut, la colonne **Durée** affiche les valeurs en millisecondes.  
   
 ### <a name="tracing-options"></a>Options de suivi  
- **Démarrer le suivi juste après avoir effectué la connexion**  
+ **Démarrer le suivi juste après avoir établi la connexion**  
  Commence une trace utilisant le modèle par défaut dès qu'une connexion est établie.  
   
- **Mettre à jour la définition de la trace lorsque la version du fournisseur change**  
+ **Mettre à jour la définition de la trace lors de la modification de la version du fournisseur**  
  Applique la définition de trace la plus récente à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lorsque le fournisseur est mis à jour. Cette option n'est pas activée par défaut. Elle force le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] à interroger le serveur sur la définition de trace et à recréer le fichier sur le disque le cas échéant.  
   
 ### <a name="file-rollover-options"></a>Options de substitution de fichier  
@@ -60,17 +60,16 @@ ms.locfileid: "66089619"
  Le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] vous demande confirmation avant l'ajout d'un fichier de substitution lorsqu'un fichier de trace est ouvert.  
   
  **Ne jamais charger les fichiers de substitution suivants**  
- 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ne charge jamais les fichiers de substitution suivants quand un fichier de trace est ouvert.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ne charge jamais les fichiers de substitution suivants quand un fichier de trace est ouvert.  
   
 ### <a name="replay-options"></a>Options de relecture  
  **Nombre par défaut de threads de relecture**  
  Spécifiez le nombre de threads de relecture à utiliser simultanément. Un nombre élevé consomme davantage de ressources pendant la relecture, mais améliore la simultanéité de relecture.  
   
- **Délai d’attente du moniteur d’intégrité par défaut (s)**  
+ **Délai d'attente du moniteur d'intégrité par défaut (sec)**  
  Spécifiez le délai d'attente de la relecture, en secondes. La valeur par défaut est 3 600 secondes (1 heure). Ce paramètre affecte la durée d'exécution d'un thread autorisée avant son interruption par le moniteur d'intégrité.  
   
- **Intervalle d’interrogation du moniteur d’intégrité par défaut (s)**  
+ **Intervalle d'interrogation du moniteur d'intégrité par défaut (sec)**  
  Spécifiez, en secondes, l'intervalle d'interrogation du moniteur d'intégrité pendant la relecture. La valeur par défaut est 60 secondes. Cette valeur permet à l'utilisateur de configurer la fréquence à laquelle le moniteur d'intégrité interroge les candidats à l'arrêt.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -78,9 +77,9 @@ ms.locfileid: "66089619"
  [Définir les valeurs par défaut de l’affichage des traces &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Relire une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Relire un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
- [Relire des traces](../tools/sql-server-profiler/replay-traces.md)   
+ [Relire les traces](../tools/sql-server-profiler/replay-traces.md)   
  [Définir les options de trace globales &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

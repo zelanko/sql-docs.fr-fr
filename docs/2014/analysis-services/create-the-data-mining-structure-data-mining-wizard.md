@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086762"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Créer la structure d'exploration de données (Assistant Exploration de données)
@@ -24,7 +24,7 @@ ms.locfileid: "66086762"
   
  Si vous choisissez de créer un modèle d'exploration de données, vous devez également spécifier l'algorithme d'exploration de données à utiliser. Si vous créez uniquement la structure pour le moment, vous pouvez ajouter un modèle d'exploration de données à la structure ultérieurement.  
   
- **Pour plus d’informations :** [algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [assistant exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Algorithmes d’exploitation de données &#40;Analysis Services – Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Assistant Exploration de données &#40;Analysis Services – Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Créer une structure d'exploration de données avec un modèle d'exploration de données**  

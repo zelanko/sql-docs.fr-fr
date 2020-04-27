@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088854"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>Générateur de profils SQL Server (boîte de dialogue Rechercher)
@@ -39,18 +39,18 @@ ms.locfileid: "66088854"
  **Mot entier**  
  Restreint la recherche à des mots entiers. Décochez la case **Mot entier** pour rechercher des caractères spécifiques au sein d’un mot.  
   
- **Rechercher suivant**  
+ **Suivant**  
  Recherche la correspondance suivante avec les caractères spécifiés dans la zone **Rechercher** .  
   
- **Rechercher précédent**  
+ **Précédent**  
  Recherche dans la trace la correspondance précédente avec les caractères spécifiés dans la zone **Rechercher** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rechercher une valeur ou une colonne de données pendant le suivi &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [Créer une trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [Créer un &#40;de trace SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Ouvrez une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

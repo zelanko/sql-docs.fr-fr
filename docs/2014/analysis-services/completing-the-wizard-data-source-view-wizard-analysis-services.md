@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087640"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Fin de l'Assistant (Assistant Vue de source de données) (Analysis Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66087640"
  **Nom**  
  Entrez le nom de la vue de source de données. Le nom de la source de données est utilisé par défaut.  
   
- **Préversion**  
+ **PRÉVERSION**  
  Affiche les tables et les vues incluses dans la vue de source de données. Cliquez sur **Précédent** pour effectuer des modifications.  
   
 ## <a name="see-also"></a>Voir aussi  

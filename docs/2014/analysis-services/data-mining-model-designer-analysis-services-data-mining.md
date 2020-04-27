@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086410"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>Concepteur de modèle d'exploration de données (Analysis Services - Exploration de données)
@@ -28,9 +28,9 @@ ms.locfileid: "66086410"
   
 -   [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Création et interrogation de modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services-exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Assistant Exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+-   [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 -   [Concepts d'exploration de données](data-mining/data-mining-concepts.md)  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66086410"
  [Vue modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

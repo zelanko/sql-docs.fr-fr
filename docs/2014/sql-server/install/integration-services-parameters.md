@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094237"
 ---
 # <a name="integration-services-parameters"></a>Paramètres Integration Services
@@ -24,7 +24,7 @@ ms.locfileid: "66094237"
   
 ## <a name="options"></a>Options  
  **Analyser les packages SSIS sur l'ordinateur**  
- Sélectionnez cette option pour analyser les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur l'ordinateur. Cette option est sélectionnée par défaut.  
+ Sélectionnez cette option pour analyser les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur l'ordinateur. Cette option est activée par défaut.  
   
  **Analyser les fichiers de package SSIS**  
  Sélectionnez cette option pour analyser les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans le système de fichiers.  

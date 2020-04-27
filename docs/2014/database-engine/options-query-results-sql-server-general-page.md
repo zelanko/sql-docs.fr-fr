@@ -17,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089325"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Options (résultats de la requête-SQL Server-page général)
-  Utilisez cette page pour déterminer le comportement par défaut du volet Résultats de la requête. Pour afficher ces paramètres, dans le menu **Outils**, cliquez sur **Options**, développez le dossier **Résultats de la requête**, sélectionnez **SQL Server**, puis cliquez sur **Général**. Les modifications apportées à ces options sont [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] appliquées uniquement aux nouvelles requêtes. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou, dans une fenêtre de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez avec le bouton droit et sélectionnez **Options de requête**.  
+  Utilisez cette page pour déterminer le comportement par défaut du volet Résultats de la requête. Pour afficher ces paramètres, dans le menu **Outils**, cliquez sur **Options**, développez le dossier **Résultats de la requête**, sélectionnez **SQL Server**, puis cliquez sur **Général**. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou, dans une fenêtre de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez avec le bouton droit et sélectionnez **Options de requête**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Destination par défaut des résultats**  

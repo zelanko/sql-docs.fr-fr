@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088799"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Propriétés du fichier de suivi (onglet Sélection des événements)
@@ -27,7 +27,7 @@ ms.locfileid: "66088799"
  Pour afficher cette fenêtre, ouvrez un fichier de trace. Ensuite, dans le menu **Fichier** , cliquez sur **Propriétés**, puis cliquez sur l'onglet **Sélection des événements** .  
   
 ## <a name="options"></a>Options  
- Colonne **événements**  
+ Colonne**Events**  
  Affiche les événements tracés organisés par catégorie. Initialement, tous les événements de la trace sont sélectionnés. Sélectionnez les événements requis en activant ou en désactivant les cases à cocher correspondant à une colonne de données d'un événement. Si une case d'événement est cochée, toutes les colonnes de données de cet événement sont sélectionnées. Si la colonne de données d'un événement est cochée, l'événement l'est aussi, de même que toutes les autres colonnes requises. Lors de l'affichage d'une table ou d'un fichier de trace, la désactivation des cases à cocher de certains événements ou de colonnes de données réduit la quantité de données visibles dans la fenêtre de trace, ce qui facilite les analyses. Pour réduire la quantité d'informations visibles, vous pouvez également modifier les filtres de colonne. Pour plus d'informations sur les classes d'événements, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonnes de données  

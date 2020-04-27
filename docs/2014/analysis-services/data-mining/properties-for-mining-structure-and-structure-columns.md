@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083062"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
@@ -46,7 +46,7 @@ ms.locfileid: "66083062"
 |**HoldoutMaxCases**|Spécifie le nombre maximal de cas de structure qui peuvent être réservés en tant que jeu de données de test.  Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées.<br /><br /> Remarque : pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit avoir la valeur `KeepTrainingCases`.|  
 |**HoldoutPercent**|Spécifie le pourcentage de cas de structure à réserver comme jeu de données de test. Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées.<br /><br /> Remarque : pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit avoir la valeur `KeepTrainingCases`.|  
 |**HoldoutSeed**|Spécifie une valeur de départ pour initialiser le partitionnement du jeu de test d'exclusion, afin de garantir que le jeu de données de test pourra être recréé.<br /><br /> Remarque : pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit avoir la valeur `KeepTrainingCases`.|  
-|**IDENTIFI**|Affiche l'identificateur unique de la structure d'exploration de données.<br /><br /> Le nom que vous avez attribué à la structure d'exploration de données lorsque vous l'avez créée est utilisé comme ID. Si vous modifiez ultérieurement le nom en tapant une nouvelle valeur pour la propriété `Name`, le nouveau nom est uniquement utilisé comme alias ; l'ID ne change pas.|  
+|**Identifiant**|Affiche l'identificateur unique de la structure d'exploration de données.<br /><br /> Le nom que vous avez attribué à la structure d'exploration de données lorsque vous l'avez créée est utilisé comme ID. Si vous modifiez ultérieurement le nom en tapant une nouvelle valeur pour la propriété `Name`, le nouveau nom est uniquement utilisé comme alias ; l'ID ne change pas.|  
 |**Langage**|Spécifie la langue des légendes dans la structure d'exploration de données.|  
 |`Name`|Spécifie le nom ou l'alias de la structure d'exploration de données.<br /><br /> Si vous modifiez la valeur de la propriété Name, le nouveau nom est utilisé comme légende ou alias uniquement ; l'identificateur de la structure d'exploration de données ne change pas.|  
 |**Source**|Affiche le nom et le type de la source de données.|  
@@ -56,12 +56,12 @@ ms.locfileid: "66083062"
 |Propriété|Description|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifie la colonne qu'une colonne classifiée décrit.|  
-|**Content**|Type de contenu de la colonne.|  
+|**Contenu**|Type de contenu de la colonne.|  
 |**Description**|Décrit la colonne. Il est recommandé que la description de la colonne fournisse des informations sur la manière dont les données dans la colonne ont été dérivées ou modifiées pour l'exploration de données.|  
 |**DiscretizationBucketCount**|Affiche le nombre de compartiments dans la colonne discrétisée.<br /><br /> Activé uniquement si le type de contenu a la valeur `Discretized`.<br /><br /> Cette propriété est en lecture seule.|  
 |**DiscretizationMethod**|Affiche la méthode utilisée pour discrétiser la colonne.<br /><br /> Activé uniquement si le type de contenu a la valeur `Discretized`.<br /><br /> Cette propriété est en lecture seule.|  
 |**Distribution**|Spécifie la distribution de contenu dans la colonne.|  
-|**IDENTIFI**|Affiche l'identificateur de la colonne.<br /><br /> Modifier la valeur de la propriété Name de la colonne n'affecte pas la valeur de la propriété ID.|  
+|**Identifiant**|Affiche l'identificateur de la colonne.<br /><br /> Modifier la valeur de la propriété Name de la colonne n'affecte pas la valeur de la propriété ID.|  
 |**IsKey**|Indique si la colonne est une colonne clé.|  
 |**KeyColumns**|Contient la définition d'une colonne qui représente la clé ou une partie de la clé d'un attribut.|  
 |**ModelingFlags**|Spécifie des paramètres supplémentaires rendus disponibles par l'algorithme.|  

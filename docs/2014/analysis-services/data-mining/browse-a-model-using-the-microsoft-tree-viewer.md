@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085936"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Explorer un modèle à l'aide de la visionneuse d'arborescences Microsoft
@@ -36,16 +36,16 @@ ms.locfileid: "66085936"
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a>Onglets de la visionneuse  
+##  <a name="viewer-tabs"></a><a name="BKMK_TabsPanes"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse d'arborescences [!INCLUDE[msCoName](../../includes/msconame-md.md)] contient les onglets et volets suivants :  
   
 -   [Arbre de décision](#BKMK_DecisionTree)  
   
 -   [Réseau de dépendances](#BKMK_DependencyNetwork)  
   
--   [Légende d’exploration de données](#BKMK_MiningLegend)  
+-   [Légende d'exploration de données](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a>Arbre de décision  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>Arbre de décision  
  Lorsque vous créez un modèle d'arbre de décision, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère un arbre distinct pour chaque attribut prévisible. Vous pouvez afficher un arbre spécifique en le sélectionnant dans la liste **Arborescence** sous l’onglet **Arbre de décision** de la visionneuse.  
   
  Un arbre de décision se compose d’une série de fractionnements, le fractionnement le plus important (tel que déterminé par l’algorithme) figurant à gauche de la visionneuse dans le nœud **Tout** . Des fractionnements supplémentaires apparaissent à droite. La division se trouvant dans le nœud **Tout** est la plus importante car elle contient l’instruction conditionnelle de fractionnement la plus forte du dataset et est, par conséquent, à l’origine de la première division.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085936"
   
  [Retour au début](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a>Réseau de dépendances  
+###  <a name="dependency-network"></a><a name="BKMK_DependencyNetwork"></a>Réseau de dépendances  
  Le **Réseau de dépendances** affiche les dépendances entre les attributs d’entrée et les attributs prévisibles du modèle. Le curseur situé à gauche de la visionneuse agit comme un filtre lié à la force des dépendances. Si vous déplacez le curseur vers le bas, la visionneuse affiche uniquement les liens les plus forts.  
   
  Lorsque vous sélectionnez un nœud, la visionneuse met en surbrillance les dépendances propres à ce nœud. Par exemple, si vous choisissez un nœud prévisible, la visionneuse met également en surbrillance chacun des nœuds permettant de prédire le nœud prévisible.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085936"
   
  [Retour au début](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a>Légende d’exploration de données  
+###  <a name="mining-legend"></a><a name="BKMK_MiningLegend"></a>Légende d’exploration de données  
  La **Légende d’exploration de données** affiche les informations suivantes lorsque vous sélectionnez un nœud dans le modèle d’arbre de décision :  
   
 -   le nombre de cas dans le nœud, décomposés en fonction des différents états de l'attribut prévisible ;  

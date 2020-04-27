@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085408"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Créer un graphique de courbes d'élévation, un graphique des bénéfices ou une matrice de classification
@@ -112,6 +112,6 @@ ms.locfileid: "66085408"
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matrice de classification &#40;Analysis Services d’exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

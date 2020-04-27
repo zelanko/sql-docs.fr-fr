@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083956"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
@@ -46,11 +46,11 @@ ms.locfileid: "66083956"
   
  Les spécifications liées à un modèle de régression logistique sont les suivantes :  
   
- **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+ **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
- **Colonnes d’entrée** Chaque modèle doit contenir au moins une colonne d’entrée qui contient les valeurs utilisées comme facteurs dans l’analyse. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
+ **Colonnes d'entrée** Chaque modèle doit posséder au moins une colonne d'entrée qui contient les valeurs utilisées comme facteurs dans l’analyse. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
   
- **Au moins une colonne prévisible** Le modèle doit contenir au moins une colonne prévisible de tout type de données, y compris des données numériques continues. Les valeurs de la colonne prédictible peuvent également être traitées en tant qu'entrées du modèle, ou vous pouvez spécifier qu'elle soit utilisée uniquement à des fins de prédiction. Les tables imbriquées ne sont pas prévues pour les colonnes prédictibles, mais elles peuvent être utilisées comme entrées.  
+ **Au moins une colonne prédictible** Le modèle doit contenir au moins une colonne prédictible de tout type de données, y compris les données numériques continues. Les valeurs de la colonne prédictible peuvent également être traitées en tant qu'entrées du modèle, ou vous pouvez spécifier qu'elle soit utilisée uniquement à des fins de prédiction. Les tables imbriquées ne sont pas prévues pour les colonnes prédictibles, mais elles peuvent être utilisées comme entrées.  
   
  Pour de plus amples informations sur les types de contenu et les types de données pris en charge pour les modèles de régression logistique, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md).  
   

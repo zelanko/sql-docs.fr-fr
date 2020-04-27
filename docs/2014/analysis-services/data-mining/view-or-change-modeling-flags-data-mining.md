@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082677"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Afficher ou modifier les indicateurs de modélisation (Exploration de données)
@@ -52,6 +52,6 @@ ms.locfileid: "66082677"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Indicateurs de modélisation &#40;&#41;d’exploration de données](modeling-flags-data-mining.md)  
+ [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
   

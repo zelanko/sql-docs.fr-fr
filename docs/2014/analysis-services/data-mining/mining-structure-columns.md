@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083411"
 ---
 # <a name="mining-structure-columns"></a>Colonnes de structure d'exploration de données
@@ -36,13 +36,13 @@ ms.locfileid: "66083411"
   
 -   **Nom**: nom ou alias de la colonne.  
   
--   **Content**: énumération qui décrit si les données sont discrètes ou continues.  
+-   **Contenu**: énumération qui décrit si les données sont discrètes ou continues.  
   
 -   **Type**: énumération qui indique le type de données général.  
   
 -   **Distribution**: énumération qui décrit la distribution attendue des valeurs. Une distribution est incluse si la colonne est continue.  
   
--   **Indicateurs de modélisation**: énumération qui indique comment gérer les valeurs manquantes, etc. Les indicateurs de modélisation peuvent également être définis sur le modèle d'exploration de données, mais les indicateurs de modèle sont différents des indicateurs utilisés sur les colonnes de structure.  
+-   **Indicateurs de modélisation**: énumération qui indique comment gérer des valeurs manquantes, etc. Les indicateurs de modélisation peuvent également être définis sur le modèle d'exploration de données, mais les indicateurs de modèle sont différents des indicateurs utilisés sur les colonnes de structure.  
   
 -   **Liaisons**: propriétés qui spécifient les données sources.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "66083411"
   
 |Rubrique|Liens|  
 |-----------|-----------|  
-|Décrit les types de données que vous pouvez utiliser pour définir une colonne de structure d'exploration de données.|[Types de données &#40;&#41;d’exploration de données](data-types-data-mining.md)|  
-|Décrit les types de contenu qui sont disponibles pour chaque type de données contenu dans une colonne de structure d'exploration de données. Les types de contenu dépendent du type de données. Le type de contenu est affecté au niveau du modèle et détermine comment les données de la colonne sont utilisées par le modèle.|[Types de contenu &#40;l’exploration de données&#41;](content-types-data-mining.md)|  
-|Présente le concept de tables imbriquées, et explique comment les tables imbriquées peuvent être ajoutées à la source de données comme colonnes de structure d'exploration de données.|[Colonnes classifiées &#40;&#41;d’exploration de données](classified-columns-data-mining.md)|  
-|Répertorie et décrit les propriétés de distribution que vous pouvez définir sur une colonne de structure d'exploration de données pour spécifier la distribution attendue des valeurs dans la colonne.|[Distributions de colonnes &#40;&#41;d’exploration de données](column-distributions-data-mining.md)|  
-|Décrit le concept de discrétisation (parfois appelée *placement dans un conteneur*) et décrit les méthodes qu’Analysis Services fournit pour la discrétisation des données numériques continues.|[Méthodes de discrétisation &#40;l’exploration de données&#41;](discretization-methods-data-mining.md)|  
-|Décrit les indicateurs de modélisation que vous pouvez définir sur une colonne de structure d'exploration de données.|[Indicateurs de modélisation &#40;&#41;d’exploration de données](modeling-flags-data-mining.md)|  
-|Décrit les colonnes classifiées, qui sont un type spécial de colonne que vous pouvez utiliser pour associer une colonne de structure d'exploration de données à une autre.|[Colonnes classifiées &#40;&#41;d’exploration de données](classified-columns-data-mining.md)|  
+|Décrit les types de données que vous pouvez utiliser pour définir une colonne de structure d'exploration de données.|[Types de données &#40;Exploration de données&#41;](data-types-data-mining.md)|  
+|Décrit les types de contenu qui sont disponibles pour chaque type de données contenu dans une colonne de structure d'exploration de données. Les types de contenu dépendent du type de données. Le type de contenu est affecté au niveau du modèle et détermine comment les données de la colonne sont utilisées par le modèle.|[Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)|  
+|Présente le concept de tables imbriquées, et explique comment les tables imbriquées peuvent être ajoutées à la source de données comme colonnes de structure d'exploration de données.|[Colonnes classifiées &#40;exploration de données&#41;](classified-columns-data-mining.md)|  
+|Répertorie et décrit les propriétés de distribution que vous pouvez définir sur une colonne de structure d'exploration de données pour spécifier la distribution attendue des valeurs dans la colonne.|[Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md)|  
+|Décrit le concept de discrétisation (parfois appelée *placement dans un conteneur*) et décrit les méthodes qu’Analysis Services fournit pour la discrétisation des données numériques continues.|[Méthodes de discrétisation &#40;exploration de données&#41;](discretization-methods-data-mining.md)|  
+|Décrit les indicateurs de modélisation que vous pouvez définir sur une colonne de structure d'exploration de données.|[Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
+|Décrit les colonnes classifiées, qui sont un type spécial de colonne que vous pouvez utiliser pour associer une colonne de structure d'exploration de données à une autre.|[Colonnes classifiées &#40;exploration de données&#41;](classified-columns-data-mining.md)|  
 |Apprenez à ajouter et modifier des colonnes de structure d'exploration de données.|[Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

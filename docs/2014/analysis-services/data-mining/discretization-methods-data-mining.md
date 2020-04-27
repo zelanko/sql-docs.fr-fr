@@ -21,16 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e984fe2ea57ab175e3224d099f5392f96287c74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084637"
 ---
 # <a name="discretization-methods-data-mining"></a>Méthodes de discrétisation (exploration de données)
   Certains algorithmes utilisés pour créer des modèles d’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans nécessitent des types de contenu spécifiques pour fonctionner correctement. Par exemple, l'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ne peut pas utiliser de colonnes continues comme entrée ni prédire des valeurs continues. En outre, certaines colonnes peuvent contenir tellement de valeurs que l'algorithme ne peut pas identifier facilement les motifs intéressants qui ressortent des données et qui vont servir à créer un modèle.  
   
- Dans ce cas, vous pouvez discrétiser les données des colonnes afin de pouvoir utiliser les algorithmes pour créer un modèle d'exploration de données. La *discrétisation* est le processus consistant à placer des valeurs dans des compartiments afin qu’il y ait un nombre limité d’États possibles. Les compartiments eux-mêmes sont traités comme des valeurs discrètes et ordonnées. Vous pouvez discrétiser les colonnes de nombres et de chaînes.  
+ Dans ce cas, vous pouvez discrétiser les données des colonnes afin de pouvoir utiliser les algorithmes pour créer un modèle d'exploration de données. La*discrétisation* est le processus consistant à mettre des valeurs dans des compartiments afin d’obtenir un nombre limité d’états possibles. Les compartiments eux-mêmes sont traités comme des valeurs discrètes et ordonnées. Vous pouvez discrétiser les colonnes de nombres et de chaînes.  
   
  Plusieurs méthodes vous permettent de discrétiser des données. Si votre solution d’exploration de données utilise des données relationnelles, vous pouvez déterminer le nombre de compartiments à utiliser pour le regroupement des données en définissant la valeur de la propriété <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> . Le nombre de compartiments par défaut est 5.  
   
@@ -44,8 +44,7 @@ ms.locfileid: "66084637"
   
 |Méthode de discrétisation|Description|  
 |---------------------------|-----------------|  
-|`AUTOMATIC`|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] détermine la méthode de discrétisation à utiliser.|  
+|`AUTOMATIC`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] détermine la méthode de discrétisation à utiliser.|  
 |`CLUSTERS`|L'algorithme divise les données en groupes en échantillonnant les données d'apprentissage, en initialisant à un certain nombre de points aléatoires, puis en exécutant plusieurs itérations de l'algorithme MC (Microsoft Clustering) à l'aide de la méthode de clustering EM (expectation-maximisation). La méthode `CLUSTERS` est utile car elle fonctionne sur n'importe quelle courbe de distribution. Cependant, elle nécessite une durée de traitement plus longue que les autres méthodes de discrétisation.<br /><br /> Cette méthode peut uniquement être utilisée sur des colonnes numériques.|  
 |`EQUAL_AREAS`|L'algorithme divise les données en groupes contenant un nombre égal de valeurs. Cette méthode convient surtout aux courbes de distribution normales, mais elle n'est pas efficace si la distribution comprend un nombre élevé de valeurs dans un groupe resserré de valeurs continues. Par exemple, si la moitié des éléments a un coût de 0, la moitié des données se trouvera sous un point unique de la courbe. Dans ce type de distribution, cette méthode disperse les données pour tenter d'établir une discrétisation équivalente dans plusieurs zones, ce qui engendre une représentation inexacte des données.|  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66084637"
  [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
  [Types de données &#40;&#41;d’exploration de données](data-types-data-mining.md)   
  [Colonnes de structure d’exploration de données](mining-structure-columns.md)   
- [Distributions de colonnes &#40;&#41;d’exploration de données](column-distributions-data-mining.md)  
+ [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md)  
   
   

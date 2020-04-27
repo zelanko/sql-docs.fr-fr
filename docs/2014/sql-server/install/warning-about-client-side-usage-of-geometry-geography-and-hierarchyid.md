@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091087"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avertissement sur l'utilisation du côté client de GEOMETRY, de la GÉOGRAPHIE et du HIERARCHYID

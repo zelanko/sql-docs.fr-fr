@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082345"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vue de source de données (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -101,7 +101,7 @@ ms.locfileid: "66082345"
  Ouvre la boîte de dialogue **Explorer les données** pour la table sélectionnée.  
   
  **Modifier la vue de source de données**  
- Affiche le **Concepteur de vue de source de données** pour la vue de source de données qui contient la table sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Affiche le **Concepteur de vue de source** de données pour la vue de source de données qui contient la table sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriétés**  
  Affiche la fenêtre **Propriétés** dans **SQL Server Data Tools** pour la table sélectionnée.  
@@ -116,7 +116,7 @@ ms.locfileid: "66082345"
  Affiche la boîte de dialogue **Explorer les données** pour la table contenant la colonne sélectionnée.  
   
  **Modifier la vue de source de données**  
- Affiche le **Concepteur de vue de source de données** pour la vue de source de données qui contient la colonne sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Affiche le **Concepteur de vue de source** de données pour la vue de source de données qui contient la colonne sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriétés**  
  Affiche la fenêtre **Propriétés** dans **SQL Server Data Tools** pour la colonne sélectionnée.  
@@ -125,7 +125,7 @@ ms.locfileid: "66082345"
  Les options répertoriées dans le tableau suivant sont disponibles dans le menu contextuel qui s’affiche en cliquant avec le bouton droit sur une relation dans le volet **Vue de source de données** .  
   
  **Modifier la vue de source de données**  
- Affiche le **Concepteur de vue de source de données** pour la vue de source de données qui contient la relation sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Affiche le **Concepteur de vue de source** de données pour la vue de source de données qui contient la relation sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriétés**  
  Affiche la fenêtre **Propriétés** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour la relation sélectionnée.  

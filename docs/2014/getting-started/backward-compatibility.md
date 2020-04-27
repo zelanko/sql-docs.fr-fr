@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088578"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -39,7 +39,7 @@ ms.locfileid: "66088578"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Compatibilité descendante SQL Server](../../2014/getting-started/sql-server-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications. Les fonctionnalités incluses dans cette rubrique incluent la programmabilité des données, les outils de configuration de la surface d'exposition, le programme d'installation, les services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et autres modifications de fonctionnalités générales.|  
+|[Compatibilité descendante de SQL Server](../../2014/getting-started/sql-server-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications. Les fonctionnalités incluses dans cette rubrique incluent la programmabilité des données, les outils de configuration de la surface d'exposition, le programme d'installation, les services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et autres modifications de fonctionnalités générales.|  
 |[Compatibilité descendante du moteur de base de données SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications.|  
 |[Compatibilité descendante Analysis Services](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications.|  
 |[Compatibilité descendante d'Integration Services](../integration-services/integration-services-backward-compatibility.md)|Décrit les modifications de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications Data Transformation Services existantes.|  

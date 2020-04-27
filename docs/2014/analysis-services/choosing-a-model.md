@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088091"
 ---
 # <a name="choosing-a-model"></a>Choix d'un modèle
@@ -77,7 +77,7 @@ ms.locfileid: "66088091"
   
  Les algorithmes qu'utilisent les compléments d'exploration de données SQL Server pour Office reposent sur les algorithmes fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez également utiliser des algorithmes tiers conformes à la spécification OLE DB pour l’exploration de données, si l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous êtes connecté a été configurée pour autoriser les algorithmes tiers.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Chaque algorithme diffère au niveau des types des données avec lesquels il peut s'exécuter.  
   
 -   Un modèle de régression linéaire ne peut modéliser que des valeurs numériques. Les variables d'entrée et les résultats cibles doivent être des types de nombres continus. Utilisez un arbre de décision ou un modèle d'estimation si vous devez combiner des variables discrètes et continues.  

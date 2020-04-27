@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087382"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Connexion à une base de données DB2 (SSAS)
@@ -43,7 +43,7 @@ ms.locfileid: "66087382"
  Spécifiez un mot de passe pour la connexion de base de données.  
   
  **Enregistrer mon mot de passe**  
- Spécifiez si le mot de passe que vous avez entré dans la zone **Mot de passe** est stocké.  
+ Précisez si le mot de passe que vous avez entré dans la zone **Mot de passe** est mémorisé.  
   
  **Nom de la base de données**  
  Sélectionnez une base de données dans la liste.  
@@ -54,7 +54,7 @@ ms.locfileid: "66087382"
  **Schéma par défaut**  
  Spécifiez le nom du schéma par défaut de la base de données sélectionnée.  
   
- **Avancée**  
+ **Avancé**  
  Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Tester la connexion**  

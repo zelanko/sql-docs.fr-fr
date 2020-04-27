@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087968"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice de classification (Compléments d'exploration de données SQL Server)
@@ -37,10 +37,10 @@ ms.locfileid: "66087968"
 ||Bronze (réel)|Or (réel)|Argent (réel)|  
 |-|-----------------------|---------------------|-----------------------|  
 |Bronze|**94,45%**|15,18%|1,70 %|  
-|Gold|2,72 %|**84,82%**|0.00%|  
-|Silver|1,84%|0.00%|**93,80%**|  
+|Or|2,72 %|**84,82%**|0.00%|  
+|Argent|1,84%|0.00%|**93,80%**|  
 |*Correct*|*95,45%*|*84,82%*|*98,30%*|  
-|*Mal classés*|*4,55%*|*15,18%*|*1,70 %*|  
+|*Mal classés*|*4,55%*|*15,18%*|*1,70%*|  
   
 -   Chaque colonne indique les valeurs réelles dans le jeu de données de test.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66087968"
   
      L'Assistant crée un rapport contenant la matrice de classification ainsi que d'autres détails à propos de l'analyse. Ce rapport est enregistré en tant que table dans Excel, avec un résumé au-dessus du rapport qui indique combien de cas ont été prédits correctement et le nombre de prédictions incorrectes.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
   
 -   Pour créer une matrice de classification, vous devez avoir accès à un modèle existant qui prend en charge les mesures de précision. Les modèles de prévision et les modèles d'association ne peuvent pas être mesurés à l'aide de cet outil.  
   

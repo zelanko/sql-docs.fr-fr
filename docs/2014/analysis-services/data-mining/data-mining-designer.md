@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085111"
 ---
 # <a name="data-mining-designer"></a>Concepteur d’exploration de données
@@ -39,7 +39,7 @@ ms.locfileid: "66085111"
 ## <a name="mining-structure-tab"></a>Onglet Structure d'exploration de données  
  Utilisez l’onglet **Structure d’exploration de données** pour ajouter des colonnes et modifier les propriétés d’une structure d’exploration de données existante. Les tâches et les rubriques suivantes fournissent d'autres informations sur l'utilisation des structures d'exploration de données :  
   
- [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)  
   
  [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66085111"
   
  Consultez les rubriques suivantes pour plus d'informations sur l'utilisation des modèles d'exploration de données :  
   
- [Modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
  [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66085111"
   
  Consultez les rubriques suivantes pour plus d'informations sur le test et la validation des modèles d'exploration de données :  
   
- [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
- [Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Onglet Prévision de modèle d'exploration de données  
  L’onglet **Prévision de modèle d’exploration de données** contient le Générateur de requêtes de prédictions, que vous pouvez utiliser pour créer une requête de prédiction DMX (Data Mining Extensions). Cet onglet contient également des outils pour spécifier des modèles d'exploration de données et des tables d'entrée, mapper les colonnes du modèle d'exploration de données vers les colonnes de la table d'entrée, ajouter des fonctions à une requête et pour spécifier des critères pour chaque colonne.  

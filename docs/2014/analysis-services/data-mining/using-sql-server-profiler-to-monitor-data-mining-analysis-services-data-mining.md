@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082700"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Utilisation de SQL Server Profiler pour contrôler l'exploration de données (Analysis Services – Exploration de données)
@@ -31,12 +31,12 @@ ms.locfileid: "66082700"
   
 |EventClass|EventSubclass|Description|  
 |----------------|-------------------|-----------------|  
-|**Query Begin**<br /><br /> **Query End**|**0-MDXQuery**|Contient le texte de tous les appels aux procédures stockées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|**Query Begin**<br /><br /> **Query End**|**1-DMXQuery**|Contient le texte et les résultats des instructions DMX (Data Mining Extensions).|  
-|**Progress Report Begin**<br /><br /> **Progress Report End**|**34-DataMiningProgress**|Fournit des informations sur la progression de l'algorithme d'exploration de données : par exemple, si vous générez un modèle de clustering, le message de progression indique quel cluster de candidat est construit|  
-|**Query Begin**<br /><br /> **Query End**|EXECUTESQL|Contient le texte de la requête Transact-SQL en cours d'exécution.|  
-|**Query Begin**<br /><br /> **Query End**|**2-SQLQuery**|Contient le texte des requêtes sur les ensembles de lignes de schéma dans le formulaire de tables système.|  
-|**Début de la découverte**<br /><br /> **Fin de la détection**|Multiple|Contient le texte des appels de fonction DMX ou des instructions DISCOVER, encapsulés dans XMLA.|  
+|**Début de la requête**<br /><br /> **Fin de la requête**|**0 - MDXQuery**|Contient le texte de tous les appels aux procédures stockées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|**Début de la requête**<br /><br /> **Fin de la requête**|**1 - DMXQuery**|Contient le texte et les résultats des instructions DMX (Data Mining Extensions).|  
+|**Progress Report Begin**<br /><br /> **Progress Report End**|**34 - DataMiningProgress**|Fournit des informations sur la progression de l'algorithme d'exploration de données : par exemple, si vous générez un modèle de clustering, le message de progression indique quel cluster de candidat est construit|  
+|**Début de la requête**<br /><br /> **Fin de la requête**|EXECUTESQL|Contient le texte de la requête Transact-SQL en cours d'exécution.|  
+|**Début de la requête**<br /><br /> **Fin de la requête**|**2-SQLQuery**|Contient le texte des requêtes sur les ensembles de lignes de schéma dans le formulaire de tables système.|  
+|**Début de la découverte**<br /><br /> **DISCOVER End**|Multiple|Contient le texte des appels de fonction DMX ou des instructions DISCOVER, encapsulés dans XMLA.|  
 |**Error**|(aucun)|Contient le texte des erreurs envoyées par le serveur au client.<br /><br /> Des messages d’erreur précédés de **Erreur (Exploration de données) :** ou **Informationnel (Exploration de données) :** sont générés spécifiquement en réponse aux requêtes DMX. Toutefois, il n'est pas suffisant de consulter uniquement ces messages d'erreur. D'autres erreurs, telles que celles générées par l'analyseur, sont parfois liées à l'exploration de données mais elles n'ont pas ce préfixe.|  
   
  En consultant les instructions de commande dans le journal des traces, vous pouvez également voir la syntaxe des instructions complexes envoyées par le client au serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , notamment les appels aux procédures stockées système. Ces informations peuvent être utiles pour le débogage, ou vous pouvez utiliser des instructions valides comme modèle pour créer de nouvelles requêtes ou de nouveaux modèles de prédiction. Pour obtenir des exemples d’appels de procédure stockée que vous pouvez capturer par l’intermédiaire d’une trace, consultez [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md).  

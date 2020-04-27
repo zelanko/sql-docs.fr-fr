@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085759"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Choisir et mapper les données de test du modèle
@@ -43,13 +43,13 @@ ms.locfileid: "66085759"
   
  Cette rubrique explique comment choisir et mapper les données de test :  
   
- [Sélectionner des tables d’entrée pour tester la précision d’un modèle d’exploration de données](#bkmk_SelectInputs)  
+ [Sélectionner des tables d'entrée pour tester la précision d'un modèle d'exploration de données](#bkmk_SelectInputs)  
   
- [Mapper les colonnes du modèle aux colonnes des données de test](#bkmk_MapColumns)  
+ [Mapper des colonnes aux colonnes des données de test](#bkmk_MapColumns)  
   
  [Modifier la façon dont les colonnes des données de test sont mappées au modèle](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a>Pour sélectionner des tables d’entrée pour tester la précision d’un modèle d’exploration de données  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> Pour sélectionner des tables d'entrée pour tester la précision d'un modèle d'exploration de données  
   
 1.  Dans le Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur la structure d'exploration de données qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "66085759"
   
 3.  Sous l’onglet **Sélection d’entrée** de la vue **Graphique d’analyse de précision de l’exploration de données** , sélectionnez l’une des options suivantes :  
   
-     **Utiliser des scénarios de test de modèle d’exploration de données**  
+     **Utiliser des scénarios de test de modèle d'exploration de données**  
   
-     **Utiliser les cas de test de la structure d’exploration de données**  
+     **Utiliser des scénarios de test de structure d'exploration de données**  
   
      **Spécifier un autre jeu de données**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085759"
   
 5.  Cliquez sur l’onglet **Graphique de courbes d’élévation** ou sur l’onglet **Matrice de classification** pour générer automatiquement le graphique en utilisant les données de test spécifiées.  
   
-##  <a name="bkmk_MapColumns"></a>Pour mapper les colonnes du modèle aux colonnes des données de test  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> Pour mapper des colonnes aux colonnes des données de test  
   
 1.  Pour ouvrir la structure et les modèles dans le Concepteur d'exploration de données, double-cliquez sur la structure d'exploration de données qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085759"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a>Pour modifier la façon dont les données d’entrée sont mappées au modèle  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a>Pour modifier la façon dont les données d’entrée sont mappées au modèle  
   
 1.  Dans le Concepteur d’exploration de données, double-cliquez sur la structure qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
@@ -120,6 +120,6 @@ ms.locfileid: "66085759"
      Les nouveaux mappages de colonnes sont affichés dans la boîte de dialogue **Spécifier le mappage des colonnes** . Pour supprimer un mappage, sélectionnez la ligne située entre les colonnes, puis appuyez sur la touche Suppr. Pour créer une connexion, sélectionnez une colonne dans la table **Structure d’exploration de données** , puis faites-la glisser vers la colonne correspondante de la table **Sélectionner une ou plusieurs tables d’entrée** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   
