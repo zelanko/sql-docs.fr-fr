@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761636"
 ---
 # <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
@@ -40,7 +40,7 @@ ms.locfileid: "62761636"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration SQL Server](../sql-server-configuration-manager.md)   
- [Définir le compte du service du Lanceur de démon de filtre de texte intégral](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [Définir le compte de service du lanceur de démon de filtre de texte intégral](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Recherche en texte intégral](../search/full-text-search.md)  
   
   

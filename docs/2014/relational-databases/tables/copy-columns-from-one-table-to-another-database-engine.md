@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736352"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copier des colonnes d'une table vers une autre (Moteur de base de données)
@@ -31,23 +31,23 @@ ms.locfileid: "62736352"
   
      [Sécurité](#Security)  
   
--   **Pour copier des des colonnes, utilisez :**  
+-   **Pour copier des colonnes à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Lorsque vous copiez une colonne contenant un type de données alias d'une base de données dans l'autre, le type de données alias risque de ne pas être disponible dans la base de données cible. En pareil cas, la colonne se voit assigner le type de données de base le plus proche disponible dans cette base de données.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Pour copier des définitions de colonne d'une table vers une autre  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736352"
      Si vous copiez des lignes au sein d'une même table, vous pouvez ajouter la table source comme table de destination.  
   
     > [!NOTE]  
-    >  Le **Concepteur de requêtes** ne peut pas déterminer à l’avance les tables et les vues que vous pouvez mettre à jour. Par conséquent, la liste des tables fournie dans la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** affiche toutes les tables et vues disponibles dans la connexion de données sur laquelle porte la requête, même celles vers lesquelles il est impossible de copier des lignes.  
+    >  Le**Concepteur de requêtes** ne peut pas déterminer à l'avance les tables et vues qu'il est possible de mettre à jour. Par conséquent, la liste des tables fournie dans la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** affiche toutes les tables et vues disponibles dans la connexion de données sur laquelle porte la requête, même celles vers lesquelles il est impossible de copier des lignes.  
   
 5.  Cliquez avec le bouton droit dans le corps du volet Schéma et, dans le menu contextuel, cliquez sur **Add Table to Diagram**.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "62736352"
   
 11. Cliquez sur le bouton **Exécuter SQL** pour exécuter la requête.  
   
-     Lorsque vous exécutez une requête Insert Results, aucun résultat n’est signalé dans le [volet résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
+     Lorsque vous exécutez une requête Insert Values, aucun résultat n'apparaît dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Pour copier des définitions de colonne d'une table vers une autre  
   

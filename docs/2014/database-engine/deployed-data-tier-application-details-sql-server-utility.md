@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754089"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Détails des applications de la couche Données déployées (utilitaire SQL Server)
@@ -46,11 +46,11 @@ ms.locfileid: "62754089"
   
 -   Nom : le nom de l'application de la couche Données.  
   
--   Processeur de l'application : affiche l'état d'intégrité de l'utilisation du processeur pour cette application de la couche Données. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'application de la couche Données et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l'application : affiche l'état d'intégrité de l'utilisation du processeur pour cette application de la couche Données. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'application de la couche Données et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette application de la couche Données ou pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
--   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette application de la couche Données ou pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
@@ -166,9 +166,9 @@ ms.locfileid: "62754089"
 -   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) dans la documentation en ligne de SQL Server. Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Détails Managed Instance &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Tableau de bord de l’utilitaire &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Surveiller des instances de SQL Server dans le Utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Fonctionnalités et tâches de l'utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

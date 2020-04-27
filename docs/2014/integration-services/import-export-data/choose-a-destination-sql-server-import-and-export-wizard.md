@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768023"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
@@ -57,10 +57,10 @@ ms.locfileid: "62768023"
  **Sauvegarde de la base de données**  
  Sélectionnez dans la liste des bases de données sur l’instance spécifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de ou créez une nouvelle base de données en cliquant sur **nouveau**.  
   
- **Actualiser**  
+ **Actualisation**  
  Cliquez sur **Actualiser** pour restaurer la liste des bases de données disponibles.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez une nouvelle base de données de destination à l’aide de la boîte **de dialogue créer une base de données** .  
   
 ### <a name="destination--flat-file-destination"></a>Destination = destination de fichier plat  
@@ -82,7 +82,7 @@ ms.locfileid: "62768023"
  **Format**  
  Permet de préciser la mise en forme à utiliser : délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Delimited|Les colonnes sont séparées par un délimiteur spécifié à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
@@ -91,7 +91,7 @@ ms.locfileid: "62768023"
  **Qualificateur de texte**  
  Tapez le qualificateur de texte à utiliser. Par exemple, vous pouvez indiquer que chaque colonne de texte doit être entourée de guillemets.  
   
- **Noms de colonnes dans la première ligne de données**  
+ **Noms de colonne dans la première ligne de données**  
  Indiquez si vous souhaitez afficher les noms de colonne dans la première ligne de données.  
   
 ### <a name="destination--microsoft-excel"></a>Destination = Microsoft Excel  
@@ -105,7 +105,7 @@ ms.locfileid: "62768023"
  **Parcourir**  
  Localisez un classeur Excel à l’aide de la boîte de dialogue **ouvrir** .  
   
- **Version Excel**  
+ **Version d’Excel**  
  Permet de sélectionner la version d'Excel utilisée par le classeur de destination.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "62768023"
  **Mot de passe**  
  Fournissez le mot de passe utilisateur pour la connexion à la base de données lorsqu'un fichier d'informations d'un groupe de travail est associé à la base de données. Cependant, si la base de données est protégée par un seul mot de passe pour tous les utilisateurs, vous devez indiquer cette valeur dans la boîte de dialogue **Propriétés des liaisons de données** , à laquelle vous pouvez accéder à l'aide du bouton **Avancé** .  
   
- **Avancée**  
+ **Avancé**  
  Permet de spécifier les options avancées, telles que le mot de passe de la base de données ou un autre fichier d’informations de groupe de travail que celui défini par défaut, à l’aide de la boîte de dialogue **Propriétés des liaisons de données**. Pour plus d'informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section « Data Access » (en anglais) de [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

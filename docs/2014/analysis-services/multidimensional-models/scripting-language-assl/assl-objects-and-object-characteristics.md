@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736613"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objets ASSL et caractéristiques des objets
@@ -63,8 +63,7 @@ ms.locfileid: "62736613"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (le cas échéant)  
+-   `LastProcessed` (le cas échéant)  
   
 > [!NOTE]  
 >  La classification d'un objet comme objet principal a un effet sur la façon dont une instance de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] traite cet objet et sur la façon dont il est traité dans le langage de définition d'objet. Toutefois, cette classification ne garantit pas que les outils de gestion et de développement [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] permettront de créer, modifier ou supprimer ces objets de manière indépendante.  
@@ -90,17 +89,15 @@ ms.locfileid: "62736613"
 |Valeur d'énumération|Autorisé pour \<ALTER>|Description|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|non|Retourne uniquement le nom, l'ID et l'horodateur pour l'objet demandé et tous les objets principaux qu'il contient de manière récursive.|  
-|*ObjectProperties*|Oui|Développe l'objet demandé et les objets secondaires qu'il contient, mais ne retourne pas les objets principaux qu'il contient.|  
+|*ObjectProperties*|oui|Développe l'objet demandé et les objets secondaires qu'il contient, mais ne retourne pas les objets principaux qu'il contient.|  
 |*ExpandObject*|non|Identique à *ObjectProperties*, mais retourne également le nom, l'ID et l'horodateur pour les objets principaux contenus.|  
-|*ExpandFull*|Oui|Développe entièrement l'objet demandé et touts les objets qu'il contient de manière récursive.|  
+|*ExpandFull*|oui|Développe entièrement l'objet demandé et touts les objets qu'il contient de manière récursive.|  
   
  Cette section de référence ASSL décrit la représentation *ExpandFull* . Tous les autres niveaux `ObjectExpansion` sont dérivés de ce niveau.  
   
 ## <a name="object-processing"></a>Traitement des objets  
- ASSL inclut des éléments ou des propriétés en lecture seule (par exemple, `LastProcessed`) qui peuvent être lus à partir de l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], mais qui sont omis lorsque des scripts de commande sont soumis à l'instance. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignore les valeurs modifiées pour les éléments en lecture seule sans émettre d'avertissement ni d'erreur.  
+ ASSL inclut des éléments ou des propriétés en lecture seule (par exemple, `LastProcessed`) qui peuvent être lus à partir de l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], mais qui sont omis lorsque des scripts de commande sont soumis à l'instance. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignore les valeurs modifiées pour les éléments en lecture seule sans émettre d'avertissement ni d'erreur.  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignore également les propriétés non appropriées ou non pertinentes sans déclencher d'erreurs de validation. Par exemple, l'élément X ne doit être présent que lorsque l'élément Y a une valeur particulière. L'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignore l'élément X au lieu de le valider par rapport à la valeur de l'élément Y.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignore également les propriétés non appropriées ou non pertinentes sans déclencher d'erreurs de validation. Par exemple, l'élément X ne doit être présent que lorsque l'élément Y a une valeur particulière. L'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignore l'élément X au lieu de le valider par rapport à la valeur de l'élément Y.  
   
   

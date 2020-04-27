@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754241"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Les deux indicateurs clés d'intégrité d'index de hachage sont :  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* indique le nombre de compartiments vides dans l’index de hachage.  
+ *empty_bucket_percent* indique le nombre de compartiments vides dans l'index de hachage.  
   
  Si *empty_bucket_percent* est inférieur à 10 pour cent, le nombre de compartiments est probablement trop bas. Idéalement, *empty_bucket_percent* devrait être de 33 pour cent ou plus. Si le nombre de compartiments correspond au nombre de valeurs de clés d'index, environ 1/3 des compartiments est vide, en raison de la distribution du hachage.  
   
  *avg_chain_length*  
- *avg_chain_length* indique la longueur moyenne des chaînes de lignes dans les compartiments de hachage.  
+ *avg_chain_length* indique la longueur maximale des chaînes de ligne dans les compartiments de hachage.  
   
  Si *avg_chain_length* est supérieur à 10 et *empty_bucket_percent* est supérieur à 10 pour cent, il existe probablement plusieurs valeurs de clé d'index dupliquées et un index non cluster serait plus approprié. Une longueur de chaîne moyenne de 1 est idéale.  
   
@@ -186,6 +186,6 @@ GO
 -   Pour optimiser les performances des recherches de point, un nombre plus élevé de compartiments, égal à 2 ou 3 fois le nombre de valeurs d'index uniques, semble approprié. Un nombre plus élevé de compartiments signifierait une utilisation accrue de mémoire et une augmentation du temps requis pour une analyse d'index complète.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Index sur des tables optimisées en mémoire](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [Index sur les tables optimisées en mémoire](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

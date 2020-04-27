@@ -26,18 +26,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755254"
 ---
 # <a name="clr-triggers"></a>Déclencheurs CLR
   En raison de l'intégration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez utiliser n'importe quel langage [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour créer des déclencheurs CLR. Cette section couvre des informations spécifiques aux déclencheurs implémentés avec l'intégration du CLR. Pour une description complète des déclencheurs, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Que sont les déclencheurs ?  
- Un déclencheur est un type spécial de procédure stockée qui s'exécute automatiquement lorsqu'un événement de langage s'exécute. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre deux types généraux de déclencheurs : les déclencheurs du langage de manipulation de données (DML) et les déclencheurs du langage de définition de données (DDL). Les déclencheurs DML peuvent être utilisés lorsque des instructions `INSERT`, `UPDATE` ou `DELETE` modifient des données dans une table ou une vue spécifiée. Les déclencheurs DDL activent des procédures stockées en réponse à diverses instructions DDL, qui sont essentiellement des instructions qui commencent par `CREATE`, `ALTER` et `DROP`. Les déclencheurs DDL peuvent être utilisés dans des tâches d'administration telles que l'audit et la régulation d'opérations de base de données.  
+ Un déclencheur est un type spécial de procédure stockée qui s'exécute automatiquement lorsqu'un événement de langage s'exécute. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre deux types généraux de déclencheurs : les déclencheurs du langage de manipulation de données (DML) et les déclencheurs du langage de définition de données (DDL). Les déclencheurs DML peuvent être utilisés lorsque des instructions `INSERT`, `UPDATE` ou `DELETE` modifient des données dans une table ou une vue spécifiée. Les déclencheurs DDL activent des procédures stockées en réponse à diverses instructions DDL, qui sont essentiellement des instructions qui commencent par `CREATE`, `ALTER` et `DROP`. Les déclencheurs DDL peuvent être utilisés dans des tâches d'administration telles que l'audit et la régulation d'opérations de base de données.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Fonctionnalités uniques des déclencheurs CLR  
  Les déclencheurs écrits en [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent déterminer les colonnes de la vue ou de la table d'activation qui ont été mises à jour à l'aide des fonctions `UPDATE(column)` et `COLUMNS_UPDATED()`.  
@@ -660,7 +659,7 @@ DROP TABLE Table1;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [ESSAYER... Interception &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/try-catch-transact-sql)   
  [Génération d’objets de base de données avec Common Language Runtime &#40;l’intégration du CLR&#41;](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

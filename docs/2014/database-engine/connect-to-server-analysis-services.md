@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755599"
 ---
 # <a name="connect-to-server-analysis-services"></a>Se connecter au serveur (Analysis Services)
-  Utilisez cette boîte de dialogue pour afficher ou spécifier les options [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de connexion à.  
+  Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="options"></a>Options  
  **Type de serveur**  
@@ -32,7 +32,7 @@ ms.locfileid: "62755599"
  **Authentification**  
  Les modes d'authentification suivants sont pris en charge lors de la connexion à une instance d'Analysis Services : Authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- **Mode d’authentification Windows (authentification Windows)**  
+ **Mode d'authentification Windows (authentification Windows)**  
  Le mode **d’authentification Windows** permet à un utilisateur de se connecter via un compte d’utilisateur Windows.  
   
  **Nom d'utilisateur**  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754032"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
@@ -29,17 +29,17 @@ ms.locfileid: "62754032"
   
  Une fois l'analyse établie pour une base de données en miroir, un administrateur système peut configurer des seuils d'avertissements sur plusieurs métriques de performances clés. Il est également possible de configurer des alertes sur ces événements de mise en miroir de bases de données et sur d'autres événements.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Métriques de performances et seuils d’avertissement](#PerfMetricsAndWarningThresholds)  
   
 -   [Définition et gestion de seuils d’avertissement](#SetUpManageWarningThresholds)  
   
--   [Utilisation d’alertes pour une base de données mise en miroir](#UseAlerts)  
+-   [Utilisation d'alertes pour une base de données en miroir](#UseAlerts)  
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> Métriques de performances et seuils d'avertissement  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> Métriques de performances et seuils d'avertissement  
  Le tableau suivant répertorie les métriques de performances pour lesquelles des avertissements peuvent être configurés, décrit les seuils d'avertissement correspondants et répertorie le libellé Moniteur de mise en miroir de bases de données correspondant.  
   
 |Mesure de performance|Seuil d'avertissement|Libellé Moniteur de mise en miroir de bases de données|  
@@ -51,7 +51,7 @@ ms.locfileid: "62754032"
   
  Pour chacune de ces métriques de performances, un administrateur système peut spécifier un seuil sur une base de données en miroir. Pour plus d'informations, consultez [Définition et gestion de seuils d'avertissement](#SetUpManageWarningThresholds), plus loin dans cette rubrique.  
   
-##  <a name="SetUpManageWarningThresholds"></a> Définition et gestion de seuils d'avertissement  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> Définition et gestion de seuils d'avertissement  
  Un administrateur système peut configurer un ou plusieurs seuils d'avertissement pour les métriques de performances de mise en miroir clés. Nous recommandons de définir un seuil pour un avertissement donné sur les deux partenaires afin de s'assurer que l'avertissement persiste en cas de basculement de la base de données. Le seuil approprié sur chaque partenaire dépend des capacités de performances du système du partenaire.  
   
  Les seuils d'avertissement peuvent être configurés et gérés à l'aide des méthodes suivantes :  
@@ -73,7 +73,7 @@ ms.locfileid: "62754032"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Supprime l'avertissement pour une métrique de performance spécifiée.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Événements de seuil de performance envoyés au journal des événements Windows  
- Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil est atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’informations (un *événement de seuil de performance*) pour la métrique et elle écrit l’événement dans le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
+ Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil a été atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’information (un *événement de seuil de performance*) pour la métrique et écrit [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’événement dans le journal des événements Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
   
 |Mesure de performance|ID de l’événement|  
 |------------------------|--------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "62754032"
 >   
 >  rubrique.  
   
-##  <a name="UseAlerts"></a> Utilisation d'alertes pour une base de données en miroir  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a>Utilisation d’alertes pour une base de données mise en miroir  
  L'un des aspects importants de la surveillance d'une base de données mise en miroir consiste à configurer des alertes sur des événements de mise en miroir de bases de données importants. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère les types suivants d'événements de mise en miroir de bases de données :  
   
 -   Événements de seuil de performance  
@@ -110,7 +110,7 @@ ms.locfileid: "62754032"
 > [!IMPORTANT]  
 >  Pour toutes les sessions de mise en miroir, nous vous recommandons vivement de configurer la base de données de façon à envoyer une alerte sur tout événement de changement d'état. À moins qu'un changement d'état ne soit attendu suite à une modification de configuration manuelle, un événement risquant de compromettre vos données s'est produit. Pour aider à protéger vos données, identifiez et corrigez la cause d'un changement d'état inattendu.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour créer une alerte à l'aide de SQL Server Management Studio**  
   
 -   [Créer une alerte utilisant un numéro d'erreur](../../ssms/agent/create-an-alert-using-an-error-number.md)  

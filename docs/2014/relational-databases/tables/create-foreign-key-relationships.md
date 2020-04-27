@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761613"
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
@@ -36,9 +36,9 @@ ms.locfileid: "62761613"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Une contrainte de clé étrangère ne doit pas forcément être liée seulement à une contrainte de clé primaire d'une autre table. Elle peut également être définie pour référencer les colonnes d'une contrainte UNIQUE d'une autre table.  
   
@@ -60,20 +60,20 @@ ms.locfileid: "62761613"
   
 -   Une colonne de type `varchar(max)` ne peut participer à une contrainte FOREIGN KEY que si la clé primaire qu'elle référence est également définie comme étant de type `varchar(max)`.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  La création d'une nouvelle table avec une clé étrangère nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table a été créée.  
   
  La création d'une clé étrangère dans une table existante nécessite l'autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Pour créer une relation de clé étrangère dans le Concepteur de tables  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table qui se trouve du côté clé étrangère de la relation et cliquez sur **Conception**.  
   
-     La table s'ouvre dans le **Concepteur de tables**.  
+     La table s’ouvre dans **Concepteur de tables**.  
   
 2.  Dans le menu **Concepteur de tables** , cliquez sur **Relations**.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62761613"
   
 7.  Dans la grille située au-dessous, choisissez les colonnes qui participent à la clé primaire de la table. Dans la cellule de la grille située à gauche de chaque colonne, choisissez la colonne clé étrangère correspondante dans la table de clé étrangère.  
   
-     **Concepteur de tables** suggère un nom pour la relation. Pour changer ce nom, modifiez le contenu de la zone de texte **Nom de la relation** .  
+     Le**Concepteur de tables** propose un nom pour la relation. Pour changer ce nom, modifiez le contenu de la zone de texte **Nom de la relation** .  
   
 8.  Choisissez **OK** pour créer la relation.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Pour créer une clé étrangère dans une nouvelle table  
   

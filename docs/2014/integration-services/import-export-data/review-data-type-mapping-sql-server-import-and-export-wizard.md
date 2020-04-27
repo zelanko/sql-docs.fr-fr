@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767941"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Vérifier le mappage de type de données (Assistant Importation et Exportation SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62767941"
  La page **Vérifier le mappage de type de données** comporte une liste **Table** , une liste **Mappage de type de données** et des options de gestion des erreurs.  
   
 ### <a name="table-list"></a>Liste Table  
- La partie supérieure de la page **vérifier les problèmes de type de données** est une liste de tables qui répertorie les tables à transférer de la source vers la destination. **** Le tableau suivant décrit les colonnes figurant dans cette liste.  
+ La partie supérieure de la page **vérifier les problèmes de type de données** est une liste de tables qui répertorie les tables à transférer de la source vers la destination. **Table** Le tableau suivant décrit les colonnes figurant dans cette liste.  
   
 |Colonne|Description|  
 |------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "62767941"
  Pour afficher des informations détaillées sur la conversion d'une colonne de données spécifique, double-cliquez sur une ligne dans la liste. La boîte de dialogue **Détails de la conversion de colonne** s'ouvre et affiche des informations de conversion plus détaillées pour la colonne.  
   
 ### <a name="error-handling-options"></a>Options de gestion des erreurs  
- **En cas d’erreur (Global)**  
+ **En cas d'erreur (global)**  
  Spécifiez comment l'Assistant gère les erreurs :  
   
 -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation.  
@@ -67,7 +67,7 @@ ms.locfileid: "62767941"
   
  Ce paramètre s'applique à toutes les conversions pour lesquelles l'option **Utiliser Global** est sélectionnée dans la colonne **En cas d'erreur** de la liste **Mappage de type de données** .  
   
- **En cas de troncation (Global)**  
+ **En cas de troncation (global)**  
  Spécifiez comment l'Assistant gère les troncations :  
   
 -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation.  

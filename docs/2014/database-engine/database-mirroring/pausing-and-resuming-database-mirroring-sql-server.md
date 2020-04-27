@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754522"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Suspendre et reprendre la mise en miroir de bases de données (SQL Server)
@@ -33,15 +33,15 @@ ms.locfileid: "62754522"
 > [!IMPORTANT]  
 >  Après un service forcé, lorsque le serveur principal d'origine se reconnecte, la mise en miroir est suspendue. La reprise de la mise en miroir dans cette situation peut entraîner des pertes de données sur le serveur principal d'origine. Pour plus d'informations sur la gestion des problèmes éventuels de perte de données, consultez [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Comment la suspension et la reprise affectent la troncation du journal](#EffectOnLogTrunc)  
+-   [Comment la suspension et la reprise affectent la troncature du journal](#EffectOnLogTrunc)  
   
--   [Éviter un journal des transactions complet](#AvoidFullLog)  
+-   [Éviter la saturation du journal des transactions](#AvoidFullLog)  
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a>Comment la suspension et la reprise affectent la troncation du journal  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a>Comment la suspension et la reprise affectent la troncation du journal  
  En général, lorsqu'un point de contrôle automatique est effectué sur une base de données, son journal des transactions est tronqué jusqu'à ce point de contrôle après la sauvegarde du journal suivante. Durant la suspension de la session de la mise en miroir de bases de données, tous les enregistrements du journal en cours restent actifs puisque le serveur principal attend de les envoyer au serveur miroir. Les enregistrements de journal qui n'ont pas été envoyés s'accumulent dans le journal des transactions de la base de données principale en attendant que la session reprenne et que le serveur principal envoie les enregistrements du journal vers le serveur miroir.  
   
  Lors de la reprise de la session, le serveur principal commence immédiatement l'envoi des enregistrements accumulés du journal vers le serveur miroir. Après confirmation par le serveur miroir de la mise en file d'attente de l'enregistrement de journal correspondant jusqu'au point de contrôle automatique le plus ancien, le serveur principal tronque le journal de la base de données principale jusqu'à ce point de contrôle. Le serveur miroir tronque la file d'attente de restauration au même enregistrement de journal. Ce processus est répété pour chaque point de contrôle successif et le journal est tronqué par étape, point de contrôle par point de contrôle.  
@@ -49,7 +49,7 @@ ms.locfileid: "62754522"
 > [!NOTE]  
 >  Pour plus d'informations sur les points de contrôle et la troncature du journal, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-##  <a name="AvoidFullLog"></a>Éviter un journal des transactions complet  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a>Éviter un journal des transactions complet  
  Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
   
 -   Reprendre la session de mise en miroir de base de données avant que le journal ne soit plein, ou ajouter un espace journal supplémentaire. La reprise de la mise en miroir de bases de données permet au serveur principal d'envoyer son journal actif cumulé au serveur miroir et met la base de données miroir en état SYNCHRONIZING. Le serveur miroir peut alors renforcer le journal sur le disque et commencer à le refaire.  
@@ -58,7 +58,7 @@ ms.locfileid: "62754522"
   
      Contrairement à la suspension d'une session, la suppression d'une mise en miroir supprime toutes les informations sur la session de mise en miroir. Chaque instance de serveur partenaire conserve sa propre copie de la base de données. Si l'ancienne copie miroir est récupérée, elle divergera de l'ancienne copie principale et accusera un retard par rapport à la durée qui s'est écoulée depuis la suspension de la session. Pour plus d’informations, consultez [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour suspendre ou reprendre la mise en miroir de bases de données**  
   
 -   [Suspendre ou reprendre une session de mise en miroir de bases de données &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  

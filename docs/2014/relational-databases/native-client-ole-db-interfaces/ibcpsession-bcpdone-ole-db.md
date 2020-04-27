@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743195"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Vous pouvez utiliser BCP pour réinsérer ces données dans la table avec la commande suivante :  
   
- **maître BCP... fltest dans le fichier out. dat-n-T-S** **  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
  Vous devrez indiquer sqlncli11.lib lors de la compilation de cet exemple.  
   

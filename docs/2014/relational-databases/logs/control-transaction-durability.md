@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743165"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
@@ -60,13 +60,13 @@ ms.locfileid: "62743165"
   
  Voici quelques-uns des cas dans lesquels vous pouvez tirer parti de l'utilisation de la durabilité retardée des transactions :  
   
- **Vous tolérez la perte de certaines données.**   
+ **Vous tolérez la perte de certaines données.**  
  Si vous tolérez la perte de certaines données, par exemple des enregistrements qui ne sont pas indispensables tant que vous disposez de la majeure partie des données, il peut être intéressant d'utiliser la durabilité retardée. Si, en revanche, vous ne tolérez aucune perte de données, n'utilisez pas la durabilité retardée des transactions.  
   
- **Vous rencontrez un goulot d’étranglement au niveau des écritures du journal de transactions.**   
+ **Vous rencontrez un goulot d’étranglement au niveau des écritures du journal de transactions.**  
  Si les problèmes de performances sont attribuables à une latence dans les écritures du journal de transactions, votre application bénéficiera probablement de l'utilisation de la durabilité retardée des transactions.  
   
- **Vos charges de travail présentent un niveau de contention élevé.**   
+ **Vos charges de travail présentent un niveau de contention élevé.**  
  Si votre système a des charges de travail présentant un haut degré de contention, beaucoup de temps est perdu à attendre la libération de verrous. La durabilité retardée des transactions réduit la durée de validation. De ce fait, les verrous sont libérés plus rapidement, ce qui se traduit par un débit supérieur.  
   
  **Garanties offertes par la durabilité retardée des transactions**  
@@ -103,7 +103,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  `FORCED`  
  Avec ce paramètre, chaque transaction qui est validée sur la base de données a une durabilité retardée, même si la transaction spécifie une durabilité complète (DELAYED_DURABILITY = OFF) ou omette toute indication de durabilité. Ce paramètre est utile lorsque la durabilité retardée des transactions a un intérêt pour une base de données, mais que vous ne souhaitez pas modifier le code de l'application.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Contrôle au niveau du bloc Atomic-procédures stockées compilées en mode natif  
  Le code suivant s'insère à l'intérieur du bloc atomique.  
   
 ```sql  
@@ -116,7 +116,7 @@ DELAYED_DURABILITY = { OFF | ON }
  `ON`  
  La transaction a une durabilité retardée, sauf si l'option de base de données DELAYED_DURABLITY = DISABLED est activée, auquel cas la validation COMMIT est synchrone et donc à durabilité complète.  Pour plus d’informations, consultez [Contrôle au niveau de la base de données](#database-level-control) .  
   
- **Exemple de code :**  
+ **Exemple de code :**  
   
 ```sql  
 CREATE PROCEDURE <procedureName> ...  
@@ -176,7 +176,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Récupération sur incident**  
  La cohérence est garantie, mais certaines modifications des transactions à durabilité retardée qui ont été validées peuvent être perdues.  
   
- **Bases de données croisées et DTC**  
+ **Transactions distribuées et de bases de données croisées**  
  Les transactions distribuées ou de bases de données croisées ont une durabilité complète, quel que soit le paramètre de validation des bases de données ou des transactions.  
   
  **Groupes de disponibilité Always On et mise en miroir**  
@@ -191,7 +191,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Copie des journaux de transaction**  
  Seules les transactions rendues durables sont incluses dans le journal qui est copié.  
   
- **Sauvegarde de journal**  
+ **Sauvegarde de fichier journal**  
  Seules les transactions rendues durables sont incluses dans la sauvegarde.  
   
 ## <a name="when-can-i-lose-data"></a>Quand puis-je perdre des données ?  

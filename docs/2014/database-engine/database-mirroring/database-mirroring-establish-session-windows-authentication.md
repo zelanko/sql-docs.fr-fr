@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755509"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Établir une session de mise en miroir de bases de données au moyen de l'authentification Windows (Transact-SQL)
@@ -63,9 +63,9 @@ ms.locfileid: "62755509"
   
 4.  Pour définir le serveur principal comme partenaire sur la base de données miroir, connectez-vous au serveur miroir et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<database_name>* définir le **=** partenaire _<server_network_address>_  
+     ALTER DATABASE *<nom_base_de_données>* SET PARTNER **=**_<adresse_réseau_serveur>_  
   
-     où *<database_name>* est le nom de la base de données à mettre en miroir (ce nom est le même sur les deux partenaires) et *<server_network_address*>est l’adresse réseau du serveur principal.  
+     où *<nom_base_de_données>* correspond au nom de la base de données à mettre en miroir (ce nom est identique sur les deux partenaires) et *<adresse_réseau_serveur>* est l’adresse réseau du serveur principal.  
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62755509"
   
 5.  Pour définir le serveur miroir comme partenaire sur la base de données principale, connectez-vous au serveur principal et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<database_name>* définir le **=** partenaire _<server_network_address>_  
+     ALTER DATABASE *<nom_base_de_données>* SET PARTNER **=**_<adresse_réseau_serveur>_  
   
      Pour plus d'informations, consultez l'étape 4.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62755509"
   
     -   **Mode hautes performances**  
   
-         Si vous ne voulez pas utiliser le basculement automatique et si vous préférez privilégier les performances par rapport à la disponibilité, désactivez la sécurité des transactions. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+         Si vous ne voulez pas utiliser le basculement automatique et si vous préférez privilégier les performances par rapport à la disponibilité, désactivez la sécurité des transactions. Pour plus d’informations, consultez [modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;&#41;Transact-SQL ](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
         >  En mode hautes performances, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
@@ -192,7 +192,7 @@ ms.locfileid: "62755509"
     ```  
   
     > [!IMPORTANT]  
-    >  Une session de mise en miroir de bases de données s'exécute par défaut en mode synchrone, ce qui dépend de la sécurité des transactions totale (SAFETY défini sur FULL). Pour qu'une session s'exécute en mode hautes performances asynchrone, définissez SAFETY sur OFF. Pour en savoir plus, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
+    >  Une session de mise en miroir de bases de données s'exécute par défaut en mode synchrone, ce qui dépend de la sécurité des transactions totale (SAFETY défini sur FULL). Pour qu'une session s'exécute en mode hautes performances asynchrone, définissez SAFETY sur OFF. Pour plus d'informations, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 8.  Dans l'instance de serveur principal, définissez l'instance de serveur sur `PARTNERHOST5` comme étant le partenaire (ce qui en fait le serveur miroir initial) :  
   
@@ -210,7 +210,7 @@ ms.locfileid: "62755509"
 >  Pour voir un exemple illustrant la configuration de la sécurité, la préparation de la base de données miroir, la définition des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Autoriser l’accès réseau à un point de terminaison de mise en miroir de bases de données à l’aide de l’authentification Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
@@ -218,7 +218,7 @@ ms.locfileid: "62755509"
  [Mise en miroir de bases de données et copie des journaux de &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
- [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Spécifiez une adresse réseau de serveur &#40;&#41;de mise en miroir de bases de données](specify-a-server-network-address-database-mirroring.md)   
  [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754930"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Modifier la sécurité des transactions dans une session de mise en miroir de bases de données (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62754930"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     où *\<database>* est le nom de la base de données mise en miroir.  
+     où * \<Database>* est le nom de la base de données mise en miroir.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Pour désactiver la sécurité des transactions  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62754930"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     où *\<database>* est la base de données mise en miroir.  
+     où * \<base de données>* est la base de données mise en miroir.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

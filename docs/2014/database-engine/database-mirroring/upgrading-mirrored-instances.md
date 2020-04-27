@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754276"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Réduire le temps d'indisponibilité des bases de données mises en miroir lors de la mise à niveau d'instances de serveur
@@ -53,11 +53,11 @@ ms.locfileid: "62754276"
  Les étapes spécifiques d'une mise à niveau propagée dépendent du mode d'opération de la configuration de mise en miroir. Toutefois, les étapes de base sont les mêmes.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les modes d’opération, consultez [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md).  
+>   Pour plus d'informations sur les modes d'opération, consultez [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
  L'organigramme suivant illustre les étapes de base d'une mise à niveau propagée pour chaque mode d'opération. Les procédures correspondantes sont décrites après l'illustration.  
   
- ![Organigramme illustrant les étapes d'une mise à niveau propagée](../media/dbm-rolling-upgrade.gif "Organigramme illustrant les étapes d'une mise à niveau propagée")  
+ ![Organigramme illustrant les étapes d’une mise à niveau propagée](../media/dbm-rolling-upgrade.gif "Organigramme illustrant les étapes d’une mise à niveau propagée")  
   
 > [!IMPORTANT]  
 >  Une instance de serveur peut remplir différents rôles de mise en miroir (serveur principal, serveur miroir ou témoin) dans des sessions de mise en miroir simultanées. Dans ce cas, vous devez adapter le processus de mise à niveau propagée de base en conséquence. Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "62754276"
   
     -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : affectez la valeur **Haute sécurité sans basculement automatique (synchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données**. Pour plus d’informations sur la façon d’accéder à cette page, consultez [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   Dans [!INCLUDE[tsql](../../includes/tsql-md.md)] : attribuez à la sécurité des transactions la valeur FULL. Pour plus d’informations, consultez [modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   Dans [!INCLUDE[tsql](../../includes/tsql-md.md)] : attribuez à la sécurité des transactions la valeur FULL. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>Pour supprimer un témoin d'une session  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62754276"
   
      Le but de cette étape est de permettre à une autre instance de serveur de devenir le serveur miroir dans chaque session de mise en miroir dans laquelle elle est un serveur partenaire.  
   
-     **Restrictions après le basculement vers une instance de serveur mise à niveau.**  
+     **Restrictions après le basculement sur une instance de serveur mise à niveau.**  
   
      Après un basculement à partir d'une instance de serveur antérieure vers une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , la session de base de données est interrompue. Elle ne peut pas reprendre tant que l'autre serveur partenaire n'a pas été mis à niveau. Toutefois, le serveur principal accepte encore des connexions et autorise l'accès aux données et des modifications sur la base de données principale.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62754276"
   
 1.  En mode haute sécurité, rétablissez éventuellement le témoin sur chaque session de mise en miroir.  
   
-     **Pour retourner un témoin**  
+     **Pour réintégrer un témoin**  
   
     -   [Ajouter ou remplacer un témoin de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62754276"
  [Installer un Service Pack sur un système avec un temps d’arrêt minimal pour les bases de données mises en miroir](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Forcer le service dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
- [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Démarrer Moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)  
   
   

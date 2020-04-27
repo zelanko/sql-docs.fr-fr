@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745758"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>synchroniser un abonnement à l'aide du Gestionnaire de synchronisation Windows (Windows Synchronization Manager)
@@ -73,11 +73,11 @@ ms.locfileid: "62745758"
   
 2.  Affichez et modifiez les propriétés dans les onglets suivants :  
   
-    -   **Détermination**  
+    -   **Identification**  
   
-    -   Connexion de l' **abonné**, connexion au serveur de **distribution**et connexion de l' **éditeur** (pour la réplication de fusion uniquement)  
+    -   **Connexion à l'Abonné**, **Connexion au serveur de distribution**et **Connexion au serveur de publication** (pour la réplication de fusion uniquement)  
   
-    -   **Informations sur le serveur Web** (pour les abonnements de fusion sur les abonnés exécutant SQL Server 2005 ou version ultérieure)  
+    -   **Informations sur le serveur Web** (pour les abonnements de fusion sur les abonnés exécutant SQL Server 2005 ou supérieur)  
   
     -   **Autres**  
   
@@ -103,13 +103,13 @@ ms.locfileid: "62745758"
   
 3.  Modifiez au besoin toute colonne affichée dans l'outil de résolution interactive, puis cliquez sur l'un des boutons suivants pour résoudre le conflit :  
   
-    -   **Accepter les suggestions**  
+    -   **Accepter la suggestion**  
   
     -   **Accepter le serveur de publication**  
   
-    -   **Accepter l’abonné**  
+    -   **Accepter l'Abonné**  
   
-    -   **Tout résoudre automatiquement** (tous les conflits actuels sont résolus sans entrée supplémentaire)  
+    -   **Tout résoudre automatiquement** (tous les conflits actuels sont résolus sans données complémentaires)  
   
      La ligne sélectionné est ensuite appliqué au serveur de publication et/ou à l'Abonné ; elle est propagée à d'autres nœuds dans la topologie lors des synchronisations suivantes.  
   

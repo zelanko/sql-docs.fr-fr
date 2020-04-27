@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754594"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Suspendre ou reprendre une session de mise en miroir de bases de données (SQL Server)
@@ -32,26 +32,26 @@ ms.locfileid: "62754594"
   
      [Sécurité](#Security)  
   
--   **À ReplaceThisText, à l’aide de :**  
+-   **Sur ReplaceThisText, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [après avoir suspendu ou repris la mise en miroir de bases de données](#FollowUp)  
+-   **Suivi :**  [Après avoir suspendu ou repris la mise en miroir de bases de données](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Vous pouvez à tout moment suspendre une session de mise en miroir de bases de données afin d'améliorer les performances pendant les goulots d'étranglement. De même, vous pouvez reprendre une session interrompue à tout moment.  
   
 > [!CAUTION]  
 >  Après un service forcé, lorsque le serveur principal d'origine se reconnecte, la mise en miroir est suspendue. La reprise de la mise en miroir dans cette situation peut entraîner des pertes de données sur le serveur principal d'origine. Pour plus d’informations sur la gestion des problèmes éventuels de perte de données, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Pour suspendre ou reprendre une session de mise en miroir de bases de données, utilisez la page **Mise en miroir** de la boîte de dialogue Propriétés de la base de données.  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>Pour suspendre ou reprendre la mise en miroir de bases de données  
@@ -60,7 +60,7 @@ ms.locfileid: "62754594"
   
 2.  Développez le nœud **Bases de données**et sélectionnez la base de données.  
   
-3.  Cliquez avec le bouton droit sur la base de données, sélectionnez **Tâches**, puis cliquez sur **Miroir**. La page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** s'affiche.  
+3.  Cliquez avec le bouton droit sur la base de données, sélectionnez **Tâches**, puis cliquez sur **Miroir**. La page **mise en miroir** de la boîte de dialogue **Propriétés de la base de données** s’ouvre.  
   
 4.  Pour suspendre la session, cliquez sur **Suspendre**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754594"
   
 5.  Pour reprendre la session, cliquez sur **Reprendre**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>Pour suspendre la mise en miroir de bases de données  
   
@@ -108,17 +108,17 @@ ms.locfileid: "62754594"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>Suivi : après avoir suspendu ou repris la mise en miroir de bases de données  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a> Suivi : après avoir suspendu ou repris la mise en miroir de bases de données  
   
--   **Après la suspension de la mise en miroir de bases de données**  
+-   **Après avoir suspendu la mise en miroir de bases de données**  
   
      Sur la base de données primaire, prenez des précautions pour éviter la saturation du journal des transactions. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
--   **Après la reprise de la mise en miroir de bases de données**  
+-   **Après avoir repris la mise en miroir de bases de données**  
   
      La reprise de la mise en miroir de la base de données place la base de données miroir dans l'état Synchronisation. Si le niveau de sécurité est FULL, le miroir récupère le principal et la base de données miroir entre dans l'état Synchronisé. À ce stade, le basculement devient possible. Si le serveur témoin est présent et activé, le basculement automatique est possible. En l'absence de serveur témoin, le basculement manuel est possible.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   

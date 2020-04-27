@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62756985"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -87,7 +87,7 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|Name|"LocalDBApp1"|  
+|Nom|"LocalDBApp1"|  
 |Version|\<Version actuelle>|  
 |Nom partagé|""|  
 |Propriétaire|"\<votre utilisateur Windows>"|  
@@ -102,7 +102,7 @@ REM Gather information about the instance of LocalDB
 ### <a name="connecting-to-a-shared-instance-of-localdb"></a>Connexion à une instance partagée de LocalDB  
  Pour vous connecter à une instance partagée `LocalDB` de **Add\\ .** (point + barre oblique inverse) à la chaîne de connexion pour faire référence à l’espace de noms réservé aux instances partagées. Par exemple, pour se connecter à une instance partagée `LocalDB` de `AppData` nommée, utilisez une chaîne de `(localdb)\.\AppData` connexion telle que dans le cadre de la chaîne de connexion. Un utilisateur qui se connecte à une `LocalDB` instance partagée de dont il n’est pas propriétaire doit disposer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une connexion d’authentification ou d’authentification Windows.  
   
-## <a name="troubleshooting"></a>Dépannage  
+## <a name="troubleshooting"></a>Résolution des problèmes  
  Pour plus d’informations `LocalDB`sur la résolution des problèmes, consultez [résolution des problèmes SQL Server 2012 Express](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
 ## <a name="permissions"></a>Autorisations  

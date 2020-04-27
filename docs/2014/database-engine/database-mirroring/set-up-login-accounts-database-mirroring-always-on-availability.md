@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754312"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité AlwaysOn (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754312"
     > [!IMPORTANT]  
     >  Pour créer un environnement plus sécurisé, envisagez d'utiliser des comptes de domaine distincts pour chaque instance de serveur.  
   
-##  <a name="CreateLogin"></a> Créer une connexion pour un compte différent  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a>Créer une connexion pour un compte différent  
  Si deux instances de serveur s'exécutent sous des comptes différents, l'administrateur système doit utiliser l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE LOGIN pour créer une connexion pour le compte de service de démarrage de l'instance distante de chaque instance de serveur. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
 > [!IMPORTANT]  
@@ -49,20 +49,20 @@ ms.locfileid: "62754312"
 > [!NOTE]  
 >  Il est possible de se connecter au compte de service réseau en utilisant le compte d'ordinateur plutôt qu'un utilisateur de domaine. Si le compte d'ordinateur est utilisé, il doit être ajouté en tant qu'utilisateur sur l'autre instance de serveur.  
   
-##  <a name="GrantConnect"></a> Accorder l'autorisation CONNECT  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a>Accorder l’autorisation Connect  
  Après avoir créé un nom d'accès sur une instance de serveur, vous devez lui accorder l'autorisation de se connecter au point de terminaison de mise en miroir de bases de données de l'instance de serveur. L'administrateur système accorde l'autorisation de connexion à l'aide d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Pour plus d’informations, consultez [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
--   [Créer un compte de connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Créer une connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
 -   [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [Le point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [Résoudre les problèmes de configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Résoudre les problèmes de configuration groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

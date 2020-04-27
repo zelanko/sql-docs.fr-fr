@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755583"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mise en miroir de base de données et instances de cluster de basculement SQL Server
@@ -53,11 +53,11 @@ ms.locfileid: "62755583"
 ### <a name="high-performance-mode-session"></a>Session en mode hautes performances  
  Si vous envisagez de mettre en miroir une base de données en mode hautes performances, placez le serveur principal sur l'instance cluster de basculement d'un cluster et le serveur miroir sur un serveur non-cluster situé sur un site distant. En cas de basculement du cluster vers un autre nœud, l'instance cluster de basculement continue de fonctionner en tant que serveur principal au cours de la session de mise en miroir. Si le cluster tout entier est confronté à des problèmes, vous pouvez forcer le service sur le serveur miroir.  
   
- **Pour configurer un nouveau cluster de basculement SQL Server**  
+ **Pour configurer un nouveau cluster de basculement SQL Server**  
   
--   [Créer un cluster de basculement SQL Server &#40;d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
- **Pour configurer la mise en miroir de bases de données**  
+ **Pour configurer la mise en miroir des bases de données**  
   
 -   [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   

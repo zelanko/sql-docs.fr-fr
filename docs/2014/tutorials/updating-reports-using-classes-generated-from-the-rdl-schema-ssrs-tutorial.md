@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62746113"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Mise à jour des rapports à l'aide des classes générées à partir du schéma RDL (didacticiel SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "62746113"
 > [!NOTE]  
 >  Les exemples de code fournis dans ce didacticiel risquent d'échouer pour les rapports ne comportant aucune description. L'échec s'explique par l'absence de la propriété de description pour les rapports pour lesquels aucune description n'est spécifiée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Conditions requises  
  Pour exécuter ce didacticiel, vous devez disposer des éléments suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -61,19 +61,19 @@ ms.locfileid: "62746113"
  **Durée estimée pour effectuer ce didacticiel :** 30 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : Création du projet Visual Studio du schéma RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [Leçon 1 : Créer le projet Visual Studio du schéma RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Leçon 2 : génération de classes à partir du schéma RDL à l'aide de l'outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Leçon 2 : Générer des classes à partir du schéma RDL à l’aide de l’outil xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Leçon 3 : chargement d'une définition de rapport à partir du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Leçon 3 : Charger une définition de rapport à partir du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [Leçon 4 : Mise à jour par programme de la définition du rapport](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [Leçon 4 : Mettre à jour la définition du rapport par programmation](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Leçon 5 : publication de la définition du rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Leçon 5 : Publier la définition du rapport sur le serveur de rapports](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
  [Leçon 6 : exécuter l’application de schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

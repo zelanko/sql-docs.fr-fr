@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755351"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
   Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
   
- ##  <a name="InitialConnection"></a>Établissement de la connexion initiale à une session de mise en miroir de bases de données  
+ ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Établissement de la connexion initiale à une session de mise en miroir de bases de données  
  Pour établir la connexion initiale avec une base de données mise en miroir, un client doit fournir une chaîne de connexion contenant au minimum le nom d'une instance de serveur. Ce nom de serveur obligatoire doit identifier l'instance du serveur principal actuel et est appelé *nom du serveur partenaire initial*.  
   
  Éventuellement, la chaîne de connexion peut également fournir le nom d'une autre instance de serveur, qui doit alors identifier l'instance du serveur miroir actuel, à utiliser si le serveur partenaire initial n'est pas disponible lors de la première tentative de connexion. Ce deuxième nom est appelé *nom du partenaire de basculement*.  
@@ -152,7 +152,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a>Algorithme de nouvelle tentative de connexion (pour les connexions TCP/IP)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algorithme de délai entre deux tentatives de connexion (pour les connexions TCP/IP)  
  Pour une connexion TCP/IP, lorsque les noms des deux partenaires sont dans le cache, le fournisseur d'accès aux données se conforme à un algorithme de délai entre deux tentatives de connexion. Ceci s'applique lors de l'établissement de la connexion initiale à la session et lors de la reconnexion lorsqu'une connexion établie a été perdue. Une fois qu'une connexion a été ouverte, la réalisation des opérations de préouverture et d'ouverture de session prend du temps.  
   
 > [!NOTE]  
@@ -170,9 +170,9 @@ Server=123.34.45.56,4724;
   
  Où *PreviousRetryTime* a la valeur 0 au départ.  
   
- Par exemple, si vous utilisez le délai d’expiration de connexion par défaut de 15 secondes, *LoginTimeout* *= 15*. Dans ce cas, les délais entre deux tentatives alloués lors des trois premiers essais sont les suivants :  
+ Par exemple, si vous utilisez le délai d’expiration de connexion par défaut de 15 secondes, *LoginTimeout* *= 15*. Dans ce cas, les délais entre deux tentatives alloués lors des trois premiers essais sont les suivants :  
   
-|Round|Calcul *RetryTime*|Délai entre chaque tentative|  
+|Round|Calcul de*RetryTime*|Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondes|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondes|  
@@ -201,14 +201,13 @@ Server=123.34.45.56,4724;
   
  ![Algorithme de délai entre reprises](../media/dbm-retry-delay-algorithm.gif "Algorithme de délai entre reprises")  
   
-##  <a name="Reconnecting"></a>Reconnexion à une session de mise en miroir de bases de données  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Reconnexion à une session de mise en miroir de bases de données  
  Si une connexion établie à une session de mise en miroir de bases de données échoue pour une raison quelconque, par exemple suite au basculement de mise en miroir de bases de données, et que l'application tente de se reconnecter au serveur initial, le fournisseur d'accès aux données peut essayer de se reconnecter à l'aide du nom du partenaire de basculement stocké dans le cache du client. La reconnexion n'est cependant pas automatique. L'application doit avoir connaissance de l'erreur. Ensuite, elle doit fermer la connexion qui a échoué et en ouvrir une nouvelle à l'aide des mêmes attributs de chaîne de connexion. À ce stade, le fournisseur d'accès aux données redirige la connexion vers le partenaire de basculement. Si l'instance de serveur identifiée par ce nom est actuellement le serveur principal, la tentative de connexion réussit en général. S'il est incertain si une transaction a été validée ou restaurée, l'application doit vérifier son état, de la même façon que lors de la reconnexion à une instance de serveur autonome.  
   
  La reconnexion s'apparente à une connexion initiale pour laquelle la chaîne de connexion a fourni un nom de partenaire de basculement. Si la première tentative de connexion échoue, les tentatives de connexion alternent entre le nom du partenaire initial et le nom du partenaire de basculement jusqu'à ce que le client se connecte au serveur principal ou que le délai d'attente du fournisseur d'accès aux données soit atteint.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vérifie qu’il se connecte à une instance de serveur principal, mais ne vérifie pas si cette instance est le serveur partenaire de l’instance de serveur spécifiée dans le nom de serveur partenaire initial de la chaîne de connexion.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vérifie qu’il se connecte à une instance de serveur principal, mais ne vérifie pas si cette instance est le serveur partenaire de l’instance de serveur spécifiée dans le nom de serveur partenaire initial de la chaîne de connexion.  
   
  Si les connexions utilisent TCP/IP, l'algorithme de délai entre deux tentatives de connexion détermine la durée allouée aux tentatives de connexion à chaque cycle.  
   
@@ -221,7 +220,7 @@ Server=123.34.45.56,4724;
   
  Après avoir été redirigé vers le partenaire de basculement, un client peut rencontrer des résultats inattendus lors de l'utilisation d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] USE pour utiliser une base de données différente. Cela peut se produire si l'instance de serveur principal actuelle (le partenaire de basculement) possède un ensemble de bases de données différent du serveur principal d'origine (le partenaire initial).  
   
-##  <a name="StalePartnerName"></a>Impact d’un nom de partenaire de basculement obsolète  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> Impact d'un nom de partenaire de basculement obsolète  
  L'administrateur de base de données peut modifier le partenaire de basculement à tout moment. C’est pourquoi un nom de partenaire de basculement fourni par le client peut être périmé ou *obsolète*. Prenons par exemple un partenaire de basculement nommé Partner_B qui est remplacé par une autre instance de serveur nommée Partner_C. Si un client fournit Partner_B comme nom de partenaire de basculement, ce nom est obsolète. Quand le nom du partenaire de basculement fourni par le client est obsolète, le comportement du fournisseur d'accès aux données est identique à celui adopté lorsque le nom du partenaire de basculement n'est pas fourni par le client.  
   
  Par exemple, imaginons une situation dans laquelle un client utilise une chaîne de connexion unique pour une série de quatre tentatives de connexion. Dans la chaîne de connexion, le nom du serveur partenaire initial est Partner_A et le nom du partenaire de basculement est Partner_B :  

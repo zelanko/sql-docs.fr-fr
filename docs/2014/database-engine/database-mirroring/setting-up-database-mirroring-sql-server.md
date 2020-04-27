@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754454"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configuration de la mise en miroir de bases de données (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754454"
   
  
   
-##  <a name="PrepareInstances"></a> Préparation d'une instance de serveur pour héberger un serveur miroir  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Préparation d'une instance de serveur pour héberger un serveur miroir  
  Pour chaque session de mise en miroir de bases de données :  
   
 1.  Le serveur principal, le serveur miroir et le serveur témoin, le cas échéant, doivent être hébergés par des instances de serveur distinctes, chacune devant se trouver sur des systèmes hôtes distincts. Chacune des instances de serveur nécessite un point de terminaison de mise en miroir de bases de données. Si vous devez créer un point de terminaison de mise en miroir de bases de données, vérifiez qu'il est accessible aux autres instances de serveur.  
@@ -48,7 +48,7 @@ ms.locfileid: "62754454"
   
 3.  Sur l'instance de serveur qui hébergera la base de données miroir, configurez le reste de l'environnement requis pour la base de données mise en miroir. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Vue d'ensemble : établissement d'une session de mise en miroir de bases de données  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Vue d'ensemble : établissement d'une session de mise en miroir de bases de données  
  Les étapes de base pour établir une session de mise en miroir sont les suivantes :  
   
 1.  Créez la base de données miroir en restaurant les sauvegardes suivantes, à l'aide de RESTORE WITH NORECOVERY sur chaque opération de restauration :  
@@ -99,7 +99,7 @@ ms.locfileid: "62754454"
   
  
   
-##  <a name="InThisSection"></a> Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Résume les étapes de la création d'une base de données miroir ou de la préparation d'une base de données miroir avant la reprise d'une session suspendue. Fournit également des liens vers des articles de procédure.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754454"
  [Configurer des comptes de connexion pour la mise en miroir de bases de données ou groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Décrit la création d'une connexion pour une instance de serveur distant qui n'utilise pas le même compte que l'instance de serveur local.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **SQL Server Management Studio**  
   
 -   [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

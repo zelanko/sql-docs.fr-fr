@@ -14,20 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755241"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Se connecter au serveur (page Propriétés de connexion) Integration Services
-  Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou d’dansscription de [!INCLUDE[ssIS](../includes/ssis-md.md)] dans **Serveurs inscrits**. **Se connecter** et **options** s’affichent uniquement dans cette boîte de dialogue lors de la connexion. **Test** et **enregistrement** s’affichent uniquement dans cette boîte de [!INCLUDE[ssIS](../includes/ssis-md.md)]dialogue lors de l’inscription.  
+  Utilisez cet onglet pour afficher ou spécifier des options lors de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] la connexion [!INCLUDE[ssIS](../includes/ssis-md.md)] ou de l’inscription à des **serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 ## <a name="options"></a>Options  
  **Numéro de port**  
  Entrez le numéro de port utilisé par [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
- **Délai d’expiration de la connexion**  
+ **Expiration du délai de connexion**  
  Entrez le nombre de secondes d’attente de l’établissement d’une connexion avant expiration du délai d’attente. La valeur par défaut est 15 secondes.  
   
  **Délai d’exécution**  
@@ -45,7 +45,7 @@ ms.locfileid: "62755241"
  **Test**  
  Quand vous inscrivez [!INCLUDE[ssIS](../includes/ssis-md.md)] dans **Serveurs inscrits**, cliquez ici pour tester la connexion.  
   
- **Été**  
+ **Save**  
  Enregistre les paramètres dans **Serveurs inscrits**.  
   
   

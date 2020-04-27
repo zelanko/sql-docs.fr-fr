@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755052"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Moniteur de mise en miroir de bases de données (Page Avertissements)
   Affiche une liste, accessible en lecture seule, d'avertissements pris en charge lors d'événements de mise en miroir de bases de données, ainsi que les valeurs de seuil spécifiées pour les avertissements, si disponible.  
   
- **Pour utiliser SQL Server Management Studio pour surveiller la mise en miroir de bases de données**  
+ **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -37,18 +37,18 @@ ms.locfileid: "62755052"
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de durée et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Spécifie, en millisecondes, le délai moyen par transaction au terme duquel un avertissement est généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|  
   
- **Seuil à «** _<server_instance>_ **»**  
+ **Seuil à «**   _&lt;instance_serveur_   **»**  
  Pour chaque avertissement, affiche le cas échéant le seuil spécifié par l'utilisateur actuel pour l'une des instances de serveurs. Le nom complet de l'instance de serveur est spécifié dans l'en-tête de colonne correspondante.  
   
  Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
   
- **Définir des seuils**  
+ **Définir les seuils**  
  Cliquez sur ce bouton pour définir un seuil par avertissement sur chaque partenaire de basculement.  
   
  Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
   
 ## <a name="remarks"></a>Notes  
- Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** _<nom_système>_ ou **Non connecté à** _nom_système_**\\**_<nom_instance>_, selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données...**.  
+ Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** _<NOM_SYSTÈME>_ ou **Non connecté à** _<NOM_SYSTÈME>_ **\\** _<nom_instance>_ , selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données...** .  
   
  Quand des informations sont disponibles, la cellule correspondant à chaque avertissement affiche une valeur de seuil spécifique (ainsi qu’une unité de mesure) ou le texte **Non activé**.  
   

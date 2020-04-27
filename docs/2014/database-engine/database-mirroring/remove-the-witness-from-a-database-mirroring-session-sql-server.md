@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754676"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Supprimer le témoin d'une session de mise en miroir de bases de données (SQL Server)
@@ -30,22 +30,22 @@ ms.locfileid: "62754676"
   
      [Sécurité](#Security)  
   
--   **Pour remplacer supprimer le témoin, utilisez :**  
+-   **Pour supprimer le témoin, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [après avoir supprimé le témoin](#FollowUp)  
+-   **Suivi :**  [Après avoir supprimé le témoin](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>Pour supprimer le témoin  
   
@@ -53,14 +53,14 @@ ms.locfileid: "62754676"
   
 2.  Développez **Bases de données**, puis sélectionnez la base de données dont vous souhaitez supprimer le témoin.  
   
-3.  Cliquez avec le bouton droit sur la base de données, sélectionnez **Tâches**, puis cliquez sur **Miroir**. La page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** s'affiche.  
+3.  Cliquez avec le bouton droit sur la base de données, sélectionnez **Tâches**, puis cliquez sur **Miroir**. La page **mise en miroir** de la boîte de dialogue **Propriétés de la base de données** s’ouvre.  
   
 4.  Pour supprimer le témoin, supprimez son adresse réseau de serveur du champ **Témoin** .  
   
     > [!NOTE]  
     >  Si vous passez du mode de sécurité élevée avec basculement automatique au mode haute performance, le champ **Témoin** est automatiquement supprimé.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>Pour supprimer le témoin  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754676"
   
 3.  Émettez l'instruction suivante :  
   
-     [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* SET WITNESS désactivé  
+     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *nom_base_de_données* SET WITNESS OFF  
   
      où *nom_base_de_données* est le nom de la base de données en miroir.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754676"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>Suivi : après avoir supprimé le témoin  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a>Suivi : après avoir supprimé le témoin  
  La désactivation du témoin modifie le [mode d’opération](database-mirroring-operating-modes.md)conformément au paramètre de sécurité des transactions :  
   
 -   Si la sécurité des transactions a la valeur FULL (valeur par défaut), la session utilise le mode synchrone haute sécurité sans basculement automatique.  
@@ -90,7 +90,7 @@ ms.locfileid: "62754676"
 > [!TIP]  
 >  Le paramètre de sécurité des transactions de la base de données est enregistré pour chaque serveur partenaire dans la vue de catalogue [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) des colonnes **mirroring_safety_level** et **mirroring_safety_level_desc**.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Ajouter un témoin de mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
