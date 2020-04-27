@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070180"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Volet Résultats (vue Prévision de modèle d'exploration de données)
@@ -24,7 +24,7 @@ ms.locfileid: "66070180"
   
 ## <a name="options"></a>Options  
  **Basculer vers l'affichage de conception de requête**  
- Cliquez pour basculer entre les volets **Conception**, **Requête**et **Résultat** .  
+ Sélectionnez cette option pour basculer entre les volets **Conception**, **Requête**et **Résultat** .  
   
  **Enregistrer les résultats de la requête**  
  Ouvre la boîte de dialogue **Enregistrer le résultat de la requête d’exploration de données** .  
@@ -38,6 +38,6 @@ ms.locfileid: "66070180"
 ## <a name="see-also"></a>Voir aussi  
  [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
- [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

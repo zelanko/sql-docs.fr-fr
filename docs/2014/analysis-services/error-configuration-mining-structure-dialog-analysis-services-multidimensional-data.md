@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081372"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configuration d'erreur (boîte de dialogue Structure d'exploration de données) (Analysis Services - Données multidimensionnelles)
@@ -29,9 +29,9 @@ ms.locfileid: "66081372"
  **Action de l’erreur de clé**  
  Choisissez l'une des actions suivantes qui se produit lorsqu'une nouvelle clé est détectée lors du traitement sans recherche possible :  
   
--   **Convertir en données inconnues** agrège les informations de l’enregistrement dans le membre inconnu.  
+-   L'option**Convertir en clé inconnue** agrège les informations de l'enregistrement dans le membre inconnu.  
   
--   **Ignorer l’enregistrement** exclut les informations de l’enregistrement du traitement de l’objet.  
+-   L'option**Annuler l'enregistrement** empêche le traitement des informations de l'enregistrement, avec cet objet.  
   
  **Ignorer le nombre d’erreurs**  
  Cliquez sur cette option pour ignorer les erreurs qui se produisent lors du traitement.  
@@ -42,12 +42,12 @@ ms.locfileid: "66081372"
  **Nombre d’erreurs**  
  Tapez le nombre d'erreurs à ignorer avant l'arrêt du traitement.  
   
- **Action en cas d’erreur**  
+ **Action pour l'erreur**  
  Choisissez l’une des actions suivantes à effectuer quand le nombre d’erreurs dépasse la valeur spécifiée dans **Nombre d’erreurs**:  
   
--   **Arrêter le traitement** met fin à l’opération de traitement.  
+-   L'option**Arrêter le traitement** met un terme au traitement.  
   
--   **Arrêter la journalisation** arrête l’enregistrement des erreurs, mais poursuit l’opération de traitement.  
+-   L'option**Arrêter l'inscription dans le journal** arrête l'inscription des erreurs dans le journal mais elle continue le traitement.  
   
  **Clé introuvable**  
  Spécifiez une des actions suivantes à effectuer lorsqu'une clé est introuvable pendant le traitement d'un objet :  
@@ -56,7 +56,7 @@ ms.locfileid: "66081372"
   
 -   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
+-   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
   
  **Clé dupliquée**  
  Spécifiez une des actions suivantes à effectuer lorsqu'une clé dupliquée est trouvée pendant le traitement d'un objet :  
@@ -65,27 +65,27 @@ ms.locfileid: "66081372"
   
 -   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
+-   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
   
- **Clé null convertie en clé inconnue**  
+ **Clé NULL convertie en clé inconnue**  
  Spécifiez une des actions suivantes à effectuer lorsqu'un membre NULL est ajouté au membre inconnu pendant le traitement d'un objet :  
   
 -   **Ignorer l’erreur** ignore l’erreur  
   
 -   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
+-   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
   
- **Clé null non autorisée**  
+ **Clé NULL non autorisée**  
  Spécifiez une des actions suivantes à effectuer lorsqu'une clé NULL est trouvée, mais non autorisée, pendant le traitement d'un objet :  
   
 -   **Ignorer l’erreur** ignore l’erreur  
   
 -   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
+-   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
   
- **Chemin du journal des erreurs**  
+ **Chemin d'accès du journal des erreurs**  
  Tapez le chemin d'accès et le nom complets du fichier journal d'erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  

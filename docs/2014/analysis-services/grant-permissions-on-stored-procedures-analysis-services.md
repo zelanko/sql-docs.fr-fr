@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080729"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Accorder des autorisations sur des procédures stockées (Analysis Services)
@@ -25,8 +25,7 @@ ms.locfileid: "66080729"
 ## <a name="security-context-for-stored-procedure-execution"></a>Contexte de sécurité pour l'exécution des procédures stockées  
  N'importe quel utilisateur peut appeler une procédure stockée. En fonction la manière dont la procédure stockée a été configurée, elle peut s'exécuter dans le contexte de l'utilisateur qui appelle la procédure ou dans le contexte d'un utilisateur anonyme. Étant donné qu'un utilisateur anonyme n'a pas de contexte de sécurité, utilisez cette fonctionnalité conjointement avec la configuration de l'instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour autoriser les accès anonymes.  
   
- Entre le moment où l'utilisateur appelle une procédure stockée et l'exécution, par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], de cette dernière, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] évalue les actions incluses dans la procédure stockée. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] évalue les actions incluses dans la procédure stockée, en se basant sur l'intersection des autorisations accordées à l'utilisateur et du jeu d'autorisations utilisé pour exécuter la procédure. Si la procédure stockée contient une action qui ne peut pas être exécutée par le rôle de base de données de l'utilisateur, l'action n'est pas exécutée.  
+ Entre le moment où l'utilisateur appelle une procédure stockée et l'exécution, par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], de cette dernière, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] évalue les actions incluses dans la procédure stockée. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] évalue les actions incluses dans la procédure stockée, en se basant sur l'intersection des autorisations accordées à l'utilisateur et du jeu d'autorisations utilisé pour exécuter la procédure. Si la procédure stockée contient une action qui ne peut pas être exécutée par le rôle de base de données de l'utilisateur, l'action n'est pas exécutée.  
   
  Les jeux d'autorisations utilisés pour exécuter les procédures stockées sont répertoriés ci-dessous :  
   

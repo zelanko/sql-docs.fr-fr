@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077463"
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
@@ -63,14 +63,14 @@ ms.locfileid: "66077463"
   
         |Option|Description|  
         |------------|-----------------|  
-        |Interactive|L'action est générée par l'intervention de l'utilisateur.|  
+        |Interactive (Interactif)|L'action est générée par l'intervention de l'utilisateur.|  
         |Batch|L'action s'exécute en tant que traitement par lots.|  
         |À l'ouverture|L'action s'exécute lorsqu'un utilisateur ouvre le cube.|  
   
     -   Dans **Application**, tapez le nom de l'application associée à l'action. Par exemple, si vous créez une action qui amène un utilisateur vers un site Web spécifique, l'application associée à cette action doit être Microsoft Internet Explorer ou un autre navigateur Web.  
   
         > [!NOTE]  
-        >  Les actions propriétaires ne sont pas retournées au serveur, sauf si l’application cliente restreint explicitement l’ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
+        >   Les actions propriétaires ne sont pas retournées au serveur sauf si l'application cliente restreint explicitement l'ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
   
     -   Dans **contenu**de l’action, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, parhttp://www.adventure-works.comexemple, "".  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072897"
 ---
 # <a name="set-partition-writeback"></a>Définir l'écriture différée de partition
@@ -62,6 +62,6 @@ ms.locfileid: "66072897"
 ## <a name="see-also"></a>Voir aussi  
  [Partitions activées en écriture](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Activation de l’écriture différée sur un cube OLAP au niveau de la cellule dans Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Activation et sécurisation de l’entrée de données avec Analysis Services écriture différée](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Activation et sécurisation de l’entrée de données avec écriture différée d’Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

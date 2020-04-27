@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076106"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes dans les modèles multidimensionnels
@@ -34,12 +34,12 @@ ms.locfileid: "66076106"
 |Élément|Description|  
 |-------------|-----------------|  
 |Dimensions|[Dimensions dans les modèles multidimensionnels](dimensions-in-multidimensional-models.md)|  
-|Mesures et groupes de mesures|[Créer des mesures et des groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|Mesures et groupes de mesures|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partitions|[Partitions dans les modèles multidimensionnels](partitions-in-multidimensional-models.md)|  
 |perspectives|[Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)|  
-|Hierarchies|[Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)|  
+|Hierarchies|[Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)|  
 |Actions|[Actions dans les modèles multidimensionnels](actions-in-multidimensional-models.md)|  
-|Indicateurs de performance clés (KPI)|[Indicateurs de performance clés &#40;&#41; KPI dans les modèles multidimensionnels](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Indicateurs de performance clés (KPI)|[Indicateurs de performance clés &#40;KPI&#41; dans les modèles multidimensionnels](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calculs|[Calculs dans les modèles multidimensionnels](calculations-in-multidimensional-models.md)|  
 |Translations|[Traductions dans les modèles multidimensionnels](translations-in-multidimensional-models-analysis-services.md)|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66076106"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer un cube à l'aide de l'Assistant Cube](create-a-cube-using-the-cube-wizard.md)|Décrit comment utiliser l'Assistant Cube pour définir un cube, des dimensions, des attributs de dimension et des hiérarchies définies par l'utilisateur.|  
-|[Créer des mesures et des groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Décrit comment définir des groupes de mesures.|  
+|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Décrit comment définir des groupes de mesures.|  
 |[Calculs dans les modèles multidimensionnels](calculations-in-multidimensional-models.md)|Décrit comment définir et configurer un calcul dans un script MDX.|  
 |[Actions dans les modèles multidimensionnels](actions-in-multidimensional-models.md)|Décrit comment définir et configurer une action.|  
 |[Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)|Décrit comment définir et configurer une perspective.|  

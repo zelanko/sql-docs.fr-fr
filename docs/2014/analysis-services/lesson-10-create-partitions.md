@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079198"
 ---
 # <a name="lesson-11-create-partitions"></a>Leçon 11 : Créer des partitions
@@ -22,14 +22,14 @@ ms.locfileid: "66079198"
   
  Durée estimée pour suivre cette leçon : **15 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Créer des partitions  
   
 #### <a name="to-create-partitions-in-the-internet-sales-table"></a>Pour créer des partitions dans la table Internet Sales  
   
-1.  Dans le Générateur de modèles, cliquez sur la table **Internet Sales**, sur le menu **Table**, puis sur **Partitions**.  
+1.  Dans le Générateur de modèles, cliquez sur la table **Internet Sales** , sur le menu **Table** , puis sur **Partitions**.  
   
      La boîte de dialogue **Gestionnaire de partition** s’ouvre.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66079198"
   
      Étant donné que vous souhaitez que la partition inclue uniquement les lignes appartenant à une certaine période, vous devez inclure une clause WHERE. Vous pouvez créer une clause WHERE uniquement à l'aide d'une instruction SQL.  
   
-5.  Dans le champ **Instruction SQL**, remplacez l’instruction existante en collant l’instruction suivante :  
+5.  Dans le champ **Instruction SQL** , remplacez l’instruction existante en collant l’instruction suivante :  
   
     ```  
     SELECT   
@@ -95,7 +95,7 @@ ms.locfileid: "66079198"
   
 #### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>Pour créer une partition pour l’année 2007 dans la table Internet Sales  
   
-1.  Dans la boîte de dialogue **Gestionnaire de partition**, cliquez sur **Copier**.  
+1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Copier**.  
   
 2.  Dans **nom**de la partition `Internet Sales 2007`, tapez.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66079198"
   
 #### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Pour créer une partition pour l’année 2008 dans la table Internet Sales  
   
-1.  Dans la boîte de dialogue **Gestionnaire de partition**, cliquez sur **Nouveau**.  
+1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Nouveau**.  
   
 2.  Dans **nom**de la partition `Internet Sales 2008`, tapez.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66079198"
   
 #### <a name="to-create-a-partition-for-the-2009-year-in-the-internet-sales-table"></a>Pour créer une partition pour l'année 2009 dans la table Internet Sales  
   
-1.  Dans la boîte de dialogue **Gestionnaire de partition**, cliquez sur **Nouveau**.  
+1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Nouveau**.  
   
 2.  Dans **nom**de la partition `Internet Sales 2009`, tapez.  
   
@@ -136,21 +136,21 @@ ms.locfileid: "66079198"
     ```  
   
 ## <a name="process-partitions"></a>Traiter les partitions  
- Dans la boîte de dialogue **Gestionnaire de partition**, notez l’astérisque (**\***) en regard des noms de partition pour chacune des partitions que vous venez de créer. Cela indique que la partition n'a pas été traitée (actualisée). Lorsque vous créez de nouvelles partitions, vous devez exécuter une opération « Traiter les partitions » ou « Traiter la table » pour actualiser les données dans ces partitions.  
+ Dans la boîte de dialogue **Gestionnaire de partition** , notez l’astérisque (**\***) en regard des noms de partition pour chacune des partitions que vous venez de créer. Cela indique que la partition n'a pas été traitée (actualisée). Lorsque vous créez de nouvelles partitions, vous devez exécuter une opération « Traiter les partitions » ou « Traiter la table » pour actualiser les données dans ces partitions.  
   
 #### <a name="to-process-internet-sales-partitions"></a>Pour traiter les partitions Internet Sales  
   
-1.  Cliquez sur **OK** pour fermer la boîte de dialogue **Gestionnaire de partition**.  
+1.  Cliquez sur **OK** pour fermer la boîte de dialogue **Gestionnaire de partition** .  
   
-2.  Dans le Concepteur de modèles, cliquez sur la table **Internet Sales**, cliquez sur le menu **Modèle**, puis pointez sur **Traiter** (Actualiser) et enfin, cliquez sur **Traiter les partitions**.  
+2.  Dans le Concepteur de modèles, cliquez sur la table **Internet Sales** , cliquez sur le menu **Modèle** , puis pointez sur **Traiter** (Actualiser) et enfin, cliquez sur **Traiter les partitions**.  
   
-3.  Dans la boîte de dialogue **Traiter les partitions**, vérifiez que le **Mode** est défini sur **Traiter par défaut**.  
+3.  Dans la boîte de dialogue **Traiter les partitions** , vérifiez que le **Mode** est défini sur **Traiter par défaut**.  
   
 4.  Cochez la case située dans la colonne **Processus** pour chacune des cinq partitions que vous avez créées, puis cliquez sur **OK**.  
   
      Si vous êtes invité à fournir les informations d'emprunt d'identité, entrez le nom d'utilisateur Windows et le mot de passe spécifiés dans la leçon 2, étape 6.  
   
-     La boîte de dialogue **traitement des données** apparaît et affiche les détails du processus pour chaque partition. Notez que le nombre de lignes transférées est différent pour chaque partition. Cela s’explique par le fait que chaque partition contient uniquement les lignes de l’année spécifiée dans la clause WHERE de l’instruction SQL. Il n'y a pas de données pour l'année 2010.  
+     La boîte de dialogue **traitement des données** apparaît et affiche les détails du processus pour chaque partition. Notez qu'un nombre de lignes différent est transféré pour chaque partition. Cela est dû au fait que chaque partition contient uniquement les lignes de l'année spécifiée dans la clause WHERE dans l'instruction SQL. Il n'y a pas de données pour l'année 2010.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 12 : Créer des rôles](lesson-11-create-roles.md).  

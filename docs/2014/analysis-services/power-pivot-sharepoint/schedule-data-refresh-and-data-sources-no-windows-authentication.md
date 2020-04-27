@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071154"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualisation planifiée des données et sources de données qui ne prennent pas en charge l'authentification Windows (PowerPivot pour SharePoint)
@@ -24,19 +24,19 @@ ms.locfileid: "66071154"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Vue d’ensemble :** Créez deux applications cibles de stockage sécurisé. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
+ **Présentation :** créer deux applications cibles Banque d'informations sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh :** ID d’application cible du magasin sécurisé défini avec l’authentification Windows.  
+-   **(1) PowerPivotDatarefresh :** ID d’application cible de la Banque d’informations sécurisées qui est défini avec l’authentification Windows.  
   
--   **(2) OracleAuthentication :** ID d’application cible du magasin sécurisé défini avec les informations d’identification Oracle.  
+-   **(2) OracleAuthentication :** ID d’application cible de la Banque d’informations sécurisées qui est défini avec les informations d’identification Oracle.  
   
 -   **(3)** l’application de service PowerPivot est configurée pour utiliser l’application cible « PowerPivotDataRefresh » pour le **compte d’actualisation des données sans assistance**.  
   
--   **(4)** le classeur PowerPivot utilise des données Oracle. Les paramètres d’actualisation du classeur spécifient que la connexion de source de données utilise l’application cible **(2)** pour les informations d’identification.  
+-   **(4)** Le classeur PowerPivot utilise des données Oracle. Les paramètres d’actualisation du classeur spécifient que la connexion de source de données utilise l’application cible **(2)** pour les informations d’identification.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Présence d'une application de service PowerPivot.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66071154"
   
 ## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>Pour créer un ID d'application cible qui utilise l'authentification Windows  
   
-1.  Dans l'administration centrale de SharePoint, cliquez sur **Gérer les applications de service**.  
+1.  Dans l’administration centrale de SharePoint, cliquez sur **gérer les applications de service**.  
   
 2.  Cliquez sur le nom de votre application de service Banque d'informations sécurisées.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "66071154"
   
 4.  Sur la page **Créer une nouvelle application cible du magasin sécurisé** , configurez les valeurs suivantes :  
   
-    -   **ID de l’application cible :** PowerPivotDataRefresh.  
+    -   **ID de l'application cible :** PowerPivotDataRefresh.  
   
-    -   **Nom complet :** PowerPivotDataRefresh.  
+    -   **Nom complet :** PowerPivotDataRefresh.  
   
-    -   **Adresse de messagerie du contact :** ?  
+    -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d’application cible :** Communauté.  
+    -   **Type d'application cible :** Groupe.  
   
-    -   **URL de la page d’application cible :** None.  
+    -   **URL de la page de l'application cible :** aucune.  
   
 5.  Cliquez sur **Suivant**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66071154"
   
 ## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>Pour créer un ID d'application cible qui utilise les informations d'identification Oracle  
   
-1.  Dans l'administration centrale de SharePoint, cliquez sur **Gérer les applications de service**.  
+1.  Dans l’administration centrale de SharePoint, cliquez sur **gérer les applications de service**.  
   
 2.  Cliquez sur le nom de votre application de service Banque d'informations sécurisées.  
   
@@ -88,15 +88,15 @@ ms.locfileid: "66071154"
   
 4.  Sur la page **Créer une nouvelle application cible du magasin sécurisé** , configurez les valeurs suivantes :  
   
-    -   **ID de l’application cible :** OracleAuthentication.  
+    -   **ID de l'application cible :** OracleAuthentication.  
   
-    -   **Nom complet :** OracleAuthentication.  
+    -   **Nom complet :** OracleAuthentication.  
   
-    -   **Adresse de messagerie du contact :** ?  
+    -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d’application cible :** Communauté.  
+    -   **Type d'application cible :** Groupe.  
   
-    -   **URL de la page d’application cible :** None.  
+    -   **URL de la page de l'application cible :** aucune.  
   
 5.  Cliquez sur **Suivant**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66071154"
   
 ## <a name="more-information"></a>Informations complémentaires  
   
--   [Configurez le service Banque d’informations sécurisé dans SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configurer le service Banque d'informations sécurisé dans SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
 -   Consultez la section « actualisation planifiée des données » de la rubrique [actualisation des données PowerPivot avec SharePoint 2013 et SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   

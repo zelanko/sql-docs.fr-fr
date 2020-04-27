@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075349"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Spécification des options de déploiement de partitions et de rôles
@@ -41,7 +41,7 @@ ms.locfileid: "66075349"
 > [!NOTE]  
 >  Si le groupe de mesures dans lequel existe la partition est supprimé, la partition est supprimée automatiquement.  
   
- **Options de déploiement de rôle**  
+ **Options de déploiement de rôles**  
  Le \< *nom du projet*> fichier. deploymentoptions spécifie l’une des options de déploiement de rôle suivantes :  
   
 -   Les rôles et les membres de rôle existant dans la base de données de destination sont conservés, et seuls les nouveaux rôles et membres de rôle sont déployés.  
@@ -50,7 +50,7 @@ ms.locfileid: "66075349"
   
 -   Les rôles et les membres de rôle existant dans la base de données de destination sont conservés, et aucun nouveau rôle n'est déployé.  
   
--   **Remarque** Lorsque les rôles et les membres existants sont conservés, les autorisations associées à ces rôles sont réinitialisées sur aucun. Les autorisations de sécurité sont contenues dans les objets qu'elles sécurisent, et non dans les rôles de sécurité auxquels elles sont associées. Pour plus d’informations sur l’utilisation de ce comportement à l’aide de l’Assistant Déploiement d’Analysis Services, consultez la rubrique relative à la conservation des rôles et des membres dans la base de connaissances Microsoft.  
+-   **Remarque** Lorsque des membres et des rôles existants sont conservés, les autorisations associées à ces rôles sont réinitialisées à Aucune autorisation. Les autorisations de sécurité sont contenues dans les objets qu'elles sécurisent, et non dans les rôles de sécurité auxquels elles sont associées. Pour plus d’informations sur l’utilisation de ce comportement à l’aide de l’Assistant Déploiement d’Analysis Services, consultez la rubrique relative à la conservation des rôles et des membres dans la base de connaissances Microsoft.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modification des options de déploiement de partitions et de rôles  
  Vous devrez peut-être déployer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le projet en utilisant des options de partitions et de rôles différentes \<de celles stockées dans le *nom du projet*> fichier. deploymentoptions. Par exemple, vous souhaiterez peut-être conserver les partitions, rôles et membres de rôle existants, au lieu de remplacer l’ensemble des partitions, rôles et membres existants, \<comme indiqué dans le *nom du projet*> fichier. deploymentoptions.  

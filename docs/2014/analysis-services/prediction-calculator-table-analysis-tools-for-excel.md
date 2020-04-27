@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070858"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcul de prédiction (Outils d'analyse de table pour Excel)
@@ -58,7 +58,7 @@ ms.locfileid: "66070858"
   
      L'outil crée de nouvelles feuilles de calcul qui contiennent les rapports et les tableaux de bord.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  L’outil **calcul de prédiction** utilise l’algorithme de régression logistique de Microsoft, qui peut utiliser des valeurs discrètes, ainsi que des données numériques discrètes et continues.  
   
 ## <a name="understanding-the-scoring-reports"></a>Présentation des rapports de score  
@@ -101,8 +101,8 @@ ms.locfileid: "66070858"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Unique|71|  
-|Sexe|Féminin|13|  
-|Sexe|Masculin|0|  
+|Sexe|Female|13|  
+|Sexe|Male|0|  
   
  Vous pouvez interpréter ces facteurs comme suit :  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070858"
 |Attribut|Valeur|Impact relatif|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
-|Sexe|Masculin|0|  
+|Sexe|Male|0|  
 |Revenu|39050-71062|117|  
 |Children|0|157|  
 |Formation|Célibataires|22|  
@@ -175,8 +175,7 @@ ms.locfileid: "66070858"
 8.  Convertissez le score en résultat prédit à l’aide des critères imprimés sur la feuille juste après la ligne **totale** .  
   
 ## <a name="related-tools"></a>Outils connexes  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit l'algorithme MLR (Microsoft Logistic Regression) pour une utilisation dans ce type d'analyse. Si vous êtes déjà familiarisé avec la régression logistique, vous pouvez facilement créer des modèles de régression logistique à l’aide de l’option **avancé** du client d’exploration de données pour Excel. Pour plus d’informations, consultez [modélisation avancée &#40;compléments d’exploration de données pour Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Pour plus d’informations sur les options et les paramètres pour les modèles de régression logistique, consultez la rubrique « algorithme de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] régression logistique Microsoft » dans la documentation en ligne de.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit l'algorithme MLR (Microsoft Logistic Regression) pour une utilisation dans ce type d'analyse. Si vous êtes déjà familiarisé avec la régression logistique, vous pouvez facilement créer des modèles de régression logistique à l’aide de l’option **avancé** du client d’exploration de données pour Excel. Pour plus d’informations, consultez [modélisation avancée &#40;compléments d’exploration de données pour Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Pour plus d’informations sur les options et les paramètres pour les modèles de régression logistique, consultez la rubrique « algorithme de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] régression logistique Microsoft » dans la documentation en ligne de.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d'analyse de table pour Excel](table-analysis-tools-for-excel.md)  

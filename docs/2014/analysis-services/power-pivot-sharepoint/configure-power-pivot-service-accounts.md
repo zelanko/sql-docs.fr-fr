@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071857"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configuration des comptes de service PowerPivot
@@ -32,17 +32,17 @@ ms.locfileid: "66071857"
   
  [Mettre à jour un mot de passe arrivé à expiration pour l'application de service PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
- [Modifier le compte sous lequel chaque service s’exécute](#bkmk_newacct)  
+ [Modifier le compte sous lequel chaque service s'exécute](#bkmk_newacct)  
   
  [Créer ou modifier le pool d'applications pour une application de service PowerPivot](#bkmk_appPool)  
   
- [Exigences relatives au compte et autorisations](#requirements)  
+ [Spécifications relatives aux comptes et autorisations](#requirements)  
   
- [Résolution des problèmes : accorder des autorisations administratives manuellement](#updatemanually)  
+ [Dépannage : accorder des autorisations administratives manuellement](#updatemanually)  
   
- [Résolution des problèmes : résoudre les erreurs HTTP 503 en raison des mots de passe expirés pour l’administration centrale ou le service d’application Web SharePoint Foundation](#expired)  
+ [Dépannage : résoudre les erreurs HTTP 503 dues à des mots de passe expirés pour l'Administration centrale ou le service de l'application Web de SharePoint Foundation](#expired)  
   
-##  <a name="bkmk_passwordssas"></a>Mettre à jour un mot de passe expiré pour une instance de SQL Server Analysis Services (PowerPivot)  
+##  <a name="update-an-expired-password-for-sql-server-analysis-services-powerpivot-instance"></a><a name="bkmk_passwordssas"></a>Mettre à jour un mot de passe expiré pour une instance de SQL Server Analysis Services (PowerPivot)  
   
 1.  Pointez sur Démarrer, cliquez sur **Outils d'administration**, puis cliquez sur **Services**. Double-cliquez sur **SQL Server Analysis Services (PowerPivot)**. Cliquez sur **Ouvrir une session**, puis tapez le nouveau mot de passe pour le compte.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66071857"
   
 5.  Sélectionnez **Attribuer une nouvelle valeur au mot de passe du compte**. Tous les services qui s'exécutent sous le compte géré utilisent les informations d'identification mises à jour.  
   
-##  <a name="bkmk_passwordapp"></a>Mettre à jour un mot de passe arrivé à expiration pour l’application de service PowerPivot  
+##  <a name="update-an-expired-password-for-the-powerpivot-service-application"></a><a name="bkmk_passwordapp"></a>Mettre à jour un mot de passe arrivé à expiration pour l’application de service PowerPivot  
   
 1.  Dans Administration centrale, dans la section Sécurité, cliquez sur **Configurer les comptes gérés**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66071857"
   
 4.  Sélectionnez **Attribuer une nouvelle valeur au mot de passe du compte**. Tous les services qui s'exécutent sous le compte géré utilisent les informations d'identification mises à jour.  
   
-##  <a name="bkmk_newacct"></a>Modifier le compte sous lequel chaque service s’exécute  
+##  <a name="change-the-account-under-which-each-service-runs"></a><a name="bkmk_newacct"></a>Modifier le compte sous lequel chaque service s’exécute  
   
 1.  Dans Administration centrale, dans la section Sécurité, cliquez sur **Configurer les comptes de service**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66071857"
   
 6.  Cliquez sur **OK**.  
   
-##  <a name="bkmk_appPool"></a>Créer ou modifier le pool d’applications pour une application de service PowerPivot  
+##  <a name="create-or-change-the-application-pool-for-a-powerpivot-service-application"></a><a name="bkmk_appPool"></a>Créer ou modifier le pool d’applications pour une application de service PowerPivot  
   
 1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66071857"
   
 4.  Sélectionnez **Créer un nouveau pool d'applications**. Spécifiez un nom pour le pool d'applications et un compte géré pour son identité.  
   
-##  <a name="requirements"></a>Exigences relatives au compte et autorisations  
+##  <a name="account-requirements-and-permissions"></a><a name="requirements"></a>Exigences relatives au compte et autorisations  
  Lorsque vous planifiez un déploiement PowerPivot pour SharePoint, vous devez planifier les comptes de service ci-dessous.  
   
 -   Compte de service Analysis Services. Analysis Services traite les requêtes PowerPivot et les travaux d'actualisation des données de la batterie de serveurs. Ce compte est toujours spécifié lors de l'installation de SQL Server lorsque vous installez PowerPivot pour SharePoint.  
@@ -113,9 +113,9 @@ ms.locfileid: "66071857"
 |Spécification relative à la configuration|Le service système PowerPivot est une ressource partagée de la batterie de serveurs qui devient disponible lorsque vous créez une application de service. Le pool d'applications de service doit être spécifié lors de la création de l'application de service. Il peut être spécifié de deux façons, soit à l'aide de l'outil de configuration de PowerPivot, soit par le biais de commandes PowerShell.<br /><br /> Vous pouvez avoir configuré l'identité du pool d'applications de sorte qu'il s'exécute sous un compte unique. Mais si ce n’est pas le cas, envisagez de le modifier maintenant pour qu’il s’exécute sous un autre compte.|  
 |Spécification relative au compte d'utilisateur de domaine|L'identité du pool d'applications doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits.|  
 |Spécifications relatives aux autorisations|Ce compte n'a pas besoin d'autorisations d'administrateur système local sur l'ordinateur. Ce compte doit cependant avoir des autorisations d'administrateur système Analysis Services sur le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local installé sur le même ordinateur. Ces autorisations sont accordées automatiquement par le programme d'installation de SQL Server, ou lorsque vous définissez ou modifiez l'identité du pool d'applications dans l'Administration centrale.<br /><br /> Les autorisations d'administration sont nécessaires pour l'envoi de requêtes au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elles sont également requises pour la surveillance de l'intégrité, la fermeture de sessions inactives et l'écoute des événements de trace.<br /><br /> Le compte doit disposer d'autorisations de connexion, de lecture et d'écriture sur la base de données d'application de service PowerPivot. Ces autorisations sont accordées automatiquement lors de la création de l'application et sont mises à jour automatiquement lorsque vous modifiez des comptes ou des mots de passe dans l'Administration centrale.<br /><br /> L'application de service PowerPivot vérifie qu'un utilisateur SharePoint est autorisé à afficher des données avant de récupérer le fichier, mais n'emprunte pas l'identité de l'utilisateur. Il n'existe aucune spécification relative à l'emprunt d'identité.|  
-|Spécifications relatives à la montée en puissance parallèle|Aucun.|  
+|Spécifications relatives à la montée en puissance parallèle|Aucune.|  
   
-##  <a name="updatemanually"></a>Résolution des problèmes : accorder des autorisations administratives manuellement  
+##  <a name="troubleshooting-grant-administrative-permissions-manually"></a><a name="updatemanually"></a>Résolution des problèmes : accorder des autorisations administratives manuellement  
  Les autorisations administratives ne peuvent être mises à jour si la personne qui met à jour les informations d'identification n'est pas administrateur local sur l'ordinateur. Vous pouvez alors accorder des autorisations administratives manuellement. Pour ce faire, le plus simple est d'exécuter le travail du minuteur de Configuration PowerPivot dans l'Administration centrale. Avec cette approche, vous pouvez réinitialiser des autorisations pour tous les serveurs PowerPivot de la batterie. Notez que cette approche fonctionne uniquement si le travail du minuteur SharePoint s'exécute à la fois comme administrateur de batterie et comme administrateur local sur l'ordinateur.  
   
 1.  Dans Supervision, cliquez sur **Examiner les définitions de travail**.  
@@ -150,7 +150,7 @@ ms.locfileid: "66071857"
   
 11. Tapez le nom du compte utilisé pour le pool d'applications de service PowerPivot, puis cliquez sur **OK**.  
   
-##  <a name="expired"></a>Résolution des problèmes : résoudre les erreurs HTTP 503 en raison des mots de passe expirés pour l’administration centrale ou le service d’application Web SharePoint Foundation  
+##  <a name="troubleshooting-resolve-http-503-errors-due-to-expired-passwords-for-central-administration-or-the-sharepoint-foundation-web-application-service"></a><a name="expired"></a>Résolution des problèmes : résoudre les erreurs HTTP 503 en raison des mots de passe expirés pour l’administration centrale ou le service d’application Web SharePoint Foundation  
  Si le service de l'Administration centrale ou le service Application Web de SharePoint Foundation cesse de fonctionner en raison de la réinitialisation du compte ou de l'expiration du mot de passe, des messages d'erreur HTTP 503 « Service non disponible » s'affichent lors de la tentative d'ouverture de l'Administration centrale de SharePoint ou d'un site SharePoint. Suivez ces étapes pour remettre votre serveur en ligne. Une fois l'Administration centrale disponible, vous pouvez passer à la mise à jour des informations de compte périmées.  
   
 1.  Dans les outils d'administration, cliquez sur **Gestionnaire des services IIS**.  

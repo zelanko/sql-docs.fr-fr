@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081073"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Général (boîte de dialogue Propriétés de partition) (SSMS)
@@ -33,7 +33,7 @@ ms.locfileid: "66081073"
 |**Description**|Modifie la description de la référence de la partition.|  
 |**Lignes estimées**|Tapez le nombre de lignes estimé dans la source de données sous-jacente représentée par la partition. Cette valeur est utilisée pendant le traitement pour estimer le temps et la capacité de stockage nécessaires au traitement de la partition.|  
 |**Taille estimée**|Affiche la taille estimée de la partition.|  
-|**IDENTIFI**|Affiche l'identificateur de la partition.|  
+|**Identifiant**|Affiche l'identificateur de la partition.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la partition.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la partition.|  
 |**Nom**|Affiche le nom de la partition.|  

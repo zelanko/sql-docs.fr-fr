@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078935"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Leçon 2 : Définition et déploiement d'un cube
@@ -23,14 +23,14 @@ ms.locfileid: "66078935"
  Vous pouvez également définir un cube et ses dimensions en une même phase, en utilisant l'Assistant Cube. Vous pouvez également définir une ou plusieurs dimensions, puis utiliser l'Assistant Cube pour définir un cube qui utilise ces dimensions. Si vous concevez une solution complexe, vous démarrez généralement en définissant les dimensions. Pour plus d’informations, consultez [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projets qui vont de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
  Cette leçon contient les tâches suivantes :  
   
  [Définition d'une dimension](lesson-2-1-defining-a-dimension.md)  
  Au cours de cette tâche, vous allez utiliser l'Assistant Dimension pour définir une dimension.  
   
- [Définition d'un cube](lesson-2-2-defining-a-cube.md)  
+ [Définition d’un cube](lesson-2-2-defining-a-cube.md)  
  Au cours de cette tâche, vous allez utiliser l'Assistant Cube pour définir un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] initial.  
   
  [Ajout d'attributs aux dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  

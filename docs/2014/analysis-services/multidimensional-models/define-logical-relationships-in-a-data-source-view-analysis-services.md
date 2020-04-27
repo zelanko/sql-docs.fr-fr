@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075620"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Définir des relations logiques dans une vue de source de données (Analysis Services)
@@ -47,7 +47,7 @@ ms.locfileid: "66075620"
   
  [Pour afficher ou modifier une relation dans le volet Tables](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a>Pour ajouter une relation entre des tables, des requêtes nommées ou des vues  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>Pour ajouter une relation entre des tables, des requêtes nommées ou des vues  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet ou connectez-vous à la base de données qui contient la vue de source de données dans laquelle vous souhaitez ajouter une relation logique.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075620"
   
     4.  Si vous le souhaitez, dans la zone **Description** , tapez la description de la relation.  
   
-##  <a name="bkmk_diagrampane"></a>Pour afficher ou modifier une relation dans le volet Diagramme  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a>Pour afficher ou modifier une relation dans le volet Diagramme  
   
 -   Dans le volet **Diagramme** , dans **Concepteur de vue de source de données**, cliquez avec le bouton droit sur la relation que vous souhaitez afficher, puis sélectionnez **Modifier la relation** (ou double-cliquez simplement sur la flèche représentant la relation).  Utilisez la boîte de dialogue **Modifier la relation** pour modifier la relation.  
   
-##  <a name="bkmk_tablespane"></a>Pour afficher ou modifier une relation dans le volet Tables  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a>Pour afficher ou modifier une relation dans le volet Tables  
   
 1.  Dans le volet **Tables** dans **Concepteur de vue de source de données**, développez la table, la vue ou la requête nommée contenant la relation que vous souhaitez afficher ou modifier.  
   

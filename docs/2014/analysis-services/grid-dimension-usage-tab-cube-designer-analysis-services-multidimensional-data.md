@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080807"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grille (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -36,7 +36,7 @@ ms.locfileid: "66080807"
 |**Ajouter une dimension de cube**|Affiche la boîte de dialogue **Ajouter une dimension de cube** et ajoute des références à des dimensions de base de données existantes ou nouvelles dans le cube. Pour plus d’informations sur la boîte de dialogue **Ajouter une dimension de cube**, consultez [Boîte de dialogue Ajouter une dimension de cube &#40;Analysis Services - Données multidimensionnelles&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Nouvel objet lié**|Sélectionnez cette option pour afficher l' **Assistant Objet lié** et lier les groupes de mesures et les dimensions d'autres cubes et importer des actions, des indicateurs de performance clés (KPI) et des calculs dans le cube sélectionné. Pour plus d’informations sur **l’Assistant Objet lié**, consultez [Aide de l’Assistant Objet lié par la touche F1](linked-object-wizard-f1-help.md).|  
 |**Couper**|Remarque : cette option est désactivée.|  
-|**Copy**|Remarque : cette option est désactivée.|  
+|**Copier**|Remarque : cette option est désactivée.|  
 |**Coller**|Remarque : cette option est désactivée.|  
 |**Supprimer**|Supprime du cube la dimension du cube, le groupe de mesures ou la relation de dimension sélectionné.|  
 |**Renommer**|Renomme la dimension du cube, le groupe de mesures ou la relation de dimension sélectionné.|  

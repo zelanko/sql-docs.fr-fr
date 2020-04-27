@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079865"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Vérifier une installation PowerPivot pour SharePoint
   Une instance de PowerPivot pour SharePoint que vous installez dans une batterie de serveurs SharePoint est administrée via l'Administration centrale de SharePoint. Au minimum, vous pouvez vérifier des pages dans l'Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur PowerPivot sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d'un classeur PowerPivot que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d'une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d'exemple contenant déjà des données PowerPivot et l'utiliser pour confirmer que l'intégration SharePoint est correctement configurée.  
   
-##  <a name="verifyinstall"></a>Vérifier l’intégration de l’administration centrale  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a> Vérifiez l'intégration de l'Administration centrale  
  Pour vérifier l'intégration de PowerPivot avec l'Administration centrale, procédez comme suit :  
   
 1.  Dans le menu Démarrer, cliquez sur **tous les programmes**, ouvrez produits Microsoft SharePoint 2010, puis cliquez sur **administration centrale de SharePoint 2010**.  
@@ -46,7 +46,7 @@ ms.locfileid: "66079865"
   
 4.  Vérifiez que l'option **Fonctionnalité d'intégration PowerPivot** a la valeur **Activée**.  
   
-5.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les services sur le serveur**.  
+5.  Dans l’administration centrale, sous paramètres système, cliquez sur **gérer les services sur le serveur**.  
   
 6.  Vérifiez que **SQL Server Analysis Services** et le **service système SQL Server PowerPivot** sont démarrés.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66079865"
 ## <a name="verify-data-access-on-the-server"></a>Vérifiez l'accès aux données sur le serveur  
  Pour vérifier l'accès aux données PowerPivot sur le serveur, procédez comme suit :  
   
-1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l’exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Procédez à l’extraction des fichiers.  
+1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Procédez à l’extraction des fichiers.  
   
 2.  Téléchargez le classeur Excel (.xlsx) dans Documents partagés. Le classeur contient des données PowerPivot incorporées.  
   

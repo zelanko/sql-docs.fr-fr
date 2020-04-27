@@ -13,40 +13,40 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080422"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Onglet Sélection d'entrée (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez l’onglet **Sélection d’entrée** du concepteur **Graphique d’analyse de précision de l’exploration de données** pour spécifier la source des données utilisées pour tester le modèle et générer le graphique d’analyse de précision.  
   
- **Pour plus d’informations :** [test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Pour plus d’informations :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Options  
- **Synchroniser**  **les colonnes de prédiction et les valeurs**  
+ **Synchroniser les colonnes**  **de prédiction et les valeurs**  
  Activez cette case à cocher pour coordonner les attributs prédictibles dans la grille, de sorte que même s'ils portent un nom différent, ils sont dérivés de la même colonne prédictible de la structure d'exploration de données pendant l'apprentissage du modèle.  
   
- **Remarque** Cette option est sélectionnée par défaut. Vous ne devez la désactiver que dans les cas où vous savez que deux colonnes de la structure d'exploration de données dérivent de la même source relationnelle ou multidimensionnelle sous-jacente et que les colonnes contiennent les mêmes états ou ont été discrétisées de la même façon.  
+ **Remarque** Cette option est activée par défaut. Vous ne devez la désactiver que dans les cas où vous savez que deux colonnes de la structure d'exploration de données dérivent de la même source relationnelle ou multidimensionnelle sous-jacente et que les colonnes contiennent les mêmes états ou ont été discrétisées de la même façon.  
   
  **Sélectionnez les colonnes prédictibles du modèle d'exploration de données à afficher dans le graphique de courbes d'élévation**  
  Grille contenant les colonnes permettant de contrôler les modèles qui sont inclus dans le graphique de courbes d'élévation et leur mode d'utilisation dans ce graphique.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Afficher**|Activez la case à cocher située en regard du nom de chaque colonne prédictible dans le modèle d'exploration de données que vous souhaitez afficher dans le graphique.<br /><br /> Si le graphique est trop complexe pour être consulté facilement, désactivez la case à cocher en regard d'une ou de plusieurs colonnes pour le simplifier.<br /><br /> Remarque : vous ne pouvez créer un graphique d’analyse de précision que si au moins une colonne est sélectionnée.|  
-|**Modèle d’exploration de données**|Répertorie les modèles d'exploration de données contenus dans la structure d'exploration de données.|  
+|**Modèle d'exploration de données**|Répertorie les modèles d'exploration de données contenus dans la structure d'exploration de données.|  
 |**Nom de la colonne prédictible**|Sélectionnez une colonne prédictible contenue dans les modèles d'exploration de données qui sont utilisés pour créer le graphique de courbes d'élévation.|  
 |**Prédire la valeur**|Sélectionnez une valeur pour la colonne prédictible. Si vous laissez ce champ vide, le graphique de courbes d'évaluation prédit le comportement du modèle pour tous les états de la colonne prédictible.|  
   
  **Sélectionner le jeu de données à utiliser pour le graphique d'analyse de précision**  
  Groupe d'options qui contient trois options pour spécifier les données de test de précision.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Utiliser des scénarios de test de modèle d’exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données et appliquez le filtre défini sur le modèle. Pour plus d’informations sur les filtres de modèle, consultez [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
-|**Utiliser les cas de test de la structure d’exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données.|  
+|**Utiliser des scénarios de test de modèle d'exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données et appliquez le filtre défini sur le modèle. Pour plus d’informations sur les filtres de modèle, consultez [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
+|**Utiliser des scénarios de test de structure d'exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données.|  
 |**Spécifier un autre jeu de données**|Spécifiez une table d'une vue de source de données existante à utiliser comme jeu de données de test.|  
   
 ## <a name="filtering-options"></a>Options de filtrage  
@@ -71,6 +71,6 @@ ms.locfileid: "66080422"
  [Tâches de test et de validation et &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Appliquer un filtre à un modèle d’exploration de données](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

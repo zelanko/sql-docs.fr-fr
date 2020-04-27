@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078103"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Onglet Graphique de courbes d'élévation (vue Graphique d'analyse de précision de l'exploration de données)
@@ -39,12 +39,12 @@ ms.locfileid: "66078103"
   
  Le graphique des bénéfices n’est pas disponible si une colonne prédictible continue a été sélectionnée sous l’onglet **Mappage de colonnes** .  
   
- **Copy**  
+ **Copier**  
  Copie le graphique dans le Presse-papiers.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Tâches de test et de validation et &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

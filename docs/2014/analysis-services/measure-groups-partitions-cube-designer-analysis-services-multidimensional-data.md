@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077912"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Groupes de mesures (onglet Partitions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -54,7 +54,7 @@ ms.locfileid: "66077912"
 > [!NOTE]  
 >  Cette option est activée uniquement si une cellule d’une partition est sélectionnée dans la grille **Partitions** du groupe de mesures sélectionné.  
   
- **Paramètres d’écriture différée...**  
+ **Paramètres d'écriture différée...**  
  Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures sélectionné.  
   
 ## <a name="context-menu"></a>Menu contextuel  
@@ -68,10 +68,10 @@ ms.locfileid: "66077912"
 |**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
 |**Créer des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
 |**Paramètres de stockage**|Cliquez pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification de la partition sélectionnée.|  
-|**Paramètres d'écriture différée**|Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures contenant la partition sélectionnée.|  
+|**Paramètres d’écriture différée**|Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures contenant la partition sélectionnée.|  
 |**Optimisation basée sur l'utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
-|**Procédure**|Cliquez sur cette option pour afficher la boîte de dialogue **Traiter** et traiter la partition sélectionnée.|  
-|**Copy**|Cette option est désactivée.|  
+|**Processus**|Cliquez sur cette option pour afficher la boîte de dialogue **Traiter** et traiter la partition sélectionnée.|  
+|**Copier**|Cette option est désactivée.|  
 |**Coller**|Cette option est désactivée.|  
 |**Propriétés**|Sélectionnez cette option pour afficher la fenêtre **Propriétés** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour la partition sélectionnée.|  
   

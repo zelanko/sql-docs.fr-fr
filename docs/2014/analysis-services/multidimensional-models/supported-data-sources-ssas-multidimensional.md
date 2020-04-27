@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072862"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Sources de données prises en charge (SSAS multidimensionnel)
   Cette rubrique décrit les types de sources de données que vous pouvez utiliser dans un modèle multidimensionnel.  
   
-##  <a name="bkmk_supported_ds"></a>Sources de données prises en charge  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Sources de données prises en charge  
  Vous pouvez récupérer des données à partir des sources de données dans la table suivante. Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le programme d'installation n'installe pas les fournisseurs répertoriés pour chaque source de données. Certains fournisseurs ont pu être déjà installés sur votre ordinateur avec d'autres applications ; dans le cas contraire, vous devez télécharger et installer le fournisseur.  
   
 > [!NOTE]  

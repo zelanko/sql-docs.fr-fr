@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081046"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Prévisions (Outils d'analyse de table pour Excel)
@@ -51,7 +51,7 @@ ms.locfileid: "66081046"
   
 8.  Pour ajouter les nouvelles valeur au graphique de prédiction, étendez la série chronologique pour inclure les valeurs projetées.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Les colonnes que vous prévoyez doivent contenir des données numériques continues (devise ou autres nombres).  
   
  Si possible, vos données doivent également inclure une colonne qui contient une série de dates ou d'heures. Vous pouvez utiliser une série numérique (1, 2, 3...) au lieu de données de date et d’heure. Cependant, les valeurs dans la colonne de série doivent être uniques. Une erreur se produit si l’outil **prévision** recherche des valeurs en double dans la colonne de série.  

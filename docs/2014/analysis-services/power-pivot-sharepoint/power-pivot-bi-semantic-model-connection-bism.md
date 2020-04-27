@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071383"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Connexion de modèle sémantique BI PowerPivot (.bism)
@@ -24,7 +24,7 @@ ms.locfileid: "66071383"
   
  ![Capture d'écran de la commande de lancement rapide de BISM](../media/ssas-bism-quicklaunch.gif "Capture d'écran de la commande de lancement rapide de BISM")  
   
-##  <a name="bkmk_prereq"></a>Bases de données prises en charge  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>Bases de données prises en charge  
  Une connexion de modèle sémantique BI pointe sur des données de modèle tabulaire. Il y a trois sources pour ces données :  
   
 -   Base de données model tabulaire s'exécutant dans une instance d'Analysis Services autonome en mode serveur tabulaire. Déploiement d'une instance d'Analysis Services autonome extérieure à la batterie. L'accès aux sources de données de la batterie requiert des autorisations supplémentaires, abordées plus loin dans cette rubrique : [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "66071383"
   
  Toutes les connexions à une base de données de modèle tabulaire sont établies à l'aide des informations d'identification de l'utilisateur qui demande les données. Toutefois, les mécanismes de cette connexion varient selon que la connexion est une connexion dans la batterie ou une connexion à simple ou double saut, et selon que Kerberos est activé ou désactivé. Pour plus d’informations sur les connexions authentifiées entre SharePoint et des sources de données principales, consultez [Double-hop authentication: Why NTLM fails and Kerberos works](https://go.microsoft.com/fwlink/?LinkId=237137).  
   
- **Connexion d’Excel à des données tabulaires sur un réseau**  
+ **Se connecter depuis Excel aux données tabulaires sur un réseau**  
   
  Lorsqu'un utilisateur Excel spécifie une connexion de modèle sémantique BI comme source de données, les informations de connexion dans le fichier .bism sont téléchargées vers l'application cliente, qui émet alors sa propre requête directe à la base de données model tabulaire sur Analysis Services. Pour accéder à la connexion .bism, l'utilisateur Excel doit être un utilisateur SharePoint avec des autorisations de lecture sur le fichier de connexion .bism. Une fois les informations de connexion téléchargées, toutes les connexions ultérieures ignorent SharePoint et affluent directement d'Excel dans la base de données model tabulaire.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071383"
   
  ![Connexions à une base de données model tabulaire à partir d'Excel](../media/ssas-powerpivotbismconnection-1.gif "Connexions à une base de données model tabulaire à partir d'Excel")  
   
- **Connexion à partir de Power View à des données tabulaires sur un réseau**  
+ **Se connecter depuis Power View aux données tabulaires sur un réseau**  
   
  Lorsqu'un utilisateur SharePoint clique sur une connexion sémantique BI dans une bibliothèque de documents, Power View (si installé) démarre immédiatement et ouvre une connexion avec la base de données model tabulaire.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66071383"
   
  Dans ce scénario, toutes les connexions se produisent dans la même batterie, donc il n'y a aucune spécification pour Kerberos ou la délégation contrainte.  
   
-##  <a name="bkmk_rel"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> Tâches associées  
  [Ajoutez un type de contenu de connexion de modèle sémantique BI à une bibliothèque &#40;PowerPivot pour SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Créer une connexion de modèle sémantique BI à un classeur PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  

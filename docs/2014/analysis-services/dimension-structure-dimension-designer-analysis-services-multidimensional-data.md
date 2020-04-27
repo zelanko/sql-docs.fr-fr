@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081750"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Structure de dimension (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -37,7 +37,7 @@ ms.locfileid: "66081750"
  [Vue de source de données](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilisez le volet **Vue de source de données** pour explorer et gérer la vue de source de données associée à une dimension.  
   
- [Hierarchies](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Hiérarchies](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
  Le volet **Hiérarchies** permet de gérer les hiérarchies et les niveaux d’une dimension.  
   
  [Attributs](attributes-dimension-designer-analysis-services-multidimensional-data.md)  

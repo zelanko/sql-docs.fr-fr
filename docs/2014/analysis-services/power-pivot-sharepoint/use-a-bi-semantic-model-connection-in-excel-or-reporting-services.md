@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070933"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
   Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé de modèle sémantique BI, consultez [créer une connexion de modèle sémantique bi à un classeur PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [créer une connexion de modèle sémantique bi à une base de données model tabulaire](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
-##  <a name="bkmk_connect"></a>Se connecter à partir d’Excel  
+##  <a name="connect-from-excel"></a><a name="bkmk_connect"></a> Se connecter depuis Excel  
  Vous pouvez spécifier une connexion de modèle sémantique BI comme source de données dans Excel ou toute autre application de gestion qui utilise des données de modèle tabulaire Analysis Services. Cette section présente les deux approches de connexion aux données de modèles sémantiques BI à l'aide d'Excel.  
   
  Les connexions de modèles sémantiques BI Excel nécessitent l'installation d'Excel 2010 et du fournisseur OLE DB MSOLAP.5 sur votre station de travail. Des informations supplémentaires sur les exigences de connexion sont fournies plus loin dans cette section.  
   
- **Démarrage à partir de SharePoint**  
+ **Lancement depuis SharePoint**  
   
 -   Cliquez avec le bouton droit sur une connexion de modèle sémantique BI dans une bibliothèque, puis sélectionnez **Lancer Excel**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66070933"
   
  Cliquez sur **Activer** lorsque vous êtes invité à activer les connexions de données. Excel ouvre un classeur qui contient une liste de champs de tableau croisé dynamique renseignée avec les champs de la source de données sous-jacente.  
   
- **Démarrage à partir d’Excel**  
+ **Lancement depuis Excel**  
   
 1.  Démarrez Excel et ouvrez un classeur. Sous l'onglet Données, dans le groupe Données externes, cliquez sur **À partir d'autres sources**.  
   
@@ -47,14 +47,13 @@ ms.locfileid: "66070933"
   
  Pour que les connexions réussissent, Excel 2010 et le fichier MSOLAP.5.dll doivent être installés sur l'ordinateur client. Vous pouvez obtenir le fournisseur en installant la version de PowerPivot pour Excel qui est à jour pour cette version ou vous pouvez télécharger uniquement le fournisseur Analysis Services OLE DB à partir de la [page de téléchargement du Feature Pack](https://go.microsoft.com/fwlink/?linkid=214066).  
   
- Pour confirmer que le fichier MSOLAP.5.dll est la version actuelle, vérifiez `HKEY_CLASSES_ROOT\MSOLAP` dans le Registre. 
-  `CurVer` doit avoir la valeur MSOLAP.5.  
+ Pour confirmer que le fichier MSOLAP.5.dll est la version actuelle, vérifiez `HKEY_CLASSES_ROOT\MSOLAP` dans le Registre. `CurVer` doit avoir la valeur MSOLAP.5.  
   
  Vous devez également disposer des autorisations de lecture sur le fichier de modèle sémantique BI dans SharePoint. Les autorisations de lecture incluent des droits de téléchargement. Excel télécharge les informations de la connexion de modèle sémantique BI depuis SharePoint et ouvre une connexion directe à la base de données via `HTTP Get`. Les demandes de connexion ne sont pas acheminées via SharePoint une fois que les informations de connexion de modèle sémantique BI sont stockées localement.  
   
  Si vous vous connectez à une base de données model tabulaire qui s'exécute sur un serveur Analysis Services, les autorisations SharePoint ne sont pas suffisantes. Vous devez également disposer des autorisations de lecture de base de données sur le serveur. Cette étape doit avoir été effectuée lorsque vous avez créé la connexion de modèle sémantique BI. Pour plus d’informations, consultez [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
-##  <a name="bkmk_use"></a>Se connecter à partir de Reporting Services dans SharePoint  
+##  <a name="connect-from-reporting-services-in-sharepoint"></a><a name="bkmk_use"></a> Se connecter à partir de Reporting Services dans SharePoint  
  Vous pouvez utiliser une connexion de modèle sémantique BI de la même façon que vous utilisez la plupart des sources de données, en spécifiant le fichier comme source de données dans le document ou l'outil qui utilise les données. Bien qu'une connexion de modèle sémantique BI pointe vers une base de données physique sur un autre serveur, vous utilisez le fichier de connexion comme s'il s'agissait de la source de données. L'URL SharePoint de la connexion de modèle sémantique BI est un emplacement de source de données valide pour les rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] qui utilisent des données de modèle sémantique BI.  
   
  Pour la conception de rapports ad hoc dans SharePoint, l'utilisateur qui crée le rapport doit disposer d'autorisations SharePoint sur le fichier de connexion de modèle sémantique BI (.bism) et sur la base de données de modèle sémantique Business Intelligence. Le contexte de sécurité de la connexion est l'utilisateur interactif qui crée le rapport.  

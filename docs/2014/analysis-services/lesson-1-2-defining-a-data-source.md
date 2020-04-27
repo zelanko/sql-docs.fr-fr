@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079334"
 ---
 # <a name="defining-a-data-source"></a>Définition d'une source de données
@@ -32,7 +32,7 @@ ms.locfileid: "66079334"
   
 4.  Dans la boîte de dialogue **Gestionnaire de connexions** vous définissez les propriétés de connexion de la source de données. Dans la zone de liste **Fournisseur** , vérifiez que **Native OLE DB\SQL Server Native Client 11.0** est sélectionné.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend également en charge d’autres fournisseurs, affichés dans **la liste des fournisseurs.**  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend également en charge d’autres fournisseurs, affichés dans la liste **Fournisseur** .  
   
 5.  Dans la zone de texte **nom** du serveur `localhost`, tapez.  
   
@@ -44,8 +44,7 @@ ms.locfileid: "66079334"
   
 8.  Cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
-9. Dans la page **Informations d’emprunt d’identité** de l’Assistant, vous pouvez définir les informations d’identification de sécurité que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit utiliser pour se connecter à la source de données. L'emprunt d'identité affecte le compte Windows utilisé pour la connexion à la source de données lorsque l'authentification Windows est sélectionnée. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne prend pas en charge l’emprunt d’identité pour le traitement des objets OLAP. Sélectionnez **Utiliser le compte de service**, puis cliquez sur **Suivant**.  
+9. Dans la page **Informations d’emprunt d’identité** de l’Assistant, vous pouvez définir les informations d’identification de sécurité que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit utiliser pour se connecter à la source de données. L'emprunt d'identité affecte le compte Windows utilisé pour la connexion à la source de données lorsque l'authentification Windows est sélectionnée. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne prend pas en charge l’emprunt d’identité pour le traitement des objets OLAP. Sélectionnez **Utiliser le compte de service**, puis cliquez sur **Suivant**.  
   
 10. Dans la page **Fin de l’Assistant** , acceptez le nom par défaut **Adventure Works DW 2012**et cliquez sur **Terminer** pour créer la source de données.  
   
@@ -56,6 +55,6 @@ ms.locfileid: "66079334"
  [Définition d'une vue de source de données](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une source de données &#40;SSAS multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Créer une source de données &#40;SSAS Multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

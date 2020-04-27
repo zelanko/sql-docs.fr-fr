@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075355"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Déployer des solutions de modèle avec l'utilitaire de déploiement
@@ -33,14 +33,14 @@ ms.locfileid: "66075355"
     {[/s[:logfile]] | [/a] | [[/o[:output_script_file]] [/d]]}  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  *ASdatabasefile*  
  Chemin complet du dossier dans lequel le fichier de script de déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.asdatabase) se trouve. Ce fichier est généré lorsque vous déployez un projet dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Il se trouve dans le dossier bin du projet. Le fichier de base de données contient les définitions d'objets à déployer. En l'absence de toute spécification, le dossier en cours est utilisé.  
   
  **commutateur**  
  Exécute l'utilitaire en mode silencieux et n'affiche pas de boîte de dialogue. Pour plus d'informations sur les modes, consultez la section, [Modes](#Modes), plus loin dans cette rubrique.  
   
- *relog*  
+ *logfile*  
  Chemin d'accès complet et nom de fichier du fichier journal. Les événements de trace sont consignés dans le fichier journal spécifié. Si le fichier journal existe déjà, le contenu du fichier est remplacé.  
   
  **/a**  
@@ -65,7 +65,7 @@ ms.locfileid: "66075355"
   
  L'utilitaire se trouve dans le dossier \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a>Façons  
+##  <a name="modes"></a><a name="Modes"></a>Façons  
  L'utilitaire peut être employé dans les modes indiqués dans le tableau suivant.  
   
 |Mode|Description|  
@@ -86,6 +86,6 @@ ms.locfileid: "66075355"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’utilitaire d’invite de commandes &#40;Moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

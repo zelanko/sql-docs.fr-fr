@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075939"
 ---
 # <a name="create-a-date-type-dimension"></a>Créer une dimension de type Date
@@ -40,8 +40,7 @@ ms.locfileid: "66075939"
  Dimension de temps du serveur  
  Si vous ne disposez pas d'une table de dimension à laquelle lier les attributs relatifs au temps, vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de définir une dimension de temps du serveur basée sur des périodes de temps. Pour définir les hiérarchies, les niveaux et les membres représentés par la dimension de temps du serveur, sélectionnez les périodes de temps standard où vous créez la dimension.  
   
- Les attributs d'une dimension de temps du serveur ont une liaison attribut-temps spéciale. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les types d’attributs liés aux dates, tels que Year, Month ou Day, pour définir les membres des attributs d’une dimension de temps.  
+ Les attributs d'une dimension de temps du serveur ont une liaison attribut-temps spéciale. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les types d’attributs liés aux dates, tels que Year, Month ou Day, pour définir les membres des attributs d’une dimension de temps.  
   
  Lorsque vous incluez une dimension de temps du serveur dans un cube, vous définissez la relation entre le groupe de mesures et la dimension de temps du serveur en définissant une relation dans la page **Définir l’utilisation de la dimension** de l’Assistant Cube.  
   

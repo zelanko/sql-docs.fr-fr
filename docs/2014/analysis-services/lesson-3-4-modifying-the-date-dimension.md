@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078798"
 ---
 # <a name="modifying-the-date-dimension"></a>Modification de la dimension Date
   Dans les tâches de cette rubrique, vous allez créer une hiérarchie définie par l'utilisateur et vous allez modifier les noms de membre affichés pour les attributs Date, Month, Calendar Quarter et Calendar Semester. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
   
 ## <a name="adding-a-named-calculation"></a>Ajout d'un calcul nommé  
- Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source des données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source des données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Pour ajouter un calcul nommé  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66078798"
   
 6.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Quarter** , puis cliquez sur **Nouvelle relation d’attribut**.  
   
-7.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**.  
+7.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Semester**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**.  
   
 8.  Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66078798"
   
 3.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** , puis cliquez sur le bouton de navigation (**...**).  
   
-4.  Dans la boîte de dialogue **Colonnes clés** , dans la liste **Colonnes disponibles** , sélectionnez la colonne **CalendarYear**, puis cliquez sur le bouton **>** .  
+4.  Dans la boîte de dialogue **colonnes clés** , dans la liste **colonnes disponibles** , sélectionnez la colonne **CalendarYear**, puis cliquez sur **>** le bouton.  
   
 5.  Les colonnes **EnglishMonthName** et **CalendarYear** s’affichent maintenant dans la liste **Colonnes clés** .  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66078798"
   
 2.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** , puis cliquez sur le bouton de navigation (**...**).  
   
-3.  Dans la boîte de dialogue **Colonnes clés** , dans la liste **Colonnes disponibles** , sélectionnez la colonne **CalendarYear**, puis cliquez sur le bouton **>** .  
+3.  Dans la boîte de dialogue **colonnes clés** , dans la liste **colonnes disponibles** , sélectionnez la colonne **CalendarYear**, puis cliquez sur **>** le bouton.  
   
      Les colonnes **CalendarQuarter** et **CalendarYear** s’affichent maintenant dans la liste **Colonnes clés** .  
   
@@ -226,7 +226,7 @@ ms.locfileid: "66078798"
   
 2.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** , puis cliquez sur le bouton de navigation (**...**).  
   
-3.  Dans la boîte de dialogue **colonnes clés** , dans la liste **colonnes disponibles** , sélectionnez la colonne **CalendarYear**, puis cliquez sur le **>** bouton.  
+3.  Dans la boîte de dialogue **Colonnes clés** , dans la liste **Colonnes disponibles** , sélectionnez la colonne **CalendarYear**, puis cliquez sur le bouton **>** .  
   
      Les colonnes **CalendarSemester** et **CalendarYear** s’affichent maintenant dans la liste **Colonnes clés** .  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077921"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Mesures (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -63,7 +63,7 @@ ms.locfileid: "66077921"
 |Option|Définition|  
 |------------|----------------|  
 |**Arbres**|Affiche les groupes et les mesures sous forme d'arborescence.|  
-|**Boutons**|Affiche les groupes et les mesures sous forme de tableau.|  
+|**Grille**|Affiche les groupes et les mesures sous forme de tableau.|  
   
  **Renommer**  
  Sélectionnez cette option pour renommer la mesure ou le groupe de mesures sélectionné.  

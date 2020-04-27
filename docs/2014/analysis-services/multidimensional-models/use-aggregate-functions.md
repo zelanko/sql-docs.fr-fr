@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072716"
 ---
 # <a name="use-aggregate-functions"></a>Utiliser des fonctions d'agrégation
@@ -28,10 +28,8 @@ ms.locfileid: "66072716"
   
  Vous pouvez affecter ou changer la méthode d’agrégation dans la définition du cube, via [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]ou via MDX. Pour obtenir d’autres instructions, consultez [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md) ou [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx).  
   
-##  <a name="AggFunction"></a>Fonctions d’agrégation  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fournit des fonctions pour agréger des mesures avec les dimensions qui sont contenues dans des groupes de mesures. 
-  *L’additivité* d’une fonction d’agrégation détermine la manière dont la mesure est agrégée à travers toutes les dimensions du cube. Les fonctions d'agrégation sont divisées en trois catégories en fonction de leur niveau d'additivité :  
+##  <a name="aggregate-functions"></a><a name="AggFunction"></a>Fonctions d’agrégation  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fournit des fonctions pour agréger des mesures avec les dimensions qui sont contenues dans des groupes de mesures. *L’additivité* d’une fonction d’agrégation détermine la manière dont la mesure est agrégée à travers toutes les dimensions du cube. Les fonctions d'agrégation sont divisées en trois catégories en fonction de leur niveau d'additivité :  
   
  Additive  
  Une mesure additive, ou mesure entièrement additive, peut être agrégée avec toutes les dimensions incluses dans le groupe de mesures qui contient la mesure, sans aucune restriction.  
@@ -59,7 +57,7 @@ ms.locfileid: "66072716"
 |`FirstNonEmpty`|Semi-additive|Renvoie la valeur du premier membre enfant non vide.|  
 |`LastNonEmpty`|Semi-additive|Renvoie la valeur du dernier membre enfant non vide.|  
   
-##  <a name="bkmk_distinct"></a>À propos des mesures de comptage de valeurs  
+##  <a name="about-distinct-count-measures"></a><a name="bkmk_distinct"></a> Présentation des mesures de comptage de valeurs  
  Une mesure dont la propriété **Fonction d’agrégation** a la valeur **Comptage de valeurs** est appelée mesure de comptage de valeurs. Une mesure de comptage de valeurs peut être utilisée pour compter les occurrences des membres du niveau le plus bas d'une dimension dans la table de faits. Avec ce type de comptage, si un membre apparaît plusieurs fois, il n'est compté qu'une seule fois. Une mesure de comptage de valeurs est toujours placée dans un groupe de mesures dédié. Placer une mesure de comptage de valeurs dans son propre groupe de mesures est une recommandation qui a été intégrée dans le concepteur afin d'optimiser les performances.  
   
  Les mesures de comptage de valeurs s'utilisent généralement pour déterminer pour chaque membre d'une dimension combien de membres distincts du niveau le plus bas d'une autre dimension possèdent des lignes identiques à celles de la table de faits. Par exemple, dans un cube Sales, pour chaque client et groupe de clients, combien de produits différents ont été achetés ? C'est-à-dire, pour chaque membre de la dimension Customers, combien de membres différents du niveau le plus bas de la dimension Products ont en commun des lignes avec la table de faits ? Ou, par exemple, dans un cube de visites d'un site Internet, pour chaque visiteur et chaque groupe de visiteurs, combien de pages distinctes ont été consultées sur le site Internet ? C'est-à-dire, pour chaque membre de la dimension Site Visitors, combien de membres différents du niveau le plus bas de la dimension Pages ont en commun des lignes avec la table de faits ? Dans chacun de ces exemples, les membres du niveau le plus bas de la deuxième dimension sont comptés par une mesure de comptage de valeurs.  

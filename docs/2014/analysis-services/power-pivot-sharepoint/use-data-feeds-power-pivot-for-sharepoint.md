@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070904"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utiliser des flux de données (PowerPivot pour SharePoint)
@@ -26,22 +26,22 @@ ms.locfileid: "66070904"
   
  Cette rubrique contient les sections suivantes :  
   
- [Prérequis](#prereq)  
+ [Conditions préalables](#prereq)  
   
  [Créer un flux de données à partir d’une liste SharePoint](#sharepointlist)  
   
- [Créer un flux de données à partir d’un rapport de Reporting Services](#rsreport)  
+ [Créer un flux de données à partir d'un rapport Reporting Services](#rsreport)  
   
  [Créer un flux de données à partir d’un document de service de données](#dsdoc)  
   
-##  <a name="prereq"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables  
  Vous devez disposer de PowerPivot pour Excel pour importer un flux de données dans Excel 2010.  
   
  Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Et SharePoint 2010 peuvent fournir des données dans ce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] format.  
   
  Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="sharepointlist"></a>Créer un flux de données à partir d’une liste SharePoint  
+##  <a name="create-a-data-feed-from-a-sharepoint-list"></a><a name="sharepointlist"></a> Créer un flux de données à partir d'une liste SharePoint  
  Dans une batterie de serveurs SharePoint 2010, une liste SharePoint présente un bouton Exporter en tant que flux de données dans le ruban Liste. Vous pouvez cliquer sur ce bouton pour exporter la liste en tant que flux. Pour de meilleurs résultats, Excel 2010 avec l'application cliente PowerPivot doit être installé votre station de travail. L'application cliente PowerPivot est lancée en réponse à l'exportation du flux et crée une table PowerPivot qui contient la liste.  
   
 1.  Ouvrez la liste sur votre site SharePoint.  
@@ -59,7 +59,7 @@ ms.locfileid: "66070904"
   
  Une erreur se produira si ADO.NET Data Services 3.5.1 n'est pas installé sur le serveur SharePoint. Pour plus d’informations sur cette erreur et sur sa résolution, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="rsreport"></a>Créer un flux de données à partir d’un rapport de Reporting Services  
+##  <a name="create-a-data-feed-from-a-reporting-services-report"></a><a name="rsreport"></a>Créer un flux de données à partir d’un rapport de Reporting Services  
  Si vous avez un déploiement de SQL Server 2008 R2 Reporting Services, vous pouvez utiliser la nouvelle extension de rendu Atom pour générer un flux de données à partir d'un rapport existant. Pour de meilleurs résultats, Excel 2010 avec PowerPivot pour Excel doit être installé sur votre station de travail. L'application cliente PowerPivot est lancée en réponse à l'exportation du flux, et ajoute et met automatiquement en relation les tables et colonnes à mesure qu'elles sont transmises.  
   
  Pour obtenir des instructions sur l’exportation d’un flux de données à partir d’un rapport, consultez [Générer des flux de données à partir d’un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) dans le [fichier d’aide du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494).  
@@ -67,7 +67,7 @@ ms.locfileid: "66070904"
 > [!NOTE]  
 >  Pour configurer une planification périodique d'actualisation des données qui réimporte les données de rapport dans un classeur PowerPivot publié dans une bibliothèque SharePoint, le serveur de rapports doit être configuré pour l'intégration SharePoint. Pour plus d’informations sur l’utilisation conjointe d’PowerPivot pour SharePoint et de Reporting Services, consultez [configuration et administration d’un serveur de rapports &#40;Reporting Services mode SharePoint&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
-##  <a name="dsdoc"></a>Créer un flux de données à partir d’un document de service de données  
+##  <a name="create-a-data-feed-from-a-data-service-document"></a><a name="dsdoc"></a> Créer un flux à partir d'un document de service de données  
  Si vous avez un service de données personnalisé qui génère des flux Atom, vous pouvez configurer un document de service de données en tant que méthode pour rendre les données accessibles aux utilisateurs et aux applications. Un fichier de *document de service de données* (.atomsvc) spécifie une ou plusieurs connexions à des sources en ligne qui publient des données au format câble Atom. Les documents de service de données peuvent être créés dans une *bibliothèque de flux de données*, qui est une bibliothèque à usage spécifique qui fournit un point d’accès commun pour l’exploration de documents de service de données publiés sur un serveur SharePoint. Les travailleurs de l'information sont autorisés à accéder aux documents de service de données dans la bibliothèque de flux peuvent faire référence à l'URL SharePoint du document pour importer les flux dans leurs classeurs et applications.  
   
 1.  Ouvrez une bibliothèque de flux créée par votre administrateur de site. Pour plus d’informations, consultez [créer ou personnaliser une bibliothèque de flux de données &#40;PowerPivot pour SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
@@ -80,9 +80,9 @@ ms.locfileid: "66070904"
   
 5.  Spécifiez une ou plusieurs URL qui fournissent le flux :  
   
-    1.  L' **URL de base** est facultative. Vous devez la spécifier si un document de service de données fournit plusieurs flux. L'URL de base doit spécifier la partie de l'URL qui est commune à tous les flux (par exemple, le nom du serveur et le site). Si vous créez un document de service de données pour un rapport Reporting Services, l'URL de base correspond à l'URL du serveur de rapports et au rapport.  
+    1.  L'**URL de base** est facultative. Vous devez la spécifier si un document de service de données fournit plusieurs flux. L'URL de base doit spécifier la partie de l'URL qui est commune à tous les flux (par exemple, le nom du serveur et le site). Si vous créez un document de service de données pour un rapport Reporting Services, l'URL de base correspond à l'URL du serveur de rapports et au rapport.  
   
-    2.  L' **URL du service Web** est obligatoire. Sans l'URL de base, cette valeur doit inclure le préfixe http:// ou https:// dans l'adresse. Si vous spécifiez une URL de base, l'URL du service Web est la partie qui suit l'URL de base. Par exemple, si l’URL complète est http://adventure-works/inventory/today.aspx, l’URL de base est http://adventure-works/inventory, et l’URL du service Web est/Today.aspx.  
+    2.  L'**URL du service Web** est requise. Sans l'URL de base, cette valeur doit inclure le préfixe http:// ou https:// dans l'adresse. Si vous spécifiez une URL de base, l'URL du service Web est la partie qui suit l'URL de base. Par exemple, si l’URL complète est http://adventure-works/inventory/today.aspx, l’URL de base est http://adventure-works/inventory, et l’URL du service Web est/Today.aspx.  
   
          L'URL du service Web peut inclure des paramètres qui filtrent ou sélectionnent un sous-ensemble de données. L'application ou le service qui fournit le flux doit prendre en charge les paramètres que vous spécifiez dans l'URL.  
   

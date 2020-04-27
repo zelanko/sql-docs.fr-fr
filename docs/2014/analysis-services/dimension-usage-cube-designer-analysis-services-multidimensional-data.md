@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081666"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Utilisation de la dimension (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,8 +26,8 @@ ms.locfileid: "66081666"
   
 |Volet|Définition|  
 |----------|----------------|  
-|**Barre d'outils**|Utilisez la barre d’outils pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet utilisation de la dimension, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Boutons**|Utilisez la grille pour afficher ou modifier les relations de dimensions entre les dimensions et les groupes de mesures dans le cube. Pour plus d’informations sur ce volet, consultez [Grille &#40;onglet Utilisation de la dimension, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barre**|Utilisez la barre d’outils pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet utilisation de la dimension, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Grille**|Utilisez la grille pour afficher ou modifier les relations de dimensions entre les dimensions et les groupes de mesures dans le cube. Pour plus d’informations sur ce volet, consultez [Grille &#40;onglet Utilisation de la dimension, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

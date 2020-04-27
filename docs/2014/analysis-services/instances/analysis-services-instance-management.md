@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080349"
 ---
 # <a name="analysis-services-instance-management"></a>Gestion d'instances Analysis Services
@@ -46,17 +46,17 @@ ms.locfileid: "66080349"
   
 |Lien|Description de la tâche|  
 |----------|----------------------|  
-|[&#40;de configuration postérieures à l’installation Analysis Services&#41;](post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
+|[Configuration consécutive à l’installation &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
 |[Se connecter à Analysis Services](connect-to-analysis-services.md)|Décrit les propriétés des chaînes de connexion, les bibliothèques clientes, les méthodologies d'authentification, ainsi que les étapes requises pour établir ou désactiver des connexions.|  
-|[Analyser une instance Analysis Services](monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
-|[Écrire des scripts pour les tâches d’administration dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explique comment automatiser de nombreuses tâches d'administration, notamment le traitement.|  
+|[Monitor an Analysis Services Instance](monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
+|[Tâches d'administration à l'aide de scripts dans Analysis Services]](../script-administrative-tasks-in-analysis-services.md)|Explique comment automatiser de nombreuses tâches d'administration, notamment le traitement.|  
 |[Scénarios de globalisation pour données multidimensionnelles Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Explique la prise en charge linguistique et du classement, décrit les étapes permettant de modifier les deux propriétés et fournit des conseils pour définir et tester les comportements de langue et de classement.|  
-|[Opérations de journalisation dans Analysis Services](log-operations-in-analysis-services.md)|Décrit les journaux et explique comment les configurer.|  
+|[Enregistrer les opérations dans Analysis Services](log-operations-in-analysis-services.md)|Décrit les journaux et explique comment les configurer.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Outils de configuration de PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administration et configuration du serveur PowerPivot dans l’administration centrale](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Déterminer le mode serveur d’une instance de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

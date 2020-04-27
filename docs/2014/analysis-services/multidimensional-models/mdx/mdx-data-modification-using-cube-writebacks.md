@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074217"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Utilisation de l'écriture différée de cubes (MDX)
@@ -81,7 +81,7 @@ SET ([Measures].[Sales Amount Quota], [Employee].[Employee Department].[Departme
 USE_EQUAL_ALLOCATION  
 ```  
   
-## <a name="error-conditions"></a>Conditions d’erreur  
+## <a name="error-conditions"></a>Conditions d'erreur  
  Le tableau suivant décrit à la fois les éléments pouvant entraîner l'échec d'écritures différées et le résultat de ces erreurs.  
   
 |Condition d'erreur|Résultats|  
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   modification de la granularité d'une dimension comprise dans l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modification des données &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [Modification de données &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

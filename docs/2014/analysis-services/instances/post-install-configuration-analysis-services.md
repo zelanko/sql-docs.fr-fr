@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079655"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuration consécutive à l'installation (Analysis Services)
@@ -32,8 +32,8 @@ ms.locfileid: "66079655"
 |[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Créez une règle de trafic entrant dans le Pare-feu Windows afin que les demandes puissent être routées via le port TCP utilisé par l'instance d'Analysis Services. Cette tâche est obligatoire. Personne ne peut accéder à Analysis Services depuis un ordinateur distant tant qu'une règle entrante de pare-feu n'est pas définie.|  
 |[Accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Pendant l'installation, vous deviez ajouter au moins un compte d'utilisateur au rôle Administrateur de l'instance Analysis Services. Les autorisations administratives sont obligatoires pour de nombreuses opérations courantes de serveur, telles que le traitement des données à partir de bases de données relationnelles externes. Utilisez les informations de cette rubrique pour ajouter ou modifier l'appartenance du rôle Administrateur.|  
 |[Configurer les comptes de service &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Pendant l'installation, le compte de service Analysis Services a été configuré avec les autorisations appropriées pour permettre l'accès contrôlé aux fichiers exécutables du programme et aux fichiers de la base de données. En tant que tâche consécutive à l'installation, vous devez déterminer s'il faut autoriser l'utilisation du compte de service lors de l'exécution de tâches supplémentaires. Les charges de travail de traitement et de requête peuvent être exécutées sous le compte de service. Ces opérations réussissent uniquement quand le compte de service dispose des autorisations appropriées.|  
-|[Inscrire une instance de Analysis Services dans un groupe de serveurs](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) permet de créer des groupes de serveurs pour organiser vos instances de SQL Server. Il est plus facile de gérer des déploiements évolutif constitués de plusieurs instances de serveurs au sein de groupes de serveurs. Utilisez les informations de cette rubrique pour organiser les instances d'Analysis Services en groupes dans SSMS.|  
-|[Déterminer le mode serveur d’une instance de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Pendant l'installation, vous deviez sélectionner un mode serveur pour déterminer le type de modèle (multidimensionnel ou tabulaire) s'exécutant sur le serveur. Si vous avez des doutes quant au mode serveur, utilisez les informations de cette rubrique pour déterminer le mode qui a été installé.|  
+|[Inscrire une instance Analysis Services dans un groupe de serveurs](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) permet de créer des groupes de serveurs pour organiser vos instances de SQL Server. Il est plus facile de gérer des déploiements évolutif constitués de plusieurs instances de serveurs au sein de groupes de serveurs. Utilisez les informations de cette rubrique pour organiser les instances d'Analysis Services en groupes dans SSMS.|  
+|[Déterminer le mode serveur d'une instance Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Pendant l'installation, vous deviez sélectionner un mode serveur pour déterminer le type de modèle (multidimensionnel ou tabulaire) s'exécutant sur le serveur. Si vous avez des doutes quant au mode serveur, utilisez les informations de cette rubrique pour déterminer le mode qui a été installé.|  
 |[Renommer une instance d'Analysis Services](rename-an-analysis-services-instance.md)|Un nom descriptif peut vous aider à faire la distinction entre plusieurs instances ayant des modes serveur différents, ou entre des instances principalement utilisées par des services ou des équipes de votre organisation. Si vous souhaitez remplacer le nom de l'instance par un nom qui vous aide à mieux gérer vos installations, utilisez les informations de cette rubrique pour savoir comment procéder.|  
   
 ## <a name="next-steps"></a>Étapes suivantes  

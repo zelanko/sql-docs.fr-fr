@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080412"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Insérer une fonction, boîte de dialogue (SSAS)
@@ -50,6 +50,6 @@ ms.locfileid: "66080412"
  La boîte de dialogue **Insérer une fonction** est disponible uniquement lorsque vous générez une formule. Vous pouvez créer des calculs dans une colonne calculée, un tableau croisé dynamique ou un graphique croisé dynamique. Les formules que vous générez spécifiquement pour une utilisation dans un tableau croisé dynamique sont également appelées *mesures*. Pour plus d’informations, consultez [Créer une colonne calculée &#40;SSAS Tabulaire&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) et [Créer et gérer des mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Calculs &#40;&#41;tabulaire SSAS](tabular-models/calculations-ssas-tabular.md)  
+ [Calculs &#40;SSAS Tabulaire&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

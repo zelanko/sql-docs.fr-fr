@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079361"
 ---
 # <a name="creating-an-analysis-services-project"></a>Création d'un projet Analysis Services
@@ -37,7 +37,7 @@ ms.locfileid: "66079361"
  Vous avez correctement créé le `Analysis Services Tutorial` projet, en fonction du modèle de **projet multidimensionnel et d’exploration de données Analysis Services** , dans une nouvelle solution qui est `Analysis Services Tutorial`également nommée.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d'une source de données](lesson-1-2-defining-a-data-source.md)  
+ [Définition d’une source de données](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création de modèles multidimensionnels à l’aide de SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   

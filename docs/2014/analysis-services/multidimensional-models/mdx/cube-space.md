@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074708"
 ---
 # <a name="cube-space"></a>Espace du cube
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  Dans la requête ci-dessus, la hiérarchie définie par l'utilisateur Customer Geography incluse dans la dimension Customer est utilisée pour définir la position dans l'espace du cube définie auparavant à l'aide d'une hiérarchie d'attribut. La même position dans l'espace du cube peut être définie soit au moyen de hiérarchies d'attribut, soit à l'aide de hiérarchies définies par l'utilisateur.  
   
-##  <a name="AttribRelationships"></a>Relations d’attributs et espace du cube  
+##  <a name="attribute-relationships-and-cube-space"></a><a name="AttribRelationships"></a>Relations d’attributs et espace du cube  
  La définition de relations d'attributs entre des attributs associés améliore les performances des requêtes (grâce à la création facilitée d'agrégations adaptées) et affecte le membre d'une hiérarchie d'attribut associée qui apparaît avec un membre de hiérarchie d'attribut. Par exemple, lorsque vous définissez un tuple qui inclut un membre de la hiérarchie d'attribut City et que le tuple ne définit pas explicitement le membre de la hiérarchie d'attribut Country, vous pouvez vous attendre à ce que le membre par défaut de la hiérarchie d'attribut Country corresponde au membre associé de la hiérarchie d'attribut Country. Néanmoins, cette situation ne vaut que si une relation d'attribut est définie entre les hiérarchies d'attribut City et Country.  
   
  L'exemple ci-après retourne le membre d'une hiérarchie d'attribut associée qui ne figure pas de manière explicite dans la requête.  
@@ -135,6 +135,6 @@ FROM [Adventure Works]
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Totaux visuels et non visuels](visual-totals-and-non-visual-totals.md)   
  [Référence du langage MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
- [Expressions multidimensionnelles &#40;référence de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

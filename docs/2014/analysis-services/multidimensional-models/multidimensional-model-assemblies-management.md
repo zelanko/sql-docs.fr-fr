@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073529"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestion des assemblys de modèles multidimensionnels
@@ -73,19 +73,18 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Pour assurer la compatibilité amont avec les versions antérieures de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la syntaxe suivante est également acceptable :  
   
- *AssemblyName*! *FullClassName*! *Nomprocédure*(*argument1*, *argument2*,...)  
+ *AssemblyName*!*FullClassName*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
  Si une bibliothèque COM prend en charge plusieurs interfaces, l'identificateur d'interface peut également être utilisé pour résoudre le nom de la procédure, comme dans cet exemple :  
   
- *AssemblyName*! *InterfaceId*! *Nomprocédure*(*argument1*, *argument2*,...)  
+ *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
 ## <a name="security"></a>Sécurité  
  La sécurité des assemblys est basée sur le modèle de sécurité de .NET Framework, qui est un modèle de sécurité d'accès du code. .NET Framework prend en charge un mécanisme de sécurité d'accès du code qui suppose que le module d'exécution peut héberger à la fois du code d'un niveau de confiance total et d'un niveau de confiance partiel. Les ressources qui sont protégées par la sécurité d'accès du code de .NET Framework sont généralement intégrées à du code managé qui demande l'autorisation correspondante avant d'autoriser l'accès à la ressource. La demande d'autorisation est satisfaite seulement si tous les appelants (au niveau de l'assembly) de la pile d'appels ont l'autorisation pour la ressource correspondante.  
   
  Pour les assemblys, l'autorisation d'exécution est passée avec la propriété `PermissionSet` sur l'objet `Assembly`. Les autorisations reçues par le code managé sont déterminées par la stratégie de sécurité effective. Il existe déjà trois niveaux de stratégie effectifs dans un environnement hébergé non-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : entreprise, ordinateur et utilisateur. La liste effective des autorisations reçues par le code est déterminée par l'intersection des autorisations obtenues par ces trois niveaux.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une stratégie de sécurité au niveau de l’hôte au CLR (Common Language Runtime) quand il l’héberge. Cette stratégie est un niveau de stratégie supplémentaire sous les trois niveaux de stratégie qui sont toujours effectifs. Cette stratégie est définie pour chaque domaine d'application qui est créé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une stratégie de sécurité au niveau de l’hôte au CLR (Common Language Runtime) quand il l’héberge. Cette stratégie est un niveau de stratégie supplémentaire sous les trois niveaux de stratégie qui sont toujours effectifs. Cette stratégie est définie pour chaque domaine d'application qui est créé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  La stratégie de niveau hôte de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est une combinaison de la stratégie fixe de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les assemblys système et de la stratégie spécifiée par l’utilisateur pour les assemblys utilisateur. La partie spécifiée par l'utilisateur de la stratégie d'hôte d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est basée sur le propriétaire de l'assembly spécifiant un des trois compartiments d'autorisation pour chaque assembly :  
   
@@ -109,8 +108,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  La propriété `ImpersonationMode` doit être définie à `ImpersonateCurrentUser` ou à `ImpersonateAnonymous`. Le paramètre par défaut, `ImpersonateCurrentUser`, exécute un assembly sous le compte de connexion réseau de l'utilisateur en cours. Si le `ImpersonateAnonymous` paramètre est utilisé, le contexte d’exécution correspond au compte d’utilisateur de connexion Windows IUSER_*ServerName* sur le serveur. Il s'agit du compte Invité Internet, qui a des droits limités sur le serveur. Un assembly s'exécutant dans ce contexte peut seulement accéder à des ressources limitées sur le serveur local.  
   
 ### <a name="application-domains"></a>Domaines d'application  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’expose pas directement les domaines d’application. Grâce à un ensemble d'assemblys s'exécutant dans le même domaine d'application, les domaines d'application sont capables de se découvrir les uns les autres au moment de l'exécution à l'aide de l'espace de noms `System.Reflection` dans .NET Framework ou par d'autres moyens, et ils sont capables d'y faire des appels en mode de liaison tardive. De tels appels font l'objet des vérifications d'autorisations utilisées par la sécurité basée sur les autorisations de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’expose pas directement les domaines d’application. Grâce à un ensemble d'assemblys s'exécutant dans le même domaine d'application, les domaines d'application sont capables de se découvrir les uns les autres au moment de l'exécution à l'aide de l'espace de noms `System.Reflection` dans .NET Framework ou par d'autres moyens, et ils sont capables d'y faire des appels en mode de liaison tardive. De tels appels font l'objet des vérifications d'autorisations utilisées par la sécurité basée sur les autorisations de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Il est recommandé de ne pas se baser sur la recherche d'assemblys dans le même domaine d'application, dans la mesure où la limite du domaine d'application et les assemblys qui vont dans chacun des domaines sont définis par la mise en œuvre.  
   

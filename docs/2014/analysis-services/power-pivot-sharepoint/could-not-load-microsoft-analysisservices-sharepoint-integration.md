@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071632"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>Impossible de charger le fichier ou l’assembly &#39;Microsoft. Data. services, version = 3.5.0.0, culture = neutral, PublicKeyToken = b77a5c561934e089&#39; ou l’une de ses dépendances. Le système ne peut pas trouver le fichier spécifié.
@@ -26,7 +26,7 @@ ms.locfileid: "66071632"
 |-|-|  
 |S’applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause :|ADO.NET Data Services 3.5 SP1 est introuvable.|  
+|Cause|ADO.NET Data Services 3.5 SP1 est introuvable.|  
 |Texte du message|Impossible de charger le fichier ou l'assembly 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' ou une de ses dépendances. Le système ne trouve pas le fichier spécifié.|  
   
 ## <a name="explanation"></a>Explication  
@@ -38,7 +38,7 @@ ms.locfileid: "66071632"
   
 1.  Accédez à la documentation relative à la configuration matérielle et logicielle requise pour SharePoint 2010, [déterminer la configuration matérielle et logicielle requise (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734).  
   
-2.  Dans **installation des composants logiciels requis**, recherchez le lien pour ADO.NET Data Services 3,5 qui correspond au système d’exploitation que vous utilisez.  
+2.  Dans **Installer les logiciels requis**, recherchez le lien pour ADO.NET Data Services 3.5 correspondant au système d'exploitation que vous utilisez.  
   
 3.  Cliquez sur le lien, puis exécutez le programme d'installation qui installe le service.  
   

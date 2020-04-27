@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080651"
 ---
 # <a name="impersonation-information"></a>Informations d’emprunt d’identité
@@ -39,7 +39,7 @@ ms.locfileid: "66080651"
  **Utiliser le compte de service**  
  Sélectionnez cette option pour que l'objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise les informations d'identification de sécurité associées au service [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui gère l'objet. Les informations d'identification du compte de service sont utilisées pour le traitement, les requêtes ROLAP, les partitions distantes, les objets liés et la synchronisation entre la cible et la source. Cependant, pour les instructions DMX (Data Mining Extensions) OPENQUERY, les cubes locaux et les modèles d'exploration de données, les informations d'identification de l'utilisateur actuel sont utilisées. Cette option n'est pas prise en charge pour les liaisons hors ligne.  
   
- **Utiliser les informations d’identification de l’utilisateur actuel**  
+ **Utiliser les informations d'identification de l'utilisateur actuel**  
  Sélectionnez cette option afin que l'objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise les informations d'identification de sécurité de l'utilisateur actuel pour les liaisons hors ligne, les instructions DMX OPENQUERY, les cubes locaux et les modèles d'exploration de données. Cette option n'est pas prise en charge pour le traitement, les requêtes ROLAP, les partitions distantes, les objets liés et la synchronisation entre la cible et la source.  
   
  **Être**  

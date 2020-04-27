@@ -11,31 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078428"
 ---
 # <a name="lesson-7-create-measures"></a>Leçon 7 : Créer des mesures
-  Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Similairement aux colonnes calculées que vous avez créées dans la leçon précédente, une mesure est essentiellement un calcul créé à l'aide d'une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées selon un *filtre* sélectionné par l’utilisateur, tel qu’une colonne ou un segment ajouté au champ Étiquettes de lignes d’un tableau croisé dynamique.   Pour chaque cellule du filtre, une valeur est alors calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires, pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [Mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
+  Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Similairement aux colonnes calculées que vous avez créées dans la leçon précédente, une mesure est essentiellement un calcul créé à l'aide d'une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique.   Pour chaque cellule du filtre, une valeur est alors calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires, pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [Mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
   
- Pour créer des mesures, vous utilisez la grille de mesures. Par défaut, chaque table comprend une grille de mesures vide. Toutefois, la plupart du temps, vous n’avez pas à créer des mesures pour chaque table. La grille de mesures s'affiche sous une table au sein du générateur de modèles dans la vue de données. Pour afficher ou masquer la grille de mesures d’une table, cliquez sur le menu **Table**, puis sur **Afficher la grille de mesures**.  
+ Pour créer des mesures, vous utilisez la grille de mesures. Par défaut, chaque table contient une grille de mesures vide ; toutefois, en général, vous ne créez pas de mesures pour chaque table. La grille de mesures s'affiche sous une table au sein du générateur de modèles dans la vue de données. Pour afficher ou masquer la grille de mesures d’une table, cliquez sur le menu **Table**, puis sur **Afficher la grille de mesures**.  
   
- Vous pouvez créer une mesure en cliquant sur une cellule vide de la grille de mesures, puis en tapant une formule DAX dans la barre de formule. Lorsque vous cliquez sur Entrée pour finaliser la formule, la mesure s’affiche dans la cellule. Vous pouvez également créer des mesures à l’aide d’une fonction d’agrégation standard en cliquant sur une colonne, puis en cliquant sur le bouton Somme automatique (**∑**) dans la barre d’outils. Les mesures créées à l'aide de la fonction Somme automatique apparaissent dans la cellule de la grille de mesures, directement sous la colonne. Toutefois, elles peuvent être déplacées si nécessaire.  
+ Vous pouvez créer une mesure en cliquant sur une cellule vide dans la grille de mesures, puis en tapant une formule DAX dans la barre de formule. Lorsque vous cliquez sur ENTRÉE pour terminer la formule, la mesure apparaît dans la cellule. Vous pouvez également créer des mesures à l’aide d’une fonction d’agrégation standard en cliquant sur une colonne, puis en cliquant sur le bouton Somme automatique (**∑**) dans la barre d’outils. Les mesures créées à l'aide de la fonction Somme automatique apparaissent dans la cellule de la grille de mesures, directement sous la colonne. Toutefois, elles peuvent être déplacées si nécessaire.  
   
  Dans cette leçon, vous allez créer des mesures en entrant une formule DAX dans la barre de formule et en utilisant la fonction de somme automatique.  
   
- Durée estimée pour effectuer cette leçon : **30 minutes**  
+ Durée estimée pour suivre cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Créer des mesures  
   
 #### <a name="to-create-a-days-current-quarter-to-date-measure-in-the-date-table"></a>Pour créer une mesure pour tous les jours du trimestre en cours jusqu'à la date du jour dans la table de dates  
   
-1.  Dans le générateur de modèles, cliquez sur la table **Date** .  
+1.  Dans le concepteur de modèles, cliquez sur la table **Date** .  
   
 2.  Si une grille de mesures vide n'apparaît pas sous la table, cliquez sur le menu **Table** , puis cliquez sur **Afficher la grille de mesures**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66078428"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
- Lorsque vous créez un rapport de comparaison entre une période non terminée et la période précédente, la formule doit prendre en compte la durée déjà écoulée de cette période et la comparer à la même durée de la période précédente. Dans ce cas, [Jours du trimestre en cours à ce jour] /[Jours du trimestre en cours] donne la période écoulée dans la période actuelle.  
+ Lorsque vous créez un ratio de comparaison entre une période incomplète et la période précédente, la formule doit prendre en compte la partie de la période qui s'est écoulée, et la comparer à la même partie de la période précédente. Dans ce cas, [Jours du trimestre en cours à ce jour] /[Jours du trimestre en cours] donne la période écoulée dans la période actuelle.  
   
 #### <a name="to-create-an-internet-distinct-count-sales-order-measure-in-the-internet-sales-table"></a>Pour créer une mesure de comptage de valeurs de commande client dans la table Internet Sales  
   

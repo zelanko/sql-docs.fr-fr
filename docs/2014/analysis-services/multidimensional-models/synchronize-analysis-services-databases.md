@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072849"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comprend une fonctionnalité de synchronisation de bases de données qui rend deux bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] équivalentes en copiant les données et les métadonnées depuis une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
   
 -   Déployer une base de données à partir d'un serveur de mise en lots vers un serveur de production.  
@@ -43,7 +42,7 @@ ms.locfileid: "66072849"
 > [!NOTE]  
 >  Les livres blancs suivants, écrits pour les versions antérieures d'Analysis Services, s'appliquent également aux solutions multidimensionnelles évolutives créées à l'aide de SQL Server 2012. Pour plus d’informations, consultez [Scale-Out Querying with Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) (Requêtes de scale-out avec Analysis Services) et [Scale-Out Querying for Analysis Services with Read-Only Databases](https://go.microsoft.com/fwlink/?LinkId=253137.)(Requêtes de scale-out pour Analysis Services avec des bases de données en lecture seule)  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Vous devez être membre du rôle d'administrateur de serveur Analysis Services sur le serveur de destination (ou cible) à partir duquel vous lancez la synchronisation de bases de données. Sur le serveur source, votre compte d'utilisateur Windows doit disposer des autorisations de contrôle total sur la base de données source. Si vous synchroniserez les bases de données de manière interactive, souvenez-vous que la synchronisation s'exécute sous le contexte de sécurité de votre identité d'utilisateur Windows. Si votre compte n'a pas accès à des objets spécifiques, ces objets seront exclus de l'opération. Pour plus d’informations sur les rôles d’administrateur de serveur et les autorisations de base de données, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [accorder des autorisations de base de données &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  Le port TCP 2383 doit être ouvert sur les deux serveurs pour autoriser les connexions distantes entre les instances par défaut. Pour plus d’informations sur la création d’une exception dans le Pare-feu Windows, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -82,7 +81,7 @@ ms.locfileid: "66072849"
   
 3.  Spécifiez le serveur source et la base de données source. Dans la page Sélectionnez la base de données à synchroniser, dans **Serveur source** et **Base de données source**, entrez le nom du serveur source et de la base de données source. Par exemple, si vous déployez à partir d'un environnement de test vers un serveur de production, la source est la base de données dans le serveur de mise en lots.  
   
-     **Serveur de destination** affiche le nom de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l’instance de à laquelle sont synchronisées les données et les métadonnées de la base de données sélectionnée dans la **base de données source** .  
+     **Serveur de destination** affiche le nom de l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec laquelle sont synchronisées les données et les métadonnées de la base de données sélectionnée dans **Base de données source** .  
   
      La synchronisation se produit pour les bases de données source et de destination qui portent le même nom. Si le serveur de destination a déjà une base de données qui partage le même nom que la base de données source, la base de données de destination est mise à jour avec les métadonnées et les données de la source. Si la base de données n'existe pas, elle sera créée sur le serveur de destination.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66072849"
   
      L’option **Emplacements** affiche une grille donnant les détails sur les emplacements dans lesquels sont stockées les partitions distantes de la base de données source, notamment les informations de source et de destination ainsi que la taille du stockage utilisé par chaque emplacement, disponibles dans la base de données sélectionnée. Cette grille comporte les colonnes suivantes :  
   
-     **Synchronisation**  
+     **Sync**  
      Sélectionnez cette option pour inclure un emplacement contenant les partitions distantes durant la synchronisation.  
   
     > [!NOTE]  

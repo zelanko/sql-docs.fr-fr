@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078787"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Leçon 4 : Marquer en tant que table de dates
@@ -24,18 +24,18 @@ ms.locfileid: "66078787"
   
  Dans cette leçon, vous marquez la table Date importée et renommée comme *Table de Date* et la colonne Date (dans la table de date) comme *Colonne de date* (identificateur unique). Toute utilisation de la date de nom peut devenir confuse, mais vous obtiendrez bientôt l’idée.  
   
- Durée estimée pour suivre cette leçon : **3 minutes**  
+ Durée estimée pour effectuer cette leçon : **3 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 3 : Renommer des colonnes](rename-columns.md).  
   
 ### <a name="to-set-mark-as-date-table"></a>Pour marquer en tant que table de dates  
   
 1.  Dans le concepteur de modèles, cliquez sur la table **Date** (onglet).  
   
-2.  Cliquez sur le menu **Table**, cliquez sur **Date**, puis cliquez sur **Marquer en tant que table de dates**.  
+2.  Cliquez sur le menu **table** , sur **Date**, puis sur **marquer en tant que table de dates**.  
   
-3.  Dans la boîte de dialogue **Marquer en tant que table de dates**, dans la zone de liste **Date**, sélectionnez la colonne **Date** comme identificateur unique.  
+3.  Dans la boîte de dialogue **Marquer comme Table de Date** , dans la zone de liste **Date** , sélectionnez la colonne **Date** comme identificateur unique.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour continuer ce didacticiel, passez à la [Leçon 5 : Créer des relations](lesson-4-create-relationships.md).  

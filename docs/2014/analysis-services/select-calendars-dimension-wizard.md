@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069691"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Sélectionner des calendriers (Assistant Dimension)
@@ -58,7 +58,7 @@ ms.locfileid: "66069691"
   
  Le tableau suivant répertorie les options disponibles pour le modèle de semaine du mois.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Semaine 445**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 4, et le troisième mois en compte 5.|  
 |**Semaine 454**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 5, et le troisième mois en compte 4.|  

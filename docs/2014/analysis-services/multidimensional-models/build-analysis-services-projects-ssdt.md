@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076774"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Générer des projets Analysis Services (SSDT)
@@ -43,10 +43,10 @@ ms.locfileid: "66076774"
   
 |Fichiers (dans le dossier bin)|Description|  
 |-----------------------------|-----------------|  
-|*NomProjet*. asdatabase|Contient les éléments ASSL qui définissent les métadonnées des objets du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de script de déploiement. Ce fichier est utilisé par le moteur de déploiement pour déployer les objets dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|*NomProjet*. configsettings|Contient les paramètres de configuration utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, la chaîne de connexion pour les sources de données).|  
-|*NomProjet*. deploymenttargets|Contient les paramètres de destination utilisés lors du déploiement que vous pouvez modifier directement ou dans l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, les noms de serveur et de base de données).|  
-|*NomProjet*. deploymentoptions|Contient plusieurs paramètres utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, les emplacements de stockage).|  
+|*nom_projet*.asdatabase|Contient les éléments ASSL qui définissent les métadonnées des objets du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de script de déploiement. Ce fichier est utilisé par le moteur de déploiement pour déployer les objets dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|*nom_projet*.configsettings|Contient les paramètres de configuration utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, la chaîne de connexion pour les sources de données).|  
+|*nom_projet*.deploymenttargets|Contient les paramètres de destination utilisés lors du déploiement que vous pouvez modifier directement ou dans l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, les noms de serveur et de base de données).|  
+|*nom_projet*.deploymentoptions|Contient plusieurs paramètres utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, les emplacements de stockage).|  
 |*AssemblyName*/*DllName.* dll|Les dossiers sont distincts pour chaque assembly référencé ; chaque dossier contient la DLL de l'assembly, l'assembly référencé et les fichiers .pdb associés pour les informations de débogage de la sortie.|  
   
 |Fichiers (dans le dossier obj)|Description|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074728"
 ---
 # <a name="autoexists"></a>Autoexists
@@ -88,9 +88,7 @@ WHERE (Measures.[Internet Sales Amount],
  Chacune de ces trois requêtes précédentes illustre l’effet du comportement de l’auto-existence [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]dans.  
   
 ## <a name="deep-and-shallow-autoexists"></a>Fonctionnalités Deep Autoexists et Shallow Autoexists  
- Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. 
-  `Deep Autoexists` signifie que toutes les expressions seront évaluées pour rencontrer l'espace le plus profond possible après l'application des expressions de découpage, des expressions de sous-sélection dans l'axe, etc. 
-  `Shallow Autoexists` permet d'évaluer les expressions externes avant l'expression actuelle et de passer ces résultats à l'expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
+ Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. `Deep Autoexists` signifie que toutes les expressions seront évaluées pour rencontrer l'espace le plus profond possible après l'application des expressions de découpage, des expressions de sous-sélection dans l'axe, etc. `Shallow Autoexists` permet d'évaluer les expressions externes avant l'expression actuelle et de passer ces résultats à l'expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
   
  Le scénario et les exemples suivants illustrent les différents types de fonctionnalités Autoexists. Dans les exemples suivants, nous allons créer deux jeux : l'un sous forme d'expression calculée et l'autre sous forme d'expression constante.  
   
@@ -134,17 +132,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Route-250**|**$9 377 457,68**|**$4 032,47**|**0,04%**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Route-650**|**$7 442 141,81**|**$39 698,30**|**0,53%**|  
-|**Tourisme-1000**|**$6 723 794,29**|**$166 144,17**|**2,47 %**|  
-|**Route-550-W**|**$3 668 383,88**|**$1 901,97**|**0,05%**|  
-|**Route-350-W**|**$3 665 932,31**|**$20 946,50**|**0,57%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
-|**Route-150**|**$2 363 805,16**|**$0,00**|**0,00%**|  
-|**Tourisme-3000**|**$2 046 508,26**|**$79 582,15**|**3,89 %**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0,53 %**|  
+|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2,47%**|  
+|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0,05%**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
+|**Road-150**|**2 363 805,16 $**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3,89%**|  
   
  Le jeu de produits obtenu semble être le même que jeu Preferred10Products, qui se présente ainsi :  
   
@@ -186,17 +184,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Route-250**|**$9 377 457,68**|**$4 032,47**|**0,04%**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Route-650**|**$7 442 141,81**|**$39 698,30**|**0,53%**|  
-|**Tourisme-1000**|**$6 723 794,29**|**$166 144,17**|**2,47 %**|  
-|**Route-550-W**|**$3 668 383,88**|**$1 901,97**|**0,05%**|  
-|**Route-350-W**|**$3 665 932,31**|**$20 946,50**|**0,57%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
-|**Route-150**|**$2 363 805,16**|**$0,00**|**0,00%**|  
-|**Tourisme-3000**|**$2 046 508,26**|**$79 582,15**|**3,89 %**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0,53 %**|  
+|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2,47%**|  
+|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0,05%**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
+|**Road-150**|**2 363 805,16 $**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3,89%**|  
   
  L'exemple suivant illustre le concept de la fonctionnalité Deep Autoexists. Dans l'exemple, nous filtrons Top10SellingProducts sur l'attribut [Product].[Product Line] pour les membres du groupe [Mountain]. Notez que les deux attributs (slicer et axis) appartiennent à la même dimension, [Product].  
   
@@ -218,17 +216,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
-|**Montagne-300**|**$1 907 249,38**|**$876,95**|**0,05%**|  
-|**Mountain-500**|**$1 067 327,31**|**$17 266,09**|**1,62%**|  
-|**Montagne-400-W**|**$592 450,05**|**$303,49**|**0,05%**|  
-|**LL de montagne**|**$521 864,42**|**$252,41**|**0,05%**|  
-|**Cadre de montagne ML-W**|**$482 953,16**|**$206,95**|**0,04%**|  
-|**Cadre de montagne ML**|**$343 785,29**|**$161,82**|**0,05%**|  
-|**Women's Mountain Shorts**|**$260 304,09**|**$6 675,56**|**2,56%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
+|**Mountain-300**|**1 907 249,38 $**|**$876.95**|**0,05%**|  
+|**Mountain-500**|**1 067 327,31 $**|**17 266,09 $**|**1,62%**|  
+|**Mountain-400-W**|**592 450,05 $**|**$303.49**|**0,05%**|  
+|**LL Mountain Frame**|**521 864,42 $**|**$252.41**|**0,05%**|  
+|**ML Mountain Frame-W**|**482 953,16 $**|**$206,95**|**0,04%**|  
+|**ML Mountain Frame**|**343 785,29 $**|**$161.82**|**0,05%**|  
+|**Women's Mountain Shorts**|**260 304,09 $**|**6 675,56 $**|**2,56%**|  
   
  Dans le jeu de résultats ci-dessus, nous avons sept nouveaux venus dans la liste des articles Top10SellingProducts ; de plus, Mountain-200, Mountain-100 et HL Mountain Frame ont été déplacés en haut de la liste. Dans le jeu de résultats précédent, ces trois valeurs étaient entrecoupées.  
   
@@ -276,10 +274,10 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
   
  Dans les résultats ci-dessus, le découpage donne un résultat qui contient uniquement les produits de Preferred10Products qui font partie du groupe [Mountain] dans [Product].[Product Line], comme prévu car Preferred10Products est une expression constante.  
   
@@ -305,10 +303,10 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
   
  Le comportement d’Autoexists peut être modifié à l’aide du paramètre Autoexists = [1 | 2 | 3] dans la chaîne de connexion ; consultez les [Propriétés XMLA prises en charge &#40;les&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> l’utilisation des paramètres.  
   
@@ -319,6 +317,6 @@ WHERE (Measures.[Internet Sales Amount],
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Totaux visuels et non visuels](visual-totals-and-non-visual-totals.md)   
  [Référence du langage MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
- [Expressions multidimensionnelles &#40;référence de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

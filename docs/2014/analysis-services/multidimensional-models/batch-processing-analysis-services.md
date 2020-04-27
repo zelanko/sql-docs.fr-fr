@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076942"
 ---
 # <a name="batch-processing-analysis-services"></a>Traitement par lots (Analysis Services)
@@ -30,9 +30,9 @@ ms.locfileid: "66076942"
   
  [Traitement par lots dans SQL Server Data Tools](#bkmk_ssdt)  
   
- [Traitement par lots à l’aide de XMLA dans Management Studio](#bkmk_xmla)  
+ [Traitement par lots à l'aide de XMLA dans Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>Traitement par lots dans SQL Server Data Tools  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a> Traitement par lots dans SQL Server Data Tools  
  Pour que des objets puissent être traités dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], le projet contenant les objets doit être déployé. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Ouvrez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,9 +53,9 @@ ms.locfileid: "66076942"
   
 9. Sous **Options de traitement**, marquez les paramètres suivants :  
   
-    -   L' **ordre de traitement** est défini sur **séquentiel**et le mode de **transaction** est défini sur **une seule transaction**.  
+    -   **Ordre de traitement** a la valeur **Séquentiel**et **Mode de transaction** a la valeur **Une seule transaction**.  
   
-    -   L' **option de table d’écriture différée** est définie pour **utiliser l’existant**.  
+    -   **Option de la table d'écriture différée** a la valeur **Utiliser l'existante**.  
   
     -   Sous **Objets affectés**, activez la case à cocher **Traiter les objets affectés** .  
   
@@ -69,10 +69,10 @@ ms.locfileid: "66076942"
   
 14. Cliquez sur **Fermer** sur l'écran **Traiter les objets** .  
   
-##  <a name="bkmk_xmla"></a>Traitement par lots à l’aide de XMLA dans Management Studio  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Traitement par lots à l’aide de XMLA dans Management Studio  
  Vous pouvez créer un script XMLA qui exécute le traitement par lots. Commencez en générant un script XMLA dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour chaque objet, puis associez-les dans une seule requête XMLA que vous exécutez de façon interactive ou dans une tâche planifiée.  
   
- Pour obtenir des dansstructions étape par étape, consultez l’ **exemple 2** dans [Schedule SSAS Admdansistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
+ Pour obtenir des instructions pas à pas, consultez l' **exemple 2** dans [planifier des tâches d’administration SSAS avec SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement des objets de modèles multidimensionnels](processing-a-multidimensional-model-analysis-services.md)  

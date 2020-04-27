@@ -14,18 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080324"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatiser les tâches d'administration Analysis Services avec SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d’automatiser l’exécution de scripts DDL, de tâches de traitement de cubes et de modèles d’exploration de données, ainsi que de tâches de requête d’exploration de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] données. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d’automatiser l’exécution de scripts DDL, de tâches de traitement de cubes et de modèles d’exploration de données, ainsi que de tâches de requête d’exploration de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a été conçu pour effectuer des opérations de nettoyage de données au cours des tâches de traitement de données et pour rassembler des données de sources de données différentes. En cas d’utilisation de cubes et de modèles d’exploration de données, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut transformer des données non numériques en données numériques et peut garantir que les valeurs appartiennent aux intervalles prévus, créant ainsi des données propres qui permettront de remplir les tables de faits et les dimensions.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a été conçu pour effectuer des opérations de nettoyage de données au cours des tâches de traitement de données et pour rassembler des données de sources de données différentes. En cas d’utilisation de cubes et de modèles d’exploration de données, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut transformer des données non numériques en données numériques et peut garantir que les valeurs appartiennent aux intervalles prévus, créant ainsi des données propres qui permettront de remplir les tables de faits et les dimensions.  
   
 ## <a name="integration-services-tasks"></a>Tâches Integration Services  
  Il existe deux éléments principaux dans toute tâche ou travail [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : les éléments de flux de contrôle et les éléments de flux de données. Les éléments de flux de contrôle définissent l'ordre logique de la progression des travaux en appliquant des contraintes de précédence. Les éléments de flux de données se rapportent à la connexion entre la sortie d'un composant et l'entrée du composant suivant, ainsi qu'à toutes les transformations des données qui peuvent avoir lieu entre les deux. Pour ce qui est du choix de l'emplacement de destination des données, les contraintes de précédence incorporent une logique permettant de spécifier le composant qui reçoit la sortie. Les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tâches les plus pertinentes pour inclure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la tâche DDL d’exécution, la tâche de traitement de Analysis Services et la tâche de requête d’exploration de données. Pour chacune de ces tâches, la tâche Envoyer un message peut être utilisée pour envoyer à l'administrateur un message électronique contenant les résultats de la tâche.  
@@ -44,6 +42,6 @@ ms.locfileid: "66080324"
  [Destination de traitement de dimension](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Transformation de requête d’exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Traitement d’objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Écrire des scripts pour les tâches d’administration dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Tâches d'administration à l'aide de scripts dans Analysis Services]](../script-administrative-tasks-in-analysis-services.md)  
   
   

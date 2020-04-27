@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079449"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -65,7 +65,7 @@ ms.locfileid: "66079449"
 > [!NOTE]  
 >  Les valeurs inférieures à 1 et supérieures à 1 sont possibles, mais elles peuvent ne pas être interprétées correctement par des applications clientes tierces.  
   
- **Tendance**  
+ **Phénomène**  
  Développez pour afficher les options **Graphique de tendance** et **Expression de tendance** .  
   
  **Graphique de tendance**  

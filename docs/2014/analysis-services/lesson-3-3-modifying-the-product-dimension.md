@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078842"
 ---
 # <a name="modifying-the-product-dimension"></a>Modification de la dimension Product
@@ -71,7 +71,7 @@ ms.locfileid: "66078842"
   
      Le champ NameColumn contient maintenant le texte **Product.EnglishProductName (WChar)**.  
   
-8.  Dans le Fenêtre Propriétés, faites défiler la **** liste vers le haut, cliquez sur `Product Name`le champ de propriété Name, puis tapez.  
+8.  Dans le Fenêtre Propriétés, faites défiler la **Name** liste vers le haut, cliquez sur `Product Name`le champ de propriété Name, puis tapez.  
   
 ## <a name="creating-a-hierarchy"></a>Création d'une hiérarchie  
   
@@ -95,19 +95,19 @@ ms.locfileid: "66078842"
   
 1.  Dans le volet **Attributs** , sélectionnez les attributs suivants en maintenant la touche Ctrl enfoncée pendant que vous cliquez sur chacun d’eux :  
   
-    -   **Type**  
+    -   **Classe**  
   
-    -   **Color**  
+    -   **Couleur**  
   
     -   **Jours de fabrication**  
   
-    -   **Point de réorganisation**  
+    -   **Reorder Point**  
   
-    -   **Niveau de stock de sécurité**  
+    -   **Safety Stock Level**  
   
     -   **Taille**  
   
-    -   **Plage de tailles**  
+    -   **Size Range**  
   
     -   **Style**  
   
@@ -117,19 +117,19 @@ ms.locfileid: "66078842"
   
      Vous avez maintenant groupé ces attributs dans un seul dossier d'affichage.  
   
-3.  Dans le volet **Attributs**, sélectionnez les attributs suivants :  
+3.  Dans le volet **Attributs** , sélectionnez les attributs suivants :  
   
-    -   **Prix du concessionnaire**  
+    -   **Dealer Price**  
   
-    -   **Tarif**  
+    -   **List Price**  
   
-    -   **Coût standard**  
+    -   **Standard Cost**  
   
 4.  Dans la cellule de propriété **AttributeHierarchyDisplayFolder** de la fenêtre Propriétés, `Financial`tapez.  
   
      Vous avez maintenant groupé ces attributs dans un deuxième dossier d'affichage.  
   
-5.  Dans le volet **Attributs**, sélectionnez les attributs suivants :  
+5.  Dans le volet **Attributs** , sélectionnez les attributs suivants :  
   
     -   **Date de fin**  
   
@@ -176,7 +176,7 @@ ms.locfileid: "66078842"
   
 3.  Vérifiez que `Product Model Lines` est sélectionné dans la liste **hiérarchie** , puis développez `All Products`.  
   
-     Notez que le nom du membre **All** apparaît sous la `All Products`forme. Cela est dû au fait que **** vous avez modifié la propriété AllMemberName `All Products` de la hiérarchie en plus tôt dans la leçon. De même, les membres du niveau **Product Line** ont maintenant des noms conviviaux, au lieu d’abréviations d’une seule lettre.  
+     Notez que le nom du membre **All** apparaît sous la `All Products`forme. Cela est dû au fait que **AllMemberName** vous avez modifié la propriété AllMemberName `All Products` de la hiérarchie en plus tôt dans la leçon. De même, les membres du niveau **Product Line** ont maintenant des noms conviviaux, au lieu d’abréviations d’une seule lettre.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Modification de la dimension Date](lesson-3-4-modifying-the-date-dimension.md)  
@@ -184,6 +184,6 @@ ms.locfileid: "66078842"
 ## <a name="see-also"></a>Voir aussi  
  [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Créer des hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurer le &#40;tous les niveaux de&#41; pour les hiérarchies d’attributs](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

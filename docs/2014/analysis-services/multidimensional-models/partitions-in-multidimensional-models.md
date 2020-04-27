@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073332"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitions dans les modèles multidimensionnels
@@ -23,7 +23,7 @@ ms.locfileid: "66073332"
  Le traitement est plus efficace car les partitions peuvent être traitées indépendamment et en parallèle, sur un ou plusieurs serveurs. Les requêtes s'exécutent plus rapidement car chaque partition peut être configurée de manière à ce que les modes de stockage et les optimisations d'agrégation génèrent des temps de réponse plus courts. Par exemple, choisir le stockage MOLAP pour les partitions qui contiennent des données plus récentes s'avère généralement plus rapide que le stockage ROLAP. De même, si vous partitionnez par date, les partitions qui contiennent les données plus récentes peuvent bénéficier de davantage d'optimisations que les partitions qui contiennent des données plus anciennes auxquelles l'accès est moins fréquent. Notez que varier le stockage et la conception d'agrégation par partition aura un impact négatif sur les futures opérations de fusion. Veillez à déterminer si la fusion est un élément essentiel de votre stratégie de la gestion des partitions avant d'optimiser des partitions individuelles.  
   
 > [!NOTE]  
->  La prise en charge de plusieurs partitions est disponible dans les versions Business Intelligence Edition et Enterprise Edition. L'édition standard ne prend pas en charge plusieurs partitions. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  La prise en charge de plusieurs partitions est disponible dans les versions Business Intelligence Edition et Enterprise Edition. L'édition standard ne prend pas en charge plusieurs partitions. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="important-considerations-when-designing-a-partitioning-strategy"></a>Considérations importantes à prendre en compte lors de la conception d'une stratégie de partitionnement  
  L'intégrité des données d'un cube repose sur les données distribuées parmi les partitions de cube du sorte qu'aucune donnée ne soit dupliquée entre les partitions. Lorsque les données sont récapitulées à partir des partitions, tous les éléments de données qui sont présents dans plusieurs partitions sont résumés comme s'il s'agissait d'éléments de données différents. Cela peut entraîner des résumés incorrects et la distribution de données erronées à l'utilisateur final. Par exemple, si une transaction commerciale du produit X est dupliquée dans les tables de faits pour deux partitions, les résumés des ventes du produit X peuvent inclure une double comptabilité de la transaction dupliquée.  
@@ -47,9 +47,9 @@ ms.locfileid: "66073332"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer et gérer une partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Contient des informations sur la façon de partitionner des données à l'aide de filtres ou de tables de faits différentes sans duplication des données.|  
-|[Définir le stockage de partitions &#40;Analysis Services-multidimensionnel&#41;](set-partition-storage-analysis-services-multidimensional.md)|Explique comment configurer le stockage de partitions.|  
+|[Définir un stockage de partitions &#40;Analysis Services - Multidimensionnel&#41;](set-partition-storage-analysis-services-multidimensional.md)|Explique comment configurer le stockage de partitions.|  
 |[Modifier ou supprimer des partitions &#40;Analysis Services-multidimensionnelles&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Décrit comment afficher et modifier des partitions.|  
-|[Fusionner des partitions dans Analysis Services &#40;SSAS-&#41;multidimensionnel](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Contient des informations sur la façon de fusionner les partitions qui ont des tables de faits ou des segments de données différents sans duplication des données.|  
+|[Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Contient des informations sur la façon de fusionner les partitions qui ont des tables de faits ou des segments de données différents sans duplication des données.|  
 |[Définir l'écriture différée de partition](set-partition-writeback.md)|Explique comment activer l'écriture sur une partition.|  
 |[Créer et gérer une partition distante &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Décrit comment créer et gérer une partition distante.|  
   

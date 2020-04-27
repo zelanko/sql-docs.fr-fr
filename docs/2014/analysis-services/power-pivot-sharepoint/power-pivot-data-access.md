@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071251"
 ---
 # <a name="powerpivot-data-access"></a>Accès aux données PowerPivot
@@ -28,7 +28,7 @@ ms.locfileid: "66071251"
   
  Sur une batterie de serveurs SharePoint, Excel Services utilise le fournisseur OLE DB MSOLAP local pour la connexion aux données PowerPivot. Le fournisseur envoie la demande de connexion à un serveur PowerPivot pour SharePoint de la batterie. Ce serveur charge les données, exécute la requête, et retourne l'ensemble de résultats.  
   
-##  <a name="queryproc"></a>Interrogation des données PowerPivot dans SharePoint  
+##  <a name="querying-powerpivot-data-in-sharepoint"></a><a name="queryproc"></a>Interrogation des données PowerPivot dans SharePoint  
  Lorsque vous affichez un classeur PowerPivot à partir d'une bibliothèque SharePoint, les données PowerPivot contenues dans le classeur sont détectées, extraites et traitées séparément sur les instances du serveur Analysis Services de la batterie de serveurs, tandis qu'Excel Services restitue la couche présentation. Vous pouvez afficher le classeur pleinement traité dans une fenêtre de navigateur ou dans une application bureautique Excel 2010 dotée du complément PowerPivot.  
   
  Le diagramme suivant illustre le parcours d'une demande de traitement de requêtes dans la batterie de serveurs. Étant donné que les données PowerPivot font partie d'un classeur Excel 2010, une demande de traitement de requêtes se présente lorsqu'un utilisateur ouvre un classeur Excel à partir d'une bibliothèque SharePoint et interagit avec un tableau croisé dynamique ou graphique croisé dynamique qui contient des données PowerPivot.  

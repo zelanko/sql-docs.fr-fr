@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075708"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Définir les propriétés des hiérarchies de cube
@@ -27,9 +27,7 @@ ms.locfileid: "66075708"
 |--------------|-----------------|  
 |`Enabled`|Détermine si la hiérarchie est activée pour la dimension de cube.|  
 |`HierarchyID`|Contient l'identificateur unique (ID) de la hiérarchie.|  
-|`OptimizedState`|Détermine le niveau d'optimisation appliqué à la hiérarchie. Cette propriété peut avoir les valeurs suivantes :<br /><br /> 
-  `FullyOptimized` : l’instance génère des index pour la hiérarchie afin d’augmenter les performances en matière de requêtes. Il s’agit de la valeur par défaut.<br /><br /> 
-  `NotOptimized` : l’instance ne génère pas d’index supplémentaire.|  
+|`OptimizedState`|Détermine le niveau d'optimisation appliqué à la hiérarchie. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `FullyOptimized` : l’instance génère des index pour la hiérarchie afin d’augmenter les performances en matière de requêtes. Il s'agit de la valeur par défaut.<br /><br /> `NotOptimized` : l’instance ne génère pas d’index supplémentaire.|  
 |`Visible`|Détermine la visibilité de la hiérarchie du cube. La valeur par défaut est `True`.|  
   
 ## <a name="see-also"></a>Voir aussi  

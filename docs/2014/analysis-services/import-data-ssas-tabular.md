@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080614"
 ---
 # <a name="import-data-ssas-tabular"></a>Importer des données (SSAS Tabulaire)
@@ -27,7 +27,7 @@ ms.locfileid: "66080614"
   
 |**Source de données**|**Description**|  
 |---------------------|---------------------|  
-|**Bases de données relationnelles**|Les sources de données relationnelles incluent :<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
+|**Bases de données relationnelles**|Les sources de données relationnelles incluent :<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**Sources multidimensionnelles**|Cube Microsoft SQL Server Analysis Services|  
 |**Flux de données**|Les flux de données incluent :<br /><br /> Rapport Microsoft Reporting Services<br /><br /> Dataset Azure DataMarket<br /><br /> Flux Atom d'un fournisseur public ou d'entreprise|  
 |**Fichiers texte**|Les fichiers texte incluent :<br /><br /> Fichiers Excel (.xlsx)<br /><br /> Fichier texte (.txt)|  
@@ -42,6 +42,6 @@ ms.locfileid: "66080614"
 |[Importer à partir d’une source de données multidimensionnelles &#40;SSAS tabulaire&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Décrit comment importer les données d'un cube multidimensionnel SQL Server Analysis Services.|  
 |[Importer à partir d’un flux de données &#40;SSAS tabulaire&#41;](import-from-a-data-feed-ssas-tabular.md)|Décrit comment importer des données depuis un flux de données tel qu'un rapport Microsoft Reporting Services ou un dataset Azure Data Market.|  
 |[Importer à partir d’un fichier texte &#40;SSAS tabulaire&#41;](import-from-a-text-file-ssas-tabular.md)|Décrit comment importer des données à partir d'un classeur Microsoft Excel ou d'un fichier texte.|  
-|[Copier et coller des données &#40;la&#41;tabulaire SSAS](copy-and-paste-data-ssas-tabular.md)|Décrit comment ajouter des données à une table existante dans le générateur de modèles à l'aide des commandes Coller et Coller par ajout.|  
+|[Copier et coller des données &#40;SSAS Tabulaire&#41;](copy-and-paste-data-ssas-tabular.md)|Décrit comment ajouter des données à une table existante dans le générateur de modèles à l'aide des commandes Coller et Coller par ajout.|  
   
   

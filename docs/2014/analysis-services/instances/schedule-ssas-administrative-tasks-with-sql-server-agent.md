@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079683"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
@@ -24,7 +24,7 @@ ms.locfileid: "66079683"
   
  Cette rubrique est une procédure pas à pas qui décrit deux méthodes d'utilisation de SQL Server Agent pour exécuter le script XMLA. Le premier exemple montre comment planifier le traitement d'une dimension unique. Le deuxième exemple montre comment combiner les tâches de traitement dans un seul script qui s'exécute sur une planification. Pour effectuer cette procédure pas à pas, vous devez satisfaire aux conditions suivantes.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Le service Agent SQL Server doit être installé.  
   
  Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le compte par défaut de SQL Server Agent est NT Service\SQLAgent\<$ nom_instance>. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "66079683"
   
  Une tâche planifiée [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est un script XMLA imbriqué dans un travail de SQL Server Agent. Ce travail est planifié pour s'exécuter à une heure et une fréquence souhaitées. SQL Server Agent faisant partie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous travaillez avec le Moteur de base de données et avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer et planifier une tâche administrative.  
   
-###  <a name="bkmk_CreateScript"></a>Créer un script pour traiter une dimension dans un travail de SQL Server Agent  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a>Créer un script pour traiter une dimension dans un travail de SQL Server Agent  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ouvrez un dossier de base de données et recherchez une dimension. Cliquez sur la dimension et sélectionnez **Traiter**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079683"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a>Créer et planifier le travail de traitement de dimension  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a>Créer et planifier le travail de traitement de dimension  
   
 1.  Connectez-vous à une instance du moteur de base de données et ouvrez l'Explorateur d'objets.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079683"
 ## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemple 2 : traitement par lots d'une dimension et d'une partition dans une tâche planifiée  
  Les procédures de cet exemple montrent comment créer et planifier un travail qui traite par lots une dimension de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en même temps traiter une partition de cube qui dépend de la dimension pour l'agrégation. Pour plus d’informations sur le traitement par lots des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Traitement par lots &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a>Créer un script pour le traitement par lots d’une dimension et d’une partition dans un travail de SQL Server Agent  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>Créer un script pour le traitement par lots d’une dimension et d’une partition dans un travail de SQL Server Agent  
   
 1.  À l’aide de la même base de données, développez **Dimensions**, cliquez avec le bouton droit sur la dimension **Client** et sélectionnez **Traiter**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079683"
   
 12. Cette étape copie le script XMLA dans le presse-papiers Windows. Vous pouvez laisser le script XMLA dans le presse-papiers, l'enregistrer dans un fichier ou le coller dans le Bloc-notes ou un éditeur de texte différent.  
   
-###  <a name="bkmk_Scheduling"></a>Créer et planifier le travail de traitement par lots  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a>Créer et planifier le travail de traitement par lots  
   
 1.  Connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et ouvrez l'Explorateur d'objets.  
   
@@ -223,6 +223,6 @@ ms.locfileid: "66079683"
   
 ## <a name="see-also"></a>Voir aussi  
  [Options de traitement et paramètres &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Écrire des scripts pour les tâches d’administration dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Tâches d'administration à l'aide de scripts dans Analysis Services]](../script-administrative-tasks-in-analysis-services.md)  
   
   

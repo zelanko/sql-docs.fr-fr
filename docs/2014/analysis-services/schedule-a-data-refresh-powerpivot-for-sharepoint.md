@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070013"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planifier une actualisation des données (PowerPivot pour SharePoint)
@@ -28,7 +28,7 @@ ms.locfileid: "66070013"
   
  **Dans cette rubrique :**  
   
- [Prérequis](#prereq)  
+ [Conditions préalables](#prereq)  
   
  [Vue d'ensemble de l'actualisation des données](#intro)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66070013"
 > [!NOTE]  
 >  L'actualisation des données PowerPivot est effectuée par les instances de serveur Analysis Services de la batterie de serveurs SharePoint. Elle n'a aucun rapport avec la fonctionnalité d'actualisation des données proposée par Excel Services. La fonctionnalité d'actualisation de la planification des données PowerPivot n'actualise pas les données non-PowerPivot.  
   
-##  <a name="prereq"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables  
  Pour créer une planification d'actualisation des données, vous devez disposer au moins du niveau d'autorisation Collaboration sur le classeur.  
   
  Les sources de données externes utilisées pendant l'actualisation des données doivent être disponibles et les informations d'identification que vous spécifiez dans la planification doivent avoir l'autorisation d'accéder à ces sources de données. L'actualisation des données planifiée requiert que l'emplacement des sources de données soit accessible sur une connexion réseau (par exemple, sur un partage de fichiers réseau plutôt qu'un dossier local sur votre station de travail).  
@@ -53,7 +53,7 @@ ms.locfileid: "66070013"
 > [!NOTE]  
 >  Le serveur ne verrouille pas le classeur pendant l'opération d'actualisation des données. Toutefois, il verrouille le fichier à la fin de l'actualisation des données en vue d'archiver le fichier mis à jour. Si, à ce stade, le fichier est extrait par un autre utilisateur, les données actualisées seront levées. De même, si le fichier est archivé, mais qu’il est très différent de la copie récupérée par le serveur au début de l’actualisation des données, les données actualisées sont ignorées.  
   
-##  <a name="intro"></a>Vue d’ensemble de l’actualisation des données  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>Vue d’ensemble de l’actualisation des données  
  Les données PowerPivot dans un classeur Excel peuvent provenir de plusieurs sources de données externes, notamment de bases de données externes ou de fichiers de données auxquels vous accédez par des serveurs distants ou des partages de fichiers réseau. Pour les classeurs PowerPivot qui contiennent des données importées à partir de sources de données connectées ou externes, vous pouvez configurer l'actualisation des données de façon à planifier une importation automatique des données mises à jour de ces sources d'origine.  
   
  L'accès à une source de données externe s'effectue au moyen d'une chaîne de connexion incorporée, d'une URL ou d'un chemin d'accès UNC spécifié lors de l'importation des données d'origine dans le classeur à l'aide de l'application cliente PowerPivot. Les informations de connexion d'origine stockées dans le classeur PowerPivot sont réutilisées pour les opérations d'actualisation des données suivantes. Bien que vous puissiez remplacer les informations d'identification utilisées pour se connecter aux sources de données, vous ne pouvez pas remplacer les chaînes de connexion à des fins d'actualisation des données ; seules les informations de connexion existantes sont utilisées.  
@@ -72,7 +72,7 @@ ms.locfileid: "66070013"
   
  La création de planifications avec précision pour des sources de données individuelles permet d'adapter la planification de l'actualisation aux fluctuations des sources de données externes. Par exemple, si une source de données externe contient des données transactionnelles générées pendant la journée, vous pouvez créer une planification d'actualisation des données individuelle pour cette source de données de façon à obtenir ses informations mises à jour de nuit.  
   
-##  <a name="drenablesched"></a>Activer et planifier l’actualisation des données  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>Activer et planifier l’actualisation des données  
  Utilisez les instructions suivantes pour planifier l'actualisation des données PowerPivot d'un classeur Excel publié dans une bibliothèque SharePoint.  
   
 1.  Dans la bibliothèque qui contient le classeur, sélectionnez ce dernier, puis cliquez sur la flèche orientée vers le bas pour afficher une liste de commandes.  
@@ -88,9 +88,9 @@ ms.locfileid: "66070013"
   
 5.  Dans Heure de début (au plus tôt), choisissez l'une des options suivantes :  
   
-    1.  **Après les heures** d’ouverture, spécifie une période de traitement en dehors des heures d’ouverture lorsque les serveurs de base de données sont plus susceptibles d’avoir des données actuelles qui ont été générées pendant la journée de travail.  
+    1.  **Après les heures d'ouverture** spécifie une période de traitement en dehors des heures d'ouverture, lorsque les serveurs de base de données sont le plus susceptibles de contenir les données actuelles générées pendant la journée de travail.  
   
-    2.  L’heure de début la plus **ancienne spécifique** est l’heure et les minutes de la première heure de la journée à laquelle la demande d’actualisation des données est ajoutée à une file d’attente de processus. Les minutes peuvent être spécifiées par intervalles de 15 minutes. Ce paramètre s'applique au jour actuel, ainsi qu'à des dates dans le futur. Par exemple, si vous spécifiez une valeur de 6 h 30 du matin et qu'il est actuellement 4 h 30 de l'après-midi, la demande d'actualisation sera ajoutée à la file d'attente du jour actuel, car 4 h 30 de l'après-midi est ultérieur à 6 h 30 du matin.  
+    2.  **Heure de début (au plus tôt) spécifique** est l'indication exacte (heure et minutes) de l'heure du jour la plus tôt où vous souhaitez que la demande d'actualisation des données soit ajoutée à une file d'attente de traitement. Les minutes peuvent être spécifiées par intervalles de 15 minutes. Ce paramètre s'applique au jour actuel, ainsi qu'à des dates dans le futur. Par exemple, si vous spécifiez une valeur de 6 h 30 du matin et qu'il est actuellement 4 h 30 de l'après-midi, la demande d'actualisation sera ajoutée à la file d'attente du jour actuel, car 4 h 30 de l'après-midi est ultérieur à 6 h 30 du matin.  
   
      L'heure de début au plus tôt définit le moment où une requête est ajoutée à la file d'attente de traitement. Le traitement en lui-même intervient lorsque le serveur dispose des ressources adéquates pour commencer le traitement des données. L'heure réelle du traitement est enregistrée dans l'historique d'actualisation des données à la fin du traitement.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070013"
   
 11. Cliquez sur **OK** pour enregistrer la planification.  
   
-##  <a name="drverify"></a>Vérifier l’actualisation des données  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>Vérifier l’actualisation des données  
  La meilleure méthode pour vérifier l'actualisation des données est de l'exécuter, puis de consulter la page d'historique pour voir se elle s'est terminée avec succès. En cochant la case **Aussi actualiser dès que possible** sur votre planification vous pouvez vérifier que l'actualisation des données fonctionne.  
   
  Vous pouvez consulter les opérations d'actualisation des données actuelles et passées dans la page Historique d'actualisation des données du classeur. Cette page ne s'affiche que si une actualisation des données a été planifiée pour un classeur. Si ce n'est pas le cas, c'est la page de définition de la planification qui s'affiche à la place.  

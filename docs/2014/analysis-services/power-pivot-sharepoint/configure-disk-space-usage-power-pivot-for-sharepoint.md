@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071808"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurer l'utilisation de l'espace disque (PowerPivot pour SharePoint)
@@ -76,17 +76,17 @@ ms.locfileid: "66071808"
   
 2.  Cliquez sur **application de service PowerPivot par défaut** pour ouvrir le tableau de bord de gestion.  
   
-3.  Dans Actions, cliquez sur **Configurer les paramètres d'application de service**.  
+3.  Dans actions, cliquez sur **configurer les paramètres d’application de service**.  
   
 4.  Dans la section Cache disque, vous pouvez spécifier combien de temps une base de données inactive reste en mémoire pour servir les nouvelles demandes (par défaut, 48 heures) et combien de temps elle reste dans le cache (par défaut, 120 heures).  
   
-     **Conserver la base de données inactive en mémoire** spécifie la durée pendant laquelle une base de données inactive reste en mémoire pour traiter de nouvelles demandes pour ces données. Une base de données active est toujours conservée en mémoire tant que vous l'interrogez ; lorsqu'elle n'est plus active, le système la conserve en mémoire pour une période supplémentaire au cas où ces données seraient interrogées ultérieurement.  
+     L'option**Conserver la base de données inactive dans la mémoire** spécifie pendant combien de temps une base de données inactive reste en mémoire pour servir les nouvelles demandes de données. Une base de données active est toujours conservée en mémoire tant que vous l'interrogez ; lorsqu'elle n'est plus active, le système la conserve en mémoire pour une période supplémentaire au cas où ces données seraient interrogées ultérieurement.  
   
      Étant donné que les bases de données PowerPivot sont d'abord mises en cache, puis chargées en mémoire, les fichiers de base de données consomment immédiatement l'espace disque. Toutefois, tant que la base de données est active (et pendant les 48 heures qui suivent), toutes les demandes sont dirigées en premier vers la base de données en mémoire, en ignorant la base de données mise en cache. Après 48 heures d'inactivité, le fichier est déchargé de la mémoire, mais reste dans le cache où il peut être rechargé rapidement si une nouvelle demande de connexion à ces données est interceptée par l'instance de serveur PowerPivot locale. Les demandes de connexion à une base de données inactive sont servies à partir du cache plutôt qu'à partir de la bibliothèque de contenu, afin de réduire l'impact sur les bases de données de contenus.  
   
      Il est important de noter que la bibliothèque de contenu est le seul emplacement permanent pour les bases de données PowerPivot. Les copies mises en cache sont utilisées uniquement si la base de données dans la bibliothèque est la même que la copie sur le disque.  
   
-     **Conserver la base de données inactive dans le cache** spécifie la durée pendant laquelle une base de données inactive reste dans le système de fichiers après avoir été déchargée de la mémoire. Le travail de nettoyage utilise ce paramètre pour déterminer les fichiers à supprimer. Toutes les bases de données PowerPivot qui sont inactives pendant 168 heures (48 heures en mémoire et 120 heures dans le cache) sont supprimées du disque par le travail de nettoyage.  
+     L'option**Conserver la base de données inactive dans le cache** spécifie combien de temps une base de données inactive reste dans le système de fichiers après qu'elle a été déchargée de la mémoire. Le travail de nettoyage utilise ce paramètre pour déterminer les fichiers à supprimer. Toutes les bases de données PowerPivot qui sont inactives pendant 168 heures (48 heures en mémoire et 120 heures dans le cache) sont supprimées du disque par le travail de nettoyage.  
   
 5.  Cliquez sur **OK** pour enregistrer vos modifications.  
   
@@ -94,6 +94,6 @@ ms.locfileid: "66071808"
  Une installation PowerPivot pour SharePoint fournit des règles d'intégrité afin que vous puissiez prendre des actions correctives lorsque des problèmes d'intégrité du serveur, de configuration ou de disponibilité sont détectés. Certaines de ces règles utilisent des paramètres de configuration pour déterminer les conditions sous lesquelles les règles d'intégrité sont déclenchées. Si vous administrez activement les performances du serveur, vous pouvez également consulter ces paramètres pour vous assurer que les valeurs par défaut utilisées sont adaptées à votre système. Pour plus d’informations, voir [PowerPivot Health Rules-configure](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

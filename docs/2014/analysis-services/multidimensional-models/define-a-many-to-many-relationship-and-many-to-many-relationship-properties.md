@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075780"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
@@ -113,8 +113,7 @@ ms.locfileid: "66075780"
   
 9. Choisissez les mesures pour chaque table de faits.  
   
-     Pour simplifier votre modèle, effacez toutes les mesures, puis sélectionnez uniquement **Sales Amount** et **Fact Internet Sales Count** au bas de la liste. 
-  **FactInternetSalesReason** ne comporte qu’une seule mesure, qui est donc automatiquement sélectionnée.  
+     Pour simplifier votre modèle, effacez toutes les mesures, puis sélectionnez uniquement **Sales Amount** et **Fact Internet Sales Count** au bas de la liste. **FactInternetSalesReason** ne comporte qu’une seule mesure, qui est donc automatiquement sélectionnée.  
   
 10. La liste des dimensions devrait contenir **Dim Sales Reason** et **Dim Sales Orders**.  
   
@@ -147,11 +146,11 @@ ms.locfileid: "66075780"
   
 3.  Créez un tableau croisé dynamique qui utilise les éléments suivants :  
   
-    -   **Montant des ventes** en tant que valeur  
+    -   **Sales Amount** pour la valeur  
   
-    -   **Nom du motif de vente** sur les colonnes  
+    -   **Sales Reason Name** pour les colonnes  
   
-    -   **Numéro de commande** sur les lignes  
+    -   **Sales Order Number** pour les lignes  
   
 4.  Analyser les résultats. Étant donné que nous utilisons des exemples de données, l'impression initiale est que toutes les commandes ont des valeurs identiques. Toutefois, si vous faites défiler le tableau, vous commencez à voir des différences.  
   
@@ -177,14 +176,14 @@ ms.locfileid: "66075780"
   
 4.  Évitez d'utiliser des groupes de mesures liés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
-##  <a name="bkmk_Learn"></a>Pour en savoir plus  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>Pour en savoir plus  
  Consultez les liens suivants pour obtenir davantage d'informations sur ces concepts.  
   
  [Comment définir des dimensions plusieurs-à-plusieurs dans Analysis Services ?](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [Révolution plusieurs-à-plusieurs 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [La révolution 2.0 des relations plusieurs-à-plusieurs](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Didacticiel : exemple de dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Didacticiel - Exemple d'une dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078109"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Niveau et membres (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -119,7 +119,7 @@ ms.locfileid: "66078109"
  **Réduire le membre**  
  Réduit le membre sélectionné dans **Arborescence**.  
   
- **Transcription**  
+ **Écriture différée**  
  Sélectionnez cette option pour activer le mode d'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077267"
 ---
 # <a name="group-attribute-members-discretization"></a>Regrouper des membres d'un attribut (discrétisation)
@@ -34,7 +34,7 @@ ms.locfileid: "66077267"
   
  La propriété `DiscretizationMethod` sur un attribut détermine la façon dont les membres sont regroupés.  
   
-|`DiscretizationMethod`Défini|Description|  
+|Paramètre `DiscretizationMethod`|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Affiche les membres.|  
 |`Automatic`|Sélectionne la méthode qui représente le mieux les données : soit la méthode `EqualAreas`, soit la méthode `Clusters`.|  

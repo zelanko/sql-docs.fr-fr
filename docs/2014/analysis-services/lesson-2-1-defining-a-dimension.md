@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079084"
 ---
 # <a name="defining-a-dimension"></a>Définition d'une dimension
@@ -39,44 +39,44 @@ ms.locfileid: "66079084"
   
 7.  Dans la page **Sélectionner les attributs de la dimension** , cochez les cases à côté des attributs suivants :  
   
-    -   **Clé de date**  
+    -   **Date Key**  
   
-    -   **Clé de remplacement de date complète**  
+    -   **Full Date Alternate Key**  
   
-    -   **Nom du mois anglais**  
+    -   **English Month Name**  
   
-    -   **Trimestre civil**  
+    -   **Calendar Quarter**  
   
-    -   **Année civile**  
+    -   **Calendar Year**  
   
-    -   **Semestre calendaire**  
+    -   **Calendar Semester**  
   
 8.  Modifiez le paramètre de la colonne **Type d’attribut** de l’attribut **Full Date Alternate Key** de **Regular** en **Date**. Pour cela, cliquez sur **Regular** dans la colonne **Type d’attribut** . Puis, cliquez sur la flèche pour développer les options. Ensuite, cliquez sur **Date** > **calendrier** > **Date**. Cliquez sur **OK**. Répétez ces étapes pour modifier le type d’attribut des attributs suivants comme suit :  
   
-    -   **Nom du mois anglais** **du mois**  
+    -   **English Month Name** en **Month**  
   
-    -   **Trimestre calendaire** à **trimestre**  
+    -   **Calendar Quarter** en **Quarter**  
   
-    -   **Année civile** à **année**  
+    -   **Calendar Year** en **Year**  
   
-    -   Semestre **calendaire** jusqu’au **semestre**  
+    -   **Calendar Semester** en **Half Year**  
   
 9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Fin de l’Assistant** , dans le volet de visualisation, vous pouvez consulter la dimension **Date** et ses attributs.  
   
-11. Cliquez sur **Terminer** pour terminer l'Assistant.  
+11. Cliquez sur **Terminer** pour terminer l’Assistant.  
   
      Dans l’Explorateur de solutions, dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la dimension Date apparaît dans le dossier **Dimensions** . Au centre de l'environnement de développement, le Concepteur de dimensions affiche la dimension Date.  
   
 12. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d'un cube](lesson-2-2-defining-a-cube.md)  
+ [Définition d’un cube](lesson-2-2-defining-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Créer une dimension à l’aide d’une table existante](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Créer une dimension à l'aide de l'Assistant Dimension](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
+ [Créer une dimension à l’aide de l’Assistant Dimension](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

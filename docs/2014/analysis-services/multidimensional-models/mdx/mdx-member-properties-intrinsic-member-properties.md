@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074206"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriétés de membre intrinsèques (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expose les propriétés intrinsèques sur les membres de dimension que vous pouvez inclure dans une requête afin de retourner des informations supplémentaires ou des métadonnées à utiliser dans une application personnalisée, ou pour faciliter l’analyse ou la construction d’un modèle. Si vous utilisez les outils clients SQL Server, vous pouvez voir les propriétés intrinsèques dans SQL Server Management Studio (SSMS).  
   
  Les propriétés intrinsèques sont `ID`, `KEY`, `KEYx` et `NAME`, lesquelles sont des propriétés exposées par chaque membre, à tout niveau. Vous pouvez également retourner les informations de position, telles que `LEVEL_NUMBER` ou `PARENT_UNIQUE_NAME`, entre autres choses.  
@@ -102,7 +101,7 @@ ms.locfileid: "66074206"
 |`IS_DATAMEMBER`|Valeur booléenne indiquant si le membre est un membre de données.|  
 |`IS_PLACEHOLDERMEMBER`|Valeur booléenne indiquant si le membre est un espace réservé.|  
 |`KEYx`|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites.<br /><br /> S'il s'agit d'une clé non composite, KEY0 équivaut alors à `Key`.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez faire référence à chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> Notez que `KEYx` peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)(Une astuce MDX toute simple : Key0, Key1, Key2).|  
-|`LCID` *x*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
+|`LCID`*x*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
 |`LEVEL_NUMBER`|Distance du membre par rapport à la racine de la hiérarchie. Le niveau de la racine est égal à zéro.|  
 |`LEVEL_UNIQUE_NAME`|Nom unique du niveau auquel le membre appartient. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
 |`MEMBER_CAPTION`|Étiquette ou légende associée au membre. La légende est essentiellement utilisée à des fins d'affichage. En l'absence de légende, la requête retourne `MEMBER_NAME`.|  
@@ -113,8 +112,7 @@ ms.locfileid: "66074206"
 |`MEMBER_VALUE`|Valeur du membre dans le type d'origine.|  
 |`PARENT_COUNT`|Nombre de parents de ce membre.|  
 |`PARENT_LEVEL`|Distance du parent du membre par rapport au niveau racine de la hiérarchie. Le niveau de la racine est égal à zéro.|  
-|`PARENT_UNIQUE_NAME`|Nom unique du parent du membre. 
-  `NULL` est retournée pour tout membre situé au niveau de la racine. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
+|`PARENT_UNIQUE_NAME`|Nom unique du parent du membre. `NULL` est retournée pour tout membre situé au niveau de la racine. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
 |`SKIPPED_LEVELS`|Nombre de niveaux ignorés pour le membre.|  
 |`UNARY_OPERATOR`|Opérateur unaire du membre.|  
 |`UNIQUE_NAME`|Le nom complet du membre, au format : [dimension].[niveau].[key6].|  
@@ -135,7 +133,7 @@ ms.locfileid: "66074206"
 ### <a name="example"></a>Exemple  
  Les exemples suivants montrent des requêtes MDX qui retournent les propriétés intrinsèques.  
   
- **Exemple 1 : utiliser des propriétés intrinsèques contextuelles dans une requête**  
+ **Exemple 1 : utiliser les propriétés intrinsèques contextuelles dans une requête**  
   
  L'exemple suivant retourne l'ID parent, la clé et le nom de chaque catégorie de produits. Notez que les propriétés sont exposées en tant que mesures. Cela vous permet d'afficher les propriétés d'un ensemble de cellules lorsque vous exécutez la requête, plutôt que la boîte de dialogue Propriétés de membre dans SSMS. Vous pouvez exécuter une requête comme celle qui suit pour récupérer des métadonnées de membre à partir d'un cube déjà déployé.  
   
@@ -153,7 +151,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Exemple 2 : propriétés intrinsèques non sensibles au contexte**  
+ **Exemple 2 : propriétés intrinsèques non sensibles au contexte**  
   
  L'exemple suivant correspond à la liste exhaustive des propriétés intrinsèques non sensibles au contexte. Après avoir exécuté la requête dans SSMS, cliquez sur les membres individuels pour afficher les propriétés dans la boîte de dialogue Propriétés de membre.  
   
@@ -191,7 +189,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **Exemple 3 : retourner les propriétés de membre sous forme de données dans un jeu de résultats**  
+ **Exemple 3 : retourner les propriétés de membre sous forme de données dans un jeu de résultats**  
   
  L'exemple suivant retourne la légende traduite pour le membre de la catégorie de produit dans la dimension Product du cube Adventure Works pour les paramètres régionaux spécifiés.  
   
@@ -218,6 +216,6 @@ FROM [Adventure Works]
  [Propriétés &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember&#41;MDX &#40;](/sql/mdx/prevmember-mdx)   
  [Utilisation des propriétés de membre &#40;MDX&#41;](mdx-member-properties.md)   
- [Référence des fonctions MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080935"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Mise en route avec l'exploration de données (compléments d'exploration de données pour Excel)
@@ -38,7 +38,7 @@ ms.locfileid: "66080935"
   
 -   Analyse factorielle, en utilisant réseaux bayésiens et neuronaux  
   
--   Analyse des séries chronologiques  
+-   Analyse de série chronologique  
   
 -   Analyse d'association, recommandations, puis analyse du panier d'achat  
   

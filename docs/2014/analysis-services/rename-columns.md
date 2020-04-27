@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070317"
 ---
 # <a name="lesson-3-rename-columns"></a>Leçon 3 : Renommer des colonnes
@@ -25,7 +25,7 @@ ms.locfileid: "66070317"
   
  Durée estimée pour suivre cette leçon : **20 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette rubrique fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 2 : Ajouter des données](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Renommer des colonnes  
@@ -36,7 +36,7 @@ ms.locfileid: "66070317"
   
      Quand vous cliquez sur un onglet, la table correspondante devient active dans la fenêtre du concepteur de modèles.  
   
-2.  Double-cliquez **** sur le nom de la colonne `Customer  Id`CustomerKey, tapez, puis appuyez sur entrée.  
+2.  Double-cliquez **CustomerKey** sur le nom de la colonne `Customer  Id`CustomerKey, tapez, puis appuyez sur entrée.  
   
     > [!TIP]  
     >  Vous pouvez également renommer une colonne dans la propriété nom de la **colonne** dans la fenêtre **Propriétés** de la colonne, ou dans la vue de diagramme.  
@@ -88,7 +88,7 @@ ms.locfileid: "66070317"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Région**  
+     **Zone géographique**  
   
     |Nom de la source|Nom convivial|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070317"
     |PostalCode|Code postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Produit**  
+     **Production**  
   
     |Nom de la source|Nom convivial|  
     |-----------------|-------------------|  
@@ -124,7 +124,7 @@ ms.locfileid: "66070317"
     |EnglishDescription|Description|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
-    |Statut|Product Status|  
+    |État|Product Status|  
   
      **Catégorie de produit**  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66070317"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Ventes sur Internet**  
+     **Internet Sales**  
   
     |Nom de la source|Nom convivial|  
     |-----------------|-------------------|  

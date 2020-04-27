@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070981"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>L'emplacement approuvé dans lequel le classeur est stocké n'autorise pas les connexions de données externes. Échec de l'actualisation des connexions suivantes : Données PowerPivot
@@ -26,7 +26,7 @@ ms.locfileid: "66070981"
 |-|-|  
 |S’applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause :|Excel Services est configuré pour refuser l'accès aux données externes.|  
+|Cause|Excel Services est configuré pour refuser l'accès aux données externes.|  
 |Texte du message|L'emplacement approuvé dans lequel le classeur est stocké n'autorise pas les connexions de données externes. Échec de l'actualisation des connexions suivantes : Données PowerPivot|  
   
 ## <a name="explanation"></a>Explication  

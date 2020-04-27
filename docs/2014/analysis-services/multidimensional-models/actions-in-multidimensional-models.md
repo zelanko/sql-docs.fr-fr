@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077500"
 ---
 # <a name="actions-in-multidimensional-models"></a>Actions dans les modèles multidimensionnels
@@ -30,7 +30,7 @@ ms.locfileid: "66077500"
  **Nom**  
  Sélectionnez un nom identifiant l'action.  
   
- **Cible d’action**  
+ **Cible d'action**  
  Sélectionnez l'objet auquel l'action est attachée. Généralement, dans les applications clientes, l'action s'affiche lorsque les utilisateurs finaux sélectionnent l'objet cible ; toutefois, l'application cliente détermine quelle opération de l'utilisateur final affiche les actions. Pour **Type de cible**, sélectionnez l’un des objets suivants :  
   
 -   Membres d'attribut  
@@ -54,7 +54,7 @@ ms.locfileid: "66077500"
  **Condition (facultatif)**  
  Spécifiez une expression MDX (Multidimensional Expressions) facultative qui est résolue en valeur booléenne. Si la valeur est `True`, l'action est effectuée sur la cible spécifiée. Si la valeur est `False`, l'action n'est pas effectuée.  
   
- **Contenu de l’action**  
+ **Contenu d'action**  
  Sélectionnez le type d'action. Le tableau suivant récapitule les types disponibles.  
   
 |Type|Description|  
@@ -72,10 +72,10 @@ ms.locfileid: "66077500"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Appel**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Batch<br /><br /> Interactive<br /><br /> À l’ouverture|  
+|**Invocation**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Batch<br /><br /> Interactive (Interactif)<br /><br /> À l’ouverture|  
 |**Application**|Décrit l'application de l'action.|  
 |**Description**|Décrit l'action.|  
-|**Caption**|Fournit une légende qui s'affiche pour l'action. Si la légende est MDX, spécifiez `True` pour **Caption est MDX**.|  
+|**-**|Fournit une légende qui s'affiche pour l'action. Si la légende est MDX, spécifiez `True` pour **Caption est MDX**.|  
 |**La légende est MDX**|Spécifiez `True` si la légende est au format MDX ou `False` si ce n'est pas le cas.|  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "66077500"
 |Propriété|Description|  
 |--------------|-----------------|  
 |**Nom du serveur**|Nom de l'ordinateur exécutant le serveur de rapports.|  
-|**Chemin du serveur**|Chemin exposé par le serveur de rapports.|  
+|**Chemin d'accès au serveur**|Chemin exposé par le serveur de rapports.|  
 |**Format de rapport**|HTML5, HTML3, Excel ou PDF.|  
   
  **Paramètres (facultatif)**  
@@ -120,7 +120,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
 ## <a name="creating-a-drillthrough-action"></a>Création d'une action d'extraction  
  Une action d'extraction est définie par une action de type ensemble de lignes, qui est retournée à l'application cliente comme une instruction d'extraction. La cible d'action est le membre d'un groupe de mesures. Pour créer une action d’extraction, dans le menu **Cube** , cliquez sur **Nouvelle action d’extraction**. Les options suivantes sont propres à une action d'extraction.  
   
- **Colonnes d’extraction**  
+ **Colonnes d'extraction**  
  Sélectionnez une ou plusieurs dimensions et, pour chacune d'entre elles, les colonnes d'extraction retournées à l'application cliente par l'action.  
   
 ## <a name="see-also"></a>Voir aussi  

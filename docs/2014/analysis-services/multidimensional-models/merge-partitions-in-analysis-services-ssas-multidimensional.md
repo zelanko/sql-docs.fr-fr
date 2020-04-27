@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073647"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
@@ -25,24 +25,24 @@ ms.locfileid: "66073647"
   
  [Scénarios courants](#bkmk_Scenario)  
   
- [Spécifications](#bkmk_prereq)  
+ [Configuration requise](#bkmk_prereq)  
   
- [Mettre à jour la source de partition après avoir fusionné des partitions](#bkmk_Where)  
+ [Mettre à jour la source de partition après avoir fusionné les partitions](#bkmk_Where)  
   
  [Considérations spéciales pour les partitions segmentées par une table de faits ou une requête nommée](#bkmk_fact)  
   
- [Comment fusionner des partitions à l’aide de SSMS](#bkmk_partitionSSMS)  
+ [Procédure pour fusionner des partitions à l'aide de SSMS](#bkmk_partitionSSMS)  
   
  [Comment fusionner des partitions à l’aide de XMLA](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a>Scénarios courants  
+##  <a name="common-scenarios"></a><a name="bkmk_Scenario"></a>Scénarios courants  
  La configuration individuelle la plus commune pour l'utilisation de partitions repose sur une séparation des données à travers la dimension du temps. La granularité du temps associé à chaque partition varie selon les besoins de l'entreprise spécifiques au projet. Par exemple, la segmentation peut se faire par années, avec l'année la plus récente divisée en mois, plus une partition distincte pour le mois actif. La partition du mois actif accepte régulièrement de nouvelles données.  
   
  Lorsque le mois actif est terminé, cette partition est fusionnée dans les mois de la partition de l'année en cours et le processus continue. À la fin de l'année, une nouvelle partition annuelle toute entière a été formée.  
   
  Comme le montre ce scénario, fusionner des partitions peut devenir une tâche courante effectuée régulièrement et constituer une approche progressive pour consolider et organiser les données d'historique.  
   
-##  <a name="bkmk_prereq"></a>Exigences  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a> Spécifications  
  Les partitions peuvent être fusionnées seulement si elles répondent à tous les critères suivants :  
   
 -   Elles ont le même groupe de mesures.  
@@ -66,7 +66,7 @@ ms.locfileid: "66073647"
   
  Pour créer une partition destinée à être fusionnée ultérieurement, vous pouvez copier la conception d'agrégation d'une autre partition du cube lors de la création de la partition dans l'Assistant Partition. Cette méthode garantit une même conception d'agrégation aux partitions. Au moment de leur fusion, les agrégations de la partition source sont associées à celles de la partition de destination.  
   
-##  <a name="bkmk_Where"></a>Mettre à jour la source de partition après avoir fusionné des partitions  
+##  <a name="update-the-partition-source-after-merging-partitions"></a><a name="bkmk_Where"></a>Mettre à jour la source de partition après avoir fusionné des partitions  
  Les partitions sont segmentées par requête, comme la clause WHERE d'une requête SQL utilisée pour traiter les données, ou par une table ou une requête nommée qui fournit des données à la partition. La propriété `Source` sur la partition indique si la partition est liée à une requête ou une table.  
   
  Lorsque vous fusionnez des partitions, le contenu des partitions est consolidé, mais la propriété `Source` n'est pas mise à jour pour refléter l'étendue supplémentaire de la partition. Cela signifie que si, plus tard, vous traitez à nouveau une partition qui conserve sa `Source`d'origine, vous obtiendrez des données incorrectes de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
@@ -85,7 +85,7 @@ ms.locfileid: "66073647"
   
  Après avoir fusionné des partitions, vérifiez toujours la `Source` pour vous assurer que le filtre est approprié pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
   
-##  <a name="bkmk_fact"></a>Considérations spéciales pour les partitions segmentées par une table de faits ou une requête nommée  
+##  <a name="special-considerations-for-partitions-segmented-by-fact-table-or-named-query"></a><a name="bkmk_fact"></a>Considérations spéciales pour les partitions segmentées par une table de faits ou une requête nommée  
  Outre les requêtes, les partitions peuvent également être segmentées par une table ou une requête nommée. Si la partition source et la partition cible utilisent la même table de faits dans une source de données ou une vue de source de données, la propriété `Source` est valide après la fusion des partitions. Elle spécifie les données de la table de faits qui sont appropriées à la partition résultante. Étant donné que les faits nécessaires à la partition résultante existent dans la table de faits, aucune modification de la propriété `Source` n'est requise.  
   
  Les partitions utilisant des données provenant de plusieurs tables de faits ou requêtes nommées requièrent un travail supplémentaire. Vous devez fusionner manuellement les faits de la table de faits de la partition source dans la table de faits de la partition de destination.  
@@ -110,7 +110,7 @@ ms.locfileid: "66073647"
   
  Les tables de faits peuvent être fusionnées avant ou après les partitions. Cependant, les agrégations ne représenteront pas avec exactitude les faits sous-jacents tant que les deux opérations ne seront pas terminées. Il est recommandé de procéder à la fusion des partitions HOLAP ou ROLAP qui ont accès à différentes tables de faits lorsque les utilisateurs ne sont pas connectés au cube qui contient ces partitions.  
   
-##  <a name="bkmk_partitionSSMS"></a>Comment fusionner des partitions à l’aide de SSMS  
+##  <a name="how-to-merge-partitions-using-ssms"></a><a name="bkmk_partitionSSMS"></a>Comment fusionner des partitions à l’aide de SSMS  
   
 > [!IMPORTANT]  
 >  Avant de fusionner des partitions, commencez par copier les informations de filtrage de données (souvent, la clause WHERE pour les filtres basés sur des requêtes SQL). Plus tard, une fois la fusion terminée, vous devrez mettre à jour la propriété Source de la partition contenant les données de faits cumulées.  
@@ -128,7 +128,7 @@ ms.locfileid: "66073647"
   
 5.  Ouvrez la `Source` propriété et modifiez la clause WHERE pour qu’elle inclue les données de partition que vous venez de fusionner. Souvenez- `Source` vous que la propriété n’est pas mise à jour automatiquement. Si vous retraitez sans commencer par mettre `Source`à jour le, vous risquez de ne pas recevoir toutes les données attendues.  
   
-##  <a name="bkmk_partitionsXMLA"></a>Comment fusionner des partitions à l’aide de XMLA  
+##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Procédure pour fusionner des partitions à l'aide de XMLA  
  Pour plus d’informations, consultez [Fusion de partitions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  

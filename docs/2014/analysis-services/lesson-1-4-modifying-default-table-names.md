@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079230"
 ---
 # <a name="modifying-default-table-names"></a>Modification des noms de tables par défaut
@@ -37,7 +37,7 @@ ms.locfileid: "66079230"
   
      Lorsque vous cliquez en dehors de la cellule correspondant à la propriété **FriendlyName** , la modification est appliquée. Dans la leçon suivante, vous définirez un groupe de mesures basé sur cette table de faits. Le nom de la table de faits sera InternetSales au lieu de FactInternetSales à cause de la modification que vous avez apportée dans cette leçon.  
   
-4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la Fenêtre Propriétés, remplacez la **** valeur de la *`Product`* propriété FriendlyName par.  
+4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la Fenêtre Propriétés, remplacez la **FriendlyName** valeur de la *`Product`* propriété FriendlyName par.  
   
 5.  Modifiez la propriété **FriendlyName** de chaque table restante dans la vue de source de données en procédant de la même façon, pour supprimer le préfixe «**Dim**».  
   
@@ -50,6 +50,6 @@ ms.locfileid: "66079230"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Modifiez les propriétés d’une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Modifier les propriétés d’une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

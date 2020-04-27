@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070746"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traiter (Analysis Services - Données multidimensionnelles)
@@ -33,7 +33,7 @@ ms.locfileid: "66070746"
 -   cliquez avec le bouton droit sur une base de données, un cube, un groupe de mesures, une partition, une dimension ou une structure d’exploration de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans l’ **Explorateur d’objets** et sélectionnez **Traiter**.  
   
 ## <a name="options"></a>Options  
- **Liste d’objets**  
+ **Liste d'objets**  
  Sélectionnez les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à traiter, ainsi que les options et les paramètres à appliquer. Cette grille comporte les colonnes suivantes :  
   
  **Nom de l’objet**  
@@ -51,7 +51,7 @@ ms.locfileid: "66070746"
  **Remove**  
  Supprime les éléments sélectionnés de la **Liste d’objets**.  
   
- **Analyse d’impact**  
+ **Analyse d'impact**  
  Ouvre la boîte de dialogue **Analyse d’impact** et affiche les objets affectés par le traitement. Pour plus d’informations sur la boîte de dialogue **Analyse d’impact**, consultez [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  

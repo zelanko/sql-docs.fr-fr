@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081309"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Explorer des données (Compléments d'exploration de données SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "66081309"
   
  Si vos données contiennent des données numériques continues, vous pouvez alterner entre ces deux vues :  
   
--   **Graphique linéaire.** Ce graphique affiche les valeurs de données sur l'axe X et le nombre de cas sur l'axe Y.  
+-   **Graphique en courbes.** Ce graphique affiche les valeurs de données sur l'axe X et le nombre de cas sur l'axe Y.  
   
 -   **Graphique à barres.** Ce graphique regroupe les valeurs selon le nombre de cas pour chaque valeur.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66081309"
   
 5.  Le cas échéant, ajoutez de nouvelles colonnes aux données, modifiez la segmentation des données ou copiez le graphique dans Excel.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Pour utiliser l’Assistant **Explorer les données** , vos données doivent se trouver dans une table de données Excel.   
   
 ## <a name="see-also"></a>Voir aussi  

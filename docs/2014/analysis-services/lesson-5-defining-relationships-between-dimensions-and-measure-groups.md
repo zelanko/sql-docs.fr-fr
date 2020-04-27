@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078419"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures
@@ -23,11 +23,11 @@ ms.locfileid: "66078419"
  Pour plus d’informations, consultez [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projets qui vont de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
  Cette leçon contient les tâches suivantes :  
   
- [Définition d'une relation référencée](lesson-5-1-defining-a-referenced-relationship.md)  
+ [Définition d’une relation référencée](lesson-5-1-defining-a-referenced-relationship.md)  
  Dans cette tâche, vous allez apprendre à lier une dimension à une table de faits indirectement par le biais d’une dimension qui est liée directement par le biais d’une relation clé primaire-clé étrangère.  
   
  [Définition d'une relation de faits](lesson-5-2-defining-a-fact-relationship.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "66078419"
  Au cours de cette tâche, vous allez apprendre à modifier la granularité d'une dimension pour un groupe de mesures spécifique.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)  
+ [Leçon 6 : définition de calculs](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   

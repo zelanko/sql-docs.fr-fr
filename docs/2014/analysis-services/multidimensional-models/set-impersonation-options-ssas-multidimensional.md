@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072957"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
@@ -39,13 +39,13 @@ ms.locfileid: "66072957"
 ## <a name="set-impersonation-options-in-management-studio"></a>Définir les options d'emprunt d'identité dans Management Studio  
  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez la boîte de dialogue **Informations d’emprunt d’identité** en cliquant sur le bouton représentant des points de suspension (**...**) pour obtenir les propriétés de boîtes de dialogue suivantes :  
   
--   Boîte **de dialogue Propriétés de la base de** données, via la propriété informations d’emprunt d’identité de source de données.  
+-   Boîte de dialogue**Propriétés de la base de données** , via la propriété Informations d’emprunt d’identité de source de données.  
   
--   Boîte de dialogue Propriétés de la **source de données** , via la propriété informations d’emprunt d’identité.  
+-   Boîte de dialogue**Propriétés de la source de données** , via la propriété Informations d’emprunt d’identité.  
   
--   Boîte de dialogue Propriétés de l' **assembly** , via la propriété informations d’emprunt d’identité.  
+-   Boîte de dialogue**Propriétés de l’assembly** , via la propriété Informations d’emprunt d’identité.  
   
-##  <a name="bkmk_options"></a>Options d’emprunt d’identité  
+##  <a name="impersonation-options"></a><a name="bkmk_options"></a> Options d’emprunt d’identité  
  Toutes les options sont disponibles dans la boîte de dialogue, mais elles ne sont pertinentes pour tous les scénarios. Utilisez les informations suivantes pour déterminer la meilleure solution pour votre scénario.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
@@ -76,14 +76,14 @@ ms.locfileid: "66072957"
 > [!NOTE]  
 >  Des erreurs peuvent se produire lors du traitement d'un modèle d'exploration de données d'un cube si le compte de service ne dispose pas d'autorisations d'administrateur sur l'instance Analysis Services. Pour plus d’informations, consultez [Structure d’exploration de données : problème lors du traitement si la source de données est dans un cube OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
- **Utiliser les informations d’identification de l’utilisateur actuel**  
+ **Utiliser les informations d'identification de l'utilisateur actuel**  
  Sélectionnez cette option afin que l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les informations d'identification de sécurité de l'utilisateur actuel pour les liaisons hors ligne, les instructions DMX OPENQUERY, les cubes locaux et les modèles d'exploration de données.  
   
  Cette option n'est pas prise en charge pour les bases de données tabulaires.  
   
  À l'exception des cubes locaux et du traitement au moyen des liaisons hors ligne, cette option n'est pas prise en charge pour les bases de données multidimensionnelles.  
   
- **Par défaut** ou **hériter**  
+ **Par défaut** ou **Hériter**  
  La boîte de dialogue utilise **Par défaut** pour les options d’emprunt d’identité définies au niveau de la base de données et **Hériter** pour les options d’emprunt d’identité définies au niveau de la source de données.  
   
  **Sources de données-option hériter**  

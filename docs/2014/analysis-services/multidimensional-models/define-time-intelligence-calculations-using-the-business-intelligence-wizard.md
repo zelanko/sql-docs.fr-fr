@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075433"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence
@@ -59,9 +59,9 @@ ms.locfileid: "66075433"
 ## <a name="apply-time-views-to-members"></a>Appliquer des vues temporelles à des membres  
  Dans la page **Définir l’étendue des calculs** , spécifiez les membres auxquels les nouvelles vues temporelles s’appliquent. Vous pouvez appliquer les nouvelles vues temporelles à l'un des objets suivants :  
   
--   **Membres d’une dimension de compte** Dans la page **définir l’étendue des calculs** , la liste **mesures disponibles** comprend les dimensions de compte. Une dimension de comptes est une dimension dont la propriété `Type` a la valeur `Accounts`. Si vous avez une dimension de comptes, mais qu’elle n’apparaît pas dans la liste **Mesures disponibles** , vous pouvez utiliser l’Assistant Business Intelligence pour appliquer l’intelligence comptable à cette dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
+-   **Membres d’une dimension de comptes** Dans la page **Définir l’étendue des calculs** , la liste **Mesures disponibles** inclut les dimensions de comptes. Une dimension de comptes est une dimension dont la propriété `Type` a la valeur `Accounts`. Si vous avez une dimension de comptes, mais qu’elle n’apparaît pas dans la liste **Mesures disponibles** , vous pouvez utiliser l’Assistant Business Intelligence pour appliquer l’intelligence comptable à cette dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
--   **Mesures** Au lieu de spécifier une dimension de compte, vous pouvez spécifier les mesures auxquelles s’appliquent les vues temporelles. Dans ce cas, sélectionnez les vues auxquelles s'appliquent les calculs de temps sélectionnés. Par exemple, l'actif et le passif sont des données de cumul annuel jusqu'à ce jour ; par conséquent, vous n'allez pas appliquer un calcul Cumul annuel jusqu'à ce jour aux mesures d'actif ou de passif.  
+-   **Mesures** Au lieu de spécifier une dimension de comptes, vous pouvez spécifier les mesures auxquelles s’appliquent les vues temporelles. Dans ce cas, sélectionnez les vues auxquelles s'appliquent les calculs de temps sélectionnés. Par exemple, l'actif et le passif sont des données de cumul annuel jusqu'à ce jour ; par conséquent, vous n'allez pas appliquer un calcul Cumul annuel jusqu'à ce jour aux mesures d'actif ou de passif.  
   
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Affichage de l'amélioration Time Intelligence  
  Dans la page finale de l’Assistant Business Intelligence, vous pouvez voir les modifications qui vont être apportées à la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ajoutant l'amélioration Time Intelligence, l'Assistant modifiera la dimension de temps sélectionnée, la vue de source de données correspondante et le cube correspondant comme cela est décrit dans le tableau suivant.  

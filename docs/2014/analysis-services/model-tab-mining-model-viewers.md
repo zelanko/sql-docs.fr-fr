@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077620"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Onglet Modèle (Visionneuses de modèle d'exploration de données)
@@ -24,13 +24,13 @@ ms.locfileid: "66077620"
   
  Utilisez cette vue d'un modèle de série chronologique pour extraire des informations utiles sur l'analyse de série chronologique, y compris l'équation pour le graphique, les termes ARIMA et les coefficients.  
   
- **Pour plus d’informations :** [algorithme MTS (Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)), [Parcourir un modèle à l’aide de la visionneuse Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)et de l' [algorithme MTS (Microsoft Time](data-mining/microsoft-time-series-algorithm.md) Series)  
+ **Pour plus d’informations :** [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d’exploration de données**  
+ **Modèle d'exploration de données**  
  Sélectionne un modèle d'exploration de données à afficher. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  

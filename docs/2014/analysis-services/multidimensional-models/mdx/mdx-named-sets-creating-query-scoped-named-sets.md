@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074068"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Création de jeux nommés d'étendue de requête (MDX)
@@ -94,6 +94,6 @@ FROM Sales
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction SELECT &#40;&#41;MDX](/sql/mdx/mdx-data-manipulation-select)   
- [Création de jeux nommés d’étendue de session &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Création de jeux nommés dans l’étendue de session &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

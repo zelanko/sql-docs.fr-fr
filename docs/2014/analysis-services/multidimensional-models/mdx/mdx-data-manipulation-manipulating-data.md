@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074357"
 ---
 # <a name="manipulating-data-mdx"></a>Manipulation de données (MDX)
@@ -29,9 +29,9 @@ La syntaxe MDX (Multidimensional Expressions) permet de manipuler les données d
 
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Utilisation de l’instruction DRILLTHROUGH pour récupérer des données sources &#40;des&#41;MDX](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|Explique comment utiliser l’instruction MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) pour récupérer les jeux de lignes des données sources d’une cellule dans une source de données multidimensionnelles.|  
+|[Utilisation de l’instruction DRILLTHROUGH pour récupérer des données sources &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|Explique comment utiliser l’instruction MDX [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) pour récupérer les jeux de lignes des données sources d’une cellule dans une source de données multidimensionnelles.|  
 |[Utilisation de la fonction RollupChildren &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|Décrit l’impact de la MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)
-|[Comprendre l’ordre de passage et l’ordre de résolution &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Décrit en détail les concepts de l'ordre de résolution et la manière dont cette fonction affecte les expressions, instructions et scripts MDX.|  
+|[Présentation des concepts d’ordre de passage et d’ordre de résolution &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Décrit en détail les concepts de l'ordre de résolution et la manière dont cette fonction affecte les expressions, instructions et scripts MDX.|  
 
 <!-- ??
 

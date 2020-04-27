@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078981"
 ---
 # <a name="browsing-the-cube"></a>Exploration du cube
@@ -42,6 +42,6 @@ ms.locfileid: "66078981"
  [Leçon 3 : Modification des mesures, des attributs et des hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de requête MDX &#40;Analysis Services-données multidimensionnelles&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [Éditeur de requête MDX &#40;Analysis Services - Données multidimensionnelles&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

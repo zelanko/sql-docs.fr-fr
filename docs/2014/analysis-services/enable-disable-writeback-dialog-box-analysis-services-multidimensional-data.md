@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081284"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Activer/désactiver l’écriture différée (Analysis Services-données multidimensionnelles)
@@ -27,19 +27,19 @@ ms.locfileid: "66081284"
 -   Cliquez avec le bouton droit sur une partition dans la grille **Partitions** du volet **Groupes de mesures** sous l’onglet **Partitions** du Concepteur de cube et sélectionnez **Paramètres d’écriture différée** dans le menu contextuel.  
   
 ## <a name="options"></a>Options  
- **Nom de la table**  
+ **Nom du tableau**  
  Tapez le nom de la table d'écriture différée à créer pour la partition sélectionnée. La table d’écriture différée stocke les modifications apportées au groupe de mesures par une application cliente.  
   
 > [!NOTE]  
 >  Cette option est désactivée si l'écriture différée n'est pas active.  
   
- **Source de données**  
+ **Sources de données**  
  Sélectionne la source de données qui contiendra la table d'écriture différée.  
   
 > [!NOTE]  
 >  Cette option est désactivée si l'écriture différée n'est pas active.  
   
- **Nouveau**  
+ **Nouvelle**  
  Cliquez sur cette option pour afficher la boîte de dialogue **Gestionnaire de connexions** et définir une nouvelle source de données qui accueillera la table d’écriture différée.  
   
 > [!NOTE]  

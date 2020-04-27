@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074796"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
@@ -46,10 +46,10 @@ ms.locfileid: "66074796"
   
 |Terme|Définition|  
 |----------|----------------|  
-|Objectif|Une expression numérique MDX ou un calcul qui retourne la valeur cible de l'indicateur de performance clé.|  
-|Valeur|Une expression numérique MDX qui retourne la valeur réelle de l'indicateur de performance clé.|  
-|Statut|Une expression MDX qui représente l'état de l'indicateur de performance clé à un point spécifié dans le temps.<br /><br /> L'expression MDX d'état doit retourner une valeur normalisée comprise entre -1 et 1. Les valeurs inférieures ou égales à -1 sont considérées comme « mauvaises » ou « basses ». La valeur zéro (0) est considérée comme « acceptable » ou « moyenne ». Les valeurs supérieures ou égales à 1 sont considérées comme « bonnes » ou « élevées ».<br /><br /> Un nombre illimité de valeurs intermédiaires peut éventuellement être retourné, ces valeurs pouvant être utilisées pour afficher n'importe quel nombre d'états supplémentaires, si l'application cliente les prend en charge.|  
-|Tendance|Une expression MDX qui évalue la valeur de l’indicateur de performance clé au fil du temps. La tendance peut être n'importe quel critère de temps utile dans un contexte d’entreprise spécifique.<br /><br /> L'expression MDX de tendance permet à un utilisateur professionnel de déterminer si le KPI s'améliore ou se dégrade au fil du temps.|  
+|Objectif|Expression numérique MDX ou calcul qui retourne la valeur cible du KPI.|  
+|Value|Expression numérique MDX qui retourne la valeur réelle du KPI.|  
+|État|Expression MDX qui représente l'état du KPI à un moment donné.<br /><br /> L'expression MDX d'état doit retourner une valeur normalisée comprise entre -1 et 1. Les valeurs inférieures ou égales à -1 sont considérées comme « mauvaises » ou « basses ». La valeur zéro (0) est considérée comme « acceptable » ou « moyenne ». Les valeurs supérieures ou égales à 1 sont considérées comme « bonnes » ou « élevées ».<br /><br /> Un nombre illimité de valeurs intermédiaires peut éventuellement être retourné, ces valeurs pouvant être utilisées pour afficher n'importe quel nombre d'états supplémentaires, si l'application cliente les prend en charge.|  
+|Tendance|Expression MDX qui évalue la valeur du KPI dans le temps. La tendance peut correspondre à n'importe quel critère de temps ayant une utilité dans un contexte d'entreprise.<br /><br /> L'expression MDX de tendance permet à un utilisateur professionnel de déterminer si le KPI s'améliore ou se dégrade au fil du temps.|  
 |Indicateur d’état|Élément visuel qui fournit une indication rapide de l'état d'un KPI. L'affichage de l'élément est déterminé par la valeur de l'expression MDX qui évalue l'état.|  
 |Indicateur de tendance|Élément visuel qui fournit une indication rapide de la tendance d'un KPI. L'affichage de l'élément est déterminé par la valeur de l'expression MDX qui évalue la tendance.|  
 |Dossier d’affichage|Dossier dans lequel le KPI apparaît lorsqu'un utilisateur effectue un parcours du cube.|  
@@ -60,10 +60,9 @@ ms.locfileid: "66074796"
 ## <a name="parent-kpis"></a>KPI parents  
  Une entité peut suivre des mesures économiques différentes à différents niveaux. Par exemple, deux ou trois KPI peuvent être utilisés pour évaluer les performances économiques de l'ensemble de l'entreprise, mais ces KPI étendus à l'ensemble de l'entreprise peuvent être basés sur trois ou quatre autres KPI suivis par les différentes divisions de l'entreprise. En outre, les divisions de l'entreprise peuvent utiliser des statistiques différentes pour calculer un même KPI, le résultat étant cumulé avec le KPI étendu à l'entreprise.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permet de définir une relation parent-enfant entre les KPI. Cette relation parent-enfant permet d'utiliser les résultats du KPI enfant pour calculer les résultats du KPI parent. Les applications clientes peuvent également utiliser cette relation pour afficher de manière approximative les KPI parents et enfants.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permet de définir une relation parent-enfant entre les KPI. Cette relation parent-enfant permet d'utiliser les résultats du KPI enfant pour calculer les résultats du KPI parent. Les applications clientes peuvent également utiliser cette relation pour afficher de manière approximative les KPI parents et enfants.  
   
-## <a name="weights"></a>Weights  
+## <a name="weights"></a>Poids  
  Des poids peuvent également être affectés aux KPI enfants. Les poids permettent à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d'ajuster proportionnellement les résultats des KPI enfants lors du calcul du KPI parent.  
   
 ## <a name="retrieving-and-displaying-kpis"></a>Extraction et affichage des KPI  

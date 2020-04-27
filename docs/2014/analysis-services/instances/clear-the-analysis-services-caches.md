@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080299"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Effacer les caches Analysis Services
   Analysis Services met en cache des données pour optimiser les performances des requêtes. Cette rubrique fournit des recommandations pour l'utilisation de la commande XMLA ClearCache en vue d'effacer des caches qui ont été créés en réponse à une requête MDX. Les effets de l'exécution de la commande ClearCache varient selon que vous utilisez un modèle tabulaire ou multidimensionnel.  
   
- **Quand effacer le cache pour les modèles multidimensionnels**  
+ **À quel moment effacer le cache pour des modèles MDX**  
   
  Pour les bases de données multidimensionnelles, Analysis Services génère des caches dans le moteur de formule en évaluant un calcul, et dans le moteur de stockage pour les résultats des requêtes de dimension et des requêtes de groupe de mesures. Les requêtes de groupe de mesures se produisent lorsque le moteur de formule a besoin de données de mesure pour une coordonnée de cellule ou un sous-cube. Les requêtes de dimension se produisent en interrogeant des hiérarchies non naturelles et en appliquant des fonctionnalités autoexist.  
   
  L'effacement du cache est recommandé lors du test des performances. En effaçant le cache entre les tests, vous garantissez que la mise en cache ne biaise aucun résultat de test qui mesure l'impact d'une modification de conception de requête.  
   
- **Quand effacer le cache pour les modèles tabulaires**  
+ **À quel moment effacer le cache pour des modèles tabulaires**  
   
  Les modèles tabulaires sont généralement stockés en mémoire, où les agrégations et d'autres calculs sont effectués au moment de l'exécution d'une requête. Ainsi, la commande ClearCache a un effet limité sur des modèles tabulaires. Pour un modèle tabulaire, des données peuvent être ajoutées dans les caches Analysis Services, si des requêtes MDX sont exécutées sur celui-ci. En particulier, les mesures DAX référencées par des opérations MDX et autoexist peuvent mettre en cache des résultats dans le cache de formule et le cache de dimension, respectivement. Notez toutefois, que ces hiérarchies non naturelles et les requêtes de groupe de mesures ne mettent pas en cache des résultats dans le moteur de stockage. De plus, il est important de noter que les requêtes DAX ne mettent pas en cache des résultats dans le moteur de formule et le moteur de stockage. Dans la mesure où les caches existent en raison de requêtes MDX, l'exécution de la commande ClearCache sur un modèle tabulaire invalidera des données en mémoire cache du système.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "66080299"
   
 ## <a name="see-also"></a>Voir aussi  
  [Écrire des scripts pour les tâches d’administration dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Analyser une instance Analysis Services](monitor-an-analysis-services-instance.md)  
+ [Monitor an Analysis Services Instance](monitor-an-analysis-services-instance.md)  
   
   

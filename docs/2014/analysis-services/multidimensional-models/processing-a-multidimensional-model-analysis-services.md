@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073363"
 ---
 # <a name="multidimensional-model-object-processing"></a>Traitement des objets de modèles multidimensionnels
@@ -35,15 +35,15 @@ ms.locfileid: "66073363"
   
  Cette rubrique contient les sections suivantes :  
   
- [Prérequis](#bkmk_prereq)  
+ [Conditions préalables](#bkmk_prereq)  
   
- [Choix d’un outil ou d’une approche](#bkmk_tool)  
+ [Choix d'un outil ou d'une approche](#bkmk_tool)  
   
  [Traitement d'objets](#bkmk_proc)  
   
  [Retraitement des objets](#bkmk_reproc)  
   
-##  <a name="bkmk_prereq"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Conditions préalables  
   
 -   Le traitement nécessite des autorisations d'administration sur l'instance Analysis Services. Si effectuez le traitement de manière interactive dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous devez être membre du rôle administrateur de serveur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ce qui concerne le traitement sans assistance, par exemple à l'aide d'un package SSIS que vous planifiez via SQL Server Agent, le compte utilisé pour exécuter le package doit être membre du rôle administrateur de serveur. Pour plus d’informations sur la définition des autorisations d’administrateur, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -53,21 +53,21 @@ ms.locfileid: "66073363"
   
      Initialement, au cours des premières phases de développement du modèle, le déploiement et le traitement se produisent simultanément. Toutefois, vous pouvez définir des options pour traiter le modèle ultérieurement, après que vous avez déployé la solution. Pour plus d’informations sur le déploiement, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
-##  <a name="bkmk_tool"></a>Choix d’un outil ou d’une approche  
+##  <a name="choosing-a-tool-or-approach"></a><a name="bkmk_tool"></a>Choix d’un outil ou d’une approche  
  Vous pouvez traiter des objets de manière interactive à l'aide d'une application cliente telle que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou d'une opération de script qui s'exécute en tant que travail SQL Server Agent ou package [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Le mode de traitement d'une base de données varie considérablement selon que le modèle est en phase de développement actif ou de production. Une fois qu'un modèle est déployé sur un serveur de production, le traitement doit être étroitement contrôlé pour garantir l'intégrité et la disponibilité des données multidimensionnelles. Les objets étant interdépendants, le traitement a en général un effet en cascade sur le modèle lorsque d'autres objets sont également traités ou non en tandem. Si certains objets sont conservés dans un état non traité, les requêtes pour ces données ne seront pas résolues et interrompront les rapports ou applications qui les utilisent. Lors du développement d'une stratégie pour traiter une base de données de production, envisagez d'utiliser un script ou des packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] que vous avez débogués et testés pour éviter une erreur d'opérateur ou des étapes négligées.  
   
- Pour plus d’informations, consultez [Outils et approches pour le traitement des &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md).  
+ Pour plus d’informations, consultez [Outils et approches de traitement &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md).  
   
-##  <a name="bkmk_proc"></a>Traitement des objets  
+##  <a name="processing-objects"></a><a name="bkmk_proc"></a>Traitement des objets  
  Le traitement affecte les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : groupes de mesures, partitions, dimensions, cubes, modèles d'exploration de données, structures d'exploration et bases de données. Lorsqu'un objet contient un ou plusieurs objets, le traitement de l'objet de niveau supérieur entraîne le traitement en cascade de tous les objets de niveau inférieur. Par exemple, un cube contient généralement un ou plusieurs groupes de mesures (chacun d'entre eux contenant une ou plusieurs partitions) et des dimensions. Le traitement d'un cube entraîne le traitement de tous les groupes de mesures qu'il contient et des dimensions constituantes qui sont actuellement dans un état non traité. Pour plus d’informations sur le traitement des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Traitement des objets Analysis Services](processing-analysis-services-objects.md).  
   
  Durant l'exécution du travail de traitement, les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affectés sont accessibles pour l'interrogation. Le travail de traitement fonctionne à l'intérieur d'une transaction et celle-ci peut être validée ou annulée. Si le travail de traitement échoue, la transaction est restaurée. Si le travail de traitement réussit, un verrou exclusif est placé sur l'objet lorsque des modifications sont validées, ce qui signifie que l'objet est momentanément indisponible pour l'interrogation ou le traitement. Pendant la phase de validation de la transaction, il est toujours possible d'envoyer des requêtes à l'objet, mais celles-ci seront mises en file d'attente jusqu'à la fin de la validation.  
   
  Durant un travail de traitement, le traitement éventuel d'un objet et la façon dont il sera traité dépendent de l'option de traitement définie pour cet objet. Pour plus d’informations sur les options de traitement spécifiques applicables à chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
-##  <a name="bkmk_reproc"></a>Retraitement des objets  
+##  <a name="reprocessing-objects"></a><a name="bkmk_reproc"></a>Retraitement des objets  
  Les cubes contenant des éléments non traités doivent être retraités avant de pouvoir être explorés. Les cubes dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiennent des groupes de mesures et des partitions doivent être traitées avant de pouvoir interroger le cube. Le traitement d'un cube fait en sorte que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les dimensions constituantes du cube si elles sont dans un état non traité. Une fois qu'un objet a déjà été traité une fois, il doit être retraité, partiellement ou intégralement, à chaque fois que l'une des situations suivantes se produit :  
   
 -   la structure de l'objet change, par exemple en cas de suppression d'une colonne dans une table de faits ;  
@@ -76,10 +76,10 @@ ms.locfileid: "66073363"
   
 -   les données contenues dans l'objet doivent être mises à jour.  
   
- Lorsque vous traitez des objets dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement ou vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de déterminer le type de traitement approprié. Les méthodes de traitement disponibles varient d'un objet à l'autre et sont basées sur le type d'objet. En outre, les méthodes disponibles dépendent des modifications qui ont été apportées à l'objet depuis son dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible. Pour plus d’informations, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
+ Lorsque vous traitez des objets dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement ou vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de déterminer le type de traitement approprié. Les méthodes de traitement disponibles varient d'un objet à l'autre et sont basées sur le type d'objet. En outre, les méthodes disponibles dépendent des modifications qui ont été apportées à l'objet depuis son dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l’objet le plus rapidement possible. Pour plus d’informations, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Architecture logique &#40;Analysis Services-données multidimensionnelles&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objets de base de données &#40;Analysis Services-données multidimensionnelles&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Objets de bases de données &#40;Analysis Services – Données multidimensionnelles&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

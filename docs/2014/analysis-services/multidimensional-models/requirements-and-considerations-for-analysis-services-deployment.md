@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073170"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Configuration requise et considérations relatives au déploiement d'Analysis Services
   Les performances et la disponibilité d'une solution dépendent de nombreux facteurs, notamment des capacités du matériel sous-jacent, de la topologie de votre déploiement de serveur, des caractéristiques de votre solution (présence, par exemple, de partitions distribuées sur plusieurs serveurs ou utilisation du stockage ROLAP qui requiert l'accès direct au moteur relationnel), des contrats de niveau de service et de la complexité de votre modèle de données.  
   
 ## <a name="memory-and-processor-requirements"></a>Besoins en mémoire et de traitement  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nécessite plus de ressources de mémoire et de traitement dans les cas suivants :  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nécessite plus de ressources de mémoire et de traitement dans les cas suivants :  
   
 -   Lors du traitement de cubes volumineux ou complexes. Ces cubes nécessitent plus de ressources mémoire et de traitement que les petits cubes et les cubes simples.  
   
@@ -47,13 +46,13 @@ ms.locfileid: "66073170"
   
  La quantité de ressources mémoire et la capacité de traitement disponibles pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] varient en fonction de l'édition de SQL Server, du système d'exploitation, des capacités matérielles et selon que vous utilisez des processeurs virtuels ou physiques. Pour plus d'informations, suivez ces liens :  
   
- [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [Limites de capacité de calcul par l'édition de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Limites de capacité de calcul par édition de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [Spécifications de capacité maximale &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [Caractéristiques de capacité maximale &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>Espace disque nécessaire  
  Différents éléments de l'installation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et les tâches associées au traitement des objets nécessitent une quantité d'espace disque différente. Le tableau suivant décrit ces besoins.  
@@ -70,7 +69,7 @@ ms.locfileid: "66073170"
  Traitement des objets  
  Pendant le traitement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] copie sur le disque les objets qu’il traite dans la transaction de traitement jusqu’à la fin du traitement. Une fois le traitement terminé, les copies traitées des objets remplacent les objets d'origine. Par conséquent, vous devez disposer d'un espace disque supplémentaire suffisant pour une seconde copie de chaque objet à traiter. Si, par exemple, vous envisagez de traiter l'ensemble d'un cube dans une seule transaction, vous devez disposer d'un espace disque suffisant pour pouvoir stocker une seconde copie de l'ensemble du cube.  
   
-##  <a name="BKMK_Availability"></a>Considérations relatives à la disponibilité  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>Considérations relatives à la disponibilité  
  Dans un environnement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un cube ou un modèle d'exploration de données peut être indisponible pour effectuer des requêtes suite à une erreur matérielle ou logicielle. Un cube peut également être indisponible car il doit être traité.  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Maintien de la disponibilité en cas d'erreurs matérielles ou logicielles  
@@ -87,7 +86,7 @@ ms.locfileid: "66073170"
   
  Pour traiter de manière transparente les mises à jour incrémentielles des données sources, activez la mise en cache proactive. La mise en cache proactive met à jour les cubes avec les nouvelles données sources sans avoir à procéder à un traitement manuel et sans affecter la disponibilité des cubes. Pour plus d’informations, consultez [Mise en cache proactive &#40;partitions&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-##  <a name="BKMK_Scalability"></a>Considérations relatives à l’extensibilité  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Considérations relatives à l’extensibilité  
  Plusieurs instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur le même ordinateur peuvent entraîner des problèmes de performances. Pour résoudre ce problème, vous pouvez augmenter les ressources de traitement, mémoire et disque sur le serveur. Toutefois, il se peut que vous deviez également faire monter en charge les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur plusieurs ordinateurs.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Montée en charge d'Analysis Services sur plusieurs ordinateurs  

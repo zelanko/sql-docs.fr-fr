@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078455"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Définition de la granularité des dimensions dans un groupe de mesures
@@ -60,8 +60,7 @@ ms.locfileid: "66078455"
   
 12. Supprimez la mesure **calendrier Quarter** du `Sales Quotas` groupe de mesures.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a détecté la colonne sous-jacente de la mesure Calendar Quarter comme étant une colonne contenant des mesures. Toutefois, cette colonne et la colonne CalendarYear contiennent les valeurs que vous allez utiliser plus tard dans cette rubrique pour lier le groupe de mesures Sales Quotas à la dimension Date.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a détecté la colonne sous-jacente de la mesure Calendar Quarter comme étant une colonne contenant des mesures. Toutefois, cette colonne et la colonne CalendarYear contiennent les valeurs que vous allez utiliser plus tard dans cette rubrique pour lier le groupe de mesures Sales Quotas à la dimension Date.  
   
 13. Dans le volet **mesures** , cliquez avec le bouton `Sales Quotas` droit sur le groupe de mesures, puis cliquez sur **nouvelle mesure**.  
   
@@ -184,9 +183,9 @@ ms.locfileid: "66078455"
   
      Notez que même si l' **année civile** est liée au **trimestre calendaire** par le biais de l’attribut **calendrier semestre** , les attributs du calendrier fiscal sont liés les uns aux autres. elles ne sont pas liées à l’attribut **calendrier Quarter** et, par conséquent, ne sont `Sales Quotas` pas agrégées correctement dans le groupe de mesures.  
   
-2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Quarter** , puis sélectionnez **Nouvelle relation d’attribut**.  
+2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Semester** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** sur **Fiscal Quarter**.  
+3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Semester**. Affectez la valeur **Fiscal Quarter** à **Attribut associé**.  
   
 4.  Cliquez sur **OK**.  
   
@@ -221,11 +220,11 @@ ms.locfileid: "66078455"
      ![Groupe de mesures Sales Quota correctement dimensionné](../../2014/tutorials/media/l5-granularity-7.gif "Groupe de mesures Sales Quota correctement dimensionné")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)  
+ [Leçon 6 : définition de calculs](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Définir une relation régulière et des propriétés de relation régulière](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Utiliser des diagrammes dans le concepteur de vue de source de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081652"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scénarios de déploiement DirectQuery (SSAS Tabulaire)
@@ -24,7 +24,7 @@ ms.locfileid: "66081652"
   
  [Comparaison des configurations DirectQuery](#bkmk_Configurations)  
   
-##  <a name="bkmk_DQProcedure"></a>Étapes de conception et de déploiement  
+##  <a name="design-and-deployment-steps"></a><a name="bkmk_DQProcedure"></a>Étapes de conception et de déploiement  
  **Étape 1. Créer la solution**  
   
  Quel que soit le mode que vous allez utiliser, vous devez vérifier les informations qui décrivent les limitations applicables aux données pouvant être utilisées dans les modèles DirectQuery. Par exemple, toutes les données utilisées dans votre modèle et vos rapports doivent provenir d'une même base de données SQL Server. Pour plus d’informations, consultez [Mode DirectQuery &#40;SSAS Tabulaire&#41;](tabular-models/directquery-mode-ssas-tabular.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "66081652"
   
 |||  
 |-|-|  
-|**DirectQuery uniquement**|facultatif. Un modèle DirectQuery uniquement n'a pas besoin de partition.<br /><br /> Toutefois, si vous avez créé des partitions dans le modèle pendant la phase de conception, souvenez-vous qu'une seule partition peut être utilisée en tant que source de données. Par défaut, la première partition que vous avez créée est utilisée en tant que partition DirectQuery.<br /><br /> Pour vous assurer que toutes les données requises par le modèle sont disponibles dans la partition DirectQuery, choisissez une partition DirectQuery et modifiez l'instruction SQL de manière à obtenir l'ensemble de données complet.|  
+|**DirectQuery uniquement**|Facultatif. Un modèle DirectQuery uniquement n'a pas besoin de partition.<br /><br /> Toutefois, si vous avez créé des partitions dans le modèle pendant la phase de conception, souvenez-vous qu'une seule partition peut être utilisée en tant que source de données. Par défaut, la première partition que vous avez créée est utilisée en tant que partition DirectQuery.<br /><br /> Pour vous assurer que toutes les données requises par le modèle sont disponibles dans la partition DirectQuery, choisissez une partition DirectQuery et modifiez l'instruction SQL de manière à obtenir l'ensemble de données complet.|  
 |**Mode hybride**|Si une table de votre modèle comporte plusieurs partitions, vous devez choisir une seule partition en tant que *partition DirectQuery*. Si vous n'affectez pas de partition, par défaut, la première partition qui a été créée sera utilisée en tant que partition DirectQuery.<br /><br /> Définissez les options de traitement sur toutes les partitions, à l'exception de DirectQuery. En général, la partition DirectQuery n'est jamais traitée, car les données sont transmises depuis la source relationnelle.<br /><br /> Pour plus d’informations, consultez [partitions et mode DirectQuery &#40;&#41;tabulaire SSAS ](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).|  
   
  **Étape 6. Configurer l’emprunt d’identité**  
@@ -89,7 +89,7 @@ ms.locfileid: "66081652"
 |||  
 |-|-|  
 |**DirectQuery uniquement**|**DirectQueryOnly**<br /><br /> Étant donné que vous avez spécifié DirectQuery uniquement, les métadonnées du modèle sont déployées sur le serveur, mais le modèle n'est pas traité.<br /><br /> Notez que le cache utilisé par la base de données d'espace de travail n'est pas supprimé automatiquement. Si vous souhaitez vous assurer que les utilisateurs ne peuvent pas voir les données en cache, vous pouvez effacer le cache au moment de la conception. Pour plus d’informations, consultez [effacer les caches de Analysis Services](instances/clear-the-analysis-services-caches.md).|  
-|**Mode hybride**|**DirectQuery avec InMemory**<br /><br /> **InMemory avec DirectQuery**<br /><br /> Ces deux valeurs vous permettent d'utiliser le cache ou la source de données relationnelle selon les besoins. L'ordre définit quelle source de données est utilisée par défaut lors de la réponse aux requêtes sur le modèle.<br /><br /> En mode hybride, le cache doit être traité en même temps que le déploiement des métadonnées du modèle sur le serveur.<br /><br /> Vous pouvez modifier ce paramètre après le déploiement.|  
+|**Mode hybride**|**DirectQuery avec InMemory**<br /><br /> **En mémoire avec DirectQuery**<br /><br /> Ces deux valeurs vous permettent d'utiliser le cache ou la source de données relationnelle selon les besoins. L'ordre définit quelle source de données est utilisée par défaut lors de la réponse aux requêtes sur le modèle.<br /><br /> En mode hybride, le cache doit être traité en même temps que le déploiement des métadonnées du modèle sur le serveur.<br /><br /> Vous pouvez modifier ce paramètre après le déploiement.|  
   
  **Étape 8. Vérifier le modèle déployé**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66081652"
   
 -   Vous pouvez modifier ces propriétés à tout moment après que le modèle a été déployé.  
   
-##  <a name="bkmk_Configurations"></a>Comparaison des options DirectQuery  
+##  <a name="comparing-directquery-options"></a><a name="bkmk_Configurations"></a>Comparaison des options DirectQuery  
  **DirectQuery uniquement**  
  Cette option est recommandée lorsque vous voulez garantir une seule source de données, ou si vos données sont trop volumineuses pour tenir en mémoire. Si vous utilisez une source de données relationnelle très volumineuse, lors de la conception, vous pouvez créer le modèle à l'aide d'un sous-ensemble des données. Lorsque vous déployez le modèle en mode DirectQuery uniquement, vous pouvez modifier la définition de la source de données de manière à inclure toutes les données requises.  
   

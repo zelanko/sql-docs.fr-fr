@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59c27d5f34d6e5a3f33e0f153a9077995bd99650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080019"
 ---
 # <a name="features-off-by-default-analysis-services"></a>Fonctionnalités désactivées par défaut (Analysis Services)
@@ -54,7 +54,7 @@ ms.locfileid: "66080019"
   
 -   XML binaire  
   
--   Compression  
+-   compression ;  
   
 -   Affinité de groupe. Pour plus d'informations, consultez [Thread Pool Properties](../server-properties/thread-pool-properties.md) .  
   

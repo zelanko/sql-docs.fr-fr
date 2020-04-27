@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079276"
 ---
 # <a name="defining-a-data-source-view"></a>Définition d'une vue de source de données
@@ -40,15 +40,15 @@ ms.locfileid: "66079276"
   
      Dans la liste **Objets disponibles** , sélectionnez les objets suivants. Vous pouvez sélectionner plusieurs tables en maintenant enfoncée la touche Ctrl :  
   
-    -   **DimCustomer (DBO)**  
+    -   **DimCustomer (dbo)**  
   
-    -   **DimDate (DBO)**  
+    -   **DimDate (dbo)**  
   
-    -   **DimGeography (DBO)**  
+    -   **DimGeography (dbo)**  
   
-    -   **DimProduct (DBO)**  
+    -   **DimProduct (dbo)**  
   
-    -   **FactInternetSales (DBO)**  
+    -   **FactInternetSales (dbo)**  
   
 5.  Cliquez **>** sur cette option pour ajouter les tables sélectionnées à la liste **objets inclus** .  
   

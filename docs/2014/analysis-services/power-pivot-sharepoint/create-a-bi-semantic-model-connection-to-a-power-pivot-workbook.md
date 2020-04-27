@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071637"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Créer une connexion de modèle sémantique BI à un classeur PowerPivot
@@ -30,11 +30,11 @@ ms.locfileid: "66071637"
   
  [Configurer des autorisations SharePoint sur la connexion de modèle sémantique BI](#bkmk_permissions)  
   
- [Configurer des autorisations SharePoint sur le classeur](#bkmk_userdb)  
+ [Configurer les autorisations SharePoint sur le classeur](#bkmk_userdb)  
   
- [Étapes suivantes](#bkmk_next)  
+ [Next Steps](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>Vérifier les conditions préalables  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Vérifier les conditions préalables  
  Vous devez disposer d'autorisations Collaboration ou supérieures pour créer un fichier de connexion de modèle sémantique BI.  
   
  Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [Ajouter un type de contenu de connexion de modèle sémantique bi à une bibliothèque &#40;PowerPivot pour SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "66071637"
   
  Tous les ordinateurs et utilisateurs qui participent à la séquence de connexion doivent être dans le même domaine ou dans un domaine approuvé (approbation bidirectionnelle).  
   
-##  <a name="bkmk_create"></a>Créer une connexion  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>Créer une connexion  
   
 1.  Dans la bibliothèque qui contiendra la connexion de modèle sémantique BI, cliquez sur **Documents** sur le ruban SharePoint. Cliquez sur la flèche de déroulement de Nouveau document, puis sélectionnez **Fichier de connexion BISM** pour ouvrir la page Nouvelle connexion de modèle sémantique BI.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071637"
   
      Éventuellement, si vous disposez d'autorisations SharePoint sur le classeur, une étape supplémentaire de validation est effectuée pour s'assurer que l'emplacement est valide. Si vous n'êtes pas autorisé à accéder aux données, vous avez la possibilité d'enregistrer la connexion de modèle sémantique BI sans la réponse de validation.  
   
-##  <a name="bkmk_permissions"></a>Configurer des autorisations SharePoint sur la connexion de modèle sémantique BI  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>Configurer des autorisations SharePoint sur la connexion de modèle sémantique BI  
  La possibilité d'utiliser une connexion de modèle sémantique BI comme source de données pour un classeur Excel ou un rapport Reporting Services requiert des autorisations de **Lecture** sur l'élément de connexion de modèle sémantique BI dans une bibliothèque SharePoint. Le niveau d'autorisation Lecture inclut l'autorisation **Ouvrir les éléments** qui permet le téléchargement des informations de connexion de modèle sémantique BI vers une application bureautique Excel.  
   
  Il existe plusieurs manières d'accorder des autorisations dans SharePoint. L’instruction suivante explique comment créer un groupe appelé **Utilisateurs BISM** qui dispose du niveau d’autorisation **Read** .  
@@ -88,12 +88,12 @@ ms.locfileid: "66071637"
   
 4.  Cliquez sur **Supprimer les autorisations des utilisateurs**.  
   
-##  <a name="bkmk_userdb"></a>Configurer des autorisations SharePoint sur le classeur  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>Configurer des autorisations SharePoint sur le classeur  
  Si vous utilisez une base de données PowerPivot dans un classeur Excel, les autorisations SharePoint sur le classeur Excel déterminent l'accès aux données par l'intermédiaire de la connexion de modèle sémantique BI. Tous les utilisateurs qui accèdent au classeur doivent disposer d'autorisations de lecture sur le classeur pour pouvoir l'utiliser comme source de données externe.  
   
  Si vous avez créé un groupe **Utilisateurs BISM** à l’aide des instructions de la section précédente, les comptes d’utilisateur et de groupe qui sont membres d’ **Utilisateurs BISM** disposent des autorisations requises sur le classeur ainsi que sur le fichier de connexion du modèle sémantique BI, en supposant que le classeur utilise des autorisations héritées.  
   
-##  <a name="bkmk_next"></a>Étapes suivantes  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> Étapes suivantes  
  Après avoir créé et sécurisé une connexion de modèle sémantique BI, vous pouvez la spécifier en tant que source de données. Pour plus d’informations, consultez [Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  

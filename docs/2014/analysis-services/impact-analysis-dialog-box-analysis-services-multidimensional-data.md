@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080752"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Analyse d'impact (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66080752"
 >  Un objet apparaît plusieurs fois s'il est affecté de différentes manières.  
   
 ## <a name="options"></a>Options  
- **Liste d’objets**  
+ **Liste d'objets**  
  Affiche la liste des objets dépendants dans une grille. Cette grille comporte les colonnes suivantes :  
   
  **Nom de l’objet**  

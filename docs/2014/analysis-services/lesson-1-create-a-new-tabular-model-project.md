@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079310"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
@@ -24,8 +24,8 @@ ms.locfileid: "66079310"
   
  Durée estimée pour suivre cette leçon : **10 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
- Cette rubrique est la première leçon d’un didacticiel de création de modèle tabulaire. Pour effectuer cette leçon, vous devez avoir installé la base de données AdventureWorksDW sur une instance de SQL Server. Pour plus d’informations, consultez [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  
+## <a name="prerequisites"></a>Prérequis  
+ Cette rubrique constitue la première leçon du didacticiel de conception de modèle tabulaire. Pour effectuer cette leçon, vous devez avoir installé la base de données AdventureWorksDW sur une instance de SQL Server. Pour plus d’informations, consultez [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Créer un projet de modèle tabulaire  
   
@@ -44,23 +44,23 @@ ms.locfileid: "66079310"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Présentation de l'environnement de création du modèle tabulaire d'outils de données SQL Server  
  Maintenant que vous avez créé un nouveau projet de modèle tabulaire, prenons un moment pour explorer l’environnement de création de modèle tabulaire dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 ou version ultérieure).  
   
- Une fois votre projet créé, il s'ouvre dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Un modèle vide apparaît dans le concepteur de modèles et le fichier **Model.bim** est sélectionné dans la fenêtre de **l’Explorateur de solutions**. Lorsque vous ajoutez des données, les tables et les colonnes apparaissent dans le concepteur. Si vous ne voyez pas le concepteur (la fenêtre vide avec l’onglet Model. BIM), dans **Explorateur de solutions**, `AW Internet Sales Tabular Model`sous, double-cliquez sur le fichier **Model. BIM** .  
+ Une fois votre projet créé, il s'ouvre dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Un modèle vide apparaît dans le concepteur de modèles et le fichier **Model.bim** est sélectionné dans la fenêtre de **l’Explorateur de solutions** . Lorsque vous ajoutez des données, les tables et les colonnes apparaissent dans le concepteur. Si vous ne voyez pas le concepteur (la fenêtre vide avec l’onglet Model. BIM), dans **Explorateur de solutions**, `AW Internet Sales Tabular Model`sous, double-cliquez sur le fichier **Model. BIM** .  
   
- Vous pouvez afficher les propriétés du projet de base dans la fenêtre **Propriétés**. Dans **Explorateur de solutions**, cliquez `AW Internet Sales Tabular Model`sur. Notez que dans la fenêtre **Propriétés**, dans **Fichier projet**, vous allez voir **Modèle tabulaire AW Internet Sales.smproj**. Il s’agit du nom du fichier du projet, avec son emplacement dans le champ **Dossier du projet**.  
+ Vous pouvez afficher les propriétés du projet de base dans la fenêtre **Propriétés** . Dans **Explorateur de solutions**, cliquez `AW Internet Sales Tabular Model`sur. Notez que dans la fenêtre **Propriétés** , dans **Fichier projet**, vous allez voir **Modèle tabulaire AW Internet Sales.smproj**. Il s’agit du nom du fichier du projet, avec son emplacement dans le champ **Dossier du projet**.  
   
  Dans **Explorateur de solutions**, cliquez avec le bouton `AW Internet Sales Tabular Model` droit sur le projet, puis cliquez sur **Propriétés**. La boîte de dialogue **Pages des propriétés du modèle tabulaire AW Internet Sales** s’affiche. Il s’agit des propriétés de projet avancées. Vous définirez ultérieurement certaines de ces propriétés lorsque vous serez prêt à déployer votre modèle.  
   
- À présent, examinons les propriétés du modèle. Dans **l’Explorateur de solutions**, cliquez sur **Model.bim**. Dans la fenêtre **Propriétés**, vous pouvez voir maintenant les propriétés du modèle, dont la plus importante est la propriété **Mode DirectQuery**. Cette propriété spécifie si le modèle est déployé, ou non, en mode In-Memory (Désactivé) ou en mode DirectQuery (Activé). Pour ce didacticiel, vous allez créer et déployer votre modèle en mode In-Memory.  
+ À présent, examinons les propriétés du modèle. Dans **l’Explorateur de solutions**, cliquez sur **Model.bim**. Dans la fenêtre **Propriétés** , vous pouvez voir maintenant les propriétés du modèle, dont la plus importante est la propriété **Mode DirectQuery** . Cette propriété spécifie si le modèle est déployé, ou non, en mode In-Memory (Désactivé) ou en mode DirectQuery (Activé). Pour ce didacticiel, vous allez créer et déployer votre modèle en mode In-Memory.  
   
- Lorsque vous créez un modèle, certaines de ses propriétés sont définies automatiquement selon les paramètres de modélisation des données qui peuvent être spécifiés dans la boîte de dialogue des outils et des options. Les propriétés Sauvegarde de données, Rétention de l’espace de travail et Serveur d’espace de travail spécifient le mode et l’emplacement de sauvegarde, de conservation en mémoire et de génération de la base de données d’espace de travail (votre base de données de création de modèle), conservée en mémoire et généré. Vous pouvez modifier ces paramètres ultérieurement si nécessaire, mais pour l’instant, laissez ces propriétés en l’état.  
+ Lorsque vous créez un modèle, certaines de ses propriétés sont définies automatiquement selon les paramètres de modélisation des données qui peuvent être spécifiés dans la boîte de dialogue des outils et des options. Les propriétés de sauvegarde de données, de rétention de l'espace de travail et du serveur de l'espace de travail spécifient comment et où la base de données d'espace de travail (votre base de données de conception de modèle) est sauvegardée, conservée en mémoire et construite. Vous pouvez modifier ces paramètres ultérieurement si nécessaire, mais pour l’instant, laissez ces propriétés en l’état.  
   
  Lorsque vous avez installé [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], plusieurs nouveaux éléments de menu ont été ajoutés à l'environnement Visual Studio. Examinons les nouveaux éléments de menu spécifiques à la création de modèles tabulaires. Cliquez sur le menu **Modèle**. À partir de cette page, vous pouvez lancer l'Assistant Importation de table, afficher et modifier les connexions existantes, actualiser les données de l'espace de travail, parcourir votre modèle dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel avec la fonctionnalité d'analyse dans Excel, créer des perspectives et des rôles, sélectionner la vue du modèle et définir les options de calcul.  
   
- Cliquez sur le menu **Table**. Ici, vous pouvez créer et gérer des relations entre des tables, créer, gérer et spécifier des paramètres de table Date, créer des partitions et modifier les propriétés de la table.  
+ Cliquez sur le menu **Table** . Ici, vous pouvez créer et gérer des relations entre des tables, créer, gérer et spécifier des paramètres de table Date, créer des partitions et modifier les propriétés de la table.  
   
- Cliquez sur le menu **Colonne** . Ici, vous pouvez ajouter et supprimer des colonnes dans une table, figer des colonnes et spécifier l'ordre de tri. Vous pouvez également utiliser la fonction Somme automatique pour créer une mesure standard d'agrégation pour une colonne sélectionnée. D’autres boutons de la barre d’outils permettent d’accéder rapidement aux commandes et fonctionnalités fréquemment utilisées.  
+ Cliquez sur le menu **Colonne** . Ici, vous pouvez ajouter et supprimer des colonnes dans une table, figer des colonnes et spécifier l'ordre de tri. Vous pouvez également utiliser la fonction Somme automatique pour créer une mesure standard d'agrégation pour une colonne sélectionnée. D'autres boutons de la barre d'outils permettent d'accéder rapidement aux fonctionnalités et aux commandes fréquemment utilisées.  
   
- Recherchez dans certaines des boîtes de dialogue et certains des emplacements les fonctionnalités spécifiques à la création de modèles tabulaires. Bien que certains éléments ne soient pas encore actifs, vous pouvez vous faire une idée claire de l’environnement de création de modèles tabulaires.  
+ Explorez les boîtes de dialogue et les emplacements des fonctionnalités spécifiques à la création des modèles tabulaires. Bien que certains éléments ne soient pas toujours actifs, vous pouvez avoir une bonne idée de l'environnement de création des modèles tabulaires.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour poursuivre l’étude de ce didacticiel, passez à la [Leçon 2 : Ajouter des données](lesson-2-add-data.md).  

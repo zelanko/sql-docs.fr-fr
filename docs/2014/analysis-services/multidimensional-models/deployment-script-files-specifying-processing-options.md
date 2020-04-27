@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075225"
 ---
 # <a name="specifying-processing-options"></a>Spécification d'options de traitement
@@ -29,7 +29,7 @@ ms.locfileid: "66075225"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Examen des options de traitement pour le déploiement  
  Les paramètres de configuration stockés dans \<le *nom du projet*> fichier. deploymentoptions sont les suivants :  
   
--   **Méthode de traitement** Ce paramètre contrôle si les objets déployés sont traités après le déploiement et le type de traitement qui sera effectué. Trois options de traitement sont possibles :  
+-   **Méthode de traitement** Ce paramètre contrôle si les objets déployés sont traités après le déploiement et le type de traitement à effectuer. Trois options de traitement sont possibles :  
   
     -   Traitement par défaut (option par défaut)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075225"
   
     -   None  
   
--   **Options de la table d’écriture différée** Si l’écriture différée est [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] activée dans le projet, ce paramètre définit la façon dont l’écriture différée est gérée. Trois options de table d'écriture différée sont possibles :  
+-   **Options de table d'écriture différée** Si l'écriture différée est activée dans le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ce paramètre définit les modalités de l'écriture différée. Trois options de table d'écriture différée sont possibles :  
   
     -   Par défaut, s'il existe une table d'écriture différée, elle est utilisée. S'il n'existe pas de table d'écriture différée, une nouvelle table d'écriture différée est créée.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075225"
   
     -   Une nouvelle table d'écriture différée est créée dans tous les cas, même s'il en existe déjà une. Avec cette option, l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toute table existante et la remplace par une nouvelle table d'écriture différée.  
   
--   **Déploiement transactionnel** Ce paramètre contrôle si le déploiement de métadonnées change et les commandes de traitement se produisent dans une transaction unique ou dans des transactions distinctes.  
+-   **Déploiement transactionnel** Ce paramètre contrôle si le déploiement de modifications de métadonnées et de commandes de processus s'effectue en une seule transaction ou en transactions distinctes.  
   
     -   Si cette option a la valeur `True` (valeur par défaut), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déploie toutes les modifications de métadonnées et toutes les commandes de processus en une seule transaction.  
   

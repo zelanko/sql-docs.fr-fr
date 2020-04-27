@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077844"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Métadonnées (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -47,7 +47,7 @@ ms.locfileid: "66077844"
 |------------|-----------------|  
 |**Ajouter à la requête**|Cliquez pour ajouter l'objet sélectionné dans le volet inférieur de la zone de génération de la requête.|  
 |**Ajouter au filtre**|Permet d’ajouter la dimension, l’attribut, la hiérarchie ou le niveau sélectionné à la zone de filtre du **Navigateur**.<br /><br /> Remarque : cette option n’est active que si une dimension, un attribut, une hiérarchie ou un niveau est sélectionné.|  
-|**Copy**|Permet d'ajouter l'élément sélectionné dans le Presse-papiers.<br /><br /> Remarque : cette option copie le nom complet de l’objet.|  
+|**Copier**|Permet d'ajouter l'élément sélectionné dans le Presse-papiers.<br /><br /> Remarque : cette option copie le nom complet de l’objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Barre d’outils &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

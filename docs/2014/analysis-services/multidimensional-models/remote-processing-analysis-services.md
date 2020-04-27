@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073207"
 ---
 # <a name="remote-processing-analysis-services"></a>Traitement à distance (Analysis Services)
   Vous pouvez exécuter un traitement planifié ou sans assistance sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La demande de traitement proviendra d'un ordinateur, mais s'exécutera sur un autre ordinateur du même réseau.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Si vous exécutez différentes versions de SQL Server sur chaque ordinateur, les bibliothèques clientes doivent correspondre à la version de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui traite le modèle. Par exemple, si le traitement se trouve sur une instance [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , l'ordinateur d'où provient la demande doit disposer de la bibliothèque cliente correspondant à [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]. Consultez [Fournisseurs de données utilisés pour les connexions Analysis Services](../instances/data-providers-used-for-analysis-services-connections.md).  
   
@@ -31,8 +31,7 @@ ms.locfileid: "66073207"
 -   Résolvez les erreurs de traitement local existantes avant de tenter le traitement à distance. Quand le traitement de la demande est local, vérifiez que les données peuvent être récupérées à partir de la source de données relationnelles externe. Pour obtenir des instructions sur la spécification des informations d’identification utilisées pour récupérer des données, consultez [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Traitement à distance à la demande  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] accepte les demandes de traitement des comptes d'utilisateur ou d'application disposants des autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si vous êtes administrateur, vérifiez que vous pouvez vous connecter à l'instance distante et traiter la base de données manuellement via la connexion à distance.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] accepte les demandes de traitement des comptes d'utilisateur ou d'application disposants des autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si vous êtes administrateur, vérifiez que vous pouvez vous connecter à l'instance distante et traiter la base de données manuellement via la connexion à distance.  
   
 1.  Sur l'ordinateur qui sera utilisé pour planifier le traitement, démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis connectez-vous à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66073207"
   
 -   [Configurer SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent composants](../../ssms/agent/sql-server-agent.md#Components) suggère des rôles serveur fixes alternatifs si l’octroi d’autorisations **sysadmin** n’est pas possible.  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) suggère d'autres rôles serveur fixes s'il n'est pas possible d'accorder des autorisations à **sysadmin** .  
   
  Après avoir configuré les autorisations du compte, passez aux étapes suivantes.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66073207"
   
 2.  Si vous le souhaitez, vous pouvez définir des propriétés de trace pour envoyer la trace vers un fichier ou une table dans une base de données.  
   
-#### <a name="run-the-job"></a>Exécution de la tâche  
+#### <a name="run-the-job"></a>Exécuter le travail  
   
 1.  Sur l'ordinateur utilisé pour exécuter le travail, vérifiez que le travail peut effectuer l'opération de base. Dans l’Explorateur d’objets, sous SQL Server Agent, développez **Travaux**, cliquez avec le bouton droit sur le travail que vous venez de créer, puis cliquez sur **Démarrer le travail à l’étape**. Le travail démarre immédiatement. Vous pouvez surveiller la progression dans SQL Server Profiler.  
   
@@ -96,6 +95,6 @@ ms.locfileid: "66073207"
  [Planifier des tâches administratives SSAS avec SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Traitement par lots &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Traitement d’objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)   
- [Traitement des objets &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+ [Traitement d’objets &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

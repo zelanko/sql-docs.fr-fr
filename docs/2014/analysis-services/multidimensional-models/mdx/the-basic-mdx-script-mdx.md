@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073808"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX de base (MDX)
@@ -28,7 +28,7 @@ ms.locfileid: "66073808"
  **Script MDX par défaut**  
  Au moment de la création d’un cube, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un script MDX par défaut pour celui-ci. Ce script définit un test de calcul pour l'intégralité du cube.  
   
- **Script MDX défini par l’utilisateur**  
+ **Script MDX défini par l'utilisateur**  
  Lorsque vous avez créé un cube, vous pouvez ajouter des scripts MDX définis par l'utilisateur qui étendent les possibilités de calcul du cube.  
   
 ## <a name="the-default-mdx-script"></a>Script MDX par défaut  
@@ -36,8 +36,7 @@ ms.locfileid: "66073808"
   
  Le script MDX par défaut contient également les commandes de script qui créent des jeux nommés, des assignations et des membres calculés dans le Concepteur de cube :  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ajoute directement les commandes de script au script MDX par défaut.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ajoute directement les commandes de script au script MDX par défaut.  
   
 -   Pour chaque jeu nommé défini dans le cube, il existe une instruction CREATE SET correspondante dans le script MDX par défaut.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66073808"
  Toutes les instructions de script MDX  
  Dans les scripts MDX, les instructions de script MDX contrôlent le contexte et la portée des calculs et gèrent le comportement des autres instructions dans le script MDX. Cette catégorie comprend les instructions suivantes :  
   
--   [DONT](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
 -   [ANTIGEL](/sql/mdx/mdx-scripting-freeze)  
   
@@ -61,10 +60,10 @@ ms.locfileid: "66073808"
   
  Pour plus d’informations sur les instructions de script MDX, consultez [Instructions de script MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CRÉER UN MEMBRE](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  L'instruction CREATE MEMBER crée des membres calculés. Pour plus d’informations sur la création de membres calculés, consultez [Création de membres calculés dans MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
- [CRÉER UN JEU](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  L'instruction CREATE SET crée des jeux nommés. Pour plus d’informations sur la création de jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md).  
   
  Instructions conditionnelles  
@@ -92,6 +91,6 @@ ms.locfileid: "66073808"
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence du langage MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
- [Notions de base de l’écriture de scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077830"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Partition de fusion (Analysis Services - Données multidimensionnelles)
@@ -29,7 +29,7 @@ ms.locfileid: "66077830"
  **Nom**  
  Sélectionnez le nom d'une partition existante à utiliser comme cible.  
   
- **Folder**  
+ **Répertoire**  
  Affiche le nom du dossier qui contient la partition cible, si la partition indiquée dans le champ Nom n'utilise pas le dossier par défaut pour l'instance Analysis Services.  
   
  **Partitions sources**  
@@ -42,12 +42,12 @@ ms.locfileid: "66077830"
   
 |Colonne|Description|  
 |------------|-----------------|  
-|**Fusionner**|Permet de fusionner la partition source dans la partition cible.|  
+|**Fusion**|Permet de fusionner la partition source dans la partition cible.|  
 |**Nom de la partition**|Affiche le nom de la partition source.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la partition source.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Fusionner des partitions dans Analysis Services &#40;SSAS-&#41;multidimensionnel](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

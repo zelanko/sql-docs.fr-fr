@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080737"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Scénario Valeur cible (Outils d'analyse de table pour Excel)
@@ -59,7 +59,7 @@ ms.locfileid: "66080737"
   
 9. Si vous avez sélectionné l’option **sur cette ligne**, les résultats de l’analyse sont générés dans la boîte de dialogue à des fins de vérification. La boîte de dialogue reste ouverte afin que vous puissiez continuer à essayer différentes valeurs et cibles.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Conditions requises  
  Cet outil utilise l'algorithme MLR (Microsoft Logistic Regression), qui peut traiter des valeurs numériques ou discrètes.  
   
  Vous pouvez exécuter la prédiction plusieurs fois et sélectionner par la suite d'autres colonnes, mais chaque combinaison de cible et de modification doit être calculée séparément.  
@@ -81,7 +81,7 @@ ms.locfileid: "66080737"
   
  L’outil génère un rapport dans le volet des **résultats** de la boîte de dialogue s’il a réussi à trouver un scénario qui atteint l’objectif souhaité. S'il trouve une solution adéquate, il émet une recommandation qui indique le changement requis. Par exemple, l’outil valeur **cible** peut vous indiquer que la distance de trajet doit être inférieure à 5 kilomètres.  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
  **La valeur cible pour Désir d'achat a trouvé une solution.**  
   

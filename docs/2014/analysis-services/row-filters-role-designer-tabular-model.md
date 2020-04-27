@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070131"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtres de lignes (Concepteur de rôle) (Modèle tabulaire)
@@ -26,7 +26,7 @@ ms.locfileid: "66070131"
 >  Toutes les options de cette page sont désactivées si l’option **Contrôle total (Administrateur)** est sélectionnée dans la page **Général** du Concepteur de rôle ou si le rôle d’autorisation a la valeur **Processus**.  
   
 ## <a name="options"></a>Options  
- **Table**  
+ **Table de charge de travail**  
  Table de modèle pour laquelle le filtre est défini.  
   
  **Filtre DAX**  
@@ -37,6 +37,6 @@ ms.locfileid: "66070131"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles de modèles tabulaires &#40;&#41;SSAS tabulaire](tabular-models/roles-ssas-tabular.md)   
- [Gérer les rôles à l’aide de SSMS &#40;la&#41;tabulaire SSAS](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Gérer les rôles à l’aide de SSMS &#40;SSAS Tabulaire&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

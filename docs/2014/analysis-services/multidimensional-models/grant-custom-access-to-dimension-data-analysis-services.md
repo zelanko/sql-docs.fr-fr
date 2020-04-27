@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075060"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
@@ -41,10 +41,10 @@ ms.locfileid: "66075060"
   
  La sécurité de base de la dimension est la plus simple : il suffit de sélectionner les attributs de dimension et les hiérarchies d'attributs à inclure ou à exclure dans le rôle. La sécurité avancée est plus complexe et nécessite une connaissance des scripts MDX. Les deux approches sont décrites ci-dessous.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Vous ne pouvez pas utiliser toutes les mesures, ni tous les membres de dimension dans les scénarios d'accès personnalisés. Une connexion échoue si un rôle restreint l'accès à une mesure ou un membre par défaut, ou s'il restreint l'accès à des mesures qui font partie d'expressions de mesure.  
   
- **Vérifiez les obstacles à la sécurité des dimensions : mesures par défaut, membres par défaut et mesures utilisées dans les expressions de mesure**  
+ **Vérifier les obstructions en matière de sécurité des dimensions : mesures par défaut, membres par défaut et mesures utilisées dans les expressions de mesure**  
   
 1.  Dans SQL Server Management Studio, cliquez avec le bouton droit sur un cube, puis sélectionnez générer un **script du cube en tant que** | **modification de** | la fenêtre de l'**éditeur de requête**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66075060"
   
 ## <a name="basic-dimension-security"></a>Sécurité de base de la dimension  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez **Rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]instance de, développez **rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
   
      Le rôle doit déjà avoir l'accès en lecture sur le cube. Pour plus d’informations, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66075060"
   
      Vous pouvez également **Désélectionner tous les membres** pour révoquer l’accès de façon globale, puis sélectionner les membres à autoriser. Dans les opérations de traitement futures, les nouveaux membres ne sont pas visibles tant que vous ne modifiez pas manuellement la sécurité des données de la dimension pour autoriser l'accès.  
   
-5.  Si vous le souhaitez **** , cliquez sur `Visual Totals` avancé pour activer cette hiérarchie d’attribut. Cette option recalcule les agrégations en fonction des membres disponibles via ce rôle.  
+5.  Si vous le souhaitez **Advanced** , cliquez sur `Visual Totals` avancé pour activer cette hiérarchie d’attribut. Cette option recalcule les agrégations en fonction des membres disponibles via ce rôle.  
   
     > [!NOTE]  
     >  Lorsque vous appliquez des autorisations qui suppriment des membres de la dimension, les totaux agrégés ne sont pas automatiquement recalculés. Supposons `All` que le membre d’une hiérarchie d’attribut retourne un nombre de 200 avant l’application des autorisations. Après avoir appliqué des autorisations qui refusent l’accès `All` à certains membres, retourne toujours 200, même si les valeurs de membre visibles à l’utilisateur sont nettement inférieures. Pour éviter de semer la confusion entre les consommateurs de votre cube, `All` vous pouvez configurer le membre comme l’agrégat des membres de rôle, plutôt que l’agrégat de tous les membres de la hiérarchie d’attribut. Pour appeler ce comportement, vous pouvez activer `Visual Totals` sous l’onglet **avancé** lors de la configuration de la sécurité de la dimension. Une fois activé, l'agrégation est calculée au moment de la requête au lieu d'être extraite d'agrégations précalculées. Cela peut avoir un effet notable sur les performances de la requête, c'est pourquoi il est conseillé de l'utiliser uniquement lorsque cela est nécessaire.  
@@ -113,7 +113,7 @@ ms.locfileid: "66075060"
   
  Par exemple, supposez qu'un rôle de base de données spécifie `Male` comme membre par défaut de l'attribut `Gender`. Si une requête n'inclut pas explicitement l'attribut `Gender` et ne définit pas un membre différent pour l'attribut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un ensemble de données qui inclut uniquement les clients hommes. Pour plus d’informations sur la définition du membre par défaut, consultez [Définir un membre par défaut](attribute-properties-define-a-default-member.md).  
   
- **Activer le total visuel**  
+ **Activer les valeurs visibles**  
  La propriété VisualTotals indique si les valeurs des cellules agrégées affichées sont calculées en fonction de toutes les valeurs des cellules ou en fonction des valeurs des cellules auxquelles le rôle de base de données peut accéder.  
   
  Par défaut, la propriété VisualTotals est désactivée ( `False`a la valeur). Cette valeur par défaut optimise les performances, car [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut calculer rapidement le total de toutes les valeurs des cellules, au lieu de passer du temps à sélectionner les valeurs des cellules à calculer.  
@@ -122,13 +122,13 @@ ms.locfileid: "66075060"
   
  L’affectation de la `True` valeur à la propriété VisualTotals peut éliminer ce risque. Quand vous activez la propriété VisualTotals, un rôle de base de données peut afficher seulement les totaux agrégés des membres de la dimension sur lesquels il dispose d’une autorisation.  
   
- **Chèque**  
+ **Vérification**  
  Cliquez pour tester la syntaxe MDX définie dans cette page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Octroi d’autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Accorder un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [Accordez des autorisations sur les modèles et les structures d’exploration de données &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Accorder des autorisations sur un objet source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

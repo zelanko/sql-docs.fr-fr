@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077417"
 ---
 # <a name="define-a-default-member"></a>Définir un membre par défaut
@@ -44,6 +44,6 @@ ms.locfileid: "66077417"
  Lorsque les niveaux d'une hiérarchie s'agrègent naturellement, vous pouvez définir un membre par défaut pour un attribut de la hiérarchie sans tenir compte des autres attributs de cette hiérarchie. Par exemple, dans la hiérarchie pays-province-ville, vous pouvez définir un membre par défaut pour City, par exemple [City]. [Montréal] sans définir le membre par défaut pour l’État ou le pays.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer le &#40;tous les niveaux de&#41; pour les hiérarchies d’attributs](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

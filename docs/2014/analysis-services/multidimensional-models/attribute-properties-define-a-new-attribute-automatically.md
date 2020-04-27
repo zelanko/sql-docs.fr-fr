@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f77148e039e61c080d0eae4e4ab7cad06ef050d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077305"
 ---
 # <a name="define-a-new-attribute-automatically"></a>Définir un nouvel attribut automatiquement
@@ -29,8 +29,7 @@ ms.locfileid: "66077305"
   
 2.  Sous l’onglet **Structure de dimension** , sélectionnez la colonne du tableau à laquelle vous souhaitez lier l’attribut dans le volet **Vue de source de données** , puis faites-la glisser jusqu’au volet **Attributs** .  
   
-     
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée l’attribut qui a le même nom que la colonne à laquelle il est lié. Si plusieurs attributs utilisent la même colonne, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute un numéro au nom de l’attribut.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée l’attribut qui a le même nom que la colonne à laquelle il est lié. Si plusieurs attributs utilisent la même colonne, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute un numéro au nom de l’attribut.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions dans les modèles multidimensionnels](dimensions-in-multidimensional-models.md)   

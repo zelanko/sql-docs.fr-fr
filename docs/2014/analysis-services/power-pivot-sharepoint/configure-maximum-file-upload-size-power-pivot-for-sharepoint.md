@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071821"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurer la taille maximale de téléchargement de fichiers (PowerPivot pour SharePoint)
@@ -48,7 +48,7 @@ ms.locfileid: "66071821"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Configurer la taille de fichier maximale pour une application Web SharePoint  
   
-1.  Dans Administration Centrale, sous Gestion des applications, cliquez sur **Gérer les applications Web**.  
+1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications Web**.  
   
     > [!NOTE]  
     >  Effectuez les étapes suivantes uniquement si vous augmentez la Taille maximale du classeur dans Excel Services.  
@@ -57,7 +57,7 @@ ms.locfileid: "66071821"
   
 3.  Dans le ruban Applications Web, cliquez sur la flèche bas située sur le bouton Paramètres généraux.  
   
-4.  Cliquez sur **paramètres généraux**.  
+4.  Cliquez sur **Paramètres généraux**.  
   
 5.  Faites défiler la liste jusqu’à **Taille maximale du téléchargement**.  
   
