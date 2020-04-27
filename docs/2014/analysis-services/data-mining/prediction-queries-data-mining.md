@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083115"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
@@ -30,17 +30,17 @@ ms.locfileid: "66083115"
   
  Les sections suivantes décrivent la syntaxe générale des requêtes de prédiction, les différents types de requêtes de prédiction et la manière d'utiliser les résultats des requêtes de prédiction.  
   
- [Conception de requête de prédiction de base](#bkmk_PredQuery)  
+ [Conception d'une requête de prédiction de base](#bkmk_PredQuery)  
   
 -   [Ajout de fonctions de prédiction](#bkmk_PredFunc)  
   
--   [Requêtes Singleton](#bkmk_SingletonQuery)  
+-   [Requêtes singleton](#bkmk_SingletonQuery)  
   
 -   [Requêtes de prédiction par lot](#bkmk_BatchQuery)  
   
  [Utilisation des résultats de requêtes](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a>Conception de requête de prédiction de base  
+##  <a name="basic-prediction-query-design"></a><a name="bkmk_PredQuery"></a>Conception de requête de prédiction de base  
  Lorsque vous créez une prédiction, vous fournissez en général des nouvelles données et vous demandez au modèle de générer une prédiction basée sur ces nouvelles données.  
   
 -   Dans une requête de prédiction par lot, vous mappez le modèle à une source externe de données à l'aide d'une *jointure de prédiction*.  
@@ -55,12 +55,12 @@ ms.locfileid: "66083115"
   
  Pour les modèles de série chronologique, les données d'entrée ne sont pas toujours nécessaires ; il est possible d'effectuer des prédictions en utilisant uniquement les données figurant déjà dans le modèle. Toutefois, si vous spécifiez de nouvelles données d'entrée, vous devez décider si vous allez utiliser les nouvelles données pour mettre à jour et étendre le modèle, ou remplacer la série d'origine de données utilisée dans le modèle.  Pour plus d'informations sur ces options, consultez [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
-###  <a name="bkmk_PredFunc"></a>Ajout de fonctions de prédiction  
+###  <a name="adding-prediction-functions"></a><a name="bkmk_PredFunc"></a>Ajout de fonctions de prédiction  
  Outre la prédiction d'une valeur, vous pouvez personnaliser une requête de prédiction en vue de retourner plusieurs types d'informations en rapport avec la prédiction. Par exemple, si la prédiction crée une liste de produits à recommander à un client, vous souhaiterez peut-être également retourner la probabilité de chaque prédiction, afin de pouvoir les classer et présenter uniquement les meilleures recommandations à l'utilisateur.  
   
  Pour cela, vous ajoutez des *fonctions de prédiction* à la requête. Chaque type de modèle ou de requête prend en charge des fonctions spécifiques. Par exemple, les modèles de clustering prennent en charge des fonctions de prédiction spéciales qui fournissent des détails supplémentaires sur les clusters créés par le modèle, tandis que les modèles de série chronologique comportent des fonctions qui calculent les différences au fil du temps. Il existe aussi des fonctions de prédiction générales qui fonctionnent avec la plupart des types de modèles. Pour obtenir la liste des fonctions de prédiction prises en charge dans les différents types de requête, consultez cette rubrique dans la référence DMX : [Fonctions de prédiction générales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
-###  <a name="bkmk_SingletonQuery"></a>Création de requêtes de prédiction Singleton  
+###  <a name="creating-singleton-prediction-queries"></a><a name="bkmk_SingletonQuery"></a>Création de requêtes de prédiction Singleton  
  Une requête de prédiction singleton est utile lorsque vous souhaitez créer des prédictions rapides en temps réel. Un scénario courant consiste à obtenir des informations à partir d'un client, probablement à l'aide d'un formulaire sur un site Web, puis à soumettre ces données comme entrée à une requête de prédiction singleton. Par exemple, lorsqu'un client choisit un produit dans une liste, vous pouvez utiliser cette sélection comme entrée à une requête qui prédit les meilleurs produits à recommander.  
   
  Les requêtes de prédiction singleton ne requièrent pas une table séparée qui contient l'entrée. À la place, vous fournissez une ou plusieurs lignes de valeurs comme entrée pour le modèle, et la ou les prédictions sont retournées en temps réel.  
@@ -70,7 +70,7 @@ ms.locfileid: "66083115"
   
  Lorsque vous créez une requête de prédiction singleton, vous devez fournir les nouvelles données au modèle sous la forme d'une jointure PREDICTION JOIN. Cela signifie que bien que vous n'effectuiez pas le mappage à une table réelle, vous devez vous assurer que les nouvelles données correspondent aux colonnes existantes dans le modèle d'exploration de données. Si les nouvelles colonnes de données et les nouvelles données correspondent exactement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mappera les colonnes pour vous. On parle alors d'une jointure *NATURAL PREDICTION JOIN*. Toutefois, si les colonnes ne correspondent pas, ou si les nouvelles données ne contiennent pas les mêmes types et quantités de données que le modèle, vous devez spécifier les colonnes du modèle qui seront mappées aux nouvelles données ou spécifier les valeurs manquantes.  
   
-###  <a name="bkmk_BatchQuery"></a>Requêtes de prédiction par lot  
+###  <a name="batch-prediction-queries"></a><a name="bkmk_BatchQuery"></a>Requêtes de prédiction par lot  
  Une requête de prédiction par lot est utile lorsque vous disposez de données externes à utiliser lors de l'élaboration de prédictions. Par exemple, vous pouvez avoir créé un modèle qui classe les clients par catégorie selon leur activité en ligne et leur historique d'achat. Vous pouvez appliquer ce modèle à une liste de prospects récemment acquis, pour créer des projections pour les ventes ou pour identifier les cibles des campagnes proposées.  
   
  Lorsque vous effectuez une jointure de prédiction, vous devez mapper les colonnes du modèle aux colonnes dans la nouvelle source de données. Par conséquent, la source de données que vous choisissez pour une entrée doit correspondre à des données qui sont quelque peu similaires aux données dans le modèle. Les nouvelles informations ne doivent pas nécessairement correspondre exactement, et elles peuvent être incomplètes. Par exemple, supposons que l'apprentissage du modèle a été effectué en utilisant des informations sur le revenu et l'âge, mais que la liste de clients que vous utilisez pour les prédictions comporte l'âge mais rien sur le revenu. Dans ce scénario, vous pouvez mapper les nouvelles données au modèle et créer une prédiction pour chaque client. Toutefois, si le revenu était un prédicteur important pour le modèle, l'absence d'informations complètes affecte la qualité des prédictions.  
@@ -84,14 +84,14 @@ ms.locfileid: "66083115"
   
  Si vous utilisez DMX pour créer une jointure de prédiction, vous pouvez spécifier la source de données externe en utilisant les commandes OPENQUERY, OPENROWSET ou SHAPE. La méthode d'accès aux données par défaut dans les modèles DMX est OPENQUERY. Pour plus d’informations sur ces méthodes, consultez [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
-###  <a name="bkmk_TSQuery"></a>Prédictions dans les modèles d’exploration de données de série chronologique  
+###  <a name="predictions-in-time-series-mining-models"></a><a name="bkmk_TSQuery"></a>Prédictions dans les modèles d’exploration de données de série chronologique  
  Les modèles de série chronologique sont différents d'autres types de modèles ; vous pouvez soit utiliser le modèle tel quel afin de créer des prédictions, ou vous pouvez fournir de nouvelles données au modèle pour mettre à jour le modèle et créer des prédictions basées sur les tendances récentes. Si vous ajoutez de nouvelles données, vous pouvez spécifier la façon dont elles doivent être utilisées.  
   
--   L' *extension des cas de modèles* signifie que vous ajoutez les nouvelles données à la série de données existante dans le modèle de série chronologique. Dorénavant, les prédictions sont basées sur les nouvelles séries combinées. Cette option est appropriée si vous souhaitez simplement ajouter quelques points de données à un modèle existant.  
+-   L'*extension des cas de modèles* signifie que vous ajoutez les nouvelles données dans la série existante de données dans le modèle de série chronologique. Dorénavant, les prédictions sont basées sur les nouvelles séries combinées. Cette option est appropriée si vous souhaitez simplement ajouter quelques points de données à un modèle existant.  
   
      Par exemple, supposons que vous ayez un modèle de série chronologique existant dont l'apprentissage a été effectué sur les chiffres des ventes de l'année précédente. Après avoir collecté plusieurs mois de nouveaux chiffres de ventes, vous décidez de mettre à jour vos prévisions de ventes pour l'année actuelle. Vous pouvez créer une jointure de prédiction qui met à jour le modèle en ajoutant de nouvelles données et qui étend le modèle pour faire de nouvelles prédictions.  
   
--   *Le remplacement des cas de modèles* signifie que vous conservez le modèle formé, mais remplacez les cas sous-jacents par un nouveau jeu de données de cas. Cette option est utile lorsque vous souhaitez conserver la tendance dans le modèle, mais l'appliquer à un ensemble différent de données.  
+-   *Remplacer les cas de modèle* signifie que vous conservez le modèle ayant fait l'objet d'un apprentissage, mais vous remplacez les cas sous-jacents par un nouveau jeu de données de cas. Cette option est utile lorsque vous souhaitez conserver la tendance dans le modèle, mais l'appliquer à un ensemble différent de données.  
   
      Par exemple, votre modèle d'origine a pu faire l'objet d'un apprentissage sur un ensemble de données avec des volumes de ventes très élevés ; lorsque vous remplacez les données sous-jacentes par une nouvelle série (peut-être d'un magasin avec un volume de ventes inférieur), vous conservez la tendance, mais les prédictions commencent à partir des valeurs de la série de remplacement.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66083115"
   
  Pour plus d’informations sur la création de jointures de prédiction sur des modèles de série chronologique, consultez [Time Series Model Query Examples](time-series-model-query-examples.md) ou [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-##  <a name="bkmk_WorkResults"></a>Utilisation des résultats d’une requête de prédiction  
+##  <a name="working-with-the-results-of-a-prediction-query"></a><a name="bkmk_WorkResults"></a>Utilisation des résultats d’une requête de prédiction  
  Les options pour enregistrer les résultats d'une requête de prédiction d'exploration de données sont différentes selon la façon dont vous créez la requête.  
   
 -   Lorsque vous générez une requête à l'aide du Générateur de requêtes de prédiction dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez enregistrer les résultats d'une requête de prédiction dans une source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante. Pour plus d’informations, consultez [Afficher et enregistrer les résultats d’une requête de prédiction](view-and-save-the-results-of-a-prediction-query.md).  
@@ -147,6 +147,6 @@ FROM
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes de contenu &#40;l’exploration de données&#41;](content-queries-data-mining.md)   
- [Requêtes de définition de données &#40;&#41;d’exploration de données](data-definition-queries-data-mining.md)  
+ [Requêtes de définition des données &#40;Exploration de données&#41;](data-definition-queries-data-mining.md)  
   
   

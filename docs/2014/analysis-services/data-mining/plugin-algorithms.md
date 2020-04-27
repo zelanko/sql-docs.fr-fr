@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac6494a438f8ecd9c1fb48cc7c2a588cfab9bd9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083172"
 ---
 # <a name="plugin-algorithms"></a>Algorithmes de plug-in
@@ -44,8 +44,7 @@ ms.locfileid: "66083172"
  `IDMAlgorithmFactory`  
  Crée des instances des objets qui implémentent l'interface de l'algorithme et fournit à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l'accès à l'interface des métadonnées de l'algorithme.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise ces interfaces COM pour communiquer avec les algorithmes de plug-in. Les algorithmes de plug-in que vous utilisez doivent prendre en charge la spécification [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour l’exploration de données, mais ils ne doivent pas nécessairement prendre en charge l’ensemble des options d’exploration de données définies dans la spécification. Vous pouvez utiliser l’ensemble de lignes de schéma [MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset) pour déterminer les fonctionnalités d’un algorithme. Cet ensemble de lignes de schéma répertorie les options de prise en charge d'exploration de données pour chaque fournisseur d'algorithme de plug-in.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise ces interfaces COM pour communiquer avec les algorithmes de plug-in. Les algorithmes de plug-in que vous utilisez doivent prendre en charge la spécification [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour l’exploration de données, mais ils ne doivent pas nécessairement prendre en charge l’ensemble des options d’exploration de données définies dans la spécification. Vous pouvez utiliser l’ensemble de lignes de schéma [MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset) pour déterminer les fonctionnalités d’un algorithme. Cet ensemble de lignes de schéma répertorie les options de prise en charge d'exploration de données pour chaque fournisseur d'algorithme de plug-in.  
   
  Vous devez enregistrer les nouveaux algorithmes avant de les utiliser avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour enregistrer un algorithme, ajoutez les informations suivantes dans le fichier .ini de l’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur laquelle vous voulez inclure les algorithmes :  
   
