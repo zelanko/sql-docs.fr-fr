@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809275"
 ---
 # <a name="server-properties-processors-page"></a>Propriétés du serveur (page Processeurs)
@@ -26,22 +26,22 @@ ms.locfileid: "62809275"
  **Affinité du processeur**  
  Affecte des processeurs à des threads spécifiques afin d'éliminer les recharges de processeurs et de réduire la migration des threads entre les processeurs. Pour plus d’informations, consultez [affinity mask (option de configuration de serveur)](affinity-mask-server-configuration-option.md).  
   
- **Affinité d’e/s**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Lie les e/s disque à un sous-ensemble spécifié de processeurs. Pour plus d’informations, consultez [affinity Input-Output mask (option de configuration de serveur)](affinity-input-output-mask-server-configuration-option.md).  
+ **Affinité d'E/S**  
+ Lie les E/S disque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un sous-ensemble spécifié de processeurs. Pour plus d’informations, consultez [affinity Input-Output mask (option de configuration de serveur)](affinity-input-output-mask-server-configuration-option.md).  
   
- **Définir automatiquement le masque d’affinité du processeur pour tous les processeurs**  
+ **Définir automatiquement le masque d'affinité du processeur pour tous les processeurs**  
  Autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir l'affinité du processeur.  
   
- **Définir automatiquement le masque d’affinité d’e/s pour tous les processeurs**  
+ **Définir automatiquement le masque d'affinité d'E/S pour tous les processeurs**  
  Autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir l'affinité d'E/S.  
   
  **Nombre maximal de threads de travail**  
  0 autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir dynamiquement le nombre de threads de travail. Ce paramètre convient à la plupart des systèmes. Toutefois, selon votre configuration système, l'attribution d'une valeur spécifique à cette option peut permettre d'accroître les performances. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max worker threads](configure-the-max-worker-threads-server-configuration-option.md).  
   
- **Augmenter la priorité de SQL Server**  
+ **Renforcer la priorité SQL Server**  
  Indique si l’exécution de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir une priorité de planification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows supérieure à celle d’autres processus du même ordinateur. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur priority boost](configure-the-priority-boost-server-configuration-option.md).  
   
- **Utiliser des fibres Windows (regroupement léger)**  
+ **Utiliser les fibres Windows (regroupement léger)**  
  Utilise les fibres Windows plutôt que des threads pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez que cette option n’est disponible que dans Windows 2003 Server Edition. Pour plus d’informations, consultez [lightweight pooling Server Configuration Option](lightweight-pooling-server-configuration-option.md).  
   
  **Valeurs configurées**  

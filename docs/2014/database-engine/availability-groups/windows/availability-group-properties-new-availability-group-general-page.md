@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815652"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propriétés du groupe de disponibilité et Nouveau groupe de disponibilité (page Général)
-  Cette rubrique s’applique à l’onglet **général** de la boîte de dialogue **nouveau groupe de disponibilité** et de la boîte de dialogue **Propriétés du groupe de disponibilité** .  La boîte de dialogue **Nouveau groupe de disponibilité** vous permet de créer un nouveau groupe de disponibilité sans utiliser l’ [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. La boîte de dialogue **Propriétés du groupe de disponibilité** vous permet d’afficher et de modifier la configuration d’un groupe de disponibilité existant.  
+   Cette rubrique s’applique à l’onglet **Général** de la boîte de dialogue **Nouveau groupe de disponibilité** et de la boîte de dialogue **Propriétés du groupe de disponibilité**.  La boîte de dialogue **Nouveau groupe de disponibilité** vous permet de créer un nouveau groupe de disponibilité sans utiliser l’ [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. La boîte de dialogue **Propriétés du groupe de disponibilité** vous permet d’afficher et de modifier la configuration d’un groupe de disponibilité existant.  
   
  **Pour afficher les propriétés d'un groupe de disponibilité**  
   
 -   [Afficher les propriétés d’un groupe de disponibilité &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Nom du groupe de disponibilité**  
@@ -46,14 +46,14 @@ ms.locfileid: "62815652"
  **Instance de serveur**  
  Nom de serveur de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge ce réplica et, pour une instance non définie par défaut, son nom d'instance.  
   
- **Actif**  
- **Primaire**  
+ **Rôle**  
+ **Principal**  
  Actuellement le réplica principal.  
   
  **Secondary**  
  Actuellement un réplica secondaire.  
   
- **La résolution**  
+ **Résolution**  
  Actuellement le rôle de réplica est en cours d'être résolu en rôle principal ou secondaire.  
   
  **Mode de disponibilité**  
@@ -97,10 +97,10 @@ ms.locfileid: "62815652"
  **Oui**  
  Toutes les connexions sont autorisées aux bases de données secondaires de ce réplica, mais uniquement pour l'accès en lecture. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
- **Délai d’expiration de session (secondes)**  
+ **Délai d'attente de session (secondes)**  
  Nombre de secondes pour la période de délai d'expiration de session sur ce réplica.  
   
- **URL du point de terminaison**  
+ **URL de point de terminaison**  
  URL du point de terminaison. Pour plus d’informations sur le format de ces URL, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Ajouter**  

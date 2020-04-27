@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770986"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
@@ -90,11 +90,11 @@ ms.locfileid: "62770986"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source OLE DB**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de source de OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Éditeur de source OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source de OLE DB &#40;page colonnes&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Éditeur de source OLE DB &#40;page Colonnes&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Éditeur de source de OLE DB &#40;page sortie d’erreur&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Éditeur de source OLE DB &#40;page Sortie d’erreur&#41;](../ole-db-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -113,11 +113,11 @@ ms.locfileid: "62770986"
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Article wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), sur social.technet.Microsoft.com.  
+ Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Destination OLE DB](ole-db-destination.md)   
- [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Destination de la OLE DB](ole-db-destination.md)   
+ [Integration Services &#40;les variables de&#41; SSIS](../integration-services-ssis-variables.md)   
  [Flux de données](data-flow.md)  
   
   

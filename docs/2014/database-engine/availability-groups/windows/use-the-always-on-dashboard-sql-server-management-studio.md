@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788726"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord AlwaysOn (SQL Server Management Studio)
@@ -51,24 +51,24 @@ ms.locfileid: "62788726"
   
  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge soit le réplica principal, soit un réplica secondaire d'un groupe de disponibilité.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a>Pour démarrer le tableau de bord AlwaysOn  
+##  <a name="to-start-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>Pour démarrer le tableau de bord AlwaysOn  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez exécuter le tableau de bord AlwaysOn.  
   
 2.  Développez le nœud **Haute disponibilité AlwaysOn** , cliquez avec le bouton droit sur le nœud **Groupes de disponibilité** , puis sélectionnez **Afficher le tableau de bord**.  
   
-###  <a name="DashboardOptions"></a>Pour modifier les options du tableau de bord AlwaysOn  
- Vous pouvez utiliser la boîte de dialogue [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]Options** de ** pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn en ce qui concerne l’actualisation automatique et l’activation d’une stratégie AlwaysOn définie automatiquement.  
+###  <a name="to-change-alwayson-dashboard-options"></a><a name="DashboardOptions"></a>Pour modifier les options du tableau de bord AlwaysOn  
+ Vous pouvez utiliser la boîte de dialogue **Options** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn en ce qui concerne l’actualisation automatique et l’activation d’une stratégie AlwaysOn définie automatiquement.  
   
 1.  Dans le menu **Outils** , cliquez sur **Options**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62788726"
   
 3.  Pour activer une stratégie définie par l'utilisateur, sélectionnez **Activer la stratégie AlwaysOn définie par l'utilisateur**.  
   
-##  <a name="AvGroupsView"></a>Résumé du groupe de disponibilité  
+##  <a name="availability-group-summary"></a><a name="AvGroupsView"></a> Résumé des groupes de disponibilité  
  L'écran de groupe de disponibilité affiche une ligne de résumé pour chaque groupe de disponibilité pour lequel l'instance de serveur connectée héberge un réplica. Ce volet inclut les colonnes suivantes.  
   
  **Nom du groupe de disponibilité**  
@@ -98,13 +98,13 @@ ms.locfileid: "62788726"
 > [!TIP]  
 >  Cliquez sur les en-têtes de colonne pour trier les informations de groupe de disponibilité selon le nom du groupe de disponibilité, l'instance principale, le mode de basculement ou le problème.  
   
-##  <a name="AvGroupDetails"></a>Détails du groupe de disponibilité  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Détails du groupe de disponibilité  
  Les informations détaillées suivantes sont affichées pour le groupe de disponibilité que vous sélectionnez dans l'écran récapitulatif :  
   
  **État du groupe de disponibilité**  
  Affiche l'état d'intégrité du groupe de disponibilité.  
   
- **Instance principale**  
+ **Primary instance**  
  Nom de l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
  **Mode de basculement**  
@@ -117,13 +117,13 @@ ms.locfileid: "62788726"
  **État du cluster**  
  Nom et état du cluster dans lequel l'instance du serveur connecté et du groupe de disponibilité est un nœud membre.  
   
-##  <a name="AvReplicaDetails"></a>Détails du réplica de disponibilité  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a>Détails du réplica de disponibilité  
  Le volet **Réplica de disponibilité** affiche les colonnes suivantes :  
   
  **Nom**  
  Nom de l'instance du serveur qui héberge le réplica de disponibilité. Cette colonne est affichée par défaut.  
   
- **Actif**  
+ **Rôle**  
  Indique le rôle actuel du réplica de disponibilité, à savoir **Principal** ou **Secondaire**. Pour plus d’informations sur les rôles des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md). Cette colonne est affichée par défaut.  
   
  **Mode de basculement**  
@@ -138,7 +138,7 @@ ms.locfileid: "62788726"
   
 -   **Non synchronisé**. Une ou plusieurs bases de données du réplica ne sont pas synchronisées ou n'ont pas encore été jointes au groupe de disponibilité.  
   
--   **Synchronisation**en cours. Une ou plusieurs bases de données du réplica sont synchronisées.  
+-   **Synchronisation**. Une ou plusieurs bases de données du réplica sont synchronisées.  
   
 -   **Synchronisé**. Toutes les bases de données du réplica secondaire sont synchronisées avec les base de données primaires correspondantes sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.  
   
@@ -174,24 +174,24 @@ ms.locfileid: "62788726"
   
 -   **Connecté**. Réplica de disponibilité distant qui est actuellement connecté au réplica local.  
   
- **État de fonctionnement**  
+ **État opérationnel**  
  Indique l'état opérationnel actuel du réplica secondaire. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
- **0**. basculement en attente  
+ **0**. Basculement en attente  
   
- **1**. en attente  
+ **1**. En attente  
   
- **2**. en ligne  
+ **2**. En ligne  
   
- **3**. hors connexion  
+ **3**. Hors connexion  
   
- **4**. échec  
+ **4**. Échec  
   
- **5**. échec, pas de quorum  
+ **5**. Échec, pas de quorum  
   
  **Valeur null**. Le réplica n'est pas local  
   
- **N ° de la dernière erreur de connexion**  
+ **Numéro de la dernière erreur de connexion**  
  Numéro de la dernière erreur de connexion.  Cette valeur est masquée par défaut.  
   
  **Description de la dernière erreur de connexion**  
@@ -203,7 +203,7 @@ ms.locfileid: "62788726"
 > [!NOTE]  
 >  Pour plus d’informations sur les compteurs de performances pour les réplicas de disponibilité, consultez [SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a>Pour regrouper les informations de groupe de disponibilité  
+##  <a name="to-group-availability-group-information"></a><a name="AvDbDetails"></a> Pour regrouper les informations de groupe de disponibilité  
  Pour regrouper les informations, cliquez sur **Regrouper par**, puis sélectionnez l'une des commandes suivantes :  
   
 -   **Réplicas de disponibilité**  
@@ -227,13 +227,13 @@ ms.locfileid: "62788726"
  **État de synchronisation**  
  Indique si la base de données de disponibilité est actuellement synchronisée avec le réplica principal. Cette valeur est affichée par défaut. Les états de synchronisation possibles sont les suivants :  
   
--   **Non synchronisé**.  
+-   **Sans synchronisation**.  
   
     -   Pour le rôle principal, indique que la base de données n'est pas prête à synchroniser son journal des transactions avec les bases de données secondaires correspondantes.  
   
     -   Pour une base de données secondaire, indique que la base de données n'a pas commencé la synchronisation du journal en raison d'un problème de connexion, est suspendue, ou passe par des états de transition pendant le démarrage ou lors d'un changement de rôle.  
   
--   **Synchronisation**en cours.  
+-   **Synchronisation**.  
   
      Sur un réplica principal :  
   
@@ -300,13 +300,13 @@ ms.locfileid: "62788726"
  **Débit d'envoi du journal (Ko/s)**  
  Indique le débit, en Ko par seconde, auquel les enregistrements de journal sont envoyés au réplica secondaire. Cette valeur est masquée par défaut.  
   
- **Taille de la file d’attente de restauration par progression (Ko)**  
+ **Taille de la file d'attente de restauration par progression (Ko)**  
  Indique la quantité d'enregistrements du journal dans les fichiers journaux du réplica secondaire qui n'ont pas encore été restaurés. Cette valeur est masquée par défaut.  
   
- **Taux de restauration par progression (Ko/s)**  
+ **Débit de la restauration par progression (Ko/s)**  
  Indique le débit, en Ko par seconde, auquel les enregistrements de journal sont restaurés. Cette valeur est masquée par défaut.  
   
- **Taux d’envoi FileStream (Ko/s)**  
+ **Vitesse d'envoi de flux de fichiers (Ko/s)**  
  Indique le débit de FileStream, en Ko par seconde, auquel les transactions sont envoyées au réplica. Cette valeur est masquée par défaut.  
   
  **LSN de fin du journal**  
@@ -318,37 +318,37 @@ ms.locfileid: "62788726"
  **LSN de troncation**  
  Indique la valeur minimale de troncation du journal du réplica principal. Cette valeur est masquée par défaut.  
   
- **LSN de la dernière validation**  
+ **LSN de dernière validation**  
  Indique le numéro séquentiel dans le journal réel correspondant au dernier enregistrement de validation dans le journal des transactions. Cette valeur est masquée par défaut.  
   
- **Heure de la dernière validation**  
+ **Heure de dernière validation**  
  Indique l'heure correspondant au dernier enregistrement de validation. Cette valeur est masquée par défaut.  
   
- **LSN du dernier envoi**  
+ **LSN de dernier envoi**  
  Indique le point jusqu'auquel tous les blocs de journal ont été envoyés par le réplica principal. Cette valeur est masquée par défaut.  
   
- **Heure du dernier envoi**  
+ **Heure de dernier envoi**  
  Indique l'heure à laquelle le dernier bloc du journal a été envoyé. Cette valeur est masquée par défaut.  
   
  **LSN de dernière réception**  
  Indique le point jusqu'auquel tous les blocs de journal ont été reçus par le réplica secondaire qui héberge la base de données secondaire. Cette valeur est masquée par défaut.  
   
- **Heure de la dernière réception**  
+ **Heure de dernière réception**  
  Indique l'heure à laquelle l'identificateur de bloc de journal du dernier message reçu a été lu sur le réplica secondaire. Cette valeur est masquée par défaut.  
   
  **LSN de dernière sécurisation renforcée**  
  Indique le point jusqu'auquel tous les enregistrements de journal ont été vidés sur le disque du réplica secondaire. Cette valeur est masquée par défaut.  
   
- **Heure de la dernière sécurisation renforcée**  
+ **Heure de dernière sécurisation renforcée**  
  Indique l'heure à laquelle l'identificateur de bloc de journal a été reçu pour le LSN de dernière sécurisation renforcée sur le réplica secondaire. Cette valeur est masquée par défaut.  
   
- **LSN de la dernière opération de restauration**  
+ **LSN de dernière restauration par progression**  
  Indique le numéro séquentiel réel dans l'enregistrement du journal qui a été reconstruit pour la dernière fois sur le réplica secondaire. Cette valeur est masquée par défaut.  
   
- **Heure de la dernière restauration**  
+ **Heure de dernière restauration par progression**  
  Indique l'heure à laquelle le dernier enregistrement du journal a été restauré sur la base de données secondaire. Cette valeur est masquée par défaut.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utilisez les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

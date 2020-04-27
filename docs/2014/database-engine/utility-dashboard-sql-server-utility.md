@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773811"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "62773811"
  Dans la partie inférieure droite du tableau de bord, le graphique à secteurs de l'utilisation du stockage affiche le rapport entre l'espace utilisé et l'espace libre sur les volumes résidant sur des ordinateurs qui contiennent des instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les données de cet affichage sont actualisées toutes les 15 minutes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+ [Utilisez l’Explorateur de l’utilitaire pour gérer le Utilitaire SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Inscrire une instance de SQL Server &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modifier une définition de la stratégie de contrôle d’intégrité des ressources &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   

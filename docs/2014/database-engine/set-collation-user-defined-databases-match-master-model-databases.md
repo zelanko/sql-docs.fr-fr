@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773309"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model
@@ -38,7 +38,7 @@ ms.locfileid: "62773309"
     ```  
   
 ## <a name="for-more-information"></a>Pour plus d'informations  
- [Définir ou modifier le classement de la base de données](../relational-databases/collations/set-or-change-the-database-collation.md)  
+ [Définir ou changer le classement de la base de données](../relational-databases/collations/set-or-change-the-database-collation.md)  
   
  [Définir ou modifier le classement des colonnes](../relational-databases/collations/set-or-change-the-column-collation.md)  
   
@@ -53,6 +53,6 @@ ms.locfileid: "62773309"
  [Procédure : installer SQL Server 2008 à partir de l'invite de commandes](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

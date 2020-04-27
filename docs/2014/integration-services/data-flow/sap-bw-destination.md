@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770861"
 ---
 # <a name="sap-bw-destination"></a>Destination SAP BW
@@ -33,7 +33,7 @@ ms.locfileid: "62770861"
   
 -   [Configurer la destination SAP BW](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Préparation des objets SAP Netweaver BW requis par la destination  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> Préparation des objets SAP Netweaver BW requis par la destination  
  La destination SAP BW nécessite la présence de certains objets dans le système SAP Netweaver BW pour que la destination puisse fonctionner. Si ces objets n'existent pas, vous devez suivre ces étapes pour les créer et les configurer dans le système SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -55,12 +55,12 @@ ms.locfileid: "62770861"
   
  Vous pouvez aussi créer des InfoObjects, des InfoCubes, des InfoSources et des InfoPackages supplémentaires, requis pour prendre en charge le chargement des données dans le système SAP Netweaver BW.  
   
-##  <a name="bkmk_Connect_Database"></a> Connexion au système SAP Netweaver BW  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Connexion au système SAP Netweaver BW  
  Pour la connexion au système SAP Netweaver BW version 7, la destination SAP BW utilise le gestionnaire de connexions SAP BW qui fait partie du package [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Le gestionnaire de connexions SAP BW est le seul gestionnaire de connexions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que la destination SAP BW peut utiliser.  
   
  Pour plus d'informations sur le gestionnaire de connexions SAP BW, consultez [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Destination"></a> Configuration de la destination SAP BW  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> Configuration de la destination SAP BW  
  Vous pouvez configurer la destination SAP BW de plusieurs manières :  
   
 -   Recherchez et sélectionnez l'InfoPackage à utiliser pour charger les données.  

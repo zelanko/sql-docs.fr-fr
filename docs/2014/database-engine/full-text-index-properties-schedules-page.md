@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779029"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propriétés d'index de texte intégral (page Planifications)
@@ -42,7 +42,7 @@ ms.locfileid: "62779029"
  **Description**  
  Affiche la description spécifiée lors de la création de la planification.  
   
- **Nouveau**  
+ **Nouvelle**  
  Cliquez pour créer une planification pour le remplissage de l'index de recherche en texte intégral.  
   
 ## <a name="see-also"></a>Voir aussi  

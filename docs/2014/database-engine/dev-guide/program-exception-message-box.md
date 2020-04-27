@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780693"
 ---
 # <a name="program-exception-message-box"></a>Programmer la boîte de message d'exceptions
@@ -61,8 +61,7 @@ ms.locfileid: "62780693"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>énumération qui spécifie les boutons à afficher dans la boîte de message d’exception.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - légende de boîte de dialogue de la boîte de message d'exception ;  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - légende de boîte de dialogue de la boîte de message d'exception ;  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>énumération qui spécifie le bouton par défaut de la boîte de dialogue de la boîte de message d’exception.  
   
@@ -90,8 +89,7 @@ ms.locfileid: "62780693"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>-affiche les boutons **abandonner**, **Réessayer**et **Ignorer** .  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - affiche les boutons personnalisés.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - affiche les boutons personnalisés.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>-affiche le bouton **OK** .  
   
@@ -133,7 +131,7 @@ ms.locfileid: "62780693"
   
     2.  Attribuez à <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> le nom de la valeur de Registre utilisée.  
   
-    3.  Réglez <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> sur `true`.  
+    3.  Définissez <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> sur `true`.  
   
     4.  Appelez la méthode <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . La clé de Registre spécifiée est évaluée et la boîte de message d'exception est affichée uniquement si les données stockées dans la clé de Registre sont définies sur 0. Si la boîte de dialogue est affichée et que l'utilisateur active la case à cocher avant de cliquer sur un bouton, les données dans la clé de Registre sont définies sur 1.  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808397"
 ---
 # <a name="connection-properties-dialog-box"></a>Propriétés de connexion (boîte de dialogue)
@@ -28,10 +28,10 @@ ms.locfileid: "62808397"
   
  Notez que le délai d'attente de requête pour SQL Azure est de 30 minutes.  
   
-## <a name="authentication"></a>Authentication  
+## <a name="authentication"></a>Authentification  
  Permet d'afficher les propriétés d'authentification pour la connexion en cours. Les propriétés d'authentification correspondent au nom d'accès et à la méthode d'authentification utilisés une fois la connexion établie. Pour modifier les propriétés d’authentification, déconnectez [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-vous, puis reconnectez l’Explorateur d’objets au serveur, à l’aide des options de connexion souhaitées.  
   
- **Méthode d’authentification**  
+ **Méthode d'authentification**  
  Méthode d'authentification utilisée pour la connexion en cours.  
   
  **Nom d’utilisateur**  
@@ -91,17 +91,17 @@ ms.locfileid: "62808397"
  **Plateforme**  
  Nom du système d'exploitation, nom du fabricant et famille d'UC du serveur.  
   
- **Système d’exploitation**  
+ **Système d'exploitation**  
  Version de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows installée sur le serveur.  
   
  **Processeurs**  
  Nombre de processeurs sur le serveur.  
   
- **Mémoire du système d’exploitation**  
+ **Operating System Memory**  
  Quantité globale de mémoire physique sur le serveur, en mégaoctets.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés dans SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Connexion au serveur &#40;page de connexion&#41; Moteur de base de données](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Se connecter au serveur &#40;page Connexion&#41; — Moteur de base de données](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

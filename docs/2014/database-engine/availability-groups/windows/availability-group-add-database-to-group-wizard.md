@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815724"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "62815724"
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell pour ajouter une base de données, consultez [Ajouter une base de données à un groupe de disponibilité &#40;SQL Server&#41;](availability-group-add-a-database.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   **Avant de commencer :**  
   
@@ -36,12 +36,12 @@ ms.locfileid: "62815724"
   
      [Sécurité](#Security)  
   
--   **Pour ajouter une base de données, utilisez l'**[Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)](#SSMSProcedure) .    
+-   **Pour ajouter une base de données, utilisez :**  [Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Si vous n’avez jamais ajouté de base de données à un groupe de disponibilité, consultez la section « bases de données de disponibilité » dans [conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises, restrictions et recommandations  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a>Conditions préalables requises, restrictions et recommandations  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62815724"
   
     5.  Restaurez cette sauvegarde de journal sur la base de données secondaire.  
   
--   **Conditions préalables à l’utilisation de la synchronisation de données initiale complète**  
+-   **Conditions préalables requises pour utiliser la synchronisation de données initiale complète**  
   
     -   Tous les chemins d'accès des fichiers de base de données doivent être identiques sur chaque instance de serveur qui héberge un réplica pour le groupe de disponibilité.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "62815724"
   
      Si vous ne pouvez pas utiliser l'Assistant pour effectuer la synchronisation des données initiale complète, vous devez préparer vos bases de données secondaires manuellement. Vous pouvez le faire avant ou après l'exécution de l'Assistant. Pour plus d’informations, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a>Utilisation de l’Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)  
- **Pour utiliser l’Assistant Ajouter une base de données au groupe de disponibilité**  
+##  <a name="using-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)  
+ **Pour utiliser l'Assistant Ajouter une base de données au groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal du groupe de disponibilité et développez l'arborescence du serveur.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62815724"
   
 11. Si la synchronisation initiale des données n'a pas démarré automatiquement sur toutes vos bases de données secondaires, vous devez configurer toutes les bases de données secondaires non encore jointes. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

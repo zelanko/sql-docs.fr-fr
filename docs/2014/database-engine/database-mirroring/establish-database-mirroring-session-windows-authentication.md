@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806906"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Établir une session de mise en miroir de bases de données au moyen de l'authentification Windows (SQL Server Management Studio)
@@ -43,7 +43,7 @@ ms.locfileid: "62806906"
   
 2.  Développez **Bases de données**et sélectionnez la base de données à mettre en miroir.  
   
-3.  Cliquez avec le bouton droit sur la base de données, sélectionnez **Tâches**, puis cliquez sur **Miroir**. La page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** s'affiche.  
+3.  Cliquez avec le bouton droit sur la base de données, sélectionnez **Tâches**, puis cliquez sur **Miroir**. La page **mise en miroir** de la boîte de dialogue **Propriétés de la base de données** s’ouvre.  
   
 4.  Pour commencer à configurer la mise en miroir, cliquez sur le bouton **Configurer la sécurité** afin de lancer l'Assistant Configurer la sécurité de mise en miroir de bases de données.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62806906"
   
     -   Les adresses TCP complètes des instances du principal et du serveur miroir sont spécifiées (dans la section **Adresses réseau du serveur** ).  
   
-    -   Si le mode d’opération est **Haute sécurité avec basculement automatique (synchrone)** , l’adresse TCP complète de l’instance de serveur témoin est également spécifiée.  
+    -   Si le mode d’opération est **Haute sécurité avec basculement automatique (synchrone)**, l’adresse TCP complète de l’instance de serveur témoin est également spécifiée.  
   
 8.  Une fois que la mise en miroir a démarré, vous pouvez changer le mode d'opération et enregistrer la modification en cliquant sur **OK**. Vous pouvez passer en mode haute sécurité avec basculement automatique si vous avez préalablement spécifié une adresse de serveur témoin.  
   
@@ -81,13 +81,13 @@ ms.locfileid: "62806906"
 ## <a name="see-also"></a>Voir aussi  
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Propriétés de la base de données &#40;page Mise en miroir&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Propriétés de la base de données &#40;page mise en miroir&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Suspendre ou reprendre une session de mise en miroir de bases de données &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [Configurer une base de données miroir pour utiliser la propriété Trustworthy &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
- [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Supprimer la mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
- [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
+ [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Ajouter ou remplacer un témoin de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

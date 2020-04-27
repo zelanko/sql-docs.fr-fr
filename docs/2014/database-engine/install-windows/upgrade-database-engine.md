@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774970"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
@@ -43,7 +43,7 @@ ms.locfileid: "62774970"
 >  Avant toute mise à niveau d'une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre, vérifiez que la fonctionnalité en cours d'utilisation est prise en charge dans l'édition vers laquelle vous effectuez la mise à niveau.  
   
 > [!NOTE]  
->  Lorsque vous effectuez la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] d'une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , choisissez entre Enterprise Edition : contrat de licence selon le nombre de cœurs et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d’informations, consultez [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Lorsque vous effectuez la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] d'une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , choisissez entre Enterprise Edition : contrat de licence selon le nombre de cœurs et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
  La mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une version précédente est prise en charge par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également migrer les bases de données à partir de versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migration peut être effectuée à partir d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre instance située vers le même ordinateur ou à partir d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un autre ordinateur. Les options de migration incluent l'utilisation de l'Assistant Copie de base de données, de la fonctionnalité de sauvegarde et de restauration, ainsi que l'utilisation de l'Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et des méthodes d'importation et d'exportation en bloc.  
@@ -124,8 +124,7 @@ ms.locfileid: "62774970"
   
 -   Alimentez à nouveau les catalogues de texte intégral pour garantir la cohérence sémantique dans les résultats de la requête.  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe de nouveaux analyseurs lexicaux pour la recherche en texte intégral et sémantique. Les analyseurs lexicaux sont utilisés au moment de l'indexation et au moment de la requête. Si vous ne reconstruisez pas les catalogues de texte intégral, vos résultats de recherche peuvent être incohérents. Si vous exécutez une requête de texte intégral qui recherche une expression qui est divisée différemment par l'analyseur lexical dans une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'analyseur lexical actuel, une ligne ou un document contenant l'expression peut ne pas être extrait. Cela est dû au fait que les expressions indexées ont été divisées à l'aide d'une logique différente de celle de la requête utilise. La solution consiste à réalimenter (reconstruire) les catalogues de texte intégral avec les nouveaux analyseurs lexicaux afin que le temps d'indexation et le comportement de cette requête soient identiques.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe de nouveaux analyseurs lexicaux pour la recherche en texte intégral et sémantique. Les analyseurs lexicaux sont utilisés au moment de l'indexation et au moment de la requête. Si vous ne reconstruisez pas les catalogues de texte intégral, vos résultats de recherche peuvent être incohérents. Si vous exécutez une requête de texte intégral qui recherche une expression qui est divisée différemment par l'analyseur lexical dans une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'analyseur lexical actuel, une ligne ou un document contenant l'expression peut ne pas être extrait. Cela est dû au fait que les expressions indexées ont été divisées à l'aide d'une logique différente de celle de la requête utilise. La solution consiste à réalimenter (reconstruire) les catalogues de texte intégral avec les nouveaux analyseurs lexicaux afin que le temps d'indexation et le comportement de cette requête soient identiques.  
   
      Pour plus d’informations, consultez [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
@@ -133,8 +132,7 @@ ms.locfileid: "62774970"
   
 -   Validez ou supprimez les indicateurs USE PLAN générés par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et appliqués aux requêtes sur les tables partitionnées et les index.  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie la manière dont sont traitées les requêtes sur les tables partitionnées et les index. Les requêtes sur les objets partitionnés qui utilisent l'indicateur USE PLAN pour un plan généré par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] peuvent contenir un plan non utilisable dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nous recommandons les procédures suivantes après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie la manière dont sont traitées les requêtes sur les tables partitionnées et les index. Les requêtes sur les objets partitionnés qui utilisent l'indicateur USE PLAN pour un plan généré par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] peuvent contenir un plan non utilisable dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nous recommandons les procédures suivantes après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      **Lorsque l'indicateur USE PLAN conseil est spécifié directement dans une requête :**  
   
@@ -165,7 +163,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de version et d’édition prises en charge](supported-version-and-edition-upgrades.md)   
  [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilité descendante](../../getting-started/backward-compatibility.md)   
  [Mettre à niveau des bases de données répliquées](upgrade-replicated-databases.md)  

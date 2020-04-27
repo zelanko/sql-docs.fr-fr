@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789109"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Page Progression (Assistants Groupe de disponibilité AlwaysOn)
   Utilisez cette boîte de dialogue pour afficher la progression d'un Assistant [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que vous exécutez dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barre de progression indique la progression relative des étapes que l'Assistant effectue.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Plus d’informations**  
+ **En savoir plus**  
  Cliquez sur la flèche bas pour afficher une grille de progression qui répertorie toutes les étapes effectuées, dans l'ordre, suivies de l'opération en cours actuelle. Cette grille comporte les colonnes suivantes :  
   
  **Nom**  
@@ -42,8 +42,8 @@ ms.locfileid: "62789109"
 |Résultats|Description|  
 |------------|-----------------|  
 |**Error**|Indique que l'opération pour cette étape a rencontré une erreur. Cliquez sur le lien pour afficher une boîte de dialogue de message qui décrit l'erreur.|  
-|**En cours (** *pourcentage-terminé* **)**|Indique que l'opération a maintenant lieu et estime le pourcentage de réalisation de cette étape.|  
-|**Success**|Indique que l'opération pour cette étape s'est terminée avec succès.|  
+|**En cours (** *pourcentage-effectué* **)**|Indique que l'opération a maintenant lieu et estime le pourcentage de réalisation de cette étape.|  
+|**Opération réussie**|Indique que l'opération pour cette étape s'est terminée avec succès.|  
   
  **Moins de détails**  
  Cliquez pour masquer la grille de progression.  
@@ -51,7 +51,7 @@ ms.locfileid: "62789109"
  **Annuler**  
  Cliquez pour ignorer les opérations restantes, puis quittez l'Assistant.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781561"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Mise en route avec Visual Basic .NET
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET est l'un des langages de programmation managés pris en charge par la bibliothèque CRT (Common Runtime Library) en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. De nombreux exemples de cette documentation sont écrits en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Vous pouvez utiliser aussi bien [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] que [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] pour développer des applications SMO.  
   
 ## <a name="references-and-imports"></a>Références et importations  

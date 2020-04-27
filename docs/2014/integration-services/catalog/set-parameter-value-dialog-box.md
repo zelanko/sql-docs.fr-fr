@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771625"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Boîte de dialogue Définir la valeur du paramètre
@@ -26,7 +26,7 @@ ms.locfileid: "62771625"
   
 -   [Configurer les options](#option)  
   
-##  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Définir la valeur du paramètre  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> Ouvrir la boîte de dialogue Définir la valeur du paramètre  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62771625"
   
 4.  Cliquez avec le bouton droit sur un package ou un projet, cliquez sur **Configurer**, puis cliquez sur le bouton de sélection sous l’onglet **Paramètres** ou l’onglet **Gestionnaires de connexions** .  
   
-##  <a name="option"></a> Configurer les options  
+##  <a name="configure-the-options"></a><a name="option"></a> Configurer les options  
  **Paramètre**  
  Indique le nom du paramètre.  
   

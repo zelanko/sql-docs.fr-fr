@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775282"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installer SQL Server 2014 à l'aide d'un fichier de configuration
@@ -52,8 +52,7 @@ FEATURES=SQL,Tools
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ne crée pas de fichier de configuration automatiquement. La commande suivante démarre l’installation et crée un fichier de configuration.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ne crée pas de fichier de configuration automatiquement. La commande suivante démarre l’installation et crée un fichier de configuration.  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
@@ -64,17 +63,17 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  L'infrastructure d'installation écrit tous les paramètres appropriés pour les actions exécutées, à l'exception des informations sensibles comme les mots de passe. Le paramètre /IAcceptSQLServerLicenseTerms n'est pas écrit dans le fichier de configuration et requiert soit une modification du fichier de configuration, soit une valeur à fournir à l'invite de commandes. Pour plus d’informations, consultez [Installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md). De plus, une valeur est incluse pour les paramètres booléens pour lesquels une valeur n'est généralement pas fournie via l'invite de commandes.  
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Vous ne pouvez utiliser le fichier de configuration que pour les installations en ligne de commande.  
   
 > [!NOTE]  
 >  Si vous devez apporter des modifications au fichier de configuration, nous vous recommandons de faire une copie de ce dernier et de l''utiliser.  
   
-#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
   
 -   Exécutez l’installation à l’aide de l’invite de commandes et fournissez fichier ConfigurationFile. ini à l’aide du paramètre *fichier ConfigurationFile* .  
   
-#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
   
 1.  Pour préparer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les configurer sur le même ordinateur.  
   
@@ -92,7 +91,7 @@ FEATURES=SQL,Tools
   
     -   Le fichier de configuration de finalisation d'image peut être stocké avec l'image Windows pour l'automatisation de la configuration des instances préparées.  
   
-#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Procédure d'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+#### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Procédure d'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 1.  Option d'installation intégrée (créez un cluster de basculement à nœud unique sur un nœud et exécutez AddNode sur les nœuds supplémentaires) :  
   
@@ -114,11 +113,11 @@ FEATURES=SQL,Tools
   
     -   Vous pouvez ensuite spécifier ce fichier ConfigurationFile.ini pour créer le cluster de basculement.  
   
-#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Comment ajouter ou supprimer un nœud dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+#### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Comment ajouter ou supprimer un nœud dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 -   Si vous disposez d'un fichier de configuration qui a été précédemment utilisé pour ajouter ou supprimer un nœud dans un cluster de basculement, vous pouvez réutiliser ce même fichier pour ajouter ou supprimer des nœuds supplémentaires.  
   
-#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Comment mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+#### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Comment mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 1.  Exécutez la mise à niveau sur le nœud passif et capturez le fichier ConfigurationFile.ini. Pour ce faire, vous pouvez effectuer la mise à niveau réelle ou sortir à la fin du processus sans effectuer la mise à niveau réelle.  
   
@@ -141,7 +140,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md)   
- [SQL Server l’installation du cluster de basculement](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
+ [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Mettre à niveau un cluster de basculement SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

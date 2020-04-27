@@ -18,19 +18,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780722"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Scénarios et exemples d'utilisation pour l'intégration du CLR (Common Language Runtime)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient des exemples d'applications et de packages, ainsi que de nombreux exemples de code que vous pouvez utiliser pour apprendre à vous servir des fonctionnalités de programmabilité de l'intégration du CLR.  
   
  Pour obtenir des projets Visual Studio complets qui implémentent ces exemples et des documents supplémentaires, visitez [Microsoft SQL Server projets de la communauté & exemples sur CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[Accès au code natif depuis une fonction CLR définie par l'utilisateur](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Indique comment appeler une fonction dans du code C++ natif (non managé) à partir d'une fonction définie par l'utilisateur dans un assembly de votre base de données.|  
 |[Exemple de paramètre tableau](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Montre comment créer, mettre à jour ou supprimer un ensemble de lignes dans une base de données en passant un tableau d'informations d'un client à une procédure stockée d'intégration du CLR sur le serveur. Pour cela, un type UDT est utilisé.|  

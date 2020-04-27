@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806985"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tâche Reconstruire l'index (Plan de maintenance)
@@ -31,7 +31,7 @@ ms.locfileid: "62806985"
  **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
- **Nouveau**  
+ **Nouvelle**  
  Crée une nouvelle connexion serveur à utiliser pour exécuter la tâche. La boîte de dialogue **Nouvelle connexion** est décrite ci-dessous.  
   
  **Bases de données**  
@@ -56,10 +56,10 @@ ms.locfileid: "62806985"
     > [!NOTE]  
     >  Les plans de maintenance sont exécutés uniquement sur des bases de données définies au niveau de compatibilité 80 ou plus. Les bases de données définies au niveau de compatibilité 70 ou moins ne sont pas affichées.  
   
- **Object**  
+ **Dessin**  
  Limite la grille de **Sélection** à l’affichage des tables et/ou des vues.  
   
- **Sélection**  
+ **d’un certificat SSTP**  
  Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible quand **Tables et vues** est sélectionné dans la zone Objet.  
   
  **Réorganiser les pages avec la quantité d'espace disponible par défaut**  
@@ -90,7 +90,7 @@ ms.locfileid: "62806985"
  **Sélectionnez ou entrez un nom de serveur.**  
  Sélectionnez un serveur auquel établir la connexion pour exécuter la tâche.  
   
- **Actualiser**  
+ **Actualisation**  
  Actualise la liste des serveurs disponibles.  
   
  **Entrez des informations pour vous connecter au serveur**  
@@ -113,8 +113,8 @@ ms.locfileid: "62806985"
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [Option SORT_IN_TEMPDB pour les index](../indexes/indexes.md)   
- [Instructions pour les opérations d'index en ligne](../indexes/guidelines-for-online-index-operations.md)   
- [Fonctionnement des opérations d'index en ligne](../indexes/how-online-index-operations-work.md)   
- [Exécuter des opérations en ligne sur les index](../indexes/perform-index-operations-online.md)  
+ [Instructions pour les opérations d’index en ligne](../indexes/guidelines-for-online-index-operations.md)   
+ [Fonctionnement des opérations d’index en ligne](../indexes/how-online-index-operations-work.md)   
+ [Exécuter des opérations d’index en ligne](../indexes/perform-index-operations-online.md)  
   
   

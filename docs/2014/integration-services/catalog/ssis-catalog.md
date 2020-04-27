@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771575"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
@@ -41,8 +41,7 @@ ms.locfileid: "62771575"
 >  Si les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basculent dans le cadre d'un basculement de cluster, les packages en cours de exécution ne redémarrent pas. Vous pouvez utiliser les points de contrôle pour redémarrer les packages. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificateurs d'objets de catalogue  
- Lorsque vous créez un objet dans le catalogue, attribuez-lui un nom. Ce nom constitue l'identificateur de l'objet. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit des règles quant aux caractères pouvant être utilisés dans un identificateur. Les noms des objets suivants doivent respecter les règles liées aux identificateurs.  
+ Lorsque vous créez un objet dans le catalogue, attribuez-lui un nom. Ce nom constitue l'identificateur de l'objet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit des règles quant aux caractères pouvant être utilisés dans un identificateur. Les noms des objets suivants doivent respecter les règles liées aux identificateurs.  
   
 -   Dossier  
   
@@ -61,8 +60,7 @@ ms.locfileid: "62771575"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   
-  \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
+-   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -80,8 +78,7 @@ ms.locfileid: "62771575"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   
-  \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
+-   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -134,7 +131,7 @@ ms.locfileid: "62771575"
   
  La modification de l'algorithme de chiffrement est une opération qui prend du temps. Tout d'abord, le serveur doit utiliser l'algorithme précédemment spécifié pour déchiffrer toutes les valeurs de configuration. Le serveur doit ensuite utiliser le nouvel algorithme pour ré-chiffrer les valeurs. Pendant ce temps, aucune autre opération [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut être effectuée sur le serveur. Ainsi, pour permettre aux opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de continuer de façon ininterrompue, l’algorithme de chiffrement est une valeur en lecture seule dans la boîte de dialogue dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Pour modifier le paramètre de propriété **algorithme de chiffrement** , définissez la `SSISDB` base de données en mode mono-utilisateur, puis appelez la procédure stockée Catalog. configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name*. Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Pour modifier le paramètre de propriété **algorithme de chiffrement** , définissez la `SSISDB` base de données en mode mono-utilisateur, puis appelez la procédure stockée Catalog. configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name* . Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Pour plus d’informations sur le mode mono-utilisateur, consultez [Définir une base de données en mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Pour plus d’informations sur le chiffrement et les algorithmes de chiffrement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques de la section [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -171,7 +168,7 @@ ms.locfileid: "62771575"
   
 -   Dans le cas d'un projet, utilisez la page **Autorisations** de la [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Pour gérer les autorisations à l’aide de Transact-SQL, appelez [Catalog. grant_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. Deny_permission &#40;base de données SSISDB](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database)&#41;et [Catalog. revoke_permission &#40;&#41;de base de données SSISDB ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Pour afficher les autorisations effectives pour le principal actuel pour tous les objets, interrogez [catalog.effective_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Cette rubrique fournit les descriptions des différents types d'autorisations. Pour afficher les autorisations affectées explicitement à l’utilisateur, interrogez [catalog.explicit_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
+ Pour gérer les autorisations à l’aide de Transact-SQL, appelez [catalog.grant_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) et [catalog.revoke_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Pour afficher les autorisations effectives pour le principal actuel pour tous les objets, interrogez [catalog.effective_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Cette rubrique fournit les descriptions des différents types d'autorisations. Pour afficher les autorisations affectées explicitement à l’utilisateur, interrogez [catalog.explicit_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## <a name="folders"></a>Dossiers  
  Un dossier contient un ou plusieurs projets et environnements dans le `SSISDB` catalogue. Vous pouvez utiliser la vue [catalog.folders &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) pour accéder aux informations relatives aux dossiers du catalogue. Vous pouvez utiliser les procédures stockées suivantes pour gérer des dossiers.  

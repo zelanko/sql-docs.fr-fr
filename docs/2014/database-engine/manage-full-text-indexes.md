@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775041"
 ---
 # <a name="manage-full-text-indexes"></a>Gérer les index de recherche en texte intégral
      
-##  <a name="view"></a>Affichage et modification des propriétés d’un index de recherche en texte intégral  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>Affichage et modification des propriétés d’un index de recherche en texte intégral  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>Pour afficher ou modifier les propriétés d'un index de recherche en texte intégral dans Management Studio  
   
@@ -35,13 +35,13 @@ ms.locfileid: "62775041"
   
     |Page|Description|  
     |----------|-----------------|  
-    |**Général**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Index de recherche en texte intégral (STOPLIST)**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**<br /><br /> <br /><br /> Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Général&#41;](full-text-index-properties-general-page.md).|  
+    |**Généralités**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**<br /><br /> <br /><br /> Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Général&#41;](full-text-index-properties-general-page.md).|  
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Colonnes&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
     |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../relational-databases/indexes/indexes.md).<br /><br /> <strong> \* Important \* \* </strong> Une fois que vous avez fermé la boîte de dialogue Propriétés de l' **index de recherche en texte intégral** , toutes les planifications nouvellement créées sont associées à un travail de SQL Server Agent (démarrer le remplissage incrémentiel de la Table sur *database_name*.* table_name*).|  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]pour enregistrer les modifications et quitter la boîte de dialogue Propriétés de l' **index de recherche en texte intégral** .  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   
-##  <a name="props"></a>Affichage des propriétés des tables et des colonnes indexées  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>Affichage des propriétés des tables et des colonnes indexées  
  Vous pouvez faire appel à plusieurs fonctions [!INCLUDE[tsql](../includes/tsql-md.md)], comme OBJECTPROPERTYEX, pour vous procurer la valeur de diverses propriétés d'indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
   
  Le tableau ci-après recense les propriétés en texte intégral liées aux colonnes et tables indexées, ainsi que les fonctions [!INCLUDE[tsql](../includes/tsql-md.md)] qui leur sont associées.  
@@ -63,7 +63,7 @@ ms.locfileid: "62775041"
 |`TableFulltextPopulateStatus`|État de remplissage de la table de texte intégral.|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|Indique si une table possède un index de recherche en texte intégral actif.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>Obtention d’informations sur la colonne clé de texte intégral  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>Obtention d’informations sur la colonne clé de texte intégral  
  En général, le résultat des fonctions d'ensemble de lignes CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Vous pouvez déterminer si un index unique donné est utilisé comme clé de texte intégral et obtenir l'identificateur de la colonne clés de texte intégral.  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Pour déterminer si un index unique donné est utilisé comme colonne clés de texte intégral  
@@ -125,7 +125,7 @@ GO
   
  Cet exemple retourne une colonne de jeu de résultats appelée `Unique Key Column`, qui contient une seule ligne indiquant le nom de la colonne clé unique de la table Document, DocumentID. Notez que, si cette requête contenait un nom d'index non valide, si le nom d'index ne correspondait pas à la table, si la table n'existait pas, etc., une valeur NULL serait retournée.  
   
-##  <a name="disable"></a>Désactivation ou réactivation d’une table pour l’indexation de texte intégral  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>Désactivation ou réactivation d’une table pour l’indexation de texte intégral  
  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], par défaut, toutes les bases de données créées par les utilisateurs sont activées pour la recherche en texte intégral. De plus, une table individuelle est automatiquement activée pour l'indexation de texte intégral dès qu'un index de recherche en texte intégral est créé sur cette table et qu'une colonne est ajoutée à l'index. Une table est automatiquement désactivée pour l'indexation de recherche en texte intégral lorsque la dernière colonne est supprimée de son index de texte intégral.  
   
  Dans une table à index de recherche en texte intégral, vous pouvez désactiver ou réactiver manuellement une table pour l'indexation de recherche en texte intégral en utilisant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -138,7 +138,7 @@ GO
   
 3.  Sélectionnez **Index de recherche en texte intégral**, puis cliquez sur **Disable Full-Text index** (Désactiver l’index de recherche en texte intégral) ou **Enable Full-Text index**(Activer l’index de recherche en texte intégral).  
   
-##  <a name="remove"></a>Suppression d’un index de recherche en texte intégral d’une table  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>Suppression d’un index de recherche en texte intégral d’une table  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>Pour supprimer un index de recherche en texte intégral d'une table  
   

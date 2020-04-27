@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789841"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>À propos de l'accès de la connexion client aux réplicas de disponibilité (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62789841"
 > [!NOTE]  
 >  Pour plus d’informations sur l’écouteur de groupe de disponibilité, qui traite les demandes de connexion des clients, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Types d’accès à la connexion pris en charge par le rôle secondaire](#ConnectAccessForSecondary)  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62789841"
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu associé](#RelatedContent)  
+-   [Contenu connexe](#RelatedContent)  
   
-##  <a name="ConnectAccessForSecondary"></a> Types d'accès à la connexion pris en charge par le rôle secondaire  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> Types d'accès à la connexion pris en charge par le rôle secondaire  
  Le rôle secondaire prend en charge trois méthodes pour les connexions clientes, comme suit :  
   
  Aucune connexion  
@@ -60,9 +60,9 @@ ms.locfileid: "62789841"
  Autoriser toute connexion en lecture seule  
  La ou les bases de données secondaires sont toutes disponibles pour les connexions d'accès en lecture. Cette option permet aux clients disposant d'une version antérieure de se connecter.  
   
- Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Pour plus d’informations, consultez [configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="ConnectAccessForPrimary"></a> Types d'accès à la connexion pris en charge par le rôle principal  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> Types d'accès à la connexion pris en charge par le rôle principal  
  Le rôle principal prend en charge deux méthodes pour les connexions clientes, comme suit :  
   
  Toutes les connexions sont autorisées  
@@ -73,20 +73,20 @@ ms.locfileid: "62789841"
   
  Pour plus d'informations sur cette propriété de connexion, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Pour plus d’informations, consultez [configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> Comment la configuration d'accès à la connexion affecte la connectivité client  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> Comment la configuration d'accès à la connexion affecte la connectivité client  
  Les paramètres d'accès à la connexion d'un réplica déterminent si une tentative de connexion échoue ou réussit. Le tableau suivant récapitule si une tentative de connexion donnée réussit ou échoue pour chaque paramètre d'accès à la connexion.  
   
 |Rôle du réplica|Accès à la connexion pris en charge sur le réplica|Intention de connexion|Résultat de la tentative de connexion|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|Tous|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Succès|  
+|Secondary|Tous|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Opération réussie|  
 |Secondary|Aucun (il s'agit du comportement secondaire par défaut.)|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Échec|  
-|Secondary|Intention de lecture uniquement|Intention de lecture|Succès|  
+|Secondary|Intention de lecture uniquement|Intention de lecture|Opération réussie|  
 |Secondary|Intention de lecture uniquement|Lecture-écriture ou aucune intention de connexion spécifiée|Échec|  
-|Principal|Tous (il s'agit du comportement principal par défaut.)|Lecture seule, lecture-écriture ou aucune intention de connexion spécifiée|Succès|  
+|Principal|Tous (il s'agit du comportement principal par défaut.)|Lecture seule, lecture-écriture ou aucune intention de connexion spécifiée|Opération réussie|  
 |Principal|Lecture-écriture|Intention de lecture uniquement|Échec|  
-|Principal|Lecture-écriture|Lecture-écriture ou aucune intention de connexion spécifiée|Succès|  
+|Principal|Lecture-écriture|Lecture-écriture ou aucune intention de connexion spécifiée|Opération réussie|  
   
  Pour plus d’informations sur la configuration d’un groupe de disponibilité pour accepter les connexions clientes à ses réplicas, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62789841"
   
  En général, dans ce scénario d'exemple, les basculements se produisent uniquement entre les réplicas avec validation synchrone, et immédiatement après le basculement, les applications avec intention de lecture peuvent se reconnecter à l'un des réplicas secondaires avec validation asynchrone. Toutefois, lorsqu'un incident se produit au centre de calcul principal, les deux réplicas avec validation synchrone sont perdus. L'administrateur de base de données sur le site satellite répond en effectuant un basculement manuel forcé vers un réplica secondaire avec validation asynchrone. Les bases de données secondaires sur le réplica secondaire restant sont interrompues par le basculement forcé, ce qui les rend indisponibles pour les charges de travail en lecture seule. Le nouveau réplica principal, qui est configuré pour les connexions en lecture-écriture, empêche la charge de travail avec intention de lecture de concurrencer la charge de travail en lecture-écriture. Cela signifie que tant que l'administrateur de base de données n'a pas repris les bases de données secondaires sur le réplica secondaire restant avec validation asynchrone, les clients avec intention de lecture ne peuvent se connecter à aucun réplica de disponibilité.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -116,15 +116,15 @@ ms.locfileid: "62789841"
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server AlwaysOn pour la haute disponibilité et la récupération d'urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe SQL Server AlwaysOn : blog officiel de l’équipe SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l'équipe de SQL Server AlwaysOn : Blog officiel de l'équipe de SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et &#40;de basculement d’application SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Statistiques](../../../relational-databases/statistics/statistics.md)  
   
   

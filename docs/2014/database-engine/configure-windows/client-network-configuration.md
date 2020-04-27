@@ -19,19 +19,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787101"
 ---
 # <a name="client-network-configuration"></a>Configuration du réseau client
-  Le logiciel client permet aux ordinateurs clients de se connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance de sur un réseau. Un client est une application frontale utilisant les services fournis par un serveur tel que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. L'ordinateur sur lequel se trouve cette application est appelé *ordinateur client*.  
+  Un logiciel client permet aux ordinateurs clients de se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un réseau. Un client est une application frontale utilisant les services fournis par un serveur tel que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. L'ordinateur sur lequel se trouve cette application est appelé *ordinateur client*.  
   
  Au niveau le plus simple, un client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut résider sur le même ordinateur qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le plus souvent, cependant, un client se connecte à un ou plusieurs serveurs distants à travers un réseau. L'architecture client/serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lui permet de gérer de façon intégrée plusieurs clients et serveurs sur un réseau. Les configurations par défaut des clients suffisent à la plupart des situations.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent inclure des applications de différents types, telles que :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent inclure des applications de différents types, telles que :  
   
 -   Consommateurs OLE DB  
   
@@ -43,22 +42,20 @@ ms.locfileid: "62787101"
   
 -   Clients DB-Library  
   
-     Ces applications incluent l’utilitaire d’invite de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** et des clients écrits dans DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la prise en charge des applications clientes utilisant DB- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Library est limitée à 7,0 fonctionnalités.  
+     Ces applications incluent l’utilitaire d’invite de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** et des clients écrits dans DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure une prise en charge pour les applications clientes utilisant DB-Library qui se limite aux fonctionnalités de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
   
 > [!NOTE]  
->  Bien que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] prenne toujours en charge les connexions des applications existantes qui utilisent les API DB-Library et Embedded SQL, il n'inclut pas les fichiers ni la documentation nécessaires aux tâches de programmation dans les applications qui utilisent ces API. Une version future du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] n'intègrera plus la prise en charge des connexions à partir des applications DB-Library ou Embedded SQL. N'utilisez pas DB-Library ni Embedded SQL pour développer de nouvelles applications. Supprimez toutes les dépendances à DB-Library ou à Embedded SQL lorsque vous modifiez des applications existantes. À la place de ces API, utilisez l’espace de noms SQLClient ou une API telle que OLE DB ou ODBC. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'inclut pas la DLL DB-Library requise pour exécuter ces applications. Pour exécuter des applications DB-Library ou Embedded SQL, vous devez utiliser la DLL DB-Library à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5, de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 ou de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+>  Bien que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] prenne toujours en charge les connexions des applications existantes qui utilisent les API DB-Library et Embedded SQL, il n'inclut pas les fichiers ni la documentation nécessaires aux tâches de programmation dans les applications qui utilisent ces API. Une version future du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] n'intègrera plus la prise en charge des connexions à partir des applications DB-Library ou Embedded SQL. N'utilisez pas DB-Library ni Embedded SQL pour développer de nouvelles applications. Supprimez toutes les dépendances à DB-Library ou à Embedded SQL lorsque vous modifiez des applications existantes. À la place de ces API, utilisez l’espace de noms SQLClient ou une API telle que OLE DB ou ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’inclut pas la DLL DB-Library nécessaires à l’exécution de ces applications. Pour exécuter des applications DB-Library ou Embedded SQL, vous devez utiliser la DLL DB-Library à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5, de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 ou de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
  Quel que soit le type d'application utilisé, la gestion d'un client consiste principalement à configurer sa connexion avec les composants serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En fonction des besoins spécifiques de votre site, la gestion du client va de la simple création du nom de l'ordinateur serveur à la génération d'une bibliothèque de configurations personnalisées permettant de prendre en charge un environnement multiserveur hétérogène.  
   
  La DLL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client contient les bibliothèques réseau et est installée par le programme d'installation. Les protocoles réseau ne sont pas activés au démarrage des nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les installations mises à niveau activent les protocoles activés précédemment. Les protocoles réseau sous-jacents sont installés en tant que partie intégrante de l'installation de Windows (ou à partir de l'icône Réseau du Panneau de configuration). Les outils ci-dessous permettent de gérer les clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration  
   
-     Les composants réseau client et serveur sont gérés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , qui associe l'utilitaire réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'utilitaire réseau client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Gestionnaire de services des versions précédentes. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console). Il apparaît également comme un nœud dans le composant logiciel enfichable Windows Gestion de l'ordinateur. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'activer, de désactiver, de configurer et de classer par priorité des bibliothèques réseau individuelles.  
+     Les composants réseau client et serveur sont gérés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , qui associe l'utilitaire réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'utilitaire réseau client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Gestionnaire de services des versions précédentes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console). Il apparaît également comme un nœud dans le composant logiciel enfichable Windows Gestion de l'ordinateur. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'activer, de désactiver, de configurer et de classer par priorité des bibliothèques réseau individuelles.  
   
--   Installation  
+-   Programme d’installation  
   
      Exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour installer les composants réseau sur un ordinateur client. Les bibliothèques réseau individuelles peuvent être activées ou désactivées pendant l'installation si celle-ci est démarrée à partir de l'invite de commandes.  
   

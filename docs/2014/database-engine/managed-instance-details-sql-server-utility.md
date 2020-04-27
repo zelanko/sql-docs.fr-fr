@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774341"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
@@ -38,11 +38,11 @@ ms.locfileid: "62774341"
   
  Par défaut, les colonnes suivantes affichent des informations sur l'état d'intégrité de chaque instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Processeur de l’instance : affiche l’état d’intégrité de l’utilisation du processeur alloué à cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'état d'intégrité de ce paramètre est déterminé d'après la stratégie d'utilisation du processeur définie pour l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l’instance : affiche l’état d’intégrité de l’utilisation du processeur alloué à cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'état d'intégrité de ce paramètre est déterminé d'après la stratégie d'utilisation du processeur définie pour l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
--   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Processeur de l'ordinateur : affiche l'état d'intégrité de l'utilisation du processeur de l'ordinateur. L'état d'intégrité de ce paramètre est déterminé en fonction de la stratégie d'utilisation du processeur définie pour l'ordinateur et du paramètre de configuration de la stratégie d'évaluation des ressources volatiles. Pour plus d’informations, consultez [Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Pour consulter l’historique de l’utilisation du processeur pour cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du processeur**.  
   
@@ -176,10 +176,10 @@ ms.locfileid: "62774341"
 -   Language :  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [Détails de l’application de la couche données déployée &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Tableau de bord de l’utilitaire &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Fonctionnalités et tâches de l'utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Surveiller des instances de SQL Server dans le Utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Fonctionnalités et tâches de Utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Résolution des problèmes liés à l’utilitaire SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787963"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
@@ -37,9 +37,9 @@ ms.locfileid: "62787963"
   
      [Page Sélectionner le nouveau réplica principal](#SelectNewPrimaryReplica) (plus loin dans cette rubrique)  
   
-     [Page se connecter au réplica](#ConnectToReplica) (plus loin dans cette rubrique)  
+     [Page Se connecter au réplica](#ConnectToReplica) (plus loin dans cette rubrique)  
   
-     [Page confirmer la perte de données potentielle](#ConfirmPotentialDataLoss) (plus loin dans cette rubrique)  
+     [Page Confirmer la perte de données potentielle](#ConfirmPotentialDataLoss) (plus loin dans cette rubrique)  
   
      [Page Résumé &#40;assistants groupe de disponibilité AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "62787963"
   
      [Page résultats &#40;assistants groupe de disponibilité AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Avant votre premier basculement manuel planifié, consultez la section « Avant de commencer » dans [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
  Avant votre premier basculement forcé, consultez les sections « Avant de commencer » et « Suivi : tâches essentielles après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Une commande de basculement retourne dès que le réplica secondaire cible a accepté la commande. Toutefois, la récupération de la base de données est asynchrone après que le basculement du groupe de disponibilité est terminé.  
   
@@ -61,16 +61,16 @@ ms.locfileid: "62787963"
     > [!NOTE]  
     >  Les transactions entre bases de données et les transactions distribuées ne sont pas prises en charge par [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [Transactions entre bases de données non prises en charge pour la mise en miroir de bases de données ou les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises pour utiliser l'Assistant Basculer le groupe de disponibilité  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a>Conditions préalables à l’utilisation de l’Assistant basculer le groupe de disponibilité  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge un réplica de disponibilité actuellement disponible.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour utiliser l'Assistant Basculer le groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge un réplica secondaire du groupe de disponibilité devant être basculé et développez l'arborescence du serveur.  
@@ -81,7 +81,7 @@ ms.locfileid: "62787963"
   
 4.  Les informations présentées dans la page d' **Introduction** varient selon qu'un réplica secondaire est éligible ou non à un basculement planifié. Si cette page indique «**Effectuer un basculement planifié pour ce groupe de disponibilité**», vous pouvez basculer le groupe de disponibilité sans perte de données.  
   
-5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Pour un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera «**perte de données***#***, avertissements ()**», où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d’une cible de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
+5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Dans un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera « **Perte de données, avertissements (***#***)**  », où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d’une cible de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
   
      Pour plus d'informations, consultez la [page Sélectionner le nouveau réplica principal](#SelectNewPrimaryReplica), plus loin dans cette rubrique.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62787963"
   
 8.  Dans la page **Résumé** , analysez les conséquences du basculement sur le réplica secondaire sélectionné.  
   
-     Si vous êtes satisfait de vos sélections, cliquez éventuellement sur **Script** pour créer un script des étapes que l'assistant devra exécuter. Puis, pour basculer le groupe de disponibilité vers le réplica secondaire sélectionné, cliquez sur **Terminer**.  
+     Si vous êtes satisfait de vos sélections, cliquez éventuellement sur **script** pour créer un script des étapes que l’Assistant va exécuter. Puis, pour basculer le groupe de disponibilité vers le réplica secondaire sélectionné, cliquez sur **Terminer**.  
   
 9. La page **Progression** affiche la progression du basculement du groupe de disponibilité.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62787963"
   
  Les autres pages de cette partie de l'Assistant comprennent un ou plusieurs autres Assistants de groupes de disponibilité AlwaysOn et sont documentées dans des rubriques d'aide (F1) distinctes.  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a>Page Sélectionner le nouveau réplica principal  
  Cette section décrit les options de la page **Sélectionner le nouveau réplica principal** . Utilisez cette page pour sélectionner le réplica secondaire (cible de basculement) vers lequel le groupe de disponibilité va basculer. Ce réplica devient le nouveau réplica principal.  
   
 #### <a name="page-options"></a>Options des pages  
@@ -121,14 +121,14 @@ ms.locfileid: "62787963"
  **État du quorum**  
  Affiche l'état du quorum WSFC du réplica de disponibilité, parmi les suivants :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Quorum normal**|Le cluster a démarré avec le quorum normal.|  
 |**Quorum forcé**|Le cluster a démarré avec le quorum forcé.|  
 |**Quorum inconnu**|L'état du quorum du cluster n'est pas disponible.|  
 |**Non applicable**|Le nœud hébergeant le réplica de disponibilité n'a aucun quorum.|  
   
- Pour plus d’informations, consultez [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+ Pour plus d’informations, consultez [modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
  **Choisir un nouveau réplica principal**  
  Utilisez cette grille pour choisir le réplica secondaire qui deviendra le nouveau réplica principal. Les colonnes de la grille sont les suivantes :  
@@ -139,7 +139,7 @@ ms.locfileid: "62787963"
  **Mode de disponibilité**  
  Affiche le mode de disponibilité de l'instance de serveur, parmi les suivants :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Validation synchrone**|En mode de validation synchrone, avant de valider des transactions, un réplica principal avec validation synchrone attend qu'un réplica secondaire avec validation synchrone confirme qu'il a terminé le renforcement du journal. Le mode de validation synchrone garantit qu'une fois qu'une base de données secondaire particulière est synchronisée avec la base de données primaire, les transactions validées sont entièrement protégées.|  
 |**Validation asynchrone**|En mode de validation asynchrone, le réplica principal valide les transactions sans attendre d'accusé de réception confirmant qu'un réplica secondaire avec validation asynchrone a renforcé le journal. Le mode de validation asynchrone réduit la latence de transaction sur les bases de données secondaires, mais leur permet d'être antérieures aux bases de données primaires, ce qui rend possible la perte de données.|  
@@ -149,7 +149,7 @@ ms.locfileid: "62787963"
  **Mode de basculement**  
  Affiche le mode de basculement de l'instance de serveur, parmi les suivants :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Automatique**|Un réplica secondaire configuré pour le basculement automatique prend également en charge le basculement manuel planifié chaque fois que le réplica secondaire est synchronisé avec le réplica principal.|  
 |**Manuel**|Il existe deux types de basculement manuel : planifié (sans perte de données) et forcé (avec perte de données possible). Pour un réplica secondaire donné, un seul de ces modes est pris en charge, en fonction du mode de disponibilité et, en mode avec validation synchrone, en fonction de l'état de synchronisation du réplica secondaire. Pour déterminer la forme du basculement manuel actuellement prise en charge par un réplica secondaire donné, consultez la colonne **Disponibilité de basculement** de cette grille.|  
@@ -159,18 +159,18 @@ ms.locfileid: "62787963"
  **Disponibilité du basculement**  
  Affiche la disponibilité de basculement du réplica secondaire, parmi les options suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Aucune perte de données**|Ce réplica secondaire prend actuellement en charge le basculement planifié. Cette valeur est présente uniquement lorsqu'un réplica secondaire en mode de validation synchrone est actuellement synchronisé avec le réplica principal.|  
 |**Perte de données, avertissements (** *#* **)**|Ce réplica secondaire prend actuellement en charge le basculement forcé (avec perte de données possible). Cette valeur est présente chaque fois que le réplica secondaire n'est pas synchronisé avec le réplica principal. Cliquez sur le lien d'un avertissement de perte de données pour plus d'informations sur la perte de données.|  
   
- **Actualiser**  
+ **Actualisation**  
  Cliquez pour actualiser la grille.  
   
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Sélectionner le nouveau réplica principal** , l'annulation de l'Assistant entraîne sa fermeture sans qu'aucune action ne soit effectuée.  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a>Page confirmer la perte de données potentielle  
  Cette section décrit les options de la page **Confirmer la perte de données potentielle** , qui s'affiche uniquement si vous effectuez un basculement forcé. Cette rubrique est utilisée uniquement par l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Utilisez cette page pour indiquer si vous voulez prendre le risque de perdre des données pour forcer le basculement du groupe de disponibilité.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Options de confirmation de la perte potentielle de données  
@@ -182,7 +182,7 @@ ms.locfileid: "62787963"
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Confirmer la perte de données potentielle** , l'annulation de l'Assistant provoque sa fermeture sans effectuer aucune action.  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a>Page se connecter au réplica  
  Cette section décrit les options de la page **Se connecter au réplica** de l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Cette page s'affiche uniquement si vous n'êtes pas connecté au réplica secondaire cible. Utilisez cette page pour vous connecter au réplica secondaire que vous avez sélectionné comme nouveau réplica principal.  
   
 #### <a name="page-options"></a>Options des pages  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771179"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
@@ -32,7 +32,7 @@ ms.locfileid: "62771179"
   
      Cette section décrit les commandes de ligne de commande qui peuvent être utilisées pour configurer le service de capture de données modifiées Oracle.  
   
-##  <a name="BKMK_MSXDBCDC"></a> Base de données MSXDBCDC  
+##  <a name="the-msxdbcdc-database"></a><a name="BKMK_MSXDBCDC"></a> Base de données MSXDBCDC  
  La base de données MSXDBCDC (Microsoft External Database CDC) est une base de données spéciale qui est requise lors de l'utilisation du service de capture de données modifiées pour Oracle avec une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Le nom de cette base de données ne peut pas être modifié. Si une base de données appelée MSXDBCDC existe sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hôte et contient des tables autres que celles définies par le service de capture de données modifiées pour Oracle, l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hôte ne peut pas être utilisée.  
@@ -63,7 +63,7 @@ ms.locfileid: "62771179"
   
 -   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
-###  <a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
+###  <a name="dboxdbcdc_trace"></a><a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
  Cette table stocke les informations de trace pour le service de capture de données modifiées Oracle. Les informations stockées dans cette table incluent les modifications notables d'état et les enregistrements de trace.  
   
  Le service de capture de données modifiées Oracle écrit des enregistrements d'erreur et certains enregistrements des informations dans le journal des événements Windows et dans la table de trace. Dans certains cas, la table de trace n'est pas accessible, auquel cas les informations d'erreur sont accessibles à partir du journal des événements.  
@@ -84,7 +84,7 @@ ms.locfileid: "62771179"
   
  L'instance Oracle CDC supprime les anciennes lignes de table de trace en fonction de la stratégie de rétention de tables de modifications.  
   
-###  <a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
+###  <a name="dboxdbcdc_databases"></a><a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
  Cette table contient les noms de services de capture de données modifiées pour les bases de données de capture de données modifiées Oracle dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] active. Chaque base de données correspond à une instance Oracle CDC. Le service de capture de données modifiées Oracle utilise cette table pour déterminer quelles instances démarrer ou arrêter et quelles instances reconfigurer.  
   
  Le tableau suivant décrit les éléments inclus dans la table **dbo.xdbcdc_databases** .  
@@ -96,7 +96,7 @@ ms.locfileid: "62771179"
 |cdc_service_name|Cet élément détermine le service de capture de données modifiées Oracle qui gère la base de données Oracle sélectionnée.|  
 |enabled|Indique si l'instance Oracle CDC est activée (1) ou désactivée (0). Lorsque le service de capture de données modifiées Oracle démarre, seules les instances marquées comme étant activées (1) sont démarrées.<br /><br /> **Remarque**: Une instance Oracle CDC peut être désactivée en raison d’une erreur qui n’est pas renouvelable. Dans ce cas, l'instance doit être redémarrée manuellement une fois l'erreur corrigée.|  
   
-###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
+###  <a name="dboxdbcdc_services"></a><a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  Ce tableau répertorie les services de capture de données modifiées associés à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hôte. Cette table est utilisée par la console du concepteur CDC pour déterminer la liste des services de capture de données modifiées configurés pour l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale. Elle est également utilisée par le service de capture de données modifiées pour garantir qu'un seul service Windows en cours de exécution gère un nom donné de service de capture de données modifiées Oracle.  
   
  La section suivante décrit les éléments d’état de capture qui sont inclus dans la table **dbo.xdbcdc_databases** .  
@@ -108,7 +108,7 @@ ms.locfileid: "62771179"
 |ref_count|Cet élément compte le nombre d'ordinateurs où le même service de capture de données modifiées Oracle est installé. Il est augmenté à chaque ajout de service de capture de données modifiées Oracle portant le même nom, et il est réduit lorsque ce service est supprimé. Lorsque le compteur atteint zéro, cette ligne est supprimée.|  
 |active_service_node|Nom du nœud Windows qui gère actuellement le service de capture de données modifiées. Lorsque le service est arrêté correctement, cette colonne a la valeur Null, ce qui indique qu'il ne s'agit plus d'un service actif.|  
 |active_service_heartbeat|Cet élément suit le service de capture de données modifiées actuel pour déterminer s'il est encore actif.<br /><br /> Cet élément est mis à jour avec l'horodateur UTC de la base de données active du service de capture de données modifiées actif à intervalles réguliers. L'intervalle par défaut est de 30 secondes ; cependant, vous pouvez le configurer.<br /><br /> Lorsqu'un service de capture de données modifiées en attente détecte que la pulsation n'a pas été mise à jour après que l'intervalle configuré est passé, le service en attente tente d'assumer le rôle de service de capture de données modifiées actif.|  
-|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]** . La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> la trace a les valeurs possibles suivantes :<br /><br /> true<br /><br /> sur<br /><br /> false<br /><br /> arrêt<br /><br /> \<nom de la classe> [, nom de la classe>]<br /><br /> La valeur par défaut est **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
+|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]** . La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> la trace a les valeurs possibles suivantes :<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> arrêt<br /><br /> \<nom_classe>[,nom_classe>]<br /><br /> La valeur par défaut est **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Procédures stockées de base de données MSXDBCDC  
@@ -124,7 +124,7 @@ ms.locfileid: "62771179"
   
 -   [dbo.xdbcdc_stop(dbname)](#BKMK_dboxdbcdc_stop)  
   
-###  <a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(Database Name)  
+###  <a name="dboxcbcdc_reset_dbdatabase-name"></a><a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(Database Name)  
  Cette procédure efface les données d'une instance Oracle CDC. Mode d'utilisation  
   
 -   Pour redémarrer la capture de données en ignorant les anciennes données, par exemple après récupération de la base de données source ou après inactivité lorsque les journaux des transactions Oracle ne sont pas disponibles.  
@@ -145,7 +145,7 @@ ms.locfileid: "62771179"
   
  Pour plus d’informations sur les tables de capture de données modifiées, consultez *Bases de données CDC* dans le système d’aide de la console du concepteur CDC.  
   
-###  <a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
+###  <a name="dboxdbcdc_disable_dbdbname"></a><a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
  La procédure **dbo.xcbcdc_disable_db** effectue la tâche suivante :  
   
 -   Elle supprime l’entrée pour la base de données CDC sélectionnée dans la table MSXDBCDC.xdbcdc_databases.  
@@ -154,29 +154,29 @@ ms.locfileid: "62771179"
   
  Pour plus d'informations sur les tables de capture de données modifiées, consultez Bases de données CDC dans le système d'aide de la console du concepteur CDC.  
   
-###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service (svcname,sqlusr)  
+###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service (svcname,sqlusr)  
  La procédure **dbo.xcbcdc_add_service** ajoute une entrée à la table **MSXDBCDC.xdbcdc_services** et ajoute un incrément de un à la colonne ref_count pour le nom du service dans la table **MSXDBCDC.xdbcdc_services** . Quand **ref_count** a la valeur 0, elle supprime la ligne.  
   
  Pour utiliser la procédure **dbo.xcbcdc_add_service\<nom_service, nom_utilisateur>** , l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données d’instanceCDC nommée ou membre du rôle serveur fixe **sysadmin** ou **serveradmin**.  
   
-###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
+###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  La procédure **dbo.xdbcdc_start** envoie une demande de démarrage au service de capture de données modifiées qui gère l’instance de capture de données modifiées sélectionnée pour démarrer le traitement des modifications.  
   
  Pour utiliser la procédure **dbo.xcdcdc_start** , l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données CDC ou être membre des rôles **sysadmin** ou **serveradmin** pour l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
+###  <a name="dboxdbcdc_stopdbname"></a><a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
  La procédure **dbo.xdbcdc_stop** envoie une demande d’arrêt au service de capture de données modifiées qui gère l’instance de capture de données modifiées sélectionnée pour arrêter le traitement des modifications.  
   
  Pour utiliser la procédure **dbo.xcdcdc_stop** , l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données CDC ou être membre des rôles **sysadmin** ou **serveradmin** pour l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="BKMK_CDCdatabase"></a> Bases de données CDC  
+##  <a name="the-cdc-databases"></a><a name="BKMK_CDCdatabase"></a> Bases de données CDC  
  Chaque instance Oracle CDC utilisée dans un service de capture de données modifiées est associée à une base de données spécifique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelée base de données CDC. Cette base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est hébergée dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associée au service de capture de données modifiées Oracle.  
   
  La base de données CDC contient un schéma cdc spécial. Le service de capture de données modifiées Oracle utilise ce schéma avec des noms de tables ayant le préfixe **xdbcdc_** . Ce schéma est utilisé à des fins de sécurité et de cohérence.  
   
  L'instance Oracle CDC et les bases de données CDC sont créées à l'aide de la console du concepteur de capture de données modifiées Oracle. Pour plus d'informations sur les bases de données CDC, consultez la documentation fournie avec votre installation de la console du concepteur CDC Oracle.  
   
-##  <a name="BKMK_CommandConfigCDC"></a> Utilisation de la ligne de commande pour configurer le service de capture de données modifiées  
+##  <a name="using-the-command-line-to-configure-the-cdc-service"></a><a name="BKMK_CommandConfigCDC"></a> Utilisation de la ligne de commande pour configurer le service de capture de données modifiées  
  Vous pouvez exécuter le programme Service de capture de données modifiées Oracle (xdbcdcsvc.exe) à partir de la ligne de commande. Ce programme est un fichier exécutable 32 bits et 64 bits natif Windows.  
   
  **Voir aussi**  
@@ -192,7 +192,7 @@ ms.locfileid: "62771179"
   
 -   [Supprimer](#BKMK_delete)  
   
-###  <a name="BKMK_config"></a> Config  
+###  <a name="config"></a><a name="BKMK_config"></a> Config  
  Utilisez `Config` pour mettre à jour une configuration de service de capture de données modifiées Oracle à partir d'un script. La commande peut être utilisée pour mettre à jour uniquement les parties spécifiques de la configuration du service de capture de données modifiées (par exemple, uniquement la chaîne de connexion sans connaître le mot de passe de la clé asymétrique). La commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Config` .  
   
 ```  
@@ -219,7 +219,7 @@ ms.locfileid: "62771179"
   
  **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
-###  <a name="BKMK_create"></a> Créer  
+###  <a name="create"></a><a name="BKMK_create"></a> Créer  
  Utilisez `Create` pour créer un service de capture de données modifiées Oracle à partir d'un script. La commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Create` :  
   
 ```  
@@ -245,7 +245,7 @@ ms.locfileid: "62771179"
   
  **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
-###  <a name="BKMK_delete"></a> Supprimer  
+###  <a name="delete"></a><a name="BKMK_delete"></a> Supprimer  
  Utilisez `Delete` pour supprimer correctement le service de capture de données modifiées Oracle à partir d'un script. Cette commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Delete` .  
   
 ```  

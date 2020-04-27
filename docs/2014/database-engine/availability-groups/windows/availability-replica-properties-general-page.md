@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791903"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriétés du réplica de disponibilité (page Général)
   Utilisez cette boîte de dialogue pour afficher les propriétés d’un réplica de disponibilité.  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour afficher les propriétés d’un réplica de disponibilité**  
+ **Pour afficher les propriétés d'un réplica de disponibilité**  
   
 -   [Afficher les propriétés d’un réplica de disponibilité &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Nom du groupe de disponibilité**  
@@ -36,14 +36,14 @@ ms.locfileid: "62791903"
  **Instance de serveur**  
  Nom de serveur de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge ce réplica et, pour une instance non définie par défaut, son nom d'instance.  
   
- **Actif**  
- **Primaire**  
+ **Rôle**  
+ **Principal**  
  Actuellement le réplica principal.  
   
  **Secondary**  
  Actuellement un réplica secondaire.  
   
- **La résolution**  
+ **Résolution**  
  Actuellement le rôle de réplica est en cours d'être résolu en rôle principal ou secondaire.  
   
  **Mode de disponibilité**  
@@ -95,7 +95,7 @@ ms.locfileid: "62791903"
 > [!NOTE]  
 >  Les délais d'expiration de session ne provoquent pas de basculements automatiques.  
   
- **URL du point de terminaison**  
+ **URL de point de terminaison**  
  Représentation de chaîne du point de terminaison de mise en miroir de bases de données spécifié par l'utilisateur, qui est utilisé par les connexions entre les réplicas principal et secondaire pour la synchronisation des données. Pour plus d’informations sur la syntaxe des URL de point de terminaison, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ## <a name="see-also"></a>Voir aussi  

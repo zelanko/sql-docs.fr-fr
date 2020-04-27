@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779787"
 ---
 # <a name="features-in-sql-server-management-studio"></a>Fonctionnalités de SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] comprend les fonctionnalités générales suivantes :  
   
 -   la prise en charge de la plupart des tâches d'administration pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)];  
@@ -65,8 +64,7 @@ ms.locfileid: "62779787"
   
 -   un contrôle de code source pour les projets solutions et de script qui prend en charge le stockage et la gestion de copies de scripts au fur et à mesure de leur évolution ;  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] la prise en charge d’IntelliSense pour les instructions MDX.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] la prise en charge d’IntelliSense pour les instructions MDX.  
   
 ## <a name="object-explorer-features"></a>Fonctionnalités de l'Explorateur d'objets  
  Le composant Explorateur d'objets de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est un outil intégré d'affichage et de gestion des objets dans tous les types de serveurs. Il permet d'effectuer les tâches suivantes :  
@@ -80,8 +78,7 @@ ms.locfileid: "62779787"
  Pour plus d’informations, consultez [Explorateur d’objets](../ssms/object/object-explorer.md).  
   
 ## <a name="extensibility"></a>Extensibilité  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] repose sur le shell isolé Visual Studio, qui prend en charge intrinsèquement l’extensibilité (compléments/plug-ins). Il est possible d'exploiter les services d'extensibilité de Visual Studio dans les fonctions personnalisées de l'aire dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]; toutefois, cette extensibilité n'est pas prise en charge.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] repose sur le shell isolé Visual Studio, qui prend en charge intrinsèquement l’extensibilité (compléments/plug-ins). Il est possible d'exploiter les services d'extensibilité de Visual Studio dans les fonctions personnalisées de l'aire dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]; toutefois, cette extensibilité n'est pas prise en charge.  
   
  Certains utilisateurs et fournisseurs tiers ont développé des extensions de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Même si nous ne décourageons pas cette démarche, n’oubliez pas que cette extensibilité n’est pas prise en charge et qu’elle peut donc engendrer des problèmes de compatibilité descendante/ascendante. Microsoft ne publie pas de documentation pour l’extension de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Il existe toutefois des blogs communautaires et des exemples de code dont vous pourrez tirer parti.  
   

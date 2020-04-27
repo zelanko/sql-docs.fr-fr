@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771025"
 ---
 # <a name="odbc-destination"></a>Destination ODBC
@@ -26,7 +26,7 @@ ms.locfileid: "62771025"
   
  La destination ODBC comporte une sortie standard et une sortie d'erreur.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Options de chargement  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Options de chargement  
  La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-source-editor-connection-manager-page.md). Les deux modes sont :  
   
 -   **Lot**: dans ce mode, la destination ODBC tente d’utiliser la méthode d’insertion la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs modernes ODBC, cela implique de préparer une instruction INSERT avec des paramètres, puis d’utiliser une liaison de paramètre de table selon les lignes (où la taille de la table est contrôlée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
@@ -81,7 +81,7 @@ ms.locfileid: "62771025"
   
 -   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Charger des données à l’aide de la destination ODBC](odbc-destination.md)  
+-   [Charger des données à l'aide de la destination ODBC](odbc-destination.md)  
   
 -   [Propriétés personnalisées des destinations ODBC](odbc-destination-custom-properties.md)  
   

@@ -15,24 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813192"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Changements de comportement pour la recherche en texte intégral
   Cette rubrique décrit les changements de comportement de la recherche en texte intégral. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Modifications du comportement de la recherche en texte intégral dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>Modifications du comportement de la recherche en texte intégral dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Informations qui seront fournies par la suite.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifications du comportement de la recherche en texte intégral dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] installe une nouvelle version des analyseurs lexicaux et des générateurs de formes dérivés pour l'anglais américain (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Toutefois, vous pouvez revenir à la version précédente de ces composants si vous souhaitez conserver le comportement précédent. Pour plus d’informations, consultez [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>Modifications du comportement de la recherche en texte intégral dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] installe une nouvelle version des analyseurs lexicaux et des générateurs de formes dérivés pour l'anglais américain (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Toutefois, vous pouvez revenir à la version précédente de ces composants si vous souhaitez conserver le comportement précédent. Pour plus d’informations, consultez [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Nouveaux analyseurs lexicaux et générateurs de formes dérivées installés  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]met à jour tous les analyseurs lexicaux et générateurs de formes dérivées utilisés par la recherche en texte intégral et la recherche sémantique. Pour des raisons de cohérence entre le contenu des index et les résultats des requêtes, nous vous recommandons de réalimenter les index de recherche en texte intégral existants.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] met à jour les analyseurs lexicaux et générateurs de formes dérivées utilisés par la recherche en texte intégral et la recherche sémantique. Pour des raisons de cohérence entre le contenu des index et les résultats des requêtes, nous vous recommandons de réalimenter les index de recherche en texte intégral existants.  
   
 1.  Il existe de nouveaux analyseurs lexicaux pour l'anglais. Si vous devez conserver le comportement antérieur, consultez [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -95,8 +94,7 @@ ms.locfileid: "62813192"
   
 -   Les mots vides et les listes de mots vides ont remplacé les mots parasites et les fichiers de mots parasites. Une liste de mots vides est un objet de base de données qui facilite les tâches gestion des mots vides et améliore l'intégrité entre instances de serveur différentes et environnements. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures contiennent de nouveaux analyseurs lexicaux pour un grand nombre des langues prises en charge par [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Seuls les analyseurs lexicaux pour l'anglais, le coréen, le thaï et le chinois (traditionnel et simplifié) restent inchangés. Pour les autres langues, si un catalogue de texte intégral a été importé [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] lors de la mise à niveau [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] d’une base de données vers ou version ultérieure, une ou plusieurs langues utilisées par les index de recherche en texte intégral dans le catalogue de texte intégral peuvent maintenant être associées à de nouveaux analyseurs lexicaux qui peuvent se comporter légèrement différemment des analyseurs lexicaux importés. Pour plus d’informations sur la façon de garantir la cohérence entre les requêtes et le contenu de l’index de recherche en texte intégral, consultez [mise à niveau de la recherche en texte intégral](../relational-databases/search/upgrade-full-text-search.md).  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures contiennent de nouveaux analyseurs lexicaux pour un grand nombre des langues prises en charge par [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Seuls les analyseurs lexicaux pour l'anglais, le coréen, le thaï et le chinois (traditionnel et simplifié) restent inchangés. Pour les autres langues, si un catalogue de texte intégral a été importé [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] lors de la mise à niveau [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] d’une base de données vers ou version ultérieure, une ou plusieurs langues utilisées par les index de recherche en texte intégral dans le catalogue de texte intégral peuvent maintenant être associées à de nouveaux analyseurs lexicaux qui peuvent se comporter légèrement différemment des analyseurs lexicaux importés. Pour plus d’informations sur la façon de garantir la cohérence entre les requêtes et le contenu de l’index de recherche en texte intégral, consultez [mise à niveau de la recherche en texte intégral](../relational-databases/search/upgrade-full-text-search.md).  
   
 -   Un nouveau service de lancement FDHOST (MSSQLFDLauncher) a été ajouté. Pour plus d’informations, consultez [prise en main de la recherche en texte intégral](../relational-databases/search/get-started-with-full-text-search.md).  
   

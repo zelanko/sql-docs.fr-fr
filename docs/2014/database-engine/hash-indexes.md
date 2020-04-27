@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779483"
 ---
 # <a name="hash-indexes"></a>Index de hachage
@@ -26,8 +26,7 @@ ms.locfileid: "62779483"
   
  La fonction de hachage utilisée pour les index de hachage présente les caractéristiques suivantes :  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une fonction de hachage utilisée pour tous les index de hachage.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une fonction de hachage utilisée pour tous les index de hachage.  
   
 -   La fonction de hachage est déterministe. La même clé d'index est toujours mappée vers le même compartiment dans l'index de hachage.  
   
@@ -48,6 +47,6 @@ ms.locfileid: "62779483"
  Pour plus d'informations sur les index des tables mémoire optimisées, consultez [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Index sur des tables optimisées en mémoire](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [Index sur les tables optimisées en mémoire](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

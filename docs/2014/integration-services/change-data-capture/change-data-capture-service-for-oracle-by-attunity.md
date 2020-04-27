@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771525"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Service de capture de données modifiées pour Oracle par Attunity
@@ -38,7 +38,7 @@ ms.locfileid: "62771525"
   
 -   Windows Server 2012  
   
--   Windows Server 2008 R2 avec Service Pack 1  
+-   Windows Server 2008 R2 avec Service Pack 1  
   
 -   Windows Server 2008 32 bits (x86) et 64 bits (x64) avec Service Pack 2  
   
@@ -80,11 +80,11 @@ ms.locfileid: "62771525"
   
 -   [Service de capture de données modifiées Oracle](the-oracle-cdc-service.md)  
   
--   [Aide (F1) du service CDC pour Oracle par Attunity](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Aide sur le service de capture de données modifiées pour Oracle par Attunity via la touche F1](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Service de capture de données modifiées pour Oracle par Attunity : rubrique Procédures](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation du service CDC Oracle](working-with-the-oracle-cdc-service.md)  
+ [Utilisation du service de capture de données modifiées Oracle](working-with-the-oracle-cdc-service.md)  
   
   

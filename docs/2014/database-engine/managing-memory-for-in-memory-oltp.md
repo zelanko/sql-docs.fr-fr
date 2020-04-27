@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774833"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gestion de la mémoire pour l'OLTP en mémoire
@@ -25,13 +25,13 @@ ms.locfileid: "62774833"
 |Section|Description|  
 |-------------|-----------------|  
 |[Estimer les besoins en mémoire des tables mémoire optimisées](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimez les besoins en mémoire d’une table.|  
-|[Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Procédure pas à pas pour lier une base de données à un pool de ressources.|  
-|[Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Outils que vous pouvez utiliser pour surveiller l'utilisation de la mémoire. Couvre également le dépannage si l'utilisation de la mémoire est trop intensive.|  
+|[Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Procédure pas à pas pour lier une base de données à un pool de ressources.|  
+|[Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Outils que vous pouvez utiliser pour surveiller l'utilisation de la mémoire. Couvre également le dépannage si l'utilisation de la mémoire est trop intensive.|  
 |[Résoudre les problèmes de mémoire insuffisante](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Étapes pour récupérer d'une situation d'insuffisance de mémoire.|  
 |[Restaurer une base de données et la lier à un pool de ressources](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|Étapes pour restaurer une base de données [!INCLUDE[hek_2](../includes/hek-2-md.md)] et la lier à un pool de ressources nommé.|  
 |[Garbage collection de l'OLTP en mémoire](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)|Comprendre comment le garbage collection fonctionne sur les lignes supprimées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

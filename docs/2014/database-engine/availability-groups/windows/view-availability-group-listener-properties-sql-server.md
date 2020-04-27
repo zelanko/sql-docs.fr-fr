@@ -15,22 +15,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788025"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server)
   Cette rubrique explique comment afficher les propriétés d'un *écouteur de groupe de disponibilité* AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Pour afficher les propriétés d’un écouteur, utilisez :**  
+-   **Pour afficher les propriétés d'un écouteur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance de serveur qui héberge un réplica de disponibilité du groupe de disponibilité dont vous souhaitez afficher l'écouteur. Cliquez sur le nom du serveur pour développer son arborescence.  
@@ -43,7 +43,7 @@ ms.locfileid: "62788025"
   
 5.  Cela ouvre la boîte de dialogue **Propriétés de l'écouteur du groupe disponibilité** . Pour plus d’informations, consultez [Propriétés de l’écouteur du groupe disponibilité (boîte de dialogue)](#AgListenerPropertiesDialog), plus loin dans cette rubrique.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Propriétés de l’écouteur du groupe disponibilité (boîte de dialogue)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a>Propriétés de l’écouteur du groupe disponibilité (boîte de dialogue)  
  **Nom DNS de l'écouteur**  
  Nom réseau de l'écouteur du groupe de disponibilité.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62788025"
   
  La grille affiche chacun des sous-réseaux sur lesquels l'écouteur écoute, ainsi que l'adresse IP associée à chaque sous-réseau.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
   
  Pour surveiller les écouteurs de groupe de disponibilité, utilisez les vues suivantes :  
@@ -87,7 +87,7 @@ ms.locfileid: "62788025"
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour surveiller votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62788025"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et &#40;de basculement d’application SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

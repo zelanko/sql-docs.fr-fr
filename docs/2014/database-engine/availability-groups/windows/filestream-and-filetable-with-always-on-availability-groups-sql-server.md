@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814139"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM et FileTable avec groupes de disponibilité AlwaysOn (SQL Server)
@@ -28,21 +28,21 @@ ms.locfileid: "62814139"
   
  La fonctionnalité FileTable n'est prise en charge que partiellement. Après un basculement, les données FileTable sont accessibles sur le réplica principal, mais pas sur les réplicas secondaires avec accès en lecture.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Prérequis](#Prerequisites)  
+-   [Conditions préalables](#Prerequisites)  
   
--   [Utilisation de noms de réseau virtuel (VNN) pour l’accès FILESTREAM et filetable](#vnn)  
+-   [Utilisation de noms de réseau virtuel (VNN) pour l'accès à FILESTREAM et FileTable](#vnn)  
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu associé](#RelatedContent)  
+-   [Contenu connexe](#RelatedContent)  
   
-##  <a name="Prerequisites"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Avant d'ajouter une base de données qui utilise FILESTREAM, avec ou sans FileTable, à un groupe de disponibilité, vérifiez que FILESTREAM est activé sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Pour plus d’informations, consultez [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
-##  <a name="vnn"></a>Utilisation de noms de réseau virtuel (VNN) pour l’accès FILESTREAM et filetable  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a>Utilisation de noms de réseau virtuel (VNN) pour l’accès FILESTREAM et filetable  
  Lorsque vous activez FILESTREAM sur une instance du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un partage d'instance est créé pour permettre d'accéder aux données FILESTREAM. Vous accédez à ce partage en utilisant le nom d'ordinateur au format suivant :  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -59,11 +59,9 @@ ms.locfileid: "62814139"
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   
-    2.  
-  `\\<VNN1>\<filestream_share_name>` pour le groupe de disponibilité 1.  
+    2.  `\\<VNN1>\<filestream_share_name>` pour le groupe de disponibilité 1.  
   
-    3.  
-  `\\<VNN2>\<filestream_share_name>` pour le groupe de disponibilité 2.  
+    3.  `\\<VNN2>\<filestream_share_name>` pour le groupe de disponibilité 2.  
   
  Ces partages d'étendue VNN sont également propagées à tous les réplicas secondaires.  
   
@@ -77,13 +75,13 @@ ms.locfileid: "62814139"
   
  Si votre application tente d'accéder au partage à l'aide d'un chemin d'accès d'étendue VNN lorsque la base de données ne fait pas partie d'un groupe de disponibilité, la demande peut réussir. Dans ce cas, le nom du réseau virtuel est résolu avec le nom de l'ordinateur. Toutefois, cette utilisation est fortement déconseillée, étant donné que le chemin d'accès d'étendue VNN cesse de fonctionner si le groupe de disponibilité est supprimé.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Activer et configurer FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Activer les conditions préalables pour les FileTables](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

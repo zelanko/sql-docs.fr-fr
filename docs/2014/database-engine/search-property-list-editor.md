@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773667"
 ---
 # <a name="search-property-list-editor"></a>Éditeur de listes de propriétés de recherche
@@ -27,7 +27,7 @@ ms.locfileid: "62773667"
   
 ## <a name="options"></a>Options  
  **Nom de la propriété**  
- Spécifiez le nom à utiliser pour identifier la propriété dans les requêtes de texte intégral. Un nom de propriété peut contenir des espaces internes. La longueur maximale de **Property Name** est de 256 caractères. Ce nom peut être un nom convivial, tel que « Auteur » ou « Domicile », ou ce peut être le nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`. Le nom de la **propriété** doit identifier la propriété de manière unique dans le jeu de propriétés.  
+ Spécifiez le nom à utiliser pour identifier la propriété dans les requêtes de texte intégral. Un nom de propriété peut contenir des espaces internes. La longueur maximale de **Property Name** est de 256 caractères. Ce nom peut être un nom convivial, tel que « Auteur » ou « Domicile », ou ce peut être le nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`. **Property Name** doit identifier la propriété de manière unique dans le jeu de propriétés.  
   
  Les développeurs utilisent le nom de la propriété pour identifier la propriété dans le prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Par conséquent, lors de l'ajout d'une propriété, il est important de spécifier une valeur qui représente la propriété de manière significative.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "62773667"
   
  **Pour configurer une liste de propriétés de recherche pour un index de recherche en texte intégral**  
   
--   [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+-   [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Autorisations  
  Consultez la page [ALTER Search Property LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
- [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [Rechercher des propriétés de document avec des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

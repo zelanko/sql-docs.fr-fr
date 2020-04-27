@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780512"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Prise en charge de SQLXML 4.0 pour Microsoft .NET Framework
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 prend en charge des fonctionnalités qui vous permettent d'écrire des applications pour accéder aux données XML d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], intégrer ces données à l'environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, les traiter et renvoyer les mises à jour à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette section décrit les fonctionnalités de prise en charge de .NET Framework et fournit des exemples de leur utilisation.  
   
 ## <a name="in-this-section"></a>Dans cette section  
@@ -36,6 +35,6 @@ ms.locfileid: "62780512"
  Décrit comment utiliser le chargement en masse SQLXML avec le .NET Framework.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution du chargement en masse de données XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Exécution du chargement en masse de données XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

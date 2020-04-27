@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791985"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Gestion d'une base de données de publication AlwaysOn (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791985"
   
  
   
-##  <a name="MaintainPublDb"></a> Gestion d'une base de données publiée dans un groupe de disponibilité  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>Maintenance d’une base de données publiée dans un groupe de disponibilité  
  La gestion d'une base de données de publication AlwaysOn est quasiment identique à la gestion d'une base de données de publication standard. Il convient toutefois de prendre quelques précautions :  
   
 -   L'administration doit être effectuée au niveau de l'hôte de réplica principal. Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], les publications apparaissent dans le dossier **Publications locales** pour l'hôte de réplica principal et également pour les réplicas secondaires lisibles. Après un basculement, il est possible que vous soyez contraint d'actualiser manuellement [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] pour que la modification soit prise en compte si le serveur secondaire qui est devenu le principal n'était pas lisible.  
@@ -39,7 +39,7 @@ ms.locfileid: "62791985"
   
 -   Pour synchroniser un abonnement dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] après un basculement, synchronisez les abonnements par extraction à partir de l'abonné, puis synchronisez les abonnements par émission de données à partir du serveur de publication actif.  
   
-##  <a name="RemovePublDb"></a> Suppression d'une base de données publiée d'un groupe de disponibilité  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Suppression d'une base de données publiée d'un groupe de disponibilité  
  Considérez les points suivants lorsqu'une base de données publiée est supprimée d'un groupe de disponibilité, ou lorsqu'un groupe de disponibilité avec une base de données membre publiée est supprimé.  
   
 -   Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un réplica `sp_redirect_publisher` principal de groupe de disponibilité, *@redirected_publisher* vous devez exécuter sans spécifier de valeur pour le paramètre pour supprimer la redirection pour la paire serveur de publication/base de données.  
@@ -100,7 +100,7 @@ ms.locfileid: "62791985"
   
      À ce stade, la copie de la base de données publiée peut être conservée ou supprimée.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   
@@ -114,6 +114,6 @@ ms.locfileid: "62791985"
  [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Groupes de disponibilité AlwaysOn : interopérabilité (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [Réplication SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+ [Réplication SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

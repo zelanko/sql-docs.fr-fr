@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773885"
 ---
 # <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
@@ -44,7 +44,7 @@ ms.locfileid: "62773885"
  [Se connecter à n'importe quel composant de SQL Server à partir de SQL Server Management Studio](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
  Décrit comment se connecter aux instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et effectuer certaines tâches sans connexion.  
   
- [l’Explorateur d’objets](../ssms/object/object-explorer.md)  
+ [Explorateur d’objets](../ssms/object/object-explorer.md)  
  Décrit les fonctionnalités de l'Explorateur d'objets.  
   
  [Assistance utilisateur de SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)  
@@ -62,13 +62,13 @@ ms.locfileid: "62773885"
  [Raccourcis clavier dans SQL Server Management Studio](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
  Répertorie les raccourcis clavier disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Personnaliser des menus et des touches de raccourci](../ssms/customize-menus-and-shortcut-keys.md)  
+ [Personnaliser les menus et les touches de raccourci](../ssms/customize-menus-and-shortcut-keys.md)  
  Décrit comment créer des menus et des raccourcis personnalisés.  
   
  [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
  Décrit comment développer des projets de script et des solutions.  
   
- [l’Explorateur de modèles](../ssms/template/template-explorer.md)  
+ [Explorateur de modèles](../ssms/template/template-explorer.md)  
  Décrit comment utiliser les modèles [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et créer des modèles personnalisés.  
   
  [Pages des propriétés dans SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "62773885"
  Décrit les outils Visual Database Tools que vous pouvez utiliser pour créer des requêtes, concevoir ou modifier une structure de base de données ou mettre à jour des données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichez ou modifiez les propriétés du serveur &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+ [Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

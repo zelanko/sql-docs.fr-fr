@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813585"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurer un serveur pour écouter un port TCP spécifique (Gestionnaire de configuration SQL Server)
@@ -37,11 +37,11 @@ ms.locfileid: "62813585"
   
  **Dans cette rubrique**  
   
--   **Pour configurer un serveur pour l’écoute sur un port TCP spécifique, utilisez :**  
+-   **Pour configurer un serveur pour l'écoute sur un port TCP spécifique, utilisez :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Pour affecter un numéro de port TCP/IP au moteur de base de données SQL Server  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62813585"
   
 3.  Si la boîte de dialogue **Ports TCP dynamiques** contient **0**pour indiquer que [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les ports dynamiques, supprimez le 0.  
   
-4.  Dans la zone **Propriétés** **IP**_n_ , dans la zone **port TCP** , tapez le numéro de port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**.  
+4.  Dans **Propriétés**_IP_ **n**, dans la zone **Port TCP**, tapez le numéro du port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**.  
   
 5.  Dans le volet de la console, cliquez sur **Services SQL Server**.  
   

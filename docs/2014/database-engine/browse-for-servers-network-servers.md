@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786685"
 ---
 # <a name="browse-for-servers-network-servers"></a>Parcourir les serveurs (Serveurs réseau)
@@ -33,7 +33,7 @@ ms.locfileid: "62786685"
  Pour vous connecter à une instance qui n'apparaît pas dans la liste, entrez une chaîne de connexion complète pour l'instance, y compris le numéro de port TCP/IP ou le nom des canaux nommés.  
   
 ## <a name="options"></a>Options  
- **Sélectionner une instance de SQL Server dans le réseau pour votre connexion**  
+ **Sélectionnez une instance de SQL Server sur le réseau pour votre connexion**  
  Désignez le serveur auquel vous souhaitez vous connecter en cliquant sur l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] affichée dans l'arborescence. Vous pouvez afficher ou masquer des parties de l’arborescence en cliquant sur les nœuds marqués avec **+** un **-** symbole ou.  
   
   

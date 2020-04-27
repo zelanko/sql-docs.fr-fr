@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808760"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>Se connecter au serveur (page Connexion) — Analysis Services
@@ -32,7 +32,7 @@ ms.locfileid: "62808760"
  **Authentification**  
  Les modes d'authentification suivants sont pris en charge lors de la connexion à une instance d'Analysis Services : Authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- **Mode d’authentification Windows (authentification Windows)**  
+ **Mode d'authentification Windows (authentification Windows)**  
  Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  
   
  **Connexion**  

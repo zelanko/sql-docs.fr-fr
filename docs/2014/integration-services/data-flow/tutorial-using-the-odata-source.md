@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770215"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Didacticiel : Utiliser la source OData [SSIS]
@@ -46,7 +46,7 @@ ms.locfileid: "62770215"
   
 6.  Entrez l'URL du service OData pour l' **Emplacement du document de service**. Il peut s'agir de l'URL qui renvoie au document de service, ou bien à un flux ou à une entité spécifique. Pour les besoins de ce didacticiel, tapez [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Assurez-vous que l' **Authentification Windows** est sélectionnée pour l' **authentification** à utiliser pour accéder au service OData. **L’authentification Windows** est sélectionnée par défaut. Pour utiliser l'authentification de base, sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**.  
+7.  Assurez-vous que l' **Authentification Windows** est sélectionnée pour l' **authentification** à utiliser pour accéder au service OData. L'**Authentification Windows** est sélectionnée par défaut. Pour utiliser l'authentification de base, sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**.  
   
 8.  Cliquez sur **Tester la connexion** à la connexion, puis cliquez sur **OK** pour créer une instance du gestionnaire de connexions OData.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770215"
   
 10. Dans la liste déroulante **Collection** , sélectionnez **Employés**.  
   
-11. Entrez toutes les options ou filtres de requête OData supplémentaires pour **Options de requête**. P. $orderby=CompanyName&$top=100. Pour les besoins de ce didacticiel, entrez **$top=5**.  
+11. Entrez toutes les options ou filtres de requête OData supplémentaires pour **Options de requête**. Exemple : $orderby=CompanyName&$top=100. Pour les besoins de ce didacticiel, entrez **$top=5**.  
   
 12. Cliquez sur **Aperçu** pour afficher un aperçu des données.  
   

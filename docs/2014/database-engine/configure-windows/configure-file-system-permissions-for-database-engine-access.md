@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811323"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données
@@ -47,7 +47,7 @@ ms.locfileid: "62811323"
 9. Cliquez sur **Appliquer**, puis cliquez à deux reprises sur **OK** pour quitter la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les services Moteur de base de données](manage-the-database-engine-services.md)   
+ [Gérer les services du moteur de base de données](manage-the-database-engine-services.md)   
  [Déplacer des bases de données système](../../relational-databases/databases/system-databases.md)   
  [Déplacer des bases de données utilisateur](../../relational-databases/databases/move-user-databases.md)  
   

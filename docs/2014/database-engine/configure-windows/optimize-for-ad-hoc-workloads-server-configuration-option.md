@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7edf279b49374823c9083005be9b8d047b003f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781435"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads (option de configuration de serveur)
@@ -28,13 +28,13 @@ ms.locfileid: "62781435"
   
  Le stub du plan compilé est l'un des types d'objets cache contenus dans l'affichage catalogue sys.dm_exec_cached_plans. Il possède un handle SQL et un handle de plan qui sont uniques. Aucun plan d'exécution n'est associé au stub du plan compilé et interroger le handle du plan ne retourne pas de plan d'exécution de requêtes XML.  
   
- L'indicateur de trace 8 032 rétablit les paramètres de limitation du cache au paramètre RTM [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui permet en général aux caches d'être plus volumineux. Utilisez ce paramètre lorsque les entrées du cache fréquemment utilisées ne tiennent pas dans le cache et lorsque l' *option de configuration de serveur optimiser pour les charges de travail ad hoc* n’a pas réussi à résoudre le problème avec le cache du plan.  
+ L'indicateur de trace 8 032 rétablit les paramètres de limitation du cache au paramètre RTM [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui permet en général aux caches d'être plus volumineux. Utilisez ce paramètre quand les entrées du cache fréquemment utilisées ne tiennent pas dans le cache et que l’ *option de configuration de serveur Optimiser pour les charges de travail ad hoc* ne permet pas de résoudre le problème avec le cache du plan.  
   
 > [!WARNING]  
 >  L'indicateur de trace 8 032 peut altérer les performances si des caches volumineux diminuent la mémoire disponible pour les autres consommateurs, tels que le pool de mémoires tampons.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
+ [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
  [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

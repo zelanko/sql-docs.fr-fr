@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789456"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Vue d'ensemble des applets de commande PowerShell pour les groupes de disponibilité AlwaysOn (SQL Server)
@@ -33,20 +33,20 @@ ms.locfileid: "62789456"
   
 -   [Sauvegarde et restauration des bases de données et des journaux des transactions](#BnRcmdlets)  
   
--   [Création et gestion d’un groupe de disponibilité](#DeployManageAGs)  
+-   [Création et gestion d'un groupe de disponibilité](#DeployManageAGs)  
   
--   [Création et gestion d’un écouteur de groupe de disponibilité](#AGlisteners)  
+-   [Création et gestion d'un écouteur de groupe de disponibilité](#AGlisteners)  
   
--   [Création et gestion d’un réplica de disponibilité](#DeployManageARs)  
+-   [Création et gestion d'un réplica de disponibilité](#DeployManageARs)  
   
--   [Ajout et gestion d’une base de données de disponibilité](#DeployManageDbs)  
+-   [Ajout et gestion d'une base de données de disponibilité](#DeployManageDbs)  
   
--   [Surveillance de l’intégrité du groupe de disponibilité](#MonitorTblshtAGs)  
+-   [Surveillance de l'intégrité d'un groupe de disponibilité](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  Pour obtenir la liste des rubriques [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] de la documentation en ligne qui expliquent comment utiliser les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] applets de commande pour effectuer des tâches, consultez la section « tâches associées » de la rubrique [vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a>Configuration d’une instance de serveur pour groupes de disponibilité AlwaysOn  
+##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>Configuration d’une instance de serveur pour groupes de disponibilité AlwaysOn  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "62789456"
 |`New-SqlHadrEndPoint`|Crée un nouveau point de terminaison de mise en miroir de bases de données sur une instance de serveur. Ce point de terminaison est requis pour le déplacement des données entre des bases de données primaires et secondaires.|Toute instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Modifie les propriétés d'un point de terminaison de mise en miroir de bases de données existant, telles que le nom, l'état ou les propriétés d'authentification.|Instance de serveur qui prend en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et ne dispose pas d'un point de terminaison de mise en miroir de bases de données|  
   
-##  <a name="BnRcmdlets"></a> Sauvegarde et restauration des bases de données et journaux de transactions  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a>Sauvegarde et restauration des bases de données et des journaux des transactions  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "62789456"
   
  Pour plus d’informations sur l’utilisation de ces applets de commande pour préparer une base de données secondaire, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a>Création et gestion d’un groupe de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "62789456"
 |`Set-SqlAvailabilityGroup`|Définit les propriétés d'un groupe de disponibilité ; met un groupe de disponibilité en ligne/hors connexion|Instance de serveur qui héberge le réplica principal|  
 |`Switch-SqlAvailabilityGroup`|Démarre l'une des formes de basculement suivantes :<br /><br /> Basculement forcé d'un groupe de disponibilité (avec possible perte de données).<br /><br /> Basculement manuel d'un groupe de disponibilité.|Instance de serveur qui héberge le réplica secondaire cible.|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a>Création et gestion d’un écouteur de groupe de disponibilité  
   
 |Applet de commande|Description|Prise en charge sur|  
 |------------|-----------------|------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "62789456"
 |`Set-SqlAvailabilityGroupListener`|Modifie le paramètre de port sur un écouteur de groupe de disponibilité existant.|Instance de serveur qui héberge le réplica principal|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|Ajoute une adresse IP statique à une configuration existante d'écouteur de groupe de disponibilité. L'adresse IP peut être une adresse IPv4 avec sous-réseau ou une adresse IPv6.|Instance de serveur qui héberge le réplica principal|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a>Création et gestion d’un réplica de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "62789456"
 |**Remove-SqlAvailabilityReplica**|Supprime un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |`Set-SqlAvailabilityReplica`|Définit les propriétés d'un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a>Ajout et gestion d’une base de données de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "62789456"
 |`Resume-SqlAvailabilityDatabase`|Reprend le déplacement des données pour une base de données de disponibilité interrompue.|Instance de serveur sur laquelle la base de données a été interrompue.|  
 |`Suspend-SqlAvailabilityDatabase`|Interrompt le déplacement des données pour une base de données de disponibilité.|Instance de serveur qui héberge un réplica de disponibilité.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a>Analyse Intégrité de groupe de disponibilité  
  Les applets de commande [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivantes vous permettent de surveiller l'intégrité d'un groupe de disponibilité et de ses réplicas et bases de données.  
   
 > [!IMPORTANT]  
@@ -117,6 +117,6 @@ ms.locfileid: "62789456"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+ [Obtenir de l'aide sur SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
   

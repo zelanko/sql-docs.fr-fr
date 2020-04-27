@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779190"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriétés du catalogue de texte intégral (page Tables et vues)
@@ -44,7 +44,7 @@ ms.locfileid: "62779190"
 |||  
 |-|-|  
 |**Colonnes disponibles**|Affiche toutes les colonnes qui sont indexées en texte intégral. Activez une case à cocher pour ajouter une colonne à l'index de texte intégral.|  
-|**Langue pour l’analyseur lexical**|Affiche le langage de l'analyseur lexical.|  
+|**Langue pour l'analyseur lexical**|Affiche le langage de l'analyseur lexical.|  
 |**Colonne de type de données**|Répertorie le nom de la colonne dans la table qui contient le type de document de la colonne répertoriée dans **colonnes disponibles** si la `varbinary(max)` colonne `image` est une colonne ou.|  
 |**Sémantique statistique**|Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Si vous sélectionnez une **langue** avant de sélectionner **Sémantique statistique**, et que la langue sélectionnée n'est pas associée à un modèle linguistique sémantique, la case à cocher **Sémantique statistique** est désactivée. Si vous sélectionnez **Sémantique statistique** avant de sélectionner une **langue**, les langues disponibles dans la zone de liste déroulante sont limitées à celles pour lesquelles il existe une prise en charge de modèle linguistique sémantique.|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62779190"
 |**Aucun suivi**|Lorsque cette option est activée, les modifications apportées aux données indexées du catalogue ne sont pas enregistrées. Un administrateur doit générer l'index en utilisant ALTER FULLTEXT INDEX avec FULL POPULATION ou INCREMENTAL POPULATION.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER un catalogue de texte intégral &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Alimenter des index de recherche en texte intégral](../relational-databases/indexes/indexes.md)  
   

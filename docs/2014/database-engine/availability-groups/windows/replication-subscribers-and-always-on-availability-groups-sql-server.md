@@ -15,24 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789145"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Abonnés de réplication et groupes de disponibilité AlwaysOn (SQL Server)
   Lorsqu'un groupe de disponibilité AlwaysOn contenant une base de données est un abonné de réplication et bascule, l'abonnement de réplication peut échouer. Pour les abonnés de réplication par émission transactionnelle, l’agent de distribution continue la réplication automatiquement après un basculement si l’abonnement a été créé avec le nom de l’écouteur de groupe de disponibilité. Pour les abonnés de réplication par réception transactionnelle, l’agent de distribution continue la réplication automatiquement après un basculement si l’abonnement a été créé avec le nom de l’écouteur de groupe de disponibilité et que le serveur de l’Abonné d’origine fonctionne. C’est parce que les travaux de l’agent de distribution sont uniquement créés sur l’Abonné d’origine (réplica principal du groupe de disponibilité). Pour les abonnés de fusion, un administrateur de réplication doit reconfigurer l'abonné manuellement, en recréant l'abonnement.  
   
 ## <a name="what-is-supported"></a>Ce qui est pris en charge  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le basculement automatique du serveur de publication, le basculement automatique des abonnés transactionnels et le basculement manuel des abonnés de fusion. Le basculement d'un serveur de distribution dans une base de données de disponibilité n'est pas pris en charge. AlwaysOn ne peut pas être combiné avec Websync et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le basculement automatique du serveur de publication, le basculement automatique des abonnés transactionnels et le basculement manuel des abonnés de fusion. Le basculement d'un serveur de distribution dans une base de données de disponibilité n'est pas pris en charge. AlwaysOn ne peut pas être combiné avec Websync et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  
   
- **Basculement d’un abonnement par extraction de fusion**  
+ **Basculement d'un abonnement de fusion par extraction de données (pull)**  
   
  Un abonnement par extraction échoue lors d'un basculement de groupe de disponibilité, car l'agent d'extraction de données ne trouve pas les travaux stockés dans la base de données **msdb** de l'instance de serveur qui héberge le réplica principal, qui n'est pas disponible parce que l'instance de serveur a échoué.  
   
- **Basculement d’un abonnement par envoi de fusion**  
+ **Basculement d'un abonnement de fusion par émission de données (push)**  
   
  Un abonnement par émission de données échoue lors du basculement d'un groupe de disponibilité, car l'agent de transmission de type push ne peut plus se connecter à la base de données d'abonnement d'origine sur l'abonné d'origine.  
   

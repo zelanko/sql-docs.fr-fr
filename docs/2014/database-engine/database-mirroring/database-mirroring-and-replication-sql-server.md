@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807457"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
@@ -85,14 +85,13 @@ ms.locfileid: "62807457"
   
     -   Agent de fusion (pour les abonnements de fusion)  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Écouteur de réplication (replisapi.dll : pour les abonnements de fusion synchronisés via la synchronisation web)  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Écouteur de réplication (replisapi.dll : pour les abonnements de fusion synchronisés via la synchronisation web)  
   
     -   Contrôle ActiveX SQL Merge (pour les abonnements de fusion synchronisés à l'aide du contrôle)  
   
      L'agent de distribution et le contrôle ActiveX SQL Distribution n'ont pas ce paramètre puisqu'ils ne se connectent pas au serveur de publication.  
   
-     Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. Les paramètres peuvent être définis dans les profils d'agent et à l'invite de commandes. Pour plus d'informations, consultez les pages suivantes :  
+     Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. Les paramètres peuvent être définis dans les profils d'agent et à l'invite de commandes. Pour plus d’informations, voir :  
   
     -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -159,10 +158,10 @@ ms.locfileid: "62807457"
 |--------------------|------------------------------------------------------------|  
 |Mode haute sécurité avec basculement automatique|Si le miroir n'est pas disponible, l'Agent de lecture du journal propage les commandes vers la base de données de distribution. Le principal ne peut pas basculer sur le miroir tant que ce dernier n'est pas connecté et que toutes les transactions du principal n'y figurent pas.|  
 |Mode hautes performances|Si le miroir n'est pas disponible, la base de données principale s'exécute sans filet (elle n'est pas mise en miroir). Toutefois, l'Agent de lecture du journal réplique les transactions renforcées sur le miroir. Si le service est forcé et que le serveur miroir joue le rôle de principal, l'Agent de lecture du journal travaille en fonction du miroir et commence à collecter les nouvelles transactions.<br /><br /> Sachez que la durée de latence de la réplication augmente si le miroir se trouve derrière le principal.|  
-|Mode haute sécurité sans basculement automatique|Toutes les transactions validées sont renforcées sur le disque dur du miroir. L'Agent de lecture du journal ne réplique que les transactions renforcées du miroir. Si le miroir n'est pas disponible, le principal empêche toute autre activité dans la base de données. L'Agent de lecture du journal n'a plus aucune transaction à répliquer.|  
+|Mode Haute sécurité sans basculement automatique|Toutes les transactions validées sont renforcées sur le disque dur du miroir. L'Agent de lecture du journal ne réplique que les transactions renforcées du miroir. Si le miroir n'est pas disponible, le principal empêche toute autre activité dans la base de données. L'Agent de lecture du journal n'a plus aucune transaction à répliquer.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)   
- [&#40;de la copie des journaux de réplication et des SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

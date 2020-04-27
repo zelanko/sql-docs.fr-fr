@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770385"
 ---
 # <a name="ole-db-command-transformation"></a>transformation de commande OLE DB
@@ -50,7 +50,7 @@ ms.locfileid: "62770385"
  Vous pouvez configurer la transformation à l'aide du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou du modèle objet. Pour plus d’informations sur la configuration de la transformation à l’aide du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , consultez  [Configurer la transformation de commande OLE DB](../../configure-the-ole-db-command-transformation.md). Pour plus d'informations sur la configuration par programmation de cette transformation, consultez le Guide du développeur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Flux de données](../data-flow.md)   
+ [Transmission de données](../data-flow.md)   
  [Transformations Integration Services](integration-services-transformations.md)  
   
   

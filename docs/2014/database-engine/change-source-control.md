@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812743"
 ---
 # <a name="change-source-control"></a>Modifier le contrôle de code source
@@ -31,7 +31,7 @@ ms.locfileid: "62812743"
 >  Cette boîte de dialogue est également disponible en cliquant avec le bouton droit sur l'élément dans l'Explorateur de solutions.  
   
 ## <a name="options"></a>Options  
- **Lier**  
+ **Établis**  
  Associe les éléments sélectionnés à un emplacement de serveur de contrôle de code source spécifié. Par exemple, vous pouvez utiliser cette option pour effectuer une liaison vers le dernier dossier et la dernière base de données connus du serveur de contrôle de code source. Si aucun dossier ou base de données récent n'est trouvé, vous devez en spécifier un ou une autre.  
   
  **Parcourir**  
@@ -43,7 +43,7 @@ ms.locfileid: "62812743"
  **Connexion**  
  Crée une connexion entre les éléments sélectionnés et le serveur de contrôle de code source.  
   
- **Correctement**  
+ **Connecté**  
  Affiche l'état de connexion d'une solution ou d'un projet sélectionné.  
   
  **Connect**  
@@ -55,7 +55,7 @@ ms.locfileid: "62812743"
  **Fournisseur**  
  Affiche le nom de votre plug-in de contrôle de code source.  
   
- **Actualiser**  
+ **Actualisation**  
  Actualise les informations de connexion relatives à tous les projets répertoriés dans cette boîte de dialogue.  
   
  **Liaison du serveur**  
@@ -80,7 +80,7 @@ ms.locfileid: "62812743"
 |Unknown|L'état de l'élément sous contrôle de code source n'a pas encore été déterminé.|  
 |Pas contrôlé|L'élément n'est pas placé sous contrôle de code source.|  
   
- **Annuler la liaison**  
+ **Dissoci**  
  Affiche la boîte de dialogue **Contrôle de code source** pour vous permettre de supprimer des éléments du contrôle de code source et de les dissocier de façon permanente de leurs dossiers actuels.  
   
 ## <a name="see-also"></a>Voir aussi  

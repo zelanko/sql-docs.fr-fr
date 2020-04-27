@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807305"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62807305"
   
 -   [Catalogues de texte intégral](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Envoi de journaux](database-mirroring-and-log-shipping-sql-server.md)  
+-   [Copie des journaux de transaction](database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Réplication](database-mirroring-and-replication-sql-server.md)  
   

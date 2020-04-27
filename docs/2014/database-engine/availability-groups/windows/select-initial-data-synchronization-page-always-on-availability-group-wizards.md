@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789467"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Page Sélectionner la synchronisation de données initiale (assistants de groupe de disponibilité AlwaysOn)
@@ -28,7 +28,7 @@ ms.locfileid: "62789467"
   
 
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Interrompez les tâches de sauvegarde de fichier journal pour les bases de données principales durant la synchronisation de données initiale.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "62789467"
   
      Si vos opérations de sauvegarde et de restauration nécessitent une sécurisation élevée, nous vous recommandons de sélectionner l'option **Joindre uniquement** ou **Ignorer la synchronisation de données initiale** .  
   
-##  <a name="Full"></a>Sauvegarde  
+##  <a name="full"></a><a name="Full"></a>Sauvegarde  
  Pour chaque base de données primaire, l'option **Complet** exécute plusieurs opérations dans un flux de travail : création d'une sauvegarde complète et une sauvegarde du journal de la base de données primaire, création des bases de données secondaires correspondantes en restaurant ces sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire et jointure de chaque base de données secondaire à un groupe de disponibilité.  
   
  Sélectionnez cette option uniquement si votre environnement satisfait aux conditions préalables requises qui suivent pour utiliser la synchronisation de données initiale complète, et si vous souhaitez que l'Assistant démarre automatiquement la synchronisation des données.  
   
- **Conditions préalables à l’utilisation de la synchronisation de données initiale complète**  
+ **Conditions préalables requises pour utiliser la synchronisation de données initiale complète**  
   
 -   Tous les chemins d'accès des fichiers de base de données doivent être identiques sur chaque instance de serveur qui héberge un réplica pour le groupe de disponibilité.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "62789467"
     > [!IMPORTANT]  
     >  Les sauvegardes de journaux feront partie de votre chaîne de sauvegarde du journal. Stockez les fichiers de sauvegarde des journaux de manière appropriée.  
   
- **Si les conditions préalables ne sont pas remplies**  
+ **Si les conditions préalables requises ne sont pas satisfaites**  
   
  L'Assistant ne peut pas créer les bases de données secondaires pour ce groupe de disponibilité. Pour plus d'informations sur la façon de les préparer, consultez [Pour préparer manuellement une base de données secondaire](#PrepareSecondaryDbs), plus loin dans cette rubrique.  
   
- **Si les conditions préalables sont remplies**  
+ **Si les conditions préalables requises sont remplies**  
   
  Si toutes les conditions préalables requises sont remplies et si vous souhaitez que l'Assistant effectue la synchronisation de données initiale complète, sélectionnez l'option **Complet** et spécifiez un partage réseau. L'Assitant crée alors la base de données complète et les sauvegardes des fichiers journaux de chaque base de données sélectionnée et place ces sauvegardes sur le partage réseau que vous spécifiez. Ensuite, sur chaque instance de serveur qui héberge l'un des nouveaux réplicas secondaires, l'Assistant crée les bases de données secondaires en restaurant les sauvegardes à l'aide de RESTORE WITH NORECOVERY. Après la création de chacune des bases de données secondaires, l'Assistant joint la nouvelle base de données secondaire au groupe de disponibilité. Dès qu'une base de données secondaire est jointe, les synchronisations de données démarrent sur cette base de données.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62789467"
 > [!IMPORTANT]  
 >  Les sauvegardes de journaux feront partie de votre chaîne de sauvegarde du journal. Stockez les fichiers de sauvegarde de manière appropriée.  
   
-##  <a name="Joinonly"></a>Joindre uniquement  
+##  <a name="join-only"></a><a name="Joinonly"></a>Joindre uniquement  
  Sélectionnez cette option uniquement s'il existe déjà des nouvelles bases de données secondaires sur chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité. Pour plus d'informations sur la préparation des bases de données secondaires, consultez [Pour préparer manuellement une base de données secondaire](#PrepareSecondaryDbs), plus loin dans cette section.  
   
  Si vous sélectionnez **Joindre uniquement**, l'assistant essaie de joindre chaque base de données secondaire existante au groupe de disponibilité.  
@@ -82,12 +82,12 @@ ms.locfileid: "62789467"
 > [!NOTE]  
 >  Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a>Pour préparer manuellement les bases de données secondaires  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a>Pour préparer manuellement les bases de données secondaires  
  Pour préparer les bases de données secondaires indépendamment de l'Assistant [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilisé, vous pouvez opter pour l'une des méthodes suivantes :  
   
 -   Restaurez manuellement une sauvegarde récente de la base de données primaire à l'aide de RESTORE WITH NORECOVERY, puis restaurez chaque sauvegarde de journal suivante à l'aide de RESTORE WITH NORECOVERY. Si les bases de données primaire et secondaire ont des chemins d'accès différents, vous devez utiliser l'option WITH MOVE. Effectuez cette séquence de restauration sur chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité.  Vous pouvez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell pour exécuter ces opérations de sauvegarde et de restauration.  
   
-     **Pour plus d'informations :**  
+     **Pour plus d’informations :**  
   
      [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62789467"
     > [!NOTE]  
     >  Après avoir créé toutes les bases de données secondaires pour le groupe de disponibilité, si vous souhaitez effectuer des sauvegardes sur des réplicas secondaires, vous devez reconfigurer la préférence de sauvegarde automatisée du groupe de disponibilité.  
   
-     **Pour plus d'informations :**  
+     **Pour plus d’informations :**  
   
      [Conditions préalables à la migration de la copie des journaux de session vers groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62789467"
   
  Éventuellement, vous pouvez préparer toutes les bases de données secondaires avant d'exécuter l'Assistant. Puis, dans la page **Sélectionner la synchronisation de données initiale** de l'Assistant, sélectionnez **Joindre uniquement** pour joindre automatiquement vos nouvelles bases de données secondaires au groupe de disponibilité.  
   
-##  <a name="LaunchWiz"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tâches associées  
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

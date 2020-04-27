@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778821"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propriétés du catalogue de texte intégral (page Planification du remplissage)
@@ -37,7 +37,7 @@ ms.locfileid: "62778821"
  **Description**  
  Description de l'opération planifiée.  
   
- **Nouveau**  
+ **Nouvelle**  
  Cliquez sur ce bouton pour créer une nouvelle planification d'indexation. Ce bouton permet d'afficher la boîte de dialogue **Nouvelle planification de catalogue d'indexation de texte intégral** .  
   
  **Modifier**  

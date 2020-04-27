@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770340"
 ---
 # <a name="pivot-transformation"></a>transformation de tableau croisé dynamique
@@ -45,7 +45,7 @@ ms.locfileid: "62770340"
   
  Les données d'entrée peuvent contenir des lignes en double, ce qui entraîne l'échec de la transformation de tableau croisé dynamique. L'expression « lignes en double » désigne des lignes qui ont les mêmes valeurs dans les colonnes clés d'ensemble et dans les colonnes tableau croisé dynamique. Pour éviter cet échec, vous pouvez soit configurer la transformation de manière à rediriger les lignes d'erreur vers une sortie d'erreur, soit préagréger les valeurs de manière à ce qu'il n'y ait pas de lignes en double.  
   
-##  <a name="options"></a> Options de la boîte de dialogue Tableau croisé dynamique  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> Options de la boîte de dialogue Tableau croisé dynamique  
  Configurez l’opération d’ajout de tableau croisé dynamique en définissant les options de la boîte de dialogue **Tableau croisé dynamique** . Pour ouvrir la boîte de dialogue **Tableau croisé dynamique** , ajoutez la transformation de tableau croisé dynamique au package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], puis cliquez avec le bouton droit sur le composant et cliquez sur **Modifier**.  
   
  La liste suivante décrit les options de la boîte de dialogue **Tableau croisé dynamique** .  

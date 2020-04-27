@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815286"
 ---
 # <a name="availability-replica-is-not-joined"></a>Le réplica de disponibilité n'est pas joint
@@ -30,7 +30,7 @@ ms.locfileid: "62815286"
 |**Nom de la stratégie**|État de jointure du réplica de disponibilité|  
 |**Problème**|Le réplica de disponibilité n'est pas joint.|  
 |**Catégorie**|**Avertissement**|  
-|**Facette**|Réplica de disponibilité|  
+|**Articulaire**|Réplica de disponibilité|  
   
 ## <a name="description"></a>Description  
  Cette stratégie vérifie l'état de jointure du réplica de disponibilité. La stratégie se trouve dans un état défectueux lorsque le réplica de disponibilité est ajouté au groupe de disponibilité, mais n'est pas joint correctement. Autrement, l'état de la stratégie est sain.  
@@ -46,6 +46,6 @@ ms.locfileid: "62815286"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

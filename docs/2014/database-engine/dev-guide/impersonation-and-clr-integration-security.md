@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781127"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Emprunt d'identité et sécurité de l'intégration du CLR
@@ -39,7 +39,7 @@ ms.locfileid: "62781127"
   
  Lorsque le code s'exécute dans un contexte dont l'identité a été empruntée qui est différent de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il ne peut pas effectuer d'appels d'accès aux données in-process ; il doit annuler le contexte d'emprunt d'identité avant d'effectuer des appels d'accès aux données in-process. Lorsque l'accès aux données in-process est effectué à partir de code managé, le contexte d'exécution d'origine du point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le code managé est toujours utilisé pour l'autorisation.  
   
- Les assemblys `EXTERNAL_ACCESS` et `UNSAFE` accèdent tous deux aux ressources de système d'exploitation avec le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à moins qu'ils n'empruntent volontairement l'identité du contexte de sécurité actuel comme décrit précédemment. Pour cette raison, les auteurs des assemblys `EXTERNAL_ACCESS` nécessitent un niveau supérieur d'approbation que ceux des assemblys `SAFE`, spécifié par l'autorisation au niveau de la connexion `EXTERNAL ACCESS`. L'autorisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service `EXTERNAL ACCESS`.  
+ Les assemblys `EXTERNAL_ACCESS` et `UNSAFE` accèdent tous deux aux ressources de système d'exploitation avec le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à moins qu'ils n'empruntent volontairement l'identité du contexte de sécurité actuel comme décrit précédemment. Pour cette raison, les auteurs des assemblys `EXTERNAL_ACCESS` nécessitent un niveau supérieur d'approbation que ceux des assemblys `SAFE`, spécifié par l'autorisation au niveau de la connexion `EXTERNAL ACCESS`. L'autorisation `EXTERNAL ACCESS` doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

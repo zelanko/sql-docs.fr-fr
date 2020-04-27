@@ -13,20 +13,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808660"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Se connecter au serveur (page Propriétés de connexion) Reporting Services
-  Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d’dansscription de [!INCLUDE[ssRS](../includes/ssrs.md)] dans **Serveurs inscrits**. **Se connecter** et **options** s’affichent uniquement dans cette boîte de dialogue lors de la connexion. **Test** et **enregistrement** s’affichent uniquement dans cette boîte de [!INCLUDE[ssRS](../includes/ssrs.md)]dialogue lors de l’inscription.  
+  Utilisez cet onglet pour afficher ou spécifier des options lors de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] la connexion [!INCLUDE[ssRS](../includes/ssrs.md)] ou de l’inscription à des **serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Options  
  **Délai de connexion (en ms)**  
  Spécifiez le délai d'expiration imparti, en millisecondes, pour qu'une connexion soit établie.  
   
- **Toujours utiliser SSL**  
+ **Toujours utiliser le protocole SSL**  
  Se connecte au moyen de Secure Sockets Layer.  
   
  **Connexion**  
@@ -38,7 +38,7 @@ ms.locfileid: "62808660"
  **Test**  
  Quand vous inscrivez [!INCLUDE[ssRS](../includes/ssrs.md)] dans **Serveurs inscrits**, cliquez ici pour tester la connexion.  
   
- **Été**  
+ **Save**  
  Enregistre les paramètres dans **Serveurs inscrits**.  
   
 ## <a name="see-also"></a>Voir aussi  

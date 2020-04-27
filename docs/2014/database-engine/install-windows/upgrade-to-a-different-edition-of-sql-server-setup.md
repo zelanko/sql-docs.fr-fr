@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774573"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2014 (programme d'installation)
@@ -26,12 +26,12 @@ ms.locfileid: "62774573"
   
 -   [Limites de capacité de calcul par édition de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **dans un environnement en cluster : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** L’exécution de la mise à niveau de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition sur l’un des nœuds du cluster est suffisante. Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "62774573"
   
 ## <a name="procedure"></a>Procédure  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>Pour effectuer une mise à niveau vers une autre édition de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>Pour effectuer une mise à niveau vers une autre édition de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au niveau du dossier racine, double-cliquez sur setup.exe ou lancez le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir des Outils de configuration. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   

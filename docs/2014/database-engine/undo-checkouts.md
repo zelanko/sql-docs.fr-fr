@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773395"
 ---
 # <a name="undo-checkouts"></a>Annuler des extractions
@@ -54,7 +54,7 @@ ms.locfileid: "62773395"
      **Arborescence**  
      Permet d'afficher la hiérarchie des dossiers et des éléments pour les éléments dont vous annulez l'extraction.  
   
-     **Annuler l'extraction**  
+     **Annuler l’extraction**  
      Permet d'annuler l'extraction, en supprimant toutes les modifications apportées au fichier extrait.  
   
 ## <a name="see-also"></a>Voir aussi  

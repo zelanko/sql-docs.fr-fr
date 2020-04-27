@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775342"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installer des mises à jour de maintenance de SQL Server 2014
@@ -26,7 +26,7 @@ ms.locfileid: "62775342"
   
  Il est recommandé que les clients évaluent et installent les dernières mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en temps voulu pour s'assurer que les systèmes sont à jour avec des mises à jour de sécurité les plus récentes.  
   
-## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-during-a-new-installation"></a>Installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pendant une nouvelle installation  
+## <a name="installing-updates-for-sscurrent-during-a-new-installation"></a>Installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pendant une nouvelle installation  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre les dernières mises à jour du produit avec l'installation principale, de sorte que le produit principal et les mises à jour applicables sont installés en même temps. La mise à jour du produit peut rechercher les mises à jour applicables à partir de :  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
@@ -39,7 +39,7 @@ ms.locfileid: "62775342"
   
  Une fois que le programme d'installation a détecté les versions les plus récentes des mises à jour applicables, il les télécharge et les intègre dans le processus d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours. La fonctionnalité de mise à jour du produit peut inclure une mise à jour, un Service Pack, ou un Service Pack et la mise à jour cumulative. La fonctionnalité de mise à jour du produit est une extension de la [fonctionnalité Slipstream](https://go.microsoft.com/fwlink/?LinkId=219945) qui était disponible dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
-## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-after-it-has-already-been-installed"></a>Installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] après qu'il a déjà été installé  
+## <a name="installing-updates-for-sscurrent-after-it-has-already-been-installed"></a>Installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] après qu'il a déjà été installé  
  Sur une instance installée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], nous vous recommandons d’appliquer toutes les mises à jour disponibles : mises en production générales de distribution (GDR-sécurité/mises à jour critiques), service packs (SP), ainsi que la dernière mise à jour cumulative disponible (Cu).  
   
  Selon le type de version de maintenance, SQL Server mises à jour sont disponibles via Microsoft Update (MU), le centre de téléchargement Microsoft et/ou le serveur de correctifs du support technique. Les mises à jour critiques et de sécurité pour SQL Server sont fournies automatiquement par Microsoft Update (pour pouvoir consulter ces mises à jour, vous devez vous abonner à MU via Windows Update dans le panneau de configuration). Les service packs sont disponibles sur MU comme téléchargements facultatifs/importants, ainsi que dans le centre de téléchargement. Les mises à jour cumulatives sont disponibles sur le serveur de téléchargement de correctifs Microsoft fourni dans les Articles de la base de connaissances CU.  

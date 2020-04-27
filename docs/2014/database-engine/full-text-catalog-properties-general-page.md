@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779662"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
@@ -32,19 +32,19 @@ ms.locfileid: "62779662"
  Indique si le catalogue est le catalogue par défaut de la base de données.  
   
  **État du remplissage**  
- Indique l'état du catalogue. Les valeurs possibles sont :  
+ Indique l'état du catalogue. Les valeurs possibles sont les suivantes :  
   
 -   **Idle**  
   
 -   **Analyse en cours**  
   
--   **Suspendu**  
+-   **En pause**  
   
 -   **Throttled**  
   
--   **Récupération**  
+-   **la récupération**  
   
--   **Correct**  
+-   **Arrêt**  
   
 -   **Remplissage incrémentiel en cours**  
   

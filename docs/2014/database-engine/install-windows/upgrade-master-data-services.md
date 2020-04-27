@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774653"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
   Il existe quatre scénarios de mise à niveau vers Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Choisissez le scénario qui convient à votre situation.  
   
--   [Mettre à niveau sans Moteur de base de données mise à niveau](#noengine)  
+-   [Mise à niveau sans mise à niveau du moteur de base de données](#noengine)  
   
 -   [Mettre à niveau avec Moteur de base de données mise à niveau](#engine)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62774653"
 > -   Les packages de déploiement de modèle peuvent être utilisés uniquement dans l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour les créer. Vous ne pouvez pas déployer des packages de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] déploiement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de modèle créés dans dans.  
 > -   Vous pouvez continuer à utiliser la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 du complément Master Data Services pour Excel après la mise à niveau de Master Data Services et de Data Quality Services vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Toutefois, aucune version antérieure du complément Master Data Services pour Excel ne fonctionnera après la mise à niveau vers SQL Server 2014 CTP2. Vous pouvez télécharger la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 du complément Master Data Services pour Excel [ici](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="noengine"></a>Mettre à niveau sans Moteur de base de données mise à niveau  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>Mettre à niveau sans Moteur de base de données mise à niveau  
  Ce scénario peut être considéré comme une installation côte à côte [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , car et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sont installés en parallèle, sur le même ordinateur ou sur des ordinateurs distincts.  
   
  Dans ce scénario, vous continuez à utiliser [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] pour héberger la base de données MDS. Toutefois, vous devez mettre à niveau le schéma de la base de données MDS, puis créer une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour accéder à la base de données MDS. La base de données MDS ne sera plus accessible par l'application Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "62774653"
   
     4.  Dans la page **Sélection des fonctionnalités** , sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** , puis toutes les autres fonctionnalités à installer.  
   
-    5.  Terminez l'Assistant.  
+    5.  Effectuez toutes les étapes de l'Assistant.  
   
 2.  Lorsque l'installation est terminée, mettez à niveau le schéma de base de données MDS.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "62774653"
   
     3.  Dans le volet droit, dans la liste **Site Web** , sélectionnez l'une des options suivantes :  
   
-        -   **Site Web par défaut**, puis cliquez sur **créer une application**.  
+        -   **Site Web par défaut**, puis cliquez sur **Créer une application**.  
   
-        -   **Créer un site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
+        -   **Créer un nouveau site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
   
         > [!IMPORTANT]  
         >  Votre application Web MDS existante issue d'une version précédente de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) est disponible à la sélection dans la version SQL Server 2014 du Gestionnaire de configuration Master Data Services. Vous ne devez pas sélectionner l'application Web existante, mais plutôt créer une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour MDS. Sinon, vous allez recevoir une erreur lorsque vous tenterez d'associer l'application Web à la base de données MDS mise à niveau, indiquant que la page demandée n'est pas accessible, car les données de configuration de la page sont erronées.  
@@ -100,12 +100,12 @@ ms.locfileid: "62774653"
   
     3.  Cliquez sur **Appliquer**.  
   
-##  <a name="engine"></a>Mettre à niveau avec Moteur de base de données mise à niveau  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Mise à niveau avec mise à niveau du moteur de base de données  
  Dans ce scénario, vous allez mettre à niveau le moteur de base de données et l'application [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou SQL Server 2012 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Pour effectuer cette tâche, procédez comme suit.  
   
-1.  **Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] uniquement**: ouvrez **le panneau de configuration** > **programmes et fonctionnalités** et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]désinstallez Microsoft.  
+1.  **Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] uniquement** : ouvrez **Panneau de configuration** > **Programmes et fonctionnalités** et désinstallez Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Mettez à niveau le moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62774653"
   
     3.  Dans le volet droit, cliquez sur **mettre à niveau à partir de SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 ou SQL Server 2012**.  
   
-    4.  Terminez l'Assistant.  
+    4.  Effectuez toutes les étapes de l'Assistant.  
   
 3.  **Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] uniquement**: lorsque la mise à niveau est terminée, **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** ajoutez la fonctionnalité.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62774653"
   
     5.  Dans la page **sélection** de fonctionnalités, sous **fonctionnalités partagées**, sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
   
-    6.  Terminez l'Assistant.  
+    6.  Effectuez toutes les étapes de l'Assistant.  
   
 4.  Mettez à niveau le schéma de la base de données MDS.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "62774653"
   
     3.  Dans le volet droit, dans la liste **Site Web** , sélectionnez l'une des options suivantes :  
   
-        -   **Site Web par défaut**, puis cliquez sur **créer une application**.  
+        -   **Site Web par défaut**, puis cliquez sur **Créer une application**.  
   
-        -   **Créer un site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
+        -   **Créer un nouveau site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
   
         > [!IMPORTANT]  
         >  Votre application Web MDS existante issue d'une version précédente de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) est disponible à la sélection dans la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du Gestionnaire de configuration Master Data Services. Vous ne devez pas sélectionner l'application Web existante, mais plutôt créer une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour MDS. Sinon, vous allez recevoir une erreur lorsque vous tenterez d'associer l'application Web à la base de données MDS mise à niveau, indiquant que la page demandée n'est pas accessible, car les données de configuration de la page sont erronées.  
@@ -171,7 +171,7 @@ ms.locfileid: "62774653"
   
     3.  Cliquez sur **Appliquer**.  
   
-##  <a name="twocomputer"></a>Mise à niveau dans un scénario à deux ordinateurs  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Effectuer une mise à niveau dans un scénario basé sur deux ordinateurs  
  Ce scénario implique la mise à niveau d'un système dans lequel SQL Server est installé sur deux ordinateurs : l'un étant doté de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et l'autre étant doté de SQL Server 2008 R2 ou SQL Server 2012.  
   
  Si [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] est installé, continuez à utiliser [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] respectivement pour héberger votre base de données MDS sur un seul ordinateur. Toutefois, vous devez mettre à niveau le schéma de la base de données MDS, puis utiliser l'application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour accéder à la base de données MDS. La base de données MDS ne sera plus accessible par l'application Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -194,7 +194,7 @@ ms.locfileid: "62774653"
   
     4.  Dans la page **Sélection des fonctionnalités** , sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** , puis toutes les autres fonctionnalités à installer.  
   
-    5.  Terminez l'Assistant.  
+    5.  Effectuez toutes les étapes de l'Assistant.  
   
 2.  Lorsque l'installation est terminée, mettez à niveau le schéma de base de données MDS.  
   
@@ -217,9 +217,9 @@ ms.locfileid: "62774653"
   
     3.  Dans le volet droit, dans la liste **Site Web** , sélectionnez l'une des options suivantes :  
   
-        -   **Site Web par défaut**, puis cliquez sur **créer une application**.  
+        -   **Site Web par défaut**, puis cliquez sur **Créer une application**.  
   
-        -   **Créer un site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
+        -   **Créer un nouveau site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
   
         > [!IMPORTANT]  
         >  Votre application Web MDS existante issue d'une version précédente de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) est disponible à la sélection dans la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du Gestionnaire de configuration Master Data Services. Vous ne devez pas sélectionner l'application Web existante, mais plutôt créer une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour MDS. Sinon, vous allez recevoir une erreur lorsque vous tenterez d'associer l'application Web à la base de données MDS mise à niveau, indiquant que la page demandée n'est pas accessible, car les données de configuration de la page sont erronées.  
@@ -234,7 +234,7 @@ ms.locfileid: "62774653"
   
     3.  Cliquez sur **Appliquer**.  
   
-##  <a name="restore"></a>Mettre à niveau avec la restauration d’une base de données à partir d’une sauvegarde  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Effectuer une mise à niveau par restauration d'une base de données à partir d'une sauvegarde  
  Dans ce scénario, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé avec SQL Server 2008 R2 ou SQL Server 2012 sur le même ordinateur ou sur deux ordinateurs différents. De même, une base de données a été sauvegardée sur une version antérieure à la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2, avant la mise à niveau, et la base de données doit être restaurée à partir de cette sauvegarde.  
   
 -   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], par défaut, les fichiers sont installés à l’emplacement suivant : *lecteur*:\Program Files\Microsoft SQL Server\120\Master Data Services.  
@@ -255,7 +255,7 @@ ms.locfileid: "62774653"
   
     4.  Dans la page **Sélection des fonctionnalités** , sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** , puis toutes les autres fonctionnalités à installer.  
   
-    5.  Terminez l'Assistant.  
+    5.  Effectuez toutes les étapes de l'Assistant.  
   
 2.  Restaurez la base de données qui a été sauvegardée.  
   
@@ -280,9 +280,9 @@ ms.locfileid: "62774653"
   
     3.  Dans le volet droit, dans la liste **Site Web** , sélectionnez l'une des options suivantes :  
   
-        -   **Site Web par défaut**, puis cliquez sur **créer une application**.  
+        -   **Site Web par défaut**, puis cliquez sur **Créer une application**.  
   
-        -   **Créer un site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
+        -   **Créer un nouveau site**. Lorsque vous créez un site web, une application web est automatiquement créée.  
   
         > [!IMPORTANT]  
         >  Votre application Web MDS existante issue d'une version précédente de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) est disponible à la sélection dans la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du Gestionnaire de configuration Master Data Services. Vous ne devez pas sélectionner l'application Web existante, mais plutôt créer une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour MDS. Sinon, vous allez recevoir une erreur lorsque vous tenterez d'associer l'application Web à la base de données MDS mise à niveau, indiquant que la page demandée n'est pas accessible, car les données de configuration de la page sont erronées.  
@@ -297,7 +297,7 @@ ms.locfileid: "62774653"
   
     3.  Cliquez sur **Appliquer**.  
   
-## <a name="troubleshooting"></a>Dépannage  
+## <a name="troubleshooting"></a>Résolution des problèmes  
  **Problème :** Lorsque vous ouvrez l' [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] application [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web ou, le message d’erreur « la version du client n’est pas compatible avec la version de la base de données » s’affiche.  
   
  **Solution :** Ce problème se produit lorsqu' [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] une [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] application Web ou Data Manager maître tente d’accéder à une base de données qui a été [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mise à niveau vers Master Data Services. Vous devez utiliser une application Web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à la place.  

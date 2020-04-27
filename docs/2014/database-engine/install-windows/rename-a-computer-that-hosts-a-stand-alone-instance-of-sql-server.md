@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775006"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renommer un ordinateur qui héberge une instance autonome de SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "62775006"
   
  Vous pouvez vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du nouveau nom d'ordinateur après avoir redémarré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous assurer que @@SERVERNAME retourne le nom mis à jour de l’instance de serveur local, vous devez exécuter manuellement la procédure suivante qui s’applique à votre scénario. La procédure à utiliser varie selon que vous mettez à jour un ordinateur qui héberge une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Pour renommer un ordinateur qui héberge une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>Pour renommer un ordinateur qui héberge une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Dans le cas d'un ordinateur renommé qui héberge une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez les procédures ci-dessous :  
   

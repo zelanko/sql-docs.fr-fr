@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807423"
 ---
 # <a name="cross-container-transactions"></a>Transactions entre conteneurs
@@ -24,7 +24,7 @@ ms.locfileid: "62807423"
   
  Toute requête interprétée référençant des tables mémoire optimisées est considérée comme une partie d'une transaction entre conteneurs, qu'elle soit exécutée à partir d'une transaction explicite ou implicite, ou en mode de validation automatique.  
   
-##  <a name="isolation"></a>Isolement des opérations individuelles  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>Isolement des opérations individuelles  
  Chaque transaction [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est caractérisée par un niveau d'isolation. Le niveau d'isolation par défaut est READ COMMITTED. Pour utiliser un niveau d’isolation différent, vous pouvez définir le niveau d’isolation à l’aide de l' [instruction Set transaction isolation level &#40;&#41;Transact-SQL ](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Il est souvent nécessaire d'effectuer des opérations sur les tables mémoire optimisées avec un niveau d'isolation différent des opérations sur les tables sur disque. Dans une transaction, il est possible de définir un niveau d'isolation différent pour un ensemble d'instructions ou pour une opération de lecture individuelle.  
@@ -99,7 +99,7 @@ commit
  La validation et la stabilité de la lecture de données sont garanties jusqu'à l'heure de fin logique de la transaction.  
   
  SERIALIZABLE  
- Toutes les garanties de la lecture renouvelable plus la prévention fantôme et la cohérence transactionnelle en ce qui concerne toutes les opérations de lecture sérialisables effectuées par T. la prévention fantôme signifie que l’opération d’analyse ne peut retourner que des lignes supplémentaires écrites par T, mais pas lignes écrites par d’autres transactions.  
+ Toutes les garanties de la lecture renouvelable plus la prévention fantôme et la cohérence transactionnelle en ce qui concerne toutes les opérations de lecture sérialisables effectuées par T. la prévention fantôme signifie que l’opération d’analyse ne peut retourner que des lignes supplémentaires écrites par T, mais aucune ligne écrite par d’autres transactions.  
   
  Prenons l'exemple de transaction suivante :  
   

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774157"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Nouvelle inscription de serveur ou Modifier les propriétés d'inscription du serveur (onglet Général) (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774157"
   
 ## <a name="options"></a>Options  
  **Type de serveur**  
- Quand un serveur est inscrit dans Serveurs inscrits, la zone **Type de serveur** est en lecture seule et concorde avec le type de serveur affiché dans Serveurs inscrits. Pour inscrire un autre type de serveur, cliquez sur **Moteur de base de données**, **Serveur d'analyse**, **Reporting Services**, **SQL Server Compact** **Edition**ou **Integration Services** dans la barre d'outils **Serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
+ Quand un serveur est inscrit dans Serveurs inscrits, la zone **Type de serveur** est en lecture seule et concorde avec le type de serveur affiché dans Serveurs inscrits. Pour inscrire un autre type de serveur, cliquez sur **Moteur de base de données**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** ou **Integration Services** dans la barre d'outils **Serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
   
  **Nom du serveur**  
  Sélectionnez le serveur auquel vous souhaitez vous connecter. Le dernier serveur avec lequel une connexion a été établie apparaît par défaut.  
@@ -52,7 +52,7 @@ ms.locfileid: "62774157"
  **Test**  
  Cliquez sur cette option pour tester la connexion au serveur sélectionné dans la zone **Nom du serveur**.  
   
- **Été**  
+ **Save**  
  Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits.  
   
   

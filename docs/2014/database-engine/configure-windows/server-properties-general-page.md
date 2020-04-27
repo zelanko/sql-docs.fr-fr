@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809342"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Propriétés du serveur (page Général) - SQL Server Management Studio
-  Utilisez cette page pour consulter des informations en lecture seule sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] votre installation.  
+  Utilisez cette page pour consulter des informations en lecture seule sur votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Grille des propriétés  
  Consultez les propriétés du serveur sélectionné, comme le nom du serveur, le système d'exploitation du serveur ou encore le nombre de processeurs.  
@@ -57,10 +57,10 @@ ms.locfileid: "62809342"
  **Classement du serveur**  
  Affiche le classement pris en charge par le serveur. Un classement spécifie la page de codes et l'ordre de tri à utiliser pour les données Unicode et non-Unicode.  
   
- **Est en cluster**  
+ **Is Clustered**  
  Affiche **True** si l’instance de serveur est configurée dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou **False** si l’instance de serveur n’est pas en cluster.  
   
- **HADR est activé**  
+ **Is HADR Enabled**  
  Affiche **True** si la fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est activée ou **False** si la fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est désactivée. Pour plus d’informations sur l’activation ou la désactivation de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], consultez [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ## <a name="description-field"></a>Champ Description  

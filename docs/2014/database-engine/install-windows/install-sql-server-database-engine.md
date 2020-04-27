@@ -13,19 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779360"
 ---
 # <a name="about-the-sql-server-database-engine"></a>À propos du moteur de base de données SQL Server
   Le composant [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est le service de base pour le stockage, le traitement et la protection des données. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit un accès contrôlé et un traitement transactionnel rapide qui répondent aux exigences des applications les plus gourmandes en termes de données dans votre entreprise.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu’à 50 instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un seul ordinateur. Pour créer une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut, consultez [installer SQL Server 2014 à partir de l’assistant Installation &#40;&#41;d' ](install-sql-server-from-the-installation-wizard-setup.md)installation.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu’à 50 instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un seul ordinateur. Pour créer une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut, consultez [installer SQL Server 2014 à partir de l’assistant Installation &#40;&#41;d' ](install-sql-server-from-the-installation-wizard-setup.md)installation.  
   
- **Important** Pour les installations locales, vous devez exécuter le programme d’installation en tant qu’administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
+ **Important** Pour des installations locales, vous devez exécuter le programme d’installation en tant qu’administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
   
  Les fonctionnalités suivantes sont installées lorsque vous sélectionnez ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données** dans la page composants à installer de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Assistant Installation de :  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62779360"
   
 -   Modèles de programmation  
   
--   Outils de gestion  
+-   Outils d'administration  
   
 -   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   

@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779259"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilité descendante de la recherche en texte intégral
@@ -29,7 +29,7 @@ ms.locfileid: "62779259"
 |[Fonctionnalités de la recherche en texte intégral déconseillées dans SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Fonctionnalités de la recherche en texte intégral déconseillées dans cette version.|  
 |[Fonctionnalités de la recherche en texte intégral abandonnées dans SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Fonctionnalités de la recherche en texte intégral supprimées dans cette version.|  
 |[Modifications importantes apportées à la recherche en texte intégral](breaking-changes-to-full-text-search.md)|Changements de la recherche en texte intégral qui pourraient nécessiter des modifications dans les applications.|  
-|[Changements de comportement de la recherche en texte intégral](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Autres changements de comportement de la recherche en texte intégral.|  
+|[Changements de comportement pour la recherche en texte intégral](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Autres changements de comportement de la recherche en texte intégral.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante du moteur de base de données SQL Server](sql-server-database-engine-backward-compatibility.md)  

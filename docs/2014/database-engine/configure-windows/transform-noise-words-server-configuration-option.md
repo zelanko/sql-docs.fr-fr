@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808690"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (option de configuration de serveur)
@@ -56,7 +56,7 @@ ms.locfileid: "62808690"
     |"`black`" AND NOT "`the`"|Accès à la ligne portant l'ID 1|  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant affecte la valeur `transform noise words` à `1`.  
+ L'exemple suivant affecte la valeur `1` à `transform noise words`.  
   
 ```  
 sp_configure 'show advanced options', 1;  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815764"
 ---
 # <a name="availability-database-is-suspended"></a>La base de données de disponibilité est suspendue
@@ -30,7 +30,7 @@ ms.locfileid: "62815764"
 |**Nom de la stratégie**|État de suspension de la base de données de disponibilité|  
 |**Problème**|La base de données de disponibilité est suspendue.|  
 |**Catégorie**|**Avertissement**|  
-|**Facette**|Base de données de disponibilité|  
+|**Articulaire**|Base de données de disponibilité|  
   
 ## <a name="description"></a>Description  
  Cette stratégie vérifie l'état du déplacement des données de la base de données secondaire (également appelée « réplica de base de données secondaire »). La stratégie se trouve dans un état non sain lorsque le déplacement des données est suspendu. Autrement, l'état de la stratégie est sain.  
@@ -50,6 +50,6 @@ ms.locfileid: "62815764"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

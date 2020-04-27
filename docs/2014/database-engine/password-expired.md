@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774742"
 ---
 # <a name="password-expired"></a>Mot de passe expiré
@@ -38,6 +38,6 @@ ms.locfileid: "62774742"
  [Mots de passe forts](../relational-databases/security/strong-passwords.md)   
  [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md)   
  [Modifier le mode d’authentification du serveur](configure-windows/change-server-authentication-mode.md)   
- [Modifiez le mot de passe des comptes utilisés par SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [Modifier le mot de passe des comptes utilisés par SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

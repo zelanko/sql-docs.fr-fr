@@ -26,28 +26,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774547"
 ---
 # <a name="about-log-shipping-sql-server"></a>À propos de la copie des journaux de transaction (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La copie des journaux de transaction vous permet d’envoyer automatiquement des sauvegardes du journal des transactions à partir d’une *base de données primaire* sur une instance de *serveur principal* vers une ou plusieurs *bases de données secondaires* sur des instances de *serveur secondaires* distinctes. Les sauvegardes du journal des transactions sont appliquées individuellement à chacune des bases de données secondaires. Une troisième instance de serveur facultatif, appelée *serveur moniteur*, enregistre l'historique et l'état des opérations de sauvegarde ainsi que de restauration, puis déclenche éventuellement des alertes si ces opérations ne sont pas effectuées selon la planification établie.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'envoyer automatiquement les sauvegardes du journal des transactions à partir d'une *base de données primaire* sur une instance du *serveur principal* vers une ou plusieurs *bases de données secondaires* sur des instances distinctes du *serveur secondaire* . Les sauvegardes du journal des transactions sont appliquées individuellement à chacune des bases de données secondaires. Une troisième instance de serveur facultatif, appelée *serveur moniteur*, enregistre l'historique et l'état des opérations de sauvegarde ainsi que de restauration, puis déclenche éventuellement des alertes si ces opérations ne sont pas effectuées selon la planification établie.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Avantages](#Benefits)  
   
 -   [Termes et définitions](#TermsAndDefinitions)  
   
--   [Vue d’ensemble de l’envoi de journaux](#ComponentsAndConcepts)  
+-   [Vue d'ensemble de la copie des journaux de transaction](#ComponentsAndConcepts)  
   
 -   [Interopérabilité](#Interoperability)  
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
   
 -   Fournit une solution de récupération d'urgence pour une base de données primaire unique et une ou plusieurs bases de données secondaires, chacune sur une instance distincte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774547"
   
 -   Possibilité de spécifier un délai défini par l'utilisateur entre la sauvegarde du fichier journal de la base de données primaire par le serveur principal et la restauration (application) de la sauvegarde du fichier journal par les serveurs secondaires. Un délai plus long peut s'avérer utile en cas, par exemple, de modification accidentelle des données sur la base de données primaire. Si la modification accidentelle est remarquée rapidement, un délai peut vous permettre de récupérer à partir de la base de données secondaire les données n'ayant pas encore été modifiées, avant que la modification n'y soit reflétée.  
   
-##  <a name="TermsAndDefinitions"></a> Termes et définitions  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termes et définitions  
  serveur principal  
  Instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est votre serveur de production.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774547"
 > [!TIP]  
 >  Pour chaque alerte, vous devez spécifier un numéro d'alerte. En outre, veillez à configurer l'alerte de manière à avertir un opérateur lorsqu'une alerte est générée.  
   
-##  <a name="ComponentsAndConcepts"></a>Vue d’ensemble de l’envoi de journaux  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Vue d'ensemble de la copie des journaux de transaction  
  La copie des journaux de transaction comprend trois opérations :  
   
 1.  sauvegarde du journal des transactions au niveau de l'instance du serveur principal ;  
@@ -123,22 +123,21 @@ ms.locfileid: "62774547"
   
  Les instances des serveurs principal et secondaire envoient leur propre historique et leur propre état vers l'instance du serveur moniteur.  
   
- ![Configuration présentant les travaux de sauvegarde, de copie & de restauration](../media/ls-typical-configuration.gif "Configuration affichant les travaux de sauvegarde, de copie & de restauration")  
+ ![Configuration affichant les travaux de sauvegarde, de copie et de restauration](../media/ls-typical-configuration.gif "Configuration affichant les travaux de sauvegarde, de copie et de restauration")  
   
-##  <a name="Interoperability"></a>Interopérabilité  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interopérabilité  
  La copie des journaux de transaction peut être utilisée avec les fonctionnalités ou les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]suivants :  
   
 -   [Conditions préalables à la migration de la copie des journaux de session vers groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [Mise en miroir de bases de données et copie des journaux de &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [Mise en miroir de bases de données et copie des journaux de transaction &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
--   [&#40;de la copie des journaux de réplication et des SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
+-   [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] et la mise en miroir de bases de données s’excluent mutuellement. Une base de données configurée pour une de ces fonctionnalités ne peut pas être configurée pour l'autre.  
+>  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] et la mise en miroir de bases de données s’excluent mutuellement. Une base de données configurée pour une de ces fonctionnalités ne peut pas être configurée pour l'autre.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Mise à niveau de la copie des journaux de transaction vers SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

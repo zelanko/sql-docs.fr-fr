@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778940"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriétés d'index de recherche en texte intégral (page Général)
@@ -31,7 +31,7 @@ ms.locfileid: "62778940"
  **Sauvegarde de la base de données**  
  Affiche le nom de la base de données dans laquelle réside l'index de recherche en texte intégral.  
   
- **Table**  
+ **Table de charge de travail**  
  Affiche le nom de la table dans laquelle est défini l'index de recherche en texte intégral.  
   
  **Clé d'index de recherche en texte intégral**  
@@ -64,7 +64,7 @@ ms.locfileid: "62778940"
  **Groupe de fichiers d'un index de recherche en texte intégral**  
  Le groupe de fichiers auquel l'index de recherche en texte intégral appartient.  
   
- **Index de recherche en texte intégral (STOPLIST)**  
+ **Liste de mots vides de l’index de recherche en texte intégral**  
  La liste de mots vides actuellement associée à l'index de recherche en texte intégral. Une liste de mots vides est une liste de [mots vides](../relational-databases/search/full-text-search.md). La liste de mots vides associée à un index de recherche en texte intégral, s'applique aux requêtes de texte intégral sur cet index. Vous pouvez supprimer la liste de mots vides de l’index en sélectionnant ** \<dés>** dans la liste, ou vous pouvez sélectionner une autre liste de mots vides ;>système indique la STOPLIST du système. ** \<**  
   
  **Pour créer une liste de mots vides**  
@@ -81,7 +81,7 @@ ms.locfileid: "62778940"
   
  **Pour créer une liste de propriétés de recherche**  
   
--   [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+-   [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
  **Nombre d'éléments de la table de texte intégral**  
  Indique le nombre de lignes qui ont été correctement indexées en texte intégral.  
@@ -119,8 +119,8 @@ ms.locfileid: "62778940"
   
 |||  
 |-|-|  
-|**True**|activé|  
-|**False**|Désactivé|  
+|**:**|Activé|  
+|**Fausses**|Désactivé|  
   
  **Suivi des modifications**  
  Spécifie si le suivi des modifications de texte intégral est activé dans la table, et le cas échant, son type. Le suivi des modifications de texte intégral conserve un enregistrement des lignes qui ont été modifiées dans une table ou dans une vue indexée configurée pour l'indexation de texte intégral. Ces modifications peuvent être propagées à l'index de recherche en texte intégral.  
@@ -129,7 +129,7 @@ ms.locfileid: "62778940"
   
 |||  
 |-|-|  
-|**Préférable**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
+|**Désactivé**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
 |**Manuel**|L'index de recherche en texte intégral n'est pas mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes. Toutefois, les modifications apportées aux données sous-jacentes sont conservées et vous pouvez les propager à l'index de recherche en texte intégral soit de manière planifiée à l'aide de l'Agent SQL Server, soit de façon manuelle.|  
 |**Automatique**|L'index de recherche en texte intégral est mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes dans la table de base.|  
   

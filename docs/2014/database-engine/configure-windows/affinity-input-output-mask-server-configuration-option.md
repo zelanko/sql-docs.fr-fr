@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813677"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (option de configuration de serveur)
-  Pour exécuter des travaux multitâche, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 et Windows Server 2003 transfèrent parfois des threads de processus entre différents processeurs. Même si cela est efficace du point de vue du système d'exploitation, cette activité peut réduire les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait des charges système élevées, puisque chaque cache de processeur est rechargé par des données de façon répétée. L'affectation de processeurs à des threads spécifiques peut améliorer les performances sous ces conditions en éliminant les rechargements de processeur ; une telle association entre un thread et un processeur est qualifiée d'affinité de processeur.  
+  Pour exécuter des travaux multitâche, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 et Windows Server 2003 transfèrent parfois des threads de processus entre différents processeurs. Bien qu’efficace du point de vue du système d’exploitation, cette activité peut réduire les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des charges de système intenses, car des données sont rechargées de façon répétée dans chaque cache de processeur. L'affectation de processeurs à des threads spécifiques peut améliorer les performances sous ces conditions en éliminant les rechargements de processeur ; une telle association entre un thread et un processeur est qualifiée d'affinité de processeur.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge l’affinité du processeur par le biais de deux options de masque d’affinité : **affinity mask** (également appelé le **masque d’affinité**de l’UC) et **Affinity I/O mask**. Pour plus d’informations sur l’option **affinity mask** , consultez [affinity mask (option de configuration de serveur)](affinity-mask-server-configuration-option.md). La prise en charge de l’affinité du processeur et des e/s pour les serveurs avec des processeurs 33 à 64 requiert l’utilisation supplémentaire de l’option de [configuration de serveur masque affinity64](affinity64-mask-server-configuration-option.md) et de l' [option de configuration de serveur masque d’entrée-sortie affinity64](affinity64-input-output-mask-server-configuration-option.md) , respectivement.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’affinité du processeur au moyen de deux options de masque d’affinité : **affinity mask** (également appelé **CPU affinity mask**) et **affinity I/O mask**. Pour plus d’informations sur l’option **affinity mask** , consultez [affinity mask (option de configuration de serveur)](affinity-mask-server-configuration-option.md). La prise en charge de l’affinité du processeur et d’E/S pour les serveurs dotés de 33 à 64 processeurs nécessite l’utilisation supplémentaire de [l’option de configuration de serveur affinity64 mask](affinity64-mask-server-configuration-option.md) et de [l’option de configuration du serveur affinity64 Input-Output mask](affinity64-input-output-mask-server-configuration-option.md) , respectivement.  
   
 > [!NOTE]  
 >  La prise en charge de l'affinité pour les serveurs dotés de 33 à 64 processeurs est uniquement disponible sur les systèmes d'exploitation 64 bits.  
