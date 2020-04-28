@@ -1,5 +1,5 @@
 ---
-title: Métadonnées du catalogue (fr) Microsoft Docs
+title: Métadonnées de catalogue | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ebf39ceb63a814b90bc5e6f0e2ebddeec401b126
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301840"
 ---
 # <a name="metadata---catalog"></a>Métadonnées - Catalogue
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Ce sujet décrit les métadonnées de colonne retournées par **SQLColumns** et **SQLProcedureColumns**, et les métadonnées de type de données retournées par **SQLGetTypeInfo**.  
+  Cette rubrique décrit les métadonnées de colonne retournées par **SQLColumns** et **SQLProcedureColumns**, ainsi que les métadonnées de type de données retournées par **SQLGetTypeInfo**.  
   
 ## <a name="remarks"></a>Notes  
- Les valeurs de colonne suivantes sont retournées pour les types date/heure par **SQLColumns** et **SQLProcedureColumns**.  
+ Les valeurs de colonnes suivantes sont retournées pour les types date/time par **SQLColumns** et **SQLProcedureColumns**.  
   
 |Type de paramètre|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1.. 7|1.. 7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- Les valeurs de colonne suivantes sont retournées pour les types date/heure par **SQLGetTypeInfo**:  
+ Les valeurs de colonnes suivantes sont retournées pour les types date/time par **SQLGetTypeInfo**:  
   
 |Type de paramètre|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -67,6 +67,6 @@ ms.locfileid: "81301840"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Métadonnées &#40;&#41;ODBC](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Métadonnées &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Fonction SQLGetGetstalledDrivers (fr) Microsoft Docs
+title: SQLGetInstalledDrivers fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303326"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers, fonction
 **Conformité**  
- Version introduite: ODBC 1.0  
+ Version introduite : ODBC 1,0  
   
  **Résumé**  
- **SQLGetInstalledDrivers** lit la section [ODBC Drivers] de l’information du système et renvoie une liste de descriptions des pilotes installés.  
+ **SQLGetInstalledDrivers** lit la section [ODBC Drivers] des informations système et renvoie une liste des descriptions des pilotes installés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,33 +44,33 @@ BOOL SQLGetInstalledDrivers(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *lpszBuf (lpszBuf)*  
- [Sortie] Liste des descriptions des pilotes installés. Pour plus d’informations sur la structure de la liste, voir « Commentaires ».  
+ *lpszBuf*  
+ Sortie Liste des descriptions des pilotes installés. Pour plus d’informations sur la structure de la liste, consultez « comments ».  
   
- *cbBufMax (en)*  
- [Entrée] Longueur de *lpszBuf*.  
+ *cbBufMax*  
+ Entrée Longueur de *lpszBuf*.  
   
  *pcbBufOut*  
- [Sortie] Nombre total d’octets (à l’exclusion du octet de cessation d’emploi nul) retournés en *lpszBuf*. Si le nombre d’octets disponibles pour revenir est supérieur ou égal à *cbBufMax*, la liste des descriptions de pilote dans *lpszBuf* est tronquée à *cbBufMax* moins le caractère de non-termination. *L’argument pcbBufOut* peut être un pointeur nul.  
+ Sortie Nombre total d’octets (à l’exception de l’octet de fin null) retournés dans *lpszBuf*. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *cbBufMax*, la liste des descriptions des pilotes dans *lpszBuf* est tronquée à *cbBufMax* moins le caractère de fin null. L’argument *pcbBufOut* peut être un pointeur null.  
   
 ## <a name="returns"></a>Retours  
- La fonction retourne VRAI si elle est réussie, FALSE si elle échoue.  
+ La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLGetInstalledDrivers** retourne FALSE, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les * \*valeurs pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et explique chacune dans le cadre de cette fonction.  
+ Quand **SQLGetInstalledDrivers** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
-|*\*pfErrorCode (en)*|Error|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erreur d’installateur général|Une erreur s’est produite pour laquelle il n’y a pas eu d’erreur spécifique d’installateur.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Longueur tampon invalide|*L’argument de lpszBuf* était NULL ou invalide, ou l’argument *cbBufMax* était inférieur ou égal à 0.|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|Composant non trouvé dans le registre|L’installateur n’a pas trouvé la section [des conducteurs de l’ODBC] dans le registre.|  
-|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|L’installateur ne pouvait pas effectuer la fonction en raison d’un manque de mémoire.|  
+|ODBC_ERROR_GENERAL_ERR|Erreur générale du programme d’installation|Une erreur s’est produite pour laquelle aucune erreur d’installation spécifique n’a été rencontrée.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Longueur de la mémoire tampon non valide|L’argument *lpszBuf* a la valeur null ou n’est pas valide, ou l’argument *cbBufMax* était inférieur ou égal à 0.|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|Composant introuvable dans le registre|Le programme d’installation n’a pas pu trouver la section [ODBC Drivers] dans le registre.|  
+|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu exécuter la fonction en raison d’un manque de mémoire.|  
   
 ## <a name="comments"></a>Commentaires  
- Chaque description du conducteur est terminée avec un byte nul, et la liste complète est terminée avec un byte nul. (C’est-à-dire que deux octets nuls marquent la fin de la liste.) Si le tampon alloué n’est pas assez grand pour contenir la liste entière, la liste est tronquée sans erreur. Une erreur est retournée si un pointeur nul est passé en tant que *lpszBuf*.  
+ Chaque description de pilote se termine par un octet NULL, et la liste entière se termine par un octet NULL. (Autrement dit, deux octets de valeur null marquent la fin de la liste.) Si la mémoire tampon allouée n’est pas assez grande pour contenir la totalité de la liste, la liste est tronquée sans erreur. Une erreur est retournée si un pointeur null est passé en tant que *lpszBuf*.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Retour des descriptions et attributs des conducteurs|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|
+|Renvoi des descriptions et des attributs des pilotes|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|

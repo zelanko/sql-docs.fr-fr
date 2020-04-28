@@ -16,10 +16,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304398"
 ---
 # <a name="conversions-ole-db"></a>Conversions (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "81304398"
   
 -   Le format des chaînes **datetime** et **datetimeoffset** est le suivant :  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.* 9999999*][ *hh*:*mm*]]  
+     *aaaa*-*mm*mm-*JJ*[ *hh*:*mm*:*SS*[.* 9999999*] [± *hh*:*mm*]]  
   
 -   Le format des chaînes **time** est :  
   
@@ -39,12 +39,12 @@ ms.locfileid: "81304398"
   
 -   Le format des chaînes **date** est :  
   
-     *yyyy*-*mm*-*dd*  
+     *aaaa*-*mm*mm-*JJ*  
   
 > [!NOTE]  
 >  Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. C'est pourquoi certaines conversions réalisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 et versions ultérieures diffèrent de la spécification OLE DB.  
   
- Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section « Formats de données : chaînes et littérales » dans [data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section « formats de données : chaînes et littéraux » dans [type de données prise en charge de OLE DB améliorations de la date et](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)de l’heure.  
   
  Les règles suivantes sont les règles générales de conversion :  
   

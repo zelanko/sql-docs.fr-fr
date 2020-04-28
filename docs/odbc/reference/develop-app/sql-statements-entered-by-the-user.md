@@ -1,5 +1,5 @@
 ---
-title: Déclarations SQL saisies par l’utilisateur Microsoft Docs
+title: Instructions SQL entrées par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bf2f8cf36be392cb42a970fa2fb0b19c35daeb39
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301960"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instructions SQL entrées par l’utilisateur
-Les applications qui effectuent une analyse ad hoc permettent également généralement à l’utilisateur d’entrer directement les relevés SQL. Par exemple :  
+Les applications qui effectuent une analyse ad hoc autorisent également généralement l’utilisateur à entrer des instructions SQL directement. Par exemple :  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Cette approche simplifie le codage d’application ; l’application s’appuie sur l’utilisateur pour construire la déclaration SQL et sur la source de données pour vérifier la validité de l’instruction. Parce qu’il est difficile d’écrire une interface utilisateur graphique qui expose adéquatement les subtilités de SQL, il suffit de demander à l’utilisateur d’entrer le texte de déclaration SQL peut être une alternative préférable. Toutefois, cela exige de l’utilisateur qu’il sache non seulement SQL, mais aussi le schéma de la source de données interrogé. Certaines applications fournissent une interface utilisateur graphique par laquelle l’utilisateur peut créer une déclaration SQL de base et également fournir une interface texte avec laquelle l’utilisateur peut le modifier.
+ Cette approche simplifie le codage des applications. l’application s’appuie sur l’utilisateur pour créer l’instruction SQL et sur la source de données pour vérifier la validité de l’instruction. Étant donné qu’il est difficile d’écrire une interface utilisateur graphique qui expose correctement les subtilités de SQL, il est préférable de demander à l’utilisateur d’entrer le texte de l’instruction SQL comme alternative. Toutefois, l’utilisateur doit connaître non seulement SQL, mais également le schéma de la source de données interrogée. Certaines applications fournissent une interface utilisateur graphique qui permet à l’utilisateur de créer une instruction SQL de base et fournit également une interface de texte avec laquelle l’utilisateur peut la modifier.

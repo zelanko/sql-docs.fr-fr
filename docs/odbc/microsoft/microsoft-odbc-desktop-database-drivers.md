@@ -1,5 +1,5 @@
 ---
-title: Microsoft ODBC Desktop Database Drivers (fr) Microsoft Docs
+title: Pilotes de base de données Microsoft ODBC Desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,31 +18,31 @@ ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302980"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Pilotes Microsoft ODBC pour les bases de données de poste de travail
-ODBC est une API qui utilise le langage de requête structurée (SQL) comme langue d’accès à la base de données. Vous pouvez accéder à une grande variété de systèmes de gestion de base de données (DBMS) avec le même code source ODBC qui est directement incorporé dans le code source d’une application. Avec les pilotes microsoft ODBC Desktop Database, un utilisateur d’une application compatible ODBC peut ouvrir, interroger et mettre à jour une base de données de bureau via l’interface ODBC.  
+ODBC est une API qui utilise langage SQL (SQL) comme langage d’accès à la base de données. Vous pouvez accéder à une grande variété de systèmes de gestion de base de données (SGBD) avec le même code source ODBC incorporé directement dans le code source d’une application. Avec les pilotes de base de données de bureau Microsoft ODBC, un utilisateur d’une application compatible ODBC peut ouvrir, interroger et mettre à jour une base de données de bureau par le biais de l’interface ODBC.  
   
- Les microsoft ODBC Desktop Database Drivers sont un ensemble de pilotes ODBC basé sur Microsoft Jet. Alors que Microsoft ODBC Desktop Database Drivers 2.0 comprennent à la fois 16 bits et 32 bits pilotes, versions 3.0 et plus tard inclure seulement 32 bits pilotes qui fonctionnent sur Windows 95 ou plus tard, Windows NT Workstation ou Server version 4.0, Windows 2000 Professional, ou Windows 2000 Server. Ces conducteurs donnent accès aux types de sources de données suivants :  
+ Les pilotes de base de données de bureau Microsoft ODBC sont un ensemble de pilotes ODBC basés sur Microsoft Jet. Tandis que les pilotes de base de données de bureau Microsoft ODBC 2,0 incluent les pilotes 16 bits et 32 bits, les versions 3,0 et ultérieures incluent uniquement les pilotes 32 bits qui fonctionnent sur Windows 95 ou version ultérieure, Windows NT Workstation ou Server version 4,0, Windows 2000 Professional ou Windows 2000 Server. Ces pilotes fournissent un accès aux types de sources de données suivants :  
   
 -   Microsoft Access  
   
 -   Microsoft Excel  
   
--   Paradoxe  
+-   Paradox  
   
--   Dbase  
+-   dBASE  
   
 -   Texte  
   
- Consultez [Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) pour obtenir des documents détaillés sur le Microsoft Visual FoxPro® ODBC Driver.  
+ Consultez [pilote ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) pour obtenir une documentation détaillée sur le pilote ODBC de Microsoft visual FoxPro®.  
   
 > [!NOTE]  
->  L’accès à d’autres sources de données, telles que Lotus 1-2-3, Microsoft Exchange et HTML, est activé par des pilotes ISAM (IISAM) installables. Pour plus d’informations sur ces pilotes, voir «Accès aux données externes» dans la *référence du programmeur de moteurs microsoft Jet Database .* Les pilotes de base de données de bureau ODBC 4.0 ne prennent pas en charge les formats de données Btrieve et EMS.  
+>  L’accès à d’autres sources de données, telles que Lotus 1-2-3, Microsoft Exchange et HTML, est activé par des pilotes ISAM (installables ISAM). Pour plus d’informations sur ces pilotes, consultez « accès aux données externes » dans le *Guide de référence du programmeur Microsoft Jet moteur de base de données*. Les pilotes de base de données de bureau ODBC 4,0 ne prennent pas en charge les formats de données Btrieve et EMS.  
   
  Cette section contient les rubriques suivantes :  
   
@@ -50,7 +50,7 @@ ODBC est une API qui utilise le langage de requête structurée (SQL) comme lang
   
 -   [Historique des pilotes pour les bases de données de poste de travail](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
--   [Prise en charge du produit](../../odbc/microsoft/product-support.md)  
+-   [Support technique](../../odbc/microsoft/product-support.md)  
   
 -   [Implémentation des pilotes pour les bases de données de poste de travail](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
@@ -66,7 +66,7 @@ ODBC est une API qui utilise le langage de requête structurée (SQL) comme lang
   
 -   [Grammaire SQL ODBC supplémentaire prise en charge](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
   
--   [Limites](../../odbc/microsoft/limitations.md)  
+-   [Limitations](../../odbc/microsoft/limitations.md)  
   
 -   [Erreurs ODBC](../../odbc/microsoft/odbc-errors.md)  
   

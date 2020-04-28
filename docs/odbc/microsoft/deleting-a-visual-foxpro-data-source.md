@@ -1,5 +1,5 @@
 ---
-title: Suppression d’une source de données FoxPro visuelle (fr) Microsoft Docs
+title: Suppression d’une source de données Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a755a90b87efc94ca5b6446e9ea32bb1a608647d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303560"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Suppression d’une source de données Visual FoxPro
-### <a name="to-delete-a-visual-foxpro-data-source"></a>Supprimer une source de données Visual FoxPro  
+### <a name="to-delete-a-visual-foxpro-data-source"></a>Pour supprimer une source de données Visual FoxPro  
   
-1.  Sur les ordinateurs fonctionnant sous Windows 2000, ouvrez le panneau de contrôle Windows et double clic outils administratifs.  
+1.  Sur les ordinateurs exécutant Windows 2000, ouvrez le panneau de configuration Windows et double-cliquez sur outils d’administration.  
   
-2.  Sources de données à double clic (ODBC) pour ouvrir la boîte de dialogue ODBC Data Source Administrator. Cette icône est disponible après avoir installé le Visual FoxPro ODBC Driver ou tout logiciel pilote ODBC.  
+2.  Double-cliquez sur sources de données (ODBC) pour ouvrir la boîte de dialogue administrateur de sources de données ODBC. Cette icône est disponible après l’installation du pilote ODBC Visual FoxPro ou de tout logiciel de pilote ODBC.  
   
     > [!NOTE]  
-    >  Si vous exécutez une version précédente de Windows, ouvrez le panneau de contrôle Windows et double-cliquez 32 bits ODBC ou ODBC pour ouvrir la boîte de dialogue ODBC Data Source Administrator.  
+    >  Si vous exécutez une version précédente de Windows, ouvrez le panneau de configuration Windows et double-cliquez sur ODBC ou ODBC 32 bits pour ouvrir la boîte de dialogue administrateur de sources de données ODBC.  
   
-3.  Dans l’onglet DSN utilisateur ou système DSN, sélectionnez le nom de la source de données que vous souhaitez supprimer.  
+3.  Dans l’onglet DSN utilisateur ou DSN système, sélectionnez le nom de la source de données que vous souhaitez supprimer.  
   
 4.  Cliquez sur Supprimer.  
   
-5.  Cliquez sur OK pour enregistrer les modifications et fermer la boîte de dialogue ODBC Data Source Administrator.
+5.  Cliquez sur OK pour enregistrer les modifications et fermer la boîte de dialogue administrateur de la source de données ODBC.

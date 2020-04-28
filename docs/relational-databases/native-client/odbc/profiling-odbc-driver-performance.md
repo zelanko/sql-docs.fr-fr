@@ -1,5 +1,5 @@
 ---
-title: Profilage des performances des conducteurs d’ODBC (fr) Microsoft Docs
+title: Profilage des performances du pilote ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2bd869b16cc6ec81d77ce0256859de1ed8c1d0e3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303660"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
@@ -44,7 +44,7 @@ ms.locfileid: "81303660"
   
 -   connexion à une source de données qui spécifie l'enregistrement ;  
   
--   Appel [à SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) pour définir des attributs spécifiques au conducteur qui contrôlent le profilage.  
+-   Appel de [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) pour définir des attributs spécifiques au pilote qui contrôlent le profilage.  
   
  Chaque processus d'application obtient sa propre copie du pilote ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ; par ailleurs, le profilage est global pour la combinaison d'une copie du pilote et d'un processus d'application. Lorsque le profilage est activé dans l'application, il enregistre les informations relatives à toutes les connexions actives dans le pilote à partir de cette application. Même les connexions qui n'ont pas demandé spécifiquement de profilage sont incluses.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81303660"
   
  Si une application démarre le profilage dans un fichier journal et si une seconde application essaie de démarrer le profilage dans le même fichier journal, la seconde application n'est pas en mesure d'enregistrer les données de profilage. Si la seconde application démarre le profilage une fois que la première application a déchargé son pilote, la seconde application remplace le fichier journal de la première application.  
   
- Si une application se connecte à une source de données qui a activé le profilage, le pilote renvoie SQL_ERROR si l’application appelle **SQLSetConnectOption** pour commencer à vous connecter. Un appel à **SQLGetDiagRec** renvoie alors ce qui suit :  
+ Si une application se connecte à une source de données pour laquelle le profilage est activé, le pilote retourne SQL_ERROR si l’application appelle **SQLSetConnectOption** pour démarrer la journalisation. Un appel à **SQLGetDiagRec** retourne alors ce qui suit :  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -71,7 +71,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Réseau  
   
--   Temps  
+-   Heure  
   
  Dans le tableau suivant, les descriptions des champs de la structure de données SQLPERF s'appliquent également aux statistiques enregistrées dans le fichier journal de performance.  
   
@@ -85,7 +85,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Nombre d'instructions SELECT traitées après SQL_PERF_START.|  
 |SQLSelectRows|Nombre de lignes sélectionnées après SQL_PERF_START.|  
 |Transactions|Nombre de transactions utilisateur après SQL_PERF_START, y compris les restaurations. Lorsqu'une application ODBC s'exécute avec SQL_AUTOCOMMIT_ON, chaque commande est considérée comme une transaction.|  
-|SQLPrepares|Nombre d’appels [SQLPrepare Fonction](https://go.microsoft.com/fwlink/?LinkId=59360) après SQL_PERF_START.|  
+|SQLPrepares|Nombre d’appels de [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) après SQL_PERF_START.|  
 |ExecDirects|Nombre d’appels **SQLExecDirect** après SQL_PERF_START.|  
 |SQLExecutes|Nombre d’appels **SQLExecute** après SQL_PERF_START.|  
 |CursorOpens|Nombre de fois où le pilote a ouvert un curseur côté serveur après SQL_PERF_START.|  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Durée cumulative d'attente des réponses du serveur par le pilote.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Client autochtone &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Profilage de la performance des conducteurs D’ODBC How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

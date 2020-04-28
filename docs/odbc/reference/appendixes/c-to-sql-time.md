@@ -1,5 +1,5 @@
 ---
-title: 'C à SQL: Temps Microsoft Docs'
+title: 'C en SQL : heure | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304761"
 ---
 # <a name="c-to-sql-time"></a>C en SQL : Temps
-L’identifiant pour le moment ODBC C type de données est:  
+L’identificateur pour le type de données ODBC C Time est :  
   
  SQL_C_TYPE_TIME  
   
- Le tableau suivant montre les types de données SQL ODBC à l’heure à laquelle les données C peuvent être converties. Pour une explication des colonnes et des termes dans le tableau, voir [convertir les données de C à SQL Data Types](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Le tableau suivant présente les types de données SQL ODBC dans lesquels les données de temps C peuvent être converties. Pour obtenir une explication des colonnes et des termes du tableau, consultez [conversion de données de C en types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identifiant de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’ente de colonne >8<br /><br /> Longueur d’ente de colonne < 8<br /><br /> La valeur des données n’est pas un temps valide|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de caractère de colonne >8<br /><br /> Longueur de caractère de colonne < 8<br /><br /> La valeur des données n’est pas un temps valide|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|La valeur des données est un temps valide<br /><br /> La valeur des données n’est pas un temps valide|n/a<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|La valeur des données est un temps valide[a]<br /><br /> La valeur des données n’est pas un temps valide|n/a<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne >= 8<br /><br /> Longueur d’octet de colonne < 8<br /><br /> La valeur des données n’est pas une heure valide|n/a<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur des caractères de la colonne >= 8<br /><br /> Longueur des caractères de la colonne < 8<br /><br /> La valeur des données n’est pas une heure valide|n/a<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|La valeur des données est une heure valide<br /><br /> La valeur des données n’est pas une heure valide|n/a<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|La valeur des données est une heure valide [a]<br /><br /> La valeur des données n’est pas une heure valide|n/a<br /><br /> 22007|  
   
- [a] La partie date de l’humidité de temps est fixée à la date actuelle, et la partie fractionnelle secondes de l’humidité de temps est réglée à zéro.  
+ [a] la partie Date de l’horodateur est définie sur la date actuelle et la partie fractions de seconde de l’horodatage est définie sur zéro.  
   
- Pour plus d’informations sur les valeurs qui sont valables dans une structure SQL_C_TYPE_TIME, voir [C Data Types](../../../odbc/reference/appendixes/c-data-types.md), plus tôt dans cette annexe.  
+ Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TYPE_TIME, consultez [types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
   
- Lorsque les données C de temps sont converties en données SQL de caractère, les données de caractère qui en résultent sont dans le format «*hh*:*mm*:*ss*».  
+ Lorsque les données de temps C sont converties en données SQL de caractères, les données de caractères résultantes sont au format «*hh*:*mm*:*SS*».  
   
- Le conducteur ignore la valeur de longueur/indicateur lors de la conversion des données à partir du type de données C et suppose que la taille du tampon de données est la taille du type de données de temps C. La durée/valeur de l’indicateur est passée dans *l’argument StrLen_or_Ind* dans **SQLPutData** et dans le tampon spécifié avec *l’argument StrLen_or_IndPtr* dans **SQLBindParameter**. Le tampon de données est spécifié avec l’argument *DataPtr* dans **SQLPutData** et *l’argument De ParameterValuePtr* dans **SQLBindParameter**.
+ Le pilote ignore la valeur de longueur/indicateur lors de la conversion de données à partir du type de données Time C et suppose que la taille de la mémoire tampon de données est égale à la taille du type de données Time C. La valeur de longueur/indicateur est passée dans l’argument *StrLen_Or_Ind* dans **SQLPutData** et dans la mémoire tampon spécifiée avec l’argument *StrLen_or_IndPtr* dans **SQLBindParameter**. La mémoire tampon de données est spécifiée avec l’argument *DataPtr* dans **SQLPutData** et l’argument *ParameterValuePtr* dans **SQLBindParameter**.

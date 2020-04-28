@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr - France Microsoft Docs
+title: SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d0e93e73de0698e8bce1cb4073458cafe526c41
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301871"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
@@ -29,7 +29,7 @@ ms.locfileid: "81301871"
  L'un des attributs contrôlé par **SQLSetEnvAttr** indique si le regroupement de connexions sera utilisé. Si le regroupement de connexions est utilisé avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, il faut affecter au paramètre *DriverCompletion* la valeur SQL_DRIVER_NOPROMPT lors de la connexion à [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) ou **SQLConnect**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLSetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=59369)   
+ [SQLSetEnvAttr fonction)](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

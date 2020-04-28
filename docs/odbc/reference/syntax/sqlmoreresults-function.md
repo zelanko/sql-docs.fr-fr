@@ -1,5 +1,5 @@
 ---
-title: Fonction SQLMoreResults (fr) Microsoft Docs
+title: Fonction SQLMoreResults | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 78bbb277e4b783eb46c79f59939a1080feae2b60
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304740"
 ---
 # <a name="sqlmoreresults-function"></a>Fonction SQLMoreResults
 **Conformité**  
- Version introduite : ODBC 1.0 Standards Compliance: ODBC  
+ Version introduite : ODBC 1,0 conforme aux normes : ODBC  
   
  **Résumé**  
- **SQLMoreResults** détermine si d’autres résultats sont disponibles sur une déclaration contenant **SELECT**, **UPDATE**, **INSERT**, ou **DELETE** déclarations et, si oui, initialise le traitement de ces résultats.  
+ **SQLMoreResults** détermine si davantage de résultats sont disponibles sur une instruction contenant des instructions **Select**, **Update**, **Insert**ou **Delete** et, le cas échéant, initialise le traitement de ces résultats.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,79 +42,79 @@ SQLRETURN SQLMoreResults(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *StatementHandle (en)*  
- [Entrée] Poignée de déclaration.  
+ *StatementHandle*  
+ Entrée Descripteur d’instruction.  
   
 ## <a name="returns"></a>Retours  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE, ou SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE OU SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLMoreResults** revient SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et une *poignée* de *StatementHandle*. Le tableau suivant énumère les valeurs SQLSTATE couramment retournées par **SQLMoreResults** et explique chacune dans le cadre de cette fonction; la notation " (DM)" précède les descriptions des SQLSTATEs retournées par le gestionnaire de conducteur. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLMoreResults** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLMoreResults** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifique au conducteur. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
-|01S02|La valeur de l’option a changé|La valeur d’un attribut de déclaration a changé au fur et à mesure que le lot était en cours de traitement. (Les retours de fonction SQL_SUCCESS_WITH_INFO.)|  
-|08S01|Défaillance du lien de communication|Le lien de communication entre le conducteur et la source de données à laquelle le conducteur était connecté a échoué avant que la fonction ne termine le traitement.|  
-|40001|Échec de la sérialisation|La transaction a été annulée en raison d’une impasse dans les ressources avec une autre transaction.|  
-|40003|Achèvement de l’énoncé inconnu|La connexion associée a échoué lors de l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle il n’y avait pas de SQLSTATE spécifique et pour laquelle aucun SQLSTATE spécifique à la mise en œuvre n’a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le * \** tampon MessageText décrit l’erreur et sa cause.|  
-|HY001 (hy001)|Erreur d’allocation de mémoire|Le conducteur n’a pas été en mesure d’allouer la mémoire nécessaire pour soutenir l’exécution ou l’achèvement de la fonction.|  
-|HY008 HY008|Opération annulée|Le traitement asynchrone a été activé pour le *StatementHandle*. La fonction **SQLMoreResults** a été appelée et, avant d’être exécutée, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction **SQLMoreResults** a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction **SQLMoreResults** a été appelée et, avant d’être exécutée, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multitâli.|  
-|HY010|Erreur de séquence de fonction|(DM) Une fonction d’exécution asynchrone a été appelée pour la poignée de connexion qui est associée à la *StatementHandle*. Cette fonction asynchrone était encore en cours d’exécution lorsque la fonction **SQLMoreResults** a été appelée.<br /><br /> (DM) Une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en exécution lorsque cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant que les données ne soient envoyées pour tous les paramètres ou colonnes de données à l’exécution.|  
-|HY013|Erreur de gestion de la mémoire|L’appel de fonction n’a pas pu être traité parce que les objets de mémoire sous-jacents n’ont pas pu être consultés, peut-être en raison de conditions de mémoire basse.|  
-|HY117|La connexion est suspendue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seulement sont autorisées.|(DM) Pour plus d’informations sur l’état suspendu, voir [SQLEndTran Fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01 (HYT01)|Délai de connexion expiré|La période de délai de connexion a expiré avant que la source de données ne réponde à la demande. La période de délai de connexion est définie par **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Le conducteur ne prend pas en charge cette fonction|(DM) Le conducteur associé au *StatementHandle* ne prend pas en charge la fonction.|  
-|IM017|Le sondage est désactivé en mode notification asynchrone|Chaque fois que le modèle de notification est utilisé, le sondage est désactivé.|  
-|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur cette poignée.|Si la fonction précédente fait appel aux retours de poignée SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur la poignée pour effectuer le post-traitement et terminer l’opération.|  
+|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S02 ne|La valeur de l’option a changé|La valeur d’un attribut d’instruction a changé lors du traitement du lot. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
+|40001|Échec de la sérialisation|La transaction a été restaurée en raison d’un blocage de ressource avec une autre transaction.|  
+|40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction **SQLMoreResults** a été appelée et, avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. La fonction **SQLMoreResults** a été appelée à nouveau sur *StatementHandle*.<br /><br /> La fonction **SQLMoreResults** a été appelée et, avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
+|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLMoreResults** .<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
+|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *StatementHandle* ne prend pas en charge la fonction.|  
+|IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
+|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur ce handle.|Si l’appel de fonction précédent sur le descripteur retourne SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur le handle pour effectuer un traitement postérieur et terminer l’opération.|  
   
 ## <a name="comments"></a>Commentaires  
- **Les** énoncés SELECT retournent les ensembles de résultats. **UPDATE**, **INSERT**, et les déclarations **DELETE** renvoient un compte de lignes affectées. Si l’un de ces relevés est en lots, soumis avec des tableaux de paramètres (numérotés dans l’ordre de paramètres croissants, dans l’ordre qu’ils apparaissent dans le lot), ou dans les procédures, ils peuvent retourner plusieurs ensembles de résultats ou des nombres de lignes. Pour plus d’informations sur les lots d’énoncés et de tableaux de paramètres, voir [Lots of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md) and [Arrays of Parameter Values](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
+ Les instructions **Select** retournent des jeux de résultats. Les instructions **Update**, **Insert**et **Delete** retournent un nombre de lignes affectées. Si l’une de ces instructions est regroupée, soumise avec des tableaux de paramètres (numérotés dans l’ordre des paramètres d’incrémentation, dans l’ordre dans lequel ils apparaissent dans le traitement), ou dans les procédures, ils peuvent retourner plusieurs jeux de résultats ou nombres de lignes. Pour plus d’informations sur les lots d’instructions et les tableaux de paramètres, consultez [lots d’instructions SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md) et de [tableaux de valeurs de paramètre](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- Après l’exécution du lot, l’application est positionnée sur le premier ensemble de résultats. L’application peut appeler **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, **SQLSetPos**, et toutes les fonctions de métadonnées, sur les premiers ou les ensembles de résultats suivants, tout comme il le ferait s’il n’y avait qu’un seul ensemble de résultats. Une fois qu’il est fait avec le premier ensemble de résultats, l’application appelle **SQLMoreResults** pour passer à l’ensemble de résultat suivant. Si un autre ensemble de résultats ou de comptage est disponible, **SQLMoreResults** retourne SQL_SUCCESS et initialise l’ensemble de résultats ou le compte pour un traitement supplémentaire. Si des relevés générateurs de nombres de lignes apparaissent entre les énoncés générateurs de résultats, ils peuvent être dépassés en appelant **SQLMoreResults**. Après avoir appelé **SQLMoreResults** pour **UPDATE**, **INSERT**, ou **DELETE** déclarations, une application peut appeler **SQLRowCount**.  
+ Après l’exécution du traitement, l’application est positionnée sur le premier jeu de résultats. L’application peut appeler **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, **SQLSetPos**et toutes les fonctions de métadonnées, sur le premier ou dans tous les jeux de résultats suivants, exactement comme s’il s’agissait d’un seul jeu de résultats. Une fois le premier jeu de résultats terminé, l’application appelle **SQLMoreResults** pour passer au jeu de résultats suivant. Si un autre jeu de résultats ou nombre est disponible, **SQLMoreResults** retourne SQL_SUCCESS et initialise le jeu de résultats ou le nombre de traitements supplémentaires. Si des instructions de génération de nombre de lignes s’affichent entre les instructions de génération de jeu de résultats, elles peuvent être exécutées en escalier en appelant **SQLMoreResults**. Après l’appel de **SQLMoreResults** pour les instructions **Update**, **Insert**ou **Delete** , une application peut appeler **SQLRowCount**.  
   
- S’il y avait un résultat actuel défini avec des lignes non verrouillées, **SQLMoreResults** rejette cet ensemble de résultats et rend le prochain ensemble de résultats ou compte disponible. Si tous les résultats ont été traités, **SQLMoreResults** retourne SQL_NO_DATA. Pour certains conducteurs, les paramètres de sortie et les valeurs de retour ne sont pas disponibles tant que tous les ensembles de résultats et les nombres de lignes n’ont pas été traités. Pour ces conducteurs, les paramètres de sortie et les valeurs de retour deviennent disponibles lorsque **SQLMoreResults** revient SQL_NO_DATA.  
+ En présence d’un jeu de résultats avec des lignes non récupérées, **SQLMoreResults** ignore ce jeu de résultats et rend le jeu de résultats suivant ou le nombre disponible. Si tous les résultats ont été traités, **SQLMoreResults** retourne SQL_NO_DATA. Pour certains pilotes, les paramètres de sortie et les valeurs de retour ne sont pas disponibles tant que tous les jeux de résultats et nombre de lignes n’ont pas été traités. Pour ces pilotes, les paramètres de sortie et les valeurs de retour deviennent disponibles lorsque **SQLMoreResults** retourne SQL_NO_DATA.  
   
- Toute fixation établie pour le résultat précédent demeure valable. Si les structures de colonne sont différentes pour cet ensemble de résultats, alors appeler **SQLFetch** ou **SQLFetchScroll** peut entraîner une erreur ou une troncation. Pour éviter cela, l’application doit appeler **SQLBindCol** pour se rebiner explicitement le cas échéant (ou le faire en fixant des champs descripteur). Alternativement, l’application peut appeler **SQLFreeStmt** avec une *option* de SQL_UNBIND pour délier tous les tampons de colonne.  
+ Toutes les liaisons établies pour le jeu de résultats précédent restent valides. Si les structures de colonne sont différentes pour ce jeu de résultats, l’appel de **SQLFetch** ou **SQLFetchScroll** peut entraîner une erreur ou une troncation. Pour éviter cela, l’application doit appeler **SQLBindCol** pour se reconnecter explicitement comme il convient (ou le faire en définissant des champs de descripteur). L’application peut également appeler **SQLFreeStmt** avec une *option* de SQL_UNBIND pour dissocier toutes les mémoires tampons de colonne.  
   
- Les valeurs des attributs de déclaration, telles que le type de curseur, la concurrence de curseur, la taille de l’ensemble de clés, ou la longueur maximale, peuvent changer pendant que l’application navigue à travers le lot par des appels à **SQLMoreResults**. Si cela se produit, **SQLMoreResults** retournera SQL_SUCCESS_WITH_INFO et SQLSTATE 01S02 (la valeur de l’option a changé).  
+ Les valeurs des attributs d’instruction, telles que le type de curseur, l’accès concurrentiel du curseur, la taille du jeu de clés ou la longueur maximale, peuvent changer à mesure que l’application parcourt le lot par le biais d’appels à **SQLMoreResults**. Dans ce cas, **SQLMoreResults** retourne SQL_SUCCESS_WITH_INFO et SQLSTATE 01s02 ne (la valeur d’option a changé).  
   
- Appeler **SQLCloseCursor**, ou **SQLFreeStmt** avec une *option* de SQL_CLOSE, écarte tous les ensembles de résultats et les nombres de rangées qui étaient disponibles à la suite de l’exécution du lot. La poignée de la déclaration revient à l’état alloué ou préparé. Appeler **SQLCancel** pour annuler une fonction d’exécution asynchrone lorsqu’un lot a été exécuté et que la poignée de déclaration se trouve dans l’état exécuté, placé par le curseur ou asynchrone, dans tous les ensembles de résultats et les dénombrements de ligne générés par le lot étant jetés si l’appel d’annulation a été réussi. La déclaration retourne ensuite à l’état préparé ou attribué.  
+ L’appel de **SQLCloseCursor**ou **SQLFreeStmt** avec l' *option* SQL_CLOSE, ignore tous les jeux de résultats et nombre de lignes qui étaient disponibles suite à l’exécution du traitement. Le descripteur d’instruction retourne à l’État alloué ou préparé. L’appel de **SQLCancel** pour annuler une fonction s’exécutant de façon asynchrone lorsqu’un lot a été exécuté et que le descripteur d’instruction se trouve dans l’État exécuté, positionné sur un curseur ou asynchrone entraîne la suppression de tous les jeux de résultats et de tous les nombres de lignes générés par le lot si l’appel d’annulation a réussi. L’instruction retourne alors à l’État prepared ou allocated.  
   
- Si un lot d’instructions ou une procédure mélange d’autres déclarations SQL avec **SELECT**, **UPDATE**, **INSERT**, et les déclarations **DELETE,** ces autres déclarations n’affectent pas **SQLMoreResults**.  
+ Si un lot d’instructions ou une procédure mélange d’autres instructions SQL avec des instructions **Select**, **Update**, **Insert**et **Delete** , ces autres instructions n’affectent pas **SQLMoreResults**.  
   
- Pour plus d’informations, voir [Résultats multiples](../../../odbc/reference/develop-app/multiple-results.md).  
+ Pour plus d’informations, consultez [plusieurs résultats](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Si une mise à jour, un insérer ou supprimer une déclaration dans un lot d’instructions n’affecte aucune ligne à la source de données, **SQLMoreResults** retourne SQL_SUCCESS. Ceci est différent du cas d’une mise à jour recherchée, d’insérer ou de supprimer la déclaration qui est exécutée par **SQLExecDirect**, **SQLExecute**, ou **SQLParamData**, qui retourne SQL_NO_DATA si elle n’affecte aucune ligne à la source de données. Si une demande appelle **SQLRowCount** pour récupérer le nombre de rangées après qu’un appel à **SQLMoreResults** n’ait affecté aucune ligne, **SQLRowCount** retournera SQL_NO_DATA.  
+ Si une instruction Update, INSERT ou DELETE recherchée dans un lot d’instructions n’affecte aucune ligne de la source de données, **SQLMoreResults** retourne SQL_SUCCESS. Cela est différent du cas d’une instruction Update, INSERT ou DELETE recherchée qui est exécutée par le biais de **SQLExecDirect**, **SQLExecute**ou **SQLParamData**, qui retourne SQL_NO_DATA s’il n’affecte pas les lignes de la source de données. Si une application appelle **SQLRowCount** pour récupérer le nombre de lignes après qu’un appel à **SQLMoreResults** n’a affecté aucune ligne, **SQLRowCount** retourne SQL_NO_DATA.  
   
- Pour plus d’informations sur le séquençage valide des fonctions de traitement des résultats, voir [Annexe B: ODBC State Transition Tables](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Pour plus d’informations sur le séquencement valide des fonctions de traitement des résultats, consultez [annexe B : tables de transition d’État ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Pour plus d’informations sur SQL_PARAM_DATA_AVAILABLE et les paramètres de sortie en streaming, voir [Les paramètres de sortie de récupération à l’aide de SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+ Pour plus d’informations sur les SQL_PARAM_DATA_AVAILABLE et les paramètres de sortie diffusés en continu, consultez [récupération des paramètres de sortie à l’aide de SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
-## <a name="availability-of-row-counts"></a>Disponibilité des comptes de ligne  
- Lorsqu’un lot contient plusieurs relevés consécutifs générateurs de nombres de lignes, il est possible que ces nombres de lignes soient enroulés en un seul nombre de lignes. Par exemple, si un lot comporte cinq énoncés d’insertion, certaines sources de données sont capables de retourner cinq dénombrements individuels de lignes. Certaines autres sources de données ne renvoient qu’un seul nombre de lignes qui représente la somme des cinq rangs individuels.  
+## <a name="availability-of-row-counts"></a>Disponibilité des nombres de lignes  
+ Lorsqu’un lot contient plusieurs instructions consécutives de génération du nombre de lignes, il est possible que ces nombres de lignes soient cumulés dans un seul nombre de lignes. Par exemple, si un lot contient cinq instructions INSERT, certaines sources de données peuvent retourner cinq nombres de lignes individuels. Certaines autres sources de données ne retournent qu’un seul nombre de lignes qui représente la somme des cinq nombres de lignes individuels.  
   
- Lorsqu’un lot contient une combinaison d’instructions génératrices de résultats et de comptage des lignes, le nombre de lignes peut ou non être disponible du tout. Le comportement du conducteur en ce qui concerne la disponibilité des dénombrements de lignes est énuméré dans le type d’information SQL_BATCH_ROW_COUNT disponible par un appel à **SQLGetInfo**. Supposons, par exemple, que le lot contient un **SELECT**, suivi de deux **INSERT**s et un autre **SELECT**. Ensuite, les cas suivants sont possibles :  
+ Lorsqu’un lot contient une combinaison d’instructions de génération de jeu de résultats et de génération de nombre de lignes, le nombre de lignes peut être ou ne pas être disponible du tout. Le comportement du pilote en ce qui concerne la disponibilité des nombres de lignes est énuméré dans le type d’informations SQL_BATCH_ROW_COUNT disponible via un appel à **SQLGetInfo**. Supposons, par exemple, que le lot contient une **instruction SELECT**, suivie de deux **instructions INSERT**et d’une autre instruction **Select**. Les cas suivants sont possibles :  
   
--   Les nombres de lignes correspondant aux deux relevés **INSERT** ne sont pas du tout disponibles. Le premier appel à **SQLMoreResults** vous positionnera sur l’ensemble de résultat de la deuxième déclaration **SELECT.**  
+-   Les nombres de lignes correspondant aux deux instructions **Insert** ne sont pas disponibles du tout. Le premier appel à **SQLMoreResults** se positionnera sur le jeu de résultats de la deuxième instruction **Select** .  
   
--   Les nombres de lignes correspondant aux deux relevés **INSERT** sont disponibles individuellement. (Un appel à **SQLGetInfo** ne renvoie pas le SQL_BRC_ROLLED_UP peu pour le type d’information SQL_BATCH_ROW_COUNT.) Le premier appel à **SQLMoreResults** vous positionnera sur le nombre de rangées du premier **INSERT**, et le deuxième appel vous positionnera sur le nombre de rangées du second **INSERT**. Le troisième appel à **SQLMoreResults** vous positionnera sur l’ensemble de résultat de la deuxième déclaration **SELECT.**  
+-   Les nombres de lignes correspondant aux deux instructions **Insert** sont disponibles individuellement. (Un appel à **SQLGetInfo** ne retourne pas le bit SQL_BRC_ROLLED_UP pour le type d’informations SQL_BATCH_ROW_COUNT.) Le premier appel à **SQLMoreResults** se positionnera sur le nombre de lignes de la première **insertion**, et le deuxième appel se positionnera sur le nombre de lignes de la deuxième **insertion**. Le troisième appel à **SQLMoreResults** se positionnera sur le jeu de résultats de la deuxième instruction **Select** .  
   
--   Les nombres de lignes correspondant aux deux **INSERT** sont enroulés en un seul nombre de lignes disponibles. (Un appel à **SQLGetInfo** renvoie le SQL_BRC_ROLLED_UP peu pour le type d’information SQL_BATCH_ROW_COUNT.) Le premier appel à **SQLMoreResults** vous positionnera sur le nombre de rangées enroulées, et le deuxième appel à **SQLMoreResults** vous positionnera sur l’ensemble de résultat de la deuxième **SELECT**.  
+-   Les nombres de lignes correspondant aux deux **insertions** sont reportés dans un seul nombre de lignes disponible. (Un appel à **SQLGetInfo** retourne le bit SQL_BRC_ROLLED_UP pour le type d’informations SQL_BATCH_ROW_COUNT.) Le premier appel à **SQLMoreResults** se positionnera sur le nombre de lignes cumulées, et le deuxième appel à **SQLMoreResults** se positionnera sur le jeu de résultats de la deuxième **sélection**.  
   
- Certains conducteurs rendent les dénombrements de rangées disponibles uniquement pour les lots explicites et non pour les procédures stockées.  
+ Certains pilotes rendent les nombres de lignes disponibles uniquement pour les lots explicites, et non pour les procédures stockées.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Annulation du traitement des relevés|[SQLCancel, fonction](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Aller chercher un bloc de données ou faire défiler un ensemble de résultats|[Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Aller chercher une seule rangée ou un bloc de données dans une direction avant-seulement|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Aller chercher une partie ou la totalité d’une colonne de données|[Fonction SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|Annulation du traitement des instructions|[SQLCancel, fonction](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Extraction d’un bloc de données ou défilement dans un jeu de résultats|[Fonction SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Extraction d’une seule ligne ou d’un bloc de données dans une direction vers l’avant uniquement|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Extraction d’une partie ou de la totalité d’une colonne de données|[Fonction SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Récupération des paramètres de sortie à l’aide de SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

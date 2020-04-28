@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304370"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
@@ -25,14 +25,14 @@ ms.locfileid: "81304370"
 
   Cette rubrique traite des modifications apportées à OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour prendre en charge les types définis par l'utilisateur (UDT) du CLR (Common Language Runtime) volumineux.  
   
- Pour plus d’informations sur le soutien [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux grands UDT CLR dans Native Client, voir [Grands types définis par l’utilisateur CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Pour un exemple, consultez [Utiliser des types CLR volumineux &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Pour plus d’informations sur la prise en charge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT volumineux CLR dans Native Client, consultez [types CLR volumineux définis par l’utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Pour un exemple, consultez [Utiliser des types CLR volumineux &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Format de données  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise ~0 pour représenter la longueur des valeurs qui sont de taille illimitée pour les types d'objets volumineux (LOB). ~0 représente également la taille des types UDT du CLR supérieurs à 8 000 octets.  
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les ensembles de lignes :  
   
-|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Value|  
+|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Valeur|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](tableau d’octets\)|132 (oledb.h)|  
   
@@ -121,13 +121,13 @@ ms.locfileid: "81304370"
 |Type de données de liaison|UDT vers serveur|Non-UDT vers serveur|UDT à partir du serveur|Non-UDT à partir du serveur|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Pris en charge (5)|Erreur (1)|Pris en charge (5)|Erreur (4)|  
-|DBTYPE_BYTES|Pris en charge (5)|N/A|Pris en charge (5)|N/A|  
-|DBTYPE_WSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5), (6)|N/A|  
-|DBTYPE_BSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
-|DBTYPE_STR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
-|DBTYPE_IUNKNOWN|Pris en charge (6)|N/A|Pris en charge (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|N/A|Pris en charge (3), (5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|N/A|N/A|N/A|  
+|DBTYPE_BYTES|Pris en charge (5)|NON APPLICABLE|Pris en charge (5)|NON APPLICABLE|  
+|DBTYPE_WSTR|Pris en charge (2), (5)|NON APPLICABLE|Pris en charge (3), (5), (6)|NON APPLICABLE|  
+|DBTYPE_BSTR|Pris en charge (2), (5)|NON APPLICABLE|Pris en charge (3), (5)|NON APPLICABLE|  
+|DBTYPE_STR|Pris en charge (2), (5)|NON APPLICABLE|Pris en charge (3), (5)|NON APPLICABLE|  
+|DBTYPE_IUNKNOWN|Pris en charge (6)|NON APPLICABLE|Pris en charge (6)|NON APPLICABLE|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|NON APPLICABLE|Pris en charge (3), (5)|NON APPLICABLE|  
+|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|NON APPLICABLE|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>Liste des symboles  
   
@@ -138,7 +138,7 @@ ms.locfileid: "81304370"
 |3|Les données sont converties données binaires en chaîne hexadécimale.|  
 |4|La validation peut se produire lors de l’utilisation de **CreateAccessor** ou de **GetNextRows**. L'erreur est DB_E_ERRORSOCCURRED. L'état de liaison a la valeur DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|BY_REF peut être utilisé.|  
-|6|Les paramètres UDT peuvent être liés en tant que DBTYPE_IUNKNOWN dans le DBBINDING. La liaison à DBTYPE_IUNKNOWN indique que l’application veut traiter les données en tant que flux avec l’interface ISequentialStream. Lorsqu’un consommateur spécifie *wType* dans une liaison comme type DBTYPE_IUNKNOWN, et que le paramètre de colonne ou de sortie correspondant de la procédure stockée est un client autochtone de serveur SQL retournera ISequentialStream. Pour un paramètre d’entrée, SQL Server Native Client posera une demande pour l’interface ISequentialStream.<br /><br /> Vous pouvez choisir de ne pas lier la longueur de données UDT à l'aide de la liaison DBTYPE_IUNKNOWN en cas types UDT volumineux. Toutefois, la longueur doit être liée pour de petits types UDT. Un paramètre DBTYPE_UDT peut être spécifié en tant que type UDT volumineux si une ou plusieurs des conditions suivantes sont réunies :<br />*ulParamParamSize* vaut ~0.<br />DBPARAMFLAGS_ISLONG est défini dans le struct DBPARAMBINDINFO.<br /><br /> Pour les données de ligne, la liaison DBTYPE_IUNKNOWN est uniquement autorisée pour les types UDT volumineux. Vous pouvez déterminer si une colonne est un type UDT volumineux à l’aide de la méthode IColumnsInfo::GetColumnInfo sur l’interface IColumnsInfo d’un ensemble de lignes ou d’un objet de commande. Une colonne DBTYPE_UDT est une colonne UDT volumineuse si une ou plusieurs des conditions suivantes sont réunies :<br />L’indicateur DBCOLUMNFLAGS_ISLONG est défini sur le membre *dwFlags* de la structure DBCOLUMNINFO. <br />Le membre *ulColumnSize* de DBCOLUMNINFO vaut ~0.|  
+|6|Les paramètres UDT peuvent être liés en tant que DBTYPE_IUNKNOWN dans le DBBINDING. La liaison à DBTYPE_IUNKNOWN indique que l’application veut traiter les données en tant que flux avec l’interface ISequentialStream. Lorsqu’un consommateur spécifie *wType* dans une liaison en tant que type DBTYPE_IUNKNOWN, et que la colonne ou le paramètre de sortie correspondant de la procédure stockée est un type défini par l’utilisateur (UDT), SQL Server Native Client retourne ISequentialStream. Pour un paramètre d’entrée, SQL Server Native Client interroge le pour l’interface ISequentialStream.<br /><br /> Vous pouvez choisir de ne pas lier la longueur de données UDT à l'aide de la liaison DBTYPE_IUNKNOWN en cas types UDT volumineux. Toutefois, la longueur doit être liée pour de petits types UDT. Un paramètre DBTYPE_UDT peut être spécifié en tant que type UDT volumineux si une ou plusieurs des conditions suivantes sont réunies :<br />*ulParamParamSize* vaut ~0.<br />DBPARAMFLAGS_ISLONG est défini dans le struct DBPARAMBINDINFO.<br /><br /> Pour les données de ligne, la liaison DBTYPE_IUNKNOWN est uniquement autorisée pour les types UDT volumineux. Vous pouvez déterminer si une colonne est un type UDT volumineux à l’aide de la méthode IColumnsInfo::GetColumnInfo sur l’interface IColumnsInfo d’un ensemble de lignes ou d’un objet de commande. Une colonne DBTYPE_UDT est une colonne UDT volumineuse si une ou plusieurs des conditions suivantes sont réunies :<br />L’indicateur DBCOLUMNFLAGS_ISLONG est défini sur le membre *dwFlags* de la structure DBCOLUMNINFO. <br />Le membre *ulColumnSize* de DBCOLUMNINFO vaut ~0.|  
   
  DBTYPE_NULL et DBTYPE_EMPTY peuvent être liés pour des paramètres d'entrée, mais pas pour des résultats ou des paramètres de sortie. S'ils sont liés pour des paramètres d'entrée, l'état doit avoir la valeur DBSTATUS_S_ISNULL pour DBTYPE_NULL ou DBSTATUS_S_DEFAULT pour DBTYPE_EMPTY. DBTYPE_BYREF ne peut pas être utilisé avec DBTYPE_NULL ou DBTYPE_EMPTY.  
   

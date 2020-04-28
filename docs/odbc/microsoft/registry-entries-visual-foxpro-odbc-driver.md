@@ -1,5 +1,5 @@
 ---
-title: Inscriptions au registre (Visual FoxPro ODBC Driver) Microsoft Docs
+title: Entrées de Registre (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,44 +16,44 @@ ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bd2d419a94c45a872789e095b014159b41d7c217
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304836"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entrées du Registre (pilote ODBC Visual FoxPro)
-Lorsque vous installez le visual FoxPro ODBC Driver, le programme d’installation met à jour le registre de votre système, dans la clé de registre HKEY_LOCAL_MACHINE-SOFTWARE-ODBC-ODBCInst.ini, pour ajouter une nouvelle clé appelée Microsoft Visual FoxPro Driver. En vertu de cette clé, les valeurs décrites dans le tableau suivant sont ajoutées.  
+Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installation met à jour le registre de votre système, dans la clé de Registre HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCInst.ini, pour ajouter une nouvelle clé nommée Microsoft Visual FoxPro Driver. Sous cette clé, les valeurs décrites dans le tableau suivant sont ajoutées.  
   
-|Nom de la valeur|Type de valeur|Value|  
+|Nom de la valeur|Type de valeur|Valeur|  
 |----------------|----------------|-----------|  
 |APILevel|REG_SZ|"1"|  
 |ConnectFunctions|REG_SZ|"YYN"|  
-|Pilote|REG_SZ|Chemin du système vers le fichier vfpodbc.dll|  
-|DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|"dbf,\*.cdx,\*.fpt"|  
-|FileUsage (en)|REG_SZ|"1"|  
-|Programme d’installation|REG_SZ|Chemin du système vers le fichier vfpodbc.dll|  
-|SQLLevel (SQLLevel)|REG_SZ|"0"|  
+|Pilote|REG_SZ|Chemin d’accès système au fichier vfpodbc. dll|  
+|DriverODBCVer|REG_SZ|« 02,50 »|  
+|FileExtns|REG_SZ|"*. DBF,\*. CDX,\*. FPT"|  
+|FileUsage|REG_SZ|"1"|  
+|Programme d’installation|REG_SZ|Chemin d’accès système au fichier vfpodbc. dll|  
+|SQLLevel|REG_SZ|"0"|  
   
- Le programme d’installation ajoute également la clé "Visual FoxPro Files", représentant le pilote Visual FoxPro par défaut, à la clé HKEY_CURRENT_USER-SOFTWARE-ODBC-Odbc.ini de votre système. Sous cette clé, le programme d’installation ajoute les valeurs décrites dans le tableau suivant.  
+ Le programme d’installation ajoute également la clé « fichiers Visual FoxPro », représentant le pilote Visual FoxPro par défaut, à la clé de \SOFTWARE\ODBC\Odbc.ini HKEY_CURRENT_USER de votre système. Sous cette clé, le programme d’installation ajoute les valeurs décrites dans le tableau suivant.  
   
-|Nom de la valeur|Type de valeur|Value|  
+|Nom de la valeur|Type de valeur|Valeur|  
 |----------------|----------------|-----------|  
-|Pilote|REG_SZ|Chemin du système vers le fichier vfpodbc.dll|  
+|Pilote|REG_SZ|Chemin d’accès système au fichier vfpodbc. dll|  
   
- Chaque fois que vous ajoutez une source de données Visual FoxPro ODBC à votre configuration ODBC, une nouvelle clé est ajoutée pour ce nom source de données. Les valeurs de la source de données correspondent aux valeurs que vous définissez dans la boîte de dialogue **ODBC Visual FoxPro Setup,** telle qu’indiquée dans le tableau suivant.  
+ Chaque fois que vous ajoutez une source de données ODBC Visual FoxPro à votre configuration ODBC, une nouvelle clé est ajoutée pour ce nom de source de données. Les valeurs de la source de données correspondent aux valeurs que vous définissez dans la boîte de dialogue **installation de ODBC Visual FoxPro** , comme indiqué dans le tableau suivant.  
   
-|Nom de valeur (mot-clé)|Type de valeur|Value|  
+|Nom de la valeur (mot clé)|Type de valeur|Valeur|  
 |----------------------------|----------------|-----------|  
-|Copies assemblées|REG_SQ|Toute séquence de collation prise en charge|  
-|Description|REG_SZ|Description utilisateur de la source de données|  
-|Pilote||Chemin du système vers le fichier vfpodbc.dll|  
+|Copies assemblées|REG_SQ|Toutes les séquences de classement prises en charge|  
+|Description|REG_SZ|Description de l’utilisateur de la source de données|  
+|Pilote||Chemin d’accès système au fichier vfpodbc. dll|  
 |Exclusif||Oui ou Non|  
-|ContexteFetch||Oui ou Non|  
-|SourceDB|REG_SZ|Chemin vers . Fichier DBC|  
-|SourceType|REG_SZ|"DBC" ou "DBF"|  
+|BackgroundFetch||Oui ou Non|  
+|SourceDB|REG_SZ|Chemin d’accès à. Fichier DBC|  
+|SourceType|REG_SZ|« DBC » ou « DBF »|  
   
- Vous ne devriez pas accéder directement à ces informations; toute administration du registre est gérée par l’administrateur de l’ODBC lorsque vous ajoutez, modifiez ou supprimez une source de données.  
+ Vous ne devez pas accéder directement à ces informations ; toute administration du Registre est gérée par l’administrateur ODBC lorsque vous ajoutez, modifiez ou supprimez une source de données.  
   
- Vous pouvez utiliser certains de ces mots clés et valeurs comme paramètres dans la fonction [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API.
+ Vous pouvez utiliser certains de ces mots clés et valeurs comme paramètres dans la fonction API ODBC [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) .

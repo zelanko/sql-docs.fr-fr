@@ -1,5 +1,5 @@
 ---
-title: Support de fil (Visual FoxPro ODBC Driver) Microsoft Docs
+title: Prise en charge des threads (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303080"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Prise en charge des threads (pilote ODBC Visual FoxPro)
-Le visual FoxPro ODBC Driver est sans fil. L’accès aux poignées de l’environnement *(poule),* aux poignées de connexion *(hdbc),* et aux poignées de déclaration *(hstmt*) est enveloppé dans des sémaphores appropriés pour empêcher d’autres processus d’accéder et potentiellement de modifier les structures de données internes du conducteur.  
+Le pilote ODBC Visual FoxPro est thread-safe. L’accès aux descripteurs de l’environnement (*poules*), les handles de connexion (*hdbc*) et les descripteurs d’instructions (*HSTMT*) est encapsulé dans les sémaphores appropriés pour empêcher d’autres processus d’accéder aux structures de données internes du pilote et éventuellement de les modifier.  
   
- Dans une application multithreaded, vous pouvez annuler une fonction qui fonctionne de façon synchrone sur un *hstmt* en appelant [SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) sur un thread séparé.  
+ Dans une application multithread, vous pouvez annuler une fonction qui s’exécute de façon synchrone sur un *HSTMT* en appelant [SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) sur un thread distinct.  
   
- Le pilote utilise un thread séparé pour obtenir des données lorsque vous utilisez l’aller chercher progressif. Pour utiliser l’utilisation progressive de la recherche pour une source de données, sélectionnez les **données Fetch dans** la case à cocher de fond sur la boîte de dialogue [ODBC Visual FoxPro Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou utilisez le mot clé d’attribut BackgroundFetch dans votre chaîne de connexion. Évitez d’utiliser l’arrière-plan aller chercher lorsque vous appelez le pilote à partir d’applications à plusieurs lues. Pour plus d’informations sur les mots clés d’attribut de chaîne de connexion, voir [Using Connection Strings](../../odbc/microsoft/using-connection-strings.md).  
+ Le pilote utilise un thread distinct pour extraire des données lorsque vous utilisez la récupération progressive. Pour utiliser l’extraction progressive pour une source de données, activez la case à cocher **extraire les données en arrière-plan** dans la boîte de [dialogue installation de ODBC pour Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou utilisez le mot clé d’attribut BackgroundFetch dans votre chaîne de connexion. Évitez d’utiliser la récupération en arrière-plan lorsque vous appelez le pilote à partir d’applications multithread. Pour plus d’informations sur les mots clés d’attribut de chaîne de connexion, consultez [utilisation de chaînes de connexion](../../odbc/microsoft/using-connection-strings.md).  
   
- Pour plus d’informations sur les fils et **SQLCancel**, voir [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) dans la *référence du programmeur ODBC*.
+ Pour plus d’informations sur les threads et les **SQLCancel**, consultez [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) dans le *Guide de référence du programmeur ODBC*.

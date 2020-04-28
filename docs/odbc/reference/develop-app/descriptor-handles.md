@@ -1,5 +1,5 @@
 ---
-title: Poignées descripteur Microsoft Docs
+title: Handles de descripteur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -24,25 +24,25 @@ ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed0595c97f3f4ad92d976c89327a01e25cb5b753
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305910"
 ---
 # <a name="descriptor-handles"></a>Handles de descripteur
-Un *descripteur* est une collection de métadonnées qui décrit les paramètres d’une déclaration SQL ou les colonnes d’un ensemble de résultats, comme le voit l’application ou le conducteur (également connu sous le nom *de mise en œuvre*). Ainsi, un descripteur peut remplir l’un des quatre rôles :  
+Un *descripteur* est une collection de métadonnées qui décrit les paramètres d’une instruction SQL ou les colonnes d’un jeu de résultats, comme le montre l’application ou le pilote (également appelée *implémentation*). Par conséquent, un descripteur peut remplir l’un des quatre rôles suivants :  
   
--   **Descripteur paramètre d’application (APD).** Contient des informations sur les tampons d’application liés aux paramètres dans une déclaration SQL, telles que leurs adresses, longueurs et types de données C.  
+-   **Descripteur de paramètre d’application (APD).** Contient des informations sur les mémoires tampons d’application liées aux paramètres dans une instruction SQL, telles que leurs adresses, leurs longueurs et leurs types de données C.  
   
--   **Descripteur paramètre de mise en œuvre (IPD).** Contient des renseignements sur les paramètres dans un communiqué sqL, comme leurs types de données SQL, leurs longueurs et leur nullité.  
+-   **Descripteur de paramètre d’implémentation (IPD).** Contient des informations sur les paramètres dans une instruction SQL, telles que les types de données SQL, les longueurs et les valeurs NULL.  
   
--   **Descripteur de ligne d’application (ARD).** Contient des informations sur les tampons d’application liés aux colonnes dans un ensemble de résultats, tels que leurs adresses, longueurs et types de données C.  
+-   **Descripteur de ligne d’application (ARD).** Contient des informations sur les mémoires tampons d’application liées aux colonnes dans un jeu de résultats, telles que leurs adresses, leurs longueurs et leurs types de données C.  
   
--   **Implémentation Descriptor de ligne (IRD).** Contient des informations sur les colonnes dans un ensemble de résultats, tels que leurs types de données SQL, les longueurs et l’annulation.  
+-   **Descripteur de ligne d’implémentation (IRD).** Contient des informations sur les colonnes d’un jeu de résultats, telles que leurs types de données SQL, leurs longueurs et leurs valeurs NULL.  
   
- Quatre descripteurs (un remplissant chaque rôle) sont attribués automatiquement lorsqu’une déclaration est attribuée. Ceux-ci sont connus sous le nom *de descripteurs automatiquement attribués* et sont toujours associés à cette déclaration. Les applications peuvent également allouer des descripteurs avec **SQLAllocHandle**. Ceux-ci sont connus comme *des descripteurs explicitement alloués*. Ils sont attribués sur une connexion et peuvent être associés à une ou plusieurs déclarations sur cette connexion pour remplir le rôle d’une DPA ou d’une DPA sur ces déclarations.  
+ Quatre descripteurs (un remplissant chaque rôle) sont alloués automatiquement lors de l’allocation d’une instruction. Celles-ci sont appelées *descripteurs alloués automatiquement* et sont toujours associées à cette instruction. Les applications peuvent également allouer des descripteurs avec **SQLAllocHandle**. Ils sont appelés *descripteurs explicitement alloués*. Elles sont allouées sur une connexion et peuvent être associées à une ou plusieurs instructions sur cette connexion pour assumer le rôle d’un APD ou d’un ARD sur ces instructions.  
   
- La plupart des opérations dans ODBC peuvent être effectuées sans utilisation explicite de descripteurs par l’application. Cependant, les descripteurs fournissent un raccourci pratique pour certaines opérations. Supposons, par exemple, qu’une application veuille insérer des données de deux ensembles différents de tampons. Pour utiliser le premier ensemble de tampons, il appellerait à plusieurs reprises **SQLBindParameter** pour les lier aux paramètres dans une déclaration **INSERT,** puis exécuter la déclaration. Pour utiliser la deuxième série de tampons, il répéterait ce processus. Alternativement, il pourrait mettre en place des fixations à la première série de tampons dans un descripteur et à la deuxième série de tampons dans un autre descripteur. Pour passer d’un ensemble de fixations, l’application appellerait simplement **SQLSetStmtAttr** et associerait le descripteur correct à la déclaration sous le titre apD.  
+ La plupart des opérations dans ODBC peuvent être effectuées sans utilisation explicite des descripteurs par l’application. Toutefois, les descripteurs fournissent un raccourci pratique pour certaines opérations. Par exemple, supposons qu’une application souhaite insérer des données à partir de deux ensembles différents de mémoires tampons. Pour utiliser le premier ensemble de mémoires tampons, il doit appeler **SQLBindParameter** à plusieurs reprises pour les lier aux paramètres dans une instruction **Insert** , puis exécuter l’instruction. Pour utiliser le deuxième ensemble de mémoires tampons, il répète ce processus. Elle peut également définir des liaisons au premier jeu de mémoires tampons dans un descripteur et au deuxième ensemble de mémoires tampons dans un autre descripteur. Pour basculer entre les jeux de liaisons, l’application appelle simplement **SQLSetStmtAttr** et associe le descripteur correct à l’instruction en tant que APD.  
   
- Pour plus d’informations sur les descripteurs, voir [Types de descripteurs](../../../odbc/reference/develop-app/types-of-descriptors.md).
+ Pour plus d’informations sur les descripteurs, consultez [types de descripteurs](../../../odbc/reference/develop-app/types-of-descriptors.md).

@@ -1,5 +1,5 @@
 ---
-title: Comportements cursors (fr) Microsoft Docs
+title: Comportements des curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e3400e52cd0b7574c07a3cf813b4cbca317df2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305460"
 ---
 # <a name="cursor-behaviors"></a>Comportements des curseurs
@@ -42,15 +42,15 @@ ms.locfileid: "81305460"
 |SQL_NONSCROLLABLE et SQL_INSENSITIVE|Jeu de résultats par défaut (avant uniquement, en lecture seule)|  
 |SQL_NONSCROLLABLE et SQL_UNSPECIFIED|Jeu de résultats par défaut (avant uniquement, en lecture seule)|  
   
- La concurrence optimiste basée sur la version nécessite une colonne **de temps** dans le tableau sous-jacent. Si le contrôle optimiste fondé sur la version est demandé sur une table qui n’a pas de colonne **de timestamp,** le serveur utilise une concordance optimiste basée sur les valeurs.  
+ L’accès concurrentiel optimiste basé sur la version nécessite une colonne **timestamp** dans la table sous-jacente. Si le contrôle d’accès concurrentiel optimiste basé sur la version est demandé sur une table qui n’a pas de colonne **timestamp** , le serveur utilise l’accès concurrentiel optimiste basé sur les valeurs.  
   
 ## <a name="scrollability"></a>Capacité de défilement  
- Lorsque SQL_ATTR_CURSOR_SCROLLABLE est mis à SQL_SCROLLABLE, le curseur prend en charge toutes les différentes valeurs pour le paramètre *FetchOrientation* de [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Lorsque SQL_ATTR_CURSOR_SCROLLABLE est réglée pour SQL_NONSCROLLABLE, le curseur ne prend en charge *qu’une valeur FetchOrientation* de SQL_FETCH_NEXT.  
+ Lorsque SQL_ATTR_CURSOR_SCROLLABLE a la valeur SQL_SCROLLABLE, le curseur prend en charge toutes les valeurs différentes pour le paramètre *FetchOrientation* de [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Lorsque SQL_ATTR_CURSOR_SCROLLABLE est défini sur SQL_NONSCROLLABLE, le curseur prend en charge uniquement la valeur *FetchOrientation* de SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilité  
  Quand SQL_ATTR_CURSOR_SENSITIVITY est défini avec la valeur SQL_SENSITIVE, le curseur reflète les modifications des données effectuées par l'utilisateur en cours ou validées par d'autres utilisateurs. Quand SQL_ATTR_CURSOR_SENSITIVITY est défini avec la valeur SQL_INSENSITIVE, le curseur ne reflète pas les modifications des données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des propriétés cursives (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [Cursor](properties/cursor-properties.md) 
+ [Utilisation des curseurs (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) des [Propriétés de curseur](properties/cursor-properties.md) 
   
   

@@ -1,5 +1,5 @@
 ---
-title: Somn ète ODBC SQL Grammar (Visual FoxPro ODBC Driver) Microsoft Docs
+title: Grammaire SQL ODBC prise en charge (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,44 +19,44 @@ ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304082"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammaire ODBC SQL prise en charge (pilote ODBC Visual FoxPro)
-Le pilote Microsoft Visual FoxPro ODBC prend en charge ce qui suit :  
+Le pilote ODBC Microsoft Visual FoxPro prend en charge les éléments suivants :  
   
--   Toutes les déclarations et clauses SQL dans la grammaire minimale SQL de l’ODBC  
+-   Toutes les instructions et clauses SQL dans la grammaire SQL minimale ODBC  
   
--   Une déclaration SQL supplémentaire de la grammaire SQL de base de l’ODBC  
+-   Instruction SQL supplémentaire issue de la grammaire SQL ODBC Core  
   
- Le tableau suivant répertorie les éléments pris en charge par le conducteur, par ODBC SQL Grammar level.  
+ Le tableau suivant répertorie les éléments pris en charge par le pilote, par le niveau de grammaire SQL ODBC.  
   
 |Level|Éléments|Élément|  
 |-----------|--------------|----------|  
 |Minimum|Langage de définition de données (DDL)|CREATE TABLE et DROP TABLE|  
 ||Langage de manipulation de données (DML)|SELECT, INSERT, UPDATE et DELETE|  
-||Expressions|Simple (comme A>B-C)|  
-||Types de données|CHAR, VARCHAR, ou LONG VARCHAR|  
+||Expressions|Simple (par exemple, un>B + C)|  
+||Types de données|CHAR, VARCHAR ou LONG VARCHAR|  
   
- En plus de la grammaire ODBC SQL supportée, le Visual FoxPro ODBC Driver prend en charge la syntaxe en langue visuelle FoxPro native complète pour les commandes Visuelle FoxPro suivantes :  
+ En plus de la grammaire SQL ODBC prise en charge, le pilote ODBC Visual FoxPro prend en charge la syntaxe de langage Visual FoxPro native complète pour les commandes Visual FoxPro suivantes :  
   
- [TABLE DE MODIFICATION](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
- [CRÉER UNE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
+ [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [Supprimer](../../odbc/microsoft/delete-sql-command.md)  
+ [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [SUPPRIMER L’ÉTIQUETTE](../../odbc/microsoft/delete-tag-command.md)  
+ [SUPPRIMER LA BALISE](../../odbc/microsoft/delete-tag-command.md)  
   
- [TABLE DE CHUTE](../../odbc/microsoft/drop-table-command.md)  
+ [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
- [Index](../../odbc/microsoft/index-command.md)  
+ [INDEX](../../odbc/microsoft/index-command.md)  
   
- [Insérer](../../odbc/microsoft/insert-sql-command.md)  
+ [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   
  [SELECT](../../odbc/microsoft/select-sql-command.md)  
   
- [mettre à jour](../../odbc/microsoft/update-sql-command.md)
+ [UPDATE](../../odbc/microsoft/update-sql-command.md)

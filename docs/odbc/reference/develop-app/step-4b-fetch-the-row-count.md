@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4b: Aller chercher le compte de ligne Microsoft Docs'
+title: 'Étape 4b : extraire le nombre de lignes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31ccbd15ae435165ea007fa9f3c0505c1dcc5aa0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302960"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Étape 4b : Extraire le nombre de lignes
-L’étape suivante consiste à aller chercher le nombre de rangées, comme le montre l’illustration suivante.  
+L’étape suivante consiste à extraire le nombre de lignes, comme indiqué dans l’illustration suivante.  
   
  ![Présente l'extraction du nombre de lignes](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  
   
- Si la déclaration exécutée dans l’étape 3 était une **mise À JOUR**, **SUPPRIMER**, ou **INSERT** déclaration, l’application récupère le nombre de lignes touchées avec **SQLRowCount**. Pour plus d’informations, voir [Déterminer le nombre de lignes touchées](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
+ Si l’instruction exécutée à l’étape 3 était une instruction **Update**, **Delete**ou **Insert** , l’application récupère le nombre de lignes affectées avec **SQLRowCount**. Pour plus d’informations, consultez [détermination du nombre de lignes affectées](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
- L’application revient maintenant à l’étape 3 pour exécuter une autre déclaration dans la même transaction ou produit à l’étape 5 pour valider ou annuler la transaction.
+ L’application retourne maintenant à l’étape 3 pour exécuter une autre instruction dans la même transaction ou passe à l’étape 5 pour valider ou restaurer la transaction.

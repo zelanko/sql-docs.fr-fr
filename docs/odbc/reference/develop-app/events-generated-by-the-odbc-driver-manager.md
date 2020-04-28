@@ -1,5 +1,5 @@
 ---
-title: Événements générés par le gestionnaire de chauffeurs de l’ODBC (fr) Microsoft Docs
+title: Événements générés par le gestionnaire de pilotes ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a7ce17f9ef8e082f94609e0f8fc432b8963d73a6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305750"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Événements générés par le gestionnaire de pilotes ODBC
 > [!IMPORTANT]  
->  La prise en charge de Visual Studio Analyzer a été supprimée à partir de Windows 8 (Visual Studio Analyzer n’a été inclus que dans les anciennes versions de Visual Studio.). Pour un autre mécanisme de dépannage, utilisez le traçage BID.  
+>  La prise en charge de Visual Studio Analyzer a été supprimée depuis Windows 8 (Visual Studio Analyzer n’était inclus que dans les versions antérieures de Visual Studio). Pour un autre mécanisme de résolution des problèmes, utilisez le suivi des enchères.  
   
- Les événements générés par le gestionnaire de pilote ODBC sont enregistrés lorsque le bouton Start Visual Studio Analyzer est cliqué. L’outil lui-même offre des événements définis par le système et la possibilité de créer des événements personnalisés. Pour plus d’informations sur les événements, consultez le *Visual Studio Analyzer Reference Guide* dans la suite de documentation Visual Studio.  
+ Les événements générés par le gestionnaire de pilotes ODBC sont enregistrés lorsque l’utilisateur clique sur le bouton démarrer Visual Studio Analyzer. L’outil lui-même propose des événements définis par le système et la possibilité de créer des événements personnalisés. Pour plus d’informations sur les événements, consultez le *Guide de référence Visual Studio Analyzer* dans la suite de documentation de Visual Studio.  
   
 |Événement Visual Studio Analyzer|Description|  
 |----------------------------------|-----------------|  
-|**Appeler**|Généré sur chaque entrée ODBC API.|  
-|**ReturnException (en anglais)**|Généré sur chaque retour D’ODBC API si le code de retour est SQL_ERROR.|  
-|**RetourNormal**|Généré sur chaque retour ODBC API si le code de retour n’est pas SQL_ERROR.|  
-|**Démarrage de la connexion**|Indique qu’une connexion a commencé; lorsque le gestionnaire de pilote ODBC appelle les API de connexion du conducteur.|  
-|**Connexion complète**|Indique qu’une connexion est terminée; généré lorsque les API de connexion du conducteur reviennent au gestionnaire de pilote ODBC.|  
-|**Démarrage de déconnexion**|Généré lorsque le gestionnaire de conducteur ODBC appelle la fonction **SQLDisconnect** du conducteur.|  
-|**Déconnecter complet**|Généré lorsque la fonction **SQLDisconnect** du conducteur revient au gestionnaire de conduite ODBC.|  
-|**RequêteSend**|Généré lorsque le gestionnaire de conducteur ODBC appelle le **conducteur SQLPrepare**, **SQLExecute**, **fonctions SQLExecDirect,** ainsi que des fonctions de catalogue telles que **SQLTables** et **SQLColumns**.|  
-|**RequêteResult**|Généré lorsque le conducteur retourne un résultat réglé au gestionnaire de pilote ODBC pour les fonctions impliquant des requêtes.|  
-|**TransactionStart**|Généré lorsqu’une application définit la valeur de SQL_ATTR_AUTOCOMMIT à SQL_AUTOCOMMIT_OFF, ou après qu’une application appelle avec succès **SQLEndTran**.|  
+|**Appeler**|Généré sur chaque entrée d’API ODBC.|  
+|**ReturnException**|Généré à chaque retour de l’API ODBC si le code de retour est SQL_ERROR.|  
+|**ReturnNormal**|Généré à chaque retour de l’API ODBC si le code de retour n’est pas SQL_ERROR.|  
+|**Début de la connexion**|Indique qu’une connexion a démarré ; généré lorsque le gestionnaire de pilotes ODBC appelle les API de connexion du pilote.|  
+|**Connexion terminée**|Indique qu’une connexion est terminée ; générée lorsque les API de connexion du pilote retournent au gestionnaire de pilotes ODBC.|  
+|**Démarrer la déconnexion**|Généré lorsque le gestionnaire de pilotes ODBC appelle la fonction **SQLDisconnect** du pilote.|  
+|**Déconnexion terminée**|Généré lorsque la fonction **SQLDisconnect** du pilote revient au gestionnaire de pilotes ODBC.|  
+|**QuerySend**|Généré lorsque le gestionnaire de pilotes ODBC appelle les fonctions **SQLPrepare**, **SQLExecute**, **SQLExecDirect** du pilote, ainsi que les fonctions de catalogue telles que **SQLTables** et **SQLColumns**.|  
+|**QueryResult**|Généré lorsque le pilote retourne un jeu de résultats au gestionnaire de pilotes ODBC pour les fonctions impliquant des requêtes.|  
+|**TransactionStart**|Généré lorsqu’une application définit la valeur de SQL_ATTR_AUTOCOMMIT sur SQL_AUTOCOMMIT_OFF, ou après qu’une application a réussi à appeler **SQLEndTran**.|  
 |**TransactionCommit**|Généré lorsqu’une application appelle **SQLEndTran** pour valider une transaction locale.|  
-|**TransactionRollback**|Généré lorsqu’une application appelle **SQLEndTran** pour annuler une transaction locale.|  
-|**JoinDTC**|Généré lorsqu’une application se joint au Coordonnateur des transactions distribuées (DTC).|  
-|**LeaveDTC (en anglais seulement)**|Généré lorsqu’une application quitte le Coordonnateur des transactions distribuées (DTC).|
+|**TransactionRollback**|Généré lorsqu’une application appelle **SQLEndTran** pour restaurer une transaction locale.|  
+|**JoinDTC**|Généré lorsqu’une application rejoint le Distributed Transaction Coordinator (DTC).|  
+|**LeaveDTC**|Généré lorsqu’une application quitte le Distributed Transaction Coordinator (DTC).|

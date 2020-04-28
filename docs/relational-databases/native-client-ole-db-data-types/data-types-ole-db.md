@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304437"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] Afin d’exécuter des instructions et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de traiter les résultats à l’aide du fournisseur native Client OLE DB, vous devez savoir comment le fournisseur native OLE DB cartographie les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données aux types de données OLE DB lors de la liaison des paramètres ou des colonnes dans un ensemble de lignes, et quand il utilise **l’interface ITableDefinition** pour créer un tableau en .  
+  Pour exécuter [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions et traiter les résultats à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fournisseur OLE DB Native Client, vous devez savoir comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mappe les types de données aux types de données OLE DB lors de la liaison de paramètres ou de colonnes dans un ensemble de lignes, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lorsqu’il utilise l’interface **ITableDefinition** pour créer une table dans.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

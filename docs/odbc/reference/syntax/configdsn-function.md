@@ -1,5 +1,5 @@
 ---
-title: Fonction ConfigDSN ( Microsoft Docs
+title: ConfigDSN fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: fbae126c819088bd277621b207454503a86c8955
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306040"
 ---
 # <a name="configdsn-function"></a>ConfigDSN, fonction
 **Conformité**  
- Version introduite: ODBC 1.0  
+ Version introduite : ODBC 1,0  
   
  **Résumé**  
- **ConfigDSN** ajoute, modifie ou supprime les sources de données des informations du système. Il peut inciter l’utilisateur à obtenir des informations de connexion. Il peut être dans le pilote DLL ou une configuration séparée DLL.  
+ **ConfigDSN** ajoute, modifie ou supprime des sources de données à partir des informations système. Il peut inviter l’utilisateur à fournir des informations de connexion. Il peut se trouver dans la DLL du pilote ou dans une DLL d’installation distincte.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,86 +46,86 @@ BOOL ConfigDSN(
   
 ## <a name="arguments"></a>Arguments  
  *hwndParent*  
- [Entrée] Poignée de fenêtre de parent. La fonction n’affichera pas de boîtes de dialogue si la poignée est nulle.  
+ Entrée Handle de fenêtre parente. La fonction n’affiche pas de boîtes de dialogue si le handle a la valeur null.  
   
  *fRequest*  
- [Entrée] Type de demande. *L’argument de fRequest* doit contenir l’une des valeurs suivantes :  
+ Entrée Type de requête. L’argument *fRequest* doit contenir l’une des valeurs suivantes :  
   
- ODBC_ADD_DSN : Ajoutez une nouvelle source de données.  
+ ODBC_ADD_DSN : ajoutez une nouvelle source de données.  
   
- ODBC_CONFIG_DSN : Configurer (modifier) une source de données existante.  
+ ODBC_CONFIG_DSN : configurer (modifier) une source de données existante.  
   
- ODBC_REMOVE_DSN : Supprimez une source de données existante.  
+ ODBC_REMOVE_DSN : supprimer une source de données existante.  
   
- *lpszDriver (en)*  
- [Entrée] Description du pilote (généralement le nom du DBMS associé) présentée aux utilisateurs au lieu du nom du conducteur physique.  
+ *lpszDriver*  
+ Entrée Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom du pilote physique.  
   
  *lpszAttributes*  
- [Entrée] Une liste doublement nulle des attributs sous forme de paires de mots clés. Pour plus d’informations, voir "Commentaires".  
+ Entrée Liste d’attributs se terminant par un caractère null, sous la forme de paires mot clé-valeur. Pour plus d’informations, consultez la section « commentaires ».  
   
 ## <a name="returns"></a>Retours  
- La fonction retourne VRAI si elle est réussie, FALSE si elle échoue.  
+ La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **ConfigDSN** retourne FALSE, une valeur * \*pfErrorCode* associée est affichée sur le tampon d’erreur de l’installateur par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les * \*valeurs pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et explique chacune dans le cadre de cette fonction.  
+ Quand **ConfigDSN** retourne false, une valeur * \*pfErrorCode* associée est publiée dans la mémoire tampon d’erreur du programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
-|*\*pfErrorCode (en)*|Error|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|Poignée de fenêtre invalide|*L’argument de hwndParent* était invalide.|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Paires de mots clés invalides|*L’argument lpszAttributes* contenait une erreur de syntaxe.|  
-|ODBC_ERROR_INVALID_NAME|Nom de conducteur ou traducteur invalide|*L’argument de lpszDriver* était invalide. Il n’a pas été trouvé dans le registre.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Type invalide de demande|*L’argument de fRequest* n’était pas l’un des suivants :<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN|  
-|ODBC_ERROR_REQUEST_FAILED|*Demande* a échoué|Impossible d’effectuer l’opération demandée par l’argument *de fRequest.*|  
-|ODBC_ERROR_DRIVER_SPECIFIC|Erreur spécifique au conducteur ou au traducteur|Une erreur spécifique au conducteur pour laquelle il n’y a pas d’erreur d’installateur ODBC définie. *L’argument de SzError* dans un appel à la fonction **SQLPostInstallerError** devrait contenir le message d’erreur spécifique au conducteur.|  
+|ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|L’argument *hwndParent* n’était pas valide.|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Paires mot clé/valeur non valides|L’argument *lpszAttributes* contient une erreur de syntaxe.|  
+|ODBC_ERROR_INVALID_NAME|Nom de pilote ou de convertisseur non valide|L’argument *lpszDriver* n’était pas valide. Il est introuvable dans le registre.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|L’argument *fRequest* ne faisait pas partie des éléments suivants :<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN|  
+|ODBC_ERROR_REQUEST_FAILED|Échec de la *requête*|Impossible d’effectuer l’opération demandée par l’argument *fRequest* .|  
+|ODBC_ERROR_DRIVER_SPECIFIC|Erreur spécifique au pilote ou au traducteur|Erreur propre au pilote pour laquelle il n’existe aucune erreur de programme d’installation ODBC définie. L’argument *SzError* dans un appel à la fonction **SQLPostInstallerError** doit contenir le message d’erreur spécifique au pilote.|  
   
 ## <a name="comments"></a>Commentaires  
- **ConfigDSN** reçoit des informations de connexion de l’installateur DLL comme une liste d’attributs sous la forme de paires de mots clés. Chaque paire est terminée avec un byte nul, et la liste entière est terminée avec un byte nul. (C’est-à-dire que deux octets nuls marquent la fin de la liste.) Les espaces ne sont pas autorisés autour du signe égal dans la paire de valeur de mot-clé. **ConfigDSN** peut accepter des mots clés qui ne sont pas des mots clés valides pour **SQLBrowseConnect** et **SQLDriverConnect**. **ConfigDSN** ne prend pas nécessairement en charge tous les mots clés valides pour **SQLBrowseConnect** et **SQLDriverConnect**. (**ConfigDSN** n’accepte pas le mot clé **DRIVER.)** Les mots clés utilisés par la fonction **ConfigDSN** doivent prendre en charge toutes les options nécessaires pour recréer la source de données à l’aide de la fonction de configuration AUTO de l’installateur. Lorsque les utilisations des valeurs **ConfigDSN** et les valeurs de chaîne de connexion sont les mêmes, les mêmes mots clés doivent être utilisés.  
+ **ConfigDSN** reçoit les informations de connexion de la dll du programme d’installation sous la forme d’une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet NULL, et la liste entière se termine par un octet NULL. (Autrement dit, deux octets de valeur null marquent la fin de la liste.) Les espaces ne sont pas autorisés autour du signe égal dans la paire mot clé-valeur. **ConfigDSN** peut accepter des mots clés qui ne sont pas des mots clés valides pour **SQLBrowseConnect** et **SQLDriverConnect**. **ConfigDSN** ne prend pas nécessairement en charge tous les mots clés qui sont des mots clés valides pour **SQLBrowseConnect** et **SQLDriverConnect**. (**ConfigDSN** n’accepte pas le mot clé **Driver** .) Les mots clés utilisés par la fonction **ConfigDSN** doivent prendre en charge toutes les options nécessaires à la recréation de la source de données à l’aide de la fonctionnalité de configuration automatique du programme d’installation. Lorsque les utilisations des valeurs **ConfigDSN** et des valeurs de chaîne de connexion sont identiques, les mêmes mots clés doivent être utilisés.  
   
- Comme dans **SQLBrowseConnect** et **SQLDriverConnect**, les mots clés et leurs valeurs ne devraient pas contenir le **[]{}(),;? Les \*** caractères et la valeur du mot clé **DSN** ne peuvent pas se composer uniquement de blancs. En raison de la grammaire du registre, les mots\\clés et les noms de source de données ne peuvent pas contenir le caractère de barre oblique inverse.  
+ Comme dans **SQLBrowseConnect** et **SQLDriverConnect**, les mots clés et leurs valeurs ne doivent pas contenir les **[]{}(),;? = \*! @** caractères, et la valeur du mot clé **DSN** ne peut pas contenir uniquement des espaces. En raison de la grammaire du Registre, les mots clés et les noms de sources\\de données ne peuvent pas contenir de barre oblique inverse ().  
   
- **ConfigDSN** devrait appeler **SQLValidDSN** pour vérifier la durée du nom de la source de données et vérifier qu’aucun personnage invalide n’est inclus dans le nom. Si le nom de source de données est plus long que SQL_MAX_DSN_LENGTH ou inclut des caractères non valides, **SQLValidDSN** renvoie une erreur et **ConfigDSN** renvoie une erreur. La longueur du nom de la source de données est également vérifiée par **SQLWriteDSNToIni**.  
+ **ConfigDSN** doit appeler **SQLValidDSN** pour vérifier la longueur du nom de la source de données et vérifier qu’aucun caractère non valide n’est inclus dans le nom. Si le nom de la source de données est plus long que SQL_MAX_DSN_LENGTH ou contient des caractères non valides, **SQLValidDSN** retourne une erreur et **ConfigDSN** retourne une erreur. La longueur du nom de la source de données est également vérifiée par **SQLWriteDSNToIni**.  
   
- Par exemple, pour configurer une source de données qui nécessite un identifiant d’utilisateur, un mot de passe et un nom de base de données, une application de configuration peut passer les paires de mots clés suivantes :  
+ Par exemple, pour configurer une source de données qui requiert un ID d’utilisateur, un mot de passe et un nom de base de données, une application de configuration peut passer les paires mot clé/valeur suivantes :  
   
 ```  
 DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0  
 ```  
   
- Pour plus d’informations sur ces mots clés, consultez [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) et la documentation de chaque conducteur.  
+ Pour plus d’informations sur ces mots clés, consultez [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) et la documentation de chaque pilote.  
   
- Pour afficher une boîte de dialogue, *hwndParent* ne doit pas être nul.  
+ Pour afficher une boîte de dialogue, *hwndParent* ne doit pas avoir la valeur null.  
   
 ## <a name="adding-a-data-source"></a>Ajout d'une source de données  
- Si un nom de source de données est transmis à **ConfigDSN** dans *lpszAttributes*, **ConfigDSN** vérifie que le nom est valide. Si le nom de source de données correspond à un nom de source de données existant et *que le nom hwndParent* est nul, **ConfigDSN** surmene le nom existant. S’il correspond à un nom existant et *hwndParent n’est* pas nul, **ConfigDSN** invite l’utilisateur à sous-rôdre le nom existant.  
+ Si un nom de source de données est transmis à **ConfigDSN** dans *lpszAttributes*, **ConfigDSN** vérifie que le nom est valide. Si le nom de la source de données correspond à un nom de source de données existant et que *hwndParent* a la valeur null, **ConfigDSN** remplace le nom existant. S’il correspond à un nom existant et que *hwndParent* n’est pas null, **ConfigDSN** invite l’utilisateur à remplacer le nom existant.  
   
- Si *lpszAttributes* contient suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** peut ajouter la source de données ou afficher une boîte de dialogue avec laquelle l’utilisateur peut modifier les informations de connexion. Si *lpszAttributes* ne contient pas suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** doit déterminer les informations nécessaires; si *hwndParent n’est* pas nul, il affiche une boîte de dialogue pour récupérer les informations de l’utilisateur.  
+ Si *lpszAttributes* contient suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** peut ajouter la source de données ou afficher une boîte de dialogue permettant à l’utilisateur de modifier les informations de connexion. Si *lpszAttributes* ne contient pas suffisamment d’informations pour se connecter à une source de données, **ConfigDSN** doit déterminer les informations nécessaires ; Si *hwndParent* n’a pas la valeur null, il affiche une boîte de dialogue pour récupérer les informations de l’utilisateur.  
   
- Si **ConfigDSN** affiche une boîte de dialogue, il doit afficher toutes les informations de connexion qui lui sont transmises dans *lpszAttributes*. En particulier, si un nom de source de données lui a été transmis, **ConfigDSN** affiche ce nom, mais ne permet pas à l’utilisateur de le modifier. **ConfigDSN** peut fournir des valeurs par défaut pour les informations de connexion qui ne lui sont pas transmises dans *lpszAttributes*.  
+ Si **ConfigDSN** affiche une boîte de dialogue, elle doit afficher toutes les informations de connexion qui lui sont passées dans *lpszAttributes*. En particulier, si un nom de source de données lui a été passé, **ConfigDSN** affiche ce nom, mais ne permet pas à l’utilisateur de le modifier. **ConfigDSN** peut fournir des valeurs par défaut pour les informations de connexion qui ne lui sont pas transmises dans *lpszAttributes*.  
   
- Si **ConfigDSN** ne peut pas obtenir des informations de connexion complètes pour une source de données, il renvoie FALSE.  
+ Si **ConfigDSN** ne parvient pas à obtenir les informations de connexion complètes pour une source de données, elle retourne false.  
   
- Si **ConfigDSN** peut obtenir des informations de connexion complètes pour une source de données, il appelle **SQLWriteDSNToIni** dans l’installateur DLL pour ajouter la nouvelle spécification source de données au fichier Odbc.ini (ou registre). **SQLWriteDSNToIni** ajoute le nom de source de données à la section [ODBC Data Sources], crée la section de spécifications de source de données et ajoute le mot clé **DRIVER** avec la description du conducteur comme valeur. **ConfigDSN** appelle **SQLWritePrivateProfileString** dans l’installateur DLL pour ajouter les mots clés et les valeurs supplémentaires utilisés par le conducteur.  
+ Si **ConfigDSN** peut obtenir des informations de connexion complètes pour une source de données, il appelle **SQLWRITEDSNTOINI** dans la dll du programme d’installation pour ajouter la nouvelle spécification de la source de données au fichier ODBC. ini (ou au registre). **SQLWriteDSNToIni** ajoute le nom de la source de données à la section [sources de données ODBC], crée la section de spécification de la source de données et ajoute le mot clé **Driver** avec la description du pilote comme valeur. **ConfigDSN** appelle **SQLWRITEPRIVATEPROFILESTRING** dans la dll du programme d’installation pour ajouter tous les mots clés et valeurs supplémentaires utilisés par le pilote.  
   
 ## <a name="modifying-a-data-source"></a>Modification d’une source de données  
- Pour modifier une source de données, un nom de source de données doit être transmis à **ConfigDSN** dans *lpszAttributes*. **ConfigDSN** vérifie que le nom de la source de données se trouve dans le fichier Odbc.ini (ou registre).  
+ Pour modifier une source de données, un nom de source de données doit être passé à **ConfigDSN** dans *lpszAttributes*. **ConfigDSN** vérifie que le nom de la source de données se trouve dans le fichier ODBC. ini (ou dans le registre).  
   
- Si *hwndParent* est nul, **ConfigDSN** utilise les informations contenues dans *lpszAttributes* pour modifier les informations contenues dans le fichier Odbc.ini (ou registre). Si *hwndParent n’est* pas nul, **ConfigDSN** affiche une boîte de dialogue en utilisant les informations dans *lpszAttributes*; pour les informations non dans *lpszAttributes*, il utilise des informations provenant des informations du système. L’utilisateur peut modifier les informations avant **que ConfigDSN** ne les stocke dans les informations du système.  
+ Si *hwndParent* a la valeur null, **ConfigDSN** utilise les informations dans *lpszAttributes* pour modifier les informations dans le fichier ODBC. ini (ou le registre). Si *hwndParent* n’a pas la valeur null, **ConfigDSN** affiche une boîte de dialogue à l’aide des informations contenues dans *lpszAttributes*; pour les informations qui ne se trouvent pas dans *lpszAttributes*, il utilise les informations des informations système. L’utilisateur peut modifier les informations avant que **ConfigDSN** ne les stocke dans les informations système.  
   
- Si le nom de source de données a été modifié, **ConfigDSN** appelle **d’abord SQLRemoveDSNFromIni** dans l’installateur DLL pour supprimer la spécification source de données existante du fichier Odbc.ini (ou registre). Il suit ensuite les étapes de la section précédente pour ajouter les nouvelles spécifications de source de données. Si le nom de source de données n’a pas été modifié, **ConfigDSN** appelle **SQLWritePrivateProfileString** dans l’installateur DLL pour apporter d’autres modifications. **ConfigDSN** ne peut pas supprimer ou modifier la valeur du mot clé **pilote.**  
+ Si le nom de la source de données a été modifié, **ConfigDSN** appelle d’abord **SQLREMOVEDSNFROMINI** dans la dll du programme d’installation pour supprimer la spécification de la source de données existante du fichier ODBC. ini (ou du registre). Il suit ensuite les étapes de la section précédente pour ajouter la nouvelle spécification de source de données. Si le nom de la source de données n’a pas été modifié, **ConfigDSN** appelle **SQLWRITEPRIVATEPROFILESTRING** dans la dll du programme d’installation pour apporter d’autres modifications. **ConfigDSN** ne peut pas supprimer ou modifier la valeur du mot clé **Driver** .  
   
 ## <a name="deleting-a-data-source"></a>Suppression d’une source de données  
- Pour supprimer une source de données, un nom de source de données doit être transmis à **ConfigDSN** dans *lpszAttributes*. **ConfigDSN** vérifie que le nom de la source de données se trouve dans le fichier Odbc.ini (ou registre). Il appelle ensuite **SQLRemoveDSNFromIni** dans l’installateur DLL pour supprimer la source de données.  
+ Pour supprimer une source de données, un nom de source de données doit être passé à **ConfigDSN** dans *lpszAttributes*. **ConfigDSN** vérifie que le nom de la source de données se trouve dans le fichier ODBC. ini (ou dans le registre). Il appelle ensuite **SQLRemoveDSNFromIni** dans la dll du programme d’installation pour supprimer la source de données.  
   
 ## <a name="note"></a>Remarque
- Si vous écrivez une version Unicode de cette routine, il doit être appelé **ConfigDSNW**, avec des arguments LPCWSTR au lieu de LPCSTR.
+ Si vous écrivez une version Unicode de cette routine, elle doit être appelée **ConfigDSNW**, avec des arguments LPCWSTR au lieu de LPCSTR.
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Ajout, modification ou suppression d’une source de données|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Obtenir une valeur du fichier Odbc.ini ou du registre|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|  
+|Obtention d’une valeur à partir du fichier ODBC. ini ou du Registre|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|  
 |Suppression de la source de données par défaut|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
-|Suppression d’un nom de source de données de Odbc.ini (ou registre)|[SQLRemoveDSNDeIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
-|Ajout d’un nom de source de données à Odbc.ini (ou registre)|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
-|Rédaction d’une valeur pour le fichier Odbc.ini ou le registre|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
+|Suppression d’un nom de source de données du fichier ODBC. ini (ou du registre)|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
+|Ajout d’un nom de source de données à ODBC. ini (ou au registre)|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
+|Écriture d’une valeur dans le fichier ODBC. ini ou dans le registre|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

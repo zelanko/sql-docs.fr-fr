@@ -1,5 +1,5 @@
 ---
-title: Dossiers diagnostiques (en anglais) Microsoft Docs
+title: Enregistrements de diagnostic | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b564f2837bc76e04011170e191d00c08d10c119d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305180"
 ---
 # <a name="diagnostic-records"></a>Enregistrements de diagnostic
-Associés à chaque environnement, connexion, déclaration, et poignée descripteur sont *des dossiers diagnostiques*. Ces dossiers contiennent des informations diagnostiques sur la dernière fonction appelée qui utilisait une poignée particulière. Les enregistrements ne sont remplacés que lorsqu’une autre fonction est appelée à l’aide de cette poignée. Il n’y a pas de limite au nombre de dossiers diagnostiques qui peuvent être stockés à tout moment.  
+Les *enregistrements de diagnostic*sont associés à chaque handle d’environnement, de connexion, d’instruction et de descripteur. Ces enregistrements contiennent des informations de diagnostic sur la dernière fonction appelée qui utilisait un handle particulier. Les enregistrements sont remplacés uniquement lorsqu’une autre fonction est appelée à l’aide de ce handle. Le nombre d’enregistrements de diagnostic pouvant être stockés à un moment donné n’est pas limité.  
   
- Il existe deux types de dossiers diagnostiques : un *enregistrement d’en-tête* et des enregistrements de *statut*nuls ou plus. Le record d’en-tête est record 0; les registres d’état sont des enregistrements 1 et plus. Les dossiers diagnostiques sont composés d’un certain nombre de champs distincts, qui sont différents pour l’enregistrement d’en-tête et les enregistrements d’état. En outre, les composants ODBC peuvent définir leurs propres champs de dossiers diagnostiques.  
+ Il existe deux types d’enregistrements de diagnostic : un *enregistrement d’en-tête* et zéro, un ou plusieurs *enregistrements d’État*. L’enregistrement d’en-tête est l’enregistrement 0 ; les enregistrements d’État sont les enregistrements 1 et ultérieur. Les enregistrements de diagnostic sont composés d’un certain nombre de champs distincts, qui sont différents pour l’enregistrement d’en-tête et les enregistrements d’État. En outre, les composants ODBC peuvent définir leurs propres champs d’enregistrement de diagnostic.  
   
- Bien que les dossiers diagnostiques puissent être considérés comme des structures, il n’est pas nécessaire qu’elles soient réellement des structures; comment un conducteur stocke l’information diagnostique est spécifique au conducteur.  
+ Bien que les enregistrements de diagnostic puissent être considérés comme des structures, il n’est pas nécessaire qu’ils soient réellement des structures ; la façon dont un pilote stocke les informations de diagnostic est spécifique au pilote.  
   
- Les champs dans les dossiers diagnostiques sont récupérés avec **SQLGetDiagField**. Le SQLSTATE, le numéro d’erreur natif et les champs de messages diagnostiques des dossiers d’état peuvent être récupérés en un seul appel avec **SQLGetDiagRec**.  
+ Les champs des enregistrements de diagnostic sont récupérés avec **SQLGetDiagField**. Les champs SQLSTATE, numéro d’erreur natif et message de diagnostic des enregistrements d’État peuvent être récupérés en un seul appel avec **SQLGetDiagRec**.  
   
  Cette section contient les rubriques suivantes :  
   

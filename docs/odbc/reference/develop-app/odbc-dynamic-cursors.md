@@ -1,5 +1,5 @@
 ---
-title: Cursors dynamiques de l’ODBC (fr) Microsoft Docs
+title: Curseurs dynamiques ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,32 +14,32 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f94b83ef1458cd9f8368d1bea3a39682bd80b1a2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302321"
 ---
 # <a name="odbc-dynamic-cursors"></a>Curseurs dynamiques dans ODBC
-Un curseur dynamique est juste que: dynamique. Il peut détecter les modifications apportées à l’adhésion, à l’ordre et aux valeurs du résultat fixé après l’ouverture du curseur. Par exemple, supposez qu’un curseur dynamique extrait deux lignes et qu’une autre application met ensuite à jour l’une de ces lignes et supprime l’autre. Si le curseur dynamique tente alors de réfélériser ces lignes, il ne trouvera pas la ligne supprimée, mais retournera les nouvelles valeurs pour la ligne mise à jour.  
+Un curseur dynamique est simplement : dynamique. Il peut détecter toute modification apportée à l’appartenance, à l’ordre et aux valeurs du jeu de résultats après l’ouverture du curseur. Par exemple, supposez qu’un curseur dynamique extrait deux lignes et qu’une autre application met ensuite à jour l’une de ces lignes et supprime l’autre. Si le curseur dynamique tente ensuite de récupérer ces lignes, il ne trouvera pas la ligne supprimée, mais renverra les nouvelles valeurs de la ligne mise à jour.  
   
- Les curseurs dynamiques détectent toutes les mises à jour, les suppressions et les inserts, les leurs et ceux fabriqués par d’autres. (Cela est soumis au niveau d’isolement de la transaction, tel que défini par l’attribut de connexion SQL_ATTR_TXN_ISOLATION.) Le tableau d’état de la ligne spécifié par l’attribut de l’instruction SQL_ATTR_ROW_STATUS_PTR reflète ces modifications et peut contenir des SQL_ROW_SUCCESS, des SQL_ROW_SUCCESS_WITH_INFO, des SQL_ROW_ERROR, des SQL_ROW_UPDATED et des SQL_ROW_ADDED. Il ne peut pas retourner SQL_ROW_DELETED parce qu’un curseur dynamique ne retourne pas les lignes supprimées à l’extérieur de la ligne et ne reconnaît donc plus l’existence de la ligne supprimée dans l’ensemble de résultat ou son élément correspondant dans le tableau d’état de la ligne. SQL_ROW_ADDED n’est retourné que lorsqu’une ligne est mise à jour par un appel à **SQLSetPos**, pas lorsqu’elle est mise à jour par un autre curseur.  
+ Les curseurs dynamiques détectent toutes les mises à jour, suppressions et insertions, les unes avec les autres et celles effectuées par d’autres. (Ceci est soumis au niveau d’isolation de la transaction, tel qu’il est défini par l’attribut de connexion SQL_ATTR_TXN_ISOLATION.) Le tableau d’état de ligne spécifié par l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR reflète ces modifications et peut contenir SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED et SQL_ROW_ADDED. Elle ne peut pas retourner SQL_ROW_DELETED, car un curseur dynamique ne retourne pas de lignes supprimées en dehors de l’ensemble de lignes et ne reconnaît donc plus l’existence de la ligne supprimée dans le jeu de résultats ou son élément correspondant dans le tableau d’état de ligne. SQL_ROW_ADDED est retourné uniquement lorsqu’une ligne est mise à jour par un appel à **SQLSetPos**, et non lorsqu’elle est mise à jour par un autre curseur.  
   
- Une façon de mettre en œuvre des curseurs dynamiques dans la base de données est de créer un indice sélectif qui définit les membres et la commande de l’ensemble de résultats. Étant donné que l’indice est mis à jour lorsque d’autres effectuent des modifications, un curseur basé sur un tel indice est sensible à tous les changements. Une sélection supplémentaire dans le résultat défini par cet indice est possible en traitant le long de l’indice.  
+ L’une des façons d’implémenter des curseurs dynamiques dans la base de données consiste à créer un index sélectif qui définit l’appartenance et l’ordre du jeu de résultats. Étant donné que l’index est mis à jour lorsque d’autres utilisateurs apportent des modifications, un curseur basé sur ce type d’index est sensible à toutes les modifications. Une sélection supplémentaire dans le jeu de résultats défini par cet index est possible en traitant le long de l’index.  
   
- Les curseurs dynamiques peuvent être simulés en exigeant que le résultat soit commandé par une clé unique. Avec une telle restriction, les allers chercher sont faits en exécutant une déclaration **SELECT** chaque fois que le curseur récupère des rangées. Supposons, par exemple, que l’ensemble de résultats soit défini par cette affirmation :  
+ Les curseurs dynamiques peuvent être simulés en exigeant que le jeu de résultats soit classé par une clé unique. Avec une telle restriction, les extractions sont effectuées en exécutant une instruction **Select** chaque fois que le curseur extrait des lignes. Par exemple, supposons que le jeu de résultats est défini par l’instruction suivante :  
   
 ```  
 SELECT * FROM Customers ORDER BY Name, CustID  
 ```  
   
- Pour aller chercher le jeu de ligne suivant dans cet ensemble de résultats, le curseur simulé définit les paramètres de l’énoncé **SELECT** suivant aux valeurs de la dernière rangée de l’ensemble actuel, puis l’exécute :  
+ Pour extraire l’ensemble de lignes suivant dans ce jeu de résultats, le curseur simulé définit les paramètres de l’instruction **Select** suivante sur les valeurs de la dernière ligne de l’ensemble de lignes actif, puis l’exécute :  
   
 ```  
 SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)  
    ORDER BY Name, CustID  
 ```  
   
- Cette déclaration crée un deuxième ensemble de résultats, dont le premier jeu de ligne est le jeu de ligne suivant dans l’ensemble de résultats d’origine - dans ce cas, l’ensemble de lignes dans le tableau des clients. Le curseur renvoie ce jeu de ligne à l’application.  
+ Cette instruction crée un deuxième jeu de résultats, le premier ensemble de lignes qui est l’ensemble de lignes suivant dans le jeu de résultats d’origine. dans ce cas, il s’agit de l’ensemble de lignes de la table Customers. Le curseur retourne cet ensemble de lignes à l’application.  
   
- Il est intéressant de noter qu’un curseur dynamique mis en œuvre de cette manière crée en fait de nombreux ensembles de résultats, ce qui lui permet de détecter les changements à l’ensemble de résultats d’origine. L’application n’apprend jamais de l’existence de ces ensembles de résultats auxiliaires; il apparaît simplement comme si le curseur est capable de détecter les changements à l’ensemble de résultat d’origine.
+ Il est intéressant de noter qu’un curseur dynamique implémenté de cette manière crée en fait de nombreux jeux de résultats, ce qui lui permet de détecter les modifications apportées au jeu de résultats d’origine. L’application n’apprend jamais l’existence de ces jeux de résultats auxiliaires. Il apparaît simplement comme si le curseur est en mesure de détecter les modifications apportées au jeu de résultats d’origine.

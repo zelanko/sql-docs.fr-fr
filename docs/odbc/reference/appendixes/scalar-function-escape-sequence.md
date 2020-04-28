@@ -1,5 +1,5 @@
 ---
-title: Séquence d’évasion de fonction scalaire (fr) Microsoft Docs
+title: Séquence d’échappement de fonction scalaire | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8347b8e6f0fab6dffc5295fb3b8260a6a56ed123
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305072"
 ---
 # <a name="scalar-function-escape-sequence"></a>Séquence d’échappement de fonction scalaire
-ODBC utilise des séquences d’évasion pour des fonctions scalaires. La syntaxe de cette séquence d’évasion est la suivante :  
+ODBC utilise des séquences d’échappement pour les fonctions scalaires. La syntaxe de cette séquence d’échappement est la suivante :  
   
 ```  
 {fn scalar-function}  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans la notation BNF, la syntaxe est la suivante :  
+ Dans la notation BNF, la syntaxe est la suivante :  
   
- *ODBC-scalar-function-escape* ::  
+ *ODBC-scalaire-fonction-Escape* :: =  
   
- *ODBC-esc-initiateur* fn *scalar-function ODBC-esc-terminator*  
+ *ODBC-ESC-initiateur* Fn *scalaire-fonction ODBC-ESC-terminateur*  
   
- *fonction scalaire* ::md *fonction-nom* *(argument-liste*)  
+ *scalaire-Function* :: = *nom-fonction* (*liste d’arguments*)  
   
- (Les définitions du nom *de fonction* et du *nom de fonction* *(liste d’arguments)* sont dérivées de la liste des fonctions scalaires de [l’Annexe E : Fonctions Scalar](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Les définitions pour les fonctions non Terminals *nom-fonction* et *nom-fonction* (*liste d’arguments*) sont dérivées de la liste des fonctions scalaires dans [annexe E : fonctions scalaires](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-esc-initiateur* ::  
+ *ODBC-Echap-Initiator* :: = {  
   
- *ODBC-esc-terminator* ::  
+ *ODBC-ESC-terminateur* :: =}  
   
- Pour déterminer si la source de données prend en charge les procédures et le conducteur prend en charge la syntaxe d’invocation de la procédure ODBC, une application peut appeler **SQLGetInfo**. Pour plus d’informations, voir [Annexe E: Scalar Functions](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Pour déterminer si la source de données prend en charge les procédures et que le pilote prend en charge la syntaxe d’appel de procédure ODBC, une application peut appeler **SQLGetInfo**. Pour plus d’informations, consultez [l’annexe E : fonctions scalaires](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

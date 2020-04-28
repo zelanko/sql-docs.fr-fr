@@ -1,5 +1,5 @@
 ---
-title: Exécution des questions Comment faire (ODBC) (fr) Microsoft Docs
+title: Rubriques de procédures relatives à l’exécution de requêtes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4953454b761c0c0031d6a31e7762dff7193d7c25
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302284"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Rubriques de procédures relatives à l'exécution de requêtes (ODBC)
@@ -27,13 +27,13 @@ ms.locfileid: "81302284"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utiliser une déclaration &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [Utiliser une instruction &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
--   [Définir les options de curseur &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
+-   [Définir les options de curseur &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [Exécuter une déclaration directement &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [Exécuter directement une instruction &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
--   [Préparer et exécuter une déclaration &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
+-   [Préparer et exécuter une instruction &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures liées à ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

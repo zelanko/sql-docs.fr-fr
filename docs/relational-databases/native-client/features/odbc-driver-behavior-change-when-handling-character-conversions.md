@@ -1,5 +1,5 @@
 ---
-title: Conversions d’oDBC de manipulation de changement d’omble
+title: Conversions de caractères de gestion des modifications ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82e9e3b1ed8487e864e91edfd3067f9fb97bbb71
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303830"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Changement de comportement du pilote ODBC lors de la gestion des conversions de caractères
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] native Client ODBC Driver (SQLNCLI11.dll) a changé la façon dont il fait des conversions SQL_WCHARMD (NCHAR/NVARCHAR/NVARCHAR(MAX)) et SQL_CHAR\* (CHAR/VARCHAR/NARCHAR(MAX)). Les fonctions ODBC, telles que SQLGetData, SQLBindCol et SQLBindParameter, retournent (-4) SQL_NO_TOTAL comme paramètre de longueur/indicateur lors de l'utilisation du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Les versions antérieures du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retournaient une valeur de longueur, ce qui peut s'avérer incorrect.  
+  Le [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] pilote ODBC de Native Client (SQLNCLI11. dll) a modifié son mode de conversion SQL_WCHAR * (NCHAR/NVARCHAR/nvarchar (max))\* et SQL_CHAR (char/varchar/NARCHAR (max)). Les fonctions ODBC, telles que SQLGetData, SQLBindCol et SQLBindParameter, retournent (-4) SQL_NO_TOTAL comme paramètre de longueur/indicateur lors de l'utilisation du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Les versions antérieures du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retournaient une valeur de longueur, ce qui peut s'avérer incorrect.  
   
 ## <a name="sqlgetdata-behavior"></a>Comportement de SQLGetData  
  La plupart des fonctions Windows vous permettent de spécifier une taille de mémoire tampon de 0, et la longueur retournée correspond à la taille des données renvoyées. Le motif suivant est bien connu des programmeurs Windows :  
@@ -33,7 +33,7 @@ pBuffer = new BYTE[iSize];   // Allocate buffer
 GetMyFavoriteAPI(pBuffer, &iSize);   // Retrieve actual data  
 ```  
   
- Toutefois, **SQLGetData** ne devrait pas être utilisé dans ce scénario. Le motif suivant ne doit pas être utilisé :  
+ Toutefois, **SQLGetData** ne doit pas être utilisé dans ce scénario. Le motif suivant ne doit pas être utilisé :  
   
 ```  
 // bad  
@@ -44,11 +44,11 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- **SQLGetData** ne peut être appelé que pour récupérer des morceaux de données réelles. L’utilisation **de SQLGetData** pour obtenir la taille des données n’est pas non étayée.  
+ **SQLGetData** ne peut être appelé que pour récupérer des blocs de données réelles. L’utilisation de **SQLGetData** pour récupérer la taille des données n’est pas prise en charge.  
   
- Ce qui suit montre l'impact du changement de pilote lors de l'utilisation d'un motif incorrect. Cette application interroge une colonne **varchar** et la liaison comme Unicode (SQL_UNICODE/SQL_WCHAR):  
+ Ce qui suit montre l'impact du changement de pilote lors de l'utilisation d'un motif incorrect. Cette application interroge une colonne **varchar** et une liaison au format Unicode (SQL_UNICODE/SQL_WCHAR) :  
   
- Requête:`select convert(varchar(36), '123')`  
+ Demande`select convert(varchar(36), '123')`  
   
 ```  
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
@@ -57,9 +57,9 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Version du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Résultat de longueur ou d'indicateur|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou antérieur|6|Le pilote a déduit par erreur que la conversion de CHAR en WCHAR serait obtenue en multipliant la longueur par 2.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|Le conducteur ne suppose plus que la conversion de CHAR à WCHAR \*ou WCHAR en CHAR est une action (multiplier) 2 ou (diviser)/2.<br /><br /> Appeler **SQLGetData** ne renvoie plus la durée de la conversion attendue. Le pilote détecte la conversion vers ou depuis CHAR et WCHAR, puis retourne (-4) SQL_NO_TOTAL au lieu du comportement *2 ou /2 qui peut être incorrect.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|Le pilote ne suppose plus que la conversion de CHAR en WCHAR ou WCHAR en CHAR est une action (Multiply \*) 2 ou (Division)/2.<br /><br /> L’appel de **SQLGetData** ne retourne plus la longueur de la conversion attendue. Le pilote détecte la conversion vers ou depuis CHAR et WCHAR, puis retourne (-4) SQL_NO_TOTAL au lieu du comportement *2 ou /2 qui peut être incorrect.|  
   
- Utilisez **SQLGetData** pour récupérer les morceaux des données. (Pseudo-code illustré :)  
+ Utilisez **SQLGetData** pour récupérer les segments des données. (Pseudo-code illustré :)  
   
 ```  
 while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {  
@@ -77,7 +77,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 ```  
   
 ## <a name="sqlbindcol-behavior"></a>Comportement de SQLBindCol  
- Requête:`select convert(varchar(36), '1234567890')`  
+ Demande`select convert(varchar(36), '1234567890')`  
   
 ```  
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
@@ -85,11 +85,11 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
   
 |Version du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Résultat de longueur ou d'indicateur|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou antérieur|20|**SQLFetch** signale qu’il y a une troncation sur le côté droit des données.<br /><br /> La longueur correspond à la longueur des données retournées, et non au contenu stocké (suppose une conversion *2 de CHAR en WCHAR, laquelle peut être incorrecte pour les glyphes).<br /><br /> Les données stockées dans le tampon sont de 123 à 0. La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|**SQLFetch** signale qu’il y a une troncation sur le côté droit des données.<br /><br /> La longueur indique -4 (SQL_NO_TOTAL), car le reste des données n'a pas été converti.<br /><br /> Les données stockées dans la mémoire tampon sont 123\0. - La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou antérieur|20|**SQLFetch** signale qu’il existe une troncation à droite des données.<br /><br /> La longueur correspond à la longueur des données retournées, et non au contenu stocké (suppose une conversion *2 de CHAR en WCHAR, laquelle peut être incorrecte pour les glyphes).<br /><br /> Les données stockées dans la mémoire tampon sont 123 \ 0. La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|**SQLFetch** signale qu’il existe une troncation à droite des données.<br /><br /> La longueur indique -4 (SQL_NO_TOTAL), car le reste des données n'a pas été converti.<br /><br /> Les données stockées dans la mémoire tampon sont 123\0. - La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (comportement du paramètre OUTPUT)  
- Requête:`create procedure spTest @p1 varchar(max) OUTPUT`  
+ Demande`create procedure spTest @p1 varchar(max) OUTPUT`  
   
  `select @p1 = replicate('B', 1234)`  
   
@@ -99,15 +99,15 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 |Version du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Résultat de longueur ou d'indicateur|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou antérieur|2468|**SQLFetch** ne renvoie plus de données disponibles.<br /><br /> **SQLMoreResults** ne renvoie plus de données disponibles.<br /><br /> La longueur indique la taille des données retournées du serveur, et non de celles stockées dans la mémoire tampon.<br /><br /> La mémoire tampon d'origine contient 63 octets et un terminateur NULL. La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|**SQLFetch** ne renvoie plus de données disponibles.<br /><br /> **SQLMoreResults** ne renvoie plus de données disponibles.<br /><br /> La longueur indique (-4) SQL_NO_TOTAL, car le reste des données n'a pas été converti.<br /><br /> La mémoire tampon d'origine contient 63 octets et un terminateur NULL. La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou antérieur|2468|**SQLFetch** ne retourne plus de données disponibles.<br /><br /> **SQLMoreResults** ne retourne plus de données disponibles.<br /><br /> La longueur indique la taille des données retournées du serveur, et non de celles stockées dans la mémoire tampon.<br /><br /> La mémoire tampon d'origine contient 63 octets et un terminateur NULL. La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|**SQLFetch** ne retourne plus de données disponibles.<br /><br /> **SQLMoreResults** ne retourne plus de données disponibles.<br /><br /> La longueur indique (-4) SQL_NO_TOTAL, car le reste des données n'a pas été converti.<br /><br /> La mémoire tampon d'origine contient 63 octets et un terminateur NULL. La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>Réalisation de conversions CHAR et WCHAR  
- Le pilote ODBC [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client propose plusieurs manières d'effectuer des conversions CHAR et WCHAR. La logique est similaire à la manipulation des blobs (varchar(max), nvarchar (max), ...):  
+ Le pilote ODBC [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client propose plusieurs manières d'effectuer des conversions CHAR et WCHAR. La logique est similaire à la manipulation d’objets BLOB (varchar (max), nvarchar (max),...) :  
   
--   Les données sont enregistrées ou tronquées dans le tampon spécifié lorsqu’elles sont liant avec **SQLBindCol** ou **SQLBindParameter**.  
+-   Les données sont enregistrées ou tronquées dans la mémoire tampon spécifiée lors de la liaison avec **SQLBindCol** ou **SQLBindParameter**.  
   
--   Si vous ne liez pas, vous pouvez récupérer les données en morceaux en utilisant **SQLGetData** et **SQLParamData**.  
+-   Si vous n’effectuez pas de liaison, vous pouvez récupérer les données par segments à l’aide de **SQLGetData** et **SQLParamData**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

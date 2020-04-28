@@ -1,5 +1,5 @@
 ---
-title: Fonction SQLDriverToDataSource (fr) Microsoft Docs
+title: SQLDriverToDataSource fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 89e7db7e4b20a35e047dca94cb72d8a6888fb670
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302750"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource, fonction
-**SQLDriverToDataSource** prend en charge les traductions pour les conducteurs d’ODBC. Cette fonction n’est pas appelée par les applications compatibles ODBC; les applications demandent la traduction par **SQLSetConnectAttr**. Le conducteur associé au *ConnectionHandle* spécifié dans **SQLSetConnectAttr** appelle le DLL spécifié pour effectuer des traductions de toutes les données qui circulent du conducteur à la source de données. Une traduction par défaut DLL peut être spécifiée dans le fichier de initialisation ODBC.  
+**SQLDriverToDataSource** prend en charge les traductions pour les pilotes ODBC. Cette fonction n’est pas appelée par les applications compatibles ODBC ; les applications demandent une traduction par le biais de **SQLSetConnectAttr**. Le pilote associé au *ConnectionHandle* spécifié dans **SQLSETCONNECTATTR** appelle la DLL spécifiée pour effectuer des traductions de toutes les données circulant du pilote à la source de données. Une DLL de traduction par défaut peut être spécifiée dans le fichier d’initialisation ODBC.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,64 +48,64 @@ BOOL SQLDriverToDataSource(
   
 ## <a name="arguments"></a>Arguments  
  *fOption*  
- [Entrée] Valeur de l’option.  
+ Entrée Valeur de l’option.  
   
  *fSqlType*  
- [Entrée] Le type de données SQL ODBC. Cet argument indique au conducteur comment convertir *rgbValueIn* dans un formulaire acceptable par la source de données. Pour une liste des types de données SQL valides, consultez [LES types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md).  
+ Entrée Type de données SQL ODBC. Cet argument indique au pilote comment convertir des *rgbValueIn* dans un format acceptable par la source de données. Pour obtenir la liste des types de données SQL valides, consultez [types de données](../../../odbc/reference/appendixes/sql-data-types.md)SQL.  
   
  *rgbValueIn*  
- [Entrée] Valeur à traduire.  
+ Entrée Valeur à convertir.  
   
  *cbValueIn*  
- [Entrée] Longueur de *rgbValueIn*.  
+ Entrée Longueur de *rgbValueIn*.  
   
- *rgbValueOut (en)*  
- [Sortie] Résultat de la traduction.  
+ *rgbValueOut*  
+ Sortie Résultat de la traduction.  
   
 > [!NOTE]  
->  La traduction DLL ne met pas fin à cette valeur.  
+>  La DLL de traduction ne termine pas cette valeur par un caractère null.  
   
- *cbValueOutMax (en)*  
- [Entrée] Longueur de *rgbValueOut*.  
+ *cbValueOutMax*  
+ Entrée Longueur de *rgbValueOut*.  
   
- *pcbValueOut (en anglais)*  
- [Sortie] Le nombre total d’octets (à l’exclusion du octet de cessation d’emploi nul) disponible pour revenir en *rgbValueOut*.  
+ *pcbValueOut*  
+ Sortie Nombre total d’octets (à l’exclusion de l’octet de fin null) disponibles pour le retour dans *rgbValueOut*.  
   
- Pour les données de caractère ou binaires, si cela est supérieur ou égal à *cbValueOutMax*, les données dans *rgbValueOut* est tronquée aux octets *cbValueOutMax.*  
+ Pour les données de type caractère ou binaire, si cette valeur est supérieure ou égale à *cbValueOutMax*, les données de *rgbValueOut* sont tronquées à *cbValueOutMax* octets.  
   
- Pour tous les autres types de données, la valeur de *cbValueOutMax* est ignorée et la traduction DLL suppose que la taille de *rgbValueOut* est la taille du type de données C par défaut du type de données SQL spécifié avec *fSqlType*.  
+ Pour tous les autres types de données, la valeur de *cbValueOutMax* est ignorée et la dll de traduction suppose que la taille de *rgbValueOut* est la taille du type de données C par défaut du type de données SQL spécifié avec *fSqlType*.  
   
- *L’argument pcbValueOut* peut être un pointeur nul.  
+ L’argument *pcbValueOut* peut être un pointeur null.  
   
  *szErrorMsg*  
- [Sortie] Pointeur au stockage pour un message d’erreur. Il s’agit d’une chaîne vide à moins que la traduction n’ait échoué.  
+ Sortie Pointeur vers le stockage pour un message d’erreur. Il s’agit d’une chaîne vide, sauf si la conversion a échoué.  
   
  *cbErrorMsgMax*  
- [Entrée] Longueur de *szErrorMsg*.  
+ Entrée Longueur de *szErrorMsg*.  
   
  *pcbErrorMsg*  
- [Sortie] Pointeur sur le nombre total d’octets (à l’exclusion du octet de cessation d’emploi nul) disponible pour revenir en *szErrorMsg*. Si cela est supérieur ou égal à *cbErrorMsg*, les données dans *szErrorMsg* est tronqué à *cbErrorMsgMax* moins le caractère de non-termination. *L’argument pcbErrorMsg* peut être un pointeur nul.  
+ Sortie Pointeur vers le nombre total d’octets (à l’exclusion de l’octet de fin null) disponibles à retourner dans *szErrorMsg*. Si cette valeur est supérieure ou égale à *cbErrorMsg*, les données de *szErrorMsg* sont tronquées à *cbErrorMsgMax* moins le caractère de fin null. L’argument *pcbErrorMsg* peut être un pointeur null.  
   
 ## <a name="returns"></a>Retours  
- VRAI si la traduction a été réussie, FALSE si la traduction a échoué.  
+ TRUE si la conversion a réussi, FALSe en cas d’échec de la traduction.  
   
 ## <a name="comments"></a>Commentaires  
- Le conducteur appelle **SQLDriverToDataSource** pour traduire toutes les données (déclarations SQL, paramètres, etc.) passant du conducteur à la source de données. La traduction DLL peut ne pas traduire certaines données, selon le type de données et le but de la traduction DLL. Par exemple, un DLL qui traduit les données de caractère d’une page de code à une autre ignore toutes les données numériques et binaires.  
+ Le pilote appelle **SQLDriverToDataSource** pour convertir toutes les données (instructions SQL, paramètres, etc.) passant du pilote à la source de données. La DLL de traduction peut ne pas traduire certaines données, selon le type de données et l’objectif de la DLL de traduction. Par exemple, une DLL qui traduit les données de type caractère d’une page de codes en une autre ignore toutes les données numériques et binaires.  
   
- La valeur de *fOption* est définie à la valeur de *vParam* spécifiée en appelant **SQLSetConnectAttr** avec l’attribut SQL_ATTR_TRANSLATE_OPTION. Il s’agit d’une valeur 32 bits qui a une signification spécifique pour une traduction donnée DLL. Par exemple, il peut spécifier une certaine traduction de l’ensemble de caractères.  
+ La valeur de *fOption* est définie sur la valeur de *vParam* spécifiée en appelant **SQLSetConnectAttr** avec l’attribut SQL_ATTR_TRANSLATE_OPTION. Il s’agit d’une valeur 32 bits qui a une signification spécifique pour une DLL de traduction donnée. Par exemple, il peut spécifier une traduction de jeu de caractères spécifique.  
   
- Si le même tampon est spécifié pour *rgbValueIn* et *rgbValueOut*, la traduction des données dans le tampon sera effectuée en place.  
+ Si la même mémoire tampon est spécifiée pour *rgbValueIn* et *rgbValueOut*, la traduction des données dans la mémoire tampon est effectuée sur place.  
   
- Bien que *cbValueIn*, *cbValueOutMax*, et *pcbValueOut* sont du type SDWORD, **SQLDriverToDataSource** ne prend pas nécessairement en charge d’énormes pointeurs.  
+ Bien que *cbValueIn*, *cbValueOutMax*et *pcbValueOut* soient du type SDWORD, **SQLDriverToDataSource** ne prend pas nécessairement en charge les pointeurs énormes.  
   
- Si **SQLDriverToDataSource** renvoie FALSE, la troncation de données aurait pu se produire pendant la traduction. Si *pcbValueOut* (le nombre d’octets disponibles pour revenir dans le tampon de sortie) est supérieur à *cbValueOutMax* (la longueur du tampon de sortie), alors la troncation s’est produite. Le conducteur doit déterminer si la troncation était acceptable ou non. Si la troncation n’a pas eu lieu, le **SQLDriverToDataSource** a retourné FALSE en raison d’une autre erreur. Dans les deux cas, un message d’erreur spécifique est retourné dans *szErrorMsg*.  
+ Si **SQLDriverToDataSource** retourne la valeur false, la troncation des données s’est peut-être produite lors de la traduction. Si *pcbValueOut* (nombre d’octets disponibles à retourner dans la mémoire tampon de sortie) est supérieur à *cbValueOutMax* (longueur de la mémoire tampon de sortie), la troncation s’est produite. Le pilote doit déterminer si la troncation est acceptable ou non. Si la troncation n’a pas eu lieu, **SQLDriverToDataSource** a retourné false en raison d’une autre erreur. Dans les deux cas, un message d’erreur spécifique est retourné dans *szErrorMsg*.  
   
- Pour plus d’informations sur la traduction des données, voir [Traduction DLLs](../../../odbc/reference/develop-app/translation-dlls.md).  
+ Pour plus d’informations sur la traduction de données, consultez [dll de traduction](../../../odbc/reference/develop-app/translation-dlls.md).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Traduire les données issues de la source de données|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|  
-|Retour du paramètre d’un attribut de connexion|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Définir un attribut de connexion|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|Traduction des données retournées à partir de la source de données|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|  
+|Renvoi du paramètre d’un attribut de connexion|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Définition d’un attribut de connexion|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

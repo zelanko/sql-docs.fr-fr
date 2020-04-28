@@ -1,5 +1,5 @@
 ---
-title: SQLTables (Chauffeur d’accès) Microsoft Docs
+title: SQLTables (pilote Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: df3a23af365efbef6a0f0da2c52568501425ecb3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306090"
 ---
 # <a name="sqltables-access-driver"></a>SQLTables (pilote Access)
 > [!NOTE]  
->  Ce sujet fournit des informations spécifiques à Access Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote d’accès. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Argument|Commentaires|  
 |--------------|--------------|  
-|*szTableOwner (en)*|Le seul argument valable pour *szTableOwner* est NULL parce qu’aucun des noms de propriétaire de soutien des conducteurs. Avec *szTableOwner* réglé à NULL, toutes les tables sont retournées. NULL est retourné dans la colonne TABLE_OWNER.|  
-|*szTableQualifier*|Dans la colonne TABLE_QUALIFIER, **SQLTables** retournera le chemin vers un fichier de base de données.|  
-|*SzTableType (en)*|Lorsque le pilote Microsoft Access est utilisé, "SYSTEM TABLE" est pris en charge pour *szTableType* pour les tables système, "SYNONYM" est pris en charge pour les tables jointes, et "VIEW" est pris en charge pour les requêtes de retour en ligne.|  
+|*szTableOwner*|Le seul argument valide pour *szTableOwner* est null, car aucun des pilotes ne prend en charge les noms de propriétaire. Si *szTableOwner* a la valeur null, toutes les tables sont retournées. La valeur NULL est retournée dans la colonne TABLE_OWNER.|  
+|*szTableQualifier*|Dans la colonne TABLE_QUALIFIER, **SQLTables** retourne le chemin d’accès à un fichier de base de données.|  
+|*SzTableType*|Lorsque le pilote Microsoft Access est utilisé, la « TABLE système » est prise en charge pour *szTableType* pour les tables système, « synonyme » est pris en charge pour les tables attachées et « View » est pris en charge pour les requêtes qui retournent des lignes.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonction SQLTables](../../odbc/reference/syntax/sqltables-function.md)

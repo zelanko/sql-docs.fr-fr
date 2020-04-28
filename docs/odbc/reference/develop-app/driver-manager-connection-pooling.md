@@ -1,5 +1,5 @@
 ---
-title: Mise en commun de connexion de gestionnaire de conducteur (fr) Microsoft Docs
+title: Regroupement de connexions du gestionnaire de pilotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,73 +16,73 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 84ccc0db8f9a54eecc8337ca5efbc7b4c4baa239
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305820"
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du gestionnaire de pilotes
-La mise en commun des connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui n’ont pas besoin d’être rétablies pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans une piscine, une application peut réutiliser cette connexion sans effectuer le processus de connexion complet.  
+Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui n’ont pas besoin d’être rétablies pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans exécuter le processus de connexion complet.  
   
- L’utilisation d’une connexion mise en commun peut entraîner des gains de performances importants, car les applications peuvent enregistrer les frais généraux impliqués dans la réalisation d’une connexion. Cela peut être particulièrement important pour les applications de niveau intermédiaire qui se connectent sur un réseau ou pour les applications qui se connectent et se déconnectent à plusieurs reprises, telles que les applications Internet.  
+ L’utilisation d’une connexion regroupée peut entraîner des gains de performances significatifs, car les applications peuvent économiser la surcharge liée à l’établissement d’une connexion. Cela peut être particulièrement important pour les applications de couche intermédiaire qui se connectent sur un réseau ou pour les applications qui se connectent et se déconnectent à plusieurs reprises, telles que les applications Internet.  
   
- En plus des gains de performance, l’architecture de mise en commun des connexions permet d’utiliser un environnement et ses connexions associées par plusieurs composants en un seul processus. Cela signifie que les composants autonomes dans le même processus peuvent interagir les uns avec les autres sans être conscients les uns des autres. Une connexion dans un pool de connexion peut être utilisée à plusieurs reprises par plusieurs composants.  
+ En plus des gains de performances, l’architecture de regroupement de connexions permet à un environnement et à ses connexions associées d’être utilisés par plusieurs composants dans un même processus. Cela signifie que les composants autonomes dans le même processus peuvent interagir l’un avec l’autre sans être conscients l’un de l’autre. Une connexion dans un pool de connexions peut être utilisée de façon répétée par plusieurs composants.  
   
 > [!NOTE]
->  La mise en commun des connexions peut être utilisée par une application ODBC présentant ODBC 2. *x* comportement, tant que l’application peut appeler *SQLSetEnvAttr*. Lors de l’utilisation de la mise en commun des connexions, l’application ne \<doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, comme la modification du nom de *base de données*>, qui modifie le catalogue utilisé par une source de données.  
+>  Le regroupement de connexions peut être utilisé par une application ODBC qui présente ODBC 2. comportement *x* , tant que l’application peut appeler *SQLSetEnvAttr*. Lorsque vous utilisez le regroupement de connexions, l’application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de \<la base de données, par exemple la modification du *nom de la base de* données>, qui modifie le catalogue utilisé par une source de données.  
 
 
- Un pilote ODBC doit être entièrement sûr de fil, et les connexions ne doivent pas avoir d’affinité de fil pour prendre en charge la mise en commun des connexions. Cela signifie que le pilote est capable de gérer un appel sur n’importe quel thread à tout moment et est capable de se connecter sur un thread, d’utiliser la connexion sur un autre thread, et de se déconnecter sur un troisième thread.  
+ Un pilote ODBC doit être entièrement thread-safe, et les connexions ne doivent pas avoir d’affinité de thread pour prendre en charge le regroupement de connexions. Cela signifie que le pilote est en mesure de gérer un appel sur n’importe quel thread à tout moment et qu’il est en mesure de se connecter à un thread, d’utiliser la connexion sur un autre thread et de se déconnecter sur un troisième thread.  
   
- La piscine de connexion est maintenue par le Driver Manager. Les connexions sont tirées de la piscine lorsque l’application appelle **SQLConnect** ou **SQLDriverConnect** et sont retournées à la piscine lorsque l’application appelle **SQLDisconnect**. La taille de la piscine augmente dynamiquement, en fonction des allocations de ressources demandées. Il se rétrécit en fonction du délai d’inactivité : si une connexion est inactive pendant un certain temps (elle n’a pas été utilisée dans une connexion), elle est retirée de la piscine. La taille de la piscine n’est limitée que par des contraintes de mémoire et des limites sur le serveur.  
+ Le pool de connexions est géré par le gestionnaire de pilotes. Les connexions sont extraites du pool lorsque l’application appelle **SQLConnect** ou **SQLDriverConnect** et sont retournées au pool lorsque l’application appelle **SQLDisconnect**. La taille du pool augmente de manière dynamique, en fonction des allocations de ressources demandées. Elle diminue en fonction du délai d’inactivité : si une connexion est inactive pendant un certain laps de temps (elle n’a pas été utilisée dans une connexion), elle est supprimée du pool. La taille du pool est limitée uniquement par les contraintes de mémoire et les limites sur le serveur.  
   
- Le gestionnaire de conducteur détermine si une connexion spécifique dans un pool doit être utilisée en fonction des arguments adoptés dans **SQLConnect** ou **SQLDriverConnect**, et selon les attributs de connexion définis après l’attribution de la connexion.  
+ Le gestionnaire de pilotes détermine si une connexion spécifique dans un pool doit être utilisée conformément aux arguments passés dans **SQLConnect** ou **SQLDriverConnect**, et en fonction des attributs de connexion définis après l’allocation de la connexion.  
   
- Lorsque le Gestionnaire de pilote met en commun les connexions, il doit être en mesure de déterminer si une connexion fonctionne toujours avant de distribuer la connexion. Dans le cas contraire, le gestionnaire de conducteur continue de distribuer la connexion morte à l’application chaque fois qu’une défaillance transitoire du réseau se produit. Un nouvel attribut de connexion a été défini dans ODBC 3 *.x*: SQL_ATTR_CONNECTION_DEAD. Il s’agit d’un attribut de connexion de lecture uniquement qui renvoie SQL_CD_TRUE ou SQL_CD_FALSE. La valeur SQL_CD_TRUE signifie que la connexion a été perdue, tandis que la valeur SQL_CD_FALSE signifie que la connexion est toujours active. (Les conducteurs conformes aux versions antérieures d’ODBC peuvent également prendre en charge cet attribut.)  
+ Quand le gestionnaire de pilotes regroupe les connexions, il doit être en mesure de déterminer si une connexion continue à fonctionner avant de distribuer la connexion. Dans le cas contraire, le gestionnaire de pilotes continue de transmettre la connexion morte à l’application à chaque fois qu’une défaillance réseau temporaire se produit. Un nouvel attribut de connexion a été défini dans ODBC 3 *. x*: SQL_ATTR_CONNECTION_DEAD. Il s’agit d’un attribut de connexion en lecture seule qui retourne soit SQL_CD_TRUE, soit SQL_CD_FALSE. La valeur SQL_CD_TRUE signifie que la connexion a été perdue, tandis que la valeur SQL_CD_FALSE signifie que la connexion est toujours active. (Les pilotes conformes aux versions antérieures d’ODBC peuvent également prendre en charge cet attribut.)  
   
- Un conducteur doit implémenter cette option efficacement ou il va nuire aux performances de mise en commun des connexions. Plus précisément, un appel pour obtenir cet attribut de connexion ne devrait pas provoquer un aller-retour sur le serveur. Au lieu de cela, un conducteur devrait simplement retourner le dernier état connu de la connexion. La connexion est morte si le dernier voyage sur le serveur a échoué, et pas mort si le dernier voyage a réussi.  
+ Un pilote doit implémenter cette option de manière efficace, sans nuire aux performances du regroupement de connexions. Plus précisément, un appel pour obtenir cet attribut de connexion ne doit pas provoquer d’aller-retour vers le serveur. Au lieu de cela, un pilote doit simplement retourner le dernier état connu de la connexion. La connexion est inactive si le dernier voyage au serveur a échoué et n’est pas mort si le dernier voyage a réussi.  
   
 ## <a name="remarks"></a>Notes  
- Si une connexion a été perdue (signalée par l’intermédiaire de SQL_ATTR_CONNECTION_DEAD), le gestionnaire de conduite de l’ODBC détruira cette connexion en appelant SQLDisconnect au conducteur. Les nouvelles demandes de connexion pourraient ne pas trouver de connexion utilisable dans la piscine. Finalement, le Driver Manager pourrait faire une nouvelle connexion, en supposant que la piscine est vide.  
+ Si une connexion a été perdue (signalée via SQL_ATTR_CONNECTION_DEAD), le gestionnaire de pilotes ODBC détruira cette connexion en appelant SQLDisconnect dans le pilote. Les nouvelles demandes de connexion peuvent ne pas trouver de connexion utilisable dans le pool. Finalement, le gestionnaire de pilotes peut établir une nouvelle connexion, en supposant que le pool est vide.  
   
- Pour utiliser un pool de connexion, une application effectue les étapes suivantes :  
+ Pour utiliser un pool de connexions, une application effectue les étapes suivantes :  
   
-1.  Permet la mise en commun des connexions en appelant **SQLSetEnvAttr** pour définir l’attribut SQL_ATTR_CONNECTION_POOLING environnement à SQL_CP_ONE_PER_DRIVER ou SQL_CP_ONE_PER_HENV. Cet appel doit être effectué avant que l’application n’attribue l’environnement partagé pour lequel la mise en commun des connexions doit être activée. La poignée d’environnement dans l’appel à **SQLSetEnvAttr** doit être réglée à nul, ce qui rend SQL_ATTR_CONNECTION_POOLING un attribut de niveau processus. Si l’attribut est réglé pour SQL_CP_ONE_PER_DRIVER, un pool de connexion unique est pris en charge pour chaque conducteur. Si une application fonctionne avec de nombreux pilotes et peu d’environnements, cela pourrait être plus efficace parce que moins de comparaisons peuvent être nécessaires. Si elle est réglée pour SQL_CP_ONE_PER_HENV, un pool de connexion unique est pris en charge pour chaque environnement. Si une application fonctionne avec de nombreux environnements et peu de pilotes, cela pourrait être plus efficace parce que moins de comparaisons peuvent être nécessaires. La mise en commun des connexions est désactivée en fixant SQL_ATTR_CONNECTION_POOLING à SQL_CP_OFF.  
+1.  Active le regroupement de connexions en appelant **SQLSetEnvAttr** pour définir l’attribut d’environnement SQL_ATTR_CONNECTION_POOLING sur SQL_CP_ONE_PER_DRIVER ou SQL_CP_ONE_PER_HENV. Cet appel doit être effectué avant que l’application n’alloue l’environnement partagé pour lequel le groupement de connexions doit être activé. Le handle d’environnement dans l’appel à **SQLSetEnvAttr** doit avoir la valeur null, ce qui rend SQL_ATTR_CONNECTION_POOLING un attribut de niveau processus. Si l’attribut a la valeur SQL_CP_ONE_PER_DRIVER, un seul pool de connexions est pris en charge pour chaque pilote. Si une application fonctionne avec de nombreux pilotes et peu d’environnements, cela peut être plus efficace, car il peut y avoir moins de comparaisons. Si la valeur est SQL_CP_ONE_PER_HENV, un seul pool de connexions est pris en charge pour chaque environnement. Si une application fonctionne avec de nombreux environnements et quelques pilotes, cela peut être plus efficace, car il peut y avoir moins de comparaisons. Le regroupement de connexions est désactivé en définissant SQL_ATTR_CONNECTION_POOLING sur SQL_CP_OFF.  
   
-2.  Alloue un environnement en appelant **SQLAllocHandle** avec l’argument *HandleType* mis à SQL_HANDLE_ENV. L’environnement alloué par cet appel sera un environnement implicite partagé car la mise en commun des connexions a été activée. L’environnement à utiliser n’est pas déterminé, cependant, jusqu’à ce que **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_DBC est appelé sur cet environnement.  
+2.  Alloue un environnement en appelant **SQLAllocHandle** avec l’argument *comme handletype* défini sur SQL_HANDLE_ENV. L’environnement alloué par cet appel sera un environnement partagé implicite, car le regroupement de connexions a été activé. Toutefois, l’environnement à utiliser n’est pas déterminé jusqu’à ce que **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC soit appelé sur cet environnement.  
   
-3.  Alloue une connexion en appelant **SQLAllocHandle** avec *InputHandle* réglé pour SQL_HANDLE_DBC, et *l’ensemble InputHandle* à la poignée environnement allouée pour la mise en commun des connexions. Le Gestionnaire de pilote tente de trouver un environnement existant qui correspond aux attributs de l’environnement définis par l’application. S’il n’existe pas de tel environnement, on en crée un, avec un décompte de référence (maintenu par le Driver Manager) de 1. Si un environnement partagé assorti est trouvé, l’environnement est retourné à l’application et son nombre de références est incrémenté. (La connexion réelle à utiliser n’est pas déterminée par le gestionnaire de conducteur jusqu’à ce que **SQLConnect** ou **SQLDriverConnect** soit appelé.)  
+3.  Alloue une connexion en appelant **SQLAllocHandle** avec *InputHandle* défini sur SQL_HANDLE_DBC, et le *InputHandle* défini sur le handle d’environnement alloué pour le regroupement de connexions. Le gestionnaire de pilotes tente de trouver un environnement existant qui correspond aux attributs d’environnement définis par l’application. Si aucun de ces environnements n’existe, un tel environnement est créé, avec un nombre de références (géré par le gestionnaire de pilotes) de 1. Si un environnement partagé correspondant est trouvé, l’environnement est retourné à l’application et son décompte de références est incrémenté. (La connexion réelle à utiliser n’est pas déterminée par le gestionnaire de pilotes tant que **SQLConnect** ou **SQLDriverConnect** n’est pas appelé.)  
   
-4.  Appelle **SQLConnect** ou **SQLDriverConnect** pour effectuer la connexion. Le gestionnaire de chauffeur utilise les options de connexion dans l’appel à **SQLConnect** (ou les mots clés de connexion dans l’appel à **SQLDriverConnect**) et les attributs de connexion définis après l’attribution de connexion pour déterminer quelle connexion dans le pool doit être utilisée.  
+4.  Appelle **SQLConnect** ou **SQLDriverConnect** pour établir la connexion. Le gestionnaire de pilotes utilise les options de connexion dans l’appel à **SQLConnect** (ou les mots clés de connexion dans l’appel à **SQLDriverConnect**) et les attributs de connexion définis après l’allocation de connexion pour déterminer la connexion dans le pool à utiliser.  
   
     > [!NOTE]  
-    >  La façon dont une connexion demandée est appariée à une connexion mise en commun est déterminée par l’attribut SQL_ATTR_CP_MATCH environnement. Pour plus d’informations, voir [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
+    >  La façon dont une connexion demandée est mise en correspondance avec une connexion regroupée est déterminée par l’attribut d’environnement SQL_ATTR_CP_MATCH. Pour plus d’informations, consultez [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     Les applications ODBC utilisant la mise en commun des connexions doivent appeler [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) lors de l’initialisation de [l’application et CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) lorsque l’application se termine.  
+     Les applications ODBC utilisant le regroupement de connexions doivent appeler [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) pendant l’initialisation de l’application et [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) lorsque l’application se ferme.  
   
-5.  Appels **SQLDisconnect** lorsqu’il est fait avec la connexion. La connexion est retournée à la piscine de connexion et devient disponible pour la réutilisation.  
+5.  Appelle **SQLDisconnect** lorsqu’il est terminé avec la connexion. La connexion est retournée au pool de connexions et devient disponible en vue de sa réutilisation.  
   
- Pour une discussion approfondie, voir [Pooling dans les composants Microsoft Data Access](https://go.microsoft.com/fwlink/?LinkId=120776).  
+ Pour une discussion détaillée, consultez [regroupement dans les composants d’accès aux données Microsoft](https://go.microsoft.com/fwlink/?LinkId=120776).  
   
-## <a name="connection-pooling-considerations"></a>Considérations de mise en commun des connexions  
- L’exécution de l’une ou l’autre des actions suivantes à l’aide d’une commande SQL (plutôt que par l’intermédiaire de l’API ODBC) peut affecter l’état de la connexion et causer des problèmes imprévus lorsque la mise en commun des connexions est active :  
+## <a name="connection-pooling-considerations"></a>Considérations relatives au regroupement de connexions  
+ L’exécution de l’une des actions suivantes à l’aide d’une commande SQL (plutôt que par le biais de l’API ODBC) peut affecter l’état de la connexion et provoquer des problèmes inattendus lorsque le regroupement de connexions est actif :  
   
 -   Ouverture d’une connexion et modification de la base de données par défaut.  
   
--   Utilisation de la déclaration SET pour modifier toutes les options configurables (y compris SET ROWCOUNT, ANSI_NULL, IMPLICIT_TRANSACTIONS, SHOWPLAN, STATISTICS, TEXTSIZE et DATEFORMAT).  
+-   Utilisation de l’instruction SET pour modifier toutes les options configurables (notamment SET ROWCOUNT, ANSI_NULL, IMPLICIT_TRANSACTIONS, SHOWPLAN, STATISTICs, TEXTSIZE et DATEFORMAT).  
   
--   Création de tables temporaires et procédures stockées.  
+-   Création de tables temporaires et de procédures stockées.  
   
- Si l’une de ces actions est effectuée en dehors de l’API ODBC, la prochaine personne qui utilise la connexion héritera automatiquement des paramètres, tableaux ou procédures précédents.  
+ Si l’une de ces actions est effectuée en dehors de l’API ODBC, la personne suivante qui utilise la connexion héritera automatiquement des paramètres, tables ou procédures précédents.  
   
 > [!NOTE]  
->  Ne vous attendez pas à ce que certains paramètres soient présents dans l’état de connexion. Vous devez toujours définir l’état de connexion dans votre application et vous assurer que l’application supprime tous les paramètres de mise en commun des connexions inutilisés.  
+>  Ne vous attendez pas à ce que certains paramètres soient présents dans l’état de la connexion. Vous devez toujours définir l’état de la connexion dans votre application et vous assurer que l’application supprime tous les paramètres de regroupement de connexions inutilisés.  
   
 ## <a name="driver-aware-connection-pooling"></a>Regroupement de connexions prenant en charge les pilotes  
- À partir de Windows 8, un pilote ODBC peut utiliser plus efficacement les connexions dans la piscine. Pour plus d’informations, voir [Driver-Aware Connection Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
+ À compter de Windows 8, un pilote ODBC peut utiliser des connexions dans le pool de manière plus efficace. Pour plus d’informations, consultez [regroupement de connexions prenant en charge les pilotes](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexion à une source de données ou à un pilote](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
- [Développer un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Mise en commun dans les composants Microsoft Data Access](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Regroupement dans les composants Microsoft Data Access](https://go.microsoft.com/fwlink/?LinkId=120776)

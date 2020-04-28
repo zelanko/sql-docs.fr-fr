@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f01c5e43d7d451cbcdca30dd66cf2ca70227541
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305340"
 ---
 # <a name="stored-procedures---running"></a>Procédures stockées - Exécution
@@ -37,7 +37,7 @@ ms.locfileid: "81305340"
   
 -   des fonctionnalités supplémentaires.  
   
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de DB OLE de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client autochtone prend en charge trois des mécanismes utilisés par les procédures stockées pour retourner les données :  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge trois des mécanismes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisés par les procédures stockées pour retourner les données :  
   
 -   Chaque instruction SELECT dans la procédure génère un jeu de résultats.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "81305340"
   
  L'application doit être en mesure de gérer toutes ces sorties provenant de procédures stockées.  
   
- Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cas du fournisseur de DB OLE du client autochtone, les paramètres de sortie et les codes de retour ne sont fournis qu’après que le consommateur a récupéré ou annulé les ensembles de résultats retournés par la procédure stockée. Les codes de retour et les paramètres de sortie sont retournés dans le dernier paquet TDS provenant du serveur.  
+ Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cas du fournisseur OLE DB Native Client, les paramètres de sortie et les codes de retour ne sont pas fournis tant que le consommateur n’a pas récupéré ou annulé les jeux de résultats retournés par la procédure stockée. Les codes de retour et les paramètres de sortie sont retournés dans le dernier paquet TDS provenant du serveur.  
   
  Les fournisseurs utilisent la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY pour signaler quand les paramètres de sortie et les valeurs de retour sont retournés. Cette propriété figure dans le jeu de propriétés DBPROPSET_DATASOURCEINFO.  
   
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de DB OLE du client autochtone définit la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY à DBPROPVAL_OA_ATROWRELEASE pour indiquer que les codes de retour et les paramètres de sortie ne sont pas retournés tant que l’ensemble de résultats n’est pas traité ou publié.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client définit la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY sur DBPROPVAL_OA_ATROWRELEASE pour indiquer que les codes de retour et les paramètres de sortie ne sont pas retournés tant que le jeu de résultats n’est pas traité ou libéré.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

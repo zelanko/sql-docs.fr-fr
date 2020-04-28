@@ -1,5 +1,5 @@
 ---
-title: Règles de manutention diagnostique (en anglais seulement) Microsoft Docs
+title: Règles de gestion des diagnostics | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,45 +16,45 @@ ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9f7f9d19a5a369e9da0efbc0d62f8e556b0597c1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305840"
 ---
 # <a name="diagnostic-handling-rules"></a>Règles de gestion des diagnostics
-Les règles suivantes régissent la manipulation diagnostique dans **SQLGetDiagRec** et **SQLGetDiagField**.  
+Les règles suivantes régissent la gestion des diagnostics dans **SQLGetDiagRec** et **SQLGetDiagField**.  
   
- Pour tous les composants ODBC :  
+ Pour tous les composants ODBC :  
   
--   Ne doit pas remplacer, modifier ou masquer les erreurs ou avertissements reçus d’un autre composant ODBC.  
+-   Ne doit pas remplacer, modifier ou masquer les erreurs ou les avertissements reçus d’un autre composant ODBC.  
   
--   Peut ajouter un enregistrement d’état supplémentaire lorsqu’ils reçoivent un message diagnostique d’un autre composant ODBC. L’enregistrement supplémentaire doit ajouter une réelle valeur d’information au message original.  
+-   Peut ajouter un enregistrement d’État supplémentaire lorsqu’ils reçoivent un message de diagnostic d’un autre composant ODBC. L’enregistrement ajouté doit ajouter la valeur des informations réelles au message d’origine.  
   
- Pour le composant ODBC qui interface directement une source de données :  
+ Pour le composant ODBC qui interface directement une source de données :  
   
--   Doit préfixer son identifiant fournisseur, son identifiant de composant et l’identifiant de la source de données au message diagnostique qu’il reçoit de la source de données.  
+-   Doit préfixer son identificateur de fournisseur, son identificateur de composant et l’identificateur de la source de données au message de diagnostic qu’il reçoit de la source de données.  
   
--   Doit préserver le code d’erreur natif de la source de données.  
+-   Doit conserver le code d’erreur natif de la source de données.  
   
--   Doit préserver le message diagnostique de la source de données.  
+-   Doit conserver le message de diagnostic de la source de données.  
   
- Pour tout composant ODBC qui génère une erreur ou un avertissement indépendant de la source de données :  
+ Pour tout composant ODBC qui génère une erreur ou un avertissement indépendant de la source de données :  
   
--   Doit fournir le SQLSTATE correct pour l’erreur ou l’avertissement.  
+-   Vous devez fournir le SQLSTATE correct pour l’erreur ou l’avertissement.  
   
--   Doit générer le texte du message diagnostique.  
+-   Doit générer le texte du message de diagnostic.  
   
--   Doit préfixer son identifiant fournisseur et son identifiant de composant au message diagnostique.  
+-   Doit préfixer son identificateur de fournisseur et son identificateur de composant au message de diagnostic.  
   
--   Doit retourner un code d’erreur natif, si l’on est disponible et significatif.  
+-   Doit retourner un code d’erreur natif, s’il est disponible et significatif.  
   
- Pour le composant ODBC qui s’interface avec le Driver Manager :  
+ Pour le composant ODBC qui s’interface avec le gestionnaire de pilotes :  
   
 -   Doit initialiser les arguments de sortie de **SQLGetDiagRec** et **SQLGetDiagField**.  
   
--   Doit formater et retourner l’information diagnostique comme arguments de sortie de **SQLGetDiagRec** et **SQLGetDiagField** lorsque cette fonction est appelée.  
+-   Doit mettre en forme et retourner les informations de diagnostic en tant qu’arguments de sortie de **SQLGetDiagRec** et **SQLGetDiagField** lorsque cette fonction est appelée.  
   
- Pour un composant ODBC autre que le gestionnaire de conducteur :  
+ Pour un composant ODBC autre que le gestionnaire de pilotes :  
   
--   Doit définir le SQLSTATE en fonction de l’erreur native. Pour les conducteurs basés sur les fichiers et les conducteurs basés sur DBMS qui n’utilisent pas une passerelle, le conducteur doit définir le SQLSTATE. Pour les conducteurs basés sur DBMS qui utilisent une passerelle, soit le conducteur ou une passerelle qui prend en charge ODBC peut définir le SQLSTATE.
+-   La valeur SQLSTATE doit être définie en fonction de l’erreur native. Pour les pilotes basés sur des fichiers et les pilotes SGBD qui n’utilisent pas de passerelle, le pilote doit définir la valeur SQLSTATE. Pour les pilotes basés sur SGBD qui utilisent une passerelle, le pilote ou une passerelle qui prend en charge ODBC peut définir SQLSTATE.

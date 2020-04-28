@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305336"
 ---
 # <a name="stored-procedures---calling"></a>Procédures stockées - Appel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’utilisation du fournisseur de DB OLE de client autochtone, les paramètres d’une procédure stockée peuvent être transmis par :  
+  Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lorsque vous utilisez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native Client, les paramètres d’une procédure stockée peuvent être passés par :  
   
 -   via un codage effectué de manière irréversible de la valeur de données ;  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305336"
 5.  Exécutez la commande en utilisant **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Méthodes d'appel d'une procédure stockée  
- Lors de l’exécution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]d’une procédure stockée dans , le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de DB OLE native Client prend en charge le :  
+ Lors de l’exécution d’une procédure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stockée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans, le fournisseur OLE DB Native Client prend en charge les éléments suivants :  
   
 -   séquence d'échappement ODBC CALL ;  
   
@@ -94,7 +94,7 @@ ms.locfileid: "81305336"
   
  La syntaxe générale pour l'appel d'une procédure à l'aide de la séquence d'échappement ODBC CALL est :  
   
- **[?]****appeler**_procedure_name_**[[[paramètre**]**,***[paramètre*]]...*parameter* **)**]}  
+ {[**? =**]**appel**_PROCEDURE_NAME_[**(**[*paramètre*] [**,**[*paramètre*]]... **)**]}  
   
  Par exemple :  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81305336"
  Pour obtenir un exemple d’application qui illustre une séquence d’échappement RPC, consultez [Exécuter une procédure stockée (avec la syntaxe RPC) et traiter les codes de retour et les paramètres de sortie &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instruction Transact-SQL EXECUTE  
- La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée, plutôt que l’instruction [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de DB OLE native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client utilise le mécanisme RPC pour optimiser le traitement des commandes. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
+ La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée, plutôt que l’instruction [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client utilise le mécanisme RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de pour optimiser le traitement des commandes. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
   
  Voici un exemple d’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** :  
   

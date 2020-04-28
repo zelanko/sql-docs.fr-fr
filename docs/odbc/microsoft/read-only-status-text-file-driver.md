@@ -1,5 +1,5 @@
 ---
-title: Statut de lecture seulement (pilote de fichier de texte) Microsoft Docs
+title: État en lecture seule (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 934d125b8e50d0c3d1c98fdb8b7ec1cdc7bc2e88
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304860"
 ---
 # <a name="read-only-status-text-file-driver"></a>État En lecture seule (pilote de fichier texte)
-Lorsque le pilote de texte est utilisé, les tableaux de source de données sont lus uniquement. Cependant, les applications peuvent effectuer des insertions pour les tables textuelles.
+Lorsque le pilote de texte est utilisé, les tables de source de données sont en lecture seule. Toutefois, les applications peuvent effectuer des insertions pour les tables de texte.

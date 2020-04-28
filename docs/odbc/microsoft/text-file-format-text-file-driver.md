@@ -1,5 +1,5 @@
 ---
-title: Format de fichier texte (Pilote de fichiers texte) Microsoft Docs
+title: Format de fichier texte (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,37 +16,37 @@ ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303090"
 ---
 # <a name="text-file-format-text-file-driver"></a>Format du fichier texte (pilote de fichier texte)
-Le pilote de texte ODBC prend en charge les fichiers texte délimités et à largeur fixe. Un fichier texte se compose d’une ligne d’en-tête facultative et de lignes de texte nulles ou plus.  
+Le pilote texte ODBC prend en charge les fichiers texte délimités et à largeur fixe. Un fichier texte se compose d’une ligne d’en-tête facultative et de zéro ou plusieurs lignes de texte.  
   
- Bien que la ligne d’en-tête utilise le même format que les autres lignes du fichier texte, le pilote de texte ODBC interprète les entrées de la ligne d’en-tête comme des noms de colonne, et non des données.  
+ Bien que la ligne d’en-tête utilise le même format que les autres lignes du fichier texte, le pilote texte ODBC interprète les entrées de ligne d’en-tête comme des noms de colonnes, et non des données.  
   
- Une ligne de texte délimitée contient une ou plusieurs valeurs de données séparées par des délimitants : virgules, onglets ou délimitants personnalisés. Le même délimitant doit être utilisé dans tout le fichier. Les valeurs de données nulles sont notées par deux délimitants d’affilée sans données entre elles. Les chaînes de caractères d’une ligne de texte délimitée peuvent être incluses dans des doubles guillemets (« »). Aucun blanc ne peut se produire avant ou après des valeurs délimitées.  
+ Une ligne de texte délimitée contient une ou plusieurs valeurs de données séparées par des délimiteurs : des virgules, des tabulations ou un délimiteur personnalisé. Le même délimiteur doit être utilisé dans tout le fichier. Les valeurs de données NULL sont dénotées par deux séparateurs dans une ligne sans données. Les chaînes de caractères d’une ligne de texte délimitée peuvent être placées entre guillemets doubles (""). Aucun espace ne peut se produire avant ou après les valeurs délimitées.  
   
- La largeur de chaque entrée de données dans une ligne de texte à largeur fixe est spécifiée dans un schéma. Les valeurs de données nulles sont notées par des blancs.  
+ La largeur de chaque entrée de données dans une ligne de texte à largeur fixe est spécifiée dans un schéma. Les valeurs de données NULL sont dénotées par des espaces.  
   
- Les tables sont limitées à un maximum de 255 champs. Les noms de terrain sont limités à 64 caractères, et les largeurs de champ sont limitées à 32 766 caractères. Les dossiers sont limités à 65 000 octets.  
+ Les tables sont limitées à un maximum de 255 champs. Les noms de champs sont limités à 64 caractères, et les largeurs de champ sont limitées à 32 766 caractères. Les enregistrements sont limités à 65 000 octets.  
   
  Un fichier texte ne peut être ouvert que pour un seul utilisateur. Plusieurs utilisateurs ne sont pas pris en charge.  
   
- La grammaire suivante, écrite pour les programmeurs, définit le format d’un fichier texte qui peut être lu par le facteur texte ODBC :  
+ La grammaire suivante, écrite pour les programmeurs, définit le format d’un fichier texte qui peut être lu par le pilote texte ODBC :  
   
 |Format|Représentation|  
 |------------|--------------------|  
-|Non-italique|Caractères qui doivent être entrés comme indiqué|  
-|*Italique*|Arguments définis ailleurs dans la grammaire|  
-|parenthèses ([])|Éléments facultatifs|  
-|accolades{}( )|Une liste de choix mutuellement exclusifs|  
-|barres verticales (&#124;)|Séparer les choix mutuellement exclusifs|  
-|points de suspension (...)|Articles qui peuvent être répétés une ou plusieurs fois|  
+|Non italique|Caractères qui doivent être entrés comme indiqué|  
+|*italique*|Arguments définis ailleurs dans la grammaire|  
+|crochets ([])|Éléments facultatifs|  
+|accolades ({})|Liste de choix s’excluant mutuellement|  
+|barres verticales (&#124;)|Séparer les choix s’excluant mutuellement|  
+|points de suspension (...)|Éléments qui peuvent être répétés une ou plusieurs fois|  
   
- Le format d’un fichier texte est :  
+ Le format d’un fichier texte est le suivant :  
   
 ```  
 text-file ::=  
@@ -67,7 +67,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  La largeur de chaque colonne dans un fichier texte à largeur fixe est spécifiée dans le fichier Schema.ini.  
+>  La largeur de chaque colonne dans un fichier texte de largeur fixe est spécifiée dans le fichier Schema. ini.  
   
 ```  
   
@@ -87,7 +87,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  Le délimitant dans un fichier texte délimité sur mesure est spécifié dans le fichier Schema.ini.  
+>  Le délimiteur d’un fichier texte délimité personnalisé est spécifié dans le fichier Schema. ini.  
   
 ```  
 quote-character ::= "  
@@ -113,11 +113,11 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Pour les fichiers délimités, un NULL n’est représenté par aucune donnée entre deux délimitants.  
+>  Pour les fichiers délimités, une valeur NULL est représentée par aucune donnée entre deux délimiteurs.  
   
 ```  
 fixed-width-null ::= <SPACE>...  
 ```  
   
 > [!NOTE]  
->  Pour les fichiers à largeur fixe, un NULL est représenté par des espaces.
+>  Pour les fichiers de largeur fixe, une valeur NULL est représentée par des espaces.
