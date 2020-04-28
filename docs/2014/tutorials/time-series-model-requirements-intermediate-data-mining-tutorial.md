@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892964"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Spécifications pour un modèle de série chronologique (Didacticiel sur l'exploration de données intermédiaire)
@@ -24,8 +24,7 @@ ms.locfileid: "68892964"
   
  Pour ce didacticiel, les données de ventes sont collectées quotidiennement dans la base de données des ventes transactionnelles, mais pour l'exploration de données, les données ont été préagrégées par mois, à l'aide d'une vue.  
   
- De plus, il est souhaitable pour l'analyse que les données aient aussi peu d'écart possible. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries devraient commencer et se terminer de préférence aux mêmes dates. Si les données comportent des intervalles, mais que les espaces ne se trouvent pas au début ou à la fin d’une série, vous pouvez utiliser le paramètre MISSING_VALUE_SUBSTITUTION pour remplir la série. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit également plusieurs options permettant de remplacer des données manquantes par des données, telles que l'utilisation de moyennes ou de constantes.  
+ De plus, il est souhaitable pour l'analyse que les données aient aussi peu d'écart possible. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries devraient commencer et se terminer de préférence aux mêmes dates. Si les données comportent des intervalles, mais que les espaces ne se trouvent pas au début ou à la fin d’une série, vous pouvez utiliser le paramètre MISSING_VALUE_SUBSTITUTION pour remplir la série. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit également plusieurs options permettant de remplacer des données manquantes par des données, telles que l'utilisation de moyennes ou de constantes.  
   
 > [!WARNING]  
 >  Les outils de graphique croisé dynamique et de tableau croisé dynamique qui ont été inclus dans les versions antérieures du concepteur de vue de source de données ne sont plus fournis. Nous vous conseillons d'identifier au préalable les écarts dans les données de série chronologique à l'aide des outils tels que le profileur de données inclus dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

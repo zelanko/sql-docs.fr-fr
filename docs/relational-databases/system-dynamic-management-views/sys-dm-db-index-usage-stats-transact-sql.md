@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264405"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
@@ -49,18 +49,18 @@ ms.locfileid: "68264405"
 |**user_scans**|**bigint**|Nombre d’analyses par requête utilisateur qui n’utilisaient pas le prédicat « SEEK ».|  
 |**user_lookups**|**bigint**|Nombre de recherches de signets par les requêtes utilisateur.|  
 |**user_updates**|**bigint**|Nombre de mises à jour par requête utilisateur. Cela comprend l’insertion, la suppression et les mises à jour qui représentent le nombre d’opérations effectuées, pas les lignes réelles affectées. Par exemple, si vous supprimez 1000 lignes dans une instruction, ce nombre est incrémenté de 1|  
-|**last_user_seek**|**DATETIME**|Heure de la dernière recherche utilisateur.|  
-|**last_user_scan**|**DATETIME**|Heure de la dernière analyse utilisateur.|  
-|**last_user_lookup**|**DATETIME**|Heure de la dernière recherche utilisateur.|  
-|**last_user_update**|**DATETIME**|Heure de la dernière mise à jour utilisateur.|  
+|**last_user_seek**|**datetime**|Heure de la dernière recherche utilisateur.|  
+|**last_user_scan**|**datetime**|Heure de la dernière analyse utilisateur.|  
+|**last_user_lookup**|**datetime**|Heure de la dernière recherche utilisateur.|  
+|**last_user_update**|**datetime**|Heure de la dernière mise à jour utilisateur.|  
 |**system_seeks**|**bigint**|Nombre de recherches par requête système.|  
 |**system_scans**|**bigint**|Nombre d'analyses par requête système.|  
 |**system_lookups**|**bigint**|Nombre de recherches par requête système.|  
 |**system_updates**|**bigint**|Nombre de mises à jour par requête système.|  
-|**last_system_seek**|**DATETIME**|Heure de la dernière recherche système.|  
-|**last_system_scan**|**DATETIME**|Heure de la dernière analyse système.|  
-|**last_system_lookup**|**DATETIME**|Heure de la dernière recherche système.|  
-|**last_system_update**|**DATETIME**|Heure de la dernière mise à jour système.|  
+|**last_system_seek**|**datetime**|Heure de la dernière recherche système.|  
+|**last_system_scan**|**datetime**|Heure de la dernière analyse système.|  
+|**last_system_lookup**|**datetime**|Heure de la dernière recherche système.|  
+|**last_system_update**|**datetime**|Heure de la dernière mise à jour système.|  
 |pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="remarks"></a>Notes  
@@ -83,9 +83,9 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
  [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
+ [Surveillance et réglage des performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   
 

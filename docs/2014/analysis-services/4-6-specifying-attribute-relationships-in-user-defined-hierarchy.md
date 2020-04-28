@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493850"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur
@@ -22,7 +22,7 @@ ms.locfileid: "69493850"
   
  Avec une hiérarchie naturelle, si vous définissez des relations d'attributs entres les attributs qui composent les niveaux, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser l'agrégation d'un attribut pour obtenir les résultats à partir d'un attribut connexe. S'il n'existe aucune relation entre les attributs, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agrège tous les attributs non clé à partir de l'attribut clé. Par conséquent, si les données sous-jacentes le prennent en charge, il est également conseillé de définir des relations d'attributs entre les attributs. La définition des relations d'attributs améliore les performances des dimensions, des partitions et du traitement des requêtes. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md) et [Relations d’attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
- Lorsque vous définissez des relations d'attributs, vous pouvez spécifier si la relation est flexible ou rigide. Si vous définissez une relation rigide, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conserve les agrégations une fois la dimension mise à jour. Si une relation rigide change, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère une erreur au cours du traitement, excepté si la dimension est traitée entièrement. En spécifiant les relations et les propriétés de relations appropriées, vous améliorez les performances de requête et de traitement. Pour plus d’informations, consultez [définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md)et propriétés de la hiérarchie de l' [utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ Lorsque vous définissez des relations d'attributs, vous pouvez spécifier si la relation est flexible ou rigide. Si vous définissez une relation rigide, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conserve les agrégations une fois la dimension mise à jour. Si une relation rigide change, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère une erreur au cours du traitement, excepté si la dimension est traitée entièrement. En spécifiant les relations et les propriétés de relations appropriées, vous améliorez les performances de requête et de traitement. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md)et [Propriétés de la hiérarchie définie par l’utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  Au cours des tâches de cette rubrique, vous allez définir des relations d'attributs pour les attributs des hiérarchies utilisateur naturelles dans le projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Il s’agit de la hiérarchie **Customer Geography** dans la dimension **Customer**, de la hiérarchie **Sales Territory** dans la dimension **Sales Territory** , de la hiérarchie **Product Model Lines** dans la dimension **Product** et des hiérarchies **Fiscal Date** et **Calendar Date** dans la dimension **Date** . Ces hiérarchies utilisateur sont toutes des hiérarchies naturelles.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69493850"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Une icône d'avertissement apparaît dans le diagramme parce que la relation est redondante. Le nom complet de la****-> relation **nom** -> complet du**Code postal** existe déjà, et vous venez de créer le**Code postal**de la relation **nom** -> complet. Le**Code postal** de la relation **Geography**-> est maintenant redondant. nous allons donc le supprimer.  
+     Une icône d'avertissement apparaît dans le diagramme parce que la relation est redondante. Le nom complet de la**Geography**-> relation **nom** -> complet du**Code postal** existe déjà, et vous venez de créer le**Code postal**de la relation **nom** -> complet. Le**Code postal** de la relation **Geography**-> est maintenant redondant. nous allons donc le supprimer.  
   
 6.  Dans le volet **Relations d’attributs** , cliquez avec le bouton droit sur **Géographie**-> **Code postal** , puis cliquez sur **Supprimer**.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493850"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Le **groupe du secteur de vente** est maintenant lié au pays du **secteur**de vente et le pays du secteur de **vente** est maintenant lié à la région du **secteur de vente**. La propriété **RelationshipType** de chacune de ces relations doit avoir la valeur **Flexible** , car le regroupement des régions d’un pays peut changer dans le temps, de même que le regroupement des pays dans les groupes.  
+     L’attribut**Groupe du secteur de vente** est maintenant lié à l’attribut **Pays du secteur de vente**et l’attribut **Pays du secteur de vente** est maintenant lié à l’attribut **Région du secteur de vente**. La propriété **RelationshipType** de chacune de ces relations doit avoir la valeur **Flexible** , car le regroupement des régions d’un pays peut changer dans le temps, de même que le regroupement des pays dans les groupes.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>Définition des relations d'attributs pour les attributs dans la hiérarchie Product Model Lines  
   
@@ -114,7 +114,7 @@ ms.locfileid: "69493850"
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Month Name** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Month Name**. Définissez **l’Attribut associé** sur **Fiscal Quarter**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Month Name**. Affectez la valeur **Fiscal Quarter** à **Attribut associé**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,9 +138,9 @@ ms.locfileid: "69493850"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Quarter** , puis sélectionnez **Nouvelle relation d’attribut**.  
+4.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Semester** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-5.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+5.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Semester**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

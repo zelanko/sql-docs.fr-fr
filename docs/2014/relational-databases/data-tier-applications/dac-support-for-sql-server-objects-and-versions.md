@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811266"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
@@ -27,15 +27,14 @@ ms.locfileid: "68811266"
   
 -   [Objets SQL Server pris en charge](#SupportedObjects)  
   
--   [Prise en charge des applications de la couche données par les versions de SQL Server](#SupportByVersion)  
+-   [Prise en charge de l'application de la couche Données par les versions de SQL Server](#SupportByVersion)  
   
--   [Limitations du déploiement des données](#DeploymentLimitations)  
+-   [Limitations lors du déploiement de données](#DeploymentLimitations)  
   
 -   [Considérations supplémentaires concernant les actions de déploiement](#Considerations)  
   
-##  <a name="SupportedObjects"></a>Objets SQL Server pris en charge  
- Seuls les objets pris en charge peuvent être spécifiés dans une application de la couche Données lors de sa création ou de sa modification. Vous n'êtes pas autorisé à extraire, inscrire ou importer une DAC à partir d'une base de données existante qui contient des objets qui ne sont pas pris en charge dans une DAC. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge les objets suivants dans une DAC.  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a>Objets SQL Server pris en charge  
+ Seuls les objets pris en charge peuvent être spécifiés dans une application de la couche Données lors de sa création ou de sa modification. Vous n'êtes pas autorisé à extraire, inscrire ou importer une DAC à partir d'une base de données existante qui contient des objets qui ne sont pas pris en charge dans une DAC. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge les objets suivants dans une DAC.  
   
 |||  
 |-|-|  
@@ -55,7 +54,7 @@ ms.locfileid: "68811266"
 |TYPE : type de table défini par l'utilisateur|Utilisateur|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a>Prise en charge des applications de la couche données par les versions de SQL Server  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a>Prise en charge des applications de la couche données par les versions de SQL Server  
  Les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont des niveaux de prise en charge différents selon les opérations DAC. Toutes les opérations DAC prises en charge par une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont prises en charge par toutes les éditions de cette version.  
   
  Les instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prennent en charge les opérations DAC suivantes :  
@@ -68,14 +67,11 @@ ms.locfileid: "68811266"
   
  Le DAC Framework comporte les outils côté client pour générer et traiter les packages et les fichiers d'exportation DAC. Le DAC Framework est inclus dans les produits suivants.  
   
--   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] incluent le DAC Framework 3.0, qui prend en charge toutes les opérations DAC.  
+-   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] incluent le DAC Framework 3.0, qui prend en charge toutes les opérations DAC.  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 et Visual Studio 2010 SP1 incluent le DAC Framework 1.1, qui prend en charge toutes les opérations DAC à l'exception des opérations d'exportation et d'importation.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 et Visual Studio 2010 SP1 incluent le DAC Framework 1.1, qui prend en charge toutes les opérations DAC à l'exception des opérations d'exportation et d'importation.  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et Visual Studio 2010 incluent le DAC Framework 1.0, qui prend en charge toutes les opérations DAC à l’exception des opérations d’exportation, d’importation et de mise à niveau sur place.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et Visual Studio 2010 incluent le DAC Framework 1.0, qui prend en charge toutes les opérations DAC à l’exception des opérations d’exportation, d’importation et de mise à niveau sur place.  
   
 -   Les outils clients des versions antérieures de SQL Server ou Visual Studio ne prennent pas en charge les opérations DAC.  
   
@@ -83,7 +79,7 @@ ms.locfileid: "68811266"
   
  Un package DAC ou un fichier d'exportation créé avec une version de DAC Framework peut être traité par toute version ultérieure du DAC Framework. Par exemple, un package DAC extrait à l'aide des outils clients de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] peut être déployé à l'aide de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 ou des outils clients d'une version supérieure.  
   
-##  <a name="DeploymentLimitations"></a>Limitations du déploiement des données  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a>Limitations du déploiement des données  
  Notez les limitations de fidélité dans le moteur de déploiement de données du DAC Framework dans SQL Server 2012 SP1. Les limitations s'appliquent aux actions suivantes du DAC Framework : déployer ou publier un fichier .dacpac, et importer un fichier .bacpac.  
   
 1.  La perte des métadonnées de certaines conditions et types de base dans les colonnes sql_variant. Dans les cas affectés, un avertissement avec le message suivant s’affiche :  **Certaines propriétés sur certains types de données utilisés dans une colonne sql_variant ne sont pas conservées lorsqu’elles sont déployées par le DAC Framework.**  
@@ -108,18 +104,18 @@ ms.locfileid: "68811266"
   
     -   Type de base DECIMAL, NUMERIC : lorsque la précision de la valeur est supérieure à 28.  
   
-##  <a name="Considerations"></a>Considérations supplémentaires concernant les actions de déploiement  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a>Considérations supplémentaires concernant les actions de déploiement  
  Notez les points suivants pour les actions de déploiement de données DAC Framework :  
   
 -   **Extraction/exportation** : sur les actions qui utilisent l’infrastructure DAC pour créer un package à partir d’une base de données, par exemple, extraire un fichier. dacpac, exporter un fichier. BacPac-ces limitations ne s’appliquent pas. Les données du package sont une représentation haute fidélité des données dans la base de données source. Si l'une de ces conditions est présente dans le package, le journal d'extraction/exportation contient un résumé des problèmes au moyen des messages indiqués ci-dessus. Permet d'avertir l'utilisateur des problèmes potentiels de déploiement de données avec le package qu'ils ont créé. L'utilisateur voit également le message de synthèse suivant dans le journal :  **Ces limitations n'affectent pas la fiabilité des types de données et des valeurs stockées dans le package DAC créé par le DAC Framework ; elles s'appliquent uniquement aux types de données et valeurs résultant du déploiement d'un package DAC dans une base de données. Pour plus d’informations sur les données affectées et la façon de contourner cette limitation, consultez** [cette rubrique](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
--   Actions de **déploiement/publication/importation** -à l’aide de la DAC Framework pour déployer un package dans une base de données, par exemple pour déployer ou publier un fichier. dacpac, et importer un fichier. BacPac, ces limitations s’appliquent. Les données qui donnent la base de données cible ne doivent pas contenir une représentation haute fidélité des données du package. Le journal de déploiement/importation contient un message, indiqué ci-dessus, pour chaque instance dans laquelle le problème est rencontré. L’opération est bloquée par les erreurs (consultez la catégorie 3 ci-dessus), mais se poursuit avec les autres avertissements.  
+-   **Déploiement/publication/importation** : pour les actions qui utilisent le DAC Framework dans le but de déployer un package dans une base de données, par exemple pour déployer ou publier un fichier .dacpac et importer un fichier .bacpac, ces limitations s’appliquent. Les données qui donnent la base de données cible ne doivent pas contenir une représentation haute fidélité des données du package. Le journal de déploiement/importation contient un message, indiqué ci-dessus, pour chaque instance dans laquelle le problème est rencontré. L’opération est bloquée par les erreurs (consultez la catégorie 3 ci-dessus), mais se poursuit avec les autres avertissements.  
   
      Pour plus d’informations sur les données affectées dans ce scénario et la façon de contourner cette limitation pour les actions de déploiement/publication/importation, consultez [cette rubrique](https://go.microsoft.com/fwlink/?LinkId=267087).  
   
 -   **Solutions de contournement** : les opérations d’extraction et d’exportation écrivent les fichiers de données BCP à fidélité complète dans les fichiers. dacpac ou. BacPac. Pour éviter les limitations, utilisez l'utilitaire en ligne de commande SQL Server BCP.exe pour déployer des données haute fidélité dans une base de données cible d'un package DAC.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](data-tier-applications.md)  
   
   

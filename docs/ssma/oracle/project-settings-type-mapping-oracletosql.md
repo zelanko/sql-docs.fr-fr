@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266584"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Paramètres du projet (Mappage de type) (OracleToSQL)
@@ -63,7 +63,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
-|objet blob|varbinary(max)|  
+|objet BLOB|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -118,7 +118,7 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|objet blob|varbinary(max)|  
+|objet BLOB|varbinary(max)|  
 |char|char|  
 |char varying [*.. \*]|VARCHAR [*]|  
 |Char [*.. \*]|Char [*]|  

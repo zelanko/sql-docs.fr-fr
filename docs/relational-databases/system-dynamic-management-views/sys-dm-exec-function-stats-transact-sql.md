@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742836"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68742836"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID de base de données dans lequel la fonction réside.|  
 |**object_id**|**int**|Numéro d’identification d’objet de la fonction.|  
-|**entrer**|**Char (2)**|Type de l’objet : FN = fonctions scalaires|  
-|**type_desc**|**nvarchar (60)**|Description du type d’objet : SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary (64)**|Cela peut être utilisé pour établir une corrélation avec les requêtes dans **sys. dm_exec_query_stats** qui ont été exécutées à partir de cette fonction.|  
-|**plan_handle**|**varbinary (64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec la vue de gestion dynamique **sys. dm_exec_cached_plans** .<br /><br /> Sera toujours 0x000 quand une fonction compilée en mode natif interroge une table optimisée en mémoire.|  
-|**cached_time**|**DATETIME**|Heure à laquelle la fonction a été ajoutée au cache.|  
-|**last_execution_time**|**DATETIME**|Heure à laquelle la fonction a été exécutée pour la dernière fois.|  
+|**type**|**char(2)**|Type de l’objet : FN = fonctions scalaires|  
+|**type_desc**|**nvarchar(60)**|Description du type d’objet : SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary(64)**|Cela peut être utilisé pour établir une corrélation avec les requêtes dans **sys. dm_exec_query_stats** qui ont été exécutées à partir de cette fonction.|  
+|**plan_handle**|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec la vue de gestion dynamique **sys. dm_exec_cached_plans** .<br /><br /> Sera toujours 0x000 quand une fonction compilée en mode natif interroge une table optimisée en mémoire.|  
+|**cached_time**|**datetime**|Heure à laquelle la fonction a été ajoutée au cache.|  
+|**last_execution_time**|**datetime**|Heure à laquelle la fonction a été exécutée pour la dernière fois.|  
 |**execution_count**|**bigint**|Nombre de fois où la fonction a été exécutée depuis sa dernière compilation.|  
 |**total_worker_time**|**bigint**|Temps processeur total, en microsecondes, consommé par les exécutions de cette fonction depuis sa compilation.<br /><br /> Pour les fonctions compilées en mode natif, **total_worker_time** peut ne pas être précis si de nombreuses exécutions prennent moins de 1 milliseconde.|  
 |**last_worker_time**|**bigint**|Temps processeur, en microsecondes, consommé lors de la dernière exécution de la fonction. <sup>1</sup>|  

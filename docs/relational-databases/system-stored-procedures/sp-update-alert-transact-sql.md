@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890844"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -83,7 +83,7 @@ sp_update_alert
 |**0**|None|  
 |**1**|Messagerie électronique|  
 |**2**|Récepteur de radiomessagerie|  
-|**4**|**envoi réseau**|  
+|**4**|**net send**|  
 |**7**|Tous|  
   
 `[ @database_name = ] 'database'`Nom de la base de données dans laquelle l’erreur doit se produire pour déclencher l’alerte. *Database est de* **type sysname.** Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138691"
 ---
 # <a name="mdx-scripting---if"></a>Écriture de scripts MDX - IF
@@ -28,10 +28,10 @@ IF expression THEN assignment END IF
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *formule*  
+ *expression*  
  Expression MDX (Multidimensional Expressions) dont l'évaluation aboutit à une valeur booléenne retournant la valeur True ou False.  
   
- *assigné*  
+ *affectation*  
  Expression MDX assignant une valeur à un sous-cube ou à une propriété calculée.  
   
 ## <a name="remarks"></a>Notes  
@@ -47,6 +47,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

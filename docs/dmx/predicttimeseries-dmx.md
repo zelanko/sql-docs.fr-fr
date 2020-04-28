@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893885"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Étant donné que la requête ** utilise l’option [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] EXTEND_MODEL_CASES, effectue les actions suivantes pour ses prédictions :  
+ Étant donné que la requête *EXTEND_MODEL_CASES* utilise l’option [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] EXTEND_MODEL_CASES, effectue les actions suivantes pour ses prédictions :  
   
 -   Augmente la taille totale des cas d'apprentissage en ajoutant les deux nouveaux mois de données au modèle.  
   
@@ -254,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Exemples de requêtes de modèle de série chronologique](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [Prédire &#40;&#41;DMX](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 263238a0d8430928fad99042dfa0ffd06921a33b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893320"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Éléments de la syntaxe MDX (MDX)
@@ -32,6 +32,6 @@ ms.locfileid: "68893320"
 |[Membres, tuples et jeux](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Les membres, tuples et jeux sont des concepts essentiels des données multidimensionnelles que vous devez comprendre avant de créer une requête MDX.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions multidimensionnelles &#40;référence de&#41; MDX](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Référence MDX &#40;Multidimensional Expressions&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

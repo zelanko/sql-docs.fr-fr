@@ -22,10 +22,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260220"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Préparation des bases de données Access pour la migration (AccessToSQL)
@@ -42,7 +42,7 @@ Après la migration des bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversi
    > [!NOTE]
    > Les fonctionnalités et les paramètres d’accès ne sont pas tous pris en charge par, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]peuvent être facilement converties en. Avant de commencer à migrer des bases de données, consultez [fonctionnalités d’accès incompatible](incompatible-access-features-accesstosql.md).
   
-## <a name="preparing-for-migration"></a>Préparation de la migration  
+## <a name="preparing-for-migration"></a>Préparation à la migration  
 Utilisez les instructions suivantes pour vous aider à préparer vos bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à la migration vers.  
   
 ### <a name="upgrading-older-access-databases"></a>Mise à niveau des bases de données Access plus anciennes  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154302"
 ---
 # <a name="connect-to-azure-storage"></a>Se connecter à Stockage Azure
@@ -29,7 +29,7 @@ ms.locfileid: "70154302"
   
 2.  **Clé de compte** - Indiquez la clé de compte pour le compte de stockage spécifié.  
   
-3.  **Utiliser des points de terminaison sécurisés (HTTPS)** - Cette option utilise la communication chiffrée et l’identification sécurisée d’un serveur web du réseau.  
+3.  **Utiliser des points de terminaison sécurisés (https)** : cette option utilise la communication chiffrée et l’identification sécurisée d’un serveur Web réseau.  
   
 4.  **Enregistrer la clé de compte** - Cette option enregistre votre mot de passe dans un fichier chiffré.  
   

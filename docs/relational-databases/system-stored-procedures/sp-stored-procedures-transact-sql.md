@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702783"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -73,13 +73,11 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**NUM_INPUT_PARAMS**|**int**|réservé à une utilisation future.|  
-|**NUM_OUTPUT_PARAMS**|**int**|réservé à une utilisation future.|  
-|**NUM_RESULT_SETS**|**int**|réservé à une utilisation future.|  
-|**CONCERNANT**|**varchar (254)**|Description de la procédure. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
-|**PROCEDURE_TYPE**|**smallint**|Type de procédure. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être l'une des suivantes :<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**NUM_INPUT_PARAMS**|**int**|Réservé pour un usage futur.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Réservé pour un usage futur.|  
+|**NUM_RESULT_SETS**|**int**|Réservé pour un usage futur.|  
+|**NOTES**|**varchar (254)**|Description de la procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**PROCEDURE_TYPE**|**smallint**|Type de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être l'une des suivantes :<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Notes  
  Pour une interopérabilité maximale, le client de la passerelle doit utiliser seulement les recherches de correspondance avec des caractères génériques de SQL (caractères génériques % et _).  

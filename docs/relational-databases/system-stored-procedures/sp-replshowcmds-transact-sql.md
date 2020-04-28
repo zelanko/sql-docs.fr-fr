@@ -16,10 +16,10 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96a32ea04fc53f1a0bf3a842a5e68cde5586ac29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770882"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
@@ -44,11 +44,11 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**binaire (10)**|Numéro de séquence de la commande.|  
+|**xact_seqno**|**binary(10)**|Numéro de séquence de la commande.|  
 |**originator_id**|**int**|ID de l’expéditeur de la commande, toujours **0**.|  
 |**publisher_database_id**|**int**|ID de la base de données du serveur de publication, toujours **0**.|  
 |**article_id**|**int**|ID de l’article.|  
-|**entrer**|**int**|Type de commande.|  
+|**type**|**int**|Type de commande.|  
 |**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]commande.|  
   
 ## <a name="remarks"></a>Notes  

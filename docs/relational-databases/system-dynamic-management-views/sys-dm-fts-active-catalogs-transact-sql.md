@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265967"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "68265967"
 |**database_id**|**int**|ID de la base de données contenant le catalogue de texte intégral actif.|  
 |**catalog_id**|**int**|ID du catalogue de texte intégral actif.|  
 |**memory_address**|**varbinary (8)**|Adresse des mémoires tampons allouées pour l'activité de remplissage liée à ce catalogue de texte intégral.|  
-|**nomme**|**nvarchar(128)**|Nom du catalogue de texte intégral actif.|  
+|**name**|**nvarchar(128)**|Nom du catalogue de texte intégral actif.|  
 |**is_paused**|**bit**|Indique si le remplissage du catalogue de texte intégral actif a été suspendu.|  
-|**statu**|**int**|État actuel du catalogue de texte intégral. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause <br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
-|**status_description**|**nvarchar (120)**|Description de l'état actuel du catalogue de texte intégral actif.|  
+|**statut**|**int**|État actuel du catalogue de texte intégral. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause <br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
+|**status_description**|**nvarchar(120)**|Description de l'état actuel du catalogue de texte intégral actif.|  
 |**previous_status**|**int**|État précédent du catalogue de texte intégral. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause <br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
-|**previous_status_description**|**nvarchar (120)**|Description de l'état précédent du catalogue de texte intégral actif.|  
+|**previous_status_description**|**nvarchar(120)**|Description de l'état précédent du catalogue de texte intégral actif.|  
 |**worker_count**|**int**|Nombre de threads opérant actuellement sur ce catalogue de texte intégral.|  
 |**active_fts_index_count**|**int**|Nombre d'index de recherche en texte intégral en cours d'alimentation.|  
 |**auto_population_count**|**int**|Nombre de tables en cours d'alimentation automatique pour ce catalogue de texte intégral.|  
@@ -68,10 +68,10 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|À|Relation|  
+|À partir|À|Relation|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Un-à-un|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Un-à-un|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Un à un|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Un à un|  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple retourne des informations sur les catalogues de texte intégral actifs de la base de données active.  

@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769055"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -55,7 +55,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0** (par défaut)|Agent de distribution|  
+|**0** (valeur par défaut)|Agent de distribution|  
 |**1**|Agent de fusion|  
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de distribution. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
@@ -64,12 +64,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64** (valeur par défaut)|Démarrage automatique|  
-|**128**|Récurrent|  
+|**128**|Périodique|  
   
 `[ @frequency_interval = ] frequency_interval`Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est de **type int**, avec **1**comme valeur par défaut.  
   
@@ -81,7 +81,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec **0**comme valeur par défaut.  
   

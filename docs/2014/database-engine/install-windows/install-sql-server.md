@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889249"
 ---
 # <a name="install-sql-server-2014"></a>Installer SQL Server 2014
-## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Télécharger SQL Server Express 2014](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-express"></a>[Télécharger SQL Server Express 2014](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Nous vous remercions de [Scott Hanselman](http://www.hanselman.com/) pour la collecte de tous les liens du package d’installation en un seul endroit.**
   
  Cette rubrique fournit une vue d'ensemble des différentes options d'installation disponibles pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] différents composants qui peuvent être installés et le processus d’installation, consultez [installation de SQL Server 2014](installation-for-sql-server.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "68889249"
  Avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], prenez connaissance des conditions requises pour l'installation, des contrôles de configuration du système et des considérations sur la sécurité. Pour en savoir plus, voir [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Examinez les rubriques de la section suivante pour plus d'informations sur différents scénarios d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
   
-## <a name="install-includesscurrentincludessscurrent-mdmd-components"></a>Installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les composants  
+## <a name="install-sscurrent-components"></a>Installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les composants  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "68889249"
 |[Installer les outils d'administration SQL Server](../../sql-server/install/install-sql-server-management-tools.md)|Décrit comment installer et configurer les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Installer SQL Server PowerShell](install-sql-server-powershell.md)|Décrit les considérations relatives à l'installation des composants PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Procédure d’installation[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-sscurrent"></a>Procédure d’installation[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Intitulé|Description|  
 |-----------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "68889249"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et décrit comment configurer le Pare-feu Windows.|  
+|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et décrit comment configurer le Pare-feu Windows.|  
 |[Configurer un ordinateur multirésident pour l'accès à SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.|  
 |[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Vous pouvez suivre les étapes fournies dans cette rubrique pour configurer les paramètres de port et de pare-feu afin d'autoriser l'accès à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à PowerPivot pour SharePoint.|  
   
@@ -63,13 +63,13 @@ ms.locfileid: "68889249"
  [Installer les fonctionnalités BI de SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  Les fonctions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui font partie de la plateforme BI de [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont notamment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)], ainsi que plusieurs applications clientes servant à créer ou utiliser des données analytiques. Cette section de la documentation de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explique comment installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)], et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Installation d'un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décrit comment installer et configurer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Planification d’une installation de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Mise à niveau vers SQL Server 2014](upgrade-sql-server.md)   
  [Désinstaller SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
- [Solutions de haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+ [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   

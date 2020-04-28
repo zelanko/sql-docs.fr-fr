@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652437"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652437"
 
   Compile un plan pour le lot ou l'instruction de curseur envoyé, puis crée et remplit le curseur. sp_cursorprepexec combine les fonctions de sp_cursorprepare et de sp_cursorexecute. Cette procédure est appelée en spécifiant ID = 5 dans un paquet tabular data stream (TDS).  
   
- ![icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *handle préparé*  
  Identificateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *handle* préparé généré. un *handle préparé* est requis et retourne **int**.  
   
- *mire*  
+ *cursor*  
  Identificateur de curseur généré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Cursor* est un paramètre obligatoire qui doit être fourni pour toutes les procédures suivantes qui agissent sur ce curseur, par exemple, sp_cursorfetch.  
   
  *params*  
@@ -59,7 +59,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Les règles de spécification de la valeur stmt sont les mêmes que celles de sp_cursoropen, à l’exception près que le type de données chaîne *stmt* doit être **ntext**.  
   
- *Options*  
+ *options*  
  Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. * les options requièrent la valeur d’entrée **int** suivante.  
   
 |Valeur|Description|  

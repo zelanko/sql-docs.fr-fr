@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 87db0ebd006e2ca87ddc4744a4bbcd396a827712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266121"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Création de fichiers de valeurs de variables (OracleToSQL)
@@ -30,7 +30,7 @@ Le fichier de valeurs de variable est un fichier XML comprenant les valeurs de p
   
 **Exemples :**  
   
-**Exemple 1 :**  
+**Exemple 1 :**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -51,7 +51,7 @@ Le fichier de valeurs de variable est un fichier XML comprenant les valeurs de p
   
 </variables>  
 ```  
-**Exemple 2 :**  
+**Exemple 2 :**  
   
 ```  
 <!--Sample of variable value file commands-->  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530940"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
@@ -92,14 +92,13 @@ ms.locfileid: "69530940"
   
 6.  Une fois le traitement terminé, cliquez sur **Fermer**.  
   
-##  <a name="bkmk_impactanalysis"></a>Exécuter une analyse d’impact pour identifier les dépendances des objets et l’étendue des opérations  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>Exécuter une analyse d’impact pour identifier les dépendances des objets et l’étendue des opérations  
   
 1.  Avant de traiter un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez analyser l’impact du traitement sur les objets associés en cliquant sur **Analyse d’impact** dans l’une des boîtes de dialogue **Traiter les objets** .  
   
 2.  Cliquez avec le bouton droit sur une dimension, un cube, un groupe de mesures ou une partition pour ouvrir une boîte de dialogue **Traiter les objets** .  
   
-3.  Cliquez sur **Analyse d’impact**. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] analyse le modèle et génère un rapport sur les conditions requises pour les objets liés à celui qui est sélectionné en vue du traitement.  
+3.  Cliquez sur **Analyse d’impact**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] analyse le modèle et génère un rapport sur les conditions requises pour les objets liés à celui qui est sélectionné en vue du traitement.  
   
 ### <a name="processing-objects-using-xmla"></a>Traitement d'objets à l'aide de XMLA  
   
@@ -127,9 +126,9 @@ ms.locfileid: "69530940"
   
     -   [Applet de commande Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Applet de commande Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Invoke-ProcessPartition, applet de commande](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Applet de commande Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui comprend des commandes de traitement.  
+    -   [Applet de commande Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui inclut les commandes de traitement.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Surveillance du traitement des objets à l'aide de SQL Server Profiler  
   
@@ -139,13 +138,13 @@ ms.locfileid: "69530940"
   
 3.  Choisissez l'un des événements suivants :  
   
-    -   **Début** de la commande et fin de la **commande** à afficher au démarrage et à l’arrêt du traitement  
+    -   **Début de la commande** et **Fin de la commande** pour afficher le démarrage et l’arrêt du traitement  
   
     -   **Erreur** pour capturer les erreurs  
   
-    -   **Début**du rapport de progression, rapport de **progression en cours**et **rapport de progression fin** pour signaler l’état du processus et afficher les requêtes SQL utilisées pour récupérer les données  
+    -   **Début du rapport de progression**, **Rapport de progression actuel**et **Fin du rapport de progression** pour créer un rapport sur l’état de processus et afficher les requêtes SQL utilisées pour récupérer les données  
   
-    -   **Exécuter le script MDX démarrer** et **exécuter le script MDX fin** pour afficher les calculs de cube  
+    -   **Exécuter script MDX Début** et **Exécuter script MDX Fin** pour afficher les calculs de cube  
   
     -   Éventuellement, ajoutez des événements de verrou si vous analysez des problèmes de performances liés au traitement.  
   

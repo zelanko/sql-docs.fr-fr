@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889214"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter-supprimer des tables (Analysis Services-données multidimensionnelles)
@@ -29,7 +29,7 @@ ms.locfileid: "68889214"
 -   Cliquez avec le bouton droit sur le volet **Diagramme** du **Concepteur de vue de source de données**, puis sélectionnez **Ajouter/Supprimer des tables**.  
   
 ## <a name="options"></a>Options  
- **Source de données**  
+ **Sources de données**  
  Permet de sélectionner la source de données afin d'ajouter ou de supprimer des tables.  
   
  **Objets disponibles**  
@@ -53,6 +53,6 @@ ms.locfileid: "68889214"
   
 ## <a name="see-also"></a>Voir aussi  
  [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de source de données &#40;Analysis Services-données multidimensionnelles&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

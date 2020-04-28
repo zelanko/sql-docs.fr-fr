@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493941"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilisation d'une version modifiée du projet du didacticiel Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "69493941"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Téléchargement et extraction du fichier projet  
   
-1.  [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour accéder à la page de téléchargement qui fournit les exemples de projets qui vont de ce didacticiel. Les projets de didacticiel sont inclus dans le téléchargement **Didacticiel Analysis Services SQL Server 2012** .  
+1.  [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le téléchargement **Didacticiel Analysis Services SQL Server 2012** .  
   
 2.  Cliquez sur **Didacticiel Analysis Services SQL Server 2012** pour télécharger le package qui contient les projets pour ce didacticiel.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "69493941"
 #### <a name="internet-sales-diagram"></a>Diagramme Internet Sales  
  Le diagramme **Internet Sales** contient les tables qui sont liées à la vente des produits [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] effectuée directement auprès des clients par le biais d’Internet. Les tables que ce diagramme contient sont les quatre tables de dimension et la table de faits que vous avez ajoutées à la vue de source de données **Adventure Works DW 2012** de la leçon 1. Il s’agit des tables suivantes :  
   
--   **Région**  
+-   **Zone géographique**  
   
--   **Customer**  
+-   **Client**  
   
 -   **Date**  
   
--   **Produit**  
+-   **Production**  
   
 -   **InternetSales**  
   
@@ -76,21 +76,21 @@ ms.locfileid: "69493941"
   
 -   **Reseller**  
   
--   **Promu**  
+-   **Promotion**  
   
 -   **SalesTerritory**  
   
--   **Région**  
+-   **Zone géographique**  
   
 -   **Date**  
   
--   **Produit**  
+-   **Production**  
   
--   **Employee**  
+-   **Employé**  
   
 -   **ResellerSales**  
   
- Notez que les tables **DimGeography**, **DimDate** et **DimProduct** sont utilisées à la fois dans le diagramme **Internet Sales** et le diagramme **Reseller Sales**. Les tables de dimension peuvent être liées à plusieurs tables de faits.  
+ Notez que les tables **DimGeography**, **DimDate**et **DimProduct** sont utilisées à la fois dans le diagramme **Internet Sales** et le diagramme **Reseller Sales** . Les tables de dimension peuvent être liées à plusieurs tables de faits.  
   
 ### <a name="database-and-cube-dimensions"></a>Dimensions de base de données et de cube  
  Le projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient cinq nouvelles dimensions de base de données et le cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial contient ces cinq mêmes dimensions mais en tant que dimensions de cube. Ces dimensions ont été définies pour avoir des hiérarchies utilisateur et des attributs modifiés par des calculs nommés, des clés de membre de composition et des dossiers d'affichage. Ces nouvelles dimensions sont décrites ci-après.  

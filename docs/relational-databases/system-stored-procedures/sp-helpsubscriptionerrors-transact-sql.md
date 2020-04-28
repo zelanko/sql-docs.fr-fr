@@ -16,10 +16,10 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771522"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
@@ -55,8 +55,8 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Identification de l'erreur|  
-|**time**|**DATETIME**|Heure à laquelle l'erreur s'est produite.|  
+|**id**|**int**|Identification de l'erreur|  
+|**time**|**datetime**|Heure à laquelle l'erreur s'est produite.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Identification du type de source de l'erreur|  
 |**source_name**|**nvarchar(100**|Nom de la source de l'erreur|  

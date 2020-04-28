@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764353"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -63,12 +63,12 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0** (par défaut)|Retourne tous les abonnements.|  
+|**0** (valeur par défaut)|Retourne tous les abonnements.|  
 |**1**|Retourne uniquement les abonnements qui ont des erreurs.|  
 |**2**|Retourne uniquement les abonnements qui ont généré des avertissements de mesure de seuil.|  
-|**1,3**|Retourne uniquement les abonnements qui ont des erreurs ou ayant généré des avertissements de mesure de seuil.|  
+|**3**|Retourne uniquement les abonnements qui ont des erreurs ou ayant généré des avertissements de mesure de seuil.|  
 |**4**|Retourne les 25 principaux abonnements les moins performants.|  
-|**5,5**|Retourne les 50 abonnements les moins performants.|  
+|**5**|Retourne les 50 abonnements les moins performants.|  
 |**6**|Retourne uniquement les abonnements en cours de synchronisation.|  
 |**7**|Retourne uniquement les abonnements qui ne sont pas en cours de synchronisation.|  
   
@@ -82,8 +82,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**int**|Examine l'état de tous les agents de réplication associés à la publication, puis retourne l'état le plus élevé dans l'ordre suivant :<br /><br /> **6** = échec<br /><br /> **5** = nouvelle tentative<br /><br /> **2** = arrêté<br /><br /> **4** = inactif<br /><br /> **3** = en cours<br /><br /> **1** = démarré|  
-|**tres**|**int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration-un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
+|**statut**|**int**|Examine l'état de tous les agents de réplication associés à la publication, puis retourne l'état le plus élevé dans l'ordre suivant :<br /><br /> **6** = échec<br /><br /> **5** = nouvelle tentative<br /><br /> **2** = arrêté<br /><br /> **4** = inactif<br /><br /> **3** = en cours<br /><br /> **1** = démarré|  
+|**warning**|**int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration-un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscriber_db**|**sysname**|Nom de la base de données utilisée pour l'abonnement.|  
 |**publisher_db**|**sysname**|Nom de la base de données de publication.|  
@@ -96,7 +96,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**agentnotrunningthreshold**|**int**|Durée, en heures, pendant laquelle l'Agent n'a pas été exécuté avant le déclenchement d'un avertissement.|  
 |**timetoexpiration**|**int**|Durée, en heures, au terme de laquelle l'abonnement expire s'il n'est pas synchronisé.|  
 |**expirationthreshold**|**int**|Durée, en heures, au terme de laquelle l'expiration de l'abonnement déclenche un avertissement.|  
-|**last_distsync**|**DATETIME**|Date et heure de la dernière exécution de la Agent de distribution.|  
+|**last_distsync**|**datetime**|Date et heure de la dernière exécution de la Agent de distribution.|  
 |**distribution_agentname**|**sysname**|Nom du travail d'Agent de distribution pour l'abonnement à une publication transactionnelle.|  
 |**mergeagentname**|**sysname**|Nom du travail d'Agent de fusion pour l'abonnement à une publication de fusion.|  
 |**mergesubscriptionfriendlyname**|**sysname**|Nom convivial donné à l'abonnement.|  

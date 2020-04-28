@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 57909c1bb4009ae85b7e1b38b8b3cf3fa0e70ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892773"
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68892773"
 |-|-|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin&#41;DMX &#40;](../dmx/rangemin-dmx.md)|  
 |[BottomPercent&#41;DMX &#40;](../dmx/bottompercent-dmx.md)|[&#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Prédire &#40;&#41;DMX](../dmx/predict-dmx.md)|[&#41;DMX &#40;](../dmx/toppercent-dmx.md)|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[&#41;DMX &#40;](../dmx/toppercent-dmx.md)|  
 |[RangeMax&#41;DMX &#40;](../dmx/rangemax-dmx.md)|[&#41;DMX &#40;DMX](../dmx/topsum-dmx.md)|  
 |[RangeMid&#41;DMX &#40;](../dmx/rangemid-dmx.md)||  
   
@@ -35,13 +35,13 @@ ms.locfileid: "68892773"
   
 -   [Existe &#40;DMX&#41;](../dmx/exists-dmx.md)  
   
--   [IsDescendant&#41;DMX &#40;](../dmx/isdescendant-dmx.md)  
+-   [IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
   
 -   [IsTestCase&#41;DMX &#40;](../dmx/istestcase-dmx.md)  
   
 -   [IsTrainingCase&#41;DMX &#40;](../dmx/istrainingcase-dmx.md)  
   
--   [Prédire &#40;&#41;DMX](../dmx/predict-dmx.md)  
+-   [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
 -   [RangeMax&#41;DMX &#40;](../dmx/rangemax-dmx.md)  
   
@@ -61,10 +61,10 @@ ms.locfileid: "68892773"
 |Type de requête|Fonctions prises en charge|Notes|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<Model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin&#41;DMX &#40;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid&#41;DMX &#40;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax&#41;DMX &#40;](../dmx/rangemax-dmx.md)|Ces fonctions peuvent être utilisées pour fournir des valeurs maximales, des valeurs minimales et des moyennes pour toute colonne contenant un type de données numérique, que la colonne soit continue ou ait été discrétisée.|  
-|[Sélectionnez un \<modèle>. HUMIDITÉ](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [Sélectionnez un \<modèle>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant&#41;DMX &#40;](../dmx/isdescendant-dmx.md)|Cette fonction récupère les nœuds enfants pour le nœud spécifié dans le modèle. Elle peut être utilisée, par exemple, pour parcourir les nœuds dans le contenu du modèle d'exploration de données. La disposition des nœuds dans le contenu du modèle d'exploration de données dépend du type de modèle. Pour plus d’informations sur la structure de chaque type de modèle d’exploration de données, consultez [Mining Model Content &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Si vous avez enregistré le contenu du modèle d'exploration de données sous forme d'une dimension, vous pouvez aussi utiliser d'autres fonctions MDX (Multidimensional Expressions) disponibles pour interroger une hiérarchie d'attribut.|  
-|[Sélectionnez un \<modèle>. PARFOIS](../dmx/select-from-model-cases-dmx.md)|[IsInNode&#41;DMX &#40;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase&#41;DMX &#40;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase&#41;DMX &#40;](../dmx/istestcase-dmx.md)|La fonction lag est prise en charge uniquement pour les modèles de série chronologique.<br /><br /> La fonction IsTestCase est prise en charge dans les modèles basés sur une structure créée à l’aide de l’option exclusion pour créer un jeu de données de test. Si le modèle n'est pas basé sur une structure avec le jeu de test d'exclusion, tous les cas sont traités comme des cas d'apprentissage.|  
-|[Sélectionnez un \<modèle>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode&#41;DMX &#40;](../dmx/isinnode-dmx.md)|Dans ce contexte, la fonction IsInNode retourne un cas qui appartient à un ensemble de cas d’exemple idéaux.|  
-|Sélectionnez un \<modèle>. PMML|Non applicable. Utilisez plutôt des fonctions de requête XML.|Les représentations PMML ne sont prises en charge que pour les types de modèles suivants :<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Arbres de décision<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering|  
+|[Sélectionnez un \<modèle>. HUMIDITÉ](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [Sélectionnez un \<modèle>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Cette fonction récupère les nœuds enfants pour le nœud spécifié dans le modèle. Elle peut être utilisée, par exemple, pour parcourir les nœuds dans le contenu du modèle d'exploration de données. La disposition des nœuds dans le contenu du modèle d'exploration de données dépend du type de modèle. Pour plus d’informations sur la structure de chaque type de modèle d’exploration de données, consultez [Mining Model Content &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Si vous avez enregistré le contenu du modèle d'exploration de données sous forme d'une dimension, vous pouvez aussi utiliser d'autres fonctions MDX (Multidimensional Expressions) disponibles pour interroger une hiérarchie d'attribut.|  
+|[Sélectionnez un \<modèle>. PARFOIS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase&#41;DMX &#40;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase&#41;DMX &#40;](../dmx/istestcase-dmx.md)|La fonction lag est prise en charge uniquement pour les modèles de série chronologique.<br /><br /> La fonction IsTestCase est prise en charge dans les modèles basés sur une structure créée à l’aide de l’option exclusion pour créer un jeu de données de test. Si le modèle n'est pas basé sur une structure avec le jeu de test d'exclusion, tous les cas sont traités comme des cas d'apprentissage.|  
+|[Sélectionnez un \<modèle>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Dans ce contexte, la fonction IsInNode retourne un cas qui appartient à un ensemble de cas d’exemple idéaux.|  
+|Sélectionnez un \<modèle>. PMML|Non applicable. Utilisez plutôt des fonctions de requête XML.|Les représentations PMML ne sont prises en charge que pour les types de modèles suivants :<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECT FROM \<Model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
 |[SÉLECTIONNER à \<partir du modèle>](../dmx/select-from-model-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   
@@ -76,6 +76,6 @@ ms.locfileid: "68892773"
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768940"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -58,11 +58,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **Output**  
+-   **Sortie**  
   
 -   **OutputVerboseLevel**  
   
--   **Taille paquet**  
+-   **PacketSize**  
   
 -   **QueryTimeout**  
   
@@ -78,11 +78,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **Sortie**  
   
 -   **OutputVerboseLevel**  
   
--   **Taille paquet**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -114,11 +114,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **Sortie**  
   
 -   **OutputVerboseLevel**  
   
--   **Taille paquet**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -178,13 +178,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **Output**  
+-   **Sortie**  
   
 -   **OutputMessageFile**  
   
 -   **OutputVerboseLevel**  
   
--   **Taille paquet**  
+-   **PacketSize**  
   
 -   **ParallelUploadDownload**  
   
@@ -216,7 +216,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Valider**  
+-   **Vérification**  
   
 -   **ValidateInterval**  
   
@@ -226,7 +226,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **Output**  
+-   **Sortie**  
   
 -   **OutputVerboseLevel**  
   
@@ -253,10 +253,10 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 ## <a name="see-also"></a>Voir aussi  
  [Profils de l’agent de réplication](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Agent de lecture de la file d'attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Agent de distribution de réplication](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Agent de lecture du journal de réplication](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Agent de fusion de réplication](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Agent de lecture de la file d’attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Agent d’instantané de réplication](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

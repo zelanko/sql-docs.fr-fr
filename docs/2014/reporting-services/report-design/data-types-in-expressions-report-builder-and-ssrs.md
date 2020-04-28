@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891868"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "68891868"
   
 -   Créez un champ calculé à partir d'un champ de dataset du rapport existant en écrivant une expression qui convertit toutes les données d'une colonne d'ensemble de résultats en une nouvelle colonne utilisant un type de données différent. Par exemple, l'expression suivante convertit la valeur du champ Année de nombre entier en chaîne : `=CStr(Fields!Year.Value)`. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requête MDX comprend une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme lors du traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une requête MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme pendant le traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Présentation des types de données des paramètres  
  Les cinq types de données possibles pour les paramètres de rapport sont les suivants : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  

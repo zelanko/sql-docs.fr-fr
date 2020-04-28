@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259927"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Prise en main de Assistant Migration SQL Server pour Access (AccessToSQL)
@@ -118,10 +118,10 @@ SSMA contient les menus suivants :
   
 |Menu|Description|  
 |--------|---------------|  
-|**Fichier**|Contient des commandes pour l’Assistant Migration, l’utilisation de projets, l’ajout et la suppression de fichiers de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données Access, et la connexion à ou à Azure SQL db.|  
+|**File**|Contient des commandes pour l’Assistant Migration, l’utilisation de projets, l’ajout et la suppression de fichiers de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données Access, et la connexion à ou à Azure SQL db.|  
 |**Modifier**|Contient des commandes pour rechercher et utiliser du texte dans les pages de détails, telles [!INCLUDE[tsql](../../includes/tsql-md.md)] que la copie à partir du volet d’informations SQL. Pour ouvrir la boîte de dialogue **gérer les signets** , dans le menu modifier, cliquez sur gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Afficher**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’accès et l’Explorateur de métadonnées Azure SQL db. Contient également des commandes permettant d’afficher et de masquer les volets **sortie** et **liste d’erreurs** , ainsi que les **mises en page** d’options à gérer avec les dispositions.|  
-|**Outils**|Contient des commandes permettant de créer des rapports, d’exporter des données, de migrer des objets et des données, de lier des tables et d’accéder aux boîtes de dialogue des paramètres globaux et des projets.|  
+|**Affichage**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’accès et l’Explorateur de métadonnées Azure SQL db. Contient également des commandes permettant d’afficher et de masquer les volets **sortie** et **liste d’erreurs** , ainsi que les **mises en page** d’options à gérer avec les dispositions.|  
+|**outils**|Contient des commandes permettant de créer des rapports, d’exporter des données, de migrer des objets et des données, de lier des tables et d’accéder aux boîtes de dialogue des paramètres globaux et des projets.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et à la boîte de dialogue **à propos** de.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Volet de sortie et volet de Liste d’erreurs  

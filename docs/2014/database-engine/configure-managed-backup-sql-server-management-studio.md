@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154342"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configuration de la sauvegarde managée (SQL Server Management Studio)
@@ -29,8 +29,7 @@ ms.locfileid: "70154342"
   
 ## <a name="task-list"></a>Liste des tâches  
   
-## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Fonctions utilisant l’interface de sauvegarde managée dans SQL Server Management Studio  
+## <a name="ss_smartbackup-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Fonctions utilisant l’interface de sauvegarde managée dans SQL Server Management Studio  
  Dans cette version, vous pouvez uniquement configurer des paramètres par défaut au niveau de l'instance à l'aide de l’interface de **gestion de sauvegarde**. Vous ne pouvez pas configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données, suspendre ou reprendre des opérations [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ou configurer des notifications par courrier électronique. Pour plus d’informations sur la façon d’effectuer des opérations qui ne sont pas actuellement prises en charge par le biais de l’interface de **sauvegarde managée** , consultez [SQL Server les paramètres de stockage et de rétention de sauvegarde Azure](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -44,12 +43,11 @@ ms.locfileid: "70154342"
   
 -   `VIEW ANY DEFINITION`  
   
--   `EXECUTE`sur `smart_admin.fn_is_master_switch_on`.  
+-   `EXECUTE` sur `smart_admin.fn_is_master_switch_on`.  
   
--   `SELECT`sur `smart_admin.fn_backup_instance_config`.  
+-   `SELECT` sur `smart_admin.fn_backup_instance_config`.  
   
- 
-  **Pour configurer des sauvegardes managées :** pour configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] dans SQL Server Management Studio, vous devez être un administrateur système ou disposer des autorisations suivantes :  
+ **Pour configurer des sauvegardes managées :** pour configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] dans SQL Server Management Studio, vous devez être un administrateur système ou disposer des autorisations suivantes :  
   
  L'appartenance au rôle de base de données `db_backupoperator`, avec autorisations `ALTER ANY CREDENTIAL` et autorisations `EXECUTE` sur la procédure stockée `sp_delete_backuphistory`.  
   
@@ -59,8 +57,8 @@ ms.locfileid: "70154342"
   
  Autorisations `EXECUTE` sur `smart_admin.sp_set_instance_backup` et `smart_admin.sp_backup_master_switch`.  
   
-## <a name="configure-includess_smartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>Configuration de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] à l'aide de SQL Server Management Studio  
- À partir de l’**Explorateur d'objets**, développez le nœud **gestion** et cliquez avec le bouton droit sur **sauvegarde managée**. Sélectionnez **configurer**. La boîte de dialogue **Sauvegarde managée** s'ouvre.  
+## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>Configuration de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] à l'aide de SQL Server Management Studio  
+ À partir de l’**Explorateur d'objets**, développez le nœud **gestion** et cliquez avec le bouton droit sur **sauvegarde managée**. Sélectionnez **Configurer**. La boîte de dialogue **Sauvegarde managée** s'ouvre.  
   
  Cochez l’option **Activer la sauvegarde managée** et spécifiez les valeurs de configuration :  
   
@@ -77,7 +75,7 @@ ms.locfileid: "70154342"
 > [!WARNING]  
 >  Cette boîte de dialogue ne peut pas être utilisée pour spécifier les options de chiffrement sans configuration de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Ces options de chiffrement s'appliquent uniquement aux opérations [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Pour utiliser le chiffrement pour d’autres procédures de sauvegarde, consultez [chiffrement](../relational-databases/backup-restore/backup-encryption.md)de la sauvegarde.  
   
-### <a name="considerations"></a>Considérations  
+### <a name="considerations"></a>Éléments à prendre en considération  
  Si vous configurez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de l'instance, les paramètres sont appliqués aux nouvelles bases de données créées par la suite.  Toutefois, une base de données existante n’hérite pas automatiquement de ces paramètres. Pour configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur des bases de données existantes, vous devez configurer spécifiquement chaque base de données. Pour plus d’informations, consultez [activer et configurer SQL Server sauvegarde managée sur Azure pour une base de données](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
  Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a été suspendu à l’aide `smart_admin.sp_backup_master_switch`de, vous verrez un message d’avertissement « la sauvegarde managée est désactivée et les configurations actuelles ne prendront pas effet... » Lorsque vous essayez d’effectuer la configuration. Utilisez le `smart_admin.sp_backup_master_switch` stocké et définissez @new_state= 1. Cela relance les services [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] et les paramètres de configuration prennent effet. Pour plus d’informations sur la procédure stockée, consultez [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  

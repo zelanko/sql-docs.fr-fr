@@ -16,10 +16,10 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770949"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
@@ -46,15 +46,15 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du serveur de publication.|  
+|**name**|**sysname**|Nom du serveur de publication.|  
 |**bd_distribution**|**sysname**|Base de données de distribution pour le serveur de publication spécifié.|  
-|**security_mode**|**int**|Mode de sécurité utilisé par les Agents de réplication pour se connecter au serveur de publication des abonnements avec mise à jour en attente ou à un serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**security_mode**|**int**|Mode de sécurité utilisé par les Agents de réplication pour se connecter au serveur de publication des abonnements avec mise à jour en attente ou à un serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**connexion**|**sysname**|Nom de connexion utilisé par les Agents de réplication pour se connecter au serveur de publication des abonnements avec mise à jour en attente ou à un serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**de**|**nvarchar (524)**|Mot de passe renvoyé (sous forme chiffrée simple). Le mot de passe est NULL pour les utilisateurs autres que **sysadmin**.|  
+|**mot de passe**|**nvarchar (524)**|Mot de passe renvoyé (sous forme chiffrée simple). Le mot de passe est NULL pour les utilisateurs autres que **sysadmin**.|  
 |**proactive**|**bit**|Indique si un serveur de publication distant utilise le serveur local comme serveur de distribution.<br /><br /> **0** = non<br /><br /> **1** = Oui|  
 |**working_directory**|**nvarchar(255)**|Nom du répertoire de travail.|  
 |**trusted**|**bit**|si le mot de passe est requis lorsqu'un serveur de publication se connecte au serveur de distribution. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, cette valeur doit toujours retourner **0**, ce qui signifie que le mot de passe est requis.|  
-|**thirdparty_flag**|**bit**|Indique si la publication est activée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou par une application tierce :<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle ou serveur de publication Oracle Gateway.<br /><br /> **1** = le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication a été intégré à l’aide d’une application tierce.|  
+|**thirdparty_flag**|**bit**|Indique si la publication est activée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou par une application tierce :<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle ou serveur de publication Oracle Gateway.<br /><br /> **1** = le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication a été intégré à l’aide d’une application tierce.|  
 |**publisher_type**|**sysname**|Type de serveur de publication ; il peut s'agir d'une des valeurs suivantes :<br /><br /> **MSSQLSERVER**<br /><br /> **SOLUTION**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Nom de la source de données OLE DB sur le serveur de publication.|  
 |**storage_connection_string**|**nvarchar(4000)**|Clé d’accès de stockage pour le répertoire de travail lorsque le serveur de distribution ou le serveur de publication Azure SQL Database.|  
@@ -71,7 +71,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
  Les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_helpdistpublisher** pour n’importe quel serveur de publication utilisant le serveur local en tant que serveur de distribution. Les membres du rôle de base de données fixe **db_owner** ou le rôle **replmonitor** dans une base de données de distribution peuvent exécuter **Sp_helpdistpublisher** pour tout serveur de publication qui utilise cette base de données de distribution. Les utilisateurs de la liste d’accès à la publication pour une publication sur le serveur de *publication spécifié peuvent* exécuter **sp_helpdistpublisher**. Si le serveur de *publication* n’est pas spécifié, des informations sont retournées pour tous les serveurs de publication auxquels l’utilisateur a le droit d’accéder.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

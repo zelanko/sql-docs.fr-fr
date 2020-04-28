@@ -16,10 +16,10 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770853"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
@@ -52,9 +52,9 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |-----------|-----------------|  
 |**1**|Agent d'instantané|  
 |**2**|l'Agent de lecture du journal ;|  
-|**1,3**|Agent de distribution|  
+|**3**|Agent de distribution|  
 |**4**|Agent de fusion|  
-|**0,9**|Agent de lecture de la file d'attente|  
+|**9**|Agent de lecture de la file d'attente|  
   
 `[ @profile_type = ] profile_type`Type de profil. *profile_type* est de **type int**, avec **1**comme valeur par défaut.  
   
@@ -78,7 +78,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_add_agent_profile**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des profils d’Agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Utiliser des profils d’agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Profils de l’agent de réplication](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   

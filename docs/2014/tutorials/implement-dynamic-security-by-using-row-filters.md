@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530878"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implémentation de la sécurité dynamique à l'aide des filtres de lignes
@@ -26,9 +26,9 @@ ms.locfileid: "69530878"
   
  Pour pouvoir effectuer cette leçon supplémentaire, vous allez accomplir une succession de tâches. Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, mais qui ne s’appliqueraient pas nécessairement dans la vraie vie, sont identifiées comme telles. Chaque tâche inclut des informations supplémentaires décrivant son objectif.  
   
- Durée estimée pour effectuer cette leçon : **30 minutes**  
+ Durée estimée pour suivre cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cette rubrique de leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre prévu. Avant d’effectuer les tâches de cette leçon supplémentaire, vous devez avoir suivi toutes les leçons précédentes.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Ajoutez la table dimSalesTerritory au projet Modèle tabulaire AW Internet Sales.  
@@ -96,9 +96,9 @@ ms.locfileid: "69530878"
   
 5.  Dans la feuille de calcul, sélectionnez toutes les cellules avec des données sur les employés, avec les en-têtes, puis cliquez avec le bouton droit sur les données sélectionnées, et cliquez ensuite sur **Copier**.  
   
-6.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modifier**, puis sur **Coller**.  
+6.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modifier** , puis sur **Coller**.  
   
-     Si l’option Coller est grisée, cliquez sur n’importe quelle colonne dans une table de la fenêtre du Générateur de modèles, cliquez ensuite sur le menu **Modifier**, puis sur **Coller**.  
+     Si l’option Coller est grisée, cliquez sur n’importe quelle colonne dans une table de la fenêtre du Générateur de modèles, cliquez ensuite sur le menu **Modifier** , puis sur **Coller**.  
   
 7.  Dans la boîte de dialogue **aperçu de collage** , dans nom de `Employee Security`la **table**, tapez.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "69530878"
   
 #### <a name="to-create-relationships-between-the-internet-sales-geography-and-the-sales-territory-table"></a>Pour créer des relations entre les tables lnternet Sales, Geography et Sales Territory  
   
-1.  Dans le Générateur de modèles, dans la Vue de diagramme, dans la table **Geography**, cliquez et maintenez la sélection de la colonne **Sales Territory Id**, faites ensuite glisser le curseur sur la colonne **Sales Territory Id** dans la table **Sales Territory**, et relâchez la souris.  
+1.  Dans le Générateur de modèles, dans la Vue de diagramme, dans la table **Geography** , cliquez et maintenez la sélection de la colonne **Sales Territory Id** , faites ensuite glisser le curseur sur la colonne **Sales Territory Id** dans la table **Sales Territory** , et relâchez la souris.  
   
-2.  Dans la table **Internet Sales**, cliquez et maintenez la sélection de la colonne **Sales Territory Id**, faites glisser le curseur sur la colonne **Sales Territory Id** dans la table **Sales Territory**, et relâchez la souris.  
+2.  Dans la table **Internet Sales** , cliquez et maintenez la sélection de la colonne **Sales Territory Id** , faites glisser le curseur sur la colonne **Sales Territory Id** dans la table **Sales Territory** , et relâchez la souris.  
   
      Notez que la propriété Active pour cette relation est False, ce qui signifie qu'elle est inactive. Cela est dû au fait que la table Internet Sales a déjà une autre relation active qui est utilisée dans les mesures.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "69530878"
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Pour créer un rôle d’utilisateur Sales Employees by Territory (Représentants commerciaux par secteur)  
   
-1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle**, puis sur **Rôles**.  
+1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis sur **Rôles**.  
   
 2.  Dans la boîte de dialogue **Gestionnaire de rôles** , cliquez sur **Nouveau**.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "69530878"
   
 5.  Cliquez sur l’onglet **Membres** , puis cliquez sur **Ajouter**.  
   
-6.  Dans la boîte de dialogue **Sélectionner l’utilisateur ou le groupe**, dans **Entrez le nom de l’objet à sélectionner**, tapez le premier exemple de nom d’utilisateur que vous avez utilisé lors de la création la table Employee Security. Cliquez sur **Vérifier les noms** pour vérifier si le nom d’utilisateur est valide, puis cliquez sur **OK**.  
+6.  Dans la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** , dans **Entrez le nom de l’objet à sélectionner**, tapez le premier exemple de nom d’utilisateur que vous avez utilisé lors de la création la table Employee Security. Cliquez sur **Vérifier les noms** pour vérifier si le nom d’utilisateur est valide, puis cliquez sur **OK**.  
   
      Répétez cette étape et ajoutez les autres exemples de noms d'utilisateurs que vous avez utilisés lors de la création de la table Employee Security.  
   
-7.  Cliquez sur l’onglet **Filtres de lignes**.  
+7.  Cliquez sur l’onglet **Filtres de lignes** .  
   
 8.  Pour la `Employee Security` table, dans la colonne **filtre Dax** , tapez la formule suivante.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "69530878"
   
      Cette formule indique que toutes les colonnes résolvent à la condition booléenne false ; par conséquent, aucune colonne de la table Employee Security ne peut être interrogée par un membre du rôle d'utilisateur Sales Employees by Territory.  
   
-9. Tapez la formule suivante pour la table **Sales Territory**.  
+9. Tapez la formule suivante pour la table **Sales Territory** .  
   
      `='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 'Employee Security'[Login Id], USERNAME(), 'Employee Security'[Sales Territory Id], 'Sales Territory'[Sales Territory Id])`  
   
@@ -181,7 +181,7 @@ ms.locfileid: "69530878"
   
 2.  Dans la boîte de dialogue **Analyser dans Excel**, dans **Spécifier le nom d’utilisateur ou le rôle à utiliser pour se connecter au modèle**, sélectionnez **Autre utilisateur Windows**, puis cliquez sur **Parcourir**.  
   
-3.  Dans la boîte de dialogue **Sélectionner l’utilisateur ou le groupe**, dans **Entrez le nom de l’objet à sélectionner**, tapez un des noms d’utilisateurs que vous avez inclus dans la table Employee, puis cliquez sur **Vérifier les noms**.  
+3.  Dans la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** , dans **Entrez le nom de l’objet à sélectionner**, tapez un des noms d’utilisateurs que vous avez inclus dans la table Employee, puis cliquez sur **Vérifier les noms**.  
   
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Sélectionner un utilisateur ou un groupe**, puis cliquez sur **OK** pour fermer la boîte de dialogue **Analyser dans Excel**.  
   
@@ -189,9 +189,9 @@ ms.locfileid: "69530878"
   
      Notez que la table Employee Security n'est pas visible dans la liste de champs du tableau croisé dynamique. Cela est dû au fait que vous avez choisi de masquer cette table des outils clients dans une tâche précédente.  
   
-5.  Dans la liste **Champ de tableau croisé dynamique**, dans **∑ Internet Sales** (mesures), sélectionnez la mesure **Internet Total Sales**. La mesure sera ensuite entrée dans les champs **Valeurs** .  
+5.  Dans la liste **Champ de tableau croisé dynamique** , dans **∑ Internet Sales** (mesures), sélectionnez la mesure **Internet Total Sales** . La mesure sera ensuite entrée dans les champs **Valeurs** .  
   
-6.  Dans la zone **Champ de tableau croisé dynamique**, sélectionnez la colonne **Sales Territory Id** à partir de la table **Sales Territory**. La colonne est ensuite entrée dans les champs **Étiquettes de ligne** .  
+6.  Dans la zone **Champ de tableau croisé dynamique** , sélectionnez la colonne **Sales Territory Id** à partir de la table **Sales Territory** . La colonne est ensuite entrée dans les champs **Étiquettes de ligne** .  
   
      Notez que les chiffres des ventes sur Internet s’affichent uniquement pour la région à laquelle le nom d’utilisateur effectif que vous avez utilisé appartient. Si vous sélectionnez une autre colonne (City, par exemple) dans la table Geography en tant que champ d'étiquette de ligne, seules les villes du secteur de vente auquel appartient l'utilisateur sont affichées.  
   

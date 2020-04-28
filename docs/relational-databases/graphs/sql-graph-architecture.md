@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811109"
 ---
 # <a name="sql-graph-architecture"></a>Architecture du graphique SQL  
@@ -98,28 +98,28 @@ Le tableau suivant répertorie les valeurs valides pour `graph_type` la colonne
 
 Colonnes implicites dans une table de nœuds
 
-|Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
+|Nom de la colonne    |Type de données  |is_hidden  |Comment  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |colonne `graph_id` interne  |
+|graph_id_\<hex_string> |bigint |1  |colonne `graph_id` interne  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |Colonne de `node_id` nœud externe  |
 
 Colonnes implicites dans une table Edge
 
-|Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
+|Nom de la colonne    |Type de données  |is_hidden  |Comment  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |colonne `graph_id` interne  |
+|graph_id_\<hex_string> |bigint |1  |colonne `graph_id` interne  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |colonne `edge_id` externe  |
 |from_obj_id_\<hex_string>  |INT    |1  |interne à partir du nœud`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |Interne à partir du nœud`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |Interne à partir du nœud`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |externe à partir du nœud`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interne au nœud`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |Interne au nœud`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |Interne au nœud`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |externe au nœud`node_id`  |
  
 ### <a name="system-functions"></a>Fonctions système
 Les fonctions intégrées suivantes sont ajoutées. Celles-ci permettent aux utilisateurs d’extraire des informations à partir des colonnes générées. Notez que ces méthodes ne valident pas l’entrée de l’utilisateur. Si l’utilisateur spécifie un `sys.node_id` non valide, la méthode extrait le composant approprié et le retourne. Par exemple, OBJECT_ID_FROM_NODE_ID prend `$node_id` comme entrée et retourne la object_id de la table, ce nœud appartient à. 
  
-|Intégration   |Description  |
+|Intégré   |Description  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Extraire le object_id à partir d’un`node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extraire le graph_id à partir d’un`node_id`  |

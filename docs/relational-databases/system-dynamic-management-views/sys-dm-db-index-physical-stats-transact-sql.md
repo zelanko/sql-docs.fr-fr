@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811516"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
@@ -56,26 +56,26 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>Arguments  
  *database_id* | NULL | 0 | VALEURS  
- ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
+ ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier null pour *object_id*, *index_id*et *partition_number*.  
   
  Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Si vous utilisez DB_ID sans spécifier de nom de base de données, le niveau de compatibilité de la base de données active doit être égal à 90 ou plus.  
   
  *object_id* | NULL | 0 | VALEURS  
- ID d’objet de la table ou de la vue sur laquelle l’index est activé. *object_id* est de **type int**.  
+ ID d’objet de la table ou de la vue sur laquelle l’index est activé. *l’object_id* est **int**.  
   
- Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. À partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]de, les entrées valides incluent également le nom de la file d’attente Service Broker ou le nom de la table interne de la file d’attente. Lorsque les paramètres par défaut sont appliqués (c’est-à-dire tous les objets, tous les index, etc.), les informations de fragmentation de toutes les files d’attente sont incluses dans le jeu de résultats.  
+ Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. À partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]de, les entrées valides incluent également le nom de la file d’attente Service Broker ou le nom de la table interne de la file d’attente. Lorsque les paramètres par défaut sont appliqués (c’est-à-dire tous les objets, tous les index, etc.), les informations de fragmentation de toutes les files d’attente sont incluses dans le jeu de résultats.  
   
  Spécifiez la valeur NULL pour retourner des informations sur toutes les tables et les vues de la base de données spécifiée. Si vous spécifiez NULL pour *object_id*, vous devez également spécifier null pour *index_id* et *partition_number*.  
   
  *index_id* | 0 | NULL | -1 | VALEURS  
- Identificateur de l’index. *index_id* est de **type int**. Les entrées valides sont le numéro d’ID d’un index, 0 si *object_id* est un segment de mémoire, NULL,-1 ou default. La valeur par défaut est-1. NULL,-1 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
+ Identificateur de l’index. *index_id* est de **type int**. Les entrées valides sont le numéro d’ID d’un index, 0 si *object_id* est un segment de mémoire, NULL,-1 ou default. La valeur par défaut est -1. NULL,-1 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez la valeur NULL pour retourner des informations sur tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier null pour *partition_number*.  
   
  *partition_number* | NULL | 0 | VALEURS  
- Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont le *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
+ Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont le *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations sur toutes les partitions de l'objet propriétaire.  
   
@@ -92,9 +92,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|ID d'objet de la table ou de la vue vers laquelle pointe l'index.|  
 |index_id|**int**|ID d'index d'un index.<br /><br /> 0 = Segment de mémoire.|  
 |partition_number|**int**|Numéro de partition de base 1 dans l'objet propriétaire : une table, une vue ou un index.<br /><br /> 1 = Index ou segment de mémoire non partitionné.|  
-|index_type_desc|**nvarchar (60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> INDEX ÉTENDU<br /><br /> XML INDEX<br /><br /> INDEX de mappage COLUMNSTORE (interne)<br /><br /> INDEX COLUMNSTORE DELETEBUFFER (interne)<br /><br /> INDEX COLUMNSTORE DELETEBITMAP (interne)|  
+|index_type_desc|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> INDEX ÉTENDU<br /><br /> XML INDEX<br /><br /> INDEX de mappage COLUMNSTORE (interne)<br /><br /> INDEX COLUMNSTORE DELETEBUFFER (interne)<br /><br /> INDEX COLUMNSTORE DELETEBITMAP (interne)|  
 |hobt_id|**bigint**|ID de segment de mémoire ou d’arbre B (B-Tree) de l’index ou de la partition.<br /><br /> Outre le renvoi de la hobt_id d’index définis par l’utilisateur, cela retourne également les hobt_id des index ColumnStore internes.|  
-|alloc_unit_type_desc|**nvarchar (60)**|Description du type d'unité d'allocation :<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> L’unité d’allocation LOB_DATA contient les données stockées dans des colonnes de type **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** et **XML**. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> L’unité d’allocation ROW_OVERFLOW_DATA contient les données stockées dans les colonnes de type **varchar (n)**, **nvarchar (n)**, **varbinary (n)** et **sql_variant** qui ont été envoyées hors ligne.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Description du type d'unité d'allocation :<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> L’unité d’allocation LOB_DATA contient les données stockées dans des colonnes de type **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** et **XML**. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> L’unité d’allocation ROW_OVERFLOW_DATA contient les données stockées dans les colonnes de type **varchar (n)**, **nvarchar (n)**, **varbinary (n)** et **sql_variant** qui ont été envoyées hors ligne.|  
 |index_depth|**tinyint**|Nombre de niveaux d'index.<br /><br /> 1 = Segment de mémoire ou unité d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.|  
 |index_level|**tinyint**|Niveau actuel de l'index.<br /><br /> 0 pour des index de niveau feuille, des segments de mémoire et des unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> Supérieur à 0 pour les index de niveaux non-feuille. *index_level* est le niveau le plus élevé au niveau racine d’un index.<br /><br /> Les niveaux non-feuille des index sont traités uniquement lorsque *mode* = detailed.|  
 |avg_fragmentation_in_percent|**float**|Fragmentation logique des index ou fragmentation de l'étendue des segments de mémoire dans l'unité d'allocation IN_ROW_DATA.<br /><br /> La valeur est mesurée en pourcentage et prend en compte plusieurs fichiers. Pour les définitions de la fragmentation logique et de la fragmentation de l'étendue, consultez la section Notes.<br /><br /> 0 pour les unités d'allocation LOB_DATA et ROW_OVERFLOW_DATA.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = sampled.|  
@@ -410,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**S’applique à** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]jusqu’à.|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  Les exemples suivants montrent comment interroger les files d’attente de service Broker pour la fragmentation.  
   
@@ -424,7 +424,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

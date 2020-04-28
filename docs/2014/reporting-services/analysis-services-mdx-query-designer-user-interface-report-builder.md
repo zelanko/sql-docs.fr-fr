@@ -14,11 +14,11 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1d0a5738384a738c3e0882d16bbffb0f2a4d00a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 456989b83877b0c94c07f9074719666ebac3a873
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891557"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes MDX Analysis Services (Générateur de rapports)
@@ -34,7 +34,7 @@ ms.locfileid: "68891557"
   
  La figure suivante présente les différents volets du mode Création.  
   
- ![Concepteur de requêtes MDX Analysis Services, mode Conception](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Concepteur de requêtes MDX Analysis Services, mode Conception")  
+ ![Concepteur de requêtes MDX Analysis Services, mode Conception](../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Concepteur de requêtes MDX Analysis Services, mode Conception")  
   
  Le tableau suivant répertorie les volets disponibles dans ce mode :  
   
@@ -46,13 +46,13 @@ ms.locfileid: "68891557"
 |Volet Filtre|Utilisez ce volet pour choisir des dimensions et hiérarchies associées afin de filtrer des données à la source et de limiter la quantité de données retournée dans le rapport.|  
 |Volet Données|Affiche les en-têtes de colonne pour le jeu de résultats au fur et à mesure que vous faites glisser des éléments des volets Métadonnées et Membres calculés. Met automatiquement à jour le jeu de résultats si le bouton **Exécution automatique** est sélectionné. .|  
   
- Vous pouvez faire glisser des dimensions, des mesures et des indicateurs de performance clés à partir du volet Métadonnées, ainsi que des membres calculés à partir du volet Membres calculés, dans le volet Données. Dans le volet Filtre, vous pouvez sélectionner des dimensions et des hiérarchies associées et définir des expressions de filtres pour limiter les données disponibles à rechercher. Si le bouton bascule **exécution** automatique (![exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")automatique) de la barre d’outils est sélectionné, le concepteur de requêtes exécute la requête chaque fois que vous déposez un objet de métadonnées dans le volet données. Vous pouvez exécuter la requête manuellement en utilisant le bouton **exécuter** (![exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")) de la barre d’outils.  
+ Vous pouvez faire glisser des dimensions, des mesures et des indicateurs de performance clés à partir du volet Métadonnées, ainsi que des membres calculés à partir du volet Membres calculés, dans le volet Données. Dans le volet Filtre, vous pouvez sélectionner des dimensions et des hiérarchies associées et définir des expressions de filtres pour limiter les données disponibles à rechercher. Si le bouton bascule **Exécution automatique** (![Exécuter automatiquement la requête](../analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")) de la barre d’outils est sélectionné, le concepteur de requêtes exécute la requête chaque fois que vous déposez un objet de métadonnées dans le volet Données. Vous pouvez exécuter la requête manuellement en utilisant le bouton **Exécuter** (![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")) de la barre d’outils.  
   
  Lorsque vous créez une requête MDX dans ce mode, les propriétés supplémentaires suivantes sont automatiquement incluses dans la requête :  
   
  **Propriétés de membre** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **Propriétés** de la cellule VALEUR, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+ **Propriétés de cellule** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
   
  Pour spécifier vos propres propriétés supplémentaires, vous devez modifier manuellement la requête MDX en mode Requête.  
   
@@ -66,25 +66,25 @@ ms.locfileid: "68891557"
 |------------|-----------------|  
 |**Modifier en tant que texte**|Non activé pour ce type de source de données.|  
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers.|  
-|![Basculer vers l'affichage des requêtes DMX](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Basculer vers l'affichage des requêtes DMX")|Bascule vers le type de commande MDX.|  
-|![Actualiser les données du résultat](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Actualiser les données du résultat")|Actualise les métadonnées à partir de la source de données.|  
-|![Ajouter un membre calculé](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
-|![Afficher les cellules vides](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
-|![Exécuter automatiquement la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée. Les résultats s'affichent dans le volet Données.|  
-|![Bouton Afficher les agrégations](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations")|Affiche les agrégations dans le volet Données.|  
-|![Supprimer](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "DELETE")|Supprime de la requête la colonne sélectionnée dans le volet Données.|  
-|![Icône de la boîte de dialogue Paramètres de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")|Affiche la boîte de dialogue **Paramètres de la requête** . Lorsque vous spécifiez des valeurs pour un paramètre de requête, un paramètre de rapport du même nom est automatiquement créé. Le paramètre de requête prend pour valeur une expression qui fait référence au paramètre de rapport.|  
-|![Bouton Préparer la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-preparequery.gif "Bouton Préparer la requête")|Prépare la requête.|  
-|![Exécuter la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|  
-|![Annuler la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Annuler la requête")|Annule la requête.|  
-|![Passer en mode création](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création")|Bascule entre le mode Création et le mode Requête.|  
+|![Basculer vers l'affichage des requêtes MDX](../analysis-services/media/rsqdicon-commandtypemdx.gif "Basculer vers l'affichage des requêtes MDX")|Bascule vers le type de commande MDX.|  
+|![Actualiser les données du résultat](../analysis-services/media/rsqdicon-refresh.gif "Actualiser les données du résultat")|Actualise les métadonnées à partir de la source de données.|  
+|![Ajouter un membre calculé](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
+|![Basculer pour afficher les cellules vides](../analysis-services/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
+|![Exécuter automatiquement la requête](../analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée. Les résultats s'affichent dans le volet Données.|  
+|![Bouton Afficher les agrégations](../analysis-services/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations")|Affiche les agrégations dans le volet Données.|  
+|![Supprimer](../analysis-services/media/rsqdicon-delete.gif "DELETE")|Supprime de la requête la colonne sélectionnée dans le volet Données.|  
+|![Icône de la boîte de dialogue Paramètres de la requête](../analysis-services/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")|Affiche la boîte de dialogue **Paramètres de la requête** . Lorsque vous spécifiez des valeurs pour un paramètre de requête, un paramètre de rapport du même nom est automatiquement créé. Le paramètre de requête prend pour valeur une expression qui fait référence au paramètre de rapport.|  
+|![Bouton Préparer la requête](../analysis-services/media/rsqdicon-preparequery.gif "Bouton Préparer la requête")|Prépare la requête.|  
+|![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Données.|  
+|![Annuler la requête](../analysis-services/media/rsqdicon-cancel.gif "Annuler la requête")|Annule la requête.|  
+|![Passer en mode Conception](../analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création")|Bascule entre le mode Création et le mode Requête.|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Concepteur de requêtes graphique MDX en mode Requête  
  Pour basculer en mode **Requête** dans le concepteur de requêtes graphique, cliquez sur le bouton bascule **Mode Création** dans la barre d'outils.  
   
  La figure suivante présente les différents volets du mode Requête.  
   
- ![Concepteur de requêtes MDX Analysis Services, affichage des requêtes](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Concepteur de requêtes MDX Analysis Services, affichage des requêtes")  
+ ![Concepteur de requêtes MDX Analysis Services, mode Requête](../analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Concepteur de requêtes MDX Analysis Services, mode Requête")  
   
  Le tableau suivant répertorie les volets disponibles dans ce mode :  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68891557"
   
 -   **Modifier en tant que texte**  
   
--   **Ajouter un membre calculé** (![Ajouter un membre calculé](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))  
+-   **Ajouter un membre calculé** (![Ajouter un membre calculé](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))  
   
--   **Afficher les cellules vides** (afficher![/Masquer les cellules vides](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Afficher les cellules vides"))  
+-   **Afficher les cellules vides** (![Basculer pour afficher les cellules vides](../analysis-services/media/rsqdicon-showemptycells.gif "Basculer pour afficher les cellules vides"))  
   
--   **Exécution** automatique (![exécution automatique de la requête](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))  
+-   **Exécuter automatiquement** (![Exécuter automatiquement la requête](../analysis-services/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête"))  
   
--   **Afficher les agrégations** (![bouton afficher les agrégations](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations"))  
+-   **Afficher les agrégations** (![Bouton Afficher les agrégations](../analysis-services/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations"))  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

@@ -27,16 +27,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811016"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
   Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez utiliser les résumés, les recommandations et les rapports pour déterminer si vous souhaitez implémenter des recommandations de paramétrage ou poursuivre le paramétrage jusqu’à ce que vous obteniez les améliorations de performances de requête dont vous avez besoin pour votre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
-##  <a name="View"></a>Afficher la sortie de paramétrage  
+##  <a name="view-tuning-output"></a><a name="View"></a> Afficher les résultats d'un paramétrage  
  Les procédures suivantes indiquent comment afficher les recommandations, les résumés, les rapports et les journaux de paramétrage dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d'informations sur les options de l'interface utilisateur, consultez [Descriptions de l'interface utilisateur](#UI) plus loin dans cette rubrique.  
   
  Cette interface permet en outre d’afficher les résultats du paramétrage générés par l’utilitaire de ligne de commande **dta** .  
@@ -82,7 +82,7 @@ ms.locfileid: "68811016"
   
      Si l'ensemble des événements de la session de paramétrage ont été analysés par l'Assistant Paramétrage du moteur de base de données, vous obtenez un message indiquant que le journal de paramétrage est vide pour la session. Si la case à cocher **Enregistrer le journal de paramétrage** n'a pas été activée sous l'onglet **Général** au moment de l'exécution effective de la session de paramétrage, un message vous en informe.  
   
-##  <a name="Implement"></a>Implémenter des recommandations de paramétrage  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> Mettre en œuvre des recommandations de paramétrage  
  Les recommandations de l'Assistant Paramétrage du moteur de base de données peuvent être mises en œuvre soit manuellement, soit automatiquement dans le cadre d'une session de paramétrage. Pour examiner les résultats du paramétrage avant de les mettre en œuvre, utilisez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Vous pouvez ensuite utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour exécuter manuellement les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que l'Assistant Paramétrage du moteur de base de données génère suite à l'analyse d'une charge de travail afin d'appliquer les recommandations. Si vous n’avez pas besoin d’examiner les résultats avant leur mise en œuvre, vous pouvez utiliser l’option **-a** avec l’utilitaire d’invite de commandes **dta** . Cela a pour effet l'implémentation automatique par l'utilitaire des recommandations de paramétrage après l'analyse de votre charge de travail. Les procédures suivantes expliquent comment utiliser les interfaces de l'Assistant Paramétrage du moteur de base de données afin de mettre en œuvre les recommandations de paramétrage.  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Pour mettre en œuvre manuellement les recommandations au moyen de l'interface de l'Assistant Paramétrage du moteur de base de données  
@@ -117,7 +117,7 @@ ms.locfileid: "68811016"
   
 3.  Appuyez sur Entrée.  
   
-##  <a name="Analysis"></a>Effectuer une analyse exploratoire  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> Effectuer une analyse exploratoire  
  La fonction de configuration spécifiée par l'utilisateur de l'Assistant Paramétrage du moteur de base de données permet aux administrateurs de bases de données de réaliser une analyse exploratoire. À l'aide de cette fonction, les administrateurs de bases de données spécifient la conception souhaitée d'une base de données physique à l'Assistant Paramétrage du moteur de base de données, après quoi ils peuvent évaluer les effets de cette conception sur les performances sans pour autant la mettre en œuvre. La configuration spécifiée par l'utilisateur est prise en charge par l'interface utilisateur graphique (GUI) de l'Assistant Paramétrage du moteur de base de données et par l'utilitaire de ligne de commande. Toutefois, l'utilitaire de ligne de commande présente la plus grande flexibilité.  
   
  Si vous utilisez l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données, vous pouvez évaluer les effets de la mise en œuvre d'un sous-ensemble de sa recommandation de paramétrage. En revanche, vous ne pouvez pas ajouter de structures PDS (Physical Design Structures) hypothétiques à évaluer par l'Assistant Paramétrage du moteur de base de données.  
@@ -181,8 +181,8 @@ ms.locfileid: "68811016"
   
 7.  Répétez les étapes 6 et 7 jusqu'à ce que vous ayez créé la configuration hypothétique qui produit l'amélioration des performances de requête recherchée. Vous pouvez alors mettre en œuvre la nouvelle configuration. Pour plus d'informations, consultez [Mettre en œuvre des recommandations de paramétrage](#Implement) plus haut dans cette rubrique.  
   
-##  <a name="ReviewEvaluateClone"></a>Examiner, évaluer et cloner des sessions de paramétrage  
- L'Assistant Paramétrage du moteur de base de données crée une nouvelle session de paramétrage chaque fois que vous le démarrez pour analyser les effets d'une charge de travail sur votre ou vos bases de données. Vous pouvez utiliser le **Moniteur de session** de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour afficher ou recharger toutes les sessions de paramétrage qui ont été exécutées sur une instance donnée de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de pouvoir examiner l'ensemble des sessions de paramétrage existantes facilite : le clonage de sessions, l'édition de recommandations de paramétrage existantes et l'utilisation de l'Assistant Paramétrage du moteur de base de données pour évaluer la session éditée, ou la réalisation régulière d'opérations de paramétrage afin de surveiller le modèle physique de vos bases de données. Par exemple, vous pouvez être amené à planifier l'analyse mensuelle d'une base de données.  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> Examiner, évaluer et cloner les sessions de paramétrage  
+ L'Assistant Paramétrage du moteur de base de données crée une nouvelle session de paramétrage chaque fois que vous le démarrez pour analyser les effets d'une charge de travail sur votre ou vos bases de données. Vous pouvez utiliser le **Moniteur de session** du GUI de l’Assistant Paramétrage du moteur de base de données pour afficher ou recharger toutes les sessions de paramétrage qui ont été exécutées sur une instance donnée de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de pouvoir examiner l'ensemble des sessions de paramétrage existantes facilite : le clonage de sessions, l'édition de recommandations de paramétrage existantes et l'utilisation de l'Assistant Paramétrage du moteur de base de données pour évaluer la session éditée, ou la réalisation régulière d'opérations de paramétrage afin de surveiller le modèle physique de vos bases de données. Par exemple, vous pouvez être amené à planifier l'analyse mensuelle d'une base de données.  
   
  Avant de pouvoir examiner une session de paramétrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer des sessions de paramétrage sur l'instance serveur, en analysant des charges de travail via l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
   
@@ -239,10 +239,10 @@ ms.locfileid: "68811016"
   
 6.  Cliquez sur le bouton **Démarrer l'analyse** de la barre d'outils pour analyser les effets de la charge de travail, comme lors de n'importe quelle autre session de paramétrage. Lorsque l'Assistant Paramétrage du moteur de base de données se termine, vous pouvez consulter les résultats de cette session comme vous le feriez normalement pour toute session.  
   
-##  <a name="UI"></a>Descriptions de l’interface utilisateur  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descriptions de l'interface utilisateur  
   
 ### <a name="sessions-monitor"></a>Moniteur de sessions  
- Le **moniteur de session** affiche des informations sur les sessions ouvertes dans le Assistant Paramétrage du moteur de base de données. Pour afficher des informations sur la session dans la fenêtre des propriétés, sélectionnez un nom de session dans le **Moniteur de session**.  
+ Le**Moniteur de session** affiche des informations sur les sessions ouvertes dans l'Assistant Paramétrage du moteur de base de données. Pour afficher des informations sur la session dans la fenêtre des propriétés, sélectionnez un nom de session dans le **Moniteur de session**.  
   
 ### <a name="recommendations-tab"></a>Onglet Recommandations  
  L'onglet **Recommandations** apparaît une fois que l'Assistant Paramétrage du moteur de base de données a terminé l'analyse d'une charge de travail. Cette grille contient les recommandations pour chaque objet pris en compte. Le cas échéant, les recommandations relatives aux partitions sont présentées dans la grille supérieure tandis que les recommandations relatives aux index sont présentées dans la grille inférieure. Les grilles ne s'affichent pas s'il n'existe aucune recommandation.  
@@ -262,7 +262,7 @@ ms.locfileid: "68811016"
  **Détails**  
  Description de la **Cible de recommandation**. Les valeurs possibles incluent une plage pour les fonctions de partition ou une valeur vide pour les schémas de partition.  
   
- **º. de partitions**  
+ **Nombre de partitions**  
  Le nombre de partitions définies par les fonctions de partitionnement recommandées. Lorsque cette fonction est utilisée avec un schéma et appliquée ensuite à une table, les données de la table sont divisées selon ce nombre de partitions.  
   
  **Définition**  
@@ -296,7 +296,7 @@ ms.locfileid: "68811016"
  **Afficher les objets existants**  
  Sélectionnez cette option pour afficher tous les objets existants dans la grille, même s'ils ne sont concernés par aucune recommandation de l'Assistant Paramétrage du moteur de base de données.  
   
- **Afficher les rapports sur la taille des objets existants**  
+ **Afficher les rapports sur la taille des objets**  
  Sélectionnez cette option pour afficher des rapports qui indiquent la taille des objets existants dans la grille des recommandations.  
   
 ### <a name="actions-menuapply-recommendations-options"></a>Options du menu Actions/Appliquer les recommandations  
@@ -305,7 +305,7 @@ ms.locfileid: "68811016"
  **Appliquer maintenant**  
  Génère un script pour les recommandations et exécute ce script pour mettre en application les recommandations.  
   
- **Planifier pour plus tard**  
+ **Planifier pour une date ultérieure**  
  Génère un script pour les recommandations et enregistre les actions en tant que tâche de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Date**  
@@ -317,7 +317,7 @@ ms.locfileid: "68811016"
 ### <a name="reports-tab-options"></a>Options de l'onglet Rapports  
  L'onglet **Rapports** apparaît une fois que l'Assistant Paramétrage du moteur de base de données a terminé l'analyse d'une charge de travail.  
   
- **Résumé du paramétrage**  
+ **Résumé de paramétrage**  
  Affiche un résumé des recommandations de l'Assistant Paramétrage du moteur de base de données.  
   
  **Date**  
@@ -329,7 +329,7 @@ ms.locfileid: "68811016"
  **Serveur**  
  Le serveur qui était la cible de la charge de travail de l'Assistant Paramétrage du moteur de base de données.  
   
- **Bases de données à analyser**  
+ **Base(s) de données à analyser**  
  La base de données concernée par les recommandations de l'Assistant Paramétrage du moteur de base de données.  
   
  **Fichier de charge de travail**  
@@ -341,53 +341,53 @@ ms.locfileid: "68811016"
  **Charge de travail**  
  Apparaît lorsque la charge de travail a été importée à partir de l'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Durée maximale de paramétrage**  
+ **Durée maximale d'analyse**  
  La durée maximale autorisée pour l'analyse de l'Assistant Paramétrage du moteur de base de données.  
   
- **Temps nécessaire pour le paramétrage**  
+ **Temps écoulé durant l'analyse**  
  La durée réellement utilisée par l'Assistant Paramétrage du moteur de base de données pour analyser la charge de travail.  
   
- **Pourcentage d’amélioration ATTENDU**  
+ **Pourcentage d'amélioration attendu**  
  Le pourcentage d'amélioration attendu pour la charge de travail cible si toutes les recommandations de l'Assistant Paramétrage du moteur de base de données sont mises en œuvre.  
   
  **Espace maximal pour la recommandation (Mo)**  
  L'espace maximal autorisé pour les recommandations. Cette valeur doit être configurée avant d'effectuer l'analyse en cliquant sur le bouton **Options avancées** sous l'onglet **Options de paramétrage** .  
   
- **Espace actuellement utilisé (Mo)**  
+ **Espace occupé (Mo)**  
  L'espace actuellement utilisé par les index dans la base de données qui vient d'être analysée.  
   
  **Espace occupé par la recommandation (Mo)**  
  L'espace approximatif utilisé par les index si toutes les recommandations de l'Assistant Paramétrage du moteur de base de données sont mises en œuvre.  
   
- **Nombre d’événements dans la charge de travail**  
+ **Nombre d'événements dans la charge de travail**  
  Le nombre d'événements contenus dans la charge de travail.  
   
- **Nombre d’événements paramétrés**  
+ **Nombre d'événements analysés**  
  Le nombre d'événements dans la charge de travail qui ont été analysés. Si un événement ne peut pas être analysé, il est répertorié dans le journal des paramétrages qui est disponible sous l'onglet **Progression** .  
   
- **Nombre d’instructions analysées**  
+ **Nombre d'instructions analysées**  
  Le nombre d'instructions dans la charge de travail qui ont été analysées. Si une instruction ne peut pas être analysée, elle est répertoriée dans le journal des paramétrages qui est disponible sous l'onglet **Progression** .  
   
- **Pourcentage d’instructions SELECT dans le jeu analysé**  
+ **Taux d'utilisation des instructions SELECT dans le jeu analysé**  
  Le pourcentage d'instructions SELECT parmi les instructions analysées. Apparaît uniquement si des instructions SELECT ont été analysées.  
   
- **Pourcentage d’instructions UPDATE dans le jeu analysé**  
+ **Taux d'utilisation des instructions UPDATE dans le jeu analysé**  
  Le pourcentage d'instructions UPDATE parmi les instructions analysées. Apparaît uniquement si des instructions UPDATE ont été analysées.  
   
- **Nombre d’index à [créer | supprimé] recommandé**  
+ **Nombre d'index à [créer | supprimer] recommandé**  
  Le nombre recommandé d'index à créer ou à supprimer pour la base de données analysée. Apparaît uniquement si les index font partie des recommandations.  
   
- **Nombre d’index sur les vues à [créer | supprimé] recommandé**  
+ **Nombre d'index sur les vues à [créer | supprimer] recommandé**  
  Le nombre recommandé d'index sur les vues à créer ou à supprimer pour la base de données analysée. Apparaît uniquement si les index sur les vues font partie des recommandations.  
   
  **Nombre de statistiques à créer recommandé**  
  Le nombre recommandé de statistiques à créer pour la base de données analysée. Apparaît uniquement si les statistiques font partie des recommandations.  
   
- **Sélectionner un rapport**  
+ **Select Report**  
  Affiche les détails du rapport sélectionné. Les colonnes de la grille varient en fonction du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md)   
+ [Démarrer et utiliser le Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md)   
  [dta (utilitaire)](../../tools/dta/dta-utility.md)  
   
   

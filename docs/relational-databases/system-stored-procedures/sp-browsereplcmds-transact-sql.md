@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768997"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -71,7 +71,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|Serveur d'origine de la transaction.|  
 |**originator_db**|**sysname**|Base de données d'origine de la transaction.|  
 |**article_id**|**int**|ID de l’article.|  
-|**entrer**|**int**|Type de commande.|  
+|**type**|**int**|Type de commande.|  
 |**partial_command**|**bit**|Indique s'il s'agit d'une commande partielle.|  
 |**hashkey**|**int**|À usage interne uniquement|  
 |**originator_publication_id**|**int**|ID de la publication d'origine de la transaction.|  

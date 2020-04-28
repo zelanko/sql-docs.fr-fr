@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892114"
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
@@ -30,9 +30,9 @@ ms.locfileid: "68892114"
   
  MDX prend en charge les opérateurs répertoriés dans le tableau suivant :  
   
-|Si vous devez effectuer ce type d'opération|Utilisation|  
+|Si vous devez effectuer ce type d'opération|Utiliser|  
 |---------------------------------------|---------|  
-|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias|[Opérateurs d’affectation](../mdx/assignment-operators.md)|  
+|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias|[Opérateurs d'assignation](../mdx/assignment-operators.md)|  
 |Addition, soustraction, multiplication, division.|[Opérateurs arithmétiques](../mdx/arithmetic-operators.md)|  
 |Tester une condition telle que AND, OR, NOT et XOR.|[Opérateurs au niveau du bit](../mdx/bitwise-operators.md)|  
 |Comparer une valeur à une autre ou à une expression|[Opérateurs de comparaison](../mdx/comparison-operators.md)|  
@@ -86,7 +86,7 @@ ms.locfileid: "68892114"
   
  Il existe également des règles pour déterminer la précision, l’échelle et la longueur du résultat basées sur la précision, l’échelle et la longueur des expressions simples.  
   
-## <a name="converting-data-types"></a>Conversion de types de données  
+## <a name="converting-data-types"></a>Conversion des types de données  
  La syntaxe MDX convertit un objet en un autre type lorsqu'il est utilisé dans une expression qui exige un type différent. Le tableau suivant définit les règles de conversion de chaque objet.  
   
 |Type d'origine|Type exigé|Conversion|  
@@ -95,10 +95,10 @@ ms.locfileid: "68892114"
 |Hierarchy|Membre|\<Hierarchy>. DefaultMember|  
 |Membre|Tuple|(\<> de membre)|  
 |Tuple|Membre|\<Tuple>. Item (0)|  
-|Tuple|Valeur scalaire|\<> de Tuple. valeur|  
+|Tuple|Scalaire|\<> de Tuple. valeur|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
- [Éléments de syntaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
+ [Éléments de la syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

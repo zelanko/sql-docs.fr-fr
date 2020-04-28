@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762778"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`Type d’abonné. *type* est de type **tinyint**, avec NULL comme valeur par défaut. **0** indique un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné. **1** spécifie un abonné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de serveur de source de données ODBC qui n’est pas ou.  
   
-`[ @login = ] 'login'`ID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification. *login* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @login = ] 'login'`ID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
 `[ @password = ] 'password'`Mot de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passe d’authentification. *Password* est de **%** **type sysname**, avec la valeur par défaut. **%** indique qu’il n’y a aucune modification de la propriété de mot de passe.  
   
@@ -76,12 +76,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
-|**128**|Récurrent|  
+|**128**|Périodique|  
   
 `[ @frequency_interval = ] frequency_interval`Intervalle de *frequency_type*. *frequency_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
@@ -93,7 +93,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fréquence de répétition de la tâche de distribution au cours de la *frequency_type*définie. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264251"
 ---
 # <a name="data-migration-report--oracletosql"></a>Rapport de migration des données (OracleToSQL)
@@ -24,10 +24,10 @@ La boîte de dialogue **rapport de migration des données** s’affiche après [
 **État**  
 Affiche l’état de la migration des données de la source vers la base de données cible.  
   
-**De**  
+**From**  
 Table source.  
   
-**À**  
+**To**  
 Table cible.  
   
 **Nombre total de lignes**  
@@ -42,6 +42,6 @@ Pourcentage de lignes correctement migrées.
 **Détails**  
 En cas d’échec de la migration des données, cliquez sur cette option pour afficher les détails de la migration de la ligne sélectionnée dans le rapport. SSMA affiche la raison de l’échec.  
   
-**Enregistrer le rapport**  
+**Enregistrer le rapport sous**  
 Enregistre le rapport dans un. Fichier CSV (valeurs séparées par des virgules), qui peut être examiné à l’aide de Microsoft Excel.  
   

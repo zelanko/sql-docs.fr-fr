@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890368"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Éditeur de tâche de traitement d'Analysis Services (page Analysis Services)
@@ -40,12 +40,12 @@ ms.locfileid: "68890368"
  **Gestionnaire de connexions Analysis Services**  
  Sélectionnez un gestionnaire de connexions Analysis Services existant dans la liste ou cliquez sur **Nouveau** pour créer un nouveau gestionnaire de connexions.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
- **Rubriques connexes :** [Analysis Services gestionnaire de connexions](connection-manager/analysis-services-connection-manager.md), [boîte de dialogue ajouter un gestionnaire de connexions Analysis Services référence de l’interface utilisateur](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
- **Liste d’objets**  
+ **Liste d'objets**  
  |Propriété|Description|  
 |--------------|-----------------|  
 |**Nom de l’objet**|Affiche la liste des noms d'objets définis.|  
@@ -59,27 +59,27 @@ ms.locfileid: "68890368"
  **Remove**  
  Sélectionnez un objet et cliquez sur **Supprimer**.  
   
- **Analyse d’impact**  
+ **Analyse d'impact**  
  Analyse l'impact sur l'objet sélectionné.  
   
- **Rubriques connexes :** [boîte de dialogue analyse d’impact &#40;Analysis Services-données multidimensionnelles&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Rubriques connexes :** [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
- **Résumé des paramètres du lot**  
+ **Résumé des paramètres du traitement**  
  |Propriété|Description|  
 |--------------|-----------------|  
 |**Ordre de traitement**|Indique si les objets sont traités séquentiellement ou dans un traitement. Si le traitement parallèle est utilisé, indique le nombre d'objets à traiter simultanément.|  
 |**Mode de transaction**|Indique le mode de transaction du traitement séquentiel.|  
-|**Erreurs de dimension**|Indique le comportement de la tâche lorsqu'une erreur se produit.|  
-|**Chemin du journal des erreurs de clé de dimension**|Définit le chemin d'accès du fichier de consignation des erreurs.|  
+|**Erreurs de la dimension**|Indique le comportement de la tâche lorsqu'une erreur se produit.|  
+|**Chemin d'accès du journal des erreurs de clé de dimension**|Définit le chemin d'accès du fichier de consignation des erreurs.|  
 |**Traiter les objets affectés**|Indique si les objets dépendants ou affectés sont également traités.|  
   
  **Modifier les paramètres**  
  Change les options de traitement et la gestion des erreurs dans les clés de dimension.  
   
- **Rubriques connexes :** [boîte de dialogue modifier les paramètres &#40;Analysis Services-données multidimensionnelles&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de traitement de Analysis Services &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Tâche DDL d'exécution de SQL Server Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   

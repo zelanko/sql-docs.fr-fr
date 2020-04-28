@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892805"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
@@ -32,7 +32,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Facultatif. type de l’objet à exporter (modèle d’exploration de données ou structure d’exploration de données).  
   
  *nom de l’objet*  
- facultatif. Nom de l'objet à exporter.  
+ Facultatif. Nom de l'objet à exporter.  
   
  *extension*  
  Nom et emplacement du fichier à exporter en tant que chaîne.  

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148716"
 ---
 # <a name="setting-properties---smo"></a>Définition de propriétés - SMO
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Parcours de toutes les propriétés d'un objet en Visual Basic  
- Cet exemple de code itère au sein **** de la collection de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> propriétés de l’objet et les [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] affiche sur l’écran de sortie.  
+ Cet exemple de code itère au sein **Properties** de la collection de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> propriétés de l’objet et les [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] affiche sur l’écran de sortie.  
   
  Dans l'exemple, l'objet <xref:Microsoft.SqlServer.Management.Smo.Property> a été mis entre crochets car il s'agit également d'un mot clé dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Parcours de toutes les propriétés d'un objet en Visual C#  
- Cet exemple de code itère au sein **** de la collection de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> propriétés de l’objet et les [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] affiche sur l’écran de sortie.  
+ Cet exemple de code itère au sein **Properties** de la collection de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> propriétés de l’objet et les [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] affiche sur l’écran de sortie.  
   
 ```csharp  
 {   
@@ -203,8 +203,7 @@ sp.QuotedIdentifierStatus = false;
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Définition des champs d'initialisation par défaut en Visual Basic  
  Cet exemple de code montre comment réduire le nombre de propriétés d'objet initialisées dans un programme SMO. Vous devez inclure l'instruction `using System.Collections.Specialized` pour utiliser l'objet <xref:System.Collections.Specialized.StringCollection>.  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -236,8 +235,7 @@ srv.SetDefaultInitFields(typ, sc)
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Définition des champs d'initialisation par défaut en Visual C#  
  Cet exemple de code montre comment réduire le nombre de propriétés d'objet initialisées dans un programme SMO. Vous devez inclure l'instruction `using System.Collections.Specialized` pour utiliser l'objet <xref:System.Collections.Specialized.StringCollection>.  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] peut être utilisé pour comparer le nombre d'instructions envoyées à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec cette optimisation.  
   
 ```csharp  
 {   

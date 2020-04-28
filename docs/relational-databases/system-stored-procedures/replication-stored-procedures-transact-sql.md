@@ -15,10 +15,10 @@ ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f8865167aaddeed91a071992244754e307ba69e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770974"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>Procédures stockées de réplication (Transact-SQL)
@@ -149,7 +149,7 @@ ms.locfileid: "68770974"
 |[sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Concepts de Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Concepts de programmation en matière de réplication](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

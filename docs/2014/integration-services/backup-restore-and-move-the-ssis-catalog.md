@@ -11,19 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670507"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sauvegarder, restaurer et déplacer le catalogue SSIS
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
   
  Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a>Pour sauvegarder la base de données SSIS  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a>Pour sauvegarder la base de données SSIS  
   
 1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et connectez-vous à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -31,7 +30,7 @@ ms.locfileid: "68670507"
   
      Pour plus d’informations sur l’instruction, consultez [BACKUP MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-master-key-transact-sql).  
   
-     Dans l’exemple suivant, la clé principale est exportée vers le fichier `c:\temp directory\RCTestInstKey`. Le mot de passe `LS2Setup!` est utilisé pour chiffrer la clé principale.  
+     Dans l’exemple suivant, la clé principale est exportée vers le fichier `c:\temp directory\RCTestInstKey` . Le mot de passe `LS2Setup!` est utilisé pour chiffrer la clé principale.  
   
     ```  
     backup master key to file = 'c:\temp\RCTestInstKey'  
@@ -43,7 +42,7 @@ ms.locfileid: "68670507"
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en procédant comme suit. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-    1.  Dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le nœud **Sécurité**, puis le nœud **Connexions**.  
+    1.  Dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le nœud **Sécurité** , puis le nœud **Connexions** .  
   
     2.  Cliquez avec le bouton droit sur **##MS_SSISServerCleanupJobLogin##**, puis cliquez sur **Générer un script de la connexion en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
   
@@ -80,8 +79,7 @@ ms.locfileid: "68670507"
   
     ```  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Les procédures stockées CLR exigent l’octroi d’autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l’API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Les procédures stockées CLR exigent l’octroi d’autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l’API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -91,11 +89,11 @@ ms.locfileid: "68670507"
   
     ```  
   
-3.  Restaurez la base de données SSISDB à partir de la sauvegarde, à l’aide de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez les rubriques ci-dessous.  
+3.  Restaurez la base de données SSISDB à partir de la sauvegarde, à l’aide de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, voir les rubriques suivantes :  
   
     -   [Restaurer la base de données &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Page restaurer la base de données &#40;fichiers&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Restaurer la base de données &#40;page Fichiers&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [Restaurer la base de données &#40;page Options&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   

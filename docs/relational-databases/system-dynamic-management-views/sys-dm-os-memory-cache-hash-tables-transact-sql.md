@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5a52fc7c614752cde43a1670f2fb299b35aa0ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265766"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68265766"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Adresse (clé primaire) de l'entrée du cache. N'accepte pas la valeur NULL.|  
-|**nomme**|**nvarchar (256)**|Nom du cache. N'accepte pas la valeur NULL.|  
-|**entrer**|**nvarchar (60)**|Type de cache. N'accepte pas la valeur NULL.|  
+|**name**|**nvarchar(256)**|Nom du cache. N'accepte pas la valeur NULL.|  
+|**type**|**nvarchar(60)**|Type de cache. N'accepte pas la valeur NULL.|  
 |**table_level**|**int**|Numéro de la table de hachage. Un cache peut posséder plusieurs tables de hachage qui correspondent à différentes fonctions de hachage. N'accepte pas la valeur NULL.|  
 |**buckets_count**|**int**|Nombre de compartiments dans la table de hachage. N'accepte pas la valeur NULL.|  
 |**buckets_in_use_count**|**int**|Nombre de compartiments actuellement utilisés. N'accepte pas la valeur NULL.|  

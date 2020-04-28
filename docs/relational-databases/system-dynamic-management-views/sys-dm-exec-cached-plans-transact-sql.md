@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263938"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -40,13 +40,13 @@ ms.locfileid: "68263938"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|ID du compartiment de hachage dans lequel l'entrée est en cache. La valeur indique une plage comprise entre 0 et la taille de la table de hachage pour le type du cache.<br /><br /> Pour les caches Plans d'objets et Plans SQL, la taille de la table de hachage peut atteindre 10 007 sur des systèmes 32 bits et 40 009 sur des systèmes 64 bits. Pour le cache Arborescences liées, la taille de la table de hachage peut faire jusqu'à 1 009 sur des systèmes 32 bits et 4 001 sur des systèmes 64 bits. Pour le cache Procédures stockées étendues, la taille de la table de hachage peut faire jusqu'à 127 sur des systèmes 32 bits et 64 bits.|  
-|refcounts|**int**|Nombre d'objets du cache faisant référence à cet objet. **RefCounts** doit être au moins égal à 1 pour qu’une entrée soit dans le cache.|  
+|refcounts|**int**|Nombre d'objets du cache faisant référence à cet objet. **Refcounts** doit avoir au moins la valeur 1 pour qu'une entrée soit dans le cache.|  
 |usecounts|**int**|Nombre de fois que l'objet du cache a été trouvé. Non incrémenté lorsque les requêtes paramétrables recherchent un plan dans le cache. Peut être incrémenté plusieurs fois lors de l'utilisation du plan d'exécution de requêtes.|  
 |size_in_bytes|**int**|Nombre d'octets mobilisés par l'objet dans le cache.|  
 |memory_object_address|**varbinary (8)**|Adresse mémoire de l'entrée en cache. Cette valeur peut s'utiliser avec [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) pour obtenir la répartition mémoire du plan en cache, et avec les entrées [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) pour obtenir le coût de la mise en cache de l'entrée.|  
-|cacheobjtype|**nvarchar (34)**|Type d'objet dans le cache. Les valeurs possibles sont les suivantes :<br /><br /> Compiled Plan (plan compilé)<br /><br /> Compiled Plan Stub (stub du plan compilé)<br /><br /> Parse Tree (arborescence d'analyse)<br /><br /> Extended Proc (procédure étendue)<br /><br /> CLR Compiled Func (fonction compilée CLR)<br /><br /> CLR Compiled Proc (procédure compilée CLR)|  
+|cacheobjtype|**nvarchar (34)**|Type d'objet dans le cache. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> Compiled Plan (plan compilé)<br /><br /> Compiled Plan Stub (stub du plan compilé)<br /><br /> Parse Tree (arborescence d'analyse)<br /><br /> Extended Proc (procédure étendue)<br /><br /> CLR Compiled Func (fonction compilée CLR)<br /><br /> CLR Compiled Proc (procédure compilée CLR)|  
 |objtype|**nvarchar (16)**|Type d'objet. Vous trouverez ci-dessous les valeurs possibles et leurs descriptions correspondantes.<br /><br /> Proc : procédure stockée<br />Prepared : instruction préparée<br />Adhoc : requête ad hoc. Fait référence [!INCLUDE[tsql](../../includes/tsql-md.md)] à soumis en tant qu’événements de langage en utilisant **osql** ou **sqlcmd** au lieu de comme appels de procédure distante.<br />ReplProc : réplication-filtre-procédure<br />Déclencheur : déclencheur<br />Vue : vue<br />Valeur par défaut : valeur par défaut<br />UsrTab : table utilisateur<br />SysTab : table système<br />Vérification : contrainte de validation<br />Règle : règle|  
-|plan_handle|**varbinary (64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec les fonctions de gestion dynamique suivantes :<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|plan_handle|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec les fonctions de gestion dynamique suivantes :<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|ID du pool de ressources par rapport auquel cette utilisation de la mémoire de plan est prise en compte.|  
 |pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   

@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770933"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
@@ -43,13 +43,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de la base de données de distribution.|  
+|**name**|**sysname**|Nom de la base de données de distribution.|  
 |**min_distretention**|**int**|Durée minimale de rétention (exprimée en heures) avant la suppression des transactions|  
 |**max_distretention**|**int**|Durée maximale de rétention (exprimée en heures) avant la suppression des transactions|  
 |**history retention**|**int**|Nombre d'heures de rétention de l'historique|  
 |**history_cleanup_agent**|**sysname**|Nom de l'Agent de nettoyage de l'historique|  
 |**distribution_cleanup_agent**|**sysname**|Nom de l'Agent de nettoyage de distribution.|  
-|**statu**|**int**|À usage interne uniquement|  
+|**statut**|**int**|À usage interne uniquement|  
 |**data_folder**|**nvarchar(255)**|Nom du répertoire utilisé pour stocker les fichiers de la base de données.|  
 |**data_file**|**nvarchar(255)**|Nom du fichier de base de données.|  
 |**data_file_size**|**int**|Taille initiale du fichier de données en mégaoctets.|  
@@ -67,7 +67,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  Les membres du rôle de base de données fixe **db_owner** ou du rôle **replmonitor** dans une base de données de distribution et les utilisateurs de la liste d’accès à la publication d’une publication utilisant la base de données de distribution peuvent exécuter **sp_helpdistributiondb** pour retourner les informations relatives aux fichiers. Les membres du rôle **public** peuvent exécuter **sp_helpdistributiondb** pour renvoyer des informations non liées aux fichiers pour les bases de données de distribution auxquelles ils ont accès.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

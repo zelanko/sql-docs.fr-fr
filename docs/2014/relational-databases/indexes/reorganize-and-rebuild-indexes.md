@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811029"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
@@ -52,24 +52,24 @@ ms.locfileid: "68811029"
   
      [Sécurité](#Security)  
   
--   **Pour vérifier la fragmentation d’un index, utilisez :**  
+-   **Pour vérifier la fragmentation d'un index, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
--   **Pour réorganiser ou reconstruire un index, utilisez :**  
+-   **Pour réorganiser ou reconstruire un index, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedureReorg)  
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Fragmentation"></a>Détection de la fragmentation  
+###  <a name="detecting-fragmentation"></a><a name="Fragmentation"></a>Détection de la fragmentation  
  Lorsque vous déterminez la méthode de défragmentation à adopter, la première étape consiste à analyser l'index pour évaluer son degré de fragmentation. La fonction système [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)vous permet de détecter la fragmentation dans un index spécifique, dans tous les index d’une table ou d’une vue indexée, dans tous les index d’une base de données ou dans tous les index de l’ensemble des bases de données. Pour les index partitionnés, **sys.dm_db_index_physical_stats** procure aussi des informations de fragmentation pour chaque partition.  
   
- Le jeu de résultats retourné par la fonction **sys. dm_db_index_physical_stats** comprend les colonnes suivantes.  
+ Le jeu de résultats retourné par la fonction **sys.dm_db_index_physical_stats** inclut les colonnes suivantes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
@@ -79,12 +79,12 @@ ms.locfileid: "68811029"
   
  Une fois le degré de fragmentation connu, utilisez le tableau suivant pour déterminer la méthode la mieux adaptée pour corriger la fragmentation.  
   
-|valeur **avg_fragmentation_in_percent**|Instruction corrective|  
+|Valeur**avg_fragmentation_in_percent**|Instruction corrective|  
 |-----------------------------------------------|--------------------------|  
 |> 5% et \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup> la reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne.  
+<sup>1</sup> La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne.  
   
 > [!TIP]
 > Ces valeurs fournissent des directives approximatives pour déterminer le point auquel vous devez basculer entre `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Par exemple, si un index donné est principalement utilisé pour les opérations d’analyse, la suppression de la fragmentation peut améliorer les performances de ces opérations. L’avantage en matière de performances est moins perceptible pour les index utilisés principalement pour les opérations de recherche. De même, la suppression de la fragmentation dans un segment de mémoire (une table sans index cluster) est particulièrement utile pour les opérations d’analyse d’index non-cluster, mais n’a que peu d’effet dans les opérations de recherche.
@@ -109,7 +109,7 @@ Scénarios qui ne nécessitent pas la recréation automatique de tous les index 
 -  Recréation d’un index cluster non unique
 -  Modification du schéma d’index, telle que l’application d’un schéma de partitionnement à un index cluster ou le déplacement de l’index cluster vers un autre groupe de fichiers
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 Les index possédant plus de 128 extensions sont reconstruits en deux phases distinctes : une phase logique et une phase physique. Dans la phase logique, les unités d'allocation utilisées par l'index sont signalées comme devant être désallouées, les lignes de données sont copiées et triées, puis elles sont déplacées vers les nouvelles unités d'allocation ayant été créées pour stocker l'index reconstruit. Dans la phase physique, les unités d'allocation préalablement signalées pour être désallouées sont supprimées physiquement dans des transactions courtes qui interviennent en arrière-plan et nécessitent peu de verrous. Pour plus d’informations sur les étendues, consultez [Guide d’architecture des pages et des étendues](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
 
@@ -119,12 +119,12 @@ Il est possible de créer et de reconstruire des index non alignés sur une tabl
 
 Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers dans lequel il se trouve est hors connexion ou en lecture seule. Si le mot clé `ALL` est spécifié et qu’un ou plusieurs index se trouvent dans un groupe de fichiers hors connexion ou en lecture seule, l’instruction échoue.
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l’autorisation `ALTER` sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedureFrag"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureFrag"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Pour vérifier la fragmentation d'un index  
   
@@ -166,10 +166,10 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
      **Lignes de niveau feuille**  
      Nombre de lignes de niveau feuille.  
   
-     **Taille de ligne maximale**  
+     **Taille maximale de ligne**  
      Taille maximale des lignes de niveau feuille.  
   
-     **Taille de ligne minimale**  
+     **Taille minimale de ligne**  
      Taille minimale des lignes de niveau feuille.  
   
      **Pages**  
@@ -178,10 +178,10 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
      **ID de partition (Partition ID)**  
      ID de partition de l'arbre B (B-tree) qui contient l'index.  
   
-     **Lignes fantômes de version**  
+     **Enregistrement de version fantôme**  
      Nombre d'enregistrements fantômes étant conservés en raison d'une transaction d'isolement d'instantané en attente.  
   
-##  <a name="TsqlProcedureFrag"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureFrag"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Pour vérifier la fragmentation d'un index  
   
@@ -219,7 +219,7 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
   
  Pour plus d’informations, consultez [sys. dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-##  <a name="SSMSProcedureReorg"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureReorg"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>Pour réorganiser ou reconstruire un index  
   
@@ -273,7 +273,7 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
   
 8.  Cliquez sur **OK**.  
   
-##  <a name="TsqlProcedureReorg"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>Pour réorganiser un index défragmenté  
   
@@ -333,6 +333,6 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
  Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Meilleures pratiques de défragmentation d’index Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
+ [Meilleures pratiques de défragmentation d'index Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

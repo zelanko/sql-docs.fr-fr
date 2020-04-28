@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266360"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Utilisation de projets SSMA (OracleToSQL)
@@ -62,9 +62,9 @@ Pour migrer des données depuis des bases [!INCLUDE[ssNoVersion](../../includes/
   
 **Pour créer un projet**  
   
-1.  Dans le menu **fichier** , cliquez sur **nouveau projet**.  
+1.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** apparaît.  
   
 2.  Dans la zone **Nom** , tapez le nom de votre projet.  
   
@@ -72,9 +72,9 @@ Pour migrer des données depuis des bases [!INCLUDE[ssNoVersion](../../includes/
   
 4.  Dans la liste déroulante **migration vers** , sélectionnez la version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la cible utilisée pour la migration. Voici les options disponibles :  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -100,7 +100,7 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
   
         L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées, n’activez pas les cases à cocher.  
   
-    2.  Cliquez sur le bouton **Enregistrer**.  
+    2.  Cliquez sur le bouton **Enregistrer** .  
   
         SSMA analyse les schémas Oracle et enregistre les métadonnées dans le fichier projet.  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887434"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Définition de données MDX - CREATE SUBCUBE
@@ -42,7 +42,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
 |Membre par défaut d'origine|Peut être agrégé|Sous-sélection|Membre par défaut révisé|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|Oui|{Time.Year.2003}|Aucune modification|  
+|Time.Year.All|Oui|{Time.Year.2003}|Aucun changement|  
 |Heure. année. [1997]|Oui|{Time.Year.2003}|Time.Year.All|  
 |Heure. année. [1997]|Non|{Time.Year.2003}|Heure. année. [2003]|  
 |Heure. année. [1997]|Oui|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
@@ -131,6 +131,6 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [Concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Instructions de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)   
  [Instruction DROP SUBCUBE &#40;&#41;MDX](../mdx/mdx-data-definition-drop-subcube.md)   
- [Instruction SELECT &#40;&#41;MDX](../mdx/mdx-data-manipulation-select.md)  
+ [Instruction SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

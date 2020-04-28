@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266546"
 ---
 # <a name="running-test-cases-oracletosql"></a>Exécution de cas de test (OracleToSQL)
@@ -33,7 +33,7 @@ Une fois le test terminé, le rapport de cas de test est créé. Cliquez sur le 
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution du cas de test  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Le testeur SSMA vérifie si toutes les conditions préalables sont remplies pour l’exécution des tests avant le démarrage du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
@@ -43,7 +43,7 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 ||||  
 |-|-|-|  
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |USER_TABLE $ Trg|déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
 |USER_TABLE $ AUD|table|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
 |USER_TABLE $ AUDI|table|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
@@ -56,14 +56,14 @@ L’objet suivant est créé dans le schéma de la table vérifiée à l’adres
   
 ||||  
 |-|-|-|  
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |USER_TABLE $ Trg|déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
   
 Et les objets suivants sont créés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans la base de données ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |USER_TABLE $ AUD|table|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
 |USER_TABLE $ AudI|table|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
 |USER_TABLE|vue|Représentation simplifiée des modifications de la table.|  

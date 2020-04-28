@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028689"
 ---
 # <a name="server-memory-configuration-options"></a>Options de configuration de la mémoire du serveur
@@ -34,12 +34,11 @@ ms.locfileid: "69028689"
  Le paramètre par défaut de l'option **min server memory** est 0 et le paramètre par défaut de l'option **max server memory** est 2 147 483 647 Mo. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut modifier dynamiquement sa configuration mémoire en fonction des ressources système disponibles.  
   
 > [!NOTE]  
-> Si vous donnez à **max server memory** sa valeur minimale, vous allez gravement limiter les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , jusqu'à l'empêcher même de démarrer. Si vous ne pouvez plus démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après avoir changé cette option, démarrez-le au moyen de l’option de démarrage **-f** et restaurez **max server memory** à sa valeur antérieure. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md).  
+> Si vous donnez à **max server memory** sa valeur minimale, vous allez gravement limiter les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , jusqu'à l'empêcher même de démarrer. Si vous ne pouvez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pas démarrer après avoir modifié cette option, démarrez-le à l’aide de l’option **de démarrage-f** et réinitialisez **Max Server Memory** à sa valeur précédente. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md).  
   
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise dynamiquement la mémoire, il interroge régulièrement le système afin de déterminer la mémoire physique disponible. La conservation de cette mémoire libre empêche le système d'exploitation de paginer. S'il y a moins de mémoire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en libère pour le système d'exploitation. S’il y a plus de mémoire disponible, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut allouer davantage de mémoire. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’ajoute de la mémoire que lorsque sa charge de travail en requiert davantage. Un serveur au repos n’augmente pas la taille de son espace d’adressage virtuel.  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise dynamiquement la mémoire, il interroge régulièrement le système afin de déterminer la mémoire physique disponible. La conservation de cette mémoire libre empêche le système d'exploitation de paginer. S'il y a moins de mémoire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en libère pour le système d'exploitation. S’il y a plus de mémoire disponible, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut allouer davantage de mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’ajoute de la mémoire que lorsque sa charge de travail en requiert davantage. Un serveur au repos n’augmente pas la taille de son espace d’adressage virtuel.  
   
- Pour une requête qui retourne la mémoire utilisée actuellement, consultez l'exemple B. **Max Server Memory** contrôle l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allocation de mémoire, y compris le pool de mémoires tampons, la mémoire de compilation, tous les caches, les allocations de mémoire qe, la mémoire du gestionnaire de verrous et la mémoire CLR (essentiellement, tout régisseur de mémoire trouvé dans **sys. dm_os_memory_clerks**). La mémoire pour les piles de threads, les segments de mémoire, les fournisseurs de serveurs liés autres que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que toute mémoire allouée par une DLL non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ne sont pas contrôlées par max server memory.  
+ Pour une requête qui retourne la mémoire utilisée actuellement, consultez l'exemple B. L’option**max server memory** contrôle l’allocation de mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris le pool de mémoires tampons, la mémoire de compilation, tous les caches, les allocations de mémoire qe, la mémoire du gestionnaire de verrous et la mémoire clr (essentiellement les régisseurs de mémoires qui se trouvent dans **sys.dm_os_memory_clerks**). La mémoire pour les piles de threads, les segments de mémoire, les fournisseurs de serveurs liés autres que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que toute mémoire allouée par une DLL non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ne sont pas contrôlées par max server memory.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utilise l’API de notification de mémoire **QueryMemoryResourceNotification** pour déterminer le moment où le gestionnaire de mémoire SQL Server peut allouer de la mémoire et libérer de la mémoire.  
   
@@ -49,34 +48,33 @@ ms.locfileid: "69028689"
 Vous pouvez définir les options de serveur **min server memory** et **max server memory** pour couvrir une plage de valeurs de mémoire. Cette méthode est utile pour les administrateurs système ou de bases de données qui souhaitent configurer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en accord avec la mémoire exigée par d’autres applications ou d’autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s’exécutent sur le même hôte.
 
 > [!NOTE]
-> 
-  **min server memory** et **max server memory** sont des options avancées. Si vous utilisez la procédure stockée système **sp_configure** pour changer ces paramètres, vous ne pouvez les modifier que si l’option **show advanced options** a la valeur 1. Ces paramètres entrent immédiatement en vigueur, sans redémarrage du serveur.  
+> **min server memory** et **max server memory** sont des options avancées. Si vous utilisez la procédure stockée système **sp_configure** pour changer ces paramètres, vous ne pouvez les modifier que si l’option **show advanced options** a la valeur 1. Ces paramètres entrent immédiatement en vigueur, sans redémarrage du serveur.  
   
-<a name="min_server_memory"></a>Utilisez **min_server_memory** pour garantir une quantité minimale de mémoire disponible pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestionnaire de mémoire pour une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’alloue pas immédiatement la quantité de mémoire spécifiée dans **min Server Memory** au démarrage. Néanmoins, lorsque l’utilisation de la mémoire atteint cette valeur en raison de la charge client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut libérer de la mémoire à moins que la valeur **min server memory** ne soit réduite. Par exemple, si plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent exister simultanément sur le même ordinateur hôte, définissez min_server_memory plutôt que max_server_memory afin de réserver de la mémoire pour une instance. La définition d’une valeur min_server_memory est essentielle dans un environnement virtualisé. Elle permet en effet de garantir que la sollicitation de la mémoire de l’hôte sous-jacent ne tente pas de libérer, dans le pool de tampons d’une machine virtuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitée, une quantité de mémoire supérieure à celle nécessaire pour obtenir des performances acceptables.
+<a name="min_server_memory"></a> Utilisez **min_server_memory** pour garantir une quantité minimale de mémoire accessible au Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’alloue pas immédiatement la quantité de mémoire spécifiée dans **min Server Memory** au démarrage. Néanmoins, lorsque l’utilisation de la mémoire atteint cette valeur en raison de la charge client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut libérer de la mémoire à moins que la valeur **min server memory** ne soit réduite. Par exemple, si plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent exister simultanément sur le même ordinateur hôte, définissez min_server_memory plutôt que max_server_memory afin de réserver de la mémoire pour une instance. La définition d’une valeur min_server_memory est essentielle dans un environnement virtualisé. Elle permet en effet de garantir que la sollicitation de la mémoire de l’hôte sous-jacent ne tente pas de libérer, dans le pool de tampons d’une machine virtuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitée, une quantité de mémoire supérieure à celle nécessaire pour obtenir des performances acceptables.
  
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Il n’est pas garanti d’allouer la quantité de mémoire spécifiée dans **min Server Memory**. Si la charge sur le serveur ne nécessite jamais d’allouer la quantité de mémoire spécifiée dans **min Server Memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutera avec moins de mémoire.  
   
-<a name="max_server_memory"></a>Utilisez **max_server_memory** pour garantir que le système d’exploitation ne subit pas de sollicitation de mémoire néfaste. Pour définir la configuration de la mémoire maximale du serveur, surveillez la consommation globale du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer les besoins en mémoire. Pour obtenir des résultats plus précis pour une instance unique :
+<a name="max_server_memory"></a> Utilisez **max_server_memory** pour que le système d’exploitation ne fasse pas l’objet d’une sollicitation de la mémoire préjudiciable. Pour définir la configuration de la mémoire maximale du serveur, surveillez la consommation globale du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer les besoins en mémoire. Pour obtenir des résultats plus précis pour une instance unique :
  -  Réservez 1 à 4 Go de la mémoire totale du système d’exploitation au système d’exploitation lui-même.
  -  Ensuite, soustrayez l’équivalent des allocations de mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potentielles en dehors du contrôle **max server memory**, à savoir la **_taille de la pile <sup>1</sup> \*, le nombre maximal calculé de threads de worker <sup>2</sup> et le paramètre de démarrage -g <sup>3</sup>_** (ou 256 Mo par défaut si *-g* n’est pas défini). Il doit rester le paramètre max_server_memory pour une installation d’instance unique.
  
-<sup>1</sup> reportez-vous au [Guide d’architecture de gestion](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes) de la mémoire pour plus d’informations sur les tailles de pile de threads par architecture.
+<sup>1</sup> Pour plus d’informations sur les tailles de piles de threads par architecture, consultez le [guide d’architecture de gestion de la mémoire](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes).
 
-<sup>2</sup> reportez-vous à la page de documentation sur la configuration de [l’option de configuration de serveur max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)pour plus d’informations sur les threads de travail par défaut calculés pour un nombre donné d’UC affinité dans l’hôte actuel.
+<sup>2</sup> Pour plus d’informations sur les threads de worker par défaut calculés pour un nombre donné d’UC avec affinité dans l’hôte actif, consultez la page [Configurer l’option de configuration du serveur max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) dans la documentation.
 
-<sup>3</sup> pour plus d’informations sur le paramètre de démarrage *-g,* consultez la page de documentation sur [moteur de base de données options de démarrage du service](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014) . Aplicable uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 bits (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
+<sup>3</sup> Pour plus d’informations sur le paramètre de démarrage *-g*, consultez la page [Options de démarrage du service moteur de base de données](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014) dans la documentation. Aplicable uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 bits (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
-|Type de système d’exploitation|Quantité de mémoire minimale autorisée pour **Max Server Memory**|  
+|Type de système d'exploitation|Quantité de mémoire minimale autorisée pour **Max Server Memory**|  
 |-------------|----------------------------------------------------------------|  
 |32 bits|64 Mo|  
-|64 bits|128 Mo| 
+|64 bits|128 Mo| 
 
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Comment configurer les options de mémoire à l'aide de SQL Server Management Studio  
  Utilisez les deux options de mémoire du serveur, **min server memory** et **max server memory**, pour reconfigurer la quantité de mémoire (en mégaoctets) gérée par le Gestionnaire de mémoire de SQL Server pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut modifier dynamiquement sa configuration mémoire en fonction des ressources système disponibles.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>Procédure de configuration d'une quantité de mémoire fixe  
- **Pour définir une quantité fixe de mémoire :**  
+ **Pour définir une quantité fixe de mémoire :**  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
@@ -84,7 +82,7 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
   
 3.  Sous **Options mémoire du serveur**, entrez les quantités souhaitées pour **Mémoire minimale du serveur** et **Mémoire maximale du serveur**.  
   
-     Utilisez les paramètres par défaut pour autoriser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à modifier ses besoins de mémoire de façon dynamique en fonction des ressources système disponibles. Le paramètre par défaut de l’option **min server memory** est 0 et le paramètre par défaut de l’option **max server memory** est 2147483647 mégaoctets (Mo).  
+     Utilisez les paramètres par défaut pour autoriser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à modifier ses besoins de mémoire de façon dynamique en fonction des ressources système disponibles. La valeur par défaut de l’option **min Server Memory** est 0 et la valeur par défaut de l’option **max server memory** est de 2147483647 mégaoctets (Mo).  
   
 ## <a name="maximize-data-throughput-for-network-applications"></a>Obtenir le débit de données maximal pour les applications réseau  
  Pour optimiser l'utilisation de la mémoire système pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez limiter la quantité de mémoire utilisée par le système pour la mise en cache des fichiers. Pour limiter le cache du système de fichiers, veillez à désactiver **Maximiser le débit des données pour le partage de fichiers** . Vous pouvez spécifier le plus petit cache du système de fichiers en sélectionnant **Minimiser la mémoire utilisée** ou **Équilibrer**.  
@@ -105,7 +103,7 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
 ### <a name="to-disable-lock-pages-in-memory"></a>Pour désactiver Verrouiller les pages en mémoire  
  **Pour désactiver l’option verrouiller les pages en mémoire :**  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc`.  
+1.  Dans le menu **Démarrer**, cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc`.  
   
      La boîte de dialogue **Stratégie de groupe** s'affiche.  
   
@@ -113,11 +111,11 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
   
 3.  Développez **Paramètres de sécurité**, puis **Stratégies locales**.  
   
-4.  Sélectionnez le dossier **Attribution des droits utilisateur** .  
+4.  Sélectionnez le dossier **Attribution des droits utilisateur**.  
   
      Les stratégies s'affichent dans le volet Détails.  
   
-5.  Dans le volet, double-cliquez sur **Verrouiller les pages en mémoire**.  
+5.  Dans le volet, double-cliquez sur **Verrouillage des pages en mémoire**.  
   
 6.  Dans la boîte de dialogue **Paramètre de stratégie de sécurité locale** , sélectionnez le compte avec les privilèges nécessaires pour exécuter sqlservr.exe et cliquez sur **Supprimer**.  
   
@@ -130,8 +128,7 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
   
  Les systèmes de mémoire virtuelle autorisent le surengagement de la mémoire physique, de sorte que le rapport entre la mémoire virtuelle et la mémoire physique peut être supérieur à 1:1. Il est alors possible d'exécuter des programmes plus volumineux sur des ordinateurs offrant diverses configurations de la mémoire physique. Toutefois, dans la plupart des cas, l'utilisation d'une quantité de mémoire virtuelle nettement plus importante que les plages de travail moyennes combinées de tous les processus peut entraîner une détérioration des performances.  
   
- 
-  **min server memory** et **max server memory** sont des options avancées. Si vous utilisez la procédure stockée système **sp_configure** pour changer ces paramètres, vous ne pouvez les modifier que si l’option **show advanced options** a la valeur 1. Ces paramètres entrent immédiatement en vigueur, sans redémarrage du serveur.  
+ **min server memory** et **max server memory** sont des options avancées. Si vous utilisez la procédure stockée système **sp_configure** pour changer ces paramètres, vous ne pouvez les modifier que si l’option **show advanced options** a la valeur 1. Ces paramètres entrent immédiatement en vigueur, sans redémarrage du serveur.  
   
 ## <a name="running-multiple-instances-of-sql-server"></a>Exécution de plusieurs instances SQL Server  
  Lorsque vous exécutez plusieurs instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous avez le choix entre trois approches pour gérer la mémoire :  
@@ -140,20 +137,19 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
   
 -   Choisir **min server memory** pour contrôler l'utilisation de la mémoire. Définissez les valeurs minimales pour chaque instance, de telle sorte que leur somme soit inférieure de 1 à 2 Go à la mémoire physique totale de votre machine. Une fois encore, vous pouvez établir ces valeurs minimales de façon proportionnelle à la charge prévue de cette instance. Cette solution présente l'avantage que si toutes les instances ne sont pas en cours d'exécution au même instant, celles qui le sont peuvent utiliser la mémoire libre restante. Elle est également utile quand un autre processus gourmand en mémoire est présent sur l'ordinateur, car elle garantit que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficie au moins d'une quantité de mémoire acceptable. Le désagrément est que, lorsqu'une nouvelle instance (ou un autre processus) démarre, il se peut que les instances en cours d'exécution mettent un certain temps à libérer de la mémoire, notamment si elles doivent à cette fin réécrire les pages modifiées sur leurs bases de données.  
   
--   Ne rien faire (déconseillé). Les premières instances présentées avec une charge de travail tendent à allouer la totalité de la mémoire. Les instances inactives ou les instances ayant démarré ultérieurement peuvent finir par ne disposer que d'une quantité de mémoire minime. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'effectue aucune tentative pour équilibrer l'utilisation de la mémoire entre les instances. Cependant, toutes les instances répondent aux signaux de Windows Notification Memory pour ajuster la taille de leur occupation mémoire. Windows n'équilibre pas la mémoire entre les applications avec l'API Memory Notification. Il fournit simplement un commentaire global quant à la disponibilité de la mémoire sur le système.  
+-   Ne rien faire (déconseillé). Les premières instances présentées avec une charge de travail tendent à allouer la totalité de la mémoire. Les instances inactives ou les instances ayant démarré ultérieurement peuvent finir par ne disposer que d'une quantité de mémoire minime. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'effectue aucune tentative pour équilibrer l'utilisation de la mémoire entre les instances. Cependant, toutes les instances répondent aux signaux de Windows Notification Memory pour ajuster la taille de leur occupation mémoire. Windows n'équilibre pas la mémoire entre les applications avec l'API Memory Notification. Il fournit simplement un commentaire global quant à la disponibilité de la mémoire sur le système.  
   
  Comme vous pouvez modifier ces paramètres sans redémarrer les instances, vous pouvez sans peine procéder à des essais pour trouver les valeurs qui conviennent le mieux à votre modèle d'utilisation.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Apport de la quantité maximale de mémoire à SQL Server  
   
-||32 bits|64 bits|  
+||32 bits|64 bits|  
 |-|-------------|-------------|  
 |Mémoire conventionnelle|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 2 Go<br /><br /> 3 Go avec le paramètre de démarrage **/3GB** *<br /><br /> 4 Go sur WOW64\*\*|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 8 To sur l'architecture x64|  
   
- ***/3GB** est un paramètre de démarrage du système d’exploitation. Pour plus d'informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
+ ***/3GB** est un paramètre de démarrage du système d’exploitation. Pour plus d’informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows sur Windows 64) est un mode dans lequel 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un système d’exploitation 64 bits. Pour plus d'informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
+ * * WOW64 (Windows sur Windows 64) est un mode dans lequel 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un système d’exploitation 64 bits. Pour plus d’informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Exemples  
   

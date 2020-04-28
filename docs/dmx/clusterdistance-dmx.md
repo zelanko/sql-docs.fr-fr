@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892396"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -47,8 +47,7 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance (N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>Fonctions de prédiction connexes  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit les fonctions supplémentaires suivantes permettant d'interroger des modèles de clustering :  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit les fonctions supplémentaires suivantes permettant d'interroger des modèles de clustering :  
   
 -   Utilisez la fonction [cluster &#40;DMX&#41;](../dmx/cluster-dmx.md) pour retourner le cluster le plus probable.  
   
@@ -74,7 +73,7 @@ NATURAL PREDICTION JOIN
     0 AS [Number Children At Home]) AS t  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |Expression|  
 |----------------|  
@@ -82,7 +81,7 @@ NATURAL PREDICTION JOIN
   
  Pour déterminer de quel cluster il s'agit, vous pouvez substituer `Cluster` à `ClusterDistance` dans l'exemple précédent.  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |$CLUSTER|  
 |--------------|  
@@ -97,7 +96,7 @@ FROM <model>.CONTENT
 WHERE NODE_TYPE = 5  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |NODE_UNIQUE_NAME|NODE_CAPTION|  
 |------------------------|-------------------|  
@@ -119,7 +118,7 @@ NATURAL PREDICTION JOIN
     0 AS [Number Children At Home]) AS t  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |Cluster 2 Distance|  
 |------------------------|  
@@ -129,6 +128,6 @@ NATURAL PREDICTION JOIN
  [&#41;DMX &#40;cluster](../dmx/cluster-dmx.md)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

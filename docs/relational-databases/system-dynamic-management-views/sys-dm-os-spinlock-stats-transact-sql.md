@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265690"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
@@ -38,7 +38,7 @@ Retourne des informations sur toutes les attentes de verrouillages spinlock orga
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (256)**|Nom du type de verrouillage SpinLock.|  
+|name|**nvarchar(256)**|Nom du type de verrouillage SpinLock.|  
 |collisions|**bigint**|Nombre de fois où un thread tente d’acquérir le SpinLock et est bloqué, car un autre thread contient actuellement le SpinLock.|  
 |tourne|**bigint**|Nombre de fois où un thread exécute une boucle lors de la tentative d’acquisition du SpinLock.|  
 |spins_per_collision|**real**|Taux de spins par collision.|  
@@ -67,7 +67,7 @@ GO
 >  Ces statistiques ne sont pas conservées si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre. Toutes les données sont cumulées à partir de la dernière réinitialisation des statistiques ou à partir du démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="spinlocks"></a>SpinLock  
- Un SpinLock est un objet de synchronisation léger utilisé pour sérialiser l’accès aux structures de données qui sont généralement maintenues pendant une brève période de temps. Quand un thread tente d’accéder à une ressource protégée par un SpinLock qui est détenu par un autre thread, le thread exécute une boucle, ou « fait tourner » et tente à nouveau d’accéder à la ressource, au lieu de générer immédiatement le planificateur comme avec un verrou ou une autre ressource qu'. Le thread continue de tourner jusqu’à ce que la ressource soit disponible, ou que la boucle se termine, auquel moment le thread génère le planificateur et repasse dans la file d’attente exécutable. Cette pratique permet de réduire le basculement de contexte de thread excessif, mais lorsque la contention d’un SpinLock est élevée, une utilisation importante du processeur peut être observée.
+ Un SpinLock est un objet de synchronisation léger utilisé pour sérialiser l’accès aux structures de données qui sont généralement maintenues pendant une brève période de temps. Quand un thread tente d’accéder à une ressource protégée par un SpinLock qui est détenu par un autre thread, le thread exécute une boucle, ou « tourne » et tente à nouveau d’accéder à la ressource, au lieu de générer immédiatement le planificateur comme avec un verrou ou une autre ressource en attente. Le thread continue de tourner jusqu’à ce que la ressource soit disponible, ou que la boucle se termine, auquel moment le thread génère le planificateur et repasse dans la file d’attente exécutable. Cette pratique permet de réduire le basculement de contexte de thread excessif, mais lorsque la contention d’un SpinLock est élevée, une utilisation importante du processeur peut être observée.
    
  Le tableau suivant contient une brève description de certains des types SpinLock les plus courants.  
   
@@ -177,7 +177,7 @@ GO
 |HTTP|À usage interne uniquement|
 |HTTP_CONNCACHE|À usage interne uniquement|
 |HTTP_ENDPOINT|À usage interne uniquement|
-|IDENTITÉ|À usage interne uniquement|
+|IDENTITY|À usage interne uniquement|
 |INDEX_CREATE|À usage interne uniquement|
 |IO_DISPENSER_PAUSE|À usage interne uniquement|
 |IO_RG_VOLUME_HASHTABLE|À usage interne uniquement|

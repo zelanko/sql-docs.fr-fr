@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262079"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
@@ -60,7 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parité du [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Utilisé en interne pour déterminer la fin du journal au sein d’un fichier journal virtuel.|
 |vlf_first_lsn|**nvarchar (48)** |[Numéro séquentiel dans le journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) du premier enregistrement du journal dans le [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |[Numéro séquentiel dans le journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de l’enregistrement de journal qui a créé le [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary (20)**| **S’applique à :**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Affiche l’empreinte numérique du chiffreur du fichier journal virtuel si le fichier journal virtuel est chiffré à l’aide de [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), sinon null. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **S’applique à :** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Affiche l’empreinte numérique du chiffreur du fichier journal virtuel si le fichier journal virtuel est chiffré à l’aide de [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), sinon null. |
 
 ## <a name="remarks"></a>Notes
 La `sys.dm_db_log_info` fonction de gestion dynamique remplace `DBCC LOGINFO` l’instruction.    
@@ -110,8 +110,8 @@ GO
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys. dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

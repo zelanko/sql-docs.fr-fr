@@ -11,14 +11,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266471"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Touches de raccourci (OracleToSQL)
-Vous pouvez utiliser les raccourcis clavier pour naviguer dans l’application SSMA. Pour plus d'informations, consultez les rubriques ci-dessous.  
+Vous pouvez utiliser les raccourcis clavier pour naviguer dans l’application SSMA. Pour plus d’informations, voir les rubriques suivantes :  
   
 -   [Commandes de menu et autres touches de raccourci&#40;Oracle vers SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   

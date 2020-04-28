@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493902"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Tri des membres d'attribut sur la base d'un attribut secondaire
@@ -75,7 +75,7 @@ ms.locfileid: "69493902"
   
 1.  Basculez vers l’onglet **Navigateur** du Concepteur de dimensions pour la dimension Customer, puis explorez les membres de la hiérarchie d’attribut **Commute Distance** .  
   
-     Notez que les membres de la hiérarchie d'attribut sont triés en fonction des valeurs ASCII de leur clé de membre. Dans ce cas, le tri sur le nom ou la clé de l'attribut ne permet pas de trier les distances parcourues par ordre croissant. Au cours de cette tâche, vous allez trier les membres de la hiérarchie d’attribut sur la base du calcul nommé **CommuteDistanceSort** qui attribue le numéro de tri approprié à chaque valeur distincte dans la colonne. Pour gagner du temps, ce calcul nommé a déjà été ajouté à la table **Customer** dans la vue de source de données de l’entrepôt de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] . Vous pouvez basculer vers cette vue de source de données pour consulter le script SQL utilisé dans ce calcul nommé. Pour plus d’informations, consultez [définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+     Notez que les membres de la hiérarchie d'attribut sont triés en fonction des valeurs ASCII de leur clé de membre. Dans ce cas, le tri sur le nom ou la clé de l'attribut ne permet pas de trier les distances parcourues par ordre croissant. Au cours de cette tâche, vous allez trier les membres de la hiérarchie d’attribut sur la base du calcul nommé **CommuteDistanceSort** qui attribue le numéro de tri approprié à chaque valeur distincte dans la colonne. Pour gagner du temps, ce calcul nommé a déjà été ajouté à la table **Customer** dans la vue de source de données de l’entrepôt de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] . Vous pouvez basculer vers cette vue de source de données pour consulter le script SQL utilisé dans ce calcul nommé. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
      L’illustration suivante montre les membres de la hiérarchie d’attribut **Commute Distance** , triés en fonction des valeurs ASCII de la clé de membre.  
   

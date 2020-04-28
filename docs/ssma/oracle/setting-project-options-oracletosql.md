@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266531"
 ---
 # <a name="setting-project-options-oracletosql"></a>Définition des options du projet (OracleToSQL)
@@ -39,13 +39,13 @@ SSMA comporte cinq jeux de paramètres de projet :
   
 Il comporte également quatre modes de configuration de ces paramètres :  
   
--   Default  
+-   Par défaut  
   
 -   Optimistic  
   
 -   Complète  
   
--   Custom  
+-   Personnalisé  
   
 Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve davantage la syntaxe Oracle actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe Oracle doit être convertie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en une syntaxe équivalente, le mode complet effectue la conversion la plus complète, mais le code obtenu peut être plus difficile à lire. Dans le mode personnalisé, vous définissez les options.  
   

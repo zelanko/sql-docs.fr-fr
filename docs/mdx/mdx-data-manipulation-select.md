@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891148"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulation de données MDX - SELECT
@@ -161,17 +161,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Route-250**|**$9 377 457,68**|**$4 032,47**|**0,04%**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Route-650**|**$7 442 141,81**|**$39 698,30**|**0,53%**|  
-|**Tourisme-1000**|**$6 723 794,29**|**$166 144,17**|**2,47 %**|  
-|**Route-550-W**|**$3 668 383,88**|**$1 901,97**|**0,05%**|  
-|**Route-350-W**|**$3 665 932,31**|**$20 946,50**|**0,57%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
-|**Route-150**|**$2 363 805,16**|**$0,00**|**0,00%**|  
-|**Tourisme-3000**|**$2 046 508,26**|**$79 582,15**|**3,89 %**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0,53 %**|  
+|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2,47%**|  
+|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0,05%**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
+|**Road-150**|**2 363 805,16 $**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3,89%**|  
   
  Le jeu de produits obtenu semble être le même que jeu Preferred10Products, qui se présente ainsi :  
   
@@ -213,17 +213,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Route-250**|**$9 377 457,68**|**$4 032,47**|**0,04%**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Route-650**|**$7 442 141,81**|**$39 698,30**|**0,53%**|  
-|**Tourisme-1000**|**$6 723 794,29**|**$166 144,17**|**2,47 %**|  
-|**Route-550-W**|**$3 668 383,88**|**$1 901,97**|**0,05%**|  
-|**Route-350-W**|**$3 665 932,31**|**$20 946,50**|**0,57%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
-|**Route-150**|**$2 363 805,16**|**$0,00**|**0,00%**|  
-|**Tourisme-3000**|**$2 046 508,26**|**$79 582,15**|**3,89 %**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0,53 %**|  
+|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2,47%**|  
+|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0,05%**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
+|**Road-150**|**2 363 805,16 $**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3,89%**|  
   
  Dans les exemples précédents, nous avons créé deux jeux : l'un sous forme d'expression calculée et l'autre sous forme d'expression constante. Ces exemples illustrent les différentes versions de la fonctionnalité Autoexists.  
   
@@ -247,17 +247,17 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
-|**Montagne-300**|**$1 907 249,38**|**$876,95**|**0,05%**|  
-|**Mountain-500**|**$1 067 327,31**|**$17 266,09**|**1,62%**|  
-|**Montagne-400-W**|**$592 450,05**|**$303,49**|**0,05%**|  
-|**LL de montagne**|**$521 864,42**|**$252,41**|**0,05%**|  
-|**Cadre de montagne ML-W**|**$482 953,16**|**$206,95**|**0,04%**|  
-|**Cadre de montagne ML**|**$343 785,29**|**$161,82**|**0,05%**|  
-|**Women's Mountain Shorts**|**$260 304,09**|**$6 675,56**|**2,56%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
+|**Mountain-300**|**1 907 249,38 $**|**$876.95**|**0,05%**|  
+|**Mountain-500**|**1 067 327,31 $**|**17 266,09 $**|**1,62%**|  
+|**Mountain-400-W**|**592 450,05 $**|**$303.49**|**0,05%**|  
+|**LL Mountain Frame**|**521 864,42 $**|**$252.41**|**0,05%**|  
+|**ML Mountain Frame-W**|**482 953,16 $**|**$206,95**|**0,04%**|  
+|**ML Mountain Frame**|**343 785,29 $**|**$161.82**|**0,05%**|  
+|**Women's Mountain Shorts**|**260 304,09 $**|**6 675,56 $**|**2,56%**|  
   
  Dans le jeu de résultats précédent, nous avons sept nouveaux venus dans la liste des articles Top10SellingProducts ; de plus, Mountain-200, Mountain-100 et HL Mountain Frame ont été déplacés en haut de la liste. Dans ce même jeu de résultats, ces trois valeurs étaient entrecoupées.  
   
@@ -305,10 +305,10 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
   
  Dans les résultats ci-dessus, le découpage donne un résultat qui contient uniquement les produits de Preferred10Products qui font partie du groupe [Mountain] dans [Product].[Product Line], comme prévu car Preferred10Products est une expression constante.  
   
@@ -334,10 +334,10 @@ FROM
   
 |||||  
 |-|-|-|-|  
-||**Montant des ventes du revendeur**|**Montant de la remise**|**Remise PCT**|  
-|**Montagne-200**|**$14 356 699,36**|**$19 012,71**|**0,13 %**|  
-|**Montagne-100**|**$8 568 958,27**|**$139 393,27**|**1,63%**|  
-|**Cadre de montagne HL**|**$3 365 069,27**|**$174,11**|**0,01%**|  
+||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
   
  Le comportement d’Autoexists peut être modifié à l’aide du paramètre Autoexists = [1 | 2 | 3] dans la chaîne de connexion ; consultez les [Propriétés XMLA prises en charge &#40;les&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> l’utilisation des paramètres.  
   
@@ -377,11 +377,11 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Tous les produits**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
-|**Tous les revendeurs**|**$80 450 596,98**|**$571 297,93**|**$66 302 381,56**|**$1 777 840,84**|**$11 799 076,66**|  
-|**Magasin de bicyclettes Specialty**|**$6 756 166,18**|**$65 125,48**|**$6 080 117,73**|**$252 933,91**|**$357 989,07**|  
-|**Revendeur à valeur ajoutée**|**34 967 517,33 $**|**$175 002,81**|**$30 892 354,33**|**592 385,71 $**|**$3 307 774,48**|  
-|**Fonctionnalité**|**38 726 913,48 $**|**$331 169,64**|**$29 329 909,50**|**$932 521,23**|**$8 133 313,11**|  
+||**All Products**|**Accessories**|**Bikes**|**Habillement**|**Composants**|  
+|**All Resellers**|**80 450 596,98 $**|**571 297,93 $**|**66 302 381,56 $**|**1 777 840,84 $**|**11 799 076,66 $**|  
+|**Specialty Bike Shop**|**6 756 166,18 $**|**65 125,48 $**|**6 080 117,73 $**|**252 933,91 $**|**357 989,07 $**|  
+|**Value Added Reseller**|**34 967 517,33 $**|**175 002,81 $**|**30 892 354,33 $**|**592 385,71 $**|**3 307 774,48 $**|  
+|**Fonctionnalité**|**38 726 913,48 $**|**331 169,64 $**|**29 329 909,50 $**|**932 521,23 $**|**8 133 313,11 $**|  
   
  Pour créer une table contenant uniquement les données pour les produits Accessories et Clothing, ainsi que les revendeurs Value Added Reseller et Warehouse, tout en conservant les totaux globaux, vous pouvez utiliser NON VISUAL comme suit :  
   
@@ -401,10 +401,10 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**Tous les produits**|**Accessories**|**Clothing**|  
-|**Tous les revendeurs**|**$80 450 596,98**|**$571 297,93**|**$1 777 840,84**|  
-|**Revendeur à valeur ajoutée**|**34 967 517,33 $**|**$175 002,81**|**592 385,71 $**|  
-|**Fonctionnalité**|**38 726 913,48 $**|**$331 169,64**|**$932 521,23**|  
+||**All Products**|**Accessories**|**Habillement**|  
+|**All Resellers**|**80 450 596,98 $**|**571 297,93 $**|**1 777 840,84 $**|  
+|**Value Added Reseller**|**34 967 517,33 $**|**175 002,81 $**|**592 385,71 $**|  
+|**Fonctionnalité**|**38 726 913,48 $**|**331 169,64 $**|**932 521,23 $**|  
   
  Pour créer une table qui additionne visuellement les colonnes mais qui, pour les totaux de ligne, affiche le total réel de tout l'élément [Category], vous pouvez utiliser la requête suivante :  
   
@@ -465,7 +465,7 @@ WHERE
 ## <a name="see-also"></a>Voir aussi  
  [Concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Instructions de manipulation de données MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restriction de la requête avec des axes de requête et de segment &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Restriction de la requête avec des axes de requête et de secteur &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

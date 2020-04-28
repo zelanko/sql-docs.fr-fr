@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893597"
 ---
 # <a name="expressions-mdx"></a>Expressions (MDX)
@@ -31,7 +31,7 @@ ms.locfileid: "68893597"
  Fonction scalaire  
  Dans la syntaxe MDX, une fonction scalaire retourne une valeur unique au sein du contexte d'évaluation. Cette distinction est importante pour comprendre la manière dont MDX résout les fonctions scalaires, car la plupart des expressions, instructions et scripts MDX ne sont pas évalués sur un élément de données unique, mais bien de façon itérative sur un groupe d'éléments de données, tels que ces cellules ou des membres. Cependant, au moment de l'évaluation de la fonction scalaire, elle vérifie généralement un élément de données unique.  
   
- Identificateur d’objet  
+ Identificateur d'objet  
  La syntaxe MDX est orientée objet en raison de la nature des données multidimensionnelles. Les identificateurs d'objet sont considérés comme des expressions simples dans la syntaxe MDX. Pour plus d’informations sur les identificateurs, consultez [identificateurs &#40;&#41;MDX ](../mdx/identifiers-mdx.md).  
   
  Une expression complexe peut être une combinaison de ces entités associées par des opérateurs.  
@@ -75,16 +75,16 @@ WHERE [Product].[Category].[Bikes]
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Utilisation d'expressions de cube et de sous-cube](../mdx/using-cube-and-subcube-expressions.md)|Définit les expressions de cube et de sous-cube.|  
-|[Utilisation d'expressions de dimension](../mdx/using-dimension-expressions.md)|Définit les expressions de dimension.|  
-|[Utilisation d'expressions de membre](../mdx/using-member-expressions.md)|Définit les expressions de membre.|  
-|[Utilisation d'expressions de tuple](../mdx/using-tuple-expressions.md)|Définit les expressions de tuple.|  
-|[Utilisation d'expressions de jeu](../mdx/using-set-expressions.md)|Définit les expressions de jeu.|  
-|[Utilisation d'expressions scalaires](../mdx/using-scalar-expressions.md)|Définit les expressions scalaires.|  
+|[Utilisation d’expressions de cube et de sous-cube](../mdx/using-cube-and-subcube-expressions.md)|Définit les expressions de cube et de sous-cube.|  
+|[Utilisation d’expressions de dimension](../mdx/using-dimension-expressions.md)|Définit les expressions de dimension.|  
+|[Utilisation d’expressions de membre](../mdx/using-member-expressions.md)|Définit les expressions de membre.|  
+|[Utilisation d’expressions de tuple](../mdx/using-tuple-expressions.md)|Définit les expressions de tuple.|  
+|[Utilisation d’expressions de jeu](../mdx/using-set-expressions.md)|Définit les expressions de jeu.|  
+|[Utilisation d’expressions scalaires](../mdx/using-scalar-expressions.md)|Définit les expressions scalaires.|  
 |[Manipulation de valeurs vides](../mdx/working-with-empty-values.md)|Décrit une valeur vide et la manière dont les valeurs de ce type sont gérées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence du langage MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
- [Notions de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

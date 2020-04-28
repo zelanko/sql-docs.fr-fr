@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811089"
 ---
 # <a name="sql-server-components"></a>Composants SQL Server
@@ -55,16 +55,13 @@ ms.locfileid: "68811089"
   
 -   Si vous analysez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur distant, vous devez activer les services Registre distant sur l'ordinateur distant.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est détecté si une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se trouve dans le Registre de l'ordinateur.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est détecté si une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se trouve dans le Registre de l'ordinateur.  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est détecté si une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se trouve dans le Registre de l'ordinateur.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est détecté si une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se trouve dans le Registre de l'ordinateur.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est détecté si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se trouve dans le Registre de l'ordinateur. Cependant, le Conseiller de mise à niveau analyse uniquement les serveurs de rapports locaux.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est détecté si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se trouve dans le Registre de l'ordinateur. Cependant, le Conseiller de mise à niveau analyse uniquement les serveurs de rapports locaux.  
   
- **Components**  
+ **Composants**  
  Sélectionnez les composants à analyser. Vous pouvez cliquer sur le bouton **détecter** pour sélectionner tous les composants installés sur l’ordinateur. Une coche apparaît en regard des composants détectés comme étant installés sur l'ordinateur. Vous pouvez également sélectionner manuellement les composants à analyser en activant ou désactivant la case à cocher en regard de chaque composant.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769099"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -83,7 +83,7 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@publication = ] 'publication'`Nom de la publication à créer. *publication* est de **type sysname**, sans valeur par défaut. Le nom doit être unique dans la base de données.  
+`[ \@publication = ] 'publication'`Nom de la publication à créer. *publication* est de **type sysname**, sans valeur par défaut. Le nom doit être unique au sein de la base de données.  
   
 `[ \@taskid = ] taskid`Pris en charge pour la compatibilité descendante uniquement ; Utilisez [sp_addpublication_snapshot &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
   
@@ -93,13 +93,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**natif**|Produit une copie par bloc en mode natif de toutes les tables. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**native**|Produit une copie par bloc en mode natif de toutes les tables. *Non pris en charge pour les serveurs de publication Oracle*.|  
 |**symbole**|Produit une copie par bloc en mode caractère de toutes les tables. _Pour un serveur de publication Oracle,_ le **caractère** _est valide uniquement pour la réplication d’instantané_.|  
 |**concurrence**|Produit une copie en bloc en mode natif de toutes les tables, mais ne verrouille pas les tables au cours de l'instantané. Pris en charge uniquement pour les publications transactionnelles. *Non pris en charge pour les serveurs de publication Oracle*.|  
 |**concurrent_c**|Produit une copie en bloc en mode caractère de toutes les tables, mais ne verrouille pas les tables au cours de l'instantané. Pris en charge uniquement pour les publications transactionnelles.|  
-|**instantané de base de données**|Produit une copie en bloc en mode natif de toutes les tables à partir d'un instantané de base de données. Les instantanés de base de données ne sont pas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans toutes les éditions de. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Produit une copie en bloc en mode caractère de toutes les tables à partir d'un instantané de base de données. Les instantanés de base de données ne sont pas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans toutes les éditions de. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (par défaut)|La valeur par **** défaut est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native pour les serveurs de publication. Pour les serveurs[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-, la valeur par défaut est **caractère** lorsque la valeur de *repl_freq* est **snapshot** et **concurrent_c** pour tous les autres cas.|  
+|**instantané de base de données**|Produit une copie en bloc en mode natif de toutes les tables à partir d'un instantané de base de données. Les instantanés de base de données ne sont pas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans toutes les éditions de. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Produit une copie en bloc en mode caractère de toutes les tables à partir d'un instantané de base de données. Les instantanés de base de données ne sont pas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans toutes les éditions de. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|NULL (par défaut)|La valeur par **native** défaut est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native pour les serveurs de publication. Pour les serveurs[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-, la valeur par défaut est **caractère** lorsque la valeur de *repl_freq* est **snapshot** et **concurrent_c** pour tous les autres cas.|  
   
 `[ \@repl_freq = ] 'repl_freq'`Est le type de fréquence de réplication, *repl_freq* est **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
@@ -137,8 +137,8 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**:**|Défini automatiquement lorsque la mise à jour des abonnements est activée.|  
-|**fausses**|Défini automatiquement lorsque la mise à jour des abonnements n'est pas activée, ou pour les serveurs de publication Oracle.|  
+|**true**|Défini automatiquement lorsque la mise à jour des abonnements est activée.|  
+|**false**|Défini automatiquement lorsque la mise à jour des abonnements n'est pas activée, ou pour les serveurs de publication Oracle.|  
 |NULL (par défaut)|La valeur par défaut est **true** lorsque la mise à jour des abonnements est activée et la **valeur false** lorsque la mise à jour des abonnements n’est pas activée.|  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**sql**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.|  
+|**Server**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.|  
 |NULL (par défaut)|La valeur par défaut est **SQL**, qui spécifie d’utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker des transactions.|  
   
 > [!NOTE]  
@@ -216,8 +216,8 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**:**|Autorise l'initialisation à partir d'une sauvegarde.|  
-|**fausses**|Interdit l'initialisation à partir d'une sauvegarde.|  
+|**true**|Autorise l'initialisation à partir d'une sauvegarde.|  
+|**false**|Interdit l'initialisation à partir d'une sauvegarde.|  
 |NULL (par défaut)|La valeur par défaut est **true** pour une publication dans une topologie de réplication d’égal à égal et **false** pour toutes les autres publications.|  
   
  Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  

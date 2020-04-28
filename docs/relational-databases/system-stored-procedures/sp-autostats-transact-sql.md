@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70026249"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
@@ -70,7 +70,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |-----------------|---------------|-----------------|  
 |**Nom de l’index**|**varchar(60)**|Nom de l'index ou des statistiques.|  
 |**AUTOSTATS**|**varchar (3)**|Valeur actuelle de l'option AUTO_UPDATE_STATISTICS.|  
-|**Dernière mise à jour**|**DATETIME**|Date de la mise à jour des statistiques la plus récente.|  
+|**Dernière mise à jour**|**datetime**|Date de la mise à jour des statistiques la plus récente.|  
   
  Le jeu de résultats d’une table ou d’une vue indexée comprend les statistiques créées pour les index, les statistiques à une seule colonne générées avec l’option AUTO_CREATE_STATISTICS et les statistiques créées à l’aide de l’instruction [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
@@ -115,14 +115,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Statistiques](../../relational-databases/statistics/statistics.md)   
- [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Portent](../../relational-databases/statistics/statistics.md)   
+ [Options ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CRÉER des statistiques &#40;&#41;Transact-SQL](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [METTRE à jour les statistiques &#40;&#41;Transact-SQL](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

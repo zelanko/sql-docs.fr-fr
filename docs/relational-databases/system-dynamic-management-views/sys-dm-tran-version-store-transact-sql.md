@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262600"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -51,12 +51,12 @@ sys.dm_tran_version_store
 |**version_sequence_num**|**bigint**|Numéro de séquence de l'enregistrement avec version. Cette valeur est unique dans la transaction produisant la version.|  
 |**database_id**|**int**|ID de base de données de l'enregistrement avec contrôle de version.|  
 |**rowset_id**|**bigint**|ID d'ensemble de lignes de l'enregistrement.|  
-|**statu**|**tinyint**|Indique si un enregistrement avec version a été réparti sur deux enregistrements. Si la valeur est 0, l'enregistrement est stocké sur une seule page. Si la valeur est 1, l'enregistrement est réparti sur deux enregistrements, lesquels sont stockés sur deux pages différentes.|  
+|**statut**|**tinyint**|Indique si un enregistrement avec version a été réparti sur deux enregistrements. Si la valeur est 0, l'enregistrement est stocké sur une seule page. Si la valeur est 1, l'enregistrement est réparti sur deux enregistrements, lesquels sont stockés sur deux pages différentes.|  
 |**min_length_in_bytes**|**smallint**|Longueur minimale de l'enregistrement, en octets.|  
 |**record_length_first_part_in_bytes**|**smallint**|Longueur de la première partie de l'enregistrement avec contrôle de version, en octets.|  
-|**record_image_first_part**|**varbinary (8000)**|Image binaire de la première partie de l'enregistrement avec contrôle de version.|  
+|**record_image_first_part**|**varbinary(8000)**|Image binaire de la première partie de l'enregistrement avec contrôle de version.|  
 |**record_length_second_part_in_bytes**|**smallint**|Longueur de la deuxième partie de l'enregistrement avec contrôle de version, en octets.|  
-|**record_image_second_part**|**varbinary (8000)**|Image binaire de la deuxième partie de l'enregistrement avec contrôle de version.|  
+|**record_image_second_part**|**varbinary(8000)**|Image binaire de la deuxième partie de l'enregistrement avec contrôle de version.|  
   
 ## <a name="permissions"></a>Autorisations
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  Le résultat indique que XSN-57 a créé trois versions de ligne à partir d'une table et que XSN-58 a créé une version de ligne à partir d'une autre table.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique relatives aux transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

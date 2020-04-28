@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771364"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -55,11 +55,11 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Propriété|Valeurs|Description|  
 |--------------|------------|-----------------|  
-|**proactive**|**:**|Active le serveur de publication.|  
-||**fausses**|Désactive le serveur de publication.|  
+|**proactive**|**true**|Active le serveur de publication.|  
+||**false**|Désactive le serveur de publication.|  
 |**bd_distribution**||Nom de la base de données de distribution.|  
 |**connexion**||Nom de connexion.|  
-|**de**||Mot de passe fort pour le nom de connexion fourni.|  
+|**mot de passe**||Mot de passe fort pour le nom de connexion fourni.|  
 |**security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un serveur de publication non-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un serveur de publication non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 |**working_directory**||Répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication.|  
@@ -76,7 +76,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   

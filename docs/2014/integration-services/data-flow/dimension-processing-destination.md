@@ -18,16 +18,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890571"
 ---
 # <a name="dimension-processing-destination"></a>Destination de traitement de dimension
-  La destination de traitement de dimension charge et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite une dimension. Pour plus d’informations sur les dimensions, consultez [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  La destination de traitement de dimension charge et traite une dimension [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les dimensions, consultez [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
- La destination de traitement de dimension regroupe les fonctionnalités suivantes :  
+ La destination de traitement de dimension regroupe les fonctionnalités suivantes :  
   
 -   options permettant de choisir entre un traitement incrémentiel, un traitement complet ou un traitement de mise à jour ;  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68890571"
   
 -   [Éditeur de destination de traitement de dimension &#40;page Mappages&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Éditeur de destination de traitement de dimension &#40;page avancé&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Éditeur de destination de traitement de dimension &#40;page Avancé&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l’une des rubriques suivantes :  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68890571"
  Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Flux de données](data-flow.md)   
+ [Transmission de données](data-flow.md)   
  [Transformations Integration Services](transformations/integration-services-transformations.md)  
   
   

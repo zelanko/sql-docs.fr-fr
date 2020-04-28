@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262701"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -145,8 +145,7 @@ elapsed_time_seconds
   
  Les informations suivantes évaluent les résultats de **sys. dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57 : étant donné que cette transaction n’est pas exécutée avec `is_snapshot` l’isolement `first_snapshot_sequence_num` d' `0`instantané, la valeur et est. 
-  `transaction_sequence_num` indique qu'un numéro de séquence de transaction a été attribué à cette transaction, car au moins l'une des options de base de données ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT est activée (ON).  
+-   XSN-57 : étant donné que cette transaction n’est pas exécutée avec `is_snapshot` l’isolement `first_snapshot_sequence_num` d' `0`instantané, la valeur et est. `transaction_sequence_num` indique qu'un numéro de séquence de transaction a été attribué à cette transaction, car au moins l'une des options de base de données ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT est activée (ON).  
   
 -   XSN-58 : Cette transaction n'est pas exécutée avec le niveau d'isolement d'instantané, et les informations fournies pour XSN-57 s'appliquent.  
   
@@ -155,8 +154,8 @@ elapsed_time_seconds
 -   XSN-60 : Il s'agit de la seconde transaction exécutée avec le niveau d'isolement d'instantané. Le résultat affiche les mêmes informations que pour la transaction XSN-59.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [DÉFINIR le niveau d’ISOLATION des transactions &#40;&#41;Transact-SQL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique relatives aux transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

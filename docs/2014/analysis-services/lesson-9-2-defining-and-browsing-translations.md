@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493782"
 ---
 # <a name="defining-and-browsing-translations"></a>Définition et exploration de traductions
@@ -52,7 +52,7 @@ ms.locfileid: "69493782"
   
 8.  Dans la liste **Colonnes de traduction** , sélectionnez **SpanishMonthName**, comme le montre l’image suivante.  
   
-     ![Boîte de dialogue traduction de données d’attribut](../../2014/tutorials/media/l9-translations-4.gif "Boîte de dialogue Traduction de données d’attribut")  
+     ![Boîte de dialogue Traduction de données d’attribut](../../2014/tutorials/media/l9-translations-4.gif "Boîte de dialogue Traduction de données d’attribut")  
   
 9. Cliquez sur **OK**, puis sur les points de suspension (**...**) pour la traduction **français (France)** de l’attribut **Month Name** .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "69493782"
      Observez que les noms de mois apparaissent maintenant en français, de même que le nom de la mesure.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 10 : Définition de rôles administratifs](lesson-10-defining-administrative-roles.md)  
+ [Leçon 10 : Définition de rôles d’administration](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de dimensions](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

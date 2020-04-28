@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264482"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Se connecter à Oracle (OracleToSQL)
@@ -60,7 +60,7 @@ Il s’agit d’une option de mode standard.
 Entrez le nom d’utilisateur que SSMA utilisera pour se connecter à la base de données Oracle.  
   
 **Mot de passe**  
-Entrez le mot de passe correspondant au nom d’utilisateur.  
+Entrez le mot de passe correspondant au nom d'utilisateur indiqué.  
   
 **Chaîne de connexion**  
 > [!IMPORTANT]  

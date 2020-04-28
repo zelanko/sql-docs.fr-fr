@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493969"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
@@ -36,15 +36,15 @@ ms.locfileid: "69493969"
   
  [Résoudre les problèmes](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a>Exécuter PowerPivot pour SharePoint Configuration 2013  
- **Remarque :** L' [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Assistant Installation de installe deux outils de configuration [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]différents pour. Chacun d'eux prend en charge une version différente de SharePoint.  
+##  <a name="run-powerpivot-for-sharepoint-2013-configuration"></a><a name="bkmk_run_configuration_tool"></a>Exécuter PowerPivot pour SharePoint Configuration 2013  
+ **Remarque :** l'Assistant Installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installe deux outils de configuration différents pour [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Chacun d'eux prend en charge une version différente de SharePoint.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |Configuration de PowerPivot pour SharePoint 2013|SharePoint 2013|  
 |Outil de configuration de PowerPivot|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  
   
- **Remarque :** Pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
+ **Remarque :** pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
   
 -   «L’utilisateur n’est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
   
@@ -58,13 +58,13 @@ ms.locfileid: "69493969"
   
 4.  Dans l'onglet **Paramètres** :  
   
-    1.  **Nom d’utilisateur du compte par défaut**: entrez un compte d’utilisateur de domaine pour le compte par défaut. Ce compte sera utilisé pour configurer des services, notamment le pool d'applications de service PowerPivot. Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
+    1.  **Nom d'utilisateur de compte par défaut**: entrez un compte d'utilisateur de domaine pour le compte par défaut. Ce compte sera utilisé pour configurer des services, notamment le pool d'applications de service PowerPivot. Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
   
-    2.  **Serveur de base de données**: vous pouvez utiliser SQL Server moteur de base de données pris en charge pour la batterie de serveurs SharePoint.  
+    2.  **Serveur de base de données**: vous pouvez utiliser le moteur de base de données SQL Server pris en charge pour la batterie de serveurs SharePoint.  
   
     3.  **Phrase secrète**: entrez une phrase secrète. Si vous créez une batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
   
-    4.  **Serveur PowerPivot pour Excel Services**: tapez le nom d’un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint. Dans un déploiement sur un seul serveur, il est identique à celui du serveur de base de données. `[ServerName]\powerpivot`  
+    4.  **Serveur PowerPivot pour Excel Services**: entrez le nom d'un serveur en mode SharePoint pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Dans un déploiement sur un seul serveur, il est identique à celui du serveur de base de données. `[ServerName]\powerpivot`  
   
     5.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **Déployer une solution d'application Web**.  
   
@@ -78,26 +78,26 @@ ms.locfileid: "69493969"
   
  Pour plus d’informations, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de configuration de PowerPivot&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
-##  <a name="bkmk_verify_powerpivot"></a>Vérifier la configuration PowerPivot  
+##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>Vérifier la configuration PowerPivot  
  **Services**  
   
-1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les services sur le serveur**.  
+1.  Dans l’administration centrale, sous paramètres système, cliquez sur **gérer les services sur le serveur**.  
   
 2.  Vérifiez que **SQL Server Analysis Services** et le **service système SQL Server PowerPivot** sont démarrés.  
   
- **Fonctionnalité de batterie de serveurs :**  
+ **Fonctionnalités de la batterie de serveurs :**  
   
 1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les fonctionnalités des batteries de serveurs**.  
   
 2.  Vérifiez que l'option **Fonctionnalité d'intégration PowerPivot** a la valeur **Activée**.  
   
- **Fonctionnalité de collection de sites :**  
+ **Fonctionnalités de la collection de sites :**  
   
 1.  Accédez à l'URL du site créé par l'outil de configuration.  
   
      Cliquez sur **paramètres**paramètres![SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint"), puis sur **paramètres du site**.  
   
-     Cliquez sur fonctionnalités de la **collection de sites**.  
+     Cliquez sur **Fonctionnalités de la collection de sites**.  
   
 2.  Vérifiez que **Fonctionnalité d'intégration PowerPivot pour les collections de sites** est **Activée**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "69493969"
   
  Pour plus d’informations, consultez [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).  
   
-##  <a name="bkmk_troubleshoot_issues"></a>Résoudre les problèmes  
+##  <a name="troubleshoot-issues"></a><a name="bkmk_troubleshoot_issues"></a>Résoudre les problèmes  
  Pour aider les problèmes de dépannage, il peut être judicieux de vérifier que la journalisation du diagnostic est activée.  
   
 1.  Dans l'Administration centrale de SharePoint, cliquez sur **Analyse** , puis sur **Configurer la collecte des données d'utilisation et d'intégrité**.  

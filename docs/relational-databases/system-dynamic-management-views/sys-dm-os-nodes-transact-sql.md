@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265728"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -43,7 +43,7 @@ Le tableau suivant fournit des informations sur ces nœuds.
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Identificateur du nœud.|  
-|node_state_desc|**nvarchar (256)**|Description de l'état du nœud. Les valeurs sont affichées avec, en premier, les valeurs qui s'excluent mutuellement, suivies par les valeurs pouvant être associées. Par exemple :<br /> En ligne, Ressources de thread réduites, Préemptif différé<br /><br />Il existe quatre valeurs node_state_desc mutuellement exclusives. Elles sont répertoriées ci-dessous avec leurs descriptions.<br /><ul><li>EN ligne : le nœud est en ligne<li>HORS connexion : le nœud est hors connexion<li>Inactif : le nœud n’a aucune demande de travail en attente et est passé à l’état inactif.<li>IDLE_READY : le nœud n’a aucune demande de travail en attente et est prêt à entrer dans un état d’inactivité.</li></ul><br />Il existe trois valeurs node_state_desc pouvant être combinées, répertoriées ci-dessous avec leurs descriptions.<br /><ul><li>DAC : ce nœud est réservé pour la [connexion d’administration dédiée](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW : aucun nouveau thread ne peut être créé sur ce nœud en raison d’une condition de mémoire insuffisante.<li>AJOUT à chaud : indique que les nœuds ont été ajoutés en réponse à un événement d’ajout de processeur à chaud.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Description de l'état du nœud. Les valeurs sont affichées avec, en premier, les valeurs qui s'excluent mutuellement, suivies par les valeurs pouvant être associées. Par exemple :<br /> En ligne, Ressources de thread réduites, Préemptif différé<br /><br />Il existe quatre valeurs node_state_desc mutuellement exclusives. Elles sont répertoriées ci-dessous avec leurs descriptions.<br /><ul><li>EN ligne : le nœud est en ligne<li>HORS connexion : le nœud est hors connexion<li>Inactif : le nœud n’a aucune demande de travail en attente et est passé à l’état inactif.<li>IDLE_READY : le nœud n’a aucune demande de travail en attente et est prêt à entrer dans un état d’inactivité.</li></ul><br />Il existe trois valeurs node_state_desc pouvant être combinées, répertoriées ci-dessous avec leurs descriptions.<br /><ul><li>DAC : ce nœud est réservé pour la [connexion d’administration dédiée](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW : aucun nouveau thread ne peut être créé sur ce nœud en raison d’une condition de mémoire insuffisante.<li>AJOUT à chaud : indique que les nœuds ont été ajoutés en réponse à un événement d’ajout de processeur à chaud.</li></ul>|  
 |memory_object_address|**varbinary (8)**|Adresse de l'objet mémoire associé à ce nœud. Relation un-à-un à [sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). memory_object_address.|  
 |memory_clerk_address|**varbinary (8)**|Adresse du régisseur de mémoire associé à ce nœud. Relation un-à-un à [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address.|  
 |io_completion_worker_address|**varbinary (8)**|Adresse du thread de travail assigné à l'achèvement d'E/S pour ce nœud. Relation un-à-un à [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address.|  

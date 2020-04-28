@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888687"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données pour les données de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
@@ -75,12 +75,12 @@ ms.locfileid: "68888687"
 |TotalOperators|Nombre total d'opérateurs présents pendant le temps de travail de l'équipe.|  
 |Calls|Nombre d'appels reçus pendant la période de travail de l'équipe.|  
 |AutomaticResponses|Nombre d'appels qui ont été totalement gérés par traitement automatisé des appels (réponse vocale interactive).|  
-|Commandes|Nombre de commandes qui ont fait suite à des appels.|  
+|Orders|Nombre de commandes qui ont fait suite à des appels.|  
 |IssuesRaised|Nombre de problèmes, générés par des appels, qui requièrent un suivi.|  
 |AverageTimePerIssue|Durée moyenne requise pour répondre à un appel entrant.|  
 |ServiceGrade|Métrique qui indique la qualité de service générale, mesurée comme le *taux d’abandon* pour l’ensemble de l’équipe. Plus le taux d'abandon est élevé, plus la probabilité que les clients soient mécontents et que des commandes potentielles soient perdues est forte.|  
   
- Notez que les données incluent quatre colonnes différentes qui sont basées sur une colonne de date unique `WageType`: ****, DayOfWeek `Shift`, et `DateKey`. D'ordinaire, dans l'exploration de données il n'est pas judicieux d'utiliser plusieurs colonnes dérivées des mêmes données, car les valeurs se mettent trop lourdement en corrélation entre elles et peuvent masquer d'autres modèles.  
+ Notez que les données incluent quatre colonnes différentes qui sont basées sur une colonne de date unique `WageType`: **DayOfWeek**, DayOfWeek `Shift`, et `DateKey`. D'ordinaire, dans l'exploration de données il n'est pas judicieux d'utiliser plusieurs colonnes dérivées des mêmes données, car les valeurs se mettent trop lourdement en corrélation entre elles et peuvent masquer d'autres modèles.  
   
  Toutefois, nous n’utiliserons `DateKey` pas dans le modèle, car il contient trop de valeurs uniques. Il n’existe aucune relation directe `Shift` entre et **DayOfWeek**, `WageType` et la **DayOfWeek** ne sont que partiellement liées. Si vous vous inquiétiez de la collinéarité, vous pouvez créer la structure à l'aide de toutes les colonnes disponibles, puis ignorer d'autres colonnes dans chaque modèle et tester l'effet.  
   

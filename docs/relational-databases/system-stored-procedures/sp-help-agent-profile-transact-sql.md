@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771456"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
@@ -44,9 +44,9 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |-----------|-----------------|  
 |**1**|Agent d'instantané|  
 |**2**|l'Agent de lecture du journal ;|  
-|**1,3**|Agent de distribution|  
+|**3**|Agent de distribution|  
 |**4**|Agent de fusion|  
-|**0,9**|Agent de lecture de la file d'attente|  
+|**9**|Agent de lecture de la file d'attente|  
   
 `[ @profile_id = ] profile_id`ID du profil à afficher. *profile_id* est de **type int**, avec **-1**comme valeur par défaut, qui retourne tous les profils de la table **MSagent_profiles** .  
   
@@ -58,7 +58,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_name**|**sysname**|Nom unique pour le type d'Agent.|  
 |**agent_type**|**int**|**1** = agent d’instantané<br /><br /> **2** = agent de lecture du journal<br /><br /> **3** = agent de distribution<br /><br /> **4** = agent de fusion<br /><br /> **9** = agent de lecture de la file d’attente|  
 |**Type**|**int**|**0** = système<br /><br /> **1** = personnalisé|  
-|**description**|**varchar (3000)**|Description du profil.|  
+|**descriptive**|**varchar (3000)**|Description du profil.|  
 |**def_profile**|**bit**|Indique si ce profil représente le profil par défaut pour ce type d'agent.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -71,7 +71,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **replmonitor** peuvent exécuter **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des profils d’Agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Utiliser des profils d’agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  

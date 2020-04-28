@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892881"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guide de référence du langage DMX (Data Mining Extensions)
@@ -33,7 +33,7 @@ ms.locfileid: "68892881"
   
  **Pour plus d’informations, procédez comme suit :** [structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="BKMK_DMXStatements"></a>Instructions DMX  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>Instructions DMX  
  Vous pouvez utiliser des instructions DMX pour créer, traiter, supprimer, copier, explorer et effectuer des prévisions dans des modèles d'exploration de données. Il existe deux types d'instructions DMX : les instructions de définition de données et les instructions de manipulation de données. Chaque type d'instruction permet d'effectuer différentes sortes de tâches.  
   
  Les sections suivantes fournissent des informations supplémentaires sur l'utilisation des instructions DMX :  
@@ -44,7 +44,7 @@ ms.locfileid: "68892881"
   
 -   [Notions de base des requêtes](#BKMK_Queries)  
   
-###  <a name="BKMK_DDL"></a>Instructions de définition de données  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>Instructions de définition de données  
  Les instructions de définition de données dans DMX permettent de créer et de définir de nouvelles structures et modèles d'exploration de données, d'importer et d'exporter des modèles et des structures d'exploration de données et de supprimer des modèles existants d'une base de données. Les instructions de définition de données dans DMX font partie du langage de définition de données (DDL).  
   
  En utilisant les instructions de définition de données dans DMX, vous pouvez effectuer les tâches suivantes :  
@@ -63,7 +63,7 @@ ms.locfileid: "68892881"
   
  [Retour à Instructions DMX](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_DML"></a>Instructions de manipulation de données  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>Instructions de manipulation de données  
  Les instructions de manipulation de données dans DMX permettent d'utiliser des modèles d'exploration de données existants, d'explorer ces modèles et de créer des prévisions dans ces derniers. Les instructions de manipulation de données dans DMX font partie du langage de manipulation de données (DML).  
   
  En utilisant les instructions de manipulation de données dans DMX, vous pouvez effectuer les tâches suivantes :  
@@ -90,7 +90,7 @@ ms.locfileid: "68892881"
   
  [Retour à Instructions DMX](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_Queries"></a>Notions de base des requêtes DMX  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>Notions de base des requêtes DMX  
  L’instruction SELECT est la base de la plupart des requêtes DMX. En fonction des clauses que vous utilisez avec ce type d'instruction, vous pouvez explorer ou copier des modèles d'exploration de données, ou effectuer des prévisions dans ces derniers. La requête de prédiction utilise une forme sélectionner pour créer des prédictions basées sur des modèles d’exploration de données existants. Des fonctions augmentent vos capacités à explorer et interroger les modèles d'exploration de données au-delà des possibilités intrinsèques du modèle d'exploration de données.   
   
  Les fonctions DMX permettent d'obtenir des informations qui sont découvertes au cours de l'apprentissage de vos modèles, et de calculer de nouvelles informations. Ces fonctions peuvent être utilisées pour différents objectifs, notamment pour retourner des statistiques décrivant les données sous-jacentes ou l'exactitude d'une prévision ou pour retourner l'explication développée d'une prévision.  
@@ -107,6 +107,6 @@ ms.locfileid: "68892881"
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

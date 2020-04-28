@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769133"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -93,7 +93,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
 |**10**|Mensuelle|  
 |**20**|Mensuellement, en fonction de l'intervalle de fréquence|  
@@ -106,13 +106,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
-|**1,3**|Mardi|  
+|**3**|Mardi|  
 |**4**|Mercredi|  
-|**5,5**|Jeudi|  
+|**5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
 |**version8**|jour|  
-|**0,9**|Les jours de la semaine|  
+|**9**|Jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
@@ -124,7 +124,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
 |NULL (par défaut)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor*est de **type int**, avec NULL comme valeur par défaut.  
@@ -186,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Créer un abonnement par émission de notification](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Résolution interactive des conflits](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   

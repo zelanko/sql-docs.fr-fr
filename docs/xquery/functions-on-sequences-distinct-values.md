@@ -16,10 +16,10 @@ ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68223736"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Fonctions sur les séquences : distinct-values
@@ -48,7 +48,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>R. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
  Dans cet exemple, une instance XML contenant des numéros de téléphone est assignée à une variable de type **XML** . Le XQuery spécifié par rapport à cette variable utilise la fonction **distinct-values ()** pour compiler une liste de numéros de téléphone qui ne contiennent pas de doublons.  
   
 ```  

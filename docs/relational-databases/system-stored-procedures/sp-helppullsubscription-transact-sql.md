@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771445"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -59,8 +59,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**type d’abonnement**|**int**|Type d'abonnement à la publication.|  
 |**agent de distribution**|**nvarchar(100**|Agent de distribution traitant l'abonnement.|  
 |**publication description**|**nvarchar(255)**|Description de la publication.|  
-|**last updating time**|**Date**|Heure à laquelle les informations d'abonnement ont été mises à jour. Il s'agit d'une chaîne UNICODE de date ISO (114) et d'heure ODBC (121). Le format est aaaammjj hh:mi:sss.mmm où aaaa représente l'année, mm le mois, jj le jour, hh l'heure, mi les minutes, sss les secondes et mmm les millisecondes.|  
-|**nom de l’abonnement**|**varchar (386)**|Nom de l’abonnement.|  
+|**last updating time**|**date**|Heure à laquelle les informations d'abonnement ont été mises à jour. Il s'agit d'une chaîne UNICODE de date ISO (114) et d'heure ODBC (121). Le format est aaaammjj hh:mi:sss.mmm où aaaa représente l'année, mm le mois, jj le jour, hh l'heure, mi les minutes, sss les secondes et mmm les millisecondes.|  
+|**nom de l’abonnement**|**varchar (386)**|Nom de l'abonnement.|  
 |**horodateur de la dernière transaction**|**varbinary(16)**|Horodateur de la dernière transaction dupliquée.|  
 |**mode de mise à jour**|**tinyint**|Types de mise à jour autorisés|  
 |**distribution agent job_id**|**int**|ID du travail de l'Agent de distribution.|  
@@ -70,11 +70,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|Indique si les fichiers de synchronisation sont créés ou recréés à chaque exécution de l’Agent d'instantané.|  
 |**connexion de l’éditeur**|**sysname**|ID de connexion utilisé côté serveur de publication pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher password**|**nvarchar (524)**|Mot de passe (chiffré) utilisé côté serveur de publication pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**publisher security_mode**|**int**|Mode de sécurité implémenté sur le serveur de publication :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows<br /><br /> **2** = les déclencheurs de synchronisation utilisent une entrée **sysservers** statique pour effectuer un appel de procédure distante (RPC), et le serveur de *publication* doit être défini dans la table **sysservers** en tant que serveur distant ou serveur lié.|  
+|**publisher security_mode**|**int**|Mode de sécurité implémenté sur le serveur de publication :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows<br /><br /> **2** = les déclencheurs de synchronisation utilisent une entrée **sysservers** statique pour effectuer un appel de procédure distante (RPC), et le serveur de *publication* doit être défini dans la table **sysservers** en tant que serveur distant ou serveur lié.|  
 |**conseiller**|**sysname**|Nom du serveur de distribution.|  
 |**distributor_login**|**sysname**|ID de connexion utilisé côté serveur de distribution pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**distributor_password**|**nvarchar (524)**|Mot de passe (chiffré) utilisé sur le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de distribution pour l’authentification.|  
-|**distributor_security_mode**|**int**|Mode de sécurité implémenté sur le serveur de distribution :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**distributor_security_mode**|**int**|Mode de sécurité implémenté sur le serveur de distribution :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**ftp_address**|**sysname**|Pour compatibilité descendante uniquement.|  
 |**ftp_port**|**int**|Pour compatibilité descendante uniquement.|  
 |**ftp_login**|**sysname**|Pour compatibilité descendante uniquement.|  
@@ -89,7 +89,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**offload_server**|**sysname**|Indique le nom de réseau du serveur utilisé pour l'activation à distance.|  
 |**last_sync_status**|**int**|État de l'abonnement :<br /><br /> **0** = tous les travaux sont en attente de démarrage<br /><br /> **1** = un ou plusieurs travaux commencent<br /><br /> **2** = toutes les tâches ont été exécutées avec succès<br /><br /> **3** = au moins un travail est en cours d’exécution<br /><br /> **4** = tous les travaux sont planifiés et inactifs<br /><br /> **5** = au moins un travail tente de s’exécuter après un échec précédent<br /><br /> **6** = au moins un travail n’a pas réussi à s’exécuter correctement|  
 |**last_sync_summary**|**sysname**|Description des résultats de la dernière synchronisation.|  
-|**last_sync_time**|**DATETIME**|Heure à laquelle les informations d'abonnement ont été mises à jour. Il s'agit d'une chaîne UNICODE de date ISO (114) et d'heure ODBC (121). Le format est aaaammjj hh:mi:sss.mmm où aaaa représente l'année, mm le mois, jj le jour, hh l'heure, mi les minutes, sss les secondes et mmm les millisecondes.|  
+|**last_sync_time**|**datetime**|Heure à laquelle les informations d'abonnement ont été mises à jour. Il s'agit d'une chaîne UNICODE de date ISO (114) et d'heure ODBC (121). Le format est aaaammjj hh:mi:sss.mmm où aaaa représente l'année, mm le mois, jj le jour, hh l'heure, mi les minutes, sss les secondes et mmm les millisecondes.|  
 |**job_login**|**nvarchar(512)**|Compte Windows sous lequel s’exécute l’agent de distribution, qui est retourné au format *domaine*\\*nom d’utilisateur*.|  
 |**job_password**|**sysname**|Pour des raisons de sécurité, la valeur**\*\*\*\*\*\*\*\*\***«» est toujours retournée.|  
   

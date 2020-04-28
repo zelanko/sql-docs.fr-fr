@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530949"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guide des&#39;pour les développeurs (Moteur de base de données)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fournit un ensemble complet d’outils pour développer, administrer et contrôler les applications de base de données.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un riche ensemble d'outils pour développer, administrer, et contrôler les applications de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

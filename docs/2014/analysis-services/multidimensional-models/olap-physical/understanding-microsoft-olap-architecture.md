@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530898"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Présentation de l'architecture Microsoft OLAP
@@ -39,7 +39,7 @@ ms.locfileid: "69530898"
  [En savoir plus...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Petite icône de dossier de fichiers](../../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **architecture de programmation**  
- [Développement avec AMO (Analysis Management Objects) &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Développement avec AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Développement avec le langage de script Analysis Services &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   

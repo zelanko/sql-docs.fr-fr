@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259835"
 ---
 # <a name="creating-script-files-accesstosql"></a>Création de fichiers de script (AccessToSQL)
@@ -45,7 +45,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   supprimer-messages : supprime les messages sur la console. Il s’agit de la valeur par défaut « false ».  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -62,7 +62,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -88,7 +88,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     - cible-use-Last-Used = "true" (valeur par défaut) ou target-Server = "target_servername"  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -99,7 +99,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -123,7 +123,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **Error**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -132,7 +132,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -154,7 +154,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **Generate-a-Error**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -165,7 +165,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -176,7 +176,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -202,7 +202,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   Ask-User : invite l’utilisateur à entrer une valeur (« oui »/« non »)  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -211,7 +211,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -223,7 +223,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
 6.  **Fournisseur de composants requis en échec :** Cela permet à l’utilisateur de gérer les composants requis pour le traitement d’une commande. Par défaut, le mode strict est « false ». Si la valeur est « true », une exception est générée pour ne pas satisfaire aux conditions préalables.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -251,7 +251,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   toutes les 20%  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -264,7 +264,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -297,7 +297,7 @@ Les options configurables par l’utilisateur sont les suivantes :
     > [!NOTE]  
     > Les messages obligatoires sont journalisés à n’importe quel niveau.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -306,7 +306,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ni*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -324,7 +324,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     2.  Si l’option de remplacement a la **valeur true**, l’ordre de recherche sera fichier&gt;de script-fichier&gt;de connexion du serveur-inviter l’utilisateur.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -348,7 +348,7 @@ Par exemple, une migration de données classique d’une table spécifique dans 
   
 Lorsque toutes les commandes du fichier de script sont exécutées avec succès, l’application de console SSMA s’arrête et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations variables contenues dans des [fichiers de valeurs de variables](creating-variable-value-files-accesstosql.md) ou dans une section distincte du fichier de script pour les valeurs de variables.  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <!--Sample of script file commands -->  

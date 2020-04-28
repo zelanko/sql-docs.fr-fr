@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153751"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
-  Utilisez cet onglet pour afficher ou spécifier les options de connexion à une dansstance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou d’dansscription du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans **Serveurs inscrits**. **Se connecter** et **options** s’affichent uniquement dans cette boîte de dialogue lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]connexion à une instance du. **Test** et **enregistrement** s’affichent uniquement dans cette boîte de [!INCLUDE[ssDE](../../includes/ssde-md.md)]dialogue lors de l’inscription.  
+  Utilisez cet onglet pour afficher ou spécifier les options de connexion à une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou d’inscription du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** ne s’affichent dans cette boîte de dialogue que quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="options"></a>Options  
  **Connecter à la base de données**  
  Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez ** \<>par défaut **, vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez ** \<parcourir le>serveur **, vous pouvez rechercher dans le serveur la base de données à laquelle se connecter.  
   
- Quand vous vous connectez à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du moteur de base de données [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]par le biais de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez utiliser l’authentification et spécifier une base de données dans la boîte de dialogue **se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Veillez à cocher la case **chiffrer la connexion** .  
+ Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
  Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous ne verrez que la base de données et ses objets dans l'Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez consulter toutes les bases de données. Pour plus d’informations, consultez la [vue d’ensemble de Azure SQL Database](/azure/sql-database/sql-database-technical-overview).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70153751"
  **Test**  
  Quand vous inscrivez [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans **Serveurs inscrits**, cliquez ici pour tester la connexion.  
   
- **Été**  
+ **Save**  
  Enregistre les paramètres dans **Serveurs inscrits**.  
   
 ## <a name="see-also"></a>Voir aussi  

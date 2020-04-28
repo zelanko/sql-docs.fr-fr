@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771237"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -49,7 +49,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |Valeur|Description|  
 |-----------|-----------------|  
 |< **entre**|Retourne des informations sur les exécutions passées de l'Agent, dans la limite de 100 exécutions.|  
-|**0** (par défaut)|Retourne des informations sur toutes les exécutions passées de l'Agent.|  
+|**0** (valeur par défaut)|Retourne des informations sur toutes les exécutions passées de l'Agent.|  
 |> **entre**|Retourne des informations sur les exécutions de l’agent qui se sont produites au cours des dernières *heures* .|  
   
 `[ @session_type = ] session_type`Filtre le jeu de résultats en fonction du résultat final de la session. *session_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
@@ -71,14 +71,14 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|ID de la session de travail d'Agent.|  
 |**État**|**int**|État de l'exécution de l'Agent :<br /><br /> **1** = début<br /><br /> **2** = opération réussie<br /><br /> **3** = en cours<br /><br /> **4** = inactif<br /><br /> **5** = nouvelle tentative<br /><br /> **6** = échec|  
-|**StartTime**|**DATETIME**|Heure de début de la session de travail de l’agent.|  
-|**EndTime**|**DATETIME**|Heure de fin de la session du travail de l’agent.|  
+|**StartTime**|**datetime**|Heure de début de la session de travail de l’agent.|  
+|**EndTime**|**datetime**|Heure de fin de la session du travail de l’agent.|  
 |**Durée**|**int**|Durée cumulée de cette session de travail (en secondes)|  
 |**UploadedCommands**|**int**|Nombre de commandes téléchargées (upload) pendant la session d'Agent.|  
 |**DownloadedCommands**|**int**|Nombre de commandes téléchargées (download) pendant la session d'Agent.|  
 |**ErrorMessages**|**int**|Nombre de messages d'erreur générés pendant la session d'Agent.|  
 |**ErrorID**|**int**|ID de l'erreur qui s'est produite|  
-|**PercentageDone**|**sépar**|Pourcentage estimé des modifications déjà remises dans une session active.|  
+|**PercentageDone**|**decimal**|Pourcentage estimé des modifications déjà remises dans une session active.|  
 |**TimeRemaining**|**int**|Nombre estimé de secondes restantes dans une session active.|  
 |**CurrentPhase**|**int**|Phase actuelle d'une session active ; ce paramètre peut prendre l'une des valeurs suivantes.<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
 |**LastMessage**|**nvarchar (500)**|Dernier message journalisé par l'Agent de fusion pendant la session.|  

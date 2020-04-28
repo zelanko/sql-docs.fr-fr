@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264233"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Modifier le mappage de type (OracleToSQL)
@@ -34,10 +34,10 @@ Sélectionnez le type de données source à mapper à [!INCLUDE[ssNoVersion](../
   
 Si le type de données est de longueur variable, les champs suivants s’affichent sous le **type de source**:  
   
-**De**  
+**From**  
 Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le type de données **nchar** , vous pouvez entrer 10 pour spécifier que ce mappage s’adresse à une plage commençant par **nchar (10)**.  
   
-**À**  
+**To**  
 Spécifiez la longueur maximale pour ce mappage. Par exemple, pour le type de données **nchar** , vous pouvez entrer 20 pour spécifier que ce mappage est destiné à une plage se terminant par **nchar (20)**.  
   
 **Type de cible**  

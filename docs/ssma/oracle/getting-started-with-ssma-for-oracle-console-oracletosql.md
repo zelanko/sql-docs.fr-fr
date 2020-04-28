@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264504"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Bien démarrer avec la console SSMA pour Oracle (OracleToSQL)
@@ -60,7 +60,7 @@ Interprétation des couleurs de la sortie de la console dans le tableau suivant�
 |---------|---------------|  
 |Rouge|Erreur irrécupérable lors de l’exécution|  
 |Gris|Date et heure, message à l’utilisateur|  
-|Blanc|Commandes de fichier de script, type de message|  
+|White|Commandes de fichier de script, type de message|  
 |Jaune|Avertissement|  
 |Vert|Demander une entrée utilisateur|  
 |Cyan|Début, fin et résultat d’une opération|  

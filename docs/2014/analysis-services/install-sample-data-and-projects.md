@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530819"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "69530819"
   
      Analysis Services est disponible dans les éditions suivantes uniquement : Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Notez que les éditions SQL Server Express n'incluent pas Analysis Services. [Téléchargez la version d’évaluation](https://go.microsoft.com/fwlink/?LinkId=392824) si vous souhaitez tester le logiciel gratuitement.  
+     Notez que les éditions SQL Server Express n'incluent pas Analysis Services. [Téléchargez l’édition Evaluation](https://go.microsoft.com/fwlink/?LinkId=392824) si vous souhaitez tester le logiciel gratuitement.  
   
      Par défaut, Analysis Services est installé en tant qu'instance multidimensionnelle, que vous pouvez remplacer en choisissant le mode serveur tabulaire dans la page de configuration du serveur de l'Assistant Installation. Si vous souhaitez exécuter les deux modes serveur, réexécutez le programme d'installation de SQL Server sur le même ordinateur pour installer une seconde instance d'Analysis Services dans l'autre mode.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "69530819"
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurer le pare-feu Windows pour autoriser l’accès Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

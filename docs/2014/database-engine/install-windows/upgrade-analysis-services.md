@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889182"
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
   Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mise à niveau en mode SharePoint, consultez [mettre à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau d’une instance de SQL Server existante, consultez [mise à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problèmes de mise à niveau connus  
- Avant de procéder à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]la mise à niveau vers, passez en revue les éléments suivants :  
+ Avant d'effectuer la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez les rubriques suivantes :  
   
 -   [Notes de publication de SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -40,9 +40,9 @@ ms.locfileid: "68889182"
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
  Avant d'effectuer la mise à niveau, passez en revue les informations suivantes :  
   
--   [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)  
+-   [Mises à niveau de la version et de l’édition prises en charge](supported-version-and-edition-upgrades.md)  
   
--   [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Paramètres de l'outil d'analyse de configuration système](check-parameters-for-the-system-configuration-checker.md)  
   

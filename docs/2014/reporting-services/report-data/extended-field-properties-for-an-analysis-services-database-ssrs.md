@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892031"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
-  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extension pour le traitement des données prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui les spécifient `Fields` par leur nom à l’aide de la collection intégrée.  
+  L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui les spécifient `Fields` par leur nom à l’aide de la collection intégrée.  
   
  Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données qui sont mappées à des noms de propriétés de champs spécifiques. Elles sont accessibles par nom par l'intermédiaire de la collection `Fields` intégrée. Les propriétés personnalisées sont spécifiques à chaque fournisseur de données et sont accessibles par l'intermédiaire de la collection `Fields` intégrée uniquement par la syntaxe utilisant le nom de la propriété étendue comme chaîne.  
   
@@ -29,16 +29,16 @@ ms.locfileid: "68892031"
   
  Pour faire référence à une propriété étendue qui n'est pas prédéfinie, utilisez la syntaxe suivante dans une expression :  
   
--   *Field! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Propriétés de champ prédéfinies  
  Dans la plupart des cas, les propriétés de champ prédéfinies s'appliquent aux mesures, aux niveaux ou aux dimensions. À chaque propriété de champ prédéfinie doit correspondre une valeur stockée dans la source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si aucune valeur n'existe ou que vous spécifiez une propriété de champ de mesure uniquement sur un niveau (par exemple), la propriété retourne une valeur NULL.  
   
  Pour faire référence à une propriété prédéfinie à partir d'une expression, vous pouvez utiliser l'une des syntaxes suivantes :  
   
--   *Field! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *Field! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
  Le tableau suivant dresse la liste des propriétés de champ prédéfinies susceptibles d'être utilisées.  
   
@@ -119,7 +119,7 @@ CELL PROPERTIES
   
  Les quatre premières lignes du résultat dans le volet Résultats MDX s'affichent dans le tableau suivant.  
   
-|Mois de l'année|Order Count|  
+|Mois de l'année|Nombre de commandes|  
 |-------------------|-----------------|  
 |Janvier|2,481|  
 |February|2,684|  

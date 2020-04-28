@@ -18,10 +18,10 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702857"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
@@ -62,10 +62,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**10**|OWNER_TERM|propriétaire|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**12**|TABLE_LENGTH<br /><br /> Spécifie le nombre maximum de caractères pour un nom de table.|128|  
+|**13**|TABLE_LENGTH<br /><br /> Spécifie le nombre maximum de caractères pour un nom de table.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Spécifie la longueur maximale du nom d'un qualificateur de table. C'est la première partie d'un nom de table en trois parties.|128|  
-|**4,5**|COLUMN_LENGTH<br /><br /> Spécifie le nombre maximal de caractères pour un nom de colonne.|128|  
-|**16**|IDENTIFIER_CASE<br /><br /> Spécifie les noms définis par l'utilisateur (noms de table, noms de colonne, noms de procédure stockée) dans la base de données (cas des objets des catalogues système).|SENSITIVE|  
+|**15**|COLUMN_LENGTH<br /><br /> Spécifie le nombre maximal de caractères pour un nom de colonne.|128|  
+|**16bits**|IDENTIFIER_CASE<br /><br /> Spécifie les noms définis par l'utilisateur (noms de table, noms de colonne, noms de procédure stockée) dans la base de données (cas des objets des catalogues système).|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> Spécifie le niveau initial d'isolement de la transaction assuré par le serveur, ce qui correspond à un niveau d'isolement défini dans SQL-92.|2|  
 |**19**|COLLATION_SEQ<br /><br /> Spécifie l'ordre du jeu de caractères de ce serveur.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les points d'enregistrement nommés.|O|  

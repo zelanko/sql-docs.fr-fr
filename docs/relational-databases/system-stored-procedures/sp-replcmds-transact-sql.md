@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771008"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
@@ -49,7 +49,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**ID de l’article**|**int**|ID de l’article.|  
 |**partial_command**|**bit**|Indique s'il s'agit d'une commande partielle|  
 |**commande**|**varbinary (1024)**|La valeur de commande.|  
-|**xactid**|**binaire (10)**|ID de la transaction.|  
+|**xactid**|**binary(10)**|ID de la transaction.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de transaction.|  
 |**publication_id**|**int**|ID de la publication.|  
 |**command_id**|**int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  

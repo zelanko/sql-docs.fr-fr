@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811231"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
@@ -303,7 +303,7 @@ GO
   
 -   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Pour plus d'informations, consultez [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
-##  <a name="Schema"></a> Modification d'un fichier de schéma  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>Modification d’un fichier de schéma  
   
 -   Les index cluster ne sont pas pris en charge. Modifiez les index cluster en index non-cluster.  
   
@@ -313,10 +313,10 @@ GO
   
 -   ANSI_PADDING doit être activé.  
   
-##  <a name="PrimaryKey"></a>Réplication des modifications apportées à une clé primaire  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>Réplication des modifications apportées à une clé primaire  
  La clé primaire d'une table mémoire optimisée ne peut pas être mise à jour. Pour répliquer une mise à jour de clé primaire sur un abonné, modifiez la procédure stockée de mise à jour pour fournir la mise à jour en tant que paire d'opérations de suppression et insertion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication SQL Server](sql-server-replication.md)  
+ [Réplication SQL Server](sql-server-replication.md)  
   
   

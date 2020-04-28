@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771572"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -73,7 +73,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**type de synchronisation**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = aucun|  
 |**type d’abonnement**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
 |**full subscription**|**bit**|Indique si l'abonnement concerne tous les articles de la publication :<br /><br /> **0** = non<br /><br /> **1** = Oui|  
-|**nom de l’abonnement**|**nvarchar(255)**|Nom de l’abonnement.|  
+|**nom de l’abonnement**|**nvarchar(255)**|Nom de l'abonnement.|  
 |**mode de mise à jour**|**int**|**0** = lecture seule<br /><br /> **1** = abonnement avec mise à jour immédiate|  
 |**distribution job id**|**Binary(16**|ID du travail de l'Agent de distribution.|  
 |**loopback_detection**|**bit**|La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie.<br /><br /> **1** = n’est pas renvoyé.<br /><br /> Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, consultez [réplication transactionnelle bidirectionnelle](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  

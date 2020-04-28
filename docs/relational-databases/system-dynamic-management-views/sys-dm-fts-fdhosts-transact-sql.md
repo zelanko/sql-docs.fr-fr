@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265961"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68265961"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|ID de l'hôte de démon de filtre.|  
-|**fdhost_name**|**nvarchar (120)**|Nom de l'hôte de démon de filtre.|  
+|**fdhost_name**|**nvarchar(120)**|Nom de l'hôte de démon de filtre.|  
 |**fdhost_process_id**|**int**|ID de processus Windows de l'hôte de démon de filtre.|  
-|**fdhost_type**|**nvarchar (120)**|Type de document traité par l'hôte de démon de filtre, l'un des types suivants :<br /><br /> Thread unique<br /><br /> Multithread<br /><br /> Document énorme|  
+|**fdhost_type**|**nvarchar(120)**|Type de document traité par l'hôte de démon de filtre, l'un des types suivants :<br /><br /> Thread unique<br /><br /> Multithread<br /><br /> Document énorme|  
 |**max_thread**|**int**|Nombre maximal de threads dans l'hôte de démon de filtre.|  
 |**batch_count**|**int**|Nombre des lots traités dans l'hôte de démon de filtre.|  
   

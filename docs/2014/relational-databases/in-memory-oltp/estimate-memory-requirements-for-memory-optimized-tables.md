@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811009"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
@@ -36,7 +36,7 @@ ms.locfileid: "68811009"
   
 -   [Mémoire pour la croissance](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a> Exemple de table optimisée en mémoire  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>Exemple de table optimisée en mémoire  
  Prenons le schéma de table mémoire optimisée suivant :  
   
 ```sql  
@@ -61,16 +61,16 @@ GO
   
  Ce schéma va permettre de déterminer la mémoire minimale requise pour cette table mémoire optimisée.  
   
-##  <a name="bkmk_MemoryForTable"></a> Mémoire pour la table  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>Mémoire pour la table  
  Une ligne de table mémoire optimisée est composée de trois parties :  
   
--   **Horodateurs**   
+-   **Horodatages**   
     En-tête de ligne/horodateurs = 24 octets.  
   
 -   **Pointeurs d’index**   
     Pour chaque index de hachage dans la table, chaque ligne a un pointeur d'adresse 8 octets vers la ligne suivante dans l'index.  Étant donné qu'il y a 4 index, chaque ligne alloue 32 octets pour les pointeurs d'index (pointeur de 8 octets pour chaque index).  
   
--   **Données**   
+-   **Métadonnée**   
     La taille de la partie données de la ligne est déterminé en additionnant la taille du type pour chaque colonne de données.  Dans notre table, il y a cinq entiers de 4 octets, trois colonnes de type caractère de 50 octets et une colonne de type caractère de 30 octets.  Par conséquent, la partie données de chaque ligne est de 4 + 4 + 4 + 4 + 4 + 50 + 50 + 30 + 50 ou 200 octets.  
   
  Voici un calcul de taille de 5 millions de lignes dans une table mémoire optimisée : La quantité totale de mémoire utilisée par les lignes de données estimée est la suivante :  
@@ -79,7 +79,7 @@ GO
   
  Selon les calculs ci-dessus, la taille de chaque ligne de la table mémoire optimisée est de 24 + 32 + 200, ou 256 octets.  Étant donné qu’il y a 5 millions de lignes, la table consommera 5 000 000 * 256 octets, ou 1 280 000 000 octets (soit environ 1,28 Go).  
   
-##  <a name="bkmk_IndexMeemory"></a> Mémoire pour les index  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>Mémoire pour les index  
  **Mémoire pour chaque index de hachage**  
   
  Chaque index de hachage est un tableau de hachage de pointeurs d'adresse 8 octets.  La taille du tableau est mieux déterminée par le nombre de valeurs d’index uniques pour cet index, par exemple le nombre de valeurs uniques Col2 est un bon point de départ pour la taille du tableau de t1c2_index. Un tableau de hachage qui est trop grand gaspille de la mémoire.  Un tableau de hachage qui est trop petit ralentit les performances, car il y a trop de collisions par valeurs d'index qui hachent au même index.  
@@ -138,7 +138,7 @@ SELECT COUNT(DISTINCT [Col2])
 -   **Mémoire allouée aux nœuds non terminaux**   
     Pour une configuration spécifique, la mémoire allouée aux nœuds non terminaux représente un tout petit pourcentage de la mémoire globale utilisée par l'index. Il est si petit qu'il peut être ignoré sans risque.  
   
--   **Mémoire allouée aux nœuds terminaux**   
+-   **Mémoire pour les nœuds terminaux**   
     Les nœuds terminaux ont une ligne pour chaque clé unique dans la table et elle pointe vers les lignes de données avec cette clé unique.  Si vous avez plusieurs lignes comportant la même clé (c’est-à-dire que vous avez un index non-cluster non unique), il n’y a qu’une seule ligne dans le nœud terminal d’index qui pointe vers l’une des lignes, et les autres lignes sont liées entre elles.  Ainsi, la mémoire totale requise peut être estimée par :   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
@@ -150,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a> Mémoire pour le contrôle de version de ligne  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Mémoire pour le contrôle de version de ligne  
  Pour éviter les verrous, OLTP en mémoire utilise l'accès concurrentiel optimiste lors de la mise à jour ou de la suppression des lignes. Cela signifie que lorsqu'une ligne est mise à jour, une version supplémentaire de la ligne est créée. Le système conserve les versions précédentes disponibles tant que toutes les transactions susceptibles d'utiliser la version ne sont pas exécutées. Lorsqu'une ligne est supprimée, le système agit d'une manière similaire à une mise à jour, en conservant la version disponible jusqu'à ce qu'elle ne soit plus nécessaire. Les opérations de lecture et d'insertion ne créent pas de versions supplémentaires de ligne.  
   
  Étant donné qu'il peut y avoir plusieurs lignes supplémentaires en mémoire à tout moment lors de l'attente du cycle de garbage collection pour libérer la mémoire, vous devez disposer de suffisamment de mémoire pour gérer ces lignes supplémentaires.  
@@ -165,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a> Mémoire pour les variables de table  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>Mémoire pour les variables de table  
  La mémoire utilisée pour une variable de table est libérée uniquement lorsque la variable de table sort de l'étendue. Les lignes supprimées d'une variable de table, y compris les lignes supprimées dans le cadre d'une mise à jour, ne sont pas concernées par l'opération de garbage collection. Aucun volume de mémoire n'est libéré avant que la variable de table sorte de l'étendue.  
   
  Les variables de table définies dans un grand lot SQL, par opposition à une étendue de procédure, et qui sont utilisées par plusieurs transactions, peuvent consommer beaucoup de mémoire. Étant donné qu'elles ne sont pas nettoyées, les lignes supprimées d'une variable de table peuvent utiliser beaucoup de mémoire et réduire les performances, car les opérations de lecture doivent analyser au-delà des lignes supprimées.  
   
-##  <a name="bkmk_MemoryForGrowth"></a> Mémoire pour la croissance  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>Mémoire pour la croissance  
  Les calculs ci-dessus estiment les besoins en mémoire de la table, telle qu'elle existe actuellement. Outre cette mémoire, vous devez évaluer la croissance de la table et fournir suffisamment de mémoire pour gérer cette croissance.  Par exemple, si vous anticipez une croissance de 10 %, vous devez multiplier le résultat ci-dessus par 1,1 pour obtenir la mémoire totale nécessaire pour votre table.  
   
 ## <a name="see-also"></a>Voir aussi  
