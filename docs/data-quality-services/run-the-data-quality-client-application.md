@@ -13,10 +13,10 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: da099b6a3aca31dd0acdc82f7e2bdbdf13c7c24e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244127"
 ---
 # <a name="run-the-data-quality-client-application"></a>Exécuter l'application Data Quality Client
@@ -25,17 +25,17 @@ ms.locfileid: "75244127"
 
   Exécutez [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et ouvrez une session sur un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vous devez avoir terminé l'installation du [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe. Pour plus d’informations, consultez [Exécuter DQSInstaller.exe pour terminer l’installation du serveur DQS](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour se connecter à [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], un utilisateur doit disposer de l'un des trois rôles DQS suivants sur la base de données DQS_MAIN : dqs_administrator, dqs_kb_editor ou dqs_kb_operator.  
   
-##  <a name="Run"></a>Exécuter Data Quality Client  
+##  <a name="run-data-quality-client"></a><a name="Run"></a>Exécuter Data Quality Client  
  Pour exécuter [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] sur l’ordinateur où vous l’avez installé :  
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, cliquez sur **Data Quality Services**, puis sur **Data Quality Client**.  

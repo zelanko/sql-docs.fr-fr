@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245390"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
 Cet article explique comment utiliser Polybase sur une appliance APS pour interroger des données externes dans Hadoop.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platform) et CDH (Cloudera Distributed Hadoop). Hadoop suit le modèle « majeure.mineure.version » pour ses nouvelles versions, et toutes les versions d’une version majeure ou mineure prise en charge sont prises en charge. Les fournisseurs Hadoop suivants sont pris en charge :
  - Hortonworks HDP 1.3 sur Linux/Windows Server  
@@ -49,7 +49,7 @@ Tout d’abord, configurez APS pour utiliser votre fournisseur Hadoop spécifiqu
 
 2. Redémarrez la région APS à l’aide de la page État du service sur le Configuration Manager de l' [Appliance](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a>Activer le calcul de réactivation  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a>Activer le calcul pushdown  
 
 Pour améliorer les performances des requêtes, activez le calcul pushdown sur votre cluster Hadoop :  
   

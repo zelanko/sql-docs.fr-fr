@@ -10,10 +10,10 @@ ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d5ceef0a129989eedf75d79429e8d38c999f4257
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254757"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Affecter des rôles DQS aux utilisateurs
@@ -22,7 +22,7 @@ ms.locfileid: "75254757"
 
   Cette rubrique décrit comment créer des connexions SQL selon un principal Windows, et accorde ces rôles de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) sur la base de données DQS_MAIN.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Vous devez avoir terminé l'installation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe. Pour plus d’informations, consultez [Exécuter DQSInstaller.exe pour terminer l’installation du serveur DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -52,6 +52,6 @@ ms.locfileid: "75254757"
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Créer un compte de connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Créer une connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

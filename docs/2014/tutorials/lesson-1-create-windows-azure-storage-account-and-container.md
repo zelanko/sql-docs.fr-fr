@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253500"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Leçon 1 : Créer un compte Stockage Azure et un conteneur
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Leçon 1 : Créer un compte et un conteneur Stockage Azure
   Avant de pouvoir commencer à stocker des SQL Server fichiers de données dans le stockage Azure, vous devez d’abord créer un compte de stockage Azure et un conteneur d’objets BLOB, ainsi qu’une signature d’accès partagé. La leçon 1 vous guide tout au long des étapes de connexion à Azure Portail de gestion, de création d’un compte de stockage, d’un conteneur d’objets BLOB et d’une signature d’accès partagé.  
   
  Par défaut, seul le propriétaire du compte de stockage peut accéder aux objets blob, aux tables et aux files d’attente dans ce compte. Pour accéder à ces ressources en utilisant cette nouvelle amélioration SQL Server sans partager la clé d'accès du compte de stockage, effectuez les tâches suivantes :  

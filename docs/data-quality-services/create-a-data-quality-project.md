@@ -15,10 +15,10 @@ ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 99b869f153e6dacac799f8630283dbaf8d27660b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245486"
 ---
 # <a name="create-a-data-quality-project"></a>Créer un projet de qualité des données
@@ -27,17 +27,17 @@ ms.locfileid: "75245486"
 
   Cette rubrique explique comment créer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Un projet de qualité des données est utilisé pour exécuter l'activité de nettoyage ou de correspondance dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vous devez disposer d'une base de connaissances appropriée à utiliser dans le projet de qualité des données pour l'activité de nettoyage ou de correspondance.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour créer un projet de qualité des données.  
   
-##  <a name="Create"></a>Créer un projet de qualité des données  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a>Créer un projet de qualité des données  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75245486"
   
 4.  Cliquez sur **Créer** pour créer un projet de qualité des données.  
   
-##  <a name="FollowUp"></a>Suivi : après avoir créé un projet de qualité des données  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> Suivi : Après la création d'un projet de qualité des données  
  Après avoir créé un projet de qualité des données, un Assistant vous est proposé pour effectuer l'activité sélectionnée : nettoyage ou correspondance. Pour plus d’informations sur les activités de nettoyage et de correspondance, consultez [Nettoyage des données](../data-quality-services/data-cleansing.md) et [Correspondance de données](../data-quality-services/data-matching.md).  
   
   

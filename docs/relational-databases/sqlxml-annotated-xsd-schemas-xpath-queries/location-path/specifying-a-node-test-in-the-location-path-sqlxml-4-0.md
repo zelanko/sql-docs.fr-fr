@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254740"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
@@ -46,17 +46,14 @@ ms.locfileid: "75254740"
 ## <a name="abbreviated-syntax-for-the-axes"></a>Syntaxe abrégée des axes  
  La syntaxe abrégée suivante est prise en charge pour le chemin d'accès d'emplacement :  
   
--   
-  `attribute::` peut être abrégé en `@`.  
+-   `attribute::` peut être abrégé en `@`.  
   
      Le chemin d'accès d'emplacement `Customer[@CustomerID="ALFKI"]` est identique à `child::Customer[attribute::CustomerID="ALFKI"]`.  
   
--   
-  `child::` peut être omis dans un niveau d'emplacement.  
+-   `child::` peut être omis dans un niveau d'emplacement.  
   
      Par conséquent, **Child** est l’axe par défaut. Le chemin d'accès d'emplacement `Customer/Order` est identique à `child::Customer/child::Order`.  
   
--   
-  `self::node()` peut être abrégé en un point et `parent::node()` peut être abrégé en deux points (..).  
+-   `self::node()` peut être abrégé en un point et `parent::node()` peut être abrégé en deux points (..).  
   
   

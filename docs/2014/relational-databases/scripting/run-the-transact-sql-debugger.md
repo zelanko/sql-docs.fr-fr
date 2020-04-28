@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243704"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
@@ -105,7 +105,7 @@ ms.locfileid: "75243704"
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](step-through-transact-sql-code.md)   
- [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)   
+ [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)   
  [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

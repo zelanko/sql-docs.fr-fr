@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255642"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurer les niveaux de gravité pour les fichiers journaux DQS
@@ -30,26 +30,26 @@ ms.locfileid: "75255642"
 
   Cette rubrique décrit comment configurer des niveaux de gravité pour différents modules et activités dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Les niveaux de gravité définissent l'intensité des événements qui se produisent dans DQS. Les événements DQS ont les niveaux de gravité suivants, dans l'ordre décroissant de gravité :  
   
--   **Irrécupérable**: erreurs d’exécution critiques qui peuvent entraîner des résultats graves/inattendus.  
+-   **Irrécupérable**: erreurs d'exécution critiques qui peuvent avoir des conséquences lourdes/inattendues.  
   
--   **Erreur**: autres erreurs d’exécution.  
+-   **Erreur**: autres erreurs d'exécution.  
   
--   **WARN**: avertissement concernant les événements qui peuvent entraîner une erreur.  
+-   **Avertir**: avertissement concernant des événements qui peuvent entraîner une erreur.  
   
--   **Info**: informations sur les événements généraux qui ne sont pas une erreur ou un avertissement. Par exemple, un processus DQS a démarré.  
+-   **Informations**: information sur des événements généraux qui n'est pas une erreur ni un avertissement. Par exemple, un processus DQS a démarré.  
   
--   **Débogage**: informations détaillées (détaillées) sur l’événement.  
+-   **Déboguer**: information détaillée (commentée) sur l'événement.  
   
  En configurant des niveaux de gravité pour différents modules et activités DQS, vous filtrez les informations qui doivent être enregistrées et écrites dans le fichier journal DQS pour l'activité ou le module DQS respectif. Par exemple, si vous affectez à une activité DQS le niveau de gravité **Avertir**, seuls les messages d'avertissement et de gravité supérieure (Erreur et Irrécupérable) associés à l'activité DQS sont enregistrés.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres de gravité du journal.  
   
-##  <a name="ConfigureActivity"></a>Configurer les niveaux de gravité au niveau de l’activité  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurer les niveaux de gravité au niveau de l’activité  
  Vous pouvez configurer des paramètres de gravité du journal pour les activités suivantes dans DQS : gestion de l'arborescence du domaine, découverte des connaissances, stratégie de correspondance, nettoyage des données, correspondance de données et services de données de référence. Pour ce faire :  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "75255642"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="ConfigureModule"></a>Configurer les niveaux de gravité au niveau du module (avancé)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurer les niveaux de gravité au niveau du module (avancé)  
  La section **Avancé** sous l'onglet **Paramètres de journal** vous permet de configurer des paramètres de gravité du journal au niveau d'un module. Les modules sont des assemblys système DQS qui implémentent différentes fonctions au sein d'une fonctionnalité dans DQS. Par exemple, l'activité de gestion de l'arborescence du domaine contient diverses fonctions telles que la définition des règles de domaine, la définition des conditions de règle, la définition des règles entre domaines pour les domaines composites, et ainsi de suite.  
   
  Dans certains cas, le niveau de granularité au niveau de l'activité n'est pas suffisant. Vous pouvez analyser un problème qui se produit dans un module particulier au sein d'une activité. Il est utile de disposer d'une option pour configurer les niveaux de gravité de journal au niveau du module pour isoler et suivre le problème plus précisément.  

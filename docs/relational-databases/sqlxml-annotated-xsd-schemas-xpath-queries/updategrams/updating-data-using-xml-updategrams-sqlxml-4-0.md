@@ -28,10 +28,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3526595d169f5283f849017f1fabec24f33d553c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255990"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "75255990"
   
 -   La plupart des exemples sont basés sur l'exemple de base de données AdventureWorks. Toutes les mises à jour sont appliquées aux tables de cette base de données. Vous pouvez restaurer la base de données AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>R. Mise à jour d'un enregistrement  
+### <a name="a-updating-a-record"></a>A. Mise à jour d'un enregistrement  
  Le code de mise à jour (updategram) suivant met à jour le nom de famille d'un employé en le remplaçant par Fuller dans la table Person.Contact de la base de données AdventureWorks. Le code de mise à jour (updategram) ne spécifie pas de schéma de mappage ; par conséquent, le mappage par défaut est utilisé.  
   
 ```  

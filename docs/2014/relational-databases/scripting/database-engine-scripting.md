@@ -16,54 +16,48 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244961"
 ---
 # <a name="database-engine-scripting"></a>Scripts du moteur de base de données
   Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] prend en charge l'environnement de script [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell pour gérer les instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et leurs objets. Vous pouvez également générer et exécuter des requêtes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contiennent des éléments [!INCLUDE[tsql](../../includes/tsql-md.md)] et XQuery dans des environnements très similaires aux environnements de script.  
   
 ## <a name="sql-server-powershell"></a>SQL Server PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants logiciels enfichables PowerShell qui implémentent :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants logiciels enfichables PowerShell qui implémentent :  
   
 -   Un fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell qui expose les hiérarchies du modèle objet de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que chemins d'accès PowerShell semblables aux chemins d'accès de système de fichiers. Vous pouvez utiliser les classes du modèle objet de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour gérer les objets représentés à chaque nœud du chemin d'accès.  
   
 -   Un jeu d'applets de commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui implémentent des commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’une des applets de commande est **Invoke-Sqlcmd**. Cela permet d’exécuter [!INCLUDE[ssDE](../../includes/ssde-md.md)] des scripts de requête à exécuter avec l' `sqlcmd` utilitaire.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit ces fonctionnalités pour exécuter PowerShell :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit ces fonctionnalités pour exécuter PowerShell :  
   
--   Le module PowerShell **sqlps** qui peut être importé dans une session PowerShell, le module charge ensuite les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants logiciels enfichables. Vous pouvez exécuter des commandes PowerShell appropriées de manière interactive. Vous pouvez exécuter des fichiers de script à l'aide d'une commande telle que .\MonDossier\MonScript.ps1.  
+-   Le module PowerShell **sqlps** qui peut être importé dans une session PowerShell. Le module charge ensuite les composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez exécuter des commandes PowerShell appropriées de manière interactive. Vous pouvez exécuter des fichiers de script à l'aide d'une commande telle que .\MonDossier\MonScript.ps1.  
   
 -   Les fichiers de script PowerShell peuvent être fournis en entrée à des étapes de travail de PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui exécutent les scripts selon des intervalles planifiés ou en réponse à des événements système.  
   
 -   L’utilitaire **sqlps** qui démarre PowerShell et importe le module [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez ensuite effectuer toutes les actions prises en charge par le module. Vous pouvez démarrer l’utilitaire **sqlps** dans une invite de commandes ou en cliquant avec le bouton droit sur les nœuds dans l’arborescence de l’Explorateur d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio et en sélectionnant **Démarrer PowerShell**.  
   
 ## <a name="database-engine-queries"></a>Requêtes de moteur de base de données  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les scripts de requêtes contiennent trois types d’éléments :  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les scripts de requêtes contiennent trois types d’éléments :  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] Instructions du langage  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Instructions du langage  
   
 -   Instructions du langage XQuery  
   
 -   Commandes et variables de l' `sqlcmd` utilitaire.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit trois environnements pour la génération et l’exécution de requêtes du [!INCLUDE[ssDE](../../includes/ssde-md.md)] :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit trois environnements pour la génération et l’exécution de requêtes du [!INCLUDE[ssDE](../../includes/ssde-md.md)] :  
   
 -   Vous pouvez, de manière interactive, exécuter et déboguer des requêtes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez coder et déboguer plusieurs instructions en une session, puis enregistrer toutes les instructions dans un même fichier de script.  
   
 -   L' `sqlcmd` utilitaire d’invite de commandes vous permet d’exécuter [!INCLUDE[ssDE](../../includes/ssde-md.md)] interactivement des requêtes et [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’exécuter des fichiers de script de requête existants.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les fichiers de script de requête sont en général codés de manière interactive dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en utilisant l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Le fichier peut par la suite être ouvert dans l'un de ces environnements :  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les fichiers de script de requête sont en général codés de manière interactive dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en utilisant l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Le fichier peut par la suite être ouvert dans l'un de ces environnements :  
   
--   Utilisez le [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **fichier**/**ouvrir** pour ouvrir le fichier dans une nouvelle [!INCLUDE[ssDE](../../includes/ssde-md.md)] fenêtre de l’éditeur de requête.  
+-   Utilisez le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ouvrir**/**de** pour ouvrir le fichier dans une nouvelle fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 -   Utilisez le paramètre **-i**_input_file_ pour exécuter le fichier avec l' `sqlcmd` utilitaire.  
   
@@ -71,7 +65,7 @@ ms.locfileid: "75244961"
   
 -   Utilisez des étapes de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] pour exécuter des scripts selon des intervalles planifiés ou en réponse à des événements système.  
   
- En outre, vous pouvez utiliser l’Assistant Génération de scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez cliquer avec le bouton droit sur des objets dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis sélectionner l’élément de menu **Générer un script** . **Générer un script** lance l’Assistant, qui vous guide tout au long du processus de création d’un script.  
+ En outre, vous pouvez utiliser l’Assistant Génération de scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez cliquer avec le bouton droit sur des objets dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis sélectionner l’élément de menu **Générer un script** . **Générer un script** lance l’Assistant, qui vous guide dans le processus de création d’un script.  
   
 ## <a name="database-engine-scripting-tasks"></a>Tâches de script du moteur de base de données  
   
@@ -84,6 +78,6 @@ ms.locfileid: "75244961"
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Didacticiel : écriture d'instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutoriel : Écriture d’instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

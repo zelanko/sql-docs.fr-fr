@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257434"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mappages XSD personnalisés aux tables/colonnes (SQLXML)
@@ -59,7 +59,7 @@ ms.locfileid: "75257434"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Spécification des annotations sql:relation et sql:field  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Spécification des annotations sql:relation et sql:field  
  Dans cet exemple, le schéma XSD se compose d’un élément ** \<contact>** d’un type complexe avec ** \<fname>** et ** \<lname>** éléments enfants et l’attribut **ContactID** .  
   
  L’annotation **SQL : relation** mappe l' ** \<élément Contact>** à la table Person. contact de la base de données AdventureWorks. L’annotation **SQL : Field** mappe l' ** \<élément>fname** à la colonne FirstName et à l’élément ** \<lname>** à la colonne LastName.  

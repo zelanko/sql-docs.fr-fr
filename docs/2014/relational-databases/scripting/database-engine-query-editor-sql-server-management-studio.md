@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244942"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "75244942"
  **Connexion**  
  Ouvre la boîte de dialogue **Se connecter au serveur** . Utilisez cette boîte de dialogue pour établir une connexion à un serveur.  
   
- **Déconnexion**  
+ **Connect**  
  Déconnecte l'éditeur de requête actuel du serveur.  
   
  **Modifier la connexion**  
@@ -68,16 +68,16 @@ ms.locfileid: "75244942"
  **Bases de données disponibles**  
  Permet de se connecter à une autre base de données sur le même serveur.  
   
- **Exécuter**  
+ **Effectue**  
  Exécute le code sélectionné ou, si aucun code n'est sélectionné, exécute la totalité du code figurant dans l'éditeur de requête.  
   
- **Déboguer**  
+ **Débogage**  
  Active le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce débogueur prend en charge les actions de débogage comme la définition de points d’arrêt, la surveillance de variables et l’exécution pas à pas du code.  
   
  **Annuler l'exécution de la requête**  
  Envoie une demande d'annulation au serveur. Certaines requêtes ne peuvent pas être annulées immédiatement et doivent attendre une condition d'annulation appropriée. Les opérations de restauration de transactions peuvent prendre un certain temps lorsque celles-ci sont annulées.  
   
- **Analyser**  
+ **Analys**  
  Vérifie la syntaxe du code sélectionné. Si aucun code n'est sélectionné, cette option vérifie la syntaxe de l'ensemble du code contenu dans la fenêtre de l'éditeur de requête.  
   
  **Afficher le plan d'exécution estimé**  

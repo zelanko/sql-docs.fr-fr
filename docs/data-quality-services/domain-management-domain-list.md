@@ -1,5 +1,5 @@
 ---
-title: "Gestion de l'arborescence du domaine : Liste des domaines"
+title: 'Gestion de l’arborescence du domaine : Liste des domaines'
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,13 +12,13 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251655"
 ---
-# <a name="domain-management-domain-list"></a>Gestion de l'arborescence du domaine : Liste des domaines
+# <a name="domain-management-domain-list"></a>Gestion de l’arborescence du domaine : Liste des domaines
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "75251655"
  **Créer une copie du domaine sélectionné**  
  Créez une copie exacte du domaine sélectionné, puis ajoutez-la à la base de connaissances. Son nom est le nom du domaine à partir duquel elle a été créée, avec « - Copie » ajouté à la fin du nom. Cette commande est disponible en cliquant avec le bouton droit sur un domaine, puis en cliquant sur **Créer une copie**, ou en cliquant sur l'icône au-dessus de la liste des domaines. Elle n'est pas disponible pour un domaine composite.  
   
- **Importer un domaine à partir d’un fichier de données**  
+ **Importer un domaine à partir d'un fichier de données**  
  Importez un domaine à partir d'un fichier .dqs. Cette commande affiche la boîte de dialogue **Importer à partir d'un fichier de données** qui vous permet de parcourir le système de fichiers et de sélectionner un fichier .dqs pour un seul domaine ou un domaine composite. Cette commande est disponible en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Importez un domaine à partir d'un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md).  
   
  **Supprimer le domaine**  

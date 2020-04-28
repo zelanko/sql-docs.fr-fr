@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246732"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Types de données et comportement du chargement en masse XML (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "75246732"
   
 -   Si le type est **DateTime** ou **Time**, vous devez spécifier **SQL : DataType** car le chargement en masse XML effectue une conversion de données avant d’envoyer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]les données à Microsoft.  
   
--   Lorsque vous effectuez un chargement en masse dans une **** colonne de type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uniqueidentifier dans et que la valeur xsd est un GUID qui comprend des accolades ({et}), vous devez spécifier **SQL : datatype = "uniqueidentifier"** pour supprimer les accolades avant que la valeur ne soit insérée dans la colonne. Si **SQL : DataType** n’est pas spécifié, la valeur est envoyée avec les accolades et l’insertion échoue.  
+-   Lorsque vous effectuez un chargement en masse dans une **uniqueidentifier** colonne de type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uniqueidentifier dans et que la valeur xsd est un GUID qui comprend des accolades ({et}), vous devez spécifier **SQL : datatype = "uniqueidentifier"** pour supprimer les accolades avant que la valeur ne soit insérée dans la colonne. Si **SQL : DataType** n’est pas spécifié, la valeur est envoyée avec les accolades et l’insertion échoue.  
   
  Pour plus d’informations sur **SQL : DataType**, consultez [forçages de type de données et l’annotation sql : datatype &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   

@@ -15,10 +15,10 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244150"
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
@@ -29,17 +29,17 @@ ms.locfileid: "75244150"
   
  La découverte des connaissances est un processus piloté par l'Assistant qui inclut trois étapes, chacune devant être terminée.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Microsoft Excel doit être installé sur l'ordinateur de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources sur lesquelles vous exécutez la découverte se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une base de connaissances.  
   
-##  <a name="FirstStep"></a>Première étape : démarrer la découverte des connaissances  
+##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a>Première étape : démarrer la découverte des connaissances  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75244150"
   
 3.  Sélectionnez **Découverte des connaissances** comme activité, puis cliquez sur **Créer** pour créer la base de connaissances ou sur **Ouvrir** pour ouvrir une base de connaissances existante.  
   
-##  <a name="Mapping"></a>Étape de mappage  
+##  <a name="mapping-stage"></a><a name="Mapping"></a> Étape de mappage  
   
 1.  Dans le champ de **Source de données** , sélectionnez **SQL Server** (valeur par défaut) ou **Fichier Excel**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "75244150"
   
     -   Cliquez sur **Fermer** pour revenir à la page d'accueil de DQS, tout en enregistrant votre travail. La base de connaissances sera verrouillée, et l'état de la base de connaissances dans la table de bases de connaissances de l'écran **Ouvrir la base de connaissances** indiquera **Découverte - Mappage**. Après avoir cliqué sur **Fermer**, cliquez sur **Découverte des connaissances** dans l'écran **Ouvrir la base de connaissances** pour effectuer l'activité de gestion de l'arborescence du domaine, accédez à l'écran **Gestion de la base de connaissances : Gestion des termes de domaine** , cliquez sur **Terminer**, puis sur **Oui** pour publier la base de connaissances ou sur **Non** pour enregistrer le travail dans la base de connaissances et quitter.  
   
-##  <a name="Discover"></a>Étape de découverte  
+##  <a name="discover-stage"></a><a name="Discover"></a> Étape de découverte  
   
 1.  Cliquez sur **Démarrer** pour analyser la source de données.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75244150"
   
     -   Cliquez sur cette option pour revenir à la page **Découverte** .  
   
-##  <a name="Manage"></a>Étape de gestion des résultats de la découverte des données  
+##  <a name="manage-data-discovery-results-stage"></a><a name="Manage"></a> Étape de gestion des résultats de découverte des données  
  Après avoir effectué l'activité de découverte des connaissances, vous pouvez modifier les valeurs comme suit :  
   
 -   Ajoutez une valeur de domaine à la liste des valeurs, ou sélectionnez une valeur et supprimez-la de la liste.  
@@ -150,7 +150,7 @@ ms.locfileid: "75244150"
   
 2.  Recherchez toutes les corrections que Data Quality Services a proposées en définissant **Filtre** sur **Erreur**. Vérifiez que la valeur est en fait erronée et que la valeur de la colonne **Corriger vers** est appropriée.  
   
-3.  Définissez **Filtre** sur **Toutes les valeurs** et vérifiez que l'état des valeurs est approprié. Pour modifier l’état d’une valeur, sélectionnez la valeur, puis cliquez sur le bouton **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées** (coche), le bouton **Définir les valeurs du domaine sélectionné en tant qu’erreurs** (croix) ou sur le bouton **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** (triangle).  
+3.  Définissez **Filtre** sur **Toutes les valeurs** et vérifiez que l'état des valeurs est approprié. Pour modifier l’état d’une valeur, sélectionnez la valeur, puis cliquez sur le bouton **définir les valeurs du domaine sélectionné en tant que valeurs corrigées** (coche), sur le bouton **définir les valeurs du domaine sélectionné en tant qu’erreurs** (Croix) ou sur le bouton **définir les valeurs du domaine sélectionné en tant que valeurs non valides** (triangle).  
   
 4.  Pour modifier l’état d’une valeur, effectuez les étapes suivantes :  
   
@@ -160,70 +160,70 @@ ms.locfileid: "75244150"
   
     3.  **Définir les valeurs du domaine sélectionné comme étant non valides**: pour modifier l’état d’une valeur de correct ou d’erreur en non valide, sélectionnez la valeur, puis cliquez sur l’icône **définir les valeurs du domaine sélectionné comme non valides** (triangle) à partir de la flèche vers le bas de la barre d’icônes ou de la liste déroulante type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
   
-    4.  **Corriger vers**: après avoir défini une valeur comme erronée ou non valide, entrez une nouvelle valeur dans la colonne **corriger vers** . DQS ajoute une nouvelle ligne pour la valeur de remplacement, l'indique comme correcte, puis regroupe les deux valeurs. La nouvelle valeur sera affichée comme valeur de début, avec la valeur de début en gras et la valeur erronée ou non valide mise en retrait.  
+    4.  **Corriger vers**: après avoir défini une valeur comme erronée ou non valide, entrez une nouvelle valeur dans la colonne **Corriger vers** . DQS ajoute une nouvelle ligne pour la valeur de remplacement, l'indique comme correcte, puis regroupe les deux valeurs. La nouvelle valeur sera affichée comme valeur de début, avec la valeur de début en gras et la valeur erronée ou non valide mise en retrait.  
   
 5.  Pour indiquer les valeurs en tant que groupe de synonymes, sélectionnez plusieurs valeurs correctes, puis procédez comme suit :  
   
-    -   **Définir les valeurs du domaine sélectionné en tant que synonymes**: cliquez sur cette option pour définir les valeurs sélectionnées en tant que synonymes. DQS pointera sur l'une des valeurs comme valeur de début par laquelle les autres seront remplacées.  
+    -   **Définir les valeurs du domaine sélectionné en tant que synonymes**: cliquez sur cette option pour définir les valeurs du domaine sélectionné en tant que synonymes. DQS pointera sur l'une des valeurs comme valeur de début par laquelle les autres seront remplacées.  
   
         > [!NOTE]  
         >  Si vous sélectionnez deux valeurs ou plus dans un groupe et une autre valeur en dehors du groupe, puis les définissez comme synonymes, vous obtiendrez un message d'erreur. Après fermeture du message d'erreur, les valeurs seront définies correctement en tant que synonymes.  
   
-    -   **Rompre la relation entre les synonymes sélectionnés**: cliquez pour annuler la désignation du synonyme.  
+    -   **Supprimer la relation entre les synonymes sélectionnés**: cliquez sur cette option pour annuler la désignation de synonyme.  
   
-    -   **Définir la valeur de domaine sélectionnée en tant que valeur de début de son groupe**: modifiez la valeur de début du groupe en sélectionnant une valeur dans le groupe qui n’est pas désigné comme valeur de début, puis en cliquant sur le bouton **définir la valeur de domaine sélectionné en tant que valeur de début de son groupe** .  
+    -   **Définir une valeur du domaine sélectionné en tant que valeur de départ de son groupe**: modifiez la valeur de départ du groupe en sélectionnant une valeur dans le groupe qui n'est pas défini comme valeur de début, puis en cliquant sur le bouton **Définir une valeur du domaine sélectionné en tant que valeur de départ de son groupe** .  
   
-6.  **Vérificateur d’orthographe**: Si vous avez activé le vérificateur d’orthographe dans la page Propriétés du domaine, recherchez toutes les valeurs qui ont un trait de soulignement ondulé rouge, l’indication que le vérificateur d’orthographe suggère une correction. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
+6.  **Vérificateur d'orthographe**: si vous avez activé le correcteur orthographique dans la page des propriétés du domaine, recherchez toutes les valeurs qui ont un trait de soulignement ondulé rouge, indication que le vérificateur d'orthographe suggère une correction. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Pour utiliser le vérificateur orthographique, vous pouvez l'activer dans la page **Propriétés du domaine** ou s'il est désactivé dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Gérer les résultats de la découverte de données** pour l'activer sur cette page.  
   
-7.  **Ajouter une nouvelle**valeur de domaine : ajoutez une nouvelle valeur au domaine en cliquant sur le bouton **Ajouter une nouvelle valeur de domaine** pour ajouter une ligne à la fin de la table. Après avoir entré une valeur, la ligne sera replacée par ordre alphabétique.  
+7.  **Ajouter une valeur de domaine**: ajoutez une nouvelle valeur au domaine en cliquant sur le bouton **Ajouter une valeur de domaine** pour ajouter une ligne à la fin de la table. Après avoir entré une valeur, la ligne sera replacée par ordre alphabétique.  
   
-8.  **Importer des valeurs de domaine à partir d’Excel**: ajoutez de nouvelles valeurs à partir d’une feuille de calcul Excel en cliquant sur la flèche vers le bas de l’icône **importer des valeurs** , puis en sélectionnant **importer des valeurs de domaine à partir d’Excel**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Pour plus d’informations, consultez [Importer des valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+8.  **Importer les valeurs du domaine à partir d'Excel**: ajoutez les nouvelles valeurs d'une feuille de calcul Excel en cliquant sur la flèche bas de l'icône **Importer des valeurs** , puis en sélectionnant **Importer les valeurs du domaine à partir d'Excel**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Pour plus d’informations, consultez [Importer des valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-9. **Importer des valeurs de projet**: ajoutez de nouvelles valeurs à partir d’un projet de qualité des données en cliquant sur la flèche vers le bas de l’icône **importer des valeurs** et en sélectionnant importer les **valeurs du projet**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Sélectionnez le projet à partir duquel vous voulez importer des valeurs, puis cliquez sur **OK**. Les valeurs importées seront affichées. Cliquez sur **Terminer**. Pour plus d'informations, consultez Importer les valeurs de projet dans un domaine.  
+9. **Importer des valeurs de projet**: ajoutez les nouvelles valeurs d'un projet de qualité des données en cliquant sur la flèche bas de l'icône **Importer des valeurs** , et en sélectionnant **Importer des valeurs de projet**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Sélectionnez le projet à partir duquel vous voulez importer des valeurs, puis cliquez sur **OK**. Les valeurs importées seront affichées. Cliquez sur **Terminer**. Pour plus d'informations, consultez Importer les valeurs de projet dans un domaine.  
   
-10. Supprimer la ou les valeurs du **domaine sélectionné**: supprimez une ou plusieurs valeurs existantes du domaine en sélectionnant les valeurs, puis en cliquant sur le bouton supprimer les valeurs du **domaine sélectionné** . Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
+10. **Supprimer les valeurs du domaine sélectionné**: supprimez une ou plusieurs valeurs existantes du domaine en sélectionnant les valeurs, puis en cliquant sur le bouton **Supprimer les valeurs du domaine sélectionné** . Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
   
 11. Cliquez sur **Terminer** pour mettre fin à l'activité de découverte des connaissances. Un message s'affiche si vous n'avez pas examiné chacun des domaines. Cliquez sur **Oui** pour continuer l'examen ou sur **Non** pour poursuivre. Si vous cliquez sur Non, une autre fenêtre s'affiche, qui vous permet d'effectuer les opérations suivantes :  
   
-    1.  **Publication**: la base de connaissances sera publiée en vue de son utilisation par l’utilisateur actuel ou par d’autres utilisateurs. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau. Pour terminer le processus, cliquez sur **Oui** dans le message.  
+    1.  **Publier**: la base de connaissances sera publiée en vue de son utilisation par l'utilisateur actuel ou par d'autres. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau. Pour terminer le processus, cliquez sur **Oui** dans le message.  
   
-    2.  **Non**: votre travail sera enregistré, la base de connaissances restera verrouillée et l’état de la base de connaissances sera défini sur en cours. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
+    2.  **Non**: votre travail sera enregistré, la base de connaissances restera verrouillée et l'état de la base de connaissances sera défini sur En cours. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
   
-    3.  **Annuler**: la fenêtre contextuelle est fermée et vous restez dans la page **gérer les valeurs du domaine** .  
+    3.  **Annuler**: le message est fermé et vous demeurez sur la page **Gestion des valeurs du domaine** .  
   
 12. Vous pouvez également cliquer sur les éléments suivants :  
   
-    -   **Annuler** pour mettre fin à l’activité de découverte des connaissances, perdre votre travail et revenir à la page d’hébergement de DQS.  
+    -   **Annuler** pour mettre fin à l'activité de découverte des connaissances, auquel cas vous perdrez votre travail, et revenir à la page d'accueil de DQS.  
   
-    -   **Fermer** pour revenir à la page d’hébergement de DQS lors de l’enregistrement de votre travail. La base de connaissances sera verrouillée et l’état de la base de connaissances dans la table de bases de connaissances de l’écran **Ouvrir la base de connaissances** indiquera **Découverte - Gestion des valeurs**.  
+    -   **Fermer** pour revenir à la page d'accueil de DQS, tout en enregistrant votre travail. La base de connaissances sera verrouillée et l’état de la base de connaissances dans la table de bases de connaissances de l’écran **Ouvrir la base de connaissances** indiquera **Découverte - Gestion des valeurs**.  
   
     -   Cliquez sur **Précédent** pour revenir à la page **Découverte** . Après avoir cliqué sur **Fermer**, cliquez sur **Découverte des connaissances** dans l'écran **Ouvrir la base de connaissances** pour effectuer l'activité de gestion de l'arborescence du domaine, accédez à l'écran **Gestion de la base de connaissances : Gestion des termes de domaine** , cliquez sur **Terminer**, puis sur **Oui** pour publier la base de connaissances ou sur **Non** pour enregistrer le travail dans la base de connaissances et quitter.  
   
-##  <a name="FollowUp"></a>Suivi : après l’exécution de la découverte des connaissances  
+##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a>Suivi : après l’exécution de la découverte des connaissances  
  Après avoir ajouté les connaissances à la base des connaissance dans le processus de découverte des connaissances assisté par ordinateur, vous pouvez utiliser la base de connaissances pour un projet immédiat de nettoyage ou vous pouvez exécuter la gestion des domaines avant d'effectuer le nettoyage. Pour plus d’informations sur le nettoyage des données ou la gestion des domaines, consultez [Nettoyage des données](../data-quality-services/data-cleansing.md) ou [Gestion d’un domaine](../data-quality-services/managing-a-domain.md).  
   
-##  <a name="Meaning"></a>Signification des valeurs correctes, erronées et non valides  
+##  <a name="the-meaning-of-correct-error-and-invalid-values"></a><a name="Meaning"></a> Signification des valeurs correctes, erronées et non valides  
  Chaque valeur de la table **Valeur** de la page **Valeurs du domaine** se voit affecter un paramètre **Type** égal à **Correcte**, **Erronée**ou **Non valide**. Le type de la valeur est généré initialement par l'activité de découverte des connaissances, et vous pouvez le modifier à votre convenance. Le type final, basé sur la découverte et les modifications interactives, est généré par l'activité de nettoyage. Ces valeurs ont les significations suivantes :  
   
--   **Correct :** Il s’agit d’une valeur qui appartient au domaine et qui n’a pas d’erreurs de syntaxe. Par exemple, « Chicago » dans le champ « Ville » est une valeur correcte.  
+-   **Correcte** : valeur qui appartient au domaine et ne comporte aucune erreur de syntaxe. Par exemple, « Chicago » dans le champ « Ville » est une valeur correcte.  
   
--   **Erreur :** Il s’agit d’une valeur qui appartient au domaine, mais qui est une valeur incorrecte. Par exemple, « Shicago » au lieu de « Chicago » dans « Ville » est une erreur. DQS indique une valeur comme erronée s'il détecte une erreur de syntaxe et une correction associée dans le processus de découverte. Les erreurs de syntaxe incluent les fautes d'orthographe.  
+-   **Erreur** : valeur qui appartient au domaine, mais qui est incorrecte. Par exemple, « Shicago » au lieu de « Chicago » dans « Ville » est une erreur. DQS indique une valeur comme erronée s'il détecte une erreur de syntaxe et une correction associée dans le processus de découverte. Les erreurs de syntaxe incluent les fautes d'orthographe.  
   
--   **Non valide :** Il s’agit d’une valeur qui n’appartient pas au domaine et qui n’a pas de correction. Par exemple, la valeur « 12345 » dans un champ « Ville » n’est pas valide. DQS indique une valeur comme non valide quand elle ne respecte pas une règle de domaine.  
+-   **Non valide** : valeur qui n'appartient pas au domaine et qui n'a pas de correction. Par exemple, la valeur « 12345 » dans un champ « Ville » n’est pas valide. DQS indique une valeur comme non valide quand elle ne respecte pas une règle de domaine.  
   
  Vous pouvez modifier manuellement le type d'une valeur en l'une des deux autres valeurs. DQS n'applique pas la sémantique de validation et d'erreur sur les opérations manuelles. Vous pouvez écrire une correction pour une valeur valide sans modifier son état. Vous pouvez désigner une valeur comme non valide même si elle respecte une règle de domaine. Vous pouvez désigner une valeur comme erronée même si le processus de découverte n'indique pas d'erreur de syntaxe. Vous pouvez également supprimer une correction d'une valeur erronée, marquée comme correcte, sans modifier son état.  
   
  Lorsque vous effectuez un nettoyage des données interactif dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , les valeurs non valides et erronées sont incluses dans l'onglet **Non valide** de la page **Gérer et afficher les résultats** .  
   
-##  <a name="Display"></a>Comment afficher les valeurs appropriées  
+##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a> How to Display the Appropriate Values  
  Vous pouvez modifier l'affichage comme suit :  
   
--   **Filtrez** les résultats souhaités dans la table, en fonction de leur état, en sélectionnant l’État dans la liste déroulante **filtre** .  
+-   **Filtre** : filtrez les résultats souhaités dans la table, selon leur état, en sélectionnant celui-ci dans la liste déroulante **Filtre** .  
   
--   **Recherchez** les données que vous souhaitez vérifier ou modifier en entrant une ou plusieurs lettres à rechercher dans la zone de texte **Rechercher** . Ces lettres apparaîtront en surbrillance chaque fois qu'elles seront présentes dans une valeur affichée.  
+-   **Rechercher** : recherchez les données que vous souhaitez vérifier ou modifier en entrant une ou plusieurs lettres à rechercher dans la zone de texte **Rechercher** . Ces lettres apparaîtront en surbrillance chaque fois qu'elles seront présentes dans une valeur affichée.  
   
 -   Cliquez sur **Afficher seulement les nouvelles valeurs** pour restreindre les valeurs affichées dans la table uniquement aux valeurs qui ont été découvertes dans la session active, pas dans les sessions précédentes.  
   
@@ -233,14 +233,14 @@ ms.locfileid: "75244150"
   
 -   Cliquez sur le bouton **Afficher/Masquer le panneau d'historique des modifications de valeurs du domaine** pour afficher un message d'aperçu en bas de la table de valeurs qui affiche les modifications apportées récemment à la collection des valeurs du domaine.  
   
-##  <a name="Profiler"></a>Statistiques du profileur  
+##  <a name="profiler-statistics"></a><a name="Profiler"></a>Statistiques du profileur  
  L'onglet Générateur de profils fournit des statistiques qui indiquent la qualité des données source. Ces statistiques ne mesurent pas la qualité de la base de connaissances. Le profilage dans la découverte des connaissances fournit des informations sur l'achèvement et l'unicité. Le profilage dans la découverte des connaissances ne mesure pas la précision. Le profilage de la gestion des connaissances vous aide à évaluer jusqu'à quel point auquel la source de données est valide pour créer et améliorer la connaissance dans une base de connaissances.  
   
  L'onglet **Générateur de profils** fournit les statistiques suivantes pour le processus de découverte, par champ et par domaine :  
   
--   **Enregistrements**: nombre d’enregistrements dans l’échantillon de données détectés  
+-   **Enregistrements**: nombre d'enregistrements découverts dans l'exemple de données  
   
--   **Valeurs totales**: nombre de valeurs totales trouvées pour chaque champ et au total  
+-   **Valeurs totales**: nombre de valeurs totales trouvées pour chaque champ et chaque total  
   
 -   **Nouvelles valeurs**: nombre de valeurs totales pour chaque champ et tous les champs mappés nouveaux depuis le dernier processus de découverte, et leur pourcentage de valeurs totales  
   
@@ -248,7 +248,7 @@ ms.locfileid: "75244150"
   
 -   **Nouvelles valeurs uniques**: nombre de valeurs uniques pour chaque champ et tous les champs mappés nouveaux depuis le dernier processus de découverte, et leur pourcentage de valeurs totales  
   
--   **Valide dans les valeurs de domaine**: nombre de valeurs totales pour chaque champ et tous les champs mappés valides, et leur pourcentage de valeurs totales  
+-   **Valide dans les valeurs du domaine**: nombre de valeurs totales pour chaque champ et tous les champs mappés valides, et leur pourcentage de valeurs totales  
   
  Les statistiques de champ sont les suivantes :  
   
@@ -256,13 +256,13 @@ ms.locfileid: "75244150"
   
 -   **Domaine**: nom du domaine mappé au champ  
   
--   **Nouveau**: nombre de nouvelles valeurs et pourcentage de nouvelles valeurs comparées aux valeurs existantes dans le champ  
+-   **Nouveau**: nombre de nouvelles valeurs et pourcentage de valeurs nouvelles comparées aux valeurs existantes dans le champ  
   
--   **Unique**: nombre d’enregistrements uniques dans le champ et leur pourcentage par rapport du total  
+-   **Unique**: nombre d'enregistrements uniques dans le champ et leur pourcentage par rapport au total  
   
 -   **Valide dans le domaine**: nombre de valeurs de domaine valides et leur pourcentage du total  
   
--   **Exhaustivité**: exhaustivité de chaque champ source mappé pour l’exercice correspondant  
+-   **Exhaustivité**: exhaustivité de chaque champ source qui est mappé pour l'exercice correspondant  
   
  Le profilage dans la découverte des connaissances fournit des informations sur l'exhaustivité. Si le profilage vous informe qu'un champ est relativement incomplet, vous pouvez le supprimer de la base de connaissances d'un projet de qualité des données. Le profilage peut ne pas fournir des statistiques d'exhaustivité fiables pour les domaines composites. Si vous avez besoin des statistiques d'exhaustivité, utilisez des domaines simples plutôt que des domaines composites. Si vous souhaitez utiliser des domaines composites, vous pouvez créer une base de connaissances avec des domaines simples pour le profilage, afin de déterminer l'exhaustivité, et créer un autre domaine avec un domaine composite pour le processus de nettoyage. Par exemple, le profilage peut afficher une exhaustivité de 95 % pour les enregistrements d'adresse à l'aide d'un domaine composite, mais il peut y avoir un niveau bien supérieur de non-exhaustivité pour l'une des colonnes, par exemple, une colonne de code postal. Dans cet exemple, vous pouvez mesurer l'exhaustivité de la colonne de code postal avec un domaine unique. Le profilage fournira probablement des statistiques de précision fiables pour les domaines composites, car vous pouvez mesurer la précision de plusieurs colonnes ensemble. Comme la valeur de ces données se trouve dans l'agrégation composite, vous pouvez mesurer la précision avec un domaine composite.  
   

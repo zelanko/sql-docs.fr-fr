@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244669"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un nouveau serveur inscrit (SQL Server Management Studio)
@@ -38,7 +38,7 @@ ms.locfileid: "75244669"
   
      Les serveurs de gestion centralisée stockent les inscriptions de serveurs dans le serveur de gestion centralisée plutôt que dans le système de fichiers. Les serveurs de gestion centralisée et les serveurs inscrits subordonnés ne peuvent être inscrits que par le biais de l'authentification Windows. Une fois qu'un serveur de gestion centralisée a été inscrit, ses serveurs inscrits associés sont affichés automatiquement. Pour plus d’informations sur les serveurs d’administration centrale, consultez [Administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ne peuvent pas être désignées comme serveurs de gestion centralisée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Pour inscrire automatiquement les instances de serveur local  
   

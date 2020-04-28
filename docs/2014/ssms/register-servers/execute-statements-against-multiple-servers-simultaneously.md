@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 55b77ddf4284dc4f06e8036d0ae1b0c86b3544f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244641"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Exécuter des instructions simultanément sur plusieurs serveurs (SQL Server Management Studio)
@@ -37,14 +37,14 @@ ms.locfileid: "75244641"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Dans la mesure où les connexions gérées par un serveur de gestion centralisée s'exécutent dans le contexte de l'utilisateur, avec l'authentification Windows, les autorisations effectives sur les serveurs inscrits peuvent varier. Par exemple, l'utilisateur peut être membre du rôle serveur fixe sysadmin sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, mais disposer d'autorisations limitées sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-execute-statements-against-multiple-configuration-targets-simultaneously"></a>Pour exécuter des instructions contre plusieurs cibles de configuration simultanément  
   
@@ -72,6 +72,6 @@ ms.locfileid: "75244641"
 3.  Dans la page **Résultats multiserveurs** , spécifiez les paramètres d'options souhaités, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer plusieurs serveurs à l’aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [Administrer plusieurs serveurs à l'aide de serveurs de gestion centralisée](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

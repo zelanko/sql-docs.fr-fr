@@ -10,10 +10,10 @@ ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 518b393b296425c1aaf54229a8a843576c6a628a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251615"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exporter un domaine vers un fichier .dqs
@@ -28,17 +28,17 @@ ms.locfileid: "75251615"
   
  Le fichier de données .dqs créé par le processus d'exportation est chiffré, de sorte que le contenu ne peut pas être affiché.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour exporter un domaine vers un fichier de données .dqs, vous devez avoir créé et sélectionné un domaine unique ou un domaine composite contenant plusieurs domaines uniques. Vous n'avez pas besoin de disposer d'un fichier .dqs vers lequel effectuer l'exportation ; il en sera créé un automatiquement.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exporter un domaine vers un fichier de données .dqs.  
   
-##  <a name="Export"></a>Exporter un domaine vers un fichier. DQS  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>Exporter un domaine vers un fichier. DQS  
  Vous pouvez effectuer une exportation à partir de n'importe quelle page Gestion de l'arborescence du domaine. La commande d'exportation est disponible aussi bien à partir d'un contrôle dans l'interface utilisateur qu'à partir d'une commande dans le menu contextuel du volet Liste des domaines.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "75251615"
   
 6.  Dans la boîte de dialogue **Exporter le domaine** , vérifiez que la ligne d'état indique que l'exportation est terminée. Cliquez sur **OK**.  
   
-##  <a name="FollowUp"></a>Suivi : après l’exportation d’un domaine vers un fichier. DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Suivi : après l’exportation d’un domaine vers un fichier. DQS  
  Après avoir exporté un domaine vers un fichier .dqs, vous pouvez importer le domaine dans une autre base de connaissances.  
   
   

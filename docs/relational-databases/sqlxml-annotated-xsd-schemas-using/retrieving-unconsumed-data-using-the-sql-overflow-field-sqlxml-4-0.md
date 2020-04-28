@@ -19,10 +19,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257404"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Extraction de données non consommées à l'aide de sql:overflow-field (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "75257404"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>R. Spécification de sql:overflow-field pour un élément  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Spécification de sql:overflow-field pour un élément  
  Cet exemple suppose que le script suivant a été exécuté afin qu'une table nommée Customers2 existe dans la base de données tempdb :  
   
 ```  

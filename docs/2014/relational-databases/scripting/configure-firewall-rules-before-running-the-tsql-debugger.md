@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245188"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurer le débogueur Transact-SQL
@@ -150,8 +150,7 @@ ms.locfileid: "75245188"
 ## <a name="requirements-for-starting-the-debugger"></a>Configuration requise pour le démarrage du débogueur  
  Toute tentative de démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] doit également respecter les conditions suivantes :  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
   
 * La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est membre du rôle serveur fixe sysadmin.  
   
@@ -163,7 +162,7 @@ ms.locfileid: "75245188"
  [Débogueur Transact-SQL](transact-sql-debugger.md)   
  [Exécuter le débogueur Transact-SQL](run-the-transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](step-through-transact-sql-code.md)   
- [Informations du débogueur Transact-SQL](transact-sql-debugger-information.md)   
+ [Informations sur le débogueur Transact-SQL](transact-sql-debugger-information.md)   
  [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

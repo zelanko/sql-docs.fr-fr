@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3994a9d0bc863367edf5b1844772b94a63f19d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257251"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introduction aux DiffGrams dans SQLXML 4.0
@@ -61,7 +61,7 @@ ms.locfileid: "75257251"
 ## <a name="diffgram-annotations"></a>Annotations DiffGram  
  Ces annotations sont définies dans l’espace de noms DiffGram **« urn : schemas-microsoft-com : XML-DiffGram-01 »**:  
   
- **identifi**  
+ **id**  
  Cet attribut est utilisé pour coupler les éléments dans les ** \<blocs Before>** et ** \<DataInstance>** .  
   
  **hasChanges**  

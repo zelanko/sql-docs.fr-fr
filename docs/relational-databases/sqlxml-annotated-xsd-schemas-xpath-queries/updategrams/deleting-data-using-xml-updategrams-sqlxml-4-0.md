@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ad537d8b2ce247d45e8e7a94216006023373c13c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252428"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Suppression de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
@@ -52,7 +52,7 @@ ms.locfileid: "75252428"
   
  Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-deleting-a-record-by-using-an-updategram"></a>R. Suppression d'un enregistrement à l'aide d'un code de mise à jour  
+### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Suppression d'un enregistrement à l'aide d'un code de mise à jour  
  Les codes de mise à jour suivants suppriment deux enregistrements de la table HumanResources.Shift.  
   
  Dans ces exemples, le code de mise à jour ne spécifie pas de schéma de mappage. Par conséquent, le code de mise à jour utilise le mappage par défaut, dans lequel le nom d'élément est mappé à un nom de table et les attributs ou sous-éléments sont mappés aux colonnes.  

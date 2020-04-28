@@ -11,10 +11,10 @@ ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d82bee5e275365b72adb3700cae8c11e6e67c9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253085"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Associer une base de données Master Data Services et une application Web
@@ -23,10 +23,9 @@ ms.locfileid: "75253085"
 
   Associez votre application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] à une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour spécifier la base de données à utiliser pour les opérations web.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
--   
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] doit être installé sur l’ordinateur local. Pour plus d’informations, consultez [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md).  
+-   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] doit être installé sur l’ordinateur local. Pour plus d’informations, consultez [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md).  
   
 -   Une application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] locale doit exister. Pour plus d’informations, consultez [Créer une application web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
   
@@ -58,6 +57,6 @@ ms.locfileid: "75253085"
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
- [Page de configuration Web &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Page Configuration web &#40;Gestionnaire de configuration de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

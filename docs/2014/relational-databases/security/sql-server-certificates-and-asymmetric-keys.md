@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244514"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificats et clés asymétriques SQL Server
-  Le chiffrement à clé publique (PKI) est une forme de confidentialité des messages dans laquelle un utilisateur crée une clé *publique* et une clé *privée* . La clé privée est gardée secrète, alors que la clé publique peut être distribuée aux autres. Bien que les clés soient liées mathématiquement, la clé privée ne peut pas être dérivée facilement de la clé publique. La clé publique est utilisée pour chiffrer les données et la clé privée pour les déchiffrer. Un message chiffré à l'aide de la clé publique peut être déchiffré uniquement à l'aide de la clé privée appropriée. Comme il existe deux clés différentes, ces clés sont *asymétriques*.  
+   Le chiffrement à clé publique (PKI) est une forme de confidentialité des messages dans laquelle un utilisateur crée une clé *publique* et une clé *privée*. La clé privée est gardée secrète, alors que la clé publique peut être distribuée aux autres. Bien que les clés soient liées mathématiquement, la clé privée ne peut pas être dérivée facilement de la clé publique. La clé publique est utilisée pour chiffrer les données et la clé privée pour les déchiffrer. Un message chiffré à l'aide de la clé publique peut être déchiffré uniquement à l'aide de la clé privée appropriée. Comme il existe deux clés différentes, ces clés sont *asymétriques*.  
   
  Les certificats et les clés asymétriques sont deux façons d'utiliser un chiffrement asymétrique. Les certificats sont souvent utilisés comme conteneurs pour les clés asymétriques car ils peuvent contenir plus d'informations, telles que les dates d'expiration et les émetteurs. Il n'y a aucune différence entre les deux mécanismes en ce qui concerne l'algorithme de chiffrement et aucune différence de puissance pour une même longueur de clé. En général, vous utilisez un certificat pour chiffrer d'autres types de clés de chiffrement dans une base de données ou pour signer des modules de code.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "75244514"
 |||  
 |-|-|  
 |Outil|Objectif|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crée des certificats.|  
-|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crée des noms forts pour les clés symétriques.|  
+|[Makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crée des certificats.|  
+|[perso](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crée des noms forts pour les clés symétriques.|  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Choisir un algorithme de chiffrement](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "75244514"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [Chiffrement transparent des données &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

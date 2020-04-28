@@ -13,10 +13,10 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245482"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
@@ -25,17 +25,17 @@ ms.locfileid: "75245482"
 
   Cette rubrique décrit comment créer une règle de domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une règle de domaine est une condition utilisée pour valider, corriger et normaliser les valeurs de domaine. Une règle de domaine doit avoir la valeur true sur un domaine pour que les valeurs de domaine soient considérées comme exactes et conformes aux besoins de l'entreprise. Les règles de domaine peuvent comprendre les règles de validation qui sont utilisées pour valider les valeurs de domaine, mais ne sont pas utilisées pour corriger les données dans les projets de qualité des données. Les règles incluent également les règles de normalisation qui sont appliquées sur les données valides et sont utilisées dans la correction des données.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour créer une règle de domaine, vous devez avoir une base de connaissances et un domaine ouverts dans l'activité Gestion de l'arborescence du domaine.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une règle de domaine.  
   
-##  <a name="Build"></a>Générer des règles de domaine  
+##  <a name="build-domain-rules"></a><a name="Build"></a> Créer les règles de domaine  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75245482"
   
 6.  Sélectionnez **Active** pour spécifier que la règle sera exécutée (valeur par défaut) ou désactivez l'option pour empêcher la règle de s'exécuter.  
   
-7.  Dans le volet **Créer une règle**, sélectionnez une condition dans la liste déroulante de la zone de la clause de la règle.  
+7.  Dans le volet **créer une règle** , sélectionnez une condition dans la liste déroulante de la zone de la clause de la règle.  
   
 8.  Si la condition requiert une valeur, entrez la valeur dans la zone de texte associée.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "75245482"
   
 16. Poursuivez jusqu'à la procédure de test ci-dessous.  
   
-##  <a name="Test"></a>Tester les règles de domaine  
+##  <a name="test-domain-rules"></a><a name="Test"></a>Tester les règles de domaine  
   
 1.  L'une des règles étant sélectionnée, cliquez sur l'icône d' **Exécuter la règle de domaine sélectionnée sur des données de test** .  
   
 2.  Dans la boîte de dialogue Tester une règle de domaine, cliquez sur l'icône **Ajoute un nouveau terme de test pour la règle de domaine** . Entrez une valeur à tester. Entrez d'autres valeurs selon les besoins. Sélectionnez une valeur, puis cliquez sur l'icône de **Supprimer le terme de test sélectionné** si nécessaire.  
   
-3.  Cliquez sur l’icône **tester la règle de domaine sur tous les termes** .  
+3.  Cliquez sur l'icône **Tester la règle de domaine sur tous les termes** .  
   
 4.  Vérifiez la validité de chaque terme. Une coche signifie « correct », une croix « erreur » et un triangle « non valide ».  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75245482"
   
 7.  Poursuivez jusqu'à la procédure d'application ci-dessous.  
   
-##  <a name="Apply"></a>Appliquer les règles de domaine  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a>Appliquer les règles de domaine  
   
 1.  Cliquez sur **Appliquer toutes les règles** pour appliquer les règles aux valeurs du domaine. Quand vous cliquez sur **Appliquer toutes les règles**, un message s'affiche et indique le nombre de valeurs de certains états qui seront affectées par la règle. Cliquez sur **Oui** si vous souhaitez toujours appliquer la règle ou sur **Non** dans le cas contraire. Si vous cliquez sur **Oui**, cliquez sur **OK** pour fermer la fenêtre des résultats.  
   
@@ -99,10 +99,10 @@ ms.locfileid: "75245482"
   
 3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a>Suivi : après la création d’une règle de domaine  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Suivi : après la création d’une règle de domaine  
  Après avoir créé une règle de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Conditions"></a>Conditions de règle de domaine  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Conditions de règle de domaine  
  La table ci-dessous décrit les conditions qui peuvent être appliquées dans la règle de domaine et propose un exemple pour montrer comment les conditions peuvent être appliquées.  
   
  Lorsqu'une règle de domaine est appliquée et qu'une valeur de domaine ne respecte pas la règle, la valeur est indiquée comme Non valide. Une valeur indiquée comme Non valide sera modifiée en Correcte si la règle qui la rend non valide est supprimée ou désactivée, ou que la règle a été modifiée de telle sorte que la valeur ne respecte plus la règle. Si vous avez désigné manuellement une valeur comme non valide (sous l'onglet Valeurs de domaine de l'activité Gestion de l'arborescence du domaine) et qu'une règle que la valeur ne respecte pas a été supprimée, désactivée ou changée, la valeur toujours sera indiquée comme Non valide, selon la désignation manuelle.  

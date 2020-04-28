@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255611"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurer les paramètres avancés pour les fichiers journaux DQS
@@ -28,17 +28,17 @@ ms.locfileid: "75255611"
 > [!NOTE]  
 >  Ces activités ne peuvent pas être effectuées à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et sont réservées aux utilisateurs expérimentés uniquement.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
 -   Votre compte d'utilisateur Windows doit être membre du rôle serveur fixe sysadmin dans l'instance SQL Server afin de pouvoir modifier les paramètres de configuration dans la table A_CONFIGURATION de la base de données DQS_MAIN.  
   
 -   Vous devez être connecté en tant que membre du groupe Administrateurs sur l'ordinateur où vous modifiez le fichier DQLog.Client.xml pour configurer les paramètres de journalisation [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="DQSServer"></a>Configurer les paramètres du journal du serveur de qualité des données  
+##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a> Configurer les paramètres des journaux du serveur de qualité des données  
  Les paramètres des journaux [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sont présents au format XML dans la colonne **VALUE** de la ligne **ServerLogging** de la table A_CONFIGURATION de la base de données DQS_MAIN. Vous pouvez exécuter la requête SQL suivante pour afficher les informations de configuration :  
   
 ```  
@@ -95,7 +95,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  Appuyez sur F5 pour exécuter les instructions. Consultez le volet de **résultats** pour vérifier que les instructions ont été correctement exécutées.  
+4.  Appuyez sur F5 pour exécuter les instructions. Vérifiez le volet **résultats** pour vérifier que les instructions ont été exécutées avec succès.  
   
 5.  Pour appliquer les modifications effectuées à la configuration de journalisation [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , vous devez exécuter les instructions Transact-SQL suivantes. Ouvrez une nouvelle fenêtre de l'Éditeur de requête, puis collez les instructions Transact-SQL suivantes :  
   
@@ -109,12 +109,12 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  Appuyez sur F5 pour exécuter les instructions. Consultez le volet de **résultats** pour vérifier que les instructions ont été correctement exécutées.  
+6.  Appuyez sur F5 pour exécuter les instructions. Vérifiez le volet **résultats** pour vérifier que les instructions ont été exécutées avec succès.  
   
 > [!NOTE]  
 >  La configuration des paramètres de journalisation [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est générée dynamiquement et stockée dans le fichier DQS_MAIN.Log, généralement disponible dans C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log si vous avez installé l’instance par défaut de SQL Server. Toutefois, les modifications apportées directement dans ce fichier ne se conservent pas et sont remplacées par les paramètres de configuration de la table A_CONFIGURATION de la base de données DQS_MAIN.  
   
-##  <a name="DQSClient"></a>Configurer les paramètres du journal Data Quality Client  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Configurer les paramètres du journal Data Quality Client  
  Le [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] fichier de configuration du paramètre de journal, DQLog. client. xml, est généralement disponible dans C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. Le contenu du fichier XML est semblable au fichier XML que vous avez modifié précédemment pour les paramètres [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de configuration du journal. Pour configurer les paramètres des journaux [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Exécutez l'outil d'édition XML ou le Bloc-notes en tant qu'administrateur.  

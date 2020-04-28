@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246650"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Exécution d'un DiffGram à l'aide d'ADO (SQLXML 4.0)
@@ -102,5 +102,5 @@ End Sub
   
 6.  Modifiez le code pour spécifier le DiffGram et les noms de fichier XSD. Modifiez aussi la chaîne de connexion si nécessaire.  
   
-7.  Exécutez l’application. Le résultat de l'exécution dépend du DiffGram que vous exécutez.  
+7.  Exécutez l'application. Le résultat de l'exécution dépend du DiffGram que vous exécutez.  
 

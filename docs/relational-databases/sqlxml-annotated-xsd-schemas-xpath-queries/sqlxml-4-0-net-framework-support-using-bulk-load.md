@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252452"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Prise en charge de SQLXML 4.0 pour Microsoft .NET Framework - Utilisation du chargement en masse
@@ -111,7 +111,7 @@ ms.locfileid: "75252452"
   
 4.  Démarrez Visual Studio.  
   
-5.  Création d’une application console C#.  
+5.  Créez une application console C#.  
   
 6.  Dans le menu **projet** , sélectionnez **Ajouter une référence**.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "75252452"
      Cet exemple crée la DLL de wrapper managé (SQLXMLBULKLOADLib.dll) que vous pouvez utiliser dans le projet .NET Framework. Dans le .NET Framework, vous ajoutez une référence de projet à toutes les nouvelles DLL que vous créez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution du chargement en masse de données XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Exécution du chargement en masse de données XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

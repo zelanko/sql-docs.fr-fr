@@ -14,17 +14,16 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251669"
 ---
 # <a name="dqs-administration"></a>administration de dqs
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vous permet d'administrer et gérer les différentes activités de DQS effectuées sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], de configurer les propriétés de niveau serveur relatives aux activités de DQS, de configurer les paramètres de Reference Data Services et de configurer les paramètres de journalisation de DQS. Ces opérations sont effectuées par le biais de la fonctionnalité **Administration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Selon votre accès de sécurité (rôle) dans DQS, vous êtes autorisé ou non à accéder à certaines fonctionnalités de cette zone.  
   
  Outre ces activités d'administration, cette rubrique offre également des informations sur la sauvegarde et la restauration des bases de données DQS, une activité d'administration qui n'est pas effectuée à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "75251669"
   
 -   Configurer la journalisation en fonction du niveau de gravité des événements.  
   
-##  <a name="AdminUsingClent"></a>Activités d’administration à l’aide de Data Quality Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Activités administratives effectuées à l'aide de Data Quality Client  
  Ces activités sont effectuées à l'aide de la fonctionnalité **Administration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Analyse des activités  
@@ -54,19 +53,19 @@ ms.locfileid: "75251669"
   
 -   **Données de référence**: configurer des fournisseurs de services de données de référence : place de marché Azure ou fournisseurs de services de données de référence directs. Après avoir installé les fournisseurs de services de données de référence, vous pouvez mapper un domaine/domaine composite aux données de référence pendant l'activité de gestion des domaines d'une base de connaissances, puis utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données. Elle vous permet également de spécifier les paramètres de proxy pour la connexion à Internet afin d’utiliser la place de marché Azure.  
   
--   **Paramètres généraux**: spécifiez les valeurs de seuil pour le nettoyage des données et la correspondance des données, et indiquez s’il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]faut activer les notifications pour le profilage dans. Ces valeurs de seuil sont utilisées par DQS pendant les opérations de nettoyage et de mise en correspondance assistées par ordinateur dans un projet de qualité des données.  
+-   **Paramètres généraux**: spécifiez les valeurs de seuil pour le nettoyage et la mise en correspondance des données, et indiquez s'il faut activer les notifications pour le profilage dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Ces valeurs de seuil sont utilisées par DQS pendant les opérations de nettoyage et de mise en correspondance assistées par ordinateur dans un projet de qualité des données.  
   
--   **Paramètres du journal**: les fichiers journaux de DQS enregistrent les activités effectuées dans DQS et sont utiles pour le suivi des problèmes opérationnels pendant la maintenance et le dépannage. Vous pouvez filtrer les messages que vous souhaitez consigner dans le journal pour les différentes fonctionnalités de DQS (gestion de domaines, découverte des connaissances, nettoyage, mise en correspondance et services de données de référence) et les différents modules de DQS selon le niveau de gravité des événements.  
+-   **Paramètres de journal**: les fichiers journaux de DQS enregistrent les activités effectuées dans DQS et sont utiles pour le suivi des problèmes opérationnels pendant la maintenance et le dépannage. Vous pouvez filtrer les messages que vous souhaitez consigner dans le journal pour les différentes fonctionnalités de DQS (gestion de domaines, découverte des connaissances, nettoyage, mise en correspondance et services de données de référence) et les différents modules de DQS selon le niveau de gravité des événements.  
   
 > [!NOTE]  
 >  L'écran **Configuration** est accessible uniquement aux utilisateurs disposant du rôle dqs_administrator sur la base de données DQS_MAIN.  
   
-##  <a name="AdminOutsideClient"></a>Activités d’administration en dehors de Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Activités d’administration en dehors de Data Quality Client  
  Ces opérations sont effectuées en dehors de Data Quality Client :  
   
--   **Sauvegarder et restaurer des bases de données DQS**: la sauvegarde et la restauration des bases de données DQS sont identiques à celles de la sauvegarde et de la restauration d’une base de données SQL Server avec certaines considérations spécifiques à DQS.  
+-   **Sauvegarder et restaurer des bases de données DQS**: les opérations de sauvegarde et de restauration des bases de données DQS sont identiques à celles utilisées pour toute base de données SQL Server, à l'exception de quelques spécificités applicables à DQS.  
   
--   **Détacher et attacher des bases de données DQS**: les étapes pour détacher et attacher des bases de données DQS sont les mêmes que le détachement et l’attachement d’une base de données SQL Server avec certaines considérations spécifiques à DQS.  
+-   **Détacher et attacher des bases de données DQS**: les étapes permettant d'attacher et de détacher des bases de données DQS sont identiques à celles utilisées pour toute base de données SQL Server, à l'exception de quelques spécificités applicables à DQS.  
   
  Pour plus d’informations, consultez [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   

@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257470"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversions de types de données et annotation sql : DataType (SQLXML 4,0)
@@ -47,7 +47,7 @@ ms.locfileid: "75257470"
 |Décimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Temps|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Heure|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Tous les autres|Aucune conversion supplémentaire|  
   
 > [!NOTE]  
@@ -60,30 +60,30 @@ ms.locfileid: "75257470"
 |--------------------------|-------------------|  
 |**bigint**|**long**|  
 |**binary**|**base64Binary**|  
-|**bit**|**expression**|  
-|**char**|**chaîne**|  
-|**DATETIME**|**Date/heure**|  
-|**sépar**|**sépar**|  
-|**float**|**Cliquer**|  
+|**bit**|**boolean**|  
+|**char**|**string**|  
+|**datetime**|**dateTime**|  
+|**decimal**|**decimal**|  
+|**float**|**double**|  
 |**image**|**base64Binary**|  
 |**int**|**int**|  
-|**money**|**sépar**|  
-|**nchar**|**chaîne**|  
-|**ntext**|**chaîne**|  
-|**nvarchar**|**chaîne**|  
-|**chiffre**|**sépar**|  
+|**money**|**decimal**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
 |**real**|**float**|  
-|**smalldatetime**|**Date/heure**|  
+|**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
-|**SMALLMONEY**|**sépar**|  
-|**sql_variant**|**chaîne**|  
-|**sysname**|**chaîne**|  
-|**text**|**chaîne**|  
-|**confirmé**|**Date/heure**|  
+|**smallmoney**|**decimal**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
+|**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**chaîne**|  
-|**uniqueidentifier**|**chaîne**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>Annotation sql:datatype  
  L’annotation **SQL : DataType** est utilisée pour spécifier le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données ; cette annotation doit être spécifiée dans les cas suivants :  
@@ -99,7 +99,7 @@ ms.locfileid: "75257470"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>R. Spécification de xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Spécification de xsd:type  
  Cet exemple montre comment un type de **Date** XSD qui est spécifié à l’aide de l’attribut **xsd : type** dans le schéma affecte le document XML obtenu. Le schéma fournit une vue XML de la table Sales.SalesOrderHeader dans la base de données AdventureWorks.  
   
 ```  

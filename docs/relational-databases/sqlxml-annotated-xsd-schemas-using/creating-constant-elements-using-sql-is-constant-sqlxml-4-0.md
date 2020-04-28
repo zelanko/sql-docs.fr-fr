@@ -20,10 +20,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257477"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
@@ -42,7 +42,7 @@ ms.locfileid: "75257477"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>R. Spécification de sql:is-constant pour ajouter un élément conteneur  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Spécification de sql:is-constant pour ajouter un élément conteneur  
  Dans ce schéma XSD annoté, ** \<CustomerOrders>** est défini en tant qu’élément constant en spécifiant l’attribut **SQL : is-constant** avec la valeur 1. Par conséquent, ** \<le>CustomerOrders** n’est mappé à aucune table ou colonne de base de données. Cet élément constant est constitué de l' ** \<ordre>** éléments enfants.  
   
  Bien que ** \<le>CustomerOrders** ne soit mappé à aucune table ou colonne de base de données, il apparaît toujours dans le XML résultant en tant qu’élément conteneur contenant l' ** \<ordre>** éléments enfants.  

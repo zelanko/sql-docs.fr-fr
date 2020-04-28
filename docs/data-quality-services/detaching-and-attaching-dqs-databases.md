@@ -10,10 +10,10 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251677"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Attachement et détachement de bases de données DQS
@@ -22,20 +22,20 @@ ms.locfileid: "75251677"
 
   Cette rubrique explique comment attacher et détacher les bases de données DQS.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Limitations"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitations et restrictions  
  Pour obtenir la liste des limitations et restrictions, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Vérifiez qu'aucune activité ou aucun processus n'est en cours d'exécution dans DQS. Pour ce faire, utilisez l'écran **Analyse des activités** . Pour plus d'informations sur l'utilisation de cet écran, consultez [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
 -   Assurez-vous qu'aucun utilisateur n'est connecté au [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
 -   Votre compte d'utilisateur Windows doit être membre du rôle serveur fixe db_owner dans l'instance SQL Server pour pouvoir détacher des bases de données DQS.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75251677"
   
 -   Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour mettre fin à toutes les activités en cours d'exécution ou arrêter tous les processus en cours d'exécution dans DQS.  
   
-##  <a name="Detach"></a>Détacher des bases de données DQS  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a>Détacher des bases de données DQS  
  Lorsque vous détachez une base de données DQS à l'aide de SQL Server Management Studio, les fichiers détachés restent sur votre ordinateur et peuvent être rattachés à la même instance de SQL Server ou être déplacés vers un autre serveur et être attachés à cet endroit. Les fichiers de base de données DQS se trouvent généralement à l’emplacement suivant sur votre ordinateur Data Quality Services : C:\Program Files\Microsoft SQL Server\MSSQL13.*>nom_instance>* \MSSQL\DATA.  
   
 1.  Démarrez Microsoft SQL Server Management Studio et connectez-vous à l'instance de SQL Server appropriée.  
@@ -58,7 +58,7 @@ ms.locfileid: "75251677"
   
  Vous pouvez également détacher les bases de données DQS à l'aide d'instructions Transact-SQL avec la procédure stockée sp_detach_db. Pour plus d'informations sur le détachement de bases de données à l'aide d'instructions Transact-SQL, consultez [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) dans [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="Attach"></a>Attacher des bases de données DQS  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a>Attacher des bases de données DQS  
  Utilisez les instructions suivantes pour attacher une base de données DQS à la même instance SQL Server (depuis laquelle vous avez procédé au détachement) ou à une autre instance de SQL Server où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
 1.  Démarrez Microsoft SQL Server Management Studio et connectez-vous à l'instance de SQL Server appropriée.  
@@ -73,7 +73,7 @@ ms.locfileid: "75251677"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Le volet (inférieur) des **détails de la base de données** affiche les noms des fichiers à attacher. Pour vérifier ou modifier le nom du chemin d’un fichier, cliquez sur le bouton **Parcourir** (...).  
+5.  Le volet (inférieur) des **détails de la base de données** affiche les noms des fichiers à attacher. Pour vérifier ou modifier le chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (...).  
   
 6.  Cliquez sur **OK** pour attacher la base de données DQS_MAIN.  
   

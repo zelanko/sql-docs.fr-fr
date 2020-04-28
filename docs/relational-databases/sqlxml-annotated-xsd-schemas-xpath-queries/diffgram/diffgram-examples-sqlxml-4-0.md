@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257264"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemples de DiffGrams (SQLXML 4.0)
@@ -74,7 +74,7 @@ ms.locfileid: "75257264"
   
      Enregistrez ce schéma sous le nom DiffGramSchema.xml dans le dossier où vous enregistrez les autres fichiers utilisés dans les exemples.  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>R. Suppression d'un enregistrement à l'aide d'un DiffGram  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. Suppression d'un enregistrement à l'aide d'un DiffGram  
  Le DiffGram de cet exemple supprime un client (dont CustomerID a la valeur ALFKI) de la table Cust et supprime l'enregistrement de commande correspondant (dont OrderID a la valeur 1) de la table Ord.  
   
 ```  

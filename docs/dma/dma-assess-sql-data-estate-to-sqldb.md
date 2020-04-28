@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253512"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Évaluer la préparation d’un SQL Server de données qui migrent vers Azure SQL Database à l’aide de la Assistant Migration de données
@@ -58,12 +58,12 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
     Vous pouvez créer un projet Azure Migrate dans les zones géographiques suivantes.
 
-    | **Région**  | **Région de l’emplacement de stockage** |
+    | **Zone géographique**  | **Région de l’emplacement de stockage** |
     | ------------- | ------------- |
-    | Asie | Asie Sud-Est ou Asie Est |
+    | Asia | Asie Sud-Est ou Asie Est |
     | Europe | Europe Sud ou Europe Ouest |
     | Royaume-Uni | Royaume-Uni Sud ou Royaume-Uni Ouest |
-    | États-Unis | USA Centre ou USA Ouest 2 |
+    | États-Unis | USA Centre ou USA Ouest 2 |
 
     La zone géographique spécifiée pour le projet est utilisée uniquement pour stocker les métadonnées collectées à partir des machines virtuelles locales. Vous pouvez sélectionner n’importe quelle région cible pour la migration réelle.
 
@@ -93,7 +93,7 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
    ![Outil d’évaluation de Azure Migrate ajouté](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
 1. Téléchargez Assistant Migration de données à l’aide du lien fourni, puis installez-le sur un ordinateur ayant accès à vos instances de SQL Server sources.
-2. Démarrez Assistant Migration de données.
+2. Démarrez l’Assistant Migration de données.
 
 ### <a name="create-an-assessment"></a>Créer une évaluation
 

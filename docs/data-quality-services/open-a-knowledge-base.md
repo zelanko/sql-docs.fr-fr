@@ -12,10 +12,10 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246007"
 ---
 # <a name="open-a-knowledge-base"></a>Ouvrir une base de connaissances
@@ -24,17 +24,17 @@ ms.locfileid: "75246007"
 
   Cette rubrique explique comment ouvrir une base de connaissances existante dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) et la préparer pour la gestion de l'arborescence du domaine, la découverte des connaissances ou l'ajout d'une stratégie de correspondance.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Pour ouvrir une base de connaissances, la base de connaissances doit déjà avoir été créée et publiée (si une autre personne l'a créée) ou fermée (si vous l'avez créée).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour ouvrir une base de connaissances.  
   
-##  <a name="Open"></a>Ouvrir une base de connaissances  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Ouvrir une base de connaissances  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,24 +70,24 @@ ms.locfileid: "75246007"
   
 -   Pour ouvrir une base de connaissances dans la liste Récents qui a été verrouillée par une autre personne, contactez cette personne et demandez-lui de déverrouiller la base de connaissances.  
   
-##  <a name="FollowUp"></a>Suivi : après avoir ouvert une base de connaissances  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Suivi : après avoir ouvert une base de connaissances  
  Après avoir ouvert une base de connaissances, la base de connaissances est placée dans l'état indiqué dans la colonne d'état de la table de base de connaissances. Pour les activités de découverte des connaissances et de stratégie de correspondance, la base de connaissances est ouverte dans une page de l'Assistant spécifique. Pour l'activité de gestion de l'arborescence du domaine, la base de connaissances est ouverte dans la page de gestion de l'arborescence du domaine. Pour plus d’informations sur les différents états, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Locked"></a>Si la base de connaissances est verrouillée  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Si la base de connaissances est verrouillée  
  L'icône de verrou dans la première colonne indique si la base de connaissances est verrouillée. Le nom d'une base de connaissances verrouillée s'affiche dans une police rouge. Une base de connaissances qui est modifiée par un utilisateur spécifique via une activité de la base de connaissances est marquée comme verrouillée. Une base de connaissances verrouillée ne peut pas être exploitée par un deuxième utilisateur. L'utilisateur qui travaille sur la base de connaissances peut la déverrouiller en cliquant avec le bouton droit sur la base de connaissances dans la table de la page Ouvrir la base de connaissances, en cliquant sur **Déverrouiller**ou en la publiant. Lorsque le curseur est positionné sur une base de connaissances verrouillée, DQS affiche un indicateur qui signale qui a verrouillé la base de connaissances et quand.  
   
-##  <a name="State"></a>État d’une base de connaissances  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>État d’une base de connaissances  
  Le champ État indique l'étape d'une activité à laquelle la base de connaissances se trouve. Si vous ouvrez la base de connaissances, elle s'ouvre à cette étape.  
   
 -   >vide : le champ État est vide pour une base de connaissances si la base de connaissances a été publiée en cliquant sur **publier** dans l’activité de gestion des domaines, puis sur **Oui-publier la base de connaissances et quitter**. ** \< **  
   
 -   **En cours**: le travail sur la base de connaissances a été enregistré en cliquant sur **publier** dans l’activité de gestion des domaines, puis sur **non-enregistrer le travail dans la base de connaissances et quitter**.  
   
--   **Gestion de domaine**: des données ont été entrées pour un domaine de la base de connaissances, mais la base de connaissances n’a pas été publiée et le travail reste dans l’activité de gestion des domaines. L'activité de découverte des connaissances n'est pas disponible. Cela se produit lorsque vous cliquez sur **Fermer** dans l'écran **Gestion de l'arborescence du domaine** .  
+-   **Gestion de l'arborescence du domaine**: des données ont été entrées pour un domaine dans la base de connaissances, mais la base de connaissances n'a pas été publiée et le travail reste dans l'activité de gestion de l'arborescence du domaine. L'activité de découverte des connaissances n'est pas disponible. Cela se produit lorsque vous cliquez sur **Fermer** dans l'écran **Gestion de l'arborescence du domaine** .  
   
--   **Découverte-mappage**: la base de connaissances a été fermée sur la page gestion de la **base de connaissances : mappage** . La base de connaissances est verrouillée, et les activités de gestion de l'arborescence du domaine et de correspondance ne sont pas disponibles.  
+-   **Découverte - Mappage**: la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Mappage** . La base de connaissances est verrouillée, et les activités de gestion de l'arborescence du domaine et de correspondance ne sont pas disponibles.  
   
--   **Découverte-découvrir**: la base de connaissances a été fermée sur la page gestion de la **base de connaissances : analyse** . La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
+-   **Découverte - Découvrir**: la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Analyse** . La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
   
 -   **Découverte-gestion des valeurs**: la base de connaissances a été fermée sur la page gestion de la **base de connaissances :** gestion des termes de domaine. La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
   

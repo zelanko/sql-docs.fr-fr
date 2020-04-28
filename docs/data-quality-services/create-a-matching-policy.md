@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251788"
 ---
 # <a name="create-a-matching-policy"></a>Créer une stratégie de correspondance
@@ -28,17 +28,17 @@ ms.locfileid: "75251788"
   
  La création d'une stratégie de correspondance s'effectue en trois étapes : un processus de mappage au cours duquel vous identifiez la source de données et mappez des domaines à des colonnes, un processus de stratégie de correspondance au cours duquel vous créez une ou plusieurs règles de correspondance et testez chaque règle de correspondance séparément, et un processus de résultats de correspondance au cours duquel vous exécutez toutes les règles de correspondance ensemble, et si vous en êtes satisfait, vous ajoutez la stratégie à la base de connaissances. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité Correspondance, ce qui vous permet de naviguer entre les différentes pages, de réexécuter le processus et de fermer un processus de stratégie de correspondance spécifique, puis de retourner à la même étape du processus. Après avoir testé toutes les règles ensemble, si vous le souhaitez, vous pouvez retourner à la page **Stratégie de correspondance** , apporter quelques ajustements à une règle individuelle, la tester de nouveau séparément, puis retourner à la page **Résultats de correspondance** pour réexécuter toutes les règles ensemble. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance, lesquelles vous permettent de prendre des décisions avisées sur la stratégie de correspondance et de l'affiner.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une stratégie de correspondance.  
   
-##  <a name="MatchingRules"></a>Comment définir des paramètres de règle de correspondance  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>Comment définir des paramètres de règle de correspondance  
  La création d'une règle de correspondance est un processus itératif au cours duquel vous entrez les facteurs utilisés pour déterminer si un enregistrement est une correspondance d'un autre enregistrement. Vous pouvez entrer des conditions pour tout domaine dans une table. Lorsque DQS effectue une correspondance sur deux enregistrements, il compare les valeurs des champs mappés aux domaines qui sont inclus dans la règle de correspondance. DQS analyse les valeurs contenues dans chaque champ de la règle, puis utilise les facteurs entrés dans la règle pour chaque domaine pour calculer un score de correspondance final. Si le score de correspondance pour les deux enregistrements comparés est supérieur au score de correspondance minimal, les deux champs sont considérés comme des correspondances.  
   
  Les facteurs que vous entrez dans une règle de correspondance sont les suivants :  
@@ -57,7 +57,7 @@ ms.locfileid: "75251788"
   
  Le profilage fournit des informations sur l'exhaustivité et l'unicité. Considérez l'exhaustivité et l'unicité en tandem. Utilisez les données d'exhaustivité et d'unicité pour déterminer le poids à donner à un champ dans le processus de correspondance. Si le niveau d'unicité est élevé dans un champ, l'utilisation de ce champ dans une stratégie de correspondance peut diminuer les résultats de correspondance ; de ce fait, vous pouvez affecter une valeur relativement faible pour le poids de ce champ. Si vous avez un niveau d'unicité faible pour une colonne, mais une faible exhaustivité, vous pouvez décider de ne pas inclure de domaine pour cette colonne. Avec un niveau d'unicité faible, mais un niveau d'exhaustivité élevé, vous pouvez inclure le domaine. Certaines colonnes, telles que le sexe, peuvent naturellement avoir un niveau d'unicité faible. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
-##  <a name="Starting"></a>Première étape : démarrage d’une stratégie de correspondance  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>Première étape : démarrage d’une stratégie de correspondance  
  Vous effectuez l'activité de stratégie de correspondance dans la zone de gestion des bases de connaissances de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "75251788"
   
 3.  Cliquez sur **Ouvrir la base de connaissances** pour créer ou modifier la stratégie de correspondance dans une base de connaissances existante. Sélectionnez la base de connaissances, sélectionnez **Stratégie de correspondance**, puis cliquez sur **Suivant**. Vous pouvez également cliquer sur une base de connaissances sous **Base de connaissances récente**. Si vous ouvrez une base de connaissances qui a été fermée pendant qu'une stratégie de correspondance était en cours d'utilisation, vous passez alors à l'étape au cours de laquelle l'activité de stratégie de correspondance a été fermée (comme indiqué par la colonne **État** pour la base de connaissances dans la table de bases de connaissances ou dans le nom de la base de connaissances sous **Base de connaissances récente**). Si vous ouvrez une base de connaissances qui inclut une stratégie de correspondance et qui a été terminée, vous accédez à la page **Stratégie de correspondance** . Si vous ouvrez une base de connaissances qui n'inclut pas de stratégie de correspondance et qui a été terminée, vous accédez à la page **Mappage** .  
   
-##  <a name="MatchingStage"></a>Étape de mappage  
+##  <a name="mapping-stage"></a><a name="MatchingStage"></a> Étape de mappage  
  Au cours de l'étape de mappage, vous identifiez la source des données pour lesquelles vous allez créer la stratégie de correspondance, et vous mappez des colonnes sources à des domaines pour rendre les domaines disponibles pour l'activité de stratégie de correspondance.  
   
 1.  Dans la page **Mapper** , pour créer une stratégie pour une base de données, laissez **SQL Server** comme valeur de **Source de données**, sélectionnez la base de données pour laquelle vous voulez créer la stratégie dans **Base de données**, puis sélectionnez la table ou la vue dans **Table/vue**. La base de données source doit être présente dans la même instance de SQL Server que [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Sinon, elle ne s'affichera pas dans la liste déroulante.  
@@ -91,7 +91,7 @@ ms.locfileid: "75251788"
     > [!NOTE]  
     >  Cliquez sur **Fermer** pour enregistrer l'étape du projet de correspondance et revenir à la page d'accueil de DQS. La prochaine fois que vous ouvrirez ce projet, il démarrera à partir de la même étape. Cliquez sur **Annuler** pour mettre fin à l'activité de correspondance, auquel cas vous perdrez votre travail, et revenir à la page d'accueil de DQS.  
   
-##  <a name="MatchingPolicyStage"></a>Étape de stratégie de correspondance  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>Étape de stratégie de correspondance  
  Vous créez des règles de correspondance et les testez individuellement dans la page Stratégie de correspondance. Lorsque vous testez une règle de correspondance dans la page **Stratégie de correspondance** , une table des résultats de correspondance indiquant les clusters identifiés par DQS pour la règle sélectionnée s'affiche. Cette table affiche chaque enregistrement du cluster avec les valeurs de domaine de mappage et le score de correspondance, ainsi que l'enregistrement pivot initial pour le cluster. Vous pouvez également afficher des données de profilage pour le processus de correspondance dans son ensemble, les conditions de chaque règle de correspondance et les statistiques sur les résultats pour chaque règle de correspondance séparément. Vous pouvez définir un filtre sur les principales données de règle de votre choix.  
   
  Pour plus d'informations sur le fonctionnement des règles de correspondance, consultez [Comment définir des paramètres de règle de correspondance](#MatchingRules).  
@@ -109,7 +109,7 @@ ms.locfileid: "75251788"
     > [!NOTE]  
     >  Vous pouvez sélectionner un domaine composite uniquement si chaque domaine unique du domaine composite a été mappé à une colonne source.  
   
-6.  Pour **Similarité**, sélectionnez **Similaire** si deux valeurs du même champ de deux enregistrements distincts peuvent être considérées comme une correspondance, même si elles ne sont pas identiques. Sélectionnez **Exacte** si deux valeurs du même domaine de deux enregistrements distincts doivent être identiques pour être considérées comme une correspondance. (Pour plus d'informations, consultez [Comment définir des paramètres de règle de correspondance](#MatchingRules).)  
+6.  Pour **Similarité**, sélectionnez **Similaire** si deux valeurs du même champ de deux enregistrements distincts peuvent être considérées comme une correspondance, même si elles ne sont pas identiques. Sélectionnez **Exacte** si deux valeurs du même domaine de deux enregistrements distincts doivent être identiques pour être considérées comme une correspondance. (Pour plus d’informations, consultez [comment définir des paramètres de règle de correspondance](#MatchingRules).)  
   
 7.  Pour **Poids**, entrez une valeur qui détermine la contribution du score de correspondance d’un domaine au score de correspondance global pour deux enregistrements.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75251788"
   
 10. Sélectionnez **Clusters qui se chevauchent** dans la liste déroulante pour afficher les enregistrements pivots et les enregistrements suivants pour tous les clusters lorsque la correspondance est exécutée, même si les groupes de clusters ont des enregistrements en commun. Sélectionnez **Clusters qui ne se chevauchent pas** pour afficher les clusters qui ont des enregistrements en commun comme un seul cluster lorsque la correspondance est exécutée.  
   
-11. Cliquez sur **Recharger les données à partir de la source** pour copier les données de la source de données vers la table de mise en lots et les réindexer lorsque vous exécutez la stratégie de correspondance. Cliquez sur **Exécuter sur les données précédentes** pour exécuter une stratégie de correspondance sans copier les données vers la table de mise en lot et les réindexer. **Exécuter sur les données précédentes** est désactivé pour la première exécution de la stratégie de correspondance, ou si vous modifiez le mappage dans la page **mapper** et que vous appuyez sur **Oui** dans le menu contextuel suivant. Dans ces deux cas, vous devez effectuer une réindexation. Il n'est pas nécessaire d'effectuer une réindexation si la stratégie de correspondance n'a pas changé. L'exécution sur les données précédentes peut améliorer les performances.  
+11. Cliquez sur **Recharger les données à partir de la source** pour copier les données de la source de données vers la table de mise en lots et les réindexer lorsque vous exécutez la stratégie de correspondance. Cliquez sur **Exécuter sur les données précédentes** pour exécuter une stratégie de correspondance sans copier les données vers la table de mise en lot et les réindexer. L'option**Exécuter sur les données précédentes** est désactivée pour la première exécution de la stratégie de correspondance, ou si vous modifiez le mappage dans la page **Mapper** et que vous appuyez sur **Oui** dans la fenêtre suivante. Dans ces deux cas, vous devez effectuer une réindexation. Il n'est pas nécessaire d'effectuer une réindexation si la stratégie de correspondance n'a pas changé. L'exécution sur les données précédentes peut améliorer les performances.  
   
 12. Cliquez sur **Démarrer** pour exécuter le processus de correspondance pour la règle sélectionnée. Lorsque le processus est terminé, la table affiche l'ID d'enregistrement, le numéro de cluster et les colonnes de données (y compris celles ne figurant pas dans la règle de correspondance) pour chaque enregistrement d'un cluster. La ligne pivot du cluster est considérée comme le candidat principal pour la survivance du processus de déduplication. Chaque ligne supplémentaire d'un cluster est considérée comme un doublon ; son score de correspondance (comparé à l'enregistrement pivot) est fourni dans la table des résultats. Le numéro de cluster est identique à l'ID d'enregistrement pour l'enregistrement principal du cluster.  
   
@@ -147,14 +147,14 @@ ms.locfileid: "75251788"
   
 18. Cliquez sur **Suivant** pour passer à l'étape des résultats de correspondance.  
   
-##  <a name="MatchingResultsStage"></a>Étape des résultats de correspondance  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>Étape des résultats de correspondance  
  Vous testez toutes vos règles de correspondance simultanément dans la page **Résultats de correspondance** . Avant cela, vous pouvez spécifier que l'exécution des tests de règle identifie les clusters qui se chevauchement ou qui ne se chevauchent pas. Si vous exécutez les règles plusieurs fois, vous pouvez exécuter la règle sur des données rechargées à partir de la source ou sur les données précédentes.  
   
  Lorsque vous testez les règles de correspondance dans la page **Résultats de correspondance** , une table des résultats de correspondance indiquant les clusters identifiés par DQS pour toutes les règles s'affiche. Cette table affiche chaque enregistrement du cluster avec les valeurs de domaine de mappage et le score de correspondance, ainsi que l'enregistrement pivot initial pour le cluster. Vous pouvez également afficher des données de profilage pour les règles de correspondance dans leur ensemble, les conditions de chaque règle de correspondance et les statistiques sur les résultats pour toutes les règles de correspondance.  
   
 1.  Sur la page **Résultats de correspondance** , sélectionnez **Clusters qui se chevauchent** dans la liste déroulante pour afficher les enregistrements pivots et les enregistrements suivants pour tous les clusters lorsque la correspondance est exécutée, même si les groupes de clusters ont des enregistrements en commun. Sélectionnez **Clusters qui ne se chevauchent pas** pour afficher les clusters qui ont des enregistrements en commun comme un seul cluster lorsque la correspondance est exécutée.  
   
-2.  Cliquez sur **Recharger les données à partir de la source** pour copier les données de la source de données vers la table de mise en lots et les réindexer lorsque vous exécutez la stratégie de correspondance. Cliquez sur **Exécuter sur les données précédentes** pour exécuter une stratégie de correspondance sans copier les données vers la table de mise en lot et les réindexer. **Exécuter sur les données précédentes** est désactivé pour la première exécution de la stratégie de correspondance, ou si vous modifiez le mappage dans la page **mapper** et que vous appuyez sur **Oui** dans le menu contextuel suivant. Dans ces deux cas, vous devez effectuer une réindexation. Il n'est pas nécessaire d'effectuer une réindexation si la stratégie de correspondance n'a pas changé. L'exécution sur les données précédentes peut améliorer les performances.  
+2.  Cliquez sur **Recharger les données à partir de la source** pour copier les données de la source de données vers la table de mise en lots et les réindexer lorsque vous exécutez la stratégie de correspondance. Cliquez sur **Exécuter sur les données précédentes** pour exécuter une stratégie de correspondance sans copier les données vers la table de mise en lot et les réindexer. L'option**Exécuter sur les données précédentes** est désactivée pour la première exécution de la stratégie de correspondance, ou si vous modifiez le mappage dans la page **Mapper** et que vous appuyez sur **Oui** dans la fenêtre suivante. Dans ces deux cas, vous devez effectuer une réindexation. Il n'est pas nécessaire d'effectuer une réindexation si la stratégie de correspondance n'a pas changé. L'exécution sur les données précédentes peut améliorer les performances.  
   
 3.  Cliquez sur **Démarrer** pour exécuter le processus de correspondance pour toutes les règles que vous avez définies. La table **Résultats de correspondance** affiche l'ID d'enregistrement, le numéro de cluster et les colonnes de données (y compris celles ne figurant pas dans la règle de correspondance) pour chaque enregistrement d'un cluster. L'enregistrement de début du cluster est sélectionné de manière aléatoire. (Vous déterminez l’enregistrement survivant en sélectionnant la règle de survie dans la page **Exporter** lorsque vous exécutez le projet de correspondance.) Chaque ligne supplémentaire dans un cluster est considérée comme un doublon ; son score de correspondance (par rapport à l’enregistrement pivot) est fourni dans le tableau des résultats.  
   
@@ -175,9 +175,9 @@ ms.locfileid: "75251788"
   
 7.  Si vous êtes satisfait des résultats de toutes les règles, cliquez sur **Terminer** pour terminer le processus de stratégie de correspondance, puis cliquez sur l'une des options suivantes :  
   
-    -   **Oui-publier la base de connaissances et quitter**: la base de connaissances sera publiée pour l’utilisateur actuel ou d’autres utilisateurs. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. L'écran Ouvrir la base de connaissances s'affichera à nouveau.  
+    -   **Oui. Publier la base de connaissances et quitter** : la base de connaissances sera publiée en vue de son utilisation par l’utilisateur actuel ou d’autres utilisateurs. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. L'écran Ouvrir la base de connaissances s'affichera à nouveau.  
   
-    -   **Non-enregistrer le travail dans la base de connaissances et quitter**: votre travail sera enregistré, la base de connaissances restera verrouillée et l’état de la base de connaissances sera défini sur **en cours**. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
+    -   **Non. Enregistrer le travail dans la base de connaissances et quitter** : votre travail sera enregistré, la base de connaissances restera verrouillée et l’état de la base de connaissances sera défini sur **En cours**. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
   
     -   **Annuler-rester sur l’écran actuel**: la fenêtre contextuelle est fermée et vous êtes redirigé vers l’écran de gestion de l’objet de domaine.  
   
@@ -188,28 +188,28 @@ ms.locfileid: "75251788"
   
 9. Cliquez sur **Annuler** pour mettre fin à l'activité Stratégie de correspondance, auquel cas vous perdrez votre travail, et revenir à la page d'accueil de DQS.  
   
-##  <a name="FollowUp"></a>Suivi : après avoir créé une stratégie de correspondance  
+##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> Suivi : Après avoir créé une stratégie de correspondance  
  Après avoir créé une stratégie de correspondance, vous pouvez exécuter un projet de correspondance basé sur la base de connaissances qui contient la stratégie de correspondance. Pour plus d’informations, consultez [Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a>Onglets générateur de profils et résultats  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>Onglets générateur de profils et résultats  
  Les onglets Générateur de profils et Résultats contiennent des statistiques pour les pages Stratégie de correspondance et Résultats de correspondance.  
   
-###  <a name="Profiler"></a>Onglet générateur de profils  
+###  <a name="profiler-tab"></a><a name="Profiler"></a>Onglet générateur de profils  
  Cliquez sur l'onglet **Générateur de profils** pour afficher des statistiques pour la base de données source et pour chaque champ inclus dans la règle de stratégie. Les statistiques sont mises à jour lorsque la règle de stratégie est exécutée.  
   
  Pour plus d'informations sur l'interprétation des statistiques suivantes, consultez [Comment définir des paramètres de règle de correspondance](#MatchingRules).  
   
  Les statistiques de la base de données source sont les suivantes :  
   
--   **Enregistrements**: nombre total d’enregistrements dans la base de données source  
+-   **Enregistrements**: nombre total d'enregistrements dans la base de données source  
   
 -   **Valeurs totales**: nombre total de valeurs dans les champs de la source de données  
   
--   **Nouvelles valeurs**: nombre total de valeurs qui sont nouvelles depuis l’exécution précédente, et leur pourcentage par rapport à l’ensemble  
+-   **Nouvelles valeurs**: nombre total de valeurs qui sont nouvelles depuis l'exécution précédente, et leur pourcentage par rapport à la totalité  
   
--   **Valeurs uniques**: nombre total de valeurs uniques dans les champs, et leur pourcentage par rapport à l’ensemble  
+-   **Valeurs uniques**: nombre total de valeurs uniques dans les champs, et leur pourcentage par rapport à la totalité  
   
--   **Nouvelles valeurs uniques**: nombre total de valeurs uniques qui sont nouvelles dans les champs, et leur pourcentage par rapport à l’ensemble  
+-   **Nouvelles valeurs uniques**: nombre total de valeurs uniques qui sont nouvelles dans les champs, et leur pourcentage par rapport à la totalité  
   
  Les statistiques de champ sont les suivantes :  
   
@@ -217,13 +217,13 @@ ms.locfileid: "75251788"
   
 -   **Nom de domaine**  
   
--   **Nouveau**: nombre de nouvelles valeurs et pourcentage de nouvelles valeurs comparées aux valeurs existantes dans le domaine  
+-   **Nouveau**: nombre de nouvelles valeurs et pourcentage de valeurs nouvelles comparées aux valeurs existantes dans le domaine  
   
--   **Unique**: nombre d’enregistrements uniques dans le champ et leur pourcentage du total  
+-   **Unique**: nombre d'enregistrements uniques dans le champ et leur pourcentage par rapport au total  
   
--   **Exhaustivité**: exhaustivité de chaque champ source mappé pour l’exercice correspondant  
+-   **Exhaustivité**: exhaustivité de chaque champ source qui est mappé pour l'exercice correspondant  
   
-###  <a name="Notifications"></a>Notifications de stratégie de correspondance  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>Notifications de stratégie de correspondance  
  Pour l'activité de stratégie de correspondance, les conditions suivantes génèrent des notifications :  
   
 -   Le champ est vide dans tous les enregistrements ; il est recommandé de l'éliminer du mappage.  
@@ -236,7 +236,7 @@ ms.locfileid: "75251788"
   
 -   Il existe un niveau élevé d'unicité dans ce champ. L'utilisation de ce champ dans la stratégie de correspondance peut diminuer les résultats de correspondance.  
   
-###  <a name="ResultsTab"></a>Onglet résultats de correspondance  
+###  <a name="matching-results-tab"></a><a name="ResultsTab"></a>Onglet résultats de correspondance  
  Cliquez sur l'onglet **Résultats de correspondance** pour afficher des statistiques pour l'exécution de règles de stratégie de correspondance, et l'exécution de règles précédente. Si vous avez exécuté la même règle plusieurs fois avec des valeurs différentes, la table des résultats de correspondance affiche des statistiques pour les deux exécutions, ce qui vous permet de les comparer. Vous pouvez également restaurer la règle précédente si vous souhaitez.  
   
  Les statistiques sont les suivantes :  

@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251718"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
@@ -22,7 +22,7 @@ ms.locfileid: "75251718"
 
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
   
-##  <a name="Knowledge"></a>Concepts de la gestion des connaissances  
+##  <a name="knowledge-management-concepts"></a><a name="Knowledge"></a> Concepts relatifs à la gestion des connaissances  
  La base de connaissances DQS est un référentiel de métadonnées créé par le gestionnaire de données ou un professionnel de l'informatique pour améliorer la qualité des données via des opérations de nettoyage et de mise en correspondance. La gestion des connaissances DQS inclut les processus utilisés pour créer et gérer la base de connaissances, de manière assistée par ordinateur et de manière interactive.  
   
  **Découverte des connaissances**  
@@ -43,16 +43,16 @@ ms.locfileid: "75251718"
   
  Pour plus d'informations sur la gestion des connaissances dans DQS, consultez [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="Projects"></a>Concepts des projets de qualité des données  
+##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> Concepts relatifs au projets de qualité des données  
  Le gestionnaire de données effectue des opérations de qualité des données (nettoyage et correspondance) à l'aide d'un projet de qualité des données dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Data Cleansing**  
   
  Le nettoyage de données dans DQS s'effectue sur la base des connaissances dans une base de connaissances DQS. Le nettoyage de données dans DQS est un processus en deux étapes :  
   
--   **Nettoyage assisté par ordinateur**: DQS utilise les connaissances de la base de connaissances sélectionnée pour le projet de nettoyage afin de proposer des corrections/suggestions aux valeurs d’une source de données.  
+-   **Nettoyage assisté par ordinateur**: DQS utilise les connaissances d'une base de connaissances sélectionnée pour le projet de nettoyage afin de proposer des corrections/suggestions aux valeurs d'une source de données.  
   
--   **Nettoyage interactif**: le gestionnaire de données peut exécuter le processus de nettoyage interactif pour modifier ou augmenter les corrections de données proposées par le processus de nettoyage des données assisté par ordinateur. Il utilise pour cela les niveaux de confiance et les statistiques identifiés par le processus de nettoyage de données, ou écrit manuellement ses propres modifications dans le projet.  
+-   **Nettoyage interactif**: le gestionnaire de données ou un professionnel de l'informatique peut exécuter le processus de nettoyage interactif pour modifier ou augmenter les corrections aux données proposées par le processus de nettoyage de données assisté par ordinateur. Il utilise pour cela les niveaux de confiance et les statistiques identifiés par le processus de nettoyage de données, ou écrit manuellement ses propres modifications dans le projet.  
   
  Après le nettoyage de données, le gestionnaire peut exporter les données traitées vers une base de données SQL Server, un fichier .csv ou un fichier Excel. Pour plus d'informations, voir [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
@@ -66,10 +66,10 @@ ms.locfileid: "75251718"
   
  Pour plus d’informations sur les projets de qualité des données dans DQS, consultez [Projets de qualité des données &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md).  
   
-##  <a name="Admin"></a>Concepts de l’administration de la qualité des données  
+##  <a name="data-quality-administration-concepts"></a><a name="Admin"></a> Concepts relatifs à l'administration de la qualité des données  
  Un administrateur DQS peut effectuer diverses tâches d'administration à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Surveillance de l’activité**  
+ **Analyse des activités**  
   
  L'analyse des activités affiche l'état de chaque activité comprise dans une plage de données, fournit des données pour chaque activité et permet aux administrateurs DQS de contrôler une activité. Pour plus d’informations, consultez [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   

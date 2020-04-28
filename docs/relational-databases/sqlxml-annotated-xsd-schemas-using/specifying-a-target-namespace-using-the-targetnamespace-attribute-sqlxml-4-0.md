@@ -21,10 +21,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 39469073a8affe82ee5231a71676d7046f712f9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257364"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "75257364"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>R. Spécification d'un espace de noms cible  
+### <a name="a-specifying-a-target-namespace"></a>A. Spécification d'un espace de noms cible  
  Le schéma XSD suivant spécifie un espace de noms cible à l’aide de l’attribut **xsd : targetNamespace** . Le schéma définit également les valeurs des attributs **elementFormDefault** et **attributeFormDefault** sur **« Unqualified »** (valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale qui affecte tous les éléments locaux (**\<ordre>** dans le schéma) et les attributs (**CustomerID**, **ContactName**et **OrderID** dans le schéma).  
   
 ```  

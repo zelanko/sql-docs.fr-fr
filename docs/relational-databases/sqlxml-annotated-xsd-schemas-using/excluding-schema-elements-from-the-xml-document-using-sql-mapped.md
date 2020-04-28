@@ -24,10 +24,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257441"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Exclusion d’éléments du schéma du document XML à l’aide de sql:mapped
@@ -41,7 +41,7 @@ ms.locfileid: "75257441"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Spécification de l'annotation sql:mapped  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Spécification de l'annotation sql:mapped  
  Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un ** \<élément person. contact>** avec les attributs **ContactID**, **FirstName**, **LastName**et **HomeAddress** .  
   
  Lors du mappage de ce schéma XSD à la table Person. contact de la base de données AdventureWorks, **SQL : mapped** est spécifié sur l’attribut **HomeAddress** parce que la table Employees ne stocke pas les adresses personnelles des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  

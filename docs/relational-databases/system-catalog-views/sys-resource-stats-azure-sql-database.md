@@ -20,16 +20,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246909"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Renvoie les données de stockage et l’utilisation d’UC pour une base de données Azure SQL Database. Les données sont collectées et agrégées par intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes dans laquelle il y a une modification de la consommation des ressources. Les données retournées incluent l’utilisation du processeur, la modification de la taille du stockage et la modification des références SKU de base de données. Les bases de données inactives sans modification peuvent ne pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
+  Renvoie les données de stockage et l’utilisation d’UC pour une base de données Azure SQL Database. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes dans laquelle il y a une modification de la consommation des ressources. Les données retournées incluent l’utilisation du processeur, la modification de la taille du stockage et la modification des références SKU de base de données. Les bases de données inactives sans modification peuvent ne pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
   
  La vue **sys. resource_stats** a des définitions différentes selon la version du serveur Azure SQL Database à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "75246909"
   
 |Colonnes|Type de données|Description|  
 |----------------------------|---------------|-----------------|  
-|start_time|**DATETIME**|Heure UTC indiquant le début de l’intervalle de création de rapports de cinq minutes.|  
-|end_time|**DATETIME**|Heure UTC indiquant la fin de l’intervalle de création de rapports de cinq minutes.|  
+|start_time|**datetime**|Heure UTC indiquant le début de l’intervalle de création de rapports de cinq minutes.|  
+|end_time|**datetime**|Heure UTC indiquant la fin de l’intervalle de création de rapports de cinq minutes.|  
 |database_name|**nvarchar(128)**|Nom de la base de données utilisateur.|  
 |sku|**nvarchar(128)**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> De base<br /><br /> standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critique pour l’entreprise|  
 |storage_in_megabytes|**float**|Taille de stockage maximale en mégaoctets pour la période, y compris les données, les index, les procédures stockées et les métadonnées de la base de données.|  

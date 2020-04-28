@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247312"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
@@ -36,7 +36,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|ID du pool de ressources. N'accepte pas la valeur NULL.
-|**nomme**|sysname|Nom du pool de ressources. N'accepte pas la valeur NULL.|
+|**name**|sysname|Nom du pool de ressources. N'accepte pas la valeur NULL.|
 |**snapshot_time**|datetime2|Date et heure de l’instantané des statistiques du pool de ressources|
 |**duration_ms**|int|Durée entre l’instantané actuel et l’instantané précédent|
 |**statistics_start_time**|datetime2|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|
@@ -135,5 +135,5 @@ select snapshot_time, name, cap_vcores_used_percent,
 ## <a name="see-also"></a>Voir aussi
 
 - [Gouvernance du taux de journal des traductions](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Limites des ressources de DTU du pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Limites de ressources vCore du pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Limites des ressources DTU des pools élastiques](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Limites des ressources vCore des pools élastiques](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
