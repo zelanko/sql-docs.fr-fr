@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525460"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
@@ -24,12 +24,12 @@ ms.locfileid: "79525460"
   
  Power View est un client Web dynamique qui est lancé directement dans le navigateur à partir d'un fichier de source de données de rapport (.rsds) partagé dans une bibliothèque SharePoint. La source de données de rapport agit comme un pont entre la source de données principale et le client. La source de données principale peut être un classeur PowerPivot dans SharePoint, un modèle tabulaire sur un serveur Analysis Services s'exécutant en mode tabulaire ou un modèle multidimensionnel sur un serveur Analysis Services s'exécutant en mode multidimensionnel. Il est alors possible d'enregistrer des rapports Power View dans une galerie ou une bibliothèque SharePoint, puis de les partager avec d'autres membres de votre organisation.  
   
- **Power View pour l’architecture des modèles multidimensionnels**  
+ **Power View pour l'architecture des modèles multidimensionnels**  
   
  ![Power View pour l’architecture des modèles multidimensionnels](../media/daxmd-architecture.gif "Power View pour l’architecture des modèles multidimensionnels")  
   
 ## <a name="prerequisites"></a>Prérequis  
- **Configuration requise du serveur**  
+ **Configuration requise au niveau du serveur**  
   
 -   SQL Server 2014 édition Enterprise ou Business Intelligence avec Analysis Services exécuté en mode multidimensionnel.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "79525460"
   
  Dans cette version, les modèles multidimensionnels prennent en charge l'analyse et la visualisation grâce à l'utilisation de Power View en mode SharePoint. Aucune configuration particulière de vos modèles multidimensionnels n'est nécessaire. Il existe toutefois quelques différences dans la manière dont les objets de modèle multidimensionnel sont affichés dans Power View, par rapport à d'autres outils clients, tels que Microsoft Excel et Microsoft Performance Point. Cette version ne prend pas en charge l'analyse et la visualisation de modèles multidimensionnels à l'aide de Power View dans Excel 2013.  
   
- **Prise en charge native des requêtes DAX**  
+ **Prise en charge native pour les requêtes DAX**  
   
  Avec cette version, les modèles multidimensionnels prennent en charge les fonctions et les requêtes DAX, en plus des requêtes MDX plus traditionnelles. Certaines fonctions DAX, telles que PATH, ne sont pas applicables dans la modélisation multidimensionnelle. Pour mieux comprendre le fonctionnement de DAX et ses différences par rapport à MDX, consultez [Data Analysis Expressions et MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
   
 ## <a name="multidimensional-to-tabular-object-mapping"></a>Mappage d'objets multidimensionnels/tabulaires  
  Analysis Services fournit une représentation de métadonnées de modèle tabulaire d'un modèle multidimensionnel. Les objets d'un modèle multidimensionnel sont représentés en tant qu'objets tabulaires dans Power View et dans CSDL en sortie avec des annotations BI.  
   
- **Résumé du mappage d’objets**  
+ **Résumé du mappage d'objets**  
   
 |Objet multidimensionnel|Objet tabulaire|  
 |-----------------------------|--------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "79525460"
   
  **Mesure en tant que variante**  
   
- ![Hiérarchie ne pouvant être agrégée dans Power View](../media/daxmd-nonaggrattrib.gif "Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View")  
+ ![Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View](../media/daxmd-nonaggrattrib.gif "Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View")  
   
 ### <a name="implicit-measures"></a>Mesures implicites  
  Les modèles tabulaires fournissent aux utilisateurs la possibilité de créer des mesures *implicites* , telles qu'un compte, une somme ou une moyenne sur des champs. Concernant les modèles multidimensionnels, étant donné que les données d'attribut de dimension sont stockées différemment, l'interrogation de mesures implicites peut durer un certain temps. De ce fait, les mesures implicites ne sont pas disponibles dans Power View.  
@@ -99,14 +99,14 @@ ms.locfileid: "79525460"
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensions, attributs et hiérarchies  
  Les dimensions de cube sont exposées sous forme de tableaux dans les métadonnées tabulaires. Dans la liste de champs Power View, les attributs de dimension sont affichés en tant que colonnes dans les dossiers d'affichage.  Les attributs de dimension dont la propriété AttributeHierarchyEnabled est définie avec la valeur False, par exemple, l'attribut de date de naissance dans la dimension Customer, ou dont la propriété AttributeHierarchyVisible est définie avec la valeur False, n'apparaissent pas dans la liste de champs Power View. Les hiérarchies à plusieurs niveaux ou les hiérarchies d'utilisateurs, par exemple, Customer Geography dans la dimension Customer, sont exposées en tant que hiérarchies dans la liste de champs Power View. Les éléments UnknownMembers cachés d'un attribut de dimension, sont exposés dans les requêtes DAX et dans Power View.  
   
- **Dimension, attributs et hiérarchies dans SQL Server Data Tools (SSDT) et Power View liste de champs**  
+ **Dimension, attributs et hiérarchies dans SQL Server Data Tools (SSDT) et dans une liste de champs Power View**  
   
  ![Dimensions dans SSDT et dans une liste de champs Power View](../media/daxmd-ssdt-dimensions.gif "Dimensions dans SSDT et dans une liste de champs Power View")  
   
 ### <a name="dimension-attribute-type"></a>Type d'attribut de dimension  
  Les modèles multidimensionnels prennent en charge l'association d'attributs de dimension avec des types d'attributs de dimension spécifiques. L'image ci-dessous montre la dimension Geography dans laquelle les attributs de dimension de ville, d'état/province, de pays et de code postal sont associés aux types geography. Ceux-ci sont exposés dans les métadonnées tabulaires. Power View reconnaît les métadonnées permettant aux utilisateurs de créer des visualisations de carte. C'est ce qu'indique l'icône de carte en regard des colonnes de ville, pays, code postal et état/province dans le tableau Geography dans la liste de champs Power View.  
   
- **Types Geography d’attribut de dimension dans SSDT et liste de champs Power View**  
+ **Types geography d'attributs de dimension dans SSDT et la liste de champs Power View**  
   
  ![Types geography d'attributs de dimension](../media/daxmd-ssdt-attribute-geog-types.gif "Types geography d'attributs de dimension")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "79525460"
   
  L’image ci-dessous montre un rapport de Power View pour un cube qui contient des membres calculés par Time Intelligence sur l’attribut de dimension « fiscal date calculations » dans la dimension Date.  
   
- **Power View rapport avec des membres calculés**  
+ **Rapport Power View avec des membres calculés**  
   
  ![Membres calculés dans Power View](../media/daxmd-calcmembersinpowerview.gif "Membres calculés dans Power View")  
   
@@ -138,21 +138,21 @@ ms.locfileid: "79525460"
 ### <a name="non-aggregatable-attributeshierarchies"></a>Hiérarchies/Attributs ne pouvant faire l'objet d'une agrégation  
  Dans un modèle multidimensionnel, la valeur False peut être définie pour la propriété IsAggregatable des attributs d'une dimension. Cela signifie que l'auteur du modèle a spécifié que les applications clientes ne doivent pas agréger les données entre les hiérarchies (attributs ou à plusieurs niveaux) lorsqu'elles interrogent les données. Dans Power View, cet attribut de dimension est exposé en tant que colonne pour laquelle les sous-totaux ne sont pas disponibles. Dans l'image ci-dessous, vous pouvez voir un exemple d'une hiérarchie ne pouvant faire l'objet d'une agrégation : Accounts. Le niveau le plus élevé de la hiérarchie parent-enfant Accounts ne peut pas faire l'objet d'une agrégation, contrairement aux autres niveaux. Dans une visualisation sous forme de matrice de la hiérarchie Accounts (deux premiers niveaux), vous voyez les sous-totaux pour le niveau 02 d'Accounts, mais pas pour le niveau le plus élevé (01).  
   
- **Hiérarchie ne pouvant être agrégée dans Power View**  
+ **Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View**  
   
- ![Hiérarchie ne pouvant être agrégée dans Power View](../media/daxmd-nonaggrattrib.gif "Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View")  
+ ![Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View](../media/daxmd-nonaggrattrib.gif "Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View")  
   
 ## <a name="images"></a>Images  
  Power View offre la possibilité de rendre des images. Dans les modèles multidimensionnels, l'une des manières pour fournir des images à Power View consiste à exposer des colonnes contenant des URL (Uniform Resource Locator) des images. Dans cette version, Analysis Services prend en charge le balisage des attributs de dimension comme type ImageURL. Ce type de données est alors fourni à Power View dans les métadonnées tabulaires. Power View peut alors télécharger et afficher les images spécifiées dans les URL dans les visualisations.  
   
- **Type d’attribut de dimension ImageURL dans SSDT**  
+ **Type d'attribut de dimension ImageURL dans SSDT**  
   
  ![Propriétés d'attribut de dimension](../media/daxmd-dimattribute-properties.gif "Propriétés d'attribut de dimension")  
   
 ## <a name="parent-child-hierarchies"></a>Hiérarchies parent-enfant  
  Les modèles multidimensionnels prennent en charge les hiérarchies parent-enfant, lesquelles sont exposées en tant que hiérarchies dans les métadonnées tabulaires. Chaque niveau de la hiérarchie parent-enfant est exposé en tant que colonne masquée. L'attribut de clé de la dimension parent-enfant n'est pas exposé dans les métadonnées tabulaires.  
   
- **Hiérarchies parent-enfant dans Power View**  
+ **Hiérarchies de type parent-enfant dans Power View**  
   
  ![Hiérarchies parent-enfant](../media/daxmd-ssdt-hierarchies.gif "Hiérarchies parent-enfant")  
   
@@ -179,9 +179,9 @@ ms.locfileid: "79525460"
 ## <a name="unsupported-features"></a>Fonctionnalités non prises en charge  
  **Power View dans Excel 2013** -ne prend pas en charge la connexion et la création de rapports pour les modèles multidimensionnels. Power View pour les modèles multidimensionnels prend en charge les clients Power View basés sur navigateur uniquement.  
   
- Les **actions** ne sont pas prises en charge dans les rapports de Power View ni dans les requêtes Dax sur un modèle multidimensionnel.  
+ Les**actions** ne sont pas prises en charge dans les rapports Power View ni dans les requêtes DAX portant sur un modèle multidimensionnel.  
   
- Les **jeux nommés** dans les modèles multidimensionnels ne sont pas pris en charge dans les Power View ni dans les requêtes Dax sur un modèle multidimensionnel.  
+ Les**jeux nommés** dans les modèles multidimensionnels ne sont pas pris en charge dans Power View ni dans les requêtes DAX portant sur un modèle multidimensionnel.  
   
 > [!NOTE]  
 >  Les actions et les jeux nommés non pris en charge n'empêchent pas les utilisateurs de se connecter et d'explorer les modèles multidimensionnels avec Power View.  
@@ -193,7 +193,7 @@ ms.locfileid: "79525460"
   
  Les métadonnées multidimensionnelles sont représentées en tant qu'espace de noms de modèle tabulaire dans un document CSDLBI, ou CSDL en sortie, lorsqu'une requête DISCOVER_CSDL_METADATA est envoyée à l'instance Analysis Services.  
   
- **Exemple de demande de DISCOVER_CSDL_METADATA**  
+ **Exemple de requête DISCOVER_CSDL_METADATA**  
   
 ```  
 <Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -230,7 +230,7 @@ ms.locfileid: "79525460"
 ## <a name="client-help-on-officecom"></a>Aide sur le client sur Office.com  
  Les articles suivants sont fournis sur Office.com pour aider les utilisateurs à en savoir plus sur la manière dont les objets de modèle multidimensionnel apparaissent dans Power View et sur la procédure de création d'un rapport d'exemple :  
   
- [Comprendre les objets de modèle multidimensionnels dans Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Comprendre les objets de modèle multidimensionnel dans Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Explorez le modèle multidimensionnel Adventure Works à l’aide de Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
+ [Explorer le modèle multidimensionnel Adventure Works avec Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

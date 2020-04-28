@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289447"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "79289447"
 
 -   [Exemple C : chiffrement au niveau colonne à l'aide d'une clé asymétrique dans le coffre de clés](#ExampleC)
 
-##  <a name="Uses"></a>Utilisations de EKM
+##  <a name="uses-of-ekm"></a><a name="Uses"></a>Utilisations de EKM
  Une organisation peut utiliser le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour protéger les données sensibles. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]le chiffrement comprend [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), le [chiffrement au niveau des colonnes](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) et le [chiffrement](../../backup-restore/backup-encryption.md)de la sauvegarde. Dans tous ces cas, les données sont chiffrées à l'aide d'une clé de chiffrement de données symétrique. La clé de chiffrement de données symétrique est ensuite protégée en la chiffrant avec une hiérarchie de clés stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par ailleurs, l'architecture du fournisseur EKM permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de protéger les clés de chiffrement de données à l'aide d'une clé asymétrique stockée en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un fournisseur de services de chiffrement externe. L'utilisation de l'architecture du fournisseur EKM ajoute une couche supplémentaire de sécurité et permet aux organisations de séparer la gestion des clés de celle des données.
 
  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Azure Key Vault permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'utiliser le service de coffre de clés extensible à hautes performances et haute disponibilité comme un fournisseur EKM pour la protection des clés de chiffrement. Vous pouvez utiliser le service de coffre de clés avec les installations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Machines virtuelles [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure et pour les serveurs locaux. Le service de coffre de clés offre également la possibilité d'utiliser des modules de sécurité matériels étroitement contrôlés et surveillés pour augmenter le niveau de protection des clés de chiffrement asymétriques. Pour plus d’informations sur le coffre de clés, consultez [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401).
@@ -51,15 +51,15 @@ ms.locfileid: "79289447"
 
  ![Gestion de clés extensible SQL Server avec Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "Gestion de clés extensible (EKM) SQL Server avec Azure Key Vault")
 
-##  <a name="Step1"></a>Étape 1 : configurer le Key Vault pour une utilisation par SQL Server
+##  <a name="step-1-set-up-the-key-vault-for-use-by-sql-server"></a><a name="Step1"></a>Étape 1 : configurer le Key Vault pour une utilisation par SQL Server
  Les étapes suivantes vous permettent de configurer un coffre de clés en vue de l'utiliser avec le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] pour la protection de clé de chiffrement. Un coffre est peut-être déjà en cours d'utilisation pour l'organisation. Si aucun coffre n'existe, l'administrateur Azure dans votre organisation chargé de gérer les clés de chiffrement peut créer un coffre, générer une clé asymétrique dans le coffre, puis autoriser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à utiliser la clé. Pour vous familiariser avec le service de coffre de clés, consultez la page [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402)et les informations de référence sur les [applets de commande du coffre de clés Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) PowerShell.
 
 > [!IMPORTANT]
 >  Si vous avez plusieurs abonnements Azure, vous devez utiliser l'abonnement qui comprend [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-1.  **Créer un coffre :** Créez un coffre en suivant les instructions de la section **créer un coffre de clés** de la rubrique [prise en main de Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Notez le nom du coffre. Cette rubrique utilise **ContosoKeyVault** comme nom de coffre de clés.
+1.  **Créer un coffre :** Créez un coffre en suivant les instructions de la section **Créer un coffre de clés** de la page [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402). Notez le nom du coffre. Cette rubrique utilise **ContosoKeyVault** comme nom de coffre de clés.
 
-2.  **Générez une clé asymétrique dans le coffre :** La clé asymétrique dans le coffre de clés est utilisée pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] protéger les clés de chiffrement. Seule la partie publique de la clé asymétrique quitte le coffre, la partie privée n'étant jamais exportée par celui-ci. Toutes les opérations de chiffrement à l'aide de la clé asymétrique sont déléguées au coffre de clés Azure et sont protégées par la sécurité du coffre de clés.
+2.  **Générer une clé asymétrique dans le coffre :** la clé asymétrique dans le coffre de clés permet de protéger les clés de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Seule la partie publique de la clé asymétrique quitte le coffre, la partie privée n'étant jamais exportée par celui-ci. Toutes les opérations de chiffrement à l'aide de la clé asymétrique sont déléguées au coffre de clés Azure et sont protégées par la sécurité du coffre de clés.
 
      Il existe plusieurs méthodes pour générer une clé asymétrique et la stocker dans le coffre. Vous pouvez générer une clé en externe et l'importer dans le coffre en tant que fichier .pfx. Vous pouvez aussi créer la clé directement dans le coffre à l'aide des API du coffre de clés.
 
@@ -71,9 +71,9 @@ ms.locfileid: "79289447"
     > [!IMPORTANT]
     >  Le coffre de clés prend en charge plusieurs versions de la même clé nommée. Les clés à utiliser par le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne doivent pas être gérées sous forme de versions, ni être restaurées. Si l'administrateur veut modifier la clé utilisée pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , une nouvelle clé avec un autre nom doit être créée dans le coffre et utilisée pour chiffrer la clé de chiffrement des données.
 
-     Pour plus d'informations sur la façon d'importer une clé dans le coffre de clés ou de créer une clé dans le coffre de clés (non recommandé pour un environnement de production), voir la section **Ajouter une clé ou une clé secrète dans le coffre de clés** de la page [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402).
+     Pour plus d'informations sur la façon d'importer une clé dans le coffre de clés ou de créer une clé dans le coffre de clés (non recommandé pour un environnement de production), voir la section **Ajouter une clé ou une clé secrète dans le coffre de clés** de la page [Prise en main d’Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).
 
-3.  **Obtenir Azure Active Directory principaux de service à utiliser pour SQL Server :** Lorsque l’organisation s’inscrit à un service Cloud Microsoft, elle obtient un Azure Active Directory. Créez dans le répertoire Azure Active Directory des **principaux de service** qui permettront à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de s'authentifier auprès d'Azure Active Directory au moment d'accéder au coffre de clés.
+3.  **Obtenir les principaux du service Azure Active Directory à utiliser pour SQL Server :** quand l'organisation s'inscrit à un service cloud Microsoft, elle obtient un répertoire Azure Active Directory. Créez dans le répertoire Azure Active Directory des **principaux de service** qui permettront à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de s'authentifier auprès d'Azure Active Directory au moment d'accéder au coffre de clés.
 
     -   Un **principal de service** permet à un administrateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'accéder au coffre pendant la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour utiliser le chiffrement.
 
@@ -81,41 +81,41 @@ ms.locfileid: "79289447"
 
      Pour plus d'informations sur la façon d'inscrire une application et de générer un principal du service, consultez la section **Inscrire une application auprès d'Azure Active Directory** dans [Prise en main d'Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=521402). Le processus d'inscription retourne un **ID d'application** (également appelé **ID CLIENT**) et une **clé d'authentification** (également appelée **clé secrète**) pour chaque **principal du service**Azure Active Directory. Lorsqu’il est utilisé `CREATE CREDENTIAL` dans l’instruction, le trait d’Union doit être supprimé de l' **ID client**. Enregistrez ces éléments en vue de les utiliser dans les scripts ci-après :
 
-    -   **Principal du service** pour une connexion **sysadmin** : **CLIENTID_sysadmin_login** et **SECRET_sysadmin_login**
+    -   **Principal de service** pour une connexion **sysadmin** : **CLIENTID_sysadmin_login** et **SECRET_sysadmin_login**
 
-    -   **Principal du service** pour [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]le : **CLIENTID_DBEngine** et **SECRET_DBEngine**.
+    -   **Principal de service** pour le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** et **SECRET_DBEngine**.
 
 4.  **Accordez des autorisations pour que les principaux du service accèdent au Key Vault :** Les deux principaux **CLIENTID_sysadmin_login** et **CLIENTID_DBEngineService** requièrent les autorisations d' **extraction**, de **liste**, d' **wrapKey**et de **unwrapKey** dans le coffre de clés. Si vous prévoyez de créer des clés via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez également accorder l'autorisation **create** dans le coffre de clés.
 
     > [!IMPORTANT]
-    >  Les utilisateurs doivent avoir au moins les opérations **wrapKey** et **unwrapKey** pour le coffre de clés.
+    >   Les utilisateurs doivent avoir au moins les opérations **wrapKey** et **unwrapKey** pour le coffre de clés.
 
      Pour plus d'informations sur l'octroi d'autorisations dans le coffre, voir la section **Autoriser l'application à utiliser la clé ou la clé secrète** de la page [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402).
 
      Liens vers la documentation du coffre de clés Azure
 
-    -   [Qu’est-ce que Azure Key Vault ?](https://go.microsoft.com/fwlink/?LinkId=521401)
+    -   [Qu’est-ce qu’Azure Key Vault ?](https://go.microsoft.com/fwlink/?LinkId=521401)
 
     -   [Prise en main de Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
 
-    -   Informations de référence sur les [applets de commande Azure Key Vault](https://docs.microsoft.com/powershell/module/azurerm.keyvault) de PowerShell
+    -   Informations de référence sur les [applets de commande d’Azure Key Vault](https://docs.microsoft.com/powershell/module/azurerm.keyvault) PowerShell
 
-##  <a name="Step2"></a>Étape 2 : installer le connecteur SQL Server
+##  <a name="step-2-install-the-sql-server-connector"></a><a name="Step2"></a>Étape 2 : installer le connecteur SQL Server
  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est téléchargé et installé par l'administrateur de l'ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Recherchez le **connecteur SQL Server pour le coffre de clés Microsoft Azure**, passez en revue les détails, la configuration système requise et les instructions d'installation, téléchargez le connecteur et démarrez l'installation à l'aide de l'option **Exécuter**. Passez en revue la licence et acceptez-la, puis continuez.
 
  Par défaut, le connecteur est installé sur **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Cet emplacement peut être changé lors de l'installation. (S'il est changé, adaptez les scripts ci-dessous).
 
  À la fin de l'installation, les éléments suivants sont installés sur l'ordinateur :
 
--   **Microsoft. AzureKeyVaultService. EKM. dll**: il s’agit de la dll du fournisseur EKM de chiffrement qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être inscrite auprès de à l’aide de l’instruction CREATE Cryptographic Provider.
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: Il s'agit de la bibliothèque de liens dynamiques du fournisseur EKM de chiffrement qui doit être enregistrée avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de l'instruction CREATE CRYPTOGRAPHIC PROVIDER.
 
--   **Azure Key Vault connecteur SQL Server**: il s’agit d’un service Windows qui permet au fournisseur EKM de chiffrement de communiquer avec le coffre de clés.
+-   **Connecteur SQL Server pour le coffre de clés Azure**: Il s'agit d'un service Windows qui permet au fournisseur EKM de chiffrement de communiquer avec le coffre de clés.
 
  L'installation du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet également de télécharger éventuellement des exemples de scripts pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
-##  <a name="Step3"></a>Étape 3 : configurer SQL Server pour utiliser un fournisseur EKM pour le Key Vault
+##  <a name="step-3-configure-sql-server-to-use-an-ekm-provider-for-the-key-vault"></a><a name="Step3"></a>Étape 3 : configurer SQL Server pour utiliser un fournisseur EKM pour le Key Vault
 
-###  <a name="Permissions"></a> Autorisations
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations
  L'exécution de l'ensemble de ce processus nécessite l'autorisation CONTROL SERVER ou l'appartenance au rôle serveur fixe **sysadmin** . Des actions spécifiques nécessitent les autorisations suivantes :
 
 -   Pour créer un fournisseur de chiffrement, l'autorisation CONTROL SERVER ou l'appartenance au rôle de serveur fixe **sysadmin** est requise.
@@ -128,7 +128,7 @@ ms.locfileid: "79289447"
 
 -   La création d'une clé asymétrique nécessite l'autorisation CREATE ASYMMETRIC KEY.
 
-###  <a name="TsqlProcedure"></a>Pour configurer SQL Server pour utiliser un fournisseur de services de chiffrement
+###  <a name="to-configure-sql-server-to-use-a-cryptographic-provider"></a><a name="TsqlProcedure"></a>Pour configurer SQL Server pour utiliser un fournisseur de services de chiffrement
 
 1.  Configurez le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] pour utiliser la gestion de clés extensible et inscrivez (créez) le fournisseur de chiffrement avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -214,7 +214,7 @@ ms.locfileid: "79289447"
 
 ## <a name="examples"></a>Exemples
 
-###  <a name="ExampleA"></a>Exemple A : Transparent Data Encryption à l’aide d’une clé asymétrique du Key Vault
+###  <a name="example-a-transparent-data-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleA"></a>Exemple A : Transparent Data Encryption à l’aide d’une clé asymétrique du Key Vault
  Après avoir effectué les étapes ci-dessus, créez des informations d'identification et une connexion, puis créez une clé de chiffrement de base de données protégée par la clé asymétrique dans le coffre de clés. Utilisez la clé de chiffrement de base de données pour chiffrer une base de données avec le chiffrement transparent des données.
 
  Chiffrer une base de données nécessite l'autorisation CONTROL sur la base de données.
@@ -279,7 +279,7 @@ ms.locfileid: "79289447"
 
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)
 
-###  <a name="ExampleB"></a>Exemple B : chiffrement des sauvegardes à l’aide d’une clé asymétrique à partir du Key Vault
+###  <a name="example-b-encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleB"></a>Exemple B : chiffrement des sauvegardes à l’aide d’une clé asymétrique à partir du Key Vault
  Les sauvegardes chiffrées sont prises en charge à partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. L'exemple suivant crée et restaure une sauvegarde chiffrée avec une clé de chiffrement de données protégée par la clé asymétrique dans le coffre de clés.
 
 ```sql
@@ -301,7 +301,7 @@ GO
 
  Pour plus d’informations sur les options de sauvegarde, consultez [backup &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).
 
-###  <a name="ExampleC"></a>Exemple C : chiffrement au niveau des colonnes à l’aide d’une clé asymétrique à partir du Key Vault
+###  <a name="example-c-column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleC"></a>Exemple C : chiffrement au niveau des colonnes à l’aide d’une clé asymétrique à partir du Key Vault
  L'exemple suivant crée une clé symétrique protégée par la clé asymétrique dans le coffre de clés. La clé symétrique est ensuite utilisée pour chiffrer les données de la base de données.
 
  Cet exemple utilise la clé asymétrique CONTOSO_KEY stockée dans le coffre de clés, qui a été importée ou créée précédemment, comme décrit à l' [étape 3 de la section 3](#Step3) ci-dessus. Pour utiliser cette clé asymétrique dans la base de données `ContosoDatabase` , vous devez réexécuter l'instruction CREATE ASYMMETRIC KEY pour fournir à la base de données `ContosoDatabase` une référence à la clé.

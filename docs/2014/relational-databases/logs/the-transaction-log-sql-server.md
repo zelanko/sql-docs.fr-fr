@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289407"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "79289407"
 > [!NOTE]  
 >  Différents points de contrôle créent des points de référence connus et fiables à partir desquels vous pouvez commencer à appliquer les journaux des transactions lors de la récupération d'une base de données. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Avantages : opérations prises en charge par le journal des transactions](#Benefits)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "79289407"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Avantages : opérations prises en charge par le journal des transactions  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>Avantages : opérations prises en charge par le journal des transactions  
  Le journal des transactions prend en charge les opérations suivantes :  
   
 -   Récupération des transactions individuelles  
@@ -54,7 +54,7 @@ ms.locfileid: "79289407"
   
 -   Prise en charge de la haute disponibilité et de solutions de récupération d'urgence : [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], mise en miroir de bases de données et copie des journaux de transaction.  
   
-##  <a name="Truncation"></a>Troncation du journal des transactions  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a>Troncation du journal des transactions  
  La troncation du journal libère de l'espace dans le fichier journal pour que le journal des transactions puisse le réutiliser. La troncation du journal est essentielle pour empêcher que le journal se remplisse. Elle supprime les fichiers journaux virtuels inactifs du journal des transactions logique d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui libère de l'espace dans le journal logique de façon à ce qu'il soit réutilisé par le journal des transactions physique. Si un journal des transactions n'était jamais tronqué, il finirait par occuper tout l'espace disque alloué à ses fichiers journaux physiques.  
   
  Pour éviter ce problème, à moins que la troncation du journal ne soit retardée pour une raison quelconque, la troncation se produit automatiquement après les événements suivants :  
@@ -63,12 +63,12 @@ ms.locfileid: "79289407"
   
 -   En mode de récupération complète ou de récupération utilisant les journaux de transactions, si un point de contrôle s'est produit depuis la sauvegarde précédente, la troncation se produit après une sauvegarde de fichier journal (sauf s'il s'agit d'une sauvegarde de copie uniquement).  
   
- Pour plus d’informations, consultez [facteurs pouvant retarder la troncation du journal](#FactorsThatDelayTruncation), plus loin dans cette rubrique.  
+ Pour plus d'informations, consultez [Facteurs pouvant retarder la troncation du journal](#FactorsThatDelayTruncation), plus loin dans cette rubrique.  
   
 > [!NOTE]  
 >  La troncation du journal ne réduit pas la taille du fichier journal physique. Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d'informations sur la réduction de la taille du fichier journal physique, consultez [Gérer la taille du fichier journal des transactions](manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="FactorsThatDelayTruncation"></a>Facteurs pouvant retarder la troncation du journal  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>Facteurs pouvant retarder la troncation du journal  
  Lorsque les enregistrements de journal restent actifs longtemps, la troncation du journal des transactions est retardée, et le journal des transactions risque de se remplir entièrement.  
   
 > [!IMPORTANT]  
@@ -95,7 +95,7 @@ ms.locfileid: "79289407"
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
 |16|XTP_CHECKPOINT|Quand une base de données possède un groupe de fichiers à mémoire optimisée, aucune troncation du journal des transactions ne peut avoir lieu avant le déclenchement du point de contrôle automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (ce qui se produit chaque fois que le journal croît de 512 Mo).<br /><br /> Remarque : pour tronquer le journal des transactions avant la taille de 512 Mo, déclenchez la commande Checkpoint manuellement sur la base de données en question.|  
   
-##  <a name="MinimallyLogged"></a>Opérations pouvant être journalisées au minimum  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>Opérations pouvant être journalisées au minimum  
  La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en mode de récupération utilisant les journaux de transactions (ainsi qu'en mode de récupération simple, sauf lorsqu'une sauvegarde est en cours).  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ ms.locfileid: "79289407"
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
--   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) et [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)et [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  Lorsque la réplication transactionnelle est activée, les opérations BULK INSERT sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
@@ -135,9 +135,9 @@ ms.locfileid: "79289407"
     -   Reconstruction d'un nouveau segment de mémoire DROP INDEX (le cas échéant).  
   
         > [!NOTE]  
-        >  La désallocation des pages d’index pendant une opération de [Drop index](/sql/t-sql/statements/drop-index-transact-sql) est toujours entièrement journalisée.  
+        >   La désallocation de pages d'index au cours d'une opération [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) est toujours entièrement journalisée.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  `Managing the transaction log`  
   
 -   [Gérer la taille du fichier journal des transactions](manage-the-size-of-the-transaction-log-file.md)  
@@ -153,9 +153,9 @@ ms.locfileid: "79289407"
 -  [Restaurer une sauvegarde du journal des transactions](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôler la durabilité d’une transaction](control-transaction-durability.md)   
- [Conditions requises pour une journalisation minimale dans l'importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Sauvegarde et restauration des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Contrôler la durabilité des transactions](control-transaction-durability.md)   
+ [Conditions préalables à la journalisation minimale dans l’importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [Sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Afficher ou modifier les propriétés d’une base de données](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modes de récupération &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  

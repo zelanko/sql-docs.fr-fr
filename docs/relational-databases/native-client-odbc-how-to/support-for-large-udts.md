@@ -1,5 +1,5 @@
 ---
-title: Soutien aux grands UDTs (fr) Microsoft Docs
+title: Prise en charge des UDT volumineux | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281751"
 ---
 # <a name="support-for-large-udts"></a>Prise en charge de tables UDT volumineuses
@@ -25,12 +25,12 @@ ms.locfileid: "81281751"
   
  Il ne fonctionne pas avec les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Pour plus d’informations sur le support pour les grands UDT, voir [Grands types définis par l’utilisateur CLR &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Pour plus d’informations sur la prise en charge des UDT volumineux, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Exemple  
  La première liste de code correspond à du code source C#. Collez-la dans un fichier appelé LargeStringUDT.cs et compilez-la dans une DLL. Copiez LargeStringUDT.dll vers le répertoire racine de votre lecteur C.  
   
- La deuxième [!INCLUDE[tsql](../../includes/tsql-md.md)]liste de code () crée l’assemblage dans la base de données principale.  
+ La deuxième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée l’assembly dans la base de données Master.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et user32.lib. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281751"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La quatrième [!INCLUDE[tsql](../../includes/tsql-md.md)]liste de code () supprime l’assemblage de la base de données principale.  
+ La quatrième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime l’assembly de la base de données Master.  
   
 ```  
 // LargeStringUDT.cs  

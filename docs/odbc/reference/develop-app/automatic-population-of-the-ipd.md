@@ -1,5 +1,5 @@
 ---
-title: Population automatique de l’IPD (fr) Microsoft Docs
+title: Remplissage automatique de la IPD | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285069"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Remplissage automatique de l’IPD
-Certains conducteurs sont capables de définir les champs de l’IPD après qu’une requête paramétrée a été préparée. Les champs descripteur sont automatiquement peuplés d’informations sur le paramètre, y compris le type de données, la précision, l’échelle et d’autres caractéristiques. Cela équivaut à soutenir **SQLDescribeParam**. Ces informations peuvent être particulièrement précieuses pour une application lorsqu’elle n’a pas d’autre moyen de les découvrir, par exemple lorsqu’une requête ad hoc est effectuée avec des paramètres que l’application ne connaît pas.  
+Certains pilotes sont en mesure de définir les champs de l’IPD après la préparation d’une requête paramétrable. Les champs de descripteur sont renseignés automatiquement avec des informations sur le paramètre, notamment le type de données, la précision, l’échelle et d’autres caractéristiques. Cela équivaut à la prise en charge de **SQLDescribeParam**. Ces informations peuvent être particulièrement utiles pour une application quand elle n’a pas d’autre moyen de la découvrir, par exemple lorsqu’une requête ad hoc est exécutée avec des paramètres que l’application ne connaît pas.  
   
- Une demande détermine si le conducteur prend en charge la population automatique en appelant **SQLGetConnectAttr** avec un *attribut* de SQL_ATTR_AUTO_IPD. Si SQL_TRUE est retournée, le conducteur le prend en charge et l’application peut l’activer en définissant l’attribut SQL_ATTR_ENABLE_AUTO_IPD’énoncé à SQL_TRUE.  
+ Une application détermine si le pilote prend en charge le remplissage automatique en appelant **SQLGetConnectAttr** avec un *attribut* de SQL_ATTR_AUTO_IPD. Si SQL_TRUE est retourné, le pilote le prend en charge et l’application peut l’activer en affectant à l’attribut d’instruction SQL_ATTR_ENABLE_AUTO_IPD la valeur SQL_TRUE.  
   
- Lorsque la population automatique est soutenue et activée, le conducteur peuple les champs de l’IPD après qu’une déclaration SQL contenant des marqueurs de paramètres a été préparée par un appel à **SQLPrepare**. Une application peut récupérer ces informations en appelant **SQLGetDescField** ou **SQLGetDescRec**, ou **SQLDescribeParam**. L’application peut utiliser les informations pour lier le tampon d’application le plus approprié pour un paramètre ou pour spécifier une conversion de données pour elle.  
+ Lorsque le remplissage automatique est pris en charge et activé, le pilote remplit les champs de l’IPD après qu’une instruction SQL contenant des marqueurs de paramètres a été préparée par un appel à **SQLPrepare**. Une application peut récupérer ces informations en appelant **SQLGetDescField** ou **SQLGetDescRec**, ou **SQLDescribeParam**. L’application peut utiliser les informations pour lier la mémoire tampon d’application la plus appropriée à un paramètre ou pour spécifier une conversion de données pour celle-ci.  
   
- La population automatique de l’IPD peut entraîner une pénalité de performance. Une application peut l’éteindre en réinitialisant l’attribut de l’SQL_ATTR_ENABLE_AUTO_IPD déclaration à SQL_FALSE (la valeur par défaut).
+ Le remplissage automatique de l’IPD peut entraîner une baisse des performances. Une application peut la désactiver en réinitialisant l’attribut d’instruction SQL_ATTR_ENABLE_AUTO_IPD sur SQL_FALSE (valeur par défaut).

@@ -18,21 +18,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288579"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Prise en charge des ensembles de lignes de schéma (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB prend également en [!INCLUDE[tsql](../../../includes/tsql-md.md)] charge le retour des informations schématiques à partir d’un serveur lié lors du traitement des requêtes distribuées.  
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend également en charge le retour des informations de schéma à [!INCLUDE[tsql](../../../includes/tsql-md.md)] partir d’un serveur lié lors du traitement des requêtes distribuées.  
   
 > [!NOTE]  
 >  Bien que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prenne en charge les synonymes, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne retourne pas les métadonnées de ces derniers.  
   
- Les tableaux suivants énumèrent les ensembles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schémas et les colonnes de restriction appuyées par le fournisseur de DB OLE de client autochtone.  
+ Les tableaux suivants répertorient les ensembles de lignes de schéma et les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonnes de restriction prises en charge par le fournisseur de OLE DB Native Client.  
   
 |Ensemble de lignes de schéma|Colonnes de restriction|  
 |-------------------|-------------------------|  

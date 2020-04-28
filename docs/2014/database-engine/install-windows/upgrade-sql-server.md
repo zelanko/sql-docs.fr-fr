@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217141"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Mettre à niveau vers SQL Server 2014
@@ -25,7 +25,7 @@ ms.locfileid: "79217141"
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section contient les rubriques suivantes :  
   
--   [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)  
+-   [Mises à niveau de la version et de l’édition prises en charge](supported-version-and-edition-upgrades.md)  
   
 -   [Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   

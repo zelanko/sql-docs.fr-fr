@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217148"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accès aux données de modèles multidimensionnels (Analysis Services - Données multidimensionnelles)
@@ -38,7 +38,7 @@ ms.locfileid: "79217148"
   
  [Interfaces de programmation](#bkmk_api)  
   
-##  <a name="bkmk_clientapps"></a>Applications clientes  
+##  <a name="client-applications"></a><a name="bkmk_clientapps"></a>Applications clientes  
  Bien qu'Analysis Services fournisse les interfaces qui vous permettent de générer ou intégrer les bases de données multidimensionnelles par programmation, une approche plus courante consiste à utiliser des applications clientes Microsoft et d'autres fournisseurs de logiciels existantes qui ont un accès intégré aux données Analysis Services.  
   
  Les applications Microsoft suivantes prennent en charge les connexions natives aux données multidimensionnelles.  
@@ -60,7 +60,7 @@ ms.locfileid: "79217148"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Pour les administrateurs de base de données, SQL Server Management Studio est un environnement intégré qui gère vos instances de SQL Server, y compris les instances d'Analysis Services et les bases de données multidimensionnelles. Pour plus d’informations, consultez [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) et [Se connecter à Analysis Services](../../instances/connect-to-analysis-services.md).  
   
-##  <a name="bkmk_querylang"></a>Langages de requête  
+##  <a name="query-languages"></a><a name="bkmk_querylang"></a>Langages de requête  
  MDX est un langage de requête et de calcul standard utilisé pour récupérer les données des bases de données OLAP. Dans Analysis Services, MDX est le langage de requête utilisé pour récupérer les données, mais prend également en charge la définition des données et la manipulation de données. Les éditeurs MDX sont générés dans SQL Server Management Studio, Reporting Services et les outils de données SQL Server. Vous pouvez utiliser les éditeurs MDX pour créer des requêtes ad hoc ou un script réutilisable si l'opération de données est répétée.  
   
  Certains outils et applications, par exemple Excel, utilisent une instruction MDX pour interroger en interne une source de données Analysis Services. Vous pouvez également utiliser MDX par programmation en incluant l'instruction MDX dans une requête XMLA Execute.  
@@ -69,13 +69,13 @@ ms.locfileid: "79217148"
   
  [Interrogation de données multidimensionnelles à l'aide de MDX](querying-multidimensional-data-with-mdx.md)  
   
- [Concepts clés dans MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
- [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
- [Notions de base de l’écriture de scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
-##  <a name="bkmk_api"></a>Interfaces de programmation  
+##  <a name="programmatic-interfaces"></a><a name="bkmk_api"></a>Interfaces de programmation  
  Lorsque vous développez une application personnalisée qui utilise des données multidimensionnelles, votre approche pour accéder aux données tombera très probablement dans l'une des catégories suivantes :  
   
 -   **XMLA**. Utilisez XMLA lorsque vous avez besoin d'assurer la compatibilité avec une grande variété de systèmes d'exploitation et de protocoles. XMLA offre une plus grande souplesse, mais souvent au détriment des performances et de la facilité de programmation.  

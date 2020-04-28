@@ -1,5 +1,5 @@
 ---
-title: Mode Auto-Commit (fr) Microsoft Docs
+title: Mode de validation automatique | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285109"
 ---
 # <a name="auto-commit-mode"></a>Mode de validation automatique
-*En mode auto-commit,* chaque opération de base de données est une transaction qui est validée lorsqu’elle est effectuée. Ce mode convient à de nombreuses transactions réelles qui se composent d’une seule déclaration SQL. Il n’est pas nécessaire de délimiter ou de spécifier l’achèvement de ces transactions. Dans les bases de données sans support transactionnel, le mode auto-commit est le seul mode pris en charge. Dans ces bases de données, les déclarations sont commises lorsqu’elles sont exécutées et qu’il n’y a aucun moyen de les faire reculer; ils sont donc toujours en mode auto-commit.  
+*En mode de validation automatique,* chaque opération de base de données est une transaction validée lors de l’exécution. Ce mode convient pour de nombreuses transactions réelles qui se composent d’une seule instruction SQL. Il est inutile de délimiter ou de spécifier l’achèvement de ces transactions. Dans les bases de données sans prise en charge des transactions, le mode de validation automatique est le seul mode pris en charge. Dans ces bases de données, les instructions sont validées lorsqu’elles sont exécutées et il n’existe aucun moyen de les restaurer. ils sont donc toujours en mode de validation automatique.  
   
- Si le DBMS sous-jacent ne prend pas en charge les transactions en mode auto-commit, le conducteur peut les imiter en commettant manuellement chaque relevé SQL au fur et à mesure qu’il est exécuté.  
+ Si le SGBD sous-jacent ne prend pas en charge les transactions en mode de validation automatique, le pilote peut les émuler en validant manuellement chaque instruction SQL au fur et à mesure de son exécution.  
   
- Si un lot de relevés SQL est exécuté en mode auto-commit, il est spécifique à la source des données lorsque les relevés du lot sont validés. Ils peuvent être commis car ils sont exécutés ou dans leur ensemble après l’exécution de l’ensemble du lot. Certaines sources de données peuvent prendre en charge ces deux comportements et peuvent fournir un moyen de choisir l’un ou l’autre. En particulier, si une erreur se produit au milieu du lot, il est spécifique aux données si les déclarations déjà exécutées sont commises ou annulées. Ainsi, les applications interopérables qui utilisent des lots et qui exigent qu’elles soient validées ou annulées dans leur ensemble ne doivent exécuter des lots qu’en mode de validation manuelle.
+ Si un lot d’instructions SQL est exécuté en mode de validation automatique, il est spécifique à la source de données lorsque les instructions du lot sont validées. Elles peuvent être validées lorsqu’elles sont exécutées ou dans leur ensemble une fois que l’ensemble du lot a été exécuté. Certaines sources de données peuvent prendre en charge ces deux comportements et fournir un moyen de sélectionner l’un ou l’autre. En particulier, si une erreur se produit au milieu du lot, elle est spécifique à la source de données, que les instructions déjà exécutées soient validées ou restaurées. Ainsi, les applications interopérables qui utilisent des lots et exigent qu’elles soient validées ou restaurées dans leur ensemble doivent exécuter des lots uniquement en mode de validation manuelle.

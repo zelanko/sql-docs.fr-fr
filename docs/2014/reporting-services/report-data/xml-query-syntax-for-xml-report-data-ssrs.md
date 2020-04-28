@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380790"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Syntaxe de requête XML pour les données de rapport XML (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de créer des datasets pour des sources de données XML. Après avoir défini une source de données, vous devez créer une requête pour le dataset. Selon le type de données XML désigné par la source de données, vous pouvez créer la requête du dataset en incluant une `Query` XML ou un chemin d'accès à un élément. Un XML `Query` commence par une ** \<** étiquette de>de requête et comprend des espaces de noms et des éléments XML qui varient selon la source de données. Un chemin d'accès à un élément opère indépendamment des espaces de noms ; il précise les nœuds et les attributs de nœud à utiliser à partir des données XML sous-jacentes avec une syntaxe similaire à la syntaxe XPath. Pour plus d’informations sur les chemins d’éléments, consultez [Syntaxe du chemin vers l’élément pour des données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de créer des datasets pour des sources de données XML. Après avoir défini une source de données, vous devez créer une requête pour le dataset. Selon le type de données XML désigné par la source de données, vous pouvez créer la requête du dataset en incluant une `Query` XML ou un chemin d'accès à un élément. Un XML `Query` commence par une ** \<** balise de>de requête et comprend des espaces de noms et des éléments XML qui varient en fonction de la source de données. Un chemin d'accès à un élément opère indépendamment des espaces de noms ; il précise les nœuds et les attributs de nœud à utiliser à partir des données XML sous-jacentes avec une syntaxe similaire à la syntaxe XPath. Pour plus d’informations sur les chemins d’éléments, consultez [Syntaxe du chemin vers l’élément pour des données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).  
   
  Vous pouvez créer une source de données XML pour les types de données XML suivants :  
   
@@ -87,8 +87,8 @@ ms.locfileid: "80380790"
   
 |Élément de requête XML|Champs obtenus dans le dataset|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Valeur A: `https://schemas.microsoft.com/..`.<br /><br /> Valeur B: `https://schemas.microsoft.com/..`.<br /><br /> Valeur C: `https://schemas.microsoft.com/.`..|  
-|\<xmldp:Query xmlns:xmldphttps://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" " xmlns:ns "https://schemas.microsoft.com/... ><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Valeur D<br /><br /> Valeur E<br /><br /> Valeur F|  
+|\<Query/>|Valeur A : `https://schemas.microsoft.com/..`.<br /><br /> Valeur B : `https://schemas.microsoft.com/..`.<br /><br /> Valeur C : `https://schemas.microsoft.com/.`..|  
+|\<xmldp : requête xmlns : xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns : NS = "https://schemas.microsoft.com/..." ><br /><br /> \<xmldp : ElementPath>racine {}/NS : élément2/node\</xmldp : ElementPath><br /><br /> \</xmldp :> de requête|Valeur D<br /><br /> Valeur E<br /><br /> Valeur F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Document XML : DPNamespace.xml  
  Vous pouvez copier ce document XML et l'enregistrer dans une URL disponible pour être utilisée en tant que source de données par le Concepteur de rapports : par exemple http://localhost/DPNamespace.xml.  
@@ -109,7 +109,7 @@ ms.locfileid: "80380790"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML Connection Type &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [Type de connexion XML &#40;&#41;SSRS](xml-connection-type-ssrs.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

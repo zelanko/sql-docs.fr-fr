@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112245"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
@@ -170,8 +170,7 @@ Plan de requête pour joindre des tables mémoire optimisées.
   
     -   Les index cluster ne sont pas pris en charge avec les tables mémoire optimisées. À la place, chaque table mémoire optimisée doit avoir au moins un index non cluster et tous les index des tables mémoire optimisées accéder efficacement à toutes les colonnes de la table sans devoir les stocker dans l'index ou les référencer dans un index cluster.  
   
--   Ce plan contient un `Hash Match` plutôt qu'un `Merge Join`. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. 
-  `Merge Join` nécessiterait des opérateurs de tri qui diminueraient les performances.  
+-   Ce plan contient un `Hash Match` plutôt qu'un `Merge Join`. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. `Merge Join` nécessiterait des opérateurs de tri qui diminueraient les performances.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
  Les procédures stockées compilées en mode natif sont des procédures stockées en [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui sont compilées dans le code machine, au lieu d'être interprétées par le moteur d'exécution de requête. Le script suivant crée une procédure stockée compilée en mode natif qui exécute l'exemple de requête (dans la section Exemple de requête).  
@@ -201,7 +200,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Compilation et traitement des requêtes  
  Le diagramme ci-dessous illustre le processus de compilation des procédures stockées compilées en mode natif :  
   
- ![Procédures stockées compilées en mode natif.](../../database-engine/media/hekaton-query-plan-6.gif "Procédures stockées compilées en mode natif.")  
+ ![Compilation native des procédures stockées.](../../database-engine/media/hekaton-query-plan-6.gif "Procédures stockées compilées en mode natif.")  
 Procédures stockées compilées en mode natif.  
   
  Le processus se présente comme suit :  
@@ -301,10 +300,9 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   L'analyse complète d'un index sur IX_CustomerID a été remplacée par une recherche d'index. Cela a abouti à l'analyse de 5 lignes, au lieu des 830 lignes requises pour l'analyse complète de l'index.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiques et cardinalité pour les tables mémoire optimisées  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques des colonnes pour les tables mémoire optimisées. En outre, le nombre réel de lignes de la table est conservé. Toutefois, contrairement aux tables sur disque, les statistiques des tables mémoire optimisées ne sont pas mises à jour automatiquement. Par conséquent, les statistiques doivent être mises à jour manuellement après des modifications significatives dans les tables. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques des colonnes pour les tables mémoire optimisées. En outre, le nombre réel de lignes de la table est conservé. Toutefois, contrairement aux tables sur disque, les statistiques des tables mémoire optimisées ne sont pas mises à jour automatiquement. Par conséquent, les statistiques doivent être mises à jour manuellement après des modifications significatives dans les tables. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables à mémoire optimisée](memory-optimized-tables.md)  
+ [Tables optimisées en mémoire](memory-optimized-tables.md)  
   
   

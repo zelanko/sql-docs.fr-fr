@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics ( france) Microsoft Docs
+title: SQLStatistics | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2aa220cc17ac3e224037aecfda752f3276830dc2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291857"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
@@ -27,7 +27,7 @@ ms.locfileid: "81291857"
   **SQLStatistics** peut être exécuté sur un curseur statique. Toute tentative d'exécution de **SQLStatistics** sur un curseur pouvant être mis à jour (curseur de jeu de clés ou curseur dynamique) retourne SQL_SUCCESS_WITH_INFO pour indiquer que le type de curseur a été modifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQLStatistics, fonction](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112224"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
@@ -35,8 +35,7 @@ ms.locfileid: "79112224"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Fonctionnalités supprimées dans SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Support de plate-forme 64 bits dans Reporting Services  
- À partir de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], le composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend plus en charge les serveurs Itanium qui exécutent Windows Server 2003 ou Windows Server 2003 R2. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continue à prendre en charge d'autres systèmes d'exploitation 64 bits, notamment Windows Server 2008 et Windows Server 2008 R2 pour les systèmes Itanium. Pour effectuer une mise à niveau vers [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] à partir d’une installation [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur une édition de système Itanium de Windows Server 2003 ou Windows Server 2003 R2, vous devez commencer par mettre à niveau le système d’exploitation.  
+ À partir de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], le composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend plus en charge les serveurs Itanium qui exécutent Windows Server 2003 ou Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continue à prendre en charge d'autres systèmes d'exploitation 64 bits, notamment Windows Server 2008 et Windows Server 2008 R2 pour les systèmes Itanium. Pour effectuer une mise à niveau vers [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] à partir d’une installation [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur une édition de système Itanium de Windows Server 2003 ou Windows Server 2003 R2, vous devez commencer par mettre à niveau le système d’exploitation.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Fonctionnalités supprimées dans SQL Server 2008  
   
@@ -52,8 +51,8 @@ ms.locfileid: "79112224"
 |Paramètres de remplacement et fonctionnalités de composant|Comment configurer|  
 |-------------------------------------------------|----------------------|  
 |Protocoles, connexion et options de démarrage|Utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]éléments|Utilisez la Gestion basée sur une stratégie, les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]éléments|Utilisez les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|Fonctionnalités [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilisez la Gestion basée sur une stratégie, les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou sp_Configure.|  
+|Fonctionnalités [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Utilisez les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - Propriété EnableIntegratedSecurity|Utilisez les paramètres de propriétés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - « Événements programmés et remise du rapport » et « Service Web et accès HTTP »|Modifiez le fichier de configuration RSReportServer.config.|  
 |Options de ligne de commande|Pas de prise en charge dans cette version.|  

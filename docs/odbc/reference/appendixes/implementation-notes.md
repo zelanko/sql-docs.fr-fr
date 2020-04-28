@@ -1,5 +1,5 @@
 ---
-title: Notes de mise en œuvre (en anglais) Microsoft Docs
+title: Remarques sur l’implémentation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 970188a2fca45706405e398cece0f04d38dfdc68
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284310"
 ---
 # <a name="implementation-notes"></a>Remarques relatives à l’implémentation
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser la fonctionnalité du curseur du conducteur.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- Cette section décrit comment la bibliothèque de curseurs de l’ODBC est mise en œuvre. Il décrit comment la bibliothèque de curseurs maintient son cache, exécute les relevés SQL et implémente les fonctions oDBC.  
+ Cette section décrit l’implémentation de la bibliothèque de curseurs ODBC. Il décrit comment la bibliothèque de curseurs gère son cache, exécute les instructions SQL et implémente les fonctions ODBC.  
   
  Cette section contient les rubriques suivantes :  
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289687"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestion des autorisations dans les Data Warehouse parallèles
 Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour SQL Server PDW.
 
-## <a name="BackupRestoreBasics"></a>Notions de base des autorisations Moteur de base de données
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>Notions de base des autorisations Moteur de base de données
 Les autorisations Moteur de base de données sur les SQL Server PDW sont gérées au niveau du serveur par le biais de connexions et au niveau de la base de données via les utilisateurs de base de données et les rôles de base de données définis par l’utilisateur.
 
 **Connexions** Les connexions sont des comptes d’utilisateur individuels pour la connexion au SQL Server PDW. SQL Server PDW prend en charge les connexions à l’aide de l’authentification Windows et de l’authentification SQL Server.  Les connexions d’authentification Windows peuvent être des utilisateurs Windows ou des groupes Windows à partir de n’importe quel domaine approuvé par SQL Server PDW. SQL Server les connexions d’authentification sont définies et authentifiées par SQL Server PDW et doivent être créées en spécifiant un mot de passe.
@@ -52,7 +52,7 @@ Les connexions sont des objets de niveau serveur et peuvent être répertoriées
 
 Les utilisateurs et les rôles de base de données sont des objets de niveau base de données et peuvent être répertoriés en affichant [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Seules les autorisations au niveau de la base de données peuvent être accordées aux principaux de base de données.
 
-## <a name="BackupTypes"></a>Autorisations par défaut
+## <a name="default-permissions"></a><a name="BackupTypes"></a>Autorisations par défaut
 La liste suivante décrit les autorisations par défaut :
 
 -   Lorsqu’une connexion est créée à l’aide de l’instruction **Create login** , la connexion reçoit l’autorisation **Connect SQL** , ce qui permet à la connexion de se connecter au SQL Server PDW.
@@ -80,7 +80,7 @@ Toutes les nouvelles connexions d’appliance appartiennent automatiquement au r
 
 -   Le rôle serveur PUBLIC ne peut pas hériter des autorisations implicites. Toutes les autorisations accordées au rôle PUBLIC doivent être accordées explicitement.
 
-## <a name="BackupProc"></a>Détermination des autorisations
+## <a name="determining-permissions"></a><a name="BackupProc"></a>Détermination des autorisations
 Le fait qu’une connexion ait ou non l’autorisation d’effectuer une action spécifique dépend des autorisations accordées ou refusées à la connexion, à l’utilisateur et aux rôles dont l’utilisateur est membre. Les autorisations au niveau du serveur (telles que **Create login** et **View Server State**) sont disponibles pour les principaux de niveau serveur (connexions). Les autorisations au niveau de la base de données (telles que **Select** dans une table ou **Execute** sur une procédure) sont disponibles pour les principaux au niveau de la base de données (utilisateurs et rôles de base de données).
 
 ### <a name="implicit-and-explicit-permissions"></a>Autorisations implicites et explicites
@@ -165,7 +165,7 @@ Pour rechercher les autorisations d’un utilisateur, vérifiez les éléments s
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>Meilleures pratiques relatives aux autorisations de base de données
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>Meilleures pratiques relatives aux autorisations de base de données
 
 -   Accordez des autorisations au niveau le plus granulaire qui est pratique. L’octroi d’autorisations au niveau de la table ou de la vue peut devenir impossible à gérer. Toutefois, l’octroi d’autorisations au niveau de la base de données peut être trop permissif. Si la base de données est conçue avec des schémas pour définir des limites de travail, peut-être que l’autorisation accordée au schéma est un compromis approprié entre le niveau de la table et le niveau de la base de données.
 

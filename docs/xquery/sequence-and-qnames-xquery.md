@@ -1,5 +1,5 @@
 ---
-title: Séquence et QNames (XQuery) Microsoft Docs
+title: Sequence et QNames (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380780"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Séquence et QNames (XQuery)
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Chaque identificateur d'une XQuery est un QName. Un QName est constitué d'un préfixe d'espace de noms et d'un nom local. Dans cette implémentation, les noms de variables dans XQuery sont des QNames et ne peuvent pas avoir de préfixes.  
   
- Prenons l’exemple suivant dans lequel une requête est spécifiée par rapport à une variable **xml** non portée :  
+ Prenons l’exemple suivant dans lequel une requête est spécifiée par rapport à une variable **XML** non typée :  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  Dans l'expression (`/Root/a`), `Root` et `a` sont des QNames.  
   
- Dans l’exemple suivant, une requête est spécifiée par rapport à une colonne **xml** dactylographiée. La requête itère sur \<toutes les étapes> éléments au premier lieu de travail.  
+ Dans l’exemple suivant, une requête est spécifiée par rapport à une colonne **XML** typée. La requête effectue une itération sur \<tous les éléments de> d’étape au premier emplacement atelier.  
   
 ```  
 SELECT Instructions.query('  
@@ -143,10 +143,10 @@ WHERE ProductModelID=7;
 |Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(aucun préfixe)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Chaque base de données que vous créez a la collection **de schémas XML.** Elle réserve ces schémas de sorte qu'ils soient accessibles à partir de toute collection de schémas XML créée par l'utilisateur.  
+ Chaque base de données que vous créez possède la collection de schémas XML **sys** . Elle réserve ces schémas de sorte qu'ils soient accessibles à partir de toute collection de schémas XML créée par l'utilisateur.  
   
 > [!NOTE]  
->  Cette implémentation `local` ne prend pas en charge le http://www.w3.org/2004/07/xquery-local-functionspréfixe tel que décrit dans la spécification XQuery dans .  
+>  Cette implémentation ne prend pas en `local` charge le préfixe comme décrit dans la http://www.w3.org/2004/07/xquery-local-functionsspécification XQuery dans.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts de base de XQuery](../xquery/xquery-basics.md)  

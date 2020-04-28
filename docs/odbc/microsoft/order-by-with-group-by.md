@@ -1,5 +1,5 @@
 ---
-title: ORDER BY avec GROUPE BY Microsoft Docs
+title: ORDER BY avec GROUP BY | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 44d3581f7a70c344cfa94faedcc5d279e50c7827
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291079"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY avec GROUP BY
-ORDER BY peut être effectué sur n’importe quelle expression dans la *liste d’expression* GROUP BY ou n’importe quelle colonne dans l’ensemble de résultat.
+La clause ORDER BY peut être exécutée sur n’importe quelle expression de la *liste d’expressions* Group by ou de toute colonne du jeu de résultats.

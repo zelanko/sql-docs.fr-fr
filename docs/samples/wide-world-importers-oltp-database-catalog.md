@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112403"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de bases de données WideWorldImporters
@@ -68,7 +68,7 @@ Détails des paramètres et des personnes (utilisateurs et contacts), ainsi que 
 |Table de charge de travail|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contient des paramètres configurables à l’ensemble du système.|
-|People|Contient des noms d’utilisateur, des informations de contact, pour tous ceux qui utilisent l’application, et pour les personnes que les importateurs grand public traitent au sein des organisations clientes. Cela comprend le personnel, les clients, les fournisseurs et tout autre contact. Pour les personnes qui ont reçu l’autorisation d’utiliser le système ou le site Web, les informations incluent les informations de connexion.|
+|Personnes|Contient des noms d’utilisateur, des informations de contact, pour tous ceux qui utilisent l’application, et pour les personnes que les importateurs grand public traitent au sein des organisations clientes. Cela comprend le personnel, les clients, les fournisseurs et tout autre contact. Pour les personnes qui ont reçu l’autorisation d’utiliser le système ou le site Web, les informations incluent les informations de connexion.|
 |Villes|Il existe de nombreuses adresses stockées dans le système, pour les personnes, les adresses de livraison de l’organisation cliente, les adresses des fournisseurs, etc. Chaque fois qu’une adresse est stockée, il y a une référence à une ville dans ce tableau. Il y a également un emplacement spatial pour chaque ville.|
 |StateProvinces|Les villes font partie des États ou des provinces. Ce tableau contient les détails de ceux-ci, y compris les données spatiales qui décrivent les limites de chaque État ou province.|
 |Pays|Les États ou provinces font partie des pays. Ce tableau contient les détails de ceux-ci, y compris les données spatiales qui décrivent les limites de chaque pays.|
@@ -100,7 +100,7 @@ Détails des clients, des commerciaux et des ventes d’articles en stock.
 |BuyingGroups|Les organisations clientes peuvent faire partie des groupes qui exercent une plus grande puissance d’achat|
 |CustomerTransactions|Toutes les transactions financières liées aux clients (factures, paiements)|
 |SpecialDeals|Tarification spéciale. Cela peut inclure des prix fixes, une remise en dollars ou un pourcentage de remise.|
-|Commandes|Détails des commandes client|
+|Orders|Détails des commandes client|
 |OrderLines|Lignes de détails des commandes client|
 |Factures|Détails des factures client|
 |InvoiceLines|Lignes de détails des factures client|
@@ -122,7 +122,7 @@ Détails des actions, de leurs exploitations et de leurs transactions.
 |ColdRoomTemperatures|Températures enregistrées régulièrement des refroidisseurs de la chambre froide|
 
 
-## <a name="design-considerations"></a>Remarques relatives à la conception
+## <a name="design-considerations"></a>Considérations de conception
 
 La conception de base de données est subjective et il n’existe pas de méthode correcte ou incorrecte pour concevoir une base de données. Les schémas et les tables de cette base de données montrent des idées de conception de votre propre base de données.
 

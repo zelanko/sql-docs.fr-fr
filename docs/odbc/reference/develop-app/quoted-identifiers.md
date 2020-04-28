@@ -1,5 +1,5 @@
 ---
-title: Identifiants cités (en anglais) Microsoft Docs
+title: Identificateurs entre guillemets | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0c03fa8bbc059566288997b29c899056f26de252
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282002"
 ---
 # <a name="quoted-identifiers"></a>Identificateurs entre guillemets
-Dans une déclaration SQL, les identifiants contenant des caractères spéciaux ou des mots clés de correspondance doivent être inclus dans des *caractères de citation d’identification*; les identificateurs inclus dans ces caractères sont connus sous le nom *d’identifiants cités* (également connus sous le nom *d’identifiants délimités* dans SQL-92). Par exemple, l’identifiant comptes à payer est cité dans la déclaration **SELECT** suivante :  
+Dans une instruction SQL, les identificateurs contenant des caractères spéciaux ou des mots clés de correspondance doivent être placés entre *guillemets*. les identificateurs entre ces caractères sont appelés *identificateurs entre guillemets* (également appelés *identificateurs délimités* dans SQL-92). Par exemple, l’identificateur Accounts payable est placé entre guillemets dans l’instruction **Select** suivante :  
   
 ```  
 SELECT * FROM "Accounts Payable"  
 ```  
   
- La raison de citer les identificateurs est de rendre la déclaration parseable. Par exemple, si les comptes payables n’étaient pas cités dans la déclaration précédente, le parseur supposerait qu’il y avait deux tableaux, comptes et payables, et retournerait une erreur de syntaxe qu’ils n’étaient pas séparés par une virgule. Le caractère de citation d’identification est spécifique au conducteur et est récupéré avec l’option SQL_IDENTIFIER_QUOTE_CHAR dans **SQLGetInfo**. Les listes de caractères spéciaux et de mots clés sont récupérées avec les options SQL_SPECIAL_CHARACTERS et SQL_KEYWORDS dans **SQLGetInfo**.  
+ La raison pour laquelle les identificateurs sont des identificateurs consiste à rendre l’instruction analysable. Par exemple, si Accounts payable n’a pas été placé entre guillemets dans l’instruction précédente, l’analyseur suppose qu’il existait deux tables, Accounts et payable, et retourne une erreur de syntaxe qui n’était pas séparée par une virgule. Le caractère d’identificateur guillemet est spécifique au pilote et est récupéré avec l’option SQL_IDENTIFIER_QUOTE_CHAR dans **SQLGetInfo**. Les listes de caractères spéciaux et de mots clés sont extraites avec les options SQL_SPECIAL_CHARACTERS et SQL_KEYWORDS dans **SQLGetInfo**.  
   
- Pour être sûrs, les applications interopérables citent souvent tous les identificateurs sauf ceux des pseudo-colonnes, comme la colonne ROWID dans Oracle. **SQLSpecialColumns** retourne une liste de pseudo-colonnes. En outre, s’il existe des restrictions spécifiques aux applications sur l’endroit où des caractères spéciaux peuvent apparaître dans un nom d’objet, il est préférable pour les applications interopérables de ne pas utiliser des caractères spéciaux dans ces positions.
+ Pour garantir la sécurité, les applications interopérables encadrent souvent tous les identificateurs, à l’exception de ceux pour les pseudo-colonnes, telles que la colonne ROWID dans Oracle. **SQLSpecialColumns** retourne une liste de pseudo-colonnes. De même, s’il existe des restrictions spécifiques à l’application permettant d’afficher les caractères spéciaux dans un nom d’objet, il est préférable que les applications interopérables n’utilisent pas de caractères spéciaux dans ces positions.

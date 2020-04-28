@@ -1,5 +1,5 @@
 ---
-title: Changements comportementaux (fr) Microsoft Docs
+title: Changements de comportement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3e4a433531d90eb0f89d9a5e446464b13fd02526
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283439"
 ---
 # <a name="behavioral-changes"></a>Changements de comportement
-Les changements de comportement sont ceux pour lesquels la *syntaxe* de l’interface reste la même, mais la *sémantique* a changé. Pour ces modifications, fonctionnalités utilisées dans ODBC 2. *x* se comporte différemment de la même fonctionnalité dans ODBC 3. *x*.  
+Les changements de comportement sont les modifications pour lesquelles la *syntaxe* de l’interface reste la même, mais la *sémantique* a changé. Pour ces modifications, fonctionnalités utilisées dans ODBC 2. *x* se comporte différemment de la même fonctionnalité dans ODBC 3. *x*.  
   
- La question de savoir si une demande présente ODBC 2. *x* comportement ou ODBC 3. *x* le comportement est déterminé par l’attribut SQL_ATTR_ODBC_VERSION environnement. Cette valeur 32 bits est prête à SQL_OV_ODBC2 pour exposer ODBC 2. *x* comportement, et SQL_OV_ODBC3 d’exposer ODBC 3. *x* comportement.  
+ Si une application présente ODBC 2. comportement *x* ou ODBC 3. le comportement *x* est déterminé par l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cette valeur 32 bits est définie sur SQL_OV_ODBC2 pour exposer ODBC 2. le comportement *x* et SQL_OV_ODBC3 d’exposer ODBC 3. comportement *x* .  
   
- L’attribut SQL_ATTR_ODBC_VERSION environnement est fixé par un appel à **SQLSetEnvAttr**. Après qu’une application appelle **SQLAllocHandle** pour allouer une poignée d’environnement, il doit appeler**SQLSetEnvAttr** immédiatement pour définir le comportement qu’il présente. (En conséquence, il existe un nouvel état de l’environnement pour décrire la poignée de l’environnement dans un état alloué, mais sans version.) Pour plus d’informations, voir [Annexe B: ODBC State Transition Tables](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ L’attribut d’environnement SQL_ATTR_ODBC_VERSION est défini par un appel à **SQLSetEnvAttr**. Une fois qu’une application a appelé **SQLAllocHandle** pour allouer un handle d’environnement, elle doit appeler**SQLSetEnvAttr** immédiatement pour définir le comportement qu’elle présente. (Par conséquent, il existe un nouvel état d’environnement pour décrire le descripteur d’environnement dans un État alloué, mais sans version.) Pour plus d’informations, consultez [annexe B : tables de transition d’État ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Une application indique le comportement qu’elle présente avec l’attribut SQL_ATTR_ODBC_VERSION environnement, mais l’attribut n’a aucun effet sur la connexion de l’application avec un ODBC 2. *x* ou ODBC 3. *x* conducteur. Un ODBC 3. *x* application peut se connecter à un ODBC 2. *x* ou 3. *x* conducteur, quel que soit le réglage de l’environnement attribut.  
+ Une application indique le comportement qu’elle présente avec l’attribut d’environnement SQL_ATTR_ODBC_VERSION, mais l’attribut n’a aucun effet sur la connexion de l’application avec ODBC 2. *x* ou ODBC 3. pilote *x* . ODBC 3. *x* l’application peut se connecter à ODBC 2. *x* ou 3. *x* , quel que soit le paramètre de l’attribut d’environnement.  
   
- ODBC 3. *x* applications ne doit jamais appeler **SQLAllocEnv**. Par conséquent, si le gestionnaire de conducteur reçoit un appel à **SQLAllocEnv**, il reconnaît l’application comme un ODBC 2. *x* application.  
+ ODBC 3. *x* les applications ne doivent jamais appeler **SQLAllocEnv**. Par conséquent, si le gestionnaire de pilotes reçoit un appel à **SQLAllocEnv**, il reconnaît l’application comme ODBC 2. application *x* .  
   
- L’attribut SQL_ATTR_ODBC_VERSION affecte trois aspects différents d’un ODBC 3. *x* comportement du conducteur :  
+ L’attribut SQL_ATTR_ODBC_VERSION affecte trois aspects différents d’un ODBC 3. comportement du pilote *x* :  
   
 -   Codes SQLSTATE  
   
--   Types de données pour la date, l’heure et l’heure  
+-   Types de données pour date, Time et timestamp  
   
--   *L’argument catalogué* dans **SQLTables** accepte les modèles de recherche dans ODBC 3. *x*, mais pas dans ODBC 2. *x*  
+-   L’argument *nomcatalogue* dans **SQLTables** accepte les modèles de recherche dans ODBC 3. *x*, mais pas dans ODBC 2. *x*  
   
- Le réglage de l’attribut SQL_ATTR_ODBC_VERSION environnement n’affecte pas **SQLSetParam** ou **SQLBindParam**. **SQLColAttribute n’est** pas non plus affecté par ce bit. Bien que **SQLColAttribute** retourne les attributs qui sont affectés par la version de l’ODBC (type de date, précision, échelle et longueur), le comportement prévu est déterminé par la valeur de *l’argument FieldIdentifier.* Lorsque *FieldIdentifier* est égal à SQL_DESC_TYPE, **SQLColAttribute** retourne l’ODBC 3. *x* codes pour la date, l’heure et l’heure; lorsque *FieldIdentifier* est égal à SQL_COLUMN_TYPE, **SQLColAttribute** retourne l’ODBC 2. *x* codes pour la date, l’heure et l’heure.  
+ Le paramètre de l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’affecte pas **SQLSetParam,** ou **SQLBindParam**. **SQLColAttribute** n’est pas non plus affecté par ce bit. Bien que **SQLColAttribute** retourne des attributs qui sont affectés par la version d’ODBC (type date, précision, échelle et longueur), le comportement prévu est déterminé par la valeur de l’argument *FieldIdentifier* . Lorsque *FieldIdentifier* est égal à SQL_DESC_TYPE, **SQLColAttribute** retourne ODBC 3. codes *x* pour date, Time et timestamp ; Lorsque *FieldIdentifier* est égal à SQL_COLUMN_TYPE, **SQLColAttribute** retourne ODBC 2. codes *x* pour date, Time et timestamp.  
   
  Cette section contient les rubriques suivantes :  
   

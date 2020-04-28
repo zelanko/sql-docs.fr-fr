@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112435"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogue de bases de données WideWorldImportersDW
@@ -63,9 +63,9 @@ WideWorldImportersDW contient les tables de faits suivantes. La description comp
 |-----------------------------|---------------------|---------------------|
 |JSON|`Sales.Orders` et `Sales.OrderLines`|Les vendeurs, le sélecteur/la productivité des packs et le temps de prélèvement des commandes. En outre, les situations de stock faible conduisent à des commandes en différé.|
 |Sale|`Sales.Invoices` et `Sales.InvoiceLines`|Les ventes, les dates de livraison, la rentabilité dans le temps, la rentabilité par commercial.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Temps de leads comparatifs attendus|
+|Acheter|`Purchasing.PurchaseOrderLines`|Temps de leads comparatifs attendus|
 |Transaction|`Sales.CustomerTransactions` et `Purchasing.SupplierTransactions`|Mesure des dates de sortie et des dates de finalisation et des montants.|
-|Trésorerie|`Warehouse.StockTransactions`|Mouvements dans le temps.|
+|Movement|`Warehouse.StockTransactions`|Mouvements dans le temps.|
 |Détention des actions|`Warehouse.StockItemHoldings`|Niveaux et valeurs de stock disponibles.|
 
 ## <a name="stored-procedures"></a>Procédures stockées

@@ -1,5 +1,5 @@
 ---
-title: Considérations de programmation (en anglais) Microsoft Docs
+title: Considérations sur la programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282179"
 ---
 # <a name="programming-considerations"></a>Éléments de programmation à prendre en considération
-Cette section traite brièvement d’un certain nombre de sujets liés à la rédaction d’applications et de chauffeurs de l’ODBC.  
+Cette section présente brièvement un certain nombre de sujets relatifs à l’écriture d’applications et de pilotes ODBC.  
   
  Cette section contient les rubriques suivantes :  
   

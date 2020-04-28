@@ -1,5 +1,5 @@
 ---
-title: Documentation pour SQL Server 2014 Outils et composants d’ajout Microsoft Docs
+title: Documentation pour les outils de SQL Server 2014 et les composants de complément | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2020
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402567"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentation pour les outils SQL Server 2014 et les composants du complément
@@ -33,7 +33,7 @@ ms.locfileid: "80402567"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 pour SAP BW est un ensemble de trois composants permettant d'extraire des données à partir de ou de charger des données vers un système SAP NetWeaver BW version 7.0.|  
 |[Assistant lecture de capture pour la mise à niveau](https://go.microsoft.com/fwlink/?LinkId=299182)|Le flux de travail Lecture de capture de l'Assistant Mise à niveau automatise le processus de capture de trace de charge de travail à utiliser pour une relecture ultérieure.|  
 |[Microsoft® ODBC Driver 11 for SQL Server® dans Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Le pilote Microsoft ODBC Driver 11 pour Windows est un pilote autonome qui fournit une API (Application Programming Interface) qui implémente les interfaces ODBC standard dans Microsoft Windows.|  
-|[PowerPivot pour SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot pour SharePoint est un serveur Analysis Services exécuté en mode SharePoint.|  
+|[Power Pivot pour SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot pour SharePoint est un serveur Analysis Services exécuté en mode SharePoint.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server 2014 Documentation](../2014-toc/index.yml)  
+ [Documentation SQL Server 2014](../2014-toc/index.yml)  

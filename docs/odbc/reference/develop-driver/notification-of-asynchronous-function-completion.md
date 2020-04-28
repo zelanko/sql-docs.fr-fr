@@ -1,5 +1,5 @@
 ---
-title: Notification de l’achèvement de la fonction asynchrone (fr) Microsoft Docs
+title: Notification de la fin de la fonction asynchrone | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a453967f2ffdda4af2a44429737f700f4a994cf8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287819"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notification de la fin d’une fonction asynchrone
-Dans le Windows 8 SDK, ODBC a ajouté un mécanisme pour aviser les applications lorsqu’une opération asynchrone se termine, que nous appellerons la « notification à l’achèvement ». (Voir [Asynchrone Execution (Méthode de notification)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) pour plus d’informations.) Ce sujet traite de quelques-unes des questions pour les développeurs de pilotes.  
+Dans le kit de développement logiciel (SDK) Windows 8, ODBC a ajouté un mécanisme pour notifier les applications lorsqu’une opération asynchrone se termine, ce que nous appelons « notification à l’achèvement ». (Pour plus d’informations, consultez [exécution asynchrone (méthode de notification)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) .) Cette rubrique décrit certains des problèmes rencontrés par les développeurs de pilotes.  
   
-## <a name="the-interface-between-the-driver-manager-and-driver"></a>L’interface entre le Driver Manager et le Driver  
- Le Driver Manager fournit à l’interne une fonction de rappel [SQLAsyncNotificationCallback fonction](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** ne peut être appelé que par le conducteur - une application ne peut pas l’appeler directement. Le conducteur appelle **SQLAsyncNotificationCallback** chaque fois que de nouvelles données reçues du serveur après le retour SQL_STILL_EXECUTING dernier.  
+## <a name="the-interface-between-the-driver-manager-and-driver"></a>Interface entre le gestionnaire de pilotes et le pilote  
+ Le gestionnaire de pilotes fournit en interne une fonction de rappel [SQLAsyncNotificationCallback Function](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** peut uniquement être appelé par le pilote : une application ne peut pas l’appeler directement. Le pilote appelle **SQLAsyncNotificationCallback** chaque fois que de nouvelles données sont reçues du serveur après le dernier renvoi de SQL_STILL_EXECUTING.  
   
- Le gestionnaire de conducteur fournit un mécanisme de rappel afin qu’un conducteur puisse aviser le gestionnaire de conducteur lorsque des progrès ont été réalisés dans l’exécution d’une opération asynchrone après le retour de la fonction correspondante SQL_STILL_EXECUTING  
+ Le gestionnaire de pilotes fournit un mécanisme de rappel afin qu’un pilote puisse notifier le gestionnaire de pilotes lorsqu’une progression a été effectuée lors de l’exécution d’une opération asynchrone après le retour de la fonction correspondante SQL_STILL_EXECUTING  
   
- Le gestionnaire de conducteur définit l’attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK sur une poignée de connexion du conducteur avec un pointeur de fonction non-NULL, qui est de type SQL_ASYNC_NOTIFICATION_CALLBACK, pour le conducteur de travailler en mode de notification pour toute opération asynchrone sur cette poignée. De même, le gestionnaire de conducteur définit l’attribut SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK sur une poignée de relevé de pilote avec un pointeur de fonction non-NULL, qui est également de type SQL_ASYNC_NOTIFICATION_CALLBACK, pour le conducteur de travailler en mode de notification pour toute opération asynchrone sur cette poignée.  
+ Le gestionnaire de pilotes définit l’attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK sur un handle de connexion de pilote avec un pointeur de fonction non NULL, qui est de type SQL_ASYNC_NOTIFICATION_CALLBACK pour que le pilote fonctionne en mode de notification pour les opérations asynchrones sur ce handle. De même, le gestionnaire de pilotes définit l’attribut SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK sur un handle d’instruction de pilote avec un pointeur de fonction non NULL, qui est également de type SQL_ASYNC_NOTIFICATION_CALLBACK, pour que le pilote fonctionne en mode de notification pour les opérations asynchrones sur ce handle.  
   
- Si une opération asynchrone est effectuée sur une poignée de conducteur, les fonctions asynchrones du conducteur doivent fonctionner dans un style non-blocage. Si l’opération ne peut pas se terminer immédiatement, la fonction du conducteur doit retourner SQL_STILL_EXECUTING. Cette exigence est valable tant pour le mode de scrutin que pour le mode notification.  
+ Si une opération asynchrone est effectuée sur un handle de pilote, les fonctions du pilote asynchrone doivent fonctionner dans un style non bloquant. Si l’opération ne peut pas se terminer immédiatement, la fonction du pilote doit retourner SQL_STILL_EXECUTING. Cette condition est vraie pour le mode d’interrogation et le mode de notification.  
   
- Si une poignée est en mode notification asynchrone, le conducteur doit appeler la fonction de rappel de notification, dont l’adresse est la valeur pour l’attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK, une fois après le retour SQL_STILL_EXECUTING. En d’autres termes, un SQL_STILL_EXECUTING de retour doit être jumelé à une invocation de la fonction de rappel de notification. Le conducteur doit utiliser la valeur actuelle de l’attribut de poignée SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT de poignée comme valeur pour le paramètre de fonction de rappel *pContext*.  
+ Si un handle est en mode de notification asynchrone, le pilote doit appeler la fonction de rappel de notification, dont l’adresse est la valeur de l’attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK, une fois après avoir retourné SQL_STILL_EXECUTING. En d’autres termes, un SQL_STILL_EXECUTING de retour doit être associé à un appel de la fonction de rappel de notification. Le pilote doit utiliser la valeur actuelle de l’attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT ou SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT handle comme valeur pour le paramètre de fonction de rappel *pContext*.  
   
- Le conducteur ne doit pas rappeler dans le fil qui appelle la fonction du conducteur; il n’y a aucune raison d’aviser les progrès avant le retour de la fonction. Le conducteur doit utiliser son propre thread pour rappeler. Le Gestionnaire de pilote n’utilisera pas le fil de rappel du conducteur pour l’exécution d’une logique de traitement étendue.  
+ Le pilote ne doit pas rappeler le thread qui appelle la fonction de pilote ; Il n’y a aucune raison de notifier la progression avant le retour de la fonction. Le pilote doit utiliser son propre thread pour le rappel. Le gestionnaire de pilotes n’utilise pas le thread de rappel du pilote pour exécuter une logique de traitement extensive.  
   
- Le gestionnaire de conducteur appellera à nouveau la fonction d’origine après que le conducteur rappelle. Le Gestionnaire de pilote peut utiliser un thread qui n’est ni un thread d’application ni un thread de pilote. Si le conducteur utilise certaines informations associées au thread (par exemple, le jeton de sécurité ou l’identifiant de l’utilisateur), le conducteur doit enregistrer les informations requises dans l’appel asynchrone initial et utiliser la valeur enregistrée avant que l’opération asynchrone entière se termine. Habituellement, seuls **SQLDriverConnect**, **SQLConnect**, ou **SQLBrowseConnect** doivent utiliser ce genre d’information.  
+ Le gestionnaire de pilotes appellera la fonction d’origine une fois le pilote rappelé. Le gestionnaire de pilotes peut utiliser un thread qui n’est ni un thread d’application, ni un thread de pilote. Si le pilote utilise des informations associées au thread (par exemple, un jeton de sécurité ou un identificateur d’utilisateur), le pilote doit enregistrer les informations requises dans l’appel asynchrone initial et utiliser la valeur enregistrée avant la fin de l’intégralité de l’opération asynchrone. En règle générale, seuls **SQLDriverConnect**, **SQLConnect**ou **SQLBrowseConnect** doivent utiliser ce type d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217066"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriétés des chaînes de connexion (Analysis Services)
@@ -34,7 +34,7 @@ ms.locfileid: "79217066"
   
  [Réservé pour un usage ultérieur](#bkmk_reserved)  
   
- [Exemples de chaîne de connexion](#bkmk_examples)  
+ [Exemples de chaînes de connexion](#bkmk_examples)  
   
  [Formats de chaîne de connexion utilisés dans Analysis Services](#bkmk_supportedstrings)  
   
@@ -45,31 +45,24 @@ ms.locfileid: "79217066"
   
  Pour plus d’informations sur la façon de spécifier une connexion Analysis Services dans des applications Microsoft existantes, voir [Connexion à partir d’applications clientes (Analysis Services)](connect-from-client-applications-analysis-services.md).  
   
-##  <a name="bkmk_common"></a>Paramètres de connexion couramment utilisés  
+##  <a name="connection-parameters-in-common-use"></a><a name="bkmk_common"></a> Paramètres de connexion couramment utilisés  
  Le tableau suivant décrit les propriétés couramment utilisées lors de la génération d'une chaîne de connexion.  
   
 |Propriété|Description|Exemple|  
 |--------------|-----------------|-------------|  
-|`Data Source` ou `DataSource`|Spécifie l'instance du serveur. Cette propriété est obligatoire pour toutes les connexions. Les valeurs valides incluent le nom réseau ou l'adresse IP du serveur, local ou localhost pour les connexions locales, une adresse URL si le serveur est configuré pour l'accès HTTP ou HTTPS, ou le nom d'un fichier de cube local (.cub).|
-  `Data source=AW-SRV01` pour l'instance et le port par défaut (TCP 2383).<br /><br /> 
-  `Data source=AW-SRV01$Finance:8081` pour une instance nommée ($Finance) et un port fixe.<br /><br /> 
-  `Data source=AW-SRV01.corp.Adventure-Works.com` pour un nom de domaine complet, avec le port et l'instance par défaut.<br /><br /> 
-  `Data source=172.16.254.1` pour une adresse IP du serveur, en ignorant la recherche de serveur DNS, utile pour résoudre des problèmes de connexion.|  
+|`Data Source` ou `DataSource`|Spécifie l'instance du serveur. Cette propriété est obligatoire pour toutes les connexions. Les valeurs valides incluent le nom réseau ou l'adresse IP du serveur, local ou localhost pour les connexions locales, une adresse URL si le serveur est configuré pour l'accès HTTP ou HTTPS, ou le nom d'un fichier de cube local (.cub).|`Data source=AW-SRV01` pour l'instance et le port par défaut (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` pour une instance nommée ($Finance) et un port fixe.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` pour un nom de domaine complet, avec le port et l'instance par défaut.<br /><br /> `Data source=172.16.254.1` pour une adresse IP du serveur, en ignorant la recherche de serveur DNS, utile pour résoudre des problèmes de connexion.|  
 |`Initial Catalog` ou `Catalog`|Spécifie le nom de la base de données Analysis Services à laquelle se connecter. La base de données doit être déployée sur Analysis Services et vous devez avoir l'autorisation de vous y connecter. Cette propriété est facultative pour les connexions AMO, mais requise pour ADOMD.NET.|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|Les valeurs valides sont MSOLAP ou MSOLAP. \<version>, où \<version> est 3, 4 ou 5. Dans le système de fichiers, le nom du fournisseur de données est msolap110.dll pour la version SQL Server 2012, msolap100.dll pour SQL Server 2008 et SQL Server 2008 R2, et msolap90.dll pour SQL Server 2005.<br /><br /> La version actuelle est MSOLAP.5. Cette propriété est facultative. Par défaut, les bibliothèques clientes lisent la version actuelle du fournisseur OLE DB à partir du Registre. Il vous suffit de définir cette propriété à si vous avez besoin d'une version spécifique du fournisseur de données, par exemple pour vous connecter à une instance SQL Server 2008.<br /><br /> Les fournisseurs de données correspondent aux versions de SQL Server. Si votre organisation utilise la version actuelle et les versions antérieures d'Analysis Services, vous devrez probablement spécifier le fournisseur à utiliser dans les chaînes de connexion que vous créez manuellement. Vous devrez peut-être aussi télécharger et installer des versions spécifiques du fournisseur de données sur des ordinateurs qui n'ont pas la version dont vous avez besoin. Vous pouvez télécharger le fournisseur OLE DB à partir des pages SQL Server Feature Pack du Centre de téléchargement. Accédez à [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) pour télécharger le fournisseur OLE DB d'Analysis Services pour SQL Server 2012.<br /><br /> MSOLAP.4 a été implémenté à la fois dans SQL Server 2008 et dans SQL Server 2008 R2. La version 2008 R2 prend en charge les classeurs PowerPivot et doit parfois être installée manuellement sur les serveurs SharePoint. Pour distinguer ces versions, vous devez vérifier le numéro de build dans les propriétés de fichier du fournisseur : accédez à Program files\Microsoft Analysis Services\AS OLEDB\10. Cliquez avec le bouton droit sur msolap110.dll, puis sélectionnez **Propriétés**. Cliquez sur **Détails**. Consultez les informations de version du fichier. La version doit inclure 10,50. \<BuildNumber> pour SQL Server 2008 R2. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) et [Fournisseurs de données utilisés pour les connexions Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 a été publié en SQL Server 2005.<br /><br /> MSOLAP. 4 a été publié dans SQL Server 2008 et SQL Server 2008 R2<br /><br /> MSOLAP. 5 a été publié en SQL Server 2012|
-  `Provider=MSOLAP.3` est utilisé pour les connexions qui nécessitent la version SQL Server 2005 du fournisseur OLE DB pour Analysis Services.|  
-|`Cube`|Nom du cube ou de la perspective. Une base de données peut contenir plusieurs cubes et perspectives. Lorsque plusieurs cibles sont possibles, indiquez le nom du cube ou de la perspective dans la chaîne de connexion.|
-  `Cube=SalesPerspective` indique que vous pouvez utiliser la propriété de chaîne de connexion Cube pour spécifier le nom d’un cube ou le nom d’une perspective.|  
+|`Provider`|Les valeurs valides sont MSOLAP ou MSOLAP. \<version>, où \<version> est 3, 4 ou 5. Dans le système de fichiers, le nom du fournisseur de données est msolap110.dll pour la version SQL Server 2012, msolap100.dll pour SQL Server 2008 et SQL Server 2008 R2, et msolap90.dll pour SQL Server 2005.<br /><br /> La version actuelle est MSOLAP.5. Cette propriété est facultative. Par défaut, les bibliothèques clientes lisent la version actuelle du fournisseur OLE DB à partir du Registre. Il vous suffit de définir cette propriété à si vous avez besoin d'une version spécifique du fournisseur de données, par exemple pour vous connecter à une instance SQL Server 2008.<br /><br /> Les fournisseurs de données correspondent aux versions de SQL Server. Si votre organisation utilise la version actuelle et les versions antérieures d'Analysis Services, vous devrez probablement spécifier le fournisseur à utiliser dans les chaînes de connexion que vous créez manuellement. Vous devrez peut-être aussi télécharger et installer des versions spécifiques du fournisseur de données sur des ordinateurs qui n'ont pas la version dont vous avez besoin. Vous pouvez télécharger le fournisseur OLE DB à partir des pages SQL Server Feature Pack du Centre de téléchargement. Accédez à [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) pour télécharger le fournisseur OLE DB d'Analysis Services pour SQL Server 2012.<br /><br /> MSOLAP.4 a été implémenté à la fois dans SQL Server 2008 et dans SQL Server 2008 R2. La version 2008 R2 prend en charge les classeurs PowerPivot et doit parfois être installée manuellement sur les serveurs SharePoint. Pour distinguer ces versions, vous devez vérifier le numéro de build dans les propriétés de fichier du fournisseur : accédez à Program files\Microsoft Analysis Services\AS OLEDB\10. Cliquez avec le bouton droit sur msolap110.dll, puis sélectionnez **Propriétés**. Cliquez sur **Détails**. Consultez les informations de version du fichier. La version doit inclure 10,50. \<BuildNumber> pour SQL Server 2008 R2. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) et [Fournisseurs de données utilisés pour les connexions Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 a été publié en SQL Server 2005.<br /><br /> MSOLAP. 4 a été publié dans SQL Server 2008 et SQL Server 2008 R2<br /><br /> MSOLAP. 5 a été publié en SQL Server 2012|`Provider=MSOLAP.3` est utilisé pour les connexions qui nécessitent la version SQL Server 2005 du fournisseur OLE DB pour Analysis Services.|  
+|`Cube`|Nom du cube ou de la perspective. Une base de données peut contenir plusieurs cubes et perspectives. Lorsque plusieurs cibles sont possibles, indiquez le nom du cube ou de la perspective dans la chaîne de connexion.|`Cube=SalesPerspective` indique que vous pouvez utiliser la propriété de chaîne de connexion Cube pour spécifier le nom d’un cube ou le nom d’une perspective.|  
   
-##  <a name="bkmk_auth"></a>Authentification et sécurité  
+##  <a name="authentication-and-security"></a><a name="bkmk_auth"></a>Authentification et sécurité  
  Cette section présente les propriétés de chaîne de connexion relatives à l'authentification et au chiffrement. Analysis Services utilise l'authentification Windows uniquement, mais vous pouvez définir des propriétés sur la chaîne de connexion pour transmettre un nom d'utilisateur et un mot de passe spécifiques.  
   
  Les propriétés sont répertoriées par ordre alphabétique.  
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`EffectiveUserName`|À utiliser lorsque l'identité de l'utilisateur final doit être empruntée sur le serveur. Spécifiez le compte sous le format domaine\utilisateur. Pour utiliser cette propriété, l'appelant doit avoir des autorisations d'administration dans Analysis Services. Pour plus d'informations sur l'utilisation de cette propriété dans un classeur Excel à partir de SharePoint, consultez [Utiliser Analysis Services EffectiveUserName dans SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkId=311905). Pour obtenir une illustration de l'utilisation de cette propriété avec Reporting Services, consultez [Utilisation d'EffectiveUserName pour l'emprunt d'identité dans SSAS](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas).<br /><br /> 
-  `EffectiveUserName` est utilisé dans une installation de PowerPivot pour SharePoint afin de recueillir des informations d'utilisation. L'identité de l'utilisateur est fournie au serveur afin que les événements ou les erreurs qui incluent l'identité de l'utilisateur puissent être stockés dans les fichiers journaux. Dans le cas de PowerPivot, elle n'est pas utilisée pour l'autorisation.|  
+|`EffectiveUserName`|À utiliser lorsque l'identité de l'utilisateur final doit être empruntée sur le serveur. Spécifiez le compte sous le format domaine\utilisateur. Pour utiliser cette propriété, l'appelant doit avoir des autorisations d'administration dans Analysis Services. Pour plus d'informations sur l'utilisation de cette propriété dans un classeur Excel à partir de SharePoint, consultez [Utiliser Analysis Services EffectiveUserName dans SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkId=311905). Pour obtenir une illustration de l'utilisation de cette propriété avec Reporting Services, consultez [Utilisation d'EffectiveUserName pour l'emprunt d'identité dans SSAS](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas).<br /><br /> `EffectiveUserName` est utilisé dans une installation de PowerPivot pour SharePoint afin de recueillir des informations d'utilisation. L'identité de l'utilisateur est fournie au serveur afin que les événements ou les erreurs qui incluent l'identité de l'utilisateur puissent être stockés dans les fichiers journaux. Dans le cas de PowerPivot, elle n'est pas utilisée pour l'autorisation.|  
 |**Chiffrer le mot de passe**|Spécifie si un mot de passe local doit être utilisé pour chiffrer les cubes locaux. Les valeurs valides sont True ou False. La valeur par défaut est False.|  
 |`Encryption Password`|Le mot de passe utilisé pour déchiffrer un cube local chiffré. La valeur par défaut est vide. Cette valeur doit être explicitement définie par l'utilisateur.|  
 |`Impersonation Level`|Indique le niveau d'emprunt d'identité que le serveur est autorisé à utiliser lorsqu'il emprunte l'identité du client. Les valeurs valides sont les suivantes :<br /><br /> **Anonyme**: le client est anonyme pour le serveur. Le processus serveur ne peut pas obtenir les informations sur le client et il n'est pas possible d'emprunter l'identité du client.<br /><br /> **Identifier**: le processus serveur peut récupérer l’identité du client. Le serveur peut emprunter l'identité du client à des fins d'autorisation, mais il ne peut pas accéder aux objets système en tant que client.<br /><br /> **Impersonate**: il s’agit de la valeur par défaut. L'identité du client peut être empruntée, mais uniquement lorsque la connexion est établie, et non à chaque appel.<br /><br /> **Délégué**: le processus serveur peut emprunter l’identité du contexte de sécurité du client tout en agissant pour le compte du client. Le processus serveur peut également faire des appels sortants à d'autres serveurs lorsqu'il agit de la part du client.|  
@@ -82,7 +75,7 @@ ms.locfileid: "79217066"
 |`Use Encryption for Data`|Chiffre les transmissions de données. Les valeurs possibles sont True et False.|  
 |`User ID`=...;`Password`=|`User ID`et `Password` sont utilisés ensemble. Analysis Services emprunte l'identité de l'utilisateur spécifiée au moyen de ces informations d'identification. Sur une connexion Analysis Services, placer les informations d'identification sur la ligne de commande n'est permis que lorsque le serveur est configuré pour l'accès HTTP et que vous avez défini l'authentification de base au lieu de la sécurité intégrée dans le répertoire virtuel IIS.<br /><br /> Le nom d'utilisateur et le mot de passe doivent être des informations d'identification d'une identité Windows, c'est-à-dire un compte d'utilisateur de domaine ou local. Notez que `User ID` comporte un espace incorporé. D'autres alias pour cette propriété sont `UserName` (sans espace) et `UID`. L'alias pour `Password` est `PWD`.|  
   
-##  <a name="bkmk_special"></a>Paramètres spéciaux  
+##  <a name="special-purpose-parameters"></a><a name="bkmk_special"></a> Paramètres spéciaux  
  Cette section décrit les autres paramètres de chaîne de connexion. Ceux-ci sont utilisées pour garantir des comportements de connexion spécifiques requis par une application.  
   
  Les propriétés sont répertoriées par ordre alphabétique.  
@@ -108,7 +101,7 @@ ms.locfileid: "79217066"
 |`UseExistingFile`|Utilisé lors de la connexion à un cube local. Cette propriété spécifie si le cube local est remplacé. Les valeurs valides sont True ou False. Si la valeur True est définie, le fichier de cube doit exister. Le fichier existant sera la cible de la connexion. Si la valeur définie est False, le fichier de cube est remplacé.|  
 |`VisualMode`|Définissez cette propriété pour contrôler la façon dont les membres sont agrégées lorsque la sécurité de dimension est appliquée.<br /><br /> Pour les données de cube que toute le monde est autorisé à afficher, l'agrégation de tous les membres est logique car toutes les valeurs qui contribuent au total sont visibles. Toutefois, si vous filtrez ou restreignez les dimensions en fonction de l'identité de l'utilisateur, afficher un total basé sur tous les membres (en combinant les valeurs restreintes et autorisées dans un seul total) risque d'être déroutant ou d'inclure plus d'informations que nécessaire.<br /><br /> Pour spécifier la façon dont les membres sont agrégés lorsque la sécurité de dimension est appliquée, vous pouvez définir cette propriété sur True afin d'utiliser uniquement les valeurs autorisées dans l'agrégation, ou False pour exclure les valeurs restreintes du total.<br /><br /> Si la chaîne de connexion est définie, cette valeur s'applique au niveau de cube ou de perspective. Dans un modèle, vous pouvez contrôler les valeurs totales affichées à un niveau plus granulaire.<br /><br /> Les valeurs valides sont 0, 1 et 2.<br /><br /> La valeur par défaut est 0. Actuellement, le comportement par défaut est équivalent à 2, où les agrégations contiennent des valeurs qui sont masquées de l'utilisateur.<br /><br /> 1 exclut les valeurs masquées du total. Il s'agit de la valeur par défaut pour Excel.<br /><br /> 2 inclut les valeurs masquées dans le total. Il s'agit de la valeur par défaut sur le serveur.<br /><br /> <br /><br /> Les alias pour cette propriété sont `Visual Total` ou `Default MDX Visual Mode`.|  
   
-##  <a name="bkmk_reserved"></a>Réservé pour un usage ultérieur  
+##  <a name="reserved-for-future-use"></a><a name="bkmk_reserved"></a>Réservé pour un usage ultérieur  
  Les propriétés suivantes sont autorisées sur une chaîne de connexion, mais ne sont pas opérationnelles dans les versions actuelle d'Analysis Services.  
   
 -   utilisateur authentifié  
@@ -133,7 +126,7 @@ ms.locfileid: "79217066"
   
 -   Utiliser le cache de formule  
   
-##  <a name="bkmk_examples"></a>Exemples de chaînes de connexion  
+##  <a name="example-connection-strings"></a><a name="bkmk_examples"></a>Exemples de chaînes de connexion  
  Cette section présente la chaîne de connexion que vous utiliserez très probablement lors de la configuration d’une connexion Analysis Services dans les applications couramment utilisées.  
   
  **Chaîne de connexion générique**  
@@ -150,7 +143,7 @@ ms.locfileid: "79217066"
   
  Pour plus d’informations, consultez [connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md) et [authentification de données pour Excel Services dans SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkId=296350).  
   
-##  <a name="bkmk_supportedstrings"></a>Formats de chaîne de connexion utilisés dans Analysis Services  
+##  <a name="connection-string-formats-used-in-analysis-services"></a><a name="bkmk_supportedstrings"></a> Formats de chaîne de connexion utilisés dans Analysis Services  
  Cette section répertorie tous les formats de chaîne de connexion pris en charge par Analysis Services. À l'exception des connexions aux bases de données PowerPivot, vous pouvez spécifier ces chaînes de connexion dans les applications qui se connectent à Analysis Services.  
   
  **Connexions natives (ou directes) au serveur**  
@@ -163,43 +156,34 @@ ms.locfileid: "79217066"
   
  « Data source = Server1 : port1\instance1 » ouvre une connexion à SQL Browser sur « PORT1 », résout le port de l’instance nommée « Instance1 », puis ouvre la connexion à ce Analysis Services port.  
   
- **Connexions de cube locales (fichiers. CUB)**  
+ **Connexions de cube locales (fichiers .cub)**  
   
  `Data Source=<path>`, par exemple « Data source = c:\temp\a.CUB »  
   
- **Connexions http (s) à msmdpump. dll**  
+ **Connexions HTTP(s) à msmdpump.dll**  
   
- 
-  `Data Source=<URL>`, où l'URL est l'adresse HTTP ou HTTPS dans le dossier virtuel IIS qui contient le fichier msmdpump.dll. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
+ `Data Source=<URL>`, où l'URL est l'adresse HTTP ou HTTPS dans le dossier virtuel IIS qui contient le fichier msmdpump.dll. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  **Connexions HTTP aux classeurs PowerPivot (fichiers .xlsx, .xlsb ou .xlsm)**  
   
- 
-  `Data Source=<URL>`, où l'URL est le chemin d'accès SharePoint à un classeur PowerPivot publié dans une bibliothèque SharePoint. Par exemple, « Data source =<http://localhost/Shared> documents/Sales. xlsx ».  
+ `Data Source=<URL>`, où l'URL est le chemin d'accès SharePoint à un classeur PowerPivot publié dans une bibliothèque SharePoint. Par exemple, « Data source =<http://localhost/Shared> documents/Sales. xlsx ».  
   
- **Connexions http (s) aux fichiers de connexion de modèle sémantique BI**  
+ **Connexions HTTP(s) aux fichiers de connexion de modèle sémantique BI**  
   
- 
-  `Data Source=<URL>` où l'URL est le chemin d'accès SharePoint au fichier .bism. Par exemple, « Data source =<http://localhost/Shared> documents/Sales. BISM ».  
+ `Data Source=<URL>` où l'URL est le chemin d'accès SharePoint au fichier .bism. Par exemple, « Data source =<http://localhost/Shared> documents/Sales. BISM ».  
   
  **Connexions incorporées PowerPivot**  
   
- 
-  `Data Source=$Embedded$` où $embedded$ " est un moniker qui fait référence à un modèle de données PowerPivot incorporées dans le classeur. Cette chaîne de connexion est créée et gérée en interne. Ne la modifiez pas. Les chaînes de connexion incorporées sont résolues par le complément PowerPivot pour Excel sur les stations de travail clientes, ou par les instances PowerPivot pour SharePoint dans une batterie de serveurs SharePoint.  
+ `Data Source=$Embedded$` où $embedded$ " est un moniker qui fait référence à un modèle de données PowerPivot incorporées dans le classeur. Cette chaîne de connexion est créée et gérée en interne. Ne la modifiez pas. Les chaînes de connexion incorporées sont résolues par le complément PowerPivot pour Excel sur les stations de travail clientes, ou par les instances PowerPivot pour SharePoint dans une batterie de serveurs SharePoint.  
   
  **Contexte de serveur local dans les procédures stockées Analysis Services**  
   
- 
-  `Data Source=*`, où * est résolu en instance locale.  
+ `Data Source=*`, où * est résolu en instance locale.  
   
-##  <a name="bkmk_encrypt"></a>Chiffrement des chaînes de connexion  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre et stocke les chaînes de connexion qu’il utilise pour se connecter à chacune de ses sources de données. Si la connexion à une source de données nécessite un nom d'utilisateur et un mot de passe, vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de stocker le nom et le mot de passe avec la chaîne de connexion, ou lui indiquer de demander le nom et le mot de passe chaque fois qu'une connexion à la source de données est nécessaire. Si vous indiquez à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vous demander les informations utilisateur, ceci implique que ces informations ne doivent pas être stockées et chiffrées. En revanche, si vous stockez ces informations dans la chaîne de connexion, ces informations doivent être chiffrées et protégées.  
+##  <a name="encrypting-connection-strings"></a><a name="bkmk_encrypt"></a> Chiffrement des chaînes de connexion  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre et stocke les chaînes de connexion qu’il utilise pour se connecter à chacune de ses sources de données. Si la connexion à une source de données nécessite un nom d'utilisateur et un mot de passe, vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de stocker le nom et le mot de passe avec la chaîne de connexion, ou lui indiquer de demander le nom et le mot de passe chaque fois qu'une connexion à la source de données est nécessaire. Si vous indiquez à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vous demander les informations utilisateur, ceci implique que ces informations ne doivent pas être stockées et chiffrées. En revanche, si vous stockez ces informations dans la chaîne de connexion, ces informations doivent être chiffrées et protégées.  
   
- Pour chiffrer et protéger les informations de la chaîne de connexion, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise l'API de protection des données. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise une clé de chiffrement distincte pour chiffrer les informations de la chaîne de connexion pour chaque base de données de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée cette clé quand vous créez une base de données et chiffe les informations de la chaîne de connexion en fonction du compte de démarrage [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lors du démarrage de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , la clé chiffrée pour chaque base de données est lue, déchiffrée et stockée. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise ensuite la clé déchiffrée appropriée pour déchiffrer les informations de la chaîne de connexion à la source de données lorsque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a besoin de se connecter à une source de données.  
+ Pour chiffrer et protéger les informations de la chaîne de connexion, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise l'API de protection des données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise une clé de chiffrement distincte pour chiffrer les informations de la chaîne de connexion pour chaque base de données de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée cette clé quand vous créez une base de données et chiffe les informations de la chaîne de connexion en fonction du compte de démarrage [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lors du démarrage de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , la clé chiffrée pour chaque base de données est lue, déchiffrée et stockée. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise ensuite la clé déchiffrée appropriée pour déchiffrer les informations de la chaîne de connexion à la source de données lorsque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a besoin de se connecter à une source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   

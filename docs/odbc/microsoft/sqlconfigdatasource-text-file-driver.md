@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Text File Driver) Microsoft Docs
+title: SQLConfigDataSource (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2d2809f9b15dd6843e4404c7cf1887c3caa015a3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283919"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (pilote de fichier texte)
 > [!NOTE]  
->  Ce sujet fournit des informations spécifiques au fichier texte. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote de fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- La fonction **SQLConfigDataSource** qui est utilisée pour ajouter, modifier ou supprimer une source de données utilise dynamiquement les mots clés suivants.  
+ La fonction **SQLConfigDataSource** utilisée pour ajouter, modifier ou supprimer une source de données utilise dynamiquement les mots clés suivants.  
   
 |Mot clé|Description|  
 |-------------|-----------------|  
-|PERSONNAGESET|Pour le pilote de texte, OEM ou ANSI.|  
-|COLNAMEHEADER|Pour le pilote de texte, indique si le premier enregistrement des données spécifiera les noms de colonne. SOIT VRAI, soit FALSE.|  
-|DÉFAUTDIR|Le parcours du répertoire.|  
-|Description|Une description des données dans la source de données.<br /><br /> Cela définit la même option que **description** dans la boîte de dialogue de configuration.|  
-|DRIVER|La spécification de chemin au conducteur DLL.|  
-|DRIVERID (EN)|Une pièce d’identité pour le conducteur. 27 (Texte)|  
-|Extensions|Répertorie les extensions de nom de fichier des fichiers texte sur la source de données.<br /><br /> Cela définit la même option que **la liste d’extensions** dans la boîte de dialogue de configuration.|  
-|FIL (EN)|Texte de type fichier|  
-|Filetype|Type de fichier pour le pilote de texte (Texte).|  
-|FORMAT|Pour le pilote de texte, peut être FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (par virgule), ou DELIMITED () (par le caractère spécial spécifié dans les parenthèses). Le personnage spécial est un personnage de longueur et peut être dans le format de caractère, décimale, ou hexadecimal.|  
-|MAXSCANROWS (EN)|Nombre de lignes à numériser lors de la définition du type de données d’une colonne à partir des données existantes.<br /><br /> Pour le pilote textuel, vous pouvez entrer un numéro de 1 à 32767 pour le nombre de lignes à numériser; cependant, la valeur sera toujours par défaut à 25. (Un numéro en dehors de la limite retournera une erreur.)<br /><br /> Cela définit la même option que **Rows to Scan** dans la boîte de dialogue de configuration.|  
-|READONLY|VRAI pour faire lecture de fichier seulement; FALSE pour faire fichier non lu seulement.<br /><br /> Cela définit la même option que **Lire uniquement** dans la boîte de dialogue de configuration.|
+|CHARACTERSET|Pour le pilote de texte, OEM ou ANSI.|  
+|COLNAMEHEADER|Pour le pilote de texte, indique si le premier enregistrement de données spécifie les noms de colonne. TRUE ou FALSe.|  
+|DEFAULTDIR|Spécification du chemin d’accès au répertoire.|  
+|Description|Description des données dans la source de données.<br /><br /> Cela définit la même option que **Description** dans la boîte de dialogue d’installation.|  
+|DRIVER|Spécification du chemin d’accès à la DLL du pilote.|  
+|DRIVERID|ID d’entier du pilote. 27 (texte)|  
+|EXTENSIONS|Répertorie les extensions de nom de fichier des fichiers texte sur la source de données.<br /><br /> Cela définit la même option que la **liste des extensions** dans la boîte de dialogue d’installation.|  
+|FIL|Texte du type de fichier|  
+|FILETYPE|Type de fichier pour le pilote de texte (texte).|  
+|FORMAT|Pour le pilote de texte, peut être multiple, TABDELIMITED, CSVDELIMITED (par une virgule) ou délimité () (par le caractère spécial spécifié entre parenthèses). Le caractère spécial est un caractère de longueur et peut être au format caractère, décimal ou hexadécimal.|  
+|MAXSCANROWS|Nombre de lignes à analyser lors de la définition du type de données d’une colonne en fonction des données existantes.<br /><br /> Pour le pilote Text, vous pouvez entrer un nombre compris entre 1 et 32767 pour le nombre de lignes à analyser. Toutefois, la valeur par défaut sera toujours 25. (Un nombre en dehors de la limite renverra une erreur.)<br /><br /> Cela définit la même option que **lignes à analyser** dans la boîte de dialogue d’installation.|  
+|READONLY|TRUE pour rendre le fichier accessible en lecture seule ; FALSe pour que le fichier ne soit pas en lecture seule.<br /><br /> Cela permet de définir la même option en **lecture seule** dans la boîte de dialogue d’installation.|

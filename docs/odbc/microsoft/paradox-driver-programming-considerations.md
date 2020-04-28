@@ -1,5 +1,5 @@
 ---
-title: Considérations de programmation paradoxal des conducteurs (en anglais seulement) Microsoft Docs
+title: Considérations sur la programmation du pilote Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d2c33b52d851facfea5a20b8aac6faf8428758f3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290849"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Considérations sur la programmation du pilote Paradox
@@ -34,4 +34,4 @@ Cette section contient les rubriques suivantes :
 -   [Autres détails de programmation du pilote Paradox](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
   
 > [!NOTE]  
->  L’accès aux fichiers Paradox ISAM via les pilotes de base de données de bureau ODBC nécessite l’installation du moteur de base de données Borland.
+>  L’accès aux fichiers Paradox ISAM par le biais des pilotes de base de données de bureau ODBC nécessite l’installation du moteur de base de données Borland.

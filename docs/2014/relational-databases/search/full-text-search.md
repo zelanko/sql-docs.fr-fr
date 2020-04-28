@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176839"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
@@ -27,12 +27,12 @@ ms.locfileid: "78176839"
 > [!NOTE]
 >  La recherche en texte intégral est un composant facultatif du Moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).
 
-##  <a name="benefits"></a>Que puis-je faire avec la recherche en texte intégral ?
+##  <a name="what-can-i-do-with-full-text-search"></a><a name="benefits"></a>Que puis-je faire avec la recherche en texte intégral ?
  La recherche en texte intégral s’applique à un large éventail de scénarios d’entreprise, tels que des activités e-Business, qui recherchent des éléments sur un site Web. cabinets d’avocats : recherche d’historiques de cas dans un référentiel de données juridiques ; ou services HWS-descriptions des postes correspondant aux CV stockés. Les principales tâches d'administration et de développement de la recherche en texte intégral sont identiques pour tous les scénarios d'entreprise. Toutefois, il est possible d'affiner l'index de recherche en texte intégral et les requêtes de texte intégral dans un scénario d'entreprise donné afin de répondre à des objectifs d'entreprise précis. Par exemple, pour une entreprise e-business, l'optimisation des performances sera peut-être plus importante que le classement des résultats, l'exactitude de rappel (nombre de correspondances existantes à être réellement retournées par une requête de texte intégral), ou la prise en charge de plusieurs langues. Pour un cabinet d'avocats, il sera par exemple essentiel de garantir une réponse à chaque contact (*rappel total* d'informations).
 
  [Dans cette rubrique](#top)
 
-###  <a name="queries"></a>Requêtes de recherche en texte intégral
+###  <a name="full-text-search-queries"></a><a name="queries"></a>Requêtes de recherche en texte intégral
  Une fois que des colonnes ont été ajoutées à un index de recherche en texte intégral, les utilisateurs et les applications peuvent exécuter des requêtes de texte intégral sur le texte contenu dans ces colonnes. Ces requêtes peuvent être utilisées pour rechercher les éléments suivants :
 
 -   Un ou plusieurs mots ou expressions spécifiques (*terme simple*)
@@ -74,12 +74,12 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-###  <a name="like"></a>Comparaison comme la recherche en texte intégral
- Contrairement à la recherche en texte intégral, le prédicat [Like](/sql/t-sql/language-elements/like-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] fonctionne uniquement sur les modèles de caractères. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées.
+###  <a name="comparing-like-to-full-text-search"></a><a name="like"></a>Comparaison comme la recherche en texte intégral
+ Contrairement à la recherche en texte intégral, le prédicat [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] fonctionne uniquement sur les modèles de caractères. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées.
 
  [Dans cette rubrique](#top)
 
-##  <a name="architecture"></a>Composants et architecture de la recherche en texte intégral
+##  <a name="components-and-architecture-of-full-text-search"></a><a name="architecture"></a>Composants et architecture de la recherche en texte intégral
  L'architecture de la recherche en texte intégral est constituée des processus suivants :
 
 -   Processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlservr.exe).
@@ -94,20 +94,20 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-###  <a name="sqlprocess"></a>Processus de SQL Server
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a>Processus de SQL Server
  Le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent les composants suivants pour la recherche en texte intégral :
 
 -   **Tables utilisateur.** Ces tables contiennent les données à indexer en texte intégral.
 
--   **Rassembleur de texte intégral.** L'outil d'extraction de texte intégral fonctionne avec les threads d'analyse de texte intégral. Il est responsable de la planification et du pilotage du remplissage des index de texte intégral, ainsi que de la surveillance des catalogues de texte intégral.
+-   **Outil d'extraction de texte intégral.** L'outil d'extraction de texte intégral fonctionne avec les threads d'analyse de texte intégral. Il est responsable de la planification et du pilotage du remplissage des index de texte intégral, ainsi que de la surveillance des catalogues de texte intégral.
 
 -   **Fichiers de dictionnaire des synonymes.** Ces fichiers contiennent des synonymes de termes de recherche. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](configure-and-manage-thesaurus-files-for-full-text-search.md).
 
--   **Objets de la STOPLIST.** Les objets de la liste de mots vides contiennent une liste de mots courants qui ne sont pas utiles pour la recherche. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
+-   **Objets de la liste de mots vides.** Les objets de la liste de mots vides contiennent une liste de mots courants qui ne sont pas utiles pour la recherche. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]processeur de requêtes.** Le processeur de requêtes compile et exécute des requêtes SQL. Si une requête SQL inclut une requête de recherche en texte intégral, la requête est envoyée au Moteur d'indexation et de recherche en texte intégral, à la fois pendant la compilation et pendant l'exécution. Le résultat de la requête est opposé à l'index de texte intégral.
 
--   **Moteur de texte intégral.** Le Moteur d’indexation et de recherche en texte intégral de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est entièrement intégré au processeur de requêtes. Le Moteur d'indexation et de recherche en texte intégral compile et exécute les requêtes de texte intégral. Dans le cadre de l'exécution de la requête, le Moteur d'indexation et de recherche en texte intégral peut recevoir des entrées provenant du dictionnaire des synonymes et de la liste de mots vides.
+-   **Moteur d'indexation et de recherche en texte intégral.** Le Moteur d’indexation et de recherche en texte intégral de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est entièrement intégré au processeur de requêtes. Le Moteur d'indexation et de recherche en texte intégral compile et exécute les requêtes de texte intégral. Dans le cadre de l'exécution de la requête, le Moteur d'indexation et de recherche en texte intégral peut recevoir des entrées provenant du dictionnaire des synonymes et de la liste de mots vides.
 
 -   **Générateur d'index (indexeur).** Le générateur d'index crée la structure utilisée pour stocker les jetons indexés.
 
@@ -115,7 +115,7 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-###  <a name="fdhostprocess"></a>Processus hôte de démon de filtre
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a>Processus hôte de démon de filtre
  L'hôte de démon de filtre est un processus démarré par le Moteur d'indexation et de recherche en texte intégral. Il exécute les composants de recherche en texte intégral ci-dessous, chargés d'accéder aux données des tables, de les filtrer et d'en effectuer l'analyse lexicale, ainsi que d'effectuer l'analyse lexicale et d'identifier la racine des mots de l'entrée de requête.
 
  Les composants de l'hôte de démon de filtre sont les suivants :
@@ -128,10 +128,10 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-##  <a name="processing"></a>Traitement de la recherche en texte intégral
+##  <a name="full-text-search-processing"></a><a name="processing"></a>Traitement de la recherche en texte intégral
  La recherche en texte intégral est rendue possible par le Moteur d'indexation et de recherche en texte intégral. Le Moteur d'indexation et de recherche en texte intégral assure deux rôles : prise en charge de l'indexation et prise en charge des requêtes.
 
-###  <a name="indexing"></a>Processus d’indexation de texte intégral
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Processus d’indexation de texte intégral
  Au début d'une alimentation de texte intégral (également appelé analyse), le Moteur d'indexation et de recherche en texte intégral effectue l'envoi (push) de grands lots de données en mémoire et informe l'hôte de démon de filtre. L'hôte filtre et effectue une analyse lexicale des données et il convertit les données converties en listes de mots inversées. La recherche en texte intégral extrait ensuite les données converties des listes de mots, traite les données pour supprimer les mots vides et conserve les listes de mots pour un lot dans un ou plusieurs index inversés.
 
  Lors de l’indexation des données stockées `varbinary(max)` dans `image` une colonne ou, le filtre qui implémente l’interface **IFilter** extrait le texte en fonction du format de fichier spécifié pour ces données (par exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] , Word). Dans certains cas, les composants de filtre nécessitent `varbinary(max)`le, `image` ou les données sont écrites dans le dossier FilterData, au lieu d’être envoyées en mémoire.
@@ -144,22 +144,21 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-###  <a name="querying"></a>Processus d’interrogation de texte intégral
+###  <a name="full-text-querying-process"></a><a name="querying"></a>Processus d’interrogation de texte intégral
  Le processeur de requêtes passe les parties de texte intégral d'une requête au Moteur d'indexation et de recherche en texte intégral à des fins de traitement. Le Moteur d'indexation et de recherche en texte intégral effectue l'analyse lexicale et procède éventuellement à des expansions du dictionnaire des synonymes, à la recherche de radical et au traitement des mots vides (mots parasites). Ensuite, les parties de texte intégral de la requête sont représentées sous forme d'opérateurs SQL, essentiellement comme des fonctions table multi-diffusion. Au cours de l'exécution de la requête, ces fonctions table multi-diffusion accèdent à l'index inversé pour extraire les résultats corrects. Les résultats sont alors retournés au client ou bien ils font l'objet d'un traitement supplémentaire avant d'être retournés au client.
 
  [Dans cette rubrique](#top)
 
-##  <a name="components"></a>Composants linguistiques et prise en charge des langues dans la recherche en texte intégral
+##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>Composants linguistiques et prise en charge des langues dans la recherche en texte intégral
  La recherche en texte intégral prend en charge environ 50 langues, dont l'anglais, l'espagnol, le chinois, le japonais, l'arabe, le bengali et l'hindi. Pour obtenir une liste complète des langues de texte intégral prises en charge, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Chacune des colonnes contenues dans l'index de recherche en texte intégral est associée à un identificateur de paramètres régionaux (LCID) Microsoft Windows qui représente une langue prise en charge par la recherche en texte intégral. Par exemple, le LCID 1033 correspond à l'anglais américain et le LCID 2057 à l'anglais britannique. Pour chaque langue de texte intégral prise en charge, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des composants linguistiques qui acceptent l'indexation et l'interrogation des données de texte intégral qui sont stockées dans cette langue.
 
  Les composants spécifiques à une langue sont les suivants :
 
 -   **Analyseurs lexicaux et générateurs de formes dérivées.** Un analyseur lexical détecte les limites de mots en fonction des règles lexicales définies pour une langue donnée (*analyse lexicale*). Chaque analyseur lexical est associé à un générateur de formes dérivées qui conjugue des verbes pour la même langue. Pour plus d’informations, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
--   **Mots vides.** Une liste de mots vides système contenant un jeu de base de mots vides (également appelés mots parasites) est fournie. Un *mot vide* n’est d’aucune utilité pour la recherche et est ignoré par les requêtes de texte intégral. Par exemple, en français, les mots tels que « un », « et », « est » ou « le » sont considérés comme des mots vides. En général, vous devez configurer un ou plusieurs fichiers de dictionnaires des synonymes et une ou plusieurs listes de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
+-   **Listes de mots vides.** Une liste de mots vides système contenant un jeu de base de mots vides (également appelés mots parasites) est fournie. Un *mot vide* n’est d’aucune utilité pour la recherche et est ignoré par les requêtes de texte intégral. Par exemple, en français, les mots tels que « un », « et », « est » ou « le » sont considérés comme des mots vides. En général, vous devez configurer un ou plusieurs fichiers de dictionnaires des synonymes et une ou plusieurs listes de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
--   **Fichiers de dictionnaire des synonymes.** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe aussi un fichier de dictionnaire des synonymes pour chaque langue de texte intégral, ainsi qu’un fichier de dictionnaire des synonymes global. Les fichiers de dictionnaire des synonymes installés sont essentiellement vides, mais vous pouvez les modifier et définir des synonymes pour une langue ou un scénario d'entreprise spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](configure-and-manage-thesaurus-files-for-full-text-search.md).
+-   **Fichiers de dictionnaire des synonymes.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe aussi un fichier de dictionnaire des synonymes pour chaque langue de texte intégral, ainsi qu’un fichier de dictionnaire des synonymes global. Les fichiers de dictionnaire des synonymes installés sont essentiellement vides, mais vous pouvez les modifier et définir des synonymes pour une langue ou un scénario d'entreprise spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](configure-and-manage-thesaurus-files-for-full-text-search.md).
 
 -   **Filtres (iFilters).**  L'indexation d'un document dans une colonne de type de données `varbinary(max)`, `image` ou `xml` nécessite un traitement supplémentaire effectué par un filtre. Ce filtre doit être spécifique au type de document (.doc, .pdf, .xls, .xml, etc.). Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](configure-and-manage-filters-for-search.md).
 
@@ -167,7 +166,7 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-##  <a name="reltasks"></a> Tâches associées
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tâches associées
 
 -   [Commencer à utiliser la recherche en texte intégral](get-started-with-full-text-search.md)
 
@@ -181,9 +180,9 @@ ms.locfileid: "78176839"
 
     -   [Améliorer les performances des requêtes de texte intégral](improve-the-performance-of-full-text-queries.md)
 
-    -   [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md)
+    -   [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](search-document-properties-with-search-property-lists.md)
 
-    -   [Rechercher des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md)
+    -   [Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md)
 
 -   Gestion des catalogues et des index
 
@@ -231,7 +230,7 @@ ms.locfileid: "78176839"
 
  [Dans cette rubrique](#top)
 
-##  <a name="relcontent"></a> Contenu associé
+##  <a name="related-content"></a><a name="relcontent"></a> Contenu associé
 
 -   [DDL, fonctions, procédures stockées et vues de recherche en texte intégral](../views/views.md)
 

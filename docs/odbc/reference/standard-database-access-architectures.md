@@ -1,5 +1,5 @@
 ---
-title: Architectures d’accès standard à la base de données (en anglais seulement) Microsoft Docs
+title: Architectures d’accès aux bases de données standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6e78202eff69e6b30dc1e97d80f464dad75bb201
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280032"
 ---
 # <a name="standard-database-access-architectures"></a>Architectures de l’accès aux bases de données standard
-En examinant les composants d’accès à la base de données décrits dans la section précédente, il s’avère que deux d’entre eux - les interfaces de programmation et les protocoles de flux de données - sont de bons candidats à la normalisation. Les deux autres composantes - le mécanisme IPC et les protocoles de réseau - résident non seulement à un niveau trop bas, mais ils sont tous deux très dépendants du réseau et du système d’exploitation. Il existe également une troisième approche - les passerelles - qui offre des possibilités de normalisation.  
+En examinant les composants d’accès à la base de données décrits dans la section précédente, il s’avère que deux des interfaces de programmation et de flux de données sont de bons candidats à la normalisation. Les deux autres composants, le mécanisme IPC et les protocoles réseau, ne se trouvent pas seulement à un niveau trop faible, mais ils sont tous deux très tributaires du réseau et du système d’exploitation. Il existe également une troisième approche, passerelles, qui offre des possibilités de normalisation.  
   
  Cette section contient les rubriques suivantes :  
   

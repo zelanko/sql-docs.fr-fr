@@ -1,5 +1,5 @@
 ---
-title: sp_execute_external_script (Transact-SQL) Microsoft Docs
+title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 8800df26e505f1fffe25e6f65218481e7a8158f0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80663016"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
@@ -32,27 +32,27 @@ ms.locfileid: "80663016"
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-La procédure **stockée sp_execute_external_script** exécute un script fourni comme argument d’entrée à la procédure, et est utilisée avec les [services d’apprentissage automatique](../../machine-learning/index.yml) et les [extensions de langue](../../language-extensions/language-extensions-overview.md). 
+La procédure stockée **sp_execute_external_script** exécute un script fourni en tant qu’argument d’entrée pour la procédure et est utilisé avec les [extensions de langage](../../language-extensions/language-extensions-overview.md)et de [machine learning services](../../machine-learning/index.yml) . 
 
-Pour les services d’apprentissage automatique, [Python](../../machine-learning/concepts/extension-python.md) et [R](../../machine-learning/concepts/extension-r.md) sont des langues prises en charge. Pour les extensions linguistiques, Java est pris en charge mais doit être défini avec [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
+Pour Machine Learning Services, [python](../../machine-learning/concepts/extension-python.md) et [R](../../machine-learning/concepts/extension-r.md) sont des langages pris en charge. Pour les extensions de langage, Java est pris en charge, mais doit être défini avec [Create External Language](../../t-sql/statements/create-external-language-transact-sql.md).
 
-Pour exécuter **sp_execute_external_script,** vous devez d’abord installer des services d’apprentissage automatique ou des extensions de langue. Pour plus d’informations, voir [installer SQL Server Machine Learning Services (Python and R) sur Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) et [Linux](../../linux/sql-server-linux-setup-machine-learning.md), ou [installez SQL Server Language Extensions sur Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) et [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+Pour exécuter **sp_execute_external_script**, vous devez d’abord installer les extensions de langage ou de machine learning services. Pour plus d’informations, consultez [installer SQL Server machine learning services (Python et R) sur Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) et [Linux](../../linux/sql-server-linux-setup-machine-learning.md), ou [installer les extensions de langage SQL Server sur Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) et [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-La **procédure stockée sp_execute_external_script** exécute un script fourni comme argument d’entrée à la procédure, et est utilisée avec Les Services [d’apprentissage automatique](../../machine-learning/index.yml) sur SQL Server 2017. 
+La procédure stockée **sp_execute_external_script** exécute un script fourni en tant qu’argument d’entrée pour la procédure et est utilisé avec [Machine Learning Services](../../machine-learning/index.yml) sur SQL Server 2017. 
 
-Pour les services d’apprentissage automatique, [Python](../../machine-learning/concepts/extension-python.md) et [R](../../machine-learning/concepts/extension-r.md) sont des langues prises en charge. 
+Pour Machine Learning Services, [python](../../machine-learning/concepts/extension-python.md) et [R](../../machine-learning/concepts/extension-r.md) sont des langages pris en charge. 
 
-Pour exécuter **sp_execute_external_script,** vous devez d’abord installer des services d’apprentissage automatique. Pour plus d’informations, voir [Installer SQL Server Machine Learning Services (Python et R) sur Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
+Pour exécuter **sp_execute_external_script**, vous devez d’abord installer machine learning services. Pour plus d’informations, consultez [installer SQL Server machine learning services (Python et R) sur Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-La **procédure sp_execute_external_script** stockée exécute un script fourni comme argument d’entrée à la procédure, et est utilisé avec R [Services](../../machine-learning/r/sql-server-r-services.md) sur SQL Server 2016.
+La procédure stockée **sp_execute_external_script** exécute un script fourni en tant qu’argument d’entrée pour la procédure et est utilisé avec [R Services](../../machine-learning/r/sql-server-r-services.md) sur SQL Server 2016.
 
-Pour R Services, [R](../../machine-learning/concepts/extension-r.md) est la langue soutenue.
+Pour R services, [r](../../machine-learning/concepts/extension-r.md) est le langage pris en charge.
 
-Pour exécuter **sp_execute_external_script,** vous devez d’abord installer R Services. Pour plus d’informations, voir [Installer SQL Server Machine Learning Services (Python et R) sur Windows](../../machine-learning/install/sql-r-services-windows-install.md).
+Pour exécuter **sp_execute_external_script**, vous devez d’abord installer R services. Pour plus d’informations, consultez [installer SQL Server machine learning services (Python et R) sur Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
 
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -75,7 +75,7 @@ sp_execute_external_script
 ```
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-## <a name="syntax-for-2017-and-earlier"></a>Syntaxe pour 2017 et plus tôt
+## <a name="syntax-for-2017-and-earlier"></a>Syntaxe pour 2017 et versions antérieures
 
 ```
 sp_execute_external_script   
@@ -91,101 +91,101 @@ sp_execute_external_script
 ::: moniker-end
 
 ## <a name="arguments"></a>Arguments
- langue n '*langue*' ** \@**  
+ Language = N'*Language*' ** \@**  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
- Indique le langage du script. *la langue* est **sysname**. Les valeurs valides sont **R**, **Python**, et toute langue définie avec [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) (par exemple, Java).
+ Indique le langage de script. *Language* est de **type sysname**. Les valeurs valides sont **R**, **python**et n’importe quel langage défini avec [Create External Language](../../t-sql/statements/create-external-language-transact-sql.md) (par exemple, Java).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
- Indique le langage du script. *la langue* est **sysname**. Dans SQL Server 2017, les valeurs valides sont **R** et **Python**.
+ Indique le langage de script. *Language* est de **type sysname**. Dans SQL Server 2017, les valeurs valides sont **R** et **python**.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
- Indique le langage du script. *la langue* est **sysname**. Dans SQL Server 2016, la seule valeur valable est **R**.
+ Indique le langage de script. *Language* est de **type sysname**. Dans SQL Server 2016, la seule valeur valide est **R**.
 ::: moniker-end
 
- script n'*script*' Script de langage externe spécifié comme une entrée littérale ou variable. ** \@** *script* est **nvarchar(max)**.  
+ script = N script du langage externe de*script*spécifié en tant qu’entrée littérale ou variable. ** \@** le *script* est **de type nvarchar (max)**.  
 
-`[ @input_data_1 =  N'input_data_1' ]`Spécifie les données d’entrée utilisées [!INCLUDE[tsql](../../includes/tsql-md.md)] par le script externe sous la forme d’une requête. Le type de données de *input_data_1* est **nvarchar(max)**.
+`[ @input_data_1 =  N'input_data_1' ]`Spécifie les données d’entrée utilisées par le script externe sous la forme [!INCLUDE[tsql](../../includes/tsql-md.md)] d’une requête. Le type de données de *input_data_1* est **nvarchar (max)**.
 
-`[ @input_data_1_name = N'input_data_1_name' ]`Spécifie le nom de la variable @input_data_1utilisée pour représenter la requête définie par . Le type de données de la variable dans le script externe dépend de la langue. En cas de R, la variable d’entrée est un cadre de données. Dans le cas de Python, l’entrée doit être tabulaire. *input_data_1_name* est **sysname**.  La valeur par défaut est *InputDataSet*.  
+`[ @input_data_1_name = N'input_data_1_name' ]`Spécifie le nom de la variable utilisée pour représenter la requête définie @input_data_1par. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire. *input_data_1_name* est de **type sysname**.  La valeur par défaut est *InputDataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`Utilisé pour construire des modèles par partition. Spécifie le nom de la colonne utilisée pour commander l’ensemble de résultats, par exemple par nom de produit. Le type de données de la variable dans le script externe dépend de la langue. En cas de R, la variable d’entrée est un cadre de données. Dans le cas de Python, l’entrée doit être tabulaire.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`Utilisé pour générer des modèles par partition. Spécifie le nom de la colonne utilisée pour trier le jeu de résultats, par exemple par nom de produit. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire.
 
-`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`Utilisé pour construire des modèles par partition. Spécifie le nom de la colonne utilisée pour segmenter les données, telles que la région géographique ou la date. Le type de données de la variable dans le script externe dépend de la langue. En cas de R, la variable d’entrée est un cadre de données. Dans le cas de Python, l’entrée doit être tabulaire. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`Utilisé pour générer des modèles par partition. Spécifie le nom de la colonne utilisée pour segmenter les données, telles que la région géographique ou la date. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire. 
 ::: moniker-end
 
-`[ @output_data_1_name =  N'output_data_1_name' ]`Spécifie le nom de la variable dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script externe qui contient les données à retourner à la fin de l’appel de procédure stocké. Le type de données de la variable dans le script externe dépend de la langue. Pour R, la sortie doit être un cadre de données. Pour Python, la sortie doit être un cadre de données pandas. *output_data_1_name* est **sysname**.  La valeur par défaut est *OutputDataSet*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]`Spécifie le nom de la variable dans le script externe qui contient les données à retourner à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’achèvement de l’appel de la procédure stockée. Le type de données de la variable dans le script externe dépend de la langue. Pour R, la sortie doit être une trame de données. Pour Python, la sortie doit être une trame de données pandas. *output_data_1_name* est de **type sysname**.  La valeur par défaut est *OutputDataSet*.  
 
-`[ @parallel = 0 | 1 ]`Activez l’exécution parallèle des `@parallel` scripts R en définissant le paramètre à 1. La valeur par défaut de ce paramètre est de 0 (pas de parallélisme). Si `@parallel = 1` et la sortie est diffusée directement à `WITH RESULT SETS` la machine cliente, alors la clause est nécessaire et un schéma de sortie doit être spécifié.  
+`[ @parallel = 0 | 1 ]`Activez l’exécution parallèle des scripts R en affectant la valeur 1 au `@parallel` paramètre. La valeur par défaut de ce paramètre est 0 (aucun parallélisme). Si `@parallel = 1` et que la sortie est diffusée directement sur l’ordinateur client, la `WITH RESULT SETS` clause est obligatoire et un schéma de sortie doit être spécifié.  
 
- + Pour les scripts R qui n’utilisent pas `@parallel` les fonctions RevoScaleR, l’utilisation du paramètre peut être bénéfique pour le traitement de grands jeux de données, en supposant que le script peut être banalement parallélisé. Par exemple, lors `predict` de l’utilisation de la `@parallel = 1` fonction R avec un modèle pour générer de nouvelles prédictions, définissez comme un indice pour le moteur de requête. Si la requête peut être parallélisée, les lignes sont distribuées selon le paramètre **MAXDOP.**  
+ + Pour les scripts R qui n’utilisent pas de fonctions RevoScaleR, `@parallel` l’utilisation du paramètre peut être bénéfique pour le traitement de jeux de données volumineux, en supposant que le script peut être parallélisée de façon triviale. Par exemple, lors de l’utilisation `predict` de la fonction R avec un modèle pour générer de nouvelles `@parallel = 1` prédictions, définissez en tant qu’indicateur pour le moteur de requête. Si la requête peut être parallélisée, les lignes sont distribuées selon le paramètre **MAXDOP** .  
   
- + Pour les scripts R qui utilisent les fonctions RevoScaleR, `@parallel = 1` le traitement parallèle est géré automatiquement et vous ne devez pas spécifier à **l’sp_execute_external_script** appel.  
+ + Pour les scripts R qui utilisent des fonctions RevoScaleR, le traitement parallèle est géré automatiquement et vous `@parallel = 1` ne devez pas spécifier à l’appel **sp_execute_external_script** .  
   
-`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`Une liste des déclarations de paramètres d’entrée qui sont utilisées dans le script externe.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`Liste des déclarations de paramètre d’entrée utilisées dans le script externe.  
   
-`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Une liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
 
 ## <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
-> L’arbre de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est contrôlé par et les utilisateurs ne peuvent pas effectuer des opérations arbitraires sur la requête. 
+> L’arborescence de requêtes est contrôlée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par et les utilisateurs ne peuvent pas effectuer d’opérations arbitraires sur la requête. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans une langue prise en charge. Les langues prises en charge sont **Python** et **R** utilisées avec les services d’apprentissage automatique, et toute langue définie avec [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) (par exemple, Java) utilisée avec les extensions linguistiques.
+Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans un langage pris en charge. Les langues prises en charge sont **python** et **R** utilisées avec machine learning services, ainsi que tous les langages définis avec [Create External Language](../../t-sql/statements/create-external-language-transact-sql.md) (par exemple, Java) utilisés avec les extensions de langage.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans une langue prise en charge. Les langues prises en charge sont **Python** et **R** dans SQL Server 2017 Machine Learning Services.
+Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans un langage pris en charge. Les langues prises en charge sont **python** et **R** dans SQL Server 2017 machine learning services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans une langue prise en charge. La seule langue prise en charge est **R** dans SQL Server 2016 R Services.
+Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans un langage pris en charge. La seule langue prise en charge est **r** dans SQL Server les Services r 2016.
 ::: moniker-end
 
-Par défaut, les ensembles de résultats retournés par cette procédure stockée sont des sorties avec des colonnes anonymes. Les noms de colonnes utilisés dans un script sont locaux à l’environnement de script et ne sont pas reflétés dans l’ensemble de résultats de sortie. Pour nommer les colonnes `WITH RESULT SET` de [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md)jeu de résultat, utilisez la clause de .
+Par défaut, les jeux de résultats retournés par cette procédure stockée sont générés avec des colonnes sans nom. Les noms de colonne utilisés dans un script sont locaux dans l’environnement de script et ne sont pas reflétés dans le jeu de résultats sorti. Pour nommer les colonnes du jeu de résultats `WITH RESULT SET` , utilisez [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md)la clause de.
 
-En plus de retourner un ensemble de résultats, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous pouvez retourner les valeurs scalaires en utilisant des paramètres OUTPUT. 
+En plus de retourner un jeu de résultats, vous pouvez retourner des valeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scalaires à à l’aide de paramètres de sortie. 
   
-Vous pouvez contrôler les ressources utilisées par les scripts externes en configurant un pool de ressources externes. Pour plus d’informations, voir [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Les renseignements sur la charge de travail peuvent être obtenus à partir des vues du catalogue des gouverneurs des ressources, des DMV et des compteurs. Pour plus d’informations, voir [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), Resource Governor Related Dynamic Management Views &#40;[Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), et [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
+Vous pouvez contrôler les ressources utilisées par les scripts externes en configurant un pool de ressources externes. Pour plus d’informations, consultez [Create External RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Les informations sur la charge de travail peuvent être obtenues à partir des affichages catalogue du gouverneur de ressources, des DMV et des compteurs. Pour plus d’informations, consultez [Resource Governor les affichages catalogue &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor vues de gestion dynamique associées &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)et [SQL Server, objet scripts externes](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 
 ### <a name="monitor-script-execution"></a>Surveiller l’exécution du script
 
-Surveiller l’exécution du script à [l’aide de sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) et [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
+Surveiller l’exécution du script à l’aide de [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) et [sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Paramètres pour la modélisation de partition
 
-Vous pouvez définir deux paramètres supplémentaires qui permettent la modélisation sur les données partitionnées, où les partitions sont basées sur une ou plusieurs colonnes que vous fournissez qui segmentent naturellement un ensemble de données en partitions logiques créées et utilisées uniquement lors de l’exécution du script. Les colonnes contenant des valeurs répétitives pour l’âge, le sexe, la région géographique, la date ou l’heure, sont quelques exemples qui se prêtent à des ensembles de données partitionnés.
+Vous pouvez définir deux paramètres supplémentaires qui activent la modélisation sur des données partitionnées, où les partitions sont basées sur une ou plusieurs colonnes que vous fournissez, qui segmentent naturellement un jeu de données en partitions logiques créées et utilisées uniquement pendant l’exécution du script. Les colonnes contenant des valeurs répétitives pour l’âge, le sexe, la région géographique, la date ou l’heure, sont quelques exemples qui se prêtent à des jeux de données partitionnés.
  
-Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**, où le deuxième paramètre est utilisé pour commander l’ensemble de résultats. Les paramètres sont passés sous `sp_execute_external_script` forme d’entrées avec le script externe exécutant une fois pour chaque partition. Pour plus d’informations et d’exemples, voir [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**, où le deuxième paramètre est utilisé pour trier le jeu de résultats. Les paramètres sont passés comme entrées à `sp_execute_external_script` avec le script externe qui s’exécute une fois pour chaque partition. Pour plus d’informations et d’exemples, consultez [Didacticiel : créer des modèles basés sur une partition](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
 
-Vous pouvez exécuter le script `@parallel=1`en parallèle en spécifiant . Si la requête d’entrée peut être `@parallel=1` parallélisée, `sp_execute_external_script`vous devez définir dans le cadre de vos arguments à . Par défaut, l’optimiseur `@parallel=1` de requête fonctionne sous les tables ayant plus de 256 lignes, mais si vous voulez gérer cela explicitement, ce script inclut le paramètre comme une démonstration.
+Vous pouvez exécuter le script en parallèle en `@parallel=1`spécifiant. Si la requête d’entrée peut être parallélisée, vous devez définir `@parallel=1` dans le cadre de vos arguments `sp_execute_external_script`sur. Par défaut, l’optimiseur de requête fonctionne `@parallel=1` sous sur des tables contenant plus de 256 lignes, mais si vous souhaitez gérer cela explicitement, ce script comprend le paramètre comme une démonstration.
 
 > [!Tip]
-> Pour les charges de travail d’entraînement, vous pouvez utiliser `@parallel` avec n’importe quel script d’entraînement arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-rx. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe rx) offrent un parallélisme dans les scénarios d’entraînement dans SQL Server. Mais avec les nouveaux paramètres dans SQL Server vNext, vous pouvez faire le parallèle avec un script qui appelle des fonctions non spécifiquement conçues avec cette capacité.
+> Pour les charges de travail d’entraînement, vous pouvez utiliser `@parallel` avec n’importe quel script d’entraînement arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-rx. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe rx) offrent un parallélisme dans les scénarios d’entraînement dans SQL Server. Mais avec les nouveaux paramètres dans SQL Server vNext, vous pouvez paralléliser un script qui appelle des fonctions qui ne sont pas spécifiquement conçues avec cette fonctionnalité.
 ::: moniker-end
 
-### <a name="streaming-execution-for-python-and-r-scripts"></a>Exécution en continu pour les scripts Python et R  
+### <a name="streaming-execution-for-python-and-r-scripts"></a>Exécution de la diffusion en continu pour les scripts Python et R  
 
-Le streaming permet au script Python ou R de fonctionner avec plus de données que ce qui peut tenir dans la mémoire. Pour contrôler le nombre de lignes passées pendant le streaming, `@r_rowsPerRead` spécifiez une valeur integer pour le paramètre, dans la `@params` collection.  Par exemple, si vous formez un modèle qui utilise des données très larges, vous pouvez ajuster la valeur pour lire moins de lignes, pour vous assurer que toutes les lignes peuvent être envoyées dans un morceau de données. Vous pouvez également utiliser ce paramètre pour gérer le nombre de lignes lues et traitées en même temps, afin d’atténuer les problèmes de performances du serveur. 
+La diffusion en continu permet au script Python ou R de travailler avec plus de données que la mémoire ne peut en contenir. Pour contrôler le nombre de lignes transmises pendant la diffusion en continu, spécifiez une valeur entière `@r_rowsPerRead` pour le `@params` paramètre dans la collection.  Par exemple, si vous effectuez l’apprentissage d’un modèle qui utilise des données très larges, vous pouvez ajuster la valeur pour lire moins de lignes, afin de vous assurer que toutes les lignes peuvent être envoyées dans un segment de données. Vous pouvez également utiliser ce paramètre pour gérer le nombre de lignes lues et traitées en même temps, afin d’atténuer les problèmes de performances du serveur. 
   
-Le `@r_rowsPerRead` paramètre pour `@parallel` le streaming et l’argument doivent être considérés comme des indices. Pour que l’indice soit appliqué, il doit être possible de générer un plan de requête SQL qui comprend le traitement parallèle. Si cela n’est pas possible, le traitement parallèle ne peut pas être activé.  
+Le `@r_rowsPerRead` paramètre pour la diffusion en continu `@parallel` et l’argument doivent être considérés comme des indicateurs. Pour que l’indicateur soit appliqué, il doit être possible de générer un plan de requête SQL qui comprend un traitement parallèle. Si ce n’est pas possible, le traitement parallèle ne peut pas être activé.  
   
 > [!NOTE]  
-> Le streaming et le traitement parallèle ne sont pris en charge que dans Enterprise Edition. Vous pouvez inclure les paramètres dans vos requêtes dans l’édition standard sans soulever une erreur, mais les paramètres n’ont aucun effet et les scripts R s’exécutent en un seul processus.  
+> La diffusion en continu et le traitement parallèle sont pris en charge uniquement dans Enterprise Edition. Vous pouvez inclure les paramètres dans vos requêtes dans l’édition standard sans générer d’erreur, mais les paramètres n’ont aucun effet et les scripts R s’exécutent dans un processus unique.  
   
 ## <a name="restrictions"></a>Restrictions  
 
 ### <a name="data-types"></a>Types de données
 
-Les types de données suivants ne sont pas pris en charge lorsqu’ils sont utilisés dans la requête d’entrée ou les paramètres de la procédure **sp_execute_external_script,** et renvoient une erreur de type non étayée.  
+Les types de données suivants ne sont pas pris en charge lorsqu’ils sont utilisés dans la requête ou les paramètres d’entrée de **sp_execute_external_script** procédure, et renvoient une erreur de type non pris en charge.  
 
-En tant que **CAST** solution de contournement, CAST [!INCLUDE[tsql](../../includes/tsql-md.md)] la colonne ou la valeur à un type pris en charge avant de l’envoyer au script externe.  
+En guise de solution de contournement, **effectuez un cast** de la colonne [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de la valeur en un type pris en charge dans avant de l’envoyer au script externe.  
   
--   **Curseur**  
+-   **cursor**  
   
--   **Timestamp**  
+-   **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **heure**  
+-   **datetime2**, **DateTimeOffset**, **Time**  
   
 -   **sql_variant**  
   
@@ -193,29 +193,29 @@ En tant que **CAST** solution de contournement, CAST [!INCLUDE[tsql](../../inclu
   
 -   **xml**  
   
--   **hiérarchie,** **géométrie**, **géographie**  
+-   **hierarchyid**, **Geometry**, **Geography**  
   
 -   types CLR définis par l'utilisateur
 
-En général, tout ensemble de résultat [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ne peut pas être cartographié à un type de données, est la sortie comme NULL.  
+En général, tout jeu de résultats qui ne peut pas être mappé [!INCLUDE[tsql](../../includes/tsql-md.md)] à un type de données est généré comme valeur null.  
 
 ### <a name="restrictions-specific-to-r"></a>Restrictions spécifiques à R
 
-Si l’entrée comprend des valeurs **de date** qui ne correspondent pas à la gamme de valeurs autorisées en R, les valeurs sont converties en **NA**. Cela est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessaire parce que permet un plus large éventail de valeurs que ce qui est pris en charge dans la langue R.
+Si l’entrée comprend des valeurs **DateTime** qui ne correspondent pas à la plage de valeurs autorisée dans R, les valeurs sont converties en **na**. Cela est nécessaire car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise une plus grande plage de valeurs que la prise en charge dans le langage R.
 
-Les valeurs de `+Inf`flotteurs (par exemple, , `-Inf`, `NaN`) ne sont pas prises en charge même [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si les deux langues utilisent IEEE 754. Le comportement actuel envoie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simplement les valeurs directement; par conséquent, le client [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] SQL jette une erreur. Par conséquent, ces valeurs sont converties en **NULL**.
+Les valeurs float (par exemple `+Inf` `-Inf`,, `NaN`,) ne sont pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge dans même si les deux langages utilisent IEEE 754. Le comportement actuel envoie simplement les valeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à directement ; par conséquent, le client SQL dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] lève une erreur. Par conséquent, ces valeurs sont converties en valeurs **null**.
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite **EXECUTE N’IMPORTE QUELLE** autorisation de base de données SCRIPT EXTERNE.  
+Requiert **l’autorisation exécuter une** base de données de script externe.  
 
 ## <a name="examples"></a>Exemples
 
-Cette section contient des exemples de la façon dont cette [!INCLUDE[tsql](../../includes/tsql-md.md)]procédure stockée peut être utilisée pour exécuter des scripts R ou Python à l’aide de .
+Cette section contient des exemples de la façon dont cette procédure stockée peut être utilisée pour exécuter des [!INCLUDE[tsql](../../includes/tsql-md.md)]scripts R ou python à l’aide de.
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>R. Retourner un ensemble de données R sur SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Retourne un jeu de données R SQL Server  
 
-L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour retourner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le jeu de données Iris inclus avec R à .  
+L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour retourner le jeu de données Iris inclus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]avec R à.  
 
 ```sql
 DROP PROC IF EXISTS get_iris_dataset;  
@@ -238,10 +238,10 @@ GO
 
 ### <a name="b-generate-an-r-model-based-on-data-from-sql-server"></a>B. Générer un modèle R basé sur les données de SQL Server  
 
-L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]générer un modèle d’iris et de retourner le modèle à .  
+L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour générer un modèle d’IRIS et retourner le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]modèle à.  
 
 > [!NOTE]
->  Cet exemple nécessite l’installation préalable du paquet e1071. Pour plus d’informations, voir [Installer des forfaits R supplémentaires sur SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
+>  Cet exemple nécessite une installation avancée du package e1071. Pour plus d’informations, consultez [installer des packages R supplémentaires sur SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
 
 ```sql
 DROP PROC IF EXISTS generate_iris_model;
@@ -300,24 +300,24 @@ END;
 GO
 ```
 
-Les rubriques de colonne utilisées dans le code Python ne sont pas la sortie de SQL Server ; par conséquent, utilisez la déclaration WITH RESULT pour spécifier les noms de colonnes et les types de données que SQL peut utiliser.
+Les en-têtes de colonne utilisés dans le code python ne sont pas générés dans SQL Server ; par conséquent, utilisez l’instruction WITH RESULT pour spécifier les noms de colonnes et les types de données que SQL doit utiliser.
 
 Pour calculer les scores, vous pouvez également utiliser la fonction [PREDICT](../../t-sql/queries/predict-transact-sql.md) native, qui est généralement plus rapide car elle évite d’appeler le runtime Python ou R.
 
 ## <a name="see-also"></a>Voir aussi
 
-+ [Services d’apprentissage automatique de serveur SQL](../../machine-learning/index.yml)
-+ [Extensions linguistiques du serveur SQL](../../language-extensions/language-extensions-overview.md). 
++ [Services de Machine Learning SQL Server](../../machine-learning/index.yml)
++ [Extensions de langage SQL Server](../../language-extensions/language-extensions-overview.md). 
 + [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [Bibliothèques python et types de données](../../machine-learning/python/python-libraries-and-data-types.md)  
-+ [R Bibliothèques et types de données R](../../machine-learning/r/r-libraries-and-data-types.md)  
++ [Bibliothèques Python et types de données](../../machine-learning/python/python-libraries-and-data-types.md)  
++ [Bibliothèques r et types de données R](../../machine-learning/r/r-libraries-and-data-types.md)  
 + [SQL Server R Services](../../machine-learning/r/sql-server-r-services.md)   
 + [Problèmes connus pour SQL Server Machine Learning Services](../../machine-learning/known-issues-for-sql-server-machine-learning-services.md)   
-+ [CREATE BIBLIOTHÈQUE EXTERNE &#40;&#41;Transact-SQL](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [CRÉER une bibliothèque externe &#40;&#41;Transact-SQL](../../t-sql/statements/create-external-library-transact-sql.md)  
 + [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [external scripts enabled (option de configuration de serveur)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, objet External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
-+ [Sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
++ [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 + [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

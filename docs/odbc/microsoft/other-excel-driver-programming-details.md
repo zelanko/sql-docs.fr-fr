@@ -1,5 +1,5 @@
 ---
-title: Autres détails de la programmation des pilotes Excel (en anglais seulement) Microsoft Docs
+title: Autres détails de programmation du pilote Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290999"
 ---
 # <a name="other-excel-driver-programming-details"></a>Autres détails de programmation du pilote Excel
 > [!NOTE]  
->  Cette section fournit des informations spécifiques à Excel Driver sur les fonctions ODBC et d’autres détails de programmation. Pour plus d’informations générales sur une fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette section fournit des informations spécifiques au pilote Excel sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Cette section contient les rubriques suivantes :  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81290999"
   
 -   [SQLColumns (pilote Excel)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [SQLConfigDataSource (Pilote Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigDataSource (pilote Excel)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect (pilote Excel)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

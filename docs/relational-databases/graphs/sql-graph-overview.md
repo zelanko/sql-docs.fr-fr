@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428150"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Traitement de graphiques avec SQL Server et Azure SQL Database
@@ -28,7 +28,7 @@ ms.locfileid: "79428150"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre des fonctionnalités de base de données de graphiques pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées [!INCLUDE[tsql-md](../../includes/tsql-md.md)] dans et bénéficient des avantages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilisation de en tant que système de gestion de base de données de base.
 
 
-## <a name="what-is-a-graph-database"></a>Qu’est-ce qu’une base de données Graph ?  
+## <a name="what-is-a-graph-database"></a>Qu’est-ce qu’une base de données de graphes ?  
 Une base de données de graphes est une collection de nœuds (ou sommets) et d’arêtes (ou relations). Un nœud représente une entité (par exemple, une personne ou une organisation) et une arête représente une relation entre deux nœuds qu’elle connecte (par exemple, des mentions j’aime ou des amis). Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Voici quelques fonctionnalités qui rendent une base de données de graphe unique :  
 -    Les arêtes ou relations sont des entités de première classe dans une base de données de graphe, auxquelles des attributs ou des propriétés peuvent être associés. 
 -    Un simple arête peut connecter de manière flexible plusieurs nœuds dans une base de données de graphe.
@@ -47,7 +47,7 @@ Nous commençons à ajouter des extensions graphiques à SQL Server, pour facili
 
 
 ### <a name="create-graph-objects"></a>Créer des objets graphiques
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]les extensions permettent aux utilisateurs de créer des tables de nœuds ou d’arêtes. Des propriétés peuvent être associées aux nœuds et aux bords. Étant donné que les nœuds et les bords sont stockés sous forme de tables, toutes les opérations qui sont prises en charge sur les tables relationnelles sont prises en charge sur une table de nœuds ou d’arêtes. Voici un exemple :   
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]les extensions permettent aux utilisateurs de créer des tables de nœuds ou d’arêtes. Des propriétés peuvent être associées aux nœuds et aux bords. Étant donné que les nœuds et les bords sont stockés sous forme de tables, toutes les opérations qui sont prises en charge sur les tables relationnelles sont prises en charge sur une table de nœuds ou d’arêtes. Voici un exemple :  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

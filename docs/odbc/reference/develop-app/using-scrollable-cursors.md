@@ -1,5 +1,5 @@
 ---
-title: Utilisation de cursors défilementables ( Microsoft Docs
+title: Utilisation des curseurs à défilement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81289130"
 ---
 # <a name="using-scrollable-cursors"></a>Utilisation des curseurs avec défilement
-L’utilisation d’un curseur défilement nécessite ces trois étapes :  
+L’utilisation d’un curseur de défilement nécessite les trois étapes suivantes :  
   
-1.  Déterminez les capacités du curseur.  
+1.  Déterminez les fonctionnalités de curseur.  
   
-2.  Installez le curseur.  
+2.  Configurez le curseur.  
   
-3.  Faites défiler et aller chercher des rangées.  
+3.  Défilement et extraction de lignes.  
   
  Cette section contient les rubriques suivantes :  
   

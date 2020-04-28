@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289887"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
@@ -72,7 +72,7 @@ ms.locfileid: "79289887"
   
  Des niveaux plusieurs à plusieurs peuvent être masqués, tout comme les autres niveaux de la hiérarchie dérivée.  
    
-### <a name="M2MSample"></a>Relation plusieurs À plusieurs dans l’exemple de modèle  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> Relation plusieurs à plusieurs dans l’exemple de modèle  
 La hiérarchie dérivée Region Climate de l’exemple de modèle Customer fournie avec [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]vous permet de visualiser une démonstration d’une relation plusieurs à plusieurs.   
   
 Comme illustré dans l’image ci-dessous, le nom du niveau qui modélise cette relation est ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**. La section ![mds_Number2](../master-data-services/media/mds-number2.png)**Aperçu** montre les régions regroupées selon les types de climats auxquels elles sont associées. Il s’agit d’une relation plusieurs à plusieurs car certaines régions (membres enfants) sont associées à plusieurs climats (parents). Par exemple, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** est associé à ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** et ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
@@ -90,7 +90,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>Sécurité des membres  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> Sécurité des membres  
  Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Par exemple :  
   
 -   Une hiérarchie dérivée qui n’ancre pas les récursions Null (chaque membre au niveau récursif apparaît sous la racine et sous son parent récursif).  

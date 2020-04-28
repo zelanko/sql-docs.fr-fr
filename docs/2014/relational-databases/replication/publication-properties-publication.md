@@ -1,5 +1,5 @@
 ---
-title: Propriétés de publication de réplication de serveur SQL - Microsoft Docs
+title: Propriétés de la publication Réplication SQL Server-| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,23 +21,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380720"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Propriétés de publication de réplication de serveur SQL 
-  Cette section fournit des informations sur toutes les pages de la boîte de dialogue **Publication Properties.** 
+# <a name="sql-server-replication-publication-properties"></a>Propriétés de la publication Réplication SQL Server 
+  Cette section fournit des informations sur toutes les pages de la boîte de dialogue Propriétés de la **publication** . 
 
 ## <a name="general"></a>Général
   La page **Général** de la boîte de dialogue **Propriétés de la publication** contient des informations générales sur la publication, notamment le nom, la description et la stratégie d'expiration d'abonnement.  
   
 ### <a name="options"></a>Options  
- **Nom   **  
+ **Nom**  
  Nom de la publication (en lecture seule).  
   
- **Base**  
+ **Sauvegarde de la base de données**  
  Nom de la base de données de publication (en lecture seule).  
   
  **Description**  
@@ -47,7 +47,7 @@ ms.locfileid: "80380720"
  Type de la publication (en lecture seule).  
   
  **Expiration de l'abonnement**  
- Sélectionnez l'une des options d'expiration d'abonnement : **Les abonnements n'expirent jamais** ou **Les abonnements expirent**avec une période explicite (**Intervalle**).  
+ Sélectionnez l'une des options d'expiration d'abonnement : **Les abonnements n’expirent jamais** ou **Les abonnements expirent** avec une période explicite (**Intervalle**).  
   
  Pour les publications d'instantané et transactionnelles, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'accepter la valeur par défaut **Les abonnements n'expirent jamais**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "80380720"
  Pour plus d’informations, voir [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Niveau de compatibilité**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures seulement; fusion de publications seulement. Sélectionnez la version minimale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessaire aux abonnés qui se synchronisent avec cette publication. Il existe des règles permettant de déterminer le niveau de compatibilité.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Publications de fusion uniquement. Sélectionnez la version minimale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessaire aux abonnés qui se synchronisent avec cette publication. Il existe des règles permettant de déterminer le niveau de compatibilité.  
 
 ## <a name="filter-rows"></a>Filtrer les lignes
 
@@ -84,7 +84,7 @@ ms.locfileid: "80380720"
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s'affichent : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s’affichent : **Ajouter un filtre**, **Ajouter une jointure pour étendre le filtre sélectionné** et **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   
@@ -107,18 +107,18 @@ ms.locfileid: "80380720"
  **Rechercher une table**  
  Publications de fusion uniquement. Cliquez sur **Rechercher une table** pour trouver une table dans une arborescence de filtres complexe. Dans une base de données comportant des relations complexes, une table peut être jointe à plusieurs tables et apparaître dès lors à plusieurs endroits dans l'arborescence des filtres.  
   
- La table réelle apparaît à un seul endroit dans l'arborescence. Aux autres endroits, elle est représentée par un raccourci. Ce raccourci n'est qu'une référence à la table ; il n'affiche pas les nœuds enfants de la table. Un nœud de raccourci est identifié par une flèche. En développant ce nœud, vous affichez le texte **Cliquez sur Rechercher une table pour afficher la table de \<nom_table>**.  
+ La table réelle apparaît à un seul endroit dans l'arborescence. Aux autres endroits, elle est représentée par un raccourci. Ce raccourci n'est qu'une référence à la table ; il n'affiche pas les nœuds enfants de la table. Un nœud de raccourci est identifié par une flèche. En développant ce nœud, vous affichez le texte **Cliquez sur Rechercher une table pour afficher la table de \<nom_table>** .  
   
  Sélectionnez un nœud de raccourci dans le volet et cliquez sur **Rechercher une table** . Le volet se développe et la table apparaît en surbrillance. Si vous cliquez sur **Rechercher une table** sans sélectionner un nœud de raccourci, une boîte de dialogue **Rechercher une table** s'ouvre.  
   
- **Filtre**  
+ **Filter**  
  Contient la définition [!INCLUDE[tsql](../../includes/tsql-md.md)] du filtre sélectionné dans le volet.  
 
 ## <a name="ftp-snapshot-and-internet"></a>Instantané FTP et Internet
   
 Cette page vous permet de :  
   
--   définir les propriétés d'envoi de l'instantané via FTP (File Transfer Protocol). Pour plus d’informations, consultez la documentation [De Transfert Snapshots Through FTP](transfer-snapshots-through-ftp.md) Windows pour plus d’informations.  
+-   définir les propriétés d'envoi de l'instantané via FTP (File Transfer Protocol). Pour plus d’informations, consultez [transférer des instantanés via](transfer-snapshots-through-ftp.md) la documentation Windows FTP pour plus d’informations.  
   
     > [!NOTE]  
     >  Les modifications des paramètres FTP nécessitent de générer un nouvel instantané.  
@@ -144,7 +144,7 @@ Cette page vous permet de :
  **Ajouter**  
  Permet d'ajouter une nouvelle entrée à la liste. Vous ne pouvez ajouter que les noms de connexion, de compte ou de groupe déjà définis aussi bien sur le serveur de publication que le serveur de distribution. Ils sont par ailleurs définis sur ces deux serveurs si les comptes du domaine sont utilisés ou si des comptes locaux ont été créés sur les deux serveurs.  
   
- **Supprimer**  
+ **Remove**  
  Supprime de la liste l'entrée sélectionnée.  
   
  **Supprimer tout**  
@@ -153,7 +153,7 @@ Cette page vous permet de :
 
   Cette page vous permet de :  
   
--   définir les propriétés d'envoi de l'instantané via FTP (File Transfer Protocol). Pour plus d’informations, consultez la documentation [De Transfert Snapshots Through FTP](transfer-snapshots-through-ftp.md) Windows pour plus d’informations.  
+-   définir les propriétés d'envoi de l'instantané via FTP (File Transfer Protocol). Pour plus d’informations, consultez [transférer des instantanés via](transfer-snapshots-through-ftp.md) la documentation Windows FTP pour plus d’informations.  
   
     > [!NOTE]  
     >  Les modifications des paramètres FTP nécessitent de générer un nouvel instantané.  
@@ -183,7 +183,7 @@ Cette page vous permet de :
  Si un travail d'agent a été créé, cliquez sur **Paramètres de sécurité** pour accéder à une boîte de dialogue qui vous permet de modifier les paramètres de sécurité d'un agent. Dans le cas contraire, cliquez sur **Créer un Agent** pour en créer un et spécifier les paramètres de sécurité.  
 
 ## <a name="data-partitions"></a>Partitions de données
-   La page **Partitions de données** de la boîte de dialogue **Propriétés de la publication** permet de définir des partitions de données pour les publications de fusion qui utilisent le filtrage paramétrable. Après avoir défini les partitions, vous pouvez générer des instantanés pour fournir différents jeux de données initiaux pour différents abonnés en fonction des propriétés de connexion (connexion et/ou nom d'ordinateur) des abonnés. Vous pouvez également permettre aux abonnés de demander la distribution et la génération d'instantanés s'ils ne disposent pas d'un instantané pour leur partition lorsqu'ils se synchronisent pour la première fois. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  La page **Partitions de données** de la boîte de dialogue **Propriétés de la publication** permet de définir des partitions de données pour les publications de fusion qui utilisent le filtrage paramétré. Après avoir défini les partitions, vous pouvez générer des instantanés pour fournir différents jeux de données initiaux pour différents abonnés en fonction des propriétés de connexion (connexion et/ou nom d'ordinateur) des abonnés. Vous pouvez également permettre aux abonnés de demander la distribution et la génération d'instantanés s'ils ne disposent pas d'un instantané pour leur partition lorsqu'ils se synchronisent pour la première fois. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Options  
  **Ajouter**  
@@ -206,7 +206,7 @@ Cette page vous permet de :
 
 ## <a name="snapshot"></a>Instantané
 
-  La page **Instantané** de la boîte de dialogue **Propriétés de la publication** permet de définir un format d’instantané, l’emplacement d’un dossier d’instantanés et des scripts avant et après l’application d’instantané. Le dossier d'instantanés doit être défini comme partage et disposer des autorisations suffisantes pour les agents qui lisent et écrivent des fichiers dans le dossier. Pour plus d’informations sur une sécurisation appropriée du dossier, consultez [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md).  
+ La page **Instantané** de la boîte de dialogue **Propriétés de la publication** permet de définir un format d'instantané, l'emplacement d'un dossier d'instantanés et des scripts avant et après l'application d'instantané. Le dossier d'instantanés doit être défini comme partage et disposer des autorisations suffisantes pour les agents qui lisent et écrivent des fichiers dans le dossier. Pour plus d’informations sur une sécurisation appropriée du dossier, consultez [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  
 >  Les modifications nécessitent un nouvel instantané pour la publication. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](publish/change-publication-and-article-properties.md).  
@@ -221,7 +221,7 @@ Cette page vous permet de :
  **Emplacement des fichiers d'instantané**  
  Sélectionnez l'emplacement des fichiers d'instantané. Vous pouvez les stocker dans l'emplacement par défaut et dans un emplacement différent, ou seulement dans un emplacement différent. Les fichiers stockés dans un emplacement différent peuvent être compressés.  
   
--   Sélectionnez **Placer les fichiers dans le dossier par défaut** pour utiliser le dossier d'instantanés du serveur de publication. L'emplacement du dossier d'instantanés est en lecture seule dans cette boîte de dialogue, car il ne peut être changé que dans la boîte de dialogue **Propriétés du serveur de distribution** du serveur de publication. Pour plus d’informations, voir [Spécifier l’emplacement instantané par défaut](snapshot-options.md#snapshot-folder-locations).   
+-   Sélectionnez **Placer les fichiers dans le dossier par défaut** pour utiliser le dossier d'instantanés du serveur de publication. L'emplacement du dossier d'instantanés est en lecture seule dans cette boîte de dialogue, car il ne peut être changé que dans la boîte de dialogue **Propriétés du serveur de distribution** du serveur de publication. Pour plus d’informations, consultez [spécifier l’emplacement par défaut des instantanés](snapshot-options.md#snapshot-folder-locations).   
 -   Sélectionnez **Placer les fichiers dans le dossier suivant** pour remplacer l'emplacement par défaut ou ajouter un emplacement. Tapez le chemin d'accès dans la zone de texte ou cliquez sur **Parcourir** et accédez à un emplacement. Sélectionnez **Compresser les fichiers d'instantanés dans ce dossier** pour compresser les fichiers dans l'autre emplacement d'instantanés. L'emplacement secondaire peut se trouver sur un autre serveur, un lecteur réseau ou un support amovible (tel qu'un CD-ROM ou un disque amovible). Pour plus d'informations, consultez [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) et [Compressed Snapshots](compressed-snapshots.md).  
   
  **Exécuter des scripts supplémentaires**  
@@ -235,11 +235,11 @@ Cette page vous permet de :
 
 
 ## <a name="see-also"></a>Voir aussi  
- [Créer une publication](publish/create-a-publication.md)   
- [Afficher et modifier les propriétés de publication](publish/view-and-modify-publication-properties.md)   
- [Publier des objets de données et de base de données](publish/publish-data-and-database-objects.md)   
- [Pratiques exemplaires en matière de sécurité de réplication](security/replication-security-best-practices.md)   
- [Sécurité de réplication du serveur SQL](security/view-and-modify-replication-security-settings.md)  
+ [Create a Publication](publish/create-a-publication.md)   
+ [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
+ [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)   
+ [Meilleures pratiques pour la sécurité de la réplication](security/replication-security-best-practices.md)   
+ [Sécurité Réplication SQL Server](security/view-and-modify-replication-security-settings.md)  
  [Initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md)   
   
   

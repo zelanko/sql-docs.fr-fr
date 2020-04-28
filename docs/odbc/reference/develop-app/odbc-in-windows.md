@@ -1,5 +1,5 @@
 ---
-title: ODBC dans Windows (fr) Microsoft Docs
+title: ODBC dans Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: de5f78f55f7242e0762d9b7cffb6dfe41c83d1dd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282529"
 ---
 # <a name="odbc-in-windows"></a>ODBC dans Windows
-Les éléments suivants ne s’appliquent qu’à ODBC en cours d’exécution dans Microsoft® Windows NT®/Windows 2000 et Microsoft Windows® systèmes d’exploitation 95/98.  
+Les éléments suivants s’appliquent uniquement à ODBC qui s’exécute dans les systèmes d’exploitation Microsoft® Windows NT®/Windows 2000 et Microsoft Windows® 95/98.  
   
  Cette section contient les rubriques suivantes :  
   
@@ -26,6 +26,6 @@ Les éléments suivants ne s’appliquent qu’à ODBC en cours d’exécution d
   
 -   [Fichiers d’en-tête](../../../odbc/reference/develop-app/header-files.md)  
   
--   [Passer des objets cString aux fonctions ODBC](../../../odbc/reference/develop-app/cstring-class.md)  
+-   [Passage d’objets CString à des fonctions ODBC](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [Création et arrêt des threads](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)

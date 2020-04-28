@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289747"
 ---
 # <a name="transparent-data-encryption"></a>chiffrement transparent des données
@@ -37,7 +37,7 @@ L’illustration suivante montre la hiérarchie des clés pour le chiffrement TD
   
 ![Affiche la hiérarchie](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Utilisation du chiffrement transparent des données  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Utilisation du chiffrement transparent des données  
 Pour utiliser le chiffrement transparent des données, procédez comme suit : Les trois premières étapes ne sont effectuées qu’une seule fois, lors de la préparation de SQL Server PDW pour prendre en charge TDE.  
   
 1.  Créez une clé principale dans la base de données Master.  
@@ -122,7 +122,7 @@ Le tableau suivant fournit des liens et des explications pour les commandes et l
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crée une clé permettant de chiffrer une base de données.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Modifie la clé qui permet de chiffrer une base de données.|  
-|[SUPPRIMER LA CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Présente l'option **ALTER DATABASE** qui est utilisée pour activer le chiffrement transparent des données.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Affichages catalogue et vues de gestion dynamique  
@@ -139,7 +139,7 @@ Chaque fonctionnalité et commande TDE requiert des autorisations individuelles,
   
 L’affichage des métadonnées impliquées dans TDE `CONTROL SERVER` nécessite l’autorisation.  
   
-## <a name="considerations"></a>Considérations  
+## <a name="considerations"></a>Éléments à prendre en considération  
 Lorsqu'une analyse de rechiffrement est en cours pour une opération de chiffrement de la base de données, les opérations de maintenance sur la base de données sont désactivées.  
   
 Vous pouvez trouver l’état du chiffrement de la base de données à l’aide de la vue de gestion dynamique **sys. dm_pdw_nodes_database_encryption_keys** . Pour plus d’informations, consultez la section *affichages catalogue et vues de gestion dynamique* plus haut dans cet article.  
@@ -202,7 +202,7 @@ SQL Server PDW gère un ensemble de journaux destinés à la résolution des pro
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Chiffrement transparent des données et base de données système tempdb  
 La base de données système tempdb est chiffrée lorsque le chiffrement est activé à l’aide de [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md). Cela est nécessaire pour qu’une base de données puisse utiliser TDE. Cela peut avoir un effet sur les performances des bases de données non chiffrées sur la même instance de SQL Server PDW.  
   
-## <a name="key-management"></a>Gestion des clés  
+## <a name="key-management"></a>Gestion de clés  
 La clé de chiffrement de base de données (DEK) est protégée par les certificats stockés dans la base de données Master. Ces certificats sont protégés par la clé principale de base de données (DMK) de la base de données Master. Le DMK doit être protégé par la clé principale du service (SMK) afin d’être utilisé pour TDE.  
   
 Le système peut accéder aux clés sans nécessiter une intervention humaine (comme fournir un mot de passe). Si le certificat n’est pas disponible, le système génère une erreur qui explique que le DEK ne peut pas être déchiffré tant que le certificat approprié n’est pas disponible.  

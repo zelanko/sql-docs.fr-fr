@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289697"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Accorder des autorisations T-SQL pour des Data Warehouse parallèles
@@ -146,7 +146,7 @@ Pour accorder à un utilisateur l’autorisation de contrôler toutes les bases 
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Accorder des autorisations pour gérer les connexions, les utilisateurs et les rôles de base de données
 Cette section décrit comment accorder des autorisations pour gérer les connexions, les utilisateurs de base de données et les rôles de base de données.  
   
-### <a name="PermsAdminConsole"></a>Accorder des autorisations pour gérer les connexions  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>Accorder des autorisations pour gérer les connexions  
 **Ajouter ou gérer des connexions**  
   
 Les instructions SQL suivantes créent une connexion nommée KimAbercrombie qui peut créer de nouvelles connexions à l’aide de l’instruction [Create login](../t-sql/statements/create-login-transact-sql.md) et modifier les connexions existantes à l’aide de l’instruction [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md) .  
@@ -204,7 +204,7 @@ Les graphiques suivants peuvent prêter à confusion, mais ils montrent comment 
   
 ![Autorisations de connexion de sécurité APS](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
   
-**Autorisations utilisateur :**  
+**Autorisations de l’utilisateur :**  
   
 ![Autorisations utilisateur de sécurité APS](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
   
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Accorder des autorisations pour surveiller l’appliance
 L’appliance SQL Server PDW peut être surveillée à l’aide de la console d’administration ou des vues du système SQL Server PDW. Les connexions requièrent l’autorisation niveau serveur **afficher l’état du serveur** pour surveiller l’appliance. Les connexions requièrent l’autorisation **ALTER ANY Connection** pour mettre fin aux connexions à l’aide de la console d’administration ou de la commande **Kill** . Pour plus d’informations sur les autorisations requises pour utiliser la console d’administration, consultez [accorder des autorisations pour utiliser la console d’administration &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Accorder l’autorisation de surveiller l’appliance à l’aide des vues système  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Accorder l’autorisation de surveiller l’appliance à l’aide des vues système  
 Les instructions SQL suivantes créent une connexion nommée `monitor_login` et accordent l’autorisation **View Server State** à `monitor_login` la connexion.  
   
 ```sql  
@@ -247,6 +247,6 @@ Pour créer des connexions d’administrateur, consultez [rôles serveur fixes](
   
 ## <a name="see-also"></a>Voir aussi
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CRÉER UN UTILISATEUR](../t-sql/statements/create-user-transact-sql.md)  
+[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+[Chargement](load-overview.md)  

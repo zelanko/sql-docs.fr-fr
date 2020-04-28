@@ -1,5 +1,5 @@
 ---
-title: Données progressives, FILESTREAM (ODBC)
+title: Données incrémentielles, FILESTREAM (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281787"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Envoyer et recevoir des données de façon incrémentielle avec FILESTREAM (ODBC)
@@ -23,16 +23,16 @@ ms.locfileid: "81281787"
 
   Cet exemple montre comment utiliser la fonctionnalité FILESTREAM pour envoyer et recevoir des données de façon incrémentielle avec SQLPutData et SQLGetData.  
   
- Pour plus d’informations sur la fonction FILESTREAM, voir [FILESTREAM Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
+ Pour plus d’informations sur la fonctionnalité FILESTREAM, consultez [prise en charge de filestream &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Exemple  
  Avant de compiler et d'exécuter cet exemple, activez la prise en charge FILESTREAM ([Activer et configurer FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- La première [!INCLUDE[tsql](../../includes/tsql-md.md)]liste de code () crée une base de données utilisée par cet échantillon. Votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture pour exécuter ce script (par exemple, ouvrez une session en tant que compte système local).  
+ La première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée une base de données utilisée par cet exemple. Votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture pour exécuter ce script (par exemple, ouvrez une session en tant que compte système local).  
   
  La deuxième liste de code correspond au code C++. Vous devez spécifier un serveur ; dans le code C++, modifiez « MyServer » par un nom de serveur valide. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h. Compilez le code C++ avec odbc32.lib, user32.lib, /D « _UNICODE », /D « UNICODE », odbc32.lib et /EHsc.  
   
- La troisième [!INCLUDE[tsql](../../includes/tsql-md.md)]liste de code supprime la base de données utilisée par cet échantillon.  
+ La troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime la base de données utilisée par cet exemple.  
   
 ```sql
 USE master  

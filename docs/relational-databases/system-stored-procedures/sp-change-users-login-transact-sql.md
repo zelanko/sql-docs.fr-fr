@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448334"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -53,14 +53,14 @@ sp_change_users_login [ @Action = ] 'action'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|Lie une entrée d'utilisateur de l'affichage catalogue système sys.database_principals de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du même nom. Le compte de connexion de même nom est créé s'il n'existe pas déjà. Examinez le résultat de l’instruction **Auto_Fix** pour confirmer que le lien correct est effectivement effectué. Évitez d’utiliser des **Auto_Fix** dans des situations de sécurité.<br /><br /> Lorsque vous utilisez **Auto_Fix**, vous devez spécifier l' *utilisateur* et le *mot de passe* si la connexion n’existe pas déjà, sinon vous devez spécifier l' *utilisateur* , mais le *mot de passe* sera ignoré. la *connexion* doit avoir la valeur null. l' *utilisateur* doit être un utilisateur valide dans la base de données actuelle. Le compte de connexion ne doit être associé à aucun autre utilisateur.|  
-|**Report**|Dresse la liste des utilisateurs qui ne sont pas liés à un compte de connexion dans la base de données active et indique les identificateurs de sécurité (SID) correspondants. l' *utilisateur*, la *connexion*et le *mot de passe* doivent avoir la valeur null ou ne pas être spécifiés.<br /><br /> Pour remplacer l’option de rapport par une requête qui utilise les tables système, comparez les entrées dans **sys. server_prinicpals** avec les entrées dans **sys. database_principals**.|  
+|**Rapport**|Dresse la liste des utilisateurs qui ne sont pas liés à un compte de connexion dans la base de données active et indique les identificateurs de sécurité (SID) correspondants. l' *utilisateur*, la *connexion*et le *mot de passe* doivent avoir la valeur null ou ne pas être spécifiés.<br /><br /> Pour remplacer l’option de rapport par une requête qui utilise les tables système, comparez les entrées dans **sys. server_prinicpals** avec les entrées dans **sys. database_principals**.|  
 |**Update_One**|Lie l' *utilisateur* spécifié dans la base de données active à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une *connexion*existante. l' *utilisateur* et la *connexion* doivent être spécifiés. le *mot de passe* doit avoir la valeur null ou n’est pas spécifié.|  
   
  [ @UserNamePattern= ] '*utilisateur*'  
  Nom d'un utilisateur dans la base de données active. *User* est de **type sysname**, avec NULL comme valeur par défaut.  
   
  [ @LoginName= ] «*connexion*»  
- Est le nom d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de **type sysname**, avec NULL comme valeur par défaut.  
+ Est le nom d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
  [ @Password= ] «*mot de passe*»  
  Mot de passe affecté à une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion créée en spécifiant **Auto_Fix**. Si une connexion correspondante existe déjà, l’utilisateur et la connexion sont mappés et le *mot de passe* est ignoré. S’il n’existe pas de connexion correspondante, sp_change_users_login crée une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nouvelle connexion et attribue *le mot de* passe à la nouvelle connexion. *Password est de* **type sysname**et ne doit pas avoir la valeur null.  
@@ -75,7 +75,7 @@ sp_change_users_login [ @Action = ] 'action'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Nom de l'utilisateur de la base de données.|  
-|UserSID|**varbinary(85)**|Identificateur de sécurité de l'utilisateur.|  
+|UserSID|**varbinary (85)**|Identificateur de sécurité de l'utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez sp_change_users_login pour lier un utilisateur de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte de connexion d'un utilisateur a changé, utilisez sp_change_users_login pour lier l'utilisateur au nouveau compte de connexion sans perdre les autorisations de l'utilisateur. La nouvelle *connexion* ne peut pas être sa et l' *utilisateur* ne peut pas être dbo, guest ou un utilisateur INFORMATION_SCHEMA.  
@@ -123,11 +123,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CRÉER une connexion &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

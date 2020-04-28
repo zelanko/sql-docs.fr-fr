@@ -1,5 +1,5 @@
 ---
-title: Construction d’une déclaration SQL (ODBC) Microsoft Docs
+title: Construction d’une instruction SQL (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eab0db859bbecea43d19b012a56b2e491b4ecfcf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291445"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Construction d'une instruction SQL (ODBC)
@@ -35,7 +35,7 @@ ms.locfileid: "81291445"
   
      Les instructions SQL construites au moment de l'exécution permettent à l'utilisateur de personnaliser l'instruction en utilisant des clauses courantes telles que SELECT, WHERE et ORDER BY. Cela inclut les requêtes ad hoc entrées par les utilisateurs.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client ODBC pilote analyse les déclarations SQL uniquement pour ODBC [!INCLUDE[ssDE](../../includes/ssde-md.md)]et LA syntaxe ISO non directement pris en charge par le , que le conducteur transforme en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Toute autre syntaxe SQL est passée au [!INCLUDE[ssDE](../../includes/ssde-md.md)] inchangée, où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déterminera s'il s'agit de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Cette approche fournit deux avantages :  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC du client analyse les instructions SQL uniquement pour la syntaxe ODBC et ISO non directement prise [!INCLUDE[ssDE](../../includes/ssde-md.md)]en charge par le, que le pilote [!INCLUDE[tsql](../../includes/tsql-md.md)]transforme. Toute autre syntaxe SQL est passée au [!INCLUDE[ssDE](../../includes/ssde-md.md)] inchangée, où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déterminera s'il s'agit de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Cette approche fournit deux avantages :  
   
 -   Réduction des coûts  
   
@@ -43,11 +43,11 @@ ms.locfileid: "81291445"
   
 -   Souplesse  
   
-     Les programmeurs peuvent personnaliser la portabilité de leurs applications. Pour améliorer la portabilité contre plusieurs bases de données, utilisez principalement la syntaxe ODBC et ISO. Pour utiliser des améliorations spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriée. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote Native Client ODBC prend en charge la syntaxe complète [!INCLUDE[tsql](../../includes/tsql-md.md)] afin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que les applications basées sur ODBC puissent tirer parti de toutes les fonctionnalités de .  
+     Les programmeurs peuvent personnaliser la portabilité de leurs applications. Pour améliorer la portabilité contre plusieurs bases de données, utilisez principalement la syntaxe ODBC et ISO. Pour utiliser des améliorations spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriée. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] la syntaxe complète afin que les applications basées sur ODBC puissent tirer parti de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]toutes les fonctionnalités de.  
   
  La liste de colonnes dans une instruction SELECT doit contenir uniquement les colonnes requises pour effectuer la tâche actuelle. Cela réduit non seulement la quantité de données envoyées sur le réseau, mais réduit également l'impact des modifications de base de données sur l'application. Si une application ne fait pas référence à une colonne d'une table, elle n'est pas affectée par les modifications apportées à cette colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution des requêtes &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

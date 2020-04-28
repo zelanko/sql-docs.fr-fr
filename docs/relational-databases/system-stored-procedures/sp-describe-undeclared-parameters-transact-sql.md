@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180124"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -51,7 +51,7 @@ sp_describe_undeclared_parameters
   
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans *Transact-SQL_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. n correspond à un espace réservé pour d'autres définitions de paramètres. Si l’instruction ou le lot Transact-SQL dans l’instruction ne contient pas de \@paramètres, params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
- Datatype  
+ Type de données  
  Type de données du paramètre.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -84,8 +84,8 @@ sp_describe_undeclared_parameters
 |**suggested_is_input**|**bit NOT NULL**|Retourne 1 si le paramètre est utilisé n'importe où autre que le côté gauche d'une attribution. Dans le cas contraire, retourne la valeur 0.|  
 |**suggested_is_output**|**bit NOT NULL**|Retourne 1 si le paramètre est utilisé du côté gauche d'une attribution ou est passé à un paramètre de sortie d'une procédure stockée. Dans le cas contraire, retourne la valeur 0.|  
 |**formal_parameter_name**|**sysname NULL**|Si le paramètre est un argument d'une procédure stockée ou une fonction définie par l'utilisateur, retourne le nom du paramètre formel correspondant. Dans le cas contraire, la valeur NULL est retournée.|  
-|**suggested_tds_type_id**|**int NOT NULL**|À usage interne.|  
-|**suggested_tds_length**|**int NOT NULL**|À usage interne.|  
+|**suggested_tds_type_id**|**int NOT NULL**|À usage interne uniquement.|  
+|**suggested_tds_length**|**int NOT NULL**|À usage interne uniquement.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_describe_undeclared_parameters** retourne toujours le statut de retour égal à zéro.  
@@ -111,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>Algorithme de sélection du paramètre  
  Dans le cas d'une requête avec des paramètres non déclarés, la déduction de type de données pour les paramètres non déclarés s'effectue en trois étapes.  
   
- **Étape 1**  
+ **Étape 1**  
   
  La première étape dans la déduction du type de données pour une requête avec des paramètres non déclarés consiste à rechercher les types de données de toutes les sous-expressions dont les types de données ne dépendent pas des paramètres non déclarés. Le type peut être déterminé pour les expressions suivantes :  
   
@@ -137,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **Étape 2**  
+ **Étape 2**  
   
  Pour un paramètre \@non déclaré donné, l’algorithme de déduction du type recherche l’expression E\@(p) la \@plus profonde qui contient p et est l’un des éléments suivants :  
   
@@ -163,7 +163,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Si \@p n’est pas contenu dans une expression indiquée au début de l’étape 2, l’algorithme de déduction du type\@détermine que E (p) est la plus \@grande expression scalaire qui contient p, et l’algorithme de déduction du type ne calcule pas le type de données cible TT (\@p) pour E (\@p). Par exemple, si la requête est SELECT `@p + 2` , alors E\@(p) \@= p + 2, et il n’y a\@pas de TT (p).  
   
- **Étape 3**  
+ **Étape 3**  
   
  Maintenant que E (\@p) et TT (\@p) sont identifiés, l’algorithme de déduction du type déduit un type de \@données pour p de l’une des deux manières suivantes :  
   
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Dans ce cas, E (\@p) est Col_Int + \@p et TT (\@p) est de **type int**. **int** est choisi pour \@p, car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
   
-2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple  
+2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple :  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

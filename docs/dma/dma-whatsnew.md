@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896804"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
@@ -82,7 +82,7 @@ Une fois l’évaluation terminée, utilisez notre [Azure Database Migration Ser
 
 ## <a name="data-migration-assistant-v40"></a>Assistant Migration de données v 4.0
 
-La version v 4.0 de Assistant Migration de données présente la fonctionnalité de recommandation Azure SQL Database SKU, qui permet aux utilisateurs d’identifier la référence SKU Azure SQL Database minimale recommandée en fonction des compteurs de performances collectés sur le ou les ordinateurs qui hébergent votre bases. Cette fonctionnalité fournit des recommandations relatives au niveau tarifaire, au niveau de calcul et à la taille maximale des données, ainsi qu’au coût estimé par mois. Il offre également la possibilité d’approvisionner toutes vos bases de données dans Azure en bloc.
+La version v 4.0 de Assistant Migration de données présente la fonctionnalité de recommandation Azure SQL Database SKU, qui permet aux utilisateurs d’identifier la référence SKU Azure SQL Database minimale recommandée en fonction des compteurs de performances collectés sur le ou les ordinateurs hébergeant vos bases de données. Cette fonctionnalité fournit des recommandations relatives au niveau tarifaire, au niveau de calcul et à la taille maximale des données, ainsi qu’au coût estimé par mois. Il offre également la possibilité d’approvisionner toutes vos bases de données dans Azure en bloc.
 
 > [!NOTE]
 > Cette fonctionnalité n’est actuellement disponible qu’à l’aide de l’interface de ligne de commande (CLI).
@@ -177,7 +177,7 @@ La version v 1.0 de Assistant Migration de données est la version initiale, et 
 
 - Détection des problèmes qui peuvent affecter une mise à niveau vers une version locale de SQL Server. Toutes les découvertes sont décrites comme des problèmes de compatibilité et sont classées dans les domaines suivants :
   - Changements cassants
-  -  Changements de comportement
+  - Changements de comportement
   - Fonctionnalités dépréciées
 - Découverte de nouvelles fonctionnalités de la plateforme de SQL Server cible dont la base de données peut bénéficier après une mise à niveau. Toutes les découvertes sont décrites comme des recommandations relatives aux fonctionnalités et sont classées dans les domaines suivants :
   - Performances

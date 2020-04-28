@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289517"
 ---
 # <a name="identity-and-access-control-replication"></a>Identité et contrôle d'accès (réplication)
@@ -45,7 +45,7 @@ ms.locfileid: "79289517"
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèle de sécurité de l’agent de réplication](replication-agent-security-model.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Meilleures pratiques pour la sécurité de la réplication](replication-security-best-practices.md)   
  [Sécurité Réplication SQL Server](view-and-modify-replication-security-settings.md)   
  [Atténuation des menaces et des vulnérabilités de réplication](threat-and-vulnerability-mitigation-replication.md)   
 

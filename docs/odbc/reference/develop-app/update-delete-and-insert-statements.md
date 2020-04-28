@@ -1,5 +1,5 @@
 ---
-title: MISES À JOUR, DELETE et INSERT Statements (en anglais seulement) Microsoft Docs
+title: Instructions UPDATE, DELETE et INSERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,37 +17,37 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284259"
 ---
 # <a name="update-delete-and-insert-statements"></a>Instructions UPDATE, DELETE et INSERT
-Les applications basées sur SQL modifient les tableaux en exécutant les instructions **UPDATE**, **DELETE**et **INSERT.** Ces énoncés font partie du niveau de conformité de grammaire minimum SQL et doivent être pris en charge par tous les conducteurs et sources de données.  
+Les applications basées sur SQL apportent des modifications aux tables en exécutant les instructions **Update**, **Delete**et **Insert** . Ces instructions font partie du niveau minimal de conformité de la grammaire SQL et doivent être prises en charge par tous les pilotes et sources de données.  
   
- La syntaxe de ces énoncés est la suivante :  
+ La syntaxe de ces instructions est la suivante :  
   
- **NOM** _de table_ UPDATE  
+ **Mettre à jour** _le nom de la table_  
   
- **SET** _colonne-identificateur_ **=** -*expression* &#124; **NULL**'  
+ **Set** _Column-identifier_ **=** {*expression* &#124; **null**}  
   
- [,**,** _colonne-identifiant_ **=** -*expression* &#124; **NULL]...**  
+ [**,** _identificateur de colonne_ **=** {*expression* &#124; **null**}]...  
   
- [**Où** _la recherche-condition_]  
+ [**Where** _recherche-condition_]  
   
- **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
+ **Supprimer de** _table-Name_[**Where** _Search-condition_]  
   
- **INSERT INTO** _nom de table_[**(** _colonne-identifiant_ [**,** _colonne-identifiant_]... **)**]  
+ **INSERT dans** _table-Name_[**(** _Column-identifier_ [**,** _Column-identifier_]... **)**]  
   
- -*requête-spécification* &#124; VALUES **(** _insert-value_ [**,** _insert-value_]... **)**}  
+ {value *-Specification* &#124; **valeurs (** _Insert-value_ [**,** _Insert-value_]... **)**}  
   
- Notez que *l’élément de spécification de requête* n’est valable que dans les grammaires Core et Extended SQL, et que les éléments *d’expression* et *de condition de recherche* deviennent plus complexes dans les grammaires Core et Extended SQL.  
+ Notez que l’élément de *spécification de requête* est valide uniquement dans les grammaires SQL principales et étendues, et que les éléments d' *expression* et de *condition de recherche* deviennent plus complexes dans les grammaires SQL principales et étendues.  
   
- Comme d’autres déclarations SQL, **UPDATE**, **DELETE**, et **INSERT** déclarations sont souvent plus efficaces quand ils utilisent des paramètres. Par exemple, la déclaration suivante peut être préparée et exécutée à plusieurs reprises pour insérer plusieurs lignes dans le tableau des ordres :  
+ Comme d’autres instructions SQL, les instructions **Update**, **Delete**et **Insert** sont souvent plus efficaces lorsqu’elles utilisent des paramètres. Par exemple, l’instruction suivante peut être préparée et exécutée à plusieurs reprises pour insérer plusieurs lignes dans la table Orders :  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Cette efficacité peut être augmentée en passant des gammes de valeurs de paramètres. Pour plus d’informations sur les paramètres de l’énoncé et les tableaux de valeurs de paramètres, voir [Paramètres d’énoncé .](../../../odbc/reference/develop-app/statement-parameters.md)
+ Cette efficacité peut être augmentée en transmettant des tableaux de valeurs de paramètre. Pour plus d’informations sur les paramètres d’instruction et les tableaux de valeurs de paramètre, consultez [paramètres d’instruction](../../../odbc/reference/develop-app/statement-parameters.md).

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525470"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
@@ -31,9 +31,7 @@ ms.locfileid: "79525470"
  Excel est également recommandé pour parcourir les modèles tabulaires dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. L'outil inclut une option **Analyser dans Excel** qui démarre une nouvelle instance Excel, crée un classeur Excel et ouvre une connexion de données entre le classeur et la base de données model d'espace de travail. Lorsque vous parcourez les données de modèle tabulaire dans Excel, sachez qu'Excel émet des requêtes sur le modèle à l'aide du client Tableau croisé dynamique Excel. Par conséquent, les opérations du classeur Excel provoquent l'envoi de requêtes MDX à la base de données d'espace de travail, et non de requêtes DAX. Si vous utilisez SQL Profiler ou un autre outil d'analyse pour surveiller les requêtes, vous verrez MDX et non DAX dans la trace de Profiler. Pour plus d’informations sur la fonctionnalité Analyser dans Excel, consultez [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application cliente Reporting Services qui s'exécute dans un environnement SharePoint 2010. Elle associe l'exploration de données, la création de requêtes et la disposition de présentation dans une expérience de rapports intégrée ad hoc. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] peut utiliser des modèles tabulaires comme sources de données, que le modèle soit stocké dans un classeur PowerPivot autonome, soit hébergé sur une instance d'Analysis Services s'exécutant en mode tabulaire ou soit extrait d'une banque de données relationnelles à l'aide du mode DirectQuery. Pour vous connecter à un modèle tabulaire dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez créer un fichier de connexion qui contient l'emplacement du serveur et de la base de données. Vous pouvez créer une source de données partagées Reporting Services ou un fichier de connexion de modèle sémantique BI dans SharePoint. Pour plus d’informations sur les connexions de modèle sémantique BI, consultez [connexion de modèle sémantique bi PowerPivot &#40;&#41;. BISM ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application cliente Reporting Services qui s'exécute dans un environnement SharePoint 2010. Elle associe l'exploration de données, la création de requêtes et la disposition de présentation dans une expérience de rapports intégrée ad hoc. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] peut utiliser des modèles tabulaires comme sources de données, que le modèle soit stocké dans un classeur PowerPivot autonome, soit hébergé sur une instance d'Analysis Services s'exécutant en mode tabulaire ou soit extrait d'une banque de données relationnelles à l'aide du mode DirectQuery. Pour vous connecter à un modèle tabulaire dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez créer un fichier de connexion qui contient l'emplacement du serveur et de la base de données. Vous pouvez créer une source de données partagées Reporting Services ou un fichier de connexion de modèle sémantique BI dans SharePoint. Pour plus d’informations sur les connexions de modèle sémantique BI, consultez [connexion de modèle sémantique bi PowerPivot &#40;&#41;. BISM ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  Le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] détermine la structure du modèle spécifié en envoyant une requête à la source de données spécifiée, qui retourne un schéma pouvant être utilisé par le client pour créer des requêtes sur le modèle en tant que source de données et pour effectuer des opérations sur les données. Les opérations qui suivent dans l'interface utilisateur de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour filtrer les données, effectuer des calculs ou des agrégations et afficher les données associées sont contrôlées par le client et ne peuvent pas être manipulées par programme.  
   
@@ -42,11 +40,11 @@ ms.locfileid: "79525470"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d'informations, voir les rubriques suivantes :  
   
--   [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+-   [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Se connecter à Analysis Services](../instances/connect-to-analysis-services.md)  
   
--   [Analyser une instance Analysis Services](../instances/monitor-an-analysis-services-instance.md)  
+-   [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)  
   
  Vous pouvez utiliser les fenêtres de requête MDX et XMLA dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour récupérer les données et les métadonnées d'une base de données de modèle tabulaire. Toutefois, notez les restrictions suivantes :  
   
@@ -85,7 +83,7 @@ ms.locfileid: "79525470"
   
 -   Exemple AMO de modèle tabulaire sur Codeplex  
   
--   [Utilisez les vues de gestion dynamique &#40;les DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Vous pouvez utiliser le fournisseur OLE DB pour Analysis Services 9.0 dans des applications clientes non managées afin de prendre en charge l'accès du fournisseur OLE DB aux modèles tabulaires. Une version mise à jour du fournisseur OLE DB pour Analysis Services est nécessaire pour activer l'accès au modèle tabulaire. Pour plus d’informations sur les fournisseurs utilisés avec les modèles tabulaires, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
@@ -107,19 +105,19 @@ ms.locfileid: "79525470"
 ### <a name="schema-rowsets"></a>Ensembles de lignes de schéma  
  Les applications clientes peuvent utiliser les ensembles de lignes de schéma pour examiner les métadonnées des modèles tabulaires et récupérer les informations de prise en charge et de surveillance du serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Dans cette version de SQL Server, de nouveaux ensembles de lignes de schéma ont été ajoutés et des ensembles de lignes de schéma existants ont été étendus pour prendre en charge des fonctionnalités relatives aux modèles tabulaires et pour améliorer la surveillance et l'analyse des performances sur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [Ensemble de lignes DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
+-   [DISCOVER_CALC_DEPENDENCY, ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      Nouvel ensemble de lignes de schéma pour suivre les dépendances entre les colonnes et les références d'un modèle tabulaire  
   
--   [Ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
+-   [DISCOVER_CSDL_METADATA, ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      Nouvel ensemble de lignes de schéma pour obtenir la représentation CSDL d'un modèle tabulaire  
   
--   [Ensemble de lignes DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)  
+-   [DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
      Nouvel ensemble de lignes de schéma pour surveiller les événements étendus SQL Server. Pour plus d’informations, consultez [utiliser des événements étendus SQL Server &#40;XEvents&#41; pour analyser les Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
--   [Ensemble de lignes DISCOVER_TRACES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
+-   [DISCOVER_TRACES, ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      La nouvelle colonne `Type` vous permet de filtrer les traces par catégorie. Pour plus d’informations, consultez [Créer des traces de SQL Server Profiler pour la relecture &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   

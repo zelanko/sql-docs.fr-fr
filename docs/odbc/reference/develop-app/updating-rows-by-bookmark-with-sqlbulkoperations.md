@@ -1,5 +1,5 @@
 ---
-title: Mise à jour des lignes par Signetmark avec SQLBulkOperations (fr) Microsoft Docs
+title: Mise à jour de lignes par signet avec SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283197"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Mise à jour de lignes par signet avec SQLBulkOperations
-Lors de la mise à jour d’une ligne par signet, **SQLBulkOperations** rend la source de données mettre à jour une ou plusieurs rangées de la table. Les lignes sont identifiées par le signet dans une colonne de signet lié. La ligne est mise à jour à l’aide des données dans les tampons d’application pour chaque colonne liée (sauf lorsque la valeur de la longueur / tampon indicateur pour une colonne est SQL_COLUMN_IGNORE). Les colonnes non liées ne seront pas mises à jour.  
+Lors de la mise à jour d’une ligne par signet, **SQLBulkOperations** permet à la source de données de mettre à jour une ou plusieurs lignes de la table. Les lignes sont identifiées par le signet dans une colonne de signets liée. La ligne est mise à jour à l’aide des données des mémoires tampons d’application pour chaque colonne liée (sauf lorsque la valeur de la mémoire tampon de longueur/d’indicateur d’une colonne est SQL_COLUMN_IGNORE). Les colonnes indépendantes ne seront pas mises à jour.  
   
- Pour mettre à jour les lignes par signet avec **SQLBulkOperations**, l’application:  
+ Pour mettre à jour des lignes par signet avec **SQLBulkOperations**, l’application :  
   
-1.  Récupère et cache les signets de toutes les lignes à mettre à jour. S’il y a plus d’un signet et une reliure de colonne est utilisée, les signets sont stockés dans un tableau ; s’il y a plus d’un signet et que la reliure en ligne est utilisée, les signets sont stockés dans un tableau de structures de rangée.  
+1.  Récupère et met en cache les signets de toutes les lignes à mettre à jour. Si plusieurs liaisons de signet et de colonne sont utilisées, les signets sont stockés dans un tableau ; s’il y a plus d’un signet et que la liaison selon les lignes est utilisée, les signets sont stockés dans un tableau de structures de lignes.  
   
-2.  Définit l’attribut SQL_ATTR_ROW_ARRAY_SIZE énoncé au nombre de signets et lie le tampon contenant la valeur du signet, ou la gamme de signets, à la colonne 0.  
+2.  Définit l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE sur le nombre de signets et lie la mémoire tampon contenant la valeur de signet, ou le tableau de signets, à la colonne 0.  
   
-3.  Place les nouvelles valeurs de données dans les tampons rowset. Pour plus d’informations sur la façon d’envoyer de longues données avec **SQLBulkOperations**, voir [Long Data et SQLSetPos et SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+3.  Place les nouvelles valeurs de données dans les mémoires tampons de l’ensemble de lignes. Pour plus d’informations sur l’envoi de données de type long avec **SQLBulkOperations**, consultez [long Data et SQLSetPos et SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-4.  Définit la valeur dans le tampon longueur/indicateur de chaque colonne au besoin. Il s’agit de la longueur d’entrée des données ou SQL_NTS pour les colonnes liées aux tampons de chaîne, la longueur d’or des données pour les colonnes liées aux tampons binaires, et SQL_NULL_DATA pour toutes les colonnes à définir à NULL.  
+4.  Définit la valeur de la mémoire tampon de longueur/d’indicateur de chaque colonne si nécessaire. Il s’agit de la longueur en octets des données ou SQL_NTS pour les colonnes liées aux mémoires tampons de chaîne, la longueur en octets des données pour les colonnes liées aux mémoires tampons binaires, et SQL_NULL_DATA pour toutes les colonnes dont la valeur est NULL.  
   
-5.  Définit la valeur dans le tampon longueur/indicateur des colonnes qui ne doivent pas être mises à jour pour SQL_COLUMN_IGNORE. Bien que l’application puisse sauter cette étape et renvoyer les données existantes, elle est inefficace et risque d’envoyer des valeurs à la source de données qui ont été tronquées lors de leur lecture.  
+5.  Définit la valeur dans la mémoire tampon de longueur/d’indicateur des colonnes qui ne doivent pas être mises à jour pour SQL_COLUMN_IGNORE. Bien que l’application puisse ignorer cette étape et renvoyer les données existantes, cela est inefficace et risque d’envoyer des valeurs à la source de données qui ont été tronquées lors de leur lecture.  
   
-6.  Appels **SQLBulkOperations** avec *l’argument de l’opération* mis à SQL_UPDATE_BY_BOOKMARK.  
+6.  Appelle **SQLBulkOperations** avec l’argument *Operation* défini sur SQL_UPDATE_BY_BOOKMARK.  
   
- Pour chaque ligne qui est envoyée à la source de données comme une mise à jour, les tampons d’application doivent avoir des données de ligne valides. Si les tampons d’application ont été remplis par aller chercher, si un tableau d’état de ligne a été maintenu, et si la valeur de statut pour une rangée est SQL_ROW_DELETED, SQL_ROW_ERROR, ou SQL_ROW_NOROW, des données invalides pourraient par inadvertance être envoyées à la source de données.
+ Pour chaque ligne envoyée à la source de données sous forme de mise à jour, les mémoires tampons de l’application doivent avoir des données de ligne valides. Si les mémoires tampons de l’application ont été remplies par l’extraction, si un tableau d’état de ligne a été conservé et si la valeur d’état d’une ligne est SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW, les données non valides peuvent être envoyées par inadvertance à la source de données.

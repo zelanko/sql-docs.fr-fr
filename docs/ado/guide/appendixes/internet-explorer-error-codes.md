@@ -1,5 +1,5 @@
 ---
-title: Codes d’erreur d’Internet Explorer (en anglais seulement) Microsoft Docs
+title: Codes d’erreur d’Internet Explorer | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d7c3364dba94f6b106509e2646821391bd01df1c
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81219268"
 ---
-# <a name="internet-explorer-error-codes-for-remote-data-service"></a>Codes d’erreur Internet Explorer pour le service de données à distance
-Le tableau suivant répertorie les codes d’erreur Microsoft® Internet Explorer liés à l’utilisation des services de données à distance. La traduction décimale positive des deux octets bas, la traduction décimale négative du code d’erreur complet, et les valeurs hexadecimal sont montrées.
+# <a name="internet-explorer-error-codes-for-remote-data-service"></a>Codes d’erreur d’Internet Explorer pour le service de données distant
+Le tableau suivant répertorie les codes d’erreur Microsoft® Internet Explorer relatifs à l’utilisation du service de données à distance. La traduction décimale positive des deux octets de poids faible, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichées.
 
-|Internet Explorer (Wininet) erreurs|Number|Description|
+|Erreurs d’Internet Explorer (WinInet)|Number|Description|
 |------------------------------------------|------------|-----------------|
-|**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|Erreur de client Internet : ne peut pas se connecter au serveur.|
-|**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|Erreur de client Internet : Réinitialisation de connexion.|
-|**IDS_WinInet_Error**|8193 -2146820095 0x800A2001|Erreur de client Internet.|
-|**IDS_WinInet_ InvalidServerResponse**|8430 -2146819858 0x800A20EE|Erreur de client Internet : Réponse du serveur invalide.|
-|**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|Erreur de client Internet : erreur de TLS/SSL (peut-être limitation de téléchargement de données 32K).|
-|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|Erreur de client d’Internet : délai de demande.|
+|**IDS_WinInet_CantConnect**|8195-2146820093 0x800A2003|Erreur du client Internet : impossible de se connecter au serveur.|
+|**IDS_WinInet_ ConnectionReset**|12031-2146816257 0x800A2EFF|Erreur du client Internet : réinitialisation de la connexion.|
+|**IDS_WinInet_Error**|8193-2146820095 0x800A2001|Erreur du client Internet.|
+|**IDS_WinInet_ InvalidServerResponse**|8430-2146819858 0x800A20EE|Erreur du client Internet : réponse du serveur non valide.|
+|**IDS_WinInet_ SSLPostLimitation**|8196-2146820092 0x800A2004|Erreur du client Internet : erreur TLS/SSL (peut-être la limitation du téléchargement de données de 32 Ko).|
+|**IDS_WinInet_Timeout**|8194-2146820094 0x800A2002|Erreur du client Internet : délai d’expiration de la demande.|

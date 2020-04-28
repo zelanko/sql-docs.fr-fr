@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525430"
 ---
 # <a name="tabular-model-programming"></a>Programmation de modèle tabulaire
@@ -29,7 +29,7 @@ ms.locfileid: "79525430"
   
  [Présentation du modèle d'objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Référence technique pour les annotations BI au langage CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
+ [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [Interface IMDEmbedded](imdembeddeddata-interface.md)  
   

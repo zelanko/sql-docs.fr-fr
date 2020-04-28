@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE (ODBC Error Codes) Microsoft Docs
+title: SQLSTATE (codes d’erreur ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c7f3fbdf690989830cff2a41028ee0c1e2c9f37
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291519"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (codes d'erreur ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLSTATE fournit des informations détaillées à propos de la cause d'un avertissement ou d'une erreur. Pour les erreurs qui se produisent dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données détectée et retournée par , le conducteur de l’ODBC du client autochtone cartographie le numéro d’erreur natif retourné au SQLSTATE approprié. Si un numéro d’erreur natif n’a pas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code d’erreur ODBC à cartographier, le conducteur de Native Client ODBC renvoie SQLSTATE 42000 (« erreur de syntaxe ou violation d’accès »). Pour les erreurs détectées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le conducteur, le conducteur de Native Client ODBC génère le SQLSTATE approprié.  
+  SQLSTATE fournit des informations détaillées à propos de la cause d'un avertissement ou d'une erreur. Pour les erreurs qui se produisent dans la source de données détectées et retournées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client mappe le numéro d’erreur native retourné au SQLSTATE approprié. Si aucun code d’erreur ODBC n’est mappé à un numéro d’erreur natif, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne SQLState 42000 (« erreur de syntaxe ou violation d’accès »). Pour les erreurs détectées par le pilote, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client génère le SQLSTATE approprié.  
   
  Pour plus d'informations sur les codes d'erreur d'état, consultez les rubriques suivantes :  
   

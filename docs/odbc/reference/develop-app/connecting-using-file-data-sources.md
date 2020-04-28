@@ -1,5 +1,5 @@
 ---
-title: Connexion à l’aide de sources de données de fichiers (fr) Microsoft Docs
+title: Connexion à l’aide de sources de données de fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287409"
 ---
 # <a name="connecting-using-file-data-sources"></a>Connexion à l’aide de sources de données de fichier
-Les informations de connexion d’une source de données de fichiers sont stockées dans un fichier .dsn. En conséquence, la chaîne de connexion peut être utilisée à plusieurs reprises par un seul utilisateur ou partagée entre plusieurs utilisateurs s’ils ont installé le pilote approprié. Le fichier contient un nom de pilote (ou un autre nom source de données dans le cas d’une source de données de fichier non partageable) et, en option, une chaîne de connexion qui peut être utilisée par **SQLDriverConnect**. Le Gestionnaire de pilote construit la chaîne de connexion pour l’appel à **SQLDriverConnect** à partir des mots clés dans le fichier .dsn.  
+Les informations de connexion pour une source de données de fichier sont stockées dans un fichier. DSN. Par conséquent, la chaîne de connexion peut être utilisée à plusieurs reprises par un seul utilisateur ou partagée entre plusieurs utilisateurs si le pilote approprié est installé. Le fichier contient un nom de pilote (ou un autre nom de source de données dans le cas d’une source de données de fichier non partagée) et éventuellement une chaîne de connexion qui peut être utilisée par **SQLDriverConnect**. Le gestionnaire de pilotes génère la chaîne de connexion pour l’appel à **SQLDriverConnect** à partir des mots clés du fichier. DSN.  
   
- Une source de données de fichiers permet à une application de spécifier les options de connexion sans avoir à construire une chaîne de connexion pour une utilisation avec **SQLDriverConnect**. La source de données de fichiers est généralement créée en spécifiant le mot clé **SAVEFILE,** ce qui oblige le gestionnaire de pilote à enregistrer la chaîne de connexion de sortie créée par un appel à **SQLDriverConnect** au fichier .dsn. Cette chaîne de connexion peut être utilisée à plusieurs reprises en appelant **SQLDriverConnect** avec le mot clé **FILEDSN.** Cela simplifie le processus de connexion et fournit une source persistante de la chaîne de connexion.  
+ Une source de données de fichier permet à une application de spécifier des options de connexion sans avoir à créer une chaîne de connexion pour une utilisation avec **SQLDriverConnect**. La source de données de fichier est généralement créée en spécifiant le mot clé **SaveFile** , qui oblige le gestionnaire de pilotes à enregistrer la chaîne de connexion de sortie créée par un appel à **SQLDriverConnect** dans le fichier. DSN. Cette chaîne de connexion peut être utilisée à plusieurs reprises en appelant **SQLDriverConnect** avec le mot clé **FILEDSN** . Cela permet de rationaliser le processus de connexion et de fournir une source persistante de la chaîne de connexion.  
   
- Des sources de données de fichiers peuvent également être créées en appelant **SQLCreateDataSource** dans l’installateur DLL. L’information peut être inscrite dans le fichier .dsn en appelant **SQLWriteFileDSN**, et lire à partir du fichier .dsn en appelant **SQLReadFileDSN**; ces deux fonctions sont également dans l’installateur DLL. Pour plus d’informations sur l’installateur DLL, voir [Configuring Data Sources](../../../odbc/reference/install/configuring-data-sources.md).  
+ Vous pouvez également créer des sources de données de fichier en appelant **SQLCreateDataSource** dans la dll du programme d’installation. Les informations peuvent être écrites dans le fichier. DSN en appelant **SQLWriteFileDSN**et lire à partir du fichier. DSN en appelant **SQLReadFileDSN**; ces deux fonctions se trouvent également dans la DLL du programme d’installation. Pour plus d’informations sur la DLL du programme d’installation, consultez [Configuration des sources de données](../../../odbc/reference/install/configuring-data-sources.md).  
   
- Les mots clés utilisés pour les informations de connexion se trouvent dans la section [ODBC] d’un fichier .dsn. Les renseignements minimaux qu’un fichier .dsn partageable aurait dans la section [ODBC] sont le mot clé DRIVER :  
+ Les mots clés utilisés pour les informations de connexion se trouvent dans la section [ODBC] d’un fichier. DSN. Les informations minimales qu’un fichier partageable. DSN aurait dans la section [ODBC] est le mot clé DRIVER :  
   
 ```  
 DRIVER = SQL Server  
 ```  
   
- Le fichier shareable .dsn contient habituellement une chaîne de connexion, comme suit :  
+ Le fichier Shareable. DSN contient généralement une chaîne de connexion, comme suit :  
   
 ```  
 DRIVER = SQL Server  
@@ -45,13 +45,13 @@ UID = Larry
 DATABASE = MyDB  
 ```  
   
- Lorsque la source de données de fichier est inpartable, le fichier .dsn ne contient qu’un mot clé **DSN.** Lorsque le gestionnaire de conducteur reçoit les informations dans une source de données de fichiers non partageable, il se connecte au besoin à la source de données indiquée par le mot clé **DSN.** Un fichier .dsn inétable contiendrait le mot clé suivant :  
+ Lorsque la source de données de fichier ne peut pas être partagée, le fichier. DSN contient uniquement un mot clé **DSN** . Quand le gestionnaire de pilotes reçoit les informations dans une source de données de fichier non partageable, il se connecte en fonction des besoins de la source de données indiquée par le mot clé **DSN** . Un fichier. DSN non partageable contient le mot clé suivant :  
   
 ```  
 DSN = MyDataSource  
 ```  
   
- La chaîne de connexion utilisée pour une source de données de fichiers est l’union des mots clés spécifiés dans le fichier .dsn et les mots clés spécifiés dans la chaîne de connexion dans l’appel à **SQLDriverConnect**. Si l’un des mots clés du fichier .dsn est en conflit avec les mots clés de la chaîne de connexion, le gestionnaire de pilote décide quelle valeur de mot clé doit être utilisée. Pour plus d’informations, voir [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ La chaîne de connexion utilisée pour une source de données de fichier est l’Union des mots clés spécifiés dans le fichier. DSN et les mots clés spécifiés dans la chaîne de connexion dans l’appel à **SQLDriverConnect**. Si l’un des mots clés du fichier. DSN est en conflit avec des mots clés dans la chaîne de connexion, le gestionnaire de pilotes décide de la valeur de mot clé à utiliser. Pour plus d’informations, consultez [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

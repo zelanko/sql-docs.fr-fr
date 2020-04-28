@@ -1,5 +1,5 @@
 ---
-title: Séquences d’évasion ODBC (fr) Microsoft Docs
+title: Séquences d’échappement ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b32d12cc6be2814198160ce95cb8153227c19aa9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287569"
 ---
 # <a name="odbc-escape-sequences"></a>Séquences d’échappement ODBC
-Les séquences d’évacuation suivantes sont utilisées dans ODBC. La grammaire de cette section utilise certains éléments définis dans [les éléments utilisés dans les déclarations SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
+Les séquences d’échappement suivantes sont utilisées dans ODBC. La grammaire de cette section utilise certains éléments définis dans les [éléments utilisés dans les instructions SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
   
  Cette section contient les rubriques suivantes :  
   
